@@ -17,8 +17,8 @@ let closure_11 = async function _requestPushNotificationPermission(arg0) {
     if (arg0 === 1) {
       throw value;
     } else if (arg0 === 2) {
-      const obj4 = { value, done: true };
-      return obj4;
+      const obj3 = { value, done: true };
+      return obj3;
     } else {
       return { value: "IconComponent", done: null };
     }
@@ -31,8 +31,8 @@ let closure_11 = async function _requestPushNotificationPermission(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj5 = { value, done: true };
-          return obj5;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_4 = tmp5;
           closure_3 = tmp2;
@@ -48,40 +48,57 @@ let closure_11 = async function _requestPushNotificationPermission(arg0) {
           };
           return obj7;
         }
-      } else if (arg0 === 1) {
-        c6 = 3;
-        throw value;
-      } else if (arg0 === 2) {
-        c6 = 3;
-        const obj8 = { value, done: true };
-        return obj8;
       } else {
-        closure_131_3 = value;
-        if (closure_131_3 === closure_132_10.DENIED) {
-          closure_132_1(closure_132_2[9])();
-          const obj9 = { action_type: closure_132_8.TO_SETTINGS, action_location: closure_131_1 };
-          closure_132_1(closure_132_2[10]).track(closure_132_9.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj9);
-          closure_131_2();
+        if (1 === tmp5) {
+          if (arg0 === 1) {
+            c6 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c6 = 3;
+            const obj9 = { value, done: true };
+            return obj9;
+          } else {
+            closure_131_3 = value;
+            if (closure_131_3 === closure_132_10.DENIED) {
+              closure_132_1(closure_132_2[9])();
+              const obj10 = { action_type: closure_132_8.TO_SETTINGS, action_location: closure_131_1 };
+              closure_132_1(closure_132_2[10]).track(closure_132_9.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, obj10);
+              closure_131_2();
+              const obj5 = closure_132_1(closure_132_2[10]);
+            } else if (closure_131_3 === closure_132_10.AUTHORIZED) {
+              const result = closure_132_0(closure_132_2[11]).updateNotificationAuthorizationStatus(closure_131_3);
+              closure_131_2();
+              const obj4 = closure_132_0(closure_132_2[11]);
+            } else {
+              c5 = 2;
+              c6 = 1;
+              const obj11 = {
+                value: closure_132_1(closure_132_2[12]).requestPermission((permission_granted) => {
+                  action_location(1264).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
+                    action_type,
+                    action_location,
+                    permission_granted,
+                  });
+                  dependencyMap();
+                }),
+                done: false,
+              };
+              return obj11;
+            }
+          }
+        } else if (arg0 === 1) {
           c6 = 3;
-          const obj3 = closure_132_1(closure_132_2[10]);
-        } else if (closure_131_3 !== closure_132_10.AUTHORIZED) {
-          const permission = closure_132_1(closure_132_2[12]).requestPermission((permission_granted) => {
-            action_location(1267).track(constants.NOTIFICATION_PERMISSION_PREPROMPT_ACKED, {
-              action_type,
-              action_location,
-              permission_granted,
-            });
-            dependencyMap();
-          });
-          const obj = closure_132_1(closure_132_2[12]);
+          throw value;
+        } else if (arg0 === 2) {
+          c6 = 3;
+          const obj = { value, done: true };
+          return obj;
         }
-        const result = closure_132_0(closure_132_2[11]).updateNotificationAuthorizationStatus(closure_131_3);
-        closure_131_2();
-        const obj2 = closure_132_0(closure_132_2[11]);
+        c6 = 3;
       }
-    } catch (tmp37) {
+    } catch (tmp36) {
       c6 = tmp;
-      throw tmp37;
+      throw tmp36;
     }
   }
 };
@@ -160,9 +177,9 @@ let closure_12 = async function _enableProvisionalPushNotification() {
   }
 };
 const NativeModules = fn(17).NativeModules;
-const EventActionType = fn(13313).EventActionType;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-let closure_10 = fn(7868).NotificationAuthorizationStatus;
+const EventActionType = fn(13327).EventActionType;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+let closure_10 = fn(7869).NotificationAuthorizationStatus;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()

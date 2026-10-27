@@ -79,7 +79,7 @@ function communityFeatures() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({
   HelpdeskArticles: closure_9,
   GuildFeatures: c10,
@@ -88,7 +88,7 @@ const Constants = fn(1087);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { height: "100%" },
   contentPadding: { padding: 16 },

@@ -12,4 +12,6 @@ export const DesignIds = {
   [2]: "DESIGN_TABS_IA",
   YOU_BAR_IA: 3,
   [3]: "YOU_BAR_IA",
+  PHOENIX: 4,
+  [4]: "PHOENIX",
 };

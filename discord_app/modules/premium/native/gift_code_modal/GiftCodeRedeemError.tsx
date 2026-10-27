@@ -2,14 +2,14 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import Link from "../../../../../_runtime/01506_Link.js";
+import Link from "../../../../../_runtime/01503_Link.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import common_SafeAreaView from "../../../../components_native/common/SafeAreaView.tsx";
-import _modDef11192 from "../../../../../_runtime/metro/11192__.js";
-import _modDef11193 from "../../../../../_runtime/metro/11193__.js";
+import _modDef11195 from "../../../../../_runtime/metro/11195__.js";
+import _modDef11196 from "../../../../../_runtime/metro/11196__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: {
@@ -45,15 +45,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_7();
       ({ container, body } = tmp4);
       if (obj2.useTheme().dark) {
-        let tmp5Result = _modDef11192;
+        let tmp5Result = _modDef11195;
         let tmp7 = importDefault;
       } else {
-        tmp5Result = _modDef11193;
+        tmp5Result = _modDef11196;
         tmp7 = importDefault;
       }
       if (cResult[0] !== tmp5Result) {
         const obj3 = { source: tmp5Result };
-        const tmp10 = hasOwnProperty(tmp7(5669), obj3);
+        const tmp10 = hasOwnProperty(tmp7(5670), obj3);
         cResult[0] = tmp5Result;
         cResult[1] = tmp10;
         let tmp8 = tmp10;
@@ -169,9 +169,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { bottom: true, style: tmp.container, children: null };
       const obj3 = { contentContainerStyle: tmp.body, alwaysBounceVertical: false, children: null };
       if (theme.dark) {
-        let tmp8Result = _modDef11192;
+        let tmp8Result = _modDef11195;
       } else {
-        tmp8Result = _modDef11193;
+        tmp8Result = _modDef11196;
       }
       const items = [hasOwnProperty(FastImageDefault, { source: tmp8Result }), ,];
       const obj4 = { variant: "heading-xl/bold", style: tmp.header, children: null };

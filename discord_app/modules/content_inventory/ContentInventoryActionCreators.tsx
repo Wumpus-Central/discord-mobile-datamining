@@ -9,7 +9,7 @@ import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 import ContentInventoryPersistedStore from "ContentInventoryPersistedStore.tsx";
 
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/content_inventory/ContentInventoryActionCreators.tsx");
 

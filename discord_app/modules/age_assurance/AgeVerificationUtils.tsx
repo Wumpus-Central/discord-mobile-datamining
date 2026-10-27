@@ -3,7 +3,7 @@ import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import util from "../../intl/index.native.tsx";
 import Server from "../../flow/Server.tsx";
-import _modDef3090 from "AgeAssurance.messages.js";
+import _modDef3091 from "AgeAssurance.messages.js";
 import RegionalFeatureConfigUtils from "../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeGatedFeature from "../../../discord_common/js/shared/shared-constants/AgeGatedFeature.tsx";
 import usePreviousDefault from "../../hooks/usePrevious.tsx";
@@ -97,13 +97,13 @@ let closure_18 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(6656).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
-const AgeGateConstants = fn(1112);
+fn(6657).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+const AgeGateConstants = fn(1109);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: c10 } = AgeGateConstants);
 let items = [
-  fn(6657).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
-  fn(6657).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
-  fn(6657).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+  fn(6658).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT,
+  fn(6658).AgeVerificationModalEntryPoint.START_STAGE_PROMPT,
+  fn(6658).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
 ];
 const set = new Set(items);
 let items1 = [, , , , ,];
@@ -625,7 +625,7 @@ export const getAgeVerificationGetStartedTitle = function getAgeVerificationGetS
   if (hasItem) {
     let stringResult = string(util.t.lSWVTM);
   } else if (flag) {
-    stringResult = string(_modDef3090["/kgWIg"]);
+    stringResult = string(_modDef3091["/kgWIg"]);
   } else {
     stringResult = string(util.t.xYXsr6);
   }
@@ -648,14 +648,14 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
     let stringResult = intl6.string(util.t["S/xS/w"]);
   } else if (flag) {
     const intl5 = util.intl;
-    stringResult = intl5.string(_modDef3090.h7qzoa);
+    stringResult = intl5.string(_modDef3091.h7qzoa);
   } else {
     if (flag2) {
       if (null != handleOnHelpUrlHook) {
         if (null != fn) {
           const intl4 = util.intl;
           const obj2 = { handleOnHelpUrlHook, handleOnTrustedProvidersHook: fn };
-          stringResult = intl4.format(_modDef3090["+Ft5ch"], obj2);
+          stringResult = intl4.format(_modDef3091["+Ft5ch"], obj2);
         }
       }
     }
@@ -663,13 +663,13 @@ export const getAgeVerificationGetStartedSubtitle = function getAgeVerificationG
       if (null != handleOnHelpUrlHook) {
         const intl3 = util.intl;
         const obj3 = { handleOnHelpUrlHook };
-        stringResult = intl3.format(_modDef3090["22HSSI"], obj3);
+        stringResult = intl3.format(_modDef3091["22HSSI"], obj3);
       }
     }
     if (null != handleOnHelpUrlHook) {
       const intl2 = util.intl;
       const obj = { handleOnHelpUrlHook };
-      stringResult = intl2.format(_modDef3090.RpMIT0, obj);
+      stringResult = intl2.format(_modDef3091.RpMIT0, obj);
     } else {
       const intl = util.intl;
       stringResult = intl.string(util.t.HxS3oQ);

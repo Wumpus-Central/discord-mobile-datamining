@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   ongoingActivityContainer: {
     position: "absolute",
@@ -37,7 +37,7 @@ let obj3 = {
   backgroundColor: null,
   marginBottom: 8,
 };
-const ColorUtils = fn(4968);
+const ColorUtils = fn(4969);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.64);
 obj2.overlayActivityName = obj3;
 obj2.overlayActivityNameText = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };

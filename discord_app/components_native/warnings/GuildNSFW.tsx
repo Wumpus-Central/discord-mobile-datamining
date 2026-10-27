@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const stringResult = obj4.string(tmp(1128).t["/g10LC"]);
+        const stringResult = obj4.string(tmp(1125).t["/g10LC"]);
         cResult[12] = stringResult;
         const tmp19 = stringResult;
       } else {
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback = noop.useCallback(() => {
         const obj = AgeVerificationActionCreatorsDefault;
         const result = obj.showAgeVerificationGetStartedModal({
-          entryPoint: channelId(6657).AgeVerificationModalEntryPoint.NSFW_GUILD,
+          entryPoint: channelId(6658).AgeVerificationModalEntryPoint.NSFW_GUILD,
         });
       }, []);
       const merged = Object.assign(_objectWithoutProperties(ageGateVerifyContentForGuild, closure_4));
@@ -176,11 +176,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj3.guildId = id;
       obj3.channelId = channelId.channelId;
-      const intl = tmp(1128).intl;
+      const intl = tmp(1125).intl;
       obj3.disagreement = intl.string(require("util").t["/g10LC"]);
       if (require("AgeVerificationAnalyticsUtils").NsfwSpaceWarningModalType.NSFW_CHANNEL_AGE_VERIFY !== modalType) {
-        if (tmp(6657).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
-          if (tmp(6657).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
+        if (tmp(6658).NsfwSpaceWarningModalType.GUILD_LARGE_SERVER !== modalType) {
+          if (tmp(6658).NsfwSpaceWarningModalType.NSFW_CHANNEL_UNDERAGE === modalType) {
             const obj4 = { modalType, disagreementButtonVariant: "primary", onDisagree: handleDisagree };
             const merged1 = Object.assign(obj3);
             return jsx(GatedContentDefault, {

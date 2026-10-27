@@ -129,7 +129,7 @@ function handleUserAffinitiesV2StoreUpdate() {
   closure_6 = !UserAffinitiesV2Store.shouldFetch();
   return flag;
 }
-const ActivityTypes = fn(1087).ActivityTypes;
+const ActivityTypes = fn(1084).ActivityTypes;
 let c6 = false;
 const Store = initializeDefault.Store;
 class NowPlayingStore extends Store {}

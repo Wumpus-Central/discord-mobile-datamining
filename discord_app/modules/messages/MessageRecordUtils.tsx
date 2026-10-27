@@ -1,6 +1,6 @@
 // discord_app/modules/messages/MessageRecordUtils.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import _modDef2049 from "../../../_runtime/metro/02049__.js";
+import _modDef2046 from "../../../_runtime/metro/02046__.js";
 import findCodedLinksDefault from "../coded_links/findCodedLinks.tsx";
 import useMessageAuthor from "useMessageAuthor.tsx";
 import isMessageMentioned from "isMessageMentioned.tsx";
@@ -206,11 +206,11 @@ function createMessageRecord(message, arg1) {
     if (null != call.ended_timestamp) {
       const _Date = Date;
       const date = new Date(call.ended_timestamp);
-      tmp47Result = _modDef2049(date);
+      tmp47Result = _modDef2046(date);
     }
     let durationResult = null;
     if (null != tmp47Result) {
-      durationResult = _modDef2049.duration(tmp47Result.diff(tmp43));
+      durationResult = _modDef2046.duration(tmp47Result.diff(tmp43));
     }
     const obj11 = { participants: call.participants, endedTimestamp: tmp47Result, duration: durationResult };
     tmp44 = obj11;
@@ -264,7 +264,7 @@ function createMessageRecord(message, arg1) {
     }
     obj9.giftInfo = tmp60;
     obj9.giftingPrompt = message.gifting_prompt;
-    ({ boosting_prompt: obj7.boostingPrompt, guild_space_data: obj7.guildSpaceData } = message);
+    obj9.guildSpaceData = message.guild_space_data;
     const tmp242 = new MessageRecord(obj9);
     return tmp242;
   }
@@ -323,10 +323,10 @@ function createMessageRecord(message, arg1) {
   });
   const tmp10Result4 = GiftCodeUtils;
 }
-let MessageRecord = fn(4914);
+let MessageRecord = fn(4915);
 ({ MessageSnapshotRecord: closure_4, MinimalMessageRecord: hasOwnProperty } = MessageRecord);
 let MessageRecord = MessageRecord_mod;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MessageFlags: closure_11, MessageTypes: closure_12, MessageTypesSets: map1 } = Constants);
 const importDefaultResult1 = new UserRecord({ id: "???", username: "???" });
 const size = fn(2);
@@ -360,11 +360,11 @@ export const updateMessageRecord = function updateMessageRecord(message, message
         if (null != call.ended_timestamp) {
           const _Date = Date;
           const date = new Date(call.ended_timestamp);
-          tmp = _modDef2049(date);
+          tmp = _modDef2046(date);
         }
         let durationResult = null;
         if (null != tmp) {
-          durationResult = _modDef2049.duration(tmp.diff(tmp46));
+          durationResult = _modDef2046.duration(tmp.diff(tmp46));
         }
         const obj3 = { participants: call.participants, endedTimestamp: tmp, duration: durationResult };
         tmp13 = obj3;

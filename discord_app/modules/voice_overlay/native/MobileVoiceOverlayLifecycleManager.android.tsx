@@ -19,18 +19,18 @@ import MobileVoiceOverlayStore from "../../../stores/native/MobileVoiceOverlaySt
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 
 require = fn;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4901).GUILD_VOCAL_CHANNELS_KEY;
-const Constants = fn(1087);
+const GUILD_VOCAL_CHANNELS_KEY = fn(4902).GUILD_VOCAL_CHANNELS_KEY;
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-fn(15789);
-fn(15790);
-fn(15791);
-fn(15792);
-fn(8115);
-fn(14623);
-fn(15793);
-fn(15794);
-const registerAsset = fn(14598);
+fn(15827);
+fn(15828);
+fn(15829);
+fn(15830);
+fn(8113);
+fn(14659);
+fn(15831);
+fn(15832);
+const registerAsset = fn(14634);
 let items = [VoiceStateStore, RTCConnectionStore, MediaEngineStore];
 const constants = {
   DISABLED: 0,
@@ -55,28 +55,28 @@ let obj = {
   searchChannels: null,
   noResults: null,
 };
-const intl = fn(1128).intl;
-obj.useSpeaker = intl.string(fn(1128).t.CVxXDM);
-const intl2 = fn(1128).intl;
-obj.mute = intl2.string(fn(1128).t.w4m945);
-const intl3 = fn(1128).intl;
-obj.disconnectFromVoice = intl3.string(fn(1128).t["/lEZpt"]);
-const intl4 = fn(1128).intl;
-obj.getInvite = intl4.string(fn(1128).t.JYzIWe);
-const intl5 = fn(1128).intl;
-obj.switchChannels = intl5.string(fn(1128).t.zJvWqU);
-const intl6 = fn(1128).intl;
-obj.openDiscord = intl6.string(fn(1128).t["G/Ez6p"]);
-const intl7 = fn(1128).intl;
-obj.inviteLinkCopied = intl7.string(fn(1128).t.OhctG7);
-const intl8 = fn(1128).intl;
-obj.channelSelect = intl8.string(fn(1128).t.r2ptsz);
-const intl9 = fn(1128).intl;
-obj.closeWindow = intl9.string(fn(1128).t.gaifwY);
-const intl10 = fn(1128).intl;
-obj.searchChannels = intl10.string(fn(1128).t.wM7uRI);
-const intl11 = fn(1128).intl;
-obj.noResults = intl11.string(fn(1128).t.wk3qsA);
+const intl = fn(1125).intl;
+obj.useSpeaker = intl.string(fn(1125).t.CVxXDM);
+const intl2 = fn(1125).intl;
+obj.mute = intl2.string(fn(1125).t.w4m945);
+const intl3 = fn(1125).intl;
+obj.disconnectFromVoice = intl3.string(fn(1125).t["/lEZpt"]);
+const intl4 = fn(1125).intl;
+obj.getInvite = intl4.string(fn(1125).t.JYzIWe);
+const intl5 = fn(1125).intl;
+obj.switchChannels = intl5.string(fn(1125).t.zJvWqU);
+const intl6 = fn(1125).intl;
+obj.openDiscord = intl6.string(fn(1125).t["G/Ez6p"]);
+const intl7 = fn(1125).intl;
+obj.inviteLinkCopied = intl7.string(fn(1125).t.OhctG7);
+const intl8 = fn(1125).intl;
+obj.channelSelect = intl8.string(fn(1125).t.r2ptsz);
+const intl9 = fn(1125).intl;
+obj.closeWindow = intl9.string(fn(1125).t.gaifwY);
+const intl10 = fn(1125).intl;
+obj.searchChannels = intl10.string(fn(1125).t.wM7uRI);
+const intl11 = fn(1125).intl;
+obj.noResults = intl11.string(fn(1125).t.wk3qsA);
 class MobileVoiceOverlayManager {
   constructor() {
     obj = Object.create(new.target.prototype);

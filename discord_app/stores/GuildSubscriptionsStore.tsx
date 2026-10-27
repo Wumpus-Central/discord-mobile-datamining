@@ -82,7 +82,7 @@ function handleConnectionOpenOrResumed(type) {
       }
     }
     closure_20.subscribeToGuild(tmp11);
-    obj5 = obj4(4848);
+    obj5 = obj4(4849);
   }
   obj4 = {};
   set = new Set(LurkingStore.lurkingGuildIds());
@@ -184,8 +184,8 @@ function handleSpotifyUpdate() {
   }
   return false;
 }
-const EVERYONE_CHANNEL_ID = fn(7372).EVERYONE_CHANNEL_ID;
-const Constants = fn(1087);
+const EVERYONE_CHANNEL_ID = fn(7374).EVERYONE_CHANNEL_ID;
+const Constants = fn(1084);
 ({ ChannelSections, ChannelTypes: closure_19 } = Constants);
 let closure_20 = new GuildSubscriptionsDefault((subscriptions) => {
   for (const key10004 in arg0) {

@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../../utils/AvatarUtils.tsx";
-import _modDef3830 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3831 from "../../intl/ConjureUntranslated.messages.js";
 import UserUtils from "../../../../utils/UserUtils.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import useConjureAppCreatorDefault from "../useConjureAppCreator.tsx";
@@ -12,7 +12,7 @@ import ConjureProjectStore from "../../projects/ConjureProjectStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { icon: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.lg };
 obj2.icon = size;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (arg1) {
         tmp5 = guild_id;
       }
-      const appChannelApplication = guild_id(7346).useAppChannelApplication(tmp5);
+      const appChannelApplication = guild_id(7348).useAppChannelApplication(tmp5);
       let tmp7 = null;
       if (arg1) {
         let conjureProjectId;
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = cResult[2];
         tmp12 = cResult[3];
       }
-      const tmpResult = guild_id(7346);
+      const tmpResult = guild_id(7348);
       const stateFromStores = guild_id(504).useStateFromStores(first, tmp11, tmp12);
       let tmp16 = null != tmp7;
       const tmpResult3 = guild_id(504);
@@ -156,10 +156,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj3.title = tmp7.name;
         let formatToPlainStringResult;
         if (null != creator) {
-          const intl = tmp(1128).intl;
-          const obj5 = { name: tmp(5025).getName(creator) };
-          formatToPlainStringResult = intl.formatToPlainString(_modDef3830["6/x9LD"], obj5);
-          const tmpResult4 = tmp(5025);
+          const intl = tmp(1125).intl;
+          const obj5 = { name: tmp(5026).getName(creator) };
+          formatToPlainStringResult = intl.formatToPlainString(_modDef3831["6/x9LD"], obj5);
+          const tmpResult4 = tmp(5026);
         }
         obj3.subtitle = formatToPlainStringResult;
         tmp20 = obj3;
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (null != creator) {
             const intl = util.intl;
             const obj3 = { name: UserUtils.getName(tmp5) };
-            formatToPlainStringResult = intl.formatToPlainString(_modDef3830["6/x9LD"], obj3);
+            formatToPlainStringResult = intl.formatToPlainString(_modDef3831["6/x9LD"], obj3);
           }
           obj.subtitle = formatToPlainStringResult;
           tmp2 = obj;

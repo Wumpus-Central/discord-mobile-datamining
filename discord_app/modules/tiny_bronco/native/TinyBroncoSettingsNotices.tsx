@@ -1,7 +1,7 @@
 // discord_app/modules/tiny_bronco/native/TinyBroncoSettingsNotices.tsx
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3122 from "../TinyBronco.messages.js";
+import _modDef3123 from "../TinyBronco.messages.js";
 import RegionalFeatureConfigUtils from "../../regional_feature_config/RegionalFeatureConfigUtils.tsx";
 import AgeVerificationUtils from "../../age_assurance/AgeVerificationUtils.tsx";
 import AgeVerificationAnalyticsUtils from "../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
@@ -17,11 +17,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6665).TINY_BRONCO_SETTINGS_LOCATION;
-const Constants = fn(7416);
+let closure_6 = fn(6666).TINY_BRONCO_SETTINGS_LOCATION;
+const Constants = fn(7418);
 ({ SafetySettingsNoticeAction: closure_7, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -104,7 +104,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               return;
             }
           }
-          const stringResult = obj2.string(noticeType(1128).t.hvVgAZ);
+          const stringResult = obj2.string(noticeType(1125).t.hvVgAZ);
           cResult[10] = stringResult;
           const tmp14 = stringResult;
         } else {
@@ -180,7 +180,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           tmp21 = tmp24;
         }
         const obj4 = { type: "info", message: tmp11, role: "status", action: tmp17 };
-        const tmp20 = jsx(noticeType(7953).InlineNotice, {
+        const tmp20 = jsx(noticeType(7954).InlineNotice, {
           type: "info",
           message: tmp11,
           role: "status",
@@ -190,7 +190,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[14] = tmp17;
         cResult[15] = tmp20;
       }
-      const intl = noticeType(1128).intl;
+      const intl = noticeType(1125).intl;
       const formatResult = intl.format(message, { handleOnConfirmAgeHook: A });
       cResult[7] = A;
       cResult[8] = message;
@@ -221,14 +221,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         const result1 = SafetySettingsUtils.trackSafetySettingsNoticeAnalytics(noticeType, constants.CONFIRM_AGE);
       }, items2);
       let obj2 = { type: "info", message: null, role: "status", action: null };
-      const intl = noticeType(1128).intl;
+      const intl = noticeType(1125).intl;
       obj2.message = intl.format(noticeType.message, { handleOnConfirmAgeHook: callback1 });
       const obj3 = { text: null, onPress: null };
-      const intl2 = noticeType(1128).intl;
-      obj3.text = intl2.string(noticeType(1128).t.hvVgAZ);
+      const intl2 = noticeType(1125).intl;
+      obj3.text = intl2.string(noticeType(1125).t.hvVgAZ);
       obj3.onPress = callback;
       obj2.action = obj3;
-      obj.children = jsx(noticeType(7953).InlineNotice, { type: "info", message: null, role: "status", action: null });
+      obj.children = jsx(noticeType(7954).InlineNotice, { type: "info", message: null, role: "status", action: null });
       return <View style={closure_10().container}>{null}</View>;
     };
 fn(558);
@@ -238,8 +238,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function MessageRequestsTeenNotice() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { message: _modDef3122["l+jt8J"], noticeType: constants2.CONTENT_AND_SOCIAL_NOTICE };
-        const tmp8 = <closure_11 message={_modDef3122["l+jt8J"]} noticeType={constants2.CONTENT_AND_SOCIAL_NOTICE} />;
+        const obj2 = { message: _modDef3123["l+jt8J"], noticeType: constants2.CONTENT_AND_SOCIAL_NOTICE };
+        const tmp8 = <closure_11 message={_modDef3123["l+jt8J"]} noticeType={constants2.CONTENT_AND_SOCIAL_NOTICE} />;
         cResult[0] = tmp8;
         let first = tmp8;
       } else {
@@ -248,7 +248,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       return first;
     }
   : function MessageRequestsTeenNotice() {
-      return <closure_11 message={_modDef3122["l+jt8J"]} noticeType={constants2.CONTENT_AND_SOCIAL_NOTICE} />;
+      return <closure_11 message={_modDef3123["l+jt8J"]} noticeType={constants2.CONTENT_AND_SOCIAL_NOTICE} />;
     };
 let closure_12 = tmp4;
 ReactCompilerGating = fn(558);
@@ -358,8 +358,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const intl = tmp(1128).intl;
-        tmp13[0] = intl.string(tmp(1128).t.FDSSia);
+        const intl = tmp(1125).intl;
+        tmp13[0] = intl.string(tmp(1125).t.FDSSia);
         tmp13[1] = T;
         cResult[6] = tmp13;
       } else {
@@ -386,7 +386,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { type: "info", message: tmp10, role: "status", action: tmp13 };
-        const tmp15 = jsx(tmp(7953).InlineNotice, { type: "info", message: tmp10, role: "status", action: tmp13 });
+        const tmp15 = jsx(tmp(7954).InlineNotice, { type: "info", message: tmp10, role: "status", action: tmp13 });
         cResult[7] = tmp10;
         cResult[8] = tmp15;
       } else {
@@ -453,14 +453,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         );
       }, items2);
       let obj2 = { type: "info", message: null, role: "status", action: null };
-      const intl = AGE_CONFIRMATION_NOTICE(1128).intl;
+      const intl = AGE_CONFIRMATION_NOTICE(1125).intl;
       obj2.message = intl.format(message.message, { handleOnAgeGatedContentHook: callback });
       const obj3 = { text: null, onPress: null };
-      const intl2 = AGE_CONFIRMATION_NOTICE(1128).intl;
-      obj3.text = intl2.string(AGE_CONFIRMATION_NOTICE(1128).t.FDSSia);
+      const intl2 = AGE_CONFIRMATION_NOTICE(1125).intl;
+      obj3.text = intl2.string(AGE_CONFIRMATION_NOTICE(1125).t.FDSSia);
       obj3.onPress = callback1;
       obj2.action = obj3;
-      obj.children = jsx(AGE_CONFIRMATION_NOTICE(7953).InlineNotice, {
+      obj.children = jsx(AGE_CONFIRMATION_NOTICE(7954).InlineNotice, {
         type: "info",
         message: null,
         role: "status",
@@ -473,9 +473,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ContentFiltersTeenNotice() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { message: _modDef3122.qbBkFI, noticeType: constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE };
+        const obj2 = { message: _modDef3123.qbBkFI, noticeType: constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE };
         const tmp8 = (
-          <closure_11 message={_modDef3122.qbBkFI} noticeType={constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />
+          <closure_11 message={_modDef3123.qbBkFI} noticeType={constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />
         );
         cResult[0] = tmp8;
         let first = tmp8;
@@ -485,15 +485,15 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       return first;
     }
   : function ContentFiltersTeenNotice() {
-      return <closure_11 message={_modDef3122.qbBkFI} noticeType={constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />;
+      return <closure_11 message={_modDef3123.qbBkFI} noticeType={constants2.SENSITIVE_CONTENT_FILTER_TEEN_NOTICE} />;
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
   ? function MessageRequestsUnconfirmedNotice() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { message: _modDef3122.tGsCdS };
-        const tmp7 = <closure_13 message={_modDef3122.tGsCdS} />;
+        const obj2 = { message: _modDef3123.tGsCdS };
+        const tmp7 = <closure_13 message={_modDef3123.tGsCdS} />;
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -502,7 +502,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       return first;
     }
   : function MessageRequestsUnconfirmedNotice() {
-      return <closure_13 message={_modDef3122.tGsCdS} />;
+      return <closure_13 message={_modDef3123.tGsCdS} />;
     };
 let closure_14 = tmp6;
 ReactCompilerGating = fn(558);
@@ -557,8 +557,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function ContentFiltersUnconfirmedNotice() {
       const cResult = c.c(1);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { message: _modDef3122.HGJo1F };
-        const tmp7 = <closure_13 message={_modDef3122.HGJo1F} />;
+        const obj2 = { message: _modDef3123.HGJo1F };
+        const tmp7 = <closure_13 message={_modDef3123.HGJo1F} />;
         cResult[0] = tmp7;
         let first = tmp7;
       } else {
@@ -567,7 +567,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       return first;
     }
   : function ContentFiltersUnconfirmedNotice() {
-      return <closure_13 message={_modDef3122.HGJo1F} />;
+      return <closure_13 message={_modDef3123.HGJo1F} />;
     };
 function useIsEnabled() {
   return TinyBroncoExperiment.useIsTinyBroncoEnabled(closure_6);

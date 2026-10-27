@@ -2,7 +2,7 @@
 import initializeDefault from "../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import privDefault from "../../../_runtime/01459_priv.js";
+import privDefault from "../../../_runtime/01456_priv.js";
 
 let closure_2 = { taken: null, error: "IconComponent", rateLimited: null };
 let obj = {
@@ -10,8 +10,8 @@ let obj = {
   currentUsernameInvalid: false,
   retryAfterTime: null,
   suggestions: {
-    migration: { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false },
-    registration: { suggestion: { username: "Array" }, source: "Reflect", fetched: null },
+    migration: { suggestion: { username: "rejectWithError" }, fetched: false, usernameSuggestionLoading: false },
+    registration: { suggestion: { username: "rejectWithError" }, source: "Reflect", fetched: null },
   },
 };
 const Store = initializeDefault.Store;
@@ -85,8 +85,12 @@ const uniqueUsernamesStore = new UniqueUsernamesStore(DispatcherDefault, {
     }
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {
-    obj.suggestions.migration = { suggestion: { username: "Array" }, fetched: false, usernameSuggestionLoading: false };
-    obj.suggestions.registration = { suggestion: { username: "Array" }, source: "Reflect", fetched: null };
+    obj.suggestions.migration = {
+      suggestion: { username: "rejectWithError" },
+      fetched: false,
+      usernameSuggestionLoading: false,
+    };
+    obj.suggestions.registration = { suggestion: { username: "rejectWithError" }, source: "Reflect", fetched: null };
   },
   UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function handleUniqueUsernameSuggestionsSuccess(suggestion) {
     suggestion = suggestion.suggestion;

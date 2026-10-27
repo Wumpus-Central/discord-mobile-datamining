@@ -5,7 +5,7 @@ import PremiumUtilsDefault from "../../utils/PremiumUtils.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MAX_MESSAGE_LENGTH_PREMIUM: closure_4, MAX_MESSAGE_LENGTH: hasOwnProperty } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -18,6 +18,8 @@ export const getDeliveredAdCreativeId = function getDeliveredAdCreativeId(creati
       return creative.questId;
     } else if (AdCreativeType.AdCreativeType.BOUNTY === type) {
       return creative.bounty.id;
+    } else if (AdCreativeType.AdCreativeType.PLAYABLE === type) {
+      return creative.playable.id;
     } else if (AdCreativeType.AdCreativeType.QUEST_HOME_HERO === type) {
       return creative.questHomeHero.id;
     }
@@ -44,6 +46,17 @@ export const getDeliveredBounty = function getDeliveredBounty(creative) {
     bounty = creative.bounty;
   }
   return bounty;
+};
+export const getDeliveredPlayable = function getDeliveredPlayable(creative2) {
+  let type;
+  if (creative2 != null) {
+    type = creative2.type;
+  }
+  let playable = null;
+  if (type === AdCreativeType.AdCreativeType.PLAYABLE) {
+    playable = creative2.playable;
+  }
+  return playable;
 };
 export const resolveResponseTtl = function resolveResponseTtl(responseTtlSeconds) {
   if (null == responseTtlSeconds) {

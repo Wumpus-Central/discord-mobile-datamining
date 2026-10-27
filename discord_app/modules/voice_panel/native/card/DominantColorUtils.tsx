@@ -1,6 +1,6 @@
 // discord_app/modules/voice_panel/native/card/DominantColorUtils.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import privDefault from "../../../../../_runtime/01459_priv.js";
+import privDefault from "../../../../../_runtime/01456_priv.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -36,8 +36,8 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           hexToRgbResult = closure_6.get(arg0);
         }
         if (hexToRgbResult == null) {
-          hexToRgbResult = tmp(4968).hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
-          const tmpResult = tmp(4968);
+          hexToRgbResult = tmp(4969).hexToRgb(nativeDefault.unsafe_rawColors.PRIMARY_800);
+          const tmpResult = tmp(4969);
         }
         cResult[2] = arg0;
         cResult[3] = hexToRgbResult;
@@ -76,13 +76,13 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               let result = closure_1_7.set(str, value2);
               if (null != value2) {
                 if (typeof value2 === "number") {
-                  let dominantColorsLocalAsset = ref(1901).getDominantColorsLocalAsset(
+                  let dominantColorsLocalAsset = ref(1898).getDominantColorsLocalAsset(
                     Image.resolveAssetSource(value2),
                   );
-                  const obj3 = ref(1901);
+                  const obj3 = ref(1898);
                 } else {
-                  dominantColorsLocalAsset = ref(1901).getDominantColors(Image.resolveAssetSource(value2));
-                  const obj4 = ref(1901);
+                  dominantColorsLocalAsset = ref(1898).getDominantColors(Image.resolveAssetSource(value2));
+                  const obj4 = ref(1898);
                 }
                 dominantColorsLocalAsset
                   .then((result) => {
@@ -174,11 +174,11 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             let result = closure_1_7.set(str, value2);
             if (null != value2) {
               if (typeof value2 === "number") {
-                let dominantColorsLocalAsset = ref(1901).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
-                const obj3 = ref(1901);
+                let dominantColorsLocalAsset = ref(1898).getDominantColorsLocalAsset(Image.resolveAssetSource(value2));
+                const obj3 = ref(1898);
               } else {
-                dominantColorsLocalAsset = ref(1901).getDominantColors(Image.resolveAssetSource(value2));
-                const obj4 = ref(1901);
+                dominantColorsLocalAsset = ref(1898).getDominantColors(Image.resolveAssetSource(value2));
+                const obj4 = ref(1898);
               }
               dominantColorsLocalAsset
                 .then((result) => {
@@ -215,16 +215,16 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
 let closure_8 = tmp4;
 ReactCompilerGating = fn(558);
 let tmp3 = new privDefault({ max: 1000 });
-function getCachedSourceFromURI(avatarURI) {
-  value = closure_7.get(avatarURI);
+function getCachedSourceFromURI(avatarURL) {
+  value = closure_7.get(avatarURL);
   if (value == null) {
-    let tmp2 = avatarURI;
-    if (typeof avatarURI !== "number") {
+    let tmp2 = avatarURL;
+    if (typeof avatarURL !== "number") {
       let tmp3 = null;
-      if (null != avatarURI) {
+      if (null != avatarURL) {
         tmp3 = null;
-        if ("" !== avatarURI.trim()) {
-          const obj2 = { uri: avatarURI };
+        if ("" !== avatarURL.trim()) {
+          const obj2 = { uri: avatarURL };
           tmp3 = obj2;
         }
       }
@@ -232,7 +232,7 @@ function getCachedSourceFromURI(avatarURI) {
     }
     value = tmp2;
   }
-  const result = closure_7.set(avatarURI, value);
+  const result = closure_7.set(avatarURL, value);
   return value;
 }
 const size = fn(2);

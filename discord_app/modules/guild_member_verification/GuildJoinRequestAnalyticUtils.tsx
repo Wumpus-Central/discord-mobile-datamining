@@ -3,7 +3,7 @@ import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
 import GuildMemberStore from "../../stores/GuildMemberStore.tsx";
 
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/GuildJoinRequestAnalyticUtils.tsx");
 

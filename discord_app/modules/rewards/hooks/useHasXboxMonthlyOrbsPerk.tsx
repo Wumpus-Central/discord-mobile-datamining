@@ -9,7 +9,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const PremiumUtilsDefault = PremiumUtils;
 
 require = fn;
-const PremiumTypes = fn(1394).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const ReactCompilerGating = fn(558);
 function hasCrepeMonthlyOrbsPerk(currentUser) {
   if (obj.canUseMonthlyOrbs(currentUser)) {

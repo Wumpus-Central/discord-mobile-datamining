@@ -8,7 +8,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-let RelationshipTypes = fn(1087).RelationshipTypes;
+let RelationshipTypes = fn(1084).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 const AppLauncherMentionableListActionSheet = "AppLauncherMentionableListActionSheet";

@@ -37,9 +37,9 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
-const isEveryoneRole = fn(4878).isEveryoneRole;
-let closure_15 = fn(19112).GuildSettingsRoleEditSections;
-const Constants = fn(1087);
+const isEveryoneRole = fn(4879).isEveryoneRole;
+let closure_15 = fn(19150).GuildSettingsRoleEditSections;
+const Constants = fn(1084);
 ({
   GuildSettingsSections: closure_16,
   AnalyticEvents: closure_17,
@@ -49,7 +49,7 @@ const Constants = fn(1087);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21, Fragment: closure_22 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { flex: 1 },
   scrollContainer: { paddingHorizontal: 12 },

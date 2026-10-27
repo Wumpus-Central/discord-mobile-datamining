@@ -1,6 +1,6 @@
 // discord_app/modules/hexagon_campaign/native/HexagonCampaignDisplayNameStylePromo.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4247 from "../HexagonCampaign.messages.js";
+import _modDef4248 from "../HexagonCampaign.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore.tsx";
 import HexagonCampaignPromoGradientDefault from "HexagonCampaignPromoGradient.tsx";
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   promo: {
     height: 32,
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] === tmp4) {
           if (cResult[6] !== cResult[5]) {
             const obj2 = { variant: "text-xxs/medium", color: "text-default", lineClamp: 1, children: tmp11 };
-            const tmp17 = closure_4(tmp(5234).Text, obj2);
+            const tmp17 = closure_4(tmp(5235).Text, obj2);
             cResult[6] = tmp11;
             cResult[7] = tmp17;
             let tmp15 = tmp17;
@@ -86,24 +86,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             return tmp18;
           }
-          const obj3 = { theme: tmp(15877).ThemeTypes.DARK, children: null };
+          const obj3 = { theme: tmp(15915).ThemeTypes.DARK, children: null };
           const obj4 = { style: tmp5.promo, children: null };
           const items = [tmp7, tmp15];
           obj4.children = items;
           obj3.children = closure_5(View, obj4);
-          const tmp22 = closure_4(tmp(5037).ThemeContextProvider, obj3);
+          const tmp22 = closure_4(tmp(5038).ThemeContextProvider, obj3);
           cResult[8] = tmp5.promo;
           cResult[9] = tmp15;
           cResult[10] = tmp22;
           tmp18 = tmp22;
         }
       }
-      const intl = tmp(1128).intl;
+      const intl = tmp(1125).intl;
       if (undefined !== showLearnMore && showLearnMore) {
         const obj5 = { learnMoreHook: tmp6 };
-        let formatResult = intl.format(_modDef4247.eb99JA, obj5);
+        let formatResult = intl.format(_modDef4248.eb99JA, obj5);
       } else {
-        formatResult = intl.string(_modDef4247.WyZOg3);
+        formatResult = intl.string(_modDef4248.WyZOg3);
       }
       cResult[3] = tmp6;
       cResult[4] = undefined !== showLearnMore && showLearnMore;
@@ -138,9 +138,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             );
           },
         };
-        let formatResult = intl.format(_modDef4247.eb99JA, obj3);
+        let formatResult = intl.format(_modDef4248.eb99JA, obj3);
       } else {
-        formatResult = intl.string(_modDef4247.WyZOg3);
+        formatResult = intl.string(_modDef4248.WyZOg3);
       }
       items[1] = closure_4(require("Text/Text").Text, {
         variant: "text-xxs/medium",

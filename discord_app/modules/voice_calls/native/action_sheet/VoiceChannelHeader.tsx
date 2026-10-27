@@ -8,7 +8,7 @@ import useChannelNameDefault from "../../../channel/useChannelName.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import isRoleRequiredDefault from "../../../channel/isRoleRequired.tsx";
 import instant_invite_InstantInviteUtils from "../../../instant_invite/native/InstantInviteUtils.tsx";
-import _modDef10861 from "../../../../../_runtime/metro/10861__.js";
+import _modDef10864 from "../../../../../_runtime/metro/10864__.js";
 import openGroupDMAddMembersDefault from "../../../group_dm/native/openGroupDMAddMembers.tsx";
 import useIsVoiceChannelFullDefault from "../../useIsVoiceChannelFull.tsx";
 import CallStateHooks from "../CallStateHooks.tsx";
@@ -23,11 +23,11 @@ const CallStateHooksDefault = CallStateHooks;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Permissions: closure_7, AnalyticsPages: closure_8, InstantInviteSources: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: {
     alignSelf: "stretch",
@@ -182,7 +182,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = channel(576);
       const stateFromStores = channel(504).useStateFromStores(first, tmp7);
-      const tmp10 = stateFromStores1(11562)(channel);
+      const tmp10 = stateFromStores1(11564)(channel);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [EmbeddedActivitiesStore];
         cResult[3] = items1;
@@ -224,7 +224,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp9 = stateFromStores1;
       const tmpResult = channel(504);
       stateFromStores1 = channel(504).useStateFromStores(tmp11, A, tmp15);
-      const tmp17 = tmp9(5604)(channel);
+      const tmp17 = tmp9(5605)(channel);
       if (stateFromStores != null) {
         class A {
           constructor() {
@@ -282,7 +282,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     color: "text-overlay-light",
                     children: tmp17,
                   };
-                  const tmp34 = closure_10(tmp(5234).Text, obj2);
+                  const tmp34 = closure_10(tmp(5235).Text, obj2);
                 }
                 cResult[21] = tmp17;
                 cResult[22] = tmp34;
@@ -312,7 +312,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     color: "text-overlay-light",
                     children: tmp18,
                   };
-                  const tmp36 = closure_10(tmp(5234).Text, obj3);
+                  const tmp36 = closure_10(tmp(5235).Text, obj3);
                 }
                 cResult[23] = tmp18;
                 cResult[24] = tmp36;
@@ -339,8 +339,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[27] = tmp33;
               cResult[28] = tmp40;
             }
-            const obj5 = { size: tmp(1202).Icon.Sizes.MEDIUM, source: tmp29, disableColor: true, style: tmp4.icons };
-            const tmp32 = closure_10(tmp(1202).Icon, obj5);
+            const obj5 = { size: tmp(1199).Icon.Sizes.MEDIUM, source: tmp29, disableColor: true, style: tmp4.icons };
+            const tmp32 = closure_10(tmp(1199).Icon, obj5);
             cResult[18] = tmp4.icons;
             cResult[19] = tmp29;
             cResult[20] = tmp32;
@@ -448,9 +448,9 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let formatToPlainStringResult = useChannelNameDefault(channel);
       if (channel.isPrivate()) {
-        const intl = tmp2(1128).intl;
+        const intl = tmp2(1125).intl;
         const obj3 = { count: channel.recipients.length + 1 };
-        formatToPlainStringResult = intl.formatToPlainString(tmp2(1128).t["8bn8Br"], obj3);
+        formatToPlainStringResult = intl.formatToPlainString(tmp2(1125).t["8bn8Br"], obj3);
         const obj4 = { channel };
         name = closure_10(closure_13, obj4);
         class A {
@@ -460,15 +460,15 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj5 = { style: tmp.container, children: null };
-      const obj6 = { size: channel(1202).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
+      const obj6 = { size: channel(1199).Icon.Sizes.MEDIUM, source: null, disableColor: true, style: null };
       if (isRoleRequiredDefault(channel)) {
-        let tmp5Result = tmp5(14635);
+        let tmp5Result = tmp5(14671);
       } else {
-        tmp5Result = tmp5(11669);
+        tmp5Result = tmp5(11671);
       }
       obj6.source = tmp5Result;
       obj6.style = tmp.icons;
-      const items3 = [closure_10(channel(1202).Icon, obj6), ,];
+      const items3 = [closure_10(channel(1199).Icon, obj6), ,];
       const obj7 = { style: tmp.middle, children: null };
       let tmp14Result = formatToPlainStringResult;
       if (typeof formatToPlainStringResult === "string") {
@@ -479,7 +479,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-overlay-light",
           children: formatToPlainStringResult,
         };
-        tmp14Result = closure_10(tmp2(5234).Text, obj8);
+        tmp14Result = closure_10(tmp2(5235).Text, obj8);
       }
       const items4 = [tmp14Result];
       let tmp14Result3 = name;
@@ -491,7 +491,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           color: "text-overlay-light",
           children: name,
         };
-        tmp14Result3 = closure_10(tmp2(5234).Text, obj9);
+        tmp14Result3 = closure_10(tmp2(5235).Text, obj9);
       }
       items4[1] = tmp14Result3;
       obj7.children = items4;
@@ -529,7 +529,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp8 = v65535(closure_15, {
         onPress,
-        iconSource: _modDef10861,
+        iconSource: _modDef10864,
         iconStyle: tmp4.icons,
         accessibilityLabel: first,
       });
@@ -537,12 +537,12 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = tmp4.icons;
       cResult[3] = tmp8;
       tmp7 = tmp8;
-      const obj2 = { onPress, iconSource: _modDef10861, iconStyle: tmp4.icons, accessibilityLabel: first };
+      const obj2 = { onPress, iconSource: _modDef10864, iconStyle: tmp4.icons, accessibilityLabel: first };
     }
   : function AddMemberButton(onPress) {
       const obj = {
         onPress: onPress.onPress,
-        iconSource: _modDef10861,
+        iconSource: _modDef10864,
         iconStyle: closure_12().icons,
         accessibilityLabel: null,
       };

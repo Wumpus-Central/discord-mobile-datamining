@@ -2,7 +2,7 @@
 import SelectedChannelActionCreatorsDefault from "../../../actions/SelectedChannelActionCreators.tsx";
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 
-const StaticChannelRoute = fn(4830).StaticChannelRoute;
+const StaticChannelRoute = fn(4831).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/builder/selectConjureChannel.tsx");
 

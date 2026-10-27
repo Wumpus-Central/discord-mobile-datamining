@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/home/native/ConjureHomeScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3830 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3831 from "../../intl/ConjureUntranslated.messages.js";
 import ConjureStandaloneScreenDefault from "../../builder/native/ConjureStandaloneScreen.tsx";
 import ConjureGlobalScreenContextDefault from "../../builder/native/ConjureGlobalScreenContext.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const ConjureHomeScreen = "ConjureHomeScreen";
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, centered: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.centered = {
@@ -42,7 +42,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_10();
       ({ projectId, requestId } = navigation.route.params);
       const obj = navigation(576);
-      const isFocused = navigation(1506).useIsFocused();
+      const isFocused = navigation(1503).useIsFocused();
       if (cResult[0] !== navigation) {
         const fn = function n() {
           if (navigation.canGoBack()) {
@@ -58,8 +58,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[1];
       }
-      const obj2 = navigation(1506);
-      const conjureForMeGuildId = navigation(12304).useConjureForMeGuildId(ConjureHomeScreen);
+      const obj2 = navigation(1503);
+      const conjureForMeGuildId = navigation(12310).useConjureForMeGuildId(ConjureHomeScreen);
       if (cResult[2] === isFocused) {
         if (cResult[3] === projectId) {
           if (cResult[4] === requestId) {
@@ -128,18 +128,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj7 = { variant: "heading-lg/semibold", color: "text-default", children: null };
-            const intl = tmp(1128).intl;
-            obj7.children = intl.string(_modDef3830["c+8IMp"]);
-            const items1 = [closure_7(tmp(5234).Text, obj7), ,];
+            const intl = tmp(1125).intl;
+            obj7.children = intl.string(_modDef3831["c+8IMp"]);
+            const items1 = [closure_7(tmp(5235).Text, obj7), ,];
             const obj8 = { variant: "text-md/normal", color: "text-muted", children: null };
-            const intl2 = tmp(1128).intl;
-            obj8.children = intl2.string(_modDef3830["5PqGKy"]);
-            items1[1] = closure_7(tmp(5234).Text, obj8);
+            const intl2 = tmp(1125).intl;
+            obj8.children = intl2.string(_modDef3831["5PqGKy"]);
+            items1[1] = closure_7(tmp(5235).Text, obj8);
             const obj9 = { variant: "secondary", size: "sm", text: null, onPress: null };
-            const intl3 = tmp(1128).intl;
-            obj9.text = intl3.string(tmp(1128).t["13/7kX"]);
+            const intl3 = tmp(1125).intl;
+            obj9.text = intl3.string(tmp(1125).t["13/7kX"]);
             obj9.onPress = tmp6;
-            items1[2] = closure_7(tmp(5244).Button, obj9);
+            items1[2] = closure_7(tmp(5245).Button, obj9);
             obj6.children = items1;
             tmp18 = closure_8(closure_5, obj6);
           } else {
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = requestId;
       cResult[5] = obj11;
       tmp8 = obj11;
-      const tmpResult = navigation(12304);
+      const tmpResult = navigation(12310);
     }
   : function ConjureHomeScreen(navigation) {
       navigation = navigation.navigation;

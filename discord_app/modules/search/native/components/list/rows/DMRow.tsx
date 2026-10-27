@@ -6,7 +6,7 @@ import UserUtilsDefault from "../../../../../../utils/UserUtils.tsx";
 import _modDef8991 from "../../../../../../../_runtime/metro/08991__.js";
 import BotTagDefault from "../../../../../applications/native/BotTag.tsx";
 import ActivityStatusDefault from "../../../../../activity_status/native/ActivityStatus.tsx";
-import _modDef14812 from "../../../../../../../_runtime/metro/14812__.js";
+import _modDef14848 from "../../../../../../../_runtime/metro/14848__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
@@ -14,16 +14,16 @@ import AccessibilityStore from "../../../../../a11y/AccessibilityStore.tsx";
 import PresenceStore from "../../../../../../stores/PresenceStore.tsx";
 import RelationshipStore from "../../../../../../stores/RelationshipStore.tsx";
 
-const UserUtils = Text(5025);
-const Text_Text = Text(5234);
+const UserUtils = Text(5026);
+const Text_Text = Text(5235);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ActivityIndicator: closure_7 } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ StatusTypes: closure_11, RelationshipTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   activityStatusIcon: { width: 14, height: 14 },
   activityStatusText: { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" },
@@ -246,7 +246,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef14812, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef14848, disableColor: true };
         obj6.children = map1(native.Icon, obj7);
         tmp4Result3 = map1(timestampProducer, obj6);
       }

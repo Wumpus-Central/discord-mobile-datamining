@@ -9,4 +9,5 @@ export const GameSearchSurface = {
   CREATE_CHANNEL: "create_channel",
   DETECTION_REPORT: "detection_report",
   CHAT_MENTION: "chat_mention",
+  INTEREST_PICKER: "interest_picker",
 };

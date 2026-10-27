@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   qrCode: {
     display: "flex",
@@ -67,7 +67,7 @@ QRCode.prototype["render"] = function render() {
   obj.children = closure_1_8(hasOwnProperty, obj2);
   return React5(hasOwnProperty, obj);
 };
-QRCode.contextType = fn(5037).ThemeContext;
+QRCode.contextType = fn(5038).ThemeContext;
 QRCode.defaultProps = { size: 128, bgColor: "#ffffff", fgColor: "#000000" };
 const PureComponent2 = noop.PureComponent;
 class QRCodeWithOverlay extends PureComponent2 {}
@@ -98,7 +98,7 @@ QRCodeWithOverlay.prototype["render"] = function render() {
   obj.children = items;
   return closure_1_8(hasOwnProperty, obj);
 };
-QRCodeWithOverlay.contextType = fn(5037).ThemeContext;
+QRCodeWithOverlay.contextType = fn(5038).ThemeContext;
 QRCodeWithOverlay.defaultProps = { size: 144, bgColor: "#ffffff", fgColor: "#000000" };
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/QRCode.tsx");

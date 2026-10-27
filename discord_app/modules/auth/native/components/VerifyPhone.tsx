@@ -7,14 +7,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-let closure_6 = fn(17362).doesRegistrationHaveIdentityType;
-const RegistrationConstants = fn(17363);
+let closure_6 = fn(17403).doesRegistrationHaveIdentityType;
+const RegistrationConstants = fn(17404);
 ({
   authStateToRegisterTransitionStep: closure_7,
   RegisterTransitionSteps: closure_8,
   RegistrationTransitionActionTypes: closure_9,
 } = RegistrationConstants);
-const Links = fn(1087).Links;
+const Links = fn(1084).Links;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -174,7 +174,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_7 = noop.useRef(false);
       const context = noop.useContext(require("Auth").TrackRegistrationContext);
       const tmp4 = _slicedToArray(noop.useState(false), 2);
-      onPhoneTokenReceived(17379)(closure_7(sourceState));
+      onPhoneTokenReceived(17420)(closure_7(sourceState));
       const items = [context];
       const effect = noop.useEffect(() => {
         if (_undefined()) {
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           context(obj);
         }
       }, items);
-      onPhoneTokenReceived(5263)(() => () => {
+      onPhoneTokenReceived(5264)(() => () => {
         let tmpResult;
         if (dependencyMap != null) {
           tmpResult = tmp(ref.current);
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (v3()) {
           context({ step: context.PHONE_VERIFICATION, actionType: callback.SUBMITTED });
         }
-        yield onPhoneTokenReceived(7140).verifyPhone(closure_0, closure_0, false);
+        yield onPhoneTokenReceived(7142).verifyPhone(closure_0, closure_0, false);
         if (1 === tmp7) {
           v0 = 0;
           closure_129_1 = closure_3;
@@ -210,8 +210,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             message = body.message;
           }
           if (!message) {
-            const intl = closure_0(1128).intl;
-            message = intl.format(closure_0(1128).t.aTVNes, { statusPageURL: constants.STATUS });
+            const intl = closure_0(1125).intl;
+            message = intl.format(closure_0(1125).t.aTVNes, { statusPageURL: constants.STATUS });
           }
           _undefined(message);
           v3 = 3;
@@ -299,7 +299,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return applyArgumentsResult;
       }, items2);
-      onPhoneTokenReceived(7174)(callback1);
+      onPhoneTokenReceived(7176)(callback1);
       const items3 = [onBail];
       const memo = noop.useMemo(() => {
         let tmp2 = null;
@@ -320,11 +320,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         loading: null,
         disableKeyboardAvoidingView: true,
       };
-      const tmp7 = onPhoneTokenReceived(17379);
+      const tmp7 = onPhoneTokenReceived(17420);
       obj.codeType = require("CodeField").CodeType.NUMERIC;
       obj.footer = memo;
       obj.disabled = tmp5;
-      return jsx(onPhoneTokenReceived(7175), {
+      return jsx(onPhoneTokenReceived(7177), {
         title,
         description,
         error: tmp3,

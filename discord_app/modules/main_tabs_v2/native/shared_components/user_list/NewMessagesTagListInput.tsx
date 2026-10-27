@@ -12,7 +12,7 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   searchBarContainer: {
     paddingHorizontal: nativeDefault.space.PX_16,
@@ -23,7 +23,7 @@ let obj = {
   showSearchButton: null,
 };
 let obj4 = { marginLeft: nativeDefault.space.PX_12, marginBottom: null };
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
@@ -57,8 +57,8 @@ export default noop.memo(
             items = [];
           }
           const mapped = items.map(UserStore.getUser);
-          const found = mapped.filter(onSelectUser(1388).isNotNullish);
-          const mapped1 = found.map(tags(10619));
+          const found = mapped.filter(onSelectUser(1385).isNotNullish);
+          const mapped1 = found.map(tags(10622));
           cResult[0] = selectedUserIds;
           cResult[1] = mapped1;
           tags = mapped1;
@@ -74,8 +74,8 @@ export default noop.memo(
                 }
                 const _Symbol = Symbol;
                 if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-                  const intl2 = onSelectUser(1128).intl;
-                  const stringResult = intl2.string(onSelectUser(1128).t.kHyiXs);
+                  const intl2 = onSelectUser(1125).intl;
+                  const stringResult = intl2.string(onSelectUser(1125).t.kHyiXs);
                   cResult[8] = stringResult;
                   let tmp16 = stringResult;
                 } else {
@@ -89,7 +89,7 @@ export default noop.memo(
                     accessible: false,
                     children: tmp16,
                   };
-                  const tmp20 = jsx(onSelectUser(5234).Text, {
+                  const tmp20 = jsx(onSelectUser(5235).Text, {
                     style: tmp4.header,
                     variant: "text-sm/medium",
                     color: "text-muted",
@@ -108,8 +108,8 @@ export default noop.memo(
                   }
                   const _Symbol2 = Symbol;
                   if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                    const intl3 = onSelectUser(1128).intl;
-                    const stringResult1 = intl3.string(onSelectUser(1128).t.CaEER6);
+                    const intl3 = onSelectUser(1125).intl;
+                    const stringResult1 = intl3.string(onSelectUser(1125).t.CaEER6);
                     cResult[14] = stringResult1;
                     let tmp22 = stringResult1;
                   } else {
@@ -201,9 +201,9 @@ export default noop.memo(
         if (!hasQuery) {
           tmp11 = null;
           if (tags.length > 0) {
-            let intl = onSelectUser(1128).intl;
+            let intl = onSelectUser(1125).intl;
             const string = intl.string;
-            const t = onSelectUser(1128).t;
+            const t = onSelectUser(1125).t;
             if (forceSearchResults) {
               let stringResult2 = string(t["4wv+DE"]);
             } else {
@@ -217,12 +217,12 @@ export default noop.memo(
               children: null,
             };
             if (forceSearchResults) {
-              let CirclePlusIcon = onSelectUser(13257).ChevronLargeRightIcon;
+              let CirclePlusIcon = onSelectUser(13271).ChevronLargeRightIcon;
             } else {
-              CirclePlusIcon = onSelectUser(11157).CirclePlusIcon;
+              CirclePlusIcon = onSelectUser(11160).CirclePlusIcon;
             }
             obj5.children = <CirclePlusIcon size="xs" />;
-            jsx(onSelectUser(6908).PressableOpacity, {
+            jsx(onSelectUser(6910).PressableOpacity, {
               accessibilityRole: "button",
               accessibilityLabel: stringResult2,
               onPress: onForceSearchResults,

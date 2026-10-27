@@ -11,19 +11,22 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
-  containerOuter: { flex: 1, overflow: "hidden" },
-  containerOuterTablet: {
-    backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
-    paddingHorizontal: nativeDefault.space.PX_8,
-    borderRadius: nativeDefault.radii.md,
-    flex: 1,
-  },
-  container: { flex: 1 },
+  containerOuter: { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
+  containerOuterTablet: null,
+  container: null,
   containerTablet: null,
 };
-let obj3 = {
+let obj3 = { flex: 1, overflow: "hidden", backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
+obj2.containerOuterTablet = {
+  backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
+  paddingHorizontal: nativeDefault.space.PX_8,
+  borderRadius: nativeDefault.radii.md,
+  flex: 1,
+};
+obj2.container = { flex: 1 };
+let obj4 = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST,
   paddingHorizontal: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
@@ -32,7 +35,7 @@ let obj3 = {
 obj2.containerTablet = { borderRadius: nativeDefault.radii.md, overflow: "hidden", flex: 1 };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj4 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", flex: 1 };
+let obj5 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", flex: 1 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/settings/Settings.tsx");
 

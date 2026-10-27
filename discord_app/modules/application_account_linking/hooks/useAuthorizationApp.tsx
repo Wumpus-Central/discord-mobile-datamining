@@ -8,7 +8,7 @@ import ApplicationRecord from "../../../records/ApplicationRecord.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ApplicationTypes = fn(1375).ApplicationTypes;
+const ApplicationTypes = fn(1372).ApplicationTypes;
 const ReactCompilerGating = fn(558);
 function getAuthorizationApp(application) {
   if (null == application) {

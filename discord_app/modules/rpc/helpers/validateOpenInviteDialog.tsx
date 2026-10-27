@@ -10,7 +10,7 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
-const RPCErrors = fn(1087).RPCErrors;
+const RPCErrors = fn(1084).RPCErrors;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/validateOpenInviteDialog.tsx");
 

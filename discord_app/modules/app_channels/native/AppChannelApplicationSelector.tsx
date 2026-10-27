@@ -1,5 +1,5 @@
 // discord_app/modules/app_channels/native/AppChannelApplicationSelector.tsx
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AppChannelApplicationActionSheet from "AppChannelApplicationActionSheet.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";

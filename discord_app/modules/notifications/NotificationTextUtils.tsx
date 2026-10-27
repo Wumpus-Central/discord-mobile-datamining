@@ -162,9 +162,9 @@ function getInviteEmbedFormatString(type, _TD0la, _TD0la2, _TD0la3) {
     return _TD0la;
   }
 }
-const ChannelRecord = fn(4827);
+const ChannelRecord = fn(4828);
 ({ GUILD_VOCAL_CHANNEL_TYPES: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({
   ActivityActionTypes: closure_21,
   ChannelTypes: closure_22,
@@ -174,8 +174,8 @@ const Constants = fn(1087);
   StatusTypes: closure_26,
   UserFlags: closure_27,
 } = Constants);
-const ActivityPanelModes = fn(5609).ActivityPanelModes;
-const ThreadMemberFlags = fn(1127).ThreadMemberFlags;
+const ActivityPanelModes = fn(5610).ActivityPanelModes;
+const ThreadMemberFlags = fn(1124).ThreadMemberFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/NotificationTextUtils.tsx");

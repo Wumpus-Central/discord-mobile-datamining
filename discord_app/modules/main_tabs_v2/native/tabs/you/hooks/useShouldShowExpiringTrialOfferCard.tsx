@@ -7,8 +7,8 @@ import usePremiumTrialOffer from "../../../../../premium/hooks/usePremiumTrialOf
 import NoticeStore from "../../../../../premium/native/NoticeStore.tsx";
 
 require = fn;
-const NoticeTypes = fn(1087).NoticeTypes;
-const PremiumSubscriptionSKUs = fn(1394).PremiumSubscriptionSKUs;
+const NoticeTypes = fn(1084).NoticeTypes;
+const PremiumSubscriptionSKUs = fn(1391).PremiumSubscriptionSKUs;
 let closure_6 = 10 * DurationsDefault.Millis.SECOND;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

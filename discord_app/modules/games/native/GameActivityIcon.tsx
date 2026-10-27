@@ -5,13 +5,13 @@ import native from "../../../../discord_common/js/packages/design/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const AvatarUtils = UnknownGameIcon(1417);
-const shared = UnknownGameIcon(4978);
-const UnknownGameIcon2 = UnknownGameIcon(8074);
+const AvatarUtils = UnknownGameIcon(1414);
+const shared = UnknownGameIcon(4979);
+const UnknownGameIcon2 = UnknownGameIcon(8072);
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { icon: { borderRadius: nativeDefault.radii.xs } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);

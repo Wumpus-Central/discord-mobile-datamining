@@ -64,8 +64,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl = tmp(1128).intl;
-              const stringResult = intl.string(tmp(1128).t["9x1v/p"]);
+              const intl = tmp(1125).intl;
+              const stringResult = intl.string(tmp(1125).t["9x1v/p"]);
               class P {
                 constructor() {
                   items = [,];
@@ -92,8 +92,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               if (tmp29 === Symbol.for("react.memo_cache_sentinel")) {
-                const intl2 = tmp(1128).intl;
-                const stringResult1 = intl2.string(tmp(1128).t.TiLCgw);
+                const intl2 = tmp(1125).intl;
+                const stringResult1 = intl2.string(tmp(1125).t.TiLCgw);
                 class P {
                   constructor() {
                     items = [,];
@@ -125,8 +125,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const _Symbol2 = Symbol;
               let preview = tmp14.preview;
               if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl3 = tmp(1128).intl;
-                const stringResult2 = intl3.string(tmp(1128).t["1vbbee"]);
+                const intl3 = tmp(1125).intl;
+                const stringResult2 = intl3.string(tmp(1125).t["1vbbee"]);
                 class P {
                   constructor() {
                     items = [,];
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmp11 = _slicedToArray(stateFromStores(573).useStateFromStoresArray(tmp8, tmp9), 2);
-      let profileEffects = stateFromStores(7662).getProfileEffects(stateFromStores, tmp12);
+      let profileEffects = stateFromStores(7663).getProfileEffects(stateFromStores, tmp12);
       if (cResult[10] === tmp13) {
         if (cResult[11] === stateFromStores) {
           let tmp17 = cResult[12];
@@ -270,7 +270,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = stateFromStores;
       cResult[12] = U;
       tmp17 = U;
-      const tmpResult4 = stateFromStores(7662);
+      const tmpResult4 = stateFromStores(7663);
     }
   : function useProfileEffectSections() {
       let obj = stateFromStores(573);
@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       dependencyMap = tmp4;
       const items2 = [first, tmp2[1], stateFromStores];
       obj2 = stateFromStores(573);
-      return first(14489)(
+      return first(14525)(
         useMemo(() => {
           let obj = CollectiblesUtils;
           const profileEffects = obj.getProfileEffects(stateFromStores, first);

@@ -5,7 +5,7 @@ import GuildChannelStore from "../../stores/GuildChannelStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx");

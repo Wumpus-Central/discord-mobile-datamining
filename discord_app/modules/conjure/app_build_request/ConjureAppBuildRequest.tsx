@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/app_build_request/ConjureAppBuildRequest.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3830 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
 import createNonce from "../../messages/createNonce.tsx";
 import conjureAttachmentDrafts from "../chat/conjureAttachmentDrafts.tsx";
 import useConjureProjectPickerOptionsDefault from "../clarification/useConjureProjectPickerOptions.tsx";
@@ -29,12 +29,12 @@ function sentMessage(arr) {
   arr = Array.from(map, (arg0) => {
     [tmp, arr] = arg0;
     const mapped = arr.map((name) => {
-      const intl = closure_1_0(1128).intl;
-      return intl.formatToPlainString(closure_1_1(3830).tcDZw9, { name: name.name, projectId: name.projectId });
+      const intl = closure_1_0(1125).intl;
+      return intl.formatToPlainString(closure_1_1(3831).tcDZw9, { name: name.name, projectId: name.projectId });
     });
     const targets = mapped.join(", ");
     let intl = require("util").intl;
-    return "" + intl.formatToPlainString(_modDef3830.jZlNst, { targets }) + "\n\n" + tmp;
+    return "" + intl.formatToPlainString(_modDef3831.jZlNst, { targets }) + "\n\n" + tmp;
   });
   return arr.join("\n\n");
 }
@@ -49,7 +49,7 @@ export const appBuildRequestSentToast = function appBuildRequestSentToast(arr) {
   const obj = { names: null };
   const mapped = arr.map((name) => name.name);
   obj.names = mapped.join(", ");
-  return intl.formatToPlainString(_modDef3830.RZO35O, obj);
+  return intl.formatToPlainString(_modDef3831.RZO35O, obj);
 };
 export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjureAppBuildRequestForm(arg0, prompt, arg2, arg3, arg4) {
@@ -183,11 +183,11 @@ export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompiler
                               if (name == null) {
                                 name = tmp8;
                               }
-                              const intl = content(1128).intl;
+                              const intl = content(1125).intl;
                               let obj = { name, projectId: content };
                               const _HermesInternal = HermesInternal;
                               content =
-                                "" + closure_15 + "\n\n" + intl.formatToPlainString(closure_1(3830).ScoZLp, obj);
+                                "" + closure_15 + "\n\n" + intl.formatToPlainString(closure_1(3831).ScoZLp, obj);
                               Promise.allSettled(
                                 arr7.map((projectId) => {
                                   const current = ref.current;
@@ -475,10 +475,10 @@ export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompiler
               if (name == null) {
                 name = tmp8;
               }
-              const intl = content(1128).intl;
+              const intl = content(1125).intl;
               let obj = { name, projectId: content };
               const _HermesInternal = HermesInternal;
-              content = "" + trimmed + "\n\n" + intl.formatToPlainString(_prompt(3830).ScoZLp, obj);
+              content = "" + trimmed + "\n\n" + intl.formatToPlainString(_prompt(3831).ScoZLp, obj);
               Promise.allSettled(
                 memo3.map((projectId) => {
                   const current = ref.current;

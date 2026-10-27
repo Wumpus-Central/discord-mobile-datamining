@@ -12,7 +12,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const TooltipArrowDirections = { UP: "UP", DOWN: "DOWN" };
 let obj2 = { CENTER: "CENTER", RIGHT: "RIGHT", LEFT: "LEFT" };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj4 = {
   container: {
     padding: 10,
@@ -34,7 +34,7 @@ let obj5 = {
   alignItems: "center",
   backgroundColor: nativeDefault.colors.BACKGROUND_BRAND,
 };
-obj4.label = { fontFamily: fn(1087).Fonts.PRIMARY_MEDIUM, fontSize: 12, color: nativeDefault.colors.WHITE };
+obj4.label = { fontFamily: fn(1084).Fonts.PRIMARY_MEDIUM, fontSize: 12, color: nativeDefault.colors.WHITE };
 obj4.title = { marginBottom: 4 };
 let size = {
   width: 0,
@@ -48,7 +48,7 @@ let size = {
 obj4.arrow = size;
 let closure_8 = createStyles.createStyles(obj4);
 const ReactCompilerGating = fn(558);
-let obj6 = { fontFamily: fn(1087).Fonts.PRIMARY_MEDIUM, fontSize: 12, color: nativeDefault.colors.WHITE };
+let obj6 = { fontFamily: fn(1084).Fonts.PRIMARY_MEDIUM, fontSize: 12, color: nativeDefault.colors.WHITE };
 size = fn(2);
 const result = size.fileFinishedImporting("design/void/Tooltip/native/Tooltip.tsx");
 

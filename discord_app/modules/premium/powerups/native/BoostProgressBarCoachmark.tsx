@@ -1,15 +1,15 @@
 // discord_app/modules/premium/powerups/native/BoostProgressBarCoachmark.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2568 from "../GuildPowerups.messages.js";
+import _modDef2567 from "../GuildPowerups.messages.js";
 import BoostThisServerRive from "../../../../../discord_common/js/packages/design/components/Rive/native/generated/BoostThisServerRive.tsx";
 import GuildSettingsActionCreatorsDefault from "../../../guild_settings/GuildSettingsActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_7 = createStyles.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -38,10 +38,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1128).intl;
-          const stringResult = intl.string(markAsDismissed(2568).uwV2dH);
-          const intl2 = tmp(1128).intl;
-          const stringResult1 = intl2.string(markAsDismissed(2568).MIwlcR);
+          const intl = tmp(1125).intl;
+          const stringResult = intl.string(markAsDismissed(2567).uwV2dH);
+          const intl2 = tmp(1125).intl;
+          const stringResult1 = intl2.string(markAsDismissed(2567).MIwlcR);
           cResult[5] = stringResult;
           cResult[6] = stringResult1;
           let tmp9 = stringResult1;
@@ -66,8 +66,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol2 = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl3 = tmp(1128).intl;
-          const stringResult2 = intl3.string(tmp(1128).t["0CJWP2"]);
+          const intl3 = tmp(1125).intl;
+          const stringResult2 = intl3.string(tmp(1125).t["0CJWP2"]);
           cResult[9] = stringResult2;
           let tmp14 = stringResult2;
         } else {
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[12] === tmp13) {
               let tmp16 = cResult[13];
             }
-            const coachmark = tmp(9840).useCoachmark(guild.targetRef, tmp16);
+            const coachmark = tmp(9842).useCoachmark(guild.targetRef, tmp16);
             return null;
           }
         }
@@ -139,9 +139,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onButtonPress: null,
         };
         const intl = util.intl;
-        obj.title = intl.string(_modDef2568.uwV2dH);
+        obj.title = intl.string(_modDef2567.uwV2dH);
         const intl2 = util.intl;
-        obj.description = intl2.string(_modDef2568.MIwlcR);
+        obj.description = intl2.string(_modDef2567.MIwlcR);
         obj.onDismiss = onDismiss;
         obj.renderImgComponent = function renderImgComponent() {
           return (
@@ -155,6 +155,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.onButtonPress = callback1;
         return obj;
       }, items2);
-      const coachmark = guild(9840).useCoachmark(guild.targetRef, memo);
+      const coachmark = guild(9842).useCoachmark(guild.targetRef, memo);
       return null;
     };

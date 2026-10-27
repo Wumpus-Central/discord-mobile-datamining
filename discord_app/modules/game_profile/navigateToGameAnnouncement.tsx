@@ -150,7 +150,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ GuildFeatures: hasOwnProperty, JoinGuildSources: metroRequire, Routes: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/navigateToGameAnnouncement.tsx");

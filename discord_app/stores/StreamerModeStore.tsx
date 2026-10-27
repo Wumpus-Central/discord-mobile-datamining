@@ -6,7 +6,7 @@ import OverlayV3Experiment from "../modules/overlay/OverlayV3Experiment.tsx";
 import AuthenticationStore from "AuthenticationStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 let obj = {
   enabled: false,
   autoToggle: true,

@@ -15,10 +15,10 @@ const require = globalThis.__r;
 let closure_10 = ContentImpressionTrackerConstants.MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN;
 let result = size.fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
 
-export const getBrandSafetyContext = function getBrandSafetyContext(questContent) {
-  const result = require("QuestDataUtils").isBillableQuestContent(questContent);
+export const getBrandSafetyContext = function getBrandSafetyContext(surfaceId) {
+  const result = require("QuestDataUtils").isBillableQuestContent(surfaceId);
   let obj = require("QuestDataUtils");
-  const adContext = require("QuestDataUtils").getAdContext(questContent);
+  const adContext = require("QuestDataUtils").getAdContext(surfaceId);
   const tmp4 = closure_4();
   const tmp5 = closure_3();
   let prop;

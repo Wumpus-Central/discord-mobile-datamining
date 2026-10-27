@@ -20,7 +20,7 @@ let obj = Object.create(
     obj.cancelled = false;
     obj.push = function push() {
       obj = ModalActionCreatorsDefault;
-      obj.pushLazy(obj(2002)(18885, dependencyMap.paths), {}, c7);
+      obj.pushLazy(obj(1999)(18923, dependencyMap.paths), {}, c7);
       if (obj.cancelled) {
         ModalActionCreatorsDefault.popWithKey(c7);
         const tmpResult = ModalActionCreatorsDefault;
@@ -28,14 +28,14 @@ let obj = Object.create(
     };
     obj.enqueue = function enqueue() {
       obj.cancelled = false;
-      obj = obj(5151);
+      obj = obj(5152);
       const rootNavigationRef = obj.getRootNavigationRef();
       if (null != rootNavigationRef) {
         if (rootNavigationRef.isReady()) {
           arr.push();
         }
       }
-      const ComponentDispatch = obj(1123).ComponentDispatch;
+      const ComponentDispatch = obj(1120).ComponentDispatch;
       ComponentDispatch.subscribeOnce(constants.NAVIGATOR_READY, () => {
         if (!cancelled.cancelled) {
           cancelled.push();
@@ -54,7 +54,7 @@ let obj = Object.create(
 obj.cancelled = false;
 obj.push = function push() {
   obj = ModalActionCreatorsDefault;
-  obj.pushLazy(obj(2002)(18885, dependencyMap.paths), {}, c7);
+  obj.pushLazy(obj(1999)(18923, dependencyMap.paths), {}, c7);
   if (obj.cancelled) {
     ModalActionCreatorsDefault.popWithKey(c7);
     const tmpResult = ModalActionCreatorsDefault;
@@ -62,14 +62,14 @@ obj.push = function push() {
 };
 obj.enqueue = function enqueue() {
   obj.cancelled = false;
-  obj = obj(5151);
+  obj = obj(5152);
   const rootNavigationRef = obj.getRootNavigationRef();
   if (null != rootNavigationRef) {
     if (rootNavigationRef.isReady()) {
       arr.push();
     }
   }
-  const ComponentDispatch = obj(1123).ComponentDispatch;
+  const ComponentDispatch = obj(1120).ComponentDispatch;
   ComponentDispatch.subscribeOnce(constants.NAVIGATOR_READY, () => {
     if (!cancelled.cancelled) {
       cancelled.push();
@@ -102,30 +102,30 @@ prototype["onSwitchStart"] = function onSwitchStart() {
 prototype["onSwitchSuccess"] = function onSwitchSuccess(currentUser, navigateHome) {
   const user = currentUser;
   if (navigateHome) {
-    user(1114).transitionTo(constants2.ME, { navigationReplace: true });
-    const MobileHomeDrawerExperiment = user(5156).MobileHomeDrawerExperiment;
+    user(1111).transitionTo(constants2.ME, { navigationReplace: true });
+    const MobileHomeDrawerExperiment = user(5157).MobileHomeDrawerExperiment;
     if (MobileHomeDrawerExperiment.getConfig({ location: "multi-account" }).enableHome) {
-      tmp(5150).setHomeDrawerState(false);
-      const tmpResult = tmp(5150);
+      tmp(5151).setHomeDrawerState(false);
+      const tmpResult = tmp(5151);
     }
-    obj = user(1114);
+    obj = user(1111);
     tmp = user;
   }
   const timerId = setTimeout(() => {
     obj = ToastActionCreatorsDefault;
     const obj2 = { text: null, icon: null };
-    const intl = obj(1128).intl;
-    obj2.text = intl.formatToPlainString(obj(1128).t.wx7O3L, { username: user.username });
-    obj2.icon = obj(18887).ArrowsLeftRightIcon;
+    const intl = obj(1125).intl;
+    obj2.text = intl.formatToPlainString(obj(1125).t.wx7O3L, { username: user.username });
+    obj2.icon = obj(18925).ArrowsLeftRightIcon;
     obj.open("SWITCH_ACCOUNTS_TOAST_LOGIN_SUCCESS", obj2);
   }, 100);
 };
 prototype["onSwitchError"] = function onSwitchError() {
   obj = ToastActionCreatorsDefault;
   const obj2 = { text: null, icon: null };
-  const intl = obj(1128).intl;
-  obj2.text = intl.string(obj(1128).t.pqvKWA);
-  obj2.icon = obj(18887).ArrowsLeftRightIcon;
+  const intl = obj(1125).intl;
+  obj2.text = intl.string(obj(1125).t.pqvKWA);
+  obj2.icon = obj(18925).ArrowsLeftRightIcon;
   obj.open("SWITCH_ACCOUNTS_TOAST_LOGIN_ERROR", obj2);
 };
 prototype["onSwitchComplete"] = function onSwitchComplete() {

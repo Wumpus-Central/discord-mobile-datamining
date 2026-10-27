@@ -7,7 +7,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
 require = fn;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/validateJumpWithAlert.tsx");
 

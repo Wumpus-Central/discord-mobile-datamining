@@ -1,7 +1,7 @@
 // discord_app/modules/rtc/SecureFramesPlatformUtils.native.tsx
 import util from "../../intl/index.native.tsx";
 import native from "../../design/void/native.tsx";
-import asyncRequireImpl from "../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import actions_AlertActionCreatorsDefault from "../../actions/native/AlertActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
@@ -16,7 +16,7 @@ const SecureFramesConstants = fn(9197);
   SECURE_FRAMES_STREAM_VERIFICATION_BOTTOM_SHEET_KEY: metroRequire,
   SECURE_FRAMES_USER_VERIFICATION_MODAL_KEY: closure_7,
 } = SecureFramesConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ME: closure_8, Routes: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/SecureFramesPlatformUtils.native.tsx");

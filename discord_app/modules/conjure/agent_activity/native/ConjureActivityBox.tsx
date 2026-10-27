@@ -12,17 +12,17 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
-  activityBox: { marginLeft: -fn(12337).RAIL_INDENT },
+  activityBox: { marginLeft: -fn(12343).RAIL_INDENT },
   activityDetail: null,
   stepDetail: null,
   stepLine: null,
   stepCommand: null,
 };
-let obj3 = { marginLeft: -fn(12337).RAIL_INDENT };
-obj2.activityDetail = { paddingLeft: fn(12337).RAIL_INDENT };
-let obj4 = { paddingLeft: fn(12337).RAIL_INDENT };
+let obj3 = { marginLeft: -fn(12343).RAIL_INDENT };
+obj2.activityDetail = { paddingLeft: fn(12343).RAIL_INDENT };
+let obj4 = { paddingLeft: fn(12343).RAIL_INDENT };
 obj2.stepDetail = {
   marginTop: nativeDefault.space.PX_4,
   paddingLeft: nativeDefault.space.PX_12,
@@ -38,7 +38,7 @@ let obj5 = {
   gap: 2,
 };
 obj2.stepLine = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
-obj2.stepCommand = { fontFamily: fn(1087).Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 18 };
+obj2.stepCommand = { fontFamily: fn(1084).Fonts.CODE_NORMAL, fontSize: 12, lineHeight: 18 };
 let closure_8 = createStyles.createStyles(obj2);
 fn(558);
 let obj6 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -649,11 +649,11 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = flatMapResult;
       } else {
         if (cResult[3] !== node) {
-          const describeNodeResult = node(12295).describeNode(node);
+          const describeNodeResult = node(12301).describeNode(node);
           cResult[3] = node;
           cResult[4] = describeNodeResult;
           let tmp11 = describeNodeResult;
-          let tmpResult = node(12295);
+          let tmpResult = node(12301);
         } else {
           tmp11 = cResult[4];
         }
@@ -671,10 +671,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = {
               variant: "text-xs/normal",
               color: "text-subtle",
-              children: node(11770).describeDuration(node.durationMs),
+              children: node(11771).describeDuration(node.durationMs),
             };
-            tmp15 = closure_6(node(5234).Text, obj2);
-            const tmpResult2 = node(11770);
+            tmp15 = closure_6(node(5235).Text, obj2);
+            const tmpResult2 = node(11771);
           }
           cResult[5] = node.durationMs;
           cResult[6] = tmp15;
@@ -857,7 +857,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         trailing: null,
       };
       let tmp7 = ConjureNativeStatusLineDefault;
-      obj.line = node(12295).describeNode(node);
+      obj.line = node(12301).describeNode(node);
       obj.live = flag2;
       let tmp9 = !flag2;
       if (!flag2) {
@@ -878,10 +878,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = {
           variant: "text-xs/normal",
           color: "text-subtle",
-          children: node(11770).describeDuration(node.durationMs),
+          children: node(11771).describeDuration(node.durationMs),
         };
-        tmp4Result = closure_6(node(5234).Text, obj3);
-        const tmp8Result = node(11770);
+        tmp4Result = closure_6(node(5235).Text, obj3);
+        const tmp8Result = node(11771);
       }
       obj.trailing = tmp4Result;
       const children = [closure_6(tmp7, obj), ,];

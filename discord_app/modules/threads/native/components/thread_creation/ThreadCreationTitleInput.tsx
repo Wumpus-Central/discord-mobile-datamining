@@ -5,7 +5,7 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 const require = fn;
-const MAX_CHANNEL_NAME_LENGTH = fn(1087).MAX_CHANNEL_NAME_LENGTH;
+const MAX_CHANNEL_NAME_LENGTH = fn(1084).MAX_CHANNEL_NAME_LENGTH;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

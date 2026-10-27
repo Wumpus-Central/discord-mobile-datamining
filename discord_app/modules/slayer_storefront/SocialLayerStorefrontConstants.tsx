@@ -21,6 +21,11 @@ export const SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL_TYPE = "Social Layer Gift Code C
 export const SOCIAL_LAYER_STOREFRONT_PRODUCT_DETAILS_MODAL_TYPE = "Social Layer Storefront Product Details Modal";
 export const MARVEL_RIVALS_APPLICATION_ID = "1346069614634864772";
 export const RUST_APPLICATION_ID = "1288512934112264234";
+export const BLOONS_TD6_SPLIT_TENDER_COUPON_SKU_IDS = new Set([
+  "1560340689907089505",
+  "1560711732412940429",
+  "1560711810007699506",
+]);
 export const SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM = 14;
 export const SOCIAL_LAYER_COMMERCE_PARTNER_DOCUMENTATION_URL = "https://docs.discord.com/partners/commerce/overview";
 export const getChannelsGameShopPrefix = function getChannelsGameShopPrefix(arg0) {

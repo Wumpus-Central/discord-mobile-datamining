@@ -8,7 +8,7 @@ import ForumSearchStore from "../ForumSearchStore.tsx";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_8 = createStyles.createStyles({
   inputContainer: { flexGrow: 1, marginLeft: 8 },
   cancelButtonContainer: { paddingLeft: 8 },
@@ -144,7 +144,7 @@ export const ForumChannelSearchInput = noop.memo(
         const guildId = channelId.guildId;
         closure_8();
         let obj = channelId(576);
-        const canSearchForumPostsByChannelId = channelId(14009).useCanSearchForumPostsByChannelId(channelId);
+        const canSearchForumPostsByChannelId = channelId(14023).useCanSearchForumPostsByChannelId(channelId);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [ForumSearchStore];
           cResult[0] = items;
@@ -170,7 +170,7 @@ export const ForumChannelSearchInput = noop.memo(
           tmp8 = cResult[2];
           tmp9 = cResult[3];
         }
-        let obj2 = channelId(14009);
+        let obj2 = channelId(14023);
         const stateFromStores = channelId(504).useStateFromStores(first, tmp8, tmp9);
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const items2 = [ChannelStore];
@@ -288,8 +288,8 @@ export const ForumChannelSearchInput = noop.memo(
         channelId = channelId.channelId;
         ({ guildId: importDefault, placeholder } = channelId);
         const tmp = closure_8();
-        const canSearchForumPostsByChannelId = channelId(14009).useCanSearchForumPostsByChannelId(channelId);
-        let obj = channelId(14009);
+        const canSearchForumPostsByChannelId = channelId(14023).useCanSearchForumPostsByChannelId(channelId);
+        let obj = channelId(14023);
         const items = [ForumSearchStore];
         const items1 = [channelId];
         const stateFromStores = channelId(504).useStateFromStores(
@@ -342,8 +342,8 @@ export const ForumChannelSearchInput = noop.memo(
               obj3.children = <tmp10 {...obj4} />;
               tmp8Result = <View {...obj3} />;
             } else {
-              const intl = tmp2(1128).intl;
-              const t = tmp2(1128).t;
+              const intl = tmp2(1125).intl;
+              const t = tmp2(1125).t;
               intl.string(tmp6 ? t["5h0QOP"] : t.Iy2gnS);
             }
           }

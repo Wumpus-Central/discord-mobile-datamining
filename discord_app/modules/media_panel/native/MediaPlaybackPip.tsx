@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../_runtime/05258_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05259_LinearGradient.js";
 import useChannelName from "../../channel/useChannelName.tsx";
 import safeTransitionToDefault from "../../links/safeTransitionTo.native.tsx";
 import MessageActionCreatorsDefault from "../../../actions/MessageActionCreators.tsx";
@@ -20,12 +20,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Easing: hasOwnProperty, StyleSheet, TouchableOpacity: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_12, MessageFlags: map1, Routes: closure_14 } = Constants);
-const SquarePIPReferenceDimensions = fn(18456).SquarePIPReferenceDimensions;
+const SquarePIPReferenceDimensions = fn(18490).SquarePIPReferenceDimensions;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: {
     justifyContent: "center",
@@ -90,7 +90,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       ({ activeMediaPlayerSource, isVoiceMessage, isControlVisible } = message);
       const tmp4 = closure_17();
       let obj = message(576);
-      const token = message(5252).useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
+      const token = message(5253).useToken(nativeDefault.colors.BACKGROUND_SURFACE_HIGH);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore, UserStore, RelationshipStore];
         cResult[0] = items;
@@ -134,7 +134,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp14 = cResult[4];
       }
-      const obj2 = message(5252);
+      const obj2 = message(5253);
       const stateFromStores = message(504).useStateFromStores(first, tmp12, tmp14);
       const tmpResult = message(504);
       [tmp17, importDefault] = noop.useState(0);
@@ -174,7 +174,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                   onLayout: R,
                   children: tmp20,
                 };
-                const tmp27 = closure_15(tmp(5234).Text, obj3);
+                const tmp27 = closure_15(tmp(5235).Text, obj3);
                 cResult[11] = tmp20;
                 cResult[12] = tmp27;
               } else {
@@ -215,7 +215,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj4 = { style: { flex: 1 }, children: null };
                 const obj5 = { spacing: 20, speed: 0.2, children: tmp26 };
-                const items2 = [closure_15(tmp(18676).Marquee, obj5)];
+                const items2 = [closure_15(tmp(18712).Marquee, obj5)];
                 const obj6 = {
                   start: { x: 0, y: 0 },
                   end: { x: 1, y: 0 },
@@ -287,8 +287,8 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       noop = undefined;
       ({ isVoiceMessage, isControlVisible } = message);
       const tmp = closure_17();
-      const token = message(5252).useToken(first(587).colors.BACKGROUND_SURFACE_HIGH);
-      let obj = message(5252);
+      const token = message(5253).useToken(first(587).colors.BACKGROUND_SURFACE_HIGH);
+      let obj = message(5253);
       const items = [ChannelStore, UserStore, RelationshipStore];
       const items1 = [message];
       const stateFromStores = message(504).useStateFromStores(
@@ -342,7 +342,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               },
               children: str2,
             };
-            const tmp14 = closure_15(tmp2(5234).Text, obj3);
+            const tmp14 = closure_15(tmp2(5235).Text, obj3);
             const obj4 = {
               accessibilityElementsHidden: isControlVisible,
               style: tmp.infoContent,
@@ -356,7 +356,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             if (memo) {
               const obj6 = { style: { flex: 1 }, children: null };
               const obj7 = { spacing: 20, speed: 0.2, children: tmp14 };
-              const items3 = [closure_15(tmp2(18676).Marquee, obj7)];
+              const items3 = [closure_15(tmp2(18712).Marquee, obj7)];
               const obj8 = {
                 start: { x: 0, y: 0 },
                 end: { x: 1, y: 0 },
@@ -367,7 +367,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
               const items4 = [token, `${tmp5}CC`, `${tmp5}00`, `${tmp5}00`, `${tmp5}CC`, token];
               obj8.colors = items4;
               obj8.style = tmp.infoContainerGradient;
-              items3[1] = closure_15(tmp4(5258), obj8);
+              items3[1] = closure_15(tmp4(5259), obj8);
               obj6.children = items3;
               tmp16Result = closure_16(closure_7, obj6);
             }
@@ -375,7 +375,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp13Result = null != stateFromStores;
             if (tmp13Result) {
               const obj9 = { variant: "text-xs/medium", color: "text-subtle", lineClamp: 1, children: stateFromStores };
-              tmp13Result = closure_15(tmp2(5234).Text, obj9);
+              tmp13Result = closure_15(tmp2(5235).Text, obj9);
             }
             items5[1] = tmp13Result;
             obj5.children = items5;
@@ -435,15 +435,15 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: timing.withTiming(num, { duration: 200 }) };
       };
-      const tmpResult = message(5052);
-      fn2.__closure = { withTiming: message(5206).withTiming, visible };
+      const tmpResult = message(5053);
+      fn2.__closure = { withTiming: message(5207).withTiming, visible };
       fn2.__workletHash = 3641278982291;
       fn2.__initData = __initData;
       const animatedStyle = tmpResult.useAnimatedStyle(fn2);
       if (cResult[2] !== isVoiceMessage) {
-        const intl = tmp(1128).intl;
+        const intl = tmp(1125).intl;
         const string = intl.string;
-        let KTonHP = tmp(1128).t;
+        let KTonHP = tmp(1125).t;
         if (isVoiceMessage) {
           KTonHP = KTonHP.KTonHP;
           let stringResult = string(KTonHP);
@@ -453,9 +453,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[2] = isVoiceMessage;
         cResult[3] = stringResult;
       } else if (cResult[4] !== isVoiceMessage) {
-        const intl2 = tmp(1128).intl;
+        const intl2 = tmp(1125).intl;
         const string2 = intl2.string;
-        let t = tmp(1128).t;
+        let t = tmp(1125).t;
         if (isVoiceMessage) {
           t = t["6rhrVG"];
           let string2Result = string2(t);
@@ -483,7 +483,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol2 = Symbol;
             if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp23 = closure_15(tmp(6928).ArrowLargeLeftIcon, { size: "sm" });
+              const tmp23 = closure_15(tmp(6930).ArrowLargeLeftIcon, { size: "sm" });
               cResult[13] = tmp23;
               let tmp21 = tmp23;
             } else {
@@ -501,7 +501,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     const _Symbol3 = Symbol;
                     if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                      const tmp32 = closure_15(tmp(10657).XLargeIcon, { size: "sm" });
+                      const tmp32 = closure_15(tmp(10660).XLargeIcon, { size: "sm" });
                       cResult[22] = tmp32;
                       let tmp30 = tmp32;
                     } else {
@@ -524,7 +524,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                           const obj3 = { style: tmp14, children: null };
                           const items = [tmp16, tmp24, tmp33];
                           obj3.children = items;
-                          const tmp40 = closure_16(visible(5052).View, obj3);
+                          const tmp40 = closure_16(visible(5053).View, obj3);
                           cResult[28] = tmp33;
                           cResult[29] = tmp14;
                           cResult[30] = tmp24;
@@ -589,7 +589,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[8] = items3;
         tmp14 = items3;
       }
-      const obj2 = { withTiming: message(5206).withTiming, visible };
+      const obj2 = { withTiming: message(5207).withTiming, visible };
     }
   : function PiPControls(message) {
       message = message.message;
@@ -624,22 +624,22 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return { opacity: timing.withTiming(num, { duration: 200 }) };
       };
-      let obj = message(5052);
-      fn.__closure = { withTiming: message(5206).withTiming, visible };
+      let obj = message(5053);
+      fn.__closure = { withTiming: message(5207).withTiming, visible };
       fn.__workletHash = 1481412007504;
       fn.__initData = __initData2;
       const animatedStyle = obj.useAnimatedStyle(fn);
-      const intl = message(1128).intl;
+      const intl = message(1125).intl;
       const string = intl.string;
-      const t = message(1128).t;
+      const t = message(1125).t;
       if (isVoiceMessage) {
         let stringResult = string(t.KTonHP);
       } else {
         stringResult = string(t["13/7kX"]);
       }
-      const intl2 = tmp3(1128).intl;
+      const intl2 = tmp3(1125).intl;
       const string2 = intl2.string;
-      const t2 = tmp3(1128).t;
+      const t2 = tmp3(1125).t;
       if (isVoiceMessage) {
         let string2Result = string2(t2["6rhrVG"]);
       } else {
@@ -656,7 +656,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: true,
         accessibilityRole: "button",
         accessibilityLabel: stringResult,
-        children: closure_15(message(6928).ArrowLargeLeftIcon, { size: "sm" }),
+        children: closure_15(message(6930).ArrowLargeLeftIcon, { size: "sm" }),
       };
       const items3 = [,];
       ({ pipButton: arr4[0], backButton: arr4[1] } = tmp);
@@ -669,14 +669,14 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         accessible: true,
         accessibilityRole: "button",
         accessibilityLabel: string2Result,
-        children: closure_15(message(10657).XLargeIcon, { size: "sm" }),
+        children: closure_15(message(10660).XLargeIcon, { size: "sm" }),
       };
       const items4 = [,];
       ({ pipButton: arr5[0], dismissButton: arr5[1] } = tmp);
       obj5.style = items4;
       items2[2] = closure_15(closure_6, obj5);
       obj3.children = items2;
-      return closure_16(visible(5052).View, obj3);
+      return closure_16(visible(5053).View, obj3);
     };
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()

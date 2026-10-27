@@ -6,7 +6,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 const obj2 = {
   timestamp: { color: nativeDefault.colors.TEXT_DEFAULT, backgroundColor: nativeDefault.colors.BORDER_SUBTLE },
 };
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp7;
         }
       }
-      const tmp8 = jsx(tmp(1202).LegacyText, { style, onPress: tmp6, children: tmp5 });
+      const tmp8 = jsx(tmp(1199).LegacyText, { style, onPress: tmp6, children: tmp5 });
       cResult[2] = tmp5;
       cResult[3] = style;
       cResult[4] = tmp6;
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         style = node.style;
       }
       const tmp2 = useFormattedTimestampDefault(node);
-      return jsx(node(1202).LegacyText, {
+      return jsx(node(1199).LegacyText, {
         style,
         onPress() {
           ToastActionCreatorsDefault.open("TIMESTAMP", { text: node.full });

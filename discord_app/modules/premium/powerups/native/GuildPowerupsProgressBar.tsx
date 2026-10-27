@@ -1,7 +1,7 @@
 // discord_app/modules/premium/powerups/native/GuildPowerupsProgressBar.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05258_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05259_LinearGradient.js";
 import AnalyticsLocationDefault from "../../../app_analytics/AnalyticsLocation.tsx";
 import openGuildPowerupsModalDefault from "utils/openGuildPowerupsModal.tsx";
 import GuildBoostingProgressBarActionCreators from "../../../guild_boosting/GuildBoostingProgressBarActionCreators.tsx";
@@ -19,7 +19,7 @@ const colors = ["rgba(255, 115, 250, 0.4)", "rgba(255, 115, 250, 0.1)"];
 let c10 = 500;
 let result = 2 * nativeDefault.space.PX_4;
 const LinearGradient = ReanimatedRexport.createAnimatedComponent(LinearGradientDefault);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   container: { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16 },
   track: null,
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = guildId(576);
       const stateFromStores = guildId(573).useStateFromStores(first, tmp7, tmp8);
-      stateFromStores1(17654)(stateFromStores);
+      stateFromStores1(17695)(stateFromStores);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [GuildBoostingProgressBarPersistedStore];
         cResult[4] = items2;

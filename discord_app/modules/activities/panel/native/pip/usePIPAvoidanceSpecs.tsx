@@ -26,9 +26,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function usePIPAvoidanceSpecs(safeArea) {
       _require = safeArea;
       const sharedValue = require("ReanimatedRexport").useSharedValue({ top: 0, bottom: 0 });
-      const tmp2 = sharedValue(11751)();
+      const tmp2 = sharedValue(11753)();
       dependencyMap = tmp2;
-      const tmp3 = sharedValue(18462)();
+      const tmp3 = sharedValue(18496)();
       __initData = tmp3;
       let obj = require("ReanimatedRexport");
       const fn = function c() {
@@ -55,9 +55,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = require("ReanimatedRexport");
       fn2.__closure = {
         cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual,
-        getPIPBottomOffsetForPIPMode: sharedValue(18380),
-        getAdjustedBottomOffsets: sharedValue(18463),
-        updateSharedValueIfChanged: sharedValue(10905),
+        getPIPBottomOffsetForPIPMode: sharedValue(18414),
+        getAdjustedBottomOffsets: sharedValue(18497),
+        updateSharedValueIfChanged: sharedValue(10908),
         pipAvoidanceSpecs: sharedValue,
       };
       fn2.__workletHash = 9489549686165;
@@ -68,9 +68,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function usePIPAvoidanceSpecs(safeArea) {
       _require = safeArea;
       const sharedValue = require("ReanimatedRexport").useSharedValue({ top: 0, bottom: 0 });
-      const tmp2 = sharedValue(11751)();
+      const tmp2 = sharedValue(11753)();
       dependencyMap = tmp2;
-      const tmp3 = sharedValue(18462)();
+      const tmp3 = sharedValue(18496)();
       closure_3 = tmp3;
       let obj = require("ReanimatedRexport");
       const fn = function c() {
@@ -97,9 +97,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj2 = require("ReanimatedRexport");
       fn2.__closure = {
         cheapWorkletShallowEqual: require("cheapWorkletShallowEqual").cheapWorkletShallowEqual,
-        getPIPBottomOffsetForPIPMode: sharedValue(18380),
-        getAdjustedBottomOffsets: sharedValue(18463),
-        updateSharedValueIfChanged: sharedValue(10905),
+        getPIPBottomOffsetForPIPMode: sharedValue(18414),
+        getAdjustedBottomOffsets: sharedValue(18497),
+        updateSharedValueIfChanged: sharedValue(10908),
         pipAvoidanceSpecs: sharedValue,
       };
       fn2.__workletHash = 10685434620469;

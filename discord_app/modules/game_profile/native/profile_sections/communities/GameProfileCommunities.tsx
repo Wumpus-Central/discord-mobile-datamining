@@ -19,11 +19,11 @@ const GameProfileCommunitiesLocaleFilterActionSheetDefault = GameProfileCommunit
 
 require = fn;
 const View = fn(17).View;
-const JoinGuildSources = fn(1087).JoinGuildSources;
-const isStaticChannelRoute = fn(4830).isStaticChannelRoute;
+const JoinGuildSources = fn(1084).JoinGuildSources;
+const isStaticChannelRoute = fn(4831).isStaticChannelRoute;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   container: {
     marginTop: nativeDefault.modules.mobile.SHEET_HANDLE_HEIGHT,
@@ -716,21 +716,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         style: tmp.heading,
         children: null,
       };
-      const intl = game(1128).intl;
-      obj3.children = intl.string(game(1128).t.r6bvTh);
-      const items1 = [closure_11(game(5234).Heading, obj3)];
+      const intl = game(1125).intl;
+      obj3.children = intl.string(game(1125).t.r6bvTh);
+      const items1 = [closure_11(game(5235).Heading, obj3)];
       if (showLocaleFilter) {
         const obj4 = {
           size: "sm",
           variant: "secondary",
-          icon: closure_11(tmp12(9514).LanguageIcon, { size: "sm" }),
+          icon: closure_11(tmp12(9513).LanguageIcon, { size: "sm" }),
           accessibilityLabel: null,
           onPress: null,
         };
-        const intl2 = tmp12(1128).intl;
-        obj4.accessibilityLabel = intl2.string(tmp12(1128).t.OlOHDH);
+        const intl2 = tmp12(1125).intl;
+        obj4.accessibilityLabel = intl2.string(tmp12(1125).t.OlOHDH);
         obj4.onPress = callback;
-        showLocaleFilter = closure_11(tmp12(7959).IconButton, obj4);
+        showLocaleFilter = closure_11(tmp12(7957).IconButton, obj4);
       }
       items1[1] = showLocaleFilter;
       obj2.children = items1;

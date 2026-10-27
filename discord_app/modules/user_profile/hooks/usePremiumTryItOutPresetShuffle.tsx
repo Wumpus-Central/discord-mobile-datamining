@@ -11,7 +11,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserProfileSettingsStore from "../UserProfileSettingsStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/usePremiumTryItOutPresetShuffle.tsx");
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return I;
     }
   : function usePremiumTryItOutPresetShuffle() {
-      const tmp = callback(5205)();
+      const tmp = callback(5206)();
       const isThemeLightResult = shared.isThemeLight(tmp);
       const require = isThemeLightResult;
       const items = [isThemeLightResult];

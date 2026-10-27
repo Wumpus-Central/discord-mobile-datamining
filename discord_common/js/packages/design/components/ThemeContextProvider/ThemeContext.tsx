@@ -29,7 +29,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 let closure_5 = tmp3;
 let obj = {
-  theme: fn(1098).ThemeTypes.LIGHT,
+  theme: fn(1095).ThemeTypes.LIGHT,
   primaryColor: null,
   secondaryColor: null,
   gradient: null,

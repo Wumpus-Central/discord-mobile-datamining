@@ -9,14 +9,14 @@ import Record from "../lib/Record.tsx";
 const AvatarUtilsDefault = AvatarUtils;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({
   LOCAL_BOT_ID: closure_4,
   NON_USER_BOT_DISCRIMINATOR: hasOwnProperty,
   PREMIUM_TYPE_NONE: metroRequire,
   UserFlags: closure_7,
 } = Constants);
-const PremiumConstants = fn(1394);
+const PremiumConstants = fn(1391);
 ({ SKU_ID_PURCHASED_FLAGS: closure_8, PremiumTypes: closure_9, PurchasedFlags: c10 } = PremiumConstants);
 class UserRecord extends tmp2 {
   constructor(arg0) {

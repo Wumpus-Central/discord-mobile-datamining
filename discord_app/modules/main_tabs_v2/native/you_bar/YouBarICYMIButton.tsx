@@ -9,9 +9,9 @@ import useICYMITabBadgeDefault from "../../../icymi/useICYMITabBadge.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const YOU_BAR_BUTTON_ICON_SIZE = fn(16444).YOU_BAR_BUTTON_ICON_SIZE;
+const YOU_BAR_BUTTON_ICON_SIZE = fn(16483).YOU_BAR_BUTTON_ICON_SIZE;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE },
   badge: { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND },

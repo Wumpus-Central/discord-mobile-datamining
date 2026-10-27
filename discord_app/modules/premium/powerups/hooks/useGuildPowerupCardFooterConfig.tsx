@@ -6,13 +6,13 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5182);
+const GuildPowerupsConstants = fn(5183);
 ({
   GUILD_POWERUP_CONFIGURABLE_SKUS_DESKTOP,
   GUILD_POWERUP_CONFIGURABLE_SKUS_MOBILE: closure_4,
   PowerupActiveStatusType: hasOwnProperty,
 } = GuildPowerupsConstants);
-const GuildFeatures = fn(1087).GuildFeatures;
+const GuildFeatures = fn(1084).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupCardFooterConfig.tsx");
@@ -53,8 +53,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = require("initialize").useStateFromStores(first, tmp8, tmp9);
       let tmp12 = tmp5.type !== constants.INACTIVE;
       if (!tmp12) {
-        tmp12 = skuId.skuId === tmp(5185).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
-        const tmp13 = skuId.skuId === tmp(5185).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+        tmp12 = skuId.skuId === tmp(5186).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
+        const tmp13 = skuId.skuId === tmp(5186).GUILD_POWERUP_GUILD_THEME_SKU_ID && stateFromStores;
       }
       let tmp14 = tmp12;
       if (!tmp12) {

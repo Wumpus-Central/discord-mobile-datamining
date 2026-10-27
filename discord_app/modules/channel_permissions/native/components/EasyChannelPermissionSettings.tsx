@@ -27,8 +27,8 @@ function onBack() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const SettingMode = fn(7875).SettingMode;
-const Constants = fn(1087);
+const SettingMode = fn(7876).SettingMode;
+const Constants = fn(1084);
 ({
   ChannelTypes: closure_18,
   Permissions: closure_19,
@@ -39,7 +39,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 let closure_25 = { BASIC: 0, [0]: "BASIC", ADVANCED: 1, [1]: "ADVANCED", MODERATORS: 2, [2]: "MODERATORS" };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { flex: 1, paddingTop: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   content: { marginTop: 16, flex: 1 },
@@ -92,7 +92,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== navigation) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "rejectWithError" });
             return;
           }
         }
@@ -104,7 +104,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "rejectWithError" });
             return;
           }
         }
@@ -114,7 +114,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != guild) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "rejectWithError" });
             return;
           }
         }
@@ -122,7 +122,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "rejectWithError" });
             return;
           }
         }
@@ -130,7 +130,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "rejectWithError" });
             return;
           }
         }
@@ -138,7 +138,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       if (null != guild) {
         class N {
           constructor() {
-            setOptionsResult = closure_3.setOptions({ headerRight: "Array" });
+            setOptionsResult = closure_3.setOptions({ headerRight: "rejectWithError" });
             return;
           }
         }
@@ -298,19 +298,19 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               dependencyMap = 3;
               return { value: "IconComponent", done: null };
             }
-            const intl = tmp5(1128).intl;
+            const intl = tmp5(1125).intl;
             const string = intl.string;
-            const t = tmp5(1128).t;
+            const t = tmp5(1125).t;
             if (closure_129_1) {
               let stringResult = string(t.vw48TT);
             } else {
               stringResult = string(t["47gQYL"]);
             }
             closure_128_0 = stringResult;
-            closure_128_1 = tmp5(5604).computeChannelName(closure_129_0, UserStore, RelationshipStore);
-            let intl2 = tmp5(1128).intl;
+            closure_128_1 = tmp5(5605).computeChannelName(closure_129_0, UserStore, RelationshipStore);
+            let intl2 = tmp5(1125).intl;
             let onCancel = intl2.format;
-            let show = tmp5(1128).t;
+            let show = tmp5(1125).t;
             if (closure_129_1) {
               const obj7 = { channelName: closure_128_1 };
               let onCancelResult = onCancel(show.hGzPnx, obj7);
@@ -320,8 +320,8 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             }
             closure_128_2 = onCancelResult;
             closure_129_2(!closure_129_1);
-            const obj4 = tmp5(5604);
-            show = tmp2(5908).show;
+            const obj4 = tmp5(5605);
+            show = tmp2(5909).show;
             const obj9 = {
               title: closure_128_0,
               body: closure_128_2,
@@ -332,10 +332,10 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
               onCancel: null,
               isDismissable: false,
             };
-            const intl3 = tmp5(1128).intl;
-            obj9.cancelText = intl3.string(tmp5(1128).t["ETE/oC"]);
-            const intl4 = tmp5(1128).intl;
-            obj9.confirmText = intl4.string(tmp5(1128).t.p89ACt);
+            const intl3 = tmp5(1125).intl;
+            obj9.cancelText = intl3.string(tmp5(1125).t["ETE/oC"]);
+            const intl4 = tmp5(1125).intl;
+            obj9.confirmText = intl4.string(tmp5(1125).t.p89ACt);
             intl2 = closure_129_6;
             obj9.onConfirm = closure_129_6;
             onCancel = function onCancel() {
@@ -344,7 +344,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
             obj9.onCancel = onCancel;
             show(obj9);
             dependencyMap = 3;
-            const tmp42 = tmp2(5908);
+            const tmp42 = tmp2(5909);
           } catch (tmp54) {
             dependencyMap = tmp;
             throw tmp54;
@@ -371,7 +371,7 @@ let closure_27 = ReactCompilerGating.isReactCompilerEnabled()
       const sortedGuildRoles = stateFromStoresObject.sortedGuildRoles;
       const items1 = [navigation];
       const layoutEffect = togglePrivateChannel.useLayoutEffect(() => {
-        navigation.setOptions({ headerRight: "Array" });
+        navigation.setOptions({ headerRight: "rejectWithError" });
       }, items1);
       const items2 = [guild, sortedGuildRoles, channel];
       const memo = togglePrivateChannel.useMemo(() => {

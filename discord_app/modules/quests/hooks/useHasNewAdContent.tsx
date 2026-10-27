@@ -77,10 +77,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult3 = stateFromStoresArray(504);
       let prop = null;
       if (stateFromStores) {
-        prop = tmp(4807).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
+        prop = tmp(4808).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
       }
       const tmp17 = _slicedToArray(
-        stateFromStoresArray(7496).useSelectedTimeRecurringDismissibleContent(prop, tmp14, undefined, true),
+        stateFromStoresArray(7497).useSelectedTimeRecurringDismissibleContent(prop, tmp14, undefined, true),
         2,
       );
       if (cResult[8] === tmp17[1]) {
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[9] = null != tmp17[0];
       cResult[10] = obj3;
       tmp20 = obj3;
-      const tmpResult4 = stateFromStoresArray(7496);
+      const tmpResult4 = stateFromStoresArray(7497);
     }
   : function useHasNewAdContent() {
       const items = [QuestStore];
@@ -128,10 +128,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = stateFromStoresArray(504);
       let prop = null;
       if (stateFromStores) {
-        prop = tmp(4807).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
+        prop = tmp(4808).DismissibleContent.QUEST_HOME_NEW_QUEST_BADGE;
       }
       const tmp6 = _slicedToArray(
-        stateFromStoresArray(7496).useSelectedTimeRecurringDismissibleContent(
+        stateFromStoresArray(7497).useSelectedTimeRecurringDismissibleContent(
           prop,
           { cooldownDurationMs: DAY },
           undefined,

@@ -6,9 +6,9 @@ const require = fn;
 get_ActivityIndicator = fn(17);
 ({ requireNativeComponent, NativeEventEmitter, NativeModules } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_5 = createStyles.createStyles({ base: { overflow: "hidden" } });
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 if (PlatformUtils.isAndroid()) {
   let importDefaultResult = PortalViewNativeComponentDefault;
 } else {
@@ -374,7 +374,7 @@ export default noop.memo(
         const muted = paused.muted;
         ({ onLoad: dependencyMap, portal } = paused);
         ({ style, pointerEvents } = paused);
-        const tmp2 = muted(7058)(() => {
+        const tmp2 = muted(7060)(() => {
           let tmp;
           if (dependencyMap != null) {
             tmp = dependencyMap();

@@ -2,7 +2,7 @@
 import DispatcherDefault from "../Dispatcher.tsx";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
-import asyncRequireImpl from "../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/01999_asyncRequireImpl.js";
 import openURLDefault from "openURL.tsx";
 import CodedLink from "../modules/coded_links/CodedLink.tsx";
 import AppAnalyticsUtilsDefault from "../modules/app_analytics/AppAnalyticsUtils.tsx";
@@ -75,7 +75,7 @@ let closure_18 = async function _openInviteModal() {
               type: "DISPLAYED_INVITE_SHOW",
               code,
               username: "Array",
-              deeplinkAttemptId: "application",
+              deeplinkAttemptId: "applicationId",
               invite_instance_id,
             };
             c3 = 1;
@@ -264,17 +264,17 @@ let closure_19 = async function _handleInviteCodedLink(arg0, arg1) {
     }
   })();
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AbortCodes, AnalyticEvents: closure_12, AppContext, InviteStates: map1, JoinGuildSources, Routes } = Constants);
-const CollectiblesShopConstants = fn(1089);
+const CollectiblesShopConstants = fn(1086);
 ({ CollectibleShopTab: closure_14, CollectiblesMobileShopScreen: closure_15 } = CollectiblesShopConstants);
-const isGameShopPath = fn(7333).isGameShopPath;
+const isGameShopPath = fn(7335).isGameShopPath;
 let obj = { skipExtensionCheck: "Array", analyticsLocations: [] };
 const size = fn(2);
 let result = size.fileFinishedImporting("lib/getOnClick.tsx");
 
-export default function getOnClick(url) {
-  _require = url;
+export default function getOnClick(src) {
+  _require = src;
   let tmp = arg1;
   if (arg1 === undefined) {
     tmp = obj;
@@ -283,7 +283,7 @@ export default function getOnClick(url) {
   pathname = undefined;
   let obj2;
   obj = require("findCodedLinks");
-  const findCodedLinkResult = obj.findCodedLink(url);
+  const findCodedLinkResult = obj.findCodedLink(src);
   c3 = findCodedLinkResult;
   if (null != findCodedLinkResult) {
     return (preventDefault) => {
@@ -313,7 +313,7 @@ export default function getOnClick(url) {
         if (_undefined.type !== CodedLink.CodedLinkType.APP_DIRECTORY_STOREFRONT) {
           let result = storefrontMessageEmbedCodedLink.parseStorefrontSkuCodedLink(code);
           if (result == null) {
-            result = { applicationId: "Array", skuId: "Reflect" };
+            result = { applicationId: "toCharArray$esjava$1", skuId: "Symbol" };
           }
           const tmp3Result = storefrontMessageEmbedCodedLink;
         }
@@ -331,11 +331,11 @@ export default function getOnClick(url) {
         openURLDefault(closure_0);
         return true;
       }
-      result = { applicationId: code, skuId: "Array" };
+      result = { applicationId: code, skuId: "y" };
     };
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.ACTIVITY_BOOKMARK) {
+    if (findCodedLinkResult.type === tmp2(5704).CodedLinkType.ACTIVITY_BOOKMARK) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -346,7 +346,7 @@ export default function getOnClick(url) {
         const searchParams = uRL.searchParams;
         value = searchParams.get("referrer_id");
         closure_2 = value;
-        const playInContext = url(paths[29]).getPlayInContext(code);
+        const playInContext = src(paths[29]).getPlayInContext(code);
         ({ currentChannelId: c3, isCurrentlyInInstance, canLaunchInChannel } = playInContext);
         if (!isCurrentlyInInstance) {
           let tmp8 = !canLaunchInChannel;
@@ -358,8 +358,8 @@ export default function getOnClick(url) {
             tmp8 = null == bot;
           }
           if (tmp8) {
-            tmp8 = !url(paths[30]).canOpenFrame(application);
-            const tmp5Result = url(paths[30]);
+            tmp8 = !src(paths[30]).canOpenFrame(application);
+            const tmp5Result = src(paths[30]);
           }
           isCurrentlyInInstance = tmp8;
         }
@@ -368,12 +368,12 @@ export default function getOnClick(url) {
           const searchParams2 = uRL.searchParams;
           const searchParams3 = uRL.searchParams;
           value2 = searchParams2.get("link_id");
-          const customActivityLinkParams = url(paths[31]).getCustomActivityLinkParams(
+          const customActivityLinkParams = src(paths[31]).getCustomActivityLinkParams(
             code,
             value2,
             searchParams3.get("custom_id"),
           );
-          const tmp5Result2 = url(paths[31]);
+          const tmp5Result2 = src(paths[31]);
           customActivityLinkParams
             .then((customId) => {
               obj2 = {
@@ -427,22 +427,22 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.GUILD_PRODUCT) {
+    if (findCodedLinkResult.type === tmp2(5704).CodedLinkType.GUILD_PRODUCT) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
         [closure_0, closure_1] = _undefined.code.split("-");
         const tmp2 = _slicedToArray(_undefined.code.split("-"), 2);
-        asyncRequireImpl(14197, dependencyMap.paths).then((openGuildProductLink) => {
-          openGuildProductLink.openGuildProductLink(url, analyticsLocations);
+        asyncRequireImpl(14224, dependencyMap.paths).then((openGuildProductLink) => {
+          openGuildProductLink.openGuildProductLink(src, analyticsLocations);
         });
         return true;
       };
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
+    if (findCodedLinkResult.type === tmp2(5704).CodedLinkType.SOCIAL_LAYER_STOREFRONT) {
       return (preventDefault) => {
         const result = storefrontCodedLink.parseStorefrontCodedLink(_undefined.code);
         if (null == result) {
@@ -465,7 +465,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
+    if (findCodedLinkResult.type === tmp2(5704).CodedLinkType.SOCIAL_LAYER_STOREFRONT_APP) {
       return (preventDefault) => {
         const result = storefrontCodedLink.parseStorefrontCodedLink(_undefined.code);
         if (null == result) {
@@ -488,7 +488,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.QUESTS_EMBED) {
+    if (findCodedLinkResult.type === tmp2(5704).CodedLinkType.QUESTS_EMBED) {
       if (tmp2Result.getIsEligibleForQuests()) {
         return (preventDefault) => {
           if (preventDefault != null) {
@@ -523,18 +523,18 @@ export default function getOnClick(url) {
           return true;
         };
       }
-      tmp2Result = tmp2(9565);
+      tmp2Result = tmp2(9564);
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.COLLECTIBLES_SHOP) {
+    if (findCodedLinkResult.type === tmp2(5704).CodedLinkType.COLLECTIBLES_SHOP) {
       return (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
         }
-        const enabled = url(paths[41]).isVirtualCurrencyEnabled().enabled;
-        obj = url(paths[41]);
-        url(paths[20])(paths[42], paths.paths).then((openCollectiblesShopMobile) => {
+        const enabled = src(paths[41]).isVirtualCurrencyEnabled().enabled;
+        obj = src(paths[41]);
+        src(paths[20])(paths[42], paths.paths).then((openCollectiblesShopMobile) => {
           const tmp3 = _slicedToArray(code.code.split("-"), 2)[1];
           if (enabled) {
             if (tmp2 === constants.ORBS) {
@@ -560,7 +560,7 @@ export default function getOnClick(url) {
       };
     }
   }
-  let toURLSafeResult = URLUtilsDefault.toURLSafe(url);
+  let toURLSafeResult = URLUtilsDefault.toURLSafe(src);
   if (toURLSafeResult == null) {
     toURLSafeResult = {};
   }
@@ -588,7 +588,7 @@ export default function getOnClick(url) {
           if (preventDefault != null) {
             preventDefault.preventDefault();
           }
-          const result = url(paths[36]).openSocialLayerStorefrontUnsupportedOnMobileAlert();
+          const result = src(paths[36]).openSocialLayerStorefrontUnsupportedOnMobileAlert();
           return true;
         };
       }
@@ -616,7 +616,7 @@ export default function getOnClick(url) {
     }
   }
   if (null != findCodedLinkResult) {
-    if (findCodedLinkResult.type === tmp2(5703).CodedLinkType.APP_OAUTH2_LINK) {
+    if (findCodedLinkResult.type === tmp2(5704).CodedLinkType.APP_OAUTH2_LINK) {
       let fn = (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();
@@ -633,7 +633,7 @@ export default function getOnClick(url) {
   let tmp5Result = URLUtilsDefault;
   let result = require("LinkUtils").tryParseEventDetailsPath(pathname);
   if (!tmp.skipExtensionCheck) {
-    if (null != tmp2Result4.isSuspiciousDownload(url)) {
+    if (null != tmp2Result4.isSuspiciousDownload(src)) {
       fn = (preventDefault) => {
         if (preventDefault != null) {
           preventDefault.preventDefault();

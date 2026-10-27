@@ -14,8 +14,8 @@ import ForumSearchStore from "../ForumSearchStore.tsx";
 const AppAnalyticsUtilsDefault = AppAnalyticsUtils;
 
 require = fn;
-const DraftType = fn(7631).DraftType;
-const Constants = fn(1087);
+const DraftType = fn(7632).DraftType;
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/tracking/Tracking.tsx");

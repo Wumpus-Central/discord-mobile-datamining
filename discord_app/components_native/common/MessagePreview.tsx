@@ -7,7 +7,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import MessagePreviewStore from "../../stores/native/MessagePreviewStore.tsx";
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticsSections, AnalyticsObjects } = Constants);
 const jsx = fn(21).jsx;
 const analyticsLocation = { section: AnalyticsSections.CHANNEL_SEARCH, object: AnalyticsObjects.CHANNEL_SEARCH };
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         [],
       );
-      return jsx(onBeforeJumpToMessage(9778).ChatPreview, {
+      return jsx(onBeforeJumpToMessage(9780).ChatPreview, {
         channelId: channelId.channelId,
         messages: stateFromStoresObject.messages,
         jumpToChatProps: memo,

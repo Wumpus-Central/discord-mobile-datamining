@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef14919 from "../../../../../_runtime/metro/14919__.js";
+import _modDef14955 from "../../../../../_runtime/metro/14955__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -10,15 +10,15 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const HelpdeskArticles = fn(1087).HelpdeskArticles;
+const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   wrapper: {
     alignSelf: "center",
     marginTop: 50,
-    marginBottom: fn(7509).VISIBILITY_OFFSET,
+    marginBottom: fn(7510).VISIBILITY_OFFSET,
     maxWidth: 800,
     paddingHorizontal: 16,
     width: "100%",
@@ -37,7 +37,7 @@ let obj2 = {
 let obj3 = {
   alignSelf: "center",
   marginTop: 50,
-  marginBottom: fn(7509).VISIBILITY_OFFSET,
+  marginBottom: fn(7510).VISIBILITY_OFFSET,
   maxWidth: 800,
   paddingHorizontal: 16,
   width: "100%",
@@ -187,8 +187,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       [first, dependencyMap] = noop.useState(null);
       ({ wrapper, content, heading } = tmp4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t.HPJ6Nj);
+        const intl = tmp(1125).intl;
+        const stringResult = intl.string(tmp(1125).t.HPJ6Nj);
         cResult[0] = stringResult;
         let first1 = stringResult;
       } else {
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== tmp4.heading) {
         let obj2 = { style: heading, variant: "heading-xxl/bold", children: first1 };
-        const tmp11 = closure_7(tmp(5234).Heading, obj2);
+        const tmp11 = closure_7(tmp(5235).Heading, obj2);
         cResult[1] = tmp4.heading;
         cResult[2] = tmp11;
         let tmp9 = tmp11;
@@ -375,14 +375,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             str = "interactive-text-active";
           }
           items1 = [
-            closure_1_7(closure_0(5234).Text, {
+            closure_1_7(closure_0(5235).Text, {
               color: str,
               style: closure_0.question,
               variant: "text-md/normal",
               children: getQuestion.getQuestion(),
             }),
           ];
-          const obj4 = { source: _modDef14919, style: null };
+          const obj4 = { source: _modDef14955, style: null };
           const items2 = [closure_0.questionIcon];
           let questionIconExpanded = tmp;
           if (tmp) {
@@ -390,9 +390,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           items2[1] = questionIconExpanded;
           obj4.style = items2;
-          items1[1] = closure_1_7(closure_0(1202).Icon, obj4);
+          items1[1] = closure_1_7(closure_0(1199).Icon, obj4);
           obj2.children = items1;
-          const items3 = [closure_1_8(closure_0(6908).PressableOpacity, obj2)];
+          const items3 = [closure_1_8(closure_0(6910).PressableOpacity, obj2)];
           if (tmp) {
             const obj5 = {
               style: tmp4.answer,
@@ -400,7 +400,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               variant: "text-sm/normal",
               children: getQuestion.getAnswer(),
             };
-            tmp = closure_1_7(tmp5(5234).Text, obj5);
+            tmp = closure_1_7(tmp5(5235).Text, obj5);
           }
           items3[1] = tmp;
           obj.children = items3;

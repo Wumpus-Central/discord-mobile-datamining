@@ -1,6 +1,6 @@
 // discord_app/modules/stage_channels/native/channel_permissions/ViewModerators.tsx
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ChannelOverwritesItemDefault from "../../../channel_permissions/native/components/ChannelOverwritesItem.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -10,8 +10,8 @@ import GuildRoleStore from "../../../../stores/GuildRoleStore.tsx";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const RowType = fn(7875).RowType;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const RowType = fn(7876).RowType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -22,7 +22,7 @@ function openAddModeratorsActionSheet(channel) {
   }
   AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
   const obj2 = ActionSheetActionCreatorsDefault;
-  obj2.openLazy(asyncRequireImpl(18287, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
+  obj2.openLazy(asyncRequireImpl(18321, dependencyMap.paths), "channel-add-moderators-" + channel.id, {
     channel,
     canSkip: flag,
   });
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = channel(576).c(21);
       channel = channel.channel;
       let obj = channel(576);
-      const navigation = channel(1505).useNavigation();
+      const navigation = channel(1502).useNavigation();
       navigation.setOptions({
         headerRight() {
           return null;
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[4];
         tmp11 = cResult[5];
       }
-      let obj2 = channel(1505);
+      let obj2 = channel(1502);
       let obj3 = {
         headerRight() {
           return null;
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStoresObject = channel(504).useStateFromStoresObject(tmp7, tmp10, tmp11);
       ({ guild, sortedGuildRoles } = stateFromStoresObject);
       const tmpResult = channel(504);
-      const canUpdateStageChannelModerators = channel(6638).useCanUpdateStageChannelModerators(channel.id);
+      const canUpdateStageChannelModerators = channel(6639).useCanUpdateStageChannelModerators(channel.id);
       if (null != guild) {
         if (null != sortedGuildRoles) {
           if (cResult[6] !== channel) {
@@ -119,14 +119,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             memberIds,
             channel,
             guild,
-            tmp(4831).MODERATE_STAGE_CHANNEL_PERMISSIONS,
+            tmp(4832).MODERATE_STAGE_CHANNEL_PERMISSIONS,
           );
           let obj8 = canUpdateStageChannelModerators(8972);
           const existingRolesRowWithPermissionDisabled = obj8.getExistingRolesRowWithPermissionDisabled(
             guild,
             sortedGuildRoles,
             channel,
-            tmp(4831).MODERATE_STAGE_CHANNEL_PERMISSIONS,
+            tmp(4832).MODERATE_STAGE_CHANNEL_PERMISSIONS,
           );
           if (cResult[14] !== channel) {
             function handleRemovePermission(name) {
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         if (obj11.isEmptyOverwrite(id)) {
                           c1 = 2;
                           c2 = 1;
-                          const obj8 = { value: v1(7411).clearPermissionOverwrite(tmp2.id, id.id), done: false };
+                          const obj8 = { value: v1(7413).clearPermissionOverwrite(tmp2.id, id.id), done: false };
                           return obj8;
                         } else {
                           const items = [id];
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           const obj9 = { value: tmp2(8973).savePermissionUpdates(tmp2.id, items), done: false };
                           return obj9;
                         }
-                        obj11 = tmp2(6638);
+                        obj11 = tmp2(6639);
                       }
                     } else {
                       if (1 === tmp5) {
@@ -212,9 +212,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const obj = { value, done: true };
                         return obj;
                       }
-                      const result = tmp2(5662).memberOrRoleRemovedToast(closure_128_0.name);
-                      const obj2 = tmp2(5662);
-                      v1(5210).hideActionSheet();
+                      const result = tmp2(5663).memberOrRoleRemovedToast(closure_128_0.name);
+                      const obj2 = tmp2(5663);
+                      v1(5211).hideActionSheet();
                       c2 = 3;
                       return { value: "IconComponent", done: null };
                     }
@@ -257,17 +257,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (tmp14) {
                   let obj4 = { style: { paddingHorizontal: 16 }, spacing: 16, children: null };
                   const obj5 = { title: null, hasIcons: true, children: null };
-                  let intl = tmp(1128).intl;
-                  obj5.title = intl.string(tmp(1128).t.f7VbhF);
+                  let intl = tmp(1125).intl;
+                  obj5.title = intl.string(tmp(1125).t.f7VbhF);
                   let obj6 = {
-                    icon: closure_10(tmp(11157).CirclePlusIcon, {}),
+                    icon: closure_10(tmp(11160).CirclePlusIcon, {}),
                     label: null,
                     onPress: null,
                     disabled: null,
                     arrow: true,
                   };
-                  let intl2 = tmp(1128).intl;
-                  obj6.label = intl2.string(tmp(1128).t.n3bcy8);
+                  let intl2 = tmp(1125).intl;
+                  obj6.label = intl2.string(tmp(1125).t.n3bcy8);
                   obj6.onPress = function onPress() {
                     if (null != channel) {
                       AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_POPOUT, { type: "Grant Channel Access" });
@@ -275,28 +275,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj2 = ActionSheetActionCreatorsDefault;
                       const obj3 = { channel, canSkip: false };
                       obj2.openLazy(
-                        asyncRequireImpl(18287, dependencyMap.paths),
+                        asyncRequireImpl(18321, dependencyMap.paths),
                         "channel-add-moderators-" + channel.id,
                         obj3,
                       );
-                      const tmp7 = asyncRequireImpl(18287, dependencyMap.paths);
+                      const tmp7 = asyncRequireImpl(18321, dependencyMap.paths);
                     }
                   };
                   obj6.disabled = !canUpdateStageChannelModerators;
-                  obj5.children = closure_10(tmp(6903).TableRow, obj6);
-                  const items2 = [closure_10(tmp(6987).TableRowGroup, obj5), ,];
+                  obj5.children = closure_10(tmp(6905).TableRow, obj6);
+                  const items2 = [closure_10(tmp(6989).TableRowGroup, obj5), ,];
                   let obj9 = { title: null, hasIcons: true, children: null };
-                  let intl3 = tmp(1128).intl;
-                  obj9.title = intl3.string(tmp(1128).t.ghdVJL);
+                  let intl3 = tmp(1125).intl;
+                  obj9.title = intl3.string(tmp(1125).t.ghdVJL);
                   obj9.children = existingRolesRowWithPermissionDisabled.map((item) => closure_4(item));
-                  items2[1] = closure_10(tmp(6987).TableRowGroup, obj9);
+                  items2[1] = closure_10(tmp(6989).TableRowGroup, obj9);
                   let obj10 = { title: null, hasIcons: true, children: null };
-                  let intl4 = tmp(1128).intl;
-                  obj10.title = intl4.string(tmp(1128).t.ghdVJL);
+                  let intl4 = tmp(1125).intl;
+                  obj10.title = intl4.string(tmp(1125).t.ghdVJL);
                   obj10.children = existingMembersRows.map((item) => closure_4(item));
-                  items2[2] = closure_10(tmp(6987).TableRowGroup, obj10);
+                  items2[2] = closure_10(tmp(6989).TableRowGroup, obj10);
                   obj4.children = items2;
-                  tmp31 = closure_11(tmp(5977).Stack, obj4);
+                  tmp31 = closure_11(tmp(5978).Stack, obj4);
                 }
                 cResult[8] = canUpdateStageChannelModerators;
                 cResult[9] = channel;
@@ -388,7 +388,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if (obj11.isEmptyOverwrite(id)) {
                     c1 = 2;
                     c2 = 1;
-                    const obj8 = { value: v1(7411).clearPermissionOverwrite(tmp2.id, id.id), done: false };
+                    const obj8 = { value: v1(7413).clearPermissionOverwrite(tmp2.id, id.id), done: false };
                     return obj8;
                   } else {
                     const items = [id];
@@ -397,7 +397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj9 = { value: tmp2(8973).savePermissionUpdates(tmp2.id, items), done: false };
                     return obj9;
                   }
-                  obj11 = tmp2(6638);
+                  obj11 = tmp2(6639);
                 }
               } else {
                 if (1 === tmp5) {
@@ -417,9 +417,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj = { value, done: true };
                   return obj;
                 }
-                const result = tmp2(5662).memberOrRoleRemovedToast(closure_128_0.name);
-                const obj2 = tmp2(5662);
-                v1(5210).hideActionSheet();
+                const result = tmp2(5663).memberOrRoleRemovedToast(closure_128_0.name);
+                const obj2 = tmp2(5663);
+                v1(5211).hideActionSheet();
                 c2 = 3;
                 return { value: "IconComponent", done: null };
               }
@@ -520,11 +520,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj2 = ActionSheetActionCreatorsDefault;
                 const obj3 = { channel, canSkip: false };
                 obj2.openLazy(
-                  asyncRequireImpl(18287, dependencyMap.paths),
+                  asyncRequireImpl(18321, dependencyMap.paths),
                   "channel-add-moderators-" + channel.id,
                   obj3,
                 );
-                const tmp7 = asyncRequireImpl(18287, dependencyMap.paths);
+                const tmp7 = asyncRequireImpl(18321, dependencyMap.paths);
               }
             };
             obj9.disabled = !canUpdateStageChannelModerators;

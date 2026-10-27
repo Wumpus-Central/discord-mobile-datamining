@@ -8,10 +8,10 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let GuildChannelStore = fn(4901);
+let GuildChannelStore = fn(4902);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 let closure_129_0 = () => {
   const intl = util.intl;
   return intl.string(util.t.PqEzn8);

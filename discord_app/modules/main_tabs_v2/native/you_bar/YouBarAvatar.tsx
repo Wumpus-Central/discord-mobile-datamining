@@ -4,7 +4,7 @@ import native from "../../../../design/void/native.tsx";
 import native2 from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05297_LegacyBaseButton.js";
+import LegacyBaseButton from "../../../../../_runtime/05298_LegacyBaseButton.js";
 import ClipView from "../../../../design/components/Icon/native/ClipView.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -16,7 +16,7 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const YouBarConstants = fn(16444);
+const YouBarConstants = fn(16483);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_11,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: closure_12,
@@ -29,10 +29,10 @@ const YouBarConstants = fn(16444);
   YOU_BAR_STATUS_OFFSET: closure_19,
   YOU_BAR_AVATAR_LARGE_PX: closure_20,
 } = YouBarConstants);
-const StatusTypes = fn(1087).StatusTypes;
+const StatusTypes = fn(1084).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { avatarShadow: null };
 let merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj.avatarShadow = {};
@@ -87,36 +87,36 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmpResult = transitionState(504);
       const stateFromStores1 = transitionState(504).useStateFromStores(tmp9, tmp10);
-      let result = tmp(1202).AVATAR_SIZE_MAP[closure_13] / height;
+      let result = tmp(1199).AVATAR_SIZE_MAP[closure_13] / height;
       dependencyMap = result;
-      let result1 = (height - tmp(1202).AVATAR_SIZE_MAP[closure_13]) / 2;
-      const tmp16 = transitionState === transitionState(5037).TransitionStates.MOUNTED;
+      let result1 = (height - tmp(1199).AVATAR_SIZE_MAP[closure_13]) / 2;
+      const tmp16 = transitionState === transitionState(5038).TransitionStates.MOUNTED;
       const tmpResult10 = transitionState(504);
       let num5 = 0;
       if (tmp16) {
         num5 = 1;
       }
-      const sharedValue = transitionState(5052).useSharedValue(num5);
-      const tmpResult11 = transitionState(5052);
+      const sharedValue = transitionState(5053).useSharedValue(num5);
+      const tmpResult11 = transitionState(5053);
       let num6 = 1;
       if (!tmp16) {
         num6 = result;
       }
-      const sharedValue1 = transitionState(5052).useSharedValue(num6);
-      const tmpResult12 = transitionState(5052);
+      const sharedValue1 = transitionState(5053).useSharedValue(num6);
+      const tmpResult12 = transitionState(5053);
       if (tmp16) {
         let tmp19 = -closure_17;
       } else {
         tmp19 = -result1;
       }
-      const sharedValue2 = transitionState(5052).useSharedValue(tmp19);
-      const tmpResult13 = transitionState(5052);
+      const sharedValue2 = transitionState(5053).useSharedValue(tmp19);
+      const tmpResult13 = transitionState(5053);
       if (tmp16) {
         let diff = -closure_17 - (height - closure_15) / 2;
       } else {
         diff = -result1;
       }
-      const sharedValue3 = transitionState(5052).useSharedValue(diff);
+      const sharedValue3 = transitionState(5053).useSharedValue(diff);
       if (cResult[4] === sharedValue2) {
         if (cResult[5] === sharedValue) {
           if (cResult[6] === sharedValue1) {
@@ -154,7 +154,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                 OFFLINE = StatusTypes.OFFLINE;
               }
               if (null == OFFLINE) {
-                tmp(5052);
+                tmp(5053);
                 function et() {
                   const rect = { transform: null, left: null, top: null, opacity: null };
                   let obj = { scale: spring.withSpring(sharedValue1.get(), YOU_BAR_SPRING_CONFIG) };
@@ -202,23 +202,23 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                     return closure_1_8.animateYouBarAvatarDeco;
                   }
                 }
-                rect.withSpring = tmp(5247).withSpring;
+                rect.withSpring = tmp(5248).withSpring;
                 rect.scale = sharedValue1;
                 rect.YOU_BAR_SPRING_CONFIG = YOU_BAR_SPRING_CONFIG;
                 rect.left = sharedValue2;
                 rect.top = sharedValue3;
                 rect.opacity = sharedValue;
                 rect.transitionState = transitionState;
-                rect.TransitionStates = tmp(5037).TransitionStates;
-                rect.runOnJS = tmp(5052).runOnJS;
+                rect.TransitionStates = tmp(5038).TransitionStates;
+                rect.runOnJS = tmp(5053).runOnJS;
                 rect.cleanup = cleanup;
                 et.__closure = rect;
                 et.__workletHash = 15831722009842;
                 et.__initData = __initData;
                 const tmp45Result = tmp45(et);
-                const token = tmp(5252).useToken(cleanup(587).colors.MOBILE_FLOATINGBAR_BACKGROUND);
-                const tmpResult17 = tmp(5252);
-                const token1 = tmp(5252).useToken(cleanup(587).colors.BORDER_SUBTLE);
+                const token = tmp(5253).useToken(cleanup(587).colors.MOBILE_FLOATINGBAR_BACKGROUND);
+                const tmpResult17 = tmp(5253);
+                const token1 = tmp(5253).useToken(cleanup(587).colors.BORDER_SUBTLE);
                 if (null == stateFromStores1) {
                   return null;
                 } else {
@@ -245,10 +245,10 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[16] = tmp4.avatarShadow;
                   cResult[17] = items3;
                 }
-                const tmpResult18 = tmp(5252);
+                const tmpResult18 = tmp(5253);
               } else {
                 let result2 = closure_16 / 2;
-                let sum = result2 + tmp(1202).STATUS_PADDING;
+                let sum = result2 + tmp(1199).STATUS_PADDING;
                 class K {
                   constructor() {
                     return closure_1_8.animateYouBarAvatarDeco;
@@ -329,7 +329,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[10] = items4;
       tmp27 = items4;
       tmp26 = J;
-      const tmpResult14 = transitionState(5052);
+      const tmpResult14 = transitionState(5053);
     }
   : function YouBarAvatarLarge(transitionState) {
       transitionState = transitionState.transitionState;
@@ -765,7 +765,8 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
             needsOffscreenAlphaCompositing: null,
             avatarDecoration,
             status: OFFLINE,
-            autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9naWZ0X2NhcmRzL21lc3NhZ2Vz",
+            autoStatusCutout:
+              "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9zZXR0aW5ncy9zZXJ2ZXJfbW9uZXRpemF0aW9uL3RhZ3Mvd2Vi",
           };
           const tmp22 = closure_22(tmp(tmp2[15]).Avatar, obj4);
           cResult[11] = avatarDecoration;
@@ -881,7 +882,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled()
           needsOffscreenAlphaCompositing: null,
           avatarDecoration,
           status: true,
-          autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9naWZ0X2NhcmRzL21lc3NhZ2Vz",
+          autoStatusCutout: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9zZXR0aW5ncy9zZXJ2ZXJfbW9uZXRpemF0aW9uL3RhZ3Mvd2Vi",
         };
         if (OFFLINE === StatusTypes.UNKNOWN) {
           OFFLINE = StatusTypes.OFFLINE;

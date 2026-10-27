@@ -86,7 +86,7 @@ function handleRecomputeAllSubtitles() {
 function handleGuildScheduledEventUpdate(guildScheduledEvent) {
   return closure_20.updateSubtitles(guildScheduledEvent.guildScheduledEvent.guild_id);
 }
-const UserSettingsTypes = fn(1097).UserSettingsTypes;
+const UserSettingsTypes = fn(1094).UserSettingsTypes;
 let channelId = null;
 let voiceChannelId = null;
 let closure_20 = new ChannelListStateDefault();

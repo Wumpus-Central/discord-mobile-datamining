@@ -1,7 +1,7 @@
 // discord_app/intl/IntlLoaderStore.tsx
 import c from "../../_runtime/00576_c.js";
 import util from "index.native.tsx";
-import _modDef2070 from "../../_runtime/metro/02070__.js";
+import _modDef2067 from "../../_runtime/metro/02067__.js";
 import bg from "locale-data/date-fns.tsx";
 import formatjs from "locale-data/formatjs.tsx";
 import moment from "locale-data/moment.tsx";
@@ -72,7 +72,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                     closure_0 = tmp4;
                     c1 = 1;
                     dependencyMap = 1;
-                    const obj6 = { value: closure_0(2080).preloadAllIntlMessageFiles(), done: false };
+                    const obj6 = { value: closure_0(2077).preloadAllIntlMessageFiles(), done: false };
                     return obj6;
                   }
                 } else if (1 === tmp4) {
@@ -86,7 +86,7 @@ let closure_6 = async function _setAppLocale(arg0) {
                   } else {
                     c1 = 2;
                     dependencyMap = 1;
-                    const obj8 = { value: closure_0(1167).loadAllMessagesInLocale(closure_128_0), done: false };
+                    const obj8 = { value: closure_0(1164).loadAllMessagesInLocale(closure_128_0), done: false };
                     return obj8;
                   }
                 } else if (arg0 === 1) {
@@ -202,7 +202,7 @@ let closure_7 = async function _loadDateFnsLocale(arg0) {
             const obj4 = { value: tmp20(), done: false };
             return obj4;
           } else {
-            state.setLocaleData(_modDef2070);
+            state.setLocaleData(_modDef2067);
             c3 = 3;
           }
         }
@@ -341,21 +341,21 @@ let closure_9 = async function _setMomentLocale(arg0) {
     }
   }
 };
-const identity = fn(1269);
+const identity = fn(1266);
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   let obj = {
     isLoading: false,
     inProgressLocale: "Boolean",
-    error: "unicodeVersion",
-    localeData: _modDef2070,
+    error: "applicationId",
+    localeData: _modDef2067,
     setLoadingStarted(inProgressLocale) {
       return closure_0({ isLoading: true, inProgressLocale });
     },
     setLoadingSucceeded(arg0) {
       if (closure_1().inProgressLocale === arg0) {
-        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "unicodeVersion" });
+        closure_0({ isLoading: false, inProgressLocale: "Boolean", error: "applicationId" });
       }
     },
     setLoadingFailed(error, arg1) {
@@ -407,13 +407,13 @@ export const useLocaleData = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   let tmp4 = withEqualityFn(first);
   if (tmp4 == null) {
-    tmp4 = _modDef2070;
+    tmp4 = _modDef2067;
   }
   return tmp4;
 }) : (function useLocaleData() {
   let tmp = withEqualityFn((localeData) => localeData.localeData);
   if (tmp == null) {
-    tmp = _modDef2070;
+    tmp = _modDef2067;
   }
   return tmp;
 });

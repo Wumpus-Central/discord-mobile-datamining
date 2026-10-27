@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 const styles = createStyles.createStyles({
   container: { alignItems: "center", flexDirection: "row" },
   content: { marginStart: 8, flexGrow: 1 },
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         label = placeholder;
       }
       obj2.children = label;
-      items1[1] = React3(tmp7(5234).Text, obj2);
+      items1[1] = React3(tmp7(5235).Text, obj2);
       items1[2] = tmp5Result;
       obj.children = items1;
       return React4(TouchableHitBoxDefault, obj);

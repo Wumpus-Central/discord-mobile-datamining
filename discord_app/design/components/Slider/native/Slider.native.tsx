@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { flexGrow: 1, flexDirection: "row", alignItems: "center" },
   slider: { flex: 1 },
@@ -130,7 +130,7 @@ export const Slider = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 cResult[10] = fn;
                 let tmp19 = fn;
-                tmpResult = step(1384);
+                tmpResult = step(1381);
               } else {
                 tmp19 = cResult[10];
               }

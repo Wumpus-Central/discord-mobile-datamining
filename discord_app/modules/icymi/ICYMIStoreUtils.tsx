@@ -220,7 +220,7 @@ let closure_9 = async function _regenerateFeedAndClearReadStates(arg0) {
     }
   }
 };
-const ChannelTypes = fn(1087).ChannelTypes;
+const ChannelTypes = fn(1084).ChannelTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()

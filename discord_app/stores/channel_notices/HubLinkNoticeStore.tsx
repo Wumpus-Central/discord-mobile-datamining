@@ -21,7 +21,7 @@ function checkGuildIsHub(id) {
 function handleHotspotUpdates() {
   return true;
 }
-const GuildFeatures = fn(1087).GuildFeatures;
+const GuildFeatures = fn(1084).GuildFeatures;
 let c3 = false;
 const Store = initializeDefault.Store;
 class HubLinkNoticeStore extends Store {}

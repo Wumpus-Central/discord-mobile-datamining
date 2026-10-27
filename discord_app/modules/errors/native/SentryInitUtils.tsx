@@ -562,8 +562,8 @@ function trackCrash(event, hint, arg2) {
     tmp39 = 0 !== event_id2.length;
   }
   if (tmp39) {
-    tmp25(1257).markCrashHandled(event_id2);
-    const tmp25Result = tmp25(1257);
+    tmp25(1254).markCrashHandled(event_id2);
+    const tmp25Result = tmp25(1254);
   }
   const AppCrashedReasons = AppCrashedReasons2.AppCrashedReasons;
   const tmp41 = tmp4 ? AppCrashedReasons.UNHANDLED_NATIVE_ERROR : AppCrashedReasons.UNHANDLED_JS_ERROR;
@@ -574,13 +574,13 @@ function trackCrash(event, hint, arg2) {
   }
   items[1] = "level:" + level;
   obj6.tags = items;
-  tmp26(6468).increment(obj6, true);
-  const tmp26Result = tmp26(6468);
+  tmp26(6469).increment(obj6, true);
+  const tmp26Result = tmp26(6469);
 }
 const NativeModules = fn(17).NativeModules;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: metroRequire, Endpoints } = Constants);
-const PRIMARY_DOMAIN = fn(1098).PRIMARY_DOMAIN;
+const PRIMARY_DOMAIN = fn(1095).PRIMARY_DOMAIN;
 let registerSpanErrorInstrumentation = fn(686);
 registerSpanErrorInstrumentation = registerSpanErrorInstrumentation.reactNavigationIntegration();
 const regExp = new RegExp("/v" + window.GLOBAL_ENV.API_VERSION + Endpoints.METRICS, "g");
@@ -600,7 +600,7 @@ let closure_11 = [
 let c12 = 0.05;
 let c13 = 0.005;
 let c14 = false;
-const CommonSentryInitUtils = fn(1377);
+const CommonSentryInitUtils = fn(1374);
 let closure_20 = CommonSentryInitUtils.filterThrottle({ maxBudgetMinute: 1, maxBudgetHour: 15 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/errors/native/SentryInitUtils.tsx");
@@ -667,13 +667,13 @@ export const initSentry = function initSentry() {
             tunnel: `/error-reporting-proxy/${str2}`,
             autoInitializeNativeSdk: false,
             beforeSend,
-            dist: "35320000000000",
+            dist: "35320100000000",
             dsn: SentryStaffDsn,
             environment: ReleaseChannel,
             tracesSampleRate: 0,
             sampleRate: 1,
             ignoreErrors,
-            release: "discord_android@353.0.0-2+353200",
+            release: "discord_android@353.1.0-2+353201",
             tracePropagationTargets: null,
             integrations: null,
             beforeBreadcrumb: null,
@@ -708,7 +708,7 @@ export const initSentry = function initSentry() {
           };
           tmp15Result13.init(obj3);
           const tmp15Result16 = _mod686;
-          _mod686.setTag("buildNumber", "35320000000000");
+          _mod686.setTag("buildNumber", "35320100000000");
           const tmp15Result17 = _mod686;
           _mod686.setTag("appVersion", constants.Version);
           const tmp15Result18 = _mod686;

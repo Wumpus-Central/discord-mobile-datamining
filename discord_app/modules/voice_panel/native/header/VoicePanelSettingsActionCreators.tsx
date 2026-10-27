@@ -1,5 +1,5 @@
 // discord_app/modules/voice_panel/native/header/VoicePanelSettingsActionCreators.tsx
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
@@ -12,7 +12,7 @@ export const closeVoicePanelSettingsActionSheet = function closeVoicePanelSettin
 };
 export const openVoicePanelSettingsActionSheet = function openVoicePanelSettingsActionSheet(guildId, channelId) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(18543, dependencyMap.paths),
+    asyncRequireImpl(18577, dependencyMap.paths),
     VoicePanelSettingsActionSheet,
     { guildId, channelId },
   );

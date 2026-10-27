@@ -1,6 +1,6 @@
 // discord_app/modules/guild_settings_picker/native/components/GuildPicker.tsx
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -14,12 +14,12 @@ export default function GuildPicker(isGuildIncluded) {
   const guildId = isGuildIncluded.guildId;
   const onChange = isGuildIncluded.onChange;
   dependencyMap = undefined;
-  ({ options: c2, selectedGuild } = onChange(15143)({
+  ({ options: c2, selectedGuild } = onChange(15179)({
     isGuildIncluded: isGuildIncluded.isGuildIncluded,
     selectedGuildId: guildId,
   }));
   let name;
-  const tmp2 = onChange(15143)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
+  const tmp2 = onChange(15179)({ isGuildIncluded: isGuildIncluded.isGuildIncluded, selectedGuildId: guildId });
   if (selectedGuild != null) {
     name = selectedGuild.name;
   }
@@ -46,9 +46,9 @@ export default function GuildPicker(isGuildIncluded) {
     },
     placeholder: null,
   };
-  let intl = guildId(1128).intl;
-  obj.placeholder = intl.string(guildId(1128).t.etZ9tX);
-  return jsx(onChange(15144), {
+  let intl = guildId(1125).intl;
+  obj.placeholder = intl.string(guildId(1125).t.etZ9tX);
+  return jsx(onChange(15180), {
     label: name,
     onPress: function handleSelectGuild() {
       const obj2 = { title: null, items: null, onItemSelect: null, selectedItem: null, hasIcons: false };

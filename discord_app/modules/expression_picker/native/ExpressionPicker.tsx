@@ -9,17 +9,17 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ExpressionPickerConstants = fn(1243);
+const ExpressionPickerConstants = fn(1240);
 ({
   ExpressionPickerViewType: hasOwnProperty,
   ExpressionPickerOrder: metroRequire,
   PADDING_HORIZONTAL,
 } = ExpressionPickerConstants);
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const EmojiIntention = fn(1395).EmojiIntention;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   expressionPickerContainer: {
     flex: 1,
@@ -75,7 +75,7 @@ export default noop.memo(
           if (cResult[1] === visibleTabs) {
             let tmp5 = cResult[2];
           }
-          const tmp7 = expressionPickerViewType(10127)(tmp5);
+          const tmp7 = expressionPickerViewType(10129)(tmp5);
           ({ expressionPickerSelectedIndex, expressionPickerViewType } = tmp7);
           const prop = tmp7.expressionPickerTabStrings;
           if (cResult[3] !== channel) {
@@ -367,9 +367,9 @@ export default noop.memo(
                   }
                 }
               }
-              const tmp28 = expressionPickerViewType(10128)(tmp27);
+              const tmp28 = expressionPickerViewType(10130)(tmp27);
               const tmpResult = tmp(8901);
-              const isScreenReaderEnabled = tmp(5267).useIsScreenReaderEnabled();
+              const isScreenReaderEnabled = tmp(5268).useIsScreenReaderEnabled();
               if (cResult[20] === tmp28) {
                 class Z {
                   constructor() {
@@ -502,7 +502,7 @@ export default noop.memo(
               cResult[20] = tmp28;
               cResult[21] = isScreenReaderEnabled;
               cResult[22] = tmp31;
-              const tmpResult2 = tmp(5267);
+              const tmpResult2 = tmp(5268);
             }
             let obj3 = { pageWidth: 0, defaultIndex: expressionPickerSelectedIndex, onSetActiveIndex: L, items: tmp15 };
             cResult[12] = expressionPickerSelectedIndex;

@@ -25,8 +25,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useOverlayLayoutDriver() {
       const cResult = sharedValue(576).c(6);
       let obj = sharedValue(576);
-      sharedValue = sharedValue(5052).useSharedValue(0);
-      const obj2 = sharedValue(5052);
+      sharedValue = sharedValue(5053).useSharedValue(0);
+      const obj2 = sharedValue(5053);
       const mediaViewerDimensions = sharedValue(8784).useMediaViewerDimensions();
       ({ height, width } = mediaViewerDimensions);
       if (cResult[0] !== sharedValue) {
@@ -58,8 +58,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = sharedValue(8784);
     }
   : function useOverlayLayoutDriver() {
-      sharedValue = sharedValue(5052).useSharedValue(0);
-      let obj = sharedValue(5052);
+      sharedValue = sharedValue(5053).useSharedValue(0);
+      let obj = sharedValue(5053);
       const mediaViewerDimensions = sharedValue(8784).useMediaViewerDimensions();
       const items = [sharedValue, ,];
       ({ height: arr[1], width: arr[2] } = mediaViewerDimensions);

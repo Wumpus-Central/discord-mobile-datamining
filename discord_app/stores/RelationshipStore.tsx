@@ -85,7 +85,7 @@ function recountPending() {
   closure_17 = Math.max(num - size - size, 0);
   closure_15 = closure_15 + 1;
 }
-const RelationshipTypes = fn(1087).RelationshipTypes;
+const RelationshipTypes = fn(1084).RelationshipTypes;
 const map = new Map();
 let set = new Set();
 const set1 = new Set();
@@ -94,7 +94,7 @@ let closure_15 = 0;
 const dependencyMap = {};
 let closure_17 = 0;
 let size = 0;
-let closure_20 = { friends: "Array", blocked: "test", ignored: "y", blockedOrIgnored: "IconComponent" };
+let closure_20 = { friends: "Array", blocked: "Symbol", ignored: "y", blockedOrIgnored: "IconComponent" };
 const set3 = new Set();
 const map1 = new Map();
 const Store = initializeDefault.Store;

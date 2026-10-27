@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const MessageStates = fn(1087).MessageStates;
+const MessageStates = fn(1084).MessageStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/useOnMessageSend.tsx");

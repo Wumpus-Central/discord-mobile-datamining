@@ -4,7 +4,6 @@ import size from "../../_runtime/metro/00002__.js";
 const result = size.fileFinishedImporting("flow/Server.tsx");
 
 export const PermissionOverwriteType = { ROLE: 0, [0]: "ROLE", MEMBER: 1, [1]: "MEMBER" };
-export const GuildBoostUpsellType = { FIRST_BOOSTER: 0, [0]: "FIRST_BOOSTER" };
 export const AgeVerificationStatusUkAndAusOnly = {
   UNVERIFIED: 1,
   [1]: "UNVERIFIED",

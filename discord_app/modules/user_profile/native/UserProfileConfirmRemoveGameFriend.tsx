@@ -20,9 +20,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp4 = cResult[2];
         }
         if (cResult[3] !== userDisplayName) {
-          const intl = userId(1128).intl;
+          const intl = userId(1125).intl;
           const obj2 = { name: userDisplayName };
-          const formatToPlainStringResult = intl.formatToPlainString(userId(1128).t.fBKKfq, obj2);
+          const formatToPlainStringResult = intl.formatToPlainString(userId(1125).t.fBKKfq, obj2);
           cResult[3] = userDisplayName;
           cResult[4] = formatToPlainStringResult;
           let tmp5 = formatToPlainStringResult;
@@ -35,8 +35,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl3 = userId(1128).intl;
-            const stringResult = intl3.string(userId(1128).t.RLcE6x);
+            const intl3 = userId(1125).intl;
+            const stringResult = intl3.string(userId(1125).t.RLcE6x);
             cResult[8] = stringResult;
             let tmp10 = stringResult;
           } else {
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[9] !== tmp4) {
             const obj3 = { variant: "destructive", text: tmp10, onPress: tmp4 };
-            const tmp14 = closure_4(userId(5914).AlertActionButton, obj3, "confirm-remove");
+            const tmp14 = closure_4(userId(5915).AlertActionButton, obj3, "confirm-remove");
             cResult[9] = tmp4;
             cResult[10] = tmp14;
             let tmp12 = tmp14;
@@ -54,9 +54,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol2 = Symbol;
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
             const obj4 = { variant: "secondary", text: null };
-            const intl4 = userId(1128).intl;
-            obj4.text = intl4.string(userId(1128).t["eN6+rI"]);
-            const tmp17 = closure_4(userId(5914).AlertActionButton, obj4, "nevermind");
+            const intl4 = userId(1125).intl;
+            obj4.text = intl4.string(userId(1125).t["eN6+rI"]);
+            const tmp17 = closure_4(userId(5915).AlertActionButton, obj4, "nevermind");
             cResult[11] = tmp17;
             let tmp15 = tmp17;
           } else {
@@ -66,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj5 = { children: null };
             const items = [tmp12, tmp15];
             obj5.children = items;
-            const tmp20 = closure_5(userId(5914).AlertActions, obj5);
+            const tmp20 = closure_5(userId(5915).AlertActions, obj5);
             cResult[12] = tmp12;
             cResult[13] = tmp20;
             let tmp18 = tmp20;
@@ -82,16 +82,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj6 = { title: tmp5, content: tmp7, actions: tmp18 };
-          const tmp23 = closure_4(userId(5914).AlertModal, obj6);
+          const tmp23 = closure_4(userId(5915).AlertModal, obj6);
           cResult[14] = tmp5;
           cResult[15] = tmp7;
           cResult[16] = tmp18;
           cResult[17] = tmp23;
           tmp21 = tmp23;
         }
-        const intl2 = userId(1128).intl;
+        const intl2 = userId(1125).intl;
         const obj7 = { name: userDisplayName, gameName };
-        const formatToPlainStringResult1 = intl2.formatToPlainString(userId(1128).t.dsU5bl, obj7);
+        const formatToPlainStringResult1 = intl2.formatToPlainString(userId(1125).t.dsU5bl, obj7);
         cResult[5] = gameName;
         cResult[6] = userDisplayName;
         cResult[7] = formatToPlainStringResult1;
@@ -116,24 +116,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         PeopleUtilsDefault.removeFriend({ userId, applicationId, location: "UserProfileConfirmRemoveGameFriend" });
       }, items);
       let obj = { title: null, content: null, actions: null };
-      const intl = userId(1128).intl;
-      obj.title = intl.formatToPlainString(userId(1128).t.fBKKfq, { name: userDisplayName });
-      const intl2 = userId(1128).intl;
-      obj.content = intl2.formatToPlainString(userId(1128).t.dsU5bl, {
+      const intl = userId(1125).intl;
+      obj.title = intl.formatToPlainString(userId(1125).t.fBKKfq, { name: userDisplayName });
+      const intl2 = userId(1125).intl;
+      obj.content = intl2.formatToPlainString(userId(1125).t.dsU5bl, {
         name: userDisplayName,
         gameName: gameName.gameName,
       });
       const obj2 = { children: null };
       const obj3 = { variant: "destructive", text: null, onPress: null };
-      const intl3 = userId(1128).intl;
-      obj3.text = intl3.string(userId(1128).t.RLcE6x);
+      const intl3 = userId(1125).intl;
+      obj3.text = intl3.string(userId(1125).t.RLcE6x);
       obj3.onPress = callback;
-      const items1 = [closure_4(userId(5914).AlertActionButton, obj3, "confirm-remove")];
+      const items1 = [closure_4(userId(5915).AlertActionButton, obj3, "confirm-remove")];
       const obj4 = { variant: "secondary", text: null };
-      const intl4 = userId(1128).intl;
-      obj4.text = intl4.string(userId(1128).t["eN6+rI"]);
-      items1[1] = closure_4(userId(5914).AlertActionButton, obj4, "nevermind");
+      const intl4 = userId(1125).intl;
+      obj4.text = intl4.string(userId(1125).t["eN6+rI"]);
+      items1[1] = closure_4(userId(5915).AlertActionButton, obj4, "nevermind");
       obj2.children = items1;
-      obj.actions = closure_5(userId(5914).AlertActions, obj2);
-      return closure_4(userId(5914).AlertModal, obj);
+      obj.actions = closure_5(userId(5915).AlertActions, obj2);
+      return closure_4(userId(5915).AlertModal, obj);
     };

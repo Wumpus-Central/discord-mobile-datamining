@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/chat/conjureFileMentions.tsx
-import _modDef1951 from "../../../../_runtime/metro/01951__.js";
+import _modDef1948 from "../../../../_runtime/metro/01948__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 let c2 = "<file:(\\d{16}-[a-z0-9]{6})>";
@@ -62,7 +62,7 @@ export const createConjureFileMentionRule = function createConjureFileMentionRul
   closure_0 = arg0;
   regExp = new RegExp("^" + c2);
   return {
-    order: _modDef1951.defaultRules.autolink.order - 0.5,
+    order: _modDef1948.defaultRules.autolink.order - 0.5,
     requiredFirstCharacters: ["<"],
     match(arg0) {
       return regExp.exec(arg0);

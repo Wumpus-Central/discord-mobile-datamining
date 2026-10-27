@@ -27,9 +27,9 @@ const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 120;
 let c11 = 160;
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 let closure_13 = null;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   smallCardsScroller: { marginHorizontal: -nativeDefault.space.PX_16, overflow: "visible" },
   skeletonCardsScroller: null,
@@ -331,7 +331,7 @@ let closure_17 = noop.memo(
         }
         const obj = require("c");
         const tmp = _require;
-        const tmp11 = onPress(tmp(9337).GameProfileSectionSkeleton, {
+        const tmp11 = onPress(tmp(9336).GameProfileSectionSkeleton, {
           showViewAllSkeleton: true,
           skeletonTitleWidth: 200,
           children: onPress(GameProfileSkeletonCardRowDefault, {
@@ -1429,7 +1429,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                                   }
                                   if (cResult[38] !== tmp44) {
                                     const obj2 = { variant: "text-xs/medium", color: "text-muted", children: tmp44 };
-                                    const tmp53 = onPress(tmp(5234).Text, obj2);
+                                    const tmp53 = onPress(tmp(5235).Text, obj2);
                                     cResult[38] = tmp44;
                                     cResult[39] = tmp53;
                                     let tmp51 = tmp53;
@@ -1500,18 +1500,18 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                                   cResult[42] = tmp57;
                                   tmp54 = tmp57;
                                 }
-                                const intl2 = tmp(1128).intl;
+                                const intl2 = tmp(1125).intl;
                                 const obj6 = { createdAt: null, expiryLabel: null };
                                 const _Date = Date;
                                 const date = new Date(message.timestamp);
                                 obj6.createdAt = date;
-                                obj6.expiryLabel = tmp(9345).getPollExpiryLabel(poll);
-                                const formatResult = intl2.format(tmp(1128).t.t0FTsH, obj6);
+                                obj6.expiryLabel = tmp(9344).getPollExpiryLabel(poll);
+                                const formatResult = intl2.format(tmp(1125).t.t0FTsH, obj6);
                                 cResult[35] = message.timestamp;
                                 cResult[36] = poll;
                                 cResult[37] = formatResult;
                                 tmp44 = formatResult;
-                                const tmpResult = tmp(9345);
+                                const tmpResult = tmp(9344);
                               }
                             }
                           }
@@ -1534,10 +1534,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
                             style: tmp4.pollMoreOptions,
                             children: null,
                           };
-                          const intl = tmp(1128).intl;
+                          const intl = tmp(1125).intl;
                           const obj9 = { count: tmp8 };
-                          obj8.children = intl.format(tmp(1128).t["mv/nIa"], obj9);
-                          tmp38 = onPress(tmp(5234).Text, obj8);
+                          obj8.children = intl.format(tmp(1125).t["mv/nIa"], obj9);
+                          tmp38 = onPress(tmp(5235).Text, obj8);
                         }
                         cResult[27] = cResult[11];
                         cResult[28] = tmp4.pollMoreOptions;
@@ -1569,7 +1569,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               color: "mobile-text-heading-primary",
               children: poll.question.text,
             };
-            const tmp23 = onPress(tmp(5234).Text, obj10);
+            const tmp23 = onPress(tmp(5235).Text, obj10);
             cResult[23] = poll.question.text;
             cResult[24] = tmp23;
             let tmp21 = tmp23;
@@ -1680,7 +1680,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: poll.question.text,
         };
-        const items = [onPress(message(5234).Text, obj4), ,];
+        const items = [onPress(message(5235).Text, obj4), ,];
         const obj5 = { style: tmp.pollAnswers, children: null };
         const items1 = [
           substr.map((poll_media) => {
@@ -1701,24 +1701,24 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp9Result = diff > 0;
         if (tmp9Result) {
           let obj = { variant: "text-xs/medium", color: "text-muted", style: tmp.pollMoreOptions, children: null };
-          const intl = tmp13(1128).intl;
+          const intl = tmp13(1125).intl;
           const obj6 = { count: diff };
-          obj.children = intl.format(tmp13(1128).t["mv/nIa"], obj6);
-          tmp9Result = tmp9(tmp13(5234).Text, obj);
+          obj.children = intl.format(tmp13(1125).t["mv/nIa"], obj6);
+          tmp9Result = tmp9(tmp13(5235).Text, obj);
         }
         items1[1] = tmp9Result;
         obj5.children = items1;
         items[1] = closure_9(closure_5, obj5);
         const obj7 = { style: tmp.metadataRow, children: null };
         const obj8 = { variant: "text-xs/medium", color: "text-muted", children: null };
-        const intl2 = tmp13(1128).intl;
+        const intl2 = tmp13(1125).intl;
         const obj9 = { createdAt: null, expiryLabel: null };
         const _Date = Date;
         const date = new Date(message.timestamp);
         obj9.createdAt = date;
-        obj9.expiryLabel = message(9345).getPollExpiryLabel(poll);
-        obj8.children = intl2.format(message(1128).t.t0FTsH, obj9);
-        obj7.children = onPress(message(5234).Text, obj8);
+        obj9.expiryLabel = message(9344).getPollExpiryLabel(poll);
+        obj8.children = intl2.format(message(1125).t.t0FTsH, obj9);
+        obj7.children = onPress(message(5235).Text, obj8);
         items[2] = onPress(closure_5, obj7);
         obj3.children = items;
         obj2.children = closure_9(closure_5, obj3);

@@ -9,7 +9,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_5 = createStyles.createStyles((height) => {
   const obj = { expressionButton: null, expressionButtonIconTint: null };
   const size = {
@@ -73,7 +73,7 @@ export default noop.memo(
           } else {
             tmp17 = cResult[7];
           }
-          const tmp5Result = importDefault(showKeyboardIcon ? 12060 : 9351);
+          const tmp5Result = importDefault(showKeyboardIcon ? 12061 : 9350);
           if (cResult[8] === tmp9.expressionButtonIconTint) {
             if (cResult[9] === token1) {
               if (cResult[10] === tmp5Result) {
@@ -179,7 +179,7 @@ export default noop.memo(
         obj4.children = jsx(native.Icon, {
           size: token1,
           style: tmp7.expressionButtonIconTint,
-          source: importDefault(showKeyboardIcon ? 12060 : 9351),
+          source: importDefault(showKeyboardIcon ? 12061 : 9350),
         });
         return jsx(Pressables.PressableOpacity, {
           ref: noop.useRef(null),

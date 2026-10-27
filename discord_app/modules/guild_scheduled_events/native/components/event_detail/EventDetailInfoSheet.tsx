@@ -17,12 +17,12 @@ import TextStyles_mod from "../../../../rebrand/native/TextStyles.tsx";
 
 require = fn;
 const View = fn(17).View;
-fn(4829).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
+fn(4830).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 let closure_11 = fn(8884).GUILD_EVENT_INFO_ACTION_SHEET_KEY;
-const Fonts = fn(1098).Fonts;
+const Fonts = fn(1095).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   eventContainer: { paddingHorizontal: nativeDefault.space.PX_16 },
   eventHeader: { paddingTop: 19 },
@@ -579,9 +579,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj11 = { style: tmp.interestedContainer, children: null };
       const items9 = [closure_12(guildEvent(9140).BellIcon, { size: "sm", style: tmp.interestedIcon })];
       const obj13 = { variant: "text-sm/medium", color: "text-default", children: null };
-      const intl = guildEvent(1128).intl;
-      obj13.children = intl.format(guildEvent(1128).t["+DLsD8"], { count: tmp8 });
-      items9[1] = closure_12(guildEvent(5234).Text, obj13);
+      const intl = guildEvent(1125).intl;
+      obj13.children = intl.format(guildEvent(1125).t["+DLsD8"], { count: tmp8 });
+      items9[1] = closure_12(guildEvent(5235).Text, obj13);
       obj11.children = items9;
       items8[4] = closure_13(creator, obj11);
       let tmp11Result = null != creator && stateFromStores1;
@@ -590,12 +590,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj15 = {
           user: creator,
           guildId: guildEvent.guild_id,
-          size: tmp2(1202).AvatarSizes.XSMALL_20,
+          size: tmp2(1199).AvatarSizes.XSMALL_20,
           style: tmp.interestedIcon,
         };
-        const items10 = [closure_12(tmp2(1202).Avatar, obj15)];
+        const items10 = [closure_12(tmp2(1199).Avatar, obj15)];
         const obj16 = { variant: "text-sm/medium", color: "text-default", children: null };
-        const intl2 = tmp2(1128).intl;
+        const intl2 = tmp2(1125).intl;
         const obj17 = {
           usernameHook: function renderUsername() {
             let tmp4 = "dot" === closure_3;
@@ -636,8 +636,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return map1(closure_2_14, obj5);
           },
         };
-        obj16.children = intl2.format(tmp2(1128).t["66DLFs"], obj17);
-        items10[1] = closure_12(tmp2(5234).Text, obj16);
+        obj16.children = intl2.format(tmp2(1125).t["66DLFs"], obj17);
+        items10[1] = closure_12(tmp2(5235).Text, obj16);
         obj14.children = items10;
         tmp11Result = closure_13(tmp12, obj14);
       }
@@ -649,7 +649,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let hasItem = set.has(guildEvent.entity_type);
       if (hasItem) {
         const obj19 = { noBackground: true, divider: null, onConfirmPress: null, channelId: null, style: null };
-        const items11 = [tmp2(7882).DividerPosition.TOP, tmp2(7882).DividerPosition.BOTTOM];
+        const items11 = [tmp2(7883).DividerPosition.TOP, tmp2(7883).DividerPosition.BOTTOM];
         obj19.divider = items11;
         obj19.onConfirmPress = function onConfirmPress() {
           return ActionSheetActionCreatorsDefault.hideAllActionSheets();
@@ -683,7 +683,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       items12[1] = tmp13Result;
       items12[2] = closure_12(guildEvent(8902).GuildEventModeratorAction, { event: guildEvent, recurrenceId });
       obj20.children = items12;
-      items8[8] = closure_13(guildEvent(6696).ButtonGroup, obj20);
+      items8[8] = closure_13(guildEvent(6697).ButtonGroup, obj20);
       let tmp13Result2 = null != result;
       if (tmp13Result2) {
         const obj23 = {

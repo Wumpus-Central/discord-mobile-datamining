@@ -1,7 +1,7 @@
 // discord_app/modules/guild_settings/community/native/GuildSettingsModalCommunity.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import GuildSettingsActionCreatorsDefault from "../../GuildSettingsActionCreators.tsx";
@@ -14,9 +14,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 import GuildSettingsStore from "../../GuildSettingsStore.tsx";
 
 require = fn;
-let closure_6 = fn(4901).GUILD_SELECTABLE_CHANNELS_KEY;
-const calculateLocaleOptions = fn(17935).calculateLocaleOptions;
-const Constants = fn(1087);
+let closure_6 = fn(4902).GUILD_SELECTABLE_CHANNELS_KEY;
+const calculateLocaleOptions = fn(17969).calculateLocaleOptions;
+const Constants = fn(1084);
 ({
   ChannelTypes: closure_12,
   GuildFeatures: map1,
@@ -25,7 +25,7 @@ const Constants = fn(1087);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { overview: { flex: 1 }, overviewContent: { paddingTop: nativeDefault.space.PX_16 } };
 let closure_18 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -203,7 +203,7 @@ export default function GuildSettingsModalCommunity(guildId) {
       onClose(9005).updateGuild({ rulesChannelId });
       const obj = onClose(9005);
       const obj2 = { rulesChannelId };
-      onClose(5210).hideActionSheet();
+      onClose(5211).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -223,7 +223,7 @@ export default function GuildSettingsModalCommunity(guildId) {
       onClose(9005).updateGuild({ publicUpdatesChannelId });
       const obj = onClose(9005);
       const obj2 = { publicUpdatesChannelId };
-      onClose(5210).hideActionSheet();
+      onClose(5211).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {
@@ -243,7 +243,7 @@ export default function GuildSettingsModalCommunity(guildId) {
       onClose(9005).updateGuild({ safetyAlertsChannelId });
       const obj = onClose(9005);
       const obj2 = { safetyAlertsChannelId };
-      onClose(5210).hideActionSheet();
+      onClose(5211).hideActionSheet();
     };
     let id;
     if (safetyAlertsChannel != null) {

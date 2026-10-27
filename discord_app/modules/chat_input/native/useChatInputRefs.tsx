@@ -17,11 +17,11 @@ import SlowmodeStore from "../../../stores/SlowmodeStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const DraftType = fn(7631).DraftType;
-let closure_11 = fn(9782).updateChatInputContainerHeight;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const COMMAND_SENTINEL = fn(5984).COMMAND_SENTINEL;
-const MessageSendLocation = fn(4976).MessageSendLocation;
+const DraftType = fn(7632).DraftType;
+let closure_11 = fn(9784).updateChatInputContainerHeight;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const COMMAND_SENTINEL = fn(5985).COMMAND_SENTINEL;
+const MessageSendLocation = fn(4977).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/chat_input/native/useChatInputRefs.tsx");
 
@@ -39,7 +39,7 @@ export default function useChatInputRefs(chatInputProps) {
   const chatInputNative = noop.useRef(null);
   const chatInputSendButton = noop.useRef(null);
   const chatInputTextFlushedResponses = noop.useRef(new Map());
-  const tmp2 = chatInputTextFieldHeight(5599)(() =>
+  const tmp2 = chatInputTextFieldHeight(5600)(() =>
     ChatInputUtils.createInputRefTracker(chatInputProps.channel.id, chatInputProps.screenIndex),
   );
   closure_12 = tmp2;
@@ -68,7 +68,7 @@ export default function useChatInputRefs(chatInputProps) {
     };
   }, items2);
   const state = noop.useRef(
-    chatInputTextFieldHeight(5599)(() => ({
+    chatInputTextFieldHeight(5600)(() => ({
       editId: null,
       focused: false,
       selectionStart: 0,
@@ -390,7 +390,7 @@ export default function useChatInputRefs(chatInputProps) {
                   const merged = Object.assign(ref.current);
                   obj4.chatInputRef = chatInputRef;
                   obj2.params = obj4;
-                  const result = threadCreationCallback(13096).chatInputSendApplicationCommand(obj2);
+                  const result = threadCreationCallback(13110).chatInputSendApplicationCommand(obj2);
                 },
               );
             }
@@ -415,15 +415,15 @@ export default function useChatInputRefs(chatInputProps) {
                     tmp8 = chatInputRef;
                     obj3.chatInputRef = chatInputRef;
                     obj2.params = obj3;
-                    const result = chatInputProps(13096).chatInputHandleSendText(obj2);
-                    const obj = chatInputProps(13096);
+                    const result = chatInputProps(13110).chatInputHandleSendText(obj2);
+                    const obj = chatInputProps(13110);
                   }
-                  const keyboardType = chatInputProps(5161).getKeyboardType();
-                  if (keyboardType === chatInputProps(1631).KeyboardTypes.SYSTEM) {
+                  const keyboardType = chatInputProps(5162).getKeyboardType();
+                  if (keyboardType === chatInputProps(1628).KeyboardTypes.SYSTEM) {
                     const current2 = tmp8.current;
                     current2.focus();
                   }
-                  obj4 = chatInputProps(5161);
+                  obj4 = chatInputProps(5162);
                 },
               );
               let obj = chatInputTextFieldHeight(ref[14]);

@@ -295,9 +295,9 @@ function getEntitlementsHandler(socket) {
     return EntitlementActionCreatorsAll.fetchUserEntitlementsForApplication(id);
   }
 }
-let Constants = fn(6378);
+let Constants = fn(6379);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE, RPC_SCOPE_CONFIG } = Constants);
-Constants = fn(1087);
+Constants = fn(1084);
 ({ CurrencyCodes: hasOwnProperty, RPCCommands, RPCErrors: metroRequire, SKUTypes: closure_7 } = Constants);
 let obj = { [RPCCommands.GET_SKUS]: obj2, [RPCCommands.GET_ENTITLEMENTS]: obj3 };
 obj2 = { scope: null, handler: getSkusHandler };
@@ -306,7 +306,7 @@ obj2.scope = { [RPC_SCOPE_CONFIG.ANY]: items };
 obj3 = { scope: null, handler: getEntitlementsHandler };
 let items1 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj3.scope = { [RPC_SCOPE_CONFIG.ANY]: items1 };
-let CONTEXT_MENU_ICON_NAMES = fn(15725);
+let CONTEXT_MENU_ICON_NAMES = fn(15761);
 let obj5 = {
   scope: null,
   handler(arg0) {
@@ -322,7 +322,7 @@ let obj5 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE, RPC_LOCAL_SCOPE];
 obj5.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.GET_SKUS_EMBEDDED] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SKUS_EMBEDDED, obj5);
-CONTEXT_MENU_ICON_NAMES = fn(15725);
+CONTEXT_MENU_ICON_NAMES = fn(15761);
 let obj7 = {
   scope: null,
   handler(arg0) {

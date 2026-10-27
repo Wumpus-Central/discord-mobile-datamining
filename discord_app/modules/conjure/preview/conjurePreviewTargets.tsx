@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/preview/conjurePreviewTargets.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3830 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
 import ConjurePreviewMode from "ConjurePreviewMode.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
@@ -67,18 +67,18 @@ export const getPreviewTargetLabel = function getPreviewTargetLabel(memo1) {
     } else {
       const intl4 = util.intl;
       const obj = { surface: ConjurePreviewMode.getPreviewFrameSurfaceLabel(memo1.surface), channel: memo1.appChannel };
-      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef3830["6xVl+N"], obj);
+      previewFrameSurfaceLabel = intl4.formatToPlainString(_modDef3831["6xVl+N"], obj);
     }
     return previewFrameSurfaceLabel;
   } else if ("widget" === mode) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3830.y5GiL1);
+    return intl3.string(_modDef3831.y5GiL1);
   } else if ("overlay" === mode) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3830["2940LX"]);
+    return intl2.string(_modDef3831["2940LX"]);
   } else if ("bot" === mode) {
     const intl = util.intl;
-    return intl.string(_modDef3830.tjpaGN);
+    return intl.string(_modDef3831.tjpaGN);
   }
 };
 export const selectPreviewTarget = function selectPreviewTarget(mode, fn, fn2, fn3) {

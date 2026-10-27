@@ -103,8 +103,8 @@ let closure_8 = async function _resolveConversationFocusLink(arg0) {
     }
   }
 };
-fn(6859).addPostConnectionCallback;
-const CONVERSATION_QUERY_PARAM = fn(5607).CONVERSATION_QUERY_PARAM;
+fn(6861).addPostConnectionCallback;
+const CONVERSATION_QUERY_PARAM = fn(5608).CONVERSATION_QUERY_PARAM;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conversations/ConversationDeepLinkUtils.tsx");
 
@@ -120,7 +120,7 @@ export const consumeConversationFocusParam = function consumeConversationFocusPa
     return null;
   } else {
     str.delete(CONVERSATION_QUERY_PARAM);
-    const tryParseChannelPathResult = channelId(5606).tryParseChannelPath(pathname);
+    const tryParseChannelPathResult = channelId(5607).tryParseChannelPath(pathname);
     channelId = undefined;
     if (tryParseChannelPathResult != null) {
       channelId = tryParseChannelPathResult.channelId;

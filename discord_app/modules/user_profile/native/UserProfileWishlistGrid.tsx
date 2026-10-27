@@ -3,7 +3,7 @@ import LoggerDefault from "../../debug/Logger.tsx";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import shared from "../../../design/shared.tsx";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -23,14 +23,14 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_9 = fn(9373).isCollectiblesWishlistItemRecord;
-const getWishlistProductLines = fn(9371).getWishlistProductLines;
+let closure_9 = fn(9372).isCollectiblesWishlistItemRecord;
+const getWishlistProductLines = fn(9370).getWishlistProductLines;
 let Constants = fn(8672);
 ({ TrackUserProfileWishlistActions: closure_14, UserProfileSections: closure_15 } = Constants);
-Constants = fn(1087);
+Constants = fn(1084);
 ({ Routes: closure_16, SKUProductLines: closure_17 } = Constants);
-let closure_18 = fn(1089).CollectiblesMobileShopScreen;
-const PremiumConstants = fn(1394);
+let closure_18 = fn(1086).CollectiblesMobileShopScreen;
+const PremiumConstants = fn(1391);
 ({
   GiftingOrigin: closure_19,
   PremiumSubscriptionSKUToPremiumType: closure_20,
@@ -39,7 +39,7 @@ const PremiumConstants = fn(1394);
 const jsxProd = fn(21);
 ({ jsx: closure_22, jsxs: closure_23, Fragment: closure_24 } = jsxProd);
 let closure_25 = new LoggerDefault("UserProfileWishlistGrid");
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   headerRow: null,
   headerButtons: null,
@@ -723,7 +723,7 @@ export default function UserProfileWishlistGrid(wishlistId) {
     obj.productLines = tmp4;
     trackUserProfileWishlistAction(obj);
     ActionSheetActionCreatorsDefault.openLazy(
-      asyncRequireImpl(14425, dependencyMap.paths),
+      asyncRequireImpl(14461, dependencyMap.paths),
       "EditWishlistActionSheet",
       { wishlistId, analyticsContext: context, analyticsLocations },
       "stack",

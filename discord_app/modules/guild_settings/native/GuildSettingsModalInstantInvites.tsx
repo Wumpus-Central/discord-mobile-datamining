@@ -3,7 +3,7 @@ import _modDef12 from "../../../../_runtime/metro/00012__.js";
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -12,7 +12,7 @@ import TableRowIcon from "../../../design/components/TableRow/native/TableRowIco
 import GuildAntiRaidUtils from "../../guild_antiraid/GuildAntiRaidUtils.tsx";
 import GuildAntiRaidTypes from "../../guild_antiraid/GuildAntiRaidTypes.tsx";
 import InstantInvite from "../../guild_instant_invites/native/InstantInvite.tsx";
-import _modDef14921 from "../../../../_runtime/metro/14921__.js";
+import _modDef14957 from "../../../../_runtime/metro/14957__.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildIncidentsStore from "../../guild_antiraid/GuildIncidentsStore.tsx";
@@ -123,7 +123,7 @@ function GuildSettingsModalInstantInvites(invites) {
         };
         const obj4 = { guild, analyticsData: obj };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(12776, dependencyMap.paths),
+          asyncRequireImpl(12785, dependencyMap.paths),
           "GuildIncidentActionsActionSheet",
           obj4,
         );
@@ -178,11 +178,11 @@ function GuildSettingsModalInstantInvites(invites) {
 }
 get_ActivityIndicator = fn(17);
 ({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ GuildFeatures: c10, HelpdeskArticles: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, Fragment: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   content: { padding: 16 },
   contentWithoutPause: { paddingTop: nativeDefault.space.PX_24 },
@@ -249,7 +249,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] !== invitesDisabled) {
           let tmp15 = null;
           if (invitesDisabled) {
-            const obj5 = { source: _modDef14921 };
+            const obj5 = { source: _modDef14957 };
             tmp15 = __initData(TableRowIcon.TableRowIcon, obj5);
           }
           cResult[5] = invitesDisabled;
@@ -307,7 +307,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       };
       let tmp7Result = null;
       if (invitesDisabled) {
-        const obj4 = { source: _modDef14921 };
+        const obj4 = { source: _modDef14957 };
         tmp7Result = __initData(TableRowIcon.TableRowIcon, obj4);
       }
       obj3.icon = tmp7Result;
@@ -387,7 +387,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { guild: stateFromStores, invites: stateFromStores1, contentContainerStyle, showChannel: true };
-        const items2 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(tmp(5592).NavScrim, {})];
+        const items2 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(tmp(5593).NavScrim, {})];
         obj2.children = items2;
         tmp13 = closure_14(closure_13, obj2);
       }
@@ -413,7 +413,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           contentContainerStyle: guildId.contentContainerStyle,
           showChannel: true,
         };
-        const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(5592).NavScrim, {})];
+        const items1 = [closure_12(GuildSettingsModalInstantInvites, obj3), closure_12(guildId(5593).NavScrim, {})];
         obj2.children = items1;
         tmp6 = closure_14(closure_13, obj2);
       }

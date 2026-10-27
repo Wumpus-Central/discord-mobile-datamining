@@ -8,10 +8,10 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-let closure_4 = fn(1097).ChannelNotificationSettingsFlags;
+let closure_4 = fn(1094).ChannelNotificationSettingsFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { content: null, informations: null, actions: null, inlineTextWithIcon: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.content = {
@@ -58,9 +58,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { variant: "text-md/semibold", children: null };
-        const intl = tmp(1128).intl;
-        obj3.children = intl.string(tmp(1128).t.i4xQ5o);
-        const tmp11 = closure_5(tmp(5234).Text, obj3);
+        const intl = tmp(1125).intl;
+        obj3.children = intl.string(tmp(1125).t.i4xQ5o);
+        const tmp11 = closure_5(tmp(5235).Text, obj3);
         cResult[2] = tmp11;
         let tmp9 = tmp11;
       } else {
@@ -92,9 +92,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const obj5 = { variant: "text-xs/medium", color: "text-link", children: null };
-        const intl2 = tmp(1128).intl;
-        obj5.children = intl2.string(tmp(1128).t.KyUKhT);
-        const tmp19 = closure_5(tmp(5234).Text, obj5);
+        const intl2 = tmp(1125).intl;
+        obj5.children = intl2.string(tmp(1125).t.KyUKhT);
+        const tmp19 = closure_5(tmp(5235).Text, obj5);
         cResult[7] = tmp19;
         let tmp17 = tmp19;
       } else {

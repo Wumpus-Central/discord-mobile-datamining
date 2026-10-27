@@ -25,21 +25,21 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(10901);
+const VoicePanelConstants = fn(10904);
 let MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({
   UI_SHOW_HIDE_PHYSICS: closure_16,
   VoicePanelModes: closure_17,
   DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18,
 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(10904).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(10899).VoicePanelControlsModes;
-const ParticipantTypes = fn(5632).ParticipantTypes;
-const ThemeTypes = fn(1098).ThemeTypes;
+const EDGE_GUTTER = fn(10907).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(10902).VoicePanelControlsModes;
+const ParticipantTypes = fn(5633).ParticipantTypes;
+const ThemeTypes = fn(1095).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const OPACITY_TIMING = { duration: 300 };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   headerWrapper: { zIndex: 1, position: "absolute", top: 0, left: 0, width: "100%" },
   headerSurface: null,
@@ -550,9 +550,9 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
       if (tmpResult2.useShowStageMusicMuteButton(channelId)) {
         if (speaker) {
           if (cResult[2] !== stateFromStores) {
-            const intl = tmp(1128).intl;
+            const intl = tmp(1125).intl;
             const string = intl.string;
-            let ScHlfl = tmp(1128).t;
+            let ScHlfl = tmp(1125).t;
             if (stateFromStores) {
               ScHlfl = ScHlfl.ScHlfl;
               let stringResult = string(ScHlfl);
@@ -562,7 +562,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[2] = stateFromStores;
             cResult[3] = stringResult;
           } else {
-            const tmp4Result = importDefault(stateFromStores ? 11534 : 8461);
+            const tmp4Result = importDefault(stateFromStores ? 11536 : 8460);
             if (cResult[4] !== stateFromStores) {
               const fn2 = function p() {
                 return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
@@ -607,9 +607,9 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
       if (obj2.useShowStageMusicMuteButton(channelId)) {
         tmp6 = null;
         if (speaker) {
-          const intl = tmp4(1128).intl;
+          const intl = tmp4(1125).intl;
           const string = intl.string;
-          const t = tmp4(1128).t;
+          const t = tmp4(1125).t;
           if (stateFromStores) {
             let stringResult = string(t.ScHlfl);
           } else {
@@ -617,7 +617,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj3 = {
             accessibilityLabel: stringResult,
-            icon: importDefault(stateFromStores ? 11534 : 8461),
+            icon: importDefault(stateFromStores ? 11536 : 8460),
             onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             },

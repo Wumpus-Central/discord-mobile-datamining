@@ -16,34 +16,34 @@ function createNativePlaceholderConfig(listFooter) {
   }
   const size = {
     borderRadius: "Array",
-    borderTopLeftRadius: "defineProperty",
-    borderTopRightRadius: "ix",
-    borderBottomLeftRadius: "k",
-    borderBottomRightRadius: "substring_i",
-    divider: "ind",
-    dividerColor: "Map",
-    dividerPaddingLeft: "message",
-    dividerPaddingRight: "body",
-    placeholderShape: "substring_i",
-    placeholderShapeColor: "ref",
-    placeholderShapeCount: "analyticsLocations",
-    placeholderShapeGap: "substring_i",
-    placeholderShapePaddingHorizontal: "ind",
-    placeholderShapePaddingVertical: "Map",
-    placeholderFeedBackgroundColor: "message",
-    placeholderFeedColor: "body",
-    placeholderFeedLabelPadding: "substring_i",
-    placeholderFeedLabelPaddingInnerRatio: "ref",
-    placeholderFeedLabelSize: "analyticsLocations",
-    placeholderFeedLabelSecondarySize: "useRef",
-    placeholderFeedPadding: "runOnJS",
-    placeholderFeedShape: "channel_id",
-    placeholderFeedShapeSize: "ddd",
+    borderTopLeftRadius: "op",
+    borderTopRightRadius: "code",
+    borderBottomLeftRadius: "exports",
+    borderBottomRightRadius: "context",
+    divider: "fileFinishedImporting",
+    dividerColor: "context",
+    dividerPaddingLeft: "withSpring",
+    dividerPaddingRight: "HermesInternal",
+    placeholderShape: "WireType",
+    placeholderShapeColor: "t",
+    placeholderShapeCount: "radii",
+    placeholderShapeGap: "start",
+    placeholderShapePaddingHorizontal: "PX_16",
+    placeholderShapePaddingVertical: "formatToPlainString",
+    placeholderFeedBackgroundColor: "Number",
+    placeholderFeedColor: "formatToPlainString",
+    placeholderFeedLabelPadding: "Object",
+    placeholderFeedLabelPaddingInnerRatio: "formatToPlainString",
+    placeholderFeedLabelSize: "length",
+    placeholderFeedLabelSecondarySize: "nm",
+    placeholderFeedPadding: "substring_i",
+    placeholderFeedShape: "Object",
+    placeholderFeedShapeSize: "apply",
     placeholderType: NONE,
-    width: "numpad /",
-    height: "SETTINGS_TYPING_INDICATOR",
-    verticalAlignment: "onLoadingStart",
-    horizontalAlignment: "STREAMER_FLAMES",
+    width: 256288806806630140000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+    height: 0.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000027941951255810712,
+    verticalAlignment: 0.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000012780487820385914,
+    horizontalAlignment: 39352503571782300000,
   };
   if (null == listFooter) {
     return size;
@@ -162,9 +162,9 @@ function createNativePlaceholderConfig(listFooter) {
   }
 }
 const processColor = fn(17).processColor;
-let obj = { sectionItem: { type: fn(7157).FastestListPropsPlaceholderType.NONE } };
+let obj = { sectionItem: { type: fn(7159).FastestListPropsPlaceholderType.NONE } };
 const ReactCompilerGating = fn(558);
-let obj2 = { type: fn(7157).FastestListPropsPlaceholderType.NONE };
+let obj2 = { type: fn(7159).FastestListPropsPlaceholderType.NONE };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/fastest_list/props/useFastestListPropsPlaceholder.android.tsx");
 

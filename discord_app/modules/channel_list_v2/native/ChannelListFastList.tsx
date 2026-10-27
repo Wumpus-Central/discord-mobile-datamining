@@ -106,6 +106,7 @@ export default noop.memo(
         const tmp8 = jsx(FastListDefault, {
           insetEnd,
           scrollIndicatorInsets: tmp6,
+          automaticallyAdjustsScrollIndicatorInsets: false,
           waitFor,
           ref: tmp5,
           chunkBase: listViewportHeight,
@@ -190,6 +191,7 @@ export default noop.memo(
         const obj = {
           insetEnd,
           scrollIndicatorInsets: memo,
+          automaticallyAdjustsScrollIndicatorInsets: false,
           waitFor,
           ref: _slicedToArray(useForwardedRefDefault(ref), 2)[1],
           chunkBase: listViewportHeight,
@@ -242,6 +244,7 @@ export default noop.memo(
         return jsx(FastListDefault, {
           insetEnd,
           scrollIndicatorInsets: memo,
+          automaticallyAdjustsScrollIndicatorInsets: false,
           waitFor,
           ref: _slicedToArray(useForwardedRefDefault(ref), 2)[1],
           chunkBase: listViewportHeight,

@@ -771,7 +771,7 @@ let closure_14 = async function _maybeFetchCollectionsForApplication(arg0) {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontCollectionActionCreators.tsx");
 

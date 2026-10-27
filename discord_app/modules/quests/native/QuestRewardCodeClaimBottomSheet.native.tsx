@@ -13,10 +13,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const REWARD_CODE_PLACEHOLDER = fn(6710).REWARD_CODE_PLACEHOLDER;
+const REWARD_CODE_PLACEHOLDER = fn(6711).REWARD_CODE_PLACEHOLDER;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_10 = createStyles.createStyles((paddingBottom) => {
   const obj = {
     wrapper: { display: "flex", paddingHorizontal: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_24 },
@@ -155,10 +155,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                                     if (null != rewardCode) {
                                       ClipboardUtils.copy(tmp.code, () => {
                                         const obj2 = { text: null, icon: null };
-                                        const intl = quest(1128).intl;
-                                        obj2.text = intl.string(quest(1128).t.MSaeTe);
-                                        obj2.icon = quest(5682).CopyIcon;
-                                        rewardCode(5663).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
+                                        const intl = quest(1125).intl;
+                                        obj2.text = intl.string(quest(1125).t.MSaeTe);
+                                        obj2.icon = quest(5683).CopyIcon;
+                                        rewardCode(5664).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
                                       });
                                     }
                                   };
@@ -633,10 +633,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         if (null != rewardCode) {
           ClipboardUtils.copy(tmp.code, () => {
             const obj2 = { text: null, icon: null };
-            const intl = quest(1128).intl;
-            obj2.text = intl.string(quest(1128).t.MSaeTe);
-            obj2.icon = quest(5682).CopyIcon;
-            rewardCode(5663).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
+            const intl = quest(1125).intl;
+            obj2.text = intl.string(quest(1125).t.MSaeTe);
+            obj2.icon = quest(5683).CopyIcon;
+            rewardCode(5664).open("TOAST_QUEST_REWARD_CODE_COPIED", obj2);
           });
         }
       }, items4);

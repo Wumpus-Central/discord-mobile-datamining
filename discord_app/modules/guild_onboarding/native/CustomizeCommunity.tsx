@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
@@ -78,7 +78,7 @@ function DropdownPrompt(guildId) {
   const handleSelectOption = _prompt(isNew[41])(guildId).handleSelectOption;
   const items1 = [guildId, _prompt, handleSelectOption, stateFromStoresArray.length];
   const callback = stateFromStoresArray.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7232, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7234, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: _prompt.id,
       onSelect: function handleOptionSelected(arg0, arg1) {
@@ -143,13 +143,13 @@ function DropdownPrompt(guildId) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildOnboardingPromptsConstants = fn(7196);
+const GuildOnboardingPromptsConstants = fn(7198);
 ({ GuildOnboardingTab: closure_11, OnboardingPromptType: closure_12 } = GuildOnboardingPromptsConstants);
-const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
-const ReadStateTypes = fn(6705).ReadStateTypes;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
+const ReadStateTypes = fn(6706).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { paddingHorizontal: nativeDefault.space.PX_16 },
   sheetTitle: null,
@@ -266,7 +266,7 @@ let size = { width: 120, height: 80, marginBottom: nativeDefault.space.PX_16 };
 obj2.emptyContainerImage = size;
 let obj12 = {};
 const merged = Object.assign(
-  TextStyles(fn(1087).Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18),
+  TextStyles(fn(1084).Fonts.DISPLAY_SEMIBOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 18),
 );
 obj12.marginBottom = nativeDefault.space.PX_4;
 obj2.emptyContainerHeader = obj12;
@@ -289,7 +289,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       setTab = setTab.setTab;
       const tmp4 = closure_18();
       const obj = setTab(576);
-      const obj2 = setTab(4993);
+      const obj2 = setTab(4994);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [SelectedGuildStore];
         const fn = function l() {
@@ -302,21 +302,21 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp7, tmp8] = cResult;
       }
-      const isThemeDarkResult = setTab(4993).isThemeDark(stateFromStores(5205)());
+      const isThemeDarkResult = setTab(4994).isThemeDark(stateFromStores(5206)());
       stateFromStores = setTab(504).useStateFromStores(tmp7, tmp8);
       if (cResult[2] === stateFromStores) {
         if (cResult[3] === setTab) {
           let tmp11 = cResult[4];
         }
-        const tmp5Result = tmp5(isThemeDarkResult ? 11245 : 11246);
+        const tmp5Result = tmp5(isThemeDarkResult ? 11248 : 11249);
         if (cResult[5] === tmp4.emptyContainerImage) {
           if (cResult[6] === tmp5Result) {
             let tmp13 = cResult[7];
           }
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = tmp(1128).intl;
-            const stringResult = intl.string(tmp(1128).t.leKHQz);
+            const intl = tmp(1125).intl;
+            const stringResult = intl.string(tmp(1125).t.leKHQz);
             cResult[8] = stringResult;
             let tmp16 = stringResult;
           } else {
@@ -324,7 +324,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[9] !== tmp4.emptyContainerHeader) {
             const obj3 = { style: tmp4.emptyContainerHeader, children: tmp16 };
-            const tmp20 = closure_15(tmp(1202).LegacyText, obj3);
+            const tmp20 = closure_15(tmp(1199).LegacyText, obj3);
             cResult[9] = tmp4.emptyContainerHeader;
             cResult[10] = tmp20;
             let tmp18 = tmp20;
@@ -332,9 +332,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             tmp18 = cResult[10];
           }
           if (cResult[11] !== tmp11) {
-            const intl2 = tmp(1128).intl;
+            const intl2 = tmp(1125).intl;
             const obj4 = { onBrowseChannels: tmp11 };
-            const formatResult = intl2.format(tmp(1128).t["jH+ktB"], obj4);
+            const formatResult = intl2.format(tmp(1125).t["jH+ktB"], obj4);
             cResult[11] = tmp11;
             cResult[12] = formatResult;
             let tmp21 = formatResult;
@@ -343,7 +343,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[13] !== tmp21) {
             const obj5 = { variant: "text-sm/medium", color: "text-subtle", children: tmp21 };
-            const tmp25 = closure_15(tmp(5234).Text, obj5);
+            const tmp25 = closure_15(tmp(5235).Text, obj5);
             cResult[13] = tmp21;
             cResult[14] = tmp25;
             let tmp23 = tmp25;
@@ -372,7 +372,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           tmp26 = tmp29;
         }
         const obj7 = { style: tmp4.emptyContainerImage, source: tmp5Result };
-        const tmp15 = closure_15(tmp5(5669), obj7);
+        const tmp15 = closure_15(tmp5(5670), obj7);
         cResult[5] = tmp4.emptyContainerImage;
         cResult[6] = tmp5Result;
         cResult[7] = tmp15;
@@ -393,30 +393,30 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       setTab = setTab.setTab;
       importDefault = undefined;
       const tmp = closure_18();
-      const obj = setTab(4993);
+      const obj = setTab(4994);
       const tmp4 = importDefault;
-      const isThemeDarkResult = setTab(4993).isThemeDark(useThemeDefault());
+      const isThemeDarkResult = setTab(4994).isThemeDark(useThemeDefault());
       const items = [SelectedGuildStore];
       importDefault = setTab(504).useStateFromStores(items, () => guildId.getGuildId());
       const obj3 = { style: tmp.emptyContainer, children: null };
       const obj4 = { style: tmp.emptyContainerImage, source: null };
       const obj2 = setTab(504);
-      obj4.source = tmp4(isThemeDarkResult ? 11245 : 11246);
+      obj4.source = tmp4(isThemeDarkResult ? 11248 : 11249);
       const items1 = [closure_15(FastImageDefault, obj4), ,];
       const obj5 = { style: tmp.emptyContainerHeader, children: null };
-      const intl = tmp2(1128).intl;
-      obj5.children = intl.string(setTab(1128).t.leKHQz);
-      items1[1] = closure_15(setTab(1202).LegacyText, obj5);
+      const intl = tmp2(1125).intl;
+      obj5.children = intl.string(setTab(1125).t.leKHQz);
+      items1[1] = closure_15(setTab(1199).LegacyText, obj5);
       const obj6 = { variant: "text-sm/medium", color: "text-subtle", children: null };
-      const intl2 = tmp2(1128).intl;
-      obj6.children = intl2.format(setTab(1128).t["jH+ktB"], {
+      const intl2 = tmp2(1125).intl;
+      obj6.children = intl2.format(setTab(1125).t["jH+ktB"], {
         onBrowseChannels() {
           if (null != closure_1) {
             setTab(constants.BROWSE);
           }
         },
       });
-      items1[2] = closure_15(setTab(5234).Text, obj6);
+      items1[2] = closure_15(setTab(5235).Text, obj6);
       obj3.children = items1;
       return closure_16(closure_4, obj3);
     };
@@ -517,8 +517,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[6] !== tmp10) {
           if (null != tmp10) {
-            let selectedRoleIds = tmp(7201).getSelectedRoleIds(tmp10);
-            const tmpResult3 = tmp(7201);
+            let selectedRoleIds = tmp(7203).getSelectedRoleIds(tmp10);
+            const tmpResult3 = tmp(7203);
           } else {
             const _Set = Set;
             selectedRoleIds = new Set();
@@ -527,8 +527,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[7] = selectedRoleIds;
         } else if (cResult[8] !== tmp10) {
           if (null != tmp10) {
-            let selectedChannelIds = tmp(7201).getSelectedChannelIds(tmp10);
-            const tmpResult4 = tmp(7201);
+            let selectedChannelIds = tmp(7203).getSelectedChannelIds(tmp10);
+            const tmpResult4 = tmp(7203);
           } else {
             const _Set2 = Set;
             selectedChannelIds = new Set();
@@ -556,7 +556,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[14] === tmp13) {
                   let tmp24 = cResult[15];
                 }
-                ({ helpText, helpTextAdditional } = selectedOptionIds(7222)(tmp24));
+                ({ helpText, helpTextAdditional } = selectedOptionIds(7224)(tmp24));
                 if (cResult[16] === helpText) {
                   if (cResult[17] === helpTextAdditional) {
                     if (cResult[18] === tmp4) {
@@ -574,7 +574,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                   };
                   const items1 = [helpText, " ", helpTextAdditional];
                   obj2.children = items1;
-                  let tmp28 = closure_16(tmp(5234).Text, obj2);
+                  let tmp28 = closure_16(tmp(5235).Text, obj2);
                 } else {
                   tmp28 = null;
                 }
@@ -583,7 +583,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[18] = tmp4;
                 cResult[19] = tmp28;
                 tmp27 = tmp28;
-                const tmp26 = selectedOptionIds(7222)(tmp24);
+                const tmp26 = selectedOptionIds(7224)(tmp24);
               }
             }
           }
@@ -719,8 +719,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         ({ connectionsPromptContainer, connectionsTitle } = tmp4);
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1128).intl;
-          const stringResult = intl.string(tmp(1128).t.eDVMrA);
+          const intl = tmp(1125).intl;
+          const stringResult = intl.string(tmp(1125).t.eDVMrA);
           cResult[3] = stringResult;
           let tmp8 = stringResult;
         } else {
@@ -733,7 +733,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: tmp8,
           };
-          const tmp12 = closure_15(tmp(5234).Text, obj2);
+          const tmp12 = closure_15(tmp(5235).Text, obj2);
           cResult[4] = tmp4.connectionsTitle;
           cResult[5] = tmp12;
           let tmp10 = tmp12;
@@ -743,9 +743,9 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
-          const intl2 = tmp(1128).intl;
-          obj3.children = intl2.string(tmp(1128).t.BozOXu);
-          const tmp15 = closure_15(tmp(5234).Text, obj3);
+          const intl2 = tmp(1125).intl;
+          obj3.children = intl2.string(tmp(1125).t.BozOXu);
+          const tmp15 = closure_15(tmp(5235).Text, obj3);
           cResult[6] = tmp15;
           let tmp13 = tmp15;
         } else {
@@ -827,13 +827,13 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: null,
         };
-        const intl = tmp2(1128).intl;
-        obj3.children = intl.string(tmp2(1128).t.eDVMrA);
-        const items1 = [closure_15(tmp2(5234).Text, obj3), ,];
+        const intl = tmp2(1125).intl;
+        obj3.children = intl.string(tmp2(1125).t.eDVMrA);
+        const items1 = [closure_15(tmp2(5235).Text, obj3), ,];
         const obj4 = { variant: "text-xs/medium", color: "text-muted", children: null };
-        const intl2 = tmp2(1128).intl;
-        obj4.children = intl2.string(tmp2(1128).t.BozOXu);
-        items1[1] = closure_15(tmp2(5234).Text, obj4);
+        const intl2 = tmp2(1125).intl;
+        obj4.children = intl2.string(tmp2(1125).t.BozOXu);
+        items1[1] = closure_15(tmp2(5235).Text, obj4);
         const obj5 = {
           style: tmp.connectionsContainer,
           children: stateFromStores.map((connection, index) => {
@@ -927,7 +927,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[10] !== option.title) {
                   const obj2 = { variant: "text-md/semibold", children: option.title };
-                  const tmp26 = closure_15(tmp(5234).Text, obj2);
+                  const tmp26 = closure_15(tmp(5235).Text, obj2);
                   cResult[10] = option.title;
                   cResult[11] = tmp26;
                   let tmp24 = tmp26;
@@ -1060,7 +1060,7 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const items1 = [
         tmp10Result,
-        closure_15(option(5234).Text, { variant: "text-md/semibold", children: option.title }),
+        closure_15(option(5235).Text, { variant: "text-md/semibold", children: option.title }),
       ];
       obj2.children = items1;
       return closure_16(closure_4, obj2);
@@ -1396,7 +1396,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = guildId(576).c(47);
       guildId = guildId.guildId;
       closure_18();
-      const bottom = stateFromStores(1633)().bottom;
+      const bottom = stateFromStores(1630)().bottom;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ReadStateStore];
         cResult[0] = items;
@@ -1453,7 +1453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores1 = guildId(504).useStateFromStores(tmp10, N);
       const tmpResult2 = guildId(504);
       ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, newAnswersCount, onboardingPrompts } =
-        tmp5(11247)(guildId));
+        tmp5(11250)(guildId));
       if (cResult[6] === guildId) {
         class N {
           constructor() {
@@ -1504,13 +1504,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = guildId;
       cResult[7] = stateFromStores;
       cResult[8] = D;
-      const tmp14 = tmp5(11247)(guildId);
+      const tmp14 = tmp5(11250)(guildId);
     }
   : function CustomizeCommunity(guildId) {
       guildId = guildId.guildId;
       let stateFromStores;
       const tmp = closure_18();
-      const bottom = stateFromStores(1633)().bottom;
+      const bottom = stateFromStores(1630)().bottom;
       const items = [ReadStateStore];
       stateFromStores = guildId(504).useStateFromStores(items, () =>
         ReadStateStore.hasUnread(guildId, ReadStateTypes.GUILD_ONBOARDING_QUESTION),
@@ -1525,7 +1525,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return prop;
       });
-      const tmp7 = stateFromStores(11247)(guildId);
+      const tmp7 = stateFromStores(11250)(guildId);
       ({ newOnboardingPrompts, onboardingPromptsWithNewAnswers, onboardingPrompts } = tmp7);
       const items2 = [guildId, stateFromStores, stateFromStores1];
       ({ onboardingPromptsRaw, newAnswersCount } = tmp7);
@@ -1544,13 +1544,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () =>
           null != guildId
             ? () => {
-                guildId(7206).ackGuildFeature(
+                guildId(7208).ackGuildFeature(
                   closure_1_0,
                   constants.GUILD_ONBOARDING_QUESTION,
                   GuildOnboardingPromptsStore.ackIdForGuild(closure_1_0),
                 );
-                const obj = guildId(7206);
-                const result = stateFromStores(7200).updateOnboardingResponses(closure_1_0);
+                const obj = guildId(7208);
+                const result = stateFromStores(7202).updateOnboardingResponses(closure_1_0);
               }
             : undefined,
         items3,
@@ -1586,11 +1586,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: null,
           };
-          const intl = tmp4(1128).intl;
+          const intl = tmp4(1125).intl;
           const obj10 = { count: newOnboardingPrompts.length + newAnswersCount };
-          obj9.children = intl.format(tmp4(1128).t.iB5Gqe, obj10);
+          obj9.children = intl.format(tmp4(1125).t.iB5Gqe, obj10);
           const items5 = [
-            closure_15(tmp4(5234).Text, obj9),
+            closure_15(tmp4(5235).Text, obj9),
             newOnboardingPrompts.map(callback),
             onboardingPromptsWithNewAnswers.map(callback),
           ];
@@ -1609,13 +1609,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: null,
           };
-          const intl2 = tmp4(1128).intl;
-          obj13.children = intl2.string(tmp4(1128).t.BGkaer);
-          const items7 = [closure_15(tmp4(5234).Text, obj13), ,];
+          const intl2 = tmp4(1125).intl;
+          obj13.children = intl2.string(tmp4(1125).t.BGkaer);
+          const items7 = [closure_15(tmp4(5235).Text, obj13), ,];
           const obj14 = { variant: "text-xs/medium", color: "text-muted", children: null };
-          const intl3 = tmp4(1128).intl;
-          obj14.children = intl3.string(tmp4(1128).t.r6Vm8T);
-          items7[1] = closure_15(tmp4(5234).Text, obj14);
+          const intl3 = tmp4(1125).intl;
+          obj14.children = intl3.string(tmp4(1125).t.r6Vm8T);
+          items7[1] = closure_15(tmp4(5235).Text, obj14);
           items7[2] = onboardingPrompts.map(callback);
           obj12.children = items7;
           tmp24Result3 = closure_16(closure_17, obj12);

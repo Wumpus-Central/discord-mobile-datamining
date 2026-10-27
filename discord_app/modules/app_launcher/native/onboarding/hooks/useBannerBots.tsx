@@ -51,7 +51,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] === stateFromStores) {
           let tmp10 = cResult[5];
         }
-        return tmp(9657).useTopCommands(tmp10);
+        return tmp(9659).useTopCommands(tmp10);
       }
       const obj2 = { channel: context.channel, guild: stateFromStores };
       cResult[3] = context.channel;
@@ -75,7 +75,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
           return GuildStore.getGuild(guild_id);
         }),
       };
-      return context(9657).useTopCommands(obj2);
+      return context(9659).useTopCommands(obj2);
     };
 ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
@@ -307,14 +307,14 @@ export const useBannerBots = ReactCompilerGating.isReactCompilerEnabled()
       context = context.context;
       let first1;
       const obj = closure_6({ context });
-      const apps = first1(11937).useApplicationsInContext({
+      const apps = first1(11938).useApplicationsInContext({
         context,
         onlyWithCommands: true,
         includeBuiltIn: false,
         includeEmbeddedApps: false,
         includeNonEmbeddedApps: true,
       }).apps;
-      const obj2 = first1(11937);
+      const obj2 = first1(11938);
       const tmp2 = first1;
       const obj3 = closure_7({ context });
       const tmp4 = closure_5({ context });
@@ -323,8 +323,8 @@ export const useBannerBots = ReactCompilerGating.isReactCompilerEnabled()
       if (channel != null) {
         guild_id = channel.guild_id;
       }
-      const activityApplications = first1(11909).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
-      const obj4 = first1(11909);
+      const activityApplications = first1(11910).useActivityApplications({ guildId: guild_id, fetchesShelf: true });
+      const obj4 = first1(11910);
       const items = [AppLauncherOnboardingStore];
       const stateFromStores = tmp2(504).useStateFromStores(items, () =>
         recentApplicationCommandMetadata.getRecentApplicationCommandMetadata(),

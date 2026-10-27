@@ -3,7 +3,7 @@ import initialize from "../../../../../../discord_common/js/packages/flux/index.
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import UserCircleIcon from "../../../../../design/components/Icon/native/redesign/generated/UserCircleIcon.tsx";
 import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet.tsx";
@@ -17,9 +17,9 @@ import GuildRoleStore from "../../../../../stores/GuildRoleStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
-const StatusTypes = fn(1098).StatusTypes;
+const StatusTypes = fn(1095).StatusTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -30,7 +30,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_10();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [AccessibilityStore];
-        const fn = function o() {
+        const fn = function l() {
           return useReducedMotion.useReducedMotion;
         };
         cResult[0] = items;
@@ -151,7 +151,7 @@ export default function AppLauncherMentionableOption(option) {
   mentionable = undefined;
   closure_8 = undefined;
   const guild_id = channel.guild_id;
-  ({ style, autoFocus, hasError } = option);
+  ({ autoFocus, hasError } = option);
   [mentionable, closure_8] = channel.useState(() => {
     if (null != initialValue) {
       if ("roleMention" === initialValue.type) {
@@ -204,7 +204,6 @@ export default function AppLauncherMentionableOption(option) {
     }
   }, items1);
   let obj = {
-    style,
     option,
     hasError,
     selected: null != mentionable,
@@ -225,7 +224,7 @@ export default function AppLauncherMentionableOption(option) {
     }
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(12083, dependencyMap.paths),
+      asyncRequireImpl(12084, dependencyMap.paths),
       AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY,
       {
         option,
@@ -241,7 +240,6 @@ export default function AppLauncherMentionableOption(option) {
   };
   obj.autoFocus = autoFocus;
   return jsx(initialValue(onMentionablePress[18]), {
-    style,
     option,
     hasError,
     selected: null != mentionable,

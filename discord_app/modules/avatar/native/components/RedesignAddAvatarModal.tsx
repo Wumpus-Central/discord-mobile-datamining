@@ -11,10 +11,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const UPLOAD_MEDIUM_SIZE = fn(1087).UPLOAD_MEDIUM_SIZE;
+const UPLOAD_MEDIUM_SIZE = fn(1084).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   contentContainer: { flexGrow: 2, alignItems: "center" },
@@ -558,7 +558,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj7 = { size };
                 dependencyMap = 1;
                 c3 = 1;
-                const obj9 = { value: tmp2(8154).openImagePicker(obj7), done: false };
+                const obj9 = { value: tmp2(8152).openImagePicker(obj7), done: false };
                 return obj9;
               }
             } else if (arg0 === 1) {
@@ -574,7 +574,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 pendingImage = undefined;
                 if (null != base64) {
                   const obj11 = { imageUri: base64, description: null };
-                  const obj = tmp2(15840);
+                  const obj = tmp2(15878);
                   obj11.description = tmp2(8658).generateAvatarDescription();
                   pendingImage = obj.createPendingImage(obj11);
                   const obj3 = tmp2(8658);

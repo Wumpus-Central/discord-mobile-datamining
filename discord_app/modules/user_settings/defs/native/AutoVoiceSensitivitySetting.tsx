@@ -7,7 +7,7 @@ import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAutoVoiceSensitivitySettingValue() {
       const cResult = c.c(2);
@@ -34,7 +34,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.Z4oaN0);
   },
-  parent: fn(8332).MobileUserSettings.VOICE,
+  parent: fn(8331).MobileUserSettings.VOICE,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAutoVoiceSensitivitySettingValue() {
         const cResult = c.c(2);

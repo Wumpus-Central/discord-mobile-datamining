@@ -1,6 +1,6 @@
 // discord_app/components_native/chat/contentHandlers.tsx
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../modules/toast/native/ToastUtils.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
@@ -317,7 +317,7 @@ obj.onLongPressAttachmentLink = function onLongPressAttachmentLink() {
   return applyArgumentsResult;
 };
 obj.onTapMention = function onTapMention(nativeEvent) {
-  const nativeSyntheticEventData = parsedUserId(10073).getNativeSyntheticEventData(nativeEvent);
+  const nativeSyntheticEventData = parsedUserId(10075).getNativeSyntheticEventData(nativeEvent);
   ({ userId, channelId, roleName, parsedUserId } = nativeSyntheticEventData);
   ({ roleId, guildId } = nativeSyntheticEventData);
   if (null != userId) {
@@ -330,7 +330,7 @@ obj.onTapMention = function onTapMention(nativeEvent) {
       if (null != guildId) {
         const obj3 = { guildId, roleId, channelId };
         ActionSheetActionCreatorsDefault.openLazy(
-          parsedUserId(2002)(11286, dependencyMap.paths),
+          parsedUserId(1999)(11289, dependencyMap.paths),
           "RoleMembersActionSheet",
           obj3,
         );
@@ -340,19 +340,19 @@ obj.onTapMention = function onTapMention(nativeEvent) {
       if (null != guildId) {
         const obj5 = { guildId, roleId: null, channelId: null };
         const obj6 = ActionSheetActionCreatorsDefault;
-        const tmp10 = parsedUserId(2002)(11286, dependencyMap.paths);
+        const tmp10 = parsedUserId(1999)(11289, dependencyMap.paths);
         obj5.roleId = SnowflakeUtilsDefault.castGuildIdAsEveryoneGuildRoleId(guildId);
         obj5.channelId = channelId;
         obj6.openLazy(tmp10, "RoleMembersActionSheet", obj5);
       }
     }
     if (null == roleName) {
-      const DeveloperMode = parsedUserId(4799).DeveloperMode;
+      const DeveloperMode = parsedUserId(4800).DeveloperMode;
       if (DeveloperMode.getSetting()) {
         if (null != parsedUserId) {
           const obj7 = { secondaryConfirmText: null, onConfirmSecondary: null };
-          const intl = parsedUserId(1128).intl;
-          obj7.secondaryConfirmText = intl.string(parsedUserId(1128).t["/AXYnE"]);
+          const intl = parsedUserId(1125).intl;
+          obj7.secondaryConfirmText = intl.string(parsedUserId(1125).t["/AXYnE"]);
           obj7.onConfirmSecondary = function onConfirmSecondary() {
             ClipboardUtils.copy(parsedUserId);
             const result = ToastUtils.presentCopiedToClipboard();
@@ -360,19 +360,19 @@ obj.onTapMention = function onTapMention(nativeEvent) {
           let obj11 = obj7;
         }
         const obj10 = { title: null, body: null, confirmText: null, isDismissable: true };
-        const intl2 = parsedUserId(1128).intl;
-        obj10.title = intl2.string(parsedUserId(1128).t.r0DLNm);
-        const intl3 = parsedUserId(1128).intl;
-        obj10.body = intl3.string(parsedUserId(1128).t.Fqqbhg);
-        const intl4 = parsedUserId(1128).intl;
-        obj10.confirmText = intl4.string(parsedUserId(1128).t.BddRzS);
+        const intl2 = parsedUserId(1125).intl;
+        obj10.title = intl2.string(parsedUserId(1125).t.r0DLNm);
+        const intl3 = parsedUserId(1125).intl;
+        obj10.body = intl3.string(parsedUserId(1125).t.Fqqbhg);
+        const intl4 = parsedUserId(1125).intl;
+        obj10.confirmText = intl4.string(parsedUserId(1125).t.BddRzS);
         const merged = Object.assign(obj11);
         AlertActionCreatorsDefault.show(obj10);
       }
       obj11 = {};
     }
   }
-  let obj = parsedUserId(10073);
+  let obj = parsedUserId(10075);
 };
 obj.onTapTimestamp = function onTapTimestamp(nativeEvent) {
   ToastUtils.presentTimestamp(nativeEvent.nativeEvent.node.full);
@@ -386,7 +386,7 @@ obj.onTapInlineCode = function onTapInlineCode(nativeEvent) {
   tmp = null != node.content && typeof node.content === "string";
 };
 obj.onTapEmoji = function onTapEmoji(emojiNode) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9937, dependencyMap.paths), "MessageEmojiActionSheet", {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(9939, dependencyMap.paths), "MessageEmojiActionSheet", {
     emojiNode: emojiNode.nativeEvent.node,
   });
 };

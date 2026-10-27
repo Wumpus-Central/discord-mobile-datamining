@@ -24,7 +24,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { padding: nativeDefault.space.PX_16 },
   preview: null,
@@ -349,8 +349,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_9();
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp8 = closure_7(tmp(5234).Heading, { variant: "text-lg/bold", children: "Variants" });
-        const tmp9 = closure_7(tmp(5234).Text, {
+        const tmp8 = closure_7(tmp(5235).Heading, { variant: "text-lg/bold", children: "Variants" });
+        const tmp9 = closure_7(tmp(5235).Text, {
           variant: "text-sm/normal",
           color: "text-subtle",
           children:
@@ -426,8 +426,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = { spacing: nativeDefault.space.PX_16, children: null };
         items = [tmp5, tmp6, tmp10];
         obj3.children = items;
-        obj2.children = closure_8(tmp(5977).Stack, obj3);
-        const tmp17 = closure_7(tmp(6905).Card, obj2);
+        obj2.children = closure_8(tmp(5978).Stack, obj3);
+        const tmp17 = closure_7(tmp(6907).Card, obj2);
         cResult[4] = tmp10;
         cResult[5] = tmp17;
         let tmp13 = tmp17;

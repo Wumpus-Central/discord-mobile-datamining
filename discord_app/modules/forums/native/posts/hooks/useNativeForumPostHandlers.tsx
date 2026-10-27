@@ -22,14 +22,14 @@ import ForumPostMessagesStore from "../../../ForumPostMessagesStore.tsx";
 import ForumPostRecentMessageStore from "../../../ForumPostRecentMessageStore.tsx";
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({
   AnalyticsObjectTypes: closure_11,
   AnalyticsPages: closure_12,
   AnalyticsSections: map1,
   EMPTY_STRING_SNOWFLAKE_ID: closure_14,
 } = Constants);
-const constants4 = fn(1127).OpenThreadAnalyticsLocations;
+const constants4 = fn(1124).OpenThreadAnalyticsLocations;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/native/posts/hooks/useNativeForumPostHandlers.tsx");
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       threadId = threadId.threadId;
       let NORMAL = threadId.reactionType;
       if (undefined === NORMAL) {
-        NORMAL = tmp(5225).ReactionTypes.NORMAL;
+        NORMAL = tmp(5226).ReactionTypes.NORMAL;
       }
       if (cResult[0] !== threadId) {
         const fn = function h(containerRef) {
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const channelIcon = utils_ChannelUtils.getChannelIcon(channel);
           const mapped = mediaItems.map((src) => {
             src = src.src;
-            const str = NORMAL(1386).toURLSafe(src);
+            const str = NORMAL(1383).toURLSafe(src);
             let tmp = null != str;
             if (src.srcIsAnimated) {
               if (tmp) {
@@ -70,14 +70,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (tmp) {
                 let isAttachmentPathUrlResult = src.type === threadId(8848).ForumPostMediaTypes.ATTACHMENT;
                 if (isAttachmentPathUrlResult) {
-                  isAttachmentPathUrlResult = closure_2(9718).isAttachmentPathUrl(str);
-                  const obj5 = closure_2(9718);
+                  isAttachmentPathUrlResult = closure_2(9720).isAttachmentPathUrl(str);
+                  const obj5 = closure_2(9720);
                 }
                 if (!isAttachmentPathUrlResult) {
                   let result = src.type === threadId(8848).ForumPostMediaTypes.EMBED;
                   if (result) {
-                    result = closure_2(9718).isExternalProxiedAttachmentUrl(str);
-                    const obj6 = closure_2(9718);
+                    result = closure_2(9720).isExternalProxiedAttachmentUrl(str);
+                    const obj6 = closure_2(9720);
                   }
                   isAttachmentPathUrlResult = result;
                 }
@@ -533,7 +533,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       threadId = threadId.threadId;
       let NORMAL = threadId.reactionType;
       if (NORMAL === undefined) {
-        NORMAL = threadId(5225).ReactionTypes.NORMAL;
+        NORMAL = threadId(5226).ReactionTypes.NORMAL;
       }
       const items = [threadId];
       const items1 = [threadId];
@@ -548,7 +548,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const channelIcon = utils_ChannelUtils.getChannelIcon(channel);
         const mapped = mediaItems.map((src) => {
           src = src.src;
-          const str = NORMAL(1386).toURLSafe(src);
+          const str = NORMAL(1383).toURLSafe(src);
           let tmp = null != str;
           if (src.srcIsAnimated) {
             if (tmp) {
@@ -563,14 +563,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (tmp) {
               let isAttachmentPathUrlResult = src.type === threadId(8848).ForumPostMediaTypes.ATTACHMENT;
               if (isAttachmentPathUrlResult) {
-                isAttachmentPathUrlResult = callback1(9718).isAttachmentPathUrl(str);
-                const obj5 = callback1(9718);
+                isAttachmentPathUrlResult = callback1(9720).isAttachmentPathUrl(str);
+                const obj5 = callback1(9720);
               }
               if (!isAttachmentPathUrlResult) {
                 let result = src.type === threadId(8848).ForumPostMediaTypes.EMBED;
                 if (result) {
-                  result = callback1(9718).isExternalProxiedAttachmentUrl(str);
-                  const obj6 = callback1(9718);
+                  result = callback1(9720).isExternalProxiedAttachmentUrl(str);
+                  const obj6 = callback1(9720);
                 }
                 isAttachmentPathUrlResult = result;
               }

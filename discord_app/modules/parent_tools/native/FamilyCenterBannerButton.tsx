@@ -3,8 +3,8 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import MetaQuestUtils from "../../device/MetaQuestUtils.android.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
-import _modDef2536 from "../FamilyCenter.messages.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
+import _modDef2535 from "../FamilyCenter.messages.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import NativePermissionUtilsDefault from "../../native_permissions/NativePermissionUtils.tsx";
@@ -66,7 +66,7 @@ function FamilyCenterTeenQRCodeButtonInner() {
       const obj2 = { action: React6.ShowQRCodeModal };
       AnalyticsUtilsDefault.track(AnalyticEvents.FAMILY_CENTER_ACTION, obj2);
       const obj4 = { linkCode: stateFromStores1, expiresAt: stateFromStores2, onRefresh: getLinkCode2 };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16171, dependencyMap.paths), React5, obj4);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16209, dependencyMap.paths), React5, obj4);
     }
   }, items4);
   const obj8 = {
@@ -119,22 +119,22 @@ function FamilyCenterTeenQRCodeButtonInner() {
   return closure_13(getLinkCode(stateFromStores[23]).Stack, obj8);
 }
 const View = fn(17).View;
-const FamilyCenterConstants = fn(7646);
+const FamilyCenterConstants = fn(7647);
 ({
   CONNECT_GUARDIAN_BOTTOM_SHEET_KEY: closure_7,
   FAMILY_CENTER_LINK_REQUEST_REGEX: closure_8,
   FamilyCenterAction: closure_9,
 } = FamilyCenterConstants);
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const NativePermissionTypes = fn(7868).NativePermissionTypes;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const NativePermissionTypes = fn(7869).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let createStyles = fn(4971);
+let createStyles = fn(4972);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_16 } };
 let closure_14 = createStyles.createStyles(obj2);
 fn(558);
 let obj3 = { marginTop: nativeDefault.space.PX_16 };
-createStyles = fn(4971);
+createStyles = fn(4972);
 let closure_16 = createStyles.createStyles({
   button: { height: 50, width: "100%", marginTop: 16 },
   art: { width: 18, height: 18, marginRight: 6 },
@@ -273,8 +273,8 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
     return null;
   } else {
     let obj2 = { text: null, onPress: null };
-    const intl = tmp(1128).intl;
-    obj2.text = intl.string(_modDef2536.z4a9HP);
+    const intl = tmp(1125).intl;
+    obj2.text = intl.string(_modDef2535.z4a9HP);
     obj2.onPress = function onPress() {
       AnalyticsUtilsDefault.track(AnalyticEvents.FAMILY_CENTER_ACTION, { action: React6.ScanQRCodeButton });
       let obj2 = { action: React6.ScanQRCodeButton };
@@ -291,6 +291,6 @@ export const FamilyCenterParentQRCodeButton = function FamilyCenterParentQRCodeB
     };
     return closure_12(closure_17, obj2);
   }
-  obj = handleQrCodeScanSucess(8125);
+  obj = handleQrCodeScanSucess(8123);
   tmp = handleQrCodeScanSucess;
 };

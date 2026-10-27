@@ -312,7 +312,7 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
       }
       return setControlsMode({ mode, debounce });
     }, items4);
-    obj2.runOnJS = tmp(5052).runOnJS;
+    obj2.runOnJS = tmp(5053).runOnJS;
     obj2._queueHideControls = callback1;
     fn.__closure = obj2;
     fn.__workletHash = 9447192071204;
@@ -335,11 +335,11 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
         ReanimatedRexport.runOnJS(callback)();
       }
     };
-    const obj4 = { VoicePanelModes, runOnJS: tmp(5052).runOnJS, _queueHideControls: callback1, _clearHideControlsQueue };
+    const obj4 = { VoicePanelModes, runOnJS: tmp(5053).runOnJS, _queueHideControls: callback1, _clearHideControlsQueue };
     fn2.__closure = obj4;
     fn2.__workletHash = 9080436423990;
     fn2.__initData = __initData13;
-    const animatedReaction = tmp(5052).useAnimatedReaction(S, fn2);
+    const animatedReaction = tmp(5053).useAnimatedReaction(S, fn2);
     const items6 = [stateFromStores, tmp4Result, isConnected];
     const layoutEffect = noop.useLayoutEffect(() => {
       if (closure_3) {
@@ -351,7 +351,7 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
       }
       tmp5 = CONTROLS_HEIGHT;
     }, items6);
-    const tmpResult = tmp(5052);
+    const tmpResult = tmp(5053);
     const fn3 = function f() {
       return connected.get();
     };
@@ -373,7 +373,7 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
     fn4.__closure = obj6;
     fn4.__workletHash = 14172278286591;
     fn4.__initData = __initData15;
-    const animatedReaction1 = tmp(5052).useAnimatedReaction(fn3, fn4);
+    const animatedReaction1 = tmp(5053).useAnimatedReaction(fn3, fn4);
     const items7 = [cancelControlsDebounce, _clearHideControlsQueue];
     const layoutEffect1 = noop.useLayoutEffect(() => () => {
       cancelControlsDebounce();
@@ -397,16 +397,16 @@ function useControlsState(mode, isConnected, connected, stateFromStores) {
   tmp6 = CONTROLS_HEIGHT;
 }
 let AppState = fn(17).AppState;
-const VoicePanelConstants = fn(10901);
+const VoicePanelConstants = fn(10904);
 ({ VoicePanelModes: closure_17, getAnalyticsNameForVoicePanelMode: closure_18 } = VoicePanelConstants);
-const VoicePanelControlsConstants = fn(10899);
+const VoicePanelControlsConstants = fn(10902);
 ({ CONTROLS_HEIGHT: closure_19, CONTROLS_HEIGHT_PTT: closure_20, CONTROLS_HIDE_TIMEOUT: closure_21, VoicePanelControlsModes: closure_22 } = VoicePanelControlsConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_23, ComponentActions: closure_24, InputModes: closure_25 } = Constants);
-const OrientationLockState = fn(2026).OrientationLockState;
-const ActivityPanelModes = fn(5609).ActivityPanelModes;
-const isActivityParticipant = fn(5632).isActivityParticipant;
-const MorphablePanelModes = fn(10902).MorphablePanelModes;
+const OrientationLockState = fn(2023).OrientationLockState;
+const ActivityPanelModes = fn(5610).ActivityPanelModes;
+const isActivityParticipant = fn(5633).isActivityParticipant;
+const MorphablePanelModes = fn(10905).MorphablePanelModes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_31 = ReactCompilerGating.isReactCompilerEnabled() ? (function useActivityConnected(setControlsMode) {
@@ -2755,8 +2755,8 @@ let closure_72 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKey
     obj = mode(dependencyMap[26]);
     tmp3 = arg1;
   };
-  let obj = mode(5052);
-  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9976).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(5052).runOnJS, dismissKeyboard: mode(5159).dismissKeyboard };
+  let obj = mode(5053);
+  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9978).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(5053).runOnJS, dismissKeyboard: mode(5160).dismissKeyboard };
   fn2.__workletHash = 9634019064864;
   fn2.__initData = __initData21;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);
@@ -2792,8 +2792,8 @@ let closure_72 = ReactCompilerGating.isReactCompilerEnabled() ? (function useKey
     obj = mode(dependencyMap[26]);
     tmp3 = arg1;
   };
-  let obj = mode(5052);
-  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9976).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(5052).runOnJS, dismissKeyboard: mode(5159).dismissKeyboard };
+  let obj = mode(5053);
+  fn2.__closure = { cheapWorkletArrayShallowEqual: mode(9978).cheapWorkletArrayShallowEqual, VoicePanelControlsModes, VoicePanelModes, runOnJS: mode(5053).runOnJS, dismissKeyboard: mode(5160).dismissKeyboard };
   fn2.__workletHash = 12442886667392;
   fn2.__initData = __initData23;
   const animatedReaction = obj.useAnimatedReaction(fn, fn2);

@@ -10,7 +10,7 @@ import GameAutocompleteStore from "GameAutocompleteStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const QueryIds = fn(1087).QueryIds;
+const QueryIds = fn(1084).QueryIds;
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(GameAutocompleteStore, {
   getQueryId(name, arg1) {

@@ -88,12 +88,12 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/embedded_apps/csp/useEmbeddedAppCSP.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function useEmbeddedAppCSP(url) {
+  ? function useEmbeddedAppCSP(embeddedAppUrl) {
       const cResult = c.c(10);
       const isEmbeddedAppFramePolicyEnabled =
         EmbeddedAppFramePolicyExperiment.useIsEmbeddedAppFramePolicyEnabled("useEmbeddedAppCSP");
       if (cResult[0] === isEmbeddedAppFramePolicyEnabled) {
-        if (cResult[1] === url) {
+        if (cResult[1] === embeddedAppUrl) {
           let tmp5 = cResult[2];
         }
         ({ data, error } = fetchStore(tmp5));
@@ -133,24 +133,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let applicationRouterOrigin = null;
       if (isEmbeddedAppFramePolicyEnabled) {
         applicationRouterOrigin = null;
-        if (null != url) {
-          applicationRouterOrigin = getURLForApplication.getApplicationRouterOrigin(url);
+        if (null != embeddedAppUrl) {
+          applicationRouterOrigin = getURLForApplication.getApplicationRouterOrigin(embeddedAppUrl);
           const tmpResult = getURLForApplication;
         }
       }
       cResult[0] = isEmbeddedAppFramePolicyEnabled;
-      cResult[1] = url;
+      cResult[1] = embeddedAppUrl;
       cResult[2] = applicationRouterOrigin;
       tmp5 = applicationRouterOrigin;
     }
-  : function useEmbeddedAppCSP(url) {
+  : function useEmbeddedAppCSP(embeddedAppUrl) {
       const isEmbeddedAppFramePolicyEnabled =
         EmbeddedAppFramePolicyExperiment.useIsEmbeddedAppFramePolicyEnabled("useEmbeddedAppCSP");
       let applicationRouterOrigin = null;
       if (isEmbeddedAppFramePolicyEnabled) {
         applicationRouterOrigin = null;
-        if (null != url) {
-          applicationRouterOrigin = getURLForApplication.getApplicationRouterOrigin(url);
+        if (null != embeddedAppUrl) {
+          applicationRouterOrigin = getURLForApplication.getApplicationRouterOrigin(embeddedAppUrl);
           const tmpResult = getURLForApplication;
         }
       }

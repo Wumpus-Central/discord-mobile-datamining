@@ -41,9 +41,9 @@ function getConsoleInfo(type) {
     return null;
   }
 }
-const PlatformTypes = fn(1087).PlatformTypes;
+const PlatformTypes = fn(1084).PlatformTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   consoleIconContainer: {
     borderRadius: nativeDefault.radii.round,
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const arr = useGameConsoleAccountsDefault();
       if (cResult[0] !== arr) {
         const mapped = arr.map(getConsoleInfo);
-        const found = mapped.filter(tmp(1388).isNotNullish);
+        const found = mapped.filter(tmp(1385).isNotNullish);
         cResult[0] = arr;
         cResult[1] = found;
         let tmp5 = found;
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp9;
         }
         const obj2 = { items: tmp5, renderItem: tmp8, offsetAmount: -3 };
-        const tmp11 = jsx(tmp(1202).SummarizedIconRow, { items: tmp5, renderItem: tmp8, offsetAmount: -3 });
+        const tmp11 = jsx(tmp(1199).SummarizedIconRow, { items: tmp5, renderItem: tmp8, offsetAmount: -3 });
         cResult[5] = tmp5;
         cResult[6] = tmp8;
         cResult[7] = tmp11;

@@ -6,8 +6,8 @@ import UserRecord from "../../records/UserRecord.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ReferencedMessageState = fn(7696).ReferencedMessageState;
-const Constants = fn(1087);
+const ReferencedMessageState = fn(7697).ReferencedMessageState;
+const Constants = fn(1084);
 ({
   MessageStates: closure_7,
   MessageTypes: closure_8,
@@ -30,7 +30,7 @@ export default function createMessage(tts) {
   }
   ({ messageReference, allowedMentions, author, nonce, state } = tts);
   const items = [];
-  ({ flags, poll, sharedCustomTheme, changelogId, giftingPrompt, boostingPrompt, mediaMention } = tts);
+  ({ flags, poll, sharedCustomTheme, changelogId, giftingPrompt, mediaMention } = tts);
   if (DEFAULT === constants2.REPLY) {
     _modDef38(null != messageReference, "Replies must have a message reference");
     if (null == allowedMentions) {
@@ -124,7 +124,6 @@ export default function createMessage(tts) {
     shared_client_theme: null,
     changelog_id: null,
     gifting_prompt: null,
-    boosting_prompt: null,
     media_mention: null,
   };
   if (state == null) {
@@ -140,7 +139,6 @@ export default function createMessage(tts) {
   obj5.shared_client_theme = sharedCustomTheme;
   obj5.changelog_id = changelogId;
   obj5.gifting_prompt = giftingPrompt;
-  obj5.boosting_prompt = boostingPrompt;
   obj5.media_mention = mediaMention;
   return obj5;
 }

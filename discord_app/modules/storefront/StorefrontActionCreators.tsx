@@ -373,7 +373,7 @@ let closure_19 = async function _fetchStorefrontPrices(arg0) {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 let closure_9 = 10 * DurationsDefault.Millis.MINUTE;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 const size = fn(2);

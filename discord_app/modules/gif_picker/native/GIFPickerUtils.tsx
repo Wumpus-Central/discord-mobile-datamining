@@ -7,9 +7,9 @@ import FavoriteGIFHooks from "../FavoriteGIFHooks.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-function transformFavoriteGifUrl(url, arg1) {
-  let combined = url;
-  const str = URLUtilsDefault.toURLSafe(url);
+function transformFavoriteGifUrl(src, arg1) {
+  let combined = src;
+  const str = URLUtilsDefault.toURLSafe(src);
   if (null != str) {
     if (obj6.isExternalProxiedAttachmentUrl(str)) {
       const formatted = str.pathname.toLowerCase();
@@ -51,7 +51,7 @@ function transformFavoriteGifUrl(url, arg1) {
     return combined;
   }
 }
-fn(1087).GIFPickerResultTypes;
+fn(1084).GIFPickerResultTypes;
 const re6 = /(https?:\/\/)(?!media(?:\d+)?\.)(?:[^.]+\.)*giphy\.com/;
 const re7 = /(tenor\.com)/;
 const re8 = /-(?:.(?!-))+$/;
@@ -95,9 +95,9 @@ export const useFavoriteGIFsMobile = ReactCompilerGating.isReactCompilerEnabled(
       tmp4 = tmp5;
     }
   : function useFavoriteGIFsMobile() {
-      sortedFavoriteGIFs = sortedFavoriteGIFs(10136).useSortedFavoriteGIFs(transformFavoriteGifUrl);
+      sortedFavoriteGIFs = sortedFavoriteGIFs(10138).useSortedFavoriteGIFs(transformFavoriteGifUrl);
       const items = [sortedFavoriteGIFs];
-      let obj = sortedFavoriteGIFs(10136);
+      let obj = sortedFavoriteGIFs(10138);
       return {
         favorites: sortedFavoriteGIFs,
         favoritesCategory: noop.useMemo(() => {

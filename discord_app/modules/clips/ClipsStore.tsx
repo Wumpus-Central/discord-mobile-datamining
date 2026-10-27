@@ -237,7 +237,7 @@ function trackClipMessage(message) {
   }
   obj = DistributedClipsExperimentDefault;
 }
-const ClipsConstants = fn(8148);
+const ClipsConstants = fn(8146);
 ({
   CLIPS_HARDWARE_CLASSIFICATION_VERSION: metroRequire,
   ClipSaveTypes: closure_7,
@@ -249,9 +249,9 @@ const ClipsConstants = fn(8148);
   ClipsLengthSettings,
   DEFAULT_CLIPS_BITRATE_PERCENT,
 } = ClipsConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MessageAttachmentFlags: map1, MessageReferenceTypes: closure_14, VoiceFlags: closure_15 } = Constants);
-const StreamSettingsConstants = fn(5814);
+const StreamSettingsConstants = fn(5815);
 let c16 = "default";
 let c17 = "Discord Clips";
 const dependencyMap = {};

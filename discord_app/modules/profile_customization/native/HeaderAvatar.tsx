@@ -25,9 +25,9 @@ let closure_3 = [
   "ref",
 ];
 const View = fn(17).View;
-const ActivityTypes = fn(1087).ActivityTypes;
+const ActivityTypes = fn(1084).ActivityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_11 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         dependencyMap = cResult[12];
       }
       if (undefined === XXLARGE) {
-        XXLARGE = tmp(1202).AvatarSizes.XXLARGE;
+        XXLARGE = tmp(1199).AvatarSizes.XXLARGE;
       }
       closure_11();
       id = tmp14.id;
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ pendingAvatarSrc, style, onPress, size } = animate);
       ({ disableStatus, pendingAvatarDecoration, statusStyle } = animate);
       if (size === undefined) {
-        size = guildId(1202).AvatarSizes.XXLARGE;
+        size = guildId(1199).AvatarSizes.XXLARGE;
       }
       let flag = animate.animate;
       if (flag === undefined) {
@@ -379,8 +379,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj10 = { user, guildId };
           const merged2 = Object.assign(obj7);
         }
-        obj8.children = jsx(obj(1202).Avatar, obj10);
-        jsx(obj(6908).PressableOpacity, {
+        obj8.children = jsx(obj(1199).Avatar, obj10);
+        jsx(obj(6910).PressableOpacity, {
           ref,
           onPress,
           onLongPress: onPress,
@@ -401,7 +401,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj13 = { user, guildId };
           const merged5 = Object.assign(obj7);
         }
-        obj11.children = jsx(obj(1202).Avatar, obj13);
+        obj11.children = jsx(obj(1199).Avatar, obj13);
         return <View ref={ref} style={style} accessibilityRole="image" accessible />;
       }
       const tmp10Result = tmp10(guildId(8655).getProfilePreviewValue(obj6));

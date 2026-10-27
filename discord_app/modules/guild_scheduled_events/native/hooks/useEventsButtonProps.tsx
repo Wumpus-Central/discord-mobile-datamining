@@ -1,5 +1,5 @@
 // discord_app/modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import MemberVerificationModalActionCreators from "../../../guild_member_verification/MemberVerificationModalActionCreators.tsx";
 import guild_scheduled_events_GuildScheduledEventModalActionCreators from "../GuildScheduledEventModalActionCreators.tsx";
@@ -11,7 +11,7 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 const require = globalThis.__r;
 
 require = fn;
-const ReadStateTypes = fn(6705).ReadStateTypes;
+const ReadStateTypes = fn(6706).ReadStateTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_scheduled_events/native/hooks/useEventsButtonProps.tsx");
 
@@ -48,25 +48,25 @@ export default function useEventsButtonProps(id) {
   }, items3);
   const handleLongPress = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(13272, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, {
+    obj.openLazy(asyncRequireImpl(13286, dependencyMap.paths), "UpcomingEventsLongPress-" + user.id, {
       guildId: user.id,
     });
   }, items4);
   if (arr4.length > 0) {
-    const intl2 = tmp(1128).intl;
+    const intl2 = tmp(1125).intl;
     const obj3 = { number: arr4.length };
-    let name = intl2.formatToPlainString(tmp(1128).t.IBdqSu, obj3);
+    let name = intl2.formatToPlainString(tmp(1125).t.IBdqSu, obj3);
   } else {
-    const intl = tmp(1128).intl;
-    name = intl.string(tmp(1128).t.tlopTM);
+    const intl = tmp(1125).intl;
+    name = intl.string(tmp(1125).t.tlopTM);
   }
-  let mode = tmp(13276).ChannelModes.DEFAULT;
+  let mode = tmp(13290).ChannelModes.DEFAULT;
   let tmp8 = hasUnread;
   if (hasUnread) {
     tmp8 = !eventsMuted;
   }
   if (tmp8) {
-    mode = tmp(13276).ChannelModes.UNREAD_IMPORTANT;
+    mode = tmp(13290).ChannelModes.UNREAD_IMPORTANT;
   }
   return { hasUnread, mentionCount, mode, name, eventsMuted, handlePress, handleLongPress };
 }

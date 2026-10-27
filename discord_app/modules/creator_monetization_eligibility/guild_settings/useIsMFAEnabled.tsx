@@ -5,7 +5,7 @@ import GuildSettingsStore from "../../guild_settings/GuildSettingsStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const MFALevels = fn(1087).MFALevels;
+const MFALevels = fn(1084).MFALevels;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(

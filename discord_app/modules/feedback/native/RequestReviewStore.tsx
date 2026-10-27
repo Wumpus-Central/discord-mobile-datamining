@@ -81,7 +81,7 @@ function handleConnectionClosedOrInterrupted() {
     c11 = -1;
   }
 }
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const RequestReviewStore = "RequestReviewStore";
 let obj = { revision: 0 };
 let closure_10 = false;

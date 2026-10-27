@@ -13,7 +13,7 @@ class JankNavigationReporter {
     return Object.assign({
       _isAttached: false,
       _routeKeyAtDispatch: "Boolean",
-      _screensBeforeDispatch: "unicodeVersion",
+      _screensBeforeDispatch: "applicationId",
     });
   }
 }
@@ -113,5 +113,5 @@ let result = size.fileFinishedImporting("modules/jank_stats/native/JankNavigatio
 export default Object.assign({
   _isAttached: false,
   _routeKeyAtDispatch: "Boolean",
-  _screensBeforeDispatch: "unicodeVersion",
+  _screensBeforeDispatch: "applicationId",
 });

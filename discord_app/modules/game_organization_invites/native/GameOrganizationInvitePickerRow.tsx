@@ -2,12 +2,12 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef2406 from "../GameOrganizationInvitesUntranslated.messages.js";
+import _modDef2403 from "../GameOrganizationInvitesUntranslated.messages.js";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import TableRow from "../../../design/components/TableRow/native/TableRow.native.tsx";
-import _modDef7265 from "../../../../_runtime/metro/07265__.js";
+import _modDef7267 from "../../../../_runtime/metro/07267__.js";
 import GroupIcon from "../../../design/components/Icon/native/redesign/generated/GroupIcon.tsx";
 import InviteButtonDefault from "../../instant_invite/native/components/InviteButton.tsx";
 import getGameOrganizationInviteSendStateKey from "../getGameOrganizationInviteSendStateKey.tsx";
@@ -17,10 +17,10 @@ const getGameOrganizationInviteSendStateKeyDefault = getGameOrganizationInviteSe
 
 require = fn;
 let closure_4 = fn(9131).useInstantInviteSendStates;
-const InviteSendStates = fn(7809).InviteSendStates;
+const InviteSendStates = fn(7810).InviteSendStates;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { icon: null };
 let size = {
   width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE,
@@ -69,7 +69,7 @@ export default noop.memo(
                 const obj2 = { uri: organization.iconUrl };
                 let tmp16 = obj2;
               } else {
-                tmp16 = _modDef7265;
+                tmp16 = _modDef7267;
               }
               cResult[8] = organization.iconUrl;
               cResult[9] = tmp16;
@@ -139,7 +139,7 @@ export default noop.memo(
                     const obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
                     const intl = util.intl;
                     const obj8 = { count: memberCount, max: maxMembers };
-                    obj7.children = intl.formatToPlainString(_modDef2406.VuENGl, obj8);
+                    obj7.children = intl.formatToPlainString(_modDef2403.VuENGl, obj8);
                     items[1] = timestampProducer(Text_Text.Text, obj7);
                     obj5.children = items;
                     tmp24 = React5(Stack_Stack.Stack, obj5);
@@ -204,7 +204,7 @@ export default noop.memo(
           const obj2 = { uri: organization.iconUrl };
           let tmp2Result = obj2;
         } else {
-          tmp2Result = _modDef7265;
+          tmp2Result = _modDef7267;
         }
         const obj3 = {
           icon: timestampProducer(FastImageDefault, { source: tmp2Result, style: tmp.icon }),
@@ -228,7 +228,7 @@ export default noop.memo(
             const obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
             const intl = util.intl;
             const obj8 = { count: memberCount, max: maxMembers };
-            obj7.children = intl.formatToPlainString(_modDef2406.VuENGl, obj8);
+            obj7.children = intl.formatToPlainString(_modDef2403.VuENGl, obj8);
             items1[1] = timestampProducer(Text_Text.Text, obj7);
             obj5.children = items1;
             tmp11 = React5(Stack_Stack.Stack, obj5);

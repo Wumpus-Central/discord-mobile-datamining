@@ -9,8 +9,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
 require = fn;
-const application_id = fn(1087).COLLECTIBLES_APPLICATION_ID;
-const PaymentGateways = fn(1098).PaymentGateways;
+const application_id = fn(1084).COLLECTIBLES_APPLICATION_ID;
+const PaymentGateways = fn(1095).PaymentGateways;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
@@ -301,7 +301,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const GiftingBadgeExperiment = tmp(10496).GiftingBadgeExperiment;
+      const GiftingBadgeExperiment = tmp(10499).GiftingBadgeExperiment;
       const enabled = GiftingBadgeExperiment.useConfig(first).enabled;
       if (cResult[1] !== enabled) {
         class O {
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        tmp14[HermesBuiltin.arraySpread(analyticsLocations, 0)] = enabled(7278).COLLECTIBLES_MOBILE_GIFT_MODAL;
+        tmp14[HermesBuiltin.arraySpread(analyticsLocations, 0)] = enabled(7280).COLLECTIBLES_MOBILE_GIFT_MODAL;
         cResult[8] = analyticsLocations;
         cResult[9] = tmp14;
         const arraySpreadResult = HermesBuiltin.arraySpread(analyticsLocations, 0);
@@ -425,7 +425,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const analyticsLocations2 = enabled(7253)(tmp14).analyticsLocations;
+      const analyticsLocations2 = enabled(7255)(tmp14).analyticsLocations;
       if (stateFromStores != null) {
         class O {
           constructor() {
@@ -563,7 +563,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return resolved;
               }
             }
-            const stringResult = obj5.string(tmp(1128).t["JCFN/y"]);
+            const stringResult = obj5.string(tmp(1125).t["JCFN/y"]);
             cResult[12] = stringResult;
             const tmp22 = stringResult;
           } else {
@@ -608,7 +608,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj3 = { onDismiss: onGiftModalDismiss, title: tmp22 };
-            const tmp25 = jsx(tmp19(10578), { onDismiss: onGiftModalDismiss, title: tmp22 });
+            const tmp25 = jsx(tmp19(10581), { onDismiss: onGiftModalDismiss, title: tmp22 });
             cResult[13] = onGiftModalDismiss;
             cResult[14] = tmp25;
           } else {

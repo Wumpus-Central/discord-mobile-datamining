@@ -14,10 +14,10 @@ import MessageStore from "../../stores/MessageStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-let GuildChannelStore = fn(4901);
+let GuildChannelStore = fn(4902);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: metroRequire, GUILD_VOCAL_CHANNELS_KEY: closure_7 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Permissions: closure_14, MessageTypes: closure_15 } = Constants);
 fn(558);
 let ReactCompilerGating = fn(558);

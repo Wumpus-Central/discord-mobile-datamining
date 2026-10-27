@@ -5,8 +5,8 @@ import FramesStore from "../frames/FramesStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelTypes = fn(1087).ChannelTypes;
-const getFrameSurfaceForChannel = fn(6776).getFrameSurfaceForChannel;
+const ChannelTypes = fn(1084).ChannelTypes;
+const getFrameSurfaceForChannel = fn(6777).getFrameSurfaceForChannel;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_channels/useAppChannelRunningApp.tsx");
@@ -58,8 +58,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] !== tmp9) {
         let stringResult = null;
         if (tmp9) {
-          const intl = tmp(1128).intl;
-          stringResult = intl.string(tmp(1128).t["1yCkJY"]);
+          const intl = tmp(1125).intl;
+          stringResult = intl.string(tmp(1125).t["1yCkJY"]);
         }
         cResult[4] = tmp9;
         cResult[5] = stringResult;
@@ -110,8 +110,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = { frameId: stateFromStores, runningLabel: null };
       let stringResult = null;
       if (useFrameRunsInBackgroundDefault(stateFromStores)) {
-        const intl = tmp(1128).intl;
-        stringResult = intl.string(tmp(1128).t["1yCkJY"]);
+        const intl = tmp(1125).intl;
+        stringResult = intl.string(tmp(1125).t["1yCkJY"]);
       }
       obj2.runningLabel = stringResult;
       return obj2;

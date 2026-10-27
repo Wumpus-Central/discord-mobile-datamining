@@ -9,7 +9,7 @@ import ConjureProjectStore from "../../conjure/projects/ConjureProjectStore.tsx"
 import ChannelStore from "../../../stores/ChannelStore.tsx";
 
 require = fn;
-const RPCErrors = fn(1087).RPCErrors;
+const RPCErrors = fn(1084).RPCErrors;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateConjureAppFrame.tsx");
 

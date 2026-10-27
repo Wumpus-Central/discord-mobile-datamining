@@ -49,10 +49,10 @@ let closure_18 = async function _handleVoiceChannelPress(arg0) {
   })();
 };
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(5717).NO_VOICE_STATES;
-const RedesignChannelListConstants = fn(11953);
+const NO_VOICE_STATES = fn(5718).NO_VOICE_STATES;
+const RedesignChannelListConstants = fn(11954);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_12, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
 let obj = {

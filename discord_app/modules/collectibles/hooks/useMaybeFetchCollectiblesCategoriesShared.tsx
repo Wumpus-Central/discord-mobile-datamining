@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const noop = fn(19);
 ({ useEffect: c3, useCallback: closure_4 } = noop);
-const CollectiblesShopConstants = fn(1089);
+const CollectiblesShopConstants = fn(1086);
 ({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: closure_7, COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: closure_8 } =
   CollectiblesShopConstants);
 const ReactCompilerGating = fn(558);

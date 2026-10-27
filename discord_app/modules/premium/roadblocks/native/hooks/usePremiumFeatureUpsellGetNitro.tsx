@@ -10,8 +10,8 @@ import SubscriptionStore from "../../../../../stores/billing/SubscriptionStore.t
 import UserOfferStore from "../../../../../stores/billing/UserOfferStore.tsx";
 
 require = fn;
-const PremiumTypes = fn(1394).PremiumTypes;
-const AnalyticsObjectTypes = fn(1087).AnalyticsObjectTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
+const AnalyticsObjectTypes = fn(1084).AnalyticsObjectTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/roadblocks/native/hooks/usePremiumFeatureUpsellGetNitro.tsx");
 
@@ -77,8 +77,8 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
             onPress();
           })
           .catch(() => {
-            const intl = closure_1_0(1128).intl;
-            page(5662).presentFailedToast(intl.string(closure_1_0(1128).t.R0RpRX));
+            const intl = closure_1_0(1125).intl;
+            page(5663).presentFailedToast(intl.string(closure_1_0(1125).t.R0RpRX));
           })
           .finally(() => closure_1_4(false));
         const catchPromise = Promise.all(items)
@@ -87,8 +87,8 @@ export default function usePremiumFeatureUpsellGetNitro(arg0, arg1, page, arg3) 
             onPress();
           })
           .catch(() => {
-            const intl = closure_1_0(1128).intl;
-            page(5662).presentFailedToast(intl.string(closure_1_0(1128).t.R0RpRX));
+            const intl = closure_1_0(1125).intl;
+            page(5663).presentFailedToast(intl.string(closure_1_0(1125).t.R0RpRX));
           });
       }
     }

@@ -13,8 +13,8 @@ import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 import PrivateChannelSortStore from "../../stores/views/PrivateChannelSortStore.tsx";
 
 require = fn;
-const ME = fn(1087).ME;
-const StaticChannelRoute = fn(4830).StaticChannelRoute;
+const ME = fn(1084).ME;
+const StaticChannelRoute = fn(4831).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/getGuildTransitionRoute.tsx");
 

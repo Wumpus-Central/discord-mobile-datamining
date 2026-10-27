@@ -2,15 +2,15 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import ContactSyncModalActionCreators from "../ContactSyncModalActionCreators.tsx";
-import _modDef15101 from "../../../../../_runtime/metro/15101__.js";
+import _modDef15137 from "../../../../../_runtime/metro/15137__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const dismissUpsellCTA = fn(13584).dismissUpsellCTA;
-const Constants = fn(1087);
+const dismissUpsellCTA = fn(13598).dismissUpsellCTA;
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   container: {
     padding: 12,
@@ -59,14 +59,14 @@ export default noop.memo(
           function openDismissOption() {
             const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
             const obj3 = { label: null, onPress: null };
-            const intl = _location(1128).intl;
-            obj3.label = intl.string(_location(1128).t.WAI6xu);
+            const intl = _location(1125).intl;
+            obj3.label = intl.string(_location(1125).t.WAI6xu);
             obj3.onPress = function onPress() {
               closure_1_3();
             };
             const items = [obj3];
             obj2.options = items;
-            const result = _location(7290).showSimpleActionSheet(obj2);
+            const result = _location(7292).showSimpleActionSheet(obj2);
           }
           cResult[2] = openDismissOption;
           let tmp6 = openDismissOption;
@@ -79,10 +79,10 @@ export default noop.memo(
           }
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            let intl = _location(1128).intl;
-            const stringResult = intl.string(_location(1128).t.T6Rfd9);
-            const intl2 = _location(1128).intl;
-            const stringResult1 = intl2.string(_location(1128).t.c6KIpg);
+            let intl = _location(1125).intl;
+            const stringResult = intl.string(_location(1125).t.T6Rfd9);
+            const intl2 = _location(1125).intl;
+            const stringResult1 = intl2.string(_location(1125).t.c6KIpg);
             cResult[6] = stringResult;
             cResult[7] = stringResult1;
             let tmp9 = stringResult1;
@@ -101,7 +101,7 @@ export default noop.memo(
             onPress: tmp5,
             onLongPress: tmp6,
             style: tmp7,
-            iconSource: _modDef15101,
+            iconSource: _modDef15137,
             title: tmp8,
             subtitle: tmp9,
           };
@@ -109,7 +109,7 @@ export default noop.memo(
             onPress: tmp5,
             onLongPress: tmp6,
             style: tmp7,
-            iconSource: _modDef15101,
+            iconSource: _modDef15137,
             title: tmp8,
             subtitle: tmp9,
           });
@@ -145,26 +145,26 @@ export default noop.memo(
           onLongPress: function openDismissOption() {
             const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
             const obj3 = { label: null, onPress: null };
-            const intl = location(1128).intl;
-            obj3.label = intl.string(location(1128).t.WAI6xu);
+            const intl = location(1125).intl;
+            obj3.label = intl.string(location(1125).t.WAI6xu);
             obj3.onPress = function onPress() {
               closure_1_3();
             };
             const items = [obj3];
             obj2.options = items;
-            const result = location(7290).showSimpleActionSheet(obj2);
+            const result = location(7292).showSimpleActionSheet(obj2);
           },
           style: null,
-          iconSource: _modDef15101,
+          iconSource: _modDef15137,
           title: null,
           subtitle: null,
         };
         let items = [closure_7().container, location.style];
         obj.style = items;
-        let intl = location(1128).intl;
-        obj.title = intl.string(location(1128).t.T6Rfd9);
-        const intl2 = location(1128).intl;
-        obj.subtitle = intl2.string(location(1128).t.c6KIpg);
+        let intl = location(1125).intl;
+        obj.title = intl.string(location(1125).t.T6Rfd9);
+        const intl2 = location(1125).intl;
+        obj.subtitle = intl2.string(location(1125).t.c6KIpg);
         return jsx(location(8951).FormCTA, {
           onPress: function handleOpen() {
             const obj2 = { type: constants2.CONTACT_SYNC_MODAL, location: null };
@@ -183,17 +183,17 @@ export default noop.memo(
           onLongPress: function openDismissOption() {
             const obj2 = { key: "ContactSyncUpsellLongPress", options: null, hasIcons: false };
             const obj3 = { label: null, onPress: null };
-            const intl = location(1128).intl;
-            obj3.label = intl.string(location(1128).t.WAI6xu);
+            const intl = location(1125).intl;
+            obj3.label = intl.string(location(1125).t.WAI6xu);
             obj3.onPress = function onPress() {
               closure_1_3();
             };
             const items = [obj3];
             obj2.options = items;
-            const result = location(7290).showSimpleActionSheet(obj2);
+            const result = location(7292).showSimpleActionSheet(obj2);
           },
           style: null,
-          iconSource: _modDef15101,
+          iconSource: _modDef15137,
           title: null,
           subtitle: null,
         });

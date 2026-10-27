@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16444);
+const YouBarConstants = fn(16483);
 ({
   YOU_BAR_SPRING_CONFIG: metroRequire,
   YOU_BAR_LARGE_AVATAR_NAME_MARGIN: closure_7,
@@ -16,7 +16,7 @@ const YouBarConstants = fn(16444);
 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   youButton: {
     flexDirection: "row",
@@ -85,9 +85,9 @@ export default noop.memo(
           fn2.__closure = obj2;
           fn2.__workletHash = 12063452832866;
           fn2.__initData = __initData;
-          const animatedStyle = tmp(5052).useAnimatedStyle(fn2);
-          const tmpResult4 = tmp(5052);
-          const name = sharedValue(5025).useName(stateFromStores);
+          const animatedStyle = tmp(5053).useAnimatedStyle(fn2);
+          const tmpResult4 = tmp(5053);
+          const name = sharedValue(5026).useName(stateFromStores);
           if (null != stateFromStores) {
             if (null != name) {
               if (cResult[21] === tmp8) {
@@ -133,14 +133,14 @@ export default noop.memo(
                       tmp30 = tmp33;
                     }
                     const obj5 = { style: tmp23, children: tmp24 };
-                    const tmp29 = closure_9(tmp16(5052).View, obj5);
+                    const tmp29 = closure_9(tmp16(5053).View, obj5);
                     cResult[31] = tmp23;
                     cResult[32] = tmp24;
                     cResult[33] = tmp29;
                     tmp27 = tmp29;
                   }
                   const obj7 = { userId: stateFromStores.id, username: name };
-                  const tmp26 = closure_9(tmp16(17835), obj7);
+                  const tmp26 = closure_9(tmp16(17876), obj7);
                   cResult[28] = stateFromStores.id;
                   cResult[29] = name;
                   cResult[30] = tmp26;
@@ -153,7 +153,7 @@ export default noop.memo(
                 tmp23 = items2;
               }
               const obj8 = { isLargeAvatar: tmp8, onPress: onAvatarPress };
-              const tmp21 = closure_9(tmp16(17834), obj8);
+              const tmp21 = closure_9(tmp16(17875), obj8);
               cResult[21] = tmp8;
               cResult[22] = onAvatarPress;
               cResult[23] = tmp21;
@@ -162,7 +162,7 @@ export default noop.memo(
           }
           if (cResult[6] !== tmp8) {
             const obj9 = { isLarge: tmp8 };
-            const tmp36 = closure_9(tmp16(17833), obj9);
+            const tmp36 = closure_9(tmp16(17874), obj9);
             cResult[6] = tmp8;
             cResult[7] = tmp36;
             let tmp34 = tmp36;
@@ -209,7 +209,7 @@ export default noop.memo(
               cResult[20] = tmp49;
             }
             const obj13 = { style: tmp38, children: tmp39 };
-            const tmp45 = closure_9(tmp16(5052).View, obj13);
+            const tmp45 = closure_9(tmp16(5053).View, obj13);
             cResult[14] = tmp38;
             cResult[15] = tmp39;
             cResult[16] = tmp45;
@@ -230,7 +230,7 @@ export default noop.memo(
           cResult[10] = youButton.userText;
           cResult[11] = items4;
           tmp38 = items4;
-          const obj6 = sharedValue(5025);
+          const obj6 = sharedValue(5026);
         }
         class T {
           constructor() {
@@ -273,33 +273,33 @@ export default noop.memo(
         M.__closure = { nameMargin: sharedValue };
         M.__workletHash = 5882881762081;
         M.__initData = __initData2;
-        const animatedStyle = tmp2(5052).useAnimatedStyle(M);
-        const tmp2Result = tmp2(5052);
-        const name = sharedValue(5025).useName(stateFromStores);
+        const animatedStyle = tmp2(5053).useAnimatedStyle(M);
+        const tmp2Result = tmp2(5053);
+        const name = sharedValue(5026).useName(stateFromStores);
         if (null != stateFromStores) {
           if (null != name) {
             let obj3 = { style: tmp.youButton, children: null };
             const obj5 = { isLargeAvatar: tmp5, onPress: isQuestRendered.onAvatarPress };
-            const items2 = [closure_9(tmp9(17834), obj5)];
+            const items2 = [closure_9(tmp9(17875), obj5)];
             const obj6 = { style: null, children: null };
             const items3 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
             obj6.style = items3;
             const obj7 = { userId: stateFromStores.id, username: name };
-            obj6.children = closure_9(tmp9(17835), obj7);
-            items2[1] = closure_9(tmp9(5052).View, obj6);
+            obj6.children = closure_9(tmp9(17876), obj7);
+            items2[1] = closure_9(tmp9(5053).View, obj6);
             obj3.children = items2;
           }
           return tmp11(View, obj3);
         }
         const obj8 = { style: tmp.youButton, children: null };
-        const items4 = [closure_9(sharedValue(17833), { isLarge: !isQuestRendered })];
+        const items4 = [closure_9(sharedValue(17874), { isLarge: !isQuestRendered })];
         const obj9 = { style: null, children: closure_9(View, { style: tmp.placeholder }) };
         const items5 = [tmp.userText, animatedStyle, { flexShrink: 1 }];
         obj9.style = items5;
-        items4[1] = closure_9(sharedValue(5052).View, obj9);
+        items4[1] = closure_9(sharedValue(5053).View, obj9);
         obj8.children = items4;
         obj3 = obj8;
         const obj10 = { style: tmp.placeholder };
-        const obj4 = sharedValue(5025);
+        const obj4 = sharedValue(5026);
       },
 );

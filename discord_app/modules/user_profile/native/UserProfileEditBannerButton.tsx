@@ -8,12 +8,12 @@ import PencilIcon from "../../../design/components/Icon/native/redesign/generate
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const UserProfileBannerDefault = tmp5(8737);
-const EditButtonDefault = tmp5(15852);
+const EditButtonDefault = tmp5(15890);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { position: "relative" },
   editButton: null,

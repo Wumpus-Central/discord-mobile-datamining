@@ -4,6 +4,7 @@ import CollectiblesShopConstants from "../collectibles/CollectiblesShopConstants
 import PremiumConstants from "../premium/PremiumConstants.tsx";
 import dismissible_content from "../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import DismissibleContentUnsafeUtils from "../dismissible_content/DismissibleContentUnsafeUtils.tsx";
+import SocialLayerStorefrontConstants from "../slayer_storefront/SocialLayerStorefrontConstants.tsx";
 import DismissibleContentConstants from "../dismissible_content/DismissibleContentConstants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -11,10 +12,16 @@ let closure_2 = Constants.COLLECTIBLES_APPLICATION_ID;
 const EXTERNAL_PRODUCT_SKU_IDS = CollectiblesShopConstants.EXTERNAL_PRODUCT_SKU_IDS;
 ({ DismissibleContentGroupName: closure_4, ContentDismissActionType: hasOwnProperty } = DismissibleContentConstants);
 let closure_6 = PremiumConstants.PREMIUM_SUBSCRIPTION_APPLICATION;
+SocialLayerStorefrontConstants.BLOONS_TD6_SPLIT_TENDER_COUPON_SKU_IDS;
 let result = size.fileFinishedImporting("modules/virtual_currency/VirtualCurrencyUtils.tsx");
 
 export const get1PShopApplicationIdForSKU = function get1PShopApplicationIdForSKU(skuId) {
-  return skuId === EXTERNAL_PRODUCT_SKU_IDS.FRACTIONAL_PREMIUM ? closure_6 : closure_2;
+  if (skuId === EXTERNAL_PRODUCT_SKU_IDS.FRACTIONAL_PREMIUM) {
+    let tmp3 = closure_6;
+  } else {
+    tmp3 = closure_2;
+  }
+  return tmp3;
 };
 export const dismissOrbsOnboardingExperience = function dismissOrbsOnboardingExperience() {
   if (

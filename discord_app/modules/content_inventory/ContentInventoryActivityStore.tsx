@@ -106,7 +106,7 @@ function handlePresenceUpdates() {
   }
   set = new Set();
 }
-const ActivityTypes = fn(1087).ActivityTypes;
+const ActivityTypes = fn(1084).ActivityTypes;
 let items = [fn(8613).ContentInventoryEntryType.LISTENED_SESSION];
 let set = new Set(items);
 const map = new Map();

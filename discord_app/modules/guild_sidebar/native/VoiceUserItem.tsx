@@ -20,13 +20,13 @@ const getConsoleIconDefault = getConsoleIcon;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = "text-sm/medium";
 let c9 = "redesign-channel-name-muted-text";
-const XSMALL_20 = fn(1202).AvatarSizes.XSMALL_20;
-const createStyles = fn(4971);
+const XSMALL_20 = fn(1199).AvatarSizes.XSMALL_20;
+const createStyles = fn(4972);
 let obj = {
   voiceState: { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 5 },
   disabled: { opacity: 0.5 },
@@ -47,7 +47,7 @@ let size = {
   overflow: "hidden",
 };
 obj.voiceStateCollapsed = size;
-const ChannelListLayout = fn(11954);
+const ChannelListLayout = fn(11955);
 let merged = Object.assign(ChannelListLayout.makeSizeStyle(14));
 obj.voiceStateIcon = { marginLeft: 6 };
 obj.legacyVoiceStateIcon = { tintColor: nativeDefault.colors.REDESIGN_CHANNEL_NAME_MUTED_TEXT, marginLeft: 6 };

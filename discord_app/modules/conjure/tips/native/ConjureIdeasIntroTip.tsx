@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/tips/native/ConjureIdeasIntroTip.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3830 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3831 from "../../intl/ConjureUntranslated.messages.js";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import LightbulbIcon from "../../../../design/components/Icon/native/redesign/generated/LightbulbIcon.tsx";
 import ConjureTipCallout from "ConjureTipCallout.tsx";
@@ -12,23 +12,23 @@ require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let obj = {};
-const merged = Object.assign(fn(12333).CONJURE_IDEAS_INTRO_TIP_BASE);
+const merged = Object.assign(fn(12339).CONJURE_IDEAS_INTRO_TIP_BASE);
 obj.render = function render(arg0, context) {
   const onAskForIdeas = context.context.onAskForIdeas;
   const dismiss = context.dismiss;
   const obj = { icon: LightbulbIcon.LightbulbIcon, onDismiss: dismiss, children: null };
   const obj2 = { children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3830.OJlbhX);
+  obj2.children = intl.string(_modDef3831.OJlbhX);
   const items = [React3(ConjureTipCallout.ConjureTipTitle, obj2), ,];
   const obj3 = { children: null };
   const intl2 = util.intl;
-  obj3.children = intl2.string(_modDef3830["3vJBni"]);
+  obj3.children = intl2.string(_modDef3831["3vJBni"]);
   items[1] = React3(ConjureTipCallout.ConjureTipBody, obj3);
   const obj4 = { children: null };
   const obj5 = { variant: "primary", size: "sm", text: null, disabled: null, onPress: null };
   const intl3 = util.intl;
-  obj5.text = intl3.string(_modDef3830["U/bLzU"]);
+  obj5.text = intl3.string(_modDef3831["U/bLzU"]);
   obj5.disabled = null == onAskForIdeas;
   obj5.onPress = function onPress() {
     if (dismiss != null) {

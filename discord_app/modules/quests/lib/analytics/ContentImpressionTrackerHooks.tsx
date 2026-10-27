@@ -207,9 +207,9 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const stateFromStores = obj(504).useStateFromStores(first, tmp5, tmp6);
         if (null == stateFromStores) {
-          return null !== adCreativeType(6660)(null);
+          return null !== adCreativeType(6661)(null);
         } else if (cResult[5] !== stateFromStores) {
-          obj = obj(7801);
+          obj = obj(7802);
           const questStatus = obj.getQuestStatus(stateFromStores);
           cResult[5] = stateFromStores;
           cResult[6] = questStatus;

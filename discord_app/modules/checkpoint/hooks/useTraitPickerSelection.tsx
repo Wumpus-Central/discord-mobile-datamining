@@ -1,6 +1,6 @@
 // discord_app/modules/checkpoint/hooks/useTraitPickerSelection.tsx
-import CheckpointCustomizationUtils from "../CheckpointCustomizationUtils.tsx";
 import CheckpointCharacterTraits from "../CheckpointCharacterTraits.tsx";
+import CheckpointCustomizationUtils from "../CheckpointCustomizationUtils.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import CheckpointStore from "../CheckpointStore.tsx";
 
@@ -15,7 +15,7 @@ export const useTraitPickerSelection = ReactCompilerGating.isReactCompilerEnable
       const cResult = customizationOption(onSelectOption[6]).c(15);
       customizationOption = customizationOption.customizationOption;
       onSelectOption = customizationOption.onSelectOption;
-      const tmp4 = customizationOption(onSelectOption[2]).CUSTOMIZATION_OPTION_TRAITS[customizationOption];
+      const tmp4 = customizationOption(onSelectOption[2]).CUSTOMIZATION_OPTION_TO_TRAIT[customizationOption];
       closure_2 = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [selectedOptionId];
@@ -119,7 +119,7 @@ export const useTraitPickerSelection = ReactCompilerGating.isReactCompilerEnable
       customizationOption = customizationOption.customizationOption;
       const onSelectOption = customizationOption.onSelectOption;
       let selectedOptionId;
-      noop = customizationOption(onSelectOption[2]).CUSTOMIZATION_OPTION_TRAITS[customizationOption];
+      noop = customizationOption(onSelectOption[2]).CUSTOMIZATION_OPTION_TO_TRAIT[customizationOption];
       const items = [selectedOptionId];
       const savedOptionId = customizationOption(onSelectOption[7]).useStateFromStoresObject(items, () => {
         let tmp7 = tmp4;

@@ -116,7 +116,7 @@ let closure_7 = async function _withErrorHandling(arg0) {
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AbortCodes: closure_4, Endpoints: hasOwnProperty } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/forums/ForumActionCreators.tsx");
@@ -170,12 +170,12 @@ export default {
     closure_0 = id;
     closure_1 = arg1;
     return (async () => {
-      await v1(8287).unarchiveThreadIfNecessary(tmp4);
-      const HTTP = tmp4(1297).HTTP;
+      await v1(8285).unarchiveThreadIfNecessary(tmp4);
+      const HTTP = tmp4(1294).HTTP;
       const request = {
         url: closure_1_5.CHANNEL(closure_128_0),
         body: { applied_tags: closure_128_1 },
-        rejectWithError: tmp4(1297).rejectWithMigratedError(),
+        rejectWithError: tmp4(1294).rejectWithMigratedError(),
       };
       return HTTP.patch(request);
     })();
@@ -217,7 +217,7 @@ export default {
     return (async () => {
       const channelId = tmp3;
       channelId(584).dispatch({ type: "FORUM_SEARCH_START", channelId });
-      await channelId(8287).searchThreads(closure_0, channelId, closure_2, closure_3, closure_4);
+      await channelId(8285).searchThreads(closure_0, channelId, closure_2, closure_3, closure_4);
       if (1 === tmp7) {
         dependencyMap = 0;
         channelId(584).dispatch({ type: "FORUM_SEARCH_FAILURE", channelId: closure_129_1 });
@@ -228,12 +228,12 @@ export default {
         throw value;
       } else if (arg0 !== 2) {
         closure_128_0 = value;
-        guild_id(8289).trackForumSearched({
+        guild_id(8287).trackForumSearched({
           guildId: closure_129_0,
           channelId: closure_129_1,
           numSearchResults: closure_128_0.length,
         });
-        guild_id(8289);
+        guild_id(8287);
         channelId(584).dispatch({ type: "FORUM_SEARCH_SUCCESS", channelId: closure_129_1, threadIds: closure_128_0 });
         dependencyMap = 0;
         channelId(584);

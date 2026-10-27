@@ -5,9 +5,9 @@ import NativeMenuStore from "../../../native_menu/native/NativeMenuStore.tsx";
 
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 const IS_ANDROID = PlatformUtils.isAndroid();
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj3 = { androidContainer: { flex: 1 }, iosContainer: null };
 let merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 obj3.iosContainer = {};

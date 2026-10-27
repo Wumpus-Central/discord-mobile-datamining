@@ -3,7 +3,7 @@ import _modDef38 from "../../../_runtime/metro/00038__.js";
 import byteLengthDefault from "../../../_runtime/00206_byteLength.js";
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import _modDef2049 from "../../../_runtime/metro/02049__.js";
+import _modDef2046 from "../../../_runtime/metro/02046__.js";
 import HelpdeskUtilsDefault from "../../utils/HelpdeskUtils.tsx";
 import UserUtilsDefault from "../../utils/UserUtils.tsx";
 import AlertActionCreatorsDefault from "../../actions/AlertActionCreators.tsx";
@@ -424,7 +424,7 @@ function getIsSecureFramesKeyInconsistent(userId, items) {
 const SecureFramesConstants = fn(9197);
 ({ AnalyticsSecureFramesUserVerification: closure_11, SECURE_FRAMES_PUBLIC_KEY_VERSION: closure_12 } =
   SecureFramesConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ LinkingTypes: map1, Routes: closure_14, Endpoints: closure_15, HelpdeskArticles: closure_16 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rtc/SecureFramesUtils.tsx");
@@ -494,8 +494,8 @@ export const deleteUserPersistentVerifications = function deleteUserPersistentVe
   let result = SecureFramesPlatformUtilsDefault.openSecureFramesUpdateConfirmation(obj3);
 };
 export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUserVerifiedTimestamp(timestamp) {
-  const tmp3 = _modDef2049(timestamp);
-  const diffResult = _modDef2049().diff(tmp3, "s");
+  const tmp3 = _modDef2046(timestamp);
+  const diffResult = _modDef2046().diff(tmp3, "s");
   if (diffResult > 12 * DurationsDefault.Seconds.DAYS_30) {
     const _Math6 = Math;
     const rounded = Math.round(diffResult / (12 * DurationsDefault.Seconds.DAYS_30));
@@ -537,7 +537,7 @@ export const getSecureFramesUserVerifiedTimestamp = function getSecureFramesUser
     const obj8 = { count: diffResult };
     return intl.formatToPlainString(util.t["/w0Qpw"], obj8);
   }
-  const obj = _modDef2049();
+  const obj = _modDef2046();
 };
 export const getUserVerificationDeeplink = function getUserVerificationDeeplink(userId, arg1) {
   return (

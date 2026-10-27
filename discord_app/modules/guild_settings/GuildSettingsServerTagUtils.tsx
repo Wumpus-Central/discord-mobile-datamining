@@ -5,7 +5,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 const GuildSettingsServerTag = "GuildSettingsServerTag";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsServerTagUtils.tsx");

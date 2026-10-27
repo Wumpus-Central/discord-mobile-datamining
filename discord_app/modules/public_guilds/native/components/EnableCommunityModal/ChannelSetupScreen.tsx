@@ -1,6 +1,6 @@
 // discord_app/modules/public_guilds/native/components/EnableCommunityModal/ChannelSetupScreen.tsx
 import util from "../../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GuildSettingsStore from "../../../../guild_settings/GuildSettingsStore.tsx";
@@ -11,9 +11,9 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(4901).GUILD_SELECTABLE_CHANNELS_KEY;
-const CREATE_NEW_CHANNEL_VALUE = fn(8406).CREATE_NEW_CHANNEL_VALUE;
-const ChannelTypes = fn(1087).ChannelTypes;
+let closure_8 = fn(4902).GUILD_SELECTABLE_CHANNELS_KEY;
+const CREATE_NEW_CHANNEL_VALUE = fn(8405).CREATE_NEW_CHANNEL_VALUE;
+const ChannelTypes = fn(1084).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const size = fn(2);
@@ -100,7 +100,7 @@ export default function ChannelSetupScreen() {
       rulesChannel(9005).updateGuild({ rulesChannelId });
       const obj = rulesChannel(9005);
       const obj2 = { rulesChannelId };
-      rulesChannel(5210).hideActionSheet();
+      rulesChannel(5211).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -122,7 +122,7 @@ export default function ChannelSetupScreen() {
       rulesChannel(9005).updateGuild({ publicUpdatesChannelId });
       const obj = rulesChannel(9005);
       const obj2 = { publicUpdatesChannelId };
-      rulesChannel(5210).hideActionSheet();
+      rulesChannel(5211).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {

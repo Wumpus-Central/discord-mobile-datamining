@@ -98,13 +98,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if ("role" === channel_filter.type) {
           tmp8 = arg0;
         }
-        const conjureGuildRoles = result(12183).useConjureGuildRoles(tmp8);
-        const resultResult1 = result(12183);
+        const conjureGuildRoles = result(12203).useConjureGuildRoles(tmp8);
+        const resultResult1 = result(12203);
         let tmp9 = null;
         if ("user" === channel_filter.type) {
           tmp9 = arg0;
         }
-        const conjureGuildMemberUsers = result(12183).useConjureGuildMemberUsers(tmp9);
+        const conjureGuildMemberUsers = result(12203).useConjureGuildMemberUsers(tmp9);
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [StreamerModeStore];
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp11 = cResult[5];
           tmp12 = cResult[6];
         }
-        const resultResult2 = result(12183);
+        const resultResult2 = result(12203);
         const stateFromStores1 = result(504).useStateFromStores(tmp11, tmp12);
         const type = channel_filter.type;
         if ("channel" === type) {
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           mapped = null;
           if (!tmp20) {
-            result = result(7345).conjureSettingChannels(stateFromStores, channel_filter.channel_filter);
+            result = result(7347).conjureSettingChannels(stateFromStores, channel_filter.channel_filter);
             map = result.map;
             mapped = map((id) => {
               const obj = {
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               };
               return obj;
             });
-            const resultResult4 = result(7345);
+            const resultResult4 = result(7347);
           }
           cResult[7] = stateFromStores;
           channel_filter = channel_filter.channel_filter;
@@ -257,7 +257,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             mapped = result.map((id) => {
               const obj = {
                 id: id.id,
-                label: closure_1_0(5604).computeChannelName(id, closure_1_6, conjureGuildMemberUsers),
+                label: closure_1_0(5605).computeChannelName(id, closure_1_6, conjureGuildMemberUsers),
               };
               return obj;
             });
@@ -267,10 +267,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return conjureGuildRoles.map((id) => ({ id: id.id, label: id.name }));
         } else if ("user" === type) {
           return conjureGuildMemberUsers.map((id) => {
-            const result = closure_0(12183).conjureMemberUsername(id, stateFromStores1);
+            const result = closure_0(12203).conjureMemberUsername(id, stateFromStores1);
             const obj2 = { id: id.id, label: null };
-            const obj = closure_0(12183);
-            obj2.label = closure_0(5989).getName(closure_1_0, null, id);
+            const obj = closure_0(12203);
+            obj2.label = closure_0(5990).getName(closure_1_0, null, id);
             if ("" === result) {
               let obj4 = {};
             } else {

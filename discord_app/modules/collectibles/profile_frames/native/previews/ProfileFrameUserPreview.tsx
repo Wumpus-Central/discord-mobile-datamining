@@ -4,7 +4,7 @@ import UserProfilePreviewDefault from "../../../../user_profile/native/UserProfi
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
-const util = prop(1128);
+const util = prop(1125);
 require = fn;
 let closure_3 = ["profileFrame", "avatarDecorationOverride", "profileEffectOverride"];
 const jsx = fn(21).jsx;

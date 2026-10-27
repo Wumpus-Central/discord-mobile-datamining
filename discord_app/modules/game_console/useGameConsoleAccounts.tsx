@@ -5,7 +5,7 @@ import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import ConnectedAccountsStore from "../../stores/ConnectedAccountsStore.tsx";
 
 require = fn;
-const PlatformTypes = fn(1087).PlatformTypes;
+const PlatformTypes = fn(1084).PlatformTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/useGameConsoleAccounts.tsx");

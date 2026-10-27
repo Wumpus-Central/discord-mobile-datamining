@@ -69,7 +69,7 @@ let closure_9 = async function _submitReportForInappropriateConversationSafetyAl
     return value;
   })();
 };
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/in_app_reports/ReportModals.tsx");
 
@@ -271,7 +271,7 @@ export const showUnauthenticatedReportModalForMessage = function showUnauthentic
 ) {
   const tmp = new MessageRecord({});
   const obj = AppAnalyticsUtilsDefault;
-  const merged = Object.assign({ message_id: "Array", channel_id: "Reflect" });
+  const merged = Object.assign({ message_id: "toCharArray$esjava$1", channel_id: "Symbol" });
   obj.trackWithMetadata(AnalyticEvents.IAR_MODAL_OPEN, { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE });
   const obj2 = { report_type: MenuTypes.UnauthenticatedReportNames.MESSAGE };
   const obj3 = showReportModal;

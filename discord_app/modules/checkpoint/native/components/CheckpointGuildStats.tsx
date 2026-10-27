@@ -3,7 +3,7 @@ import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3056 from "../../Checkpoint.messages.js";
+import _modDef3057 from "../../Checkpoint.messages.js";
 import CheckpointConstants from "../../CheckpointConstants.tsx";
 import ChatIcon from "../../../../design/components/Icon/native/redesign/generated/ChatIcon.tsx";
 import MicrophoneIcon from "../../../../design/components/Icon/native/redesign/generated/MicrophoneIcon.tsx";
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const intl = util.intl;
       const intl2 = util.intl;
-      const formatToPlainStringResult = intl.formatToPlainString(_modDef3056.UZbUtl, { numMinutes: rounded });
+      const formatToPlainStringResult = intl.formatToPlainString(_modDef3057.UZbUtl, { numMinutes: rounded });
       const stats = tmp4.stats;
       const combined1 = "" + rounded + " " + formatToPlainStringResult.toLocaleLowerCase();
       if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
@@ -175,7 +175,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[18] = tmp22;
       tmp21 = tmp22;
       const obj8 = { variant: "experimental/mono-md/bold", style: tmp4.text, children: rounded };
-      stringResult = intl2.string(_modDef3056.wWKySP);
+      stringResult = intl2.string(_modDef3057.wWKySP);
     }
   : function CheckpointGuildStats(arg0) {
       ({ numVoiceMinutes, numMessagesSent } = arg0);
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const rounded1 = Math.round(numMessagesSent);
       const intl = util.intl;
       const intl2 = util.intl;
-      const formatToPlainStringResult = intl.formatToPlainString(_modDef3056.UZbUtl, { numMinutes: rounded });
+      const formatToPlainStringResult = intl.formatToPlainString(_modDef3057.UZbUtl, { numMinutes: rounded });
       const obj = { style: tmp.stats, children: null };
       const obj2 = {
         accessible: true,
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [timestampProducer(View, obj2)];
       const obj5 = {
         accessible: true,
-        accessibilityLabel: "" + rounded1 + " " + intl2.string(_modDef3056.wWKySP).toLocaleLowerCase(),
+        accessibilityLabel: "" + rounded1 + " " + intl2.string(_modDef3057.wWKySP).toLocaleLowerCase(),
         style: tmp.stat,
         children: null,
       };

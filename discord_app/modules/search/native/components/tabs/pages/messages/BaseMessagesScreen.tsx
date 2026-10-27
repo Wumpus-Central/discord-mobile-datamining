@@ -8,7 +8,7 @@ import SearchMessageStore from "../../../../../SearchMessageStore.tsx";
 import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const constants = fn(9713).SearchResultContentEntityTypes;
+const constants = fn(9715).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

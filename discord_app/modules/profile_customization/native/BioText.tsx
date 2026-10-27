@@ -9,11 +9,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const Pressable = fn(17).Pressable;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const CHANGELOG_URL = fn(4873).CHANGELOG_URL;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const CHANGELOG_URL = fn(4874).CHANGELOG_URL;
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_10 = createStyles.createStyles({
   text: { alignSelf: "stretch", textAlignVertical: "top", width: "100%", flexGrow: 1, paddingTop: 2, lineHeight: 24 },
   span: {
@@ -126,8 +126,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol = Symbol;
             if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl = lineClamp(1128).intl;
-              const stringResult = intl.string(lineClamp(1128).t.OJmNR9);
+              const intl = lineClamp(1125).intl;
+              const stringResult = intl.string(lineClamp(1125).t.OJmNR9);
               cResult[4] = stringResult;
               let tmp14 = stringResult;
             } else {
@@ -143,13 +143,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     str3 = "text-muted";
                   }
                   if (cResult[10] !== lineClamp) {
-                    const intl2 = lineClamp(1128).intl;
+                    const intl2 = lineClamp(1125).intl;
                     const obj2 = {
                       blogHook(text, arg1) {
                         return closure_2_8(closure_11, { lineClamp, text }, arg1);
                       },
                     };
-                    const formatResult = intl2.format(lineClamp(1128).t.RCYeBL, obj2);
+                    const formatResult = intl2.format(lineClamp(1125).t.RCYeBL, obj2);
                     cResult[10] = lineClamp;
                     cResult[11] = formatResult;
                     let tmp19 = formatResult;
@@ -182,7 +182,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj4 = { variant: str, color: str3, lineClamp, style: tmp4.span, children: tmp19 };
-                  const tmp23 = closure_8(lineClamp(5234).Text, obj4, "changelog-cta");
+                  const tmp23 = closure_8(lineClamp(5235).Text, obj4, "changelog-cta");
                   cResult[12] = lineClamp;
                   cResult[13] = tmp4.span;
                   cResult[14] = tmp19;
@@ -196,7 +196,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             const obj5 = { variant: str, color: str4, lineClamp, style: tmp4.text, children: null };
             const items1 = [tmp14, "\n"];
             obj5.children = items1;
-            const tmp18 = closure_7(lineClamp(5234).Text, obj5, "changelog-bio");
+            const tmp18 = closure_7(lineClamp(5235).Text, obj5, "changelog-bio");
             cResult[5] = lineClamp;
             cResult[6] = tmp4.text;
             cResult[7] = str4;
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj6 = { variant: str, color: str2, lineClamp, style: tmp4.text, children: tmp5 };
-            const tmp12 = closure_8(lineClamp(5234).Text, obj6);
+            const tmp12 = closure_8(lineClamp(5235).Text, obj6);
             cResult[21] = lineClamp;
             cResult[22] = tmp4.text;
             cResult[23] = str2;
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = lineClamp(576);
       const obj7 = { guildId, linkVariant: str, textVariant: str, customEmojiOffsetY: null };
-      const tmpResult = lineClamp(11162);
+      const tmpResult = lineClamp(11165);
       let num;
       if (tmpResult2.isAndroid()) {
         num = 3;
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[2] = str;
       cResult[3] = parseBioReactResult;
       tmp5 = parseBioReactResult;
-      tmpResult2 = lineClamp(1384);
+      tmpResult2 = lineClamp(1381);
     }
   : function BioText(lineClamp) {
       ({ placeholder, bio } = lineClamp);

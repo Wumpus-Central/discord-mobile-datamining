@@ -34,7 +34,7 @@ function handleUserSettingsProtoStoreChange() {
     );
   }
 }
-const UserSettingsTypes = fn(1097).UserSettingsTypes;
+const UserSettingsTypes = fn(1094).UserSettingsTypes;
 let global = { pendingUsages: [] };
 let closure_6 = new FrecencyDefault({
   computeBonus() {

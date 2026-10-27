@@ -10,11 +10,11 @@ import ReadStateStore from "../../../../stores/ReadStateStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const type = fn(4829).ANALYTICS_GUILD_EVENTS_MODAL_NAME;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const ReadStateTypes = fn(6705).ReadStateTypes;
+const type = fn(4830).ANALYTICS_GUILD_EVENTS_MODAL_NAME;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const ReadStateTypes = fn(6706).ReadStateTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
@@ -29,12 +29,12 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] !== eventCount) {
           if (eventCount > 0) {
-            const intl2 = guild(1128).intl;
+            const intl2 = guild(1125).intl;
             let obj2 = { count: eventCount };
-            let formatToPlainStringResult = intl2.formatToPlainString(guild(1128).t.p1zLAf, obj2);
+            let formatToPlainStringResult = intl2.formatToPlainString(guild(1125).t.p1zLAf, obj2);
           } else {
-            const intl = guild(1128).intl;
-            formatToPlainStringResult = intl.string(guild(1128).t.tlopTM);
+            const intl = guild(1125).intl;
+            formatToPlainStringResult = intl.string(guild(1125).t.tlopTM);
           }
           cResult[3] = eventCount;
           cResult[4] = formatToPlainStringResult;
@@ -50,7 +50,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
               return tmp12;
             }
             let obj3 = { title: tmp6, trailing: tmp9 };
-            const tmp14 = jsx(guild(7248).BottomSheetTitleHeader, { title: tmp6, trailing: tmp9 });
+            const tmp14 = jsx(guild(7250).BottomSheetTitleHeader, { title: tmp6, trailing: tmp9 });
             cResult[8] = tmp6;
             cResult[9] = tmp9;
             cResult[10] = tmp14;
@@ -59,10 +59,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           let tmp10 = tmp4;
           if (tmp4) {
             const obj4 = { accessibilityLabel: null, label: null, onPress: null };
-            const intl3 = guild(1128).intl;
-            obj4.accessibilityLabel = intl3.string(guild(1128).t["60lJ0C"]);
-            const intl4 = guild(1128).intl;
-            obj4.label = intl4.string(guild(1128).t.NzROFF);
+            const intl3 = guild(1125).intl;
+            obj4.accessibilityLabel = intl3.string(guild(1125).t["60lJ0C"]);
+            const intl4 = guild(1125).intl;
+            obj4.label = intl4.string(guild(1125).t.NzROFF);
             obj4.onPress = tmp5;
             tmp10 = jsx(guild(8934).ActionSheetHeaderPressableText, {
               accessibilityLabel: null,
@@ -101,20 +101,20 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp3Result = useCanCreateAnEventDefault(guild.id);
       importDefault = tmp3Result;
       if (eventCount > 0) {
-        const intl2 = guild(1128).intl;
+        const intl2 = guild(1125).intl;
         let obj = { count: eventCount };
-        let formatToPlainStringResult = intl2.formatToPlainString(guild(1128).t.p1zLAf, obj);
+        let formatToPlainStringResult = intl2.formatToPlainString(guild(1125).t.p1zLAf, obj);
       } else {
-        const intl = guild(1128).intl;
-        formatToPlainStringResult = intl.string(guild(1128).t.tlopTM);
+        const intl = guild(1125).intl;
+        formatToPlainStringResult = intl.string(guild(1125).t.tlopTM);
       }
       let obj2 = { title: formatToPlainStringResult, trailing: null };
       if (tmp3Result) {
         let obj3 = { accessibilityLabel: null, label: null, onPress: null };
-        const intl3 = guild(1128).intl;
-        obj3.accessibilityLabel = intl3.string(guild(1128).t["60lJ0C"]);
-        const intl4 = guild(1128).intl;
-        obj3.label = intl4.string(guild(1128).t.NzROFF);
+        const intl3 = guild(1125).intl;
+        obj3.accessibilityLabel = intl3.string(guild(1125).t["60lJ0C"]);
+        const intl4 = guild(1125).intl;
+        obj3.label = intl4.string(guild(1125).t.NzROFF);
         obj3.onPress = function handleCreateEvent() {
           if (closure_1) {
             let result = guild_scheduled_events_GuildScheduledEventModalActionCreators.closeGuildEventListActionSheet();
@@ -137,7 +137,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         });
       }
       obj2.trailing = tmp3Result;
-      return jsx(guild(7248).BottomSheetTitleHeader, { title: formatToPlainStringResult, trailing: null });
+      return jsx(guild(7250).BottomSheetTitleHeader, { title: formatToPlainStringResult, trailing: null });
     };
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[10] === guild.id) {
             let tmp16 = cResult[11];
           }
-          tmp4(5263)(tmp16);
+          tmp4(5264)(tmp16);
           if (cResult[12] !== guild.id) {
             class M {
               constructor() {
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            const stringResult = obj3.string(tmp(1128).t.VSlyAn);
+            const stringResult = obj3.string(tmp(1125).t.VSlyAn);
             cResult[15] = stringResult;
           } else {
             class M {
@@ -325,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           },
         });
       }, items1);
-      events(5263)(() => {
+      events(5264)(() => {
         AnalyticsUtilsDefault.track(AnalyticEvents.OPEN_MODAL, {
           type,
           guild_id: guild.id,
@@ -346,8 +346,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         header: null,
         children: null,
       };
-      const intl = guild(1128).intl;
-      obj.dismissAccessibilityLabel = intl.string(guild(1128).t.VSlyAn);
+      const intl = guild(1125).intl;
+      obj.dismissAccessibilityLabel = intl.string(guild(1125).t.VSlyAn);
       obj.header = <closure_11 eventCount={events.length} guild={guild} />;
       const obj3 = { style: tmp.container, children: null };
       const obj4 = {
@@ -360,7 +360,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const obj2 = { eventCount: events.length, guild };
       const ref = noop.useRef(ReadStateStore.ackMessageId(guild.id, ReadStateTypes.GUILD_EVENT));
-      obj4.lastAckedId = events(6885)(ref);
+      obj4.lastAckedId = events(6887)(ref);
       obj3.children = jsx(events(9025), {
         inActionSheet: true,
         events,
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         lastAckedId: null,
       });
       obj.children = <View style={tmp.container}>{null}</View>;
-      return jsx(guild(5265).BottomSheet, {
+      return jsx(guild(5266).BottomSheet, {
         showGradient: true,
         scrollable: events.length > 0,
         startExpanded: true,

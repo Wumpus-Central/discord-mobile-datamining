@@ -7,7 +7,7 @@ import TopSoundboardSoundStore from "TopSoundboardSoundStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundboard/top_sounds/TopSoundboardSoundsActionCreators.tsx");
 
@@ -26,7 +26,7 @@ export const maybeFetchTopSoundboardSoundsByGuild = function maybeFetchTopSoundb
         if (!obj.isPseudoGuildId(id)) {
           const obj3 = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId: id };
           DispatcherDefault.dispatch(obj3);
-          const HTTP = tmp2(1297).HTTP;
+          const HTTP = tmp2(1294).HTTP;
           const obj4 = {
             url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(id),
             oldFormErrors: true,
@@ -55,7 +55,7 @@ export const fetchTopSoundboardSounds = function fetchTopSoundboardSounds(guildI
   if (!obj.isPseudoGuildId(guildId)) {
     const obj3 = { type: "TOP_SOUNDBOARD_SOUNDS_FETCH", guildId };
     DispatcherDefault.dispatch(obj3);
-    const HTTP = tmp(1297).HTTP;
+    const HTTP = tmp(1294).HTTP;
     const obj4 = {
       url: Endpoints.TOP_SOUNDBOARD_SOUNDS_FOR_GUILD(guildId),
       oldFormErrors: true,

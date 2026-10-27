@@ -4,7 +4,7 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Permissions: c3, GuildFeatures: closure_4 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -135,9 +135,9 @@ export const useGuildShopPreviewVisible = ReactCompilerGating.isReactCompilerEna
         CREATOR_MONETIZABLE_PROVISIONAL: arr2[1],
         ROLE_SUBSCRIPTIONS_ENABLED: arr2[2],
       } = constants2);
-      const guildEligibleForGuildProducts = tmp(7358).useGuildEligibleForGuildProducts(id);
+      const guildEligibleForGuildProducts = tmp(7360).useGuildEligibleForGuildProducts(id);
       let tmp9 = null != features;
-      const tmpResult = tmp(7358);
+      const tmpResult = tmp(7360);
       if (tmp9) {
         tmp9 = stateFromStores;
       }

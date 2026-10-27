@@ -11,7 +11,7 @@ import NicknameUtilsDefault from "../../../../utils/NicknameUtils.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import EmojiActionCreators from "../../../../actions/EmojiActionCreators.tsx";
 import showEmojiOverflowActionSheetDefault from "../showEmojiOverflowActionSheet.tsx";
-import _modDef19075 from "../../../../../_runtime/metro/19075__.js";
+import _modDef19113 from "../../../../../_runtime/metro/19113__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   flex: { flex: 1 },
   flexCenterRow: { flexDirection: "row", alignItems: "center" },
@@ -40,7 +40,7 @@ let obj2 = {
   emojiImage: null,
   overflowIcon: null,
 };
-let PlatformUtils = fn(1384);
+let PlatformUtils = fn(1381);
 let num = 4;
 if (PlatformUtils.isAndroid()) {
   num = 0;
@@ -53,7 +53,7 @@ obj2.activeNameContainer = {
   flexDirection: "row",
 };
 obj2.usernameContainer = { marginRight: 8, maxWidth: 150, flexShrink: 1 };
-PlatformUtils = fn(1384);
+PlatformUtils = fn(1381);
 let num2;
 if (PlatformUtils.isAndroid()) {
   num2 = 0;

@@ -4,7 +4,7 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ApexExperiment = fn(1455);
+const ApexExperiment = fn(1452);
 const obj2 = {
   kind: "user",
   name: "2026-03-surface-direct-renderer",

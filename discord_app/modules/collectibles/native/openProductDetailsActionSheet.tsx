@@ -1,5 +1,5 @@
 // discord_app/modules/collectibles/native/openProductDetailsActionSheet.tsx
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import CollectiblesActionCreators from "../CollectiblesActionCreators.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";

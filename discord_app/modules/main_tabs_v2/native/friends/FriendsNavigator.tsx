@@ -7,7 +7,7 @@ import native from "../../../../../discord_common/js/packages/design/native.tsx"
 import useColorThemeBackgroundDefault from "../../../client_themes/native/useColorThemeBackground.tsx";
 import HeaderShared from "../shared_components/HeaderShared.tsx";
 import PressableNavigatorButtonWrapperDefault from "../shared_components/navigator/PressableNavigatorButtonWrapper.tsx";
-import _modDef13524 from "../../../../../_runtime/metro/13524__.js";
+import _modDef13538 from "../../../../../_runtime/metro/13538__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -16,9 +16,9 @@ let closure_3 = ["children"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const NativeStackNavigator = fn(9743);
+const NativeStackNavigator = fn(9745);
 let closure_9 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj3 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, header: null };
 let obj4 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj3.header = {
@@ -42,7 +42,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] !== onPress) {
         const obj2 = { isModal: true, children: null };
-        const obj3 = { source: _modDef13524, onPress, accessibilityLabel: first };
+        const obj3 = { source: _modDef13538, onPress, accessibilityLabel: first };
         obj2.children = React5(HeaderShared.HeaderIconButton, obj3);
         const tmp10 = React5(PressableNavigatorButtonWrapperDefault, obj2);
         cResult[1] = onPress;
@@ -55,7 +55,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function RequestsSettingsModalButton(onPress) {
       const obj = { isModal: true, children: null };
-      const obj2 = { source: _modDef13524, onPress: onPress.onPress, accessibilityLabel: null };
+      const obj2 = { source: _modDef13538, onPress: onPress.onPress, accessibilityLabel: null };
       const intl = util.intl;
       obj2.accessibilityLabel = intl.string(util.t["3D5yo/"]);
       obj.children = React5(HeaderShared.HeaderIconButton, obj2);
@@ -69,7 +69,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function s() {
-          return closure_0(7584).trackAppUIViewed();
+          return closure_0(7585).trackAppUIViewed();
         };
         const items = [];
         cResult[0] = fn;
@@ -93,22 +93,22 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             options(navigation) {
               navigation = navigation.navigation;
               let obj = { title: null, headerRight: null };
-              let intl = navigation(1128).intl;
-              obj.title = intl.string(navigation(1128).t.TdEu5X);
+              let intl = navigation(1125).intl;
+              obj.title = intl.string(navigation(1125).t.TdEu5X);
               obj.headerRight = function headerRight(arg0) {
                 const obj = {};
                 const merged = Object.assign(arg0);
-                const intl = navigation(1128).intl;
-                obj.label = intl.string(navigation(1128).t.zIJnA6);
+                const intl = navigation(1125).intl;
+                obj.label = intl.string(navigation(1125).t.zIJnA6);
                 obj.onPress = function onPress() {
                   return navigation.navigate("add-friends", { sourcePage: "Friends Screen Header" });
                 };
-                return closure_2_7(navigation(9699).HeaderTextButton, obj);
+                return closure_2_7(navigation(9701).HeaderTextButton, obj);
               };
               return obj;
             },
             getComponent() {
-              return closure_0(18211).default;
+              return closure_0(18245).default;
             },
           };
           const tmp13 = closure_7(closure_9.Screen, obj2);
@@ -121,11 +121,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           let obj3 = { name: "new-message", options: null, getComponent: null };
           const obj4 = { title: null };
-          let intl = tmp(1128).intl;
-          obj4.title = intl.string(tmp(1128).t.jD1qzM);
+          let intl = tmp(1125).intl;
+          obj4.title = intl.string(tmp(1125).t.jD1qzM);
           obj3.options = obj4;
           obj3.getComponent = function getComponent() {
-            return closure_0(18217).default;
+            return closure_0(18251).default;
           };
           const tmp17 = closure_7(closure_9.Screen, obj3);
           cResult[6] = tmp17;
@@ -137,11 +137,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           const obj5 = { name: "gdm", options: null, getComponent: null };
           const obj6 = { title: null };
-          const intl2 = tmp(1128).intl;
-          obj6.title = intl2.string(tmp(1128).t["3hF1W4"]);
+          const intl2 = tmp(1125).intl;
+          obj6.title = intl2.string(tmp(1125).t["3hF1W4"]);
           obj5.options = obj6;
           obj5.getComponent = function getComponent() {
-            return closure_0(18220).default;
+            return closure_0(18254).default;
           };
           const tmp21 = closure_7(closure_9.Screen, obj5);
           cResult[7] = tmp21;
@@ -153,11 +153,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           const obj7 = { name: "add-friend", options: null, getComponent: null };
           const obj8 = { title: null };
-          const intl3 = tmp(1128).intl;
-          obj8.title = intl3.string(tmp(1128).t.w5uwoI);
+          const intl3 = tmp(1125).intl;
+          obj8.title = intl3.string(tmp(1125).t.w5uwoI);
           obj7.options = obj8;
           obj7.getComponent = function getComponent() {
-            return closure_0(18221).default;
+            return closure_0(18255).default;
           };
           const tmp25 = closure_7(closure_9.Screen, obj7);
           cResult[8] = tmp25;
@@ -169,11 +169,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           const obj9 = { name: "add-friends", options: null, getComponent: null };
           const obj10 = { title: null };
-          const intl4 = tmp(1128).intl;
-          obj10.title = intl4.string(tmp(1128).t.zIJnA6);
+          const intl4 = tmp(1125).intl;
+          obj10.title = intl4.string(tmp(1125).t.zIJnA6);
           obj9.options = obj10;
           obj9.getComponent = function getComponent() {
-            return closure_0(18222).default;
+            return closure_0(18256).default;
           };
           const tmp29 = closure_7(closure_9.Screen, obj9);
           cResult[9] = tmp29;
@@ -185,11 +185,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           const obj11 = { name: "username-search", options: null, getComponent: null };
           const obj12 = { title: null };
-          const intl5 = tmp(1128).intl;
-          obj12.title = intl5.string(tmp(1128).t.QzVsOs);
+          const intl5 = tmp(1125).intl;
+          obj12.title = intl5.string(tmp(1125).t.QzVsOs);
           obj11.options = obj12;
           obj11.getComponent = function getComponent() {
-            return closure_0(18233).default;
+            return closure_0(18267).default;
           };
           const tmp33 = closure_7(closure_9.Screen, obj11);
           cResult[10] = tmp33;
@@ -201,11 +201,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
           const obj13 = { name: "suggested-friends", options: null, getComponent: null };
           const obj14 = { title: null };
-          const intl6 = tmp(1128).intl;
-          obj14.title = intl6.string(tmp(1128).t["1uAmCw"]);
+          const intl6 = tmp(1125).intl;
+          obj14.title = intl6.string(tmp(1125).t["1uAmCw"]);
           obj13.options = obj14;
           obj13.getComponent = function getComponent() {
-            return closure_0(18234).default;
+            return closure_0(18268).default;
           };
           const tmp37 = closure_7(closure_9.Screen, obj13);
           cResult[11] = tmp37;
@@ -217,11 +217,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           const obj15 = { name: "requests-settings", options: null, getComponent: null };
           const obj16 = { title: null };
-          const intl7 = tmp(1128).intl;
-          obj16.title = intl7.string(tmp(1128).t.XT4hVl);
+          const intl7 = tmp(1125).intl;
+          obj16.title = intl7.string(tmp(1125).t.XT4hVl);
           obj15.options = obj16;
           obj15.getComponent = function getComponent() {
-            return closure_0(18235).default;
+            return closure_0(18269).default;
           };
           const tmp41 = closure_7(closure_9.Screen, obj15);
           cResult[12] = tmp41;
@@ -236,8 +236,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
             options(navigation) {
               navigation = navigation.navigation;
               const obj = { title: null, headerRight: null };
-              const intl = navigation(1128).intl;
-              obj.title = intl.string(navigation(1128).t.fyA115);
+              const intl = navigation(1125).intl;
+              obj.title = intl.string(navigation(1125).t.fyA115);
               obj.headerRight = function headerRight() {
                 return closure_2_7(closure_2_11, {
                   onPress() {
@@ -248,7 +248,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
               return obj;
             },
             getComponent() {
-              return closure_0(18237).default;
+              return closure_0(18271).default;
             },
           };
           const tmp45 = closure_7(closure_9.Screen, obj17);
@@ -261,11 +261,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
           const obj18 = { name: "spam-requests", options: null, getComponent: null };
           const obj19 = { title: null };
-          const intl8 = tmp(1128).intl;
-          obj19.title = intl8.string(tmp(1128).t.oHVeHc);
+          const intl8 = tmp(1125).intl;
+          obj19.title = intl8.string(tmp(1125).t.oHVeHc);
           obj18.options = obj19;
           obj18.getComponent = function getComponent() {
-            return closure_0(18240).default;
+            return closure_0(18274).default;
           };
           const tmp49 = closure_7(closure_9.Screen, obj18);
           cResult[14] = tmp49;
@@ -277,11 +277,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
           const obj20 = { name: "ignored-user-requests", options: null, getComponent: null };
           const obj21 = { title: null };
-          const intl9 = tmp(1128).intl;
-          obj21.title = intl9.string(tmp(1128).t.tFY5Zb);
+          const intl9 = tmp(1125).intl;
+          obj21.title = intl9.string(tmp(1125).t.tFY5Zb);
           obj20.options = obj21;
           obj20.getComponent = function getComponent() {
-            return closure_0(18241).default;
+            return closure_0(18275).default;
           };
           const tmp53 = closure_7(closure_9.Screen, obj20);
           cResult[15] = tmp53;
@@ -348,7 +348,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function FriendsNavigator() {
       _require = closure_10();
-      const layoutEffect = noop.useLayoutEffect(() => closure_0(7584).trackAppUIViewed(), []);
+      const layoutEffect = noop.useLayoutEffect(() => closure_0(7585).trackAppUIViewed(), []);
       closure_1 = require("Navigator").useAccessibilityNativeStackOptions();
       let obj2 = {
         screenOptions(arg0) {
@@ -398,22 +398,22 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           options(navigation) {
             navigation = navigation.navigation;
             let obj = { title: null, headerRight: null };
-            let intl = navigation(1128).intl;
-            obj.title = intl.string(navigation(1128).t.TdEu5X);
+            let intl = navigation(1125).intl;
+            obj.title = intl.string(navigation(1125).t.TdEu5X);
             obj.headerRight = function headerRight(arg0) {
               const obj = {};
               const merged = Object.assign(arg0);
-              const intl = navigation(1128).intl;
-              obj.label = intl.string(navigation(1128).t.zIJnA6);
+              const intl = navigation(1125).intl;
+              obj.label = intl.string(navigation(1125).t.zIJnA6);
               obj.onPress = function onPress() {
                 return navigation.navigate("add-friends", { sourcePage: "Friends Screen Header" });
               };
-              return closure_2_7(navigation(9699).HeaderTextButton, obj);
+              return closure_2_7(navigation(9701).HeaderTextButton, obj);
             };
             return obj;
           },
           getComponent() {
-            return closure_0(18211).default;
+            return closure_0(18245).default;
           },
         }),
         ,
@@ -432,7 +432,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj5.title = intl.string(require("util").t.jD1qzM);
       obj4.options = obj5;
       obj4.getComponent = function getComponent() {
-        return closure_0(18217).default;
+        return closure_0(18251).default;
       };
       items[1] = closure_7(closure_9.Screen, obj4);
       const obj6 = { name: "gdm", options: null, getComponent: null };
@@ -441,7 +441,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj7.title = intl2.string(require("util").t["3hF1W4"]);
       obj6.options = obj7;
       obj6.getComponent = function getComponent() {
-        return closure_0(18220).default;
+        return closure_0(18254).default;
       };
       items[2] = closure_7(closure_9.Screen, obj6);
       const obj8 = { name: "add-friend", options: null, getComponent: null };
@@ -450,7 +450,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj9.title = intl3.string(require("util").t.w5uwoI);
       obj8.options = obj9;
       obj8.getComponent = function getComponent() {
-        return closure_0(18221).default;
+        return closure_0(18255).default;
       };
       items[3] = closure_7(closure_9.Screen, obj8);
       const obj10 = { name: "add-friends", options: null, getComponent: null };
@@ -459,7 +459,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj11.title = intl4.string(require("util").t.zIJnA6);
       obj10.options = obj11;
       obj10.getComponent = function getComponent() {
-        return closure_0(18222).default;
+        return closure_0(18256).default;
       };
       items[4] = closure_7(closure_9.Screen, obj10);
       const obj12 = { name: "username-search", options: null, getComponent: null };
@@ -468,7 +468,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj13.title = intl5.string(require("util").t.QzVsOs);
       obj12.options = obj13;
       obj12.getComponent = function getComponent() {
-        return closure_0(18233).default;
+        return closure_0(18267).default;
       };
       items[5] = closure_7(closure_9.Screen, obj12);
       const obj14 = { name: "suggested-friends", options: null, getComponent: null };
@@ -477,7 +477,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj15.title = intl6.string(require("util").t["1uAmCw"]);
       obj14.options = obj15;
       obj14.getComponent = function getComponent() {
-        return closure_0(18234).default;
+        return closure_0(18268).default;
       };
       items[6] = closure_7(closure_9.Screen, obj14);
       const obj16 = { name: "requests-settings", options: null, getComponent: null };
@@ -486,7 +486,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj17.title = intl7.string(require("util").t.XT4hVl);
       obj16.options = obj17;
       obj16.getComponent = function getComponent() {
-        return closure_0(18235).default;
+        return closure_0(18269).default;
       };
       items[7] = closure_7(closure_9.Screen, obj16);
       items[8] = closure_7(closure_9.Screen, {
@@ -494,8 +494,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         options(navigation) {
           navigation = navigation.navigation;
           const obj = { title: null, headerRight: null };
-          const intl = navigation(1128).intl;
-          obj.title = intl.string(navigation(1128).t.fyA115);
+          const intl = navigation(1125).intl;
+          obj.title = intl.string(navigation(1125).t.fyA115);
           obj.headerRight = function headerRight() {
             return closure_2_7(closure_2_11, {
               onPress() {
@@ -506,7 +506,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           return obj;
         },
         getComponent() {
-          return closure_0(18237).default;
+          return closure_0(18271).default;
         },
       });
       const obj19 = { name: "spam-requests", options: null, getComponent: null };
@@ -515,7 +515,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj20.title = intl8.string(require("util").t.oHVeHc);
       obj19.options = obj20;
       obj19.getComponent = function getComponent() {
-        return closure_0(18240).default;
+        return closure_0(18274).default;
       };
       items[9] = closure_7(closure_9.Screen, obj19);
       const obj21 = { name: "ignored-user-requests", options: null, getComponent: null };
@@ -524,7 +524,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       obj22.title = intl9.string(require("util").t.tFY5Zb);
       obj21.options = obj22;
       obj21.getComponent = function getComponent() {
-        return closure_0(18241).default;
+        return closure_0(18275).default;
       };
       items[10] = closure_7(closure_9.Screen, obj21);
       obj2.children = items;

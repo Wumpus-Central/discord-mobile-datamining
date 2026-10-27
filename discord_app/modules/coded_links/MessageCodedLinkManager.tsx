@@ -170,7 +170,7 @@ function resolveMessageCodedLinks(content) {
                                                         return obj3;
                                                       } else {
                                                         const useGameOrganizationInviteFetch =
-                                                          tmp4(18877).useGameOrganizationInviteFetch;
+                                                          tmp4(18915).useGameOrganizationInviteFetch;
                                                         const items = [code];
                                                         v1 = 1;
                                                         dependencyMap = 1;
@@ -188,7 +188,7 @@ function resolveMessageCodedLinks(content) {
                                                       const obj = { value, done: true };
                                                       return obj;
                                                     } else {
-                                                      v1(12737)(closure_128_0).catch(closure_1_6);
+                                                      v1(12746)(closure_128_0).catch(closure_1_6);
                                                       dependencyMap = 3;
                                                       return { value: "IconComponent", done: null };
                                                     }
@@ -403,7 +403,7 @@ function resolveMessageCodedLinks(content) {
                                                             return obj3;
                                                           } else {
                                                             const useGameOrganizationInviteFetch =
-                                                              tmp4(18877).useGameOrganizationInviteFetch;
+                                                              tmp4(18915).useGameOrganizationInviteFetch;
                                                             const items = [code];
                                                             v1 = 1;
                                                             dependencyMap = 1;
@@ -421,7 +421,7 @@ function resolveMessageCodedLinks(content) {
                                                           const obj = { value, done: true };
                                                           return obj;
                                                         } else {
-                                                          v1(12737)(closure_128_0).catch(closure_1_6);
+                                                          v1(12746)(closure_128_0).catch(closure_1_6);
                                                           dependencyMap = 3;
                                                           return { value: "IconComponent", done: null };
                                                         }
@@ -481,7 +481,7 @@ function resolveMessageCodedLinks(content) {
     });
   }
 }
-const NOOP = fn(1098).NOOP;
+const NOOP = fn(1095).NOOP;
 class MessageCodedLinkManager extends tmp7 {
   constructor() {
     tmp3 = new MessageCodedLinkManager(tmp2, tmp, new.target);

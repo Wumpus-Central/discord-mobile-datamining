@@ -3,7 +3,7 @@ import LoggerDefault from "../modules/debug/Logger.tsx";
 import initialize from "../../discord_common/js/packages/flux/index.tsx";
 import c from "../../_runtime/00576_c.js";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _mod6479 from "../../_runtime/metro/06479__.js";
+import _mod6480 from "../../_runtime/metro/06480__.js";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../_runtime/metro/00032__.js";
 import LocaleStore from "../modules/user_settings/LocaleStore.tsx";
@@ -13,7 +13,7 @@ function getStripe() {
   if (null != React2) {
     let resolved = Promise.resolve(React2);
   } else {
-    const stripe = _mod6479.loadStripe(constants.STRIPE.KEY);
+    const stripe = _mod6480.loadStripe(constants.STRIPE.KEY);
     resolved = stripe.then((result) => {
       closure_2 = result;
       return result;
@@ -203,7 +203,7 @@ let closure_11 = async function _authenticatePaymentIntentForPaymentId(arg0) {
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Endpoints: metroRequire, PaymentSettings: closure_7 } = Constants);
 const logger = new LoggerDefault("StripeUtils");
 let closure_9 = {

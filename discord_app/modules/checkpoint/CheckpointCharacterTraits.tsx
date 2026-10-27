@@ -1,6 +1,7 @@
 // discord_app/modules/checkpoint/CheckpointCharacterTraits.tsx
 import CheckpointTraitRarity from "../../../discord_common/js/shared/shared-constants/CheckpointTraitRarity.tsx";
 import CheckpointTrait from "../../../discord_common/js/shared/shared-constants/CheckpointTrait.tsx";
+import CheckpointTraitConfig from "../../../discord_common/js/shared/shared-constants/CheckpointTraitConfig.tsx";
 import CheckpointCharacterAssets from "CheckpointCharacterAssets.tsx";
 import CheckpointCharacterBase from "../../../discord_common/js/shared/shared-constants/CheckpointCharacterBase.tsx";
 import CheckpointCharacterShoes from "../../../discord_common/js/shared/shared-constants/CheckpointCharacterShoes.tsx";
@@ -9,49 +10,46 @@ import CheckpointCharacterFace from "../../../discord_common/js/shared/shared-co
 import CheckpointCharacterHat from "../../../discord_common/js/shared/shared-constants/CheckpointCharacterHat.tsx";
 import CheckpointCharacterWearable from "../../../discord_common/js/shared/shared-constants/CheckpointCharacterWearable.tsx";
 import CheckpointCharacterAura from "../../../discord_common/js/shared/shared-constants/CheckpointCharacterAura.tsx";
-import CheckpointTraitConfig from "../../../discord_common/js/shared/shared-constants/CheckpointTraitConfig.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
 const require = globalThis.__r;
 
-const CHECKPOINT_TRAIT_OPTION_TO_RARITY = {};
-CHECKPOINT_TRAIT_OPTION_TO_RARITY[CheckpointTrait.CheckpointTrait.FACE] =
-  CheckpointTraitConfig.CHECKPOINT_FACE_OPTION_TO_RARITY;
-CHECKPOINT_TRAIT_OPTION_TO_RARITY[CheckpointTrait.CheckpointTrait.OUTFIT] =
-  CheckpointTraitConfig.CHECKPOINT_OUTFIT_OPTION_TO_RARITY;
-CHECKPOINT_TRAIT_OPTION_TO_RARITY[CheckpointTrait.CheckpointTrait.HAT] =
-  CheckpointTraitConfig.CHECKPOINT_HAT_OPTION_TO_RARITY;
-CHECKPOINT_TRAIT_OPTION_TO_RARITY[CheckpointTrait.CheckpointTrait.SHOES] =
-  CheckpointTraitConfig.CHECKPOINT_SHOES_OPTION_TO_RARITY;
-CHECKPOINT_TRAIT_OPTION_TO_RARITY[CheckpointTrait.CheckpointTrait.WEARABLE] =
-  CheckpointTraitConfig.CHECKPOINT_WEARABLE_OPTION_TO_RARITY;
-CHECKPOINT_TRAIT_OPTION_TO_RARITY[CheckpointTrait.CheckpointTrait.AURA] =
-  CheckpointTraitConfig.CHECKPOINT_AURA_OPTION_TO_RARITY;
-CHECKPOINT_TRAIT_OPTION_TO_RARITY[CheckpointTrait.CheckpointTrait.BASE] =
-  CheckpointTraitConfig.CHECKPOINT_BASE_OPTION_TO_RARITY;
+let closure_129_0 = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
+let f96312 = (arg0) => require.has(arg0);
+const set = new Set(Object.values(CheckpointTraitRarity.CheckpointTraitRarity));
+let closure_130_0 = new Set(Object.values(CheckpointTrait.CheckpointTrait));
+f96312 = (arg0) => require.has(arg0);
+let obj = {};
+obj[CheckpointTrait.CheckpointTrait.FACE] = CheckpointTraitConfig.CHECKPOINT_FACE_OPTION_TO_RARITY;
+obj[CheckpointTrait.CheckpointTrait.OUTFIT] = CheckpointTraitConfig.CHECKPOINT_OUTFIT_OPTION_TO_RARITY;
+obj[CheckpointTrait.CheckpointTrait.HAT] = CheckpointTraitConfig.CHECKPOINT_HAT_OPTION_TO_RARITY;
+obj[CheckpointTrait.CheckpointTrait.SHOES] = CheckpointTraitConfig.CHECKPOINT_SHOES_OPTION_TO_RARITY;
+obj[CheckpointTrait.CheckpointTrait.WEARABLE] = CheckpointTraitConfig.CHECKPOINT_WEARABLE_OPTION_TO_RARITY;
+obj[CheckpointTrait.CheckpointTrait.AURA] = CheckpointTraitConfig.CHECKPOINT_AURA_OPTION_TO_RARITY;
+obj[CheckpointTrait.CheckpointTrait.BASE] = CheckpointTraitConfig.CHECKPOINT_BASE_OPTION_TO_RARITY;
 const obj2 = {};
-obj2[CheckpointTrait.CheckpointTrait.FACE] = CheckpointCharacterAssets.CHARACTER_FACE_TRAIT_ASSETS;
-obj2[CheckpointTrait.CheckpointTrait.OUTFIT] = CheckpointCharacterAssets.CHARACTER_OUTFIT_TRAIT_ASSETS;
-obj2[CheckpointTrait.CheckpointTrait.HAT] = CheckpointCharacterAssets.CHARACTER_HAT_TRAIT_ASSETS;
-obj2[CheckpointTrait.CheckpointTrait.SHOES] = CheckpointCharacterAssets.CHARACTER_SHOES_TRAIT_ASSETS;
-obj2[CheckpointTrait.CheckpointTrait.WEARABLE] = CheckpointCharacterAssets.CHARACTER_WEARABLE_TRAIT_ASSETS;
-obj2[CheckpointTrait.CheckpointTrait.AURA] = CheckpointCharacterAssets.CHARACTER_AURA_TRAIT_ASSETS;
-obj2[CheckpointTrait.CheckpointTrait.BASE] = CheckpointCharacterAssets.CHARACTER_BASE_TRAIT_ASSETS;
+obj2[CheckpointTrait.CheckpointTrait.FACE] = CheckpointCharacterAssets.CHARACTER_FACE_OPTION_TO_ASSETS;
+obj2[CheckpointTrait.CheckpointTrait.OUTFIT] = CheckpointCharacterAssets.CHARACTER_OUTFIT_OPTION_TO_ASSETS;
+obj2[CheckpointTrait.CheckpointTrait.HAT] = CheckpointCharacterAssets.CHARACTER_HAT_OPTION_TO_ASSETS;
+obj2[CheckpointTrait.CheckpointTrait.SHOES] = CheckpointCharacterAssets.CHARACTER_SHOES_OPTION_TO_ASSETS;
+obj2[CheckpointTrait.CheckpointTrait.WEARABLE] = CheckpointCharacterAssets.CHARACTER_WEARABLE_OPTION_TO_ASSETS;
+obj2[CheckpointTrait.CheckpointTrait.AURA] = CheckpointCharacterAssets.CHARACTER_AURA_OPTION_TO_ASSETS;
+obj2[CheckpointTrait.CheckpointTrait.BASE] = CheckpointCharacterAssets.CHARACTER_BASE_OPTION_TO_ASSETS;
 const obj3 = {};
 let values = Object.values(CheckpointCharacterFace.CheckpointCharacterFace);
 obj3[CheckpointTrait.CheckpointTrait.FACE] = values.filter((item) => typeof item === "number");
-const values7 = Object.values(CheckpointCharacterOutfit.CheckpointCharacterOutfit);
-obj3[CheckpointTrait.CheckpointTrait.OUTFIT] = values7.filter((item) => typeof item === "number");
-const values8 = Object.values(CheckpointCharacterHat.CheckpointCharacterHat);
-obj3[CheckpointTrait.CheckpointTrait.HAT] = values8.filter((item) => typeof item === "number");
-const values9 = Object.values(CheckpointCharacterShoes.CheckpointCharacterShoes);
-obj3[CheckpointTrait.CheckpointTrait.SHOES] = values9.filter((item) => typeof item === "number");
-const values10 = Object.values(CheckpointCharacterWearable.CheckpointCharacterWearable);
-obj3[CheckpointTrait.CheckpointTrait.WEARABLE] = values10.filter((item) => typeof item === "number");
-const values11 = Object.values(CheckpointCharacterAura.CheckpointCharacterAura);
-obj3[CheckpointTrait.CheckpointTrait.AURA] = values11.filter((item) => typeof item === "number");
-const values12 = Object.values(CheckpointCharacterBase.CheckpointCharacterBase);
-obj3[CheckpointTrait.CheckpointTrait.BASE] = values12.filter((item) => typeof item === "number");
+const values8 = Object.values(CheckpointCharacterOutfit.CheckpointCharacterOutfit);
+obj3[CheckpointTrait.CheckpointTrait.OUTFIT] = values8.filter((item) => typeof item === "number");
+const values9 = Object.values(CheckpointCharacterHat.CheckpointCharacterHat);
+obj3[CheckpointTrait.CheckpointTrait.HAT] = values9.filter((item) => typeof item === "number");
+const values10 = Object.values(CheckpointCharacterShoes.CheckpointCharacterShoes);
+obj3[CheckpointTrait.CheckpointTrait.SHOES] = values10.filter((item) => typeof item === "number");
+const values11 = Object.values(CheckpointCharacterWearable.CheckpointCharacterWearable);
+obj3[CheckpointTrait.CheckpointTrait.WEARABLE] = values11.filter((item) => typeof item === "number");
+const values12 = Object.values(CheckpointCharacterAura.CheckpointCharacterAura);
+obj3[CheckpointTrait.CheckpointTrait.AURA] = values12.filter((item) => typeof item === "number");
+const values13 = Object.values(CheckpointCharacterBase.CheckpointCharacterBase);
+obj3[CheckpointTrait.CheckpointTrait.BASE] = values13.filter((item) => typeof item === "number");
 const obj4 = {};
 obj4[CheckpointTrait.CheckpointTrait.OUTFIT] = CheckpointCharacterOutfit.CheckpointCharacterOutfit.NONE;
 obj4[CheckpointTrait.CheckpointTrait.HAT] = CheckpointCharacterHat.CheckpointCharacterHat.NONE;
@@ -218,25 +216,25 @@ obj5[CheckpointCharacterOutfit.CheckpointCharacterOutfit.MAGICAL_FROST] =
   CheckpointCharacterOutfit.CheckpointCharacterOutfit.MAGICAL_DEFAULT;
 obj5[CheckpointCharacterOutfit.CheckpointCharacterOutfit.MAGICAL_CITRINE] =
   CheckpointCharacterOutfit.CheckpointCharacterOutfit.MAGICAL_DEFAULT;
-const entries = Object.entries(obj5);
-let closure_4 = entries.reduce((acc, item) => {
-  [tmp, tmp2] = item;
-  const obj = {};
-  const merged = Object.assign(acc);
-  let items = acc[tmp2];
-  if (items == null) {
-    items = [];
+const dependencyMap = {};
+const values14 = Object.values(CheckpointCharacterOutfit.CheckpointCharacterOutfit);
+const found = values14.filter((item) => typeof item === "number");
+const item = found.forEach((item) => {
+  if (null != obj5[item]) {
+    let items = dependencyMap[tmp];
+    if (items == null) {
+      items = [];
+    }
+    items.push(item);
+    dependencyMap[tmp] = items;
   }
-  const items1 = [...items, Number(tmp)];
-  obj[tmp2] = items1;
-  return obj;
-}, {});
+});
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointCharacterTraits.tsx");
 
-export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4) {
+export const getVisibleTraitRarities = function getVisibleTraitRarities(item, c4) {
   let tmp = null;
   if (null != c4) {
-    if (require("CheckpointTrait").CheckpointTrait.FACE === arg0) {
+    if (require("CheckpointTrait").CheckpointTrait.FACE === item) {
       const voice = c4.voice;
       let prop;
       if (voice != null) {
@@ -246,7 +244,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop = null;
       }
       tmp = prop;
-    } else if (tmp3(6039).CheckpointTrait.OUTFIT === arg0) {
+    } else if (tmp3(6041).CheckpointTrait.OUTFIT === item) {
       const messages = c4.messages;
       let prop1;
       if (messages != null) {
@@ -256,7 +254,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop1 = null;
       }
       tmp = prop1;
-    } else if (tmp3(6039).CheckpointTrait.HAT === arg0) {
+    } else if (tmp3(6041).CheckpointTrait.HAT === item) {
       const guilds = c4.guilds;
       let prop2;
       if (guilds != null) {
@@ -269,7 +267,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop2 = null;
       }
       tmp = prop2;
-    } else if (tmp3(6039).CheckpointTrait.SHOES === arg0) {
+    } else if (tmp3(6041).CheckpointTrait.SHOES === item) {
       const emojis = c4.emojis;
       let prop3;
       if (emojis != null) {
@@ -279,7 +277,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop3 = null;
       }
       tmp = prop3;
-    } else if (tmp3(6039).CheckpointTrait.WEARABLE === arg0) {
+    } else if (tmp3(6041).CheckpointTrait.WEARABLE === item) {
       const games2 = c4.games;
       let prop4;
       if (games2 != null) {
@@ -289,7 +287,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop4 = null;
       }
       tmp = prop4;
-    } else if (tmp3(6039).CheckpointTrait.AURA === arg0) {
+    } else if (tmp3(6041).CheckpointTrait.AURA === item) {
       const games = c4.games;
       let prop5;
       if (games != null) {
@@ -299,7 +297,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
         prop5 = null;
       }
       tmp = prop5;
-    } else if (tmp3(6039).CheckpointTrait.BASE === arg0) {
+    } else if (tmp3(6041).CheckpointTrait.BASE === item) {
       tmp = null;
     }
   }
@@ -309,7 +307,7 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
     values.filter((item) => {
       if (item !== CheckpointTraitRarity.CheckpointTraitRarity.DEFAULT) {
         if (item !== CheckpointTraitRarity.CheckpointTraitRarity.NITRO) {
-          const tmp3 = CheckpointTraitConfig.CHECKPOINT_RARITY_MIN_PERCENTILE[item];
+          const tmp3 = CheckpointTraitConfig.CHECKPOINT_RARITY_TO_MIN_PERCENTILE[item];
           let tmp5 = null != tmp3;
           if (tmp5) {
             tmp5 = null != c0;
@@ -324,32 +322,53 @@ export const getVisibleTraitRarities = function getVisibleTraitRarities(arg0, c4
     }),
   );
 };
-export { CHECKPOINT_TRAIT_OPTION_TO_RARITY };
-export const CHECKPOINT_TRAIT_OPTION_ASSETS = obj2;
-export const CHECKPOINT_TRAIT_OPTION_IDS = obj3;
-export const NONE_OPTION_IDS = obj4;
+export const getCharacterLayerOrdering = function getCharacterLayerOrdering(wearable) {
+  const CHECKPOINT_WEARABLE_LAYER_BACKGROUND = CheckpointTraitConfig.CHECKPOINT_WEARABLE_LAYER_BACKGROUND;
+  const hasItem = CHECKPOINT_WEARABLE_LAYER_BACKGROUND.has(wearable);
+  const tmp2 = CheckpointTraitConfig;
+  return hasItem
+    ? tmp2.CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING
+    : tmp2.CHECKPOINT_LAYER_DEFAULT_ORDERING.filter(f96312);
+};
+export const CHECKPOINT_TRAIT_TO_OPTION_ASSETS = obj2;
+export const CHECKPOINT_TRAIT_TO_OPTION_IDS = obj3;
+export const TRAIT_TO_NONE_OPTION_ID = obj4;
 export const OUTFIT_DEFAULT_OPTION_IDS = items;
-export const OUTFIT_VARIANTS_TO_DEFAULTS = obj5;
+export const OUTFIT_VARIANT_TO_DEFAULT = obj5;
 export const getOutfitDefaultOptionId = function getOutfitDefaultOptionId(character) {
   return obj5[character];
 };
 export const getTraitOptionRarity = function getTraitOptionRarity(item, selectedCharacterTraits) {
-  return obj[item][selectedCharacterTraits];
+  let tmp2;
+  if (null != obj[item][selectedCharacterTraits]) {
+    if (typeof f96312 === "function") {
+      if (closure_130_0.has(tmp)) {
+        tmp2 = tmp;
+      }
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  }
+  return tmp2;
 };
 export const getOutfitColorOptionIds = function getOutfitColorOptionIds(NONE) {
   if (null != obj5[NONE]) {
-    let items = closure_4[tmp];
+    let items = dependencyMap[tmp];
+    if (items == null) {
+      items = [];
+    }
+    let items1 = items;
   } else {
-    items = [];
+    items1 = [];
   }
-  return items;
+  return items1;
 };
 export const getCharacterFromTraits = function getCharacterFromTraits(arg0) {
   let ICY = arg0[CheckpointTrait.CheckpointTrait.BASE];
   if (ICY == null) {
     ICY = CheckpointCharacterBase.CheckpointCharacterBase.ICY;
   }
-  const obj = { base: ICY, shoes: null, outfit: null, face: null, hat: null, wearable: null, aura: null };
+  obj = { base: ICY, shoes: null, outfit: null, face: null, hat: null, wearable: null, aura: null };
   let NONE = arg0[CheckpointTrait.CheckpointTrait.SHOES];
   if (NONE == null) {
     NONE = CheckpointCharacterShoes.CheckpointCharacterShoes.NONE;

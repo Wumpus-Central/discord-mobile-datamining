@@ -12,7 +12,7 @@ import MessageRecord from "../../../../records/MessageRecord.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const MessageTypes = fn(1087).MessageTypes;
+const MessageTypes = fn(1084).MessageTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -188,17 +188,17 @@ export const QuestEmbedPreview = ReactCompilerGating.isReactCompilerEnabled()
       let tmp6 = null;
       if (null != memo1) {
         let obj2 = { title: null, children: null };
-        const intl = tmp2(1128).intl;
-        obj2.title = intl.string(tmp2(1128).t["habP/M"]);
+        const intl = tmp2(1125).intl;
+        obj2.title = intl.string(tmp2(1125).t["habP/M"]);
         let obj3 = { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" };
-        obj2.children = jsx(stateFromStores(9772), {
+        obj2.children = jsx(stateFromStores(9774), {
           rowGenerator: memo,
           message: memo1,
           horizontalOffset: 0,
           pointerEvents: "none",
         });
-        tmp6 = jsx(stateFromStores(16517), { title: null, children: null });
-        const tmp9 = stateFromStores(16517);
+        tmp6 = jsx(stateFromStores(16556), { title: null, children: null });
+        const tmp9 = stateFromStores(16556);
       }
       return tmp6;
     };

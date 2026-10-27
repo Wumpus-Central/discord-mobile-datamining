@@ -7,7 +7,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 
 require = fn;
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -126,11 +126,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const obj = channelId(504);
-      const isVerifiedAdult = channelId(6654).useIsVerifiedAdult();
-      const obj2 = channelId(6654);
-      const obj3 = channelId(5644);
+      const isVerifiedAdult = channelId(6655).useIsVerifiedAdult();
+      const obj2 = channelId(6655);
+      const obj3 = channelId(5645);
       return (
-        channelId(5644).useIsFeatureAgeGated(channelId(6659).AgeGatedFeature.STAGE_SPEAKING) &&
+        channelId(5645).useIsFeatureAgeGated(channelId(6660).AgeGatedFeature.STAGE_SPEAKING) &&
         !isVerifiedAdult &&
         stateFromStores
       );
@@ -236,11 +236,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         items1,
       );
       const obj = channelId(504);
-      const isAgeVerified = channelId(6654).useIsAgeVerified();
-      const obj2 = channelId(6654);
-      const obj3 = channelId(5644);
+      const isAgeVerified = channelId(6655).useIsAgeVerified();
+      const obj2 = channelId(6655);
+      const obj3 = channelId(5645);
       return (
-        channelId(5644).useIsFeatureAgeGated(channelId(6659).AgeGatedFeature.STAGE_SPEAKING) &&
+        channelId(5645).useIsFeatureAgeGated(channelId(6660).AgeGatedFeature.STAGE_SPEAKING) &&
         !isAgeVerified &&
         stateFromStores
       );

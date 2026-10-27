@@ -4,7 +4,7 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 let require = fn;
-const isExternalProduct = fn(1089).isExternalProduct;
+const isExternalProduct = fn(1086).isExternalProduct;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useHandleUseNow.tsx");
 

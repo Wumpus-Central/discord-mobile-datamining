@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const tmpResult = tmp(504);
           [tmp17, tmp18] = tmp(504).useStateFromStoresArray(tmp12, tmp13);
-          const AnimateEmoji = tmp(4799).AnimateEmoji;
+          const AnimateEmoji = tmp(4800).AnimateEmoji;
           const setting = AnimateEmoji.useSetting();
           const _Symbol2 = Symbol;
           if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
@@ -113,26 +113,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       model: tmp10,
                       markdownTextRenderOptions: tmp27,
                       onTapLink: tmp29,
-                      onLongPressLink: tmp(11280).contentHandlers.onLongPressLink,
-                      onTapAttachmentLink: tmp(11280).contentHandlers.onTapAttachmentLink,
-                      onLongPressAttachmentLink: tmp(11280).contentHandlers.onLongPressAttachmentLink,
-                      onTapMention: tmp(11280).contentHandlers.onTapMention,
-                      onTapTimestamp: tmp(11280).contentHandlers.onTapTimestamp,
-                      onTapInlineCode: tmp(11280).contentHandlers.onTapInlineCode,
-                      onTapEmoji: tmp(11280).contentHandlers.onTapEmoji,
+                      onLongPressLink: tmp(11283).contentHandlers.onLongPressLink,
+                      onTapAttachmentLink: tmp(11283).contentHandlers.onTapAttachmentLink,
+                      onLongPressAttachmentLink: tmp(11283).contentHandlers.onLongPressAttachmentLink,
+                      onTapMention: tmp(11283).contentHandlers.onTapMention,
+                      onTapTimestamp: tmp(11283).contentHandlers.onTapTimestamp,
+                      onTapInlineCode: tmp(11283).contentHandlers.onTapInlineCode,
+                      onTapEmoji: tmp(11283).contentHandlers.onTapEmoji,
                       style: tmp30,
                     };
                     const tmp34 = jsx(TextDisplayComponentViewNativeComponentDefault, {
                       model: tmp10,
                       markdownTextRenderOptions: tmp27,
                       onTapLink: tmp29,
-                      onLongPressLink: tmp(11280).contentHandlers.onLongPressLink,
-                      onTapAttachmentLink: tmp(11280).contentHandlers.onTapAttachmentLink,
-                      onLongPressAttachmentLink: tmp(11280).contentHandlers.onLongPressAttachmentLink,
-                      onTapMention: tmp(11280).contentHandlers.onTapMention,
-                      onTapTimestamp: tmp(11280).contentHandlers.onTapTimestamp,
-                      onTapInlineCode: tmp(11280).contentHandlers.onTapInlineCode,
-                      onTapEmoji: tmp(11280).contentHandlers.onTapEmoji,
+                      onLongPressLink: tmp(11283).contentHandlers.onLongPressLink,
+                      onTapAttachmentLink: tmp(11283).contentHandlers.onTapAttachmentLink,
+                      onLongPressAttachmentLink: tmp(11283).contentHandlers.onLongPressAttachmentLink,
+                      onTapMention: tmp(11283).contentHandlers.onTapMention,
+                      onTapTimestamp: tmp(11283).contentHandlers.onTapTimestamp,
+                      onTapInlineCode: tmp(11283).contentHandlers.onTapInlineCode,
+                      onTapEmoji: tmp(11283).contentHandlers.onTapEmoji,
                       style: tmp30,
                     });
                     cResult[18] = tmp10;
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj6.content = tmp8Result2.parseToAST(
         content,
         true,
-        channelId(8482).getInitialParserState({ channelId, renderOptions }),
+        channelId(8481).getInitialParserState({ channelId, renderOptions }),
       );
       const json = JSON.stringify(obj6);
       cResult[1] = content;
@@ -179,7 +179,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = json;
       tmp10 = json;
       const obj7 = { channelId, renderOptions };
-      const tmpResult6 = channelId(8482);
+      const tmpResult6 = channelId(8481);
     }
   : function TextDisplayComponent(type) {
       type = type.type;

@@ -10,7 +10,7 @@ require = fn;
 function loadMoreBookmarks() {
   const bookmarks = SavedMessagesActions.fetchBookmarks({ loadMore: true });
 }
-const NOOP = fn(1087).NOOP;
+const NOOP = fn(1084).NOOP;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/useBookmarksPagination.tsx");

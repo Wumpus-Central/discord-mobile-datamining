@@ -736,7 +736,7 @@ function getChannelIconComponent(channel, ignoreTraits) {
     }
   }
 }
-const ChannelTypes = fn(1087).ChannelTypes;
+const ChannelTypes = fn(1084).ChannelTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/ChannelUtils.tsx");
 

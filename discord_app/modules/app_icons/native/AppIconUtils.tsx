@@ -193,16 +193,16 @@ let closure_17 = async function _setAppIcon(arg0) {
     }
   }
 };
-const AppIconConstants = fn(9865);
+const AppIconConstants = fn(9867);
 ({
   getDefaultIcon: metroRequire,
   getIconById: closure_7,
   getLimitedAlternateIcons: closure_8,
   getOfficialAlternateIcons: closure_9,
 } = AppIconConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: c10, UserSettingsSections: closure_11 } = Constants);
-const PremiumTypes = fn(1394).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 let closure_13 = new LoggerDefault("AppIconUtils");
 let ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -290,7 +290,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp6 = cResult[1];
       }
-      first(5263)(tmp6);
+      first(5264)(tmp6);
       return tmp3[0];
     }
   : function useCurrentAppIcon() {

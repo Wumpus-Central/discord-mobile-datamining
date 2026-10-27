@@ -5,7 +5,7 @@ import useFetchHighlightedCreatorGuildDetailsDefault from "useFetchHighlightedCr
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const MarketingURLs = fn(1087).MarketingURLs;
+const MarketingURLs = fn(1084).MarketingURLs;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_role_subscriptions/useHighlightedCreatorGuildDetails.tsx");

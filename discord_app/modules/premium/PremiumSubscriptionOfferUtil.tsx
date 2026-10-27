@@ -2,7 +2,7 @@
 import initialize from "../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../_runtime/00576_c.js";
 import Server from "../../flow/Server.tsx";
-import _modDef2049 from "../../../_runtime/metro/02049__.js";
+import _modDef2046 from "../../../_runtime/metro/02046__.js";
 import usePremiumTrialOffer from "hooks/usePremiumTrialOffer.android.tsx";
 import PremiumSubscriptionTrialUtil from "PremiumSubscriptionTrialUtil.tsx";
 import usePremiumDiscountOffer from "hooks/usePremiumDiscountOffer.android.tsx";
@@ -62,7 +62,7 @@ function getDiscountInfo(active_discount_id) {
   }
   return { duration: 1, percentage: 30, discountId: active_discount_id };
 }
-const PremiumConstants = fn(1394);
+const PremiumConstants = fn(1391);
 ({
   PREMIUM_TIER_2_ANNUAL_20_PERCENT_DISCOUNT_ID: metroRequire,
   PREMIUM_TIER_2_ANNUAL_25_PERCENT_DISCOUNT_ID: closure_7,
@@ -110,8 +110,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp10 = null != prop;
         if (tmp10) {
           const _Date = Date;
-          tmp10 = _modDef2049(Date.now()) <= _modDef2049(prop);
-          const tmp12Result = _modDef2049(Date.now());
+          tmp10 = _modDef2046(Date.now()) <= _modDef2046(prop);
+          const tmp12Result = _modDef2046(Date.now());
         }
         cResult[2] = prop;
         cResult[3] = tmp10;
@@ -136,8 +136,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp4 = null != prop;
       if (tmp4) {
         const _Date = Date;
-        tmp4 = _modDef2049(Date.now()) <= _modDef2049(prop);
-        const tmp6Result = _modDef2049(Date.now());
+        tmp4 = _modDef2046(Date.now()) <= _modDef2046(prop);
+        const tmp6Result = _modDef2046(Date.now());
       }
       return tmp4;
     };

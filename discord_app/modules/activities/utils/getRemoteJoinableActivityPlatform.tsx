@@ -6,7 +6,7 @@ import ConnectedAppsStore from "../../../stores/ConnectedAppsStore.tsx";
 import SessionsStore from "../../../stores/SessionsStore.tsx";
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ActivityFlags: closure_4, ActivityGamePlatforms: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/getRemoteJoinableActivityPlatform.tsx");

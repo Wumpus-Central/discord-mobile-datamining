@@ -45,7 +45,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return flag;
       }, []);
     };
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function usePremiumSettingTrailing() {
       const cResult = c.c(1);
@@ -87,7 +87,7 @@ const route = SettingBuilders.createRoute({
     }
   },
   parent: null,
-  IconComponent: fn(9425).NitroWheelIcon,
+  IconComponent: fn(9424).NitroWheelIcon,
   usePreNavigationAction: tmp2,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function usePremiumSettingTrailing() {
@@ -105,7 +105,7 @@ const route = SettingBuilders.createRoute({
         return jsx(PremiumTabBadgeDefault, {});
       },
   screen: {
-    route: fn(1087).UserSettingsSections.PREMIUM,
+    route: fn(1084).UserSettingsSections.PREMIUM,
     getComponent() {
       return require("PremiumSettingScreen").default;
     },

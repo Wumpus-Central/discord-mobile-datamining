@@ -45,10 +45,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
           const obj2 = { brightTitle: true, title: null, description: null };
-          const intl = tmp(1128).intl;
-          obj2.title = intl.string(tmp(1128).t.KeeWp0);
-          const intl2 = tmp(1128).intl;
-          obj2.description = intl2.string(tmp(1128).t["tJLG+L"]);
+          const intl = tmp(1125).intl;
+          obj2.title = intl.string(tmp(1125).t.KeeWp0);
+          const intl2 = tmp(1125).intl;
+          obj2.description = intl2.string(tmp(1125).t["tJLG+L"]);
           const tmp11 = jsx(UnavailableNoticeDefault, { brightTitle: true, title: null, description: null });
           cResult[4] = tmp11;
           let tmp7 = tmp11;
@@ -66,10 +66,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp5 = jsx(PlaceholderDefault, {});
       } else {
         const obj2 = { brightTitle: true, title: null, description: null };
-        const intl = tmp(1128).intl;
-        obj2.title = intl.string(tmp(1128).t.KeeWp0);
-        const intl2 = tmp(1128).intl;
-        obj2.description = intl2.string(tmp(1128).t["tJLG+L"]);
+        const intl = tmp(1125).intl;
+        obj2.title = intl.string(tmp(1125).t.KeeWp0);
+        const intl2 = tmp(1125).intl;
+        obj2.description = intl2.string(tmp(1125).t["tJLG+L"]);
         tmp5 = jsx(UnavailableNoticeDefault, { brightTitle: true, title: null, description: null });
       }
       return tmp5;

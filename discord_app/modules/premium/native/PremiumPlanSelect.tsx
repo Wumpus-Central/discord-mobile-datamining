@@ -8,7 +8,7 @@ import utils_PlatformUtils from "../../../../discord_common/js/shared/utils/Plat
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
 import PremiumSubscription from "../PremiumSubscription.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../_runtime/05258_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05259_LinearGradient.js";
 import Stack_Stack from "../../../design/components/Stack/native/Stack.native.tsx";
 import actions_BillingActionCreators from "../../billing/actions/BillingActionCreators.tsx";
 import TextStylesDefault from "../../rebrand/native/TextStyles.tsx";
@@ -21,12 +21,12 @@ import PaymentFlowStartedTriggerPoint from "../../experiments/trigger_points/Pay
 import openPremiumPlanWhatYouLoseActionSheetDefault from "openPremiumPlanWhatYouLoseActionSheet.tsx";
 import PremiumPlanWhatYouLoseActionSheet from "PremiumPlanWhatYouLoseActionSheet.tsx";
 import TreasureChestBannerSpotIllustration from "../../../design/components/mana-assets/native/generated/TreasureChestBannerSpotIllustration.native.tsx";
-import _modDef14858 from "../../../../_runtime/metro/14858__.js";
-import _modDef14859 from "../../../../_runtime/metro/14859__.js";
-import _modDef14860 from "../../../../_runtime/metro/14860__.js";
-import _modDef14861 from "../../../../_runtime/metro/14861__.js";
-import _modDef14862 from "../../../../_runtime/metro/14862__.js";
-import _modDef14863 from "../../../../_runtime/metro/14863__.js";
+import _modDef14894 from "../../../../_runtime/metro/14894__.js";
+import _modDef14895 from "../../../../_runtime/metro/14895__.js";
+import _modDef14896 from "../../../../_runtime/metro/14896__.js";
+import _modDef14897 from "../../../../_runtime/metro/14897__.js";
+import _modDef14898 from "../../../../_runtime/metro/14898__.js";
+import _modDef14899 from "../../../../_runtime/metro/14899__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -81,7 +81,7 @@ function PlanSection(showBoostOnlyLabels) {
   c12 = undefined;
   const tmp = useNativeCheckoutStore((getCheckoutContextRecord) => getCheckoutContextRecord.getCheckoutContextRecord());
   closure_11 = tmp;
-  let isIOSResult = shouldShowModernBoostFlow(1385).isIOS();
+  let isIOSResult = shouldShowModernBoostFlow(1382).isIOS();
   if (isIOSResult) {
     isIOSResult = null != tmp;
   }
@@ -154,7 +154,7 @@ function PlanSection(showBoostOnlyLabels) {
   }, plan.productId));
   if (shouldShowModernBoostFlow) {
     let obj2 = { title: showBoostOnlyLabels.label, hasIcons: true, children: mapped };
-    let tmp7Result = closure_30(shouldShowModernBoostFlow(6987).TableRowGroup, obj2);
+    let tmp7Result = closure_30(shouldShowModernBoostFlow(6989).TableRowGroup, obj2);
   } else {
     let obj3 = { children: mapped };
     tmp7Result = closure_30(closure_6, obj3);
@@ -165,8 +165,8 @@ function withCurrentPlanAlternative(plans, productIdFromSubscription, productIdF
   if (null != productIdFromSubscription) {
     if (obj3.isValidBundleProductId(productIdFromSubscription)) {
       if (null == productIdFromSubscription2) {
-        let toggledIntervalProduct = tmp7(7518).getToggledIntervalProduct(productIdFromSubscription);
-        let tmp7Result = tmp7(7518);
+        let toggledIntervalProduct = tmp7(7519).getToggledIntervalProduct(productIdFromSubscription);
+        let tmp7Result = tmp7(7519);
       } else {
         toggledIntervalProduct = productIdFromSubscription;
       }
@@ -191,39 +191,39 @@ function withCurrentPlanAlternative(plans, productIdFromSubscription, productIdF
         })) {
           items = [];
           const arraySpreadResult = HermesBuiltin.arraySpread(plans, 0);
-          items[arraySpreadResult] = tmp7(7518).getPremiumBundledItemsFromProductId(toggledIntervalProduct);
+          items[arraySpreadResult] = tmp7(7519).getPremiumBundledItemsFromProductId(toggledIntervalProduct);
           tmp3 = items;
-          const tmp7Result2 = tmp7(7518);
+          const tmp7Result2 = tmp7(7519);
         }
       }
       return tmp3;
     }
-    obj3 = toggledIntervalProduct(7518);
+    obj3 = toggledIntervalProduct(7519);
   }
   return plans;
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-let useNativeCheckoutStore = fn(7536).useNativeCheckoutStore;
-const PremiumPlanSelectStore = fn(14853);
+let useNativeCheckoutStore = fn(7537).useNativeCheckoutStore;
+const PremiumPlanSelectStore = fn(14889);
 ({ setIsPurchasing: map1, usePremiumPlanSelectStore: closure_14 } = PremiumPlanSelectStore);
-const PremiumConstants = fn(1394);
+const PremiumConstants = fn(1391);
 ({ GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_15, NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_16, PRICE_PLACEHOLDER: closure_17, PremiumSubscriptionSKUs: closure_18, PremiumTypes: closure_19, SubscriptionIntervalTypes: closure_20, SubscriptionPlans: closure_21 } = PremiumConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_22, AnalyticsObjects: closure_23, AnalyticsObjectTypes: closure_24, Fonts, HorizontalGradient: closure_25, PaymentGateways: closure_26, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
-const ColorConstants = fn(7544);
+const ColorConstants = fn(7545);
 ({ getPremiumGradientColor: closure_27, Gradients: closure_28 } = ColorConstants);
-const ItemPurchaseType = fn(5698).ItemPurchaseType;
+const ItemPurchaseType = fn(5699).ItemPurchaseType;
 const jsxProd = fn(21);
 ({ jsx: closure_30, jsxs: closure_31, Fragment: closure_32 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { header: null, row: null, rowDisabled: null, imgWumpusNitro: null, imgBoost: null, imgWumpusNitroBoost: null, imgWumpusNitroClassic: null, imgWumpusNitroClassicBoost: null, imgWumpusNitroTier0: null, rowText: null, rowPlanDescription: null, rowPlanDescriptionSubtext: null, rowPrice: null, purchasingSpinner: null, container: null, currentPlanGradient: null, currentPlanRow: null, loadingSpinnerContainer: null, offPlatformSubscriptionMessage: null, premiumHeaderLabel: null, boostContainer: null, boostRowIcon: null, nitroBanner: null, nitroBannerText: null, recommendedText: null };
 let obj3 = {};
 let merged = Object.assign(TextStylesDefault(Fonts.DISPLAY_EXTRABOLD, undefined, 24));
 obj3.marginTop = 16;
-obj3.color = fn(6707).DARK_WHITE_500_LIGHT_BLACK_500;
+obj3.color = fn(6708).DARK_WHITE_500_LIGHT_BLACK_500;
 obj2.header = obj3;
-obj2.row = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(6707).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+obj2.row = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(6708).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
 obj2.rowDisabled = { opacity: 0.5 };
 obj2.imgWumpusNitro = { height: 40, width: 40 };
 obj2.imgBoost = { height: 40, width: 40 };
@@ -231,14 +231,14 @@ obj2.imgWumpusNitroBoost = { width: 32, height: 32 };
 obj2.imgWumpusNitroClassic = { width: 40, height: 40 };
 obj2.imgWumpusNitroClassicBoost = { width: 32, height: 32 };
 obj2.imgWumpusNitroTier0 = { width: 40, height: 40 };
-let obj4 = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(6707).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
-obj2.rowText = { fontSize: 16, color: fn(6707).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj4 = { marginTop: 7, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignItems: "center", paddingVertical: 12, paddingHorizontal: 12, flexWrap: "wrap", backgroundColor: fn(6708).DARK_PRIMARY_630_LIGHT_PRIMARY_230 };
+obj2.rowText = { fontSize: 16, color: fn(6708).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.rowPlanDescription = { marginLeft: 12, fontFamily: Fonts.PRIMARY_SEMIBOLD, lineHeight: 20 };
 obj2.rowPlanDescriptionSubtext = { fontSize: 12, marginLeft: 5, fontFamily: Fonts.PRIMARY_MEDIUM, fontWeight: "400" };
 obj2.rowPrice = { marginLeft: "auto" };
 obj2.purchasingSpinner = { position: "absolute", top: 0, bottom: 0, left: 0, right: 0, alignItems: "center", justifyContent: "center" };
 obj2.container = { marginHorizontal: 14.5, paddingBottom: 10 };
-let obj5 = { fontSize: 16, color: fn(6707).DARK_WHITE_500_LIGHT_BLACK_500 };
+let obj5 = { fontSize: 16, color: fn(6708).DARK_WHITE_500_LIGHT_BLACK_500 };
 obj2.currentPlanGradient = { marginTop: 20, borderRadius: nativeDefault.radii.sm };
 obj2.currentPlanRow = { marginTop: 0.5, marginRight: 0.5, marginLeft: 0.5, marginBottom: 0.5 };
 obj2.loadingSpinnerContainer = { display: "flex", alignItems: "center", justifyContent: "center", height: "100%" };
@@ -355,7 +355,7 @@ let closure_34 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostP
   obj.children = items;
   return __initData3(Stack_Stack.Stack, obj);
 });
-let closure_36 = { [_modDef14861]: "imgWumpusNitro", [_modDef14863]: "imgWumpusNitroBoost", [_modDef14860]: "imgWumpusNitroClassic", [_modDef14862]: "imgWumpusNitroClassicBoost", [_modDef14859]: "imgWumpusNitroTier0", [_modDef14858]: "imgBoost" };
+let closure_36 = { [_modDef14897]: "imgWumpusNitro", [_modDef14899]: "imgWumpusNitroBoost", [_modDef14896]: "imgWumpusNitroClassic", [_modDef14898]: "imgWumpusNitroClassicBoost", [_modDef14895]: "imgWumpusNitroTier0", [_modDef14894]: "imgBoost" };
 ReactCompilerGating = fn(558);
 let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function BoostDeltaPriceTrailing(arg0) {
   const cResult = c.c(8);
@@ -721,21 +721,21 @@ let closure_38 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlanRo
     tmp20 = 0 !== plan.numPremiumGuild;
   }
   if (null == plan.premiumTier) {
-    let tmp7Result = require("../../../../_runtime/metro/14858__.js");
+    let tmp7Result = require("../../../../_runtime/metro/14894__.js");
   } else if (0 !== plan.numPremiumGuild) {
     if (plan.premiumTier === closure_19.TIER_1) {
-      tmp7Result = require("../../../../_runtime/metro/14862__.js");
+      tmp7Result = require("../../../../_runtime/metro/14898__.js");
     } else {
-      tmp7Result = require("../../../../_runtime/metro/14863__.js");
+      tmp7Result = require("../../../../_runtime/metro/14899__.js");
     }
   } else {
     const premiumTier = plan.premiumTier;
     if (closure_19.TIER_0 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/14859__.js");
+      tmp7Result = require("../../../../_runtime/metro/14895__.js");
     } else if (closure_19.TIER_1 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/14860__.js");
+      tmp7Result = require("../../../../_runtime/metro/14896__.js");
     } else if (closure_19.TIER_2 === premiumTier) {
-      tmp7Result = require("../../../../_runtime/metro/14861__.js");
+      tmp7Result = require("../../../../_runtime/metro/14897__.js");
     }
   }
   const intl2 = tmp5(subscription[22]).intl;
@@ -1741,8 +1741,8 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
                 const obj7 = {
                   value: v3(modifySubscriptionItemsForProduct.map((planId) => {
                               const obj = { sku_id: null, subscription_plan_id: null, quantity: null, purchase_type: null };
-                              const obj2 = applicationId(2053);
-                              obj.sku_id = obj2.castPremiumSubscriptionAsSkuId(closure_1_1(2053).getSkuIdForPlan(planId.planId));
+                              const obj2 = applicationId(2050);
+                              obj.sku_id = obj2.castPremiumSubscriptionAsSkuId(closure_1_1(2050).getSkuIdForPlan(planId.planId));
                               ({ planId: obj.subscription_plan_id, quantity: obj.quantity } = planId);
                               obj.purchase_type = constants.SUBSCRIPTION;
                               return obj;
@@ -1810,20 +1810,20 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
           }
           obj13.orderId = id;
           obj13.onPurchaseComplete = function onPurchaseComplete(paymentGateway) {
-            closure_1(5909).close();
+            closure_1(5910).close();
             if (paymentGateway.paymentGateway === constants.APPLE_ADVANCED_COMMERCE) {
               premiumTypeSubscription = premiumTypeSubscription.getPremiumTypeSubscription();
               if (null == premiumTypeSubscription) {
                 const _Error = Error;
                 const error = new Error("PremiumActivatedAlert: no premium subscription in store post-activation");
                 const obj2 = { tags: { source: "showPremiumActivatedAlert.nullSubscription" } };
-                const result = premiumTypeSubscription(4787).captureBillingException(error, obj2);
-                const obj4 = premiumTypeSubscription(4787);
-                closure_1(6672).popWithKey(premiumTypeSubscription(7522).PREMIUM_KEY);
+                const result = premiumTypeSubscription(4788).captureBillingException(error, obj2);
+                const obj4 = premiumTypeSubscription(4788);
+                closure_1(6673).popWithKey(premiumTypeSubscription(7523).PREMIUM_KEY);
                 if (navigation.canGoBack()) {
                   navigation.goBack();
                 }
-                const tmpResult = closure_1(6672);
+                const tmpResult = closure_1(6673);
               } else {
                 const obj3 = {
                   importer() {
@@ -1831,11 +1831,11 @@ function PremiumPlanSelect(isBoostPurchaseFlow) {
                       },
                   isDismissable: false
                 };
-                closure_1(5909).openLazy(obj3);
-                const tmpResult2 = closure_1(5909);
+                closure_1(5910).openLazy(obj3);
+                const tmpResult2 = closure_1(5910);
               }
             }
-            let obj = closure_1(5909);
+            let obj = closure_1(5910);
           };
           v3 = 3;
           c7 = 1;

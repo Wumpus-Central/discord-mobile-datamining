@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
@@ -61,7 +61,7 @@ function EditGuildProfileBanner(user) {
         onGifBannerSelect: null,
       };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(15839, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(15877, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -101,17 +101,17 @@ function EditGuildProfileBanner(user) {
       const tmpResult2 = PremiumUpsellUtilsDefault;
     }
   };
-  let intl = tmp5(1128).intl;
-  obj3.editButtonAccessibilityLabel = intl.string(user(1128).t["95hPAe"]);
+  let intl = tmp5(1125).intl;
+  obj3.editButtonAccessibilityLabel = intl.string(user(1125).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_17(UserProfileEditBannerButtonDefault, obj3);
-  return closure_17(user(7253).AnalyticsLocationProvider, obj2);
+  return closure_17(user(7255).AnalyticsLocationProvider, obj2);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];
 let closure_4 = ["nick", "bio", "guild_tag"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticsObjects: closure_11, AnalyticsSections } = Constants);
 ({
   DISPLAY_NAME_MAX_LENGTH: map1,
@@ -119,7 +119,7 @@ const Constants = fn(1087);
   UpsellTypes: closure_15,
   AnalyticsPages,
 } = Constants);
-const PremiumUpsellTypes = fn(1394).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
 let closure_19 = { page: AnalyticsPages.USER_SETTINGS, section: AnalyticsSections.SETTINGS_CUSTOMIZE_PROFILE };

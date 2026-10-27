@@ -396,8 +396,8 @@ let closure_15 = async function _shareIarWithParents() {
     }
   }
 };
-const FamilyCenterAction = fn(7646).FamilyCenterAction;
-const Constants = fn(1087);
+const FamilyCenterAction = fn(7647).FamilyCenterAction;
+const Constants = fn(1084);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActionCreators.tsx");
@@ -703,11 +703,11 @@ export default {
     return (async () => {
       const code = tmp2;
       const recipient_id = tmp5;
-      const HTTP = recipient_id(1297).HTTP;
+      const HTTP = recipient_id(1294).HTTP;
       const request = {
         url: constants.FAMILY_CENTER_LINKED_USERS,
         body: { recipient_id, code },
-        rejectWithError: recipient_id(1297).rejectWithMigratedError(),
+        rejectWithError: recipient_id(1294).rejectWithMigratedError(),
       };
       await HTTP.post(request);
       const body = value.body;
@@ -1057,31 +1057,31 @@ export default {
               return obj3;
             } else {
               let settings2;
-              const protoFieldClass = tmp5(4805).getProtoFieldClass(tmp5(1211).PreloadedUserSettings, tmp2);
+              const protoFieldClass = tmp5(4806).getProtoFieldClass(tmp5(1208).PreloadedUserSettings, tmp2);
               settings = settings.getSettings(tmp5);
               let tmp13;
               if (settings != null) {
                 tmp13 = settings[tmp2];
               }
-              const tmp33Result = tmp5(4805);
+              const tmp33Result = tmp5(4806);
               const modifiedProto = tmp33Result.createModifiedProto(
                 tmp13,
                 closure_2,
                 protoFieldClass,
-                tmp5(1211).PreloadedUserSettings,
+                tmp5(1208).PreloadedUserSettings,
                 tmp2,
               );
               if (null != modifiedProto) {
-                const HTTP = tmp5(1297).HTTP;
+                const HTTP = tmp5(1294).HTTP;
                 const request = {
                   url: closure_1_7.FAMILY_CENTER_TEEN_SETTINGS(tmp5),
                   body: null,
                   rejectWithError: null,
                 };
-                const obj4 = { settings: tmp5(1248).protoToB64(tmp5(1211).PreloadedUserSettings, modifiedProto) };
+                const obj4 = { settings: tmp5(1245).protoToB64(tmp5(1208).PreloadedUserSettings, modifiedProto) };
                 request.body = obj4;
-                const tmp33Result3 = tmp5(1248);
-                request.rejectWithError = tmp5(1297).rejectWithMigratedError();
+                const tmp33Result3 = tmp5(1245);
+                request.rejectWithError = tmp5(1294).rejectWithMigratedError();
                 dependencyMap = 1;
                 c3 = 1;
                 const obj5 = { value: HTTP.patch(request), done: false };
@@ -1089,7 +1089,7 @@ export default {
               } else {
                 c3 = 3;
               }
-              const obj12 = tmp5(4805);
+              const obj12 = tmp5(4806);
             }
           } else if (arg0 === 1) {
             c3 = 3;

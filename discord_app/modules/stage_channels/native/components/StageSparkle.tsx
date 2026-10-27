@@ -7,13 +7,13 @@ import _modDef9040 from "../../../../../_runtime/metro/09040__.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const native = ThemeContextProvider(5037);
+const native = ThemeContextProvider(5038);
 require = fn;
 let closure_3 = ["theme"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { width: 88, height: 88, alignItems: "center", justifyContent: "center" },
   iconContainer: null,
@@ -130,7 +130,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = tmp6Result;
       const items1 = [timestampProducer(View, obj2)];
       const obj5 = { style: tmp3.sparkles, source: tmp10(9040) };
-      items1[1] = timestampProducer(tmp10(5669), obj5);
+      items1[1] = timestampProducer(tmp10(5670), obj5);
       obj.children = items1;
       return React5(View, obj);
     };

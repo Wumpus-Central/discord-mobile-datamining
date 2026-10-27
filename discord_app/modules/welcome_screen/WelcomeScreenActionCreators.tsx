@@ -53,7 +53,7 @@ let closure_6 = async function _saveWelcomeScreen(arg0) {
   }
   return value;
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/welcome_screen/WelcomeScreenActionCreators.tsx");
 

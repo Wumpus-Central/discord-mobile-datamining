@@ -7,16 +7,16 @@ import HelpdeskUtilsDefault from "../../../utils/HelpdeskUtils.tsx";
 import shared from "../../../design/shared.tsx";
 import useThemeDefault from "../../../hooks/useTheme.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef11043 from "../../../../_runtime/metro/11043__.js";
-import _modDef11044 from "../../../../_runtime/metro/11044__.js";
+import _modDef11046 from "../../../../_runtime/metro/11046__.js";
+import _modDef11047 from "../../../../_runtime/metro/11047__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HelpdeskArticles = fn(1087).HelpdeskArticles;
+const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { alignItems: "center" },
   header: { fontSize: 20, fontWeight: "700", color: nativeDefault.colors.TEXT_SUBTLE, marginBottom: 16 },
@@ -64,9 +64,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp6 = useThemeDefault();
       if (tmpResult.isThemeDark(tmp6)) {
-        let tmp5Result2 = _modDef11043;
+        let tmp5Result2 = _modDef11046;
       } else {
-        tmp5Result2 = _modDef11044;
+        tmp5Result2 = _modDef11047;
       }
       if (cResult[4] === tmp4.image) {
         if (cResult[5] === tmp5Result2) {
@@ -115,9 +115,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj6 = { style: tmp.image, source: null };
       const tmp8 = FastImageDefault;
       if (obj7.isThemeDark(tmp4)) {
-        let tmp2Result = _modDef11043;
+        let tmp2Result = _modDef11046;
       } else {
-        tmp2Result = _modDef11044;
+        tmp2Result = _modDef11047;
       }
       obj6.source = tmp2Result;
       items[2] = hasOwnProperty(tmp8, obj6);

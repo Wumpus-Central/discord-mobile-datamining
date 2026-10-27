@@ -6,7 +6,7 @@ import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.t
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import components_Button_Button from "../../../design/components/Button/native/Button.native.tsx";
 import Sheet_BottomSheet from "../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../_runtime/05269_BottomSheetModal.js";
+import BottomSheetModal from "../../../../_runtime/05270_BottomSheetModal.js";
 import BottomSheetTitleHeader from "../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import EmojiStore from "../../emojis/EmojiStore.tsx";
@@ -14,10 +14,10 @@ import GuildOnboardingPromptsStore from "../GuildOnboardingPromptsStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_10 = createStyles.createStyles({
   optionTextEmoji: { fontSize: 24, lineHeight: 24, paddingTop: 5 },
   optionImageEmoji: { height: 24, width: 24 },
@@ -108,7 +108,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                       }
                       if (cResult[19] !== option.title) {
                         const obj2 = { variant: "text-md/normal", children: option.title };
-                        const tmp33 = closure_8(tmp(5234).Text, obj2);
+                        const tmp33 = closure_8(tmp(5235).Text, obj2);
                         cResult[19] = option.title;
                         cResult[20] = tmp33;
                         let tmp31 = tmp33;
@@ -139,7 +139,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                             trailing: tmp28,
                             onPress: tmp13,
                           };
-                          const tmp41 = closure_8(onSelect(7235), obj3);
+                          const tmp41 = closure_8(onSelect(7237), obj3);
                           cResult[25] = tmp16;
                           cResult[26] = tmp13;
                           cResult[27] = tmp34;
@@ -163,7 +163,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                     if (canBeNew) {
                       tmp29 = null;
                       if (option.isUnseen) {
-                        tmp29 = closure_8(tmp(7233).Badge, { type: "new", variant: "primary" });
+                        tmp29 = closure_8(tmp(7235).Badge, { type: "new", variant: "primary" });
                       }
                     }
                     cResult[16] = canBeNew;
@@ -188,8 +188,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 const obj9 = { id: null, animated: null, size: null };
                 ({ id: obj6.id, animated: obj6.animated } = stateFromStores);
                 obj9.size = EMOJI_URL_BASE_SIZE;
-                emojiURL = onSelect(1417).getEmojiURL(obj9);
-                const tmp22Result = onSelect(1417);
+                emojiURL = onSelect(1414).getEmojiURL(obj9);
+                const tmp22Result = onSelect(1414);
               }
               obj8.src = emojiURL;
               const emoji7 = option.emoji;
@@ -201,9 +201,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                 str = "";
               }
               obj8.name = str;
-              obj7.children = closure_8(onSelect(7227), obj8);
+              obj7.children = closure_8(onSelect(7229), obj8);
               let tmp20Result = closure_8(View, obj7);
-              const tmp23 = onSelect(7227);
+              const tmp23 = onSelect(7229);
             } else {
               const emoji6 = option.emoji;
               let name1;

@@ -25,11 +25,11 @@ const result = size.fileFinishedImporting(
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function UserSettingsDesignSystemButtonActionSheet() {
       const cResult = require("c").c(37);
-      const tmp4 = first(17129)();
+      const tmp4 = first(17170)();
       _require = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o(buttonSize) {
-          buttonSize(1274).batchUpdates(() => first(closure_2[4]).setState({ buttonSize }));
+          buttonSize(1271).batchUpdates(() => first(closure_2[4]).setState({ buttonSize }));
         };
         cResult[0] = fn;
         first = fn;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const tmp15 = tmp9(tmp(7248).BottomSheetTitleHeader, { title: "Button Settings" });
+        const tmp15 = tmp9(tmp(7250).BottomSheetTitleHeader, { title: "Button Settings" });
         cResult[6] = tmp15;
         const tmp14 = tmp15;
       } else {
@@ -529,22 +529,22 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp = useDesignSystemSettingsStateDefault();
       _require = tmp;
       importDefault = noop.useCallback((buttonSize) => {
-        buttonSize(1274).batchUpdates(() => closure_1(closure_2[4]).setState({ buttonSize }));
+        buttonSize(1271).batchUpdates(() => closure_1(closure_2[4]).setState({ buttonSize }));
       }, []);
       dependencyMap = noop.useCallback((buttonScale) => {
-        buttonScale(1274).batchUpdates(() => closure_1(closure_2[4]).setState({ buttonScale }));
+        buttonScale(1271).batchUpdates(() => closure_1(closure_2[4]).setState({ buttonScale }));
       }, []);
       noop = noop.useCallback((showDisabled) => {
-        showDisabled(1274).batchUpdates(() => closure_1(closure_2[4]).setState({ showDisabled }));
+        showDisabled(1271).batchUpdates(() => closure_1(closure_2[4]).setState({ showDisabled }));
       }, []);
       closure_4 = noop.useCallback((showIcon) => {
-        showIcon(1274).batchUpdates(() => closure_1(closure_2[4]).setState({ showIcon }));
+        showIcon(1271).batchUpdates(() => closure_1(closure_2[4]).setState({ showIcon }));
       }, []);
       closure_5 = noop.useCallback((iconPosition) => {
-        iconPosition(1274).batchUpdates(() => closure_1(closure_2[4]).setState({ iconPosition }));
+        iconPosition(1271).batchUpdates(() => closure_1(closure_2[4]).setState({ iconPosition }));
       }, []);
       noop.useCallback((enableLoadingState) => {
-        enableLoadingState(1274).batchUpdates(() => closure_1(closure_2[4]).setState({ enableLoadingState }));
+        enableLoadingState(1271).batchUpdates(() => closure_1(closure_2[4]).setState({ enableLoadingState }));
       }, []);
       let obj = { children: null };
       items = [closure_4(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title: "Button Settings" })];

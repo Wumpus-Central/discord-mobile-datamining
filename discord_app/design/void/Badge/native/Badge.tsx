@@ -11,11 +11,11 @@ import LocaleStore from "../../../../modules/user_settings/LocaleStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const BadgeConstants = fn(1204);
+const BadgeConstants = fn(1201);
 ({ BADGE_MASK_SIZE: metroRequire, BADGE_MASK_UNREAD_SIZE: closure_7, BADGE_PADDING, BADGE_SIZE } = BadgeConstants);
 const BADGE_SIZE_UNREAD = BadgeConstants.BADGE_SIZE_UNREAD;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   badgeMask: { position: "absolute", bottom: -BADGE_PADDING, right: -BADGE_PADDING, padding: BADGE_PADDING, zIndex: 1 },
   badge: {
@@ -43,12 +43,12 @@ let obj4 = {
   textAlign: "center",
   textAlignVertical: null,
 };
-let PlatformUtils = fn(1384);
+let PlatformUtils = fn(1381);
 PlatformUtils = PlatformUtils.isAndroid();
 const space = nativeDefault.space;
 obj4.lineHeight = PlatformUtils ? space.PX_12 : space.PX_16;
-obj4.fontFamily = fn(1087).Fonts.PRIMARY_BOLD;
-PlatformUtils = fn(1384);
+obj4.fontFamily = fn(1084).Fonts.PRIMARY_BOLD;
+PlatformUtils = fn(1381);
 let str;
 if (PlatformUtils.isAndroid()) {
   str = "center";

@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const constants = fn(1089).CollectiblesMobileShopScreen;
+const constants = fn(1086).CollectiblesMobileShopScreen;
 fn(558);
 const ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled()

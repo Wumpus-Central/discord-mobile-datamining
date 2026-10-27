@@ -8,8 +8,8 @@ import MuteTimers from "../../lib/MuteTimers.tsx";
 import UserGuildSettingsStore from "../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const UserNotificationSettings = fn(1087).UserNotificationSettings;
-const UserSettingsConstants = fn(1097);
+const UserNotificationSettings = fn(1084).UserNotificationSettings;
+const UserSettingsConstants = fn(1094);
 ({ MuteUntilSeconds: metroRequire, ChannelNotificationSettingsFlags: closure_7 } = UserSettingsConstants);
 let closure_8 = { ignoreMute: false, ignoreUnreadSetting: true, ignoreNotificationSetting: false };
 const ReactCompilerGating = fn(558);

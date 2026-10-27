@@ -501,7 +501,7 @@ let closure_19 = async function _claimOrbsArcadeRewards() {
     }
   })();
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 let closure_7 = 30 * DurationsDefault.Millis.MINUTE;
 const SECOND = DurationsDefault.Millis.SECOND;
 let closure_9 = 5 * DurationsDefault.Millis.SECOND;

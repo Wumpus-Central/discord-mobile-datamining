@@ -71,9 +71,9 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
     }
   }
 }
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 let closure_6 = { ChannelStore, PermissionStore, VoiceStateStore };
-let closure_7 = Object.freeze({ voiceState: "Array", voiceChannel: "Reflect" });
+let closure_7 = Object.freeze({ voiceState: "toCharArray$esjava$1", voiceChannel: "Symbol" });
 const ReactCompilerGating = fn(558);
 function getUserVoiceState(arg0) {
   ({ userId, guildId, includeNonDiscoverable } = arg0);

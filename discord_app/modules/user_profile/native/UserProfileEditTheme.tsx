@@ -1,8 +1,8 @@
 // discord_app/modules/user_profile/native/UserProfileEditTheme.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef5804 from "../../../../_runtime/metro/05804__.js";
+import _modDef5805 from "../../../../_runtime/metro/05805__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { gap: nativeDefault.space.PX_8 },
   labelRow: { flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
@@ -73,7 +73,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
       tmp4 = arg0;
     }
     onProfileThemeColorsChanged(tmp4);
-    tmp = _modDef5804;
+    tmp = _modDef5805;
   }, items);
   require("useOpenThemeColorPickerActionSheet")({ primaryColor, secondaryColor, avatarColors, onChangeColors });
   let tmp15Result = null;
@@ -91,7 +91,7 @@ export default function UserProfileEditTheme(pendingThemeColors) {
         const intl2 = onProfileThemeColorsChanged(tmp3[11]).intl;
         obj5.accessibilityLabel = intl2.string(onProfileThemeColorsChanged(tmp3[11]).t["+1H47t"]);
         obj5.onPress = function handleOverflowMenuPress() {
-          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15889, dependencyMap.paths), "Profile Theme", {
+          ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15927, dependencyMap.paths), "Profile Theme", {
             onResetTheme() {
               return onChangeColors([null, null]);
             },

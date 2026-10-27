@@ -40,8 +40,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = HeaderIconButton(1128).intl;
-          const stringResult = intl.string(HeaderIconButton(1128).t["UKOtz+"]);
+          const intl = HeaderIconButton(1125).intl;
+          const stringResult = intl.string(HeaderIconButton(1125).t["UKOtz+"]);
           cResult[2] = stringResult;
           let tmp6 = stringResult;
         } else {
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[3] !== tmp3) {
           let obj2 = { children: null };
-          HeaderIconButton = HeaderIconButton(9699).HeaderIconButton;
+          HeaderIconButton = HeaderIconButton(9701).HeaderIconButton;
           const obj3 = { accessibilityLabel: tmp6, source: null, onPress: null };
           tmp = _modDef9032;
           obj3.source = tmp;
@@ -70,11 +70,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (channel.isDM()) {
           const obj = { children: null };
           let obj2 = { accessibilityLabel: null, source: null, onPress: null };
-          const intl = channel(1128).intl;
-          obj2.accessibilityLabel = intl.string(channel(1128).t["UKOtz+"]);
+          const intl = channel(1125).intl;
+          obj2.accessibilityLabel = intl.string(channel(1125).t["UKOtz+"]);
           obj2.source = _modDef9032;
           obj2.onPress = tmp;
-          obj.children = jsx(channel(9699).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
+          obj.children = jsx(channel(9701).HeaderIconButton, { accessibilityLabel: null, source: null, onPress: null });
           tmp2 = jsx(PressableNavigatorButtonWrapperDefault, { children: null });
         } else {
           tmp2 = null;

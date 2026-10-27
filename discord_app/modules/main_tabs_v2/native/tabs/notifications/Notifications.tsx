@@ -34,11 +34,11 @@ function goBack() {
   }
 }
 const View = fn(17).View;
-const YouBarNavigatorScreens = fn(11184).YouBarNavigatorScreens;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const YouBarNavigatorScreens = fn(11187).YouBarNavigatorScreens;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   containerOuter: { flex: 1 },
   containerOuterTablet: {
@@ -148,7 +148,7 @@ let closure_11 = noop.memo(
                     tmp26 = tmp29;
                   }
                   const obj4 = { top: tmp10, children: tmp11 };
-                  const tmp21 = closure_7(tmp(7221).SafeAreaPaddingView, obj4);
+                  const tmp21 = closure_7(tmp(7223).SafeAreaPaddingView, obj4);
                   cResult[9] = tmp10;
                   cResult[10] = tmp11;
                   cResult[11] = tmp21;
@@ -162,11 +162,11 @@ let closure_11 = noop.memo(
         if (!nestedInLaunchPad) {
           const obj5 = { style: tmp4.headerTitle, children: null };
           const obj6 = { style: tmp4.headerClose, accessibilityLabel: null, onPress: null, children: null };
-          const intl = tmp(1128).intl;
-          obj6.accessibilityLabel = intl.string(tmp(1128).t["13/7kX"]);
+          const intl = tmp(1125).intl;
+          obj6.accessibilityLabel = intl.string(tmp(1125).t["13/7kX"]);
           obj6.onPress = goBack;
-          obj6.children = closure_7(tmp(17858).LeftBackIconWithBadge, {});
-          const items1 = [closure_7(tmp(6908).PressableOpacity, obj6), ,];
+          obj6.children = closure_7(tmp(17892).LeftBackIconWithBadge, {});
+          const items1 = [closure_7(tmp(6910).PressableOpacity, obj6), ,];
           const obj7 = {
             color: "mobile-text-heading-primary",
             variant: "heading-lg/bold",
@@ -175,15 +175,15 @@ let closure_11 = noop.memo(
             accessibilityRole: "header",
             children: null,
           };
-          const intl2 = tmp(1128).intl;
-          obj7.children = intl2.string(tmp(1128).t.HcoRu0);
-          items1[1] = closure_7(tmp(5234).Text, obj7);
+          const intl2 = tmp(1125).intl;
+          obj7.children = intl2.string(tmp(1125).t.HcoRu0);
+          items1[1] = closure_7(tmp(5235).Text, obj7);
           const obj8 = { style: tmp4.actionButtons, children: null };
-          const obj9 = { ref, type: tmp(10078).SavedMessageSortTypes.BOOKMARK, onOpen: tmp9 };
+          const obj9 = { ref, type: tmp(10080).SavedMessageSortTypes.BOOKMARK, onOpen: tmp9 };
           const items2 = [closure_7(ForLaterOpenActionButtonDefault, obj9), ,];
           const obj10 = { type: null, onOpen: null };
           const tmp5Result = ForLaterOpenActionButtonDefault;
-          obj10.type = tmp(10078).SavedMessageSortTypes.REMINDER;
+          obj10.type = tmp(10080).SavedMessageSortTypes.REMINDER;
           obj10.onOpen = tmp9;
           items2[1] = closure_7(ForLaterOpenActionButtonDefault, obj10);
           items2[2] = closure_7(NotificationCenterActionButtonDefault, {});
@@ -220,11 +220,11 @@ let closure_11 = noop.memo(
         if (!nestedInLaunchPad) {
           const obj2 = { style: tmp.headerTitle, children: null };
           const obj3 = { style: tmp.headerClose, accessibilityLabel: null, onPress: null, children: null };
-          const intl = tmp11(1128).intl;
-          obj3.accessibilityLabel = intl.string(tmp11(1128).t["13/7kX"]);
+          const intl = tmp11(1125).intl;
+          obj3.accessibilityLabel = intl.string(tmp11(1125).t["13/7kX"]);
           obj3.onPress = goBack;
-          obj3.children = closure_7(tmp11(17858).LeftBackIconWithBadge, {});
-          const items1 = [closure_7(tmp11(6908).PressableOpacity, obj3), ,];
+          obj3.children = closure_7(tmp11(17892).LeftBackIconWithBadge, {});
+          const items1 = [closure_7(tmp11(6910).PressableOpacity, obj3), ,];
           const obj4 = {
             color: "mobile-text-heading-primary",
             variant: "heading-lg/bold",
@@ -233,15 +233,15 @@ let closure_11 = noop.memo(
             accessibilityRole: "header",
             children: null,
           };
-          const intl2 = tmp11(1128).intl;
-          obj4.children = intl2.string(tmp11(1128).t.HcoRu0);
-          items1[1] = closure_7(tmp11(5234).Text, obj4);
+          const intl2 = tmp11(1125).intl;
+          obj4.children = intl2.string(tmp11(1125).t.HcoRu0);
+          items1[1] = closure_7(tmp11(5235).Text, obj4);
           const obj5 = { style: tmp.actionButtons, children: null };
-          const obj6 = { ref, type: tmp11(10078).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
+          const obj6 = { ref, type: tmp11(10080).SavedMessageSortTypes.BOOKMARK, onOpen: callback };
           const items2 = [closure_7(ForLaterOpenActionButtonDefault, obj6), ,];
           const obj7 = { type: null, onOpen: null };
           const tmp2Result = ForLaterOpenActionButtonDefault;
-          obj7.type = tmp11(10078).SavedMessageSortTypes.REMINDER;
+          obj7.type = tmp11(10080).SavedMessageSortTypes.REMINDER;
           obj7.onOpen = callback;
           items2[1] = closure_7(ForLaterOpenActionButtonDefault, obj7);
           items2[2] = closure_7(NotificationCenterActionButtonDefault, {});

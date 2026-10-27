@@ -24,7 +24,7 @@ function streamApplicationEqualityCheck(arg0, arg1) {
   }
   return tmp;
 }
-const ActivityTypes = fn(1087).ActivityTypes;
+const ActivityTypes = fn(1084).ActivityTypes;
 const ReactCompilerGating = fn(558);
 function getStreamerActivityByUserId(id, PresenceStore) {
   return PresenceStore.findActivity(id, _findPlayingActivity);

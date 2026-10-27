@@ -7,7 +7,6 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import FileUtils from "../../../utils/FileUtils.tsx";
 import common_Video from "../../../components_native/common/Video.tsx";
-import _modDef12065 from "../../../../_runtime/metro/12065__.js";
 import _modDef12066 from "../../../../_runtime/metro/12066__.js";
 import _modDef12067 from "../../../../_runtime/metro/12067__.js";
 import _modDef12068 from "../../../../_runtime/metro/12068__.js";
@@ -21,13 +20,14 @@ import _modDef12075 from "../../../../_runtime/metro/12075__.js";
 import _modDef12076 from "../../../../_runtime/metro/12076__.js";
 import _modDef12077 from "../../../../_runtime/metro/12077__.js";
 import _modDef12078 from "../../../../_runtime/metro/12078__.js";
+import _modDef12079 from "../../../../_runtime/metro/12079__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   fileInfoAttachmentPreviewFile: {
     flexDirection: "row",
@@ -53,20 +53,20 @@ let obj = {
 };
 let closure_7 = createStyles.createStyles(obj);
 let obj4 = {
-  archive: _modDef12065,
-  acrobat: _modDef12066,
-  ae: _modDef12067,
-  ai: _modDef12068,
-  audio: _modDef12069,
-  code: _modDef12070,
-  document: _modDef12071,
-  image: _modDef12072,
-  photoshop: _modDef12073,
-  sketch: _modDef12074,
-  spreadsheet: _modDef12075,
-  unknown: _modDef12076,
-  video: _modDef12077,
-  webcode: _modDef12078,
+  archive: _modDef12066,
+  acrobat: _modDef12067,
+  ae: _modDef12068,
+  ai: _modDef12069,
+  audio: _modDef12070,
+  code: _modDef12071,
+  document: _modDef12072,
+  image: _modDef12073,
+  photoshop: _modDef12074,
+  sketch: _modDef12075,
+  spreadsheet: _modDef12076,
+  unknown: _modDef12077,
+  video: _modDef12078,
+  webcode: _modDef12079,
 };
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -80,7 +80,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let tmp4 = obj4[obj2.classifyFileName(obj2, str)];
       if (tmp4 == null) {
-        tmp4 = _modDef12076;
+        tmp4 = _modDef12077;
       }
       if (cResult[0] === tmp4) {
         if (cResult[1] === tmp3.attachmentFileIcon) {
@@ -106,7 +106,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         }
         let tmp2 = obj4[obj.classifyFileName(obj, str)];
         if (tmp2 == null) {
-          tmp2 = _modDef12076;
+          tmp2 = _modDef12077;
         }
         return tmp2;
       }, items);

@@ -8,7 +8,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty, TouchableOpacity: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { dropdownContainer: null, dropdownItem: null, dropdownItemLast: null, dropdownItemText: null };
 const rect = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
@@ -48,8 +48,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[0] !== placeholder) {
         let stringResult = placeholder;
         if (undefined === placeholder) {
-          const intl = tmp(1128).intl;
-          stringResult = intl.string(tmp(1128).t.XqMe3N);
+          const intl = tmp(1125).intl;
+          stringResult = intl.string(tmp(1125).t.XqMe3N);
         }
         cResult[0] = placeholder;
         cResult[1] = stringResult;
@@ -291,7 +291,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   onBlur: tmp32,
                   disabled: tmp7,
                 };
-                const tmp36 = str3(tmp(7145).SearchBar, obj8);
+                const tmp36 = str3(tmp(7147).SearchBar, obj8);
                 cResult[30] = tmp28;
                 cResult[31] = tmp31;
                 cResult[32] = tmp29;
@@ -378,8 +378,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const onChange = options.onChange;
       let placeholder = options.placeholder;
       if (placeholder === undefined) {
-        const intl = options(1128).intl;
-        placeholder = intl.string(options(1128).t.XqMe3N);
+        const intl = options(1125).intl;
+        placeholder = intl.string(options(1125).t.XqMe3N);
       }
       let flag = options.allowCustomValue;
       if (flag === undefined) {
@@ -508,7 +508,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         closure_12(false);
       }, []);
       const items6 = [
-        ref(options(7145).SearchBar, {
+        ref(options(7147).SearchBar, {
           ref,
           placeholder,
           defaultValue: onChange(flag.useState(str), 1)[0],

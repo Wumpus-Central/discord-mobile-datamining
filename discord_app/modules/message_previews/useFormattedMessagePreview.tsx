@@ -360,7 +360,7 @@ function formatMessagePreview(type, isBlocked) {
     flag = true;
   }
 }
-const MessageFlags = fn(1087).MessageFlags;
+const MessageFlags = fn(1084).MessageFlags;
 const ReactCompilerGating = fn(558);
 function isMessageContentPreviewable(message) {
   const type = message.type;
@@ -437,8 +437,8 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
       if (author.type !== require("MessageTypes").MessageTypes.USER_JOIN) {
         stringResult = nick;
         if (author.author.id === stateFromStores) {
-          const intl = tmp(1128).intl;
-          stringResult = intl.string(tmp(1128).t.LuZzxn);
+          const intl = tmp(1125).intl;
+          stringResult = intl.string(tmp(1125).t.LuZzxn);
         }
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
@@ -454,7 +454,7 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
         }
         const stateFromStores1 = tmp(504).useStateFromStores(tmp16, tmp18);
         const tmpResult6 = tmp(504);
-        const tmpResult7 = tmp(6366);
+        const tmpResult7 = tmp(6367);
         const obj2 = {
           message: author,
           channel: id,
@@ -514,8 +514,8 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
       if (author.type !== require("MessageTypes").MessageTypes.USER_JOIN) {
         stringResult = nick;
         if (author.author.id === stateFromStores) {
-          const intl = tmp(1128).intl;
-          stringResult = intl.string(tmp(1128).t.LuZzxn);
+          const intl = tmp(1125).intl;
+          stringResult = intl.string(tmp(1125).t.LuZzxn);
         }
       }
       const obj2 = require("initialize");

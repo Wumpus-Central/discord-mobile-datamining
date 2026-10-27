@@ -11,12 +11,12 @@ import UpcomingEventNoticesStore from "UpcomingEventNoticesStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-let GuildScheduledEventStore = fn(6784);
+let GuildScheduledEventStore = fn(6785);
 ({ isGuildScheduledEventActive: closure_7, StaticGuildEventIndexes: closure_8 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const GuildScheduledEventsConstants = fn(4829);
+const GuildScheduledEventsConstants = fn(4830);
 ({ GuildScheduledEventEntityTypes: closure_11, GuildScheduledEventStatus: closure_12 } = GuildScheduledEventsConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ BasicPermissions: map1, GuildFeatures: closure_14 } = Constants);
 let closure_15 = [];
 let closure_16 = 15 * DurationsDefault.Millis.MINUTE;

@@ -5,8 +5,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ContactPermissions = fn(13583).ContactPermissions;
-const PlatformTypes = fn(1087).PlatformTypes;
+const ContactPermissions = fn(13597).ContactPermissions;
+const PlatformTypes = fn(1084).PlatformTypes;
 const ContactSyncModes = {
   NORMAL: 0,
   [0]: "NORMAL",

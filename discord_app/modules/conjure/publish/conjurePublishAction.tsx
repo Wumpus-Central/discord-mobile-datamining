@@ -1,9 +1,8 @@
 // discord_app/modules/conjure/publish/conjurePublishAction.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3830 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
 import ConjurePublishTypes from "ConjurePublishTypes.tsx";
 import conjurePreviewModes from "../preview/conjurePreviewModes.tsx";
-import ConjureHistoryFormat from "../history/ConjureHistoryFormat.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishAction.tsx");
@@ -47,7 +46,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
           str4 = "";
         }
         const obj5 = { server: str4 };
-        formatResult = intl.format(_modDef3830.N4NkyR, obj5);
+        formatResult = intl.format(_modDef3831.N4NkyR, obj5);
       }
     }
     const obj7 = {
@@ -101,7 +100,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
               str8 = "";
             }
             const obj9 = { server: str8 };
-            formatResult1 = intl2.format(_modDef3830.eHYXFg, obj9);
+            formatResult1 = intl2.format(_modDef3831.eHYXFg, obj9);
           }
         }
       }
@@ -126,7 +125,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
         const obj10 = {};
         const merged2 = Object.assign(obj8);
         const intl4 = util.intl;
-        obj10.label = intl4.string(_modDef3830["tUeY/h"]);
+        obj10.label = intl4.string(_modDef3831["tUeY/h"]);
         obj10.action = "review_permissions";
         let obj11 = obj10;
       }
@@ -135,7 +134,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
     obj11 = {};
     const merged3 = Object.assign(obj8);
     const intl3 = util.intl;
-    obj11.label = intl3.string(_modDef3830["120EFN"]);
+    obj11.label = intl3.string(_modDef3831["120EFN"]);
     obj11.action = "publish";
   } else if ("activity" === status2.surface) {
     let tmp11 = null == appChannelName;
@@ -149,38 +148,4 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
       tmp10 = false === botInGuild;
     }
   }
-};
-export const conjurePublishTooltip = function conjurePublishTooltip(status) {
-  let publishedAt;
-  if (status != null) {
-    publishedAt = status.publishedAt;
-  }
-  let parseTimestampMsResult = null;
-  if (null != publishedAt) {
-    parseTimestampMsResult = ConjureHistoryFormat.parseTimestampMs(status.publishedAt);
-  }
-  if (status != null) {
-    const publishedRevision = status.publishedRevision;
-  }
-  let formatToPlainStringResult = null;
-  if (null != status) {
-    formatToPlainStringResult = null;
-    if (obj2.isConjureLive(status.publishState)) {
-      formatToPlainStringResult = null;
-      if (null != parseTimestampMsResult) {
-        formatToPlainStringResult = null;
-        if (null != publishedRevision) {
-          const intl = util.intl;
-          const obj3 = {
-            time: ConjureHistoryFormat.formatHistoryDateTime(parseTimestampMsResult),
-            version: publishedRevision,
-          };
-          formatToPlainStringResult = intl.formatToPlainString(_modDef3830.D9erxW, obj3);
-          const tmp6Result = ConjureHistoryFormat;
-        }
-      }
-    }
-    obj2 = ConjurePublishTypes;
-  }
-  return formatToPlainStringResult;
 };

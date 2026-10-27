@@ -9,8 +9,8 @@ const set1 = new Set(["", "-"]);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/internalDeepLinks.tsx");
 
-export const resolveInternalDeepLink = function resolveInternalDeepLink(url) {
-  const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
+export const resolveInternalDeepLink = function resolveInternalDeepLink(src) {
+  const toURLSafeResult = URLUtilsDefault.toURLSafe(src);
   if (null == toURLSafeResult) {
     return null;
   } else {

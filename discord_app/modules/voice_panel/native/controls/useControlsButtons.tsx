@@ -12,10 +12,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const VoicePanelControlsConstants = fn(10899);
+const VoicePanelControlsConstants = fn(10902);
 ({ CONTROLS_BUTTON_SIZE_LARGE: hasOwnProperty, CONTROLS_BUTTON_SIZE_NORMAL: metroRequire } =
   VoicePanelControlsConstants);
-const InputModes = fn(1087).InputModes;
+const InputModes = fn(1084).InputModes;
 const jsx = fn(21).jsx;
 let closure_9 = {
   mic(key, arg1) {
@@ -66,13 +66,13 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/controls/useControlsButtons.tsx");
 
 export default function useControlsButtons() {
-  const context = treatment.useContext(safeArea(10900));
+  const context = treatment.useContext(safeArea(10903));
   const windowDimensions = context.windowDimensions;
   safeArea = context.safeArea;
-  const tmp2 = safeArea(18486)(context.channelId);
+  const tmp2 = safeArea(18520)(context.channelId);
   dependencyMap = tmp2;
-  treatment = safeArea(18509).useConfig({ location: "VoicePanelControlButtons" }).treatment;
-  let obj = safeArea(18509);
+  treatment = safeArea(18543).useConfig({ location: "VoicePanelControlButtons" }).treatment;
+  let obj = safeArea(18543);
   let items = [stateFromStores];
   stateFromStores = windowDimensions(504).useStateFromStores(
     items,
@@ -86,9 +86,9 @@ export default function useControlsButtons() {
       safeArea.get().right,
     );
   };
-  let obj3 = windowDimensions(5052);
+  let obj3 = windowDimensions(5053);
   fn.__closure = {
-    getControlsDefaultWidth: windowDimensions(13166).getControlsDefaultWidth,
+    getControlsDefaultWidth: windowDimensions(13180).getControlsDefaultWidth,
     windowDimensions,
     safeArea,
   };
@@ -111,7 +111,7 @@ export default function useControlsButtons() {
           const obj3 = { type: "icon-normal", key: "connected-mic", render: redux.micConnected };
           items.push(obj3);
         }
-        if (treatment === _true(18509).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
+        if (treatment === _true(18543).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_CHAT) {
           const obj4 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj4);
         } else {
@@ -122,7 +122,7 @@ export default function useControlsButtons() {
           const obj6 = { type: "icon-large", key: "connected-ptt", render: redux.ptt };
           items.push(obj6);
         }
-        if (treatment === _true(18509).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
+        if (treatment === _true(18543).MobileGoLiveEntrypointTreatment.SCREENSHARE_REPLACES_SOUNDBOARD) {
           const obj7 = { type: "icon-normal", key: "connected-screenshare", render: redux.screenshare };
           items.push(obj7);
         } else {

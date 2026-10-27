@@ -55,8 +55,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1128).intl;
-          const stringResult = intl.string(tmp(1128).t["uz4M/z"]);
+          const intl = tmp(1125).intl;
+          const stringResult = intl.string(tmp(1125).t["uz4M/z"]);
           cResult[6] = stringResult;
           let tmp13 = stringResult;
         } else {
@@ -70,13 +70,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = {
             game: stateFromStores,
             sheetKey: OrbsArcadeHowToPlaySheet,
-            secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.CLOSE,
+            secondaryAction: tmp(16453).OrbsArcadeSheetSecondaryAction.CLOSE,
             direction: "vertical",
           };
           const tmp20 = jsx(OrbsArcadeSheetActionsDefault, {
             game: stateFromStores,
             sheetKey: OrbsArcadeHowToPlaySheet,
-            secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.CLOSE,
+            secondaryAction: tmp(16453).OrbsArcadeSheetSecondaryAction.CLOSE,
             direction: "vertical",
           });
           cResult[7] = stateFromStores;
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { illustration: tmp9, title: tmp13, description: str, actions: tmp15 };
-        const tmp23 = jsx(tmp(10856).PromoSheet, {
+        const tmp23 = jsx(tmp(10859).PromoSheet, {
           illustration: tmp9,
           title: tmp13,
           description: str,
@@ -121,8 +121,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp5Result = jsx(OrbsArcadeGameGraphicDefault, { asset: stateFromStores.asset });
         }
         const obj3 = { illustration: tmp5Result, title: null, description: null, actions: null };
-        const intl = tmp(1128).intl;
-        obj3.title = intl.string(tmp(1128).t["uz4M/z"]);
+        const intl = tmp(1125).intl;
+        obj3.title = intl.string(tmp(1125).t["uz4M/z"]);
         let str = stateFromStores.instructions;
         if (str == null) {
           str = "";
@@ -131,16 +131,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = {
           game: stateFromStores,
           sheetKey: OrbsArcadeHowToPlaySheet,
-          secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.CLOSE,
+          secondaryAction: tmp(16453).OrbsArcadeSheetSecondaryAction.CLOSE,
           direction: "vertical",
         };
         obj3.actions = jsx(OrbsArcadeSheetActionsDefault, {
           game: stateFromStores,
           sheetKey: OrbsArcadeHowToPlaySheet,
-          secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.CLOSE,
+          secondaryAction: tmp(16453).OrbsArcadeSheetSecondaryAction.CLOSE,
           direction: "vertical",
         });
-        tmp5Result2 = jsx(tmp(10856).PromoSheet, {
+        tmp5Result2 = jsx(tmp(10859).PromoSheet, {
           illustration: tmp5Result,
           title: null,
           description: null,

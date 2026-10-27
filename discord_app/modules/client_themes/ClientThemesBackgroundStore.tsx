@@ -187,10 +187,10 @@ function handleUserSettingsProtoStoreUpdate() {
     user = undefined;
   }
 }
-const isGuildTextChannelType = fn(4827).isGuildTextChannelType;
-const dependencyMap = fn(1255).BACKGROUND_GRADIENT_PRESETS_MAP;
-const HexagonCampaignPerk = fn(4996).HexagonCampaignPerk;
-const SystemThemeState = fn(1210).SystemThemeState;
+const isGuildTextChannelType = fn(4828).isGuildTextChannelType;
+const dependencyMap = fn(1252).BACKGROUND_GRADIENT_PRESETS_MAP;
+const HexagonCampaignPerk = fn(4997).HexagonCampaignPerk;
+const SystemThemeState = fn(1207).SystemThemeState;
 let closure_15 = true;
 let c16 = false;
 let c17 = false;

@@ -9,13 +9,13 @@ import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx
 import guild_GuildUtils from "../../../guild/GuildUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const GuildBadgeDefault = tmp10(6887);
+const GuildBadgeDefault = tmp10(6889);
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(6884).ExpressionSourceGuildRecord;
+let closure_4 = fn(6886).ExpressionSourceGuildRecord;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   guildDetailsContainer: { flexDirection: "column" },
   guildDetailsContent: { flexDirection: "row", marginTop: 8, alignItems: "center" },
@@ -339,7 +339,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         }
         const obj5 = { style: tmp.guildDetailsContainer, children: null };
         const obj6 = { variant: "eyebrow", color: "text-default", children: title };
-        const items = [tmp12(guild(5234).Text, obj6)];
+        const items = [tmp12(guild(5235).Text, obj6)];
         const obj7 = { style: tmp.guildDetailsContent, children: null };
         const items1 = [tmp7];
         const obj8 = { style: tmp.guildNameAndOnlineMembers, children: null };
@@ -347,22 +347,22 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         const obj10 = {
           guild,
           style: tmp.guildPartnerIcon,
-          size: guild(1202).Icon.Sizes.REFRESH_SMALL_16,
+          size: guild(1199).Icon.Sizes.REFRESH_SMALL_16,
           disableColor: true,
         };
         const items2 = [tmp12(GuildBadgeDefault, obj10)];
         const obj11 = { variant: "text-md/bold", color: "mobile-text-heading-primary", children: guild.name };
-        items2[1] = tmp12(guild(5234).Text, obj11);
+        items2[1] = tmp12(guild(5235).Text, obj11);
         obj9.children = items2;
         const items3 = [closure_7(View, obj9)];
         const obj12 = { style: tmp.guildDescriptionSection, children: null };
         if (isDiscoverableResult) {
           if (null != fromGuildType.presenceCount) {
             const obj13 = { variant: "text-xs/medium", color: "text-default", children: null };
-            const intl2 = tmp16(1128).intl;
+            const intl2 = tmp16(1125).intl;
             const obj14 = { membersOnline: fromGuildType.presenceCount };
-            obj13.children = intl2.format(tmp16(1128).t["LC+S+m"], obj14);
-            const items4 = [tmp9(tmp16(5234).Text, obj13), ,];
+            obj13.children = intl2.format(tmp16(1125).t["LC+S+m"], obj14);
+            const items4 = [tmp9(tmp16(5235).Text, obj13), ,];
             const obj15 = { style: tmp.dotSeparator };
             items4[1] = tmp9(View, obj15);
             if (!hasJoinedGuild) {
@@ -375,10 +375,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   children: null,
                 };
                 const obj17 = { variant: "text-xs/medium", color: "text-default", children: null };
-                const intl3 = tmp16(1128).intl;
-                obj17.children = intl3.string(tmp16(1128).t.riu2R5);
-                obj16.children = tmp9(tmp16(5234).Text, obj17);
-                let tmp9Result = tmp9(tmp16(6908).PressableOpacity, obj16);
+                const intl3 = tmp16(1125).intl;
+                obj17.children = intl3.string(tmp16(1125).t.riu2R5);
+                obj16.children = tmp9(tmp16(5235).Text, obj17);
+                let tmp9Result = tmp9(tmp16(6910).PressableOpacity, obj16);
               }
               const obj18 = { children: null };
               items4[2] = tmp9Result;
@@ -386,16 +386,16 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
               closure_7(closure_6, obj18);
             }
             const obj19 = { variant: "text-xs/medium", color: "text-default", children: null };
-            const intl4 = tmp16(1128).intl;
-            stringResult = intl4.string(tmp16(1128).t.inyJqO);
+            const intl4 = tmp16(1125).intl;
+            stringResult = intl4.string(tmp16(1125).t.inyJqO);
             obj19.children = stringResult;
-            tmp9Result = tmp9(tmp16(5234).Text, obj19);
+            tmp9Result = tmp9(tmp16(5235).Text, obj19);
           }
         }
         const obj20 = { variant: "text-xs/medium", color: "text-default", children: null };
-        const intl = tmp16(1128).intl;
-        obj20.children = intl.string(guild(1128).t.H29mx4);
-        obj12.children = tmp9(guild(5234).Text, obj20);
+        const intl = tmp16(1125).intl;
+        obj20.children = intl.string(guild(1125).t.H29mx4);
+        obj12.children = tmp9(guild(5235).Text, obj20);
         items3[1] = tmp9(View, obj12);
         obj8.children = items3;
         items1[1] = closure_7(View, obj8);
@@ -407,7 +407,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const obj21 = {
         style: tmp.guildIcon,
         guild: fromGuildType,
-        size: guild(6883).GuildIconSizes.XLARGE,
+        size: guild(6885).GuildIconSizes.XLARGE,
         animate: true,
       };
       tmp7 = closure_5(GuildIconDefault, obj21);

@@ -8,19 +8,19 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const RegistrationUIStore = fn(17362);
+const RegistrationUIStore = fn(17403);
 ({
   setRegistrationErrors: metroRequire,
   updateRegistrationOptions: closure_7,
   useRegistrationUIStore: closure_8,
 } = RegistrationUIStore);
-const RegistrationConstants = fn(17363);
+const RegistrationConstants = fn(17404);
 ({
   authStateToRegisterTransitionStep: closure_9,
   RegisterTransitionSteps: c10,
   RegistrationTransitionActionTypes: closure_11,
 } = RegistrationConstants);
-const AbortCodes = fn(1087).AbortCodes;
+const AbortCodes = fn(1084).AbortCodes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/useIdentityRegistrationStep.tsx");

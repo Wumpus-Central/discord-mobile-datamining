@@ -8,9 +8,9 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 const require = globalThis.__r;
 
 require = fn;
-const UserNotificationSettings = fn(1087).UserNotificationSettings;
-const UnreadSetting = fn(6705).UnreadSetting;
-const constants = fn(1097).ChannelNotificationSettingsFlags;
+const UserNotificationSettings = fn(1084).UserNotificationSettings;
+const UnreadSetting = fn(6706).UnreadSetting;
+const constants = fn(1094).ChannelNotificationSettingsFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/utils/notficationSettingsChannelFlagUtils.tsx");

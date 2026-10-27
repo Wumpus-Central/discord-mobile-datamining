@@ -8,7 +8,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const HelpdeskArticles = fn(1087).HelpdeskArticles;
+const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const ReactCompilerGating = fn(558);
 let closure_6 = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);
@@ -642,8 +642,8 @@ export default function useCreatorMonetizationEligibilityItems(arg0, arg1) {
         let handleContactSupportClick;
         if (!noRecentViolations) {
           handleContactSupportClick = function handleContactSupportClick() {
-            const tmp = onEligibilityBecameStale(5656);
-            return tmp(onEligibilityBecameStale(2067).getSubmitRequestURL());
+            const tmp = onEligibilityBecameStale(5657);
+            return tmp(onEligibilityBecameStale(2064).getSubmitRequestURL());
           };
         }
         obj2.actionHandler = handleContactSupportClick;

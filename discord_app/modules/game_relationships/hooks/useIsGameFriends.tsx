@@ -5,7 +5,7 @@ import GameRelationshipStore from "../GameRelationshipStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const RelationshipTypes = fn(1087).RelationshipTypes;
+const RelationshipTypes = fn(1084).RelationshipTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_relationships/hooks/useIsGameFriends.tsx");

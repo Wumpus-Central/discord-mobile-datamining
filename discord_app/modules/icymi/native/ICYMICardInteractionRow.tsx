@@ -37,6 +37,7 @@ function EmojiReaction(count) {
   const isBurstReaction = count.isBurstReaction;
   const handleItemInteracted = count.handleItemInteracted;
   let emoji;
+  let setting;
   const tmp = closure_19();
   let burst_colors = reaction.burst_colors;
   if (burst_colors == null) {
@@ -63,7 +64,7 @@ function EmojiReaction(count) {
     str = str2;
     const tmp2Result = tmp2(tmp3[27]);
   }
-  let obj2 = { backgroundColor: str, borderColor: null };
+  const obj2 = { backgroundColor: str, borderColor: null };
   let backgroundColor1;
   if (emojiColorPalette != null) {
     backgroundColor1 = emojiColorPalette.backgroundColor;
@@ -75,7 +76,7 @@ function EmojiReaction(count) {
   }
   let tmp8 = null;
   if (null != accentColor) {
-    const obj3 = { color: emojiColorPalette.accentColor };
+    let obj3 = { color: emojiColorPalette.accentColor };
     tmp8 = obj3;
   }
   emoji = reaction.emoji;
@@ -86,7 +87,6 @@ function EmojiReaction(count) {
   }
   let obj = messageId(reaction[26]);
   const items = [GuildVerificationStore];
-  const items1 = [emoji];
   const stateFromStores = messageId(reaction[18]).useStateFromStores(items, () => {
     let canChatInGuildResult = null != channel.guild_id;
     if (canChatInGuildResult) {
@@ -94,15 +94,22 @@ function EmojiReaction(count) {
     }
     return canChatInGuildResult;
   });
+  const AnimateEmoji = tmp2(tmp3[28]).AnimateEmoji;
+  setting = AnimateEmoji.useSetting();
+  const items1 = [emoji, setting];
   const items2 = [channel, isBurstReaction, messageId, reaction, handleItemInteracted];
   const memo = handleItemInteracted.useMemo(() => {
     let tmp2;
     if (null != emoji.id) {
-      const obj = { uri: null };
-      ({ id: obj3.id, animated: obj3.animated } = emoji);
-      obj.uri = AvatarUtilsDefault.getEmojiURL({ id: null, animated: null, size: 48 });
-      tmp2 = obj;
-      const obj4 = { id: null, animated: null, size: 48 };
+      const obj3 = { id: null, animated: null, size: 48 };
+      ({ id: obj2.id, animated } = emoji);
+      if (animated) {
+        animated = setting;
+      }
+      const obj5 = { uri: null };
+      obj3.animated = animated;
+      obj5.uri = AvatarUtilsDefault.getEmojiURL(obj3);
+      tmp2 = obj5;
     }
     return tmp2;
   }, items1);
@@ -122,11 +129,11 @@ function EmojiReaction(count) {
     );
   }, items2);
   const items3 = [tmp.emojiContainer, selected];
-  let tmp14 = isBurstReaction;
+  let tmp15 = isBurstReaction;
   if (isBurstReaction) {
-    tmp14 = obj2;
+    tmp15 = obj2;
   }
-  let obj4 = {
+  const obj4 = {
     style: items3,
     onPress: callback,
     accessible: true,
@@ -134,13 +141,13 @@ function EmojiReaction(count) {
     disabled: !stateFromStores,
     children: null,
   };
-  items3[2] = tmp14;
+  items3[2] = tmp15;
   const items4 = [tmp.innerEmojiContainer];
   let selectedInnerEmojiContainer = selectedInnerTextContainer;
   if (selectedInnerTextContainer) {
     selectedInnerEmojiContainer = tmp.selectedInnerEmojiContainer;
   }
-  const obj5 = { style: items4, children: null };
+  let obj5 = { style: items4, children: null };
   items4[1] = selectedInnerEmojiContainer;
   if (null == emoji.id) {
     const obj6 = {
@@ -154,7 +161,7 @@ function EmojiReaction(count) {
     ({ defaultEmoji: arr8[0], emojiText: arr8[1] } = tmp);
     obj6.style = items5;
     obj6.children = emoji.name;
-    let tmp15Result = closure_15(tmp2(tmp3[24]).Text, obj6);
+    let tmp16Result = closure_15(tmp2(tmp3[24]).Text, obj6);
   } else {
     if (tmp2Result4.isAndroid()) {
       const obj7 = { style: null, source: null };
@@ -162,14 +169,14 @@ function EmojiReaction(count) {
       ({ defaultEmoji: arr7[0], emojiImage: arr7[1] } = tmp);
       obj7.style = items6;
       obj7.source = memo;
-      tmp15Result = closure_15(tmp21(tmp3[30]), obj7);
+      tmp16Result = closure_15(tmp22(tmp3[31]), obj7);
     } else {
       const obj8 = { emoji, size: v20, style: tmp.defaultEmoji, animate: true };
-      tmp15Result = closure_15(tmp21(tmp3[31]), obj8);
+      tmp16Result = closure_15(tmp22(tmp3[32]), obj8);
     }
     tmp2Result4 = tmp2(tmp3[14]);
   }
-  obj5.children = tmp15Result;
+  obj5.children = tmp16Result;
   const items7 = [closure_15(emoji, obj5)];
   const items8 = [tmp.innerTextContainer];
   if (selectedInnerTextContainer) {
@@ -178,26 +185,26 @@ function EmojiReaction(count) {
   const obj9 = { style: items8, children: null };
   items8[1] = selectedInnerTextContainer;
   const obj10 = { animate: true, count: count.count, textStyle: null, textVariant: "text-md/semibold" };
-  let tmp20 = null;
+  let tmp21 = null;
   const tmp2Result3 = messageId(reaction[18]);
   if (isBurstReaction) {
-    tmp20 = tmp8;
+    tmp21 = tmp8;
   }
-  obj10.textStyle = tmp20;
-  obj9.children = closure_15(channel(reaction[32]), obj10);
+  obj10.textStyle = tmp21;
+  obj9.children = closure_15(channel(reaction[33]), obj10);
   items7[1] = closure_15(emoji, obj9);
   obj4.children = items7;
   return closure_16(messageId(reaction[25]).PressableOpacity, obj4);
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MessageFlags: closure_11, Permissions: closure_12, HorizontalGradient: map1 } = Constants);
-const EmojiIntention = fn(1395).EmojiIntention;
+const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16, Fragment: closure_17 } = jsxProd);
 let c18 = 20;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_19 = createStyles.createStyles(() => {
   const obj = {
     container: { flexDirection: "row", alignItems: "center", flexWrap: "wrap", justifyContent: "space-between" },
@@ -816,7 +823,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     if (cResult[22] !== tmp4.commentsIcon) {
                       let obj2 = { style: tmp4.commentsIcon };
-                      const tmp25 = closure_15(tmp(handleItemInteracted[36]).ChatIcon, obj2);
+                      const tmp25 = closure_15(tmp(handleItemInteracted[37]).ChatIcon, obj2);
                       cResult[22] = tmp4.commentsIcon;
                       cResult[23] = tmp25;
                       let tmp23 = tmp25;
@@ -877,7 +884,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[10] !== tmp4.commentsIcon) {
                   const obj6 = { style: tmp4.commentsIcon };
-                  const tmp14 = closure_15(tmp(handleItemInteracted[36]).ChatIcon, obj6);
+                  const tmp14 = closure_15(tmp(handleItemInteracted[37]).ChatIcon, obj6);
                   cResult[10] = tmp4.commentsIcon;
                   cResult[11] = tmp14;
                   let tmp12 = tmp14;
@@ -938,7 +945,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           if (tmp2) {
             tmp4 = closure_0;
             tmp5 = closure_2;
-            obj2 = closure_0(closure_2[35]);
+            obj2 = closure_0(closure_2[36]);
             tmp6 = threadData;
             navigateToPostResult = obj2.navigateToPost(obj.getChannelId(), threadData.thread.guild_id, obj.id);
           }
@@ -991,7 +998,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
               obj2.onPress = callback;
               const obj3 = { style: tmp.commentCount, children: null };
               const obj4 = { style: tmp.commentsIcon };
-              const items3 = [closure_15(tmp2(handleItemInteracted[36]).ChatIcon, obj4)];
+              const items3 = [closure_15(tmp2(handleItemInteracted[37]).ChatIcon, obj4)];
               const obj5 = { variant: "text-md/semibold", color: "text-strong", children: str };
               items3[1] = closure_15(tmp2(handleItemInteracted[24]).Text, obj5);
               obj3.children = items3;
@@ -1005,7 +1012,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
           obj6.onPress = callback;
           const obj7 = { style: tmp.commentCount, children: null };
           const obj8 = { style: tmp.commentsIcon };
-          obj7.children = closure_15(tmp2(handleItemInteracted[36]).ChatIcon, obj8);
+          obj7.children = closure_15(tmp2(handleItemInteracted[37]).ChatIcon, obj8);
           obj6.children = closure_15(closure_5, obj7);
           return closure_15(tmp2(handleItemInteracted[25]).PressableHighlight, obj6);
         }
@@ -1072,7 +1079,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== channel) {
         let tmp12 = null != channel;
         if (tmp12) {
-          tmp12 = message(tmp2[38])(channel);
+          tmp12 = message(tmp2[39])(channel);
         }
         cResult[2] = channel;
         cResult[3] = tmp12;
@@ -1192,13 +1199,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (me_vote.burst_count > 0) {
               const obj = {};
               const merged = Object.assign(me_vote);
-              obj.type = message(flag[37]).ReactionTypes.BURST;
+              obj.type = message(flag[38]).ReactionTypes.BURST;
               items.push(obj);
             }
             if (me_vote.count > 0) {
               const obj2 = {};
               const merged1 = Object.assign(me_vote);
-              obj2.type = message(flag[37]).ReactionTypes.NORMAL;
+              obj2.type = message(flag[38]).ReactionTypes.NORMAL;
               items.push(obj2);
             }
           }
@@ -1213,8 +1220,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp2;
       }, items1);
-      const canForwardMessage = message(flag[39]).useCanForwardMessage(message);
-      let obj = message(flag[39]);
+      const canForwardMessage = message(flag[40]).useCanForwardMessage(message);
+      let obj = message(flag[40]);
       const tmp4 = message;
       const items2 = [stateFromStores];
       stateFromStores = message(flag[18]).useStateFromStores(items2, () =>
@@ -1315,8 +1322,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items8);
       let obj2 = message(flag[18]);
-      const token = message(flag[43]).useToken(memo3);
-      let obj3 = message(flag[43]);
+      const token = message(flag[44]).useToken(memo3);
+      let obj3 = message(flag[44]);
       [tmp16, c12] = flag2(str.useState(true), 2);
       [][0] = handleItemInteracted;
       const callback4 = str.useCallback((nativeEvent) => {
@@ -1399,17 +1406,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj14 = { children: null };
               const obj17 = { style: tmp.gradient, start: null, end: null, colors: null, locations: null };
               ({ START: obj15.start, END: obj15.end } = closure_13);
-              const tmp36 = channel(tmp5[44]);
-              const obj16 = channel(tmp5[45])(token);
-              const items13 = [channel(tmp5[45])(token).alpha(0).hex(), token, token];
+              const tmp36 = channel(tmp5[45]);
+              const obj16 = channel(tmp5[46])(token);
+              const items13 = [channel(tmp5[46])(token).alpha(0).hex(), token, token];
               obj17.colors = items13;
               obj17.locations = [0, 0.8, 1];
               const items14 = [closure_15(tmp36, obj17)];
               const obj18 = { style: tmp.overflowChevron, size: "xs", color: "icon-muted" };
-              items14[1] = closure_15(tmp4(tmp5[46]).ChevronSmallRightIcon, obj18);
+              items14[1] = closure_15(tmp4(tmp5[47]).ChevronSmallRightIcon, obj18);
               obj14.children = items14;
               tmp23Result3 = closure_16(closure_17, obj14);
-              const alphaResult = channel(tmp5[45])(token).alpha(0);
+              const alphaResult = channel(tmp5[46])(token).alpha(0);
             }
           }
           items12[1] = tmp23Result3;

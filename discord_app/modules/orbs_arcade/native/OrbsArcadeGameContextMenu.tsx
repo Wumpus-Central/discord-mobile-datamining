@@ -73,8 +73,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = game(576);
       const stateFromStores = game(504).useStateFromStores(tmp4, tmp5);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        let intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t["3AT3DL"]);
+        let intl = tmp(1125).intl;
+        const stringResult = intl.string(tmp(1125).t["3AT3DL"]);
         cResult[2] = stringResult;
         let tmp8 = stringResult;
       } else {
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[3] !== game.id) {
         const obj2 = {
           label: tmp8,
-          IconComponent: tmp(13965).CircleQuestionIcon,
+          IconComponent: tmp(13979).CircleQuestionIcon,
           action() {
             return openOrbsArcadeSheets.openOrbsArcadeInfoSheet(game.id);
           },
@@ -96,8 +96,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = cResult[4];
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        let intl2 = tmp(1128).intl;
-        const stringResult1 = intl2.string(tmp(1128).t.oeBTVF);
+        let intl2 = tmp(1125).intl;
+        const stringResult1 = intl2.string(tmp(1125).t.oeBTVF);
         cResult[5] = stringResult1;
         let tmp11 = stringResult1;
       } else {
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[6] !== game.id) {
         const obj3 = {
           label: tmp11,
-          IconComponent: tmp(12270).RefreshIcon,
+          IconComponent: tmp(12275).RefreshIcon,
           variant: "destructive",
           action() {
             return handleResetGame(game.id);
@@ -171,7 +171,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj4 = { items: tmp14, triggerOnTap: true, children: S };
-              const tmp19 = jsx(tmp(9761).ContextMenu, { items: tmp14, triggerOnTap: true, children: S });
+              const tmp19 = jsx(tmp(9763).ContextMenu, { items: tmp14, triggerOnTap: true, children: S });
               cResult[13] = tmp14;
               cResult[14] = tmp19;
               const tmp18 = tmp19;
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.label = intl.string(util.t["3AT3DL"]);
         obj.IconComponent = CircleQuestionIcon.CircleQuestionIcon;
         obj.action = function action() {
-          return game(16411).openOrbsArcadeInfoSheet(id.id);
+          return game(16450).openOrbsArcadeInfoSheet(id.id);
         };
         const items = [obj];
         return items;
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         items4 = [memo];
       }
-      return jsx(game(9761).ContextMenu, {
+      return jsx(game(9763).ContextMenu, {
         items: items4,
         triggerOnTap: true,
         children(ref) {
@@ -288,11 +288,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const merged1 = Object.assign(merged);
           obj.variant = "secondary-overlay";
           obj.icon = _modDef9139;
-          const intl = game(1128).intl;
-          obj.accessibilityLabel = intl.string(game(1128).t.reWgFH);
-          const intl2 = game(1128).intl;
-          obj.accessibilityHint = intl2.string(game(1128).t.hd0b7t);
-          return jsx(game(7959).IconButton, { ref: ref.ref });
+          const intl = game(1125).intl;
+          obj.accessibilityLabel = intl.string(game(1125).t.reWgFH);
+          const intl2 = game(1125).intl;
+          obj.accessibilityHint = intl2.string(game(1125).t.hd0b7t);
+          return jsx(game(7957).IconButton, { ref: ref.ref });
         },
       });
     };

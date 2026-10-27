@@ -10,7 +10,7 @@ import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 import UserProfileStore from "../UserProfileStore.tsx";
 
 require = fn;
-const StatusTypes = fn(1087).StatusTypes;
+const StatusTypes = fn(1084).StatusTypes;
 let closure_10 = new LoggerDefault("useUserProfileActivityTabContent");
 const ReactCompilerGating = fn(558);
 let tmp2 = new LoggerDefault("useUserProfileActivityTabContent");

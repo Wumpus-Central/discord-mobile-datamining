@@ -7,7 +7,7 @@ import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 
 require = fn;
-const GuildMemberFlags = fn(4889).GuildMemberFlags;
+const GuildMemberFlags = fn(4890).GuildMemberFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -135,7 +135,7 @@ export default noop.memo(
                 return;
               }
             }
-            let stringResult = obj5.string(tmp(1128).t.Viksoo);
+            let stringResult = obj5.string(tmp(1125).t.Viksoo);
           } else {
             class R {
               constructor() {
@@ -144,7 +144,7 @@ export default noop.memo(
                 return;
               }
             }
-            stringResult = obj4.string(tmp(1128).t["/PGQf0"]);
+            stringResult = obj4.string(tmp(1125).t["/PGQf0"]);
           }
           cResult[8] = tmp11;
           cResult[9] = stringResult;
@@ -172,7 +172,7 @@ export default noop.memo(
                   return;
                 }
               }
-              let stringResult1 = obj7.string(tmp(1128).t.ml72ZU);
+              let stringResult1 = obj7.string(tmp(1125).t.ml72ZU);
             } else {
               class R {
                 constructor() {
@@ -181,7 +181,7 @@ export default noop.memo(
                   return;
                 }
               }
-              stringResult1 = obj6.string(tmp(1128).t["8HW7r9"]);
+              stringResult1 = obj6.string(tmp(1125).t["8HW7r9"]);
             }
             cResult[10] = tmp11;
             cResult[11] = stringResult1;
@@ -202,7 +202,7 @@ export default noop.memo(
                   return;
                 }
               }
-              const tmp20 = jsx(tmp(13388).ChatXIcon, {});
+              const tmp20 = jsx(tmp(13402).ChatXIcon, {});
               cResult[12] = tmp20;
               const tmp19 = tmp20;
             } else {
@@ -262,20 +262,20 @@ export default noop.memo(
           const result = GuildAutomodActionActionCreators.openAutomodProfileQuarantineAlert(guildId);
         }, items2);
         const obj = guildId(504);
-        const automodReason = guildId(4909).getAutomodReason(stateFromStores);
+        const automodReason = guildId(4910).getAutomodReason(stateFromStores);
         if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
-          const intl2 = tmp(1128).intl;
-          let stringResult = intl2.string(tmp(1128).t.Viksoo);
+          const intl2 = tmp(1125).intl;
+          let stringResult = intl2.string(tmp(1125).t.Viksoo);
         } else {
-          const intl = tmp(1128).intl;
-          stringResult = intl.string(tmp(1128).t["/PGQf0"]);
+          const intl = tmp(1125).intl;
+          stringResult = intl.string(tmp(1125).t["/PGQf0"]);
         }
         if (automodReason === GuildMemberFlags.AUTOMOD_QUARANTINED_SERVER_TAG) {
-          const intl4 = tmp(1128).intl;
-          let stringResult1 = intl4.string(tmp(1128).t.ml72ZU);
+          const intl4 = tmp(1125).intl;
+          let stringResult1 = intl4.string(tmp(1125).t.ml72ZU);
         } else {
-          const intl3 = tmp(1128).intl;
-          stringResult1 = intl3.string(tmp(1128).t["8HW7r9"]);
+          const intl3 = tmp(1125).intl;
+          stringResult1 = intl3.string(tmp(1125).t["8HW7r9"]);
         }
         const obj3 = {
           type: "simple-action",
@@ -284,8 +284,8 @@ export default noop.memo(
           icon: null,
           message: null,
         };
-        const obj2 = guildId(4909);
-        obj3.icon = jsx(guildId(13388).ChatXIcon, {});
+        const obj2 = guildId(4910);
+        obj3.icon = jsx(guildId(13402).ChatXIcon, {});
         obj3.message = stringResult1;
         return jsx(ChatInputGuardDefault, {
           type: "simple-action",

@@ -9,10 +9,10 @@ import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.ts
 
 require = fn;
 const View = fn(17).View;
-const ReadStateTypes = fn(6705).ReadStateTypes;
+const ReadStateTypes = fn(6706).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_9 = createStyles.createStyles({ headerIcon: { marginRight: 16 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -64,12 +64,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = guildId(504);
       const stateFromStores1 = guildId(504).useStateFromStores(tmp9, tmp11);
       if (cResult[6] !== stateFromStores) {
-        const obj2 = { guild: stateFromStores, size: tmp(6883).GuildIconSizes.LARGE };
-        const tmp17 = closure_7(stateFromStores1(6883), obj2);
+        const obj2 = { guild: stateFromStores, size: tmp(6885).GuildIconSizes.LARGE };
+        const tmp17 = closure_7(stateFromStores1(6885), obj2);
         cResult[6] = stateFromStores;
         cResult[7] = tmp17;
         let tmp13 = tmp17;
-        const tmp16 = stateFromStores1(6883);
+        const tmp16 = stateFromStores1(6885);
       } else {
         tmp13 = cResult[7];
       }
@@ -79,8 +79,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1128).intl;
-          const stringResult = intl.string(tmp(1128).t.tlopTM);
+          const intl = tmp(1125).intl;
+          const stringResult = intl.string(tmp(1125).t.tlopTM);
           cResult[11] = stringResult;
           let tmp20 = stringResult;
         } else {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (cResult[12] !== tmp18) {
           const obj3 = { leading: tmp18, title: tmp20 };
-          const tmp24 = closure_7(tmp(7248).BottomSheetTitleHeader, obj3);
+          const tmp24 = closure_7(tmp(7250).BottomSheetTitleHeader, obj3);
           cResult[12] = tmp18;
           cResult[13] = tmp24;
           let tmp22 = tmp24;
@@ -97,8 +97,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol2 = Symbol;
         if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj4 = { source: stateFromStores1(13273) };
-          const tmp28 = closure_7(tmp(1202).Icon, obj4);
+          const obj4 = { source: stateFromStores1(13287) };
+          const tmp28 = closure_7(tmp(1199).Icon, obj4);
           cResult[14] = tmp28;
           let tmp25 = tmp28;
         } else {
@@ -107,8 +107,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol3 = Symbol;
         if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
           const obj5 = { text: null };
-          const intl2 = tmp(1128).intl;
-          obj5.text = intl2.string(tmp(1128).t.e6RscS);
+          const intl2 = tmp(1125).intl;
+          obj5.text = intl2.string(tmp(1125).t.e6RscS);
           const tmp31 = closure_7(tmp(8951).FormLabel, obj5);
           cResult[15] = tmp31;
           let tmp29 = tmp31;
@@ -131,10 +131,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp32 = cResult[17];
         }
-        const tmp35 = stateFromStores1(stateFromStores1 ? 13274 : 13275);
+        const tmp35 = stateFromStores1(stateFromStores1 ? 13288 : 13289);
         if (cResult[18] !== tmp35) {
           const obj7 = { source: tmp35 };
-          const tmp38 = closure_7(tmp(1202).Icon, obj7);
+          const tmp38 = closure_7(tmp(1199).Icon, obj7);
           cResult[18] = tmp35;
           cResult[19] = tmp38;
           let tmp36 = tmp38;
@@ -142,9 +142,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp36 = cResult[19];
         }
         if (cResult[20] !== stateFromStores1) {
-          const intl3 = tmp(1128).intl;
+          const intl3 = tmp(1125).intl;
           const string = intl3.string;
-          let COiLo0 = tmp(1128).t;
+          let COiLo0 = tmp(1125).t;
           if (stateFromStores1) {
             COiLo0 = COiLo0.COiLo0;
             let stringResult1 = string(COiLo0);
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj9 = { children: null };
                 const items2 = [tmp22, tmp32, tmp46];
                 obj9.children = items2;
-                const tmp51 = closure_8(tmp(7298).ActionSheet, obj9);
+                const tmp51 = closure_8(tmp(7300).ActionSheet, obj9);
                 cResult[31] = tmp32;
                 cResult[32] = tmp46;
                 cResult[33] = tmp22;
@@ -236,18 +236,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj5 = { guild: stateFromStores, size: null };
       const obj2 = guildId(504);
       const tmp8 = stateFromStores1;
-      obj5.size = guildId(6883).GuildIconSizes.LARGE;
-      obj4.children = closure_7(stateFromStores1(6883), obj5);
+      obj5.size = guildId(6885).GuildIconSizes.LARGE;
+      obj4.children = closure_7(stateFromStores1(6885), obj5);
       obj3.leading = closure_7(View, obj4);
-      const intl = guildId(1128).intl;
-      obj3.title = intl.string(guildId(1128).t.tlopTM);
-      const items2 = [closure_7(guildId(7248).BottomSheetTitleHeader, obj3), ,];
+      const intl = guildId(1125).intl;
+      obj3.title = intl.string(guildId(1125).t.tlopTM);
+      const items2 = [closure_7(guildId(7250).BottomSheetTitleHeader, obj3), ,];
       const obj6 = { leading: null, label: null, onPress: null };
-      const tmp9 = stateFromStores1(6883);
-      obj6.leading = closure_7(guildId(1202).Icon, { source: stateFromStores1(13273) });
+      const tmp9 = stateFromStores1(6885);
+      obj6.leading = closure_7(guildId(1199).Icon, { source: stateFromStores1(13287) });
       const obj8 = { text: null };
-      const intl2 = guildId(1128).intl;
-      obj8.text = intl2.string(guildId(1128).t.e6RscS);
+      const intl2 = guildId(1125).intl;
+      obj8.text = intl2.string(guildId(1125).t.e6RscS);
       obj6.label = closure_7(guildId(8951).FormLabel, obj8);
       obj6.onPress = function onPress() {
         ReadStateActionCreators.ackGuildFeature(guildId, ReadStateTypes.GUILD_EVENT);
@@ -255,11 +255,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       items2[1] = closure_7(guildId(8951).FormRow, obj6);
       const obj9 = { leading: null, label: null, onPress: null };
-      const obj7 = { source: stateFromStores1(13273) };
-      obj9.leading = closure_7(guildId(1202).Icon, { source: tmp8(stateFromStores1 ? 13274 : 13275) });
-      const intl3 = tmp2(1128).intl;
+      const obj7 = { source: stateFromStores1(13287) };
+      obj9.leading = closure_7(guildId(1199).Icon, { source: tmp8(stateFromStores1 ? 13288 : 13289) });
+      const intl3 = tmp2(1125).intl;
       const string = intl3.string;
-      const t = tmp2(1128).t;
+      const t = tmp2(1125).t;
       if (stateFromStores1) {
         let stringResult = string(t.COiLo0);
       } else {
@@ -277,5 +277,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       items2[2] = closure_7(guildId(8951).FormRow, obj9);
       obj11.children = items2;
-      return closure_8(guildId(7298).ActionSheet, obj11);
+      return closure_8(guildId(7300).ActionSheet, obj11);
     };

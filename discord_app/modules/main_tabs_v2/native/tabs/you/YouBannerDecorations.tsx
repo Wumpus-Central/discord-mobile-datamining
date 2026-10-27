@@ -15,12 +15,12 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const useIntlLoaderStore = fn(2069).useIntlLoaderStore;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
-let closure_9 = fn(1394).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
+const useIntlLoaderStore = fn(2066).useIntlLoaderStore;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
+let closure_9 = fn(1391).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = {
     containerFloatingWrap: null,
@@ -126,7 +126,7 @@ let result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/Yo
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function YouBannerDecorations(navigateToSettings) {
-        const cResult = navigateToSettings(576).c(81);
+        const cResult = navigateToSettings(576).c(84);
         navigateToSettings = navigateToSettings.navigateToSettings;
         const navigateToPremium = navigateToSettings.navigateToPremium;
         ({ navigateToShop, shopButtonRef, settingsButtonRef, paddingBottom } = navigateToSettings);
@@ -192,311 +192,333 @@ export default noop.memo(
                         let tmp20 = cResult[17];
                       }
                       const tmp30 = closure_12(num, tmp20, gradientSecondaryBackground, containerBorderColor);
-                      const hasPremiumSubscriptionToDisplay = tmp(2053).useHasPremiumSubscriptionToDisplay();
+                      const hasPremiumSubscriptionToDisplay = tmp(2050).useHasPremiumSubscriptionToDisplay();
                       const tmp33 = closure_13();
                       dependencyMap = tmp33;
-                      const tmp34 = tmp10(9563)();
+                      const tmp34 = tmp10(9562)();
                       const showBadge = tmp34.showBadge;
                       const dismissBadge = tmp34.dismissBadge;
                       const _Symbol = Symbol;
                       if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-                        const isEligibleForQuests = tmp(9565).getIsEligibleForQuests();
+                        const isEligibleForQuests = tmp(9564).getIsEligibleForQuests();
                         cResult[18] = isEligibleForQuests;
                         let tmp35 = isEligibleForQuests;
-                        const tmpResult8 = tmp(9565);
+                        const tmpResult8 = tmp(9564);
                       } else {
                         tmp35 = cResult[18];
                       }
-                      const tmpResult7 = tmp(2053);
-                      const tmp38 = null != tmp(7559).useTrialOffer(closure_9);
-                      closure_5 = tmp38;
-                      if (cResult[19] === tmp38) {
+                      const tmp37 = tmp10(9565)("YouBannerDecorations");
+                      if (tmp37 != null) {
+                        const placement = tmp37.placement;
+                      }
+                      const tmpResult7 = tmp(2050);
+                      const tmp39 = null != tmp(7560).useTrialOffer(closure_9);
+                      closure_5 = tmp39;
+                      if (cResult[19] === tmp39) {
                         if (cResult[20] === tmp33) {
                           if (cResult[21] === navigateToSettings) {
-                            let tmp39 = cResult[22];
+                            let tmp40 = cResult[22];
                           }
                           if (cResult[23] !== navigateToPremium) {
-                            function ee() {
+                            function ne() {
                               const result = tracking_Tracking.trackYouTabNitroIconPress();
                               navigateToPremium();
                             }
                             cResult[23] = navigateToPremium;
-                            cResult[24] = ee;
-                            let tmp40 = ee;
+                            cResult[24] = ne;
+                            let tmp41 = ne;
                           } else {
-                            tmp40 = cResult[24];
+                            tmp41 = cResult[24];
                           }
                           if (cResult[25] === dismissBadge) {
                             if (cResult[26] === showBadge) {
-                              let tmp41 = cResult[27];
+                              let tmp42 = cResult[27];
                             }
-                            if (cResult[28] === tmp41) {
-                              if (cResult[29] === showBadge) {
-                                let tmp42 = cResult[30];
+                            if (cResult[28] !== ("you_screen" === placement)) {
+                              let tmp45 = null;
+                              if (tmp43) {
+                                tmp45 = closure_10(tmp10(14168), {}, "conjure");
                               }
-                              if (cResult[31] === navigateToShop) {
-                                if (cResult[32] === shopButtonRef) {
-                                  let tmp46 = cResult[33];
+                              cResult[28] = tmp43;
+                              cResult[29] = tmp45;
+                              let tmp44 = tmp45;
+                            } else {
+                              tmp44 = cResult[29];
+                            }
+                            if (cResult[30] === tmp42) {
+                              if (cResult[31] === showBadge) {
+                                let tmp47 = cResult[32];
+                              }
+                              if (cResult[33] === navigateToShop) {
+                                if (cResult[34] === shopButtonRef) {
+                                  let tmp51 = cResult[35];
                                 }
-                                if (cResult[34] === hasPremiumSubscriptionToDisplay) {
-                                  if (cResult[35] === tmp40) {
-                                    let tmp49 = cResult[36];
+                                if (cResult[36] === hasPremiumSubscriptionToDisplay) {
+                                  if (cResult[37] === tmp41) {
+                                    let tmp54 = cResult[38];
                                   }
                                   const _Symbol2 = Symbol;
-                                  if (cResult[37] === Symbol.for("react.memo_cache_sentinel")) {
-                                    const intl4 = tmp(1128).intl;
-                                    const stringResult = intl4.string(tmp(1128).t["3D5yo/"]);
-                                    cResult[37] = stringResult;
-                                    let tmp53 = stringResult;
+                                  if (cResult[39] === Symbol.for("react.memo_cache_sentinel")) {
+                                    const intl4 = tmp(1125).intl;
+                                    const stringResult = intl4.string(tmp(1125).t["3D5yo/"]);
+                                    cResult[39] = stringResult;
+                                    let tmp58 = stringResult;
                                   } else {
-                                    tmp53 = cResult[37];
+                                    tmp58 = cResult[39];
                                   }
-                                  if (cResult[38] === tmp33) {
-                                    if (cResult[39] === tmp39) {
-                                      if (cResult[40] === settingsButtonRef) {
-                                        let tmp55 = cResult[41];
+                                  if (cResult[40] === tmp33) {
+                                    if (cResult[41] === tmp40) {
+                                      if (cResult[42] === settingsButtonRef) {
+                                        let tmp60 = cResult[43];
                                       }
-                                      if (cResult[42] === tmp42) {
-                                        if (cResult[43] === tmp46) {
-                                          if (cResult[44] === tmp49) {
-                                            if (cResult[45] === tmp55) {
-                                              let tmp59 = cResult[46];
-                                            }
-                                            if (cResult[47] === tmp59) {
-                                              if (cResult[48] === tmp5) {
-                                                let tmp61 = cResult[49];
+                                      if (cResult[44] === tmp44) {
+                                        if (cResult[45] === tmp47) {
+                                          if (cResult[46] === tmp51) {
+                                            if (cResult[47] === tmp54) {
+                                              if (cResult[48] === tmp60) {
+                                                let tmp64 = cResult[49];
                                               }
-                                              if (cResult[50] === tmp30.buttonsFloating) {
-                                                if (cResult[51] === tmp61) {
-                                                  let tmp64 = cResult[52];
+                                              if (cResult[50] === tmp64) {
+                                                if (cResult[51] === tmp5) {
+                                                  let tmp66 = cResult[52];
                                                 }
-                                                const color = tmp30.containerFloatingGradient.color;
-                                                const _Symbol3 = Symbol;
-                                                if (cResult[53] === Symbol.for("react.memo_cache_sentinel")) {
-                                                  const point = { x: 0, y: 0 };
-                                                  const point1 = { x: 0, y: 1 };
-                                                  cResult[53] = point;
-                                                  cResult[54] = point1;
-                                                  let tmp69 = point1;
-                                                  let tmp68 = point;
-                                                } else {
-                                                  tmp68 = cResult[53];
-                                                  tmp69 = cResult[54];
-                                                }
-                                                if (cResult[55] !== color) {
-                                                  const obj22 = tmp10(683)(color);
-                                                  const hexResult = tmp10(683)(color).alpha(0).hex();
-                                                  cResult[55] = color;
-                                                  cResult[56] = hexResult;
-                                                  let tmp70 = hexResult;
-                                                  const alphaResult = tmp10(683)(color).alpha(0);
-                                                } else {
-                                                  tmp70 = cResult[56];
-                                                }
-                                                if (cResult[57] !== color) {
-                                                  const obj24 = tmp10(683)(color);
-                                                  const hexResult1 = tmp10(683)(color).alpha(1).hex();
-                                                  cResult[57] = color;
-                                                  cResult[58] = hexResult1;
-                                                  let tmp72 = hexResult1;
-                                                  const alphaResult1 = tmp10(683)(color).alpha(1);
-                                                } else {
-                                                  tmp72 = cResult[58];
-                                                }
-                                                if (cResult[59] === tmp70) {
-                                                  if (cResult[60] === tmp72) {
-                                                    let tmp74 = cResult[61];
+                                                if (cResult[53] === tmp30.buttonsFloating) {
+                                                  if (cResult[54] === tmp66) {
+                                                    let tmp69 = cResult[55];
                                                   }
-                                                  if (cResult[62] === tmp74) {
-                                                    if (cResult[63] === tmp30.containerFloatingGradient) {
-                                                      let tmp75 = cResult[64];
+                                                  const color = tmp30.containerFloatingGradient.color;
+                                                  const _Symbol3 = Symbol;
+                                                  if (cResult[56] === Symbol.for("react.memo_cache_sentinel")) {
+                                                    const point = { x: 0, y: 0 };
+                                                    const point1 = { x: 0, y: 1 };
+                                                    cResult[56] = point;
+                                                    cResult[57] = point1;
+                                                    let tmp74 = point1;
+                                                    let tmp73 = point;
+                                                  } else {
+                                                    tmp73 = cResult[56];
+                                                    tmp74 = cResult[57];
+                                                  }
+                                                  if (cResult[58] !== color) {
+                                                    const obj22 = tmp10(683)(color);
+                                                    const hexResult = tmp10(683)(color).alpha(0).hex();
+                                                    cResult[58] = color;
+                                                    cResult[59] = hexResult;
+                                                    let tmp75 = hexResult;
+                                                    const alphaResult = tmp10(683)(color).alpha(0);
+                                                  } else {
+                                                    tmp75 = cResult[59];
+                                                  }
+                                                  if (cResult[60] !== color) {
+                                                    const obj24 = tmp10(683)(color);
+                                                    const hexResult1 = tmp10(683)(color).alpha(1).hex();
+                                                    cResult[60] = color;
+                                                    cResult[61] = hexResult1;
+                                                    let tmp77 = hexResult1;
+                                                    const alphaResult1 = tmp10(683)(color).alpha(1);
+                                                  } else {
+                                                    tmp77 = cResult[61];
+                                                  }
+                                                  if (cResult[62] === tmp75) {
+                                                    if (cResult[63] === tmp77) {
+                                                      let tmp79 = cResult[64];
                                                     }
-                                                    if (cResult[65] !== tmp30.endcap) {
-                                                      let obj2 = { style: tmp30.endcap, pointerEvents: "none" };
-                                                      const tmp85 = closure_10(dismissBadge, obj2);
-                                                      cResult[65] = tmp30.endcap;
-                                                      cResult[66] = tmp85;
-                                                      let tmp82 = tmp85;
-                                                    } else {
-                                                      tmp82 = cResult[66];
-                                                    }
-                                                    if (cResult[67] === tmp64) {
-                                                      if (cResult[68] === tmp30.containerFloatingContent) {
-                                                        let tmp86 = cResult[69];
+                                                    if (cResult[65] === tmp79) {
+                                                      if (cResult[66] === tmp30.containerFloatingGradient) {
+                                                        let tmp80 = cResult[67];
                                                       }
-                                                      if (cResult[70] !== tmp30.endcap) {
-                                                        const obj3 = { style: tmp30.endcap, pointerEvents: "none" };
-                                                        const tmp93 = closure_10(dismissBadge, obj3);
-                                                        cResult[70] = tmp30.endcap;
-                                                        cResult[71] = tmp93;
-                                                        let tmp90 = tmp93;
+                                                      if (cResult[68] !== tmp30.endcap) {
+                                                        let obj2 = { style: tmp30.endcap, pointerEvents: "none" };
+                                                        const tmp90 = closure_10(dismissBadge, obj2);
+                                                        cResult[68] = tmp30.endcap;
+                                                        cResult[69] = tmp90;
+                                                        let tmp87 = tmp90;
                                                       } else {
-                                                        tmp90 = cResult[71];
+                                                        tmp87 = cResult[69];
                                                       }
-                                                      if (cResult[72] === tmp30.containerFloating) {
-                                                        if (cResult[73] === tmp82) {
-                                                          if (cResult[74] === tmp86) {
-                                                            if (cResult[75] === tmp90) {
-                                                              let tmp94 = cResult[76];
-                                                            }
-                                                            if (cResult[77] === tmp30.containerFloatingWrap) {
-                                                              if (cResult[78] === tmp75) {
-                                                                if (cResult[79] === tmp94) {
-                                                                  let tmp98 = cResult[80];
-                                                                }
-                                                                return tmp98;
+                                                      if (cResult[70] === tmp69) {
+                                                        if (cResult[71] === tmp30.containerFloatingContent) {
+                                                          let tmp91 = cResult[72];
+                                                        }
+                                                        if (cResult[73] !== tmp30.endcap) {
+                                                          const obj3 = { style: tmp30.endcap, pointerEvents: "none" };
+                                                          const tmp98 = closure_10(dismissBadge, obj3);
+                                                          cResult[73] = tmp30.endcap;
+                                                          cResult[74] = tmp98;
+                                                          let tmp95 = tmp98;
+                                                        } else {
+                                                          tmp95 = cResult[74];
+                                                        }
+                                                        if (cResult[75] === tmp30.containerFloating) {
+                                                          if (cResult[76] === tmp87) {
+                                                            if (cResult[77] === tmp91) {
+                                                              if (cResult[78] === tmp95) {
+                                                                let tmp99 = cResult[79];
                                                               }
+                                                              if (cResult[80] === tmp30.containerFloatingWrap) {
+                                                                if (cResult[81] === tmp80) {
+                                                                  if (cResult[82] === tmp99) {
+                                                                    let tmp103 = cResult[83];
+                                                                  }
+                                                                  return tmp103;
+                                                                }
+                                                              }
+                                                              const obj4 = {
+                                                                style: tmp30.containerFloatingWrap,
+                                                                pointerEvents: "box-none",
+                                                                children: null,
+                                                              };
+                                                              const items1 = [tmp80, tmp99];
+                                                              obj4.children = items1;
+                                                              const tmp106 = closure_11(dismissBadge, obj4);
+                                                              cResult[80] = tmp30.containerFloatingWrap;
+                                                              cResult[81] = tmp80;
+                                                              cResult[82] = tmp99;
+                                                              cResult[83] = tmp106;
+                                                              tmp103 = tmp106;
                                                             }
-                                                            const obj4 = {
-                                                              style: tmp30.containerFloatingWrap,
-                                                              pointerEvents: "box-none",
-                                                              children: null,
-                                                            };
-                                                            const items1 = [tmp75, tmp94];
-                                                            obj4.children = items1;
-                                                            const tmp101 = closure_11(dismissBadge, obj4);
-                                                            cResult[77] = tmp30.containerFloatingWrap;
-                                                            cResult[78] = tmp75;
-                                                            cResult[79] = tmp94;
-                                                            cResult[80] = tmp101;
-                                                            tmp98 = tmp101;
                                                           }
                                                         }
+                                                        const obj5 = { style: tmp30.containerFloating, children: null };
+                                                        const items2 = [tmp87, tmp91, tmp95];
+                                                        obj5.children = items2;
+                                                        const tmp102 = closure_11(dismissBadge, obj5);
+                                                        cResult[75] = tmp30.containerFloating;
+                                                        cResult[76] = tmp87;
+                                                        cResult[77] = tmp91;
+                                                        cResult[78] = tmp95;
+                                                        cResult[79] = tmp102;
+                                                        tmp99 = tmp102;
                                                       }
-                                                      const obj5 = { style: tmp30.containerFloating, children: null };
-                                                      const items2 = [tmp82, tmp86, tmp90];
-                                                      obj5.children = items2;
-                                                      const tmp97 = closure_11(dismissBadge, obj5);
-                                                      cResult[72] = tmp30.containerFloating;
-                                                      cResult[73] = tmp82;
-                                                      cResult[74] = tmp86;
-                                                      cResult[75] = tmp90;
-                                                      cResult[76] = tmp97;
-                                                      tmp94 = tmp97;
+                                                      const obj6 = {
+                                                        style: tmp30.containerFloatingContent,
+                                                        children: tmp69,
+                                                      };
+                                                      const tmp94 = closure_10(dismissBadge, obj6);
+                                                      cResult[70] = tmp69;
+                                                      cResult[71] = tmp30.containerFloatingContent;
+                                                      cResult[72] = tmp94;
+                                                      tmp91 = tmp94;
                                                     }
-                                                    const obj6 = {
-                                                      style: tmp30.containerFloatingContent,
-                                                      children: tmp64,
-                                                    };
-                                                    const tmp89 = closure_10(dismissBadge, obj6);
-                                                    cResult[67] = tmp64;
-                                                    cResult[68] = tmp30.containerFloatingContent;
-                                                    cResult[69] = tmp89;
-                                                    tmp86 = tmp89;
+                                                    const obj7 = { style: tmp30.containerFloatingGradient };
+                                                    const merged = Object.assign(tmp79);
+                                                    obj7.pointerEvents = "none";
+                                                    const tmp86 = closure_10(tmp10(5259), obj7);
+                                                    cResult[65] = tmp79;
+                                                    cResult[66] = tmp30.containerFloatingGradient;
+                                                    cResult[67] = tmp86;
+                                                    tmp80 = tmp86;
+                                                    const tmp10Result = tmp10(5259);
                                                   }
-                                                  const obj7 = { style: tmp30.containerFloatingGradient };
-                                                  const merged = Object.assign(tmp74);
-                                                  obj7.pointerEvents = "none";
-                                                  const tmp81 = closure_10(tmp10(5258), obj7);
-                                                  cResult[62] = tmp74;
-                                                  cResult[63] = tmp30.containerFloatingGradient;
-                                                  cResult[64] = tmp81;
-                                                  tmp75 = tmp81;
-                                                  const tmp10Result = tmp10(5258);
+                                                  const obj10 = { start: tmp73, end: tmp74, colors: null };
+                                                  const items3 = [tmp75, tmp77];
+                                                  obj10.colors = items3;
+                                                  cResult[62] = tmp75;
+                                                  cResult[63] = tmp77;
+                                                  cResult[64] = obj10;
+                                                  tmp79 = obj10;
                                                 }
-                                                const obj10 = { start: tmp68, end: tmp69, colors: null };
-                                                const items3 = [tmp70, tmp72];
-                                                obj10.colors = items3;
-                                                cResult[59] = tmp70;
-                                                cResult[60] = tmp72;
-                                                cResult[61] = obj10;
-                                                tmp74 = obj10;
+                                                const obj11 = {
+                                                  style: tmp30.buttonsFloating,
+                                                  pointerEvents: "box-none",
+                                                  children: tmp66,
+                                                };
+                                                const tmp72 = closure_10(dismissBadge, obj11);
+                                                cResult[53] = tmp30.buttonsFloating;
+                                                cResult[54] = tmp66;
+                                                cResult[55] = tmp72;
+                                                tmp69 = tmp72;
                                               }
-                                              const obj11 = {
-                                                style: tmp30.buttonsFloating,
-                                                pointerEvents: "box-none",
-                                                children: tmp61,
-                                              };
-                                              const tmp67 = closure_10(dismissBadge, obj11);
-                                              cResult[50] = tmp30.buttonsFloating;
-                                              cResult[51] = tmp61;
-                                              cResult[52] = tmp67;
-                                              tmp64 = tmp67;
+                                              const obj12 = { children: tmp64 };
+                                              const tmp68 = closure_10(
+                                                tmp(14177).YouScreenNavIconMeasurer,
+                                                obj12,
+                                                tmp5,
+                                              );
+                                              cResult[50] = tmp64;
+                                              cResult[51] = tmp5;
+                                              cResult[52] = tmp68;
+                                              tmp66 = tmp68;
                                             }
-                                            const obj12 = { children: tmp59 };
-                                            const tmp63 = closure_10(tmp(14156).YouScreenNavIconMeasurer, obj12, tmp5);
-                                            cResult[47] = tmp59;
-                                            cResult[48] = tmp5;
-                                            cResult[49] = tmp63;
-                                            tmp61 = tmp63;
                                           }
                                         }
                                       }
-                                      const items4 = [tmp42, tmp46, tmp49, tmp55];
+                                      const items4 = [tmp44, tmp47, tmp51, tmp54, tmp60];
                                       const found = items4.filter((item) => null != item);
-                                      cResult[42] = tmp42;
-                                      cResult[43] = tmp46;
-                                      cResult[44] = tmp49;
-                                      cResult[45] = tmp55;
-                                      cResult[46] = found;
-                                      tmp59 = found;
+                                      cResult[44] = tmp44;
+                                      cResult[45] = tmp47;
+                                      cResult[46] = tmp51;
+                                      cResult[47] = tmp54;
+                                      cResult[48] = tmp60;
+                                      cResult[49] = found;
+                                      tmp64 = found;
                                     }
                                   }
                                   const obj13 = {
                                     ref: settingsButtonRef,
-                                    IconComponent: tmp(7488).SettingsIcon,
-                                    accessibilityLabel: tmp53,
-                                    onPress: tmp39,
+                                    IconComponent: tmp(7489).SettingsIcon,
+                                    accessibilityLabel: tmp58,
+                                    onPress: tmp40,
                                     showRedDot: tmp33,
                                     testID: "you_tab_settings_button",
                                   };
-                                  const tmp58 = closure_10(tmp10(14154), obj13, "settings");
-                                  cResult[38] = tmp33;
-                                  cResult[39] = tmp39;
-                                  cResult[40] = settingsButtonRef;
-                                  cResult[41] = tmp58;
-                                  tmp55 = tmp58;
-                                  const tmp10Result5 = tmp10(14154);
+                                  const tmp63 = closure_10(tmp10(14176), obj13, "settings");
+                                  cResult[40] = tmp33;
+                                  cResult[41] = tmp40;
+                                  cResult[42] = settingsButtonRef;
+                                  cResult[43] = tmp63;
+                                  tmp60 = tmp63;
+                                  const tmp10Result5 = tmp10(14176);
                                 }
-                                let tmp50 = null;
+                                let tmp55 = null;
                                 if (!hasPremiumSubscriptionToDisplay) {
                                   const obj14 = {
-                                    IconComponent: tmp(9425).NitroWheelIcon,
+                                    IconComponent: tmp(9424).NitroWheelIcon,
                                     accessibilityLabel: null,
                                     label: null,
                                     onPress: null,
                                   };
-                                  const intl2 = tmp(1128).intl;
-                                  obj14.accessibilityLabel = intl2.string(tmp(1128).t.Ipxkog);
-                                  const intl3 = tmp(1128).intl;
-                                  obj14.label = intl3.string(tmp(1128).t.Ipxkog);
-                                  obj14.onPress = tmp40;
-                                  tmp50 = closure_10(tmp10(14154), obj14, "nitro");
-                                  const tmp10Result6 = tmp10(14154);
+                                  const intl2 = tmp(1125).intl;
+                                  obj14.accessibilityLabel = intl2.string(tmp(1125).t.Ipxkog);
+                                  const intl3 = tmp(1125).intl;
+                                  obj14.label = intl3.string(tmp(1125).t.Ipxkog);
+                                  obj14.onPress = tmp41;
+                                  tmp55 = closure_10(tmp10(14176), obj14, "nitro");
+                                  const tmp10Result6 = tmp10(14176);
                                 }
-                                cResult[34] = hasPremiumSubscriptionToDisplay;
-                                cResult[35] = tmp40;
-                                cResult[36] = tmp50;
-                                tmp49 = tmp50;
+                                cResult[36] = hasPremiumSubscriptionToDisplay;
+                                cResult[37] = tmp41;
+                                cResult[38] = tmp55;
+                                tmp54 = tmp55;
                               }
                               const obj15 = { shopButtonRef, navigateToShop };
-                              const tmp48 = closure_10(tmp10(14159), obj15, "shop");
-                              cResult[31] = navigateToShop;
-                              cResult[32] = shopButtonRef;
-                              cResult[33] = tmp48;
-                              tmp46 = tmp48;
+                              const tmp53 = closure_10(tmp10(14186), obj15, "shop");
+                              cResult[33] = navigateToShop;
+                              cResult[34] = shopButtonRef;
+                              cResult[35] = tmp53;
+                              tmp51 = tmp53;
                             }
-                            let tmp43 = null;
+                            let tmp48 = null;
                             if (tmp35) {
                               const obj16 = {
-                                IconComponent: tmp(14157).QuestsIcon,
+                                IconComponent: tmp(14184).QuestsIcon,
                                 accessibilityLabel: null,
                                 onPress: null,
                                 showRedDot: null,
                               };
-                              const intl = tmp(1128).intl;
-                              obj16.accessibilityLabel = intl.string(tmp(1128).t.JALI2K);
-                              obj16.onPress = tmp41;
+                              const intl = tmp(1125).intl;
+                              obj16.accessibilityLabel = intl.string(tmp(1125).t.JALI2K);
+                              obj16.onPress = tmp42;
                               obj16.showRedDot = showBadge;
-                              tmp43 = closure_10(tmp10(14154), obj16, "quests");
-                              const tmp10Result7 = tmp10(14154);
+                              tmp48 = closure_10(tmp10(14176), obj16, "quests");
+                              const tmp10Result7 = tmp10(14176);
                             }
-                            cResult[28] = tmp41;
-                            cResult[29] = showBadge;
-                            cResult[30] = tmp43;
-                            tmp42 = tmp43;
+                            cResult[30] = tmp42;
+                            cResult[31] = showBadge;
+                            cResult[32] = tmp48;
+                            tmp47 = tmp48;
                           }
-                          function te() {
+                          function oe() {
                             if (showBadge) {
                               dismissBadge(ContentDismissActionType.TAKE_ACTION);
                             }
@@ -506,15 +528,15 @@ export default noop.memo(
                           }
                           cResult[25] = dismissBadge;
                           cResult[26] = showBadge;
-                          cResult[27] = te;
-                          tmp41 = te;
+                          cResult[27] = oe;
+                          tmp42 = oe;
                         }
                       }
                       class J {
                         constructor() {
                           tmp = closure_0;
                           tmp2 = closure_2;
-                          obj = closure_0(closure_2[26]);
+                          obj = closure_0(closure_2[27]);
                           obj1 = { isBadged: closure_2 };
                           result = obj.trackYouTabSettingsIconPress(obj1);
                           tmp4 = navigateToSettings();
@@ -534,12 +556,12 @@ export default noop.memo(
                           return;
                         }
                       }
-                      cResult[19] = tmp38;
+                      cResult[19] = tmp39;
                       cResult[20] = tmp33;
                       cResult[21] = navigateToSettings;
                       cResult[22] = J;
-                      tmp39 = J;
-                      const tmpResult9 = tmp(7559);
+                      tmp40 = J;
+                      const tmpResult9 = tmp(7560);
                     }
                     let hexResult3 = null;
                     if (null != tmp18) {
@@ -579,7 +601,7 @@ export default noop.memo(
               cResult[13] = theme;
               cResult[14] = tmp19;
               tmp18 = tmp19;
-              tmpResult10 = tmp(4978);
+              tmpResult10 = tmp(4979);
             }
           }
           const obj17 = { theme, primaryColor, secondaryColor };
@@ -678,7 +700,6 @@ export default noop.memo(
           gradientSecondaryBackground,
           containerBorderColor,
         );
-        let obj4 = containerBackground;
         tmp2Result5 = navigateToSettings(gradientSecondaryBackground[21]);
         const hasPremiumSubscriptionToDisplay = navigateToSettings(
           gradientSecondaryBackground[23],
@@ -690,12 +711,17 @@ export default noop.memo(
         dismissBadge = tmp15.dismissBadge;
         const tmp2Result6 = navigateToSettings(gradientSecondaryBackground[23]);
         const isEligibleForQuests = navigateToSettings(gradientSecondaryBackground[25]).getIsEligibleForQuests();
+        const tmp17 = navigateToPremium(gradientSecondaryBackground[26])("YouBannerDecorations");
+        let placement;
+        if (tmp17 != null) {
+          placement = tmp17.placement;
+        }
         const tmp2Result7 = navigateToSettings(gradientSecondaryBackground[25]);
-        const tmp17 = null != navigateToSettings(gradientSecondaryBackground[12]).useTrialOffer(closure_9);
-        currentUser = tmp17;
-        const items2 = [tmp14, navigateToSettings, tmp17];
+        const tmp19 = null != navigateToSettings(gradientSecondaryBackground[12]).useTrialOffer(closure_9);
+        currentUser = tmp19;
+        const items2 = [tmp14, navigateToSettings, tmp19];
         const items3 = [navigateToPremium];
-        const callback = containerBackground.useCallback(() => {
+        const callback = obj4.useCallback(() => {
           const result = tracking_Tracking.trackYouTabSettingsIconPress({ isBadged });
           navigateToSettings();
           let tmp5 = closure_7;
@@ -714,34 +740,48 @@ export default noop.memo(
           const obj2 = { isBadged };
         }, items2);
         const items4 = [showBadge, dismissBadge];
-        const callback1 = containerBackground.useCallback(() => {
+        const callback1 = obj4.useCallback(() => {
           const result = tracking_Tracking.trackYouTabNitroIconPress();
           navigateToPremium();
         }, items3);
-        let tmp21 = null;
+        let tmp23 = null;
+        const callback2 = obj4.useCallback(() => {
+          if (showBadge) {
+            dismissBadge(ContentDismissActionType.TAKE_ACTION);
+          }
+          const obj = QuestUtils;
+          obj.openQuestHome({ fromContent: QuestTypes.QuestContent.USER_PROFILE_HEADER });
+          const obj2 = { fromContent: QuestTypes.QuestContent.USER_PROFILE_HEADER };
+        }, items4);
+        if ("you_screen" === placement) {
+          tmp23 = closure_10(tmp5(tmp3[30]), {}, "conjure");
+        }
+        const items5 = [tmp23, , , ,];
+        let tmp25 = null;
         if (isEligibleForQuests) {
           let obj2 = {
-            IconComponent: tmp2(tmp3[30]).QuestsIcon,
+            IconComponent: tmp2(tmp3[32]).QuestsIcon,
             accessibilityLabel: null,
             onPress: null,
             showRedDot: null,
           };
           const intl = tmp2(tmp3[16]).intl;
           obj2.accessibilityLabel = intl.string(tmp2(tmp3[16]).t.JALI2K);
-          obj2.onPress = tmp20;
+          obj2.onPress = callback2;
           obj2.showRedDot = showBadge;
-          tmp21 = closure_10(tmp5(tmp3[29]), obj2, "quests");
-          const tmp5Result = tmp5(tmp3[29]);
+          tmp25 = closure_10(tmp5(tmp3[31]), obj2, "quests");
+          const tmp5Result = tmp5(tmp3[31]);
         }
-        const items5 = [
-          tmp21,
-          closure_10(navigateToPremium(gradientSecondaryBackground[31]), { shopButtonRef, navigateToShop }, "shop"),
-          ,
-        ];
-        let tmp24Result = null;
+        items5[1] = tmp25;
+        items5[2] = closure_10(
+          navigateToPremium(gradientSecondaryBackground[33]),
+          { shopButtonRef, navigateToShop },
+          "shop",
+        );
+        let tmp28Result = null;
         if (!hasPremiumSubscriptionToDisplay) {
           let obj3 = {
-            IconComponent: tmp2(tmp3[32]).NitroWheelIcon,
+            IconComponent: tmp2(tmp3[34]).NitroWheelIcon,
             accessibilityLabel: null,
             label: null,
             onPress: null,
@@ -751,10 +791,10 @@ export default noop.memo(
           const intl3 = tmp2(tmp3[16]).intl;
           obj3.label = intl3.string(tmp2(tmp3[16]).t.Ipxkog);
           obj3.onPress = callback1;
-          tmp24Result = closure_10(tmp5(tmp3[29]), obj3, "nitro");
-          const tmp5Result4 = tmp5(tmp3[29]);
+          tmp28Result = closure_10(tmp5(tmp3[31]), obj3, "nitro");
+          const tmp5Result4 = tmp5(tmp3[31]);
         }
-        items5[2] = tmp24Result;
+        items5[3] = tmp28Result;
         const obj5 = {
           ref: settingsButtonRef,
           IconComponent: null,
@@ -764,22 +804,22 @@ export default noop.memo(
           testID: "you_tab_settings_button",
         };
         const tmp2Result8 = navigateToSettings(gradientSecondaryBackground[12]);
-        obj5.IconComponent = navigateToSettings(gradientSecondaryBackground[33]).SettingsIcon;
+        obj5.IconComponent = navigateToSettings(gradientSecondaryBackground[35]).SettingsIcon;
         const intl4 = tmp2(tmp3[16]).intl;
         obj5.accessibilityLabel = intl4.string(navigateToSettings(gradientSecondaryBackground[16]).t["3D5yo/"]);
         obj5.onPress = callback;
         obj5.showRedDot = tmp14;
-        items5[3] = closure_10(navigateToPremium(gradientSecondaryBackground[29]), obj5, "settings");
+        items5[4] = closure_10(navigateToPremium(gradientSecondaryBackground[31]), obj5, "settings");
         const obj6 = { style: tmp12.buttonsFloating, pointerEvents: "box-none", children: null };
         const found = items5.filter((item) => null != item);
         obj6.children = closure_10(
-          navigateToSettings(gradientSecondaryBackground[34]).YouScreenNavIconMeasurer,
+          navigateToSettings(gradientSecondaryBackground[36]).YouScreenNavIconMeasurer,
           { children: found },
           tmp,
         );
         color = tmp12.containerFloatingGradient.color;
         const items6 = [color];
-        const tmp5Result5 = navigateToPremium(gradientSecondaryBackground[29]);
+        const tmp5Result5 = navigateToPremium(gradientSecondaryBackground[31]);
         const obj7 = { style: tmp12.containerFloatingWrap, pointerEvents: "box-none", children: null };
         const memo = obj4.useMemo(() => {
           const obj = { start: { x: 0, y: 0 }, end: { x: 0, y: 1 }, colors: null };
@@ -792,14 +832,14 @@ export default noop.memo(
           return obj;
         }, items6);
         const obj8 = { style: tmp12.containerFloatingGradient };
-        const tmp24Result2 = closure_10(isBadged, obj6);
+        const tmp28Result2 = closure_10(isBadged, obj6);
         const merged = Object.assign(memo);
         obj8.pointerEvents = "none";
-        const items7 = [closure_10(navigateToPremium(gradientSecondaryBackground[35]), obj8)];
+        const items7 = [closure_10(navigateToPremium(gradientSecondaryBackground[37]), obj8)];
         const obj9 = { style: tmp12.containerFloating, children: null };
         const items8 = [
           closure_10(isBadged, { style: tmp12.endcap, pointerEvents: "none" }),
-          closure_10(isBadged, { style: tmp12.containerFloatingContent, children: tmp24Result2 }),
+          closure_10(isBadged, { style: tmp12.containerFloatingContent, children: tmp28Result2 }),
           closure_10(isBadged, { style: tmp12.endcap, pointerEvents: "none" }),
         ];
         obj9.children = items8;

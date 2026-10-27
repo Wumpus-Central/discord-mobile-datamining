@@ -360,9 +360,9 @@ let closure_25 = async function _openInviteFromQuickSwitcher(arg0) {
     }
   }
 };
-const InAppNavigationType = fn(6709).InAppNavigationType;
-const ChannelRecordBase = fn(4827).ChannelRecordBase;
-const Constants = fn(1087);
+const InAppNavigationType = fn(6710).InAppNavigationType;
+const ChannelRecordBase = fn(4828).ChannelRecordBase;
+const Constants = fn(1084);
 ({
   Layers,
   ME: closure_12,
@@ -371,8 +371,8 @@ const Constants = fn(1087);
   AnalyticsLocations: closure_15,
   AnalyticsPages: closure_16,
 } = Constants);
-const isStaticChannelRoute = fn(4830).isStaticChannelRoute;
-const CollectibleShopTab = fn(1089).CollectibleShopTab;
+const isStaticChannelRoute = fn(4831).isStaticChannelRoute;
+const CollectibleShopTab = fn(1086).CollectibleShopTab;
 let obj = {};
 obj[fn(9067).AutocompleterQuerySymbols.USER] = fn(9067).AutocompleterResultTypes.USER;
 obj[fn(9067).AutocompleterQuerySymbols.TEXT_CHANNEL] = fn(9067).AutocompleterResultTypes.TEXT_CHANNEL;
@@ -482,7 +482,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                       obj5.recipientIds = items;
                       dependencyMap = 1;
                       c3 = 1;
-                      const obj6 = { value: tmp2(7411).openPrivateChannel(obj5), done: false };
+                      const obj6 = { value: tmp2(7413).openPrivateChannel(obj5), done: false };
                       return obj6;
                     }
                   } else if (arg0 === 1) {
@@ -494,7 +494,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                     return obj7;
                   } else {
                     closure_128_0 = value;
-                    tmp5(12922).openChannelTabActive(closure_128_0, null);
+                    tmp5(12931).openChannelTabActive(closure_128_0, null);
                     c3 = 3;
                     return { value: "IconComponent", done: null };
                   }
@@ -535,7 +535,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                       obj5.recipientIds = items;
                       dependencyMap = 1;
                       c3 = 1;
-                      const obj6 = { value: tmp2(7411).openPrivateChannel(obj5), done: false };
+                      const obj6 = { value: tmp2(7413).openPrivateChannel(obj5), done: false };
                       return obj6;
                     }
                   } else if (arg0 === 1) {
@@ -547,7 +547,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
                     return obj7;
                   } else {
                     closure_128_0 = value;
-                    tmp5(12922).openChannelTabActive(closure_128_0, null);
+                    tmp5(12931).openChannelTabActive(closure_128_0, null);
                     c3 = 3;
                     return { value: "IconComponent", done: null };
                   }
@@ -576,7 +576,7 @@ export const switchToResultInNewTab = function switchToResultInNewTab(type) {
     trackClose(constants.QUICKSWITCHER_RESULT_SELECTED, type);
     let obj4 = { type: "QUICKSWITCHER_SWITCH_TO", result: type };
     DispatcherDefault.dispatch(obj4);
-    tmp(12922).openChannelTabActive(channel.id, guildId);
-    const tmpResult = tmp(12922);
+    tmp(12931).openChannelTabActive(channel.id, guildId);
+    const tmpResult = tmp(12931);
   }
 };

@@ -13,12 +13,12 @@ import RTCConnectionStore from "../../../stores/RTCConnectionStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_8, VideoToggleState: closure_9 } = Constants);
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_13 = createStyles.createStyles({
   card: { paddingBottom: 0 },
   cardTitle: { marginBottom: 0 },
@@ -550,7 +550,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                 return isPrivateResult;
               }
             }
-            const stringResult = obj5.string(tmp(1128).t.NiTd0e);
+            const stringResult = obj5.string(tmp(1125).t.NiTd0e);
             cResult[8] = stringResult;
           } else {
             class U {
@@ -592,7 +592,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                   return isPrivateResult;
                 }
               }
-              const stringResult1 = obj6.string(tmp(1128).t);
+              const stringResult1 = obj6.string(tmp(1125).t);
             } else {
               class U {
                 constructor() {
@@ -682,8 +682,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
             }
             const obj3 = { children: null };
             const obj4 = { label: tmp16, icon: tmp19, onPress: P };
-            obj3.children = closure_11(tmp(7303).UserProfileFormRow, obj4, "mute");
-            const tmp23 = closure_11(tmp(7303).UserProfileCardRows, obj3);
+            obj3.children = closure_11(tmp(7305).UserProfileFormRow, obj4, "mute");
+            const tmp23 = closure_11(tmp(7305).UserProfileCardRows, obj3);
             cResult[13] = tmp16;
             cResult[14] = tmp19;
             cResult[15] = P;
@@ -723,12 +723,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { style: null, title: null, titleStyle: null, children: null };
         const items2 = [tmp.card, style];
         obj4.style = items2;
-        const intl = tmp2(1128).intl;
-        obj4.title = intl.string(tmp2(1128).t.NiTd0e);
+        const intl = tmp2(1125).intl;
+        obj4.title = intl.string(tmp2(1125).t.NiTd0e);
         obj4.titleStyle = tmp.cardTitle;
-        const intl2 = tmp2(1128).intl;
+        const intl2 = tmp2(1125).intl;
         const string = intl2.string;
-        const t = tmp2(1128).t;
+        const t = tmp2(1125).t;
         if (stateFromStores) {
           let stringResult = string(t.NHJxcg);
         } else {
@@ -738,7 +738,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores) {
           let MicrophoneIcon = tmp2(9173).MicrophoneSlashIcon;
         } else {
-          MicrophoneIcon = tmp2(11646).MicrophoneIcon;
+          MicrophoneIcon = tmp2(11648).MicrophoneIcon;
         }
         const obj6 = { children: null };
         obj5.icon = MicrophoneIcon;
@@ -746,11 +746,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           trackUserProfileAction({ action: "MUTE" });
           AudioActionCreatorsDefault.toggleSelfMute();
         };
-        obj6.children = closure_11(tmp2(7303).UserProfileFormRow, obj5, "mute");
-        tmp9Result = closure_11(tmp2(7303).UserProfileCardRows, obj6);
+        obj6.children = closure_11(tmp2(7305).UserProfileFormRow, obj5, "mute");
+        tmp9Result = closure_11(tmp2(7305).UserProfileCardRows, obj6);
         obj4.children = tmp9Result;
-        closure_11(trackUserProfileAction(7303), obj4);
-        const tmp6Result = trackUserProfileAction(7303);
+        closure_11(trackUserProfileAction(7305), obj4);
+        const tmp6Result = trackUserProfileAction(7305);
       }
       return tmp8;
     };

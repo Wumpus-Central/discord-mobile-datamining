@@ -714,10 +714,10 @@ function isMessageRenderable(message) {
   }
   return true;
 }
-const ImageSizes = fn(2026).ImageSizes;
-const promiseDeduper = new fn(10789).PromiseDeduper();
-const promiseDeduper3 = new fn(10789).PromiseDeduper();
-const promiseDeduper4 = new fn(10789).PromiseDeduper();
+const ImageSizes = fn(2023).ImageSizes;
+const promiseDeduper = new fn(10792).PromiseDeduper();
+const promiseDeduper3 = new fn(10792).PromiseDeduper();
+const promiseDeduper4 = new fn(10792).PromiseDeduper();
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting(

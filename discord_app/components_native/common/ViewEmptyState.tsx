@@ -8,10 +8,10 @@ import TextStyles from "../../modules/rebrand/native/TextStyles.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Fonts = fn(1087).Fonts;
+const Fonts = fn(1084).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   emptyContainer: { flex: 1, justifyContent: "center", alignItems: "center", marginHorizontal: 36 },
   emptyImage: { width: 170, height: 130 },

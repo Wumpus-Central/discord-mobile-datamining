@@ -1,7 +1,7 @@
 // discord_app/intl/util.tsx
 import c from "../../_runtime/00576_c.js";
-import _mod1167 from "../../_runtime/metro/01167__.js";
-import _Parser from "../../_runtime/01190__Parser.js";
+import _mod1164 from "../../_runtime/metro/01164__.js";
+import _Parser from "../../_runtime/01187__Parser.js";
 import noop from "../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -10,18 +10,18 @@ require = fn;
 let closure_3 = { es: "es-ES", nb: "no", nn: "no" };
 const ReactCompilerGating = fn(558);
 function getLanguages() {
-  return require("../../_runtime/metro/01189__.js");
+  return require("../../_runtime/metro/01186__.js");
 }
 const size = fn(2);
 const result = size.fileFinishedImporting("intl/util.tsx");
 
 export const getAvailableLocales = function getAvailableLocales() {
   _require = require("messages/en-US.messages.js").default;
-  const found = require("../../_runtime/metro/01189__.js").filter((enabled) => enabled.enabled);
+  const found = require("../../_runtime/metro/01186__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => {
     code = code.code;
     const obj = { value: code, name: code.name, localizedName: null };
-    const obj2 = _mod1167;
+    const obj2 = _mod1164;
     obj.localizedName = closure_0[obj2.runtimeHashMessageKey(obj2, code)];
     return obj;
   });
@@ -41,7 +41,7 @@ export const getAvailableLocales = function getAvailableLocales() {
 };
 export { getLanguages };
 export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) {
-  const found = require("../../_runtime/metro/01189__.js").filter((enabled) => enabled.enabled);
+  const found = require("../../_runtime/metro/01186__.js").filter((enabled) => enabled.enabled);
   const mapped = found.map((code) => code.code);
   if (mapped.includes(Language)) {
     return Language;
@@ -72,14 +72,14 @@ export const getNormalizedLocale = function getNormalizedLocale(Language, arg1) 
       }
     }
   }
-  const arr = require("../../_runtime/metro/01189__.js");
+  const arr = require("../../_runtime/metro/01186__.js");
 };
 export const parseRuntimeIcuAsIntlMessage = function parseRuntimeIcuAsIntlMessage(
   acknowledgedBadgeLabel,
   currentLocale,
 ) {
   const parsed = _Parser.parse(acknowledgedBadgeLabel, { ignoreTag: true });
-  const internalIntlMessage = new _mod1167.InternalIntlMessage(parsed, currentLocale);
+  const internalIntlMessage = new _mod1164.InternalIntlMessage(parsed, currentLocale);
   return internalIntlMessage;
 };
 export const useSyncMessages = ReactCompilerGating.isReactCompilerEnabled()

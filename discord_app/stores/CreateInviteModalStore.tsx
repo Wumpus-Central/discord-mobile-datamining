@@ -68,7 +68,7 @@ function updateWithLatestInvite(channelId, arg1) {
   closure_6 = obj2;
   closure_7 = obj2;
 }
-const FormStates = fn(1087).FormStates;
+const FormStates = fn(1084).FormStates;
 InstantInviteUtilsDefault.INVITE_OPTIONS_UNLIMITED.value;
 let CLOSED = FormStates.CLOSED;
 let c15 = false;

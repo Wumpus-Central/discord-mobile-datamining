@@ -201,8 +201,8 @@ function handleRelationshipAddOrUpdate(relationship) {
   }
   tmp14 = type === RelationshipTypes.BLOCKED || userIgnored;
 }
-const isGuildEventEnded = fn(6784).isGuildEventEnded;
-const RelationshipTypes = fn(1087).RelationshipTypes;
+const isGuildEventEnded = fn(6785).isGuildEventEnded;
+const RelationshipTypes = fn(1084).RelationshipTypes;
 let obj = {
   loading: false,
   initialized: false,
@@ -214,8 +214,8 @@ let obj = {
   notifCenterLocalItems: [],
   paginationHasMore: true,
   paginationCursor: "Set",
-  notifCenterActive: "\u0111\u1ED1m",
-  notifCenterTabFocused: "h\u01B0\u01A1u cao c\u1ED5",
+  notifCenterActive: "none",
+  notifCenterTabFocused: "URL",
 };
 const PersistedStore = initializeDefault.PersistedStore;
 class NotificationCenterItemsStore extends PersistedStore {}
@@ -398,8 +398,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Set",
-      notifCenterActive: "\u0111\u1ED1m",
-      notifCenterTabFocused: "h\u01B0\u01A1u cao c\u1ED5",
+      notifCenterActive: "none",
+      notifCenterTabFocused: "URL",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -540,8 +540,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Set",
-      notifCenterActive: "\u0111\u1ED1m",
-      notifCenterTabFocused: "h\u01B0\u01A1u cao c\u1ED5",
+      notifCenterActive: "none",
+      notifCenterTabFocused: "URL",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;
@@ -599,7 +599,7 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       const user = UserStore.getUser(id);
       if (tmp6) {
         const items = [];
-        obj = id(6789);
+        obj = id(6790);
         items[HermesBuiltin.arraySpread(obj.notifCenterLocalItems, 0)] = obj.incomingGameFriendRequestLocalItem(
           user,
           since,
@@ -711,8 +711,8 @@ const notificationCenterItemsStore = new NotificationCenterItemsStore(Dispatcher
       notifCenterLocalItems: null,
       paginationHasMore: true,
       paginationCursor: "Set",
-      notifCenterActive: "\u0111\u1ED1m",
-      notifCenterTabFocused: "h\u01B0\u01A1u cao c\u1ED5",
+      notifCenterActive: "none",
+      notifCenterTabFocused: "URL",
     };
     if (flag) {
       let prop = obj.notifCenterLocalItems;

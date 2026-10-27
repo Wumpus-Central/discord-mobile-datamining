@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import native from "../../../../../design/void/native.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
-import _modDef9702 from "../../../../../../_runtime/metro/09702__.js";
+import _modDef9704 from "../../../../../../_runtime/metro/09704__.js";
 import MaskedBadgeDefault from "../MaskedBadge.tsx";
 import PressableNavigatorButtonWrapperDefault from "PressableNavigatorButtonWrapper.tsx";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -18,7 +18,7 @@ let closure_3 = ["navigation", "onPress", "badgeCutoutColor", "ref"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_12 = createStyles.createStyles(() => {
   const obj = { maskWrapper: null, maskStroke: null, actionButtonPressable: null, actionButtonIcon: null };
   const rect = {
@@ -107,13 +107,13 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
         if (stateFromStores < 100) {
           const _Symbol2 = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj2 = { minWidth: tmp(1202).BADGE_SIZE + 8 };
+            const obj2 = { minWidth: tmp(1199).BADGE_SIZE + 8 };
             cResult[8] = obj2;
           }
         } else {
           const _Symbol = Symbol;
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-            const obj3 = { minWidth: tmp(1202).BADGE_SIZE + 12 };
+            const obj3 = { minWidth: tmp(1199).BADGE_SIZE + 12 };
             cResult[9] = obj3;
           }
         }
@@ -122,7 +122,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
       let backgroundColor = require("useToken").useToken(tmp4);
       const tmpResult3 = require("useToken");
       if (backgroundColor == null) {
-        backgroundColor = tmpResult4.useGradientValue(tmp(5144).GradientPercentage.START);
+        backgroundColor = tmpResult4.useGradientValue(tmp(5145).GradientPercentage.START);
       }
       if (backgroundColor == null) {
         backgroundColor = tmp12.maskStroke.backgroundColor;
@@ -133,18 +133,18 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
         }
         if (cResult[13] !== stateFromStores) {
           if (stateFromStores > 0) {
-            const intl2 = tmp(1128).intl;
+            const intl2 = tmp(1125).intl;
             const obj4 = { mentionCount: stateFromStores };
-            let formatToPlainStringResult = intl2.formatToPlainString(tmp(1128).t.vxFYaM, obj4);
+            let formatToPlainStringResult = intl2.formatToPlainString(tmp(1125).t.vxFYaM, obj4);
           } else {
-            const intl = tmp(1128).intl;
-            formatToPlainStringResult = intl.string(tmp(1128).t["13/7kX"]);
+            const intl = tmp(1125).intl;
+            formatToPlainStringResult = intl.string(tmp(1125).t["13/7kX"]);
           }
           cResult[13] = stateFromStores;
           cResult[14] = formatToPlainStringResult;
         } else {
           if (cResult[15] !== tmp12.actionButtonIcon.tintColor) {
-            const obj5 = { source: _modDef9702, style: null };
+            const obj5 = { source: _modDef9704, style: null };
             const obj6 = { tintColor: tmp12.actionButtonIcon.tintColor };
             obj5.style = obj6;
             const tmp31 = closure_10(FastImageDefault, obj5);
@@ -186,7 +186,7 @@ export const PressableNavigatorBackIcon = ReactCompilerGating.isReactCompilerEna
                   obj8.onPress = tmp23;
                   obj8.style = tmp12.actionButtonPressable;
                   obj8.children = tmp37;
-                  obj7.children = closure_10(tmp(6908).PressableOpacity, obj8);
+                  obj7.children = closure_10(tmp(6910).PressableOpacity, obj8);
                   const tmp48 = closure_10(PressableNavigatorButtonWrapperDefault, obj7);
                   cResult[25] = tmp23;
                   cResult[26] = tmp7;

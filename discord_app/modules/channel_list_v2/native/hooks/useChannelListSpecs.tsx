@@ -9,7 +9,7 @@ import RedesignGuildHeader from "../RedesignGuildHeader.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const RedesignChannelListConstants = fn(11953);
+const RedesignChannelListConstants = fn(11954);
 ({ STICKY_BANNER_ASPECT_RATIO: closure_4, BANNER_MAX_HEIGHT_PERCENTAGE: hasOwnProperty } =
   RedesignChannelListConstants);
 const ReactCompilerGating = fn(558);
@@ -120,14 +120,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = useFontScale;
     }
   : function useChannelListSpecs(banner) {
-      redesignGuildHeaderHeight = redesignGuildHeaderHeight(17560).useRedesignGuildHeaderHeight(banner);
-      height = height(1499)({ ignoreKeyboard: true }).height;
-      const tmp2 = height(17447)();
+      redesignGuildHeaderHeight = redesignGuildHeaderHeight(17601).useRedesignGuildHeaderHeight(banner);
+      height = height(1496)({ ignoreKeyboard: true }).height;
+      const tmp2 = height(17488)();
       dependencyMap = tmp2;
-      const obj = redesignGuildHeaderHeight(17560);
-      const fontScale = redesignGuildHeaderHeight(5253).useFontScale();
+      const obj = redesignGuildHeaderHeight(17601);
+      const fontScale = redesignGuildHeaderHeight(5254).useFontScale();
       closure_4 = tmp4;
-      const top = height(1633)().top;
+      const top = height(1630)().top;
       const items = [null != banner.banner, tmp2, height, redesignGuildHeaderHeight, top, fontScale];
       return fontScale.useMemo(() => {
         let num = 0;

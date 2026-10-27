@@ -22,9 +22,9 @@ function renderChannelSecondaryViewChatHeader(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9743);
+const NativeStackNavigator = fn(9745);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj3 = { actions: { marginRight: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
@@ -219,8 +219,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const params = navigation.route.params;
       const tmp = closure_7();
       dependencyMap = tmp;
-      const tmp2 = params(5146)();
-      const accessibilityNativeStackOptions = navigation(7095).useAccessibilityNativeStackOptions();
+      const tmp2 = params(5147)();
+      const accessibilityNativeStackOptions = navigation(7097).useAccessibilityNativeStackOptions();
       const channelId = params.channelId;
       const items = [channelId, tmp, navigation, accessibilityNativeStackOptions];
       const memo = accessibilityNativeStackOptions.useMemo(() => {
@@ -256,5 +256,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
       };
       obj2.children = channelId(closure_6.Navigator, obj3);
-      return channelId(navigation(5037).ThemeContextProvider, obj2);
+      return channelId(navigation(5038).ThemeContextProvider, obj2);
     };

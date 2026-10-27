@@ -1,8 +1,8 @@
 // discord_app/modules/instant_invite/native/GuildInviteUtils.tsx
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
-import fuzzysearchDefault from "../../../../_runtime/06827_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/06829_fuzzysearch.js";
 import InstantInviteActionCreatorsDefault from "../../../actions/InstantInviteActionCreators.tsx";
 import InstantInviteUtilsDefault from "../../../utils/InstantInviteUtils.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
@@ -63,18 +63,18 @@ let closure_16 = async function _sendGuildInvite(arg0) {
     obj7.inviteAnalyticsMetadata = { source: closure_131_2 };
     closure_132_1(closure_132_2[24]).enqueue(obj7, () => {
       closure_2_12(closure_1_0, closure_1_1, constants.SENT);
-      const AccessibilityAnnouncer = closure_0(4980).AccessibilityAnnouncer;
-      const intl = closure_0(1128).intl;
-      AccessibilityAnnouncer.announce(intl.string(closure_0(1128).t.PuLLzP));
+      const AccessibilityAnnouncer = closure_0(4981).AccessibilityAnnouncer;
+      const intl = closure_0(1125).intl;
+      AccessibilityAnnouncer.announce(intl.string(closure_0(1125).t.PuLLzP));
     });
     c5 = 0;
     closure_132_1(closure_132_2[24]);
   }
   return value;
 };
-const setSendState = fn(14253).setSendState;
-const InviteSendStates = fn(7809).InviteSendStates;
-const Constants = fn(1087);
+const setSendState = fn(14280).setSendState;
+const InviteSendStates = fn(7810).InviteSendStates;
+const Constants = fn(1084);
 ({ Permissions: closure_14, AnalyticEvents: closure_15 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -84,7 +84,7 @@ export const showGuildInviteActionSheet = function showGuildInviteActionSheet(id
   AnalyticsUtilsDefault.track(constants2.OPEN_POPOUT, { type: "Invite to Guilds", source: newestAnalyticsLocation });
   const obj2 = { type: "Invite to Guilds", source: newestAnalyticsLocation };
   const obj3 = ActionSheetActionCreatorsDefault;
-  obj3.openLazy(asyncRequireImpl(14254, dependencyMap.paths), "invite-to-guilds-" + id, {
+  obj3.openLazy(asyncRequireImpl(14281, dependencyMap.paths), "invite-to-guilds-" + id, {
     recipientId: id,
     source: newestAnalyticsLocation,
   });

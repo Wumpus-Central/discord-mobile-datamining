@@ -160,9 +160,9 @@ function getScreens() {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const isGuildVocalChannelType = fn(4827).isGuildVocalChannelType;
-let isGuildOwner = fn(4841).isGuildOwner;
-const Constants = fn(1087);
+const isGuildVocalChannelType = fn(4828).isGuildVocalChannelType;
+let isGuildOwner = fn(4842).isGuildOwner;
+const Constants = fn(1084);
 const ChannelTypes = Constants.ChannelTypes;
 ({
   GuildFeatures: closure_15,
@@ -170,10 +170,10 @@ const ChannelTypes = Constants.ChannelTypes;
   AnalyticEvents: closure_17,
   HelpdeskArticles: closure_18,
 } = Constants);
-const RowType = fn(7875).RowType;
+const RowType = fn(7876).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   addMembersContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 },
   errorMessage: { marginBottom: 0 },
@@ -1461,7 +1461,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
                             }
                           }
                           const obj7 = { type: "critical", message: tmp28.message, role: "alert" };
-                          obj6.children = closure_20(tmp(7953).InlineNotice, obj7);
+                          obj6.children = closure_20(tmp(7954).InlineNotice, obj7);
                           tmp37 = closure_20(first, obj6);
                         }
                       }
@@ -1534,11 +1534,11 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (tmp) {
               if (row.rowType === constants2.ROLE) {
-                result.push(channelType(5994).permissionOverwriteForRole(row.id, channelType));
-                const obj2 = channelType(5994);
+                result.push(channelType(5995).permissionOverwriteForRole(row.id, channelType));
+                const obj2 = channelType(5995);
               } else if (row.rowType === tmp2.MEMBER) {
-                result.push(channelType(5994).permissionOverwriteForUser(row.id, channelType));
-                const obj = channelType(5994);
+                result.push(channelType(5995).permissionOverwriteForUser(row.id, channelType));
+                const obj = channelType(5995);
               }
             }
           });
@@ -1722,7 +1722,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp6;
       }
-      const tmp7 = closure_20(tmp(7095).Navigator, { screens, initialRouteStack: initialStack });
+      const tmp7 = closure_20(tmp(7097).Navigator, { screens, initialRouteStack: initialStack });
       cResult[2] = initialStack;
       cResult[3] = screens;
       cResult[4] = tmp7;

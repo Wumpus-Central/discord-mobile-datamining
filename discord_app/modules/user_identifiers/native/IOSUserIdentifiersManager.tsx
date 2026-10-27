@@ -7,7 +7,7 @@ import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.ts
 
 let require = fn;
 const NativeModules = fn(17).NativeModules;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 let closure_7 = {
   APP_TRANSACTION_UNAVAILABLE: "native_unavailable",
   APP_TRANSACTION_CANCELLED: "native_cancelled",

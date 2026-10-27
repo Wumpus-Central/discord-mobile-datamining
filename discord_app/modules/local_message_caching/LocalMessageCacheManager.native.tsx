@@ -3,7 +3,7 @@ import LoggerDefault from "../debug/Logger.tsx";
 import Storage3 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import DurationsDefault from "../../utils/Durations.tsx";
-import _modDef2049 from "../../../_runtime/metro/02049__.js";
+import _modDef2046 from "../../../_runtime/metro/02046__.js";
 import DateUtils from "../../utils/DateUtils.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
 import createMessageDefault from "../messages/createMessage.tsx";
@@ -42,8 +42,8 @@ function getAllCachedMessages() {
 }
 function messageTimestampIsInInterval(arg0, c7) {
   if (null != arg0) {
-    const tmp4 = _modDef2049();
-    const tmp5 = _modDef2049(arg0);
+    const tmp4 = _modDef2046();
+    const tmp5 = _modDef2046(arg0);
     return DateUtils.isWithinInterval(tmp4, tmp5, c7);
   } else {
     return false;
@@ -240,8 +240,8 @@ let closure_25 = async function _rehydrateFailedMessages(arg0) {
     }
   }
 };
-const MessageStates = fn(1087).MessageStates;
-const MutexUtils = fn(15818);
+const MessageStates = fn(1084).MessageStates;
+const MutexUtils = fn(15856);
 let closure_10 = MutexUtils.createLock();
 let closure_11 = new LoggerDefault("LocalMessageCacheManager");
 const LocalMessageCacheManagerMessageCacheKey = "LocalMessageCacheManagerMessageCacheKey";
@@ -962,7 +962,7 @@ prototype["_initialize"] = function _initialize() {
                 c6 = 1;
                 closure_131_1 = tmp10;
                 channel_id = closure_131_1.channel_id;
-                let obj9 = values(6491);
+                let obj9 = values(6492);
                 value = obj9.get(channel_id);
                 dependencyMap = value;
                 if (value == null) {

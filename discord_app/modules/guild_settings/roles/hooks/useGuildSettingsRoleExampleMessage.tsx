@@ -10,7 +10,7 @@ import UserRecord from "../../../../records/UserRecord.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const MessageStates = fn(1087).MessageStates;
+const MessageStates = fn(1084).MessageStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/hooks/useGuildSettingsRoleExampleMessage.tsx");

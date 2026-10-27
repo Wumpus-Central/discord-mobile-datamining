@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import NavigatorConstants from "../../../../../design/components/Navigator/native/NavigatorConstants.native.tsx";
@@ -37,7 +37,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
     return obj.openLazy(
-      asyncRequireImpl(19220, dependencyMap.paths),
+      asyncRequireImpl(19258, dependencyMap.paths),
       EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY,
       {
         eligibility,
@@ -117,12 +117,12 @@ function StartEarningButton(isTermsAccepted) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const creatorPortalUrl = fn(16562).CREATOR_REVENUE_PORTAL_URL;
-const GuildSettingsSections = fn(1087).GuildSettingsSections;
-const constants = fn(19216).CreatorMonetizationOnboardingMarketingSection;
+const creatorPortalUrl = fn(16604).CREATOR_REVENUE_PORTAL_URL;
+const GuildSettingsSections = fn(1084).GuildSettingsSections;
+const constants = fn(19254).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { flex: 1 },
   contentContainer: { flex: 1, padding: 24 },
@@ -416,11 +416,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = require("c").c(16);
       ({ onboardingMarketing, onHowItWorksLayoutChange } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        let intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t.R9rNIk);
-        const intl2 = tmp(1128).intl;
+        let intl = tmp(1125).intl;
+        const stringResult = intl.string(tmp(1125).t.R9rNIk);
+        const intl2 = tmp(1125).intl;
         let obj2 = { creatorPortalUrl };
-        const formatResult = intl2.format(tmp(1128).t.oxW30N, obj2);
+        const formatResult = intl2.format(tmp(1125).t.oxW30N, obj2);
         cResult[0] = stringResult;
         cResult[1] = formatResult;
         tmp4 = stringResult;
@@ -446,8 +446,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       }
       _require = tmp13;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = tmp(1128).intl;
-        const stringResult1 = intl3.string(tmp(1128).t["1QHJaW"]);
+        const intl3 = tmp(1125).intl;
+        const stringResult1 = intl3.string(tmp(1125).t["1QHJaW"]);
         cResult[5] = stringResult1;
         let tmp18 = stringResult1;
       } else {

@@ -8,10 +8,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   header: {
-    height: fn(5268).NAV_BAR_HEIGHT,
+    height: fn(5269).NAV_BAR_HEIGHT,
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 8,
@@ -22,7 +22,7 @@ let obj = {
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  height: fn(5268).NAV_BAR_HEIGHT,
+  height: fn(5269).NAV_BAR_HEIGHT,
   flexDirection: "row",
   alignItems: "center",
   paddingHorizontal: 8,

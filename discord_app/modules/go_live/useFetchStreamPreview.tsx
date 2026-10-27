@@ -9,7 +9,7 @@ import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const BasicPermissions = fn(1098).BasicPermissions;
+const BasicPermissions = fn(1095).BasicPermissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/useFetchStreamPreview.tsx");

@@ -5,9 +5,9 @@ import BackoffDefault from "../../discord_common/js/packages/backoff/Backoff.tsx
 import DispatcherDefault from "../Dispatcher.tsx";
 import util from "../intl/index.native.tsx";
 import SentryUtilsDefault from "../utils/SentryUtils.native.tsx";
-import MurmurHashV3Default from "../../_runtime/01266_MurmurHashV3.js";
+import MurmurHashV3Default from "../../_runtime/01263_MurmurHashV3.js";
 import AnalyticsUtilsDefault from "../utils/AnalyticsUtils.tsx";
-import v1 from "../../_runtime/01281_v1.js";
+import v1 from "../../_runtime/01278_v1.js";
 import PlatformUtils from "../utils/PlatformUtils.tsx";
 import URLUtilsDefault from "../utils/URLUtils.tsx";
 import FlagUtils from "../../discord_common/js/shared/utils/FlagUtils.tsx";
@@ -105,8 +105,8 @@ function getEventHistoryString() {
   }
   return JSON.stringify(items);
 }
-const getSystemAnalyticsInfo = fn(5733).getSystemAnalyticsInfo;
-let Constants = fn(1087);
+const getSystemAnalyticsInfo = fn(5734).getSystemAnalyticsInfo;
+let Constants = fn(1084);
 ({
   AnalyticEvents: closure_17,
   ChannelTypes: closure_18,
@@ -114,10 +114,10 @@ let Constants = fn(1087);
   RTCConnectionQuality: closure_20,
   BoostedGuildTiers: closure_21,
 } = Constants);
-const StreamSettingsConstants = fn(5814);
+const StreamSettingsConstants = fn(5815);
 ({ ApplicationStreamFPS: closure_22, ApplicationStreamResolutions: closure_23 } = StreamSettingsConstants);
-let closure_24 = fn(5815).BROWSER_SUPPORTS_UNIFIED_PLAN;
-Constants = fn(5718);
+let closure_24 = fn(5816).BROWSER_SUPPORTS_UNIFIED_PLAN;
+Constants = fn(5719);
 ({
   Features: closure_25,
   MediaEngineContextTypes: closure_26,
@@ -3781,7 +3781,7 @@ prototype["_handleMLSPrepareCommitTransition"] = function _handleMLSPrepareCommi
   dependencyMap = arg1;
   let logger = this.logger;
   logger.info("Received MLS commit for transition ID " + arg0);
-  const commitReceivedTime = _connection(5722).now();
+  const commitReceivedTime = _connection(5723).now();
   _connection = this._connection;
   if (_connection != null) {
     let result = _connection.prepareMLSCommitTransition(arg0, arg1, (arg0, protocolVersion, arg2) => {
@@ -3821,7 +3821,7 @@ prototype["_handleMLSWelcome"] = function _handleMLSWelcome(arg0, arg1) {
   dependencyMap = arg1;
   const logger = this.logger;
   logger.info("Received MLS welcome for transition ID " + arg0);
-  const welcomeReceivedTime = _connection(5722).now();
+  const welcomeReceivedTime = _connection(5723).now();
   _connection = this._connection;
   if (_connection != null) {
     _connection.processMLSWelcome(arg0, arg1, (arg0, protocolVersion, arg2) => {

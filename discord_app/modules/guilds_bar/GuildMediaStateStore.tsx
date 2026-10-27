@@ -261,7 +261,7 @@ function computeGuildMediaState(id) {
           const basicChannel = ChannelStore.getBasicChannel(item);
           let tmp2 = null != basicChannel;
           if (tmp2) {
-            tmp2 = closure_1(6639)(basicChannel, PermissionStore);
+            tmp2 = closure_1(6640)(basicChannel, PermissionStore);
           }
           return tmp2;
         });
@@ -277,7 +277,7 @@ function computeGuildMediaState(id) {
           let someResult2 = found.length > 0;
         } else {
           someResult2 = found.some((location) => {
-            const channel = ChannelStore.getChannel(id(4892).getEmbeddedActivityLocationChannelId(location.location));
+            const channel = ChannelStore.getChannel(id(4893).getEmbeddedActivityLocationChannelId(location.location));
             let tmp2 = null != channel;
             if (tmp2) {
               tmp2 = isVoiceChannel(channel.type);
@@ -333,8 +333,8 @@ function handleSelectedChannelChange() {
   }
   return tmp2;
 }
-const isVoiceChannel = fn(4827).isVoiceChannel;
-const Constants = fn(1087);
+const isVoiceChannel = fn(4828).isVoiceChannel;
+const Constants = fn(1084);
 ({ BasicPermissions: closure_18, ME: closure_19 } = Constants);
 let closure_20 = Object.freeze({
   audio: false,

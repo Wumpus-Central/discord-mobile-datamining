@@ -1,7 +1,7 @@
 // discord_app/modules/links/native/handleSupportedURL.tsx
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import KeyboardManagerUtils from "../../../utils/native/KeyboardManagerUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import NavigationRouteUtils from "../../main_tabs_v2/helpers/NavigationRouteUtils.native.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import BoostingActionCreators from "../../../actions/native/BoostingActionCreators.tsx";
@@ -36,9 +36,9 @@ import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
 
 require = fn;
 let closure_4 = ["code", "state"];
-fn(6859).addPostConnectionCallback;
-let closure_9 = fn(7533).handleMobileWebCheckoutStatus;
-const Constants = fn(1087);
+fn(6861).addPostConnectionCallback;
+let closure_9 = fn(7534).handleMobileWebCheckoutStatus;
+const Constants = fn(1084);
 ({
   AnalyticEvents: closure_12,
   LinkingTypes: map1,
@@ -47,14 +47,14 @@ const Constants = fn(1087);
   PlatformTypes: closure_16,
   ME: closure_17,
 } = Constants);
-const StaticChannelRoute = fn(4830).StaticChannelRoute;
-const StreamTypes = fn(6643).StreamTypes;
-const NativePermissionTypes = fn(7868).NativePermissionTypes;
-let closure_21 = fn(10745).OAUTH2_AUTHORIZE_MODAL_KEY;
-let closure_22 = fn(7646).FAMILY_CENTER_LINK_REQUEST_REGEX;
-let closure_23 = fn(5698).MobileWebRedirectCheckoutDeepLinkActions;
-const SHARE_SCREEN_MODAL_KEY = fn(15094).SHARE_SCREEN_MODAL_KEY;
-const MobileUserSettings = fn(8332).MobileUserSettings;
+const StaticChannelRoute = fn(4831).StaticChannelRoute;
+const StreamTypes = fn(6644).StreamTypes;
+const NativePermissionTypes = fn(7869).NativePermissionTypes;
+let closure_21 = fn(10748).OAUTH2_AUTHORIZE_MODAL_KEY;
+let closure_22 = fn(7647).FAMILY_CENTER_LINK_REQUEST_REGEX;
+let closure_23 = fn(5699).MobileWebRedirectCheckoutDeepLinkActions;
+const SHARE_SCREEN_MODAL_KEY = fn(15130).SHARE_SCREEN_MODAL_KEY;
+const MobileUserSettings = fn(8331).MobileUserSettings;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/native/handleSupportedURL.tsx");
 
@@ -215,7 +215,7 @@ export default function handleSupportedURL(payload) {
     }
     if (flag2) {
       payload(inviteCode[29]).startDiceRoll(channelId2, diceCount, diceSides);
-      const obj21 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: "bu\u017Aka" };
+      const obj21 = { guildId: guildId2, channelId: channelId2, messageId: "Array", navigationSettings: true };
       const obj26 = { safe, navigationReplace, waitForConnection, skipMessageFetch, isAppStartupNavigation };
       obj21.navigationSettings = obj26;
       rootNavigationRef1(inviteCode[30])(obj21);
@@ -306,7 +306,7 @@ export default function handleSupportedURL(payload) {
             null != remoteAuthFingerprint
               ? () => {
                   ModalActionCreatorsDefault.pushLazy(
-                    asyncRequireImpl(15106, dependencyMap.paths),
+                    asyncRequireImpl(15142, dependencyMap.paths),
                     { remoteAuthFingerprint },
                     "REMOTE_AUTH_MODAL",
                   );
@@ -677,15 +677,15 @@ export default function handleSupportedURL(payload) {
                         if (null != tmp19) {
                           obj7.openid_params = tmp19;
                         }
-                        closure_1(6672).popAll();
-                        const obj5 = closure_1(6672);
+                        closure_1(6673).popAll();
+                        const obj5 = closure_1(6673);
                         tmp10 = tmp50;
                         const obj10 = { screen: constants.CONNECTIONS };
-                        dependencyMap(7490).openUserSettings(obj10);
-                        const obj6 = dependencyMap(7490);
+                        dependencyMap(7491).openUserSettings(obj10);
+                        const obj6 = dependencyMap(7491);
                         c7 = 1;
                         c8 = 1;
-                        const obj11 = { value: closure_1(7274).callback(payload.provider, obj7), done: false };
+                        const obj11 = { value: closure_1(7276).callback(payload.provider, obj7), done: false };
                         return obj11;
                       } else {
                         c8 = 3;
@@ -701,12 +701,12 @@ export default function handleSupportedURL(payload) {
                     if (body != null) {
                       redirect = body.redirect;
                     }
-                    closure_133_1 = closure_1(1386).toURLSafe(redirect);
+                    closure_133_1 = closure_1(1383).toURLSafe(redirect);
                     if (null != closure_133_1) {
-                      closure_1(5660).openURL(closure_133_1.toString());
-                      const obj13 = closure_1(5660);
+                      closure_1(5661).openURL(closure_133_1.toString());
+                      const obj13 = closure_1(5661);
                     }
-                    const obj12 = closure_1(1386);
+                    const obj12 = closure_1(1383);
                   }
                   c8 = 3;
                   const obj = { value, done: true };

@@ -43,7 +43,7 @@ function getChannelRoleSubscriptionStatus(id) {
   }
   return obj3;
 }
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 let closure_6 = { needSubscriptionToAccess: false, isSubscriptionGated: false };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

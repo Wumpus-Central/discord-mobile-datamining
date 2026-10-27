@@ -7,9 +7,9 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_9 = createStyles.createStyles({ container: { flexDirection: "row" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -42,8 +42,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = useIsVoiceChannelFullDefault(channel);
       const stateFromStores = channel(504).useStateFromStores(first, tmp8);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t.eIi3Om);
+        const intl = tmp(1125).intl;
+        const stringResult = intl.string(tmp(1125).t.eIi3Om);
         cResult[3] = stringResult;
         let tmp10 = stringResult;
       } else {
@@ -52,8 +52,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (tmp5) {
         const _Symbol2 = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl3 = tmp(1128).intl;
-          const stringResult1 = intl3.string(tmp(1128).t.rZfiNq);
+          const intl3 = tmp(1125).intl;
+          const stringResult1 = intl3.string(tmp(1125).t.rZfiNq);
           cResult[4] = stringResult1;
         }
       } else {
@@ -61,8 +61,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores) {
           const _Symbol = Symbol;
           if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl2 = tmp(1128).intl;
-            const stringResult2 = intl2.string(tmp(1128).t.TVBCKZ);
+            const intl2 = tmp(1125).intl;
+            const stringResult2 = intl2.string(tmp(1125).t.TVBCKZ);
             cResult[5] = stringResult2;
             let tmp12 = stringResult2;
           } else {
@@ -116,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { disabled: flag, text: tmp10, onPress: N };
-          const tmp21 = jsx(tmp(5244).Button, { disabled: flag, text: tmp10, onPress: N });
+          const tmp21 = jsx(tmp(5245).Button, { disabled: flag, text: tmp10, onPress: N });
           cResult[11] = tmp10;
           cResult[12] = flag;
           cResult[13] = N;
@@ -138,17 +138,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items,
         () => !PermissionStore.can(Permissions.CONNECT, channel),
       );
-      const intl = channel(1128).intl;
-      let stringResult = intl.string(channel(1128).t.eIi3Om);
+      const intl = channel(1125).intl;
+      let stringResult = intl.string(channel(1125).t.eIi3Om);
       if (tmp3) {
-        const intl3 = tmp4(1128).intl;
-        stringResult = intl3.string(tmp4(1128).t.rZfiNq);
+        const intl3 = tmp4(1125).intl;
+        stringResult = intl3.string(tmp4(1125).t.rZfiNq);
         let flag = true;
       } else {
         flag = false;
         if (stateFromStores) {
-          const intl2 = tmp4(1128).intl;
-          stringResult = intl2.string(tmp4(1128).t.TVBCKZ);
+          const intl2 = tmp4(1125).intl;
+          stringResult = intl2.string(tmp4(1125).t.TVBCKZ);
           flag = true;
         }
       }
@@ -160,6 +160,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
         const voiceChannel = SelectedChannelActionCreatorsDefault.selectVoiceChannel(channel.id);
       }, items1);
-      obj2.children = jsx(channel(5244).Button, { disabled: flag, text: stringResult, onPress: callback });
+      obj2.children = jsx(channel(5245).Button, { disabled: flag, text: stringResult, onPress: callback });
       return <View style={null}>{null}</View>;
     };

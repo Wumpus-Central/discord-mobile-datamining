@@ -13,7 +13,7 @@ import SortedVoiceStateStore from "../../stores/views/SortedVoiceStateStore.tsx"
 import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_9, ActivityTypes: c10 } = Constants);
 const MINUTE = DurationsDefault.Millis.MINUTE;
 class AppAnalyticsManager extends tmp3 {

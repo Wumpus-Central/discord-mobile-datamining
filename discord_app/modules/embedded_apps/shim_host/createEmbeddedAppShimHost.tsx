@@ -1,40 +1,34 @@
 // discord_app/modules/embedded_apps/shim_host/createEmbeddedAppShimHost.tsx
+import _mod12 from "../../../../_runtime/metro/00012__.js";
 import protocol from "../../../../discord_common/js/packages/embedded-app-shims/src/shared/protocol.tsx";
-import connection from "../../../../discord_common/js/packages/embedded-app-shims/src/shared/connection.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-const result = size.fileFinishedImporting("modules/embedded_apps/shim_host/createEmbeddedAppShimHost.tsx");
+const require = globalThis.__r;
 
-export const createEmbeddedAppShimHost = function createEmbeddedAppShimHost(state, arg1) {
-  ({ onChildState: require, onDisconnect: dependencyMap } = arg1);
-  closure_3 = connection.createChildConnector(
-    function handleMessage(type) {
-      if (type.type === protocol.ChildToParentEvent.STATE_UPDATED) {
-        closure_1_0(type.state);
-      } else if (type.type === protocol.ChildToParentEvent.DISCONNECTED) {
-        dependencyMap();
-      }
-    },
-    function sendParentState() {
-      closure_3.dispatch({ type: protocol.ParentToChildEvent.STATE_UPDATED, state });
-    },
-  );
-  return {
+let result = size.fileFinishedImporting("modules/embedded_apps/shim_host/createEmbeddedAppShimHost.tsx");
+
+export const createEmbeddedAppShimHost = function createEmbeddedAppShimHost(arg0) {
+  ({ onConnect: require, onMessage } = arg0);
+  const map = new Map();
+  closure_3 = require("connection").createChildConnector(onMessage, () => {
+    map.clear();
+    require(obj2);
+  });
+  const obj2 = {
     offer(arg0) {
       return closure_3.offer(arg0);
     },
-    setParentState(parentState) {
-      closure_1 = state;
-      const keys = Object.keys(parentState);
-      if (!keys.every((item) => parentState[item] === closure_1[item])) {
-        state = parentState;
-        const obj = { type: protocol.ParentToChildEvent.STATE_UPDATED, state };
-        closure_3.dispatch(obj);
+    dispatch(type) {
+      if (!obj.isEqual(map.get(type.type), type)) {
+        const result = map.set(type.type, type);
+        closure_3.dispatch(type);
       }
+      obj = _mod12;
     },
     close() {
       closure_3.close();
-      dependencyMap();
+      onMessage({ type: protocol.ChildToParentEvent.DISCONNECTED });
     },
   };
+  return obj2;
 };

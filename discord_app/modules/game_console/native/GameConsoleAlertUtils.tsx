@@ -8,8 +8,8 @@ import MediaEngineStore from "../../../stores/MediaEngineStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(9626).GAME_CONSOLE_ALERT_MODAL_LOCATION;
-const Constants = fn(1087);
+let closure_4 = fn(9628).GAME_CONSOLE_ALERT_MODAL_LOCATION;
+const Constants = fn(1084);
 ({ InputModes: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -24,12 +24,12 @@ export default {
         )
       ) {
         const obj = {};
-        let intl = tmp10(1128).intl;
-        obj[constants2.XBOX] = intl.string(tmp10(1128).t.bVZ7vy);
-        const intl2 = tmp10(1128).intl;
-        obj[constants2.PLAYSTATION] = intl2.string(tmp10(1128).t["6iqUsf"]);
-        const intl3 = tmp10(1128).intl;
-        obj[constants2.PLAYSTATION_STAGING] = intl3.string(tmp10(1128).t["6iqUsf"]);
+        let intl = tmp10(1125).intl;
+        obj[constants2.XBOX] = intl.string(tmp10(1125).t.bVZ7vy);
+        const intl2 = tmp10(1125).intl;
+        obj[constants2.PLAYSTATION] = intl2.string(tmp10(1125).t["6iqUsf"]);
+        const intl3 = tmp10(1125).intl;
+        obj[constants2.PLAYSTATION_STAGING] = intl3.string(tmp10(1125).t["6iqUsf"]);
         _require = tmp3;
         if (null == obj[XBOX]) {
           let resolved = Promise.resolve();
@@ -40,8 +40,8 @@ export default {
             const intl = util.intl;
             obj2.body = intl.string(util.t.bL21zs);
             obj2.onConfirm = function onConfirm() {
-              const result = closure_0(5001).UNSAFE_markDismissibleContentAsDismissed(
-                closure_0(4807).DismissibleContent.CONSOLE_PTT_DISABLE_ALERT,
+              const result = closure_0(5002).UNSAFE_markDismissibleContentAsDismissed(
+                closure_0(4808).DismissibleContent.CONSOLE_PTT_DISABLE_ALERT,
               );
               closure_0();
             };
@@ -59,7 +59,7 @@ export default {
     ({ title, body, errorCodeMessage } = reconnectPlatformType);
     const obj2 = { title, body: null, onConfirm: null, isDismissable: false };
     let obj = actions_AlertActionCreatorsDefault;
-    obj2.body = jsx(reconnectPlatformType(11659).SelfDismissibleAlertBody, {
+    obj2.body = jsx(reconnectPlatformType(11661).SelfDismissibleAlertBody, {
       body,
       errorCodeMessage,
       dismissCallback: actions_AlertActionCreatorsDefault.close,

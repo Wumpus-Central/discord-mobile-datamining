@@ -31,7 +31,7 @@ function byteSize(data) {
     return 0;
   }
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
 let closure_9 = new LoggerDefault("GatewaySocket");
 let tmp3 = new LoggerDefault("GatewaySocket");
@@ -192,7 +192,7 @@ prototype["_connect"] = function _connect() {
     if (obj.getIsPaused()) {
       logger.info("Skipping _connect because socket is paused");
     } else {
-      self.connectionState = identify(14962).CONNECTING;
+      self.connectionState = identify(14998).CONNECTING;
       self.nextReconnectIsImmediate = false;
       const algorithm = self.compressionHandler.getAlgorithm();
       name = name.getName();
@@ -412,7 +412,7 @@ prototype["_connect"] = function _connect() {
         }
       }
       if (null == tmp32) {
-        const tmp48 = tmp5(14953)(str1);
+        const tmp48 = tmp5(14989)(str1);
         tmp48.binaryType = "arraybuffer";
         tmp32 = tmp48;
       }
@@ -660,7 +660,7 @@ prototype["_tryDetectInvalidIOSToken"] = function _tryDetectInvalidIOSToken(c13,
   if (isIOSResult) {
     self.iosGoingAwayEventCount = self.iosGoingAwayEventCount + 1;
     if (3 === self.iosGoingAwayEventCount) {
-      const HTTP = tmp(1297).HTTP;
+      const HTTP = tmp(1294).HTTP;
       const obj2 = { url: constants2.ME, headers: null, rejectWithError: false };
       const obj3 = { authorization: self.token };
       obj2.headers = obj3;
@@ -853,31 +853,31 @@ prototype["_doIdentify"] = function _doIdentify() {
             const handleIdentifyResult = self.handleIdentify();
             closure_128_0 = handleIdentifyResult;
             if (null !== handleIdentifyResult) {
-              self.connectionState = tmp2(14962).IDENTIFYING;
+              self.connectionState = tmp2(14998).IDENTIFYING;
               const _Date = Date;
               const timestamp = Date.now();
               closure_128_1 = timestamp;
               self.identifyStartTime = timestamp;
               if (obj10.isCacheEnabled()) {
-                let committedVersions = tmp2(7726).getCommittedVersions();
-                const obj12 = tmp2(7726);
+                let committedVersions = tmp2(7727).getCommittedVersions();
+                const obj12 = tmp2(7727);
               } else {
                 committedVersions = {};
               }
               const items = [committedVersions, ,];
-              obj10 = tmp3(7722);
+              obj10 = tmp3(7723);
               if (obj13.isCacheEnabled()) {
-                let committedVersions1 = tmp2(7729).getCommittedVersions();
-                const obj15 = tmp2(7729);
+                let committedVersions1 = tmp2(7730).getCommittedVersions();
+                const obj15 = tmp2(7730);
               } else {
                 committedVersions1 = {};
               }
               items[1] = committedVersions1;
-              obj13 = tmp3(7722);
-              let canUseGuildVersionsResult = tmp3(7722).isCacheEnabled();
+              obj13 = tmp3(7723);
+              let canUseGuildVersionsResult = tmp3(7723).isCacheEnabled();
               if (canUseGuildVersionsResult) {
-                canUseGuildVersionsResult = tmp2(7727).canUseGuildVersions();
-                const obj17 = tmp2(7727);
+                canUseGuildVersionsResult = tmp2(7728).canUseGuildVersions();
+                const obj17 = tmp2(7728);
               }
               items[2] = canUseGuildVersionsResult;
               v1 = 1;
@@ -921,7 +921,7 @@ prototype["_doIdentify"] = function _doIdentify() {
               obj = { guild_versions: {} };
             }
             closure_128_8 = obj;
-            if (closure_129_0.connectionState !== tmp2(14962).IDENTIFYING) {
+            if (closure_129_0.connectionState !== tmp2(14998).IDENTIFYING) {
               closure_1_9.warn("Skipping identify because connectionState or identifyStartTime has changed");
             }
             token = closure_128_0.token;
@@ -946,8 +946,8 @@ prototype["_doIdentify"] = function _doIdentify() {
             };
             const obj21 = tmp3(500);
             const obj18 = { useChannelObfuscation: null };
-            const obj5 = tmp3(14984);
-            obj18.useChannelObfuscation = tmp3(14985).isChannelMetadataObfuscationEnabled("GatewaySocket");
+            const obj5 = tmp3(15020);
+            obj18.useChannelObfuscation = tmp3(15021).isChannelMetadataObfuscationEnabled("GatewaySocket");
             obj14.capabilities = obj5.getClientCapabilities(obj18);
             obj14.properties = closure_128_11;
             obj14.presence = presence;
@@ -959,14 +959,14 @@ prototype["_doIdentify"] = function _doIdentify() {
             closure_128_14 = JSON.stringify(closure_128_13);
             closure_129_0.identifyUncompressedByteSize = closure_128_14.length;
             const compressionHandler = closure_129_0.compressionHandler;
-            const obj7 = tmp3(14985);
-            closure_129_0.identifyCompressedByteSize = v1(14967).deflate(closure_128_14).length;
+            const obj7 = tmp3(15021);
+            closure_129_0.identifyCompressedByteSize = v1(15003).deflate(closure_128_14).length;
             closure_129_0.identifyCount = closure_129_0.identifyCount + num3;
             num3 = closure_129_0;
-            closure_129_0.send(tmp3(14954).Opcode.IDENTIFY, closure_128_13, false);
-            tmp65 = tmp2(1267);
+            closure_129_0.send(tmp3(14990).Opcode.IDENTIFY, closure_128_13, false);
+            tmp65 = tmp2(1264);
             tmp65.track(constants.SESSION_START_CLIENT, {});
-            const obj8 = v1(14967);
+            const obj8 = v1(15003);
           }
         }
         dependencyMap = 3;

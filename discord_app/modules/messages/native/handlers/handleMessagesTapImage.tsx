@@ -6,7 +6,7 @@ import RelationshipStore from "../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const MessageTypes = fn(1087).MessageTypes;
+const MessageTypes = fn(1084).MessageTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapImage.tsx");
 
@@ -53,7 +53,7 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
       type1 = messageReference.type;
     }
     let tmp12 = tmp7;
-    if (type1 !== embedId(1110).MessageReferenceTypes.FORWARD) {
+    if (type1 !== embedId(1107).MessageReferenceTypes.FORWARD) {
       const attachments = tmp7.attachments;
       const found = attachments.filter((item) => !embedId(8757).isThumbnailAttachment(item));
       if ("attachment" === type) {
@@ -102,7 +102,7 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
           };
           let channelName;
           if (showContextName) {
-            const tmp25Result3 = tmp25(5604);
+            const tmp25Result3 = tmp25(5605);
             channelName = tmp25Result3.computeChannelName(messageChannel, UserStore, RelationshipStore, false);
           }
           obj3.contextName = channelName;
@@ -149,7 +149,7 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
                   tmp7,
                   components,
                   messageChannel.guild_id,
-                  embedId(6022).asComponentId(componentId),
+                  embedId(6023).asComponentId(componentId),
                   componentMediaIndex,
                 );
                 if (null != result2) {
@@ -159,7 +159,7 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
                   tmp25 = embedId;
                   const tmp10Result15 = embedId(8757);
                 }
-                const tmp10Result14 = embedId(6022);
+                const tmp10Result14 = embedId(6023);
               }
             }
           }
@@ -225,6 +225,6 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
       tmp12 = message1;
     }
   } else {
-    embedId(10021);
+    embedId(10023);
   }
 };

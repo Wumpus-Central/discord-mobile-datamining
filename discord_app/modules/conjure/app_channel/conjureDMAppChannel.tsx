@@ -8,7 +8,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ApplicationFlags: hasOwnProperty, ChannelTypes: metroRequire } = Constants);
 const DMAppChannel = "DMAppChannel";
 const ReactCompilerGating = fn(558);
@@ -83,7 +83,7 @@ export const useDMAppChannelApplicationId = ReactCompilerGating.isReactCompilerE
           if (tmpResult6.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
             id = data.id;
           }
-          tmpResult6 = tmp(6811);
+          tmpResult6 = tmp(6813);
         }
         cResult[6] = data;
         cResult[7] = id;
@@ -140,7 +140,7 @@ export const useDMAppChannelApplicationId = ReactCompilerGating.isReactCompilerE
         if (tmpResult.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
           id = data.id;
         }
-        tmpResult = tmp(6811);
+        tmpResult = tmp(6813);
       }
       return id;
     };

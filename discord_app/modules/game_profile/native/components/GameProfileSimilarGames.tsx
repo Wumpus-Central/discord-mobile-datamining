@@ -19,7 +19,7 @@ const jsx = fn(21).jsx;
 let c9 = 1.34;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   container: { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 },
   header: null,
@@ -674,7 +674,7 @@ let closure_17 = noop.memo(
             skeletonTitleWidth: 124,
             children: tmp8,
           };
-          const tmp12 = jsx(tmp(9337).GameProfileSectionSkeleton, {
+          const tmp12 = jsx(tmp(9336).GameProfileSectionSkeleton, {
             style: container,
             headerStyle: header,
             showViewAllSkeleton: false,
@@ -725,7 +725,7 @@ let closure_17 = noop.memo(
             />
           )),
         });
-        return jsx(cardWidth(9337).GameProfileSectionSkeleton, {
+        return jsx(cardWidth(9336).GameProfileSectionSkeleton, {
           style: tmp.container,
           headerStyle: tmp.header,
           showViewAllSkeleton: false,
@@ -765,8 +765,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         ({ container, header } = tmp4);
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1128).intl;
-          const stringResult = intl.string(tmp(1128).t["6rLyQB"]);
+          const intl = tmp(1125).intl;
+          const stringResult = intl.string(tmp(1125).t["6rLyQB"]);
           cResult[2] = stringResult;
           let tmp9 = stringResult;
         } else {
@@ -791,7 +791,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj3 = { style: container, headerStyle: header, title: tmp9, children: tmp13 };
-              const tmp20 = jsx(tmp5(9337), { style: container, headerStyle: header, title: tmp9, children: tmp13 });
+              const tmp20 = jsx(tmp5(9336), { style: container, headerStyle: header, title: tmp9, children: tmp13 });
               cResult[10] = tmp4.container;
               cResult[11] = tmp4.header;
               cResult[12] = tmp13;
@@ -801,7 +801,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj4 = {
             horizontal: true,
-            renderScrollComponent: tmp5(9315),
+            renderScrollComponent: tmp5(9316),
             data: similarGames,
             renderItem: tmp11,
             showsHorizontalScrollIndicator: false,
@@ -811,9 +811,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             decelerationRate: "fast",
             snapToInterval: sum,
           };
-          const tmp17 = jsx(tmp(7220).FlashList, {
+          const tmp17 = jsx(tmp(7222).FlashList, {
             horizontal: true,
-            renderScrollComponent: tmp5(9315),
+            renderScrollComponent: tmp5(9316),
             data: similarGames,
             renderItem: tmp11,
             showsHorizontalScrollIndicator: false,
@@ -853,11 +853,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (0 !== similarGames.length) {
           const obj3 = { style: null, headerStyle: null, title: null, children: null };
           ({ container: obj2.style, header: obj2.headerStyle } = tmp);
-          const intl = trackAction(1128).intl;
-          obj3.title = intl.string(trackAction(1128).t["6rLyQB"]);
+          const intl = trackAction(1125).intl;
+          obj3.title = intl.string(trackAction(1125).t["6rLyQB"]);
           const obj5 = {
             horizontal: true,
-            renderScrollComponent: tmp2(9315),
+            renderScrollComponent: tmp2(9316),
             data: similarGames,
             renderItem(game) {
               return <closure_15 game={game.item} trackAction={trackAction} cardWidth={cardWidth} />;
@@ -869,9 +869,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             decelerationRate: "fast",
             snapToInterval: result + tmp5,
           };
-          obj3.children = jsx(trackAction(7220).FlashList, {
+          obj3.children = jsx(trackAction(7222).FlashList, {
             horizontal: true,
-            renderScrollComponent: tmp2(9315),
+            renderScrollComponent: tmp2(9316),
             data: similarGames,
             renderItem(game) {
               return <closure_15 game={game.item} trackAction={trackAction} cardWidth={cardWidth} />;
@@ -883,8 +883,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             decelerationRate: "fast",
             snapToInterval: result + tmp5,
           });
-          tmp7 = jsx(tmp2(9337), { style: null, headerStyle: null, title: null, children: null });
-          const tmp2Result = tmp2(9337);
+          tmp7 = jsx(tmp2(9336), { style: null, headerStyle: null, title: null, children: null });
+          const tmp2Result = tmp2(9336);
         }
       }
       return tmp7;

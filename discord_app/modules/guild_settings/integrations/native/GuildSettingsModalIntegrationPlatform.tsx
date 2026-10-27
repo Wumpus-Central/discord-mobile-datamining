@@ -22,7 +22,7 @@ import GuildSettingsStore from "../../GuildSettingsStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({
   GuildSettingsSections: metroRequire,
   HelpdeskArticles: closure_7,
@@ -31,7 +31,7 @@ const Constants = fn(1087);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   form: { paddingTop: nativeDefault.space.PX_16 },
   trailingWrapper: { flexDirection: "row", alignItems: "center" },
@@ -62,20 +62,20 @@ class IntegrationItem extends Component {
             confirmColor: null,
             isDismissable: false,
           };
-          const intl = applyArgumentsResult(1128).intl;
-          obj3.title = intl.string(applyArgumentsResult(1128).t.emx3lN);
+          const intl = applyArgumentsResult(1125).intl;
+          obj3.title = intl.string(applyArgumentsResult(1125).t.emx3lN);
           if ("youtube" === integration.type) {
-            const intl3 = applyArgumentsResult(1128).intl;
-            let stringResult = intl3.string(applyArgumentsResult(1128).t.anKQWU);
+            const intl3 = applyArgumentsResult(1125).intl;
+            let stringResult = intl3.string(applyArgumentsResult(1125).t.anKQWU);
           } else {
-            const intl2 = applyArgumentsResult(1128).intl;
-            stringResult = intl2.string(applyArgumentsResult(1128).t["BW/xtn"]);
+            const intl2 = applyArgumentsResult(1125).intl;
+            stringResult = intl2.string(applyArgumentsResult(1125).t["BW/xtn"]);
           }
           obj3.body = stringResult;
-          const intl4 = applyArgumentsResult(1128).intl;
-          obj3.confirmText = intl4.string(applyArgumentsResult(1128).t.R9GHya);
-          const intl5 = applyArgumentsResult(1128).intl;
-          obj3.cancelText = intl5.string(applyArgumentsResult(1128).t["ETE/oC"]);
+          const intl4 = applyArgumentsResult(1125).intl;
+          obj3.confirmText = intl4.string(applyArgumentsResult(1125).t.R9GHya);
+          const intl5 = applyArgumentsResult(1125).intl;
+          obj3.cancelText = intl5.string(applyArgumentsResult(1125).t["ETE/oC"]);
           obj3.onConfirm = function onConfirm() {
             return GuildSettingsActionCreatorsDefault.disableIntegration(guild.id, integration.id);
           };
@@ -206,11 +206,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ contentContainerStyle, platformType } = closeGuildSettings);
       closeGuildSettings = closeGuildSettings.closeGuildSettings;
       let obj = platformType(576);
-      const token = platformType(5252).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
+      const token = platformType(5253).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
       const tmp6 = closure_13();
       dependencyMap = tmp6;
-      let obj2 = platformType(5252);
-      const navigation = platformType(1505).useNavigation();
+      let obj2 = platformType(5253);
+      const navigation = platformType(1502).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [hasChanges];
         const fn = function i() {
@@ -227,12 +227,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp7, tmp8] = cResult;
       }
-      const obj3 = platformType(1505);
+      const obj3 = platformType(1502);
       const stateFromStoresObject = platformType(504).useStateFromStoresObject(tmp7, tmp8);
       const submitting = stateFromStoresObject.submitting;
       hasChanges = stateFromStoresObject.hasChanges;
       guild = stateFromStoresObject.guild;
-      const tmp11 = closeGuildSettings(5205)();
+      const tmp11 = closeGuildSettings(5206)();
       constants2 = tmp11;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [hasChanges];
@@ -310,7 +310,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj4 = { headerLeft: undefined, title: null, headerRight: null };
-        value = tmp4(6502).get(platformType);
+        value = tmp4(6503).get(platformType);
         let name;
         if (value != null) {
           name = value.name;
@@ -366,36 +366,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         if (onSave.YOUTUBE === platformType) {
           if (cResult[28] !== tmp38) {
-            const intl2 = tmp(1128).intl;
+            const intl2 = tmp(1125).intl;
             const obj5 = { connectAction: null, helpdeskArticle: null };
             class A {
               constructor() {
                 return hasChanges.getProps().integrations;
               }
             }
-            obj5.helpdeskArticle = tmp4(2067).getArticleURL(constants2.YOUTUBE_INTEGRATION);
-            const formatResult = intl2.format(tmp(1128).t["4OSAQ9"], obj5);
+            obj5.helpdeskArticle = tmp4(2064).getArticleURL(constants2.YOUTUBE_INTEGRATION);
+            const formatResult = intl2.format(tmp(1125).t["4OSAQ9"], obj5);
             cResult[28] = tmp38;
             cResult[29] = formatResult;
-            const tmp4Result3 = tmp4(2067);
+            const tmp4Result3 = tmp4(2064);
           }
         } else {
           let tmp43;
           if (tmp39.TWITCH === platformType) {
             if (cResult[30] !== tmp38) {
-              let intl = tmp(1128).intl;
+              let intl = tmp(1125).intl;
               const obj6 = { connectAction: null, helpdeskArticle: null };
               class A {
                 constructor() {
                   return hasChanges.getProps().integrations;
                 }
               }
-              obj6.helpdeskArticle = tmp4(2067).getArticleURL(constants2.TWITCH_INTEGRATION);
-              const formatResult1 = intl.format(tmp(1128).t.ro1jEN, obj6);
+              obj6.helpdeskArticle = tmp4(2064).getArticleURL(constants2.TWITCH_INTEGRATION);
+              const formatResult1 = intl.format(tmp(1125).t.ro1jEN, obj6);
               cResult[30] = tmp38;
               cResult[31] = formatResult1;
               let tmp40 = formatResult1;
-              const tmp4Result4 = tmp4(2067);
+              const tmp4Result4 = tmp4(2064);
             } else {
               tmp40 = cResult[31];
             }
@@ -445,9 +445,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp29 = forResult;
           tmp30 = tmp43;
           Form = tmp(8951).Form;
-          Stack = tmp(5977).Stack;
+          Stack = tmp(5978).Stack;
         }
-        const tmp4Result = tmp4(6502);
+        const tmp4Result = tmp4(6503);
       }
       cResult[4] = stateFromStores;
       cResult[5] = closeGuildSettings;
@@ -481,12 +481,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           GuildSettingsActionCreatorsDefault.saveGuild(guild.id, obj2);
         }
       }
-      const token = platformType(5252).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
+      const token = platformType(5253).useToken(closeGuildSettings(587).modules.mobile.TABLE_ROW_PADDING);
       const tmp5 = closure_13();
       dependencyMap = tmp5;
-      let obj = platformType(5252);
-      const navigation = platformType(1505).useNavigation();
-      let obj2 = platformType(1505);
+      let obj = platformType(5253);
+      const navigation = platformType(1502).useNavigation();
+      let obj2 = platformType(1502);
       const items = [c5];
       const stateFromStoresObject = platformType(504).useStateFromStoresObject(items, () => ({
         guild: _undefined.getGuild(),
@@ -495,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }));
       const submitting = stateFromStoresObject.submitting;
       ({ hasChanges: c5, guild } = stateFromStoresObject);
-      constants2 = closeGuildSettings(5205)();
+      constants2 = closeGuildSettings(5206)();
       const obj4 = platformType(504);
       const items1 = [c5];
       const stateFromStores = platformType(504).useStateFromStores(items1, () => _undefined.getProps().integrations);
@@ -510,7 +510,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           fn = () => null;
         }
         const obj3 = { headerLeft: fn, title: null, headerRight: null };
-        value = tmp3(6502).get(platformType);
+        value = tmp3(6503).get(platformType);
         let name;
         if (value != null) {
           name = value.name;
@@ -537,21 +537,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         navigation.setOptions(obj3);
         if (onSave.YOUTUBE === platformType) {
-          let intl = tmp(1128).intl;
+          let intl = tmp(1125).intl;
           const obj6 = {
             connectAction: onConectTap,
-            helpdeskArticle: tmp3(2067).getArticleURL(constants2.YOUTUBE_INTEGRATION),
+            helpdeskArticle: tmp3(2064).getArticleURL(constants2.YOUTUBE_INTEGRATION),
           };
-          let formatResult = intl.format(tmp(1128).t["4OSAQ9"], obj6);
-          const tmp3Result3 = tmp3(2067);
+          let formatResult = intl.format(tmp(1125).t["4OSAQ9"], obj6);
+          const tmp3Result3 = tmp3(2064);
         } else if (tmp10.TWITCH === platformType) {
-          const intl2 = tmp(1128).intl;
+          const intl2 = tmp(1125).intl;
           const obj7 = {
             connectAction: onConectTap,
-            helpdeskArticle: tmp3(2067).getArticleURL(constants2.TWITCH_INTEGRATION),
+            helpdeskArticle: tmp3(2064).getArticleURL(constants2.TWITCH_INTEGRATION),
           };
-          formatResult = intl2.format(tmp(1128).t.ro1jEN, obj7);
-          const tmp3Result4 = tmp3(2067);
+          formatResult = intl2.format(tmp(1125).t.ro1jEN, obj7);
+          const tmp3Result4 = tmp3(2064);
         }
         const obj8 = { style: tmp5.form, contentContainerStyle: platformType.contentContainerStyle, children: null };
         const obj9 = { style: null, spacing: null, children: null };
@@ -580,10 +580,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj11 = { children: null };
         const items2 = [mapped];
         const obj12 = { variant: "text-sm/medium", color: "text-muted", children: formatResult };
-        items2[1] = closure_10(tmp(5234).Text, obj12);
+        items2[1] = closure_10(tmp(5235).Text, obj12);
         obj9.children = items2;
-        obj8.children = closure_11(tmp(5977).Stack, obj9);
-        const items3 = [closure_10(tmp(8951).Form, obj8), closure_10(tmp(5592).NavScrim, {})];
+        obj8.children = closure_11(tmp(5978).Stack, obj9);
+        const items3 = [closure_10(tmp(8951).Form, obj8), closure_10(tmp(5593).NavScrim, {})];
         obj11.children = items3;
         return closure_11(closure_12, obj11);
       }

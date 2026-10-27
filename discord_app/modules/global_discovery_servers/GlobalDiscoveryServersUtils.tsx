@@ -1,6 +1,6 @@
 // discord_app/modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx
 import util from "../../intl/index.native.tsx";
-import v1 from "../../../_runtime/01281_v1.js";
+import v1 from "../../../_runtime/01278_v1.js";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
@@ -40,7 +40,7 @@ const GlobalDiscoveryServersConstants = fn(9007);
   getLanguageOptions: c10,
   HUBS_CATEGORY_ID: closure_11,
 } = GlobalDiscoveryServersConstants);
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
 
@@ -217,14 +217,15 @@ export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildS
     memberCount: null,
     premiumSubscriptionCount: "r",
     preferredLocale: "toCharArray$esjava$1",
-    discoverySplash: null,
-    emojis: [],
+    discoverySplash: true,
+    emojis: true,
   };
   ({
     approximate_presence_count: obj.presenceCount,
     approximate_member_count: obj.memberCount,
     discovery_splash: obj.discoverySplash,
   } = id);
+  obj.emojis = [];
   return obj;
 };
 export const getLanguageCodeFallback = function getLanguageCodeFallback() {

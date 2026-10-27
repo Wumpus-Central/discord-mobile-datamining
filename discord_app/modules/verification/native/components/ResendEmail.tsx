@@ -10,10 +10,10 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const VerificationModalScenes = fn(1087).VerificationModalScenes;
+const VerificationModalScenes = fn(1084).VerificationModalScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_11 = createStyles.createStyles({ container: { flex: 1, padding: 16, justifyContent: "center", alignItems: "center" }, title: { marginTop: 16, textAlign: "center" }, body: { marginTop: 8, lineHeight: 18, textAlign: "center" }, resend: { marginTop: 16, width: "100%" }, change: { marginTop: 8, width: "100%" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -23,7 +23,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   const cResult = navigation(576).c(37);
   const tmp4 = closure_11();
   let obj = navigation(576);
-  navigation = navigation(1505).useNavigation();
+  navigation = navigation(1502).useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     class E {
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   } else {
     [tmp6, tmp7] = cResult;
   }
-  const obj2 = navigation(1505);
+  const obj2 = navigation(1502);
   const stateFromStores = navigation(504).useStateFromStores(tmp6, E);
   ({ email, verified } = stateFromStores);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   const tmpResult = navigation(504);
   const stateFromStores1 = navigation(504).useStateFromStores(tmp10, tmp11);
   if (cResult[4] !== stateFromStores1) {
-    const result = verified(6997).isEmailReverification(stateFromStores1);
+    const result = verified(6999).isEmailReverification(stateFromStores1);
     class E {
       constructor() {
         currentUser = closure_1_7.getCurrentUser();
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
     }
     cResult[4] = stateFromStores1;
     cResult[5] = result;
-    const obj5 = verified(6997);
+    const obj5 = verified(6999);
   }
   const tmpResult2 = navigation(504);
   [tmp19, dependencyMap] = ref(noop.useState(false), 2);
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
         return currentUser;
       }
     }
-    const tmp28 = closure_9(tmp(6998).EnvelopeOpenSpotIllustration, { scale: 0.75 });
+    const tmp28 = closure_9(tmp(7000).EnvelopeOpenSpotIllustration, { scale: 0.75 });
   } else {
     class P {
       constructor() {
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
         return;
       }
     }
-    const stringResult = obj7.string(tmp(1128).t.fUtddV);
+    const stringResult = obj7.string(tmp(1125).t.fUtddV);
     class E {
       constructor() {
         currentUser = closure_1_7.getCurrentUser();
@@ -262,7 +262,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
         return currentUser;
       }
     }
-    const tmp32 = closure_9(tmp(5234).Text, obj3);
+    const tmp32 = closure_9(tmp(5235).Text, obj3);
     cResult[16] = tmp4.title;
     cResult[17] = tmp32;
   } else {
@@ -304,7 +304,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
         return;
       }
     }
-    const tmp33Result = tmp33(tmp(1128).t.tSXg8O);
+    const tmp33Result = tmp33(tmp(1125).t.tSXg8O);
   }
   cResult[18] = email;
   cResult[19] = tmp19;
@@ -312,8 +312,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   ref = noop.useRef(verified);
 }) : (function ResendEmail() {
   let tmp = closure_11();
-  navigation = navigation(1505).useNavigation();
-  let obj = navigation(1505);
+  navigation = navigation(1502).useNavigation();
+  let obj = navigation(1502);
   const items = [UserStore];
   const stateFromStores = navigation(504).useStateFromStores(items, () => {
     currentUser = currentUser.getCurrentUser();
@@ -325,9 +325,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   const items1 = [UserRequiredActionStore];
   const stateFromStores1 = navigation(504).useStateFromStores(items1, () => action.getAction());
   let obj3 = navigation(504);
-  const result = verified(6997).isEmailReverification(stateFromStores1);
+  const result = verified(6999).isEmailReverification(stateFromStores1);
   let tmp16Result = !result;
-  const obj4 = verified(6997);
+  const obj4 = verified(6999);
   [tmp10, dependencyMap] = ref(noop.useState(false), 2);
   const tmp9 = ref(noop.useState(false), 2);
   const items2 = [verified];
@@ -348,25 +348,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
   const callback = noop.useCallback(() => {
     navigation.push(VerificationModalScenes.ENTER_EMAIL);
   }, items3);
-  const items4 = [closure_9(navigation(6998).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
+  const items4 = [closure_9(navigation(7000).EnvelopeOpenSpotIllustration, { scale: 0.75 }), , , , ];
   const obj6 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-  let intl = navigation(1128).intl;
-  obj6.children = intl.string(navigation(1128).t.fUtddV);
-  items4[1] = closure_9(navigation(5234).Text, obj6);
+  let intl = navigation(1125).intl;
+  obj6.children = intl.string(navigation(1125).t.fUtddV);
+  items4[1] = closure_9(navigation(5235).Text, obj6);
   const obj7 = { style: tmp.body, variant: "text-sm/medium", color: "text-default", children: null };
-  const intl2 = navigation(1128).intl;
+  const intl2 = navigation(1125).intl;
   if (tmp10) {
     const obj8 = { email: stateFromStores.email };
-    let formatResult = intl2.format(tmp2(1128).t.JqLgQL, obj8);
+    let formatResult = intl2.format(tmp2(1125).t.JqLgQL, obj8);
   } else {
-    formatResult = intl2.string(tmp2(1128).t.tSXg8O);
+    formatResult = intl2.string(tmp2(1125).t.tSXg8O);
   }
   obj7.children = formatResult;
-  items4[2] = closure_9(navigation(5234).Text, obj7);
+  items4[2] = closure_9(navigation(5235).Text, obj7);
   const obj9 = { style: tmp.resend, children: null };
   const obj10 = { text: null, variant: "primary", onPress: null, grow: true };
-  const intl3 = tmp2(1128).intl;
-  obj10.text = intl3.string(navigation(1128).t.WnX4J2);
+  const intl3 = tmp2(1125).intl;
+  obj10.text = intl3.string(navigation(1125).t.WnX4J2);
   obj10.onPress = function handleResendEmail() {
     dependencyMap(true);
     AuthenticationActionCreatorsDefault.verifyResend();
@@ -375,15 +375,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ResendEm
     obj3.text = intl.string(util.t["84yeoz"]);
     ToastActionCreatorsDefault.open("USER_SETTINGS_ACCOUNT_CHANGE_EMAIL_CONFIRM_CODE_SENT", obj3);
   };
-  obj9.children = closure_9(navigation(5244).Button, obj10);
+  obj9.children = closure_9(navigation(5245).Button, obj10);
   items4[3] = closure_9(View, obj9);
   if (!result) {
     const obj11 = { style: tmp.change, children: null };
     const obj12 = { text: null, variant: "secondary", onPress: null, grow: true };
-    const intl4 = tmp2(1128).intl;
-    obj12.text = intl4.string(tmp2(1128).t.Vm8akB);
+    const intl4 = tmp2(1125).intl;
+    obj12.text = intl4.string(tmp2(1125).t.Vm8akB);
     obj12.onPress = callback;
-    obj11.children = closure_9(tmp2(5244).Button, obj12);
+    obj11.children = closure_9(tmp2(5245).Button, obj12);
     tmp16Result = closure_9(View, obj11);
   }
   items4[4] = tmp16Result;

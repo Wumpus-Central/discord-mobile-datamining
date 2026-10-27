@@ -13,10 +13,10 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = id(576).c(14);
       guild = guild.guild;
       id = guild.id;
-      let MessageRequestRestrictedGuildIds = id(4799).MessageRequestRestrictedGuildIds;
+      let MessageRequestRestrictedGuildIds = id(4800).MessageRequestRestrictedGuildIds;
       const setting = MessageRequestRestrictedGuildIds.useSetting();
       if (cResult[0] === id) {
-        const RestrictedGuildIds = tmp(4799).RestrictedGuildIds;
+        const RestrictedGuildIds = tmp(4800).RestrictedGuildIds;
         const setting1 = RestrictedGuildIds.useSetting();
         if (cResult[3] === guild.id) {
           if (cResult[4] === setting1) {
@@ -89,9 +89,9 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            const stringResult = obj4.string(tmp(1128).t["7UgSGP"]);
-            const intl = tmp(1128).intl;
-            const stringResult1 = intl.string(tmp(1128).t.INRaYb);
+            const stringResult = obj4.string(tmp(1125).t["7UgSGP"]);
+            const intl = tmp(1125).intl;
+            const stringResult1 = intl.string(tmp(1125).t.INRaYb);
             cResult[8] = stringResult;
             cResult[9] = stringResult1;
             let tmp11 = stringResult1;
@@ -164,7 +164,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj2 = { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 };
-          const tmp17 = jsx(tmp(7294).ActionSheetSwitchRow, {
+          const tmp17 = jsx(tmp(7296).ActionSheetSwitchRow, {
             label: tmp10,
             subLabel: tmp11,
             value: !tmp6,
@@ -191,10 +191,10 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
   : function MessageRequestRestrictedGuildPrivacyOption(guild) {
       guild = guild.guild;
       const id = guild.id;
-      let MessageRequestRestrictedGuildIds = id(4799).MessageRequestRestrictedGuildIds;
+      let MessageRequestRestrictedGuildIds = id(4800).MessageRequestRestrictedGuildIds;
       const setting = MessageRequestRestrictedGuildIds.useSetting();
       const hasItem = setting.includes(id);
-      const RestrictedGuildIds = id(4799).RestrictedGuildIds;
+      const RestrictedGuildIds = id(4800).RestrictedGuildIds;
       const setting1 = RestrictedGuildIds.useSetting();
       const hasItem1 = setting1.includes(guild.id);
       const items = [id];
@@ -209,10 +209,10 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
         MessageRequestRestrictedGuildIds.updateSetting(Array.from(sanitizedMessageRequestRestrictedGuilds));
       }, items);
       let obj = { label: null, subLabel: null, value: null, onValueChange: null, disabled: null };
-      const intl = id(1128).intl;
-      obj.label = intl.string(id(1128).t["7UgSGP"]);
-      const intl2 = id(1128).intl;
-      obj.subLabel = intl2.string(id(1128).t.INRaYb);
+      const intl = id(1125).intl;
+      obj.label = intl.string(id(1125).t["7UgSGP"]);
+      const intl2 = id(1125).intl;
+      obj.subLabel = intl2.string(id(1125).t.INRaYb);
       let tmp5 = !hasItem1;
       if (!hasItem1) {
         tmp5 = !hasItem;
@@ -220,7 +220,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       obj.value = tmp5;
       obj.onValueChange = callback;
       obj.disabled = hasItem1;
-      return jsx(id(7294).ActionSheetSwitchRow, {
+      return jsx(id(7296).ActionSheetSwitchRow, {
         label: null,
         subLabel: null,
         value: null,

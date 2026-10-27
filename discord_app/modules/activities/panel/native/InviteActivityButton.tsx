@@ -1,5 +1,5 @@
 // discord_app/modules/activities/panel/native/InviteActivityButton.tsx
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import getCurrentUserPresenceActivityDefault from "../../utils/getCurrentUserPresenceActivity.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -49,7 +49,7 @@ export default noop.memo(
             const fn2 = function y() {
               const obj = ActionSheetActionCreatorsDefault;
               obj.openLazy(
-                asyncRequireImpl(18477, dependencyMap.paths),
+                asyncRequireImpl(18511, dependencyMap.paths),
                 "ActivityInviteSheet-" + stateFromStores.session_id,
                 { activity: stateFromStores },
               );
@@ -62,10 +62,10 @@ export default noop.memo(
           }
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = Button(1128).intl;
-            const stringResult = intl.string(Button(1128).t["OzOM/q"]);
-            const intl2 = Button(1128).intl;
-            const stringResult1 = intl2.string(Button(1128).t["OzOM/q"]);
+            const intl = Button(1125).intl;
+            const stringResult = intl.string(Button(1125).t["OzOM/q"]);
+            const intl2 = Button(1125).intl;
+            const stringResult1 = intl2.string(Button(1125).t["OzOM/q"]);
             cResult[6] = stringResult;
             cResult[7] = stringResult1;
             let tmp11 = stringResult1;
@@ -75,7 +75,7 @@ export default noop.memo(
             tmp11 = cResult[7];
           }
           if (cResult[8] !== tmp9) {
-            Button = Button(5244).Button;
+            Button = Button(5245).Button;
             const obj2 = {
               onPress: tmp9,
               icon: null,
@@ -86,7 +86,7 @@ export default noop.memo(
               shrink: true,
               maxFontSizeMultiplier: 1,
             };
-            tmp = stateFromStores(10861);
+            tmp = stateFromStores(10864);
             obj2.icon = tmp;
             obj2.text = tmp10;
             obj2.accessibilityLabel = tmp11;
@@ -123,12 +123,12 @@ export default noop.memo(
             onPress() {
               const obj = ActionSheetActionCreatorsDefault;
               obj.openLazy(
-                asyncRequireImpl(18477, dependencyMap.paths),
+                asyncRequireImpl(18511, dependencyMap.paths),
                 "ActivityInviteSheet-" + stateFromStores.session_id,
                 { activity: stateFromStores },
               );
             },
-            icon: stateFromStores(10861),
+            icon: stateFromStores(10864),
             text: null,
             accessibilityLabel: null,
             variant: "secondary-overlay",
@@ -136,20 +136,20 @@ export default noop.memo(
             shrink: true,
             maxFontSizeMultiplier: 1,
           };
-          const intl = tmp(1128).intl;
-          obj2.text = intl.string(tmp(1128).t["OzOM/q"]);
-          const intl2 = tmp(1128).intl;
-          obj2.accessibilityLabel = intl2.string(tmp(1128).t["OzOM/q"]);
-          tmp4 = jsx(tmp(5244).Button, {
+          const intl = tmp(1125).intl;
+          obj2.text = intl.string(tmp(1125).t["OzOM/q"]);
+          const intl2 = tmp(1125).intl;
+          obj2.accessibilityLabel = intl2.string(tmp(1125).t["OzOM/q"]);
+          tmp4 = jsx(tmp(5245).Button, {
             onPress() {
               const obj = ActionSheetActionCreatorsDefault;
               obj.openLazy(
-                asyncRequireImpl(18477, dependencyMap.paths),
+                asyncRequireImpl(18511, dependencyMap.paths),
                 "ActivityInviteSheet-" + stateFromStores.session_id,
                 { activity: stateFromStores },
               );
             },
-            icon: stateFromStores(10861),
+            icon: stateFromStores(10864),
             text: null,
             accessibilityLabel: null,
             variant: "secondary-overlay",

@@ -1,7 +1,7 @@
 // discord_app/modules/checkpoint/openCheckpoint.native.tsx
 import Constants from "../../Constants.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -16,7 +16,7 @@ export const openCheckpoint = function openCheckpoint(devtools, arg1) {
   AnalyticsUtilsDefault.track(AnalyticEvents.CHECKPOINT_STARTED, { source: devtools });
   const obj2 = { source: devtools };
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(12955, dependencyMap.paths),
+    asyncRequireImpl(12967, dependencyMap.paths),
     { didPlayerShareDataWithDiscord: flag },
     "CHECKPOINT_MODAL",
   );

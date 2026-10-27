@@ -4,7 +4,7 @@ import c from "../../../_runtime/00576_c.js";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const ApexExperiment = fn(1455);
+const ApexExperiment = fn(1452);
 let obj2 = {
   name: "2026-02-mana-playground-access",
   kind: "user",

@@ -119,17 +119,17 @@ let closure_12 = async function _applyHexagonCampaignPerks(arg0) {
   const obj16 = {};
   obj16[closure_131_7.CLIENT_THEME] = {
     apply() {
-      dependencyMap(16381).handleSaveTheme(closure_2_9, closure_1_4, closure_1_3);
+      dependencyMap(16420).handleSaveTheme(closure_2_9, closure_1_4, closure_1_3);
       return Promise.resolve(true);
     },
     restore() {
-      const obj = dependencyMap(16381);
+      const obj = dependencyMap(16420);
       let DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = closure_1_7.clientTheme;
       if (DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME == null) {
-        DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = dependencyMap(16380).DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME;
+        DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = dependencyMap(16419).DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME;
       }
       obj.handleSaveTheme(
-        dependencyMap(16380).getHexagonCampaignClientThemeItem(DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME),
+        dependencyMap(16419).getHexagonCampaignClientThemeItem(DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME),
         closure_1_4,
         closure_1_3,
       );
@@ -138,16 +138,16 @@ let closure_12 = async function _applyHexagonCampaignPerks(arg0) {
   };
   obj16[closure_131_7.APP_ICON] = {
     apply() {
-      return dependencyMap(14767).setAppIcon(dependencyMap(9866).LimitedTimeAppIconIds.HEXAGON, dependencyMap2, {
+      return dependencyMap(14803).setAppIcon(dependencyMap(9868).LimitedTimeAppIconIds.HEXAGON, dependencyMap2, {
         showErrorToast: false,
       });
     },
     restore() {
       let DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = closure_1_7.appIconId;
       if (DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID == null) {
-        DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = dependencyMap(16380).DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID;
+        DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = dependencyMap(16419).DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID;
       }
-      return dependencyMap(14767).setAppIcon(DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID, dependencyMap2, {
+      return dependencyMap(14803).setAppIcon(DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID, dependencyMap2, {
         showErrorToast: false,
       });
     },
@@ -167,8 +167,8 @@ let closure_12 = async function _applyHexagonCampaignPerks(arg0) {
         previousDisplayNameStyles: closure_1_7.displayNameStyles,
         canUsePremiumProfileCustomization: null,
       };
-      const obj = dependencyMap(4998);
-      obj2.canUsePremiumProfileCustomization = closure_1(2053).canUsePremiumProfileCustomization(currentUser);
+      const obj = dependencyMap(4999);
+      obj2.canUsePremiumProfileCustomization = closure_1(2050).canUsePremiumProfileCustomization(currentUser);
       return closure_2_10(obj.getHexagonCampaignRestoredDisplayNameStyles(obj2));
     },
   };
@@ -219,9 +219,9 @@ let closure_12 = async function _applyHexagonCampaignPerks(arg0) {
   } = dependencyMap);
   return "Reflect";
 };
-const HexagonCampaignPerk = fn(4996).HexagonCampaignPerk;
-const isHexagonCampaignAppIcon = fn(9865).isHexagonCampaignAppIcon;
-const HEXAGON_GRADIENT_PRESET = fn(1255).HEXAGON_GRADIENT_PRESET;
+const HexagonCampaignPerk = fn(4997).HexagonCampaignPerk;
+const isHexagonCampaignAppIcon = fn(9867).isHexagonCampaignAppIcon;
+const HEXAGON_GRADIENT_PRESET = fn(1252).HEXAGON_GRADIENT_PRESET;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/applyHexagonCampaignPerks.tsx");
 

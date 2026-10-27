@@ -13,10 +13,10 @@ import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useForumChannelStore = fn(13100).useForumChannelStore;
+const useForumChannelStore = fn(13114).useForumChannelStore;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_8 = createStyles.createStyles({
   authorContainer: { flexDirection: "row", alignItems: "center", justifyContent: "center", marginEnd: 8 },
   roleDotContainer: { alignItems: "center", justifyContent: "center", marginEnd: 2, marginBottom: 4 },

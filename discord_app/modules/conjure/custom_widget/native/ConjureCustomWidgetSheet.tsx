@@ -1,17 +1,17 @@
 // discord_app/modules/conjure/custom_widget/native/ConjureCustomWidgetSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3830 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3831 from "../../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(10698);
+const ConjureConnectionStore = fn(10701);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8 } = ConjureConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { body: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -24,7 +24,7 @@ export default function ConjureCustomWidgetSheet() {
   const tmp4 = _slicedToArray(memo.useState(null), 2);
   [tmp7, asyncGeneratorStep] = memo.useState(false);
   _slicedToArray = memo.useRef(false);
-  memo = memo.useMemo(() => first(7345).resolveConjureWorkspaceGuildId("ConjureCustomWidgetSheet"), []);
+  memo = memo.useMemo(() => first(7347).resolveConjureWorkspaceGuildId("ConjureCustomWidgetSheet"), []);
   const callback = memo.useCallback((arg0) => {
     closure_1(arg0);
     dependencyMap(null);
@@ -72,13 +72,13 @@ export default function ConjureCustomWidgetSheet() {
                     const obj6 = { guild_id: tmp65, install_scope: "user" };
                     c4 = 3;
                     c5 = 1;
-                    const obj7 = { value: value(tmp73[11]).createProject(obj6), done: false };
+                    const obj7 = { value: value(tmp74[11]).createProject(obj6), done: false };
                     return obj7;
                   }
                 }
               } else {
-                const intl = value(tmp73[9]).intl;
-                dependencyMap(intl.string(tmp4(tmp73[10]).AuyDIq));
+                const intl = value(tmp74[9]).intl;
+                dependencyMap(intl.string(tmp4(tmp74[10]).AuyDIq));
               }
               c5 = 3;
             }
@@ -86,14 +86,14 @@ export default function ConjureCustomWidgetSheet() {
             c3 = 0;
             closure_129_4.current = false;
             closure_129_3(false);
-            throw tmp73;
+            throw tmp74;
           } else {
             if (2 === tmp8) {
               c3 = 1;
-              closure_128_2 = tmp73;
+              closure_128_2 = tmp74;
               if (null == closure_128_1) {
-                closure_129_2(value(tmp73[14]).getConjureCreateErrorMessage(closure_128_2));
-                const obj3 = value(tmp73[14]);
+                closure_129_2(value(tmp74[14]).getConjureCreateErrorMessage(closure_128_2));
+                const obj3 = value(tmp74[14]);
               }
             } else if (arg0 === 1) {
               c5 = 3;
@@ -108,27 +108,27 @@ export default function ConjureCustomWidgetSheet() {
             } else {
               closure_128_1 = value;
               closure_1_7(closure_128_1);
-              closure_1_8(closure_128_1, value(tmp73[12]).composeConjureCustomWidgetPrompt(closure_128_0));
-              tmp4(tmp73[13])(closure_128_1);
+              closure_1_8(closure_128_1, value(tmp74[12]).composeConjureCustomWidgetPrompt(closure_128_0));
+              tmp4(tmp74[13])(closure_128_1);
               c3 = 1;
-              const obj = value(tmp73[12]);
+              const obj = value(tmp74[12]);
             }
             c3 = 0;
             closure_129_4.current = false;
             closure_129_3(false);
           }
-          tmp4(tmp73[13])(closure_128_1);
+          tmp4(tmp74[13])(closure_128_1);
           c3 = 0;
           closure_129_4.current = false;
           closure_129_3(false);
           c5 = 3;
           const obj9 = { value: undefined, done: true };
           return obj9;
-        } catch (tmp73) {
+        } catch (tmp74) {
           if (tmp5 === c3) {
             c5 = tmp3;
-            throw tmp73;
-          } else if (tmp2 === tmp75) {
+            throw tmp74;
+          } else if (tmp2 === tmp76) {
             c4 = tmp2;
           } else {
             c4 = tmp;
@@ -140,9 +140,9 @@ export default function ConjureCustomWidgetSheet() {
   );
   let obj = { startExpanded: true, keyboardShouldPersistTaps: "handled", header: null, children: null };
   let obj2 = { title: null };
-  let intl = value(1128).intl;
-  obj2.title = intl.string(_modDef3830.yI85oV);
-  obj.header = closure_9(value(7248).BottomSheetTitleHeader, obj2);
+  let intl = value(1125).intl;
+  obj2.title = intl.string(_modDef3831.yI85oV);
+  obj.header = closure_9(value(7250).BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp.body, children: null };
   let obj4 = {
     label: null,
@@ -154,27 +154,27 @@ export default function ConjureCustomWidgetSheet() {
     maxLength: null,
     disabled: null,
   };
-  const intl2 = value(1128).intl;
-  obj4.label = intl2.string(_modDef3830["09BSx3"]);
-  const intl3 = value(1128).intl;
-  obj4.placeholder = intl3.string(_modDef3830.K7zdCZ);
-  const intl4 = value(1128).intl;
-  obj4.description = intl4.string(_modDef3830.SKwzvJ);
+  const intl2 = value(1125).intl;
+  obj4.label = intl2.string(_modDef3831["09BSx3"]);
+  const intl3 = value(1125).intl;
+  obj4.placeholder = intl3.string(_modDef3831.K7zdCZ);
+  const intl4 = value(1125).intl;
+  obj4.description = intl4.string(_modDef3831.SKwzvJ);
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(14377).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(14413).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
-  const items1 = [closure_9(value(7180).TextArea, obj4)];
+  const items1 = [closure_9(value(7182).TextArea, obj4)];
   const obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };
-  const intl5 = tmp12(1128).intl;
-  obj5.text = intl5.string(_modDef3830.MDZXiK);
+  const intl5 = tmp12(1125).intl;
+  obj5.text = intl5.string(_modDef3831.MDZXiK);
   obj5.onPress = callback1;
   obj5.loading = tmp7;
   obj5.disabled = null == memo;
-  items1[1] = closure_9(value(5244).Button, obj5);
+  items1[1] = closure_9(value(5245).Button, obj5);
   obj3.children = items1;
   obj.children = closure_10(View, obj3);
-  return closure_9(value(7298).ActionSheet, obj);
+  return closure_9(value(7300).ActionSheet, obj);
 }
 export const CONJURE_CUSTOM_WIDGET_SHEET_KEY = "ConjureCustomWidgetSheet";

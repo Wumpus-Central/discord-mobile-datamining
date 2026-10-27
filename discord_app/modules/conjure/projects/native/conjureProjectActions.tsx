@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/projects/native/conjureProjectActions.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef3830 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3831 from "../../intl/ConjureUntranslated.messages.js";
 import ToastUtils from "../../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import CopyIcon from "../../../../design/components/Icon/native/redesign/generated/CopyIcon.tsx";
@@ -85,14 +85,14 @@ let closure_11 = async function _importIntoProject(arg0) {
           if (closure_2_1 != null) {
             closure_2_1();
           }
-          const intl2 = tmp3(1128).intl;
-          await tmp3(12257).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3830).Owerd3));
+          const intl2 = tmp3(1125).intl;
+          await tmp3(12262).sendConjureArchiveImport(id.id, closure_2_2, intl2.string(v2(3831).Owerd3));
           if (1 === tmp7) {
             dependencyMap = 0;
-            const intl = tmp3(1128).intl;
-            tmp3(5662).presentError(intl.string(v2(3830)["Q+l4Hv"]));
+            const intl = tmp3(1125).intl;
+            tmp3(5663).presentError(intl.string(v2(3831)["Q+l4Hv"]));
             c3 = 3;
-            tmp3(5662);
+            tmp3(5663);
           } else if (arg0 === 1) {
             c3 = 3;
             throw value;
@@ -120,11 +120,11 @@ let closure_11 = async function _importIntoProject(arg0) {
     }
   }
 };
-const ConjureConnectionStore = fn(10698);
+const ConjureConnectionStore = fn(10701);
 ({ ensureConnection: closure_4, sendUserMessage: hasOwnProperty } = ConjureConnectionStore);
-const ConjureProjectStore = fn(6773);
+const ConjureProjectStore = fn(6774);
 ({ canPublishProject: closure_7, canRemixProject: closure_8, isProjectOwner: closure_9 } = ConjureProjectStore);
-const StaticChannelRoute = fn(4830).StaticChannelRoute;
+const StaticChannelRoute = fn(4831).StaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/conjureProjectActions.tsx");
 
@@ -211,7 +211,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
     }
     React4(project.id);
     const intl = util.intl;
-    hasOwnProperty(project.id, intl.string(_modDef3830.oU20rd));
+    hasOwnProperty(project.id, intl.string(_modDef3831.oU20rd));
   };
   items1.push(obj5);
   if (tmp) {
@@ -230,8 +230,8 @@ export const conjureProjectActions = function conjureProjectActions(project) {
         }
         return applyArgumentsResult;
       })(project, closure_1_4).catch(() => {
-        const intl = project(1128).intl;
-        project(5662).presentError(intl.string(closure_1_1(3830)["Q+l4Hv"]));
+        const intl = project(1125).intl;
+        project(5663).presentError(intl.string(closure_1_1(3831)["Q+l4Hv"]));
       });
     };
     items1.push(obj6);
@@ -270,7 +270,7 @@ export const conjureProjectActions = function conjureProjectActions(project) {
     ClipboardUtils.copy(project.id);
     const obj3 = { text: null, icon: null };
     const intl = util.intl;
-    obj3.text = intl.string(_modDef3830.CmfaZG);
+    obj3.text = intl.string(_modDef3831.CmfaZG);
     obj3.icon = CopyIcon.CopyIcon;
     ToastActionCreatorsDefault.open("CONJURE_PROJECT_ID_COPIED", obj3);
   };
@@ -323,15 +323,15 @@ export const conjureProjectActions = function conjureProjectActions(project) {
         const obj3 = { key: "ConjureProjectDelete", title: null, content: null, confirmText: null, onConfirm: null };
         let intl = util.intl;
         const obj4 = { name: project.name };
-        obj3.title = intl.formatToPlainString(_modDef3830.CJBhb2, obj4);
+        obj3.title = intl.formatToPlainString(_modDef3831.CJBhb2, obj4);
         const intl2 = util.intl;
-        obj3.content = intl2.string(_modDef3830["0OmrVn"]);
+        obj3.content = intl2.string(_modDef3831["0OmrVn"]);
         const intl3 = util.intl;
         obj3.confirmText = intl3.string(util.t.oyYWHE);
         obj3.onConfirm = function onConfirm() {
           const result = project(muted[34]).deleteProjectInBackground(id.id, () => {
-            const intl = id(1128).intl;
-            return id(5662).presentError(intl.string(closure_1_1(3830)["0XDHob"]));
+            const intl = id(1125).intl;
+            return id(5663).presentError(intl.string(closure_1_1(3831)["0XDHob"]));
           });
         };
         AlertModal.showConfirmModal(obj3);

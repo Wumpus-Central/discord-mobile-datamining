@@ -239,7 +239,7 @@ let closure_18 = async function _settleAppStoreAgeSignalReport() {
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, AppStates: closure_8 } = Constants);
 let c9 = false;
 let c10 = null;
@@ -392,8 +392,8 @@ export const beginAppStoreAgeSignalReport = function beginAppStoreAgeSignalRepor
   if (tmp3) {
     let result = require("AppStoreAgeSignalSupport").isAppStoreAgeSignalSupported();
     if (result) {
-      result = tmp4(5644).shouldCollectAppStoreSignal();
-      const tmp4Result = tmp4(5644);
+      result = tmp4(5645).shouldCollectAppStoreSignal();
+      const tmp4Result = tmp4(5645);
     }
     tmp3 = result;
     const obj = require("AppStoreAgeSignalSupport");

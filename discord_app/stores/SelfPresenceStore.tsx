@@ -2,7 +2,7 @@
 import _modDef12 from "../../_runtime/metro/00012__.js";
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef1357 from "../../_runtime/metro/01357__.js";
+import _modDef1354 from "../../_runtime/metro/01354__.js";
 import UserSettings from "../modules/user_settings/UserSettings.tsx";
 import LibraryApplicationUtils from "../utils/LibraryApplicationUtils.tsx";
 import isListeningOnSpotifyDefault from "../modules/activities/utils/isListeningOnSpotify.tsx";
@@ -122,7 +122,7 @@ function handleUpdate() {
       found = activities.filter(shouldShowActivity);
     }
     let flag = false;
-    if (!_modDef1357(found, found)) {
+    if (!_modDef1354(found, found)) {
       closure_20 = filterPlayingActivities(found);
       flag = true;
     }
@@ -161,8 +161,8 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5712).sortActivity;
-const Constants = fn(1087);
+const sortActivity = fn(5713).sortActivity;
+const Constants = fn(1084);
 const StatusTypes = Constants.StatusTypes;
 ({ ActivityTypes: map1, AppStates: closure_14 } = Constants);
 let c15 = false;

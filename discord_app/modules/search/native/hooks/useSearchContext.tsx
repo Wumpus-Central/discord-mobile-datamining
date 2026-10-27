@@ -7,7 +7,7 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const SearchTypes = fn(1087).SearchTypes;
+const SearchTypes = fn(1084).SearchTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()

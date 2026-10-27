@@ -10,13 +10,13 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const useQueryState = fn(9650).useQueryState;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
+const useQueryState = fn(9652).useQueryState;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1084).EMPTY_STRING_SNOWFLAKE_ID;
 let items = [
-  fn(2000).ApplicationCommandType.PRIMARY_ENTRY_POINT,
-  fn(2000).ApplicationCommandType.CHAT,
-  fn(2000).ApplicationCommandType.MESSAGE,
-  fn(2000).ApplicationCommandType.USER,
+  fn(1997).ApplicationCommandType.PRIMARY_ENTRY_POINT,
+  fn(1997).ApplicationCommandType.CHAT,
+  fn(1997).ApplicationCommandType.MESSAGE,
+  fn(1997).ApplicationCommandType.USER,
 ];
 const ReactCompilerGating = fn(558);
 const size = fn(2);

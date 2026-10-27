@@ -4,7 +4,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
 import HelpdeskUtilsDefault from "../../../../utils/HelpdeskUtils.tsx";
-import _modDef3412 from "../../../favorites/intl/FavoritesGuild.messages.js";
+import _modDef3413 from "../../../favorites/intl/FavoritesGuild.messages.js";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import HeaderShared from "../../../main_tabs_v2/native/shared_components/HeaderShared.tsx";
 import SettingBuilders from "../../../settings/native/renderer/SettingBuilders.tsx";
@@ -55,7 +55,7 @@ function getAppearanceSettings() {
   obj6.settings = items6;
   const intl3 = util.intl;
   const obj7 = { helpCenterLink: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.FAVORITES_GUILD) };
-  obj6.subLabel = intl3.format(_modDef3412.GR2KOG, obj7);
+  obj6.subLabel = intl3.format(_modDef3413.GR2KOG, obj7);
   items1[5] = obj6;
   const obj9 = { label: null, settings: null };
   const intl4 = util.intl;
@@ -75,10 +75,10 @@ function getAppearanceSettings() {
   items1[8] = obj11;
   return items1;
 }
-const FontScaleStore = fn(16622);
+const FontScaleStore = fn(16664);
 ({ DEFAULT_FONT_SCALE_STORE_STATE: closure_7, useFontScaleStore: closure_8 } = FontScaleStore);
-const MobileUserSettings = fn(8332).MobileUserSettings;
-const HelpdeskArticles = fn(1087).HelpdeskArticles;
+const MobileUserSettings = fn(8331).MobileUserSettings;
+const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
@@ -122,7 +122,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (obj.isAndroid()) {
           if (closure_0.persistedFontScale === closure_0.fontScale) {
             if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-              nativeStackNavigation.setOptions({ headerRight: "Array" });
+              nativeStackNavigation.setOptions({ headerRight: "rejectWithError" });
             }
           }
           const obj2 = { headerRight: null };
@@ -171,7 +171,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         if (obj.isAndroid()) {
           if (closure_0.persistedFontScale === closure_0.fontScale) {
             if (closure_0.persistedIsClassicChatFontScaleEnabled === closure_0.isClassicChatFontScaleEnabled) {
-              nativeStackNavigation.setOptions({ headerRight: "Array" });
+              nativeStackNavigation.setOptions({ headerRight: "rejectWithError" });
             }
           }
           const obj2 = { headerRight: null };

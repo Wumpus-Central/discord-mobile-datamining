@@ -6,7 +6,7 @@ import DurationsDefault from "../utils/Durations.tsx";
 import HTTPUtils from "../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
 import GlobalUtils from "../utils/GlobalUtils.tsx";
 import AppStateStore from "native/AppStateStore.tsx";
-import asyncRequireImpl from "../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../_runtime/01999_asyncRequireImpl.js";
 import TypeUtils from "../../discord_common/js/packages/type-utils/TypeUtils.tsx";
 import ThreadActionUtils from "../modules/threads/ThreadActionUtils.tsx";
 import BasicPermissionUtilsDefault from "../utils/BasicPermissionUtils.tsx";
@@ -491,9 +491,9 @@ function mergeForGuild(guild) {
   }
   value3 = obj.get(guild.id, tmp3.GUILD_HOME);
   const obj4 = id(11);
-  const tmp12 = id(2049);
-  const tmp12Result = id(2049)(Date.now());
-  value3.lastMessageId = obj4.fromTimestamp(id(2049)(Date.now()).subtract(24, "h").valueOf());
+  const tmp12 = id(2046);
+  const tmp12Result = id(2046)(Date.now());
+  value3.lastMessageId = obj4.fromTimestamp(id(2046)(Date.now()).subtract(24, "h").valueOf());
   guild = GuildStore.getGuild(guild.id);
   if (null != guild) {
     let prop2;
@@ -506,7 +506,7 @@ function mergeForGuild(guild) {
       value4.lastMessageId = prop2;
     }
   }
-  const subtractResult = id(2049)(Date.now()).subtract(24, "h");
+  const subtractResult = id(2046)(Date.now()).subtract(24, "h");
 }
 function mergeRelationships(relationships) {
   const currentUser = UserStore.getCurrentUser();
@@ -819,19 +819,19 @@ function handleGuildFeatureAck(id) {
   }
   return tmp;
 }
-const isEventUpcoming = fn(6784).isEventUpcoming;
-const ChannelRecord = fn(4827);
+const isEventUpcoming = fn(6785).isEventUpcoming;
+const ChannelRecord = fn(4828);
 ({ isChannelChatInSidebar: closure_17, isReadableType: closure_18, isThread: closure_19, isPrivate: closure_20, ALL_CHANNEL_TYPES: closure_21, THREAD_CHANNEL_TYPES: closure_22 } = ChannelRecord);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticsObjectTypes: closure_37, AnalyticsObjects: closure_38, AnalyticsSections: closure_39, Endpoints: closure_40, ChannelLayouts: closure_41, OverlayWidgets, CURRENT_APP_CONTEXT: closure_42, ChannelTypes: closure_43, BasicPermissions } = Constants);
 ({ Permissions: closure_45, MessageTypes: closure_46, RelationshipTypes: closure_47, ChannelTypesSets: closure_48, UserNotificationSettings: closure_49, MessageTypesSets: closure_50, AppStates: closure_51 } = Constants);
-const ActivityPanelConstants = fn(5609);
+const ActivityPanelConstants = fn(5610);
 ({ ActivityPanelModes: closure_52, FocusedActivityLayouts: closure_53 } = ActivityPanelConstants);
-const ChannelConstants = fn(4830);
+const ChannelConstants = fn(4831);
 ({ ChannelFlags: closure_54, isStaticChannelRoute: closure_55 } = ChannelConstants);
-const GuildScheduledEventStatus = fn(4829).GuildScheduledEventStatus;
-const ReadStateTypes = fn(6705).ReadStateTypes;
-const ThreadMemberFlags = fn(1127).ThreadMemberFlags;
+const GuildScheduledEventStatus = fn(4830).GuildScheduledEventStatus;
+const ReadStateTypes = fn(6706).ReadStateTypes;
+const ThreadMemberFlags = fn(1124).ThreadMemberFlags;
 const logger = new LoggerDefault("ReadStateStore");
 let closure_60 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
 let channelId = SelectedChannelStore.getChannelId();
@@ -1924,14 +1924,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(6818, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(6820, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(6818, dependencyMap.paths);
+          const promise = asyncRequireImpl(6820, dependencyMap.paths);
         }
       }
     });
@@ -3246,7 +3246,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "IconComponent", local: "IconComponent", immediate: "Reflect", force: "any", isExplicitUserAction: "string_format", trackAnalytics: "uppercase" });
+    return value.ack({ messageId: "IconComponent", local: "IconComponent", immediate: "Reflect", force: "any", isExplicitUserAction: "clearReactNativeMicrotask", trackAnalytics: "hasVisitedDisplayNameStyles" });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);

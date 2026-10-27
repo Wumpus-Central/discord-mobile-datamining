@@ -25,18 +25,18 @@ function getStickerExtensionFromFormatType(format_type) {
     throw error;
   }
 }
-const StickersConstants = fn(4802);
+const StickersConstants = fn(4803);
 ({
   DEFAULT_STICKER_DIMENSIONS: closure_4,
   STICKER_APPLICATION_ID: hasOwnProperty,
   StickerAnimationSettings: metroRequire,
 } = StickersConstants);
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const API_ENDPOINT = GLOBAL_ENV.API_ENDPOINT;
 const MEDIA_PROXY_ENDPOINT = GLOBAL_ENV.MEDIA_PROXY_ENDPOINT;
 ({ PROJECT_ENV: c10, ASSET_ENDPOINT } = GLOBAL_ENV);
 const CDN_HOST = GLOBAL_ENV.CDN_HOST;
-const values = Object.values(fn(6489).StickerExtensions);
+const values = Object.values(fn(6490).StickerExtensions);
 const decodeURIComponentResult = decodeURIComponent(Endpoints.STICKER_ASSET("[\\d]+", "(" + values.join("|") + ")"));
 const regExp = new RegExp(
   "(" +

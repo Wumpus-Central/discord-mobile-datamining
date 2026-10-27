@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
       let tmp8 = null;
       if (stateFromStores) {
-        tmp8 = userProfileLiveActivities(10636)(arg0);
+        tmp8 = userProfileLiveActivities(10639)(arg0);
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const items1 = [PresenceStore];

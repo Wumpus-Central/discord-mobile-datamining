@@ -5,8 +5,8 @@ import FastestListPropsPlaceholder from "../../../fastest_list/props/FastestList
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const CATEGORY_ICON_SIZE = fn(1087).CATEGORY_ICON_SIZE;
-const createStyles = fn(4971);
+const CATEGORY_ICON_SIZE = fn(1084).CATEGORY_ICON_SIZE;
+const createStyles = fn(4972);
 let obj2 = { placeholder: { color: nativeDefault.colors.BACKGROUND_MOD_STRONG, opacity: 0.5 } };
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

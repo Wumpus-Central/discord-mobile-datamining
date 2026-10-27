@@ -3,7 +3,7 @@ import PremiumSubscriptionInvoiceItem from "../modules/premium/PremiumSubscripti
 import Record from "../lib/Record.tsx";
 
 require = fn;
-const PaymentGateways = fn(1087).PaymentGateways;
+const PaymentGateways = fn(1084).PaymentGateways;
 let BaseInvoiceRecord;
 class BaseInvoiceRecord extends tmp2 {
   constructor(arg0) {
@@ -271,6 +271,10 @@ InvoiceRecord["createFromOrder"] = function createFromOrder(billing_facet) {
       }
       return acc + num;
     }, 0);
+    let payment_legs = invoice_preview.payment_legs;
+    if (payment_legs == null) {
+      payment_legs = [];
+    }
     let obj = {
       id: "",
       invoiceItems: found,
@@ -283,6 +287,8 @@ InvoiceRecord["createFromOrder"] = function createFromOrder(billing_facet) {
       subscriptionPeriodEnd: null,
       orbsReward: null,
       checkoutContext: null,
+      applyWalletBalance: null,
+      paymentLegs: null,
     };
     ({
       total: obj.total,
@@ -292,45 +298,71 @@ InvoiceRecord["createFromOrder"] = function createFromOrder(billing_facet) {
       tax_inclusive: obj.taxInclusive,
     } = invoice_preview);
     const _Date = Date;
+    const mapped1 = payment_legs.map((amount) => {
+      const obj = {
+        amount: amount.amount,
+        currency: invoice_preview.currency,
+        payment_id: null,
+        payment_gateway: amount.payment_gateway,
+        payment_source_id: null,
+        available_balance: null,
+        amount_short: null,
+      };
+      let payment_source_id = amount.payment_source_id;
+      if (payment_source_id == null) {
+        payment_source_id = null;
+      }
+      obj.payment_source_id = payment_source_id;
+      const available_balance = amount.available_balance;
+      obj.available_balance = available_balance;
+      obj.amount_short = amount.amount_short;
+      return obj;
+    });
     const date = new Date(0);
     obj.subscriptionPeriodStart = date;
     const _Date2 = Date;
     const date1 = new Date(0);
     obj.subscriptionPeriodEnd = date1;
-    let tmp3;
+    let tmp14;
     if (reduced > 0) {
-      tmp3 = reduced;
+      tmp14 = reduced;
     }
-    obj.orbsReward = tmp3;
+    obj.orbsReward = tmp14;
     const checkout_context = billing_facet.checkout_context;
     obj.checkoutContext = checkout_context;
+    let apply_wallet_balance;
+    if (billing_facet != null) {
+      apply_wallet_balance = billing_facet.apply_wallet_balance;
+    }
+    obj.applyWalletBalance = apply_wallet_balance;
+    obj.paymentLegs = mapped1;
     if (typeof InvoiceRecord === "function") {
-      const tmp9 = new InvoiceRecord(obj, tmp, tmp15, tmp19, reduced, tmp3);
-      ({ id: tmp9.id, invoiceItems } = obj);
+      const tmp21 = new InvoiceRecord(obj, tmp, tmp6, tmp10, reduced, tmp14);
+      ({ id: tmp21.id, invoiceItems } = obj);
       if (invoiceItems == null) {
         invoiceItems = [];
       }
-      tmp9.invoiceItems = invoiceItems;
+      tmp21.invoiceItems = invoiceItems;
       ({
-        taxInclusive: tmp9.taxInclusive,
-        subscriptionPeriodStart: tmp9.subscriptionPeriodStart,
-        subscriptionPeriodEnd: tmp9.subscriptionPeriodEnd,
-        status: tmp9.status,
-        orbsReward: tmp9.orbsReward,
-        checkoutContext: tmp9.checkoutContext,
-        applyWalletBalance: tmp9.applyWalletBalance,
+        taxInclusive: tmp21.taxInclusive,
+        subscriptionPeriodStart: tmp21.subscriptionPeriodStart,
+        subscriptionPeriodEnd: tmp21.subscriptionPeriodEnd,
+        status: tmp21.status,
+        orbsReward: tmp21.orbsReward,
+        checkoutContext: tmp21.checkoutContext,
+        applyWalletBalance: tmp21.applyWalletBalance,
         paymentLegs,
       } = obj);
       if (paymentLegs == null) {
         paymentLegs = [];
       }
-      tmp9.paymentLegs = paymentLegs;
-      return tmp9;
+      tmp21.paymentLegs = paymentLegs;
+      return tmp21;
     } else {
       throw new TypeError("Trying to call a non-function");
     }
-    tmp15 = new.target;
-    tmp19 = new.target;
+    tmp10 = new.target;
+    tmp6 = new.target;
   }
 };
 InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(body) {
@@ -388,6 +420,12 @@ InvoiceRecord["createFromOTPPreview"] = function createFromOTPPreview(body) {
   }
   const date1 = new Date(0);
 };
+Object.defineProperty(prototype2, "hasGiftCardBalanceApplied", {
+  get: function hasGiftCardBalanceApplied() {
+    return this.getWalletAmount() > 0;
+  },
+  set: undefined,
+});
 prototype2["getWalletAmount"] = function getWalletAmount() {
   const paymentLegs = this.paymentLegs;
   return paymentLegs.reduce((acc, payment_gateway) => {

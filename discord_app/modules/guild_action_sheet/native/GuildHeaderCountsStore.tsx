@@ -53,21 +53,21 @@ const guildHeaderCountsStore = new GuildHeaderCountsStore(DispatcherDefault, {
   GUILD_HEADER_MEMBER_COUNT: function handleMemberCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "children", onlineCount: "k", memberCount: "borderRadius" };
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "unicodeVersion", memberCount: "children" };
     }
     dependencyMap[guildId].memberCount = guildId.count;
   },
   GUILD_HEADER_ONLINE_COUNT: function handleOnlineCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "children", onlineCount: "k", memberCount: "borderRadius" };
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "unicodeVersion", memberCount: "children" };
     }
     dependencyMap[guildId].onlineCount = guildId.count;
   },
   GUILD_HEADER_ACTIVE_CHANNELS_COUNT: function handleActiveChannelsCount(guildId) {
     guildId = guildId.guildId;
     if (null == dependencyMap[guildId]) {
-      dependencyMap[guildId] = { activeChannelsCount: "children", onlineCount: "k", memberCount: "borderRadius" };
+      dependencyMap[guildId] = { activeChannelsCount: "Array", onlineCount: "unicodeVersion", memberCount: "children" };
     }
     dependencyMap[guildId].activeChannelsCount = guildId.count;
   },

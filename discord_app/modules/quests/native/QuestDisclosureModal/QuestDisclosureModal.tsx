@@ -4,7 +4,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import Navigator from "../../../../design/components/Navigator/native/Navigator.native.tsx";
 import HeaderActionButton from "../../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
-import _modDef8115 from "../../../../../_runtime/metro/08115__.js";
+import _modDef8113 from "../../../../../_runtime/metro/08113__.js";
 import QuestDisclosureModalActionCreatorsDefault from "QuestDisclosureModalActionCreators.tsx";
 import QuestDisclosureModalInnerDefault from "QuestDisclosureModalInner.tsx";
 import ReactCompilerGating_mod from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -26,11 +26,11 @@ const headerLeft = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: _modDef8115, onPress: first, accessibilityLabel: null };
+        const obj2 = { source: _modDef8113, onPress: first, accessibilityLabel: null };
         const intl = util.intl;
         obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
         const tmp8 = jsx(HeaderActionButton.HeaderActionButton, {
-          source: _modDef8115,
+          source: _modDef8113,
           onPress: first,
           accessibilityLabel: null,
         });
@@ -43,7 +43,7 @@ const headerLeft = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function CloseButton() {
       const obj = {
-        source: _modDef8115,
+        source: _modDef8113,
         onPress: function onClose() {
           return QuestDisclosureModalActionCreatorsDefault.hideModal();
         },
@@ -52,7 +52,7 @@ const headerLeft = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
       return jsx(HeaderActionButton.HeaderActionButton, {
-        source: _modDef8115,
+        source: _modDef8113,
         onPress: function onClose() {
           return QuestDisclosureModalActionCreatorsDefault.hideModal();
         },

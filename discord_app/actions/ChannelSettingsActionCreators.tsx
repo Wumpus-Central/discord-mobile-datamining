@@ -318,8 +318,8 @@ let closure_9 = async function _saveChannel(arg0) {
               tmp5 = isThreadResult;
             }
             if (!tmp5) {
-              const result = closure_1(7424).checkGuildTemplateDirty(guildId);
-              const tmpResult = closure_1(7424);
+              const result = closure_1(7426).checkGuildTemplateDirty(guildId);
+              const tmpResult = closure_1(7426);
             }
             return arg0;
           },
@@ -433,7 +433,7 @@ function removeLinkedLobby(arg0) {
   const HTTP = HTTPUtils.HTTP;
   return HTTP.del({ url: timestampProducer.CHANNEL_LINKED_LOBBY(arg0), rejectWithError: true });
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Endpoints: metroRequire, Layers, ChannelSettingsSections: closure_7 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/ChannelSettingsActionCreators.tsx");

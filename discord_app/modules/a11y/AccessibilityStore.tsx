@@ -89,10 +89,10 @@ function handleReducedMotionUpdated() {
   obj.youBarAvatarDecoAnimation = str;
 }
 let closure_3 = ["fontScale"];
-const Constants = fn(1087);
+const Constants = fn(1084);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(4976);
+const MessageConstants = fn(4977);
 ({
   MESSAGE_GROUP_SPACING: closure_11,
   DEFAULT_COMPACT_SPACING: closure_12,

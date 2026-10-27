@@ -1,6 +1,6 @@
 // discord_app/modules/guild_automod/AutomodRemovedContentActionCreators.native.tsx
 import util from "../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastActionCreatorsDefault from "../toast/native/ToastActionCreators.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
@@ -29,7 +29,7 @@ export const showRemovedMessageToast = function showRemovedMessageToast(arg0, ch
 };
 export const openRemovedContentModal = function openRemovedContentModal(action) {
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(18757, dependencyMap.paths),
+    asyncRequireImpl(18793, dependencyMap.paths),
     "AutomodRemovedContentSheet",
     { action },
   );

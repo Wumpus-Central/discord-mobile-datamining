@@ -40,7 +40,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return flag;
       }, []);
     };
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useShowManageSubscriptionsSetting() {
       const cResult = c.c(1);
@@ -72,7 +72,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["z5YcJ+"]);
   },
   parent: null,
-  IconComponent: fn(16283).SubscriptionIcon,
+  IconComponent: fn(16321).SubscriptionIcon,
   usePreNavigationAction: tmp2,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
     ? function useShowManageSubscriptionsSetting() {
@@ -100,7 +100,7 @@ const route = SettingBuilders.createRoute({
         return hasPremiumSubscriptionToDisplay;
       },
   screen: {
-    route: fn(1087).UserSettingsSections.PREMIUM_MANAGE_PLAN,
+    route: fn(1084).UserSettingsSections.PREMIUM_MANAGE_PLAN,
     getComponent() {
       return require("PremiumManagePlanScreen").default;
     },

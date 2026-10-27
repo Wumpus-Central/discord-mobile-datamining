@@ -19,10 +19,10 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const DEFAULT_ROLE_COLOR_HEX = fn(1087).DEFAULT_ROLE_COLOR_HEX;
+const DEFAULT_ROLE_COLOR_HEX = fn(1084).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createICYMIStyles = fn(17908);
+const createICYMIStyles = fn(17942);
 let closure_12 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = {
     container: { marginTop: marginHorizontal.margin },

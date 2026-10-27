@@ -15,13 +15,13 @@ import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GatewayConnectionStore from "../../../../gateway/GatewayConnectionStore.tsx";
 
-const native = ThemeContextProvider(5037);
-const QuestsEligibility = ThemeContextProvider(9565);
-const QuestDockExternalCoordinationContext = ThemeContextProvider(16445);
-const GuildsRenderExperiment2 = ThemeContextProvider(17442);
+const native = ThemeContextProvider(5038);
+const QuestsEligibility = ThemeContextProvider(9564);
+const QuestDockExternalCoordinationContext = ThemeContextProvider(16484);
+const GuildsRenderExperiment2 = ThemeContextProvider(17483);
 require = fn;
-const YouBarNavigatorScreens = fn(11184).YouBarNavigatorScreens;
-const ComponentActions = fn(1087).ComponentActions;
+const YouBarNavigatorScreens = fn(11187).YouBarNavigatorScreens;
+const ComponentActions = fn(1084).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = false;
@@ -93,10 +93,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
             const _setTimeout = setTimeout;
             const timeout = setTimeout(allowRender, 4000);
             const subscription = isChatBesideChannelList(584).subscribe("CONNECTION_OPEN", allowRenderAfterReady);
-            let ComponentDispatch = closure_0(1123).ComponentDispatch;
+            let ComponentDispatch = closure_0(1120).ComponentDispatch;
             const subscription1 = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
             let obj = isChatBesideChannelList(584);
-            let rootNavigationRef = closure_0(5151).getRootNavigationRef();
+            let rootNavigationRef = closure_0(5152).getRootNavigationRef();
             if (rootNavigationRef != null) {
               rootNavigationRef.addListener("state", handleNavigationChange);
             }
@@ -125,7 +125,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp4, tmp5);
       if (!isChatBesideChannelList) {
-        isChatBesideChannelList = isChatBesideChannelList(5153)().isChatBesideChannelList;
+        isChatBesideChannelList = isChatBesideChannelList(5154)().isChatBesideChannelList;
       }
       return isChatBesideChannelList;
     }
@@ -182,10 +182,10 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
           const _setTimeout = setTimeout;
           timeout = setTimeout(allowRender, 4000);
           const subscription = isChatBesideChannelList(584).subscribe("CONNECTION_OPEN", allowRenderAfterReady);
-          let ComponentDispatch = closure_0(1123).ComponentDispatch;
+          let ComponentDispatch = closure_0(1120).ComponentDispatch;
           const subscription1 = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
           let obj = isChatBesideChannelList(584);
-          let rootNavigationRef = closure_0(5151).getRootNavigationRef();
+          let rootNavigationRef = closure_0(5152).getRootNavigationRef();
           if (rootNavigationRef != null) {
             rootNavigationRef.addListener("state", handleNavigationChange);
           }
@@ -203,7 +203,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
       if (!isChatBesideChannelList) {
-        isChatBesideChannelList = isChatBesideChannelList(5153)().isChatBesideChannelList;
+        isChatBesideChannelList = isChatBesideChannelList(5154)().isChatBesideChannelList;
       }
       return isChatBesideChannelList;
     };

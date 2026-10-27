@@ -57,9 +57,9 @@ function computePermissions(isPrivate, arg1) {
   obj2.computedPermissions = deserializer.deserialize(0);
   return obj2;
 }
-const ChannelRecordBase = fn(4827).ChannelRecordBase;
-const isGuildNSFW = fn(4841).isGuildNSFW;
-const Constants = fn(1087);
+const ChannelRecordBase = fn(4828).ChannelRecordBase;
+const isGuildNSFW = fn(4842).isGuildNSFW;
+const Constants = fn(1084);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled();

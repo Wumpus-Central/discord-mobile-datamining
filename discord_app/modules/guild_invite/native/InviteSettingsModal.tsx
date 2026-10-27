@@ -18,10 +18,10 @@ import PermissionStore from "../../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ InviteModalScenes: closure_9, Permissions: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   formContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_32 },
   formContent: null,
@@ -35,7 +35,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = navigation(576).c(33);
       closure_12();
       let obj = navigation(576);
-      navigation = navigation(1505).useNavigation();
+      navigation = navigation(1502).useNavigation();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [ChannelStore, CreateInviteModalStore, GuildStore];
         const fn = function v() {
@@ -57,7 +57,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         [tmp6, tmp7] = cResult;
       }
-      let obj2 = navigation(1505);
+      let obj2 = navigation(1502);
       const stateFromStoresObject = navigation(504).useStateFromStoresObject(tmp6, tmp7);
       ({ settings, inviteSettings, channel } = stateFromStoresObject);
       const tmp12 = _slicedToArray(noop.useState(channel), 2);
@@ -174,7 +174,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const unmountEffect = tmp(5263).useUnmountEffect(O);
+        const unmountEffect = tmp(5264).useUnmountEffect(O);
         if (cResult[9] !== channel) {
           class V {
             constructor() {
@@ -277,9 +277,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
                 let tmp;
                 if (dependencyMap) {
                   const obj = { onPress, text: null };
-                  const intl = navigation(1128).intl;
-                  obj.text = intl.string(navigation(1128).t["R3BPH+"]);
-                  tmp = jsx(navigation(7485).HeaderActionButton, { onPress, text: null });
+                  const intl = navigation(1125).intl;
+                  obj.text = intl.string(navigation(1125).t["R3BPH+"]);
+                  tmp = jsx(navigation(7486).HeaderActionButton, { onPress, text: null });
                 }
                 return tmp;
               },
@@ -294,7 +294,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = navigation;
         cResult[14] = P;
         cResult[15] = items2;
-        const tmpResult3 = tmp(5263);
+        const tmpResult3 = tmp(5264);
       }
       const tmpResult = navigation(504);
       const isEqualResult = navigation(12).isEqual(settings, inviteSettings);
@@ -306,8 +306,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function AdvancedInstantInviteScreen() {
       let tmp = closure_12();
-      navigation = navigation(1505).useNavigation();
-      let obj = navigation(1505);
+      navigation = navigation(1502).useNavigation();
+      let obj = navigation(1502);
       const items = [ChannelStore, CreateInviteModalStore, GuildStore];
       const stateFromStoresObject = navigation(504).useStateFromStoresObject(items, () => {
         const pendingSettings = CreateInviteModalStore.getPendingSettings();
@@ -358,7 +358,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       const tmp2Result = navigation(12);
-      const unmountEffect = navigation(5263).useUnmountEffect(() => {
+      const unmountEffect = navigation(5264).useUnmountEffect(() => {
         channel(9057).resetSettings();
       });
       const items2 = [channel];
@@ -384,9 +384,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp;
             if (dependencyMap) {
               const obj = { onPress, text: null };
-              const intl = navigation(1128).intl;
-              obj.text = intl.string(navigation(1128).t["R3BPH+"]);
-              tmp = jsx(navigation(7485).HeaderActionButton, { onPress, text: null });
+              const intl = navigation(1125).intl;
+              obj.text = intl.string(navigation(1125).t["R3BPH+"]);
+              tmp = jsx(navigation(7486).HeaderActionButton, { onPress, text: null });
             }
             return tmp;
           },
@@ -424,7 +424,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
         onChangeFlags: null,
         onChangeRoleIds: null,
       };
-      const tmp2Result2 = navigation(5263);
+      const tmp2Result2 = navigation(5264);
       obj5.maxUsesOptions = channel(9052).getMaxUsesOptions;
       ({ temporary: obj7.temporary, flags: obj7.flags, roleIds: obj7.roleIds } = settings);
       obj5.onChangeMaxAge = callback2;
@@ -432,7 +432,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       obj5.onChangeTemporary = callback3;
       obj5.onChangeFlags = callback4;
       obj5.onChangeRoleIds = callback5;
-      obj4.children = jsx(channel(19361), {
+      obj4.children = jsx(channel(19399), {
         style: tmp.formContent,
         channel: first,
         guild,

@@ -51,7 +51,7 @@ export const useDefaultVariantIndex = ReactCompilerGating.isReactCompilerEnabled
           cResult[3] = stateFromStores;
           cResult[4] = findIndexResult;
         }
-        tmpResult2 = tmp(7661);
+        tmpResult2 = tmp(7662);
       }
       return 0;
     }

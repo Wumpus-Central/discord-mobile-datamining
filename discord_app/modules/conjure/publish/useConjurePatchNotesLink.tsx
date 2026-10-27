@@ -8,8 +8,8 @@ import ConjurePublishStatusStore from "ConjurePublishStatusStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const canPublishProject = fn(6773).canPublishProject;
-const Routes = fn(1087).Routes;
+const canPublishProject = fn(6774).canPublishProject;
+const Routes = fn(1084).Routes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePatchNotesLink.tsx");

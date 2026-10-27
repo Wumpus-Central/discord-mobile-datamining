@@ -10,14 +10,14 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelsConstants = fn(6637);
+const StageChannelsConstants = fn(6638);
 ({ MAX_STAGE_TOPIC_LENGTH: closure_9, START_STAGE_CHANNEL_EVENT_SHEET_KEY: c10 } = StageChannelsConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_11, Fonts } = Constants);
-let closure_12 = fn(4829).GuildScheduledEventPrivacyLevel;
+let closure_12 = fn(4830).GuildScheduledEventPrivacyLevel;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { padding: 16 },
   header: { alignItems: "center", paddingBottom: 24 },
@@ -95,7 +95,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[4] === id) {
           let tmp16 = cResult[5];
         }
-        stateFromStores(5263)(tmp16);
+        stateFromStores(5264)(tmp16);
         if (cResult[6] === channel) {
           if (cResult[7] === stateFromStores) {
             if (cResult[8] === first1) {
@@ -103,11 +103,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[10] !== stateFromStores) {
               if (null == stateFromStores) {
-                const intl2 = tmp(1128).intl;
-                let stringResult = intl2.string(tmp(1128).t.DDF0cJ);
+                const intl2 = tmp(1125).intl;
+                let stringResult = intl2.string(tmp(1125).t.DDF0cJ);
               } else {
-                const intl = tmp(1128).intl;
-                stringResult = intl.string(tmp(1128).t["5BKP4y"]);
+                const intl = tmp(1125).intl;
+                stringResult = intl.string(tmp(1125).t["5BKP4y"]);
               }
               cResult[10] = stateFromStores;
               cResult[11] = stringResult;
@@ -118,11 +118,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[15] !== stateFromStores) {
                   if (null == stateFromStores) {
-                    const intl4 = tmp(1128).intl;
-                    let stringResult1 = intl4.string(tmp(1128).t.bqQIwa);
+                    const intl4 = tmp(1125).intl;
+                    let stringResult1 = intl4.string(tmp(1125).t.bqQIwa);
                   } else {
-                    const intl3 = tmp(1128).intl;
-                    stringResult1 = intl3.string(tmp(1128).t["I+9bLx"]);
+                    const intl3 = tmp(1125).intl;
+                    stringResult1 = intl3.string(tmp(1125).t["I+9bLx"]);
                   }
                   cResult[15] = stateFromStores;
                   cResult[16] = stringResult1;
@@ -136,8 +136,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         if (cResult[24] !== stateFromStores) {
                           let stringResult2;
                           if (null == stateFromStores) {
-                            const intl5 = tmp(1128).intl;
-                            stringResult2 = intl5.string(tmp(1128).t.gR66jX);
+                            const intl5 = tmp(1125).intl;
+                            stringResult2 = intl5.string(tmp(1125).t.gR66jX);
                           }
                           cResult[24] = stateFromStores;
                           cResult[25] = stringResult2;
@@ -148,8 +148,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         const _Symbol = Symbol;
                         const container = tmp4.container;
                         if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
-                          const intl6 = tmp(1128).intl;
-                          const stringResult3 = intl6.string(tmp(1128).t["5FPBOB"]);
+                          const intl6 = tmp(1125).intl;
+                          const stringResult3 = intl6.string(tmp(1125).t["5FPBOB"]);
                           cResult[26] = stringResult3;
                           let tmp39 = stringResult3;
                         } else {
@@ -157,8 +157,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                         const _Symbol2 = Symbol;
                         if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-                          const intl7 = tmp(1128).intl;
-                          const stringResult4 = intl7.string(tmp(1128).t.ZwWruY);
+                          const intl7 = tmp(1125).intl;
+                          const stringResult4 = intl7.string(tmp(1125).t.ZwWruY);
                           cResult[27] = stringResult4;
                           let tmp41 = stringResult4;
                         } else {
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   loading: tmp12,
                                   accessibilityHint: tmp37,
                                 };
-                                const tmp59 = closure_13(tmp(5244).Button, obj2);
+                                const tmp59 = closure_13(tmp(5245).Button, obj2);
                                 cResult[40] = tmp19;
                                 cResult[41] = tmp37;
                                 cResult[42] = tmp12;
@@ -250,14 +250,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                 color: "text-feedback-critical",
                                 children: obj4.getAnyErrorMessage(),
                               };
-                              tmp52 = closure_13(tmp(5234).Text, obj5);
+                              tmp52 = closure_13(tmp(5235).Text, obj5);
                             }
                             cResult[35] = obj4;
                             cResult[36] = tmp4.error;
                             cResult[37] = tmp52;
                           }
                           let obj6 = { onConfirmPress: Z, style: tmp4.ageVerificationNotice, channelId: channel.id };
-                          const tmp50 = closure_13(tmp17(7882), obj6);
+                          const tmp50 = closure_13(tmp17(7883), obj6);
                           cResult[32] = channel.id;
                           cResult[33] = tmp4.ageVerificationNotice;
                           cResult[34] = tmp50;
@@ -273,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           clearable: true,
                           onSubmitEditing: tmp19,
                         };
-                        const tmp46 = closure_13(tmp(7008).TextInput, obj7);
+                        const tmp46 = closure_13(tmp(7010).TextInput, obj7);
                         cResult[28] = tmp19;
                         cResult[29] = first1;
                         cResult[30] = tmp46;
@@ -294,7 +294,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     color: "text-default",
                     children: cResult[16],
                   };
-                  const tmp32 = closure_13(tmp(5234).Text, obj9);
+                  const tmp32 = closure_13(tmp(5235).Text, obj9);
                   cResult[17] = tmp4.headerSubtitle;
                   cResult[18] = cResult[16];
                   cResult[19] = tmp32;
@@ -308,7 +308,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 color: "mobile-text-heading-primary",
                 children: cResult[11],
               };
-              const tmp26 = closure_13(tmp(5234).Text, obj10);
+              const tmp26 = closure_13(tmp(5235).Text, obj10);
               cResult[12] = tmp4.headerTitle;
               cResult[13] = cResult[11];
               cResult[14] = tmp26;
@@ -348,18 +348,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   if ("" !== tmp45.trim()) {
                     v0(true);
                     v2(null);
-                    const result = first1(1896).dismissGlobalKeyboard();
+                    const result = first1(1893).dismissGlobalKeyboard();
                     v0 = 1;
                     if (null != closure_1) {
                       v2 = 3;
                       c5 = 1;
                       const obj6 = {
-                        value: first1(7873).editStage(closure_0, tmp45, constants.GUILD_ONLY),
+                        value: first1(7874).editStage(closure_0, tmp45, constants.GUILD_ONLY),
                         done: false,
                       };
                       return obj6;
                     } else {
-                      const tmp33Result2 = first1(7873);
+                      const tmp33Result2 = first1(7874);
                       v2 = 2;
                       c5 = 1;
                       const obj7 = {
@@ -368,14 +368,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       };
                       return obj7;
                     }
-                    const obj4 = first1(1896);
+                    const obj4 = first1(1893);
                   }
                 }
               } else {
                 if (1 === tmp7) {
                   v0 = 0;
                   closure_128_0 = tmp45;
-                  const aPIError = new closure_0(6374).APIError(closure_128_0);
+                  const aPIError = new closure_0(6375).APIError(closure_128_0);
                   closure_128_1 = aPIError;
                   v2(closure_128_1);
                   v0(false);
@@ -394,9 +394,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     const obj = { value, done: true };
                     return obj;
                   }
-                  stateFromStores(5210).hideActionSheet(v65535);
+                  stateFromStores(5211).hideActionSheet(v65535);
                   v0 = 0;
-                  const obj2 = stateFromStores(5210);
+                  const obj2 = stateFromStores(5211);
                 }
                 v0 = 0;
                 c5 = 3;
@@ -492,18 +492,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if ("" !== importAll.trim()) {
                   _undefined(true);
                   asyncGeneratorStep(null);
-                  const result = tmp45(1896).dismissGlobalKeyboard();
+                  const result = tmp45(1893).dismissGlobalKeyboard();
                   dependencyMap = 1;
                   if (null != stateFromStores) {
                     c4 = 3;
                     c5 = 1;
                     const obj6 = {
-                      value: tmp45(7873).editStage(channel, importAll, constants.GUILD_ONLY),
+                      value: tmp45(7874).editStage(channel, importAll, constants.GUILD_ONLY),
                       done: false,
                     };
                     return obj6;
                   } else {
-                    const tmp33Result2 = tmp45(7873);
+                    const tmp33Result2 = tmp45(7874);
                     c4 = 2;
                     c5 = 1;
                     const obj7 = {
@@ -512,14 +512,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     };
                     return obj7;
                   }
-                  const obj4 = tmp45(1896);
+                  const obj4 = tmp45(1893);
                 }
               }
             } else {
               if (1 === tmp7) {
                 dependencyMap = 0;
                 closure_128_1 = tmp45;
-                const aPIError = new channel(6374).APIError(closure_128_1);
+                const aPIError = new channel(6375).APIError(closure_128_1);
                 closure_128_0 = aPIError;
                 closure_129_4(closure_128_0);
                 closure_129_3(false);
@@ -538,9 +538,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   const obj = { value, done: true };
                   return obj;
                 }
-                tmp3(5210).hideActionSheet(closure_1_10);
+                tmp3(5211).hideActionSheet(closure_1_10);
                 dependencyMap = 0;
-                const obj2 = tmp3(5210);
+                const obj2 = tmp3(5211);
               }
               dependencyMap = 0;
               c5 = 3;
@@ -576,8 +576,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp7 = _slicedToArray(noop.useState(false), 2);
       [obj3, c4] = _slicedToArray(noop.useState(null), 2);
       const tmp9 = _slicedToArray(noop.useState(null), 2);
-      const shouldAgeVerifyToSpeakForCurrentUser = channel(6687).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
-      stateFromStores(5263)(() => {
+      const shouldAgeVerifyToSpeakForCurrentUser = channel(6688).useShouldAgeVerifyToSpeakForCurrentUser(channel.id);
+      stateFromStores(5264)(() => {
         let id;
         if (stateFromStores != null) {
           id = stateFromStores.id;
@@ -597,31 +597,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       if (null == stateFromStores) {
-        const intl2 = tmp2(1128).intl;
-        let stringResult = intl2.string(tmp2(1128).t.DDF0cJ);
+        const intl2 = tmp2(1125).intl;
+        let stringResult = intl2.string(tmp2(1125).t.DDF0cJ);
       } else {
-        const intl = tmp2(1128).intl;
-        stringResult = intl.string(tmp2(1128).t["5BKP4y"]);
+        const intl = tmp2(1125).intl;
+        stringResult = intl.string(tmp2(1125).t["5BKP4y"]);
       }
       obj5.children = stringResult;
-      const items1 = [closure_13(channel(5234).Text, obj5)];
+      const items1 = [closure_13(channel(5235).Text, obj5)];
       let obj6 = { style: tmp.headerSubtitle, variant: "text-sm/medium", color: "text-default", children: null };
       if (null == stateFromStores) {
-        const intl4 = tmp2(1128).intl;
-        let stringResult1 = intl4.string(tmp2(1128).t.bqQIwa);
+        const intl4 = tmp2(1125).intl;
+        let stringResult1 = intl4.string(tmp2(1125).t.bqQIwa);
       } else {
-        const intl3 = tmp2(1128).intl;
-        stringResult1 = intl3.string(tmp2(1128).t["I+9bLx"]);
+        const intl3 = tmp2(1125).intl;
+        stringResult1 = intl3.string(tmp2(1125).t["I+9bLx"]);
       }
       obj6.children = stringResult1;
-      items1[1] = closure_13(channel(5234).Text, obj6);
+      items1[1] = closure_13(channel(5235).Text, obj6);
       obj4.children = items1;
       let stringResult2;
       const tmp11 = stateFromStores;
-      const tmp2Result = channel(6687);
+      const tmp2Result = channel(6688);
       if (null == stateFromStores) {
-        const intl5 = tmp2(1128).intl;
-        stringResult2 = intl5.string(tmp2(1128).t.gR66jX);
+        const intl5 = tmp2(1125).intl;
+        stringResult2 = intl5.string(tmp2(1125).t.gR66jX);
       }
       function handleSave() {
         const self = this;
@@ -646,15 +646,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         clearable: true,
         onSubmitEditing: null,
       };
-      const intl6 = tmp2(1128).intl;
-      obj8.label = intl6.string(channel(1128).t["5FPBOB"]);
+      const intl6 = tmp2(1125).intl;
+      obj8.label = intl6.string(channel(1125).t["5FPBOB"]);
       obj8.maxLength = maxLength;
       obj8.value = value;
-      const intl7 = tmp2(1128).intl;
-      obj8.placeholder = intl7.string(channel(1128).t.ZwWruY);
+      const intl7 = tmp2(1125).intl;
+      obj8.placeholder = intl7.string(channel(1125).t.ZwWruY);
       obj8.onSubmitEditing = handleSave;
-      items2[1] = closure_13(channel(7008).TextInput, obj8);
-      items2[2] = closure_13(tmp11(7882), {
+      items2[1] = closure_13(channel(7010).TextInput, obj8);
+      items2[2] = closure_13(tmp11(7883), {
         onConfirmPress() {
           return stateFromStores(_undefined[19]).hideActionSheet(closure_1_10);
         },
@@ -669,18 +669,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "text-feedback-critical",
           children: obj3.getAnyErrorMessage(),
         };
-        tmp15Result = closure_13(tmp2(5234).Text, obj10);
+        tmp15Result = closure_13(tmp2(5235).Text, obj10);
       }
       items2[3] = tmp15Result;
       const obj11 = { style: tmp.startButton, children: null };
       if (null == stateFromStores) {
-        const intl9 = tmp2(1128).intl;
-        let stringResult3 = intl9.string(tmp2(1128).t.s8mM8A);
+        const intl9 = tmp2(1125).intl;
+        let stringResult3 = intl9.string(tmp2(1125).t.s8mM8A);
       } else {
-        const intl8 = tmp2(1128).intl;
-        stringResult3 = intl8.string(tmp2(1128).t.K344S7);
+        const intl8 = tmp2(1125).intl;
+        stringResult3 = intl8.string(tmp2(1125).t.K344S7);
       }
-      obj11.children = closure_13(channel(5244).Button, {
+      obj11.children = closure_13(channel(5245).Button, {
         text: stringResult3,
         onPress: handleSave,
         disabled: "" === value,
@@ -697,9 +697,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "text-default",
           children: null,
         };
-        const intl10 = tmp2(1128).intl;
-        obj13.children = intl10.string(tmp2(1128).t.gR66jX);
-        tmp15Result2 = closure_13(tmp2(5234).Text, obj13);
+        const intl10 = tmp2(1125).intl;
+        obj13.children = intl10.string(tmp2(1125).t.gR66jX);
+        tmp15Result2 = closure_13(tmp2(5235).Text, obj13);
       }
       const obj12 = {
         text: stringResult3,
@@ -718,8 +718,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp13Result = closure_14(View, obj4);
       items2[5] = tmp15Result2;
       obj7.children = items2;
-      return closure_13(channel(5265).BottomSheet, {
+      return closure_13(channel(5266).BottomSheet, {
         keyboardShouldPersistTaps: "always",
-        children: closure_14(channel(7221).SafeAreaPaddingView, obj7),
+        children: closure_14(channel(7223).SafeAreaPaddingView, obj7),
       });
     };

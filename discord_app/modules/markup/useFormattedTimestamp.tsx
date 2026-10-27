@@ -1,6 +1,6 @@
 // discord_app/modules/markup/useFormattedTimestamp.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
-import _modDef2049 from "../../../_runtime/metro/02049__.js";
+import _modDef2046 from "../../../_runtime/metro/02046__.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import noop from "../../../_runtime/metro/00019__.js";
 
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let result = 1000 * closure_1_6;
           const _Math = Math;
           const parsed = tmp.parsed;
-          const absolute = Math.abs(parsed.diff(_modDef2049()));
+          const absolute = Math.abs(parsed.diff(_modDef2046()));
           let obj = dependencyMap2[Symbol.iterator]();
           while (obj !== undefined) {
             let tmp14 = _slicedToArray(tmp11, 2);
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let result = 1000 * closure_1_6;
           const _Math = Math;
           const parsed = tmp.parsed;
-          const absolute = Math.abs(parsed.diff(_modDef2049()));
+          const absolute = Math.abs(parsed.diff(_modDef2046()));
           let obj = dependencyMap2[Symbol.iterator]();
           while (obj !== undefined) {
             let tmp14 = _slicedToArray(tmp11, 2);

@@ -7,13 +7,13 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MemberVerificationFormConstants = fn(6876);
+const MemberVerificationFormConstants = fn(6878);
 ({ AVATAR_BORDER_WIDTH, AVATAR_SIZE } = MemberVerificationFormConstants);
 const useBannerHeight = MemberVerificationFormConstants.useBannerHeight;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 1.20225424859375;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   header: { flex: 1, flexDirection: "column", justifyContent: "flex-end", alignItems: "center", marginBottom: 12 },
   headerContent: { alignItems: "center", marginTop: -48, paddingTop: 20, paddingBottom: 0, paddingHorizontal: 16 },
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = require("AvatarUtils");
       } else {
         tmp5 = importDefault;
-        guildBannerSource = require("../../../../../_runtime/metro/06882__.js");
+        guildBannerSource = require("../../../../../_runtime/metro/06884__.js");
       }
       const tmp8 = useBannerHeight();
       importDefault = tmp8;
@@ -408,7 +408,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj = require("AvatarUtils");
       } else {
         tmp3 = top;
-        guildBannerSource = require("../../../../../_runtime/metro/06882__.js");
+        guildBannerSource = require("../../../../../_runtime/metro/06884__.js");
         tmp5 = importDefault;
       }
       const tmp8 = useBannerHeight();

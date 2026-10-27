@@ -9,7 +9,7 @@ import ApplicationStore from "ApplicationStore.tsx";
 require = fn;
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1087).QueryIds.GUILD_EMBEDDED_APPLICATIONS,
+  getQueryId: fn(1084).QueryIds.GUILD_EMBEDDED_APPLICATIONS,
   failureStaleAfter: DurationsDefault.Seconds.MINUTE,
   get(arg0, arg1) {
     const guildEmbeddedApplications = ApplicationStore.getGuildEmbeddedApplications(arg1, arg0);

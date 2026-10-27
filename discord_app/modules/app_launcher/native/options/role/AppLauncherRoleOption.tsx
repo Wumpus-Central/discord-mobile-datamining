@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/options/role/AppLauncherRoleOption.tsx
-import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -21,7 +21,7 @@ export default function AppLauncherRoleOption(option) {
   first = undefined;
   closure_8 = undefined;
   const guild_id = channel.guild_id;
-  ({ style, autoFocus, hasError } = option);
+  ({ autoFocus, hasError } = option);
   [first, closure_8] = channel.useState(() => {
     let roleId = null;
     if (null != importDefault) {
@@ -53,7 +53,6 @@ export default function AppLauncherRoleOption(option) {
     }
   }, items1);
   const obj2 = {
-    style,
     option,
     hasError,
     selected: null != stateFromStores,
@@ -76,7 +75,7 @@ export default function AppLauncherRoleOption(option) {
     }
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(12084, dependencyMap.paths),
+      asyncRequireImpl(12085, dependencyMap.paths),
       AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY,
       {
         option,

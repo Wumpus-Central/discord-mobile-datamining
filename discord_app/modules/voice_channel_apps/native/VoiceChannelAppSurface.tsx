@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../safe_area/useSafeAreaInsets.native.tsx";
-import _modDef3928 from "../VoiceChannelApps.messages.js";
+import _modDef3929 from "../VoiceChannelApps.messages.js";
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import getInlineFramePresentationDefault from "../../frames/native/getInlineFramePresentation.tsx";
 import useInlineFrameOAuthNavigationDefault from "../../frames/native/useInlineFrameOAuthNavigation.tsx";
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
                 const obj4 = { description: null };
                 const intl4 = util.intl;
-                obj4.description = intl4.string(_modDef3928.TQptZV);
+                obj4.description = intl4.string(_modDef3929.TQptZV);
                 const tmp30 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { description: null });
                 cResult[13] = tmp30;
                 let tmp28 = tmp30;
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
                 const obj5 = { description: null };
                 const intl3 = util.intl;
-                obj5.description = intl3.string(_modDef3928["13FYwI"]);
+                obj5.description = intl3.string(_modDef3929["13FYwI"]);
                 const tmp26 = jsx(FrameSurfaceState.FrameSurfaceExplanation, { description: null });
                 cResult[14] = tmp26;
                 let tmp24 = tmp26;

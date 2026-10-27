@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   label: { marginHorizontal: 16, marginBottom: 8 },
   container: {
@@ -114,14 +114,14 @@ export default noop.memo(
             if (cResult[2] === userId) {
               let tmp5 = cResult[3];
             }
-            row = tmp(18044).useOtherGuildJoinRequestsForUser(tmp5);
+            row = tmp(18078).useOtherGuildJoinRequestsForUser(tmp5);
             if (0 === row.length) {
               return null;
             } else {
               const _Symbol = Symbol;
               if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl = tmp(1128).intl;
-                const stringResult = intl.string(tmp(1128).t["hxa+G3"]);
+                const intl = tmp(1125).intl;
+                const stringResult = intl.string(tmp(1125).t["hxa+G3"]);
                 cResult[4] = stringResult;
                 let tmp6 = stringResult;
               } else {
@@ -129,7 +129,7 @@ export default noop.memo(
               }
               if (cResult[5] !== tmp4.label) {
                 let obj2 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp4.label, children: tmp6 };
-                const tmp10 = closure_6(tmp(5234).Text, obj2);
+                const tmp10 = closure_6(tmp(5235).Text, obj2);
                 cResult[5] = tmp4.label;
                 cResult[6] = tmp10;
                 let tmp8 = tmp10;
@@ -211,7 +211,7 @@ export default noop.memo(
               cResult[13] = fn;
               tmp13 = fn;
             }
-            const tmpResult = tmp(18044);
+            const tmpResult = tmp(18078);
           }
         }
         let obj5 = { guildId, userId, selectedJoinRequestId };
@@ -236,9 +236,9 @@ export default noop.memo(
         if (0 !== otherGuildJoinRequestsForUser.length) {
           let obj2 = { children: null };
           let obj3 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.label, children: null };
-          const intl = tmp2(1128).intl;
-          obj3.children = intl.string(tmp2(1128).t["hxa+G3"]);
-          let items = [closure_6(tmp2(5234).Text, obj3)];
+          const intl = tmp2(1125).intl;
+          obj3.children = intl.string(tmp2(1125).t["hxa+G3"]);
+          let items = [closure_6(tmp2(5235).Text, obj3)];
           let obj4 = {
             style: tmp.container,
             children: otherGuildJoinRequestsForUser.map((createdAt, index) => {

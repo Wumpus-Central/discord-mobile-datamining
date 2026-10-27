@@ -17,12 +17,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubConstants = fn(13663);
+const HubConstants = fn(13677);
 ({ HubEmailConnectionSteps: closure_9, INVITE_ROUTING_HUB_GUILD_ID: c10 } = HubConstants);
-const MarketingURLs = fn(1087).MarketingURLs;
+const MarketingURLs = fn(1084).MarketingURLs;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { paddingHorizontal: 16 },
   header: { marginTop: 16, marginBottom: 16, alignSelf: "center" },
@@ -226,10 +226,10 @@ export default function HubEmailConnectionContent(arg0) {
   const obj4 = { ref, contentContainerStyle: null, children: null };
   const items = [tmp.scrollViewContainer];
   const tmp7 = _slicedToArray(noop.useState(null), 2);
-  items[1] = { paddingBottom: invite(5593)().insets.bottom + invite(587).space.PX_16 };
+  items[1] = { paddingBottom: invite(5594)().insets.bottom + invite(587).space.PX_16 };
   obj4.contentContainerStyle = items;
   let obj6 = { style: tmp.container, children: null };
-  let obj5 = { paddingBottom: invite(5593)().insets.bottom + invite(587).space.PX_16 };
+  let obj5 = { paddingBottom: invite(5594)().insets.bottom + invite(587).space.PX_16 };
   const tmp16 = closure_7;
   const items1 = [
     closure_12(ref, {
@@ -323,7 +323,7 @@ export default function HubEmailConnectionContent(arg0) {
       }
     }, 100);
   };
-  items1[3] = closure_12(invite(7007), obj11);
+  items1[3] = closure_12(invite(7009), obj11);
   obj6.children = items1;
   const items2 = [closure_13(ref, obj6), closure_12(ref, { style: tmp.growSpacing })];
   const obj15 = { style: tmp.buttonContainer, children: null };

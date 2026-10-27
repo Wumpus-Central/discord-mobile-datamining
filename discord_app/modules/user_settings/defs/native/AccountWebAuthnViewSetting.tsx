@@ -62,7 +62,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         return flag;
       }, []);
     };
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountSecurityKeysSettingTrailing() {
       const cResult = c.c(2);
@@ -100,7 +100,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["0N1s81"]);
   },
-  parent: fn(8332).MobileUserSettings.ACCOUNT,
+  parent: fn(8331).MobileUserSettings.ACCOUNT,
   usePreNavigationAction: tmp2,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAccountSecurityKeysSettingTrailing() {
@@ -135,7 +135,7 @@ const route = SettingBuilders.createRoute({
         });
       },
   screen: {
-    route: fn(1087).UserSettingsSections.WEBAUTHN_VIEW,
+    route: fn(1084).UserSettingsSections.WEBAUTHN_VIEW,
     getComponent() {
       return require("PasskeyInitStep").default;
     },

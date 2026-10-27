@@ -11,7 +11,7 @@ function isGIF(str) {
   return null != str.match(regExp);
 }
 fn(19).useCallback;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({
   AnalyticsPages: metroRequire,
   UPLOAD_MEDIUM_SIZE: closure_7,
@@ -19,7 +19,7 @@ const Constants = fn(1087);
   AnalyticsSections: closure_9,
   UpsellTypes: c10,
 } = Constants);
-const PremiumUpsellTypes = fn(1394).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUploadAvatar.tsx");
@@ -110,12 +110,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 let originalMd5;
                 closure_128_3 = undefined;
                 closure_128_4 = undefined;
-                analyticsLocations(5210).hideActionSheet();
-                const obj13 = analyticsLocations(5210);
+                analyticsLocations(5211).hideActionSheet();
+                const obj13 = analyticsLocations(5211);
                 const obj6 = { size };
                 c2 = 1;
                 c3 = 1;
-                const obj8 = { value: analyticsLocations(8154).openImagePicker(obj6), done: false };
+                const obj8 = { value: analyticsLocations(8152).openImagePicker(obj6), done: false };
                 return obj8;
               }
             } else if (arg0 === 1) {
@@ -134,8 +134,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               } else {
                 let canUseAnimatedAvatarResult = c2;
                 if (!c2) {
-                  canUseAnimatedAvatarResult = analyticsLocations(2053).canUseAnimatedAvatar(c3);
-                  const obj = analyticsLocations(2053);
+                  canUseAnimatedAvatarResult = analyticsLocations(2050).canUseAnimatedAvatar(c3);
+                  const obj = analyticsLocations(2050);
                 }
                 closure_128_3 = canUseAnimatedAvatarResult;
                 if (isGIF(base64)) {
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj10 = { imageUri: base64, description: null, originalMd5: null };
-              const obj2 = guildId(15840);
+              const obj2 = guildId(15878);
               obj10.description = guildId(8658).generateAvatarDescription();
               obj10.originalMd5 = originalMd5;
               closure_128_4 = obj2.createPendingImage(obj10);
@@ -241,12 +241,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let originalMd5;
                   closure_128_3 = undefined;
                   closure_128_4 = undefined;
-                  tmp2(5210).hideActionSheet();
-                  const obj13 = tmp2(5210);
+                  tmp2(5211).hideActionSheet();
+                  const obj13 = tmp2(5211);
                   const obj6 = { size };
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj8 = { value: tmp2(8154).openImagePicker(obj6), done: false };
+                  const obj8 = { value: tmp2(8152).openImagePicker(obj6), done: false };
                   return obj8;
                 }
               } else if (arg0 === 1) {
@@ -265,8 +265,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 } else {
                   let canUseAnimatedAvatarResult = closure_129_1;
                   if (!closure_129_1) {
-                    canUseAnimatedAvatarResult = tmp2(2053).canUseAnimatedAvatar(closure_129_3);
-                    const obj = tmp2(2053);
+                    canUseAnimatedAvatarResult = tmp2(2050).canUseAnimatedAvatar(closure_129_3);
+                    const obj = tmp2(2050);
                   }
                   closure_128_3 = canUseAnimatedAvatarResult;
                   if (isGIF(base64)) {
@@ -276,7 +276,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj10 = { imageUri: base64, description: null, originalMd5: null };
-                const obj2 = v0(15840);
+                const obj2 = v0(15878);
                 obj10.description = v0(8658).generateAvatarDescription();
                 obj10.originalMd5 = originalMd5;
                 closure_128_4 = obj2.createPendingImage(obj10);

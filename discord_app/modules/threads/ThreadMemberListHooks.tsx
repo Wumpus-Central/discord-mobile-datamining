@@ -9,7 +9,7 @@ import ThreadMemberListStore from "ThreadMemberListStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const StatusTypes = fn(1098).StatusTypes;
+const StatusTypes = fn(1095).StatusTypes;
 let closure_7 = [];
 const ReactCompilerGating = fn(558);
 const size = fn(2);

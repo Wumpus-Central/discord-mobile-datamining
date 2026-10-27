@@ -9,8 +9,8 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ConsentStore from "../../../../stores/ConsentStore.tsx";
 
 require = fn;
-const MobileUserSettings = fn(8332).MobileUserSettings;
-const Constants = fn(1087);
+const MobileUserSettings = fn(8331).MobileUserSettings;
+const Constants = fn(1084);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
@@ -25,30 +25,30 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { settings: null, subLabel: null };
         const items = [MobileUserSettings.USE_DATA_TO_IMPROVE_DISCORD];
         obj3.settings = items;
-        const intl = tmp(1128).intl;
+        const intl = tmp(1125).intl;
         const obj4 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(constants.DATA_PRIVACY_CONTROLS) };
-        obj3.subLabel = intl.format(tmp(1128).t["igTSG/"], obj4);
+        obj3.subLabel = intl.format(tmp(1125).t["igTSG/"], obj4);
         const obj6 = { settings: null, subLabel: null };
         const items1 = [MobileUserSettings.USE_DATA_TO_CUSTOMIZE_DISCORD];
         obj6.settings = items1;
-        const intl2 = tmp(1128).intl;
+        const intl2 = tmp(1125).intl;
         const obj7 = { helpdeskArticle: null };
         obj7.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.DATA_USED_FOR_RECOMMENDED);
-        obj6.subLabel = intl2.format(tmp(1128).t["eQL/Mr"], obj7);
+        obj6.subLabel = intl2.format(tmp(1125).t["eQL/Mr"], obj7);
         const obj9 = { settings: null, subLabel: null };
         const items2 = [MobileUserSettings.USE_DATA_FOR_QUESTS];
         obj9.settings = items2;
-        const intl3 = tmp(1128).intl;
+        const intl3 = tmp(1125).intl;
         const obj10 = { helpdeskArticle: null };
         obj10.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
-        obj9.subLabel = intl3.format(tmp(1128).t.cf9mvV, obj10);
+        obj9.subLabel = intl3.format(tmp(1125).t.cf9mvV, obj10);
         const obj12 = { settings: null, subLabel: null };
         const items3 = [MobileUserSettings.USE_DATA_FOR_QUESTS_3P];
         obj12.settings = items3;
-        const intl4 = tmp(1128).intl;
+        const intl4 = tmp(1125).intl;
         const obj13 = { helpdeskArticle: null };
         obj13.helpdeskArticle = HelpdeskUtilsDefault.getArticleURL(constants.QUESTS_PRIVACY_CONTROLS);
-        obj12.subLabel = intl4.format(tmp(1128).t["2QFDU/"], obj13);
+        obj12.subLabel = intl4.format(tmp(1125).t["2QFDU/"], obj13);
         cResult[0] = obj3;
         cResult[1] = obj6;
         cResult[2] = obj9;
@@ -69,13 +69,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       let num5 = 4;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
         const obj15 = { label: null, settings: null, subLabel: null };
-        const intl5 = tmp(1128).intl;
-        obj15.label = intl5.string(tmp(1128).t.BG7QsQ);
+        const intl5 = tmp(1125).intl;
+        obj15.label = intl5.string(tmp(1125).t.BG7QsQ);
         const items5 = [MobileUserSettings.REQUEST_YOUR_DATA];
         obj15.settings = items5;
-        const intl6 = tmp(1128).intl;
+        const intl6 = tmp(1125).intl;
         const obj16 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(constants.GDPR_REQUEST_DATA) };
-        obj15.subLabel = intl6.format(tmp(1128).t.P3kNfr, obj16);
+        obj15.subLabel = intl6.format(tmp(1125).t.P3kNfr, obj16);
         cResult[7] = obj15;
         let tmp12 = obj15;
       } else {
@@ -90,13 +90,13 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
         tmp17 = cResult[8];
       }
       if (cResult[9] !== arg0) {
-        const intl7 = tmp(1128).intl;
+        const intl7 = tmp(1125).intl;
         const obj18 = {
           onClick() {
             return navigation.navigate(constants2.CONTENT_AND_SOCIAL);
           },
         };
-        const formatResult = intl7.format(tmp(1128).t.N1P5gE, obj18);
+        const formatResult = intl7.format(tmp(1125).t.N1P5gE, obj18);
         cResult[9] = arg0;
         cResult[10] = formatResult;
         let tmp19 = formatResult;
@@ -199,16 +199,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function DataAndPrivacySettings() {
       const cResult = stackNavigation(576).c(8);
       let obj = stackNavigation(576);
-      stackNavigation = stackNavigation(1505).useStackNavigation();
+      stackNavigation = stackNavigation(1502).useStackNavigation();
       const tmp5 = closure_11(stackNavigation);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function n() {
           if (!fetchedConsents.fetchedConsents) {
-            const consents = stackNavigation(16147).fetchConsents();
-            const obj = stackNavigation(16147);
+            const consents = stackNavigation(16185).fetchConsents();
+            const obj = stackNavigation(16185);
           }
-          const harvestStatus = stackNavigation(16150).fetchHarvestStatus();
-          const obj2 = stackNavigation(16150);
+          const harvestStatus = stackNavigation(16188).fetchHarvestStatus();
+          const obj2 = stackNavigation(16188);
         };
         const items = [];
         cResult[0] = fn;
@@ -225,7 +225,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { screen: tmp(16105).SettingsScreen.DATA_AND_PRIVACY };
+          const obj3 = { screen: tmp(16143).SettingsScreen.DATA_AND_PRIVACY };
           const tmp18 = closure_8(SettingsScreenNoticesDefault, obj3);
           cResult[5] = tmp18;
           let tmp14 = tmp18;
@@ -247,31 +247,31 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp19;
       }
-      let obj2 = stackNavigation(1505);
+      let obj2 = stackNavigation(1502);
       const obj6 = { sections: null };
       const items2 = [...tmp5];
       const obj7 = { label: null, settings: null, subLabel: null };
-      const intl = tmp(1128).intl;
-      obj7.label = intl.string(stackNavigation(1128).t.Me5lVK);
+      const intl = tmp(1125).intl;
+      obj7.label = intl.string(stackNavigation(1125).t.Me5lVK);
       const items3 = [,];
       ({ DATA_AND_PRIVACY_SECURE_FRAMES_PERSISTENT_CODES: arr3[0], ENCRYPTION_VERIFIED_DEVICES: arr3[1] } =
         MobileUserSettings);
       obj7.settings = items3;
-      const intl2 = tmp(1128).intl;
+      const intl2 = tmp(1125).intl;
       const obj8 = { helpArticle: null };
-      const tmpResult = stackNavigation(11209);
+      const tmpResult = stackNavigation(11212);
       obj8.helpArticle = stackNavigation(9196).getSecureFramesHelpdeskArticle();
-      obj7.subLabel = intl2.format(stackNavigation(1128).t["/6sFWa"], obj8);
+      obj7.subLabel = intl2.format(stackNavigation(1125).t["/6sFWa"], obj8);
       const items4 = [obj7];
       const obj9 = { label: null, settings: null, subLabel: null };
       const tmpResult2 = stackNavigation(9196);
-      const intl3 = tmp(1128).intl;
-      obj9.label = intl3.string(stackNavigation(1128).t["+uHbqE"]);
+      const intl3 = tmp(1125).intl;
+      obj9.label = intl3.string(stackNavigation(1125).t["+uHbqE"]);
       const items5 = [,];
       ({ SAFETY_TERMS_OF_SERVICE: arr5[0], SAFETY_PRIVACY_POLICY: arr5[1] } = MobileUserSettings);
       obj9.settings = items5;
-      const intl4 = tmp(1128).intl;
-      obj9.subLabel = intl4.format(stackNavigation(1128).t.R5N31P, {
+      const intl4 = tmp(1125).intl;
+      obj9.subLabel = intl4.format(stackNavigation(1125).t.R5N31P, {
         onClick() {
           return navigation.navigate(constants.ACCOUNT);
         },
@@ -292,16 +292,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
     }
   : function DataAndPrivacySettings() {
-      stackNavigation = stackNavigation(1505).useStackNavigation();
+      stackNavigation = stackNavigation(1502).useStackNavigation();
       const tmp2 = closure_11(stackNavigation);
       importDefault = tmp2;
       const effect = noop.useEffect(() => {
         if (!fetchedConsents.fetchedConsents) {
-          const consents = stackNavigation(16147).fetchConsents();
-          const obj = stackNavigation(16147);
+          const consents = stackNavigation(16185).fetchConsents();
+          const obj = stackNavigation(16185);
         }
-        const harvestStatus = stackNavigation(16150).fetchHarvestStatus();
-        const obj2 = stackNavigation(16150);
+        const harvestStatus = stackNavigation(16188).fetchHarvestStatus();
+        const obj2 = stackNavigation(16188);
       }, []);
       let items = [stackNavigation, tmp2];
       let obj2 = { children: null };
@@ -340,8 +340,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return obj.createList(obj2);
       }, items);
       let obj3 = { screen: null };
-      let obj = stackNavigation(1505);
-      obj3.screen = stackNavigation(16105).SettingsScreen.DATA_AND_PRIVACY;
+      let obj = stackNavigation(1502);
+      obj3.screen = stackNavigation(16143).SettingsScreen.DATA_AND_PRIVACY;
       let items1 = [closure_8(SettingsScreenNoticesDefault, obj3), closure_8(SettingLayoutDefault, { node: memo })];
       obj2.children = items1;
       return closure_10(closure_9, obj2);

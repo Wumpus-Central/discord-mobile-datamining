@@ -8,11 +8,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const PROFILE_SIDE_PADDING = fn(7304).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7306).PROFILE_SIDE_PADDING;
 const jsx = fn(21).jsx;
 let c5 = 0.9;
 const FLOATING_UPSELL_SPRING = { mass: 1, damping: 25, stiffness: 400, overshootClamping: false };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_7 = createStyles.createStyles((bottom) => {
   const obj = {
     container: { position: "absolute", bottom, start: 0, end: 0 },
@@ -66,10 +66,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.transform = items;
         return obj2;
       };
-      let obj2 = isVisible(5052);
+      let obj2 = isVisible(5053);
       fn.__closure = {
         isVisible,
-        withSpring: isVisible(5247).withSpring,
+        withSpring: isVisible(5248).withSpring,
         FLOATING_UPSELL_SPRING,
         DISMISSED_TRANSLATE_Y: 60,
         DISMISSED_SCALE,
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = obj2.useAnimatedStyle(fn);
       let obj3 = {
         isVisible,
-        withSpring: isVisible(5247).withSpring,
+        withSpring: isVisible(5248).withSpring,
         FLOATING_UPSELL_SPRING,
         DISMISSED_TRANSLATE_Y: 60,
         DISMISSED_SCALE,
@@ -101,17 +101,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn2.__closure = { isVisible };
       fn2.__workletHash = 5163998995941;
       fn2.__initData = __initData2;
-      const animatedProps = isVisible(5052).useAnimatedProps(fn2);
+      const animatedProps = isVisible(5053).useAnimatedProps(fn2);
       if (cResult[0] === animatedStyle) {
         if (cResult[1] === tmp5.container) {
           let tmp8 = cResult[2];
         }
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1128).intl;
-          const stringResult = intl.string(tmp(1128).t["MswR/h"]);
-          const intl2 = tmp(1128).intl;
-          const stringResult1 = intl2.string(tmp(1128).t.PxUx8e);
+          const intl = tmp(1125).intl;
+          const stringResult = intl.string(tmp(1125).t["MswR/h"]);
+          const intl2 = tmp(1125).intl;
+          const stringResult1 = intl2.string(tmp(1125).t.PxUx8e);
           cResult[3] = stringResult;
           cResult[4] = stringResult1;
           let tmp11 = stringResult1;
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = tmp5.container;
       cResult[2] = items;
       tmp8 = items;
-      const obj4 = isVisible(5052);
+      const obj4 = isVisible(5053);
     }
   : function UserProfilePremiumTryItOutUpsell(isVisible) {
       isVisible = isVisible.isVisible;
@@ -192,10 +192,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.transform = items;
         return obj2;
       };
-      let obj = isVisible(5052);
+      let obj = isVisible(5053);
       fn.__closure = {
         isVisible,
-        withSpring: isVisible(5247).withSpring,
+        withSpring: isVisible(5248).withSpring,
         FLOATING_UPSELL_SPRING,
         DISMISSED_TRANSLATE_Y: 60,
         DISMISSED_SCALE,
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const animatedStyle = obj.useAnimatedStyle(fn);
       let obj2 = {
         isVisible,
-        withSpring: isVisible(5247).withSpring,
+        withSpring: isVisible(5248).withSpring,
         FLOATING_UPSELL_SPRING,
         DISMISSED_TRANSLATE_Y: 60,
         DISMISSED_SCALE,
@@ -229,16 +229,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       I.__closure = { isVisible };
       I.__workletHash = 15404222413955;
       I.__initData = __initData4;
-      const animatedProps = isVisible(5052).useAnimatedProps(I);
+      const animatedProps = isVisible(5053).useAnimatedProps(I);
       const obj4 = { animatedProps, style: null, children: null };
       let items = [tmp.container, animatedStyle];
       obj4.style = items;
       const obj5 = { style: tmp.card, text: null, buttonText: null, onButtonPress: null, buttonVariant: "primary" };
-      let obj3 = isVisible(5052);
-      const intl = isVisible(1128).intl;
-      obj5.text = intl.string(isVisible(1128).t["MswR/h"]);
-      const intl2 = isVisible(1128).intl;
-      obj5.buttonText = intl2.string(isVisible(1128).t.PxUx8e);
+      let obj3 = isVisible(5053);
+      const intl = isVisible(1125).intl;
+      obj5.text = intl.string(isVisible(1125).t["MswR/h"]);
+      const intl2 = isVisible(1125).intl;
+      obj5.buttonText = intl2.string(isVisible(1125).t.PxUx8e);
       obj5.onButtonPress = isVisible.onPreviewPremium;
       obj4.children = jsx(UserProfileUpsellCardV2Default, {
         style: tmp.card,

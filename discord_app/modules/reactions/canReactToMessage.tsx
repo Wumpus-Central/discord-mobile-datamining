@@ -40,7 +40,7 @@ function canReactToMessageInternal(state, getGuildId, items) {
   }
   return tmp6;
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MessageStates: closure_7, MessageTypes: closure_8, MessageFlags: closure_9 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

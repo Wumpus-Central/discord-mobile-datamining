@@ -6,14 +6,14 @@ import FastImageDefault from "../../../../../components_native/common/FastImage.
 import common_SafeAreaView from "../../../../../components_native/common/SafeAreaView.tsx";
 import TwoFASetupModal from "TwoFASetupModal.tsx";
 import TwoFASetupStyles from "TwoFASetupStyles.tsx";
-import _modDef16052 from "../../../../../../_runtime/metro/16052__.js";
+import _modDef16090 from "../../../../../../_runtime/metro/16090__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_6 = createStyles.createStyles({
   container: { flex: 1, alignItems: "center", justifyContent: "center" },
   authIcon: { width: 120, height: 120, marginBottom: 32 },
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const twoFASetupStyles = TwoFASetupStyles.useTwoFASetupStyles();
       ({ container, container: container2 } = tmp4);
       if (cResult[0] !== tmp4.authIcon) {
-        const obj3 = { source: _modDef16052, style: tmp4.authIcon };
+        const obj3 = { source: _modDef16090, style: tmp4.authIcon };
         const tmp10 = React4(FastImageDefault, obj3);
         cResult[0] = tmp4.authIcon;
         cResult[1] = tmp10;
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp.container, children: null };
       const obj4 = { bottom: true, style: tmp.container, children: null };
       const obj5 = { source: null, style: null };
-      obj5.source = _modDef16052;
+      obj5.source = _modDef16090;
       obj5.style = tmp.authIcon;
       const items = [React4(FastImageDefault, obj5), ,];
       const obj6 = { variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };

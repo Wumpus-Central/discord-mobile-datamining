@@ -1,18 +1,18 @@
 // discord_app/modules/user_profile/native/UserProfileFrameEditButton.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const COLLECTIBLES_PREVIEW_SIZE = fn(7304).COLLECTIBLES_PREVIEW_SIZE;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
-const NOOP = fn(1098).NOOP;
+const COLLECTIBLES_PREVIEW_SIZE = fn(7306).COLLECTIBLES_PREVIEW_SIZE;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
+const NOOP = fn(1095).NOOP;
 const jsx = fn(21).jsx;
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { previewContainer: null, noneIcon: null };
 let size = {
   height: COLLECTIBLES_PREVIEW_SIZE,
@@ -35,10 +35,10 @@ export default function UserProfileFrameEditButton(arg0) {
   ({ pendingProfileFrame, guildId } = arg0);
   let userProfileFrame;
   const tmp = closure_11();
-  const items = [user(4807).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE];
-  const tmp4 = userProfileFrame(user(7496).useSelectedDismissibleContent(items), 2);
+  const items = [user(4808).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE];
+  const tmp4 = userProfileFrame(user(7497).useSelectedDismissibleContent(items), 2);
   dependencyMap = tmp5;
-  const obj = user(7496);
+  const obj = user(7497);
   const obj3 = { pendingValue: pendingProfileFrame, userValue: null, guildValue: null, guildId: null };
   let profileFrame;
   if (displayProfile != null) {
@@ -63,7 +63,7 @@ export default function UserProfileFrameEditButton(arg0) {
   if (profilePreviewValue != null) {
     skuId = profilePreviewValue.skuId;
   }
-  const fetchCollectiblesProduct = user(11052).useFetchCollectiblesProduct(skuId);
+  const fetchCollectiblesProduct = user(11055).useFetchCollectiblesProduct(skuId);
   const product = fetchCollectiblesProduct.product;
   let type;
   if (product != null) {
@@ -72,10 +72,10 @@ export default function UserProfileFrameEditButton(arg0) {
       type = first.type;
     }
   }
-  if (type === user(1995).CollectiblesItemType.PROFILE_FRAME) {
+  if (type === user(1992).CollectiblesItemType.PROFILE_FRAME) {
     const first1 = product.items[0];
   }
-  const tmp2Result = user(11052);
+  const tmp2Result = user(11055);
   userProfileFrame = user(8655).useUserProfileFrame({ user, guildId });
   if (undefined !== pendingProfileFrame) {
     userProfileFrame = pendingProfileFrame;
@@ -83,7 +83,7 @@ export default function UserProfileFrameEditButton(arg0) {
   const items1 = [userProfileFrame, guildId, user, tmp4[1]];
   let name;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15897, dependencyMap.paths), "Profile Frame", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(15935, dependencyMap.paths), "Profile Frame", {
       user,
       currentProfileFrame: userProfileFrame,
       guildId,
@@ -94,16 +94,16 @@ export default function UserProfileFrameEditButton(arg0) {
     name = product.name;
   }
   if (name == null) {
-    const intl = user(1128).intl;
-    name = intl.string(user(1128).t.PoWNfe);
+    const intl = user(1125).intl;
+    name = intl.string(user(1125).t.PoWNfe);
   }
   let formatToPlainStringResult = name;
   if (null != guildId) {
     formatToPlainStringResult = name;
     if (null == userProfileFrame) {
-      const intl2 = user(1128).intl;
+      const intl2 = user(1125).intl;
       const obj4 = { label: name };
-      formatToPlainStringResult = intl2.formatToPlainString(user(1128).t.ep5D4i, obj4);
+      formatToPlainStringResult = intl2.formatToPlainString(user(1125).t.ep5D4i, obj4);
     }
   }
   if (fetchCollectiblesProduct.isFetching) {
@@ -116,12 +116,12 @@ export default function UserProfileFrameEditButton(arg0) {
       disabled: true,
       hideArrow: true,
     };
-    const intl4 = user(1128).intl;
-    obj5.label = intl4.string(user(1128).t.GWrZOd);
-    const intl5 = user(1128).intl;
-    obj5.buttonText = intl5.string(user(1128).t.MKDeyL);
+    const intl4 = user(1125).intl;
+    obj5.label = intl4.string(user(1125).t.GWrZOd);
+    const intl5 = user(1125).intl;
+    obj5.buttonText = intl5.string(user(1125).t.MKDeyL);
     obj5.onPress = NOOP;
-    obj5.leading = jsx(user(6880).ActivityIndicator, { animating: true, size: "large" });
+    obj5.leading = jsx(user(6882).ActivityIndicator, { animating: true, size: "large" });
     let obj6 = obj5;
   } else {
     obj6 = {
@@ -132,11 +132,11 @@ export default function UserProfileFrameEditButton(arg0) {
       onPress: null,
       leading: null,
     };
-    const intl3 = user(1128).intl;
-    obj6.label = intl3.string(user(1128).t.GWrZOd);
-    const obj7 = { showNewBadge: tmp4[0] === user(4807).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE };
-    obj6.labelTrailing = jsx(user(15872).UserProfileEditFormLabelBadges, {
-      showNewBadge: tmp4[0] === user(4807).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE,
+    const intl3 = user(1125).intl;
+    obj6.label = intl3.string(user(1125).t.GWrZOd);
+    const obj7 = { showNewBadge: tmp4[0] === user(4808).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE };
+    obj6.labelTrailing = jsx(user(15910).UserProfileEditFormLabelBadges, {
+      showNewBadge: tmp4[0] === user(4808).DismissibleContent.PROFILE_FRAME_USER_PROFILE_NEW_BADGE,
     });
     obj6.buttonText = formatToPlainStringResult;
     const obj8 = { text: formatToPlainStringResult };
@@ -150,19 +150,19 @@ export default function UserProfileFrameEditButton(arg0) {
         previewHeight: COLLECTIBLES_PREVIEW_SIZE - 2 * PX_4,
         profileBackgroundColor: guildId(587).colors.BACKGROUND_SURFACE_HIGH,
       };
-      obj9.children = jsx(guildId(9415), {
+      obj9.children = jsx(guildId(9414), {
         profileFrame: first1,
         previewWidth: COLLECTIBLES_PREVIEW_SIZE - 2 * guildId(587).space.PX_8,
         previewHeight: COLLECTIBLES_PREVIEW_SIZE - 2 * PX_4,
         profileBackgroundColor: guildId(587).colors.BACKGROUND_SURFACE_HIGH,
       });
       let tmp18Result = <View style={tmp.previewContainer}>{null}</View>;
-      const tmp23 = guildId(9415);
+      const tmp23 = guildId(9414);
     } else {
-      const obj11 = { source: guildId(14497), style: tmp.noneIcon };
-      tmp18Result = jsx(user(1202).Icon, { source: guildId(14497), style: tmp.noneIcon });
+      const obj11 = { source: guildId(14533), style: tmp.noneIcon };
+      tmp18Result = jsx(user(1199).Icon, { source: guildId(14533), style: tmp.noneIcon });
     }
     obj6.leading = tmp18Result;
   }
-  return jsx(user(15872).UserProfileEditFormButton, obj6);
+  return jsx(user(15910).UserProfileEditFormButton, obj6);
 }

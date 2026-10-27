@@ -1,35 +1,14 @@
 // discord_app/modules/checkpoint/native/showNitroLockedToast.tsx
-import util from "../../../intl/index.native.tsx";
-import _modDef3088 from "../Checkpoint2026.messages.js";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
+import CheckpointCustomizationUtils from "../CheckpointCustomizationUtils.tsx";
+import size from "../../../../_runtime/metro/00002__.js";
 
-require = fn;
-let obj = {};
-obj[fn(6039).CheckpointTrait.FACE] = _modDef3088["4IdR/H"];
-obj[fn(6039).CheckpointTrait.OUTFIT] = _modDef3088.NuujPd;
-obj[fn(6039).CheckpointTrait.HAT] = _modDef3088.o1Zign;
-obj[fn(6039).CheckpointTrait.WEARABLE] = _modDef3088.C0CzoH;
-obj[fn(6039).CheckpointTrait.AURA] = _modDef3088["+9TbTS"];
-obj[fn(6039).CheckpointTrait.SHOES] = _modDef3088.sTG4TS;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/showNitroLockedToast.tsx");
 
-export default function showNitroLockedToast(arg0) {
-  let stringResult;
-  if (null != obj[arg0]) {
-    const intl = util.intl;
-    stringResult = intl.string(tmp);
-  }
-  if (null != stringResult) {
-    obj = ToastUtils;
-    obj.presentError(stringResult);
+export default function showNitroLockedToast(nextBlockedTrait) {
+  const nitroLockedMessage = CheckpointCustomizationUtils.getNitroLockedMessage(nextBlockedTrait);
+  if (null != nitroLockedMessage) {
+    ToastUtils.presentError(nitroLockedMessage);
+    const tmpResult = ToastUtils;
   }
 }
-export const getNitroLockedMessage = function getNitroLockedMessage(nextBlockedTrait) {
-  let stringResult;
-  if (null != obj[nextBlockedTrait]) {
-    const intl = util.intl;
-    stringResult = intl.string(tmp);
-  }
-  return stringResult;
-};

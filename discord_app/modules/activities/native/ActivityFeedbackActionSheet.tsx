@@ -8,9 +8,9 @@ import trackActivityProblemDefault from "../trackActivityProblem.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ActivityFeedbackReasons = fn(2026).ActivityFeedbackReasons;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const FeedbackType = fn(10045).FeedbackType;
+const ActivityFeedbackReasons = fn(2023).ActivityFeedbackReasons;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const FeedbackType = fn(10047).FeedbackType;
 const jsx = fn(21).jsx;
 const items = [, ,];
 ({ OTHER: arr[0], ADS: arr[1], NOT_FUN: arr[2] } = ActivityFeedbackReasons);
@@ -213,14 +213,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         trackReport: null,
       };
       const tmp2 = getActivityReportOptionsDefault(true, true === prop);
-      const intl = activityApplication(1128).intl;
-      obj.headerLabel = intl.formatToPlainString(activityApplication(1128).t.QXYwoD, {
+      const intl = activityApplication(1125).intl;
+      obj.headerLabel = intl.formatToPlainString(activityApplication(1125).t.QXYwoD, {
         applicationName: activityApplication.name,
       });
-      const intl2 = activityApplication(1128).intl;
-      obj.ratingsBodyLabel = intl2.string(activityApplication(1128).t["9hk2KF"]);
-      const intl3 = activityApplication(1128).intl;
-      obj.reasonsHeaderLabel = intl3.string(activityApplication(1128).t.g1q5fr);
+      const intl2 = activityApplication(1125).intl;
+      obj.ratingsBodyLabel = intl2.string(activityApplication(1125).t["9hk2KF"]);
+      const intl3 = activityApplication(1125).intl;
+      obj.reasonsHeaderLabel = intl3.string(activityApplication(1125).t.g1q5fr);
       obj.reasons = tmp2;
       obj.feedbackReasons = items;
       obj.otherKey = ActivityFeedbackReasons.OTHER;

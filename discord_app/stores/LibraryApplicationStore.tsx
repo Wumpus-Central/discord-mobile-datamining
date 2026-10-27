@@ -23,7 +23,7 @@ function handleLibraryApplicationUpdate(libraryApplication) {
   closure_9[comboId] = fromServer;
   set.delete(comboId);
 }
-const LibraryApplicationFlags = fn(1087).LibraryApplicationFlags;
+const LibraryApplicationFlags = fn(1084).LibraryApplicationFlags;
 const LibraryApplicationStore = "LibraryApplicationStore";
 let c8 = false;
 const dependencyMap = {};

@@ -8,18 +8,18 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ExpressionPickerStore = fn(18522);
+const ExpressionPickerStore = fn(18556);
 ({ setSearchQuery: metroRequire, useExpressionPickerStore: closure_7 } = ExpressionPickerStore);
-const SoundboardPickerType = fn(6008).SoundboardPickerType;
-const EXPRESSION_FOOTER_HEIGHT = fn(1087).EXPRESSION_FOOTER_HEIGHT;
+const SoundboardPickerType = fn(6009).SoundboardPickerType;
+const EXPRESSION_FOOTER_HEIGHT = fn(1084).EXPRESSION_FOOTER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   title: { marginBottom: 8 },
   container: { flex: 1, alignItems: "center" },
   header: {
-    paddingHorizontal: fn(18523).SOUND_ROW_HORIZONTAL_PADDING,
+    paddingHorizontal: fn(18557).SOUND_ROW_HORIZONTAL_PADDING,
     padding: nativeDefault.space.PX_8,
     width: "100%",
   },
@@ -28,7 +28,7 @@ let obj = {
 let closure_14 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  paddingHorizontal: fn(18523).SOUND_ROW_HORIZONTAL_PADDING,
+  paddingHorizontal: fn(18557).SOUND_ROW_HORIZONTAL_PADDING,
   padding: nativeDefault.space.PX_8,
   width: "100%",
 };

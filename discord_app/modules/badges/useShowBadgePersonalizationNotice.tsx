@@ -5,7 +5,7 @@ import BadgeUtils from "BadgeUtils.tsx";
 import ConsentStore from "../../stores/ConsentStore.tsx";
 
 require = fn;
-const Consents = fn(1087).Consents;
+const Consents = fn(1084).Consents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useShowBadgePersonalizationNotice.tsx");

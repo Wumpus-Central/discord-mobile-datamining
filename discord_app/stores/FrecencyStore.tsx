@@ -80,8 +80,8 @@ function initFrecency() {
     );
   }
 }
-const ID_REGEX = fn(1087).ID_REGEX;
-const UserSettingsTypes = fn(1097).UserSettingsTypes;
+const ID_REGEX = fn(1084).ID_REGEX;
+const UserSettingsTypes = fn(1094).UserSettingsTypes;
 let closure_9 = new FrecencyDefault({
   computeBonus() {
     return 100;

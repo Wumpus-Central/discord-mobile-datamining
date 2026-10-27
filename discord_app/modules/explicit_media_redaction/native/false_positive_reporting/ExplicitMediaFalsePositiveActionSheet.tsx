@@ -143,7 +143,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           obj5.style = items;
           const obj6 = { uri: url };
           obj5.source = obj6;
-          tmp6Result = timestampProducer(tmp7(5669), obj5);
+          tmp6Result = timestampProducer(tmp7(5670), obj5);
         }
         cResult[5] = image;
         image = media.image;
@@ -192,7 +192,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.children = tmp3Result;
       return timestampProducer(React4, obj2);
     };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj5 = {
   content: { padding: nativeDefault.space.PX_16 },
   contentContainer: { justifyContent: "center", textAlign: "center", alignItems: "center" },
@@ -214,8 +214,8 @@ obj5.mediaContainer = {
   marginTop: nativeDefault.space.PX_8,
   aspectRatio: "4 / 3",
 };
-const native = fn(1202);
-obj5.elevationShadow = native.generateBoxShadowStyle(fn(1202).FOUR_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1199);
+obj5.elevationShadow = native.generateBoxShadowStyle(fn(1199).FOUR_DP_ELEVATION_SHADOW_PARAMS);
 obj5.image = { resizeMode: "contain" };
 let obj8 = {
   width: "100%",

@@ -5,8 +5,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const HexagonCampaignConstants = fn(4996);
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const HexagonCampaignConstants = fn(4997);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: closure_8, HexagonCampaignPerk: closure_9 } = HexagonCampaignConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
@@ -118,8 +118,8 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
                             closure_0 = tmp8;
                             closure_128_0 = undefined;
                             if (closure_2_1) {
-                              const result = displayNameStyles(15856).saveHexagonCampaignPreviousDisplayNameStyles();
-                              const obj4 = displayNameStyles(15856);
+                              const result = displayNameStyles(15894).saveHexagonCampaignPreviousDisplayNameStyles();
+                              const obj4 = displayNameStyles(15894);
                             }
                             if (closure_1_10) {
                               closure_1_12.current = true;
@@ -128,7 +128,7 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
                               colors = 3;
                               c5 = 1;
                               const obj6 = {
-                                value: displayNameStyles(7078).saveProfileAndAccountChanges(obj5),
+                                value: displayNameStyles(7080).saveProfileAndAccountChanges(obj5),
                                 done: false,
                               };
                               return obj6;
@@ -185,17 +185,17 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
                           }
                         }
                         const obj13 = {
-                          font_name: displayNameStyles(1412).DisplayNameFont[closure_2],
-                          effect_name: displayNameStyles(1411).DisplayNameEffect[c3],
+                          font_name: displayNameStyles(1409).DisplayNameFont[closure_2],
+                          effect_name: displayNameStyles(1408).DisplayNameEffect[c3],
                           colors,
                           entry_point,
                         };
-                        closure_2_1(1267).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj13);
+                        closure_2_1(1264).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj13);
                         if (closure_129_1) {
-                          const result2 = displayNameStyles(15856).markHexagonCampaignPerkApplied(
+                          const result2 = displayNameStyles(15894).markHexagonCampaignPerkApplied(
                             constants2.DISPLAY_NAME_STYLE,
                           );
-                          const obj10 = displayNameStyles(15856);
+                          const obj10 = displayNameStyles(15894);
                         }
                         if (closure_1_8 != null) {
                           closure_1_8();

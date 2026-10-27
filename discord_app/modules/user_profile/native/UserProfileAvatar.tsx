@@ -13,7 +13,7 @@ let closure_3 = ["backgroundColor", "size", "ref"];
 let closure_4 = ["animate", "user", "guildId"];
 const View = fn(17).View;
 const TrackUserProfileActions = fn(8672).TrackUserProfileActions;
-const AVATAR_SIZE_VARIANT = fn(7304).AVATAR_SIZE_VARIANT;
+const AVATAR_SIZE_VARIANT = fn(7306).AVATAR_SIZE_VARIANT;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -238,7 +238,7 @@ export const OpenableUserProfileAvatar = ReactCompilerGating.isReactCompilerEnab
                 }
               }
               if (tmp12) {
-                const intl = tmp(1128).intl;
+                const intl = tmp(1125).intl;
                 class C {
                   constructor() {
                     obj = { action: TrackUserProfileActions.VIEW_AVATAR };

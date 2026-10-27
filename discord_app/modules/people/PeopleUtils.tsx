@@ -7,7 +7,7 @@ import AcceptFriendRequestModalActionCreators from "strangers/AcceptFriendReques
 import RelationshipStore from "../../stores/RelationshipStore.tsx";
 
 require = fn;
-const AbortCodes = fn(1087).AbortCodes;
+const AbortCodes = fn(1084).AbortCodes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/people/PeopleUtils.tsx");
 

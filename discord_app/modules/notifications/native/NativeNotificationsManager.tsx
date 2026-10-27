@@ -8,7 +8,7 @@ import GuildReadStateStore from "../../../stores/GuildReadStateStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 let closure_6 = new LoggerDefault("NativeNotificationsManager");
 const prototype = function NativeNotificationsManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

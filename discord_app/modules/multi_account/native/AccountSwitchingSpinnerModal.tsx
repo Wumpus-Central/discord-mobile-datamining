@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_4 = createStyles.createStyles({
   switchingSpinnerContainer: { flex: 1, alignItems: "center", justifyContent: "center" },
 });
@@ -63,7 +63,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         </View>
       );
     };
-tmp3.modalConfig = { animation: fn(1107).ModalAnimation.FADE, closable: false };
+tmp3.modalConfig = { animation: fn(1104).ModalAnimation.FADE, closable: false };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/multi_account/native/AccountSwitchingSpinnerModal.tsx");
 

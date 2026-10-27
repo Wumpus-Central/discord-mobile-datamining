@@ -1,6 +1,6 @@
 // discord_app/modules/guild_role_subscriptions/native/components/ChannelSelectorActionSheet.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import useCreateChannelSubmit from "../../../channel/useCreateChannelSubmit.tsx";
@@ -13,11 +13,11 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Permissions = fn(1087).Permissions;
-const UnreadSetting = fn(6705).UnreadSetting;
+const Permissions = fn(1084).Permissions;
+const UnreadSetting = fn(6706).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_11, Fragment: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   titleContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, padding: 16, width: "100%" },
   searchContainer: null,
@@ -95,7 +95,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
                     color: tmp5(587).colors.ICON_BRAND,
                     secondaryColor: tmp5(587).colors.WHITE,
                   };
-                  obj3.children = closure_11(tmp(7267).CircleCheckIcon, obj4);
+                  obj3.children = closure_11(tmp(7269).CircleCheckIcon, obj4);
                   tmp15 = closure_11(View, obj3);
                 }
                 cResult[9] = selected;
@@ -116,7 +116,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           disableHighlightOnPress: true,
           resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS,
         };
-        const tmp13 = closure_11(tmp5(17555), obj5);
+        const tmp13 = closure_11(tmp5(17596), obj5);
         cResult[3] = channel;
         cResult[4] = tmp7;
         cResult[5] = selected;
@@ -133,7 +133,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = onChannelSelected;
       cResult[2] = fn;
       tmp7 = fn;
-      tmp6 = onChannelSelected(5604)(channel);
+      tmp6 = onChannelSelected(5605)(channel);
     }
   : function ChannelRow(channel) {
       channel = channel.channel;
@@ -155,16 +155,16 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
         disableHighlightOnPress: true,
         resolvedUnreadSetting: null,
       };
-      const tmp4 = onChannelSelected(5604)(channel);
+      const tmp4 = onChannelSelected(5605)(channel);
       obj.accessibilityLabel = tmp4;
       obj.channel = channel;
       obj.selected = selected;
       obj.resolvedUnreadSetting = UnreadSetting.ONLY_MENTIONS;
-      const children = [closure_11(onChannelSelected(17555), obj)];
+      const children = [closure_11(onChannelSelected(17596), obj)];
       if (selected) {
         const obj2 = { style: tmp.selectedIcon, children: null };
         const obj3 = { size: "md", color: tmp2(587).colors.ICON_BRAND, secondaryColor: tmp2(587).colors.WHITE };
-        obj2.children = closure_11(channel(7267).CircleCheckIcon, obj3);
+        obj2.children = closure_11(channel(7269).CircleCheckIcon, obj3);
         selected = closure_11(View, obj2);
       }
       children[1] = selected;
@@ -221,10 +221,10 @@ export default function ChannelSelectorActionSheet(guildId) {
   let obj2 = { scrollable: true, ref, header: null, children: null };
   let obj3 = { style: tmp.titleContainer, children: null };
   if (title == null) {
-    const intl = tmp5(1128).intl;
-    title = intl.string(tmp5(1128).t.PDn2fR);
+    const intl = tmp5(1125).intl;
+    title = intl.string(tmp5(1125).t.PDn2fR);
   }
-  obj3.children = closure_11(guildId(5234).Text, {
+  obj3.children = closure_11(guildId(5235).Text, {
     accessibilityRole: "header",
     variant: "text-md/bold",
     color: "mobile-text-heading-primary",
@@ -233,8 +233,8 @@ export default function ChannelSelectorActionSheet(guildId) {
   const items2 = [closure_11(View, obj3), ,];
   const obj4 = { style: tmp.searchContainer, children: null };
   const obj5 = { size: "md", placeholder: null, onChange: null, onFocus: null };
-  const intl2 = tmp5(1128).intl;
-  obj5.placeholder = intl2.string(guildId(1128).t.UTYBjS);
+  const intl2 = tmp5(1125).intl;
+  obj5.placeholder = intl2.string(guildId(1125).t.UTYBjS);
   obj5.onChange = tmp2[1];
   obj5.onFocus = function onFocus() {
     const current = ref.current;
@@ -244,7 +244,7 @@ export default function ChannelSelectorActionSheet(guildId) {
     }
     return expandActionSheetResult;
   };
-  obj4.children = closure_11(guildId(7145).SearchBar, obj5);
+  obj4.children = closure_11(guildId(7147).SearchBar, obj5);
   items2[1] = closure_11(View, obj4);
   let tmp9Result = !hideCreateChannel;
   if (!hideCreateChannel) {
@@ -273,17 +273,17 @@ export default function ChannelSelectorActionSheet(guildId) {
       children: null,
     };
     const obj7 = { size: "md", color: nativeDefault.colors.TEXT_LINK };
-    const items3 = [closure_11(tmp5(9469).PlusSmallIcon, obj7)];
+    const items3 = [closure_11(tmp5(9468).PlusSmallIcon, obj7)];
     const obj8 = { style: tmp.createChannelLabel, variant: "text-md/medium", color: "text-link", children: null };
-    const intl3 = tmp5(1128).intl;
-    obj8.children = intl3.string(tmp5(1128).t.d7AN7W);
-    items3[1] = closure_11(tmp5(5234).Text, obj8);
+    const intl3 = tmp5(1125).intl;
+    obj8.children = intl3.string(tmp5(1125).t.d7AN7W);
+    items3[1] = closure_11(tmp5(5235).Text, obj8);
     obj6.children = items3;
-    tmp9Result = closure_13(tmp5(6908).PressableOpacity, obj6);
+    tmp9Result = closure_13(tmp5(6910).PressableOpacity, obj6);
   }
   items2[2] = tmp9Result;
   obj2.header = closure_13(closure_12, { children: items2 });
-  obj2.children = closure_11(guildId(7220).BottomSheetFlashList, {
+  obj2.children = closure_11(guildId(7222).BottomSheetFlashList, {
     maintainVisibleContentPosition: { disabled: true },
     style: tmp.bodyContainer,
     data: stateFromStoresArray,
@@ -295,5 +295,5 @@ export default function ChannelSelectorActionSheet(guildId) {
       return closure_2_11(closure_15, { channel: item, onChannelSelected, selected: item.id === dependencyMap });
     },
   });
-  return closure_11(guildId(7298).ActionSheet, obj2);
+  return closure_11(guildId(7300).ActionSheet, obj2);
 }

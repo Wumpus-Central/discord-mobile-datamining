@@ -1,7 +1,7 @@
 // discord_app/modules/main_tabs_v2/native/panels/MainTabsChannelScreenStack.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import DispatcherDefault from "../../../../Dispatcher.tsx";
-import Link from "../../../../../_runtime/01506_Link.js";
+import Link from "../../../../../_runtime/01503_Link.js";
 import native from "../../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import REAWorkaroundViewDefault from "../../../reanimated/native/REAWorkaroundView.tsx";
@@ -10,8 +10,8 @@ import useBaseAppContainerDimensionsDefault from "../../../screen/native/useBase
 import ChatInputUtils from "../../../../utils/native/ChatInputUtils.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import useMountEffect from "../../../../hooks/useMountEffect.tsx";
-import LegacyBaseButton from "../../../../../_runtime/05297_LegacyBaseButton.js";
-import Suspender from "../../../../../_runtime/05939_Suspender.js";
+import LegacyBaseButton from "../../../../../_runtime/05298_LegacyBaseButton.js";
+import Suspender from "../../../../../_runtime/05940_Suspender.js";
 import ChatViewWidthContextDefault from "../../../chat/native/ChatViewWidthContext.tsx";
 import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext.tsx";
 import useChannelScreensFromNavigation from "useChannelScreensFromNavigation.tsx";
@@ -32,13 +32,13 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ONYX_BORDER_WIDTH = fn(9700).ONYX_BORDER_WIDTH;
-const Constants = fn(1087);
+const ONYX_BORDER_WIDTH = fn(9702).ONYX_BORDER_WIDTH;
+const Constants = fn(1084);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticsSections: c10 } = Constants);
-let ThemeTypes = fn(1098).ThemeTypes;
+let ThemeTypes = fn(1095).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_14 = createStyles.createStyles({ onyxContainerStyles: { marginTop: -ONYX_BORDER_WIDTH, marginLeft: -ONYX_BORDER_WIDTH } });
 const __initData = { code: "function MainTabsChannelScreenStackTsx1(){const{isStackVisible,highestFullyRenderedScreenIndex,index,alwaysVisible,translateX,maxWidth}=this.__closure;return isStackVisible&&highestFullyRenderedScreenIndex.get()<=index&&(alwaysVisible||translateX.get()<maxWidth);}" };
 const __initData2 = { code: "function MainTabsChannelScreenStackTsx2(visible,wasVisible){const{runOnJS,setIsVisible}=this.__closure;if(visible===wasVisible){return;}runOnJS(setIsVisible)(visible);}" };

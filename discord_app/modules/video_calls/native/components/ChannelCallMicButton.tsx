@@ -61,7 +61,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp16 = cResult[7];
         }
-        const tmp5Result = importDefault(mute ? 11648 : 11649);
+        const tmp5Result = importDefault(mute ? 11650 : 11651);
         if (!tmp4) {
           tmp4 = mute;
         }
@@ -137,7 +137,7 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
         () => null != awaitingRemoteSessionInfo.getAwaitingRemoteSessionInfo(),
       );
       const obj = mute(504);
-      const muteHandler = mute(11644).createMuteHandler(tmp3, stateFromStores);
+      const muteHandler = mute(11646).createMuteHandler(tmp3, stateFromStores);
       mute = muteHandler.mute;
       const items1 = [mute];
       const memo = noop.useMemo(() => jsx(VoicePanelRiveMicButton.VoicePanelRiveMicButton, { muted: mute }), items1);
@@ -151,10 +151,10 @@ export const ChannelCallMicButton = ReactCompilerGating.isReactCompilerEnabled()
         lottieComponent: null,
         tintColor: null,
       };
-      const intl = mute(1128).intl;
-      obj3.accessibilityLabel = intl.string(mute(1128).t.B3zz0G);
+      const intl = mute(1125).intl;
+      obj3.accessibilityLabel = intl.string(mute(1125).t.B3zz0G);
       obj3.onPress = muteHandler.onPress;
-      obj3.source = importDefault(mute ? 11648 : 11649);
+      obj3.source = importDefault(mute ? 11650 : 11651);
       if (!flag) {
         flag = mute;
       }

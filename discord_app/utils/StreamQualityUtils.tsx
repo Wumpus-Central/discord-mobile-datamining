@@ -14,8 +14,8 @@ import UserStore from "../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const StreamSettingsConstants = fn(5814);
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const StreamSettingsConstants = fn(5815);
 ({
   ApplicationStreamFPS: c10,
   ApplicationStreamResolutions: closure_11,
@@ -23,8 +23,8 @@ const StreamSettingsConstants = fn(5814);
   getApplicationFramerate: map1,
   getApplicationResolution: closure_14,
 } = StreamSettingsConstants);
-let closure_15 = fn(1394).StreamQualitiesToPremiumType;
-const ResolutionTypes = fn(5718).ResolutionTypes;
+let closure_15 = fn(1391).StreamQualitiesToPremiumType;
+const ResolutionTypes = fn(5719).ResolutionTypes;
 const ReactCompilerGating = fn(558);
 function isPremiumRequirement(quality) {
   return null != quality.quality || null != quality.guildPremiumTier;

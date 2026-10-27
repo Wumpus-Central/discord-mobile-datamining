@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   mainIdentity: { flexDirection: "row", alignItems: "center" },
   primaryAvatar: { marginRight: nativeDefault.space.PX_4 },
@@ -248,7 +248,7 @@ export default noop.memo(
                       accessibilityRole,
                       accessibilityState,
                     };
-                    const tmp16 = closure_5(FormRow(6903).TableRow, obj2);
+                    const tmp16 = closure_5(FormRow(6905).TableRow, obj2);
                     cResult[29] = accessibilityLabel;
                     cResult[30] = accessibilityRole;
                     cResult[31] = accessibilityState;
@@ -275,8 +275,8 @@ export default noop.memo(
             }
             let tmp8 = leading;
             if (leading == null) {
-              const obj4 = { source: stateFromStores.getAvatarSource(guildId), size: FormRow(1202).AvatarSizes.SMALL };
-              tmp8 = closure_5(FormRow(1202).Avatar, obj4);
+              const obj4 = { source: stateFromStores.getAvatarSource(guildId), size: FormRow(1199).AvatarSizes.SMALL };
+              tmp8 = closure_5(FormRow(1199).Avatar, obj4);
             }
             cResult[21] = guildId;
             cResult[22] = leading;
@@ -346,8 +346,8 @@ export default noop.memo(
           }
           let tmp18 = leading;
           if (leading == null) {
-            const obj7 = { source: stateFromStores.getAvatarSource(guildId), size: FormRow(1202).AvatarSizes.SMALL };
-            tmp18 = closure_5(FormRow(1202).Avatar, obj7);
+            const obj7 = { source: stateFromStores.getAvatarSource(guildId), size: FormRow(1199).AvatarSizes.SMALL };
+            tmp18 = closure_5(FormRow(1199).Avatar, obj7);
           }
           cResult[3] = guildId;
           cResult[4] = leading;

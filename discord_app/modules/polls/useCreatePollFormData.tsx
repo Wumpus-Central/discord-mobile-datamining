@@ -14,10 +14,10 @@ const require = globalThis.__r;
 
 require = fn;
 function createPollCreationImageForMedia(mediaURL, status) {
-  const obj = { mediaAttachmentState: { status, mediaURL }, emoji: "r", stickerId: "toCharArray$esjava$1" };
+  const obj = { mediaAttachmentState: { status, mediaURL }, emoji: "Array", stickerId: "applicationId" };
   return obj;
 }
-const PollsConstants = fn(8310);
+const PollsConstants = fn(8309);
 ({ MAX_NUMBER_OF_ANSWERS_PER_POLL: closure_7, MIN_NUMBER_OF_ANSWERS_PER_POLL: closure_8, PollDurations: closure_9 } = PollsConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -368,17 +368,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
   const callback5 = obj.useCallback((arg0, arg1, arg2) => {
     const objectURL = URL.createObjectURL(arg2);
     callback3(arg0, arg1);
-    const obj = { mediaAttachmentState: { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL }, emoji: "r", stickerId: "toCharArray$esjava$1" };
+    const obj = { mediaAttachmentState: { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL }, emoji: "Array", stickerId: "applicationId" };
     callback2(obj, arg1);
     const obj2 = { status: PollTypes.PollMediaUploadAttachmentStatus.PREPARING, mediaURL: objectURL };
     const result = PollUploadAttachmentActionCreatorsAll.handlePollMediaAttachmentAdd(arg0, first[arg1].localCreationAnswerId, arg2);
-    const obj4 = { mediaAttachmentState: null, emoji: "r", stickerId: "toCharArray$esjava$1" };
+    const obj4 = { mediaAttachmentState: null, emoji: "Array", stickerId: "applicationId" };
     obj4.mediaAttachmentState = { status: PollTypes.PollMediaUploadAttachmentStatus.READY_TO_UPLOAD, mediaURL: objectURL };
     callback2(obj4, arg1);
   }, items2);
   const callback6 = obj.useCallback((emoji, arg1) => {
     callback3(id, arg1);
-    callback2({ emoji, stickerId: "r", mediaAttachmentState: "toCharArray$esjava$1" }, arg1);
+    callback2({ emoji, stickerId: "Array", mediaAttachmentState: "applicationId" }, arg1);
   }, items3);
   const items4 = [answers.length < first1];
   const callback7 = obj.useCallback((arg0) => {
@@ -430,7 +430,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
       let intl = util.intl;
       obj.question = intl.string(util.t.gPX3oI);
     }
-    if (first.filter((item) => c0(8284).isAnswerFilled(item)).length < closure_2_8) {
+    if (first.filter((item) => c0(8282).isAnswerFilled(item)).length < closure_2_8) {
       c0 = false;
       let _HermesInternal = HermesInternal;
       let combined = "answer-" + first[0].localCreationAnswerId;
@@ -438,13 +438,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCreat
       obj[combined] = intl2.string(util.t.fYvzEX);
     }
     const item = first.forEach((localCreationAnswerId) => {
-      obj = closure_0(8284);
+      obj = closure_0(8282);
       if (obj.isIncompleteAnswer(localCreationAnswerId)) {
         c0 = false;
         const _HermesInternal = HermesInternal;
         const combined = "answer-" + localCreationAnswerId.localCreationAnswerId;
-        const intl = closure_0(1128).intl;
-        obj[combined] = intl.string(closure_0(1128).t["8Qqkc+"]);
+        const intl = closure_0(1125).intl;
+        obj[combined] = intl.string(closure_0(1125).t["8Qqkc+"]);
       }
     });
     closure_1_12(obj);

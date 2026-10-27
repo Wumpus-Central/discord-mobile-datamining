@@ -7,13 +7,13 @@ import UserStore from "../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildTagConstants = fn(8274);
+const GuildTagConstants = fn(8272);
 ({
   GuildTagBadgeMediaProxySizes,
   GuildTagBadgeMediaProxySizesMobile: hasOwnProperty,
   GuildTagBadgeSize: metroRequire,
 } = GuildTagConstants);
-const GuildFeatures = fn(1087).GuildFeatures;
+const GuildFeatures = fn(1084).GuildFeatures;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()

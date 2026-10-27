@@ -12,9 +12,9 @@ import CustomThemeMobileStore from "../../../client_themes/native/CustomThemeMob
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-const SystemThemeState = fn(1210).SystemThemeState;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const constants = fn(1394).AnalyticsPremiumFeatureNames;
+const SystemThemeState = fn(1207).SystemThemeState;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const constants = fn(1391).AnalyticsPremiumFeatureNames;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/appearance/native/UserSettingsAppearanceThemeUtils.tsx");
 
@@ -189,7 +189,7 @@ export const getUserThemeIndex = function getUserThemeIndex(userPreset, c1, memo
   } else {
     if (c4) {
       if (tmp >= 0) {
-        return memo1.findIndex((type) => type.type === userPreset(1256).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
+        return memo1.findIndex((type) => type.type === userPreset(1253).ClientThemeType.CUSTOM_BACKGROUND_GRADIENT);
       }
     }
     const str = "system";

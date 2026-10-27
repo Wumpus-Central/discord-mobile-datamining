@@ -375,7 +375,7 @@ function handleFetchGameProfileFeed() {
   }
 }
 const ContentInventoryFeedKey = fn(8839).ContentInventoryFeedKey;
-const PlatformTypes = fn(1087).PlatformTypes;
+const PlatformTypes = fn(1084).PlatformTypes;
 let closure_11 = 2 * DurationsDefault.Millis.MINUTE;
 const GLOBAL_FEED = ContentInventoryFeedKey.GLOBAL_FEED;
 let closure_13 = 15 * DurationsDefault.Millis.MINUTE;
@@ -384,7 +384,7 @@ const set = new Set();
 const map1 = new Map();
 let closure_17 = null;
 let apply = fn(12);
-let closure_18 = apply.debounce(fn(14403).postTrackToContentInventory, 3000, { trailing: true });
+let closure_18 = apply.debounce(fn(14439).postTrackToContentInventory, 3000, { trailing: true });
 const prototype = function ContentInventoryManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {

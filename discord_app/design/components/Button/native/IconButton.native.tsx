@@ -4,14 +4,14 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const Text_Text = BaseButton(5234);
-const Button_BaseButton = BaseButton(5254);
-const BaseIconButton = BaseButton(7960);
+const Text_Text = BaseButton(5235);
+const Button_BaseButton = BaseButton(5255);
+const BaseIconButton = BaseButton(7958);
 require = fn;
 let closure_3 = ["label", "grow", "accessibilityLabel", "maxFontSizeMultiplier", "accessibilityHint", "ref"];
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_7 = createStyles.createStyles((arg0) => {
   const labelPressable = {
     paddingBottom: nativeDefault.space.PX_4,

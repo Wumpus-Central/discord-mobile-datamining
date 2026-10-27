@@ -8,9 +8,9 @@ import GuildBoostSlotStore from "../../../../../stores/billing/GuildBoostSlotSto
 const require = globalThis.__r;
 
 const require = fn;
-const GuildPowerupsConstants = fn(5182);
+const GuildPowerupsConstants = fn(5183);
 ({ BoostPurchaseIntent: metroRequire, GuildPowerupType: closure_7 } = GuildPowerupsConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticsObjects: closure_8, AnalyticsObjectTypes: closure_9 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -75,9 +75,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   let tmp15 = c2;
                   if (c2 > 0) {
                     if (!handleMobileWebRedirectCheckout.hasFetched) {
-                      const items = [tmp2(7531).init()];
-                      let obj2 = tmp2(7531);
-                      items[1] = guildId(8368).fetchGuildBoostSlots();
+                      const items = [tmp2(7532).init()];
+                      let obj2 = tmp2(7532);
+                      items[1] = guildId(8367).fetchGuildBoostSlots();
                       c2 = 1;
                       c3 = 1;
                       const obj8 = { value: Promise.all(items), done: false };
@@ -102,11 +102,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               PERK = analyticsLocations.PERK;
             }
             closure_128_0 = PERK;
-            availableGuildBoostSlots = guildId(8366).getAvailableGuildBoostSlots(
+            availableGuildBoostSlots = guildId(8365).getAvailableGuildBoostSlots(
               handleMobileWebRedirectCheckout.boostSlots,
             );
             if (availableGuildBoostSlots.length >= c2) {
-              tmp15 = guildId(6697);
+              tmp15 = guildId(6698);
               const obj9 = { guildBoostSlots: availableGuildBoostSlots.slice(0, c2), guildId, intent: closure_128_0 };
               tmp15.openTransferModal(obj9);
             } else if (!shouldUseMobileWebRedirectCheckout) {
@@ -129,10 +129,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj = guildId(dependencyMap[11]);
               };
-              const result = guildId(7512).launchGuildBoostFlowOrAlert(obj10);
-              const obj6 = guildId(7512);
+              const result = guildId(7513).launchGuildBoostFlowOrAlert(obj10);
+              const obj6 = guildId(7513);
             }
-            const obj5 = guildId(8366);
+            const obj5 = guildId(8365);
           } catch (tmp50) {
             c3 = tmp;
             throw tmp50;
@@ -210,9 +210,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     tmp15 = dependencyMap;
                     if (dependencyMap > 0) {
                       if (!handleMobileWebRedirectCheckout.hasFetched) {
-                        const items = [tmp2(7531).init()];
-                        let obj2 = tmp2(7531);
-                        items[1] = tmp3(8368).fetchGuildBoostSlots();
+                        const items = [tmp2(7532).init()];
+                        let obj2 = tmp2(7532);
+                        items[1] = tmp3(8367).fetchGuildBoostSlots();
                         dependencyMap = 1;
                         c3 = 1;
                         const obj8 = { value: Promise.all(items), done: false };
@@ -237,11 +237,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 PERK = constants.PERK;
               }
               closure_128_0 = PERK;
-              availableGuildBoostSlots = tmp3(8366).getAvailableGuildBoostSlots(
+              availableGuildBoostSlots = tmp3(8365).getAvailableGuildBoostSlots(
                 handleMobileWebRedirectCheckout.boostSlots,
               );
               if (availableGuildBoostSlots.length >= closure_129_2) {
-                tmp15 = tmp3(6697);
+                tmp15 = tmp3(6698);
                 const obj9 = {
                   guildBoostSlots: availableGuildBoostSlots.slice(0, closure_129_2),
                   guildId: closure_129_0,
@@ -268,10 +268,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const obj = guildId(dependencyMap[11]);
                 };
-                const result = tmp3(7512).launchGuildBoostFlowOrAlert(obj10);
-                const obj6 = tmp3(7512);
+                const result = tmp3(7513).launchGuildBoostFlowOrAlert(obj10);
+                const obj6 = tmp3(7513);
               }
-              const obj5 = tmp3(8366);
+              const obj5 = tmp3(8365);
             } catch (tmp50) {
               c3 = tmp;
               throw tmp50;

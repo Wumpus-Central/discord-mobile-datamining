@@ -3,12 +3,12 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import SentryInitUtils from "../../../../modules/errors/native/SentryInitUtils.tsx";
-import Link from "../../../../../_runtime/01506_Link.js";
+import Link from "../../../../../_runtime/01503_Link.js";
 import BackPressTracking from "../../../../modules/routing/native/BackPressTracking.android.tsx";
 import NavigatorHeader from "NavigatorHeader.native.tsx";
-import _mod6933 from "../../../../../_runtime/metro/06933__.js";
+import _mod6935 from "../../../../../_runtime/metro/06935__.js";
 import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade.native.tsx";
-import StackNavigator from "../../../../../_runtime/07097_StackNavigator.js";
+import StackNavigator from "../../../../../_runtime/07099_StackNavigator.js";
 import NavigatorScreen from "NavigatorScreen.native.tsx";
 import useNavigationTheme from "useNavigationTheme.native.tsx";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -21,7 +21,7 @@ let closure_4 = ["useContainer", "containerStyle"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_8 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -930,7 +930,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const tmpResult3 = require("BackPressTracking");
-      const tmp16 = navigationContainerRef(5205)();
+      const tmp16 = navigationContainerRef(5206)();
       const navigationTheme1 = require("useNavigationTheme").useNavigationTheme(tmp16);
       if (null != tmp7) {
         class N {
@@ -1009,7 +1009,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj2 = { children: null };
-        const obj3 = { value: "Array", children: 0 };
+        const obj3 = { value: "Array", children: false };
         const obj4 = {
           ref: navigationContainerRef,
           theme: navigationTheme1,
@@ -1018,7 +1018,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           onStateChange: tmp8,
           children: tmp20,
         };
-        obj3.children = jsx(tmp(1506).NavigationContainer, {
+        obj3.children = jsx(tmp(1503).NavigationContainer, {
           ref: navigationContainerRef,
           theme: navigationTheme1,
           initialState: tmp6,
@@ -1026,8 +1026,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
           onStateChange: tmp8,
           children: tmp20,
         });
-        obj2.children = jsx(tmp(6933).HeaderBackContext.Provider, { value: "Array", children: 0 });
-        const tmp25 = jsx(tmp(1506).NavigationIndependentTree, { children: null });
+        obj2.children = jsx(tmp(6935).HeaderBackContext.Provider, { value: "Array", children: false });
+        const tmp25 = jsx(tmp(1503).NavigationIndependentTree, { children: null });
         cResult[14] = navigationContainerRef;
         cResult[15] = tmp8;
         cResult[16] = navigationTheme1;
@@ -1070,7 +1070,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         }),
         1,
       )[0];
-      const tmp5 = navigationContainerRef(5205)();
+      const tmp5 = navigationContainerRef(5206)();
       let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp5);
       const obj4 = {
         ref: navigationContainerRef,
@@ -1092,7 +1092,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         initialRouteState = tmp8;
       }
       const obj5 = { children: null };
-      const obj6 = { value: "Array", children: 0 };
+      const obj6 = { value: "Array", children: false };
       obj4.initialState = initialRouteState;
       obj4.onReady = function onReady() {
         const routingInstrumentation = SentryInitUtils.routingInstrumentation;
@@ -1109,7 +1109,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         onStateChange: null,
         children: null,
       });
-      obj5.children = jsx(_mod6933.HeaderBackContext.Provider, { value: "Array", children: 0 });
+      obj5.children = jsx(_mod6935.HeaderBackContext.Provider, { value: "Array", children: false });
       return jsx(Link.NavigationIndependentTree, { children: null });
     };
 ReactCompilerGating = fn(558);

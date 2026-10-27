@@ -1,6 +1,6 @@
 // discord_app/modules/premium/powerups/hooks/useGuildPowerupsWarningConfig.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2568 from "../GuildPowerups.messages.js";
+import _modDef2567 from "../GuildPowerups.messages.js";
 import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AppliedGuildBoostStore from "../../../../stores/AppliedGuildBoostStore.tsx";
@@ -76,8 +76,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         const _Symbol2 = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1128).intl;
-          const stringResult = intl.string(_modDef2568.n5hQhc);
+          const intl = tmp(1125).intl;
+          const stringResult = intl.string(_modDef2567.n5hQhc);
           cResult[7] = stringResult;
           let tmp12 = stringResult;
         } else {
@@ -99,9 +99,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[13] = obj3;
           tmp17 = obj3;
         }
-        const intl2 = tmp(1128).intl;
+        const intl2 = tmp(1125).intl;
         const obj4 = { boostCount: diff, perksString: join.join(", ") };
-        const formatToPlainStringResult = intl2.formatToPlainString(_modDef2568.iAaAiG, obj4);
+        const formatToPlainStringResult = intl2.formatToPlainString(_modDef2567.iAaAiG, obj4);
         cResult[8] = join;
         cResult[9] = diff;
         cResult[10] = formatToPlainStringResult;
@@ -153,10 +153,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           obj = { shouldShow: true, title: null, description: null, requiredBoostCount: null };
           const intl = util.intl;
-          obj.title = intl.string(_modDef2568.n5hQhc);
+          obj.title = intl.string(_modDef2567.n5hQhc);
           const intl2 = util.intl;
           const obj2 = { boostCount: diff, perksString: closure_1.join(", ") };
-          obj.description = intl2.formatToPlainString(_modDef2568.iAaAiG, obj2);
+          obj.description = intl2.formatToPlainString(_modDef2567.iAaAiG, obj2);
           obj.requiredBoostCount = diff;
         }
         return obj;

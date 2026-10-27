@@ -5,9 +5,9 @@ import NativePermissionUtilsDefault from "../../../native_permissions/NativePerm
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const NativePermissionTypes = fn(7868).NativePermissionTypes;
+const NativePermissionTypes = fn(7869).NativePermissionTypes;
 const apply = fn(12);
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const debounceResult = apply.debounce(
   asyncGeneratorStep(async () => {
     if (c3 === 2) {
@@ -88,7 +88,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.RC0kJz);
   },
   parent: null,
-  IconComponent: fn(16174).QrCodeIcon,
+  IconComponent: fn(16212).QrCodeIcon,
   onPress: apply.debounce(
     asyncGeneratorStep(async () => {
       if (c3 === 2) {

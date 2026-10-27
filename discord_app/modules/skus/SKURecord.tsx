@@ -1,13 +1,13 @@
 // discord_app/modules/skus/SKURecord.tsx
-import _modDef2049 from "../../../_runtime/metro/02049__.js";
+import _modDef2046 from "../../../_runtime/metro/02046__.js";
 import getPricesFromServerDefault from "utils/getPricesFromServer.tsx";
 import transformSKUTenantMetadataDefault from "utils/transformSKUTenantMetadata.tsx";
 import Record from "../../lib/Record.tsx";
 import ApplicationRecord from "../../records/ApplicationRecord.tsx";
 
 const require = fn;
-fn(2048).THE_GAME_AWARD_WINNER_SKUS;
-const Constants = fn(1087);
+fn(2045).THE_GAME_AWARD_WINNER_SKUS;
+const Constants = fn(1084);
 ({
   GIFTABLE_CURRENCIES: hasOwnProperty,
   OperatingSystems: metroRequire,
@@ -138,12 +138,12 @@ SKURecord["createFromServer"] = function createFromServer(id) {
   obj.name = name;
   let tmp6 = null;
   if (null != id.release_date) {
-    tmp6 = _modDef2049(id.release_date);
+    tmp6 = _modDef2046(id.release_date);
   }
   obj.releaseDate = tmp6;
   let tmp9 = null;
   if (null != id.preorder_release_at) {
-    tmp9 = _modDef2049(id.preorder_release_at);
+    tmp9 = _modDef2046(id.preorder_release_at);
   }
   obj.preorderReleaseAt = tmp9;
   ({ preorder_approximate_release_date: obj.preorderApproximateReleaseDate, summary: obj.summary } = id);

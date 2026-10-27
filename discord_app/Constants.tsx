@@ -720,7 +720,6 @@ const frozen2 = Object.freeze({
   },
   CAPTCHA: "/users/@me/captcha/verify",
   CAPTCHA_TEST: "/captcha/decider",
-  AGE_ASSURANCE_TEST: "/age-verification/test",
   VERIFY_AGE: "/age-verification/verify",
   VERIFY_AGE_V2: "/age-verification/verify/v2",
   AGE_VERIFICATION_MANUAL_REVIEW: "/age-verification/manual-review",
@@ -1153,6 +1152,9 @@ const frozen2 = Object.freeze({
   },
   STORE_SKU(skuId) {
     return "/store/skus/" + skuId;
+  },
+  STORE_SKU_PUBLIC(skuId) {
+    return "/store/skus/" + skuId + "/public";
   },
   STORE_SKU_PURCHASE(arg0) {
     return "/store/skus/" + arg0 + "/purchase";
@@ -2796,7 +2798,6 @@ const obj2 = {
   },
   CAPTCHA: "/users/@me/captcha/verify",
   CAPTCHA_TEST: "/captcha/decider",
-  AGE_ASSURANCE_TEST: "/age-verification/test",
   VERIFY_AGE: "/age-verification/verify",
   VERIFY_AGE_V2: "/age-verification/verify/v2",
   AGE_VERIFICATION_MANUAL_REVIEW: "/age-verification/manual-review",
@@ -3229,6 +3230,9 @@ const obj2 = {
   },
   STORE_SKU(skuId) {
     return "/store/skus/" + skuId;
+  },
+  STORE_SKU_PUBLIC(skuId) {
+    return "/store/skus/" + skuId + "/public";
   },
   STORE_SKU_PURCHASE(arg0) {
     return "/store/skus/" + arg0 + "/purchase";
@@ -7903,6 +7907,9 @@ export const AnalyticEvents = {
   PAYMENT_FLOW_STEP: "payment_flow_step",
   PAYMENT_FLOW_ADD_SOURCE_COMPLETED: "payment_flow_add_source_completed",
   PAYMENT_FLOW_ADD_SOURCE_ERROR: "payment_flow_add_source_error",
+  EXPRESS_CHECKOUT_LOADED: "express_checkout_loaded",
+  EXPRESS_CHECKOUT_LOAD_FAILED: "express_checkout_load_failed",
+  EXPRESS_CHECKOUT_AMOUNT_CHANGED: "express_checkout_amount_changed",
   PAYMENT_FLOW_SUCCEEDED: "payment_flow_succeeded",
   PAYMENT_FLOW_FAILED: "payment_flow_failed",
   PAYMENT_FLOW_CANCELED: "payment_flow_canceled",
@@ -8601,6 +8608,7 @@ export const AnalyticEvents = {
   UPDATE_SOUNDBOARD_SETTINGS: "update_soundboard_settings",
   SOUNDBOARD_ECHO_VIEWED: "soundboard_echo_viewed",
   SOUNDBOARD_ECHO_SOUND_DETAILS_VIEWED: "soundboard_echo_sound_details_viewed",
+  SOUNDBOARD_ECHO_COMBO_VIEWED: "soundboard_echo_combo_viewed",
   SYNC_ACROSS_CLIENTS_TOGGLED: "sync_across_clients_toggled",
   CHANNEL_INFORMATION_OPENED: "channel_information_opened",
   CHANNEL_INFORMATION_TAB_CLICKED: "channel_information_tab_clicked",

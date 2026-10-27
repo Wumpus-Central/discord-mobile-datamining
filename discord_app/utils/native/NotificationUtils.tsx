@@ -8,8 +8,8 @@ import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 const require = globalThis.__r;
 
 require = fn;
-const PermissionStateType = fn(13312).PermissionStateType;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const PermissionStateType = fn(13326).PermissionStateType;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/NotificationUtils.tsx");
 
@@ -32,7 +32,7 @@ export default {
     let obj = require("PushNotificationActionCreators");
     AnalyticsUtilsDefault.track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
     const permissions = PushNotificationDefault.requestPermissions();
-    permissions.then((sound) => {
+    return permissions.then((sound) => {
       ({ alert: _alert, badge } = sound);
       if (!_alert) {
         _alert = sound.sound;

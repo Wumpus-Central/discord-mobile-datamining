@@ -139,7 +139,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       }
       closure_2 = closure_131_2;
       if (closure_131_2 == null) {
-        closure_2 = { guildId: "Array" };
+        closure_2 = { guildId: "rejectWithError" };
       }
       c5 = 2;
       c6 = 1;
@@ -154,7 +154,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
     }
   }
 };
-const Routes = fn(1087).Routes;
+const Routes = fn(1084).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/links/safeTransitionTo.native.tsx");
 

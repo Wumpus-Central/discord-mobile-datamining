@@ -27,20 +27,20 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [GuildStore];
       return initialize.useStateFromStores(items, () => guildCount.getGuildCount() > 0);
     };
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.o8Bypv);
   },
-  parent: fn(8332).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8331).MobileUserSettings.NOTIFICATIONS,
   useDescription() {
     const intl = util.intl;
     return intl.string(util.t["Vw/Xn8"]);
   },
   usePredicate: tmp2,
   screen: {
-    route: fn(1087).UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
+    route: fn(1084).UserSettingsSections.HIGHLIGHT_NOTIFICATIONS,
     getComponent() {
       return require("UserSettingsHighlightNotifications").default;
     },

@@ -7,7 +7,7 @@ import UserSettingsProtoStore from "../user_settings/UserSettingsProtoStore.tsx"
 import UserStore from "../../stores/UserStore.tsx";
 
 const initialize = obj(504);
-const VideoBackgroundUtils = obj(5867);
+const VideoBackgroundUtils = obj(5868);
 require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

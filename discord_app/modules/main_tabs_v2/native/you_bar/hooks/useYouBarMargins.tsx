@@ -1,27 +1,47 @@
 // discord_app/modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
+import utils_PlatformUtils from "../../../../../../discord_common/js/shared/utils/PlatformUtils.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
+import useChatLayoutDefault from "../../../../chat/native/useChatLayout.tsx";
 import useToken from "../../../../../design/tokens/native/useToken.tsx";
 import YouBarConstants from "../YouBarConstants.tsx";
-import ReactCompilerGating_mod from "../../../../react_compiler/ReactCompilerGating.tsx";
+import "ReactCompilerGating";
+import ReactCompilerGating from "../../../../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 ({ YOU_BAR_MARGIN_IOS: c3, YOU_BAR_MARGIN: closure_4 } = YouBarConstants);
-let ReactCompilerGating = ReactCompilerGating_mod;
-ReactCompilerGating.isReactCompilerEnabled();
-let ReactCompilerGating = ReactCompilerGating_mod;
-function useYouBarHorizontalMargin() {
-  if (useSafeAreaInsetsDefault().bottom > 0) {
-    if (obj.isIOS()) {
-      let tmp3 = React3;
+const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
+  ? function useYouBarHorizontalMargin() {
+      if (useChatLayoutDefault().isChatBesideChannelList) {
+        let tmp4 = React4;
+      } else {
+        if (tmp2 > 0) {
+          if (obj.isIOS()) {
+            tmp4 = React3;
+          }
+          obj = utils_PlatformUtils;
+        }
+        tmp4 = React4;
+      }
+      return tmp4;
     }
-    return tmp3;
-  }
-  tmp3 = React4;
-}
-const result1 = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx");
+  : function useYouBarHorizontalMargin() {
+      if (useChatLayoutDefault().isChatBesideChannelList) {
+        let tmp4 = React4;
+      } else {
+        if (tmp2 > 0) {
+          if (obj.isIOS()) {
+            tmp4 = React3;
+          }
+          obj = utils_PlatformUtils;
+        }
+        tmp4 = React4;
+      }
+      return tmp4;
+    };
+const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useYouBarMargins.tsx");
 
-export { useYouBarHorizontalMargin };
+export const useYouBarHorizontalMargin = tmp3;
 export const useYouBarBottomMargin = ReactCompilerGating.isReactCompilerEnabled()
   ? function useYouBarBottomMargin() {
       return Math.max(

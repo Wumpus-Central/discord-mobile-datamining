@@ -1,17 +1,17 @@
 // discord_app/modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx
 import AnalyticsUtilsDefault from "../../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import PresenceStore from "../../../../../stores/PresenceStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(16653).HappeningNowCardTrackingType;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+let closure_7 = fn(16695).HappeningNowCardTrackingType;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
-const LARGE = fn(1202).AvatarSizes.LARGE;
-const createStyles = fn(4971);
+const LARGE = fn(1199).AvatarSizes.LARGE;
+const createStyles = fn(4972);
 let closure_11 = createStyles.createStyles({ content: { flex: 1, display: "flex", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(

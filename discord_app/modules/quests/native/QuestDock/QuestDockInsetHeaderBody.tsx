@@ -8,18 +8,18 @@ import QuestDockBlurredContentBackgroundDefault from "QuestDockBlurredContentBac
 import PremiumRewardGradientDefault from "../PremiumRewardGradient.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const native = Button(1202);
-const Text_Text = Button(5234);
-const components_Button_Button = Button(5244);
-const QuestDockHooks = Button(16438);
+const native = Button(1199);
+const Text_Text = Button(5235);
+const components_Button_Button = Button(5245);
+const QuestDockHooks = Button(16477);
 require = fn;
 const View = fn(17).View;
-const QuestDockConstants = fn(16441);
+const QuestDockConstants = fn(16480);
 const QUEST_DOCK_EXPANDED_PADDING_BOTTOM = QuestDockConstants.QUEST_DOCK_EXPANDED_PADDING_BOTTOM;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const PX_80 = nativeDefault.space.PX_80;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   rewardTile: { borderRadius: nativeDefault.radii.lg },
   wrapper: {

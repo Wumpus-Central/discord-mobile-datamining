@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/defs/native/AccountSmsBackupSetting.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import PhoneActionCreators from "../../../phone/PhoneActionCreators.tsx";
@@ -10,10 +10,10 @@ import showUserSettingsInputAlertDefault from "../../account/native/showUserSett
 import UserStore from "../../../../stores/UserStore.tsx";
 
 const initialize = obj(504);
-const account_MFAUtils = obj(16060);
+const account_MFAUtils = obj(16098);
 require = fn;
-const UserFlags = fn(1087).UserFlags;
-let closure_5 = fn(7138).PHONE_VERIFICATION_MODAL_KEY;
+const UserFlags = fn(1084).UserFlags;
+let closure_5 = fn(7140).PHONE_VERIFICATION_MODAL_KEY;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountSMSBackupSettingDescription() {
@@ -93,11 +93,11 @@ let closure_7 = apply.debounce(function toggleSMS(user) {
     const obj5 = { reason: null };
     let obj = ModalActionCreatorsDefault;
     obj5.reason = PhoneActionCreators.ChangePhoneReason.USER_SETTINGS_UPDATE;
-    obj.pushLazy(asyncRequireImpl(7137, dependencyMap.paths), obj5, closure_5);
-    const tmp5 = asyncRequireImpl(7137, dependencyMap.paths);
+    obj.pushLazy(asyncRequireImpl(7139, dependencyMap.paths), obj5, closure_5);
+    const tmp5 = asyncRequireImpl(7139, dependencyMap.paths);
   }
 }, 200);
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAccountSMSBackupSettingToggleValue() {
       const cResult = c.c(4);
@@ -147,7 +147,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.uHAJ5v);
   },
-  parent: fn(8332).MobileUserSettings.ACCOUNT,
+  parent: fn(8331).MobileUserSettings.ACCOUNT,
   useIsDisabled: useAccountSMSBackupSettingIsDisabled,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useAccountSMSBackupSettingToggleValue() {
@@ -201,7 +201,7 @@ const toggle = SettingBuilders.createToggle({
     }
   },
   useDescription: tmp2,
-  usePredicate: fn(15973).useIsTOTPEnabled,
+  usePredicate: fn(16011).useIsTOTPEnabled,
 });
 const size = fn(2);
 const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/AccountSmsBackupSetting.tsx");

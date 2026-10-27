@@ -159,10 +159,10 @@ export const getSteamReviewScoreDescriptionIntl = function getSteamReviewScoreDe
     return null;
   }
 };
-export const canShowOpenCriticReview = function canShowOpenCriticReview(game, gameProfileMobileStoreReviews) {
+export const canShowOpenCriticReview = function canShowOpenCriticReview(game, mobileStoreReviews) {
   let tmp = game.steamReleaseStatus !== SteamReleaseStatus.SteamReleaseStatus.RETIRED_ABANDONED;
   if (!tmp) {
-    tmp = gameProfileMobileStoreReviews.length > 0;
+    tmp = mobileStoreReviews.length > 0;
   }
   if (tmp) {
     const reviews = game.reviews;

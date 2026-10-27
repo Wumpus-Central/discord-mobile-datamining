@@ -69,7 +69,7 @@ let closure_5 = async function _bulkClearRecents(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/recent_channels/RecentChannelsActionCreators.tsx");
 

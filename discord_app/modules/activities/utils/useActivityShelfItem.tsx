@@ -17,8 +17,8 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 
 require = fn;
-const STAFF_RELEASE_PHASES = fn(2026).STAFF_RELEASE_PHASES;
-const ApplicationFlags = fn(1087).ApplicationFlags;
+const STAFF_RELEASE_PHASES = fn(2023).STAFF_RELEASE_PHASES;
+const ApplicationFlags = fn(1084).ApplicationFlags;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 fn(558);
 let ReactCompilerGating = fn(558);

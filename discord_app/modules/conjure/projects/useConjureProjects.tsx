@@ -221,7 +221,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
           GuildChannelStore,
           UserProfileStore,
           ApplicationStore,
-          tmp(1455).ApexExperimentStore,
+          tmp(1452).ApexExperimentStore,
         ];
         cResult[0] = items;
         let first1 = items;
@@ -289,7 +289,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [GuildStore, tmp(1455).ApexExperimentStore, PermissionStore];
+        const items = [GuildStore, tmp(1452).ApexExperimentStore, PermissionStore];
         cResult[0] = items;
         let first = items;
       } else {
@@ -345,7 +345,7 @@ export const useConjureForMeGuildId = ReactCompilerGating.isReactCompilerEnabled
       _require = arg0;
       const cResult = require("c").c(4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [GuildStore, SelectedGuildStore, tmp(1455).ApexExperimentStore];
+        const items = [GuildStore, SelectedGuildStore, tmp(1452).ApexExperimentStore];
         cResult[0] = items;
         let first = items;
       } else {

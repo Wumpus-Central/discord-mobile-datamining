@@ -10,10 +10,10 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_4, ActivityIndicator: hasOwnProperty } = get_ActivityIndicator);
 const GuildProfileFetchStatus = fn(8985).GuildProfileFetchStatus;
 const INVALID_ACCESS_ERROR_CODE = fn(9227).INVALID_ACCESS_ERROR_CODE;
-const VerticalGradient = fn(1087).VerticalGradient;
+const VerticalGradient = fn(1084).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   loadingContainer: { paddingTop: 40 },
   footerContainer: { paddingHorizontal: 16, paddingVertical: 40 },

@@ -5,7 +5,7 @@ import GameStore from "../../games/GameStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Distributors = fn(1087).Distributors;
+const Distributors = fn(1084).Distributors;
 const ReactCompilerGating = fn(558);
 function buildSteamStoreUrl(arg0) {
   return "https://store.steampowered.com/app/" + encodeURIComponent(arg0);
@@ -47,8 +47,8 @@ export const useSteamWebsiteUrl = ReactCompilerGating.isReactCompilerEnabled()
               const found1 = thirdPartySkus.filter((distributor) => {
                 let tmp = distributor.distributor === constants.STEAM;
                 if (tmp) {
-                  tmp = !closure_1_0(2033).isNullOrEmpty(distributor.id);
-                  const obj = closure_1_0(2033);
+                  tmp = !closure_1_0(2030).isNullOrEmpty(distributor.id);
+                  const obj = closure_1_0(2030);
                 }
                 return tmp;
               });
@@ -119,8 +119,8 @@ export const useSteamWebsiteUrl = ReactCompilerGating.isReactCompilerEnabled()
               const found1 = thirdPartySkus.filter((distributor) => {
                 let tmp = distributor.distributor === constants.STEAM;
                 if (tmp) {
-                  tmp = !closure_1_0(2033).isNullOrEmpty(distributor.id);
-                  const obj = closure_1_0(2033);
+                  tmp = !closure_1_0(2030).isNullOrEmpty(distributor.id);
+                  const obj = closure_1_0(2030);
                 }
                 return tmp;
               });

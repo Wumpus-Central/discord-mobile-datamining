@@ -8,7 +8,7 @@ import TableRow from "../../../../../design/components/TableRow/native/TableRow.
 import showUserProfileActionSheetDefault from "../../../../user_profile/native/showUserProfileActionSheet.tsx";
 import NoResultsDefault from "../../shared_components/user_list/NoResults.tsx";
 import WumpusCouchSpotIllustration from "../../../../../design/components/mana-assets/native/generated/WumpusCouchSpotIllustration.native.tsx";
-import _modDef17896 from "../../../../../../_runtime/metro/17896__.js";
+import _modDef17930 from "../../../../../../_runtime/metro/17930__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 import GameRelationshipStore from "../../../../game_relationships/GameRelationshipStore.tsx";
 import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_8, flex: 1 },
   requestsButtonContainer: null,
@@ -325,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items = [];
         if (tmp2) {
           const obj = {
-            icon: _modDef17896,
+            icon: _modDef17930,
             IconComponent: SendMessageIcon.SendMessageIcon,
             iconVariant: "default",
             label: null,
@@ -374,20 +374,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let v1IEawz = require;
           let obj9 = dependencyMap;
           let obj7 = { start: true, end: true, icon: null, trailing: null, label: null, subLabel: null, onPress: null };
-          const obj8 = { source: _modDef17896 };
+          const obj8 = { source: _modDef17930 };
           obj7.icon = React5(TableRow.TableRow.Icon, obj8);
           obj7.trailing = React5(TableRow.TableRow.Arrow, {});
           const intl5 = util.intl;
           obj7.label = intl5.string(util.t.fyA115);
           if (incoming + outgoing > 0) {
-            const intl2 = v1IEawz(1128).intl;
-            v1IEawz = v1IEawz(1128).t["1IEawz"];
+            const intl2 = v1IEawz(1125).intl;
+            v1IEawz = v1IEawz(1125).t["1IEawz"];
             obj9 = { incoming, outgoing };
             let formatToPlainStringResult = intl2.formatToPlainString(v1IEawz, obj9);
           } else {
-            const intl = v1IEawz(1128).intl;
+            const intl = v1IEawz(1125).intl;
             const obj10 = { spam: tmp6 };
-            formatToPlainStringResult = intl.formatToPlainString(v1IEawz(1128).t.e6BtLq, obj10);
+            formatToPlainStringResult = intl.formatToPlainString(v1IEawz(1125).t.e6BtLq, obj10);
           }
           obj7.subLabel = formatToPlainStringResult;
           obj7.onPress = function onPress() {

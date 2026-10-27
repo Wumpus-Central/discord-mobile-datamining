@@ -9,11 +9,11 @@ import TextStyles from "../../../../rebrand/native/TextStyles.tsx";
 require = fn;
 let closure_2 = ["children"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { fieldHeader: null };
 const obj3 = {};
 let merged = Object.assign(
-  TextStyles(fn(1098).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.TEXT_SUBTLE, 12, { uppercase: true }),
+  TextStyles(fn(1095).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.TEXT_SUBTLE, 12, { uppercase: true }),
 );
 obj3.paddingBottom = 8;
 obj2.fieldHeader = obj3;

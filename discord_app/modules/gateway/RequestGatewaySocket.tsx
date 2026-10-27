@@ -101,7 +101,7 @@ let closure_10 = async function _withRequest(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 let closure_5 = ["COLD_START"];
 let c6 = true;
 const map = new Map();
@@ -133,7 +133,7 @@ export const startBridgeTo = function startBridgeTo(arg0) {
     num = 0;
   }
   let result = map.set(combined, num + 1);
-  combined(7582).requestSafeIdleCallback(
+  combined(7583).requestSafeIdleCallback(
     () => {
       if (map.has(combined)) {
         const obj3 = { bridge_token: combined, cleared_after: null };
@@ -155,7 +155,7 @@ export const startBridgeTo = function startBridgeTo(arg0) {
     },
     { timeout: 5000 },
   );
-  let obj2 = combined(7582);
+  let obj2 = combined(7583);
 };
 export { stopRequest };
 export const withRequest = function withRequest() {

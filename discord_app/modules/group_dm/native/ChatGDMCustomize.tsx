@@ -8,11 +8,11 @@ import ChannelStore from "../../../stores/ChannelStore.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const MAX_CHANNEL_NAME_LENGTH = fn(1087).MAX_CHANNEL_NAME_LENGTH;
+const MAX_CHANNEL_NAME_LENGTH = fn(1084).MAX_CHANNEL_NAME_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const CLEARED_ICON = "CLEARED_ICON";
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND },
   iconUploader: null,

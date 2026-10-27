@@ -8,7 +8,7 @@ import CacheStore from "../../cache/CacheStore.tsx";
 import GatewayConnectionStore from "../../gateway/GatewayConnectionStore.tsx";
 
 require = fn;
-const ComponentActions = fn(1087).ComponentActions;
+const ComponentActions = fn(1084).ComponentActions;
 let c7 = false;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -133,8 +133,8 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
       }
     }
     function checkNavigationState() {
-      const obj = first(5150);
-      const rootNavigationRef = first(5151).getRootNavigationRef();
+      const obj = first(5151);
+      const rootNavigationRef = first(5152).getRootNavigationRef();
       let currentRoute;
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
@@ -143,14 +143,14 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
         c7 = true;
         checkGatewayConnection(true);
       }
-      const obj2 = first(5151);
+      const obj2 = first(5152);
     }
     if (!allowRender) {
       let result = GatewayConnectionStore.addReactChangeListener(checkGatewayConnection);
       let result1 = CacheStore.addReactChangeListener(checkCacheLoadStatus);
-      let ComponentDispatch = first(1123).ComponentDispatch;
+      let ComponentDispatch = first(1120).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(5151).getRootNavigationRef();
+      let rootNavigationRef = first(5152).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", checkNavigationState);
       }

@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -18,7 +18,7 @@ function openAlertChannelPicker(rule) {
   rule = rule.rule;
   const onChangeRule = rule.onChangeRule;
   const actions = rule.actions;
-  const found = actions.find(rule(19018).isActionFlagToChannel);
+  const found = actions.find(rule(19056).isActionFlagToChannel);
   let channelId;
   if (found != null) {
     channelId = found.metadata.channelId;
@@ -51,8 +51,8 @@ function openAlertChannelPicker(rule) {
     }
     return tmp2;
   };
-  const intl = tmp(1128).intl;
-  obj.noChannelOptionLabel = intl.string(rule(1128).t.PoWNfe);
+  const intl = tmp(1125).intl;
+  obj.noChannelOptionLabel = intl.string(rule(1125).t.PoWNfe);
   obj.onSelect = function onSelect(id) {
     if (null != id) {
       const _Set = Set;
@@ -69,14 +69,14 @@ function openAlertChannelPicker(rule) {
       onChangeRule(AutomodActionUtils.setRuleAction(rule, AutomodActionType.FLAG_TO_CHANNEL, null));
     }
   };
-  onChangeRule(13370)(obj);
-  const tmp5 = onChangeRule(13370);
+  onChangeRule(13384)(obj);
+  const tmp5 = onChangeRule(13384);
 }
-const channelType = fn(4901).GUILD_SELECTABLE_CHANNELS_KEY;
-const AutomodActionType = fn(12814).AutomodActionType;
+const channelType = fn(4902).GUILD_SELECTABLE_CHANNELS_KEY;
+const AutomodActionType = fn(12823).AutomodActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { subLabel: { marginTop: nativeDefault.space.PX_4 } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -325,7 +325,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const _Symbol = Symbol;
         const forResult = Symbol.for("react.early_return_sentinel");
-        const availableActionTypes = tmp(19015).getAvailableActionTypes(rule.triggerType);
+        const availableActionTypes = tmp(19053).getAvailableActionTypes(rule.triggerType);
         if (0 === availableActionTypes.length) {
           cResult[3] = tmp3;
           cResult[4] = onChangeRule;
@@ -339,8 +339,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           const _Symbol3 = Symbol;
           if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = tmp(1128).intl;
-            const stringResult = intl.string(tmp(1128).t["18TOiQ"]);
+            const intl = tmp(1125).intl;
+            const stringResult = intl.string(tmp(1125).t["18TOiQ"]);
             cResult[11] = stringResult;
           }
           map = availableActionTypes.map;
@@ -359,9 +359,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               actionType,
             );
           });
-          const TableRowGroup = tmp(6987).TableRowGroup;
+          const TableRowGroup = tmp(6989).TableRowGroup;
         }
-        const tmpResult = tmp(19015);
+        const tmpResult = tmp(19053);
       }
       function handlePressAction(arg0) {
         if (AutomodActionType.FLAG_TO_CHANNEL === arg0) {
@@ -381,13 +381,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp3 = arg0;
             }
             obj2.metadata = { customMessage: tmp3 };
-            return closure_1(closure_0(19018).setRuleAction(closure_0, constants.BLOCK_MESSAGE, obj2));
+            return closure_1(closure_0(19056).setRuleAction(closure_0, constants.BLOCK_MESSAGE, obj2));
           };
           obj8.onRemove = function onRemove() {
-            return closure_1(closure_0(19018).setRuleAction(closure_0, constants.BLOCK_MESSAGE, null));
+            return closure_1(closure_0(19056).setRuleAction(closure_0, constants.BLOCK_MESSAGE, null));
           };
-          obj3.openLazy(asyncRequireImpl(19043, dependencyMap.paths), "AutomodBlockMessage", obj8);
-          const tmp14 = asyncRequireImpl(19043, dependencyMap.paths);
+          obj3.openLazy(asyncRequireImpl(19081, dependencyMap.paths), "AutomodBlockMessage", obj8);
+          const tmp14 = asyncRequireImpl(19081, dependencyMap.paths);
         } else if (AutomodActionType.USER_COMMUNICATION_DISABLED === arg0) {
           closure_0 = rule;
           closure_1 = onChangeRule;
@@ -397,13 +397,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj9.action = actions.find(AutomodActionUtils.isActionUserCommunicationDisabled);
           obj9.onSelectDuration = function onSelectDuration(dependencyMap) {
             const obj2 = { type: constants.USER_COMMUNICATION_DISABLED, metadata: { durationSeconds: dependencyMap } };
-            return closure_1(closure_0(19018).setRuleAction(closure_0, constants.USER_COMMUNICATION_DISABLED, obj2));
+            return closure_1(closure_0(19056).setRuleAction(closure_0, constants.USER_COMMUNICATION_DISABLED, obj2));
           };
           obj9.onRemove = function onRemove() {
-            return closure_1(closure_0(19018).setRuleAction(closure_0, constants.USER_COMMUNICATION_DISABLED, null));
+            return closure_1(closure_0(19056).setRuleAction(closure_0, constants.USER_COMMUNICATION_DISABLED, null));
           };
-          obj.openLazy(asyncRequireImpl(19042, dependencyMap.paths), "AutomodTimeoutDuration", obj9);
-          const tmp7 = asyncRequireImpl(19042, dependencyMap.paths);
+          obj.openLazy(asyncRequireImpl(19080, dependencyMap.paths), "AutomodTimeoutDuration", obj9);
+          const tmp7 = asyncRequireImpl(19080, dependencyMap.paths);
         } else {
           const QUARANTINE_USER = AutomodActionType.QUARANTINE_USER;
         }
@@ -417,12 +417,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   : function RuleActionRows(rule) {
       rule = rule.rule;
       const onChangeRule = rule.onChangeRule;
-      const availableActionTypes = rule(19015).getAvailableActionTypes(rule.triggerType);
+      const availableActionTypes = rule(19053).getAvailableActionTypes(rule.triggerType);
       let tmp3 = null;
       if (0 !== availableActionTypes.length) {
         let obj2 = { title: null, hasIcons: true, children: null };
-        const intl = tmp(1128).intl;
-        obj2.title = intl.string(tmp(1128).t["18TOiQ"]);
+        const intl = tmp(1125).intl;
+        obj2.title = intl.string(tmp(1125).t["18TOiQ"]);
         obj2.children = availableActionTypes.map((actionType) => {
           rule = actionType;
           return closure_1_6(
@@ -449,13 +449,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       tmp3 = arg0;
                     }
                     obj2.metadata = { customMessage: tmp3 };
-                    return closure_1(closure_0(19018).setRuleAction(closure_0, constants.BLOCK_MESSAGE, obj2));
+                    return closure_1(closure_0(19056).setRuleAction(closure_0, constants.BLOCK_MESSAGE, obj2));
                   };
                   obj8.onRemove = function onRemove() {
-                    return closure_1(closure_0(19018).setRuleAction(closure_0, constants.BLOCK_MESSAGE, null));
+                    return closure_1(closure_0(19056).setRuleAction(closure_0, constants.BLOCK_MESSAGE, null));
                   };
-                  obj3.openLazy(asyncRequireImpl(19043, dependencyMap.paths), "AutomodBlockMessage", obj8);
-                  const tmp15 = asyncRequireImpl(19043, dependencyMap.paths);
+                  obj3.openLazy(asyncRequireImpl(19081, dependencyMap.paths), "AutomodBlockMessage", obj8);
+                  const tmp15 = asyncRequireImpl(19081, dependencyMap.paths);
                 } else if (AutomodActionType.USER_COMMUNICATION_DISABLED === tmp) {
                   closure_0 = rule;
                   closure_1 = onChangeRule;
@@ -469,16 +469,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       metadata: { durationSeconds: dependencyMap },
                     };
                     return closure_1(
-                      closure_0(19018).setRuleAction(closure_0, constants.USER_COMMUNICATION_DISABLED, obj2),
+                      closure_0(19056).setRuleAction(closure_0, constants.USER_COMMUNICATION_DISABLED, obj2),
                     );
                   };
                   obj9.onRemove = function onRemove() {
                     return closure_1(
-                      closure_0(19018).setRuleAction(closure_0, constants.USER_COMMUNICATION_DISABLED, null),
+                      closure_0(19056).setRuleAction(closure_0, constants.USER_COMMUNICATION_DISABLED, null),
                     );
                   };
-                  obj.openLazy(asyncRequireImpl(19042, dependencyMap.paths), "AutomodTimeoutDuration", obj9);
-                  const tmp8 = asyncRequireImpl(19042, dependencyMap.paths);
+                  obj.openLazy(asyncRequireImpl(19080, dependencyMap.paths), "AutomodTimeoutDuration", obj9);
+                  const tmp8 = asyncRequireImpl(19080, dependencyMap.paths);
                 } else {
                   const QUARANTINE_USER = AutomodActionType.QUARANTINE_USER;
                 }
@@ -487,7 +487,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             actionType,
           );
         });
-        tmp3 = closure_6(tmp(6987).TableRowGroup, obj2);
+        tmp3 = closure_6(tmp(6989).TableRowGroup, obj2);
       }
       return tmp3;
     };

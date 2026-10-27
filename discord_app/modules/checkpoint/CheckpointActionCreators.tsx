@@ -318,10 +318,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
               closure_133_2.map((item) => {
                 channel = channel.getChannel(item);
                 if (null != channel) {
-                  const obj = checkpointCardType(7566);
+                  const obj = checkpointCardType(7567);
                   const id = channel.id;
                   const obj3 = { location: "checkpoint", checkpointCardType };
-                  return obj.sendMessage(id, checkpointCardType(7755).parse(channel, closure_1_0), false, obj3);
+                  return obj.sendMessage(id, checkpointCardType(7756).parse(channel, closure_1_0), false, obj3);
                 }
               }),
             ),
@@ -362,7 +362,7 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointActionCreators.tsx");

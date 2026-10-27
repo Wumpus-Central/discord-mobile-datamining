@@ -1,7 +1,7 @@
 // discord_app/modules/polls/PollsUtils.tsx
 import DurationsDefault from "../../utils/Durations.tsx";
 import util from "../../intl/index.native.tsx";
-import v1 from "../../../_runtime/01281_v1.js";
+import v1 from "../../../_runtime/01278_v1.js";
 import utils_StringUtils from "../../../discord_common/js/shared/utils/StringUtils.tsx";
 import NicknameUtilsDefault from "../../utils/NicknameUtils.tsx";
 import useMessageAuthor from "../messages/useMessageAuthor.tsx";
@@ -22,7 +22,7 @@ function getSampleOfVoterUsernamesForAnswer(message, id) {
     message.id,
     { id, name: "", animated: false },
     closure_9,
-    channel(5225).ReactionTypes.VOTE,
+    channel(5226).ReactionTypes.VOTE,
   );
   channel = ChannelStore.getChannel(channelId);
   let guildId = null;
@@ -104,9 +104,9 @@ function formatVoterTooltipText(arr, arg1) {
     return intl.formatToPlainString(util.t.yVX6kE, obj);
   }
 }
-const PollsConstants = fn(8310);
+const PollsConstants = fn(8309);
 ({ POLL_RESULT_MESSAGE_POLL_TITLE_MAX_VISIBLE_CHARS: closure_8, VOTES_TOOLTIP_MAX_USERS: closure_9 } = PollsConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypesSets: c10, Permissions: closure_11 } = Constants);
 const ReactCompilerGating = fn(558);
 function generateLocalCreationAnswerId() {

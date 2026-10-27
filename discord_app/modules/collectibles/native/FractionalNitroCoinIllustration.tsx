@@ -5,7 +5,7 @@ import NitroCoinStackSpotIllustration2 from "../../../design/components/mana-ass
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EXTERNAL_PRODUCT_SKU_IDS = fn(1089).EXTERNAL_PRODUCT_SKU_IDS;
+const EXTERNAL_PRODUCT_SKU_IDS = fn(1086).EXTERNAL_PRODUCT_SKU_IDS;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

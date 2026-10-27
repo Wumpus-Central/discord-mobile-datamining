@@ -8,7 +8,7 @@ import SortedGuildStore from "../../../../stores/SortedGuildStore.tsx";
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const HighlightSettings = fn(1087).HighlightSettings;
+const HighlightSettings = fn(1084).HighlightSettings;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
@@ -95,7 +95,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj3 = { label: name, icon: tmp14, value: !muted, onValueChange: tmp4, start: isStart, end: isEnd };
-        const tmp20 = jsx(tmp(7295).TableSwitchRow, {
+        const tmp20 = jsx(tmp(7297).TableSwitchRow, {
           label: name,
           icon: tmp14,
           value: !muted,
@@ -158,7 +158,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           start: isStart,
           end: isEnd,
         };
-        return jsx(tmp2(7295).TableSwitchRow, {
+        return jsx(tmp2(7297).TableSwitchRow, {
           label: guild.name,
           icon: jsx(GuildIconDefault, { guild }),
           value: !muted,

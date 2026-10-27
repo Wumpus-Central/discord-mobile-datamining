@@ -574,9 +574,9 @@ let closure_20 = async function _authenticate(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(6378);
+let Constants = fn(6379);
 ({ TransportTypes: closure_9, RPC_AUTHENTICATED_SCOPE: c10, RPC_PRIVATE_SCOPE: closure_11 } = Constants);
-Constants = fn(1087);
+Constants = fn(1084);
 ({ Endpoints: closure_12, RPCCommands: map1, RPCErrors: closure_14 } = Constants);
 const CachedTokens = "CachedTokens";
 const AUTHORIZE_PROMPT_THROTTLERS = { "1273616940451102832": null };
@@ -647,7 +647,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                       throw tmp22;
                     } else {
                       const parts = result.split(/#|\?/);
-                      const parsed = closure_1(1493).parse(parts[parts.length - 1]);
+                      const parsed = closure_1(1490).parse(parts[parts.length - 1]);
                       if (null != parsed.error) {
                         const obj2 = { errorCode: constants2.OAUTH2_ERROR };
                         let str = parsed.error_description;
@@ -672,7 +672,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                         result = Storage.set(CachedTokens, obj3);
                         return authenticate(socket, parsed.access_token);
                       }
-                      const obj5 = closure_1(1493);
+                      const obj5 = closure_1(1490);
                     }
                   });
                 } else {
@@ -695,7 +695,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                   throw tmp22;
                 } else {
                   const parts = result.split(/#|\?/);
-                  const parsed = closure_1(1493).parse(parts[parts.length - 1]);
+                  const parsed = closure_1(1490).parse(parts[parts.length - 1]);
                   if (null != parsed.error) {
                     const obj2 = { errorCode: constants2.OAUTH2_ERROR };
                     let str = parsed.error_description;
@@ -720,7 +720,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                     result = Storage.set(CachedTokens, obj3);
                     return authenticate(socket, parsed.access_token);
                   }
-                  const obj5 = closure_1(1493);
+                  const obj5 = closure_1(1490);
                 }
               });
               const promise = authorizeWithPrompt(obj3, socket, signal);
@@ -798,7 +798,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                       throw tmp22;
                     } else {
                       const parts = result.split(/#|\?/);
-                      const parsed = closure_1(1493).parse(parts[parts.length - 1]);
+                      const parsed = closure_1(1490).parse(parts[parts.length - 1]);
                       if (null != parsed.error) {
                         const obj2 = { errorCode: constants2.OAUTH2_ERROR };
                         let str = parsed.error_description;
@@ -823,7 +823,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                         result = Storage.set(CachedTokens, obj3);
                         return authenticate(socket, parsed.access_token);
                       }
-                      const obj5 = closure_1(1493);
+                      const obj5 = closure_1(1490);
                     }
                   });
                 } else {
@@ -846,7 +846,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                   throw tmp22;
                 } else {
                   const parts = result.split(/#|\?/);
-                  const parsed = closure_1(1493).parse(parts[parts.length - 1]);
+                  const parsed = closure_1(1490).parse(parts[parts.length - 1]);
                   if (null != parsed.error) {
                     const obj2 = { errorCode: constants2.OAUTH2_ERROR };
                     let str = parsed.error_description;
@@ -871,7 +871,7 @@ export default function createAuthCommandHandlers(arg0, arg1) {
                     result = Storage.set(CachedTokens, obj3);
                     return authenticate(socket, parsed.access_token);
                   }
-                  const obj5 = closure_1(1493);
+                  const obj5 = closure_1(1490);
                 }
               });
               const promise = authorizeWithPrompt(obj3, socket, signal);

@@ -16,7 +16,7 @@ export const useCanConjureCustomWidget = ReactCompilerGating.isReactCompilerEnab
       const cResult = require("c").c(5);
       dependencyMap = tmp4;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [GuildStore, tmp(1455).ApexExperimentStore];
+        const items = [GuildStore, tmp(1452).ApexExperimentStore];
         cResult[0] = items;
         let first = items;
       } else {

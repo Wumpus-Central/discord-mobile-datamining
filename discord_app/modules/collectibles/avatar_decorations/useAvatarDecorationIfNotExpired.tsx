@@ -7,7 +7,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const MAX_TIMEOUT_MS = fn(1087).MAX_TIMEOUT_MS;
+const MAX_TIMEOUT_MS = fn(1084).MAX_TIMEOUT_MS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx");

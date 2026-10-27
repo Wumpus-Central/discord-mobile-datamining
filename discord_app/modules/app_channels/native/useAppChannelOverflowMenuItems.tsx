@@ -14,7 +14,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const isLaunched = fn(6776).isLaunched;
+const isLaunched = fn(6777).isLaunched;
 const app_channel_header_mobile = "app_channel_header_mobile";
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -33,9 +33,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === application_id.id) {
           let tmp4 = cResult[2];
         }
-        const tmp6 = application_id(11776)(application_id, tmp4);
+        const tmp6 = application_id(11777)(application_id, tmp4);
         dependencyMap = tmp6;
-        const appChannelApplication = tmp(7346).useAppChannelApplication(application_id);
+        const appChannelApplication = tmp(7348).useAppChannelApplication(application_id);
         let bot;
         if (appChannelApplication != null) {
           bot = appChannelApplication.bot;
@@ -50,8 +50,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             } else {
               const _Symbol2 = Symbol;
               if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl = tmp(1128).intl;
-                const stringResult = intl.string(tmp(1128).t.kHie4V);
+                const intl = tmp(1125).intl;
+                const stringResult = intl.string(tmp(1125).t.kHie4V);
                 cResult[6] = stringResult;
                 let tmp14 = stringResult;
               } else {
@@ -61,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return restartFrames.restartFrame(closure_2);
               }
               if (cResult[7] !== t3) {
-                const obj2 = { label: tmp14, IconComponent: tmp(12270).RefreshIcon, action: t3 };
+                const obj2 = { label: tmp14, IconComponent: tmp(12275).RefreshIcon, action: t3 };
                 cResult[7] = t3;
                 cResult[8] = obj2;
                 let tmp16 = obj2;
@@ -71,8 +71,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               items.push(tmp16);
               const _Symbol3 = Symbol;
               if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl2 = tmp(1128).intl;
-                const stringResult1 = intl2.string(tmp(1128).t.VkMnR2);
+                const intl2 = tmp(1125).intl;
+                const stringResult1 = intl2.string(tmp(1125).t.VkMnR2);
                 cResult[9] = stringResult1;
                 let DoorExitIcon = stringResult1;
               } else {
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[10] !== t6) {
                 const obj3 = { label: DoorExitIcon, IconComponent: null, action: null };
-                DoorExitIcon = tmp(11538).DoorExitIcon;
+                DoorExitIcon = tmp(11540).DoorExitIcon;
                 obj3.IconComponent = DoorExitIcon;
                 obj3.action = t6;
                 cResult[10] = t6;
@@ -114,8 +114,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (null == bot) {
             const _Symbol4 = Symbol;
             if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl4 = tmp(1128).intl;
-              const stringResult2 = intl4.string(tmp(1128).t.NgA5vp);
+              const intl4 = tmp(1125).intl;
+              const stringResult2 = intl4.string(tmp(1125).t.NgA5vp);
               cResult[20] = stringResult2;
               let tmp26 = stringResult2;
             } else {
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[15] = items2;
             }
             const obj4 = { label: tmp26, IconComponent: null, variant: "destructive", action: null };
-            FlagIcon = tmp(9971).FlagIcon;
+            FlagIcon = tmp(9973).FlagIcon;
             obj4.IconComponent = FlagIcon;
             obj4.action = function action() {
               return openAppChannelReportModalDefault(application_id, closure_0, app_channel_header_mobile);
@@ -144,8 +144,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const _Symbol5 = Symbol;
             if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl3 = tmp(1128).intl;
-              const stringResult3 = intl3.string(tmp(1128).t.Sh2z9g);
+              const intl3 = tmp(1125).intl;
+              const stringResult3 = intl3.string(tmp(1125).t.Sh2z9g);
               cResult[16] = stringResult3;
               let id = stringResult3;
             } else {
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const obj5 = {
               label: id,
-              IconComponent: tmp(5686).CircleInformationIcon,
+              IconComponent: tmp(5687).CircleInformationIcon,
               action() {
                 return showUserProfileActionSheetDefault({
                   userId: bot.id,
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return tmp10;
         }
-        const tmpResult = tmp(7346);
+        const tmpResult = tmp(7348);
       }
       const obj6 = {
         type: require("EmbeddedSurfaceType").EmbeddedSurfaceType.APP_CHANNEL,
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }),
         items,
       );
-      const tmp3 = application_id(11776)(application_id, memo);
+      const tmp3 = application_id(11777)(application_id, memo);
       dependencyMap = tmp3;
       const appChannelApplication = require("useAppChannelApplication").useAppChannelApplication(application_id);
       bot = undefined;

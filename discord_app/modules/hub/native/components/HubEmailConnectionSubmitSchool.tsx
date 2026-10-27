@@ -15,14 +15,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const HubEmailConnectionSteps = fn(13663).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13677).HubEmailConnectionSteps;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { paddingHorizontal: 16 },
   title: {
-    fontFamily: fn(1087).Fonts.PRIMARY_BOLD,
+    fontFamily: fn(1084).Fonts.PRIMARY_BOLD,
     color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
     fontSize: 24,
     textAlign: "center",
@@ -36,7 +36,7 @@ let obj2 = {
   redesignSubmit: null,
 };
 let obj3 = {
-  fontFamily: fn(1087).Fonts.PRIMARY_BOLD,
+  fontFamily: fn(1084).Fonts.PRIMARY_BOLD,
   color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
   fontSize: 24,
   textAlign: "center",

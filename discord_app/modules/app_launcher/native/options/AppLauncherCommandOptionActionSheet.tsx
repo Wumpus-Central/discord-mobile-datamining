@@ -9,14 +9,11 @@ const require = globalThis.__r;
 const require = fn;
 let closure_3 = ["option", "children", "contentContainerStyles", "scrollable", "startExpanded"];
 const View = fn(17).View;
-const DEFAULT_CONTENT_PADDING = fn(1504).DEFAULT_CONTENT_PADDING;
+const DEFAULT_CONTENT_PADDING = fn(1501).DEFAULT_CONTENT_PADDING;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   actionSheetBackground: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND },
-  titleContainer: { backgroundColor: "transparent" },
-  titleWrapper: { alignItems: "center" },
-  subtitleWrapper: { paddingHorizontal: 12, textAlign: "center" },
   contentContainer: { paddingHorizontal: DEFAULT_CONTENT_PADDING, paddingTop: DEFAULT_CONTENT_PADDING, flex: 1 },
 };
 let closure_7 = createStyles.createStyles(obj2);
@@ -29,7 +26,7 @@ const result = size.fileFinishedImporting(
 
 export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCompilerEnabled()
   ? function AppLauncherCommandOptionActionSheet(arg0) {
-      const cResult = require("c").c(32);
+      const cResult = require("c").c(28);
       if (cResult[0] !== arg0) {
         ({ option, children, contentContainerStyles, scrollable, startExpanded } = arg0);
         const tmp12 = _objectWithoutProperties(arg0, closure_3);
@@ -69,7 +66,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
             }
           },
         };
-        obj3.children = jsx(tmp(7293).ActionSheetCloseButton, {
+        obj3.children = jsx(tmp(7295).ActionSheetCloseButton, {
           onPress() {
             ActionSheetActionCreatorsDefault.hideActionSheet();
             onDismiss = onDismiss.onDismiss;
@@ -85,107 +82,79 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
       } else {
         tmp17 = cResult[9];
       }
-      if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp23 = jsx(tmp(1202).Spacer, { size: 24 });
-        cResult[10] = tmp23;
-        let tmp21 = tmp23;
-      } else {
-        tmp21 = cResult[10];
-      }
-      if (cResult[11] === tmp6.displayDescription) {
-        if (cResult[12] === tmp6.displayName) {
-          if (cResult[13] === tmp15.subtitleWrapper) {
-            if (cResult[14] === tmp15.titleContainer) {
-              if (cResult[15] === tmp15.titleWrapper) {
-                if (cResult[16] === tmp17) {
-                  let tmp24 = cResult[17];
-                }
-                if (cResult[18] === tmp5) {
-                  if (cResult[19] === tmp15.contentContainer) {
-                    let tmp26 = cResult[20];
-                  }
-                  if (cResult[21] === tmp4) {
-                    if (cResult[22] === tmp26) {
-                      let tmp27 = cResult[23];
-                    }
-                    if (cResult[24] === tmp6.name) {
-                      if (cResult[25] === tmp7) {
-                        if (cResult[26] === tmp13) {
-                          if (cResult[27] === tmp14) {
-                            if (cResult[28] === tmp15.actionSheetBackground) {
-                              if (cResult[29] === tmp24) {
-                                if (cResult[30] === tmp27) {
-                                  let tmp31 = cResult[31];
-                                }
-                                return tmp31;
-                              }
-                            }
+      if (cResult[10] === tmp6.displayDescription) {
+        if (cResult[11] === tmp6.displayName) {
+          if (cResult[12] === tmp17) {
+            let tmp21 = cResult[13];
+          }
+          if (cResult[14] === tmp5) {
+            if (cResult[15] === tmp15.contentContainer) {
+              let tmp23 = cResult[16];
+            }
+            if (cResult[17] === tmp4) {
+              if (cResult[18] === tmp23) {
+                let tmp24 = cResult[19];
+              }
+              if (cResult[20] === tmp6.name) {
+                if (cResult[21] === tmp7) {
+                  if (cResult[22] === tmp13) {
+                    if (cResult[23] === tmp14) {
+                      if (cResult[24] === tmp15.actionSheetBackground) {
+                        if (cResult[25] === tmp21) {
+                          if (cResult[26] === tmp24) {
+                            let tmp28 = cResult[27];
                           }
+                          return tmp28;
                         }
                       }
                     }
-                    const obj5 = {};
-                    const merged = Object.assign(tmp7);
-                    obj5.backgroundStyles = tmp15.actionSheetBackground;
-                    obj5.scrollable = tmp13;
-                    obj5.startExpanded = tmp14;
-                    obj5.header = tmp24;
-                    obj5.children = tmp27;
-                    const tmp36 = jsx(tmp(5265).BottomSheet, {}, tmp6.name);
-                    cResult[24] = tmp6.name;
-                    cResult[25] = tmp7;
-                    cResult[26] = tmp13;
-                    cResult[27] = tmp14;
-                    cResult[28] = tmp15.actionSheetBackground;
-                    cResult[29] = tmp24;
-                    cResult[30] = tmp27;
-                    cResult[31] = tmp36;
-                    tmp31 = tmp36;
                   }
-                  const obj6 = { style: tmp26, children: tmp4 };
-                  const tmp30 = <View style={tmp26}>{tmp4}</View>;
-                  cResult[21] = tmp4;
-                  cResult[22] = tmp26;
-                  cResult[23] = tmp30;
-                  tmp27 = tmp30;
                 }
-                const items = [tmp15.contentContainer, tmp5];
-                cResult[18] = tmp5;
-                cResult[19] = tmp15.contentContainer;
-                cResult[20] = items;
-                tmp26 = items;
               }
+              const obj5 = {};
+              const merged = Object.assign(tmp7);
+              obj5.backgroundStyles = tmp15.actionSheetBackground;
+              obj5.scrollable = tmp13;
+              obj5.startExpanded = tmp14;
+              obj5.header = tmp21;
+              obj5.children = tmp24;
+              const tmp33 = jsx(tmp(5266).BottomSheet, {}, tmp6.name);
+              cResult[20] = tmp6.name;
+              cResult[21] = tmp7;
+              cResult[22] = tmp13;
+              cResult[23] = tmp14;
+              cResult[24] = tmp15.actionSheetBackground;
+              cResult[25] = tmp21;
+              cResult[26] = tmp24;
+              cResult[27] = tmp33;
+              tmp28 = tmp33;
             }
+            const obj6 = { style: tmp23, children: tmp4 };
+            const tmp27 = <View style={tmp23}>{tmp4}</View>;
+            cResult[17] = tmp4;
+            cResult[18] = tmp23;
+            cResult[19] = tmp27;
+            tmp24 = tmp27;
           }
+          const items = [tmp15.contentContainer, tmp5];
+          cResult[14] = tmp5;
+          cResult[15] = tmp15.contentContainer;
+          cResult[16] = items;
+          tmp23 = items;
         }
       }
-      const tmp25 = jsx(require("BottomSheetTitleHeader").BottomSheetTitleHeader, {
-        titleContainerStyle: tmp15.titleContainer,
-        titleWrapperStyle: tmp15.titleWrapper,
-        subtitleStyle: tmp15.subtitleWrapper,
+      const tmp22 = jsx(require("BottomSheetTitleHeader").BottomSheetTitleHeader, {
         leading: tmp17,
         title: tmp6.displayName,
         subtitle: tmp6.displayDescription,
-        trailing: tmp21,
       });
-      cResult[11] = tmp6.displayDescription;
-      cResult[12] = tmp6.displayName;
-      cResult[13] = tmp15.subtitleWrapper;
-      cResult[14] = tmp15.titleContainer;
-      cResult[15] = tmp15.titleWrapper;
-      cResult[16] = tmp17;
-      cResult[17] = tmp25;
-      tmp24 = tmp25;
+      cResult[10] = tmp6.displayDescription;
+      cResult[11] = tmp6.displayName;
+      cResult[12] = tmp17;
+      cResult[13] = tmp22;
+      tmp21 = tmp22;
       const obj = require("c");
-      const obj7 = {
-        titleContainerStyle: tmp15.titleContainer,
-        titleWrapperStyle: tmp15.titleWrapper,
-        subtitleStyle: tmp15.subtitleWrapper,
-        leading: tmp17,
-        title: tmp6.displayName,
-        subtitle: tmp6.displayDescription,
-        trailing: tmp21,
-      };
+      const obj7 = { leading: tmp17, title: tmp6.displayName, subtitle: tmp6.displayDescription };
     }
   : function AppLauncherCommandOptionActionSheet(startExpanded) {
       ({ option, scrollable } = startExpanded);
@@ -207,18 +176,10 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
       obj.backgroundStyles = tmp2.actionSheetBackground;
       obj.scrollable = scrollable;
       obj.startExpanded = flag;
-      const obj3 = {
-        titleContainerStyle: tmp2.titleContainer,
-        titleWrapperStyle: tmp2.titleWrapper,
-        subtitleStyle: tmp2.subtitleWrapper,
-        leading: null,
-        title: null,
-        subtitle: null,
-        trailing: null,
-      };
+      const obj3 = { leading: null, title: null, subtitle: null };
       const obj4 = {
         style: { alignSelf: "flex-start" },
-        children: jsx(merged(7293).ActionSheetCloseButton, {
+        children: jsx(merged(7295).ActionSheetCloseButton, {
           onPress() {
             ActionSheetActionCreatorsDefault.hideActionSheet();
             const onDismiss = merged.onDismiss;
@@ -230,7 +191,7 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
       };
       obj3.leading = (
         <View style={{ alignSelf: "flex-start" }}>
-          {jsx(merged(7293).ActionSheetCloseButton, {
+          {jsx(merged(7295).ActionSheetCloseButton, {
             onPress() {
               ActionSheetActionCreatorsDefault.hideActionSheet();
               const onDismiss = merged.onDismiss;
@@ -242,19 +203,10 @@ export const AppLauncherCommandOptionActionSheet = ReactCompilerGating.isReactCo
         </View>
       );
       ({ displayName: obj2.title, displayDescription: obj2.subtitle } = option);
-      obj3.trailing = jsx(merged(1202).Spacer, { size: 24 });
-      obj.header = jsx(merged(7248).BottomSheetTitleHeader, {
-        titleContainerStyle: tmp2.titleContainer,
-        titleWrapperStyle: tmp2.titleWrapper,
-        subtitleStyle: tmp2.subtitleWrapper,
-        leading: null,
-        title: null,
-        subtitle: null,
-        trailing: null,
-      });
+      obj.header = jsx(merged(7250).BottomSheetTitleHeader, { leading: null, title: null, subtitle: null });
       const obj9 = { style: null, children };
       const items = [tmp2.contentContainer, contentContainerStyles];
       obj9.style = items;
       obj.children = <View style={null}>{children}</View>;
-      return jsx(merged(5265).BottomSheet, {}, option.name);
+      return jsx(merged(5266).BottomSheet, {}, option.name);
     };

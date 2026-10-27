@@ -16,21 +16,21 @@ import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import PremiumPlanActionSheetHeaderDefault from "../../premium/native/PremiumPlanActionSheetHeader.tsx";
 import utils_CollectiblesUtils from "../utils/CollectiblesUtils.tsx";
 import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration.tsx";
-import _modDef10480 from "../../../../_runtime/metro/10480__.js";
-import _modDef10481 from "../../../../_runtime/metro/10481__.js";
+import _modDef10483 from "../../../../_runtime/metro/10483__.js";
+import _modDef10484 from "../../../../_runtime/metro/10484__.js";
 import CircleQuestionIcon from "../../../design/components/Icon/native/redesign/generated/CircleQuestionIcon.tsx";
-import _modDef14480 from "../../../../_runtime/metro/14480__.js";
+import _modDef14516 from "../../../../_runtime/metro/14516__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const HelpdeskArticles = fn(1087).HelpdeskArticles;
-const PremiumConstants = fn(1394);
+const HelpdeskArticles = fn(1084).HelpdeskArticles;
+const PremiumConstants = fn(1391);
 ({ FRACTIONAL_PREMIUM_SKU_INTERVAL_COUNTS: closure_7, PremiumTypes: closure_8 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   body: { flex: 1, padding: nativeDefault.space.PX_16 },
   content: null,
@@ -48,17 +48,17 @@ obj2.buttonContainer = { flex: 1, gap: nativeDefault.space.PX_16, alignSelf: "st
 obj2.description = { textAlign: "center" };
 obj2.header = { height: 112, justifyContent: "center", alignItems: "center", overflow: "hidden" };
 let size = {
-  width: fn(9438).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
-  height: fn(9438).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
+  width: fn(9437).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
+  height: fn(9437).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET,
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: null,
 };
 let obj5 = { flex: 1, gap: nativeDefault.space.PX_16, alignSelf: "stretch" };
-let items = [{ translateX: -fn(9438).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 }];
-let obj6 = { translateX: -fn(9438).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
-items[1] = { translateY: -fn(9438).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+let items = [{ translateX: -fn(9437).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 }];
+let obj6 = { translateX: -fn(9437).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+items[1] = { translateY: -fn(9437).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
 size.transform = items;
 obj2.fractionNitroIcon = size;
 const size1 = {
@@ -82,7 +82,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       skuId = skuId.skuId;
       const tmp4 = closure_12();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { source: _modDef14480 };
+        const obj2 = { source: _modDef14516 };
         const tmp9 = React6(FastImageDefault, obj2);
         cResult[0] = tmp9;
         let first = tmp9;
@@ -131,7 +131,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   : function NitroAcquiredHeader(skuId) {
       const tmp = closure_12();
       const obj = { style: tmp.header, children: null };
-      const obj2 = { source: _modDef14480 };
+      const obj2 = { source: _modDef14516 };
       const items = [React6(FastImageDefault, obj2)];
       const obj3 = { style: tmp.fractionNitroIcon, children: null };
       const size = {
@@ -145,7 +145,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       return v65535(hasOwnProperty, obj);
     };
 ReactCompilerGating = fn(558);
-let obj7 = { translateY: -fn(9438).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+let obj7 = { translateY: -fn(9437).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FractionalNitroCollectedActionSheet.tsx");
 
@@ -159,9 +159,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ isLoading, isFractionalPremiumActive, expiresAt } = fetchFractionalPremiumInfo);
       if (consumed) {
         if (tmpResult.isThemeDark(tmp6)) {
-          let tmp5Result = _modDef10480;
+          let tmp5Result = _modDef10483;
         } else {
-          tmp5Result = _modDef10481;
+          tmp5Result = _modDef10484;
         }
         if (cResult[0] !== tmp5Result) {
           const obj3 = { source: tmp5Result };
@@ -398,9 +398,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ onPressExplorePerks, onPressViewCredits } = skuId);
       const tmp = closure_12();
       dependencyMap = tmp;
-      const tmp4 = consumed(5205)();
+      const tmp4 = consumed(5206)();
       noop = tmp4;
-      const fetchFractionalPremiumInfo = skuId(7691).useFetchFractionalPremiumInfo();
+      const fetchFractionalPremiumInfo = skuId(7692).useFetchFractionalPremiumInfo();
       const isFractionalPremiumActive = fetchFractionalPremiumInfo.isFractionalPremiumActive;
       const expiresAt = fetchFractionalPremiumInfo.expiresAt;
       const items = [consumed, tmp4];
@@ -410,9 +410,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const tmp10 = FastImageDefault;
           let obj3 = dependencyMap;
           if (obj2.isThemeDark(closure_3)) {
-            let tmp8Result = _modDef10480;
+            let tmp8Result = _modDef10483;
           } else {
-            tmp8Result = _modDef10481;
+            tmp8Result = _modDef10484;
           }
           obj3 = { source: tmp8Result };
           React6(tmp10, obj3);
@@ -465,7 +465,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, []);
       if (consumed) {
         let obj2 = { premiumType: closure_8.TIER_2 };
-        let tmp12Result = closure_9(tmp2(7543), obj2);
+        let tmp12Result = closure_9(tmp2(7544), obj2);
         let tmp15 = closure_9;
       } else {
         let obj3 = { skuId };
@@ -475,12 +475,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { children: null };
       const items2 = [tmp12Result];
       const obj5 = { style: tmp.questionIconContainer, onPress: callback, children: null };
-      let obj = skuId(7691);
-      obj5.children = tmp15(skuId(13965).CircleQuestionIcon, {
+      let obj = skuId(7692);
+      obj5.children = tmp15(skuId(13979).CircleQuestionIcon, {
         style: tmp.questionIcon,
         color: consumed(587).colors.WHITE,
       });
-      items2[1] = tmp15(skuId(6908).PressableOpacity, obj5);
+      items2[1] = tmp15(skuId(6910).PressableOpacity, obj5);
       obj4.children = items2;
       const items3 = [closure_10(closure_11, obj4), ,];
       const obj7 = { style: tmp.body, children: null };
@@ -491,9 +491,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const items4 = [memo, memo1];
         const obj9 = { style: tmp.buttonContainer, children: null };
         const obj10 = { size: "lg", text: null, onPress: null };
-        let intl = tmp5(1128).intl;
+        let intl = tmp5(1125).intl;
         const string = intl.string;
-        const t = tmp5(1128).t;
+        const t = tmp5(1125).t;
         if (consumed) {
           obj10.text = string(t.ERKK6v);
           obj10.onPress = onPressExplorePerks;
@@ -503,14 +503,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj10.onPress = onPressViewCredits;
           tmp18 = obj10;
         }
-        const items5 = [tmp15(tmp5(5244).Button, tmp18)];
+        const items5 = [tmp15(tmp5(5245).Button, tmp18)];
         const obj11 = { size: "lg", variant: "secondary", text: null, onPress: null };
-        let intl2 = tmp5(1128).intl;
-        obj11.text = intl2.string(tmp5(1128).t.TkTvBz);
+        let intl2 = tmp5(1125).intl;
+        obj11.text = intl2.string(tmp5(1125).t.TkTvBz);
         obj11.onPress = function onPress() {
           return consumed(description[25]).hideActionSheet();
         };
-        items5[1] = tmp15(tmp5(5244).Button, obj11);
+        items5[1] = tmp15(tmp5(5245).Button, obj11);
         obj9.children = items5;
         items4[2] = closure_10(tmp17, obj9);
         obj8.children = items4;
@@ -519,7 +519,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj12 = { handleDisabled: true, children: null };
       obj7.children = tmp10Result;
       items3[1] = tmp15(expiresAt, obj7);
-      items3[2] = tmp15(skuId(5582).ActionSheetHeaderBar, { variant: "floating" });
+      items3[2] = tmp15(skuId(5583).ActionSheetHeaderBar, { variant: "floating" });
       obj12.children = items3;
-      return closure_10(skuId(5265).BottomSheet, obj12);
+      return closure_10(skuId(5266).BottomSheet, obj12);
     };

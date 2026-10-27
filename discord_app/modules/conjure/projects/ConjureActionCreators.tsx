@@ -1145,8 +1145,8 @@ let closure_52 = async function _deleteProject() {
 };
 let closure_3 = ["ws_ticket", "remix_preview"];
 let closure_4 = ["ws_ticket", "remix_preview"];
-const Endpoints = fn(1087).Endpoints;
-const ReadStateTypes = fn(6705).ReadStateTypes;
+const Endpoints = fn(1084).Endpoints;
+const ReadStateTypes = fn(6706).ReadStateTypes;
 let c14 = null;
 let c15 = null;
 let c16 = false;

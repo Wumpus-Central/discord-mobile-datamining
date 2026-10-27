@@ -1,6 +1,6 @@
 // discord_app/modules/safety_flows/native/SafetyFlowsUtils.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef2832 from "../SafetyFlows.messages.js";
+import _modDef2833 from "../SafetyFlows.messages.js";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import types from "../types.tsx";
@@ -37,7 +37,7 @@ function navigateToScreenForTask(arr, task_type) {
     ModalActionCreatorsDefault.popWithKey(constants.SAFETY_FLOWS_MODAL_KEY);
     const obj3 = { text: null, variant: "success" };
     const intl = util.intl;
-    obj3.text = intl.string(_modDef2832["/fHz9S"]);
+    obj3.text = intl.string(_modDef2833["/fHz9S"]);
     ToastActionCreatorsDefault.open("SAFETY_FLOWS_VERIFY_EMAIL_SUCCESS", obj3);
   } else {
     task_type = task_type.task_type;

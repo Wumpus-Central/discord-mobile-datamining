@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import DisplayNameStylesUtils from "../DisplayNameStylesUtils.tsx";
 import DisplayNameEffect from "../../../../discord_common/js/shared/shared-constants/DisplayNameEffect.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import HapticUtils from "../../haptics/HapticUtils.native.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
@@ -18,13 +18,13 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1629).MEDIA_PICKER_SEND_BUTTON_SPRING;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1626).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let items = [fn(1411).DisplayNameEffect.GRADIENT, fn(1411).DisplayNameEffect.GUMMY, fn(1411).DisplayNameEffect.PRISM];
+let items = [fn(1408).DisplayNameEffect.GRADIENT, fn(1408).DisplayNameEffect.GUMMY, fn(1408).DisplayNameEffect.PRISM];
 let value = { overrideSettings: true };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   contentContainer: null,
@@ -633,7 +633,7 @@ export default function DisplayNameStylesEditScreen() {
         dismissCampaignFontBadge();
       }
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(16698, dependencyMap.paths),
+        asyncRequireImpl(16740, dependencyMap.paths),
         "DisplayNameStylesFontPickerSheet",
         { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName, isTryItOut },
       );
@@ -655,13 +655,13 @@ export default function DisplayNameStylesEditScreen() {
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      obj.openLazy(asyncRequireImpl(16701, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", {
+      obj.openLazy(asyncRequireImpl(16743, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", {
         userId: id,
         selectedEffectId: first1,
         onSelectEffect,
       });
       const obj2 = { userId: id, selectedEffectId: first1, onSelectEffect };
-      const tmp3 = asyncRequireImpl(16701, dependencyMap.paths);
+      const tmp3 = asyncRequireImpl(16743, dependencyMap.paths);
     }, items7);
     const callback7 = obj10.useCallback(() => {
       if (first1 === DisplayNameEffect.DisplayNameEffect.GUMMY) {
@@ -672,7 +672,7 @@ export default function DisplayNameStylesEditScreen() {
           },
         };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(16702, dependencyMap.paths),
+          asyncRequireImpl(16744, dependencyMap.paths),
           "DisplayNameStylesGummyColorPickerSheet",
           obj2,
         );
@@ -687,10 +687,10 @@ export default function DisplayNameStylesEditScreen() {
               return callback(first1, arg0);
             },
           };
-          openLazy(tmp2Result(16707, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
+          openLazy(tmp2Result(16749, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
         } else {
           const obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
-          openLazy(tmp2Result(16711, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
+          openLazy(tmp2Result(16753, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
         }
       }
     }, items8);

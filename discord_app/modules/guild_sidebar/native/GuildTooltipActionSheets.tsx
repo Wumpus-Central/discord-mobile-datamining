@@ -1,5 +1,5 @@
 // discord_app/modules/guild_sidebar/native/GuildTooltipActionSheets.tsx
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import dismissible_content from "../../../../discord_common/js/packages/protos/discord_protos/discord_users/v1/dismissible_content.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import SelectedDismissibleContentDefault from "../../dismissible_content/native/SelectedDismissibleContent.tsx";
@@ -13,18 +13,18 @@ const require = globalThis.__r;
 
 require = fn;
 function GuildRoleSubscriptionsUpsellActionSheetImporter() {
-  return asyncRequireImpl(17673, dependencyMap.paths);
+  return asyncRequireImpl(17714, dependencyMap.paths);
 }
 function GuildRoleSubscriptionsIAPUpsellActionSheetImporter() {
-  return asyncRequireImpl(17675, dependencyMap.paths);
+  return asyncRequireImpl(17716, dependencyMap.paths);
 }
 function CreatorMonetizationOnboardingV2UpsellActionSheetImporter() {
-  return asyncRequireImpl(17678, dependencyMap.paths);
+  return asyncRequireImpl(17719, dependencyMap.paths);
 }
 function TierTemplatesUpsellActionSheetImporter() {
-  return asyncRequireImpl(17680, dependencyMap.paths);
+  return asyncRequireImpl(17721, dependencyMap.paths);
 }
-const constants = fn(4820).DismissibleContentGroupName;
+const constants = fn(4821).DismissibleContentGroupName;
 const jsx = fn(21).jsx;
 const GuildTooltipActionSheet = "GuildTooltipActionSheet";
 let ReactCompilerGating = fn(558);
@@ -35,17 +35,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const items = [];
       let obj = id(576);
       if (obj2.useCanSeeCreatorMonetizationOnboardingV2Upsell(id)) {
-        items.push(tmp(4807).DismissibleContent.CREATOR_MONETIZATION_ONBOARDING_V2_UPSELL);
+        items.push(tmp(4808).DismissibleContent.CREATOR_MONETIZATION_ONBOARDING_V2_UPSELL);
       }
       if (useIsGuildEligibleForRoleSubscriptionsUpsellDefault(id)) {
-        items.push(tmp(4807).DismissibleContent.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL);
+        items.push(tmp(4808).DismissibleContent.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL);
       }
-      obj2 = id(17681);
+      obj2 = id(17722);
       if (tmpResult.useCanUseRoleSubscriptionIAP(id)) {
-        items.push(tmp(4807).DismissibleContent.GUILD_ROLE_SUBSCRIPTION_IAP_UPSELL);
+        items.push(tmp(4808).DismissibleContent.GUILD_ROLE_SUBSCRIPTION_IAP_UPSELL);
       }
       if (useIsEligibleForTierTemplateUpsellDefault(id)) {
-        items.push(tmp(4807).DismissibleContent.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
+        items.push(tmp(4808).DismissibleContent.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
       }
       if (cResult[0] !== id) {
         const fn = function s(arg0) {
@@ -126,17 +126,17 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       const id = guild.guild.id;
       const items = [];
       if (obj.useCanSeeCreatorMonetizationOnboardingV2Upsell(id)) {
-        items.push(tmp(4807).DismissibleContent.CREATOR_MONETIZATION_ONBOARDING_V2_UPSELL);
+        items.push(tmp(4808).DismissibleContent.CREATOR_MONETIZATION_ONBOARDING_V2_UPSELL);
       }
       if (useIsGuildEligibleForRoleSubscriptionsUpsellDefault(id)) {
-        items.push(tmp(4807).DismissibleContent.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL);
+        items.push(tmp(4808).DismissibleContent.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL);
       }
-      obj = id(17681);
+      obj = id(17722);
       if (tmpResult.useCanUseRoleSubscriptionIAP(id)) {
-        items.push(tmp(4807).DismissibleContent.GUILD_ROLE_SUBSCRIPTION_IAP_UPSELL);
+        items.push(tmp(4808).DismissibleContent.GUILD_ROLE_SUBSCRIPTION_IAP_UPSELL);
       }
       if (useIsEligibleForTierTemplateUpsellDefault(id)) {
-        items.push(tmp(4807).DismissibleContent.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
+        items.push(tmp(4808).DismissibleContent.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
       }
       return jsx(SelectedDismissibleContentDefault, {
         contentTypes: items,

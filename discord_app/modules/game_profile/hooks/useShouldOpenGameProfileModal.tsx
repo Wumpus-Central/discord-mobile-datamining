@@ -10,7 +10,7 @@ import GameStore from "../../games/GameStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const RejectionReason = { NoMatch: "no match", NSFW: "nsfw", Disabled: "profile disabled", Obscured: "obscured" };
 const ReactCompilerGating = fn(558);
 function trackEntryPoint(game_profile_available, id) {
@@ -327,13 +327,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             tmp19Result = utils;
           }
-          track = track(1267).track;
+          track = track(1264).track;
           GAME_PROFILE_ENTRY_POINT_AVAILABLE = AnalyticEvents.GAME_PROFILE_ENTRY_POINT_AVAILABLE;
           obj = { game_profile_available: flag, application_id: gameRecord.id, rejection_reason: tmp11, source };
           track(GAME_PROFILE_ENTRY_POINT_AVAILABLE, obj);
           flag = true;
           ref.current = true;
-          const trackResult = track(1267);
+          const trackResult = track(1264);
         }
       }, items);
       return { shouldOpenGameProfile, gameId: gameId2.gameId };

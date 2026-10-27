@@ -12,10 +12,10 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Permissions: closure_9, UserSettingsSections: c10 } = Constants);
-const GuildMemberFlags = fn(4889).GuildMemberFlags;
-const constants3 = fn(1097).ProfileCustomizationSubsection;
+const GuildMemberFlags = fn(4890).GuildMemberFlags;
+const constants3 = fn(1094).ProfileCustomizationSubsection;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -86,7 +86,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (closure_0 == null) {
             guildId = SelectedGuildStore.getGuildId();
           }
-          const obj = { nick: "Array", bio: "Reflect" };
+          const obj = { nick: "toCharArray$esjava$1", bio: "Symbol" };
           guild = GuildStore.getGuild(guildId);
           if (null != guild) {
             if (null != guildId) {
@@ -151,7 +151,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           if (closure_0 == null) {
             guildId = SelectedGuildStore.getGuildId();
           }
-          const obj = { nick: "Array", bio: "Reflect" };
+          const obj = { nick: "toCharArray$esjava$1", bio: "Symbol" };
           guild = GuildStore.getGuild(guildId);
           if (null != guild) {
             if (null != guildId) {

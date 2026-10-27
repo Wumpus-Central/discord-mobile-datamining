@@ -331,7 +331,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                         items = [first];
                       }
                       found.flagged_content = items;
-                      obj3 = classificationId(7897);
+                      obj3 = classificationId(7898);
                     }
                   }
                   const obj2 = {
@@ -392,7 +392,7 @@ let closure_12 = async function _getSafetyHubDataForClassification() {
                       items = [first];
                     }
                     found.flagged_content = items;
-                    obj3 = classificationId(7897);
+                    obj3 = classificationId(7898);
                   }
                 }
                 const obj2 = {
@@ -829,13 +829,13 @@ let closure_18 = async function _checkSuspendedUserAgeVerificationV() {
     }
   })();
 };
-const SafetyHubConstants = fn(7898);
+const SafetyHubConstants = fn(7899);
 ({
   AGE_CHECK_POLL_INTERVAL_MS: metroRequire,
   AGE_CHECK_MAX_POLL_ATTEMPTS: closure_7,
   SuspendedAgeCheckStatus: closure_8,
 } = SafetyHubConstants);
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/safety_hub/SafetyHubActionCreators.tsx");
 

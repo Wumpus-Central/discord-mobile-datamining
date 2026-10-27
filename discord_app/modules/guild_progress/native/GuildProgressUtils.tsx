@@ -1,7 +1,7 @@
 // discord_app/modules/guild_progress/native/GuildProgressUtils.tsx
 import SnowflakeUtilsDefault from "../../../utils/SnowflakeUtils.tsx";
 import c from "../../../../_runtime/00576_c.js";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import GuildProgressActionCreatorsDefault from "../GuildProgressActionCreators.tsx";
 import GuildChannelStore from "../../../stores/GuildChannelStore.tsx";
@@ -11,10 +11,10 @@ import GuildProgressStore from "../GuildProgressStore.tsx";
 
 const require = globalThis.__r;
 
-const util = zhHW5c(1128);
+const util = zhHW5c(1125);
 require = fn;
-const Steps = fn(13392).Steps;
-const Constants = fn(1087);
+const Steps = fn(13406).Steps;
+const Constants = fn(1084);
 ({ WELCOME_OLD_GUILD_AGE_THRESHOLD: closure_8, Permissions: closure_9 } = Constants);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -73,7 +73,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[6] = stateFromStores1;
         cResult[7] = items3;
       } else {
-        const channelsMessaged = tmp(13395).useChannelsMessaged(cResult[7]);
+        const channelsMessaged = tmp(13409).useChannelsMessaged(cResult[7]);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
           const items4 = [GuildProgressStore];
@@ -195,7 +195,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const tmpResult11 = tmp(13395);
+        const tmpResult11 = tmp(13409);
         const stateFromStores2 = tmp(504).useStateFromStores(tmp21, F);
         const _Symbol3 = Symbol;
         if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
@@ -528,7 +528,7 @@ export const MIN_PROGRESS_PERCENT = 3;
 export const PROGRESS_BACKGROUND_COLOR = "rgba(78, 93, 148, 0.3)";
 export const openActionSheet = function openActionSheet(guild) {
   const obj = ActionSheetActionCreatorsDefault;
-  obj.openLazy(asyncRequireImpl(13399, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
+  obj.openLazy(asyncRequireImpl(13413, dependencyMap.paths), "guild-progress-" + guild.id, { guild });
 };
 export const hideActionSheet = function hideActionSheet(id) {
   ActionSheetActionCreatorsDefault.hideActionSheet("guild-progress-" + id);

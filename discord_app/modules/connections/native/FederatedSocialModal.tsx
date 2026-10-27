@@ -156,10 +156,10 @@ function FederatedSocialModalScreen(onClose) {
   obj4.children = items;
   return closure_8(require("common/SafeAreaView").SafeAreaPaddingView, obj4);
 }
-const WebBrowserType = fn(1087).WebBrowserType;
+const WebBrowserType = fn(1084).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_9 = createStyles.createStyles({
   container: { padding: 16 },
   description: { textAlign: "center" },
@@ -180,12 +180,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           name = value.name;
         }
         if (name == null) {
-          const intl = tmp(1128).intl;
-          name = intl.string(tmp(1128).t["bU/GZm"]);
+          const intl = tmp(1125).intl;
+          name = intl.string(tmp(1125).t["bU/GZm"]);
         }
-        const intl2 = tmp(1128).intl;
+        const intl2 = tmp(1125).intl;
         const obj3 = { serviceName: name };
-        const formatToPlainStringResult = intl2.formatToPlainString(tmp(1128).t["ImMhq+"], obj3);
+        const formatToPlainStringResult = intl2.formatToPlainString(tmp(1125).t["ImMhq+"], obj3);
         cResult[0] = platformType.platformType;
         cResult[1] = formatToPlainStringResult;
         let tmp4 = formatToPlainStringResult;
@@ -193,11 +193,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] !== platformType.onClose) {
-        const headerBackButton = tmp(6924).getHeaderBackButton(platformType.onClose);
+        const headerBackButton = tmp(6926).getHeaderBackButton(platformType.onClose);
         cResult[2] = platformType.onClose;
         cResult[3] = headerBackButton;
         let tmp10 = headerBackButton;
-        const tmpResult = tmp(6924);
+        const tmpResult = tmp(6926);
       } else {
         tmp10 = cResult[3];
       }

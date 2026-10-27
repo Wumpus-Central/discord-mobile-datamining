@@ -17,19 +17,19 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import SearchMessageStore from "../../../SearchMessageStore.tsx";
 
-const ObscureMediaModels = SpoilerIcon(7394);
+const ObscureMediaModels = SpoilerIcon(7396);
 const ImageWarningIcon = SpoilerIcon(8552);
-const generated_SpoilerIcon = SpoilerIcon(13973);
+const generated_SpoilerIcon = SpoilerIcon(13987);
 require = fn;
 let closure_3 = ["attachment", "channelId", "authorId"];
 let closure_4 = ["embed", "sources", "messageId", "channelId", "authorId"];
 let closure_5 = ["unfurledMediaItem", "sources", "channelId", "authorId", "isBot"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_9, View: c10 } = get_ActivityIndicator);
-const MessageAttachmentFlags = fn(1087).MessageAttachmentFlags;
+const MessageAttachmentFlags = fn(1084).MessageAttachmentFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_17 = createStyles.createStyles({
   container: { justifyContent: "center", alignItems: "center" },
   sound: { justifyContent: "center", alignItems: "center" },
@@ -229,7 +229,7 @@ let closure_19 = noop.memo(
           const stateFromStores = tmp(504).useStateFromStores(tmp6, tmp8);
           const tmpResult = tmp(504);
           const shouldDisplaySpoilerObscurity = tmp(8763).useShouldDisplaySpoilerObscurity(stateFromStores);
-          if (obscureReason !== tmp(7394).ObscureReason.SPOILER) {
+          if (obscureReason !== tmp(7396).ObscureReason.SPOILER) {
             let tmp11 = obscureReason;
           } else {
             tmp11 = null;
@@ -244,11 +244,11 @@ let closure_19 = noop.memo(
                         if (cResult[12] === mediaWidth) {
                           if (cResult[13] === scale) {
                             if (cResult[15] !== tmp11) {
-                              const obscuredAlt = tmp(13112).getObscuredAlt(tmp11);
+                              const obscuredAlt = tmp(13126).getObscuredAlt(tmp11);
                               cResult[15] = tmp11;
                               cResult[16] = obscuredAlt;
                               let tmp20 = obscuredAlt;
-                              const tmpResult6 = tmp(13112);
+                              const tmpResult6 = tmp(13126);
                             } else {
                               tmp20 = cResult[16];
                             }
@@ -328,13 +328,13 @@ let closure_19 = noop.memo(
                                 if (cResult[36] !== tmp20) {
                                   let stringResult = tmp20;
                                   if (tmpResult8.isAndroid()) {
-                                    const intl = tmp(1128).intl;
-                                    stringResult = intl.string(tmp(1128).t.jes7FG);
+                                    const intl = tmp(1125).intl;
+                                    stringResult = intl.string(tmp(1125).t.jes7FG);
                                   }
                                   cResult[36] = tmp20;
                                   cResult[37] = stringResult;
                                   let tmp26 = stringResult;
-                                  tmpResult8 = tmp(1384);
+                                  tmpResult8 = tmp(1381);
                                 } else {
                                   tmp26 = cResult[37];
                                 }
@@ -367,7 +367,7 @@ let closure_19 = noop.memo(
                                   }
                                 }
                                 const obj7 = { style: tmp4, uri: tmp13, placeholder, placeholderVersion, alt: tmp26 };
-                                const tmp30 = closure_14(tmp(9348).ImageWithPlaceholder, obj7);
+                                const tmp30 = closure_14(tmp(9347).ImageWithPlaceholder, obj7);
                                 cResult[38] = tmp26;
                                 cResult[39] = placeholder;
                                 cResult[40] = placeholderVersion;
@@ -375,7 +375,7 @@ let closure_19 = noop.memo(
                                 cResult[42] = tmp13;
                                 cResult[43] = tmp30;
                                 tmp28 = tmp30;
-                                tmpResult7 = tmp(1384);
+                                tmpResult7 = tmp(1381);
                               }
                             }
                             let tmp23 = null;
@@ -406,7 +406,7 @@ let closure_19 = noop.memo(
                   items5[1] = Math.round(mediaHeight * (result / mediaWidth));
                 }
                 [tmp17, tmp18] = items5;
-                result1 = tmp(1498);
+                result1 = tmp(1495);
                 const obj8 = {
                   src: mediaUrl,
                   sourceWidth: mediaWidth,
@@ -670,17 +670,17 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(attachment, Object.assign({ attachment: 0, channelId: 0, authorId: 0 }));
       dependencyMap = undefined;
       const enabledHarmTypesBitmaskForChannelAndAuthorId = attachment(
-        12830,
+        12839,
       ).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, attachment.authorId);
-      const obj = attachment(12830);
+      const obj = attachment(12839);
       let num = attachment.flags;
       if (num == null) {
         num = 0;
       }
-      let hasFlagResult = attachment(1405).hasFlag(num, MessageAttachmentFlags.IS_SPOILER);
+      let hasFlagResult = attachment(1402).hasFlag(num, MessageAttachmentFlags.IS_SPOILER);
       if (!hasFlagResult) {
-        hasFlagResult = tmp2(6682).isChannelSpoilerGated(ChannelStore.getChannel(channelId));
-        const tmp2Result = tmp2(6682);
+        hasFlagResult = tmp2(6683).isChannelSpoilerGated(ChannelStore.getChannel(channelId));
+        const tmp2Result = tmp2(6683);
       }
       dependencyMap = hasFlagResult;
       const items = [attachment, enabledHarmTypesBitmaskForChannelAndAuthorId, hasFlagResult];
@@ -693,7 +693,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           ),
         items,
       );
-      const obj2 = attachment(1405);
+      const obj2 = attachment(1402);
       const obj3 = {};
       const attachmentUrl = attachment(8757).getAttachmentUrl(attachment);
       const merged1 = Object.assign(merged);
@@ -942,11 +942,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         embed,
         Object.assign({ embed: 0, sources: 0, messageId: 0, channelId: 0, authorId: 0 }),
       );
-      closure_3 = embed(12830).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
-      const obj = embed(12830);
+      closure_3 = embed(12839).useEnabledHarmTypesBitmaskForChannelAndAuthorId(channelId, embed.authorId);
+      const obj = embed(12839);
       const tmp2 = embed;
-      closure_4 = embed(6682).useIsChannelSpoilerGated(ChannelStore.getChannel(channelId));
-      const obj2 = embed(6682);
+      closure_4 = embed(6683).useIsChannelSpoilerGated(ChannelStore.getChannel(channelId));
+      const obj2 = embed(6683);
       const items = [SearchMessageStore];
       const thumbnail = embed.thumbnail;
       const stateFromStores = embed(504).useStateFromStores(items, () => {

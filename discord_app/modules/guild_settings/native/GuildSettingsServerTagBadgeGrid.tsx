@@ -9,10 +9,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildTagBadgeSize = fn(8274).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8272).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   grid: { flexDirection: "row", flexWrap: "wrap", gap: nativeDefault.space.PX_8 },
   upsellCard: {
@@ -226,9 +226,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       let obj = { spacing: nativeDefault.space.PX_8, children: null };
       const obj2 = { variant: "text-md/medium", color: "text-subtle", accessibilityRole: "header", children: null };
-      const intl = guildId(1128).intl;
-      obj2.children = intl.string(guildId(1128).t.wRnfnY);
-      const items1 = [closure_7(guildId(5234).Text, obj2), ,];
+      const intl = guildId(1125).intl;
+      obj2.children = intl.string(guildId(1125).t.wRnfnY);
+      const items1 = [closure_7(guildId(5235).Text, obj2), ,];
       const tmp4 = useGuildTagBadgeCollectionDefault();
       items1[1] = closure_7(closure_5, {
         accessibilityRole: "radiogroup",
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             children: null,
           };
           size = { badge: badge.kind, width: GuildTagBadgeSize.SIZE_32, height: GuildTagBadgeSize.SIZE_32 };
-          obj.children = closure_1_7(guildId(15164).GuildBadge, size);
+          obj.children = closure_1_7(guildId(15200).GuildBadge, size);
           return closure_1_7(GuildSettingsServerTagPickerCellDefault, obj, badge.kind);
         }),
       });
@@ -257,27 +257,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: null,
           children: null,
         };
-        const intl2 = tmp7(1128).intl;
-        obj4.accessibilityLabel = intl2.string(tmp7(1128).t.U5p3GZ);
+        const intl2 = tmp7(1125).intl;
+        obj4.accessibilityLabel = intl2.string(tmp7(1125).t.U5p3GZ);
         obj4.onPress = callback;
         obj4.style = tmp.upsellCard;
         const obj5 = { style: tmp.upsellPreview, children: null };
         const substr = lockedBadges.slice(0, 10);
         obj5.children = substr.map((badge) => {
           size = { badge: badge.kind, width: 21, height: 21 };
-          return closure_1_7(guildId(15164).GuildBadge, size, badge.kind);
+          return closure_1_7(guildId(15200).GuildBadge, size, badge.kind);
         });
         const items2 = [closure_7(closure_5, obj5), ,];
         const obj6 = { variant: "text-md/medium", color: "text-subtle", style: tmp.upsellText, children: null };
-        const intl3 = tmp7(1128).intl;
-        obj6.children = intl3.string(tmp7(1128).t.U5p3GZ);
-        items2[1] = closure_7(tmp7(5234).Text, obj6);
+        const intl3 = tmp7(1125).intl;
+        obj6.children = intl3.string(tmp7(1125).t.U5p3GZ);
+        items2[1] = closure_7(tmp7(5235).Text, obj6);
         const obj7 = { size: "md", color: nativeDefault.colors.ICON_SUBTLE };
-        items2[2] = closure_7(tmp7(7305).ChevronSmallRightIcon, obj7);
+        items2[2] = closure_7(tmp7(7307).ChevronSmallRightIcon, obj7);
         obj4.children = items2;
         tmp6Result = closure_8(closure_4, obj4);
       }
       items1[2] = tmp6Result;
       obj.children = items1;
-      return closure_8(guildId(5977).Stack, obj);
+      return closure_8(guildId(5978).Stack, obj);
     };

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/device_permissions/conjureDevicePermissions.tsx
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
-import _modDef3830 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const obj = {
@@ -9,7 +9,7 @@ const obj = {
     isSupported: PlatformUtils.isDesktop,
     getLabel() {
       const intl = util.intl;
-      return intl.string(_modDef3830["2KIefJ"]);
+      return intl.string(_modDef3831["2KIefJ"]);
     },
   },
   connect_user_to_voice: {
@@ -18,7 +18,7 @@ const obj = {
     },
     getLabel() {
       const intl = util.intl;
-      return intl.string(_modDef3830["5Hp3Nx"]);
+      return intl.string(_modDef3831["5Hp3Nx"]);
     },
   },
 };
@@ -42,5 +42,5 @@ export const getConjureDevicePermissionLabel = function getConjureDevicePermissi
 };
 export const getConjureDevicePermissionPromptTitle = function getConjureDevicePermissionPromptTitle(app) {
   const intl = util.intl;
-  return intl.formatToPlainString(_modDef3830.vBSfKU, { app });
+  return intl.formatToPlainString(_modDef3831.vBSfKU, { app });
 };

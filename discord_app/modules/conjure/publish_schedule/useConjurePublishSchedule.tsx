@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/publish_schedule/useConjurePublishSchedule.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3830 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -9,7 +9,7 @@ import ConjureConnectionStore from "../connection/ConjureConnectionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const ensureConnection = fn(10698).ensureConnection;
+const ensureConnection = fn(10701).ensureConnection;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish_schedule/useConjurePublishSchedule.tsx");
 
@@ -64,7 +64,7 @@ export default function useConjurePublishSchedule(arg0, arg1) {
           .catch(() => {
             if (ref.current.value === sum) {
               const intl = util.intl;
-              closure_2_8(intl.string(_modDef3830.n25haz));
+              closure_2_8(intl.string(_modDef3831.n25haz));
               closure_4(false);
             }
           });

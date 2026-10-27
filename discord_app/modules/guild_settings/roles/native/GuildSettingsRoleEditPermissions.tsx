@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import BigFlagUtilsAll from "../../../../../discord_common/js/shared/utils/BigFlagUtils.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import PermissionUtilsAll from "../../../../utils/PermissionUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -15,12 +15,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Keyboard: closure_7, SectionList: closure_8 } = get_ActivityIndicator);
-let isGuildOwner = fn(4841).isGuildOwner;
-const Constants = fn(1087);
+let isGuildOwner = fn(4842).isGuildOwner;
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_12, Permissions: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   emptyState: { backgroundColor: "transparent", paddingTop: 40 },
   sectionSeparator: { height: nativeDefault.space.PX_24 },
@@ -75,14 +75,14 @@ export default function GuildSettingsRoleEditPermission(guild) {
   }
   if (tmp18Result) {
     let obj4 = { variant: "text-sm/medium", color: "text-muted", children: null };
-    const intl = guild(1128).intl;
+    const intl = guild(1125).intl;
     let obj5 = { onTemplateOpen: null };
     let obj6 = {
       onClick: function handleTemplateOpen() {
         React5.dismiss();
         const obj = ActionSheetActionCreatorsDefault;
         obj.openLazy(
-          asyncRequireImpl(19142, dependencyMap.paths),
+          asyncRequireImpl(19180, dependencyMap.paths),
           "role-permission-templates-" + guild.id + "-" + role.id,
           { permissionsEdited, onPermissionsChanged, guildId: guild.id },
         );
@@ -90,12 +90,12 @@ export default function GuildSettingsRoleEditPermission(guild) {
       accessibilityRole: "button",
     };
     obj5.onTemplateOpen = obj6;
-    obj4.children = intl.format(guild(1128).t.ZhSOBy, obj5);
-    tmp18Result = closure_14(guild(5234).Text, obj4);
+    obj4.children = intl.format(guild(1125).t.ZhSOBy, obj5);
+    tmp18Result = closure_14(guild(5235).Text, obj4);
   }
   canResult = PermissionUtilsAll.can({ permission: constants2.ADMINISTRATOR, user: currentUser, context: guild });
   const tmp18Result3 = closure_14(closure_6, { children: tmp18Result });
-  const guildPermissionSpec = role(18293).generateGuildPermissionSpec(guild);
+  const guildPermissionSpec = role(18327).generateGuildPermissionSpec(guild);
   const mapped = guildPermissionSpec.map((permissions) => {
     const obj = {};
     const merged = Object.assign(permissions);
@@ -108,9 +108,9 @@ export default function GuildSettingsRoleEditPermission(guild) {
   });
   const found = mapped.filter((permissions) => permissions.permissions.length > 0);
   const mapped1 = found.map((title) => ({ title: title.title, data: title.permissions }));
-  const children = [closure_14(role(19139), { role }), , ,];
+  const children = [closure_14(role(19177), { role }), , ,];
   const obj7 = {
-    children: closure_14(guild(7145).SearchBar, {
+    children: closure_14(guild(7147).SearchBar, {
       size: "md",
       onChange: function handleSearchQuery(str) {
         closure_8(str);
@@ -217,10 +217,10 @@ export default function GuildSettingsRoleEditPermission(guild) {
   } else {
     const obj10 = { Illustration: tmp27(8998).NoResultsAlt, style: null, bodyStyle: null, body: null };
     ({ emptyState: obj11.style, emptyStateText: obj11.bodyStyle } = tmp);
-    const intl2 = tmp27(1128).intl;
+    const intl2 = tmp27(1125).intl;
     const obj12 = { query };
-    obj10.body = intl2.format(tmp27(1128).t.Psh5OO, obj12);
-    tmp18Result4 = closure_14(tmp27(1202).EmptyState, obj10);
+    obj10.body = intl2.format(tmp27(1125).t.Psh5OO, obj12);
+    tmp18Result4 = closure_14(tmp27(1199).EmptyState, obj10);
   }
   children[3] = tmp18Result4;
   return closure_16(closure_15, { children });

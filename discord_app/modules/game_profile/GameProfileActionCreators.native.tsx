@@ -1,7 +1,7 @@
 // discord_app/modules/game_profile/GameProfileActionCreators.native.tsx
 import _modDef38 from "../../../_runtime/metro/00038__.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
-import asyncRequireImpl from "../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../action_sheet/native/ActionSheetActionCreators.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 

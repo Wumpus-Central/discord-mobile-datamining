@@ -9,7 +9,7 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useAvailableTags(parent_id) {
@@ -370,8 +370,8 @@ export const useVisibleAppliedForumTags = ReactCompilerGating.isReactCompilerEna
       }
       let result1 = found;
       if (result) {
-        result1 = tmp(7383).sortedModeratorReportTags(found);
-        const tmpResult2 = tmp(7383);
+        result1 = tmp(7385).sortedModeratorReportTags(found);
+        const tmpResult2 = tmp(7385);
       }
       cResult[5] = arr;
       cResult[6] = parent_id;

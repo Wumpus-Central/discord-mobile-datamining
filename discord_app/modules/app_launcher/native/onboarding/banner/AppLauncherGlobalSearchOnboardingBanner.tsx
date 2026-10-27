@@ -5,10 +5,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const DEFAULT_CONTENT_PADDING = fn(1504).DEFAULT_CONTENT_PADDING;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const DEFAULT_CONTENT_PADDING = fn(1501).DEFAULT_CONTENT_PADDING;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { appsIcon: null, appsIconImage: null };
 let size = {
   height: 40,
@@ -54,10 +54,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             const _Symbol = Symbol;
             if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl = Coachmark(1128).intl;
-              const stringResult = intl.string(Coachmark(1128).t.bCPN5y);
-              const intl2 = Coachmark(1128).intl;
-              const stringResult1 = intl2.string(Coachmark(1128).t["0TBExc"]);
+              const intl = Coachmark(1125).intl;
+              const stringResult = intl.string(Coachmark(1125).t.bCPN5y);
+              const intl2 = Coachmark(1125).intl;
+              const stringResult1 = intl2.string(Coachmark(1125).t["0TBExc"]);
               cResult[7] = stringResult;
               cResult[8] = stringResult1;
               let tmp13 = stringResult1;
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
               }
-              Coachmark = Coachmark(9849).Coachmark;
+              Coachmark = Coachmark(9851).Coachmark;
               const obj2 = {
                 renderImgComponent: tmp9,
                 title: tmp12,
@@ -210,10 +210,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           surfaceMeasurements: null,
           position: "bottom",
         };
-        const intl = markAsDismissed(1128).intl;
-        obj.title = intl.string(markAsDismissed(1128).t.bCPN5y);
-        const intl2 = markAsDismissed(1128).intl;
-        obj.description = intl2.string(markAsDismissed(1128).t["0TBExc"]);
+        const intl = markAsDismissed(1125).intl;
+        obj.title = intl.string(markAsDismissed(1125).t.bCPN5y);
+        const intl2 = markAsDismissed(1125).intl;
+        obj.description = intl2.string(markAsDismissed(1125).t["0TBExc"]);
         obj.onDismiss = function onDismiss() {
           markAsDismissed({ actionType: ContentDismissActionType.TAKE_ACTION });
         };
@@ -221,7 +221,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.targetMeasurements = size;
         const size1 = { x: -140, y: -40, width: diff, height: windowDimensions.height };
         obj.surfaceMeasurements = size1;
-        tmp3 = jsx(markAsDismissed(9849).Coachmark, {
+        tmp3 = jsx(markAsDismissed(9851).Coachmark, {
           renderImgComponent: function appsIcon() {
             const obj = {
               style: closure_2.appsIcon,

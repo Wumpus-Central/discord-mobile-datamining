@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import QuestTypes from "../../QuestTypes.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
@@ -22,13 +22,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 let closure_3 = ["onPress"];
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ PlatformTypes: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs, Fragment } = jsxProd);
 const PLATFORM_XBOX = nativeDefault.unsafe_rawColors.PLATFORM_XBOX;
 const PLATFORM_PLAYSTATION = nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   platformButtonsContainer: {
     display: "flex",
@@ -50,7 +50,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === onConsoleSelect) {
           if (cResult[5] !== cResult[2]) {
             const obj2 = { hasIcons: true, children: tmp4 };
-            const tmp9 = closure_8(onConsoleSelect(6987).TableRowGroup, obj2);
+            const tmp9 = closure_8(onConsoleSelect(6989).TableRowGroup, obj2);
             cResult[5] = tmp4;
             cResult[6] = tmp9;
             let tmp7 = tmp9;
@@ -297,17 +297,17 @@ export default function QuestBottomSheetConsoleConnect(quest) {
   quest = quest.quest;
   ({ step: importDefault, sourceQuestContent: dependencyMap } = quest);
   function openQuestBottomSheet() {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16467, dependencyMap.paths), "QuestBottomSheet", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16506, dependencyMap.paths), "QuestBottomSheet", {
       questId: quest.id,
       initialStep,
       sourceQuestContent,
     });
   }
-  const xboxAndPlaystationAccounts = quest(9570).useConnectedAccounts().xboxAndPlaystationAccounts;
-  let obj = quest(9570);
-  closure_4 = quest(9605).useGetQuestImpressionId();
+  const xboxAndPlaystationAccounts = quest(9572).useConnectedAccounts().xboxAndPlaystationAccounts;
+  let obj = quest(9572);
+  closure_4 = quest(9608).useGetQuestImpressionId();
   const items = [quest, xboxAndPlaystationAccounts];
-  let obj2 = quest(9605);
+  let obj2 = quest(9608);
   return closure_8(closure_9, {
     consoles: openQuestBottomSheet.useMemo(
       () =>

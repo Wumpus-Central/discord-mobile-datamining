@@ -37,9 +37,9 @@ let closure_2 = [
   "allowRedesignTextInput",
   "ref",
 ];
-const KeyboardThemes = fn(1087).KeyboardThemes;
+const KeyboardThemes = fn(1084).KeyboardThemes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   inputViewContainer: { paddingVertical: 13, paddingHorizontal: 15 },
   placeholderText: { color: nativeDefault.colors.INPUT_PLACEHOLDER_TEXT_DEFAULT },

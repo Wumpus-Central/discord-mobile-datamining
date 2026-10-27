@@ -123,12 +123,12 @@ function showNotification(uri) {
                   };
                   return obj10;
                 }
-                obj2 = tmp2(1384);
+                obj2 = tmp2(1381);
               }
               closure_128_0 = tmp7;
               BUG_REPORTER = constants.BUG_REPORTER;
-              notificationDuration = tmp2(13758).getNotificationDuration(BUG_REPORTER);
-              const obj5 = tmp2(13758);
+              notificationDuration = tmp2(13772).getNotificationDuration(BUG_REPORTER);
+              const obj5 = tmp2(13772);
               const obj11 = {
                 type: BUG_REPORTER,
                 duration: notificationDuration,
@@ -138,8 +138,8 @@ function showNotification(uri) {
                 onDismiss: null,
                 inAppNotificationId: null,
               };
-              const obj6 = tmp3(13760);
-              obj11.key = tmp2(1281).v4();
+              const obj6 = tmp3(13774);
+              obj11.key = tmp2(1278).v4();
               obj11.image = closure_128_0;
               uri = undefined;
               if (closure_128_0 != null) {
@@ -149,8 +149,8 @@ function showNotification(uri) {
               obj11.onDismiss = function onDismiss() {
                 closure_1_1(dependencyMap[7]).clearNotification();
               };
-              const obj8 = tmp2(1281);
-              obj11.inAppNotificationId = tmp2(1281).v4();
+              const obj8 = tmp2(1278);
+              obj11.inAppNotificationId = tmp2(1278).v4();
               obj6.enqueueNotification(obj11);
               c3 = 3;
               return { value: "IconComponent", done: null };
@@ -177,8 +177,8 @@ function showNotification(uri) {
 }
 get_ActivityIndicator = fn(17);
 const NativeModules = get_ActivityIndicator.NativeModules;
-const InAppNotificationTypes = fn(1087).InAppNotificationTypes;
-const NativePermissionStatus = fn(7868).NativePermissionStatus;
+const InAppNotificationTypes = fn(1084).InAppNotificationTypes;
+const NativePermissionStatus = fn(7869).NativePermissionStatus;
 const nativeEventEmitter = new get_ActivityIndicator.NativeEventEmitter(NativeModules.ScreenshotHelper);
 class BugReportManager extends tmp4 {}
 const prototype = BugReportManager.prototype;

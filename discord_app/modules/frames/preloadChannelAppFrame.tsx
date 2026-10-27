@@ -11,9 +11,9 @@ import PermissionStore from "../../stores/PermissionStore.tsx";
 import FramesStore from "FramesStore.tsx";
 
 require = fn;
-const FramesConstants = fn(6776);
+const FramesConstants = fn(6777);
 ({ getFrameSurfaceForChannel: metroRequire, makeFrameId: closure_7 } = FramesConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes: closure_8, NOOP: closure_9, Permissions: c10 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/preloadChannelAppFrame.tsx");

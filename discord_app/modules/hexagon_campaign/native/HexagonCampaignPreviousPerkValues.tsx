@@ -10,16 +10,16 @@ import UnsyncedUserSettingsStore from "../../user_settings/UnsyncedUserSettingsS
 const require = globalThis.__r;
 
 require = fn;
-const isHexagonCampaignAppIcon = fn(9865).isHexagonCampaignAppIcon;
-const ClientThemesConstants = fn(1255);
+const isHexagonCampaignAppIcon = fn(9867).isHexagonCampaignAppIcon;
+const ClientThemesConstants = fn(1252);
 ({ BACKGROUND_GRADIENT_PRESETS_MAP: closure_7, REFRESH_STANDARD_BACKGROUND_THEMES: closure_8 } = ClientThemesConstants);
-const SystemThemeState = fn(1210).SystemThemeState;
+const SystemThemeState = fn(1207).SystemThemeState;
 const DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME = { theme: "system" };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/hexagon_campaign/native/HexagonCampaignPreviousPerkValues.tsx");
 
 export { DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME };
-export const DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = fn(9866).FreemiumAppIconIds.DEFAULT;
+export const DEFAULT_HEXAGON_CAMPAIGN_APP_ICON_ID = fn(9868).FreemiumAppIconIds.DEFAULT;
 export const getHexagonCampaignClientThemeItem = function getHexagonCampaignClientThemeItem(
   DEFAULT_HEXAGON_CAMPAIGN_CLIENT_THEME,
 ) {

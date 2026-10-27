@@ -22,10 +22,10 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7304);
+const Constants = fn(7306);
 ({ DIVIDER_DOT: closure_8, UserProfileThemeTypes } = Constants);
-const Routes = fn(1087).Routes;
-const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
+const Routes = fn(1084).Routes;
+const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
 let closure_14 = {
@@ -44,7 +44,7 @@ const dependencyMap2 = {
     columnGap: 3,
   },
 };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_16 = createStyles.createStyles({
   card: { flexDirection: "column" },
   textWithIcon: { flexDirection: "row", alignItems: "center" },
@@ -488,7 +488,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const tmpResult6 = tmp(504);
-        const tmpResult7 = tmp(7275);
+        const tmpResult7 = tmp(7277);
         const createdAtDate = tmpResult7.getCreatedAtDate(guildId(11).extractTimestamp(userId), stateFromStores);
         const obj6 = guildId(11);
         if (stateFromStores2 != null) {
@@ -503,7 +503,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const createdAtDate1 = tmp(7275).getCreatedAtDate(tmp22, stateFromStores);
+        const createdAtDate1 = tmp(7277).getCreatedAtDate(tmp22, stateFromStores);
         const _Symbol = Symbol;
         if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
           class R {
@@ -516,7 +516,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               return guild;
             }
           }
-          const stringResult = obj8.string(tmp(1128).t.a6XYD9);
+          const stringResult = obj8.string(tmp(1125).t.a6XYD9);
           class P {
             constructor() {
               return closure_1_5.locale;
@@ -616,9 +616,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
               return closure_1_5.locale;
             }
           }
-          const intl = tmp(1128).intl;
+          const intl = tmp(1125).intl;
           const obj3 = { date: createdAtDate };
-          const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t["9t7w53"], obj3);
+          const formatToPlainStringResult = intl.formatToPlainString(tmp(1125).t["9t7w53"], obj3);
           if (cResult[34] === createdAtDate) {
             class R {
               constructor() {
@@ -647,7 +647,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[30] = tmp4.memberJoinDates;
         cResult[31] = tmp31;
         cResult[32] = items3;
-        const tmpResult8 = tmp(7275);
+        const tmpResult8 = tmp(7277);
       }
       class U {
         constructor() {
@@ -698,28 +698,28 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         return member;
       });
       const obj3 = userId(504);
-      const obj4 = userId(7275);
+      const obj4 = userId(7277);
       const createdAtDate = obj4.getCreatedAtDate(SnowflakeUtilsDefault.extractTimestamp(userId), stateFromStores);
       let joinedAt;
       if (stateFromStores2 != null) {
         joinedAt = stateFromStores2.joinedAt;
       }
-      const createdAtDate1 = userId(7275).getCreatedAtDate(joinedAt, stateFromStores);
+      const createdAtDate1 = userId(7277).getCreatedAtDate(joinedAt, stateFromStores);
       const obj7 = { themeType, children: null };
-      const intl = tmp4(1128).intl;
-      obj7.children = intl.string(userId(1128).t.a6XYD9);
+      const intl = tmp4(1125).intl;
+      obj7.children = intl.string(userId(1125).t.a6XYD9);
       const items3 = [closure_11(closure_17, obj7)];
       const obj8 = { style: null, children: null };
       const items4 = [tmp.memberJoinDates, { columnGap }];
       obj8.style = items4;
       const obj9 = {
         themeType,
-        icon: closure_11(userId(10571).ClydeIcon, { size: "xs" }),
+        icon: closure_11(userId(10574).ClydeIcon, { size: "xs" }),
         accessibilityLabel: null,
         children: null,
       };
-      const intl2 = tmp4(1128).intl;
-      obj9.accessibilityLabel = intl2.formatToPlainString(userId(1128).t["9t7w53"], { date: createdAtDate });
+      const intl2 = tmp4(1125).intl;
+      obj9.accessibilityLabel = intl2.formatToPlainString(userId(1125).t["9t7w53"], { date: createdAtDate });
       obj9.children = createdAtDate;
       const items5 = [closure_11(closure_18, obj9)];
       let tmp13Result = null != stateFromStores1 && null != createdAtDate1;
@@ -732,13 +732,13 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           importantForAccessibility: "no-hide-descendants",
           children,
         };
-        const items6 = [closure_11(tmp4(5234).Text, obj11)];
+        const items6 = [closure_11(tmp4(5235).Text, obj11)];
         const obj12 = { themeType, icon: null, accessibilityLabel: null, children: null };
-        const obj13 = { guild: stateFromStores1, size: tmp4(6883).GuildIconSizes.XXSMALL };
+        const obj13 = { guild: stateFromStores1, size: tmp4(6885).GuildIconSizes.XXSMALL };
         obj12.icon = closure_11(GuildIconDefault, obj13);
-        const intl3 = tmp4(1128).intl;
+        const intl3 = tmp4(1125).intl;
         const obj14 = { guildName: stateFromStores1.name, date: createdAtDate1 };
-        obj12.accessibilityLabel = intl3.formatToPlainString(tmp4(1128).t.FdLNDK, obj14);
+        obj12.accessibilityLabel = intl3.formatToPlainString(tmp4(1125).t.FdLNDK, obj14);
         obj12.children = createdAtDate1;
         items6[1] = closure_11(closure_18, obj12);
         obj10.children = items6;
@@ -1007,13 +1007,13 @@ let closure_23 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp11;
         }
         const obj2 = { accessibilityRole: "link", onPress: tmp8, children: tmp9 };
-        const tmp13 = closure_11(tmp(1202).PressableOpacity, obj2);
+        const tmp13 = closure_11(tmp(1199).PressableOpacity, obj2);
         cResult[7] = tmp8;
         cResult[8] = tmp9;
         cResult[9] = tmp13;
         tmp11 = tmp13;
       }
-      const tmp10 = closure_11(url(5234).Text, { variant: textVariant, color: "text-link", children: label });
+      const tmp10 = closure_11(url(5235).Text, { variant: textVariant, color: "text-link", children: label });
       cResult[4] = label;
       cResult[5] = textVariant;
       cResult[6] = tmp10;

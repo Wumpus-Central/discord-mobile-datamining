@@ -2,7 +2,7 @@
 import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import _modDef6929 from "../../../../_runtime/metro/06929__.js";
+import _modDef6931 from "../../../../_runtime/metro/06931__.js";
 import transitionToGuild from "../../routing/transitionToGuild.native.tsx";
 import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
 import ServerPreviewPillDefault from "ServerPreviewPill.tsx";
@@ -10,10 +10,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const MOBILE_GUILD_UPSELL_LIST = fn(1087).MOBILE_GUILD_UPSELL_LIST;
+const MOBILE_GUILD_UPSELL_LIST = fn(1084).MOBILE_GUILD_UPSELL_LIST;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { row: null };
 const rect = {
   position: "absolute",
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {
           size: "md",
           variant: "secondary-overlay",
-          icon: _modDef6929,
+          icon: _modDef6931,
           onPress: first,
           accessibilityLabel: null,
           maxFontSizeMultiplier: 1.5,
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj2 = {
         size: "md",
         variant: "secondary-overlay",
-        icon: _modDef6929,
+        icon: _modDef6931,
         onPress: callback,
         accessibilityLabel: null,
         maxFontSizeMultiplier: 1.5,

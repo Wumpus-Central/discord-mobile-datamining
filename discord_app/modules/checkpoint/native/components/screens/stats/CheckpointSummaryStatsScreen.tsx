@@ -4,8 +4,8 @@ import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../../../../utils/AvatarUtils.tsx";
-import _modDef3056 from "../../../../Checkpoint.messages.js";
-import _modDef3088 from "../../../../Checkpoint2026.messages.js";
+import _modDef3057 from "../../../../Checkpoint.messages.js";
+import _modDef3089 from "../../../../Checkpoint2026.messages.js";
 import UnicodeEmojisDefault from "../../../../../emojis/UnicodeEmojis.tsx";
 import FastImageDefault from "../../../../../../components_native/common/FastImage.tsx";
 import GuildIcon from "../../../../../guild/native/GuildIcon.tsx";
@@ -30,8 +30,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_16 = nativeDefault.space.PX_16;
-const sum = fn(6015).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(4971);
+const sum = fn(6016).CHECKPOINT_CONTROL_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(4972);
 let obj2 = { container: { width: "100%", maxWidth: 400, alignSelf: "center", flexGrow: 1, alignItems: "center", gap: PX_16, paddingBottom: sum }, stats: { alignSelf: "stretch", gap: nativeDefault.space.PX_24 }, row: null, stat: null, statNumber: null, item: null, itemName: null, itemIcon: null, emoji: null, textEmoji: null };
 let obj3 = { alignSelf: "stretch", gap: nativeDefault.space.PX_24 };
 obj2.row = { flexDirection: "row", columnGap: nativeDefault.space.PX_16 };
@@ -44,13 +44,13 @@ obj2.itemName = { flexShrink: 1 };
 let size = { width: 28, height: 28, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.none };
 obj2.itemIcon = size;
 obj2.emoji = { width: 28, height: 28 };
-let PlatformUtils = fn(1385);
+let PlatformUtils = fn(1382);
 let num = 24;
 if (PlatformUtils.isIOS()) {
   num = 28;
 }
 let obj7 = { fontSize: num, lineHeight: null, textAlign: "center" };
-PlatformUtils = fn(1385);
+PlatformUtils = fn(1382);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 32;
@@ -503,7 +503,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj9 = { style: tmp.row, children: null };
   const obj10 = { label: null, value: null, color: null };
   const intl = util.intl;
-  obj10.label = intl.string(_modDef3088.MSrV9z);
+  obj10.label = intl.string(_modDef3089.MSrV9z);
   let num;
   if (voice != null) {
     num = voice.totalVoiceMinutes;
@@ -516,7 +516,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const items3 = [closure_8(closure_13, obj10), ];
   const obj11 = { label: null, value: null, color: null };
   const intl2 = util.intl;
-  obj11.label = intl2.string(_modDef3056.wWKySP);
+  obj11.label = intl2.string(_modDef3057.wWKySP);
   let num2;
   if (messages != null) {
     num2 = messages.numMessagesSent;
@@ -532,7 +532,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj12 = { style: tmp.row, children: null };
   const obj13 = { label: null, value: null, color: null };
   const intl3 = util.intl;
-  obj13.label = intl3.string(_modDef3088["f5S+pt"]);
+  obj13.label = intl3.string(_modDef3089["f5S+pt"]);
   let num3;
   if (first != null) {
     num3 = first.numDaysInteracted;
@@ -545,12 +545,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const items5 = [closure_8(closure_13, obj13), ];
   const obj14 = { label: null, name: null, color: null, icon: null };
   const intl4 = util.intl;
-  obj14.label = intl4.string(_modDef3056["8XPMJj"]);
+  obj14.label = intl4.string(_modDef3057["8XPMJj"]);
   if (null != first) {
     let name = first.guild.name;
   } else {
     const intl5 = util.intl;
-    name = intl5.string(_modDef3088.GultYJ);
+    name = intl5.string(_modDef3089.GultYJ);
   }
   obj14.name = name;
   obj14.color = primaryBackgroundColor;
@@ -567,7 +567,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj16 = { style: tmp.row, children: null };
   const obj17 = { label: null, value: null, color: null };
   const intl6 = util.intl;
-  obj17.label = intl6.string(_modDef3088.xVSlv3);
+  obj17.label = intl6.string(_modDef3089.xVSlv3);
   let num4;
   if (emojis != null) {
     num4 = emojis.numEmojisSent;
@@ -580,7 +580,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const items6 = [closure_8(closure_13, obj17), ];
   const obj18 = { label: null, name: null, color: null, icon: null };
   const intl7 = util.intl;
-  obj18.label = intl7.string(_modDef3056["3sARW7"]);
+  obj18.label = intl7.string(_modDef3057["3sARW7"]);
   if (null == first1) {
     const intl8 = util.intl;
     let stringResult = intl8.string(util.t.PoWNfe);
@@ -611,7 +611,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const obj20 = { style: tmp.row, children: null };
   const obj21 = { label: null, value: null, color: null };
   const intl9 = util.intl;
-  obj21.label = intl9.string(_modDef3088.y2Y1DD);
+  obj21.label = intl9.string(_modDef3089.y2Y1DD);
   let num5;
   if (games != null) {
     num5 = games.totalDaysPlayed;
@@ -624,7 +624,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const items7 = [closure_8(closure_13, obj21), ];
   const obj23 = { label: null, name: null, color: null, icon: null };
   const intl10 = util.intl;
-  obj23.label = intl10.string(_modDef3056.RbT4Zq);
+  obj23.label = intl10.string(_modDef3057.RbT4Zq);
   if (null != game) {
     let name2 = game.name;
   } else {

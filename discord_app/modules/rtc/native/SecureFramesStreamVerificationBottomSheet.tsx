@@ -5,7 +5,7 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import StreamRTCConnectionStore from "../../../stores/StreamRTCConnectionStore.tsx";
 
 require = fn;
-const AnalyticsSections = fn(1087).AnalyticsSections;
+const AnalyticsSections = fn(1084).AnalyticsSections;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -88,12 +88,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const stringResult = obj3.string(tmp(1128).t.QogHld);
-        const intl = tmp(1128).intl;
-        const stringResult1 = intl.string(tmp(1128).t.qODBkW);
-        const intl2 = tmp(1128).intl;
+        const stringResult = obj3.string(tmp(1125).t.QogHld);
+        const intl = tmp(1125).intl;
+        const stringResult1 = intl.string(tmp(1125).t.qODBkW);
+        const intl2 = tmp(1125).intl;
         let obj2 = { helpArticle: tmp(9196).getSecureFramesHelpdeskArticle() };
-        const formatResult = intl2.format(tmp(1128).t["H3+ktv"], obj2);
+        const formatResult = intl2.format(tmp(1125).t["H3+ktv"], obj2);
         cResult[5] = stringResult;
         cResult[6] = stringResult1;
         cResult[7] = formatResult;
@@ -168,15 +168,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items1);
       let obj2 = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
       let obj = channelId(504);
-      const intl = channelId(1128).intl;
-      obj2.title = intl.string(channelId(1128).t.QogHld);
-      const intl2 = channelId(1128).intl;
-      obj2.subtitle = intl2.string(channelId(1128).t.qODBkW);
-      const intl3 = channelId(1128).intl;
+      const intl = channelId(1125).intl;
+      obj2.title = intl.string(channelId(1125).t.QogHld);
+      const intl2 = channelId(1125).intl;
+      obj2.subtitle = intl2.string(channelId(1125).t.qODBkW);
+      const intl3 = channelId(1125).intl;
       const obj3 = { helpArticle: null };
       const tmp3 = streamKey(9212);
       obj3.helpArticle = channelId(9196).getSecureFramesHelpdeskArticle();
-      obj2.footer = intl3.format(channelId(1128).t["H3+ktv"], obj3);
+      obj2.footer = intl3.format(channelId(1125).t["H3+ktv"], obj3);
       obj2.epochAuthenticator = stateFromStores;
       obj2.onShareClick = callback;
       return <tmp3 title={null} subtitle={null} footer={null} epochAuthenticator={null} onShareClick={null} />;

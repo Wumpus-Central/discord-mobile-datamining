@@ -14,10 +14,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const MAX_FRIENDS = fn(1087).MAX_FRIENDS;
+const MAX_FRIENDS = fn(1084).MAX_FRIENDS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   applicationEducation: { flexDirection: "column", gap: 16 },
   entry: { flexDirection: "row", alignItems: "center", gap: 12 },

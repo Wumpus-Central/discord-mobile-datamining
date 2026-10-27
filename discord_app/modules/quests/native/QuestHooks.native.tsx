@@ -17,10 +17,10 @@ import QuestStore from "../QuestStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const QuestConstants = fn(6710);
+const QuestConstants = fn(6711);
 ({ QUEST_REWARD_CODE_CLAIM_BOTTOM_SHEET_KEY: closure_9, QuestVariants: c10 } = QuestConstants);
-const CAPTCHA_MODAL_KEY = fn(6474).CAPTCHA_MODAL_KEY;
-const ThemeTypes = fn(1098).ThemeTypes;
+const CAPTCHA_MODAL_KEY = fn(6475).CAPTCHA_MODAL_KEY;
+const ThemeTypes = fn(1095).ThemeTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
@@ -52,7 +52,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = require("c").c(16);
       const obj = require("c");
       const questDockQuest = require("AdCreativeUtils").getQuestDockQuest(bounty);
-      useIsWindowLargeDefault();
+      const tmp5 = useIsWindowLargeDefault();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [QuestStore];
         const fn = function u() {
@@ -79,157 +79,115 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let isDismissedResult = null != userStatus1;
       if (isDismissedResult) {
-        isDismissedResult = tmp(7772).isDismissed(questDockQuest.userStatus, tmp(6713).QuestContent.QUEST_BAR_MOBILE);
-        const tmpResult7 = tmp(7772);
+        isDismissedResult = tmp(7773).isDismissed(questDockQuest.userStatus, tmp(6714).QuestContent.QUEST_BAR_MOBILE);
+        const tmpResult7 = tmp(7773);
       }
+      let claimedAt;
       if (questDockQuest != null) {
         const userStatus = questDockQuest.userStatus;
         if (userStatus != null) {
-          const claimedAt = userStatus.claimedAt;
+          claimedAt = userStatus.claimedAt;
         }
       }
       const tmpResult = require("initialize");
       const isQuestExpired = require("hooks/QuestHooks").useIsQuestExpired(questDockQuest);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const isEligibleForQuests = tmp(9565).getIsEligibleForQuests();
+        const isEligibleForQuests = tmp(9564).getIsEligibleForQuests();
         cResult[3] = isEligibleForQuests;
-        const tmpResult9 = tmp(9565);
+        let tmp16 = isEligibleForQuests;
+        const tmpResult9 = tmp(9564);
+      } else {
+        tmp16 = cResult[3];
       }
       if (cResult[4] !== bounty) {
-        const questDockAdCreativeId = tmp(16448).getQuestDockAdCreativeId(bounty);
+        const questDockAdCreativeId = tmp(16487).getQuestDockAdCreativeId(bounty);
         cResult[4] = bounty;
         cResult[5] = questDockAdCreativeId;
-        let tmp16 = questDockAdCreativeId;
-        const tmpResult10 = tmp(16448);
+        let tmp18 = questDockAdCreativeId;
+        const tmpResult10 = tmp(16487);
       } else {
-        tmp16 = cResult[5];
+        tmp18 = cResult[5];
       }
-      importDefault = tmp16;
+      importDefault = tmp18;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [QuestStore];
         cResult[6] = items2;
-        let tmp18 = items2;
+        let tmp20 = items2;
       } else {
-        tmp18 = cResult[6];
+        tmp20 = cResult[6];
       }
-      if (cResult[7] !== tmp16) {
-        class C {
-          constructor() {
-            isAdContentDismissedResult = null != closure_1;
-            if (isAdContentDismissedResult) {
-              tmp3 = closure_8;
-              isAdContentDismissedResult = closure_8.isAdContentDismissed(tmp);
-            }
-            return isAdContentDismissedResult;
+      if (cResult[7] !== tmp18) {
+        const fn2 = function b() {
+          let isAdContentDismissedResult = null != closure_1;
+          if (isAdContentDismissedResult) {
+            isAdContentDismissedResult = QuestStore.isAdContentDismissed(tmp);
           }
-        }
-        const items3 = [tmp16];
-        cResult[7] = tmp16;
-        cResult[8] = C;
+          return isAdContentDismissedResult;
+        };
+        const items3 = [tmp18];
+        cResult[7] = tmp18;
+        cResult[8] = fn2;
         cResult[9] = items3;
-        let tmp21 = items3;
+        let tmp23 = items3;
+        let tmp22 = fn2;
       } else {
-        class C {
-          constructor() {
-            isAdContentDismissedResult = null != closure_1;
-            if (isAdContentDismissedResult) {
-              tmp3 = closure_8;
-              isAdContentDismissedResult = closure_8.isAdContentDismissed(tmp);
-            }
-            return isAdContentDismissedResult;
-          }
-        }
-        tmp21 = cResult[9];
+        tmp22 = cResult[8];
+        tmp23 = cResult[9];
       }
       const tmpResult8 = require("hooks/QuestHooks");
-      const stateFromStores1 = require("initialize").useStateFromStores(tmp18, C, tmp21);
+      const stateFromStores1 = require("initialize").useStateFromStores(tmp20, tmp22, tmp23);
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        class C {
-          constructor() {
-            isAdContentDismissedResult = null != closure_1;
-            if (isAdContentDismissedResult) {
-              tmp3 = closure_8;
-              isAdContentDismissedResult = closure_8.isAdContentDismissed(tmp);
-            }
-            return isAdContentDismissedResult;
-          }
-        }
         const items4 = [BountyStore];
         cResult[10] = items4;
-        const tmp23 = items4;
+        let tmp25 = items4;
       } else {
-        class C {
-          constructor() {
-            isAdContentDismissedResult = null != closure_1;
-            if (isAdContentDismissedResult) {
-              tmp3 = closure_8;
-              isAdContentDismissedResult = closure_8.isAdContentDismissed(tmp);
-            }
-            return isAdContentDismissedResult;
-          }
-        }
+        tmp25 = cResult[10];
       }
       if (cResult[11] === bounty.bounty) {
-        class C {
-          constructor() {
-            isAdContentDismissedResult = null != closure_1;
-            if (isAdContentDismissedResult) {
-              tmp3 = closure_8;
-              isAdContentDismissedResult = closure_8.isAdContentDismissed(tmp);
-            }
-            return isAdContentDismissedResult;
-          }
+        if (cResult[12] === bounty.type) {
+          let tmp27 = cResult[13];
         }
         if (cResult[14] !== bounty) {
-          class C {
-            constructor() {
-              isAdContentDismissedResult = null != closure_1;
-              if (isAdContentDismissedResult) {
-                tmp3 = closure_8;
-                isAdContentDismissedResult = closure_8.isAdContentDismissed(tmp);
-              }
-              return isAdContentDismissedResult;
-            }
-          }
-          tmp25[0] = bounty;
+          const items5 = [bounty];
           cResult[14] = bounty;
-          cResult[15] = tmp25;
+          cResult[15] = items5;
+          let tmp28 = items5;
         } else {
-          class C {
-            constructor() {
-              isAdContentDismissedResult = null != closure_1;
-              if (isAdContentDismissedResult) {
-                tmp3 = closure_8;
-                isAdContentDismissedResult = closure_8.isAdContentDismissed(tmp);
-              }
-              return isAdContentDismissedResult;
-            }
-          }
+          tmp28 = cResult[15];
         }
-        const stateFromStores2 = tmp(504).useStateFromStores(tmp23, M, tmp25);
-        if (tmp(6717).AdCreativeType.NO_FILL === bounty.type) {
-          class C {
-            constructor() {
-              isAdContentDismissedResult = null != closure_1;
-              if (isAdContentDismissedResult) {
-                tmp3 = closure_8;
-                isAdContentDismissedResult = closure_8.isAdContentDismissed(tmp);
-              }
-              return isAdContentDismissedResult;
-            }
-          }
+        const type = bounty.type;
+        const stateFromStores2 = tmp(504).useStateFromStores(tmp25, tmp27, tmp28);
+        if (tmp(6718).AdCreativeType.NO_FILL === type) {
           return false;
-        } else {
-          class C {
-            constructor() {
-              isAdContentDismissedResult = null != closure_1;
-              if (isAdContentDismissedResult) {
-                tmp3 = closure_8;
-                isAdContentDismissedResult = closure_8.isAdContentDismissed(tmp);
-              }
-              return isAdContentDismissedResult;
-            }
+        } else if (tmp(6718).AdCreativeType.BOUNTY === type) {
+          if (tmp16) {
+            tmp16 = !stateFromStores1;
           }
+          if (tmp16) {
+            tmp16 = !stateFromStores2;
+          }
+          if (tmp16) {
+            tmp16 = !tmp5;
+          }
+          return tmp16;
+        } else if (tmp(6718).AdCreativeType.PLAYABLE === type) {
+          let tmp32 = tmp16;
+          if (tmp16) {
+            tmp32 = !stateFromStores1;
+          }
+          if (tmp32) {
+            tmp32 = !tmp5;
+          }
+          return tmp32;
+        } else if (tmp(6718).AdCreativeType.QUEST === type) {
+          if (stateFromStores) {
+            if (!tmp14) {
+              let tmp30 = null != questDockQuest && !tmp5;
+            }
+            return tmp30;
+          }
+          tmp30 = null != questDockQuest && tmp16 && !isQuestExpired && !tmp14 && !isDismissedResult && !tmp5;
+          const tmp31 = null != questDockQuest && tmp16 && !isQuestExpired && !tmp14 && !isDismissedResult && !tmp5;
         }
         const tmpResult12 = tmp(504);
       }
@@ -247,12 +205,13 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = bounty.bounty;
       cResult[12] = bounty.type;
       cResult[13] = M;
+      tmp27 = M;
       const tmpResult11 = require("initialize");
     }
   : function useIsMobileQuestDockRenderedBase(type) {
       _require = type;
       const questDockQuest = require("AdCreativeUtils").getQuestDockQuest(type);
-      const tmp4 = questDockAdCreativeId(7038)();
+      const tmp4 = questDockAdCreativeId(7040)();
       const obj = require("AdCreativeUtils");
       const items = [QuestStore];
       let userStatus1;
@@ -267,8 +226,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let isDismissedResult = null != userStatus1;
       if (isDismissedResult) {
-        isDismissedResult = tmp(7772).isDismissed(questDockQuest.userStatus, tmp(6713).QuestContent.QUEST_BAR_MOBILE);
-        const tmpResult = tmp(7772);
+        isDismissedResult = tmp(7773).isDismissed(questDockQuest.userStatus, tmp(6714).QuestContent.QUEST_BAR_MOBILE);
+        const tmpResult = tmp(7773);
       }
       let claimedAt;
       if (questDockQuest != null) {
@@ -314,7 +273,7 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
       );
       if (require("AdCreativeType").AdCreativeType.NO_FILL === type) {
         return false;
-      } else if (tmp(6717).AdCreativeType.BOUNTY === type) {
+      } else if (tmp(6718).AdCreativeType.BOUNTY === type) {
         if (isEligibleForQuests) {
           isEligibleForQuests = !stateFromStores1;
         }
@@ -325,7 +284,16 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           isEligibleForQuests = !tmp4;
         }
         return isEligibleForQuests;
-      } else if (tmp(6717).AdCreativeType.QUEST === type) {
+      } else if (tmp(6718).AdCreativeType.PLAYABLE === type) {
+        let tmp18 = isEligibleForQuests;
+        if (isEligibleForQuests) {
+          tmp18 = !stateFromStores1;
+        }
+        if (tmp18) {
+          tmp18 = !tmp4;
+        }
+        return tmp18;
+      } else if (tmp(6718).AdCreativeType.QUEST === type) {
         if (stateFromStores) {
           if (!tmp10) {
             let tmp16 = null != questDockQuest && !tmp4;
@@ -378,11 +346,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       const currentNavigationRouteName = require("NavigationRouteUtils").useCurrentNavigationRouteName();
       if (cResult[0] !== currentNavigationRouteName) {
         const obj4 = { name: currentNavigationRouteName };
-        const coerceGuildsRouteResult = tmp(5150).coerceGuildsRoute(obj4);
+        const coerceGuildsRouteResult = tmp(5151).coerceGuildsRoute(obj4);
         cResult[0] = currentNavigationRouteName;
         cResult[1] = coerceGuildsRouteResult;
         let tmp6 = coerceGuildsRouteResult;
-        const tmpResult = tmp(5150);
+        const tmpResult = tmp(5151);
       } else {
         tmp6 = cResult[1];
       }
@@ -402,17 +370,20 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           const items1 = [ActionSheetStore];
-          const fn2 = function _() {
-            key = key.getKey();
-            let tmp2 = key === CAPTCHA_MODAL_KEY;
-            if (!tmp2) {
-              tmp2 = key === closure_1_9;
+          class E {
+            constructor() {
+              key = closure_1_5.getKey();
+              tmp2 = key === closure_1_11;
+              if (!tmp2) {
+                tmp3 = closure_1_9;
+                tmp2 = key === closure_1_9;
+              }
+              return tmp2;
             }
-            return tmp2;
-          };
+          }
           cResult[6] = items1;
-          cResult[7] = fn2;
-          let tmp14 = fn2;
+          cResult[7] = E;
+          let tmp14 = E;
           let tmp13 = items1;
         } else {
           tmp13 = cResult[6];

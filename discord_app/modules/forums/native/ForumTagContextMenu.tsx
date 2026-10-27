@@ -13,11 +13,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = tagId(576).c(7);
       tagId = tagId.tagId;
       const children = tagId.children;
-      const DeveloperMode = tagId(4799).DeveloperMode;
+      const DeveloperMode = tagId(4800).DeveloperMode;
       const setting = DeveloperMode.useSetting();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t["8VG6IY"]);
+        const intl = tmp(1125).intl;
+        const stringResult = intl.string(tmp(1125).t["8VG6IY"]);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[1] !== tagId) {
         const obj2 = {
           label: first,
-          IconComponent: tmp(10412).IdIcon,
+          IconComponent: tmp(10414).IdIcon,
           action() {
             ClipboardUtils.copy(tagId);
             ToastUtils.presentIdCopied();
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp8;
         }
       }
-      const tmp9 = jsx(tagId(9761).ContextMenu, { triggerOnLongPress: true, items: tmp7, enabled: setting, children });
+      const tmp9 = jsx(tagId(9763).ContextMenu, { triggerOnLongPress: true, items: tmp7, enabled: setting, children });
       cResult[3] = children;
       cResult[4] = tmp7;
       cResult[5] = setting;
@@ -57,16 +57,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ForumTagContextMenu(children) {
       const tagId = children.tagId;
-      const DeveloperMode = tagId(4799).DeveloperMode;
+      const DeveloperMode = tagId(4800).DeveloperMode;
       let obj = { label: null, IconComponent: null, action: null };
       const enabled = DeveloperMode.useSetting();
-      const intl = tagId(1128).intl;
-      obj.label = intl.string(tagId(1128).t["8VG6IY"]);
-      obj.IconComponent = tagId(10412).IdIcon;
+      const intl = tagId(1125).intl;
+      obj.label = intl.string(tagId(1125).t["8VG6IY"]);
+      obj.IconComponent = tagId(10414).IdIcon;
       obj.action = function action() {
         ClipboardUtils.copy(tagId);
         ToastUtils.presentIdCopied();
       };
       const items = [obj];
-      return jsx(tagId(9761).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
+      return jsx(tagId(9763).ContextMenu, { triggerOnLongPress: true, items, enabled, children: children.children });
     };

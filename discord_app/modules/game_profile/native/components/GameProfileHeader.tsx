@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05258_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05259_LinearGradient.js";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import SKUUtils from "../../../../utils/SKUUtils.tsx";
 import useGameProfileHeroBackgroundURLDefault from "../../hooks/useGameProfileHeroBackgroundURL.tsx";
@@ -22,7 +22,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 114;
 let c9 = "rgba(0,0,0,0.3)";
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   artHero: null,

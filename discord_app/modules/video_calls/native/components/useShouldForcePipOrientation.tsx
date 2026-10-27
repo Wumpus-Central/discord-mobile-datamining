@@ -6,8 +6,8 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 import AuthenticationStore from "../../../../stores/AuthenticationStore.tsx";
 
 require = fn;
-const OrientationLockState = fn(2026).OrientationLockState;
-const CallConstants = fn(5632);
+const OrientationLockState = fn(2023).OrientationLockState;
+const CallConstants = fn(5633);
 ({ isStreamParticipant: closure_7, ParticipantTypes: closure_8 } = CallConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

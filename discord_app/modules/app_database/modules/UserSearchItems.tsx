@@ -9,7 +9,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-const RelationshipTypes = fn(1087).RelationshipTypes;
+const RelationshipTypes = fn(1084).RelationshipTypes;
 let closure_9 = new LoggerDefault("UserSearchItems");
 let c10 = false;
 class UserSearchItems {

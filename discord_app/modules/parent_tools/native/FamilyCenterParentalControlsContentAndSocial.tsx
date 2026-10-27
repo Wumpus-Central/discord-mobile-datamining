@@ -8,8 +8,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const HelpdeskArticles = fn(1087).HelpdeskArticles;
-const MobileUserSettings = fn(8332).MobileUserSettings;
+const HelpdeskArticles = fn(1084).HelpdeskArticles;
+const MobileUserSettings = fn(8331).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

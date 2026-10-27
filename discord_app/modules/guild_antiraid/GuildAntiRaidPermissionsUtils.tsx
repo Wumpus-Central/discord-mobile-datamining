@@ -5,7 +5,7 @@ import GuildIncidentsStore from "GuildIncidentsStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -168,8 +168,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       );
       let hasDetectedActivityResult = null != stateFromStores1;
       if (hasDetectedActivityResult) {
-        hasDetectedActivityResult = tmp(8385).hasDetectedActivity(stateFromStores1);
-        const tmpResult = tmp(8385);
+        hasDetectedActivityResult = tmp(8384).hasDetectedActivity(stateFromStores1);
+        const tmpResult = tmp(8384);
       }
       let tmp6 = !hasDetectedActivityResult;
       if (!hasDetectedActivityResult) {

@@ -1,12 +1,12 @@
 // discord_app/modules/conjure/history/native/ConjureRestoreProposalCard.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3830 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3831 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
-import ConjureHistoryFormat from "../ConjureHistoryFormat.tsx";
 import ConjureNativeCardSurfaceDefault from "../../shared/native/ConjureNativeCardSurface.tsx";
+import ConjureHistoryFormat from "../ConjureHistoryFormat.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
         const intl = util.intl;
-        obj2.children = intl.string(_modDef3830["t+b0rz"]);
+        obj2.children = intl.string(_modDef3831["t+b0rz"]);
         const tmp9 = React3(Text_Text.Text, obj2);
         cResult[2] = tmp9;
         let tmp6 = tmp9;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (null != onRestore) {
             const obj5 = { text: null, variant: "secondary", onPress: null };
             const intl2 = util.intl;
-            obj5.text = intl2.string(_modDef3830.H8Jfhu);
+            obj5.text = intl2.string(_modDef3831.H8Jfhu);
             obj5.onPress = onRestore;
             tmp19 = React3(components_Button_Button.Button, obj5);
           }
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const relative = ConjureHistoryFormat.formatAuthoredAt(proposal.authored_at).relative;
       const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
       const intl = util.intl;
-      obj2.children = intl.string(_modDef3830["t+b0rz"]);
+      obj2.children = intl.string(_modDef3831["t+b0rz"]);
       const items = [React3(Text_Text.Text, obj2), ,];
       const items1 = [
         React3(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: proposal.subject }),
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (null != onRestore) {
         const obj5 = { text: null, variant: "secondary", onPress: null };
         const intl2 = util.intl;
-        obj5.text = intl2.string(_modDef3830.H8Jfhu);
+        obj5.text = intl2.string(_modDef3831.H8Jfhu);
         obj5.onPress = onRestore;
         tmp3Result2 = React3(components_Button_Button.Button, obj5);
       }

@@ -538,8 +538,8 @@ let closure_13 = async function _startActivity(arg0, arg1) {
     }
   })();
 };
-const ActivityFlags = fn(1087).ActivityFlags;
-const MAIN_SURFACE = fn(6776).MAIN_SURFACE;
+const ActivityFlags = fn(1084).ActivityFlags;
+const MAIN_SURFACE = fn(6777).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.shared.tsx");
 

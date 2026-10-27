@@ -34,7 +34,7 @@ const hostAccessStore = new HostAccessStore(DispatcherDefault, {
     if (value == null) {
       value = closure_4;
     }
-    const f108073 = (id) => id.id;
+    const f108296 = (id) => id.id;
     const tmp = value.length === asks.length && value.every((item, index) => o(item) === o(allowedHosts[index]));
     let flag = !tmp;
     if (!tmp) {
@@ -81,7 +81,7 @@ let obj = {
     if (value == null) {
       value = closure_4;
     }
-    const f108073 = (id) => id.id;
+    const f108296 = (id) => id.id;
     const tmp = value.length === asks.length && value.every((item, index) => o(item) === o(allowedHosts[index]));
     let flag = !tmp;
     if (!tmp) {

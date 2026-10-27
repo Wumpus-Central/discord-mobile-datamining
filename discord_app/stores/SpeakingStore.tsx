@@ -40,8 +40,8 @@ function handleConnectionOpen(user) {
   sessionId = user.sessionId;
   c14 = null;
 }
-const Permissions = fn(1087).Permissions;
-const Constants = fn(5718);
+const Permissions = fn(1084).Permissions;
+const Constants = fn(5719);
 ({ SpeakingFlags: closure_9, MediaEngineContextTypes: c10 } = Constants);
 let map = new Map();
 let id = null;

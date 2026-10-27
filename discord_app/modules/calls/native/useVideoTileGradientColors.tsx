@@ -57,7 +57,7 @@ function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2Background
   }
   return null;
 }
-const ThemeTypes = fn(1087).ThemeTypes;
+const ThemeTypes = fn(1084).ThemeTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/useVideoTileGradientColors.tsx");

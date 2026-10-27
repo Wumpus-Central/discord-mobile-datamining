@@ -424,8 +424,8 @@ function reset() {
   c31 = null;
   c19 = false;
 }
-const getCountryCodeByAlpha2 = fn(5646).getCountryCodeByAlpha2;
-const FamilyCenterConstants = fn(7646);
+const getCountryCodeByAlpha2 = fn(5647).getCountryCodeByAlpha2;
+const FamilyCenterConstants = fn(7647);
 ({ FAMILY_CENTER_REFETCH_COOLDOWN: metroRequire, FAMILY_CENTER_SUB_ROUTES } = FamilyCenterConstants);
 const FamilyCenterSubPages = FamilyCenterConstants.FamilyCenterSubPages;
 const TeenActionDisplayType = FamilyCenterConstants.TeenActionDisplayType;

@@ -9,17 +9,17 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const HappeningNowConstants = fn(16653);
+const HappeningNowConstants = fn(16695);
 const HAPPENING_NOW_CONTENT_HEIGHT = HappeningNowConstants.HAPPENING_NOW_CONTENT_HEIGHT;
 ({
   HappeningNowCardTrackingType: closure_8,
   HAPPENING_NOW_CARD_HEIGHT: closure_9,
   HAPPENING_NOW_EVENT_BANNER_WIDTH,
 } = HappeningNowConstants);
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   info: { alignSelf: "center", flexShrink: 1, marginLeft: 12, gap: 2 },
   infoNoImage: {
@@ -103,9 +103,9 @@ let obj5 = {
   borderTopLeftRadius: nativeDefault.radii.sm,
   borderBottomLeftRadius: nativeDefault.radii.sm,
 };
-obj.avatarContainer = { width: fn(1202).AVATAR_SIZE_MAP[fn(undefined, 1202).AvatarSizes.XSMALL_20] };
+obj.avatarContainer = { width: fn(1199).AVATAR_SIZE_MAP[fn(undefined, 1199).AvatarSizes.XSMALL_20] };
 let closure_13 = createStyles.createStyles(obj);
-const point = { shape: fn(9406).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
+const point = { shape: fn(9405).CutoutShape.Circle, x: -8, y: HAPPENING_NOW_CONTENT_HEIGHT / 2 - 8, size: 16 };
 let items = [point];
 let ReactCompilerGating = fn(558);
 let closure_15 = noop.memo(
@@ -138,7 +138,7 @@ let closure_15 = noop.memo(
       },
 );
 ReactCompilerGating = fn(558);
-let obj6 = { width: fn(1202).AVATAR_SIZE_MAP[fn(undefined, 1202).AvatarSizes.XSMALL_20] };
+let obj6 = { width: fn(1199).AVATAR_SIZE_MAP[fn(undefined, 1199).AvatarSizes.XSMALL_20] };
 size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardEvent.tsx",

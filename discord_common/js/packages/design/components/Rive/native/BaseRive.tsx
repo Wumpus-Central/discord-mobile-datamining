@@ -1,7 +1,7 @@
 // discord_common/js/packages/design/components/Rive/native/BaseRive.tsx
 import c from "../../../../../../../_runtime/00576_c.js";
 import AccessibilityPreferencesContext from "../../AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
-import DataBindByName from "../../../../../../../_runtime/05047_DataBindByName.js";
+import DataBindByName from "../../../../../../../_runtime/05048_DataBindByName.js";
 import ManaContext from "../../ManaContext/ManaContext.native.tsx";
 import useRivePlayback from "useRivePlayback.tsx";
 import RiveTypes from "RiveTypes.tsx";
@@ -260,7 +260,6 @@ ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useColorBinding(arg0, arg1, arg2, current, arg4) {
       closure_0 = arg2;
-      dependencyMap = current;
       closure_2 = arg4;
       const cResult = c.c(11);
       const iter = DataBindByName.useRiveColor(arg0, arg1);
@@ -275,49 +274,40 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           const effect = noop.useEffect(tmp2, tmp3);
           noop.useRef(current);
           if (cResult[5] !== current) {
-            class E {
-              constructor() {
-                closure_5.current = closure_1;
-                return;
-              }
-            }
+            const fn2 = function b() {
+              closure_5.current = current;
+            };
             const items = [current];
             cResult[5] = current;
-            cResult[6] = E;
+            cResult[6] = fn2;
             cResult[7] = items;
             let tmp6 = items;
+            let tmp5 = fn2;
           } else {
-            class E {
-              constructor() {
-                closure_5.current = closure_1;
-                return;
-              }
-            }
+            tmp5 = cResult[6];
             tmp6 = cResult[7];
           }
-          const effect1 = noop.useEffect(E, tmp6);
+          const effect1 = noop.useEffect(tmp5, tmp6);
           if (cResult[8] !== value) {
-            class E {
-              constructor() {
-                closure_5.current = closure_1;
-                return;
+            const fn3 = function y() {
+              if (null != value) {
+                current = ref.current;
+                if (current != null) {
+                  current(value.toInt());
+                }
               }
-            }
+            };
             const items1 = [value];
             cResult[8] = value;
-            cResult[9] = tmp10;
+            cResult[9] = fn3;
             cResult[10] = items1;
             let tmp9 = items1;
+            let tmp8 = fn3;
           } else {
-            class E {
-              constructor() {
-                closure_5.current = closure_1;
-                return;
-              }
-            }
+            tmp8 = cResult[9];
             tmp9 = cResult[10];
           }
-          const effect2 = noop.useEffect(tmp10, tmp9);
+          const effect2 = noop.useEffect(tmp8, tmp9);
         }
       }
       const fn = function c() {
@@ -502,13 +492,23 @@ let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
     };
 class BaseRiveInner {
   constructor(arg0) {
-    ({ artboard, defaultViewModelInstance, referencedAssets, stateMachine, fit, alignment, withReducedMotion } =
-      global);
+    ({
+      artboard,
+      defaultViewModelInstance,
+      referencedAssets,
+      onRiveFileChange,
+      stateMachine,
+      fit,
+      alignment,
+      withReducedMotion,
+    } = global);
     ({ src, style, artboardProperties, artboardViewModelInstances } = global);
     if (withReducedMotion === undefined) {
       withReducedMotion = "halt";
     }
     renderDataBinding = global.renderDataBinding;
+    riveFile = undefined;
+    closure_3 = undefined;
     play = undefined;
     pause = undefined;
     tmp = closure_0;
@@ -521,11 +521,28 @@ class BaseRiveInner {
       tmp3 = obj1;
     }
     riveFile = obj.useRiveFile(src, tmp3).riveFile;
+    obj3 = closure_2;
+    closure_3 = closure_2.useEffectEvent((arg0) => {
+      let tmpResult;
+      if (dependencyMap != null) {
+        tmpResult = tmp(arg0);
+      }
+      return tmpResult;
+    });
+    items = [];
+    items[0] = riveFile;
+    effect = closure_2.useEffect(() => {
+      let tmp2 = riveFile;
+      if (riveFile == null) {
+        tmp2 = null;
+      }
+      closure_3(tmp2);
+      return () => closure_1_3(null);
+    }, items);
     tmpResult = tmp(tmp2[3]);
     rive = tmpResult.useRive();
     riveViewRef = rive.riveViewRef;
-    tmp6 = null != riveViewRef;
-    obj4 = closure_2;
+    tmp7 = null != riveViewRef;
     enabled = closure_2.useContext(tmp(tmp2[4]).AccessibilityPreferencesContext).reducedMotion.enabled;
     tmpResult1 = tmp(tmp2[5]);
     experiments = tmpResult1.useManaContext().experiments;
@@ -541,69 +558,69 @@ class BaseRiveInner {
       flag = false;
     }
     if ("layout" === fit) {
-      tmp8 = PixelRatio;
+      tmp9 = PixelRatio;
       value = PixelRatio.get();
     }
-    items = artboardViewModelInstances[artboard];
-    if (items == null) {
-      items = [];
+    items1 = artboardViewModelInstances[artboard];
+    if (items1 == null) {
+      items1 = [];
     }
-    tmp9 = items.length > 0;
-    memo = obj4.useMemo(() => _require, []);
+    tmp10 = items1.length > 0;
+    memo = obj3.useMemo(() => _require, []);
     tmpResult2 = tmp(tmp2[3]);
     if (null != memo) {
-      tmp12 = riveFile;
+      tmp13 = riveFile;
       if (riveFile == null) {
-        tmp12 = null;
+        tmp13 = null;
       }
-      tmp11 = tmp12;
+      tmp12 = tmp13;
     } else {
-      tmp11 = null;
+      tmp12 = null;
     }
-    instance = tmpResult2.useViewModelInstance(tmp11, { artboardName: artboard, instanceName: memo }).instance;
+    instance = tmpResult2.useViewModelInstance(tmp12, { artboardName: artboard, instanceName: memo }).instance;
     None = instance;
     if (instance == null) {
       None = tmp(tmp2[3]).DataBindMode.None;
     }
-    tmp14 = artboardProperties[artboard];
+    tmp15 = artboardProperties[artboard];
     reducedMotion = undefined;
-    if (tmp14 != null) {
-      reducedMotion = tmp14.reducedMotion;
+    if (tmp15 != null) {
+      reducedMotion = tmp15.reducedMotion;
     }
-    tmp16 = null != reducedMotion;
+    tmp17 = null != reducedMotion;
     tmpResult3 = tmp(tmp2[6]);
-    obj20 = { isReady: tmp6, appStatePlaybackEnabled: flag, shouldShortLoopForReducedMotion: null };
-    tmp17 = enabled;
+    obj20 = { isReady: tmp7, appStatePlaybackEnabled: flag, shouldShortLoopForReducedMotion: null };
+    tmp18 = enabled;
     if (enabled) {
-      tmp17 = !tmp16;
+      tmp18 = !tmp17;
     }
-    if (tmp17) {
+    if (tmp18) {
       str2 = "play";
-      tmp17 = "play" !== withReducedMotion;
+      tmp18 = "play" !== withReducedMotion;
     }
-    obj20.shouldShortLoopForReducedMotion = tmp17;
+    obj20.shouldShortLoopForReducedMotion = tmp18;
     rivePlayback = tmpResult3.useRivePlayback(riveViewRef, obj20);
     play = rivePlayback.play;
     pause = rivePlayback.pause;
-    items1 = [,];
-    items1[0] = play;
-    items1[1] = pause;
-    imperativeHandle = obj4.useImperativeHandle(global.ref, () => ({ play, pause }), items1);
-    tmp22 = closure_8;
     items2 = [,];
-    items2[0] = closure_8.container;
+    items2[0] = play;
+    items2[1] = pause;
+    imperativeHandle = obj3.useImperativeHandle(global.ref, () => ({ play, pause }), items2);
+    tmp23 = closure_8;
+    items3 = [,];
+    items3[0] = closure_8.container;
     hidden = undefined;
-    tmp20 = jsxs;
-    tmp21 = View;
-    if (!tmp6) {
-      hidden = tmp22.hidden;
+    tmp21 = jsxs;
+    tmp22 = View;
+    if (!tmp7) {
+      hidden = tmp23.hidden;
     }
-    obj21 = { style: items2, children: null };
-    items2[1] = hidden;
-    tmp24 = null != riveFile;
-    if (!tmp24) {
-      items3 = [,];
-      items3[0] = tmp24;
+    obj21 = { style: items3, children: null };
+    items3[1] = hidden;
+    tmp25 = null != riveFile;
+    if (!tmp25) {
+      items4 = [,];
+      items4[0] = tmp25;
       renderDataBindingResult = undefined;
       if (renderDataBinding != null) {
         if (instance == null) {
@@ -619,20 +636,20 @@ class BaseRiveInner {
         obj22.playIfNeeded = rivePlayback.playIfNeeded;
         renderDataBindingResult = renderDataBinding(obj22);
       }
-      items3[1] = renderDataBindingResult;
-      obj21.children = items3;
-      return tmp20(tmp21, obj21);
+      items4[1] = renderDataBindingResult;
+      obj21.children = items4;
+      return tmp21(tmp22, obj21);
     } else {
-      tmp25 = jsx;
+      tmp26 = jsx;
       obj23 = { file: null, hybridRef: null, artboardName: null, autoPlay: true, dataBind: null, style: null };
       obj23.file = riveFile;
       obj23.hybridRef = rive.setHybridRef;
       obj23.artboardName = artboard;
       obj23.dataBind = None;
-      items4 = [,];
-      items4[0] = tmp22.fill;
-      items4[1] = style;
-      obj23.style = items4;
+      items5 = [,];
+      items5[0] = tmp23.fill;
+      items5[1] = style;
+      obj23.style = items5;
       if (null != stateMachine) {
         obj24 = { stateMachineName: null };
         obj24.stateMachineName = stateMachine;
@@ -640,8 +657,8 @@ class BaseRiveInner {
       } else {
         obj25 = {};
       }
-      tmp26 = obj23;
-      tmp27 = obj25;
+      tmp27 = obj23;
+      tmp28 = obj25;
       merged = Object.assign(obj25);
       if (null != fit) {
         obj26 = { fit: null };
@@ -650,8 +667,8 @@ class BaseRiveInner {
       } else {
         obj27 = {};
       }
-      tmp29 = obj23;
-      tmp30 = obj27;
+      tmp30 = obj23;
+      tmp31 = obj27;
       merged1 = Object.assign(obj27);
       if (null != alignment) {
         obj28 = { alignment: null };
@@ -660,8 +677,8 @@ class BaseRiveInner {
       } else {
         obj29 = {};
       }
-      tmp32 = obj23;
-      tmp33 = obj29;
+      tmp33 = obj23;
+      tmp34 = obj29;
       merged2 = Object.assign(obj29);
       if (null != value) {
         obj30 = { layoutScaleFactor: null };
@@ -670,10 +687,10 @@ class BaseRiveInner {
       } else {
         obj31 = {};
       }
-      tmp35 = obj23;
-      tmp36 = obj31;
+      tmp36 = obj23;
+      tmp37 = obj31;
       merged3 = Object.assign(obj31);
-      tmp25Result = tmp25(tmp(tmp2[3]).RiveView, obj23);
+      tmp26Result = tmp26(tmp(tmp2[3]).RiveView, obj23);
     }
     return;
   }
@@ -726,37 +743,28 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
             const effect1 = obj2.useEffect(tmp5, tmp6);
             closure_6 = obj2.useRef(current);
             if (cResult[8] !== current) {
-              class E {
-                constructor() {
-                  closure_6.current = closure_3;
-                  return;
-                }
-              }
+              const fn3 = function b() {
+                closure_6.current = current;
+              };
               const items1 = [current];
               cResult[8] = current;
-              cResult[9] = E;
+              cResult[9] = fn3;
               cResult[10] = items1;
               let tmp9 = items1;
+              let tmp8 = fn3;
             } else {
-              class E {
-                constructor() {
-                  closure_6.current = closure_3;
-                  return;
-                }
-              }
+              tmp8 = cResult[9];
               tmp9 = cResult[10];
             }
-            const effect2 = obj2.useEffect(E, tmp9);
+            const effect2 = obj2.useEffect(tmp8, tmp9);
             if (cResult[11] === arg1) {
-              class E {
-                constructor() {
-                  closure_6.current = closure_3;
-                  return;
-                }
+              if (cResult[12] === arg0) {
+                let tmp11 = cResult[13];
+                let tmp12 = cResult[14];
               }
               const effect3 = obj2.useEffect(tmp11, tmp12);
             }
-            const fn3 = function y() {
+            const fn4 = function y() {
               if (null != closure_1) {
                 const imagePropertyResult = closure_1.imageProperty(closure_0);
                 if (null != imagePropertyResult) {
@@ -774,10 +782,10 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
             const items2 = [arg0, arg1];
             cResult[11] = arg1;
             cResult[12] = arg0;
-            cResult[13] = fn3;
+            cResult[13] = fn4;
             cResult[14] = items2;
-            tmp11 = fn3;
             tmp12 = items2;
+            tmp11 = fn4;
           }
         }
       }
@@ -827,7 +835,6 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
       cResult[7] = items3;
       tmp6 = items3;
       tmp5 = fn2;
-      const obj = require("c");
     }
   : function useImageBinding(arg0, arg1, arg2, current, arg4) {
       closure_0 = arg0;

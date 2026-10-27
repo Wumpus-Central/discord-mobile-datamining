@@ -7,7 +7,7 @@ import ApplicationIntegrationType from "../../discord_common/js/shared/shared-co
 import Record from "../lib/Record.tsx";
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MessageFlags: c3, MessageStates: closure_4, MessageTypes: hasOwnProperty } = Constants);
 class MinimalMessageRecord extends tmp2 {
   constructor(arg0) {
@@ -143,7 +143,6 @@ class MessageRecord extends MinimalMessageRecord {
     }
     tmp2.giftInfo = giftInfo;
     tmp2.giftingPrompt = global.giftingPrompt || null;
-    tmp2.boostingPrompt = global.boostingPrompt || null;
     tmp2.messageSnapshots = global.messageSnapshots || [];
     tmp2.isUnsupported = global.isUnsupported || false;
     changelog_id = global.changelog_id;

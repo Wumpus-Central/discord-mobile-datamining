@@ -2,7 +2,7 @@
 import Storage6 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import util from "../../../intl/index.native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef3830 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
 import createNonce from "../../messages/createNonce.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
 import ConjureChatActionCreators from "../chat/ConjureChatActionCreators.tsx";
@@ -155,7 +155,7 @@ let closure_20 = async function _putInstallScope(arg0) {
     }
   })();
 };
-let ConjureConnectionStore = fn(10698);
+let ConjureConnectionStore = fn(10701);
 ({
   optimisticMessageId: closure_7,
   sendUserMessage: closure_8,
@@ -163,7 +163,7 @@ let ConjureConnectionStore = fn(10698);
   withdrawUserMessage: c10,
 } = ConjureConnectionStore);
 let ConjureConnectionStore = ConjureConnectionStore_mod;
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const ConjureHeldPrompts = "ConjureHeldPrompts";
 const map = new Map();
 const map1 = new Map();
@@ -296,7 +296,7 @@ export const serverQuestionFields = function serverQuestionFields(conjureEligibl
     const found = conjureEligibleGuilds.find((id) => id.id === closure_0);
     const obj2 = { input: "server", note: null };
     const intl = util.intl;
-    obj2.note = intl.string(_modDef3830.SU9K9U);
+    obj2.note = intl.string(_modDef3831.SU9K9U);
     if (null != found) {
       const obj4 = { default_entities: null };
       ({ id: obj3.id, name: obj3.name } = found);
@@ -324,7 +324,7 @@ export const ownerOnlyClarification = function ownerOnlyClarification(memo) {
       note: null,
     };
     const intl = util.intl;
-    obj.note = intl.string(_modDef3830.ZKPaWY);
+    obj.note = intl.string(_modDef3831.ZKPaWY);
     return obj;
   });
   return obj;
@@ -526,12 +526,12 @@ export const switchConjureInstallScope = function switchConjureInstallScope(proj
           return obj;
         } else {
           if ("guild" === closure_129_1) {
-            let prop = tmp5(3830)["8+EcCu"];
+            let prop = tmp5(3831)["8+EcCu"];
           } else {
-            prop = tmp5(3830)["U7+Yeh"];
+            prop = tmp5(3831)["U7+Yeh"];
           }
           closure_128_0 = prop;
-          const intl = tmp2(1128).intl;
+          const intl = tmp2(1125).intl;
           if (closure_1_8(closure_129_0, intl.string(closure_128_0))) {
             c3 = 3;
             return { value: "IconComponent", done: null };

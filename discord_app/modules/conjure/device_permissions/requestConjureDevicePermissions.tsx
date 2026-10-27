@@ -248,7 +248,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
     }
   }
 };
-const FrameLayoutModes = fn(6776).FrameLayoutModes;
+const FrameLayoutModes = fn(6777).FrameLayoutModes;
 const set = new Set();
 const SECOND = DurationsDefault.Millis.SECOND;
 const size = fn(2);

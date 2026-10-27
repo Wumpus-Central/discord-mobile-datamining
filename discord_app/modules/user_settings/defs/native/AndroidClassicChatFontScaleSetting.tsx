@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _mod4886 from "../../../../../_runtime/metro/04886__.js";
+import _mod4887 from "../../../../../_runtime/metro/04887__.js";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FontScaleStore from "../../appearance/native/FontScaleStore.tsx";
 import ReactCompilerGating from "../../../react_compiler/ReactCompilerGating.tsx";
@@ -24,12 +24,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return useFontScaleStore(first, _mod4886.shallow);
+      return useFontScaleStore(first, _mod4887.shallow);
     }
   : function useClassicChatFontScaleValue() {
       return useFontScaleStore(
         (isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled,
-        _mod4886.shallow,
+        _mod4887.shallow,
       );
     };
 const toggle = SettingBuilders.createToggle({
@@ -50,12 +50,12 @@ const toggle = SettingBuilders.createToggle({
         } else {
           first = cResult[0];
         }
-        return useFontScaleStore(first, _mod4886.shallow);
+        return useFontScaleStore(first, _mod4887.shallow);
       }
     : function useClassicChatFontScaleValue() {
         return useFontScaleStore(
           (isClassicChatFontScaleEnabled) => isClassicChatFontScaleEnabled.isClassicChatFontScaleEnabled,
-          _mod4886.shallow,
+          _mod4887.shallow,
         );
       },
   onValueChange: function onClassicChatFontScaleChange(isClassicChatFontScaleEnabled) {

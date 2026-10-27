@@ -20,18 +20,18 @@ import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandIndexStore = fn(9650);
+const ApplicationCommandIndexStore = fn(9652);
 ({ useContextIndexState: closure_7, useUserIndexState: closure_8 } = ApplicationCommandIndexStore);
-const AppLauncherNativeConstants = fn(1504);
+const AppLauncherNativeConstants = fn(1501);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-let closure_12 = fn(5983).DISCOVERY_COMMANDS_QUERY_LIMIT;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+let closure_12 = fn(5984).DISCOVERY_COMMANDS_QUERY_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
-  headerSpacer: { height: fn(12013).EXPANDED_HEADER_HEIGHT - fn(12013).SHEET_HANDLE_CONTAINER_HEIGHT },
+  headerSpacer: { height: fn(12014).EXPANDED_HEADER_HEIGHT - fn(12014).SHEET_HANDLE_CONTAINER_HEIGHT },
   list: { paddingHorizontal: DEFAULT_CONTENT_PADDING },
   commandsHeaderContainer: {
     flexDirection: "row",
@@ -49,16 +49,16 @@ let obj2 = {
   loadingTextPlaceholderSmall: null,
   noCommandsTextContainer: null,
 };
-let obj3 = { height: fn(12013).EXPANDED_HEADER_HEIGHT - fn(12013).SHEET_HANDLE_CONTAINER_HEIGHT };
+let obj3 = { height: fn(12014).EXPANDED_HEADER_HEIGHT - fn(12014).SHEET_HANDLE_CONTAINER_HEIGHT };
 obj2.viewContainerStyle = { borderRadius: nativeDefault.radii.lg };
 let obj4 = { borderRadius: nativeDefault.radii.lg };
 obj2.mainContainerStyle = {
-  backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
+  backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT,
   paddingHorizontal: 12,
   paddingVertical: 16,
 };
 let obj5 = {
-  backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT,
+  backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT,
   paddingHorizontal: 12,
   paddingVertical: 16,
 };
@@ -634,7 +634,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items1);
       let obj2 = require("CommandRowButton");
-      return closure_13(tmp(6903).TableRow, {
+      return closure_13(tmp(6905).TableRow, {
         start: isFirstRow,
         end: isLastRow,
         label: command.displayName,

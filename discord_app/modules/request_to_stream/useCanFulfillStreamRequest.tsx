@@ -43,15 +43,15 @@ function canFulfillStreamRequest(channel_id) {
     const tmp19 = flag;
     const application = channel_id.application;
     id = undefined;
-    const videoPermission = flag(11589).getVideoPermission(channel);
+    const videoPermission = flag(11591).getVideoPermission(channel);
     if (application != null) {
       id = application.id;
     }
-    const obj8 = flag(11589);
-    dependencyMap = tmp19(1384).isAndroid() ? constants.ANDROID : constants.IOS;
-    const tmp19Result = tmp19(1384);
+    const obj8 = flag(11591);
+    dependencyMap = tmp19(1381).isAndroid() ? constants.ANDROID : constants.IOS;
+    const tmp19Result = tmp19(1381);
     const obj5 = { guildId: channel.guild_id, location: "canFulfillStreamRequest" };
-    const tmp5 = id(11349).getConfig(obj5).enabled && null == id;
+    const tmp5 = id(11352).getConfig(obj5).enabled && null == id;
     if (null == id) {
       if (!tmp5) {
         const items1 = [false, obj.NOT_RUNNING_GAME];
@@ -79,7 +79,7 @@ function canFulfillStreamRequest(channel_id) {
     return items6;
   }
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ActivityGamePlatforms: closure_11, ActivityTypes: closure_12 } = Constants);
 const StreamRequestUnfulfillableReason = {
   NOT_IN_VOICE_CHANNEL: "NOT_IN_VOICE_CHANNEL",

@@ -1364,8 +1364,8 @@ let closure_19 = async function _cancelOrderSigning() {
     }
   })();
 };
-const OrderStatus = fn(5698).OrderStatus;
-const Endpoints = fn(1087).Endpoints;
+const OrderStatus = fn(5699).OrderStatus;
+const Endpoints = fn(1084).Endpoints;
 const tmp2 = new LoggerDefault("OrderActionCreators");
 let closure_6 = tmp2;
 let c11 = null;

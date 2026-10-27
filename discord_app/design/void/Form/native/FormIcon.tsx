@@ -3,11 +3,11 @@ import c from "../../../../../_runtime/00576_c.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const native = ThemedIcon(1202);
+const native = ThemedIcon(1199);
 require = fn;
 let closure_2 = ["style", "color", "themedColor"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_5 = createStyles.createStyles({ icon: { opacity: 0.6 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -173,7 +173,7 @@ export const CHECKPOINT_AURA_OPTION_TO_RARITY = {
   13: "nitro",
   14: "nitro",
 };
-export const CHECKPOINT_RARITY_MIN_PERCENTILE = { common: 0, rare: 70, epic: 80, ultra: 95 };
+export const CHECKPOINT_RARITY_TO_MIN_PERCENTILE = { common: 0, rare: 70, epic: 80, ultra: 95 };
 export const CHECKPOINT_WEARABLE_LAYER_BACKGROUND = new Set([1, 6, 9, 11, 13]);
 export const CHECKPOINT_LAYER_DEFAULT_ORDERING = ["base", "outfit", "shoes", "wearable", "face", "hat", "aura"];
 export const CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING = [

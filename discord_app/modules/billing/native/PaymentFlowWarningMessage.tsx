@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: {
     padding: 10,
@@ -18,7 +18,7 @@ let obj2 = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: fn(6707).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+    backgroundColor: fn(6708).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
   },
   icon: { marginRight: 10 },
   text: { flexShrink: 1 },
@@ -32,7 +32,7 @@ let obj3 = {
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  backgroundColor: fn(6707).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
+  backgroundColor: fn(6708).DARK_PRIMARY_630_LIGHT_PRIMARY_230,
 };
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/billing/native/PaymentFlowWarningMessage.tsx");

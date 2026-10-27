@@ -1,7 +1,7 @@
 // discord_app/modules/channel_following/native/components/NewChannelFollower.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import openChannelPickerDefault from "../../../channel/native/openChannelPicker.tsx";
 import ChannelFollowerActionCreatorsDefault from "../../../../actions/ChannelFollowerActionCreators.tsx";
@@ -26,13 +26,13 @@ function canFollowIntoChannel(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-fn(4827).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
-let closure_9 = fn(4901).GUILD_SELECTABLE_CHANNELS_KEY;
-const Constants = fn(1087);
+fn(4828).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+let closure_9 = fn(4902).GUILD_SELECTABLE_CHANNELS_KEY;
+const Constants = fn(1084);
 ({ AbortCodes: map1, Permissions: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 24 },
   header: { flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center", height: 96 },
@@ -120,9 +120,9 @@ export default function NewChannelFollower(targetChannelId) {
   });
   const tmp12 = require("useChannelName")(sourceChannel);
   if (tmp5Result.isThemeDark(tmp9)) {
-    let tmp8Result = require("../../../../../_runtime/metro/13368__.js");
+    let tmp8Result = require("../../../../../_runtime/metro/13382__.js");
   } else {
-    tmp8Result = require("../../../../../_runtime/metro/13369__.js");
+    tmp8Result = require("../../../../../_runtime/metro/13383__.js");
   }
   const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
   const obj5 = { style: tmp.header, children: null };

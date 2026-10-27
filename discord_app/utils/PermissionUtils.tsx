@@ -314,17 +314,17 @@ function applyThreadPermissions(context, permissions, hasJoinedResult, GuildMemb
     let combine = dependencyMap;
     let SEND_MESSAGES = Permissions;
     if (!obj2.has(permissions, Permissions.SEND_MESSAGES_IN_THREADS)) {
-      tmp8(1099).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
-      const tmp8Result = tmp8(1099);
+      tmp8(1096).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
+      const tmp8Result = tmp8(1096);
     }
     if (context.isLockedThread()) {
       if (!tmp8Result3.has(permissions, SEND_MESSAGES.MANAGE_THREADS)) {
-        let removeResult1 = tmp8(1099).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
-        const tmp8Result4 = tmp8(1099);
+        let removeResult1 = tmp8(1096).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
+        const tmp8Result4 = tmp8(1096);
       }
-      tmp8Result3 = tmp8(1099);
+      tmp8Result3 = tmp8(1096);
     }
-    tmp8 = tmp8(1099);
+    tmp8 = tmp8(1096);
     combine = tmp8.combine;
     SEND_MESSAGES = SEND_MESSAGES.SEND_MESSAGES;
     removeResult1 = combine(permissions, SEND_MESSAGES);
@@ -368,12 +368,12 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(4827);
+const ChannelRecord = fn(4828);
 ({ THREAD_CHANNEL_TYPES: closure_7, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(4841);
+const GuildRecord = fn(4842);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: c10 } = GuildRecord);
-const hasPermission = fn(4878).hasPermission;
-const Constants = fn(1087);
+const hasPermission = fn(4879).hasPermission;
+const Constants = fn(1084);
 const Permissions = Constants.Permissions;
 ({
   ElevatedPermissions: closure_19,
@@ -563,7 +563,7 @@ export const areChannelsLocked = function areChannelsLocked(c18, c19, appChannel
           if (null == obj2[guild_id]) {
             let obj = {
               id: guild_id,
-              type: obj2(2000).PermissionOverwriteType.ROLE,
+              type: obj2(1997).PermissionOverwriteType.ROLE,
               allow: deserializeResult,
               deny: deserializeResult,
             };

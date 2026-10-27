@@ -42,7 +42,7 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
               if (null == applicationCodedLinkData) {
                 return null;
               } else {
-                const obj2 = { appId: applicationCodedLinkData.applicationId, channel: tmp29, message, theme };
+                const obj2 = { appId: applicationCodedLinkData.applicationId, channel: tmp31, message, theme };
                 const appLinkGateResult = createAppMessageEmbed.getAppLinkGateResult(obj2);
                 if ("unavailable" === appLinkGateResult.state) {
                   return null;
@@ -93,11 +93,11 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
             isStaffResult = isStaffPersonalResult;
           }
           if (!isStaffResult) {
-            let tmp21 = null != GuildStore.getGuild("943265993613008967");
-            if (tmp21) {
-              tmp21 = !LurkingStore.isLurking("943265993613008967");
+            let tmp23 = null != GuildStore.getGuild("943265993613008967");
+            if (tmp23) {
+              tmp23 = !LurkingStore.isLurking("943265993613008967");
             }
-            isStaffResult = tmp21;
+            isStaffResult = tmp23;
           }
           let buildOverrideEmbed = null;
           if (isStaffResult) {
@@ -135,8 +135,12 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                             if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
                               let gameOrganizationInviteEmbed = null;
                               if (tmpResult34.getLinkedGameOrgInvitesEnabled("mobile_coded_link_embed")) {
+                                let id;
+                                if (currentUser != null) {
+                                  id = currentUser.id;
+                                }
                                 gameOrganizationInviteEmbed =
-                                  GameOrganizationInviteEmbed.createGameOrganizationInviteEmbed(code, theme);
+                                  GameOrganizationInviteEmbed.createGameOrganizationInviteEmbed(code, theme, id);
                                 const tmpResult35 = GameOrganizationInviteEmbed;
                               }
                               return gameOrganizationInviteEmbed;

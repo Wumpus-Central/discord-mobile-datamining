@@ -53,7 +53,7 @@ function findCommandInSection(found, commandId) {
     }
   }
 }
-let ApplicationCommandIndexStore = fn(9650);
+let ApplicationCommandIndexStore = fn(9652);
 ({
   useContextIndexState: metroRequire,
   useDiscoveryState: closure_7,
@@ -61,8 +61,8 @@ let ApplicationCommandIndexStore = fn(9650);
   useUserIndexState: closure_9,
 } = ApplicationCommandIndexStore);
 let ApplicationCommandIndexStore = ApplicationCommandIndexStore_mod;
-const BuiltInSectionId = fn(5983).BuiltInSectionId;
-const NOOP = fn(1087).NOOP;
+const BuiltInSectionId = fn(5984).BuiltInSectionId;
+const NOOP = fn(1084).NOOP;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
@@ -263,7 +263,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                   cResult[33] = items3;
                   tmp37 = items3;
                 } else {
-                  const tmp53 = tmp(9658).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
+                  const tmp53 = tmp(9660).BUILT_IN_SECTIONS[BuiltInSectionId.BUILT_IN];
                   const _Symbol2 = Symbol;
                   if (cResult[40] === Symbol.for("react.memo_cache_sentinel")) {
                     const items4 = [tmp53];
@@ -755,7 +755,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }, items);
     };
 let closure_14 = tmp6;
-let items = [fn(2000).ApplicationCommandType.CHAT];
+let items = [fn(1997).ApplicationCommandType.CHAT];
 ReactCompilerGating = fn(558);
 const obj6 = { id: "placeholder-section", type: null, name: "" };
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -908,14 +908,14 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         tmp10 = descriptors;
       }, items1);
     };
-obj6.type = fn(5634).ApplicationCommandSectionType.APPLICATION;
+obj6.type = fn(5635).ApplicationCommandSectionType.APPLICATION;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandQueryApi.tsx");
 
 export const getCachedCommand = function getCachedCommand(type, commandId, applicationId) {
   closure_0 = applicationId;
   if (null == commandId) {
-    return { application: "children", command: "k", section: "borderRadius" };
+    return { application: "Array", command: "unicodeVersion", section: "children" };
   } else {
     const userState = ApplicationCommandIndexStore.getUserState();
     const result2 = userState.result;
@@ -966,7 +966,7 @@ export const getCachedCommand = function getCachedCommand(type, commandId, appli
         }
       }
     }
-    return { application: "children", command: "k", section: "borderRadius" };
+    return { application: "Array", command: "unicodeVersion", section: "children" };
   }
 };
 export const getCachedApplicationSection = function getCachedApplicationSection(type, CHAT, applicationId) {
@@ -1009,11 +1009,11 @@ export const getCachedApplicationSection = function getCachedApplicationSection(
   }
   return descriptor;
 };
-export const getCachedResults = function getCachedResults(autocompleteType, CHAT, query) {
+export const getCachedResults = function getCachedResults(dependencyMap, CHAT, query) {
   const obj = { commandTypes: null, text: query };
   items = [CHAT];
   obj.commandTypes = items;
-  query = ApplicationCommandIndexStore.query(autocompleteType, obj, {
+  query = ApplicationCommandIndexStore.query(dependencyMap, obj, {
     scoreMethod: ApplicationCommandQueryTypes.ScoreMethod.COMMAND_OR_APPLICATION,
     allowFetch: false,
   });
@@ -1036,8 +1036,8 @@ export const getChangeKeys = function getChangeKeys(type) {
 };
 export const useCachedResults = tmp3;
 export const useDiscovery = tmp4;
-export const executeQuery = function executeQuery(autocompleteType, commandTypes, placeholderCount) {
-  const query = ApplicationCommandIndexStore.query(autocompleteType, commandTypes, placeholderCount);
+export const executeQuery = function executeQuery(dependencyMap, commandTypes, placeholderCount) {
+  const query = ApplicationCommandIndexStore.query(dependencyMap, commandTypes, placeholderCount);
   ({ descriptors, commands, loading } = query);
   let num = 0;
   if (loading) {
@@ -1120,7 +1120,7 @@ export const useCommand = function useCommand(cResult, commandId) {
         }
       }
     }
-    return { command: "Array", application: "Reflect" };
+    return { command: "toCharArray$esjava$1", application: "Symbol" };
   }, items);
 };
 export const useCommandsForApplication = tmp6;

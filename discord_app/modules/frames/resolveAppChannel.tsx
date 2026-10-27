@@ -131,7 +131,7 @@ let closure_7 = async function _resolveAppChannel(arg0) {
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes: hasOwnProperty, Permissions: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/resolveAppChannel.tsx");

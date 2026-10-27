@@ -8,7 +8,7 @@ import InvitableGameOrganizationStore from "InvitableGameOrganizationStore.tsx";
 
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1087).QueryIds.INVITABLE_GAME_ORGANIZATIONS,
+  getQueryId: fn(1084).QueryIds.INVITABLE_GAME_ORGANIZATIONS,
   staleAfter: DurationsDefault.Seconds.MINUTE,
   failureStaleAfter: DurationsDefault.Seconds.MINUTE,
   retryConfig: { retryableErrors: isRetryableFetchErrorDefault },

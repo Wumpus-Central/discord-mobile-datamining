@@ -307,7 +307,7 @@ function handleDeleteChannel(channel) {
     });
   }
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 const RecentMentionsFilters = Constants.RecentMentionsFilters;
 ({
   ChannelTypes: map1,

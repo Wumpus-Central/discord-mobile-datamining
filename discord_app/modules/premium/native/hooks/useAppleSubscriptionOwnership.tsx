@@ -6,7 +6,7 @@ import AppStateStore from "../../../../stores/native/AppStateStore.tsx";
 import IAPStore from "../../../../stores/native/IAPStore.android.tsx";
 
 const require = fn;
-const AppStates = fn(1087).AppStates;
+const AppStates = fn(1084).AppStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/useAppleSubscriptionOwnership.tsx");

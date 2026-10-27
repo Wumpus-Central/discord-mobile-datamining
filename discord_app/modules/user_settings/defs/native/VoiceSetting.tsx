@@ -5,10 +5,10 @@ import util from "../../../../intl/index.native.tsx";
 import MediaEngineStore from "../../../../stores/MediaEngineStore.tsx";
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ InputModes: c3, UserSettingsSections } = Constants);
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useVoiceSettingTrailing() {
       let Q8gkVL = dependencyMap;
@@ -59,7 +59,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.B1fFpf);
   },
   parent: null,
-  IconComponent: fn(11646).MicrophoneIcon,
+  IconComponent: fn(11648).MicrophoneIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useVoiceSettingTrailing() {
         let Q8gkVL = dependencyMap;

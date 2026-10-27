@@ -126,8 +126,8 @@ let closure_11 = async function _markUnread(arg0) {
     }
   }
 };
-const shouldBadgeMessage = fn(6771).shouldBadgeMessage;
-const Endpoints = fn(1087).Endpoints;
+const shouldBadgeMessage = fn(6772).shouldBadgeMessage;
+const Endpoints = fn(1084).Endpoints;
 let closure_10 = new LoggerDefault("markUnread");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/markUnread.tsx");

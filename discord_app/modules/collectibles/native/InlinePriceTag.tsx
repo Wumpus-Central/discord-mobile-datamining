@@ -6,12 +6,12 @@ import _modDef683 from "../../../../_runtime/metro/00683__.js";
 import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import CollectiblesItemType from "../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import PremiumUtilsDefault from "../../../utils/PremiumUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useToken from "../../../design/tokens/native/useToken.tsx";
-import LinearGradientDefault from "../../../../_runtime/05258_LinearGradient.js";
+import LinearGradientDefault from "../../../../_runtime/05259_LinearGradient.js";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
 import ChevronSmallRightIcon from "../../../design/components/Icon/native/redesign/generated/ChevronSmallRightIcon.tsx";
 import CollectiblesProductUtils from "../utils/CollectiblesProductUtils.tsx";
@@ -48,7 +48,7 @@ function ExpressiveNitroUpsell(arg0) {
       }
       if (closure_1_2) {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp9 = asyncRequireImpl(14464, dependencyMap.paths);
+        const tmp9 = asyncRequireImpl(14500, dependencyMap.paths);
         const obj2 = { analyticsLocations: null, title: null, description: null };
         const items = [AnalyticsLocationDefault.COLLECTIBLES_SHOP_DETAILS_MODAL];
         obj2.analyticsLocations = items;
@@ -157,12 +157,12 @@ function ExpressiveNitroUpsell(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: c3, View: closure_4, StyleSheet } = get_ActivityIndicator);
-const ShopCtaEnum = fn(1089).ShopCtaEnum;
-const Constants = fn(1087);
+const ShopCtaEnum = fn(1086).ShopCtaEnum;
+const Constants = fn(1084);
 ({ AnalyticsSections: closure_7, CurrencyCodes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-let createStyles = fn(4971);
+let createStyles = fn(4972);
 let obj2 = {
   priceTag: { flexDirection: "row", alignItems: "center" },
   strikedPrice: { textDecorationLine: "line-through", textDecorationStyle: "solid", opacity: 0.7 },
@@ -631,7 +631,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[6] = tmp4.androidTextPadding;
             cResult[7] = androidTextPadding;
             let tmp10 = androidTextPadding;
-            tmpResult = tmp(1384);
+            tmpResult = tmp(1381);
           } else {
             tmp10 = cResult[7];
           }
@@ -668,7 +668,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
                 style: tmp10,
                 children: cResult[10],
               };
-              const tmp18 = closure_9(tmp(5234).Text, obj3);
+              const tmp18 = closure_9(tmp(5235).Text, obj3);
               cResult[13] = tmp10;
               cResult[14] = cResult[10];
               cResult[15] = tmp18;
@@ -685,9 +685,9 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             tmp13 = cResult[12];
           }
-          const intl = tmp(1128).intl;
+          const intl = tmp(1125).intl;
           const obj4 = { price: underline, subscribeNowHook: tmp13 };
-          const formatResult = intl.format(tmp(1128).t.Kxw2LT, obj4);
+          const formatResult = intl.format(tmp(1125).t.Kxw2LT, obj4);
           cResult[8] = underline;
           underline = tmp4.underline;
           cResult[9] = underline;
@@ -697,7 +697,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [,];
         ({ nitroIcon: arr[0], nitroIconSubscribeNow: arr[1] } = tmp4);
         obj5.style = items1;
-        const tmp9 = closure_9(tmp(9425).NitroWheelIcon, obj5);
+        const tmp9 = closure_9(tmp(9424).NitroWheelIcon, obj5);
         cResult[3] = tmp4.nitroIcon;
         cResult[4] = tmp4.nitroIconSubscribeNow;
         cResult[5] = tmp9;
@@ -764,7 +764,7 @@ let obj6 = {
   flexDirection: "row",
   alignItems: "center",
 };
-createStyles = fn(4971);
+createStyles = fn(4972);
 let closure_19 = createStyles.createStyles(() => {
   const discount = {
     backgroundColor: "rgba(46, 204, 113, 0.25)",

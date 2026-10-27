@@ -1,20 +1,25 @@
 // discord_app/modules/embedded_apps/shim_host/EmbeddedAppShimManager.tsx
 import ComponentDispatchUtils from "../../../utils/ComponentDispatchUtils.tsx";
 import EmbeddedAppShimActionCreators from "EmbeddedAppShimActionCreators.tsx";
+import protocol from "../../../../discord_common/js/packages/embedded-app-shims/src/shared/protocol.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import FramesStore from "../../frames/FramesStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
-function getParentState(iframeId) {
+function createParentStateMessage(iframeId) {
   const frameByIframeId = FramesStore.getFrameByIframeId(iframeId);
-  if (null != frameByIframeId) {
-    const obj = { muted: frameByIframeId.data.muted };
-    let tmp2 = obj;
+  if (null == frameByIframeId) {
+    value = map1.get(iframeId);
+    if (value == null) {
+      value = closure_5;
+    }
+    let obj = value;
   } else {
-    tmp2 = closure_5;
+    obj = { muted: frameByIframeId.data.muted };
   }
-  return tmp2;
+  const result = map1.set(iframeId, obj);
+  return { type: protocol.ParentToChildEvent.STATE_UPDATED, state: obj };
 }
 function handleShimPipeOpen(iframeId) {
   iframeId = iframeId.iframeId;
@@ -22,24 +27,46 @@ function handleShimPipeOpen(iframeId) {
   if (null != value) {
     value.offer(iframeId.pipe);
   } else {
-    let onChildState = FramesStore.getFrameByIframeId(iframeId);
-    if (null != onChildState) {
-      const obj2 = { muted: onChildState.data.muted };
-      let tmp = obj2;
+    let obj2 = {
+      onConnect(dispatch) {
+        const frameByIframeId = FramesStore.getFrameByIframeId(iframeId);
+        if (null == frameByIframeId) {
+          value = map1.get(iframeId);
+          if (value == null) {
+            value = closure_5;
+          }
+          let obj = value;
+        } else {
+          obj = { muted: frameByIframeId.data.muted };
+        }
+        const result = map1.set(iframeId, obj);
+        dispatch.dispatch({ type: protocol.ParentToChildEvent.STATE_UPDATED, state: obj });
+        const obj2 = { type: protocol.ParentToChildEvent.STATE_UPDATED, state: obj };
+      },
+      onMessage(type) {
+        if (type.type === protocol.ChildToParentEvent.STATE_UPDATED) {
+          EmbeddedAppShimActionCreators.updateShimState(iframeId, type.state);
+          const tmp2Result = EmbeddedAppShimActionCreators;
+        } else if (type.type === protocol.ChildToParentEvent.DISCONNECTED) {
+          EmbeddedAppShimActionCreators.disconnectShim(iframeId);
+          const tmp2Result2 = EmbeddedAppShimActionCreators;
+        }
+      },
+    };
+    const embeddedAppShimHost = iframeId(18832).createEmbeddedAppShimHost(obj2);
+    let result = map.set(iframeId, embeddedAppShimHost);
+    let frameByIframeId = FramesStore.getFrameByIframeId(iframeId);
+    if (null == frameByIframeId) {
+      value2 = map1.get(iframeId);
+      if (value2 == null) {
+        value2 = closure_5;
+      }
+      let obj3 = value2;
     } else {
-      tmp = closure_5;
+      obj3 = { muted: frameByIframeId.data.muted };
     }
-    const obj3 = { onChildState: null, onDisconnect: null };
-    onChildState = function onChildState(state) {
-      return EmbeddedAppShimActionCreators.updateShimState(iframeId, state);
-    };
-    obj3.onChildState = onChildState;
-    obj3.onDisconnect = function onDisconnect() {
-      return EmbeddedAppShimActionCreators.disconnectShim(iframeId);
-    };
-    const embeddedAppShimHost = iframeId(18793).createEmbeddedAppShimHost(tmp, obj3);
-    const result = map.set(iframeId, embeddedAppShimHost);
-    const obj5 = iframeId(18793);
+    const result1 = map1.set(iframeId, obj3);
+    const obj4 = iframeId(18832);
   }
 }
 function handleIFrameUnmount(id) {
@@ -47,24 +74,24 @@ function handleIFrameUnmount(id) {
   value = map.get(id);
   if (null != value) {
     map.delete(id);
+    map1.delete(id);
     value.close();
   }
 }
 function updateParentStates() {
   while (tmp2 !== undefined) {
     let tmp5 = _slicedToArray(tmp3, 2);
-    [tmp6, obj] = tmp5;
-    if (null != FramesStore.getFrameByIframeId(tmp6)) {
-      let setParentStateResult = obj.setParentState(getParentState(tmp6));
-    }
+    let obj = tmp5[1];
+    let dispatchResult = obj.dispatch(createParentStateMessage(tmp5[0]));
     continue;
   }
   tmp2 = map[Symbol.iterator]();
 }
-const ComponentActions = fn(1087).ComponentActions;
+const ComponentActions = fn(1084).ComponentActions;
 let closure_5 = { muted: false };
 const map = new Map();
-class EmbeddedAppShimManager extends tmp3 {
+const map1 = new Map();
+class EmbeddedAppShimManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
     obj = { EMBEDDED_APP_SHIM_PIPE_OPEN: handleShimPipeOpen };

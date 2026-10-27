@@ -7,7 +7,7 @@ import sortByMatchScoreDefault from "../../../autocompleter/index.tsx";
 import ChannelStore from "../../../../stores/ChannelStore.tsx";
 
 const require = fn;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 let closure_6 = [];
 class GuildMemberSearchManager {
   constructor() {

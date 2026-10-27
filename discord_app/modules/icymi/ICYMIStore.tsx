@@ -594,14 +594,14 @@ function handleAck(channelId) {
   }
   arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
 }
-let GuildScheduledEventStore = fn(6784);
+let GuildScheduledEventStore = fn(6785);
 ({
   eventScheduledToStartWithin: metroRequire,
   isGuildEventEnded: closure_7,
   isGuildScheduledEventActive: closure_8,
 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes: closure_21, GuildFeatures: closure_22, Permissions: closure_23 } = Constants);
 const ContentInventoryFeedKey = fn(8839).ContentInventoryFeedKey;
 const DAY = DurationsDefault.Millis.DAY;

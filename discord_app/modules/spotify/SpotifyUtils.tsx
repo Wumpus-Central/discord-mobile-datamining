@@ -113,7 +113,7 @@ const SpotifyConstants = fn(8828);
   SpotifyResourceTypes: closure_8,
   getSpotifyResourceType: closure_9,
 } = SpotifyConstants);
-const PlatformTypes = fn(1087).PlatformTypes;
+const PlatformTypes = fn(1084).PlatformTypes;
 let closure_11 = 30 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/spotify/SpotifyUtils.tsx");
@@ -134,7 +134,7 @@ export const ensureSpotifyPlayable = function ensureSpotifyPlayable() {
     if (RunningGameStore.isObservedAppRunning(obj2.get(PlatformTypes.SPOTIFY).name)) {
       if (playableComputerDevices.length > 0) {
         ({ socket, device } = playableComputerDevices[0]);
-        playableComputerDevices(11345).setActiveDevice(socket.accountId, device.id);
+        playableComputerDevices(11348).setActiveDevice(socket.accountId, device.id);
         const obj4 = { socket, device };
         return Promise.resolve(obj4);
       }

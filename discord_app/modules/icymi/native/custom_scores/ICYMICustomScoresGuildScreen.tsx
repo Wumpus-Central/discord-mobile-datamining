@@ -1,7 +1,7 @@
 // discord_app/modules/icymi/native/custom_scores/ICYMICustomScoresGuildScreen.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import ChannelListState from "../../../guild_sidebar/ChannelListState.tsx";
@@ -121,7 +121,7 @@ function keyExtractor(kind, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: {
     flex: 1,
@@ -289,7 +289,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return closure_6.getGuild(guildId);
               }
             }
-            const bottom = guildId(1633)().bottom;
+            const bottom = guildId(1630)().bottom;
             if (cResult[20] === stateFromStores) {
               class R {
                 constructor() {
@@ -417,7 +417,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               let tmp50 = navigation;
-              if (first1 !== navigation(7637).SECTION_INDEX_GUILD_ACTIONS) {
+              if (first1 !== navigation(7638).SECTION_INDEX_GUILD_ACTIONS) {
                 class R {
                   constructor() {
                     return closure_6.getGuild(guildId);
@@ -452,8 +452,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           return closure_6.getGuild(guildId);
                         }
                       }
-                      let intl2 = tmp50(1128).intl;
-                      let stringResult = intl2.string(tmp50(1128).t.GSfOoo);
+                      let intl2 = tmp50(1125).intl;
+                      let stringResult = intl2.string(tmp50(1125).t.GSfOoo);
                       class W {
                         constructor(arg0) {
                           item = navigation.item;
@@ -554,8 +554,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           }
                         }
                       }
-                      let intl = tmp50(1128).intl;
-                      stringResult = intl.string(tmp50(1128).t.gKcrqM);
+                      let intl = tmp50(1125).intl;
+                      stringResult = intl.string(tmp50(1125).t.gKcrqM);
                     }
                   }
                 }
@@ -755,11 +755,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         data: null,
         keyExtractor: null,
       };
-      const rect = { bottom: guildId(1633)().bottom, top: guildId(587).space.PX_12 };
+      const rect = { bottom: guildId(1630)().bottom, top: guildId(587).space.PX_12 };
       obj4.contentInset = rect;
       obj4.renderItem = callback;
       obj4.data = memo;
       obj4.keyExtractor = keyExtractor;
-      obj3.children = closure_11(navigation(7220).AnimatedFlashList, obj4);
+      obj3.children = closure_11(navigation(7222).AnimatedFlashList, obj4);
       return closure_11(guildChannels, obj3);
     };

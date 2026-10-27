@@ -168,12 +168,12 @@ export const hex2rgb = function hex2rgb(gradientValue) {
   }
   obj = _modDef683;
 };
-export const int2rgba = function int2rgba(ColorUtils, arg1) {
+export const int2rgba = function int2rgba(primaryColor, arg1) {
   let result = arg1;
   if (null == arg1) {
-    result = (ColorUtils >> 24 & 255) / 255;
+    result = (primaryColor >> 24 & 255) / 255;
   }
-  return "rgba(" + ColorUtils >> 16 & 255 + ", " + ColorUtils >> 8 & 255 + ", " + 255 & ColorUtils + ", " + result + ")";
+  return "rgba(" + primaryColor >> 16 & 255 + ", " + primaryColor >> 8 & 255 + ", " + 255 & primaryColor + ", " + result + ")";
 };
 export const rgb2int = function rgb2int(dominantColorFromImage) {
   const match = dominantColorFromImage.match(re2);

@@ -18,8 +18,8 @@ import MessageStore from "../../../../stores/MessageStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-let closure_7 = fn(4976).LEGACY_SPOILER_ATTACHMENT_PREFIX;
-let MessageAttachmentFlags = fn(1087).MessageAttachmentFlags;
+let closure_7 = fn(4977).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let MessageAttachmentFlags = fn(1084).MessageAttachmentFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const ReactCompilerGating = fn(558);

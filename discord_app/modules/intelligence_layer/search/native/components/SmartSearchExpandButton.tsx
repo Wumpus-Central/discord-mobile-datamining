@@ -1,6 +1,6 @@
 // discord_app/modules/intelligence_layer/search/native/components/SmartSearchExpandButton.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef4085 from "../../SmartSearch.messages.js";
+import _modDef4086 from "../../SmartSearch.messages.js";
 import HapticUtils from "../../../../haptics/HapticUtils.native.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const rect = { top: nativeDefault.space.PX_8, bottom: nativeDefault.space.PX_8 };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_10 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     block: { position: "absolute", left: 0, right: 0, bottom: 0, alignItems: "center" },
@@ -45,11 +45,11 @@ export default noop.memo(
         const cResult = onPress(576).c(17);
         ({ isCollapsed, onPress } = arg0);
         const obj = onPress(576);
-        const tmp4 = closure_10(onPress(18150).useSearchHostSurfaceColor());
+        const tmp4 = closure_10(onPress(18184).useSearchHostSurfaceColor());
         if (isCollapsed) {
-          let ChevronSmallUpIcon = onPress(11080).ChevronSmallDownIcon;
+          let ChevronSmallUpIcon = onPress(11083).ChevronSmallDownIcon;
         } else {
-          ChevronSmallUpIcon = onPress(14885).ChevronSmallUpIcon;
+          ChevronSmallUpIcon = onPress(14921).ChevronSmallUpIcon;
         }
         if (cResult[0] !== onPress) {
           const fn = function l() {
@@ -63,8 +63,8 @@ export default noop.memo(
           tmp5 = cResult[1];
         }
         if (cResult[2] !== isCollapsed) {
-          const intl = onPress(1128).intl;
-          const tmp10 = _modDef4085;
+          const intl = onPress(1125).intl;
+          const tmp10 = _modDef4086;
           const stringResult = intl.string(isCollapsed ? tmp10.NuTbB9 : tmp10.FKLBbW);
           cResult[2] = isCollapsed;
           cResult[3] = stringResult;
@@ -129,15 +129,15 @@ export default noop.memo(
           cResult[13] = tmp25;
           tmp21 = tmp25;
         }
-        const obj2 = onPress(18150);
+        const obj2 = onPress(18184);
       }
     : function SmartSearchExpandButton(arg0) {
         ({ isCollapsed, onPress } = arg0);
-        const tmp3 = closure_10(onPress(18150).useSearchHostSurfaceColor());
+        const tmp3 = closure_10(onPress(18184).useSearchHostSurfaceColor());
         if (isCollapsed) {
-          let ChevronSmallUpIcon = onPress(11080).ChevronSmallDownIcon;
+          let ChevronSmallUpIcon = onPress(11083).ChevronSmallDownIcon;
         } else {
-          ChevronSmallUpIcon = onPress(14885).ChevronSmallUpIcon;
+          ChevronSmallUpIcon = onPress(14921).ChevronSmallUpIcon;
         }
         const items = [onPress];
         const obj2 = { style: tmp3.block, hitSlop: rect, children: null };
@@ -153,8 +153,8 @@ export default noop.memo(
           const result = HapticUtils.triggerHapticFeedback(HapticUtils.HapticFeedbackTypes.IMPACT_MEDIUM);
           onPress();
         }, items);
-        const intl = onPress(1128).intl;
-        const tmp10 = _modDef4085;
+        const intl = onPress(1125).intl;
+        const tmp10 = _modDef4086;
         if (isCollapsed) {
           let FKLBbW = tmp10.NuTbB9;
           let tmp11 = importDefault;
@@ -165,7 +165,7 @@ export default noop.memo(
         obj3.accessibilityLabel = intl.string(FKLBbW);
         obj3.onPress = callback;
         const items1 = [closure_7(closure_6, { style: tmp3.surface, pointerEvents: "none" })];
-        const obj = onPress(18150);
+        const obj = onPress(18184);
         const obj4 = { style: tmp3.surface, pointerEvents: "none" };
         items1[1] = closure_7(ChevronSmallUpIcon, { size: "sm", color: tmp11(587).colors.INTERACTIVE_ICON_DEFAULT });
         obj3.children = items1;

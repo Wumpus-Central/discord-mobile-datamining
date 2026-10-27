@@ -14,7 +14,7 @@ function getRoleId(id) {
 function getRoleName(name) {
   return name.name;
 }
-const isEveryoneRole = fn(4878).isEveryoneRole;
+const isEveryoneRole = fn(4879).isEveryoneRole;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -80,9 +80,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return !closure_1_4(guildId);
             }
           }
-          const stringResult = obj3.string(tmp(1128).t["LPJmL/"]);
-          const intl = tmp(1128).intl;
-          const stringResult1 = intl.string(tmp(1128).t.aFO1I6);
+          const stringResult = obj3.string(tmp(1125).t["LPJmL/"]);
+          const intl = tmp(1125).intl;
+          const stringResult1 = intl.string(tmp(1125).t.aFO1I6);
           cResult[7] = stringResult;
           cResult[8] = stringResult1;
           let tmp13 = stringResult1;
@@ -155,17 +155,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onSave: null,
       };
       const obj = guildId(504);
-      const intl = guildId(1128).intl;
-      obj2.title = intl.string(guildId(1128).t["LPJmL/"]);
-      const intl2 = guildId(1128).intl;
-      obj2.searchPlaceholder = intl2.string(guildId(1128).t.aFO1I6);
+      const intl = guildId(1125).intl;
+      obj2.title = intl.string(guildId(1125).t["LPJmL/"]);
+      const intl2 = guildId(1125).intl;
+      obj2.searchPlaceholder = intl2.string(guildId(1125).t.aFO1I6);
       obj2.items = memo;
       obj2.initialSelected = exemptRoles;
       obj2.getId = getRoleId;
       obj2.getSearchText = getRoleName;
       obj2.renderLabel = renderRoleName;
       obj2.onSave = onSave;
-      return jsx(stateFromStores(19046), {
+      return jsx(stateFromStores(19084), {
         title: null,
         searchPlaceholder: null,
         listId: "automod-exempt-roles",

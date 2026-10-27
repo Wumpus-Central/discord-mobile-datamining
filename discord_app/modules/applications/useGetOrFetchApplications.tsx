@@ -8,7 +8,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import ApplicationStore from "ApplicationStore.tsx";
 
 require = fn;
-const NOOP = fn(1087).NOOP;
+const NOOP = fn(1084).NOOP;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGetOrFetchApplications(current, arg1) {

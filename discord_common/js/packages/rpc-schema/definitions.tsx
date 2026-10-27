@@ -2184,10 +2184,12 @@ export const RPCCommandSchemas = {
     },
   },
   [helpers.RPCCommand.OPEN_USER_PROFILE]: {
+    embeddedAppSDK: true,
     request(string) {
       const obj = { user_id: null };
       const stringResult = string.string();
-      obj.user_id = string.string().max(64).required();
+      const maxResult = string.string().max(64);
+      obj.user_id = string.string().max(64).required().meta({ className: "UserId" });
       return obj;
     },
     response(boolean) {
@@ -2494,7 +2496,11 @@ export const RPCCommandSchemas = {
       return obj;
     },
   },
-  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "context", response: "add" },
+  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: {
+    embeddedAppSDK: true,
+    request: "unicodeVersion",
+    response: "applicationId",
+  },
   [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

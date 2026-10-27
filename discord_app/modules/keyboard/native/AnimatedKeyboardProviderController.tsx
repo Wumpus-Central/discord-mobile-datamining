@@ -1,6 +1,6 @@
 // discord_app/modules/keyboard/native/AnimatedKeyboardProviderController.tsx
 import c from "../../../../_runtime/00576_c.js";
-import KeyboardChatScrollView from "../../../../_runtime/01647_KeyboardChatScrollView.js";
+import KeyboardChatScrollView from "../../../../_runtime/01644_KeyboardChatScrollView.js";
 import ReanimatedRexport2 from "../../reanimated/ReanimatedRexport.tsx";
 import KeyboardPreloadExperiment2 from "KeyboardPreloadExperiment.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -8,10 +8,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c2, jsxs: c3 } = jsxProd);
-let ReanimatedRexport = fn(5052);
+let ReanimatedRexport = fn(5053);
 const mutable = ReanimatedRexport.makeMutable(0);
-ReanimatedRexport = fn(5052);
-const mutable1 = ReanimatedRexport.makeMutable(fn(5052).KeyboardState.UNKNOWN);
+ReanimatedRexport = fn(5053);
+const mutable1 = ReanimatedRexport.makeMutable(fn(5053).KeyboardState.UNKNOWN);
 fn(558);
 const __initData = {
   code: "function AnimatedKeyboardProviderControllerTsx1(e){const{animatedKeyboardState,KeyboardState}=this.__closure;animatedKeyboardState.set(e.height===0?KeyboardState.CLOSED:KeyboardState.OPEN);}",

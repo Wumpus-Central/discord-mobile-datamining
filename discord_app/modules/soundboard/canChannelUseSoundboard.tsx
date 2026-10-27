@@ -6,7 +6,7 @@ import SelectedChannelStore from "../../stores/SelectedChannelStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypesSets: hasOwnProperty, Permissions: metroRequire } = Constants);
 const ReactCompilerGating = fn(558);
 function canChannelUseSoundboard(type) {

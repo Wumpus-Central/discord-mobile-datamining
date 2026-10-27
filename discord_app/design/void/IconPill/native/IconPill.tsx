@@ -9,7 +9,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   pillContainer: {
     flexDirection: "row",
@@ -33,7 +33,7 @@ let obj3 = {
 obj2.pillIcon = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4 };
 let obj4 = { tintColor: nativeDefault.colors.TEXT_SUBTLE, marginRight: 4 };
 obj2.pillText = {
-  fontFamily: fn(1098).Fonts.PRIMARY_NORMAL,
+  fontFamily: fn(1095).Fonts.PRIMARY_NORMAL,
   color: nativeDefault.colors.TEXT_SUBTLE,
   fontSize: 14,
   lineHeight: 18,
@@ -41,7 +41,7 @@ obj2.pillText = {
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj5 = {
-  fontFamily: fn(1098).Fonts.PRIMARY_NORMAL,
+  fontFamily: fn(1095).Fonts.PRIMARY_NORMAL,
   color: nativeDefault.colors.TEXT_SUBTLE,
   fontSize: 14,
   lineHeight: 18,

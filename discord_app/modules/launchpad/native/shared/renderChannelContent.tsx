@@ -11,12 +11,12 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const SUBTITLE_OPACITY_NORMAL = fn(11953).SUBTITLE_OPACITY_NORMAL;
-const UnreadSetting = fn(6705).UnreadSetting;
+const SUBTITLE_OPACITY_NORMAL = fn(11954).SUBTITLE_OPACITY_NORMAL;
+const UnreadSetting = fn(6706).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
-let PlatformUtils = fn(1384);
+const createStyles = fn(4972);
+let PlatformUtils = fn(1381);
 let num = -1;
 if (PlatformUtils.isIOS()) {
   num = 2;
@@ -31,7 +31,7 @@ let obj3 = {
   channelTraitIcon: null,
 };
 let obj4 = { opacity: SUBTITLE_OPACITY_NORMAL, marginRight: 4, marginTop: null };
-PlatformUtils = fn(1384);
+PlatformUtils = fn(1381);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;

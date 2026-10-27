@@ -7,7 +7,7 @@ import subscribeToKeyboardUIStore from "../../keyboard/native/subscribeToKeyboar
 const require = globalThis.__r;
 
 require = fn;
-const VoiceMessagesUIStore = fn(13062);
+const VoiceMessagesUIStore = fn(13076);
 ({
   hideVoiceMessagesTooltip: closure_4,
   showVoiceMessagesTooltip: hasOwnProperty,
@@ -33,8 +33,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp6 = closure_6(first);
       _require = tmp6;
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t["hP6+07"]);
+        const intl = tmp(1125).intl;
+        const stringResult = intl.string(tmp(1125).t["hP6+07"]);
         cResult[1] = stringResult;
         let tmp7 = stringResult;
       } else {

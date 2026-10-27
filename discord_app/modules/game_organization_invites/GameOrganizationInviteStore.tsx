@@ -45,6 +45,9 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
     const obj = {
       code: invite.code,
       state: constants.RESOLVED,
+      inviterId: invite.inviter_id,
+      accepted: invite.accepted,
+      guildId: invite.guild.id,
       organization: fromServerGameOrganization.fromServerGameOrganization(game_organization),
       application: null,
       displayNoun: null,
@@ -77,6 +80,24 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
       const _Map = Map;
       map = new Map(map);
       const obj = { code, state: tmp3.ERROR, error: code.error };
+      const result = map.set(code, obj);
+    }
+  },
+  GAME_ORGANIZATION_INVITE_ACCEPT_SUCCESS: function handleAcceptSuccess(code) {
+    code = code.code;
+    value = map.get(code);
+    let state;
+    if (value != null) {
+      state = value.state;
+    }
+    if (state !== constants.RESOLVED) {
+      return false;
+    } else {
+      const _Map = Map;
+      map = new Map(map);
+      const obj = {};
+      const merged = Object.assign(value);
+      obj.accepted = true;
       const result = map.set(code, obj);
     }
   },

@@ -10,10 +10,10 @@ import PresenceStore from "../../../stores/PresenceStore.tsx";
 import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import VoiceStateStore from "../../../stores/VoiceStateStore.tsx";
 
-const util = v0wJXSh(1128);
-const VoiceActivityStatus = v0wJXSh(10653);
+const util = v0wJXSh(1125);
+const VoiceActivityStatus = v0wJXSh(10656);
 require = fn;
-const ActivityTypes = fn(1087).ActivityTypes;
+const ActivityTypes = fn(1084).ActivityTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/useActivityStatusLabel.tsx");

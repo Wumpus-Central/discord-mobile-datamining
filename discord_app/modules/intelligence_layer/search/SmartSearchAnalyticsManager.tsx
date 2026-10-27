@@ -34,7 +34,7 @@ function getCitationCompositionProperties(citations) {
     citation_message_ids: items2,
   };
 }
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const re5 = /\s+/;
 class SmartSearchAnalyticsManager {
   constructor() {

@@ -7,9 +7,9 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsx = fn(21).jsx;
-let items = [fn(4807).DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
+let items = [fn(4808).DismissibleContent.MOBILE_ACCESSIBILITY_COLOR_SETTINGS];
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -59,12 +59,12 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp5;
     };
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function usePreNavigationAction() {
       const cResult = first(576).c(3);
       const obj = first(576);
-      let tmp2 = _slicedToArray(first(7496).useSelectedDismissibleContent(items), 2);
+      let tmp2 = _slicedToArray(first(7497).useSelectedDismissibleContent(items), 2);
       first = tmp2[0];
       dependencyMap = tmp4;
       if (cResult[0] === tmp2[1]) {
@@ -93,7 +93,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       tmp5 = fn;
     }
   : function usePreNavigationAction() {
-      const tmp = _slicedToArray(first(7496).useSelectedDismissibleContent(items), 2);
+      const tmp = _slicedToArray(first(7497).useSelectedDismissibleContent(items), 2);
       first = tmp[0];
       dependencyMap = tmp3;
       items = [tmp[1], first];
@@ -118,13 +118,13 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.G0neg7);
   },
   parent: null,
-  IconComponent: fn(16686).AccessibilityIcon,
+  IconComponent: fn(16728).AccessibilityIcon,
   useTrailing: tmp2,
   usePreNavigationAction: ReactCompilerGating.isReactCompilerEnabled()
     ? function usePreNavigationAction() {
         const cResult = first(576).c(3);
         const obj = first(576);
-        let tmp2 = _slicedToArray(first(7496).useSelectedDismissibleContent(items), 2);
+        let tmp2 = _slicedToArray(first(7497).useSelectedDismissibleContent(items), 2);
         first = tmp2[0];
         dependencyMap = tmp4;
         if (cResult[0] === tmp2[1]) {
@@ -153,7 +153,7 @@ const route = SettingBuilders.createRoute({
         tmp5 = fn;
       }
     : function usePreNavigationAction() {
-        const tmp = _slicedToArray(first(7496).useSelectedDismissibleContent(items), 2);
+        const tmp = _slicedToArray(first(7497).useSelectedDismissibleContent(items), 2);
         first = tmp[0];
         dependencyMap = tmp3;
         items = [tmp[1], first];
@@ -173,7 +173,7 @@ const route = SettingBuilders.createRoute({
         }, items);
       },
   screen: {
-    route: fn(1087).UserSettingsSections.ACCESSIBILITY,
+    route: fn(1084).UserSettingsSections.ACCESSIBILITY,
     getComponent() {
       return require("SettingsAccessibilityScreen").default;
     },

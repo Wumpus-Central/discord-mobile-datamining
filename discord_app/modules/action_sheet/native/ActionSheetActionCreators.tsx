@@ -21,7 +21,7 @@ export default {
     } else {
       nextPromise = promise();
     }
-    nextPromise.then((result) => {
+    return nextPromise.then((result) => {
       let obj = closure_1;
       if (closure_1 == null) {
         obj = {};

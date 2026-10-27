@@ -1,7 +1,7 @@
 // discord_app/modules/guild_scheduled_events/native/GuildScheduledEventModalActionCreators.tsx
 import _modDef38 from "../../../../_runtime/metro/00038__.js";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ToastUtils from "../../toast/native/ToastUtils.tsx";
 import ToastActionCreatorsDefault from "../../toast/native/ToastActionCreators.tsx";
@@ -106,17 +106,17 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
     }
   }
 };
-let GuildScheduledEventStore = fn(6784);
+let GuildScheduledEventStore = fn(6785);
 ({ isGuildEventEnded: closure_9, isGuildScheduledEventActive: c10 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-let closure_12 = fn(4829).GuildScheduledEventUserResponses;
+let closure_12 = fn(4830).GuildScheduledEventUserResponses;
 const GuildEventModalConstants = fn(8884);
 ({
   CREATE_GUILD_EVENT_MODAL_KEY: map1,
   GUILD_EVENTS_LIST_ACTION_SHEET_KEY: closure_14,
   START_EVENT_MODAL_KEY: closure_15,
 } = GuildEventModalConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ InstantInviteSources: closure_16, Permissions: closure_17, Routes: closure_18 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -379,7 +379,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
                 "stack",
               );
             },
-            onRsvp: "k",
+            onRsvp: "applicationId",
           });
         },
       };

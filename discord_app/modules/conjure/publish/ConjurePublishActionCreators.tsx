@@ -383,7 +383,7 @@ function reloadAfterPublish(application_id, arg1, integrationInstalled) {
     const result1 = ConjurePreviewActionCreators.reloadConjureAppFrames(application_id);
   }
 }
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/ConjurePublishActionCreators.tsx");
 

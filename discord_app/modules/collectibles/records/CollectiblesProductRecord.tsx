@@ -5,11 +5,11 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7654);
+const CollectiblesItemRecord = fn(7655);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } =
   CollectiblesItemRecord);
-let closure_7 = fn(1089).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
-const Constants = fn(1087);
+let closure_7 = fn(1086).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
+const Constants = fn(1084);
 ({ PREMIUM_TYPE_NONE: closure_8, PriceSetAssignmentPurchaseTypes: closure_9 } = Constants);
 let CollectiblesProductRecord;
 class CollectiblesProductRecord extends tmp3 {
@@ -261,16 +261,16 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
                 type: "Array",
                 premiumType: "IconComponent",
                 items: "/assets/images/platforms",
-                categorySkuId: 256,
-                categoryWillUnpublishAt: 256,
+                categorySkuId: 255,
+                categoryWillUnpublishAt: 255,
                 isCategoryReward: null,
-                prices: "08e89c7c23b84c36ce6ed8da12dbbbbb",
-                previewAssets: "img_bungie_light",
+                prices: "72952773756d8776abb1f02e0c8ab235",
+                previewAssets: "img_account_sync_battlenet_light_and_dark",
                 googleSkuIds: "png",
-                eligibleOffers: "<string:2432697159>",
-                variants: "<string:100663978>",
-                bundledProducts: "<string:1493172907>",
-                isFirstParty: "<string:2852127406>",
+                eligibleOffers: true,
+                variants: "/assets/images/platforms",
+                bundledProducts: 255,
+                isFirstParty: 255,
               };
               let str;
               if (first != null) {

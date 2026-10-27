@@ -28,14 +28,14 @@ import UserRequiredActionStore from "../../../stores/UserRequiredActionStore.tsx
 const require = globalThis.__r;
 
 require = fn;
-const PremiumConstants = fn(1394);
+const PremiumConstants = fn(1391);
 ({
   PREMIUM_TIER_0_LIKELIHOOD_TRIAL_ID,
   PREMIUM_TIER_2_HFU_TWO_WEEK_TRIAL_ID,
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID,
   PREMIUM_TIER_2_REACTIVATION_TRIAL_ID,
 } = PremiumConstants);
-const UserSettingsTypes = fn(1097).UserSettingsTypes;
+const UserSettingsTypes = fn(1094).UserSettingsTypes;
 const MainViewTooltipActionSheets = "MainViewTooltipActionSheets";
 let items = [
   PREMIUM_TIER_2_LIKELIHOOD_TRIAL_ID,

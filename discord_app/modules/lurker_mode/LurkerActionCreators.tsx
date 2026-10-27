@@ -70,7 +70,7 @@ let closure_8 = async function _stopLurkingAll() {
                           _null = null;
                         }
                         closure_130_1 = _null;
-                        const HTTP = closure_0(1297).HTTP;
+                        const HTTP = closure_0(1294).HTTP;
                         const request = {
                           url: closure_2_6.GUILD_LEAVE(closure_0),
                           body: { lurking: true },
@@ -164,7 +164,7 @@ let closure_9 = async function _stopLurking() {
   closure_129_0 = tmp19;
   return "Reflect";
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/lurker_mode/LurkerActionCreators.tsx");
 

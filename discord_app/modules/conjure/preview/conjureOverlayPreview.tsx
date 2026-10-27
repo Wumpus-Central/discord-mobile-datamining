@@ -17,26 +17,6 @@ export const previewSupportsOverlay = function previewSupportsOverlay(preview_su
   }
   return true === hasItem;
 };
-export const latestOverlayWidgetDeclaration = function latestOverlayWidgetDeclaration(arg0) {
-  let overlay_widget;
-  let diff = arg0.length - 1;
-  if (0 <= diff) {
-    while (true) {
-      let proposal = arg0[diff].proposal;
-      overlay_widget = undefined;
-      if (proposal != null) {
-        overlay_widget = proposal.overlay_widget;
-      }
-      if (null != overlay_widget) {
-        break;
-      } else {
-        diff = diff - 1;
-      }
-    }
-    return overlay_widget;
-  }
-  return null;
-};
 export const overlayWidgetPreviewSize = function overlayWidgetPreviewSize(overlay_widget) {
   let default_size;
   if (overlay_widget != null) {
@@ -79,4 +59,36 @@ export const overlayWidgetPreviewScale = function overlayWidgetPreviewScale(arg0
     }
   }
   return num;
+};
+export const previewOverlayWidgetSize = function previewOverlayWidgetSize(preview_overlay_widget) {
+  let prop;
+  if (preview_overlay_widget != null) {
+    prop = preview_overlay_widget.preview_overlay_widget;
+  }
+  if (prop == null) {
+    prop = null;
+  }
+  let default_size;
+  if (prop != null) {
+    default_size = prop.default_size;
+  }
+  let isFiniteResult = null != default_size;
+  if (isFiniteResult) {
+    const _Number = Number;
+    isFiniteResult = Number.isFinite(default_size.width);
+  }
+  if (isFiniteResult) {
+    const _Number2 = Number;
+    isFiniteResult = Number.isFinite(default_size.height);
+  }
+  if (isFiniteResult) {
+    isFiniteResult = default_size.width > 0;
+  }
+  if (isFiniteResult) {
+    isFiniteResult = default_size.height > 0;
+  }
+  if (!isFiniteResult) {
+    default_size = size;
+  }
+  return default_size;
 };

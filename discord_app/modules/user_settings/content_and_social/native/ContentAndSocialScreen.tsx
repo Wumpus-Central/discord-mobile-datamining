@@ -158,11 +158,11 @@ function getSocialPermissions(allServersSelected) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const MobileUserSettings = fn(8332).MobileUserSettings;
-const HelpdeskArticles = fn(1087).HelpdeskArticles;
+const MobileUserSettings = fn(8331).MobileUserSettings;
+const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { loadingIndicator: { marginTop: nativeDefault.space.PX_32 }, emptyContainer: null };
 let obj3 = { marginTop: nativeDefault.space.PX_32 };
 obj2.emptyContainer = {
@@ -439,11 +439,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const first1 = _slicedToArray(noop.useState(tmp7), 1)[0];
       if (cResult[3] !== first1) {
         const obj2 = { defaultIndex: first1, settings: first };
-        const segmentedControl = route(11209).createSegmentedControl(obj2);
+        const segmentedControl = route(11212).createSegmentedControl(obj2);
         cResult[3] = first1;
         cResult[4] = segmentedControl;
         let tmp10 = segmentedControl;
-        const tmpResult = route(11209);
+        const tmpResult = route(11212);
       } else {
         tmp10 = cResult[4];
       }

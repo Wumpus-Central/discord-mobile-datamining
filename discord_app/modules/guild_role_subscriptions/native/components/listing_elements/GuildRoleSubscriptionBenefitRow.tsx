@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_7 = createStyles.createStyles({
   container: { flexDirection: "row", justifyContent: "flex-start" },
   textContainer: { flex: 1, justifyContent: "center" },
@@ -158,10 +158,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp10 = useChannelNameDefault(stateFromStores);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-        const intl = tmp(1128).intl;
+        const intl = tmp(1125).intl;
         const _HermesInternal = HermesInternal;
-        obj2.children = "[" + intl.string(tmp(1128).t.bz1PZX) + "]";
-        const tmp13 = closure_5(tmp(5234).Text, obj2);
+        obj2.children = "[" + intl.string(tmp(1125).t.bz1PZX) + "]";
+        const tmp13 = closure_5(tmp(5235).Text, obj2);
         cResult[4] = tmp13;
         let tmp11 = tmp13;
       } else {
@@ -217,7 +217,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[10] !== tmp10) {
             const obj4 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp10 };
-            const tmp21 = closure_5(tmp(5234).Text, obj4);
+            const tmp21 = closure_5(tmp(5235).Text, obj4);
             cResult[10] = tmp10;
             cResult[11] = tmp21;
             let tmp19 = tmp21;
@@ -238,8 +238,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = tmp19;
           cResult[15] = tmp25;
         }
-        const obj6 = { style: channelIcon, size: tmp(1202).Icon.Sizes.CUSTOM, source: tmp14 };
-        const tmp18 = closure_5(tmp(1202).Icon, obj6);
+        const obj6 = { style: channelIcon, size: tmp(1199).Icon.Sizes.CUSTOM, source: tmp14 };
+        const tmp18 = closure_5(tmp(1199).Icon, obj6);
         cResult[7] = channelTitle.channelIcon;
         cResult[8] = tmp14;
         cResult[9] = tmp18;
@@ -259,19 +259,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
       );
       const obj = benefit(504);
       const obj2 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
-      const intl = benefit(1128).intl;
-      obj2.children = "[" + intl.string(benefit(1128).t.bz1PZX) + "]";
-      let tmp8 = closure_5(benefit(5234).Text, obj2);
+      const intl = benefit(1125).intl;
+      obj2.children = "[" + intl.string(benefit(1125).t.bz1PZX) + "]";
+      let tmp8 = closure_5(benefit(5235).Text, obj2);
       if (null != stateFromStores) {
         const obj3 = { style: tmp.channelTitle, children: null };
         const obj4 = {
           style: tmp.channelIcon,
-          size: tmp2(1202).Icon.Sizes.CUSTOM,
+          size: tmp2(1199).Icon.Sizes.CUSTOM,
           source: tmp2(8502).getChannelIcon(stateFromStores),
         };
-        const items2 = [closure_5(tmp2(1202).Icon, obj4)];
+        const items2 = [closure_5(tmp2(1199).Icon, obj4)];
         const obj5 = { variant: "text-md/medium", color: "mobile-text-heading-primary", children: tmp6 };
-        items2[1] = closure_5(tmp2(5234).Text, obj5);
+        items2[1] = closure_5(tmp2(5235).Text, obj5);
         obj3.children = items2;
         tmp8 = closure_6(View, obj3);
         const tmp2Result = tmp2(8502);

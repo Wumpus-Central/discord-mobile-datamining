@@ -14,7 +14,7 @@ import GuildStore from "../../stores/GuildStore.tsx";
 import GuildSettingsStore from "GuildSettingsStore.tsx";
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({
   Endpoints: c10,
   Layers,
@@ -278,7 +278,7 @@ let body = {
     obj(584).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = GuildSettingsStore.getPendingOriginalMd5s();
     const obj5 = obj(584);
-    const obj6 = obj(7079);
+    const obj6 = obj(7081);
     const headersForMd5 = obj6.buildHeadersForMd5({
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon,
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner,
@@ -430,7 +430,7 @@ let body = {
               closure_128_0 = undefined;
               const isLurkingResult = lurking.isLurking(tmp2);
               closure_128_0 = isLurkingResult;
-              const HTTP = tmp2(1297).HTTP;
+              const HTTP = tmp2(1294).HTTP;
               const request = {
                 url: closure_1_10.GUILD_LEAVE(tmp2),
                 body: null,
@@ -443,15 +443,15 @@ let body = {
               }
               const obj5 = { lurking: isCurrentUserGuestResult };
               request.body = obj5;
-              request.rejectWithError = tmp2(1297).rejectWithMigratedError();
-              const obj4 = tmp2(1297);
+              request.rejectWithError = tmp2(1294).rejectWithMigratedError();
+              const obj4 = tmp2(1294);
               dependencyMap = 1;
               c3 = 1;
               const obj6 = {
                 value: HTTP.del(request).then(() => {
-                  const AccessibilityAnnouncer = closure_1_0(4979).AccessibilityAnnouncer;
-                  const intl = closure_1_0(1128).intl;
-                  AccessibilityAnnouncer.announce(intl.string(closure_1_0(1128).t["7iPyVW"]));
+                  const AccessibilityAnnouncer = closure_1_0(4980).AccessibilityAnnouncer;
+                  const intl = closure_1_0(1125).intl;
+                  AccessibilityAnnouncer.announce(intl.string(closure_1_0(1125).t["7iPyVW"]));
                 }),
                 done: false,
               };
@@ -471,8 +471,8 @@ let body = {
               tmp10 = closure_128_0;
             }
             if (tmp10) {
-              tmp2(1114).transitionTo(constants.GUILD_DISCOVERY);
-              const obj = tmp2(1114);
+              tmp2(1111).transitionTo(constants.GUILD_DISCOVERY);
+              const obj = tmp2(1111);
             }
             c3 = 3;
             return { value: "IconComponent", done: null };
@@ -645,7 +645,7 @@ let body = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1297).HTTP;
+              const HTTP = v3(1294).HTTP;
               const obj4 = { url: closure_1_10.GUILD_MIGRATE_PIN_PERMISSION(guildId), rejectWithError: true };
               c1 = 1;
               v3 = 1;
@@ -702,7 +702,7 @@ let body = {
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              const HTTP = v3(1297).HTTP;
+              const HTTP = v3(1294).HTTP;
               const obj4 = { url: closure_1_10.GUILD_MIGRATE_SLOWMODE_PERMISSION(guildId), rejectWithError: true };
               c1 = 1;
               v3 = 1;

@@ -9,7 +9,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/native/server/transports/WebViewPostMessageTransport.tsx");
 
 export default new PostMessageTransport(
-  fn(11478).validateSocketClient,
+  fn(11481).validateSocketClient,
   new LoggerDefault("RPCServer:PostMessage"),
   WebViewWindowProxySocketFactoryDefault,
   (arg0, info, id) => {

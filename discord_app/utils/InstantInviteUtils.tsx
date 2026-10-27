@@ -89,8 +89,8 @@ function addDmUsers(arg0) {
     continue;
   }
 }
-const ChannelTypes = fn(1087).ChannelTypes;
-const InviteTargetTypes = fn(7809).InviteTargetTypes;
+const ChannelTypes = fn(1084).ChannelTypes;
+const InviteTargetTypes = fn(7810).InviteTargetTypes;
 const RowTypes = { GROUP_DM: "GROUP_DM", DM: "DM", FRIEND: "FRIEND", CHANNEL: "CHANNEL" };
 const minutes = "minutes";
 const hours = "hours";
@@ -297,7 +297,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       importDefault = undefined;
       ({ rows: c0, counts: c1 } = obj10);
       if (obj10.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
-        const obj12 = { query: tmp44, limit: 3, guildId: "__initData" };
+        const obj12 = { query: tmp44, limit: 3, guildId: "__packager_asset" };
         let item = AutocompleteUtilsDefault.queryChannels(obj12).forEach((record) => {
           obj = { type: obj.CHANNEL, item: record.record, isSuggested: false, score: record.score };
           _undefined.push(obj);

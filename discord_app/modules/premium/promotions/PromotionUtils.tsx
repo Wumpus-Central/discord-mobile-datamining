@@ -128,8 +128,8 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
     }
   }
 };
-const PromotionFlags = fn(1394).PromotionFlags;
-const Constants = fn(1087);
+const PromotionFlags = fn(1391).PromotionFlags;
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: c10 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionUtils.tsx");

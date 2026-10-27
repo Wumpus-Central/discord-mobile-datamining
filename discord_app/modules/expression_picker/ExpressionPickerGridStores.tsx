@@ -1,6 +1,6 @@
 // discord_app/modules/expression_picker/ExpressionPickerGridStores.tsx
-import identity_mod from "../../../_runtime/metro/01269__.js";
-import module_5164_mod from "../../../_runtime/metro/05164__.js";
+import identity_mod from "../../../_runtime/metro/01266__.js";
+import module_5165_mod from "../../../_runtime/metro/05165__.js";
 import size from "../../../_runtime/metro/00002__.js";
 
 let closure_2 = Object.freeze({
@@ -13,8 +13,8 @@ let closure_2 = Object.freeze({
 });
 let identity = identity_mod;
 identity = identity.createWithEqualityFn();
-let module_5164 = module_5164_mod;
-let withEqualityFnResult = identity(module_5164.subscribeWithSelector(() => closure_1_2));
+let module_5165 = module_5165_mod;
+let withEqualityFnResult = identity(module_5165.subscribeWithSelector(() => closure_1_2));
 let store = {
   useStore: withEqualityFnResult,
   getState() {
@@ -24,26 +24,26 @@ let store = {
     return withEqualityFnResult.subscribe(arg0, arg1);
   },
   setInspectedExpressionPosition(columnIndex, rowIndex, source) {
-    withEqualityFnResult(1274).batchUpdates(() => {
+    withEqualityFnResult(1271).batchUpdates(() => {
       const obj = { inspectedExpressionPosition: { rowIndex, columnIndex, source }, hasInteracted: true };
       return withEqualityFnResult.setState(obj);
     });
   },
   setActiveCategoryIndex(activeCategoryIndex) {
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ activeCategoryIndex }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ activeCategoryIndex }));
   },
   setSearchPlaceholder(searchPlaceholder) {
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ searchPlaceholder }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ searchPlaceholder }));
   },
   resetStoreState() {
-    withEqualityFnResult(1274).batchUpdates(() => state.setState(closure_2_2));
+    withEqualityFnResult(1271).batchUpdates(() => state.setState(closure_2_2));
   },
   setBottomPosition(bottomPosition) {
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ bottomPosition }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ bottomPosition }));
   },
   setAnalyticsId(replaced) {
     const analyticsId = replaced;
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ analyticsId }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ analyticsId }));
   },
   getAnalyticsId() {
     return withEqualityFnResult.getState().analyticsId;
@@ -51,8 +51,8 @@ let store = {
 };
 let identity = identity_mod;
 identity = identity.createWithEqualityFn();
-let module_5164 = module_5164_mod;
-const withEqualityFn1Result = identity(module_5164.subscribeWithSelector(() => closure_1_2));
+let module_5165 = module_5165_mod;
+const withEqualityFn1Result = identity(module_5165.subscribeWithSelector(() => closure_1_2));
 const store1 = {
   useStore: withEqualityFn1Result,
   getState() {
@@ -62,26 +62,26 @@ const store1 = {
     return withEqualityFnResult.subscribe(arg0, arg1);
   },
   setInspectedExpressionPosition(columnIndex, rowIndex, source) {
-    withEqualityFnResult(1274).batchUpdates(() => {
+    withEqualityFnResult(1271).batchUpdates(() => {
       const obj = { inspectedExpressionPosition: { rowIndex, columnIndex, source }, hasInteracted: true };
       return withEqualityFnResult.setState(obj);
     });
   },
   setActiveCategoryIndex(activeCategoryIndex) {
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ activeCategoryIndex }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ activeCategoryIndex }));
   },
   setSearchPlaceholder(searchPlaceholder) {
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ searchPlaceholder }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ searchPlaceholder }));
   },
   resetStoreState() {
-    withEqualityFnResult(1274).batchUpdates(() => state.setState(closure_2_2));
+    withEqualityFnResult(1271).batchUpdates(() => state.setState(closure_2_2));
   },
   setBottomPosition(bottomPosition) {
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ bottomPosition }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ bottomPosition }));
   },
   setAnalyticsId(replaced) {
     const analyticsId = replaced;
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ analyticsId }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ analyticsId }));
   },
   getAnalyticsId() {
     return withEqualityFnResult.getState().analyticsId;
@@ -89,8 +89,8 @@ const store1 = {
 };
 let identity = identity_mod;
 identity = identity.createWithEqualityFn();
-let module_5164 = module_5164_mod;
-const withEqualityFn2Result = identity(module_5164.subscribeWithSelector(() => closure_1_2));
+let module_5165 = module_5165_mod;
+const withEqualityFn2Result = identity(module_5165.subscribeWithSelector(() => closure_1_2));
 const store2 = {
   useStore: withEqualityFn2Result,
   getState() {
@@ -100,26 +100,26 @@ const store2 = {
     return withEqualityFnResult.subscribe(arg0, arg1);
   },
   setInspectedExpressionPosition(columnIndex, rowIndex, source) {
-    withEqualityFnResult(1274).batchUpdates(() => {
+    withEqualityFnResult(1271).batchUpdates(() => {
       const obj = { inspectedExpressionPosition: { rowIndex, columnIndex, source }, hasInteracted: true };
       return withEqualityFnResult.setState(obj);
     });
   },
   setActiveCategoryIndex(activeCategoryIndex) {
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ activeCategoryIndex }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ activeCategoryIndex }));
   },
   setSearchPlaceholder(searchPlaceholder) {
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ searchPlaceholder }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ searchPlaceholder }));
   },
   resetStoreState() {
-    withEqualityFnResult(1274).batchUpdates(() => state.setState(closure_2_2));
+    withEqualityFnResult(1271).batchUpdates(() => state.setState(closure_2_2));
   },
   setBottomPosition(bottomPosition) {
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ bottomPosition }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ bottomPosition }));
   },
   setAnalyticsId(replaced) {
     const analyticsId = replaced;
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ analyticsId }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ analyticsId }));
   },
   getAnalyticsId() {
     return withEqualityFnResult.getState().analyticsId;
@@ -127,8 +127,8 @@ const store2 = {
 };
 let identity = identity_mod;
 identity = identity.createWithEqualityFn();
-let module_5164 = module_5164_mod;
-const withEqualityFn3Result = identity(module_5164.subscribeWithSelector(() => closure_1_2));
+let module_5165 = module_5165_mod;
+const withEqualityFn3Result = identity(module_5165.subscribeWithSelector(() => closure_1_2));
 let c0 = withEqualityFn3Result;
 const store3 = {
   useStore: withEqualityFn3Result,
@@ -139,26 +139,26 @@ const store3 = {
     return withEqualityFnResult.subscribe(arg0, arg1);
   },
   setInspectedExpressionPosition(columnIndex, rowIndex, source) {
-    withEqualityFnResult(1274).batchUpdates(() => {
+    withEqualityFnResult(1271).batchUpdates(() => {
       const obj = { inspectedExpressionPosition: { rowIndex, columnIndex, source }, hasInteracted: true };
       return withEqualityFnResult.setState(obj);
     });
   },
   setActiveCategoryIndex(activeCategoryIndex) {
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ activeCategoryIndex }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ activeCategoryIndex }));
   },
   setSearchPlaceholder(searchPlaceholder) {
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ searchPlaceholder }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ searchPlaceholder }));
   },
   resetStoreState() {
-    withEqualityFnResult(1274).batchUpdates(() => state.setState(closure_2_2));
+    withEqualityFnResult(1271).batchUpdates(() => state.setState(closure_2_2));
   },
   setBottomPosition(bottomPosition) {
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ bottomPosition }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ bottomPosition }));
   },
   setAnalyticsId(replaced) {
     const analyticsId = replaced;
-    withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ analyticsId }));
+    withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ analyticsId }));
   },
   getAnalyticsId() {
     return withEqualityFnResult.getState().analyticsId;
@@ -167,9 +167,9 @@ const store3 = {
 const result = size.fileFinishedImporting("modules/expression_picker/ExpressionPickerGridStores.tsx");
 
 export default function createStore() {
-  const withEqualityFn = _undefined(1269).createWithEqualityFn();
-  let obj = _undefined(1269);
-  const withEqualityFnResult = withEqualityFn(_undefined(5164).subscribeWithSelector(() => closure_1_2));
+  const withEqualityFn = _undefined(1266).createWithEqualityFn();
+  let obj = _undefined(1266);
+  const withEqualityFnResult = withEqualityFn(_undefined(5165).subscribeWithSelector(() => closure_1_2));
   _undefined = withEqualityFnResult;
   const store = {
     useStore: withEqualityFnResult,
@@ -180,26 +180,26 @@ export default function createStore() {
       return withEqualityFnResult.subscribe(arg0, arg1);
     },
     setInspectedExpressionPosition(columnIndex, rowIndex, source) {
-      withEqualityFnResult(1274).batchUpdates(() => {
+      withEqualityFnResult(1271).batchUpdates(() => {
         const obj = { inspectedExpressionPosition: { rowIndex, columnIndex, source }, hasInteracted: true };
         return withEqualityFnResult.setState(obj);
       });
     },
     setActiveCategoryIndex(activeCategoryIndex) {
-      withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ activeCategoryIndex }));
+      withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ activeCategoryIndex }));
     },
     setSearchPlaceholder(searchPlaceholder) {
-      withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ searchPlaceholder }));
+      withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ searchPlaceholder }));
     },
     resetStoreState() {
-      withEqualityFnResult(1274).batchUpdates(() => state.setState(closure_2_2));
+      withEqualityFnResult(1271).batchUpdates(() => state.setState(closure_2_2));
     },
     setBottomPosition(bottomPosition) {
-      withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ bottomPosition }));
+      withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ bottomPosition }));
     },
     setAnalyticsId(replaced) {
       const analyticsId = replaced;
-      withEqualityFnResult(1274).batchUpdates(() => withEqualityFnResult.setState({ analyticsId }));
+      withEqualityFnResult(1271).batchUpdates(() => withEqualityFnResult.setState({ analyticsId }));
     },
     getAnalyticsId() {
       return withEqualityFnResult.getState().analyticsId;

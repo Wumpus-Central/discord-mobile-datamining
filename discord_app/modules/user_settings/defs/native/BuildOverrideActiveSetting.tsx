@@ -2,7 +2,7 @@
 import initialize from "../../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef2145 from "../../dev_tools/UserSettingsDevTools.messages.js";
+import _modDef2142 from "../../dev_tools/UserSettingsDevTools.messages.js";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import build_overrides_BuildOverrideUtils from "../../../build_overrides/native/BuildOverrideUtils.tsx";
@@ -58,7 +58,7 @@ ReactCompilerGating = fn(558);
 function useHasBuildOverrideActive() {
   return null != closure_7();
 }
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useBuildOverrideActiveDescription() {
       const cResult = c.c(3);
@@ -76,7 +76,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { label: null, value: null };
         const intl = util.intl;
         const _HermesInternal = HermesInternal;
-        obj3.label = "" + intl.string(_modDef2145.d11XdP) + " ";
+        obj3.label = "" + intl.string(_modDef2142.d11XdP) + " ";
         obj3.value = tmp4.id;
         const items = [React4(DevToolsContent.DevToolsContentSubLabel, obj3), ,];
         const obj4 = { text: null, variant: "secondary", onPress: null };
@@ -88,7 +88,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (staffOrDeveloperSettingPredicate) {
           const obj5 = { text: null, variant: "secondary", onPress: null };
           const intl3 = util.intl;
-          obj5.text = intl3.string(_modDef2145.VBPcR9);
+          obj5.text = intl3.string(_modDef2142.VBPcR9);
           obj5.onPress = handleBuildOverrideActivePress;
           tmp9Result = React4(components_Button_Button.Button, obj5);
         }
@@ -111,7 +111,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { label: null, value: null };
         const intl = util.intl;
         const _HermesInternal = HermesInternal;
-        obj2.label = "" + intl.string(_modDef2145.d11XdP) + " ";
+        obj2.label = "" + intl.string(_modDef2142.d11XdP) + " ";
         obj2.value = tmp.id;
         const items = [React4(DevToolsContent.DevToolsContentSubLabel, obj2), ,];
         const obj3 = { text: null, variant: "secondary", onPress: null };
@@ -123,7 +123,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
         if (staffOrDeveloperSettingPredicate) {
           const obj4 = { text: null, variant: "secondary", onPress: null };
           const intl3 = util.intl;
-          obj4.text = intl3.string(_modDef2145.VBPcR9);
+          obj4.text = intl3.string(_modDef2142.VBPcR9);
           obj4.onPress = handleBuildOverrideActivePress;
           tmp7Result = React4(components_Button_Button.Button, obj4);
         }
@@ -137,10 +137,10 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled()
 let obj5 = {
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2145.jBvMiO);
+    return intl.string(_modDef2142.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(12270).RefreshIcon,
+  IconComponent: fn(12275).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
     ? function useBuildOverrideActiveDescription() {
         const cResult = c.c(3);
@@ -158,7 +158,7 @@ let obj5 = {
           const obj3 = { label: null, value: null };
           const intl = util.intl;
           const _HermesInternal = HermesInternal;
-          obj3.label = "" + intl.string(_modDef2145.d11XdP) + " ";
+          obj3.label = "" + intl.string(_modDef2142.d11XdP) + " ";
           obj3.value = tmp4.id;
           const items = [React4(DevToolsContent.DevToolsContentSubLabel, obj3), ,];
           const obj4 = { text: null, variant: "secondary", onPress: null };
@@ -170,7 +170,7 @@ let obj5 = {
           if (staffOrDeveloperSettingPredicate) {
             const obj5 = { text: null, variant: "secondary", onPress: null };
             const intl3 = util.intl;
-            obj5.text = intl3.string(_modDef2145.VBPcR9);
+            obj5.text = intl3.string(_modDef2142.VBPcR9);
             obj5.onPress = handleBuildOverrideActivePress;
             tmp9Result = React4(components_Button_Button.Button, obj5);
           }
@@ -193,7 +193,7 @@ let obj5 = {
           const obj2 = { label: null, value: null };
           const intl = util.intl;
           const _HermesInternal = HermesInternal;
-          obj2.label = "" + intl.string(_modDef2145.d11XdP) + " ";
+          obj2.label = "" + intl.string(_modDef2142.d11XdP) + " ";
           obj2.value = tmp.id;
           const items = [React4(DevToolsContent.DevToolsContentSubLabel, obj2), ,];
           const obj3 = { text: null, variant: "secondary", onPress: null };
@@ -205,7 +205,7 @@ let obj5 = {
           if (staffOrDeveloperSettingPredicate) {
             const obj4 = { text: null, variant: "secondary", onPress: null };
             const intl3 = util.intl;
-            obj4.text = intl3.string(_modDef2145.VBPcR9);
+            obj4.text = intl3.string(_modDef2142.VBPcR9);
             obj4.onPress = handleBuildOverrideActivePress;
             tmp7Result = React4(components_Button_Button.Button, obj4);
           }
@@ -224,10 +224,10 @@ const result1 = size.fileFinishedImporting("modules/user_settings/defs/native/Bu
 export default SettingBuilders.createStatic({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2145.jBvMiO);
+    return intl.string(_modDef2142.jBvMiO);
   },
   parent: null,
-  IconComponent: fn(12270).RefreshIcon,
+  IconComponent: fn(12275).RefreshIcon,
   useDescription: ReactCompilerGating.isReactCompilerEnabled()
     ? function useBuildOverrideActiveDescription() {
         const cResult = c.c(3);
@@ -245,7 +245,7 @@ export default SettingBuilders.createStatic({
           const obj3 = { label: null, value: null };
           const intl = util.intl;
           const _HermesInternal = HermesInternal;
-          obj3.label = "" + intl.string(_modDef2145.d11XdP) + " ";
+          obj3.label = "" + intl.string(_modDef2142.d11XdP) + " ";
           obj3.value = tmp4.id;
           const items = [React4(DevToolsContent.DevToolsContentSubLabel, obj3), ,];
           const obj4 = { text: null, variant: "secondary", onPress: null };
@@ -257,7 +257,7 @@ export default SettingBuilders.createStatic({
           if (staffOrDeveloperSettingPredicate) {
             const obj5 = { text: null, variant: "secondary", onPress: null };
             const intl3 = util.intl;
-            obj5.text = intl3.string(_modDef2145.VBPcR9);
+            obj5.text = intl3.string(_modDef2142.VBPcR9);
             obj5.onPress = handleBuildOverrideActivePress;
             tmp9Result = React4(components_Button_Button.Button, obj5);
           }
@@ -280,7 +280,7 @@ export default SettingBuilders.createStatic({
           const obj2 = { label: null, value: null };
           const intl = util.intl;
           const _HermesInternal = HermesInternal;
-          obj2.label = "" + intl.string(_modDef2145.d11XdP) + " ";
+          obj2.label = "" + intl.string(_modDef2142.d11XdP) + " ";
           obj2.value = tmp.id;
           const items = [React4(DevToolsContent.DevToolsContentSubLabel, obj2), ,];
           const obj3 = { text: null, variant: "secondary", onPress: null };
@@ -292,7 +292,7 @@ export default SettingBuilders.createStatic({
           if (staffOrDeveloperSettingPredicate) {
             const obj4 = { text: null, variant: "secondary", onPress: null };
             const intl3 = util.intl;
-            obj4.text = intl3.string(_modDef2145.VBPcR9);
+            obj4.text = intl3.string(_modDef2142.VBPcR9);
             obj4.onPress = handleBuildOverrideActivePress;
             tmp7Result = React4(components_Button_Button.Button, obj4);
           }

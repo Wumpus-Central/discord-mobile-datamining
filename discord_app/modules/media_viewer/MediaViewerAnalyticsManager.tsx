@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);
 let obj = {
   VIEWER_SWIPE: "number_viewer_swipes",
@@ -21,13 +21,13 @@ let obj = {
   CONTEXT_MENU_OPENED: "number_context_menu_opened",
 };
 let obj2 = {
-  guildId: "emoji",
+  guildId: "enabled",
   channelId: "toCharArray$esjava$1",
   channelType: "toCharArray$esjava$1",
   numMediaItems: "Array",
-  hasMediaOptions: "application",
+  hasMediaOptions: "applicationId",
   source: null,
-  incrementableActions: null,
+  incrementableActions: "<string:17891333>",
 };
 const values = Object.values(obj);
 obj2.incrementableActions = Object.fromEntries(

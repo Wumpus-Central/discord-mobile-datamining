@@ -5,7 +5,7 @@ import FavoriteStore from "../favorites/FavoriteStore.tsx";
 import SelectedGuildStore from "../../stores/SelectedGuildStore.tsx";
 
 require = fn;
-const FAVORITES = fn(1087).FAVORITES;
+const FAVORITES = fn(1084).FAVORITES;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/useGuildIdForChannelRoute.tsx");

@@ -57,11 +57,11 @@ function getScreens(guild, toUser) {
       return applyArgumentsResult;
     };
     obj.onSuccess = function onSuccess() {
-      toUser(12794).close();
-      const obj = toUser(12794);
+      toUser(12803).close();
+      const obj = toUser(12803);
       toUser(9005).close();
       const obj2 = toUser(9005);
-      const result = closure_0(5662).showTransferOwnershipSuccess();
+      const result = closure_0(5663).showTransferOwnershipSuccess();
     };
     obj.onResend = asyncGeneratorStep(async () => {
       if (c0 === 2) {
@@ -110,11 +110,11 @@ function getScreens(guild, toUser) {
         }
       }
     });
-    const intl = guild(1128).intl;
-    obj.headerText = intl.string(guild(1128).t.Z5s7PM);
-    const intl2 = guild(1128).intl;
-    obj.confirmButtonText = intl2.string(guild(1128).t.Z5s7PM);
-    return jsx(toUser(7006), {
+    const intl = guild(1125).intl;
+    obj.headerText = intl.string(guild(1125).t.Z5s7PM);
+    const intl2 = guild(1125).intl;
+    obj.confirmButtonText = intl2.string(guild(1125).t.Z5s7PM);
+    return jsx(toUser(7008), {
       onFormSubmit: null,
       onSuccess: null,
       onResend: null,
@@ -125,7 +125,7 @@ function getScreens(guild, toUser) {
   obj2[constants.CONFIRM_EMAIL_CODE] = obj5;
   return obj2;
 }
-const TransferOwnershipConstants = fn(12796);
+const TransferOwnershipConstants = fn(12805);
 ({ TransferOwnershipModalScenes: hasOwnProperty, TransferOwnershipVerificationTypes: metroRequire } =
   TransferOwnershipConstants);
 const jsx = fn(21).jsx;
@@ -177,9 +177,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [guild, toUser];
       const memo = noop.useMemo(() => getScreens(guild, toUser), items);
       const obj = { screens: memo, initialRouteName: constants.TRANFSER_OWNERSHIP, headerBackTitle: null };
-      const intl = guild(1128).intl;
-      obj.headerBackTitle = intl.string(guild(1128).t["13/7kX"]);
-      return jsx(guild(7095).Navigator, {
+      const intl = guild(1125).intl;
+      obj.headerBackTitle = intl.string(guild(1125).t["13/7kX"]);
+      return jsx(guild(7097).Navigator, {
         screens: memo,
         initialRouteName: constants.TRANFSER_OWNERSHIP,
         headerBackTitle: null,

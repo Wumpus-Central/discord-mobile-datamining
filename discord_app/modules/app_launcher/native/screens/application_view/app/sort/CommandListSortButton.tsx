@@ -1,16 +1,16 @@
 // discord_app/modules/app_launcher/native/screens/application_view/app/sort/CommandListSortButton.tsx
 import nativeDefault from "../../../../../../../../discord_common/js/packages/tokens/native.tsx";
-import asyncRequireImpl from "../../../../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const CommandListSortOrder = fn(12018).CommandListSortOrder;
-const ANDROID_FOREGROUND_RIPPLE = fn(1206).ANDROID_FOREGROUND_RIPPLE;
+const CommandListSortOrder = fn(12019).CommandListSortOrder;
+const ANDROID_FOREGROUND_RIPPLE = fn(1203).ANDROID_FOREGROUND_RIPPLE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { overflow: "hidden", borderRadius: nativeDefault.radii.xxl }, button: null };
 const obj3 = { overflow: "hidden", borderRadius: nativeDefault.radii.xxl };
 obj2.button = {
@@ -32,11 +32,11 @@ export default function CommandListSortButton(sortOrder) {
   const onSortOptionPress = sortOrder.onSortOptionPress;
   const tmp = closure_8();
   if (CommandListSortOrder.POPULAR === sortOrder) {
-    const intl2 = sortOrder(1128).intl;
-    let stringResult = intl2.string(sortOrder(1128).t.SzxiqK);
+    const intl2 = sortOrder(1125).intl;
+    let stringResult = intl2.string(sortOrder(1125).t.SzxiqK);
   } else if (tmp2.ALPHABETICAL === sortOrder) {
-    const intl = sortOrder(1128).intl;
-    stringResult = intl.string(sortOrder(1128).t.m8xsti);
+    const intl = sortOrder(1125).intl;
+    stringResult = intl.string(sortOrder(1125).t.m8xsti);
   }
   const obj = {
     accessibilityRole: "button",
@@ -45,7 +45,7 @@ export default function CommandListSortButton(sortOrder) {
     style: tmp.container,
     onPress: function handlePress() {
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(12034, dependencyMap.paths),
+        asyncRequireImpl(12035, dependencyMap.paths),
         "CommandListSortActionSheet",
         {
           sortOrder,
@@ -60,10 +60,10 @@ export default function CommandListSortButton(sortOrder) {
   };
   const obj2 = { style: tmp.button, children: null };
   const items = [
-    closure_6(sortOrder(5234).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }),
-    closure_6(sortOrder(11080).ChevronSmallDownIcon, { size: "xs", color: onSortOptionPress(587).colors.TEXT_DEFAULT }),
+    closure_6(sortOrder(5235).Text, { variant: "text-sm/medium", color: "text-default", children: stringResult }),
+    closure_6(sortOrder(11083).ChevronSmallDownIcon, { size: "xs", color: onSortOptionPress(587).colors.TEXT_DEFAULT }),
   ];
   obj2.children = items;
   obj.children = closure_7(View, obj2);
-  return closure_6(sortOrder(6908).PressableOpacity, obj);
+  return closure_6(sortOrder(6910).PressableOpacity, obj);
 }

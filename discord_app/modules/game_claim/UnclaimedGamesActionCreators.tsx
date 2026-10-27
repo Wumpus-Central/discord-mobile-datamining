@@ -71,7 +71,7 @@ let closure_8 = async function _fetchUnclaimedGames() {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 let closure_6 = [];
 const initialize = fn(504);
 const fetchStore = initialize.createFetchStore(UnclaimedGamesStore, {

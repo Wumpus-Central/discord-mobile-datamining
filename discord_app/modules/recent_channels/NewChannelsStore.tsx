@@ -127,8 +127,8 @@ function pruneNewChannels() {
     );
   });
 }
-let closure_7 = fn(4901).GUILD_SELECTABLE_CHANNELS_KEY;
-const Constants = fn(1087);
+let closure_7 = fn(4902).GUILD_SELECTABLE_CHANNELS_KEY;
+const Constants = fn(1084);
 ({ AnalyticsObjects: closure_12, AnalyticsObjectTypes: map1, GuildFeatures: closure_14 } = Constants);
 let set = new Set();
 const dependencyMap = {};

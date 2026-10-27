@@ -4,10 +4,10 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import LocaleStore from "../../../../../../user_settings/LocaleStore.tsx";
 
 const require = fn;
-const SearchConstants = fn(9714);
+const SearchConstants = fn(9716);
 ({ SearchTabs: hasOwnProperty, SEARCH_LIST_HORIZONTAL_PADDING, SEARCH_ROW_TAP_STATE_PADDING } = SearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_7 = createStyles.createStyles({
   header: { marginBottom: 16 },
   headerMessages: { marginHorizontal: SEARCH_LIST_HORIZONTAL_PADDING, marginTop: SEARCH_ROW_TAP_STATE_PADDING },
@@ -48,9 +48,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp13 = cResult[8];
           }
           if (cResult[9] !== tmp5) {
-            const intl = tmp(1128).intl;
+            const intl = tmp(1125).intl;
             const obj2 = { count: tmp5 };
-            const formatResult = intl.format(tmp(1128).t["4Y3O+O"], obj2);
+            const formatResult = intl.format(tmp(1125).t["4Y3O+O"], obj2);
             cResult[9] = tmp5;
             cResult[10] = formatResult;
             let tmp14 = formatResult;
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[11] !== tmp14) {
             const obj3 = { variant: "heading-sm/normal", color: "interactive-text-default", children: tmp14 };
-            const tmp18 = jsx(tmp(5234).Text, {
+            const tmp18 = jsx(tmp(5235).Text, {
               variant: "heading-sm/normal",
               color: "interactive-text-default",
               children: tmp14,
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return tmp19;
           }
           const obj4 = { variant: "primary", border: "subtle", style: tmp13, children: tmp16 };
-          const tmp21 = jsx(tmp(6905).Card, { variant: "primary", border: "subtle", style: tmp13, children: tmp16 });
+          const tmp21 = jsx(tmp(6907).Card, { variant: "primary", border: "subtle", style: tmp13, children: tmp16 });
           cResult[13] = tmp13;
           cResult[14] = tmp16;
           cResult[15] = tmp21;

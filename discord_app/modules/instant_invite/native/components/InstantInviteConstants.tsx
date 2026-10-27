@@ -2,9 +2,9 @@
 import _mod17 from "../../../../../_runtime/metro/00017__.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef5679 from "../../../../../_runtime/metro/05679__.js";
+import _modDef5680 from "../../../../../_runtime/metro/05680__.js";
 import actions_AlertActionCreatorsDefault from "../../../../actions/native/AlertActionCreators.tsx";
 import MessageActionCreatorsDefault from "../../../../actions/MessageActionCreators.tsx";
 import getInviteURLDefault from "../../getInviteURL.tsx";
@@ -104,7 +104,7 @@ items[1] = {
   type: obj.COPY,
   icon: _modDef9097,
   isAvailable: Promise.resolve(true),
-  IconComponent: _modDef5679,
+  IconComponent: _modDef5680,
   getLabel() {
     const intl = util.intl;
     return intl.string(util.t.WqhZss);
@@ -167,11 +167,11 @@ obj5.onPress = function onPress(channel) {
   let obj = channel(9050);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(5210).hideActionSheet();
-    let obj3 = code(5210);
+    code(5211).hideActionSheet();
+    let obj3 = code(5211);
   }
-  obj2 = channel(1384);
-  tmp(7823).sendSMS({ body: message }, (arg0, arg1, arg2) => {
+  obj2 = channel(1381);
+  tmp(7824).sendSMS({ body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = {
         inviteKey: code,
@@ -199,7 +199,7 @@ obj5.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj5);
     }
   });
-  const tmpResult = tmp(7823);
+  const tmpResult = tmp(7824);
 };
 items[3] = obj5;
 const obj6 = { type: obj.MAIL, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
@@ -229,11 +229,11 @@ obj6.onPress = function onPress(channel) {
   let obj = channel(9050);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(5210).hideActionSheet();
-    let obj3 = code(5210);
+    code(5211).hideActionSheet();
+    let obj3 = code(5211);
   }
-  obj2 = channel(1384);
-  tmp(7823).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
+  obj2 = channel(1381);
+  tmp(7824).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = {
         inviteKey: code,
@@ -261,7 +261,7 @@ obj6.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj5);
     }
   });
-  const tmpResult = tmp(7823);
+  const tmpResult = tmp(7824);
 };
 items[4] = obj6;
 const obj7 = { type: obj.FB_MESSENGER, fullIcon: _modDef9121, isAvailable: null, getLabel: null, onPress: null };

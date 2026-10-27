@@ -7,7 +7,7 @@ import noop_mod from "../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
-const useFastestListPropsEstimatedListSizeDefault = tmp43(7155);
+const useFastestListPropsEstimatedListSizeDefault = tmp43(7157);
 require = fn;
 function noop() {}
 let closure_3 = [

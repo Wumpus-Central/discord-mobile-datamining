@@ -136,7 +136,7 @@ let closure_9 = async function _handleForwardBreadcrumb(arg0) {
     }
   })();
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: metroRequire, AnalyticsObjects: closure_7, Routes: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/forwarding/handleForwardBreadcrumb.tsx");

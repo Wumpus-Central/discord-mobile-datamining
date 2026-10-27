@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 function trackAppEmbedViewed(arg0) {
   ({ appId, linkType, referrerId, customId, guildId, channelId, messageId, appEmbedState } = arg0);
@@ -38,7 +38,7 @@ export const ClickArea = {
   CONNECT_ACCOUNT: "connect_account",
 };
 export const trackAppEmbedClick = function trackAppEmbedClick(arg0) {
-  ({ applicationId, linkType, area, referrerId, customId, isDeadEnd, messageId } = arg0);
+  ({ applicationId, linkType, area, referrerId, customId, isDeadEnd, messageId, analyticsLocations } = arg0);
   AnalyticsUtilsDefault.track(AnalyticEvents.APP_EMBED_CLICKED, {
     application_id: applicationId,
     link_type: linkType,
@@ -47,6 +47,7 @@ export const trackAppEmbedClick = function trackAppEmbedClick(arg0) {
     custom_id: customId,
     is_dead_end: isDeadEnd,
     message_id: messageId,
+    location_stack: analyticsLocations,
   });
 };
 export { trackAppEmbedViewed };
@@ -54,11 +55,11 @@ export const useTrackAppEmbedViewed = ReactCompilerGating.isReactCompilerEnabled
   ? function useTrackAppEmbedViewed(id) {
       const cResult = require("c").c(4);
       if (cResult[0] !== id) {
-        const result = tmp(7768).trackingConfigWithDefaults(id);
+        const result = tmp(7769).trackingConfigWithDefaults(id);
         cResult[0] = id;
         cResult[1] = result;
         let tmp4 = result;
-        const tmpResult = tmp(7768);
+        const tmpResult = tmp(7769);
       } else {
         tmp4 = cResult[1];
       }

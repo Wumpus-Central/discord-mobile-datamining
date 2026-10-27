@@ -10,7 +10,7 @@ import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingSt
 import StreamRTCConnectionStore from "../../../../stores/StreamRTCConnectionStore.tsx";
 
 require = fn;
-const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
+const ApplicationStreamStates = fn(1084).ApplicationStreamStates;
 let closure_6 = 20 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamSendLowFPS.tsx");

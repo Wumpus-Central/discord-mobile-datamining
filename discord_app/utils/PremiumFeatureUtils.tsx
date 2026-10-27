@@ -5,41 +5,33 @@ import OverridePremiumTypeStore from "../modules/premium/OverridePremiumTypeStor
 require = fn;
 function getUserMaxFileSize(currentUser) {
   if (null == currentUser) {
-    return React3;
+    let tmp3 = React3;
   } else {
-    const premiumTypeOverride = OverridePremiumTypeStore.getPremiumTypeOverride();
     if (currentUser.isStaff()) {
-      if (premiumTypeOverride === React5) {
-        let tmp2 = React4;
+      if (!OverridePremiumTypeStore.hasPremiumTypeOverride(currentUser)) {
+        tmp3 = React4;
       }
-      return tmp2;
     }
-    if (null != currentUser.premiumType) {
+    if (tmp != currentUser.premiumType) {
       let getNitroFileUploadLimitBytes = require;
       let obj = dependencyMap;
-      if (obj2.isPremium(currentUser)) {
-        if (currentUser.premiumType === TIER_2.TIER_2) {
-          const nitroFileUploadLimitBytes = getNitroFileUploadLimitBytes(5032);
-          getNitroFileUploadLimitBytes = nitroFileUploadLimitBytes.getNitroFileUploadLimitBytes;
-          obj = { location: "getUserMaxFileSize" };
-          let fileSize = getNitroFileUploadLimitBytes(obj);
-        } else {
-          fileSize = timestampProducer[currentUser.premiumType].fileSize;
-        }
-      }
-      obj2 = PremiumTypeUtils;
+      PremiumTypeUtils;
     }
-    tmp2 = React3;
+    if (currentUser.premiumType === TIER_2.TIER_2) {
+      const nitroFileUploadLimitBytes = getNitroFileUploadLimitBytes(5033);
+      getNitroFileUploadLimitBytes = nitroFileUploadLimitBytes.getNitroFileUploadLimitBytes;
+      obj = { location: "getUserMaxFileSize" };
+      let fileSize = getNitroFileUploadLimitBytes(obj);
+    } else {
+      fileSize = timestampProducer[currentUser.premiumType].fileSize;
+    }
   }
+  return tmp3;
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MAX_ATTACHMENT_SIZE: c3, MAX_STAFF_ATTACHMENT_SIZE: closure_4 } = Constants);
-const PremiumConstants = fn(1394);
-({
-  PremiumTypes: hasOwnProperty,
-  PremiumUserLimits: metroRequire,
-  UNSELECTED_PREMIUM_TYPE_OVERRIDE: closure_7,
-} = PremiumConstants);
+const PremiumConstants = fn(1391);
+({ PremiumTypes: hasOwnProperty, PremiumUserLimits: metroRequire } = PremiumConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("utils/PremiumFeatureUtils.tsx");
 

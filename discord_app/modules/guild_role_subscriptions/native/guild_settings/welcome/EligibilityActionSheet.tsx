@@ -6,11 +6,11 @@ import EligibilityChecklistDefault from "../../components/EligibilityChecklist.t
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const UserSettingsSections = fn(1087).UserSettingsSections;
+const UserSettingsSections = fn(1084).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const EligibilityActionSheet = "EligibilityActionSheet";
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_8 = createStyles.createStyles({
   container: { flex: 1, paddingHorizontal: 0 },
   title: { marginHorizontal: 24, marginTop: 16 },
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const fn = function o() {
           ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);
           GuildSettingsActionCreatorsDefault.close();
-          onRequireModeratorMFAClick(7490).openUserSettings({ screen: constants.ACCOUNT });
+          onRequireModeratorMFAClick(7491).openUserSettings({ screen: constants.ACCOUNT });
         };
         cResult[0] = fn;
         let first = fn;
@@ -55,8 +55,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp8 = useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, tmp6);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t["3s47iN"]);
+        const intl = tmp(1125).intl;
+        const stringResult = intl.string(tmp(1125).t["3s47iN"]);
         cResult[3] = stringResult;
         let tmp9 = stringResult;
       } else {
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: tmp9,
         };
-        const tmp13 = closure_5(tmp(5234).Heading, obj4);
+        const tmp13 = closure_5(tmp(5235).Heading, obj4);
         cResult[4] = tmp4.title;
         cResult[5] = tmp13;
         let tmp11 = tmp13;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { startExpanded: true, children: null };
         const items = [tmp11, tmp14];
         obj5.children = items;
-        const tmp18 = closure_6(tmp(5265).BottomSheet, obj5);
+        const tmp18 = closure_6(tmp(5266).BottomSheet, obj5);
         cResult[9] = tmp11;
         cResult[10] = tmp14;
         cResult[11] = tmp18;
@@ -111,11 +111,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () => ({
           actions: {
             onEnableMFAClick() {
-              closure_1_1(5210).hideActionSheet(closure_1_7);
-              const obj = closure_1_1(5210);
+              closure_1_1(5211).hideActionSheet(closure_1_7);
+              const obj = closure_1_1(5211);
               closure_1_1(9005).close();
               const obj2 = closure_1_1(9005);
-              onRequireModeratorMFAClick(7490).openUserSettings({ screen: constants.ACCOUNT });
+              onRequireModeratorMFAClick(7491).openUserSettings({ screen: constants.ACCOUNT });
             },
             onRequireModeratorMFAClick() {
               ActionSheetActionCreatorsDefault.hideActionSheet(EligibilityActionSheet);
@@ -133,15 +133,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         color: "mobile-text-heading-primary",
         children: null,
       };
-      const intl = onRequireModeratorMFAClick(1128).intl;
-      obj2.children = intl.string(onRequireModeratorMFAClick(1128).t["3s47iN"]);
-      const items1 = [closure_5(onRequireModeratorMFAClick(5234).Heading, obj2)];
+      const intl = onRequireModeratorMFAClick(1125).intl;
+      obj2.children = intl.string(onRequireModeratorMFAClick(1125).t["3s47iN"]);
+      const items1 = [closure_5(onRequireModeratorMFAClick(5235).Heading, obj2)];
       const tmp3 = useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo);
       items1[1] = closure_5(EligibilityChecklistDefault, {
         style: tmp.container,
         items: useCreatorMonetizationEligibilityItemsDefault(onRequireModeratorMFAClick.eligibility, memo),
       });
       obj.children = items1;
-      return closure_6(onRequireModeratorMFAClick(5265).BottomSheet, obj);
+      return closure_6(onRequireModeratorMFAClick(5266).BottomSheet, obj);
     };
 export const ELIGIBILITY_ACTION_SHEET_KEY = "EligibilityActionSheet";

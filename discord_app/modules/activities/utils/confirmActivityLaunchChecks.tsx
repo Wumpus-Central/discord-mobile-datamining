@@ -181,13 +181,13 @@ let closure_9 = async function _confirmActivityChange(arg0) {
               if (value != null) {
                 _location = value.location;
               }
-              channel = channel.getChannel(closure_1_0(4892).getEmbeddedActivityLocationChannelId(_location));
+              channel = channel.getChannel(closure_1_0(4893).getEmbeddedActivityLocationChannelId(_location));
               if (null != value) {
                 if (null != channel) {
                   if (dependencyMap != null) {
                     dependencyMap();
                   }
-                  shouldClosePopout(11411)(
+                  shouldClosePopout(11414)(
                     tmp,
                     channel,
                     () => {
@@ -203,7 +203,7 @@ let closure_9 = async function _confirmActivityChange(arg0) {
                 }
               }
               fn(true);
-              const obj2 = closure_1_0(4892);
+              const obj2 = closure_1_0(4893);
             });
             c2 = 2;
             c3 = 1;
@@ -560,7 +560,7 @@ let closure_12 = async function _confirmActivityLaunchChecks() {
   closure_129_3 = value;
   return closure_129_3;
 };
-const ApplicationFlags = fn(1087).ApplicationFlags;
+const ApplicationFlags = fn(1084).ApplicationFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/confirmActivityLaunchChecks.tsx");
 

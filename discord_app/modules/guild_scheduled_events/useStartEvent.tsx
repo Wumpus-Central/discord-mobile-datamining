@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (1 === tmp8) {
             c6 = 0;
             closure_131_3 = closure_5;
-            const aPIError = new closure_0(6374).APIError(closure_131_3);
+            const aPIError = new closure_0(6375).APIError(closure_131_3);
             closure_131_4 = aPIError;
             closure_1(closure_131_4);
             closure_0(false);
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (2 === tmp7) {
                   c6 = 0;
                   closure_131_5 = closure_5;
-                  const aPIError = new closure_0(6374).APIError(closure_131_5);
+                  const aPIError = new closure_0(6375).APIError(closure_131_5);
                   closure_131_4 = aPIError;
                   closure_132_1(closure_131_4);
                   closure_132_0(false);

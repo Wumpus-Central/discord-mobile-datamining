@@ -10,7 +10,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   avatarRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-around" },
   avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
@@ -127,7 +127,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
               }
               obj3.guildId = guildId;
               const merged1 = Object.assign(tmp14);
-              const tmp20 = closure_5(tmp(1202).Avatar, obj3);
+              const tmp20 = closure_5(tmp(1199).Avatar, obj3);
               cResult[18] = guildId;
               cResult[19] = tmp14;
               cResult[20] = user;
@@ -182,7 +182,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         obj5 = { user, guildId };
         const merged1 = Object.assign(obj3);
       }
-      return closure_5(user(1202).Avatar, obj5);
+      return closure_5(user(1199).Avatar, obj5);
     };
 ReactCompilerGating = fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

@@ -7,9 +7,9 @@ import CollectiblesCategoryStore from "../CollectiblesCategoryStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(1089).CollectiblesMobileShopScreen;
+const constants = fn(1086).CollectiblesMobileShopScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_8 = createStyles.createStyles({ container: { display: "flex", flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

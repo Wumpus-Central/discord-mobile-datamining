@@ -17,7 +17,7 @@ import FavoriteStore from "../../favorites/FavoriteStore.tsx";
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
 require = fn;
-const FAVORITES = fn(1087).FAVORITES;
+const FAVORITES = fn(1084).FAVORITES;
 const jsx = fn(21).jsx;
 let c7 = "more-options";
 const ReactCompilerGating = fn(558);
@@ -178,10 +178,10 @@ export default noop.memo(
         const memo = noop.useMemo(
           () => ({
             onPress() {
-              closure_1_1(17758)(closure_1_5);
+              closure_1_1(17799)(closure_1_5);
             },
             onLongPress() {
-              closure_1_1(17563)();
+              closure_1_1(17604)();
             },
           }),
           [],
@@ -211,7 +211,7 @@ export default noop.memo(
           config: memo,
           accessibilityActions,
           onAccessibilityAction,
-          label: null,
+          label: 0,
           externalChildren: null,
           expandedChildren: null,
           children: null,
@@ -235,7 +235,7 @@ export default noop.memo(
           config: memo,
           accessibilityActions,
           onAccessibilityAction,
-          label: null,
+          label: 0,
           externalChildren: null,
           expandedChildren: null,
           children: null,

@@ -12,10 +12,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   templateContainer: { paddingVertical: 16, flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
 };
@@ -101,9 +101,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj2 = { title: null };
-          let intl = tmp(1128).intl;
-          obj2.title = intl.string(tmp(1128).t.KgCkoQ);
-          const tmp12 = jsx(tmp(7248).BottomSheetTitleHeader, { title: null });
+          let intl = tmp(1125).intl;
+          obj2.title = intl.string(tmp(1125).t.KgCkoQ);
+          const tmp12 = jsx(tmp(7250).BottomSheetTitleHeader, { title: null });
           cResult[7] = tmp12;
           const tmp11 = tmp12;
         } else {
@@ -139,14 +139,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = { header: tmp11, startExpanded: true, children: null };
           const obj4 = { style: tmp4.templateContainer, children: tmp13 };
           obj3.children = <View style={tmp4.templateContainer}>{tmp13}</View>;
-          const tmp21 = jsx(tmp(7298).ActionSheet, { header: tmp11, startExpanded: true, children: null });
+          const tmp21 = jsx(tmp(7300).ActionSheet, { header: tmp11, startExpanded: true, children: null });
           cResult[11] = tmp4.templateContainer;
           cResult[12] = tmp13;
           cResult[13] = tmp21;
           tmp18 = tmp21;
         }
         const obj5 = { onSelect: tmp10, location: constants2.GUILD_ROLE_TEMPLATE_POPOUT, guildId };
-        const tmp17 = jsx(onPermissionsChanged(19120), {
+        const tmp17 = jsx(onPermissionsChanged(19158), {
           onSelect: tmp10,
           location: constants2.GUILD_ROLE_TEMPLATE_POPOUT,
           guildId,
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             dependencyMap(closure_0);
           };
           obj2.onCancel = function onCancel() {
-            onPermissionsChanged(5210).hideActionSheet();
+            onPermissionsChanged(5211).hideActionSheet();
           };
           onPermissionsChanged(tmp9[11]).show(obj2);
           const obj = onPermissionsChanged(tmp9[11]);
@@ -233,12 +233,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj4.confirmText = intl4.string(util.t.p89ACt);
               obj4.onConfirm = function onConfirm() {
                 importDefault(closure_0);
-                closure_1_1(5210).hideActionSheet();
-                const obj = closure_1_1(5210);
-                const result = closure_0(5662).roleTemplateAppliedToast();
+                closure_1_1(5211).hideActionSheet();
+                const obj = closure_1_1(5211);
+                const result = closure_0(5663).roleTemplateAppliedToast();
               };
               obj4.onCancel = function onCancel() {
-                closure_1_1(5210).hideActionSheet();
+                closure_1_1(5211).hideActionSheet();
               };
               AlertActionCreatorsDefault.show(obj4);
             } else {
@@ -277,12 +277,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 obj4.confirmText = intl4.string(util.t.p89ACt);
                 obj4.onConfirm = function onConfirm() {
                   importDefault(closure_0);
-                  closure_1_1(5210).hideActionSheet();
-                  const obj = closure_1_1(5210);
-                  const result = closure_0(5662).roleTemplateAppliedToast();
+                  closure_1_1(5211).hideActionSheet();
+                  const obj = closure_1_1(5211);
+                  const result = closure_0(5663).roleTemplateAppliedToast();
                 };
                 obj4.onCancel = function onCancel() {
-                  closure_1_1(5210).hideActionSheet();
+                  closure_1_1(5211).hideActionSheet();
                 };
                 AlertActionCreatorsDefault.show(obj4);
               } else {

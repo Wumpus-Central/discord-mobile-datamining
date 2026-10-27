@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/ParentalControlsMessageRequests.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2536 from "../../../parent_tools/FamilyCenter.messages.js";
+import _modDef2535 from "../../../parent_tools/FamilyCenter.messages.js";
 import AgeVerificationAnalyticsUtils from "../../../age_assurance/AgeVerificationAnalyticsUtils.tsx";
 import AgeVerificationActionCreatorsDefault from "../../../age_assurance/AgeVerificationActionCreators.native.tsx";
 import useSelectedTeen from "../../../parent_tools/hooks/useSelectedTeen.tsx";
@@ -16,7 +16,7 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 function useIsDisabled() {
   return useParentalControlSettings.useDefaultGuildsRestricted();
 }
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useValue() {
       if (typeof useIsDisabled === "function") {
@@ -55,9 +55,9 @@ const toggle = SettingBuilders.createToggle({
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2536["7aYkh1"]);
+    return intl.string(_modDef2535["7aYkh1"]);
   },
-  parent: fn(8332).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8331).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useValue() {
         if (typeof useIsDisabled === "function") {

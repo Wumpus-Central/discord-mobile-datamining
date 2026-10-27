@@ -20,10 +20,10 @@ function handleThemeChange() {
   }
   return flag;
 }
-const ThemeConstants = fn(1210);
+const ThemeConstants = fn(1207);
 ({ SystemTheme: metroRequire, THEME_PREFERENCES_WEB_REFRESH, THEME_PREFERENCES_MOBILE } = ThemeConstants);
-const UserSettingsDelay = fn(1097).UserSettingsDelay;
-const ThemeTypes = fn(1087).ThemeTypes;
+const UserSettingsDelay = fn(1094).UserSettingsDelay;
+const ThemeTypes = fn(1084).ThemeTypes;
 let obj = { UNSET: 0, [0]: "UNSET", SET: 1, [1]: "SET" };
 let SET = obj.UNSET;
 obj = THEME_PREFERENCES_MOBILE;

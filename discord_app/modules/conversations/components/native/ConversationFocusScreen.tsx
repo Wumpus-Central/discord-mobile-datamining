@@ -13,7 +13,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ConversationFocusScreen() {
       const cResult = channelId(576).c(16);
       let obj = channelId(576);
-      const params = channelId(1508).useRoute().params;
+      const params = channelId(1505).useRoute().params;
       channelId = params.channelId;
       ({ conversationId, messageId } = params);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[2];
         tmp7 = cResult[3];
       }
-      const obj2 = channelId(1508);
+      const obj2 = channelId(1505);
       const stateFromStores = channelId(504).useStateFromStores(first, tmp6, tmp7);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const items2 = [SelectedConversationStore];
@@ -114,10 +114,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult2 = channelId(504);
     }
   : function ConversationFocusScreen() {
-      const params = channelId(1508).useRoute().params;
+      const params = channelId(1505).useRoute().params;
       channelId = params.channelId;
       ({ conversationId, messageId } = params);
-      let obj = channelId(1508);
+      let obj = channelId(1505);
       const items = [SelectedConversationStore];
       const items1 = [channelId];
       const messages = channelId(504).useStateFromStores(

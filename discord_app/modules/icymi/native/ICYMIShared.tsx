@@ -30,7 +30,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({
   AnalyticsObjects: c10,
   AnalyticsObjectTypes: closure_11,
@@ -44,7 +44,7 @@ const Constants = fn(1087);
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 let c21 = 225;
-const createICYMIStyles = fn(17908);
+const createICYMIStyles = fn(17942);
 let closure_22 = createICYMIStyles.createICYMIStyles((paddingBottom) => {
   let num = 0;
   if (obj.isAndroid()) {
@@ -510,7 +510,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       ({ channel: importDefault, hideTimestamp, id: dependencyMap, type: noop } = guild);
       ({ timestamp, children, avatar, title, subtitle, onHeaderPress, onHeaderLongPress, disableInteractions } = guild);
       const tmp = closure_22();
-      const fontScale = guild(5253).useFontScale();
+      const fontScale = guild(5254).useFontScale();
       let obj2 = { onPress: onHeaderPress, onLongPress: onHeaderLongPress, style: tmp.content, children: null };
       const obj3 = {
         style: fontScale > 1.8 ? tmp.channelNameAndAccessoryLarge : tmp.channelNameAndAccessory,
@@ -528,10 +528,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           lineClamp: 1,
           variant: "text-xs/normal",
           color: "text-muted",
-          children: tmp2(6789).getRelativeTimestamp(timestamp),
+          children: tmp2(6790).getRelativeTimestamp(timestamp),
         };
-        tmp7Result = closure_18(tmp2(5234).Text, obj8);
-        const tmp2Result = tmp2(6789);
+        tmp7Result = closure_18(tmp2(5235).Text, obj8);
+        const tmp2Result = tmp2(6790);
       }
       items1[1] = tmp7Result;
       obj7.children = items1;
@@ -557,8 +557,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             children: null,
           };
           const obj10 = { color: nativeDefault.colors.ICON_MUTED, size: "sm" };
-          obj9.children = closure_18(tmp2(9644).MoreHorizontalIcon, obj10);
-          tmp7Result2 = closure_18(tmp2(6908).PressableOpacity, obj9);
+          obj9.children = closure_18(tmp2(9646).MoreHorizontalIcon, obj10);
+          tmp7Result2 = closure_18(tmp2(6910).PressableOpacity, obj9);
         }
       }
       const obj11 = { children: null };
@@ -575,7 +575,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       obj4.children = items;
       obj3.children = closure_19(View, obj4);
       obj2.children = closure_18(View, obj3);
-      const items4 = [closure_18(guild(6908).PressableHighlight, obj2), children];
+      const items4 = [closure_18(guild(6910).PressableHighlight, obj2), children];
       obj11.children = items4;
       return closure_19(closure_20, obj11);
     };
@@ -2426,23 +2426,23 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
       let token;
       const tmp = closure_22();
       const tmp2 = token;
-      const tmp4 = token(5205)();
-      token = highlight(5252).useToken(token(587).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, tmp4);
-      let obj = highlight(5252);
-      const hexWithOpacityResult = highlight(4968).hexWithOpacity(token(587).unsafe_rawColors.BRAND_360, 0.25);
+      const tmp4 = token(5206)();
+      token = highlight(5253).useToken(token(587).colors.MESSAGE_HIGHLIGHT_BACKGROUND_DEFAULT, tmp4);
+      let obj = highlight(5253);
+      const hexWithOpacityResult = highlight(4969).hexWithOpacity(token(587).unsafe_rawColors.BRAND_360, 0.25);
       dependencyMap = hexWithOpacityResult;
-      let obj2 = highlight(4968);
-      const sharedValue = highlight(5052).useSharedValue(0);
-      let obj3 = highlight(5052);
+      let obj2 = highlight(4969);
+      const sharedValue = highlight(5053).useSharedValue(0);
+      let obj3 = highlight(5053);
       const fn = function c() {
         const obj = { backgroundColor: null };
         const items = [token, c2];
         obj.backgroundColor = ReanimatedRexport.interpolateColor(sharedValue.get(), [0, 1], items);
         return obj;
       };
-      let obj4 = highlight(5052);
+      let obj4 = highlight(5053);
       fn.__closure = {
-        interpolateColor: highlight(5052).interpolateColor,
+        interpolateColor: highlight(5053).interpolateColor,
         progress: sharedValue,
         bgColor: token,
         bgColorHighlighted: hexWithOpacityResult,
@@ -2467,7 +2467,7 @@ let tmp10 = ReactCompilerGating.isReactCompilerEnabled()
         const items1 = [tmp.simplePostContent, animatedStyle];
         obj7.style = items1;
         obj7.children = children;
-        const items2 = [closure_18(tmp2(5052).View, obj7)];
+        const items2 = [closure_18(tmp2(5053).View, obj7)];
         let tmp12Result = null;
         if (!hideDivider) {
           tmp12Result = closure_18(closure_23, {});
@@ -2582,8 +2582,8 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled()
                   if (mostRecentMessage.content.length > 0) {
                     let parseInlineReplyResult = MarkupUtilsDefault.parseInlineReply(mostRecentMessage.content, true);
                   } else {
-                    const intl = tmp(1128).intl;
-                    parseInlineReplyResult = intl.string(tmp(1128).t["6kp9H2"]);
+                    const intl = tmp(1125).intl;
+                    parseInlineReplyResult = intl.string(tmp(1125).t["6kp9H2"]);
                   }
                   mostRecentMessage = mostRecentMessage.content;
                   cResult[28] = mostRecentMessage;
@@ -2604,7 +2604,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     if (cResult[35] !== str) {
                       const obj3 = { variant: "text-sm/bold", color: "interactive-text-default", children: str };
-                      const tmp27 = closure_18(tmp(5234).Text, obj3);
+                      const tmp27 = closure_18(tmp(5235).Text, obj3);
                       cResult[35] = str;
                       cResult[36] = tmp27;
                       let tmp25 = tmp27;
@@ -2613,7 +2613,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled()
                     }
                     if (cResult[37] !== tmp4.chevron) {
                       const obj5 = { style: tmp4.chevron, size: "xxs" };
-                      const tmp30 = closure_18(tmp(7305).ChevronSmallRightIcon, obj5);
+                      const tmp30 = closure_18(tmp(7307).ChevronSmallRightIcon, obj5);
                       cResult[37] = tmp4.chevron;
                       cResult[38] = tmp30;
                       let tmp28 = tmp30;
@@ -2641,7 +2641,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled()
                           const obj6 = { style: tmp10, onPress, children: null };
                           const items1 = [tmp12, tmp19, tmp31];
                           obj6.children = items1;
-                          const tmp37 = closure_19(tmp(6908).PressableHighlight, obj6);
+                          const tmp37 = closure_19(tmp(6910).PressableHighlight, obj6);
                           cResult[44] = onPress;
                           cResult[45] = tmp31;
                           cResult[46] = tmp10;
@@ -2669,15 +2669,15 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled()
                     style: tmp4.recentCommentText,
                     children: cResult[29],
                   };
-                  const tmp21 = closure_18(tmp(5234).Text, obj8);
+                  const tmp21 = closure_18(tmp(5235).Text, obj8);
                   cResult[30] = tmp4.recentCommentText;
                   cResult[31] = cResult[29];
                   cResult[32] = tmp21;
                   tmp19 = tmp21;
                 }
               }
-              const obj9 = { user: author, guildId: thread.guild_id, size: tmp(1202).AvatarSizes.XSMALL };
-              const tmp14 = closure_18(tmp(1202).Avatar, obj9);
+              const obj9 = { user: author, guildId: thread.guild_id, size: tmp(1199).AvatarSizes.XSMALL };
+              const tmp14 = closure_18(tmp(1199).Avatar, obj9);
               cResult[25] = author;
               cResult[26] = thread.guild_id;
               cResult[27] = tmp14;
@@ -2696,8 +2696,8 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl2 = tmp(1128).intl;
-            const stringResult = intl2.string(tmp(1128).t.VMWjXW);
+            const intl2 = tmp(1125).intl;
+            const stringResult = intl2.string(tmp(1125).t.VMWjXW);
             cResult[6] = stringResult;
             let tmp39 = stringResult;
           } else {
@@ -2711,7 +2711,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled()
               style: tmp4.recentCommentText,
               children: tmp39,
             };
-            const tmp43 = closure_18(tmp(5234).Text, obj10);
+            const tmp43 = closure_18(tmp(5235).Text, obj10);
             cResult[7] = tmp4.recentCommentText;
             cResult[8] = tmp43;
             let tmp41 = tmp43;
@@ -2729,7 +2729,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled()
           }
           if (cResult[11] !== tmp4.chevron) {
             const obj12 = { style: tmp4.chevron, size: "xxs" };
-            const tmp49 = closure_18(tmp(7305).ChevronSmallRightIcon, obj12);
+            const tmp49 = closure_18(tmp(7307).ChevronSmallRightIcon, obj12);
             cResult[11] = tmp4.chevron;
             cResult[12] = tmp49;
             let tmp47 = tmp49;
@@ -2754,7 +2754,7 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled()
               const obj13 = { style: tmp38, onPress, children: null };
               const items4 = [tmp41, tmp50];
               obj13.children = items4;
-              const tmp56 = closure_19(tmp(6908).PressableHighlight, obj13);
+              const tmp56 = closure_19(tmp(6910).PressableHighlight, obj13);
               cResult[17] = onPress;
               cResult[18] = tmp38;
               cResult[19] = tmp41;
@@ -2812,28 +2812,28 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled()
             if (mostRecentMessage != null) {
               author = mostRecentMessage.author;
             }
-            const obj3 = { user: author, guildId: thread.guild_id, size: tmp4(1202).AvatarSizes.XSMALL };
-            const items2 = [closure_18(tmp4(1202).Avatar, obj3), ,];
+            const obj3 = { user: author, guildId: thread.guild_id, size: tmp4(1199).AvatarSizes.XSMALL };
+            const items2 = [closure_18(tmp4(1199).Avatar, obj3), ,];
             const obj4 = { variant: "text-sm/semibold", lineClamp: 1, style: tmp.recentCommentText, children: null };
             if (mostRecentMessage.content.length > 0) {
               let parseInlineReplyResult = MarkupUtilsDefault.parseInlineReply(mostRecentMessage.content, true);
             } else {
-              const intl = tmp4(1128).intl;
-              parseInlineReplyResult = intl.string(tmp4(1128).t["6kp9H2"]);
+              const intl = tmp4(1125).intl;
+              parseInlineReplyResult = intl.string(tmp4(1125).t["6kp9H2"]);
             }
             obj4.children = parseInlineReplyResult;
-            items2[1] = closure_18(tmp4(5234).Text, obj4);
+            items2[1] = closure_18(tmp4(5235).Text, obj4);
             const obj6 = { style: tmp.commentCount, children: null };
             const obj7 = { style: tmp.commentsIcon };
             const items3 = [closure_18(tmp4(8542).ChatIcon, obj7), ,];
             const obj8 = { variant: "text-sm/bold", color: "interactive-text-default", children: str };
-            items3[1] = closure_18(tmp4(5234).Text, obj8);
+            items3[1] = closure_18(tmp4(5235).Text, obj8);
             const obj9 = { style: tmp.chevron, size: "xxs" };
-            items3[2] = closure_18(tmp4(7305).ChevronSmallRightIcon, obj9);
+            items3[2] = closure_18(tmp4(7307).ChevronSmallRightIcon, obj9);
             obj6.children = items3;
             items2[2] = closure_19(View, obj6);
             obj2.children = items2;
-            return closure_19(tmp4(6908).PressableHighlight, obj2);
+            return closure_19(tmp4(6910).PressableHighlight, obj2);
           }
         }
         const obj10 = { style: null, onPress: null, children: null };
@@ -2847,18 +2847,18 @@ export const ThreadAsComments = ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.recentCommentText,
           children: null,
         };
-        const intl2 = tmp4(1128).intl;
-        obj11.children = intl2.string(tmp4(1128).t.VMWjXW);
-        const items5 = [closure_18(tmp4(5234).Text, obj11)];
+        const intl2 = tmp4(1125).intl;
+        obj11.children = intl2.string(tmp4(1125).t.VMWjXW);
+        const items5 = [closure_18(tmp4(5235).Text, obj11)];
         const obj12 = { style: tmp.commentCount, children: null };
         const obj13 = { style: tmp.commentsIcon };
         const items6 = [closure_18(tmp4(8542).ChatIcon, obj13)];
         const obj14 = { style: tmp.chevron, size: "xxs" };
-        items6[1] = closure_18(tmp4(7305).ChevronSmallRightIcon, obj14);
+        items6[1] = closure_18(tmp4(7307).ChevronSmallRightIcon, obj14);
         obj12.children = items6;
         items5[1] = closure_19(View, obj12);
         obj10.children = items5;
-        return closure_19(tmp4(6908).PressableHighlight, obj10);
+        return closure_19(tmp4(6910).PressableHighlight, obj10);
       } else {
         return null;
       }

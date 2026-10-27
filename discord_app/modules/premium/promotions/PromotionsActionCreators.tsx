@@ -93,7 +93,7 @@ function dismissOutboundPromotionNotice() {
   const lastDismissedOutboundPromotionStartDate = PromotionsStore.lastDismissedOutboundPromotionStartDate;
   if (null != lastDismissedOutboundPromotionStartDate) {
     const PreloadedUserSettingsActionCreators =
-      lastDismissedOutboundPromotionStartDate(4804).PreloadedUserSettingsActionCreators;
+      lastDismissedOutboundPromotionStartDate(4805).PreloadedUserSettingsActionCreators;
     PreloadedUserSettingsActionCreators.updateAsync(
       "userContent",
       async (arg0) => {
@@ -102,7 +102,7 @@ function dismissOutboundPromotionNotice() {
           value: lastDismissedOutboundPromotionStartDate,
         });
       },
-      lastDismissedOutboundPromotionStartDate(4804).UserSettingsDelay.INFREQUENT_USER_ACTION,
+      lastDismissedOutboundPromotionStartDate(4805).UserSettingsDelay.INFREQUENT_USER_ACTION,
     );
   }
 }
@@ -198,8 +198,8 @@ let closure_11 = async function _fetchClaimedOutboundPromotionCodes() {
 function addClaimedOutboundPromotionCode(claimedOutboundPromotionCode) {
   DispatcherDefault.dispatch({ type: "CLAIMED_OUTBOUND_PROMOTION_CODE_ADD", claimedOutboundPromotionCode });
 }
-let closure_7 = fn(1394).PREMIUM_SUBSCRIPTION_APPLICATION;
-const Endpoints = fn(1087).Endpoints;
+let closure_7 = fn(1391).PREMIUM_SUBSCRIPTION_APPLICATION;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionsActionCreators.tsx");
 

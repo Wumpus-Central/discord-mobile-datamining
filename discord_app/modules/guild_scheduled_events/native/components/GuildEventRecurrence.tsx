@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { alignSelf: "stretch", flexDirection: "row", justifyContent: "space-between", alignItems: "center" },
   eventHeader: { marginStart: 8, flexShrink: 0, flexGrow: 1 },
@@ -491,9 +491,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         closure_7 = tmp21Result;
         let str2 = "";
         if (tmp21Result) {
-          const intl = tmp2(1128).intl;
+          const intl = tmp2(1125).intl;
           const _HermesInternal = HermesInternal;
-          str2 = "" + intl.string(tmp2(1128).t.fyBVRm) + ", ";
+          str2 = "" + intl.string(tmp2(1125).t.fyBVRm) + ", ";
         }
         let str4 = "";
         const sum = str2 + stateFromStores.name;
@@ -527,13 +527,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         };
         const obj5 = { isActive, event: stateFromStores, showUserCount: false, showCreator: false, recurrenceId };
         obj4.children = closure_8(tmp2(8902).GuildEventCardHeader, obj5);
-        const items5 = [closure_8(tmp2(6908).PressableOpacity, obj4)];
+        const items5 = [closure_8(tmp2(6910).PressableOpacity, obj4)];
         const obj6 = { style: tmp.actions, children: null };
         if (tmp21Result) {
           const obj7 = { variant: "text-sm/semibold", color: "text-feedback-critical", children: null };
-          const intl2 = tmp2(1128).intl;
-          obj7.children = intl2.string(tmp2(1128).t.fyBVRm);
-          tmp21Result = closure_8(tmp2(5234).Text, obj7);
+          const intl2 = tmp2(1125).intl;
+          obj7.children = intl2.string(tmp2(1125).t.fyBVRm);
+          tmp21Result = closure_8(tmp2(5235).Text, obj7);
         }
         const items6 = [tmp21Result];
         const obj8 = {
@@ -544,9 +544,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: null,
           children: null,
         };
-        const intl3 = tmp2(1128).intl;
+        const intl3 = tmp2(1125).intl;
         const _HermesInternal3 = HermesInternal;
-        obj8.accessibilityLabel = "" + intl3.string(tmp2(1128).t.HIgA5a) + ", " + sum1;
+        obj8.accessibilityLabel = "" + intl3.string(tmp2(1125).t.HIgA5a) + ", " + sum1;
         obj8.onPress = function handlePressOverflow(stopPropagation) {
           if (null != stateFromStores) {
             stopPropagation.stopPropagation();
@@ -563,11 +563,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj8.style = tmp.secondarySmallButton;
         const obj9 = {
           source: tmp5(9032),
-          size: tmp2(1202).Icon.Sizes.REFRESH_SMALL_16,
+          size: tmp2(1199).Icon.Sizes.REFRESH_SMALL_16,
           style: tmp.secondarySmallIcon,
         };
-        obj8.children = closure_8(tmp2(1202).Icon, obj9);
-        items6[1] = closure_8(tmp2(6908).PressableOpacity, obj8);
+        obj8.children = closure_8(tmp2(1199).Icon, obj9);
+        items6[1] = closure_8(tmp2(6910).PressableOpacity, obj8);
         obj6.children = items6;
         items5[1] = closure_9(stateFromStores1, obj6);
         obj3.children = items5;

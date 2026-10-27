@@ -10,7 +10,7 @@ const require = globalThis.__r;
 require = fn;
 const initialize = fn(504);
 const obj2 = {
-  getQueryId: fn(1087).QueryIds.GAME,
+  getQueryId: fn(1084).QueryIds.GAME,
   failureStaleAfter: 15 * DurationsDefault.Seconds.SECOND,
   get(item) {
     if (null == item) {

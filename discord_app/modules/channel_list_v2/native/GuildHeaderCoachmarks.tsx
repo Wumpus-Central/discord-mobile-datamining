@@ -10,8 +10,8 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import PermissionStore from "../../../stores/PermissionStore.tsx";
 
 require = fn;
-const Permissions = fn(1087).Permissions;
-const constants = fn(4820).DismissibleContentGroupName;
+const Permissions = fn(1084).Permissions;
+const constants = fn(4821).DismissibleContentGroupName;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_5.can(Permissions.MANAGE_GUILD, guild);
           }
         }
-        tmp14(guild(4807).DismissibleContent.BOOST_PROGRESS_BAR_MOBILE_COACHMARK);
+        tmp14(guild(4808).DismissibleContent.BOOST_PROGRESS_BAR_MOBILE_COACHMARK);
       }
       if (tmp9) {
         class C {
@@ -83,7 +83,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return closure_5.can(Permissions.MANAGE_GUILD, guild);
           }
         }
-        tmp16(guild(4807).DismissibleContent.GUILD_THEME_MEMBER_COACHMARK);
+        tmp16(guild(4808).DismissibleContent.GUILD_THEME_MEMBER_COACHMARK);
       }
       cResult[4] = stateFromStores;
       cResult[5] = guild.premiumProgressBarEnabled;
@@ -100,14 +100,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         () => PermissionStore.can(Permissions.MANAGE_GUILD, guild),
         items1,
       );
-      const tmp5 = stateFromStores(17586)(guild.id);
+      const tmp5 = stateFromStores(17627)(guild.id);
       dependencyMap = tmp5;
-      stateFromStores(17588)(guild.id);
+      stateFromStores(17629)(guild.id);
       const obj = guild(504);
-      const tmp7 = stateFromStores(13437)(guild.id);
-      const tmp9 = stateFromStores(13430)(guild.id);
+      const tmp7 = stateFromStores(13451)(guild.id);
+      const tmp9 = stateFromStores(13444)(guild.id);
       const items2 = [stateFromStores, guild.premiumProgressBarEnabled, tmp5];
-      const tmp8 = stateFromStores(17595)();
+      const tmp8 = stateFromStores(17636)();
       const memo = noop.useMemo(() => {
         let tmp = stateFromStores;
         if (stateFromStores) {
@@ -122,12 +122,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return items;
       }, items2);
-      const tmp10 = stateFromStores(13431)();
-      const obj2 = guild(7496);
+      const tmp10 = stateFromStores(13445)();
+      const obj2 = guild(7497);
       const obj3 = { groupName: constants.GUILD_HEADER_TOOLTIPS };
-      [tmp15, tmp16] = guild(7496).useSelectedDismissibleContent(memo, { groupName: constants.GUILD_HEADER_TOOLTIPS });
+      [tmp15, tmp16] = guild(7497).useSelectedDismissibleContent(memo, { groupName: constants.GUILD_HEADER_TOOLTIPS });
       const tmp14 = _slicedToArray(
-        guild(7496).useSelectedDismissibleContent(memo, { groupName: constants.GUILD_HEADER_TOOLTIPS }),
+        guild(7497).useSelectedDismissibleContent(memo, { groupName: constants.GUILD_HEADER_TOOLTIPS }),
         2,
       );
       let tmp17 = false === tmp7;
@@ -141,27 +141,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp17 = tmp10;
       }
       const tmp13Result = _slicedToArray(
-        guild(13427).useBoostToUnlockCoachmarkDCF(tmp17, guild.id, constants.GUILD_HEADER_TOOLTIPS),
+        guild(13441).useBoostToUnlockCoachmarkDCF(tmp17, guild.id, constants.GUILD_HEADER_TOOLTIPS),
         2,
       );
       if (first == null) {
         first = tmp13Result[0];
       }
-      if (guild(4807).DismissibleContent.BOOST_PROGRESS_BAR_MOBILE_COACHMARK === first) {
+      if (guild(4808).DismissibleContent.BOOST_PROGRESS_BAR_MOBILE_COACHMARK === first) {
         const obj5 = { targetRef, guild, markAsDismissed: tmp16 };
-        return jsx(tmp4(17596), { targetRef, guild, markAsDismissed: tmp16 });
-      } else if (guild(4807).DismissibleContent.GUILD_THEME_MEMBER_COACHMARK === first) {
+        return jsx(tmp4(17637), { targetRef, guild, markAsDismissed: tmp16 });
+      } else if (guild(4808).DismissibleContent.GUILD_THEME_MEMBER_COACHMARK === first) {
         const obj6 = { guildId: guild.id, targetRef, markAsDismissed: tmp16 };
-        return jsx(tmp4(17597), { guildId: guild.id, targetRef, markAsDismissed: tmp16 });
-      } else if (guild(4807).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK === first) {
+        return jsx(tmp4(17638), { guildId: guild.id, targetRef, markAsDismissed: tmp16 });
+      } else if (guild(4808).DismissibleContent.BOOST_TO_UNLOCK_COACHMARK === first) {
         let tmp20 = null;
         if (null != tmp9) {
           const obj7 = { guildId: guild.id, powerup: tmp9, targetRef, markAsDismissed: tmp13Result[1] };
-          tmp20 = jsx(tmp4(17599), { guildId: guild.id, powerup: tmp9, targetRef, markAsDismissed: tmp13Result[1] });
+          tmp20 = jsx(tmp4(17640), { guildId: guild.id, powerup: tmp9, targetRef, markAsDismissed: tmp13Result[1] });
         }
         return tmp20;
       } else {
         return null;
       }
-      const obj4 = guild(13427);
+      const obj4 = guild(13441);
     };

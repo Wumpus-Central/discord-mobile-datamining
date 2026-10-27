@@ -127,7 +127,7 @@ let closure_8 = async function _handleInteractionModalCreate(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const interaction_iframe_modal = "interaction_iframe_modal";
 const prototype = function InteractionModalManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

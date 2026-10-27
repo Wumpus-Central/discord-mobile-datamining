@@ -11,15 +11,15 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let obj = {};
-obj[fn(1202).AvatarSizes.LARGE_48] = fn(1202).AvatarSizes.SMALL;
-obj[fn(1202).AvatarSizes.XLARGE] = fn(1202).AvatarSizes.NORMAL;
-obj[fn(1202).AvatarSizes.XXLARGE] = fn(1202).AvatarSizes.LARGE;
-obj[fn(1202).AvatarSizes.PROFILE] = fn(1202).AvatarSizes.XXLARGE;
-obj[fn(1202).AvatarSizes.REFRESH_MEDIUM_32] = fn(1202).AvatarSizes.XSMALL_20;
-obj[fn(1202).AvatarSizes.XSMALL] = fn(1202).AvatarSizes.SIZE_16;
-obj[fn(1202).AvatarSizes.SIZE_16] = fn(1202).AvatarSizes.XXSMALL_10;
-obj[fn(1202).AvatarSizes.NORMAL] = fn(1202).AvatarSizes.XSMALL;
-const createStyles = fn(4971);
+obj[fn(1199).AvatarSizes.LARGE_48] = fn(1199).AvatarSizes.SMALL;
+obj[fn(1199).AvatarSizes.XLARGE] = fn(1199).AvatarSizes.NORMAL;
+obj[fn(1199).AvatarSizes.XXLARGE] = fn(1199).AvatarSizes.LARGE;
+obj[fn(1199).AvatarSizes.PROFILE] = fn(1199).AvatarSizes.XXLARGE;
+obj[fn(1199).AvatarSizes.REFRESH_MEDIUM_32] = fn(1199).AvatarSizes.XSMALL_20;
+obj[fn(1199).AvatarSizes.XSMALL] = fn(1199).AvatarSizes.SIZE_16;
+obj[fn(1199).AvatarSizes.SIZE_16] = fn(1199).AvatarSizes.XXSMALL_10;
+obj[fn(1199).AvatarSizes.NORMAL] = fn(1199).AvatarSizes.XSMALL;
+const createStyles = fn(4972);
 let closure_8 = createStyles.createStyles({
   firstFace: { position: "absolute", top: 0, left: 0 },
   secondFace: { position: "absolute", bottom: 0, right: 0 },
@@ -234,6 +234,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         obj.nativeCutouts = items;
         return obj;
       }, items1);
+      const obj3 = { style: tmp.firstFace, size: pileSizeOverride, guildId: "r", cutout: memo1, animate };
       if (null == users) {
         const obj4 = { source: sources[0] };
         let obj5 = obj4;
@@ -241,15 +242,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         obj5 = { user: users[0] };
       }
       const merged = Object.assign(obj5);
-      const items3 = [
-        closure_5(require("native").Avatar, {
-          style: tmp.firstFace,
-          size: pileSizeOverride,
-          guildId: "r",
-          cutout: memo1,
-          animate,
-        }),
-      ];
+      const items3 = [closure_5(require("native").Avatar, obj3)];
       const obj6 = {
         status,
         statusSizeOverride: require("native").StatusSizes.REFRESH_MEDIUM_10,
@@ -358,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      Avatar = Avatar(1202).Avatar;
+      Avatar = Avatar(1199).Avatar;
       tmp = closure_5(Avatar, {
         autoStatusCutout: true,
         status,
@@ -404,7 +397,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp5;
       }
-      tmp5 = closure_5(channel(1202).Avatar, {
+      tmp5 = closure_5(channel(1199).Avatar, {
         autoStatusCutout: true,
         status,
         style,

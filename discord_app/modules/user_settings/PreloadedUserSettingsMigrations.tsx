@@ -38,7 +38,7 @@ function migrateHotspotLocation(userContent, HUB_LINK_CHANNEL_NOTICE, CHANNEL_NO
   }
   return hasHiddenHotspotResult;
 }
-const ChannelNoticeTypes = fn(1087).ChannelNoticeTypes;
+const ChannelNoticeTypes = fn(1084).ChannelNoticeTypes;
 let items = [
   {
     version: 2,

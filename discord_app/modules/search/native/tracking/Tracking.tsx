@@ -1,5 +1,5 @@
 // discord_app/modules/search/native/tracking/Tracking.tsx
-import v1 from "../../../../../_runtime/01281_v1.js";
+import v1 from "../../../../../_runtime/01278_v1.js";
 import UserSettings from "../../../user_settings/UserSettings.tsx";
 import AppAnalyticsUtilsDefault from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import SearchUtils from "../../SearchUtils.tsx";
@@ -9,8 +9,8 @@ import ChannelStore from "../../../../stores/ChannelStore.tsx";
 import SearchQueryStore from "../stores/SearchQueryStore.tsx";
 
 require = fn;
-let closure_5 = fn(9713).SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY;
-const Constants = fn(1087);
+let closure_5 = fn(9715).SEARCH_HISTORY_TO_ANALYTICS_SEARCH_HISTORY;
+const Constants = fn(1084);
 ({ SearchTokenTypes: metroRequire, AnalyticEvents: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/tracking/Tracking.tsx");

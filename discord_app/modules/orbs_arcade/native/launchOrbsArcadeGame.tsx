@@ -350,8 +350,8 @@ let closure_12 = async function _launchOrbsArcadeGame(arg0, arg1) {
     }
   })();
 };
-const AbortCodes = fn(1087).AbortCodes;
-const FramesConstants = fn(6776);
+const AbortCodes = fn(1084).AbortCodes;
+const FramesConstants = fn(6777);
 ({ MAIN_SURFACE: closure_7, makeFrameId: closure_8 } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/launchOrbsArcadeGame.tsx");

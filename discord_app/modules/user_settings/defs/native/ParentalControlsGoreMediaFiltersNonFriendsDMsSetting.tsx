@@ -45,30 +45,30 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
 function onGoreContentNonFriendsDmOnPress() {
   const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
   if (null != selectedTeenId) {
-    const obj = selectedTeenId(16113);
+    const obj = selectedTeenId(16151);
     const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
-    const intl = selectedTeenId(1128).intl;
-    obj3.title = intl.string(selectedTeenId(1128).t["16/3Bi"]);
-    const intl2 = selectedTeenId(1128).intl;
-    obj3.subtitle = intl2.string(selectedTeenId(1128).t["Yh+HX1"]);
+    const intl = selectedTeenId(1125).intl;
+    obj3.title = intl.string(selectedTeenId(1125).t["16/3Bi"]);
+    const intl2 = selectedTeenId(1125).intl;
+    obj3.subtitle = intl2.string(selectedTeenId(1125).t["Yh+HX1"]);
     obj3.handlePress = function handlePress(goreContentNonFriendDm) {
       return FamilyCenterControlledSettingsUtils.updateGoreContentSetting(selectedTeenId, { goreContentNonFriendDm });
     };
     obj3.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentNonFriendDm;
-    const items = [selectedTeenId(1211).ExplicitContentRedaction.SHOW];
+    const items = [selectedTeenId(1208).ExplicitContentRedaction.SHOW];
     obj3.excluded = items;
-    const result = selectedTeenId(16118).handleSensitiveMediaFilterPress(obj3);
-    const obj2 = selectedTeenId(16118);
+    const result = selectedTeenId(16156).handleSensitiveMediaFilterPress(obj3);
+    const obj2 = selectedTeenId(16156);
   }
 }
 function getTitle() {
   const intl = util.intl;
   return intl.string(util.t["Yh+HX1"]);
 }
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const pressable = SettingBuilders.createPressable({
   useTitle: getTitle,
-  parent: fn(8332).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(8331).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: tmp2,
   onPress: onGoreContentNonFriendsDmOnPress,
   unsearchable: true,

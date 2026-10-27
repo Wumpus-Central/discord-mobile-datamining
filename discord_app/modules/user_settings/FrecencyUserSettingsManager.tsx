@@ -143,9 +143,9 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(6823).MAX_NUM_SELECTED_ITEMS;
-const UserSettingsTypes = fn(1097).UserSettingsTypes;
-const FREQUENCY_ITEM_LIMIT = fn(1375).FREQUENCY_ITEM_LIMIT;
+const MAX_NUM_SELECTED_ITEMS = fn(6825).MAX_NUM_SELECTED_ITEMS;
+const UserSettingsTypes = fn(1094).UserSettingsTypes;
+const FREQUENCY_ITEM_LIMIT = fn(1372).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();
 let closure_14 = 10 + random * (10 * DurationsDefault.Millis.SECOND);
 let result = 2 * DurationsDefault.Millis.HOUR;

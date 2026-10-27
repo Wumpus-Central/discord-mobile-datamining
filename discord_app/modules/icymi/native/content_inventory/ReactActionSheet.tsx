@@ -6,18 +6,18 @@ import MessageReactionsTypes from "../../../messages/MessageReactionsTypes.tsx";
 import ICYMIActionCreatorsDefault from "../../ICYMIActionCreators.tsx";
 import openEmojiPickerActionSheet from "../../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
 import ICYMIContext from "../ICYMIContext.tsx";
-import _objectDestructuringEmpty from "../../../../../_runtime/13138__objectDestructuringEmpty.js";
+import _objectDestructuringEmpty from "../../../../../_runtime/13152__objectDestructuringEmpty.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5266).ACTION_SHEET_MAX_WIDTH;
-const EmojiIntention = fn(1395).EmojiIntention;
+const ACTION_SHEET_MAX_WIDTH = fn(5267).ACTION_SHEET_MAX_WIDTH;
+const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   header: { width: "100%", display: "flex", alignItems: "center", padding: 8 },
   container: { gap: 12 },
@@ -1268,10 +1268,10 @@ export const getStatusReplyContent = function getStatusReplyContent(reply) {
   }
   if (null != attachments) {
     if (attachments.length > 0) {
-      const intl2 = tmp5(1128).intl;
+      const intl2 = tmp5(1125).intl;
       const obj3 = { attachmentsCount: attachments.length };
       const _HermesInternal2 = HermesInternal;
-      items.push("> -# *" + intl2.formatToPlainString(tmp5(1128).t["JiNPo+"], obj3) + "*");
+      items.push("> -# *" + intl2.formatToPlainString(tmp5(1125).t["JiNPo+"], obj3) + "*");
     }
   }
   items.push(reply.reply);

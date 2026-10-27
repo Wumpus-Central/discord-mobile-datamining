@@ -10,8 +10,8 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let useStickerPickerStore = fn(10157).useStickerPickerStore;
-const Constants = fn(1087);
+let useStickerPickerStore = fn(10159).useStickerPickerStore;
+const Constants = fn(1084);
 ({
   AnalyticEvents: closure_8,
   AnalyticsPages: closure_9,
@@ -20,10 +20,10 @@ const Constants = fn(1087);
 } = Constants);
 const EXPRESSION_FOOTER_HEIGHT = Constants.EXPRESSION_FOOTER_HEIGHT;
 const NODE_SIZE = Constants.NODE_SIZE;
-const ExpressionPickerViewType = fn(1243).ExpressionPickerViewType;
+const ExpressionPickerViewType = fn(1240).ExpressionPickerViewType;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   list: { flex: 1, height: EXPRESSION_FOOTER_HEIGHT },
   item: {
@@ -1102,9 +1102,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       );
       let obj = { portalHostName: "expression-footer", style: categories.style, children: null };
       const tmp17 = categoryIndex;
-      const tmp19 = categoryIndex(9973)();
+      const tmp19 = categoryIndex(9975)();
       const items9 = [
-        closure_14(categoryIndex(7150), {
+        closure_14(categoryIndex(7152), {
           estimatedListSize: "windowSize",
           horizontal: true,
           itemSize: EXPRESSION_FOOTER_HEIGHT,
@@ -1124,18 +1124,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp22Result = null != first && first1;
       if (tmp22Result) {
         const obj3 = { onPress: callback3, accessibilityRole: "button", accessibilityLabel: null, children: null };
-        const intl = categories(1128).intl;
-        obj3.accessibilityLabel = intl.string(categories(1128).t.rzCcjK);
+        const intl = categories(1125).intl;
+        obj3.accessibilityLabel = intl.string(categories(1125).t.rzCcjK);
         const obj4 = { style: null, children: null };
         const items10 = [,];
         ({ item: arr11[0], fadedItem: arr11[1] } = tmp);
         obj4.style = items10;
-        const obj5 = { style: tmp.guildIcon, source: tmp17(10193) };
-        obj4.children = closure_14(categories(1202).Icon, obj5);
+        const obj5 = { style: tmp.guildIcon, source: tmp17(10195) };
+        obj4.children = closure_14(categories(1199).Icon, obj5);
         obj3.children = closure_14(closure_5, obj4);
-        tmp22Result = closure_14(categories(6908).PressableOpacity, obj3);
+        tmp22Result = closure_14(categories(6910).PressableOpacity, obj3);
       }
       items9[1] = tmp22Result;
       obj.children = items9;
-      return closure_15(categoryIndex(9974), obj);
+      return closure_15(categoryIndex(9976), obj);
     };

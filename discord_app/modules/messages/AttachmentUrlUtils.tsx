@@ -311,8 +311,8 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
     }
   })();
 };
-const ATTACHMENT_PATH_PREFIXES = fn(6004).ATTACHMENT_PATH_PREFIXES;
-const Endpoints = fn(1087).Endpoints;
+const ATTACHMENT_PATH_PREFIXES = fn(6005).ATTACHMENT_PATH_PREFIXES;
+const Endpoints = fn(1084).Endpoints;
 const HOUR = DurationsDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST];
 let substr;
@@ -376,7 +376,7 @@ function getSignedAttachmentExpiration(searchParams) {
   }
   return result;
 }
-const mapped = items.map(fn(2038).getHostWithoutPort);
+const mapped = items.map(fn(2035).getHostWithoutPort);
 let closure_7 = mapped.filter((item) => {
   let tmp = null != item;
   if (tmp) {

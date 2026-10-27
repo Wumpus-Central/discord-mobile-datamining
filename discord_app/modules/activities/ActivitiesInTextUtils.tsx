@@ -32,7 +32,7 @@ function isActivityInTextSupportedForChannel(channel) {
     return hasItem;
   }
 }
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()

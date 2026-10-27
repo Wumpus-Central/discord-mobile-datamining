@@ -51,9 +51,9 @@ function canRenderParticipantVideo(participant) {
   }
   return tmp;
 }
-const CallConstants = fn(5632);
+const CallConstants = fn(5633);
 ({ ParticipantTypes: closure_4, isStreamParticipant: hasOwnProperty, isUserParticipant: metroRequire } = CallConstants);
-const Features = fn(5718).Features;
+const Features = fn(5719).Features;
 const ReactCompilerGating = fn(558);
 function participantHasVideo(type) {
   let streamId = type;

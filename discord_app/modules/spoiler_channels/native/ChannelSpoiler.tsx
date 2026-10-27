@@ -16,10 +16,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelControlsModes = fn(10899).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(10902).VoicePanelControlsModes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   subtitle: { textAlign: "center", lineHeight: 22 },
   subtitleContainer: { alignItems: "center" },
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         isVocalResult = stateFromStores1.isVocal();
       }
       dependencyMap = isVocalResult;
-      setControlsMode = noop.useContext(tmp6(10900)).setControlsMode;
+      setControlsMode = noop.useContext(tmp6(10903)).setControlsMode;
       const items2 = [, , ,];
       ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
       items2[2] = setControlsMode;
@@ -208,12 +208,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: { flexShrink: 1 },
           children: tmp7,
         };
-        items4[1] = closure_10(tmp(5234).Text, obj5);
+        items4[1] = closure_10(tmp(5235).Text, obj5);
         obj3.children = items4;
         let stringResult = closure_11(View, obj3);
       } else {
-        const intl = tmp(1128).intl;
-        stringResult = intl.string(tmp(1128).t["q38/ae"]);
+        const intl = tmp(1125).intl;
+        stringResult = intl.string(tmp(1125).t["q38/ae"]);
       }
       let topic;
       if (stateFromStores1 != null) {
@@ -227,8 +227,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj7 = { style: tmp4.subtitleMeasure, pointerEvents: "none", children: null };
           const obj8 = { variant: "text-md/medium", maxFontSizeMultiplier: 2, onTextLayout: callback1, children: null };
           const obj9 = { channelId: stateFromStores1.id };
-          obj8.children = tmp6(5705).parseTopic(stateFromStores1.topic, true, obj9);
-          obj7.children = closure_10(tmp(5234).Text, obj8);
+          obj8.children = tmp6(5706).parseTopic(stateFromStores1.topic, true, obj9);
+          obj7.children = closure_10(tmp(5235).Text, obj8);
           const items5 = [closure_10(View, obj7), , ,];
           const obj10 = {
             color: "text-muted",
@@ -238,10 +238,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             lineClamp: 3,
             children: null,
           };
-          const tmp6Result = tmp6(5705);
+          const tmp6Result = tmp6(5706);
           const obj11 = { channelId: stateFromStores1.id };
-          obj10.children = tmp6(5705).parseTopic(stateFromStores1.topic, true, obj11);
-          items5[1] = closure_10(tmp(5234).Text, obj10);
+          obj10.children = tmp6(5706).parseTopic(stateFromStores1.topic, true, obj11);
+          items5[1] = closure_10(tmp(5235).Text, obj10);
           let tmp24Result = null;
           if (tmp5[0]) {
             const obj12 = { onPress: callback2, accessibilityRole: "button", children: null };
@@ -251,17 +251,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               style: { textDecorationLine: "underline" },
               children: null,
             };
-            const intl2 = tmp(1128).intl;
-            obj13.children = intl2.string(tmp(1128).t["/QvRak"]);
-            obj12.children = closure_10(tmp(5234).Text, obj13);
-            tmp24Result = closure_10(tmp(6908).PressableHighlight, obj12);
+            const intl2 = tmp(1125).intl;
+            obj13.children = intl2.string(tmp(1125).t["/QvRak"]);
+            obj12.children = closure_10(tmp(5235).Text, obj13);
+            tmp24Result = closure_10(tmp(6910).PressableHighlight, obj12);
           }
           items5[2] = tmp24Result;
           const obj14 = { style: tmp4.divider };
           items5[3] = closure_10(View, obj14);
           obj6.children = items5;
-          tmp23Result = closure_11(tmp(5977).Stack, obj6);
-          const tmp6Result3 = tmp6(5705);
+          tmp23Result = closure_11(tmp(5978).Stack, obj6);
+          const tmp6Result3 = tmp6(5706);
         }
         str = stateFromStores1.topic;
       }
@@ -285,11 +285,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj15.onDisagree = callback;
       obj15.title = stringResult;
       obj15.subtitle = tmp23Result;
-      const intl3 = tmp(1128).intl;
+      const intl3 = tmp(1125).intl;
       obj15.description = intl3.string(require("util").t["08bm2Z"]);
-      const intl4 = tmp(1128).intl;
+      const intl4 = tmp(1125).intl;
       obj15.agreement = intl4.string(require("util").t.KmRwcW);
-      const intl5 = tmp(1128).intl;
+      const intl5 = tmp(1125).intl;
       obj15.disagreement = intl5.string(require("util").t["/g10LC"]);
       let id;
       if (stateFromStores != null) {

@@ -2,7 +2,7 @@
 import util from "../../../../../intl/index.native.tsx";
 import user from "../../../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
 import PremiumUtils from "../../../../../utils/PremiumUtils.tsx";
-import _modDef3250 from "../../../../premium/premium_group/PremiumGroup.messages.js";
+import _modDef3251 from "../../../../premium/premium_group/PremiumGroup.messages.js";
 import FriendsIcon from "../../../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
 import ReactionIcon from "../../../../../design/components/Icon/native/redesign/generated/ReactionIcon.tsx";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
@@ -16,9 +16,9 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 const require = globalThis.__r;
 
 require = fn;
-const PremiumConstants = fn(1394);
+const PremiumConstants = fn(1391);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_4, PremiumTypes: hasOwnProperty } = PremiumConstants);
-const TOTAL_PREMIUM_GROUP_USERS = fn(2066).TOTAL_PREMIUM_GROUP_USERS;
+const TOTAL_PREMIUM_GROUP_USERS = fn(2063).TOTAL_PREMIUM_GROUP_USERS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_settings/premium/native/utils/usePremiumFeatures.tsx");
@@ -272,7 +272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           availableOnFractional: false,
         };
         const intl = util.intl;
-        obj.label = intl.formatToPlainString(_modDef3250.gsE005, { totalSeats: TOTAL_PREMIUM_GROUP_USERS });
+        obj.label = intl.formatToPlainString(_modDef3251.gsE005, { totalSeats: TOTAL_PREMIUM_GROUP_USERS });
         const items = [hasOwnProperty.TIER_2];
         obj.premiumTypes = new Set(items);
         const items1 = [user.PremiumSubscriptionGroupRole.PRIMARY];
@@ -286,7 +286,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           availableOnFractional: false,
         };
         const intl2 = util.intl;
-        obj3.label = intl2.string(_modDef3250["G6K/+s"]);
+        obj3.label = intl2.string(_modDef3251["G6K/+s"]);
         const items3 = [hasOwnProperty.TIER_2];
         const obj2 = { totalSeats: TOTAL_PREMIUM_GROUP_USERS };
         const set = new Set(items);
@@ -393,7 +393,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           availableOnFractional: false,
         };
         const intl8 = util.intl;
-        obj11.label = intl8.formatToPlainString(_modDef3250.HVCRVf, { numBoosts });
+        obj11.label = intl8.formatToPlainString(_modDef3251.HVCRVf, { numBoosts });
         const items15 = [hasOwnProperty.TIER_2];
         const obj12 = { numBoosts };
         const set6 = new Set(items13);

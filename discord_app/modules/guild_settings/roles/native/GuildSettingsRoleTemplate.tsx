@@ -9,8 +9,8 @@ import useIsScreenReaderEnabled from "../../../a11y/native/useIsScreenReaderEnab
 import AppAnalyticsUtils from "../../../app_analytics/AppAnalyticsUtils.tsx";
 import useIsWindowLargeDefault from "../../../screen/native/useIsWindowLarge.tsx";
 import _modDef8769 from "../../../../../_runtime/metro/08769__.js";
-import PaginationDefault from "../../../../../_runtime/10515_Pagination.js";
-import _modDef11258 from "../../../../../_runtime/metro/11258__.js";
+import PaginationDefault from "../../../../../_runtime/10518_Pagination.js";
+import _modDef11261 from "../../../../../_runtime/metro/11261__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
@@ -21,19 +21,19 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(19116);
+const GuildSettingsRoleConstants = fn(19154);
 ({
   PermissionTemplateTypes: closure_9,
   PermissionTemplates: c10,
   DEFAULT_TEMPLATE_TYPE: closure_11,
 } = GuildSettingsRoleConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let width = Dimensions.get("window").width;
 let c17 = 300;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 },
   carousel: { flex: 1 },
@@ -495,7 +495,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj = { style: closure_3.templateContent, children: null };
               const items = [
                 closure_3_14(native.Icon, {
-                  source: _modDef11258,
+                  source: _modDef11261,
                   size: native.IconSizes.MEDIUM,
                   color: nativeDefault.unsafe_rawColors.GREEN_360,
                 }),

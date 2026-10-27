@@ -21,7 +21,7 @@ import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
 import Constants from "../../Constants.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
-const AnalyticsUtilsDefault = track(1267);
+const AnalyticsUtilsDefault = track(1264);
 function collectGuildAnalyticsMetadata(guildId) {
   if (null == guildId) {
     return null;
@@ -280,7 +280,7 @@ export const collectVoiceAnalyticsMetadata = function collectVoiceAnalyticsMetad
       });
       const merged = Object.assign(obj3);
       const tmp9Result = obj3(12)(VoiceStateStore.getVoiceStates(guildId));
-      const merged1 = Object.assign(id(15081).getVoiceAnalyticsMetadataAdditional());
+      const merged1 = Object.assign(id(15117).getVoiceAnalyticsMetadataAdditional());
       return obj;
     }
   }

@@ -12,9 +12,9 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(7304);
+const Constants = fn(7306);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_4, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: hasOwnProperty } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5266).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5267).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const ReactCompilerGating = fn(558);
@@ -38,9 +38,9 @@ export default noop.memo(
         if (channel != null) {
           id = channel.id;
         }
-        const name = userTag(5989).useName(guild_id, id, user);
-        const obj3 = userTag(5989);
-        userTag = userTag(5025).useUserTag(user);
+        const name = userTag(5990).useName(guild_id, id, user);
+        const obj3 = userTag(5990);
+        userTag = userTag(5026).useUserTag(user);
         const tmp10 = userTag(8733)(displayProfile);
         const tmp11 = userTag(8721)(ACTION_SHEET_MAX_WIDTH);
         if (cResult[0] === tmp11) {
@@ -121,8 +121,8 @@ export default noop.memo(
                                         }
                                         const _Symbol = Symbol;
                                         if (cResult[33] === Symbol.for("react.memo_cache_sentinel")) {
-                                          const intl = tmp(1128).intl;
-                                          const stringResult = intl.string(tmp(1128).t.y5MwJy);
+                                          const intl = tmp(1125).intl;
+                                          const stringResult = intl.string(tmp(1125).t.y5MwJy);
                                           cResult[33] = stringResult;
                                           let tmp36 = stringResult;
                                         } else {
@@ -196,7 +196,7 @@ export default noop.memo(
                                                                       };
                                                                       const items1 = [tmp25, tmp54];
                                                                       obj7.children = items1;
-                                                                      const tmp60 = closure_8(tmp4(5052).View, obj7);
+                                                                      const tmp60 = closure_8(tmp4(5053).View, obj7);
                                                                       cResult[63] = contentAnimatedStyle;
                                                                       cResult[64] = tmp54;
                                                                       cResult[65] = tmp25;
@@ -229,7 +229,7 @@ export default noop.memo(
                                                             channel,
                                                             style: tmp46,
                                                           };
-                                                          const tmp49 = closure_7(tmp4(11160), obj10);
+                                                          const tmp49 = closure_7(tmp4(11163), obj10);
                                                           cResult[51] = channel;
                                                           cResult[52] = displayProfile;
                                                           cResult[53] = tmp46;
@@ -269,7 +269,7 @@ export default noop.memo(
                                           onPressPronouns: tmp20,
                                           showBadgeToastOnPress: true,
                                         };
-                                        const tmp40 = closure_7(tmp4(11079), obj12);
+                                        const tmp40 = closure_7(tmp4(11082), obj12);
                                         cResult[34] = tmp10;
                                         cResult[35] = containerBackground;
                                         cResult[36] = name;
@@ -358,7 +358,7 @@ export default noop.memo(
         cResult[1] = scrollPosition;
         cResult[2] = obj17;
         tmp12 = obj17;
-        const tmp4Result = userTag(5025);
+        const tmp4Result = userTag(5026);
       }
     : function NonUserBotProfileContent(scrollPosition) {
         ({ user, channel, displayProfile } = scrollPosition);
@@ -419,7 +419,7 @@ export default noop.memo(
           const obj6 = { style: null, children: null };
           const items2 = [, ,];
           ({ profileContentWrapper: arr2[0], profileContent: arr2[1] } = tmp3);
-          const obj7 = { paddingTop, paddingBottom: tmp(1633)().bottom + closure_4 };
+          const obj7 = { paddingTop, paddingBottom: tmp(1630)().bottom + closure_4 };
           items2[2] = obj7;
           obj6.style = items2;
           const obj8 = { style: tmp3.primaryInfo, children: null };
@@ -455,15 +455,15 @@ export default noop.memo(
           obj9.pronouns = pronouns;
           obj9.badges = tmp8;
           obj9.badgeContainerBackground = containerBackground;
-          const intl = tmp4(1128).intl;
-          obj9.displayNameAccessibilityHint = intl.string(tmp4(1128).t.y5MwJy);
+          const intl = tmp4(1125).intl;
+          obj9.displayNameAccessibilityHint = intl.string(tmp4(1125).t.y5MwJy);
           obj9.onPressDisplayName = handleCopyUsername;
           obj9.onPressUserTag = handleCopyUsername;
           obj9.onPressPronouns = function handlePressPronouns() {
             trackUserProfileAction({ action: "PRESS_PRONOUNS" });
             ToastUtils.presentUserPronouns();
           };
-          obj8.children = closure_7(tmp(11079), obj9);
+          obj8.children = closure_7(tmp(11082), obj9);
           const items3 = [closure_7(View, obj8)];
           const obj11 = { style: tmp3.cards, children: null };
           const obj12 = { userId: user.id, displayProfile, channel, style: null };
@@ -471,12 +471,12 @@ export default noop.memo(
           const obj13 = { backgroundColor: containerBackground };
           items4[1] = obj13;
           obj12.style = items4;
-          obj11.children = closure_7(tmp(11160), obj12);
+          obj11.children = closure_7(tmp(11163), obj12);
           items3[1] = closure_7(View, obj11);
           obj6.children = items3;
           items1[1] = closure_8(View, obj6);
           obj4.children = items1;
-          items[1] = closure_8(tmp(5052).View, obj4);
+          items[1] = closure_8(tmp(5053).View, obj4);
           obj10.children = items;
           return closure_8(closure_9, obj10);
         }

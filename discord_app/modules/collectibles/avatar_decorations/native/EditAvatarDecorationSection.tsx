@@ -9,17 +9,17 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const isAvatarDecorationRecord = fn(7655).isAvatarDecorationRecord;
-const AVATAR_DECORATION_SIZE = fn(1418).AVATAR_DECORATION_SIZE;
+const isAvatarDecorationRecord = fn(7656).isAvatarDecorationRecord;
+const AVATAR_DECORATION_SIZE = fn(1415).AVATAR_DECORATION_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   row: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    paddingHorizontal: fn(14495).GUTTER_SIZE,
+    paddingHorizontal: fn(14531).GUTTER_SIZE,
   },
   rowSpacer: null,
 };
@@ -27,9 +27,9 @@ let obj3 = {
   flexDirection: "row",
   alignItems: "center",
   justifyContent: "space-between",
-  paddingHorizontal: fn(14495).GUTTER_SIZE,
+  paddingHorizontal: fn(14531).GUTTER_SIZE,
 };
-obj.rowSpacer = { height: fn(14495).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(14531).GUTTER_SIZE };
 let closure_10 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
 const memoResult = noop.memo(

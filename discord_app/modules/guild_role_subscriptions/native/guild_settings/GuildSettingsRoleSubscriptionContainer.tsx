@@ -6,15 +6,15 @@ import RoleSubscriptionSettingsDisabledContext from "../../RoleSubscriptionSetti
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
-const ErrorBlockDefault = tmp13(12135);
-const WarningNoticeDefault = tmp13(19217);
+const ErrorBlockDefault = tmp13(12136);
+const WarningNoticeDefault = tmp13(19255);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: c3, View: closure_4 } = get_ActivityIndicator);
-const GuildFeatures = fn(1087).GuildFeatures;
+const GuildFeatures = fn(1084).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_9 = createStyles.createStyles({
   container: { flex: 1 },
   warningBlockContainer: { marginHorizontal: 16, marginTop: 16 },
@@ -95,8 +95,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol3 = Symbol;
           if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
             const obj4 = { notice: null };
-            const intl4 = tmp(1128).intl;
-            obj4.notice = intl4.string(tmp(1128).t.MyJpJT);
+            const intl4 = tmp(1125).intl;
+            obj4.notice = intl4.string(tmp(1125).t.MyJpJT);
             const tmp33 = closure_7(WarningNoticeDefault, obj4);
             cResult[9] = tmp33;
             let tmp30 = tmp33;
@@ -108,8 +108,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         } else if (null != reapplyNoticeText) {
           const _Symbol2 = Symbol;
           if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl3 = tmp(1128).intl;
-            const stringResult = intl3.string(tmp(1128).t["YKw/NQ"]);
+            const intl3 = tmp(1125).intl;
+            const stringResult = intl3.string(tmp(1125).t["YKw/NQ"]);
             cResult[10] = stringResult;
             let tmp25 = stringResult;
           } else {
@@ -139,8 +139,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           const _Symbol = Symbol;
           if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
             const obj6 = { notice: null };
-            const intl2 = tmp(1128).intl;
-            obj6.notice = intl2.string(tmp(1128).t.e2g9sW);
+            const intl2 = tmp(1125).intl;
+            obj6.notice = intl2.string(tmp(1125).t.e2g9sW);
             const tmp24 = closure_7(WarningNoticeDefault, obj6);
             cResult[15] = tmp24;
             let tmp21 = tmp24;
@@ -155,8 +155,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
             const _Symbol4 = Symbol;
             if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
               const obj7 = { notice: null };
-              const intl = tmp(1128).intl;
-              obj7.notice = intl.string(tmp(1128).t.rxI9sl);
+              const intl = tmp(1125).intl;
+              obj7.notice = intl.string(tmp(1125).t.rxI9sl);
               const tmp19 = closure_7(WarningNoticeDefault, obj7);
               cResult[16] = tmp19;
               let tmp16 = tmp19;
@@ -210,30 +210,30 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         tmp14 = closure_7(WarningNoticeDefault, obj3);
       } else if (tmp13) {
         const obj4 = { notice: null };
-        const intl3 = tmp2(1128).intl;
-        obj4.notice = intl3.string(tmp2(1128).t.MyJpJT);
+        const intl3 = tmp2(1125).intl;
+        obj4.notice = intl3.string(tmp2(1125).t.MyJpJT);
         tmp14 = closure_7(WarningNoticeDefault, obj4);
         const tmp9Result5 = WarningNoticeDefault;
       } else if (null != reapplyNoticeText) {
         const obj5 = { notice: reapplyNoticeText, ctaLabel: null, onClick: null, submitting: null };
-        const intl2 = tmp2(1128).intl;
-        obj5.ctaLabel = intl2.string(tmp2(1128).t["YKw/NQ"]);
+        const intl2 = tmp2(1125).intl;
+        obj5.ctaLabel = intl2.string(tmp2(1125).t["YKw/NQ"]);
         obj5.onClick = tmp12;
         obj5.submitting = tmp11;
         tmp14 = closure_7(WarningNoticeDefault, obj5);
         const tmp9Result6 = WarningNoticeDefault;
       } else if (true === hasItem1) {
         const obj6 = { notice: null };
-        const intl = tmp2(1128).intl;
-        obj6.notice = intl.string(tmp2(1128).t.e2g9sW);
+        const intl = tmp2(1125).intl;
+        obj6.notice = intl.string(tmp2(1125).t.e2g9sW);
         tmp14 = closure_7(WarningNoticeDefault, obj6);
         const tmp9Result7 = WarningNoticeDefault;
       } else {
         tmp14 = null;
         if (true === hasItem) {
           const obj7 = { notice: null };
-          const intl4 = tmp2(1128).intl;
-          obj7.notice = intl4.string(tmp2(1128).t.rxI9sl);
+          const intl4 = tmp2(1125).intl;
+          obj7.notice = intl4.string(tmp2(1125).t.rxI9sl);
           tmp14 = closure_7(WarningNoticeDefault, obj7);
           const tmp9Result8 = WarningNoticeDefault;
         }

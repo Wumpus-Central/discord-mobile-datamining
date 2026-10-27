@@ -1,63 +1,544 @@
 // discord_app/modules/app_launcher/native/options/text_input/AppLauncherTextInputOption.tsx
-import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import KeyboardManagerUtils from "../../../../../utils/native/KeyboardManagerUtils.tsx";
 import openEmojiPickerActionSheet from "../../../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
 import TopEmojisUtils from "../../../../emojis/top_emojis/TopEmojisUtils.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
+const require = globalThis.__r;
+
 require = fn;
-let View = fn(17).View;
-const EmojiIntention = fn(1395).EmojiIntention;
+const View = fn(17).View;
+const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
-const obj2 = {
-  container: {
-    width: "100%",
-    backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
-    borderRadius: nativeDefault.radii.lg,
-    padding: 14,
-    borderWidth: 2,
-    borderColor: "transparent",
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  hasError: null,
-  stringOptionInput: null,
-  expressionButton: null,
-};
-let obj3 = {
-  width: "100%",
-  backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT,
-  borderRadius: nativeDefault.radii.lg,
-  padding: 14,
-  borderWidth: 2,
-  borderColor: "transparent",
-  flexDirection: "row",
-  alignItems: "center",
-};
-obj2.hasError = { borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL };
-obj2.stringOptionInput = { maxHeight: 100, flex: 1, padding: 0, paddingTop: 0 };
-obj2.expressionButton = { marginVertical: -8, marginRight: -8 };
-let closure_9 = createStyles.createStyles(obj2);
+const createStyles = fn(4972);
+let closure_9 = createStyles.createStyles({
+  content: { flex: 1, flexDirection: "row", alignItems: "center" },
+  stringOptionInput: { maxHeight: 100, flex: 1, padding: 0, paddingTop: 0 },
+  expressionButton: { marginVertical: -8, marginRight: -8 },
+});
 const ReactCompilerGating = fn(558);
-let obj4 = { borderColor: nativeDefault.colors.BORDER_FEEDBACK_CRITICAL };
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/app_launcher/native/options/text_input/AppLauncherTextInputOption.tsx",
 );
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function AppLauncherTextInputOption(autoFocus) {
-      const cResult = onChangeText(initialValue[8]).c(38);
-      ({ option, onChangeText } = autoFocus);
-      ({ onFocus, onEndEditing, guildId } = autoFocus);
-      ({ style, initialValue } = autoFocus);
-      ({ hasError, onPressIn } = autoFocus);
-      const tmp4 = onPressEmoji();
-      if (cResult[0] !== initialValue) {
-        const fn = function y() {
+  ? function AppLauncherTextInputOption(onFocus) {
+      const cResult = onChangeText(guildId[7]).c(48);
+      ({ option, onChangeText } = onFocus);
+      onFocus = onFocus.onFocus;
+      ({ onEndEditing, guildId } = onFocus);
+      const initialValue = onFocus.initialValue;
+      const onPressIn = onFocus.onPressIn;
+      ({ autoFocus, hasError } = onFocus);
+      const tmp4 = closure_9();
+      if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+        const obj2 = {};
+        cResult[0] = obj2;
+        let first = obj2;
+      } else {
+        first = cResult[0];
+      }
+      let obj = onChangeText(guildId[7]);
+      const inputStyles = onChangeText(guildId[8]).useInputStyles(first);
+      const tmp7 = initialValue;
+      const tmpResult = onChangeText(guildId[8]);
+      [r10040, noop] = initialValue(noop.useState(false), 2);
+      if (cResult[1] !== initialValue) {
+        class F {
+          constructor() {
+            tmp = initialValue;
+            str = "";
+            if (null != initialValue) {
+              str2 = "text";
+              str = "";
+              if ("text" === tmp.type) {
+                str = tmp.text;
+              }
+            }
+            return str;
+          }
+        }
+        cResult[1] = initialValue;
+        cResult[2] = F;
+      } else {
+        class F {
+          constructor() {
+            tmp = initialValue;
+            str = "";
+            if (null != initialValue) {
+              str2 = "text";
+              str = "";
+              if ("text" === tmp.type) {
+                str = tmp.text;
+              }
+            }
+            return str;
+          }
+        }
+      }
+      const tmp7Result = tmp7(noop.useState(F), 2);
+      const first1 = tmp7Result[0];
+      closure_6 = tmp7Result[1];
+      const tmp8 = initialValue(noop.useState(false), 2);
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        class F {
+          constructor() {
+            tmp = initialValue;
+            str = "";
+            if (null != initialValue) {
+              str2 = "text";
+              str = "";
+              if ("text" === tmp.type) {
+                str = tmp.text;
+              }
+            }
+            return str;
+          }
+        }
+        cResult[3] = tmp13;
+      } else {
+        class F {
+          constructor() {
+            tmp = initialValue;
+            str = "";
+            if (null != initialValue) {
+              str2 = "text";
+              str = "";
+              if ("text" === tmp.type) {
+                str = tmp.text;
+              }
+            }
+            return str;
+          }
+        }
+      }
+      noop.useRef(tmp13);
+      ref = noop.useRef(null);
+      const tmp15 = option.type === onChangeText(guildId[10]).ApplicationCommandOptionType.STRING;
+      closure_9 = tmp15;
+      if (cResult[4] !== onChangeText) {
+        class F {
+          constructor() {
+            tmp = initialValue;
+            str = "";
+            if (null != initialValue) {
+              str2 = "text";
+              str = "";
+              if ("text" === tmp.type) {
+                str = tmp.text;
+              }
+            }
+            return str;
+          }
+        }
+        cResult[4] = onChangeText;
+        cResult[5] = tmp17;
+      } else {
+        class F {
+          constructor() {
+            tmp = initialValue;
+            str = "";
+            if (null != initialValue) {
+              str2 = "text";
+              str = "";
+              if ("text" === tmp.type) {
+                str = tmp.text;
+              }
+            }
+            return str;
+          }
+        }
+      }
+      if (cResult[6] === tmp16) {
+        class F {
+          constructor() {
+            tmp = initialValue;
+            str = "";
+            if (null != initialValue) {
+              str2 = "text";
+              str = "";
+              if ("text" === tmp.type) {
+                str = tmp.text;
+              }
+            }
+            return str;
+          }
+        }
+        const onPressEmoji = H;
+        const _Symbol = Symbol;
+        if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+          class F {
+            constructor() {
+              tmp = initialValue;
+              str = "";
+              if (null != initialValue) {
+                str2 = "text";
+                str = "";
+                if ("text" === tmp.type) {
+                  str = tmp.text;
+                }
+              }
+              return str;
+            }
+          }
+          cResult[9] = tmp19;
+        } else {
+          class F {
+            constructor() {
+              tmp = initialValue;
+              str = "";
+              if (null != initialValue) {
+                str2 = "text";
+                str = "";
+                if ("text" === tmp.type) {
+                  str = tmp.text;
+                }
+              }
+              return str;
+            }
+          }
+        }
+        const onClose = tmp19;
+        if (cResult[10] === guildId) {
+          class F {
+            constructor() {
+              tmp = initialValue;
+              str = "";
+              if (null != initialValue) {
+                str2 = "text";
+                str = "";
+                if ("text" === tmp.type) {
+                  str = tmp.text;
+                }
+              }
+              return str;
+            }
+          }
+          const effect = noop.useEffect(tmp20, tmp21);
+          const _Symbol2 = Symbol;
+          if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
+            class Q {
+              constructor() {
+                current = closure_8.current;
+                if (current != null) {
+                  focusResult = current.focus();
+                }
+                return;
+              }
+            }
+            cResult[14] = Q;
+          } else {
+            class Q {
+              constructor() {
+                current = closure_8.current;
+                if (current != null) {
+                  focusResult = current.focus();
+                }
+                return;
+              }
+            }
+          }
+          const animationDelayedAutoFocus = onChangeText(guildId[12]).useAnimationDelayedAutoFocus(autoFocus, Q);
+          if (tmpResult3.useAppLauncherContext().entrypoint === onChangeText(guildId[13]).AppLauncherEntrypoint.VOICE) {
+            class Q {
+              constructor() {
+                current = closure_8.current;
+                if (current != null) {
+                  focusResult = current.focus();
+                }
+                return;
+              }
+            }
+          } else {
+            class Q {
+              constructor() {
+                current = closure_8.current;
+                if (current != null) {
+                  focusResult = current.focus();
+                }
+                return;
+              }
+            }
+            const tmp25 = onFocus(guildId[15]);
+          }
+          let str = "default";
+          if (hasError) {
+            class Q {
+              constructor() {
+                current = closure_8.current;
+                if (current != null) {
+                  focusResult = current.focus();
+                }
+                return;
+              }
+            }
+          }
+          if (cResult[15] === inputStyles.padding) {
+            class Q {
+              constructor() {
+                current = closure_8.current;
+                if (current != null) {
+                  focusResult = current.focus();
+                }
+                return;
+              }
+            }
+            if (cResult[18] === inputStyles.text) {
+              class Q {
+                constructor() {
+                  current = closure_8.current;
+                  if (current != null) {
+                    focusResult = current.focus();
+                  }
+                  return;
+                }
+              }
+              if (option.type === onChangeText(guildId[10]).ApplicationCommandOptionType.STRING) {
+                class Q {
+                  constructor() {
+                    current = closure_8.current;
+                    if (current != null) {
+                      focusResult = current.focus();
+                    }
+                    return;
+                  }
+                }
+              }
+              const _Symbol3 = Symbol;
+              if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
+                class Q {
+                  constructor() {
+                    current = closure_8.current;
+                    if (current != null) {
+                      focusResult = current.focus();
+                    }
+                    return;
+                  }
+                }
+                cResult[21] = tmp30;
+              } else {
+                class Q {
+                  constructor() {
+                    current = closure_8.current;
+                    if (current != null) {
+                      focusResult = current.focus();
+                    }
+                    return;
+                  }
+                }
+              }
+              if (cResult[22] !== onFocus) {
+                class Q {
+                  constructor() {
+                    current = closure_8.current;
+                    if (current != null) {
+                      focusResult = current.focus();
+                    }
+                    return;
+                  }
+                }
+                cResult[22] = onFocus;
+                cResult[23] = tmp32;
+              } else {
+                class Q {
+                  constructor() {
+                    current = closure_8.current;
+                    if (current != null) {
+                      focusResult = current.focus();
+                    }
+                    return;
+                  }
+                }
+              }
+              const _Symbol4 = Symbol;
+              if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
+                class Q {
+                  constructor() {
+                    current = closure_8.current;
+                    if (current != null) {
+                      focusResult = current.focus();
+                    }
+                    return;
+                  }
+                }
+                cResult[24] = tmp34;
+              } else {
+                class Q {
+                  constructor() {
+                    current = closure_8.current;
+                    if (current != null) {
+                      focusResult = current.focus();
+                    }
+                    return;
+                  }
+                }
+              }
+              if (option.type === onChangeText(guildId[10]).ApplicationCommandOptionType.INTEGER) {
+                class Q {
+                  constructor() {
+                    current = closure_8.current;
+                    if (current != null) {
+                      focusResult = current.focus();
+                    }
+                    return;
+                  }
+                }
+                if (obj7.isAndroid()) {
+                  class Q {
+                    constructor() {
+                      current = closure_8.current;
+                      if (current != null) {
+                        focusResult = current.focus();
+                      }
+                      return;
+                    }
+                  }
+                }
+                str = str3;
+              } else {
+                class Q {
+                  constructor() {
+                    current = closure_8.current;
+                    if (current != null) {
+                      focusResult = current.focus();
+                    }
+                    return;
+                  }
+                }
+              }
+              if (cResult[25] === tmp25) {
+                class Q {
+                  constructor() {
+                    current = closure_8.current;
+                    if (current != null) {
+                      focusResult = current.focus();
+                    }
+                    return;
+                  }
+                }
+              }
+              const obj3 = {
+                ref,
+                autoFocus: false,
+                value: first1,
+                style: tmp27,
+                selectionColor: "Array",
+                maxLength: undefined,
+                autoComplete: null,
+                onChangeText: tmp16,
+                onSelectionChange: tmp30,
+                onFocus: tmp32,
+                onBlur: tmp34,
+                onEndEditing,
+                textAlignVertical: "default",
+                returnKeyType: true,
+                multiline: null,
+                keyboardType: str,
+                onPressIn,
+              };
+              const tmp38 = ref(tmp25, obj3);
+              cResult[25] = tmp25;
+              cResult[26] = tmp16;
+              cResult[27] = onEndEditing;
+              cResult[28] = onPressIn;
+              cResult[29] = tmp27;
+              cResult[30] = undefined;
+              cResult[31] = tmp32;
+              cResult[32] = str;
+              cResult[33] = first1;
+              cResult[34] = tmp38;
+            }
+            const items = [inputStyles.text, tmp4.stringOptionInput];
+            cResult[18] = inputStyles.text;
+            cResult[19] = tmp4.stringOptionInput;
+            cResult[20] = items;
+          }
+          const items1 = [inputStyles.padding, tmp4.content];
+          cResult[15] = inputStyles.padding;
+          cResult[16] = tmp4.content;
+          cResult[17] = items1;
+          const tmpResult4 = onChangeText(guildId[12]);
+        }
+        const fn = function z() {
+          if (closure_9) {
+            const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
+          }
+        };
+        const items2 = [guildId, tmp15];
+        cResult[10] = guildId;
+        cResult[11] = tmp15;
+        cResult[12] = fn;
+        cResult[13] = items2;
+        tmp20 = fn;
+        tmp21 = items2;
+      }
+      class H {
+        constructor(arg0) {
+          tmp2 = closure_7;
+          tmp = closure_5;
+          substr = closure_5.substring(0, closure_7.current.start);
+          start = closure_7.current.end;
+          if (start == null) {
+            start = tmp2.current.start;
+          }
+          substr1 = closure_5.substring(start);
+          if (null == onFocus.id) {
+            if (null != onFocus.surrogates) {
+              tmp8 = closure_10;
+              tmp9 = closure_10(substr + onFocus.surrogates + substr1);
+              length = substr + onFocus.surrogates.length;
+            }
+            obj = { start: null, end: null };
+            obj.start = length;
+            obj.end = length;
+            tmp2.current = obj;
+            tmp10 = closure_8;
+            current = closure_8.current;
+            if (current != null) {
+              focusResult = current.focus();
+            }
+            return;
+          }
+          if (null != onFocus.uniqueName) {
+            str = "";
+            if ("" !== onFocus.uniqueName) {
+              name = onFocus.uniqueName;
+            }
+            tmp5 = closure_10;
+            tmp6 = globalThis;
+            _HermesInternal = HermesInternal;
+            str2 = ": ";
+            str3 = ":";
+            tmp7 = closure_10(substr + ":" + name + ": " + substr1);
+            _HermesInternal2 = HermesInternal;
+            length = substr + ":" + name + ": ".length;
+          }
+          name = onFocus.name;
+          return;
+        }
+      }
+      cResult[6] = tmp16;
+      cResult[7] = first1;
+      cResult[8] = H;
+      tmpResult3 = onChangeText(guildId[9]);
+    }
+  : function AppLauncherTextInputOption(initialValue) {
+      ({ option, onChangeText } = initialValue);
+      ({ onFocus: importDefault, guildId } = initialValue);
+      initialValue = initialValue.initialValue;
+      noop = undefined;
+      closure_9 = undefined;
+      onChangeText = undefined;
+      ({ onEndEditing, autoFocus, hasError, onPressIn } = initialValue);
+      const tmp = closure_9();
+      const inputStyles = onChangeText(guildId[8]).useInputStyles({});
+      let obj = onChangeText(guildId[8]);
+      [tmp6, c4] = initialValue(noop.useState(false), 2);
+      const tmp7 = initialValue(
+        noop.useState(() => {
           let str = "";
           if (null != initialValue) {
             str = "";
@@ -66,252 +547,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           return str;
-        };
-        cResult[0] = initialValue;
-        cResult[1] = fn;
-        let tmp5 = fn;
-      } else {
-        tmp5 = cResult[1];
-      }
-      const tmp6 = first(noop.useState(tmp5), 2);
-      first = tmp6[0];
-      noop = tmp6[1];
-      let obj = onChangeText(initialValue[8]);
-      const entrypoint = onChangeText(initialValue[9]).useAppLauncherContext().entrypoint;
-      if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj3 = { start: 0, end: 0 };
-        cResult[2] = obj3;
-        let tmp8 = obj3;
-      } else {
-        tmp8 = cResult[2];
-      }
-      View = obj2.useRef(tmp8);
-      noop.useRef(null);
-      const tmp10 = option.type === onChangeText(initialValue[10]).ApplicationCommandOptionType.STRING;
-      closure_7 = tmp10;
-      if (cResult[3] !== onChangeText) {
-        class P {
-          constructor(arg0) {
-            tmp = closure_4(autoFocus);
-            tmp2 = onChangeText(autoFocus);
-            return;
-          }
-        }
-        cResult[3] = onChangeText;
-        cResult[4] = P;
-      } else {
-        class P {
-          constructor(arg0) {
-            tmp = closure_4(autoFocus);
-            tmp2 = onChangeText(autoFocus);
-            return;
-          }
-        }
-      }
-      P = tmp11;
-      if (cResult[5] === tmp11) {
-        class P {
-          constructor(arg0) {
-            tmp = closure_4(autoFocus);
-            tmp2 = onChangeText(autoFocus);
-            return;
-          }
-        }
-        onPressEmoji = V;
-        const _Symbol = Symbol;
-        if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          class P {
-            constructor(arg0) {
-              tmp = closure_4(autoFocus);
-              tmp2 = onChangeText(autoFocus);
-              return;
-            }
-          }
-          cResult[8] = tmp13;
-        } else {
-          class P {
-            constructor(arg0) {
-              tmp = closure_4(autoFocus);
-              tmp2 = onChangeText(autoFocus);
-              return;
-            }
-          }
-        }
-        const onClose = tmp13;
-        if (cResult[9] === guildId) {
-          class P {
-            constructor(arg0) {
-              tmp = closure_4(autoFocus);
-              tmp2 = onChangeText(autoFocus);
-              return;
-            }
-          }
-          const effect = obj2.useEffect(U, tmp15);
-          const _Symbol2 = Symbol;
-          if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-            class P {
-              constructor(arg0) {
-                tmp = closure_4(autoFocus);
-                tmp2 = onChangeText(autoFocus);
-                return;
-              }
-            }
-            cResult[13] = tmp18;
-          } else {
-            class P {
-              constructor(arg0) {
-                tmp = closure_4(autoFocus);
-                tmp2 = onChangeText(autoFocus);
-                return;
-              }
-            }
-          }
-          const animationDelayedAutoFocus = onChangeText(initialValue[12]).useAnimationDelayedAutoFocus(
-            autoFocus.autoFocus,
-            tmp18,
-          );
-          class U {
-            constructor() {
-              if (closure_7) {
-                tmp = closure_0;
-                tmp2 = closure_2;
-                obj = closure_0(closure_2[11]);
-                tmp3 = guildId;
-                result = obj.maybeFetchTopEmojisByGuild(guildId);
-              }
-              return;
-            }
-          }
-          if (hasError) {
-            class P {
-              constructor(arg0) {
-                tmp = closure_4(autoFocus);
-                tmp2 = onChangeText(autoFocus);
-                return;
-              }
-            }
-          }
-          if (cResult[14] === style) {
-            class P {
-              constructor(arg0) {
-                tmp = closure_4(autoFocus);
-                tmp2 = onChangeText(autoFocus);
-                return;
-              }
-            }
-          }
-          const items = [tmp4.container, hasError, style];
-          cResult[14] = style;
-          cResult[15] = tmp4.container;
-          cResult[16] = hasError;
-          cResult[17] = items;
-          const tmpResult2 = onChangeText(initialValue[12]);
-        }
-        class U {
-          constructor() {
-            if (closure_7) {
-              tmp = closure_0;
-              tmp2 = closure_2;
-              obj = closure_0(closure_2[11]);
-              tmp3 = guildId;
-              result = obj.maybeFetchTopEmojisByGuild(guildId);
-            }
-            return;
-          }
-        }
-        const items1 = [guildId, tmp10];
-        cResult[9] = guildId;
-        cResult[10] = tmp10;
-        cResult[11] = U;
-        cResult[12] = items1;
-        tmp15 = items1;
-      }
-      class V {
-        constructor(arg0) {
-          tmp2 = closure_5;
-          tmp = closure_3;
-          substr = closure_3.substring(0, closure_5.current.start);
-          start = closure_5.current.end;
-          if (start == null) {
-            start = tmp2.current.start;
-          }
-          substr1 = closure_3.substring(start);
-          if (null == autoFocus.id) {
-            if (null != autoFocus.surrogates) {
-              tmp8 = closure_8;
-              tmp9 = closure_8(substr + autoFocus.surrogates + substr1);
-              length = substr + autoFocus.surrogates.length;
-            }
-            obj = { start: null, end: null };
-            obj.start = length;
-            obj.end = length;
-            tmp2.current = obj;
-            tmp10 = closure_6;
-            current = closure_6.current;
-            if (current != null) {
-              focusResult = current.focus();
-            }
-            return;
-          }
-          if (null != autoFocus.uniqueName) {
-            str = "";
-            if ("" !== autoFocus.uniqueName) {
-              name = autoFocus.uniqueName;
-            }
-            tmp5 = closure_8;
-            tmp6 = globalThis;
-            _HermesInternal = HermesInternal;
-            str2 = ": ";
-            str3 = ":";
-            tmp7 = closure_8(substr + ":" + name + ": " + substr1);
-            _HermesInternal2 = HermesInternal;
-            length = substr + ":" + name + ": ".length;
-          }
-          name = autoFocus.name;
-          return;
-        }
-      }
-      cResult[5] = tmp11;
-      cResult[6] = first;
-      cResult[7] = V;
-      const tmpResult = onChangeText(initialValue[9]);
-    }
-  : function AppLauncherTextInputOption(guildId) {
-      ({ option, onChangeText } = guildId);
-      guildId = guildId.guildId;
-      ({ initialValue: dependencyMap, hasError } = guildId);
-      value = undefined;
-      noop = undefined;
-      onChangeText = undefined;
-      let onPressEmoji;
-      ({ onFocus, onEndEditing, style, autoFocus, onPressIn } = guildId);
-      const tmp = onPressEmoji();
-      const tmp2 = value(
-        noop.useState(() => {
-          let str = "";
-          if (null != dependencyMap) {
-            str = "";
-            if ("text" === dependencyMap.type) {
-              str = dependencyMap.text;
-            }
-          }
-          return str;
         }),
         2,
       );
-      value = tmp2[0];
-      noop = tmp2[1];
+      value = tmp7[0];
+      closure_6 = tmp7[1];
+      const tmp5 = initialValue(noop.useState(false), 2);
       noop.useRef({ start: 0, end: 0 });
-      const ref = noop.useRef(null);
-      let tmp14Result = option.type === onChangeText(2000).ApplicationCommandOptionType.STRING;
-      closure_7 = tmp14Result;
+      ref = noop.useRef(null);
+      let tmp15Result = option.type === onChangeText(guildId[10]).ApplicationCommandOptionType.STRING;
+      closure_9 = tmp15Result;
       const items = [onChangeText];
       onChangeText = noop.useCallback((arg0) => {
-        closure_4(arg0);
+        closure_6(arg0);
         onChangeText(arg0);
       }, items);
       const items1 = [onChangeText, value];
-      onPressEmoji = noop.useCallback((id) => {
+      const onPressEmoji = noop.useCallback((id) => {
         const substr = first.substring(0, ref.current.start);
         let start = ref.current.end;
         if (start == null) {
@@ -347,74 +599,86 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           current.focus();
         }
       }, []);
-      const items2 = [guildId, tmp14Result];
+      const items2 = [guildId, tmp15Result];
       const effect = noop.useEffect(() => {
-        if (closure_7) {
+        if (closure_9) {
           const result = TopEmojisUtils.maybeFetchTopEmojisByGuild(guildId);
         }
       }, items2);
-      let obj = onChangeText(11169);
-      const animationDelayedAutoFocus = onChangeText(12053).useAnimationDelayedAutoFocus(autoFocus, () => {
+      const obj2 = onChangeText(guildId[9]);
+      const animationDelayedAutoFocus = onChangeText(guildId[12]).useAnimationDelayedAutoFocus(autoFocus, () => {
         const current = ref.current;
         if (current != null) {
           current.focus();
         }
       });
-      if (obj.useAppLauncherContext().entrypoint === onChangeText(11170).AppLauncherEntrypoint.VOICE) {
-        let TextInput = tmp4(1202).TextInput;
+      if (obj2.useAppLauncherContext().entrypoint === onChangeText(guildId[13]).AppLauncherEntrypoint.VOICE) {
+        let TextInput = tmp2(guildId[14]).TextInput;
       } else {
-        TextInput = guildId(12058);
+        TextInput = require("components/BottomSheetTextInput");
       }
-      const items3 = [tmp.container, ,];
+      let str = "default";
+      let str2 = "default";
       if (hasError) {
-        hasError = tmp.hasError;
+        str2 = "error";
       }
-      const obj3 = { style: items3, children: null };
-      items3[1] = hasError;
-      items3[2] = style;
-      const obj4 = {
+      const obj4 = { status: str2, isFocused: tmp6, children: null };
+      const obj5 = { style: null, children: null };
+      const items3 = [inputStyles.padding, tmp.content];
+      obj5.style = items3;
+      const obj6 = {
         ref,
         autoFocus: false,
         value,
-        style: tmp.stringOptionInput,
-        maxLength: null,
-        autoComplete: "off",
+        style: null,
+        selectionColor: "Array",
+        maxLength: "off",
+        autoComplete: null,
         onChangeText: null,
         onSelectionChange: null,
         onFocus: null,
-        onEndEditing: null,
-        textAlignVertical: "center",
-        returnKeyType: "default",
-        multiline: true,
+        onBlur: null,
+        onEndEditing: "center",
+        textAlignVertical: "default",
+        returnKeyType: true,
+        multiline: null,
         keyboardType: null,
-        onPressIn: null,
+        onPressIn: 85.286,
       };
+      const items4 = [inputStyles.text, tmp.stringOptionInput];
+      obj6.style = items4;
       let maxLength;
-      if (option.type === onChangeText(2000).ApplicationCommandOptionType.STRING) {
+      if (option.type === onChangeText(guildId[10]).ApplicationCommandOptionType.STRING) {
         maxLength = option.maxLength;
       }
-      obj4.maxLength = maxLength;
-      obj4.onChangeText = onChangeText;
-      obj4.onSelectionChange = function onSelectionChange(nativeEvent) {
-        closure_5.current = nativeEvent.nativeEvent.selection;
+      obj6.maxLength = maxLength;
+      obj6.onChangeText = onChangeText;
+      obj6.onSelectionChange = function onSelectionChange(nativeEvent) {
+        closure_7.current = nativeEvent.nativeEvent.selection;
       };
-      obj4.onFocus = onFocus;
-      obj4.onEndEditing = onEndEditing;
-      if (option.type === onChangeText(2000).ApplicationCommandOptionType.INTEGER) {
-        let str2 = "numbers-and-punctuation";
-        if (tmp4Result.isAndroid()) {
-          str2 = "numeric";
+      obj6.onFocus = function onFocus() {
+        _undefined(true);
+        if (importDefault != null) {
+          importDefault();
         }
-        let str = str2;
-        tmp4Result = tmp4(1384);
-      } else {
-        str = "default";
+      };
+      obj6.onBlur = function onBlur() {
+        return _undefined(false);
+      };
+      obj6.onEndEditing = onEndEditing;
+      if (option.type === onChangeText(guildId[10]).ApplicationCommandOptionType.INTEGER) {
+        let str3 = "numbers-and-punctuation";
+        if (tmp2Result.isAndroid()) {
+          str3 = "numeric";
+        }
+        str = str3;
+        tmp2Result = tmp2(guildId[16]);
       }
-      obj4.keyboardType = str;
-      obj4.onPressIn = onPressIn;
-      const items4 = [closure_7(TextInput, obj4)];
-      if (tmp14Result) {
-        const obj5 = {
+      obj6.keyboardType = str;
+      obj6.onPressIn = onPressIn;
+      const items5 = [ref(TextInput, obj6)];
+      if (tmp15Result) {
+        const obj7 = {
           style: tmp.expressionButton,
           onPress() {
             const result = KeyboardManagerUtils.dismissGlobalKeyboard();
@@ -428,9 +692,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             });
           },
         };
-        tmp14Result = tmp14(guildId(12059), obj5);
+        tmp15Result = tmp15(require("ChatInputExpressionButton"), obj7);
       }
-      items4[1] = tmp14Result;
-      obj3.children = items4;
-      return onChangeText(ref, obj3);
+      items5[1] = tmp15Result;
+      obj5.children = items5;
+      obj4.children = ref(value, obj5);
+      return ref(onChangeText(guildId[8]).InputFieldContainer, obj4);
     };

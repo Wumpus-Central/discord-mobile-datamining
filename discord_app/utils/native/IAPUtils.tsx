@@ -2,7 +2,7 @@
 import LoggerDefault from "../../modules/debug/Logger.tsx";
 import _modDef12 from "../../../_runtime/metro/00012__.js";
 import _modDef38 from "../../../_runtime/metro/00038__.js";
-import v1 from "../../../_runtime/01281_v1.js";
+import v1 from "../../../_runtime/01278_v1.js";
 import ClientInfoUtilsAll from "ClientInfoUtils.tsx";
 import PlatformUtils2 from "../PlatformUtils.tsx";
 import DeviceUtils from "DeviceUtils.tsx";
@@ -94,7 +94,7 @@ let closure_16 = async function _makeIAPRequest() {
               };
               c7 = 2;
               c8 = 1;
-              const obj7 = { value: require("../../../_runtime/metro/13916__.js").requestPurchase(obj6), done: false };
+              const obj7 = { value: require("../../../_runtime/metro/13930__.js").requestPurchase(obj6), done: false };
               return obj7;
             }
           }
@@ -184,7 +184,7 @@ let closure_17 = async function _purchaseProduct(arg0) {
           } else {
             c5 = 1;
             c6 = 1;
-            const obj5 = { value: require("../../../_runtime/metro/13916__.js").clearTransactionIOS(), done: false };
+            const obj5 = { value: require("../../../_runtime/metro/13930__.js").clearTransactionIOS(), done: false };
             return obj5;
           }
         }
@@ -492,7 +492,7 @@ let closure_21 = async function _fetchStoreFront() {
             c3 = 1;
             c4 = 2;
             c5 = 1;
-            const obj6 = { value: require("../../../_runtime/metro/13916__.js").getStorefront(), done: false };
+            const obj6 = { value: require("../../../_runtime/metro/13930__.js").getStorefront(), done: false };
             return obj6;
           } else {
             c5 = 3;
@@ -532,20 +532,20 @@ let closure_21 = async function _fetchStoreFront() {
     }
   }
 };
-const convertToAlpha2 = fn(5646).convertToAlpha2;
-const Constants = fn(1087);
+const convertToAlpha2 = fn(5647).convertToAlpha2;
+const Constants = fn(1084);
 ({ CurrencyCodes: closure_8, IOS_BUNDLE_ID } = Constants);
-const NAMESPACE_SNOWFLAKE_UUID = fn(1394).NAMESPACE_SNOWFLAKE_UUID;
+const NAMESPACE_SNOWFLAKE_UUID = fn(1391).NAMESPACE_SNOWFLAKE_UUID;
 const RNIapIosSk2 = fn(17).NativeModules.RNIapIosSk2;
-let PlatformUtils = fn(1384);
+let PlatformUtils = fn(1381);
 let _default = null;
 if (PlatformUtils.isIOS()) {
-  _default = fn(13915).default;
+  _default = fn(13929).default;
 }
 let items = [
-  fn(13916).ErrorCode.E_USER_CANCELLED,
+  fn(13930).ErrorCode.E_USER_CANCELLED,
   Constants.StoreKitErrors.PAYMENT_CANCELED,
-  fn(13916).ErrorCode.E_UNKNOWN,
+  fn(13930).ErrorCode.E_UNKNOWN,
 ];
 let set = new Set(items);
 new LoggerDefault("IAPUtils.tsx");
@@ -623,17 +623,17 @@ let obj = {
     return applyArgumentsResult;
   },
 };
-PlatformUtils = fn(1384);
+PlatformUtils = fn(1381);
 PlatformUtils = PlatformUtils.isIOS();
 if (PlatformUtils) {
-  let isIOSResult1 = fn(1384).isIOS();
+  let isIOSResult1 = fn(1381).isIOS();
   if (isIOSResult1) {
     let Identifier = ClientInfoUtilsAll.getConstants().Identifier;
     let _HermesInternal = HermesInternal;
     let isRunningOnSimulator = Identifier.startsWith("" + IOS_BUNDLE_ID + ".local");
     if (!isRunningOnSimulator) {
-      isRunningOnSimulator = fn(4928).getIsRunningOnSimulator();
-      let obj8 = fn(4928);
+      isRunningOnSimulator = fn(4929).getIsRunningOnSimulator();
+      let obj8 = fn(4929);
     }
     isIOSResult1 = isRunningOnSimulator;
     const importAllResult = ClientInfoUtilsAll;
@@ -643,10 +643,10 @@ if (PlatformUtils) {
     value = DevSettingsStore.get("force_mock_iap");
   }
   PlatformUtils = value;
-  let obj6 = fn(1384);
+  let obj6 = fn(1381);
 }
 if (PlatformUtils) {
-  obj = fn(13937).default;
+  obj = fn(13951).default;
 }
 function shouldMockIAPForceEnable() {
   let isIOSResult = PlatformUtils2.isIOS();

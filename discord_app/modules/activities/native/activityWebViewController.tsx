@@ -4,7 +4,7 @@ import actions_AlertActionCreatorsDefault from "../../../actions/native/AlertAct
 import EmbeddedAppTypes from "../../embedded_apps/EmbeddedAppTypes.tsx";
 import leaveEmbeddedActivity from "../leaveEmbeddedActivity.tsx";
 import makeIframeIdDefault from "../../embedded_apps/utils/makeIframeId.tsx";
-import createWebViewControllerDefault from "../../embedded_apps/native/utils/createWebViewController.tsx";
+import createWebViewControllerDefault from "../../embedded_apps/native/webview/createWebViewController.tsx";
 import makeShellBridgeSecretDefault from "../../embedded_apps/shim_host/native/makeShellBridgeSecret.tsx";
 import EmbeddedActivitiesStore from "../EmbeddedActivitiesStore.tsx";
 

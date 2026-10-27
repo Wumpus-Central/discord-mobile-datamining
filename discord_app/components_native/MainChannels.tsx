@@ -30,10 +30,10 @@ function resolveHomeDrawerName() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 const DM_WIDTH = Constants.DM_WIDTH;
 const ME = Constants.ME;
-const HOME_DRAWER_SCREEN = fn(17434).HOME_DRAWER_SCREEN;
+const HOME_DRAWER_SCREEN = fn(17475).HOME_DRAWER_SCREEN;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -99,7 +99,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       obj2.selectedGuildId = tmp8;
       return obj2;
     };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { fill: { flex: 1 }, sideContainer: null, side: null, sideTablet: null };
 const rect = {
   position: "absolute",

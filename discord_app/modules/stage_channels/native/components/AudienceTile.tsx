@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   touchableContainer: { overflow: "visible" },
   container: { alignItems: "center" },
@@ -84,7 +84,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[8] = tmp14;
           tmp11 = tmp14;
         }
-        const obj3 = { style: tmp4.raisedHand, source: tmp6(11561), color: PRIMARY_800 };
+        const obj3 = { style: tmp4.raisedHand, source: tmp6(11563), color: PRIMARY_800 };
         const tmp10 = hasOwnProperty(native.Icon, obj3);
         cResult[3] = PRIMARY_800;
         cResult[4] = tmp4.raisedHand;
@@ -116,7 +116,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = {
         style: items,
-        children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11561), color: PRIMARY_800 }),
+        children: hasOwnProperty(native.Icon, { style: tmp.raisedHand, source: tmp5(11563), color: PRIMARY_800 }),
       };
       items[1] = activeBackground;
       return hasOwnProperty(View, obj);
@@ -138,7 +138,7 @@ export default noop.memo(
         const user = participant.user;
         ({ rtsState, blocked, ignored } = participant);
         const tmp4 = styles();
-        const diff = user(1499)().width - 46;
+        const diff = user(1496)().width - 46;
         if (cResult[0] !== channel) {
           const guildId = channel.getGuildId();
           cResult[0] = channel;
@@ -162,11 +162,11 @@ export default noop.memo(
           }
           const stateFromStores = tmp(504).useStateFromStores(tmp9, tmp11, tmp12);
           if (cResult[7] !== rtsState) {
-            const result = tmp(6688).isRequestedToSpeakAll(rtsState);
+            const result = tmp(6689).isRequestedToSpeakAll(rtsState);
             cResult[7] = rtsState;
             cResult[8] = result;
             let tmp14 = result;
-            const tmpResult3 = tmp(6688);
+            const tmpResult3 = tmp(6689);
           } else {
             tmp14 = cResult[8];
           }
@@ -219,7 +219,7 @@ export default noop.memo(
                                   if (cResult[38] !== blocked) {
                                     let tmp41 = blocked;
                                     if (blocked) {
-                                      tmp41 = closure_5(tmp(11705).BlockedStatus, {});
+                                      tmp41 = closure_5(tmp(11707).BlockedStatus, {});
                                     }
                                     cResult[38] = blocked;
                                     cResult[39] = tmp41;
@@ -230,7 +230,7 @@ export default noop.memo(
                                   if (cResult[40] !== ignored) {
                                     let tmp44 = ignored;
                                     if (ignored) {
-                                      tmp44 = closure_5(tmp(11705).IgnoredStatus, {});
+                                      tmp44 = closure_5(tmp(11707).IgnoredStatus, {});
                                     }
                                     cResult[40] = ignored;
                                     cResult[41] = tmp44;
@@ -249,14 +249,14 @@ export default noop.memo(
                                           cResult[47] = tmp49;
                                           let tmp48 = tmp49;
                                         } else {
-                                          const tmpResult4 = tmp(4978);
+                                          const tmpResult4 = tmp(4979);
                                           tmp5(587).unsafe_rawColors;
-                                          const isThemeDarkResult = tmp(4978).isThemeDark(theme);
+                                          const isThemeDarkResult = tmp(4979).isThemeDark(theme);
                                           const unsafe_rawColors = { color: null };
-                                          unsafe_rawColors.color = tmp(4978).isThemeDark(theme)
+                                          unsafe_rawColors.color = tmp(4979).isThemeDark(theme)
                                             ? unsafe_rawColors.WHITE
                                             : unsafe_rawColors.PRIMARY_860;
-                                          const tmp51 = tmp(4978).isThemeDark(theme)
+                                          const tmp51 = tmp(4979).isThemeDark(theme)
                                             ? unsafe_rawColors.WHITE
                                             : unsafe_rawColors.PRIMARY_860;
                                         }
@@ -276,11 +276,11 @@ export default noop.memo(
                                               let tmp58 = stateFromStores;
                                               if (stateFromStores) {
                                                 const obj3 = {
-                                                  source: tmp5(11726),
-                                                  size: tmp(1202).Icon.Sizes.SMALL,
+                                                  source: tmp5(11728),
+                                                  size: tmp(1199).Icon.Sizes.SMALL,
                                                   color: tmp5(587).unsafe_rawColors.GUILD_BOOSTING_PINK,
                                                 };
-                                                tmp58 = closure_5(tmp(1202).Icon, obj3);
+                                                tmp58 = closure_5(tmp(1199).Icon, obj3);
                                               }
                                               cResult[55] = stateFromStores;
                                               cResult[56] = tmp58;
@@ -344,7 +344,7 @@ export default noop.memo(
                                             tmp60 = tmp63;
                                           }
                                           const obj6 = { style: tmp53, numberOfLines: 1, children: tmp19 };
-                                          const tmp56 = closure_5(tmp(1202).LegacyText, obj6);
+                                          const tmp56 = closure_5(tmp(1199).LegacyText, obj6);
                                           cResult[52] = tmp19;
                                           cResult[53] = tmp53;
                                           cResult[54] = tmp56;
@@ -402,8 +402,8 @@ export default noop.memo(
                             tmp32 = tmp33;
                           }
                         }
-                        const obj10 = { user, guildId: tmp7, size: tmp(1202).AvatarSizes.LARGE, style: faded };
-                        const tmp31 = closure_5(tmp(1202).CutoutableAvatarImage, obj10);
+                        const obj10 = { user, guildId: tmp7, size: tmp(1199).AvatarSizes.LARGE, style: faded };
+                        const tmp31 = closure_5(tmp(1199).CutoutableAvatarImage, obj10);
                         cResult[27] = tmp7;
                         cResult[28] = faded;
                         cResult[29] = user;
@@ -423,15 +423,15 @@ export default noop.memo(
                 }
               }
             }
-            const name = tmp5(5989).getName(tmp7, channel.id, user);
+            const name = tmp5(5990).getName(tmp7, channel.id, user);
             let tmp22 = blocked;
             if (!blocked) {
               tmp22 = ignored;
             }
-            const LegacyPressable = tmp(5297).LegacyPressable;
-            const intl = tmp(1128).intl;
+            const LegacyPressable = tmp(5298).LegacyPressable;
+            const intl = tmp(1125).intl;
             const obj11 = { name };
-            const tmp5Result = tmp5(5989);
+            const tmp5Result = tmp5(5990);
             cResult[12] = blocked;
             cResult[13] = channel.id;
             cResult[14] = tmp7;
@@ -457,10 +457,10 @@ export default noop.memo(
               }
             }
             tmp18 = tmp22;
-            tmp20 = intl.formatToPlainString(tmp(1128).t.QLMGhv, obj11);
+            tmp20 = intl.formatToPlainString(tmp(1125).t.QLMGhv, obj11);
             tmp19 = name;
             tmp17 = LegacyPressable;
-            const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t.QLMGhv, obj11);
+            const formatToPlainStringResult = intl.formatToPlainString(tmp(1125).t.QLMGhv, obj11);
           }
           function handlePress() {
             StageChannelModalActionCreators.showUserProfile({ userId: user.id, channelId: channel.id });

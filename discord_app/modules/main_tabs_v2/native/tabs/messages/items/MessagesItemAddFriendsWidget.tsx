@@ -7,8 +7,8 @@ import Text_Text from "../../../../../../design/components/Text/native/Text.tsx"
 import Pressables from "../../../../../../design/void/Pressables/native/Pressables.tsx";
 import InstantInviteActionCreatorsDefault from "../../../../../../actions/InstantInviteActionCreators.tsx";
 import IconActionButtonDefault from "../../../shared_components/IconActionButton.tsx";
-import _modDef15097 from "../../../../../../../_runtime/metro/15097__.js";
-import _modDef17525 from "../../../../../../../_runtime/metro/17525__.js";
+import _modDef15133 from "../../../../../../../_runtime/metro/15133__.js";
+import _modDef17566 from "../../../../../../../_runtime/metro/17566__.js";
 import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -226,11 +226,11 @@ let closure_15 = async function _handleLink() {
   }
 };
 const View = fn(17).View;
-const InstantInviteSources = fn(1087).InstantInviteSources;
+const InstantInviteSources = fn(1084).InstantInviteSources;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const sum = fn(14002).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
-const createStyles = fn(4971);
+const sum = fn(14016).ICON_ACTION_BUTTON_SIZE + nativeDefault.space.PX_16;
+const createStyles = fn(4972);
 let obj = {
   container: {
     height: sum,
@@ -351,7 +351,7 @@ export default noop.memo(
           const obj4 = {
             style: actionIcon,
             variant: "filled",
-            source: _modDef15097,
+            source: _modDef15133,
             onPress: handleShare,
             accessibilityLabel: tmp14,
           };
@@ -374,7 +374,7 @@ export default noop.memo(
           const obj5 = {
             style: tmp4.actionIcon,
             variant: "filled",
-            source: _modDef17525,
+            source: _modDef17566,
             onPress: handleLink,
             accessibilityLabel: tmp22,
           };
@@ -461,7 +461,7 @@ export default noop.memo(
         const obj5 = {
           style: tmp.actionIcon,
           variant: "filled",
-          source: _modDef15097,
+          source: _modDef15133,
           onPress: handleShare,
           accessibilityLabel: null,
         };
@@ -475,7 +475,7 @@ export default noop.memo(
           onPress: null,
           accessibilityLabel: null,
         };
-        obj6.source = _modDef17525;
+        obj6.source = _modDef17566;
         obj6.onPress = handleLink;
         const intl4 = util.intl;
         obj6.accessibilityLabel = intl4.string(util.t.WqhZss);

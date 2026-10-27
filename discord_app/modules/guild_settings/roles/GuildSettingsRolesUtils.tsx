@@ -2,7 +2,7 @@
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
 import GlobalUtils from "../../../utils/GlobalUtils.tsx";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
-import fuzzysearchDefault from "../../../../_runtime/06827_fuzzysearch.js";
+import fuzzysearchDefault from "../../../../_runtime/06829_fuzzysearch.js";
 import GuildUtilsDefault from "../../../utils/GuildUtils.tsx";
 import GuildRoleMemberActionCreators from "../GuildRoleMemberActionCreators.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,8 +12,8 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(19112).GuildSettingsRoleEditSections;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const constants = fn(19150).GuildSettingsRoleEditSections;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGuildMembers(arg0, arg1) {

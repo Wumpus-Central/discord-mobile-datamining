@@ -81,13 +81,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
 function onOfficialMessageStyleSettingValueChange(officialMessageStyle) {
   const result = AccessibilityActionCreators.setOfficialMessageStyle(officialMessageStyle);
 }
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const radio = SettingBuilders.createRadio({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.nC2XBl);
   },
-  parent: fn(8332).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8331).MobileUserSettings.ACCESSIBILITY,
   useValue: tmp2,
   onValueChange: onOfficialMessageStyleSettingValueChange,
   useOptions: tmp3,

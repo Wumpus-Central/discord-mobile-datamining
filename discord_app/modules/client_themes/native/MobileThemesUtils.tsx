@@ -3,7 +3,7 @@ import initialize from "../../../../discord_common/js/packages/flux/index.tsx";
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import ClientThemesTypes from "../ClientThemesTypes.tsx";
-import _modDef2768 from "../intl/ClientThemes.messages.js";
+import _modDef2769 from "../intl/ClientThemes.messages.js";
 import HexagonCampaignUtils from "../../hexagon_campaign/HexagonCampaignUtils.tsx";
 import HexagonCampaignPerkAvailability from "../../hexagon_campaign/HexagonCampaignPerkAvailability.tsx";
 import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings.tsx";
@@ -17,15 +17,15 @@ const require = globalThis.__r;
 require = fn;
 function getCustomThemesName() {
   const intl = util.intl;
-  return intl.string(_modDef2768.yl1iMm);
+  return intl.string(_modDef2769.yl1iMm);
 }
-const ClientThemesConstants = fn(1255);
+const ClientThemesConstants = fn(1252);
 ({
   BACKGROUND_GRADIENT_PRESETS_MOBILE: closure_7,
   HEXAGON_GRADIENT_PRESET: closure_8,
   REFRESH_STANDARD_BACKGROUND_THEMES: closure_9,
 } = ClientThemesConstants);
-const HexagonCampaignConstants = fn(4996);
+const HexagonCampaignConstants = fn(4997);
 ({ HexagonCampaignPerk: c10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
 const MobileThemesUtils = "MobileThemesUtils";
 let ReactCompilerGating = fn(558);
@@ -341,10 +341,10 @@ export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled()
             HermesBuiltin.arraySpread(closure_7, 1);
             tmp16 = items2;
           }
-          tmpResult6 = tmp(4999);
+          tmpResult6 = tmp(5000);
         }
         tmp16 = closure_7;
-        tmpResult5 = tmp(4998);
+        tmpResult5 = tmp(4999);
       }
       if (null != tmp4) {
         const items3 = [];
@@ -386,10 +386,10 @@ export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled()
             HermesBuiltin.arraySpread(closure_7, 1);
             tmp12 = items2;
           }
-          tmp2Result2 = tmp2(4999);
+          tmp2Result2 = tmp2(5000);
         }
         tmp12 = closure_7;
-        tmp2Result = tmp2(4998);
+        tmp2Result = tmp2(4999);
       }
       if (null != tmp) {
         const items3 = [];

@@ -4,8 +4,8 @@ import SoundUtils from "../../sound_playback/SoundUtils.tsx";
 import NotificationSettingsStore from "../../../stores/NotificationSettingsStore.tsx";
 
 require = fn;
-let closure_3 = fn(13764).isInAppMessageSoundsEnabled;
-const InAppNotificationTypes = fn(1087).InAppNotificationTypes;
+let closure_3 = fn(13778).isInAppMessageSoundsEnabled;
+const InAppNotificationTypes = fn(1084).InAppNotificationTypes;
 const message1 = "message1";
 let timestamp = 0;
 const size = fn(2);

@@ -10,8 +10,8 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const isGuildEventEnded = fn(6784).isGuildEventEnded;
-const Constants = fn(1087);
+const isGuildEventEnded = fn(6785).isGuildEventEnded;
+const Constants = fn(1084);
 ({ EMPTY_STRING_SNOWFLAKE_ID: closure_8, RelationshipTypes: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/notification_center/getNotificationCenterItemBody.tsx");

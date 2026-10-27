@@ -15,7 +15,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes: closure_7, DEFAULT_ROLE_COLOR: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting(

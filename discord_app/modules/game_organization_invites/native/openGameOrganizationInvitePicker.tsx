@@ -1,5 +1,5 @@
 // discord_app/modules/game_organization_invites/native/openGameOrganizationInvitePicker.tsx
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import GameOrganizationInviteConstants from "../GameOrganizationInviteConstants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -10,5 +10,5 @@ const result = size.fileFinishedImporting(
 );
 
 export default function openGameOrganizationInvitePicker(userId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11315, dependencyMap.paths), closure_3, { userId });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11318, dependencyMap.paths), closure_3, { userId });
 }

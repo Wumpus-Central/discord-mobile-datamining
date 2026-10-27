@@ -50,8 +50,8 @@ function readConjureServerApp(arg0, arg1) {
         if (null == id) {
           let items = [];
         } else {
-          items = guild(10731).findConjureAppChannels(guild.id, id.id);
-          let obj = guild(10731);
+          items = guild(10734).findConjureAppChannels(guild.id, id.id);
+          let obj = guild(10734);
         }
         let canRemoveConjureBotResult = null != id;
         if (canRemoveConjureBotResult) {
@@ -60,8 +60,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot != null) {
             id1 = bot.id;
           }
-          canRemoveConjureBotResult = guild(10731).canRemoveConjureBot(guild, id1);
-          const obj2 = guild(10731);
+          canRemoveConjureBotResult = guild(10734).canRemoveConjureBot(guild, id1);
+          const obj2 = guild(10734);
         }
         if (canRemoveConjureBotResult) {
           const bot2 = id.bot;
@@ -69,8 +69,8 @@ function readConjureServerApp(arg0, arg1) {
           if (bot2 != null) {
             id2 = bot2.id;
           }
-          canRemoveConjureBotResult = guild(10731).canRemoveConjureBot(guild, id2);
-          const obj3 = guild(10731);
+          canRemoveConjureBotResult = guild(10734).canRemoveConjureBot(guild, id2);
+          const obj3 = guild(10734);
         }
         if (canRemoveConjureBotResult) {
           closure_129_0 = conjureProjectId;
@@ -253,8 +253,8 @@ let closure_22 = async function _loadMissingApplication(arg0) {
     }
   }
 };
-let closure_7 = fn(4901).GUILD_SELECTABLE_CHANNELS_KEY;
-const Permissions = fn(1087).Permissions;
+let closure_7 = fn(4902).GUILD_SELECTABLE_CHANNELS_KEY;
+const Permissions = fn(1084).Permissions;
 let c14 = " (Preview)";
 fn(558);
 const ReactCompilerGating = fn(558);

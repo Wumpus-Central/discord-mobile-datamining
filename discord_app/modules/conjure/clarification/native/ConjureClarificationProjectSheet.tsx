@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.native.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
-import BottomSheetModal from "../../../../../_runtime/05269_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05270_BottomSheetModal.js";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import ActionSheetRow from "../../../../design/components/Sheet/native/ActionSheetRow.native.tsx";
 import ActionSheet from "../../../../design/components/Sheet/native/ActionSheet.native.tsx";
@@ -10,7 +10,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_4 = createStyles.createStyles((arg0) => {
   const obj = { scrollContent: { paddingBottom: nativeDefault.space.PX_16 + arg0 } };
   return obj;
@@ -24,11 +24,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = sheetKey(576).c(20);
       sheetKey = sheetKey.sheetKey;
       ({ title, projects, onPick } = sheetKey);
-      const bottom = onPick(1633)().bottom;
+      const bottom = onPick(1630)().bottom;
       const tmp4 = closure_4(bottom);
       if (cResult[0] !== title) {
         const obj2 = { title };
-        const tmp7 = jsx(tmp(7248).BottomSheetTitleHeader, { title });
+        const tmp7 = jsx(tmp(7250).BottomSheetTitleHeader, { title });
         cResult[0] = title;
         cResult[1] = tmp7;
         let tmp5 = tmp7;
@@ -48,7 +48,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[6] === sheetKey) {
             if (cResult[11] !== cResult[7]) {
               const obj4 = { hasIcons: false, children: tmp9 };
-              const tmp15 = jsx(tmp(7294).ActionSheetRow.Group, { hasIcons: false, children: tmp9 });
+              const tmp15 = jsx(tmp(7296).ActionSheetRow.Group, { hasIcons: false, children: tmp9 });
               cResult[11] = tmp9;
               cResult[12] = tmp15;
               let tmp13 = tmp15;
@@ -67,7 +67,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return tmp19;
                 }
                 const obj5 = { scrollable: true, header: tmp5, children: tmp16 };
-                const tmp21 = jsx(tmp(7298).ActionSheet, { scrollable: true, header: tmp5, children: tmp16 });
+                const tmp21 = jsx(tmp(7300).ActionSheet, { scrollable: true, header: tmp5, children: tmp16 });
                 cResult[17] = tmp5;
                 cResult[18] = tmp16;
                 cResult[19] = tmp21;
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             const obj6 = { contentContainerStyle: tmp4.scrollContent, scrollIndicatorInsets: tmp8, children: tmp13 };
-            const tmp18 = jsx(tmp(5269).BottomSheetScrollView, {
+            const tmp18 = jsx(tmp(5270).BottomSheetScrollView, {
               contentContainerStyle: tmp4.scrollContent,
               scrollIndicatorInsets: tmp8,
               children: tmp13,

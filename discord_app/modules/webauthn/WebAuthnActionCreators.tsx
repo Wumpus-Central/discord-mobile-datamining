@@ -193,7 +193,7 @@ let closure_10 = async function _finishRegisterWebAuthnCredential() {
     }
   })();
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/webauthn/WebAuthnActionCreators.tsx");
 

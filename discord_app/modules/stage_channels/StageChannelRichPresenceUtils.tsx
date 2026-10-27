@@ -32,8 +32,8 @@ function unpackStageChannelParty(activity) {
     }
   }
 }
-const STAGE_APPLICATION_ID = fn(6637).STAGE_APPLICATION_ID;
-const GuildFeatures = fn(1087).GuildFeatures;
+const STAGE_APPLICATION_ID = fn(6638).STAGE_APPLICATION_ID;
+const GuildFeatures = fn(1084).GuildFeatures;
 let c7 = "stage:";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelRichPresenceUtils.tsx");

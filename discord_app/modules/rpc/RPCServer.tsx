@@ -8,8 +8,8 @@ import RpcCommandInterception from "RpcCommandInterception.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
-const TransportTypes = fn(6378).TransportTypes;
-const Constants = fn(1087);
+const TransportTypes = fn(6379).TransportTypes;
+const Constants = fn(1084);
 ({
   AnalyticEvents: hasOwnProperty,
   RPCCloseCodes: metroRequire,

@@ -4,9 +4,9 @@ import util from "../../../../intl/index.native.tsx";
 import LottieAnimationViewDefault from "../../../../components_native/common/LottieAnimationView.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef14915 from "../../../../../_runtime/metro/14915__.js";
-import _mod14916 from "../../../../../_runtime/metro/14916__.js";
-import _modDef14917 from "../../../../../_runtime/metro/14917__.js";
+import _modDef14951 from "../../../../../_runtime/metro/14951__.js";
+import _mod14952 from "../../../../../_runtime/metro/14952__.js";
+import _modDef14953 from "../../../../../_runtime/metro/14953__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../../a11y/AccessibilityStore.tsx";
 
@@ -16,7 +16,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   wrapper: { marginTop: 50 },
   heading: { marginBottom: 20, textAlign: "center" },
@@ -62,7 +62,7 @@ let items = [
       return intl.string(util.t.HTvLGu);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef14915 };
+      const obj = { style, source: _modDef14951 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },
@@ -76,7 +76,7 @@ let items = [
       return intl.string(util.t.wOYbTv);
     },
     getGraphic(style) {
-      const obj = { source: _mod14916, autoPlay: !AccessibilityStore.useReducedMotion, style };
+      const obj = { source: _mod14952, autoPlay: !AccessibilityStore.useReducedMotion, style };
       return hasOwnProperty(LottieAnimationViewDefault, obj);
     },
   },
@@ -90,7 +90,7 @@ let items = [
       return intl.string(util.t.yCjoUC);
     },
     getGraphic(style) {
-      const obj = { style, source: _modDef14917 };
+      const obj = { style, source: _modDef14953 };
       return hasOwnProperty(FastImageDefault, obj);
     },
   },
@@ -118,7 +118,7 @@ let obj4 = {
     return intl.string(util.t.HTvLGu);
   },
   getGraphic(style) {
-    const obj = { style, source: _modDef14915 };
+    const obj = { style, source: _modDef14951 };
     return hasOwnProperty(FastImageDefault, obj);
   },
 };
@@ -134,8 +134,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       _require = tmp4;
       ({ wrapper, heading } = tmp4);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t.aGdB3E);
+        const intl = tmp(1125).intl;
+        const stringResult = intl.string(tmp(1125).t.aGdB3E);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -148,7 +148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: first,
         };
-        const tmp9 = closure_5(tmp(5234).Heading, obj2);
+        const tmp9 = closure_5(tmp(5235).Heading, obj2);
         cResult[1] = tmp4.heading;
         cResult[2] = tmp9;
         let tmp7 = tmp9;
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 contentContainerStyle: tmp10,
                 children: tmp11,
               };
-              const tmp16 = closure_5(tmp(13494).MarketingCardsScroller, obj4);
+              const tmp16 = closure_5(tmp(13508).MarketingCardsScroller, obj4);
               cResult[9] = tmp4.scrollerContent;
               cResult[10] = tmp11;
               cResult[11] = tmp16;

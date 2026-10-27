@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/plan/conjurePlanExperienceSurfaces.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3830 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import conjurePlanDesign from "conjurePlanDesign.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -12,7 +12,7 @@ export const conjurePlanExperiencePlacement = function conjurePlanExperiencePlac
     return null;
   } else {
     const intl = util.intl;
-    closure_0 = intl.string(_modDef3830["6/3tGY"]);
+    closure_0 = intl.string(_modDef3831["6/3tGY"]);
     const surfaces3 = kind.surfaces;
     const items = [];
     if (!surfaces3.includes(ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL)) {
@@ -68,12 +68,12 @@ export const conjurePlanExperiencePlacement = function conjurePlanExperiencePlac
     }
   }
 };
-export const conjurePlanDesignExperienceId = function conjurePlanDesignExperienceId(proposal) {
-  const result = conjurePlanDesign.conjurePlanDesignSurface(proposal);
+export const conjurePlanDesignExperienceId = function conjurePlanDesignExperienceId(experiences) {
+  const result = conjurePlanDesign.conjurePlanDesignSurface(experiences);
   require = result;
   let tmp2 = null;
   if (null != result) {
-    const experiences = proposal.experiences;
+    experiences = experiences.experiences;
     let id;
     if (experiences != null) {
       const found = experiences.find((surfaces) => {

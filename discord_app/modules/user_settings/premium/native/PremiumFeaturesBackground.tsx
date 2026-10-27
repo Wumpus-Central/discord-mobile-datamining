@@ -1,16 +1,16 @@
 // discord_app/modules/user_settings/premium/native/PremiumFeaturesBackground.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
-import LinearGradientDefault from "../../../../../_runtime/05258_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05259_LinearGradient.js";
 import _objectWithoutProperties from "../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 let closure_3 = ["premiumType", "opacity", "children", "style"];
-const Gradients = fn(7544).Gradients;
-const PremiumTypes = fn(1394).PremiumTypes;
+const Gradients = fn(7545).Gradients;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   cardContainer: {
     display: "flex",
@@ -87,16 +87,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj2 = {
             style: tmp17,
             colors: tmp15,
-            start: tmp(1107).HorizontalGradient.START,
-            end: tmp(1107).HorizontalGradient.END,
+            start: tmp(1104).HorizontalGradient.START,
+            end: tmp(1104).HorizontalGradient.END,
           };
           const merged = Object.assign(tmp6);
           obj2.children = tmp4;
           const tmp25 = jsx(LinearGradientDefault, {
             style: tmp17,
             colors: tmp15,
-            start: tmp(1107).HorizontalGradient.START,
-            end: tmp(1107).HorizontalGradient.END,
+            start: tmp(1104).HorizontalGradient.START,
+            end: tmp(1104).HorizontalGradient.END,
           });
           cResult[12] = tmp4;
           cResult[13] = tmp15;
@@ -147,8 +147,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [closure_8().cardContainer, style];
       obj.style = items;
       const tmp2 = closure_8();
-      obj.start = num(1107).HorizontalGradient.START;
-      obj.end = num(1107).HorizontalGradient.END;
+      obj.start = num(1104).HorizontalGradient.START;
+      obj.end = num(1104).HorizontalGradient.END;
       const merged1 = Object.assign(merged);
       obj.children = children;
       return jsx(LinearGradientDefault, { style: null, colors: mapped, start: null, end: null });

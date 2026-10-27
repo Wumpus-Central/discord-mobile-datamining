@@ -5,7 +5,7 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let constants = fn(1089).CollectiblesMobileShopScreen;
+let constants = fn(1086).CollectiblesMobileShopScreen;
 let closure_6 = 10 * DurationsDefault.Millis.SECOND;
 let closure_7 = 10 * DurationsDefault.Millis.SECOND;
 const size = fn(2);
@@ -73,16 +73,16 @@ export const usePopularOrbShopProducts = function usePopularOrbShopProducts(enab
                   colors: [],
                   themes: [],
                   orbs_eligible: true,
-                  currency: _true(16362).CollectibleSearchCurrencyFilter.ORBS,
+                  currency: _true(16401).CollectibleSearchCurrencyFilter.ORBS,
                   offset: 0,
                   limit: 10,
                   sort_type,
-                  sort_direction: _true(1093).CollectibleSearchSortDirection.DESC,
+                  sort_direction: _true(1090).CollectibleSearchSortDirection.DESC,
                 };
                 const obj6 = { timeout };
                 c5 = 3;
                 sort_type = 1;
-                const obj7 = { value: _true(16361).search(obj4, obj6), done: false };
+                const obj7 = { value: _true(16400).search(obj4, obj6), done: false };
                 return obj7;
               }
             } else if (1 === tmp8) {

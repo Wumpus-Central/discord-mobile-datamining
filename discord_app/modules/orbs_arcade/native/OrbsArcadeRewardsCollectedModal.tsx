@@ -20,19 +20,19 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 const require = globalThis.__r;
 
 const initialize = nW6E3m(504);
-const util = nW6E3m(1128);
-const CollectiblesUtils = nW6E3m(7662);
+const util = nW6E3m(1125);
+const CollectiblesUtils = nW6E3m(7663);
 const useShopProductItems = nW6E3m(8660);
-const useFetchCollectiblesProduct = nW6E3m(11052);
+const useFetchCollectiblesProduct = nW6E3m(11055);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserSettingsSections = fn(1087).UserSettingsSections;
-const dependencyMap2 = fn(1394).FRACTIONAL_PREMIUM_SKU_INTERVAL_COUNTS;
+const UserSettingsSections = fn(1084).UserSettingsSections;
+const dependencyMap2 = fn(1391).FRACTIONAL_PREMIUM_SKU_INTERVAL_COUNTS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const locations = [0, 0.72, 1];
-let createStyles = fn(4971);
+let createStyles = fn(4972);
 let obj2 = {
   root: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   backdrop: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 },
@@ -76,11 +76,11 @@ obj2.pageDot = size;
 let obj8 = { flexDirection: "row", justifyContent: "center", gap: nativeDefault.space.PX_4 };
 obj2.currentPageDot = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(4971);
+createStyles = fn(4972);
 let closure_14 = createStyles.createStyles((width) => ({
   preview: { width, height: width, alignItems: "center", justifyContent: "center" },
 }));
-createStyles = fn(4971);
+createStyles = fn(4972);
 let closure_15 = createStyles.createStyles((width) => {
   const obj = { page: { width } };
   return obj;
@@ -582,8 +582,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = consumed(576).c(7);
       consumed = consumed.consumed;
       if (cResult[0] !== consumed) {
-        const intl = tmp(1128).intl;
-        const t = tmp(1128).t;
+        const intl = tmp(1125).intl;
+        const t = tmp(1125).t;
         const stringResult = intl.string(consumed ? t.ERKK6v : t["Jr6N+s"]);
         cResult[0] = consumed;
         cResult[1] = stringResult;
@@ -609,7 +609,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
           return tmp8;
         }
         let obj2 = { size: "lg", text: cResult[1], onPress: tmp7 };
-        const tmp10 = closure_10(tmp(5244).Button, obj2);
+        const tmp10 = closure_10(tmp(5245).Button, obj2);
         cResult[4] = cResult[1];
         cResult[5] = tmp7;
         cResult[6] = tmp10;
@@ -619,9 +619,9 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function NitroCreditRewardPrimaryAction(consumed) {
       consumed = consumed.consumed;
-      const intl = consumed(1128).intl;
-      const t = consumed(1128).t;
-      return closure_10(consumed(5244).Button, {
+      const intl = consumed(1125).intl;
+      const t = consumed(1125).t;
+      return closure_10(consumed(5245).Button, {
         size: "lg",
         text: intl.string(consumed ? t.ERKK6v : t["Jr6N+s"]),
         onPress() {
@@ -788,12 +788,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       closure_9 = undefined;
       const tmp = closure_13();
       importDefault = tmp;
-      const token = skuId(5252).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
-      let obj = skuId(5252);
-      const token1 = skuId(5252).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
-      let obj2 = skuId(5252);
-      const token2 = skuId(5252).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
-      let obj3 = skuId(5252);
+      const token = skuId(5253).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+      let obj = skuId(5253);
+      const token1 = skuId(5253).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
+      let obj2 = skuId(5253);
+      const token2 = skuId(5253).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
+      let obj3 = skuId(5253);
       const items = [c7];
       dependencyMap = skuId(504).useStateFromStores(items, () => _undefined.useReducedMotion);
       const ref = first.useRef(null);
@@ -821,21 +821,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj5 = { style: tmp.root, children: null };
         const obj6 = {
           style: tmp.backdrop,
-          start: tmp2(1107).VerticalGradient.START,
-          end: tmp2(1107).VerticalGradient.END,
+          start: tmp2(1104).VerticalGradient.START,
+          end: tmp2(1104).VerticalGradient.END,
           locations,
           colors: null,
         };
         const items2 = [token, token1, token2];
         obj6.colors = items2;
-        const items3 = [closure_10(tmp4(5258), obj6)];
+        const items3 = [closure_10(tmp4(5259), obj6)];
         const rect = { style: tmp.main, top: true, bottom: true, left: true, right: true, children: null };
         const obj7 = { style: tmp.header, children: null };
-        const obj8 = { variant: "tertiary", icon: tmp4(10658), accessibilityLabel: null, onPress: null };
-        const intl3 = tmp2(1128).intl;
-        obj8.accessibilityLabel = intl3.string(tmp2(1128).t.cpT0Cq);
-        obj8.onPress = tmp2(16416).closeOrbsArcadeRewardsCollectedModal;
-        obj7.children = closure_10(tmp2(7959).IconButton, obj8);
+        const obj8 = { variant: "tertiary", icon: tmp4(10661), accessibilityLabel: null, onPress: null };
+        const intl3 = tmp2(1125).intl;
+        obj8.accessibilityLabel = intl3.string(tmp2(1125).t.cpT0Cq);
+        obj8.onPress = tmp2(16455).closeOrbsArcadeRewardsCollectedModal;
+        obj7.children = closure_10(tmp2(7957).IconButton, obj8);
         const items4 = [closure_10(page, obj7), ,];
         const obj9 = { style: tmp.pager, onLayout: callback, children: null };
         let tmp28Result = null;
@@ -878,9 +878,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let tmp28Result3 = null;
         if (1 !== rewards.length) {
           const obj12 = { style: tmp.pageDots, accessible: true, accessibilityLabel: null, children: null };
-          const intl = tmp2(1128).intl;
+          const intl = tmp2(1125).intl;
           const obj13 = { current: bound + 1, total: rewards.length };
-          obj12.accessibilityLabel = intl.formatToPlainString(tmp2(1128).t.qD8TVH, obj13);
+          obj12.accessibilityLabel = intl.formatToPlainString(tmp2(1125).t.qD8TVH, obj13);
           const _Array = Array;
           const obj14 = { length: rewards.length };
           obj12.children = Array.from(obj14, (arg0, arg1) => {
@@ -895,7 +895,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp28Result3 = closure_10(tmp27, obj12);
         }
         const items5 = [tmp28Result3];
-        if (tmp16.type === tmp2(16396).OrbsArcadeRewardType.COLLECTIBLE) {
+        if (tmp16.type === tmp2(16435).OrbsArcadeRewardType.COLLECTIBLE) {
           const obj15 = { reward: tmp16 };
           let tmp28Result4 = closure_10(closure_19, obj15, tmp16.id);
         } else {
@@ -912,8 +912,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp28Result4 = closure_10(closure_21, obj16, tmp16.id);
         }
         const items6 = [tmp28Result4];
-        const intl2 = tmp2(1128).intl;
-        const t = tmp2(1128).t;
+        const intl2 = tmp2(1125).intl;
+        const t = tmp2(1125).t;
         if (1 === rewards.length) {
           let cpT0Cq = t.cpT0Cq;
         } else {
@@ -937,13 +937,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           },
         };
-        items6[1] = closure_10(tmp2(5244).Button, obj18);
+        items6[1] = closure_10(tmp2(5245).Button, obj18);
         obj17.children = items6;
-        items5[1] = closure_11(tmp2(6696).ButtonGroup, obj17);
+        items5[1] = closure_11(tmp2(6697).ButtonGroup, obj17);
         obj11.children = items5;
         items4[2] = closure_11(page, obj11);
         rect.children = items4;
-        items3[1] = closure_11(tmp2(7221).SafeAreaPaddingView, rect);
+        items3[1] = closure_11(tmp2(7223).SafeAreaPaddingView, rect);
         obj5.children = items3;
         return closure_11(page, obj5);
       }

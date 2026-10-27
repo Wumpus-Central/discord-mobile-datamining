@@ -1,12 +1,12 @@
 // discord_app/modules/custom_typing_indicator/native/CustomTypingIndicatorTypingSuggestionPickerSheet.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import _modDef3832 from "../intl/CustomTypingIndicator.messages.js";
+import _modDef3833 from "../intl/CustomTypingIndicator.messages.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { content: { paddingHorizontal: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -36,11 +36,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const obj2 = { title: null };
-        let intl = tmp(1128).intl;
-        obj2.title = intl.string(_modDef3832["X+ijyw"]);
-        const tmp12 = jsx(tmp(7248).BottomSheetTitleHeader, { title: null });
-        const intl2 = tmp(1128).intl;
-        const stringResult = intl2.string(_modDef3832.hrl2cG);
+        let intl = tmp(1125).intl;
+        obj2.title = intl.string(_modDef3833["X+ijyw"]);
+        const tmp12 = jsx(tmp(7250).BottomSheetTitleHeader, { title: null });
+        const intl2 = tmp(1125).intl;
+        const stringResult = intl2.string(_modDef3833.hrl2cG);
         cResult[2] = tmp12;
         cResult[3] = stringResult;
         let tmp9 = stringResult;
@@ -50,16 +50,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const customTypingIndicatorSuggestionPresets = tmp(13070).getCustomTypingIndicatorSuggestionPresets();
+        const customTypingIndicatorSuggestionPresets = tmp(13084).getCustomTypingIndicatorSuggestionPresets();
         const mapped = customTypingIndicatorSuggestionPresets.map((value) => {
           const obj = { value, label: null };
-          const intl = onChange(1128).intl;
-          obj.label = intl.string(onChange(13070).getCustomTypingIndicatorSuggestionMessage(value));
-          return jsx(onChange(6984).TableRadioRow, { value, label: null }, value);
+          const intl = onChange(1125).intl;
+          obj.label = intl.string(onChange(13084).getCustomTypingIndicatorSuggestionMessage(value));
+          return jsx(onChange(6986).TableRadioRow, { value, label: null }, value);
         });
         cResult[4] = mapped;
         let tmp14 = mapped;
-        const tmpResult = tmp(13070);
+        const tmpResult = tmp(13084);
       } else {
         tmp14 = cResult[4];
       }
@@ -74,7 +74,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp18;
         }
         const obj3 = { contentStyles: tmp4.content, header: tmp8, dismissAccessibilityLabel: tmp9, children: tmp16 };
-        const tmp20 = jsx(tmp(7298).ActionSheet, {
+        const tmp20 = jsx(tmp(7300).ActionSheet, {
           contentStyles: tmp4.content,
           header: tmp8,
           dismissAccessibilityLabel: tmp9,
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[10] = tmp20;
         tmp18 = tmp20;
       }
-      const tmp17 = jsx(onChange(6985).TableRadioGroup, {
+      const tmp17 = jsx(onChange(6987).TableRadioGroup, {
         value: tmp6,
         onChange: tmp7,
         hasIcons: false,
@@ -103,11 +103,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       importDefault = tmp2[1];
       let obj = { contentStyles: closure_6().content, header: null, dismissAccessibilityLabel: null, children: null };
       const obj2 = { title: null };
-      let intl = onChange(1128).intl;
-      obj2.title = intl.string(_modDef3832["X+ijyw"]);
-      obj.header = jsx(onChange(7248).BottomSheetTitleHeader, { title: null });
-      const intl2 = onChange(1128).intl;
-      obj.dismissAccessibilityLabel = intl2.string(_modDef3832.hrl2cG);
+      let intl = onChange(1125).intl;
+      obj2.title = intl.string(_modDef3833["X+ijyw"]);
+      obj.header = jsx(onChange(7250).BottomSheetTitleHeader, { title: null });
+      const intl2 = onChange(1125).intl;
+      obj.dismissAccessibilityLabel = intl2.string(_modDef3833.hrl2cG);
       const obj3 = {
         value: tmp2[0],
         onChange: function handleChange(arg0) {
@@ -118,14 +118,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const tmp = closure_6();
-      const customTypingIndicatorSuggestionPresets = onChange(13070).getCustomTypingIndicatorSuggestionPresets();
+      const customTypingIndicatorSuggestionPresets = onChange(13084).getCustomTypingIndicatorSuggestionPresets();
       obj3.children = customTypingIndicatorSuggestionPresets.map((value) => {
         const obj = { value, label: null };
-        const intl = onChange(1128).intl;
-        obj.label = intl.string(onChange(13070).getCustomTypingIndicatorSuggestionMessage(value));
-        return jsx(onChange(6984).TableRadioRow, { value, label: null }, value);
+        const intl = onChange(1125).intl;
+        obj.label = intl.string(onChange(13084).getCustomTypingIndicatorSuggestionMessage(value));
+        return jsx(onChange(6986).TableRadioRow, { value, label: null }, value);
       });
-      obj.children = jsx(onChange(6985).TableRadioGroup, {
+      obj.children = jsx(onChange(6987).TableRadioGroup, {
         value: tmp2[0],
         onChange: function handleChange(arg0) {
           closure_1(arg0);
@@ -134,7 +134,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         hasIcons: false,
         children: null,
       });
-      return jsx(onChange(7298).ActionSheet, {
+      return jsx(onChange(7300).ActionSheet, {
         contentStyles: closure_6().content,
         header: null,
         dismissAccessibilityLabel: null,

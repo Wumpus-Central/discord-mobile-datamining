@@ -413,31 +413,31 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                   if (true === ok.ok) {
                     return ok;
                   } else {
-                    if (ok.code === closure_0(11766).PREVIEW_BOT_NOT_INSTALLED_CODE) {
-                      project = closure_0(10720).getProject(projectId);
+                    if (ok.code === closure_0(11768).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                      project = closure_0(10723).getProject(projectId);
                       project.catch(() => {});
-                      const tmp9Result = closure_0(10720);
+                      const tmp9Result = closure_0(10723);
                     }
                     const _Error = Error;
-                    const error = new Error(closure_1(11766)(ok));
+                    const error = new Error(closure_1(11768)(ok));
                     throw error;
                   }
                 })
                 .then(
                   (result) => {
                     const channel_skipped = result;
-                    const intl = project(1128).intl;
-                    closure_4.showConfirmation(intl.string(closure_1_1(3830).S6Px3n));
+                    const intl = project(1125).intl;
+                    closure_4.showConfirmation(intl.string(closure_1_1(3831).S6Px3n));
                     if (null != channel_skipped.guildId) {
                       const tmpResult = project(8670);
-                      const profile = tmpResult.fetchProfile(project(10731).conjureProductionBotUserId(closure_3), {
+                      const profile = tmpResult.fetchProfile(project(10734).conjureProductionBotUserId(closure_3), {
                         withMutualGuilds: true,
                       });
                       profile.catch(() => {});
-                      const tmpResult3 = project(10731);
+                      const tmpResult3 = project(10734);
                     }
-                    result = project(10786).refreshPublishedProject(projectId, { isPreview: false });
-                    const tmpResult4 = project(10786);
+                    result = project(10789).refreshPublishedProject(projectId, { isPreview: false });
+                    const tmpResult4 = project(10789);
                     const catchPromise1 = result.catch(() => {});
                     const nextPromise = result
                       .catch(() => {})
@@ -520,8 +520,8 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                     if (message instanceof Error) {
                       message = message.message;
                     } else {
-                      const intl = closure_0(1128).intl;
-                      message = intl.string(closure_1(3830).gMWZeG);
+                      const intl = closure_0(1125).intl;
+                      message = intl.string(closure_1(3831).gMWZeG);
                     }
                     const obj = closure_1(584);
                     const obj2 = { type: "CONJURE_PROJECT_APP_CHANNEL_PENDING", projectId, pending: false };
@@ -536,13 +536,13 @@ let closure_21 = async function _startPublish(arg0, arg1, arg2) {
                   if (true === ok.ok) {
                     return ok;
                   } else {
-                    if (ok.code === closure_0(11766).PREVIEW_BOT_NOT_INSTALLED_CODE) {
-                      project = closure_0(10720).getProject(projectId);
+                    if (ok.code === closure_0(11768).PREVIEW_BOT_NOT_INSTALLED_CODE) {
+                      project = closure_0(10723).getProject(projectId);
                       project.catch(() => {});
-                      const tmp9Result = closure_0(10720);
+                      const tmp9Result = closure_0(10723);
                     }
                     const _Error = Error;
-                    const error = new Error(closure_1(11766)(ok));
+                    const error = new Error(closure_1(11768)(ok));
                     throw error;
                   }
                 });
@@ -864,13 +864,13 @@ let closure_28 = async function _continuePublish(arg0, arg1, arg2) {
                   set.add(closure_0);
                   c9 = 1;
                   const requestConsent = closure_2.platform.requestConsent;
-                  f160261 = requestConsent;
+                  f160604 = requestConsent;
                   if (requestConsent == null) {
-                    f160261 = (arg0) => closure_2_18(arg0, closure_1_3);
+                    f160604 = (arg0) => closure_2_18(arg0, closure_1_3);
                   }
                   c10 = 3;
                   c11 = 1;
-                  const obj5 = { value: f160261(closure_0), done: false };
+                  const obj5 = { value: f160604(closure_0), done: false };
                   return obj5;
                 }
               }
@@ -976,17 +976,17 @@ let closure_28 = async function _continuePublish(arg0, arg1, arg2) {
     }
   })();
 };
-let ConjureProjectStore = fn(6773);
+let ConjureProjectStore = fn(6774);
 ({ canPublishProject: closure_11, isProjectOwner: closure_12 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 let context = noop.createContext(null);
 const set = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishAction.tsx");
 
-export default function useConjurePublishAction(projectId, arg1) {
-  _require = projectId;
+export default function useConjurePublishAction(arg0, arg1) {
+  _require = arg0;
   context = arg1;
   if (arg1 == null) {
     context = guildId.useContext(memo);
@@ -1008,7 +1008,7 @@ export default function useConjurePublishAction(projectId, arg1) {
     status,
     installScope,
   ];
-  const items1 = [projectId, guildId1];
+  const items1 = [arg0, guildId1];
   const stateFromStoresObject = require("initialize").useStateFromStoresObject(
     items,
     () => {
@@ -1333,10 +1333,10 @@ export default function useConjurePublishAction(projectId, arg1) {
   let tmp19 = null;
   let obj2 = require("initialize");
   if (publishing) {
-    tmp19 = projectId;
+    tmp19 = arg0;
   }
   let stringResult = context(guildId1[33])(tmp19);
-  const items6 = [projectId, context];
+  const items6 = [arg0, context];
   if (null != context) {
     if (viewerCanPublish) {
       if (null != memo1) {

@@ -4,25 +4,31 @@ import RootNavigationRef from "../../../main_tabs_v2/RootNavigationRef.native.ts
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import ConjureGuildExperiment from "../../experiments/ConjureGuildExperiment.tsx";
 import PostConnectionCallbackStore from "../../../gateway/PostConnectionCallbackStore.tsx";
+import ConjureMobileExperiment from "../../experiments/ConjureMobileExperiment.tsx";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 PostConnectionCallbackStore.addPostConnectionCallback;
-let c4 = 0;
+const openConjureHomeScreen = "openConjureHomeScreen";
+let c5 = 0;
 let result = size.fileFinishedImporting("modules/conjure/home/native/openConjureHomeScreen.tsx");
 
 export default function openConjureHomeScreen(projectId) {
   const rootNavigationRef = RootNavigationRef.getRootNavigationRef();
-  if (tmp3) {
-    const result = KeyboardManagerUtils.dismissGlobalKeyboard();
-    const tmpResult = KeyboardManagerUtils;
+  let result = null != rootNavigationRef && rootNavigationRef.isReady();
+  if (result) {
+    result = ConjureMobileExperiment.isConjureMobileEnabled(openConjureHomeScreen);
+    const tmpResult = ConjureMobileExperiment;
+  }
+  if (result) {
+    const result1 = KeyboardManagerUtils.dismissGlobalKeyboard();
+    const tmpResult2 = KeyboardManagerUtils;
     ActionSheetActionCreatorsDefault.hideAllActionSheets();
     const obj2 = { projectId, requestId: null };
-    const sum = c4 + 1;
-    c4 = sum;
+    const sum = c5 + 1;
+    c5 = sum;
     obj2.requestId = sum;
     rootNavigationRef.navigate("conjure", obj2, { pop: true });
   }
-  tmp3 = null != rootNavigationRef && rootNavigationRef.isReady();
 }
 export const CONJURE_HOME_LINK_WAIT_MS = 10000;
 export const openConjureHomeScreenWhenReady = function openConjureHomeScreenWhenReady(projectId) {
@@ -35,18 +41,22 @@ export const openConjureHomeScreenWhenReady = function openConjureHomeScreenWhen
       clearTimeout(closure_2);
       const result = RootNavigationRef.runWhenRootNavigationReady(() => {
         const rootNavigationRef = closure_0(dependencyMap[1]).getRootNavigationRef();
-        const obj = closure_0(dependencyMap[1]);
-        if (tmp4) {
-          const result = closure_0(dependencyMap[2]).dismissGlobalKeyboard();
+        let result = null != rootNavigationRef && rootNavigationRef.isReady();
+        if (result) {
+          result = closure_0(dependencyMap[2]).isConjureMobileEnabled(openConjureHomeScreen);
           const tmp2Result = closure_0(dependencyMap[2]);
-          c1(dependencyMap[3]).hideAllActionSheets();
+        }
+        if (result) {
+          const result1 = closure_0(dependencyMap[3]).dismissGlobalKeyboard();
+          const tmp2Result2 = closure_0(dependencyMap[3]);
+          c1(dependencyMap[4]).hideAllActionSheets();
           const obj2 = { projectId, requestId: null };
           sum = sum + 1;
           obj2.requestId = sum;
           rootNavigationRef.navigate("conjure", obj2, { pop: true });
-          const obj4 = c1(dependencyMap[3]);
+          const obj5 = c1(dependencyMap[4]);
         }
-        tmp4 = null != rootNavigationRef && rootNavigationRef.isReady();
+        const obj = closure_0(dependencyMap[1]);
       });
     }
   }, 10000);
@@ -55,22 +65,26 @@ export const openConjureHomeScreenWhenReady = function openConjureHomeScreenWhen
       c1 = true;
       const _clearTimeout = clearTimeout;
       clearTimeout(dependencyMap);
-      let result = ConjureGuildExperiment.hasConjureGuildWithoutExposure("openConjureHomeScreen");
+      let result = ConjureGuildExperiment.hasConjureGuildWithoutExposure(openConjureHomeScreen);
       if (result) {
-        const result1 = RootNavigationRef.runWhenRootNavigationReady(() => {
+        let result1 = RootNavigationRef.runWhenRootNavigationReady(() => {
           const rootNavigationRef = closure_0(dependencyMap[1]).getRootNavigationRef();
-          const obj = closure_0(dependencyMap[1]);
-          if (tmp4) {
-            const result = closure_0(dependencyMap[2]).dismissGlobalKeyboard();
+          let result = null != rootNavigationRef && rootNavigationRef.isReady();
+          if (result) {
+            result = closure_0(dependencyMap[2]).isConjureMobileEnabled(openConjureHomeScreen);
             const tmp2Result = closure_0(dependencyMap[2]);
-            c1(dependencyMap[3]).hideAllActionSheets();
+          }
+          if (result) {
+            const result1 = closure_0(dependencyMap[3]).dismissGlobalKeyboard();
+            const tmp2Result2 = closure_0(dependencyMap[3]);
+            c1(dependencyMap[4]).hideAllActionSheets();
             const obj2 = { projectId, requestId: null };
             sum = sum + 1;
             obj2.requestId = sum;
             rootNavigationRef.navigate("conjure", obj2, { pop: true });
-            const obj4 = c1(dependencyMap[3]);
+            const obj5 = c1(dependencyMap[4]);
           }
-          tmp4 = null != rootNavigationRef && rootNavigationRef.isReady();
+          const obj = closure_0(dependencyMap[1]);
         });
       }
     }

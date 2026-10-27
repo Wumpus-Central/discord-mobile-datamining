@@ -147,7 +147,7 @@ let closure_10 = async function _mintProxyTicket(arg0) {
     return value.body.ticket;
   })();
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/createProxyTicket.tsx");

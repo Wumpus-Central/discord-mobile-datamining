@@ -5,7 +5,7 @@ import openFavoritesGuildCategoryActionSheetDefault from "../openFavoritesGuildC
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ChannelTypes = fn(1087).ChannelTypes;
+const ChannelTypes = fn(1084).ChannelTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/native/action/useFavoritesGuildCategoryLongPress.tsx");
@@ -14,14 +14,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useFavoritesGuildCategoryLongPress(getGuildId) {
       const cResult = id(576).c(5);
       if (cResult[0] !== getGuildId) {
-        let isFavoritesGuildIdResult = tmp(4848).isFavoritesGuildId(getGuildId.getGuildId());
+        let isFavoritesGuildIdResult = tmp(4849).isFavoritesGuildId(getGuildId.getGuildId());
         if (isFavoritesGuildIdResult) {
           isFavoritesGuildIdResult = getGuildId.type === ChannelTypes.GUILD_CATEGORY;
         }
         cResult[0] = getGuildId;
         cResult[1] = isFavoritesGuildIdResult;
         let tmp4 = isFavoritesGuildIdResult;
-        const tmpResult = tmp(4848);
+        const tmpResult = tmp(4849);
       } else {
         tmp4 = cResult[1];
       }
@@ -35,8 +35,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp8 = null;
       if (tmp4) {
         const obj2 = { label: null, perform: null };
-        const intl = tmp(1128).intl;
-        obj2.label = intl.string(tmp(1128).t.Xm41aV);
+        const intl = tmp(1125).intl;
+        obj2.label = intl.string(tmp(1125).t.Xm41aV);
         obj2.perform = function perform() {
           return openFavoritesGuildCategoryActionSheetDefault(id);
         };

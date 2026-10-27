@@ -1,8 +1,8 @@
 // discord_app/modules/checkpoint/CheckpointCharacterAccessibilityUtils.tsx
 import util from "../../intl/index.native.tsx";
-import _modDef3088 from "Checkpoint2026.messages.js";
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils.tsx";
+import _modDef3089 from "Checkpoint2026.messages.js";
 import CheckpointCharacterTraits from "CheckpointCharacterTraits.tsx";
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils.tsx";
 import CheckpointTraitOptionNames from "CheckpointTraitOptionNames.tsx";
 import size from "../../../_runtime/metro/00002__.js";
 
@@ -24,20 +24,20 @@ export const getCheckpointCharacterAccessibilityLabel = function getCheckpointCh
   _require = character;
   items = [];
   const item = items.forEach((item) => {
-    const tmp3 = closure_0[CheckpointCustomizationUtils.CUSTOMIZATION_OPTION_TRAITS[item]];
+    const tmp3 = closure_0[CheckpointCustomizationUtils.CUSTOMIZATION_OPTION_TO_TRAIT[item]];
     if (null == tmp3) {
       if (null != undefined) {
         const intl = util.intl;
         const obj = { category: CheckpointCustomizationUtils.getCustomizationOptionName(item), name: null };
         const intl2 = util.intl;
         obj.name = intl2.string(undefined);
-        items.push(intl.formatToPlainString(_modDef3088["Z+HdIo"], obj));
+        items.push(intl.formatToPlainString(_modDef3089["Z+HdIo"], obj));
         const tmpResult = CheckpointCustomizationUtils;
       }
     } else {
-      const tmp4 = CheckpointCustomizationUtils.CUSTOMIZATION_OPTION_TRAITS[item];
+      const tmp4 = CheckpointCustomizationUtils.CUSTOMIZATION_OPTION_TO_TRAIT[item];
       if (!tmpResult4.isTraitNoneOptionId(tmp4, tmp3)) {
-        const tmp6 = CheckpointTraitOptionNames.CHECKPOINT_TRAIT_OPTION_NAMES[tmp4];
+        const tmp6 = CheckpointTraitOptionNames.CHECKPOINT_TRAIT_TO_OPTION_NAMES[tmp4];
         if (CheckpointCustomizationUtils.CheckpointCustomizationOption.OUTFIT === item) {
           const outfitDefaultOptionId = CheckpointCharacterTraits.getOutfitDefaultOptionId(tmp3);
           const tmpResult5 = CheckpointCharacterTraits;
@@ -51,5 +51,5 @@ export const getCheckpointCharacterAccessibilityLabel = function getCheckpointCh
   let obj = { traits: null };
   const listFormat = new Intl.ListFormat(require("util").intl.currentLocale, { type: "conjunction" });
   obj.traits = listFormat.format(items);
-  return intl.formatToPlainString(items(3088).mQNR4x, obj);
+  return intl.formatToPlainString(items(3089).mQNR4x, obj);
 };

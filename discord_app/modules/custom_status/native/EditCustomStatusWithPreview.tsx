@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import shared from "../../../design/shared.tsx";
 import ChatInputUtils from "../../../utils/native/ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
@@ -12,7 +12,7 @@ import setAccessibilityFocus from "../../a11y/native/setAccessibilityFocus.andro
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import NavigatorHeader from "../../../design/components/Navigator/native/NavigatorHeader.native.tsx";
-import _modDef7032 from "../../../../_runtime/metro/07032__.js";
+import _modDef7034 from "../../../../_runtime/metro/07034__.js";
 import openEmojiPickerActionSheet from "../../emoji_picker/native/openEmojiPickerActionSheet.tsx";
 import setCustomStatusDefault from "../setCustomStatus.tsx";
 import removeCustomStatusDefault from "../utils/removeCustomStatus.tsx";
@@ -112,9 +112,9 @@ function EditCustomStatusWithPreview(navigation) {
   const callback2 = obj.useCallback(() => {
     removeCustomStatusDefault();
     const timerId = setTimeout(() => {
-      const AccessibilityAnnouncer = navigation(4978).AccessibilityAnnouncer;
-      const intl = navigation(1128).intl;
-      AccessibilityAnnouncer.announce(intl.string(navigation(1128).t.YdUwBS));
+      const AccessibilityAnnouncer = navigation(4979).AccessibilityAnnouncer;
+      const intl = navigation(1125).intl;
+      AccessibilityAnnouncer.announce(intl.string(navigation(1125).t.YdUwBS));
     }, 300);
     onClose();
   }, items4);
@@ -298,7 +298,7 @@ function EditCustomStatusWithPreview(navigation) {
     obj18.onPress = function handlePressClearAfter() {
       ChatInputUtils.dismissKeyboard();
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(11154, dependencyMap.paths),
+        asyncRequireImpl(11157, dependencyMap.paths),
         "ClearAfterOptionsActionSheet",
         { initialValue: first2, onChange },
       );
@@ -339,13 +339,13 @@ function EditCustomStatusWithPreview(navigation) {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const STATUS_MAX_LENGTH = fn(11064).STATUS_MAX_LENGTH;
-const Constants = fn(1087);
+const STATUS_MAX_LENGTH = fn(11067).STATUS_MAX_LENGTH;
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, NOOP: closure_11, Fonts } = Constants);
-const EmojiIntention = fn(1395).EmojiIntention;
+const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { flexGrow: 1, padding: 16, rowGap: 24 },
   statusSection: { rowGap: 8 },
@@ -441,7 +441,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         tmp8 = cResult[2];
       }
       if (cResult[3] !== tmp4.closeIcon) {
-        const obj3 = { source: _modDef7032, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
+        const obj3 = { source: _modDef7034, style: tmp4.closeIcon, size: native.Icon.Sizes.SMALL };
         const tmp12 = map1(native.Icon, obj3);
         cResult[3] = tmp4.closeIcon;
         cResult[4] = tmp12;
@@ -483,7 +483,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
       obj.hitSlop = { top: 8, bottom: 8, right: 8 };
       const tmp = closure_15();
       obj.children = map1(native.Icon, {
-        source: _modDef7032,
+        source: _modDef7034,
         style: closure_15().closeIcon,
         size: native.Icon.Sizes.SMALL,
       });
@@ -510,16 +510,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           cResult[3] = obj2;
           let tmp6 = obj2;
-          tmpResult = analyticsLocations(1385);
+          tmpResult = analyticsLocations(1382);
         } else {
           tmp6 = cResult[3];
         }
         if (cResult[4] !== tmp4) {
           const obj3 = { initialRouteName: "root", screens: tmp4, headerStatusBarHeight: null, headerStyle: null };
-          analyticsLocations(1385);
+          analyticsLocations(1382);
           obj3.headerStatusBarHeight = 12;
           obj3.headerStyle = tmp6;
-          const tmp8Result = closure_13(analyticsLocations(7095).Navigator, obj3);
+          const tmp8Result = closure_13(analyticsLocations(7097).Navigator, obj3);
           cResult[4] = tmp4;
           cResult[5] = tmp8Result;
           let tmp7 = tmp8Result;
@@ -530,16 +530,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj4 = { root: null };
       const obj5 = { title: null, headerTitle: null, headerLeft: null, ignoreKeyboard: true, render: null };
-      const intl = analyticsLocations(1128).intl;
-      obj5.title = intl.string(analyticsLocations(1128).t.Iuzg8R);
+      const intl = analyticsLocations(1125).intl;
+      obj5.title = intl.string(analyticsLocations(1125).t.Iuzg8R);
       obj5.headerTitle = function headerTitle() {
         const obj = { title: null };
-        const intl = analyticsLocations(1128).intl;
-        obj.title = intl.string(analyticsLocations(1128).t.Iuzg8R);
-        return closure_1_13(analyticsLocations(9699).GenericHeaderTitle, obj);
+        const intl = analyticsLocations(1125).intl;
+        obj.title = intl.string(analyticsLocations(1125).t.Iuzg8R);
+        return closure_1_13(analyticsLocations(9701).GenericHeaderTitle, obj);
       };
       const obj = analyticsLocations(576);
-      obj5.headerLeft = analyticsLocations(6924).getHeaderCloseButton(_prompt(6672).pop);
+      obj5.headerLeft = analyticsLocations(6926).getHeaderCloseButton(_prompt(6673).pop);
       obj5.render = function render(arg0, navigation) {
         return closure_2_13(EditCustomStatusWithPreview, {
           navigation,
@@ -553,7 +553,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[1] = _prompt;
       cResult[2] = obj4;
       tmp4 = obj4;
-      const tmpResult4 = analyticsLocations(6924);
+      const tmpResult4 = analyticsLocations(6926);
     }
   : function EditCustomStatusWithPreviewModal(analyticsLocations) {
       analyticsLocations = analyticsLocations.analyticsLocations;
@@ -566,9 +566,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj2.title = intl.string(util.t.Iuzg8R);
         obj2.headerTitle = function headerTitle() {
           const obj = { title: null };
-          const intl = analyticsLocations(1128).intl;
-          obj.title = intl.string(analyticsLocations(1128).t.Iuzg8R);
-          return closure_1_13(analyticsLocations(9699).GenericHeaderTitle, obj);
+          const intl = analyticsLocations(1125).intl;
+          obj.title = intl.string(analyticsLocations(1125).t.Iuzg8R);
+          return closure_1_13(analyticsLocations(9701).GenericHeaderTitle, obj);
         };
         obj2.headerLeft = NavigatorHeader.getHeaderCloseButton(ModalActionCreatorsDefault.pop);
         obj2.render = function render(arg0, navigation) {
@@ -583,12 +583,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return obj;
       }, items);
       let obj = { initialRouteName: "root", screens: memo, headerStatusBarHeight: null, headerStyle: null };
-      analyticsLocations(1385);
+      analyticsLocations(1382);
       obj.headerStatusBarHeight = 12;
       let obj3;
       if (!tmp3Result.isAndroid()) {
         obj3 = { height: 56 };
       }
       obj.headerStyle = obj3;
-      return closure_13(analyticsLocations(7095).Navigator, obj);
+      return closure_13(analyticsLocations(7097).Navigator, obj);
     };

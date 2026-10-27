@@ -112,16 +112,16 @@ let closure_15 = async function _handleCreateJoinGuildPress() {
   }
 };
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({
   AnalyticsPages: closure_7,
   MOBILE_GUILD_UPSELL_LIST: closure_8,
   TooltipNames: closure_9,
   UpsellTypes: c10,
 } = Constants);
-const PremiumUpsellTypes = fn(1394).PremiumUpsellTypes;
+const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -221,7 +221,7 @@ export default noop.memo(
           expandedChildren: tmp12,
           children: tmp18,
         };
-        const tmp22 = jsx(tmp17(17743), {
+        const tmp22 = jsx(tmp17(17784), {
           selected: stateFromStores,
           circle: false,
           unread: false,
@@ -265,8 +265,8 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: null,
-          expandedChildren: "text-status-online",
+          label: "f",
+          expandedChildren: "guilds-bar-drag-preview",
           children: null,
         };
         const intl = util.intl;
@@ -284,8 +284,8 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: null,
-          expandedChildren: "text-status-online",
+          label: "f",
+          expandedChildren: "guilds-bar-drag-preview",
           children: null,
         });
         return <View style={tmp.stretch}>{null}</View>;

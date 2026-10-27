@@ -1,5 +1,5 @@
 // discord_app/modules/app_launcher/native/options/channel/AppLauncherChannelOption.tsx
-import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AppLauncherChannelListActionSheet from "AppLauncherChannelListActionSheet.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -19,7 +19,7 @@ export default function AppLauncherChannelOption(option) {
   ({ onActionSheetDismiss: _slicedToArray, channel: noop, onPress: ChannelStore } = option);
   first = undefined;
   closure_7 = undefined;
-  ({ style, autoFocus, hasError } = option);
+  ({ autoFocus, hasError } = option);
   [first, closure_7] = noop.useState(() => {
     let channelId = null;
     if (null != importDefault) {
@@ -52,7 +52,6 @@ export default function AppLauncherChannelOption(option) {
   const tmp3 = option;
   const tmp4 = onChannelPress;
   const obj2 = {
-    style,
     option,
     hasError,
     selected: null != stateFromStores,
@@ -74,7 +73,7 @@ export default function AppLauncherChannelOption(option) {
     }
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(12096, dependencyMap.paths),
+      asyncRequireImpl(12097, dependencyMap.paths),
       AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY,
       {
         option,

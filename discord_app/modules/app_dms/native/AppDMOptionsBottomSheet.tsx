@@ -8,10 +8,10 @@ import AuthorizedAppsStore from "../../oauth2/AuthorizedAppsStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const UserSettingsSections = fn(1087).UserSettingsSections;
+const UserSettingsSections = fn(1084).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   sheet: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST },
   content: { paddingLeft: 16, paddingRight: 16, paddingBottom: 24 },

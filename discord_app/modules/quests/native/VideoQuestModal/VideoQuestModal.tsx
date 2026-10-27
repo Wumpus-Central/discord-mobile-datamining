@@ -15,15 +15,15 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-let closure_6 = fn(16441).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+let closure_6 = fn(16480).QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = -100;
 let c11 = 0.5625;
 let top = { mass: 1.9, damping: 18, stiffness: 80, overshootClamping: true };
 const VideoQuestModalSteps = { WATCH_VIDEO: 0, [0]: "WATCH_VIDEO", POST_WATCH_VIDEO: 1, [1]: "POST_WATCH_VIDEO" };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   root: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM },
   pillarboxed: { alignSelf: "center" },

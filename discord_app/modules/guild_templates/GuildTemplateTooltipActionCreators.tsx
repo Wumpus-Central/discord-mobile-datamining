@@ -3,7 +3,7 @@ import DispatcherDefault from "../../Dispatcher.tsx";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
 

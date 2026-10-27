@@ -6,9 +6,9 @@ import useSyncedModeThemeName from "useSyncedModeThemeName.tsx";
 import ThemeStore from "../../ThemeStore.tsx";
 
 require = fn;
-const SystemTheme = fn(1210).SystemTheme;
+const SystemTheme = fn(1207).SystemTheme;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSyncedModePickerVisible() {
       const cResult = c.c(2);
@@ -35,7 +35,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t["EgvHH/"]);
   },
-  parent: fn(8332).MobileUserSettings.APPEARANCE,
+  parent: fn(8331).MobileUserSettings.APPEARANCE,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled()
     ? function useSyncedModePickerVisible() {
         const cResult = c.c(2);
@@ -61,7 +61,7 @@ const route = SettingBuilders.createRoute({
     return useSyncedModeThemeName.useSyncedModeThemeName(SystemTheme.DARK);
   },
   screen: {
-    route: fn(1087).UserSettingsSections.APPEARANCE_DARK_MODE_THEME_PICKER,
+    route: fn(1084).UserSettingsSections.APPEARANCE_DARK_MODE_THEME_PICKER,
     getComponent() {
       return require("SettingsAppearanceDarkModeThemePickerScreen").default;
     },

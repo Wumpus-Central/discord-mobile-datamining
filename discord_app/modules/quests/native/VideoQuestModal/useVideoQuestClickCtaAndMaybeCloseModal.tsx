@@ -6,7 +6,7 @@ import QuestPlatformUtils from "../../utils/QuestPlatformUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const LinkingTypes = fn(1087).LinkingTypes;
+const LinkingTypes = fn(1084).LinkingTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(

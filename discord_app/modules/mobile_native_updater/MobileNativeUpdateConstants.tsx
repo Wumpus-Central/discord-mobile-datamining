@@ -1,6 +1,6 @@
 // discord_app/modules/mobile_native_updater/MobileNativeUpdateConstants.tsx
 import URLUtilsDefault from "../../utils/URLUtils.tsx";
-import hooks from "../../../_runtime/metro/02049__.js";
+import hooks from "../../../_runtime/metro/02046__.js";
 
 let tmp3 = null;
 if (undefined !== process.env.INTERNAL_UPDATE_URL) {
@@ -13,13 +13,13 @@ if (undefined !== process.env.INTERNAL_UPDATE_URL) {
       const importDefaultResult1 = URLUtilsDefault;
     } else {
       toURLSafeResult = null;
-      const obj3 = fn(1384);
+      const obj3 = fn(1381);
     }
     tmp3 = toURLSafeResult;
-    obj2 = fn(1384);
+    obj2 = fn(1381);
   }
 }
-let ClientInfoUtils = fn(1383);
+let ClientInfoUtils = fn(1380);
 ClientInfoUtils = ClientInfoUtils.getConstants();
 let Build;
 if (ClientInfoUtils != null) {
@@ -39,7 +39,7 @@ if (!Number.isNaN(parsed)) {
     }
   }
 }
-ClientInfoUtils = fn(1383);
+ClientInfoUtils = fn(1380);
 ClientInfoUtils = ClientInfoUtils.getConstants();
 let Version;
 if (ClientInfoUtils != null) {

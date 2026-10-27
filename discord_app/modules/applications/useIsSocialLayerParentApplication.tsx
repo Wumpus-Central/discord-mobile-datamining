@@ -4,7 +4,7 @@ import ApplicationFlagUtils from "utils/ApplicationFlagUtils.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ApplicationFlags = fn(1087).ApplicationFlags;
+const ApplicationFlags = fn(1084).ApplicationFlags;
 const ReactCompilerGating = fn(558);
 function getIsSocialLayerParentApplication(application) {
   return ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.PARENT);

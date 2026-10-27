@@ -5,10 +5,10 @@ import ApplicationStreamingStore from "../../../../stores/ApplicationStreamingSt
 
 const require = fn;
 const View = fn(17).View;
-const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
+const ApplicationStreamStates = fn(1084).ApplicationStreamStates;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: {
     alignItems: "center",

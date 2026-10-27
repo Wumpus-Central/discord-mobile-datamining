@@ -9,10 +9,10 @@ import useNotificationsTabBadgeDefault from "../tabs/notifications/useNotificati
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SavedMessagesStore from "../../../saved_messages/SavedMessagesStore.tsx";
 
-const ReanimatedRexportDefault = tmp5(5052);
+const ReanimatedRexportDefault = tmp5(5053);
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16444);
+const YouBarConstants = fn(16483);
 ({
   YOU_BAR_SPRING_CONFIG: metroRequire,
   YOU_BAR_BUTTON_HIT_SLOP: closure_7,
@@ -20,7 +20,7 @@ const YouBarConstants = fn(16444);
 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE },
   iconContainer: { display: "flex", flexDirection: "row", alignItems: "center" },
@@ -94,9 +94,9 @@ export default noop.memo(
         const stateFromStores = initialize.useStateFromStores(tmp7, tmp8);
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const fn3 = function f() {
-            const result = value(5212).triggerHapticFeedback(value(5212).HapticFeedbackTypes.SOFT);
-            const obj = value(5212);
-            value(13804).showForLaterModal(value(10078).SavedMessageSortTypes.BOOKMARK);
+            const result = value(5213).triggerHapticFeedback(value(5213).HapticFeedbackTypes.SOFT);
+            const obj = value(5213);
+            value(13818).showForLaterModal(value(10080).SavedMessageSortTypes.BOOKMARK);
           };
           cResult[2] = fn3;
           let tmp12 = fn3;
@@ -106,8 +106,8 @@ export default noop.memo(
         importDefault = tmp12;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { name: "open-bookmarks", label: null };
-          const intl = tmp(1128).intl;
-          obj4.label = intl.string(tmp(1128).t["2pAkDA"]);
+          const intl = tmp(1125).intl;
+          obj4.label = intl.string(tmp(1125).t["2pAkDA"]);
           const items1 = [obj4];
           cResult[3] = items1;
           let tmp13 = items1;
@@ -134,9 +134,9 @@ export default noop.memo(
             let tmp15 = cResult[7];
           }
           if (cResult[8] !== value) {
-            const intl2 = tmp(1128).intl;
+            const intl2 = tmp(1125).intl;
             const obj5 = { count: value };
-            const formatToPlainStringResult = intl2.formatToPlainString(tmp(1128).t.kedGua, obj5);
+            const formatToPlainStringResult = intl2.formatToPlainString(tmp(1125).t.kedGua, obj5);
             cResult[8] = value;
             cResult[9] = formatToPlainStringResult;
             let tmp17 = formatToPlainStringResult;
@@ -163,7 +163,7 @@ export default noop.memo(
                   }
                   if (cResult[18] !== value) {
                     const obj6 = { value };
-                    const tmp26 = closure_8(tmp(1202).Badge, obj6);
+                    const tmp26 = closure_8(tmp(1199).Badge, obj6);
                     cResult[18] = value;
                     cResult[19] = tmp26;
                     let tmp24 = tmp26;
@@ -237,8 +237,8 @@ export default noop.memo(
                           onLongPress: tmp12,
                           hitSlop,
                         };
-                        obj7.children = closure_8(tmp(7959).IconButton, obj9);
-                        const tmp38 = closure_8(tmp(17845).YouBarButtonContainer, obj7);
+                        obj7.children = closure_8(tmp(7957).IconButton, obj9);
+                        const tmp38 = closure_8(tmp(17879).YouBarButtonContainer, obj7);
                         cResult[28] = tmp19;
                         cResult[29] = str4;
                         cResult[30] = tmp30;
@@ -264,7 +264,7 @@ export default noop.memo(
                 }
               }
               const obj12 = { icon: tmp15, hasBadge: tmp11, badgeStyle: tmp4.overdueReminderDot };
-              const tmp23 = closure_8(tmp(17845).YouBarButtonIcon, obj12);
+              const tmp23 = closure_8(tmp(17879).YouBarButtonIcon, obj12);
               cResult[14] = tmp15;
               cResult[15] = tmp11;
               cResult[16] = tmp4.overdueReminderDot;
@@ -287,7 +287,7 @@ export default noop.memo(
             }
             const obj13 = { count: stateFromStores };
             const _HermesInternal = HermesInternal;
-            combined = "" + tmp17 + ", " + obj8.formatToPlainString(tmp(1128).t.yBmFPA, obj13);
+            combined = "" + tmp17 + ", " + obj8.formatToPlainString(tmp(1125).t.yBmFPA, obj13);
           }
           cResult[10] = tmp17;
           cResult[11] = stateFromStores;
@@ -307,7 +307,7 @@ export default noop.memo(
         hasNameplate = hasNameplate.hasNameplate;
         let onLongPress;
         const tmp = closure_10();
-        value = onLongPress(17849)().value;
+        value = onLongPress(17883)().value;
         _require = value;
         const fn = function u() {
           let num = 0;
@@ -353,15 +353,15 @@ export default noop.memo(
           overdueMessageReminderCount.getOverdueMessageReminderCount(),
         );
         onLongPress = noop.useCallback(() => {
-          const result = _undefined(5212).triggerHapticFeedback(_undefined(5212).HapticFeedbackTypes.SOFT);
-          const obj = _undefined(5212);
-          _undefined(13804).showForLaterModal(_undefined(10078).SavedMessageSortTypes.BOOKMARK);
+          const result = _undefined(5213).triggerHapticFeedback(_undefined(5213).HapticFeedbackTypes.SOFT);
+          const obj = _undefined(5213);
+          _undefined(13818).showForLaterModal(_undefined(10080).SavedMessageSortTypes.BOOKMARK);
         }, []);
         const items1 = [onLongPress];
         const memo = noop.useMemo(() => {
           const obj = { name: "open-bookmarks", label: null };
-          const intl = _undefined(1128).intl;
-          obj.label = intl.string(_undefined(1128).t["2pAkDA"]);
+          const intl = _undefined(1125).intl;
+          obj.label = intl.string(_undefined(1125).t["2pAkDA"]);
           const items = [obj];
           return items;
         }, []);
@@ -377,14 +377,14 @@ export default noop.memo(
         }
         obj4.color = str;
         let obj3 = require("initialize");
-        let intl = tmp4(1128).intl;
+        let intl = tmp4(1125).intl;
         const formatToPlainStringResult = intl.formatToPlainString(require("util").t.kedGua, { count: value });
         let combined = formatToPlainStringResult;
         if (stateFromStores > 0 && 0 === value) {
-          const intl2 = tmp4(1128).intl;
+          const intl2 = tmp4(1125).intl;
           const obj5 = { count: stateFromStores };
           const _HermesInternal = HermesInternal;
-          combined = "" + formatToPlainStringResult + ", " + intl2.formatToPlainString(tmp4(1128).t.yBmFPA, obj5);
+          combined = "" + formatToPlainStringResult + ", " + intl2.formatToPlainString(tmp4(1125).t.yBmFPA, obj5);
         }
         const obj6 = {
           accessibilityLabel: combined,
@@ -421,14 +421,14 @@ export default noop.memo(
           hasBadge: stateFromStores > 0 && 0 === value,
           badgeStyle: tmp.overdueReminderDot,
         };
-        items2[1] = closure_8(tmp2(5052).View, {
+        items2[1] = closure_8(tmp2(5053).View, {
           style: animatedStyle,
           children: closure_8(require("native").Badge, { value }),
         });
         obj8.children = items2;
         obj6.icon = closure_9(View, obj8);
         obj6.onPress = function onPress() {
-          const rootNavigationRef = _undefined(5151).getRootNavigationRef();
+          const rootNavigationRef = _undefined(5152).getRootNavigationRef();
           if (null != rootNavigationRef) {
             rootNavigationRef.navigate("notifications", { inNestedNavigator: true });
           }

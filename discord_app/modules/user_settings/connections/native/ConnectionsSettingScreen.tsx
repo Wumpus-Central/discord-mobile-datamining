@@ -1,11 +1,11 @@
 // discord_app/modules/user_settings/connections/native/ConnectionsSettingScreen.tsx
-import asyncRequireImpl from "../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 function onPress() {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16252, dependencyMap.paths), "AddConnection");
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16290, dependencyMap.paths), "AddConnection");
 }
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -18,9 +18,9 @@ export default noop.memo(
         const cResult = stackNavigation(576).c(5);
         let obj = stackNavigation(576);
         const tmp = stackNavigation;
-        stackNavigation = stackNavigation(1505).useStackNavigation();
-        const obj2 = stackNavigation(1505);
-        const params = stackNavigation(7090).useSettingNavigationRoute().params;
+        stackNavigation = stackNavigation(1502).useStackNavigation();
+        const obj2 = stackNavigation(1502);
+        const params = stackNavigation(7092).useSettingNavigationRoute().params;
         let selectedPlatformType;
         if (params != null) {
           selectedPlatformType = params.selectedPlatformType;
@@ -32,9 +32,9 @@ export default noop.memo(
                 const obj = {};
                 const merged = Object.assign(arg0);
                 obj.onPress = onPress;
-                const intl = stackNavigation(1128).intl;
-                obj.label = intl.string(stackNavigation(1128).t.OYkgVk);
-                return closure_1_4(stackNavigation(9699).HeaderTextButton, obj);
+                const intl = stackNavigation(1125).intl;
+                obj.label = intl.string(stackNavigation(1125).t.OYkgVk);
+                return closure_1_4(stackNavigation(9701).HeaderTextButton, obj);
               },
             });
           };
@@ -51,7 +51,7 @@ export default noop.memo(
         const layoutEffect = noop.useLayoutEffect(tmp6, tmp7);
         if (cResult[3] !== selectedPlatformType) {
           const obj4 = { selectedPlatformType };
-          const tmp11 = jsx(tmp(16253).UserSettingsConnections, { selectedPlatformType });
+          const tmp11 = jsx(tmp(16291).UserSettingsConnections, { selectedPlatformType });
           cResult[3] = selectedPlatformType;
           cResult[4] = tmp11;
           let tmp9 = tmp11;
@@ -61,10 +61,10 @@ export default noop.memo(
         return tmp9;
       }
     : function ConnectionsSettingScreen() {
-        stackNavigation = stackNavigation(1505).useStackNavigation();
-        let obj = stackNavigation(1505);
+        stackNavigation = stackNavigation(1502).useStackNavigation();
+        let obj = stackNavigation(1502);
         const tmp = stackNavigation;
-        const params = stackNavigation(7090).useSettingNavigationRoute().params;
+        const params = stackNavigation(7092).useSettingNavigationRoute().params;
         let selectedPlatformType;
         if (params != null) {
           selectedPlatformType = params.selectedPlatformType;
@@ -76,12 +76,12 @@ export default noop.memo(
               const obj = {};
               const merged = Object.assign(arg0);
               obj.onPress = onPress;
-              const intl = stackNavigation(1128).intl;
-              obj.label = intl.string(stackNavigation(1128).t.OYkgVk);
-              return closure_1_4(stackNavigation(9699).HeaderTextButton, obj);
+              const intl = stackNavigation(1125).intl;
+              obj.label = intl.string(stackNavigation(1125).t.OYkgVk);
+              return closure_1_4(stackNavigation(9701).HeaderTextButton, obj);
             },
           });
         }, items);
-        return jsx(tmp(16253).UserSettingsConnections, { selectedPlatformType });
+        return jsx(tmp(16291).UserSettingsConnections, { selectedPlatformType });
       },
 );

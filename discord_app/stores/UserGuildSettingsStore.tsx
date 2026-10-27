@@ -210,13 +210,13 @@ function updateUserGuildChannelSettingsBulk(guildId, channel_overrides) {
 function handleGuildUpdate() {
   return true;
 }
-const ChannelRecord = fn(4827);
+const ChannelRecord = fn(4828);
 ({ THREAD_CHANNEL_TYPES: metroRequire, isPrivate: closure_7 } = ChannelRecord);
-const Constants = fn(1087);
+const Constants = fn(1084);
 const UserNotificationSettings = Constants.UserNotificationSettings;
-const AccountNotificationFlags = fn(4916).AccountNotificationFlags;
-const UnreadSetting = fn(6705).UnreadSetting;
-const UserSettingsConstants = fn(1097);
+const AccountNotificationFlags = fn(4917).AccountNotificationFlags;
+const UnreadSetting = fn(6706).UnreadSetting;
+const UserSettingsConstants = fn(1094);
 ({ ChannelNotificationSettingsFlags: closure_14, GuildNotificationSettingsFlags: closure_15 } = UserSettingsConstants);
 let userGuildSettings = {};
 let dependencyMap = {};

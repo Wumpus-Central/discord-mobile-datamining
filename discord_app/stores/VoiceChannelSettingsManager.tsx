@@ -49,7 +49,7 @@ function handleVoiceStateUpdates(voiceStates) {
     }
   });
 }
-const VideoQualityMode = fn(1087).VideoQualityMode;
+const VideoQualityMode = fn(1084).VideoQualityMode;
 const prototype = function VoiceChannelSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {

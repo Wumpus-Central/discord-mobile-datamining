@@ -3,7 +3,7 @@ import MessageReactionsTypes from "../messages/MessageReactionsTypes.tsx";
 import MessageReactionsStore from "../../stores/MessageReactionsStore.tsx";
 
 require = fn;
-let closure_4 = fn(1087).DEFAULT_NUM_REACTION_USERS;
+let closure_4 = fn(1084).DEFAULT_NUM_REACTION_USERS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/polls/useVoteReactors.tsx");

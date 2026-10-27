@@ -4,7 +4,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
 import PremiumGroupConstants from "../PremiumGroupConstants.tsx";
-import _modDef3250 from "../PremiumGroup.messages.js";
+import _modDef3251 from "../PremiumGroup.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
 import CircleErrorIcon from "../../../../design/components/Icon/native/redesign/generated/CircleErrorIcon.tsx";
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
               const intl = util.intl;
               const obj4 = { helpCenterLink: HELP_CENTER_LINK };
-              const formatResult = intl.format(_modDef3250.ah1Ecm, obj4);
+              const formatResult = intl.format(_modDef3251.ah1Ecm, obj4);
               cResult[11] = formatResult;
               let tmp18 = formatResult;
             } else {
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items1 = [timestampProducer(View, obj3)];
       const obj6 = { variant: "text-sm/medium", color: "text-overlay-light", style: tmp.helpdeskText, children: null };
       const intl = util.intl;
-      obj6.children = intl.format(_modDef3250.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
+      obj6.children = intl.format(_modDef3251.ah1Ecm, { helpCenterLink: HELP_CENTER_LINK });
       items1[1] = hasOwnProperty(Text_Text.Text, obj6);
       obj2.children = items1;
       obj.children = timestampProducer(View, obj2);

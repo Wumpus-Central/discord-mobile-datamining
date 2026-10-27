@@ -116,9 +116,9 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
         }
         const promise = new Promise((arg0) => {
           const clientId = arg0;
-          closure_1_0(5159).dismissKeyboard();
-          let obj = closure_1_0(5159);
-          closure_1_0(10744).openOAuth2Modal({
+          closure_1_0(5160).dismissKeyboard();
+          let obj = closure_1_0(5160);
+          closure_1_0(10747).openOAuth2Modal({
             clientId,
             integrationType,
             scopes,
@@ -150,7 +150,7 @@ let closure_6 = async function _installApplicationOnDemandIfNeeded(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/installApplicationOnDemandIfNeeded.native.tsx");
 

@@ -11,9 +11,9 @@ import UserGuildSettingsStore from "../stores/UserGuildSettingsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const Endpoints = fn(1087).Endpoints;
-fn(4916).NotificationSettingsUpdateType;
-const constants = fn(1097).ChannelNotificationSettingsFlags;
+const Endpoints = fn(1084).Endpoints;
+fn(4917).NotificationSettingsUpdateType;
+const constants = fn(1094).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");
 
@@ -223,18 +223,18 @@ export default {
             } else {
               closure_0 = tmp5;
               closure_128_0 = undefined;
-              const setFlagResult = closure_0(1405).setFlag(
+              const setFlagResult = closure_0(1402).setFlag(
                 UserGuildSettingsStore.accountNotificationSettings.flags,
                 closure_0,
                 tmp2,
               );
               closure_128_0 = setFlagResult;
-              const HTTP = closure_0(1297).HTTP;
+              const HTTP = closure_0(1294).HTTP;
               const request = { url: constants.ACCOUNT_NOTIFICATION_SETTINGS, body: null, rejectWithError: null };
               const obj5 = { flags: setFlagResult };
               request.body = obj5;
-              const obj10 = closure_0(1405);
-              request.rejectWithError = closure_0(1297).rejectWithMigratedError();
+              const obj10 = closure_0(1402);
+              request.rejectWithError = closure_0(1294).rejectWithMigratedError();
               dependencyMap = 1;
               c3 = 1;
               const obj6 = { value: HTTP.patch(request), done: false };

@@ -9,8 +9,8 @@ import PromotionsStore from "../../promotions/PromotionsStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const PremiumTypes = fn(1394).PremiumTypes;
-const Constants = fn(1087);
+const PremiumTypes = fn(1391).PremiumTypes;
+const Constants = fn(1084);
 ({
   AnalyticsSections: hasOwnProperty,
   AnalyticsObjects: metroRequire,

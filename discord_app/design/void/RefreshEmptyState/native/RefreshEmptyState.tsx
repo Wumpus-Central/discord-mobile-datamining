@@ -12,10 +12,10 @@ import TextStyles_mod from "../../../../modules/rebrand/native/TextStyles.tsx";
 require = fn;
 let closure_3 = ["lightSource", "darkSource"];
 const View = fn(17).View;
-const Fonts = fn(1087).Fonts;
+const Fonts = fn(1084).Fonts;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { alignItems: "center", justifyContent: "center", padding: 16 },
   title: null,

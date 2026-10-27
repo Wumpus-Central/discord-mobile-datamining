@@ -211,7 +211,7 @@ let closure_11 = async function _fetchBookmarks() {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 let closure_8 = null;
 let c9 = 0;
 const size = fn(2);

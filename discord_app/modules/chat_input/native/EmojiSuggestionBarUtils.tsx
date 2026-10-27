@@ -9,10 +9,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
-const UpsellTypes = fn(1087).UpsellTypes;
+const UpsellTypes = fn(1084).UpsellTypes;
 const jsx = fn(21).jsx;
 let closure_8 = { focused: false, text: "", selectionStart: 0, selectionEnd: 0 };
-const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1202).STANDARD_EASING };
+const SUGGESTION_BAR_HEIGHT_TIMING = { duration: 250, easing: fn(1199).STANDARD_EASING };
 let obj2 = { duration: 200, dampingRatio: 0.7 };
 const __initData = {
   code: "function EmojiSuggestionBarUtilsTsx1(){const{progress}=this.__closure;return{opacity:progress.get(),transform:[{scale:progress.get()}]};}",
@@ -296,8 +296,8 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
       const stateFromStores = chatInputRef(504).useStateFromStores(tmp6, tmp7);
       const tmp10 = chatInputStateRef;
       const tmpResult = chatInputRef(504);
-      analyticsLocations = chatInputStateRef(7253)(chatInputStateRef(7278).EMOJI_SUGGESTIONS).analyticsLocations;
-      const tmp12 = chatInputStateRef(13294)(tmp4[1], 16);
+      analyticsLocations = chatInputStateRef(7255)(chatInputStateRef(7280).EMOJI_SUGGESTIONS).analyticsLocations;
+      const tmp12 = chatInputStateRef(13308)(tmp4[1], 16);
       setData = tmp12.setData;
       setDataImmediate = tmp12.setDataImmediate;
       if (cResult[2] !== setData) {
@@ -327,7 +327,7 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
                   if (cResult[11] === text) {
                     let tmp16 = cResult[12];
                   }
-                  const tmp17 = tmp10(13330)(tmp16);
+                  const tmp17 = tmp10(13344)(tmp16);
                   const unlockedEmojis = tmp17.unlockedEmojis;
                   ({ lockedEmojis, queryEnd } = tmp17);
                   clear = tmp17.clear;
@@ -514,7 +514,7 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
       cResult[11] = text;
       cResult[12] = obj4;
       tmp16 = obj4;
-      const tmp11 = chatInputStateRef(7253);
+      const tmp11 = chatInputStateRef(7255);
     }
   : function useEmojiSuggestionBarState(chatInputRef, maxCount, minUnlockedEmojis, arg3) {
       chatInputRef = chatInputRef.chatInputRef;
@@ -534,8 +534,8 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
       const items = [setDataImmediate];
       const stateFromStores = chatInputRef(504).useStateFromStores(items, () => setDataImmediate.useReducedMotion);
       obj2 = chatInputRef(504);
-      analyticsLocations = chatInputStateRef(7253)(chatInputStateRef(7278).EMOJI_SUGGESTIONS).analyticsLocations;
-      const tmp5 = chatInputStateRef(13294)(tmp[1], 16);
+      analyticsLocations = chatInputStateRef(7255)(chatInputStateRef(7280).EMOJI_SUGGESTIONS).analyticsLocations;
+      const tmp5 = chatInputStateRef(13308)(tmp[1], 16);
       setData = tmp5.setData;
       setDataImmediate = tmp5.setDataImmediate;
       const items1 = [setData];
@@ -549,14 +549,14 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
         maxCount: null,
         minUnlockedEmojis: null,
       };
-      const tmp4 = chatInputStateRef(7253);
+      const tmp4 = chatInputStateRef(7255);
       if (focused) {
         focused = !suppressed;
       }
       obj3.enabled = focused;
       obj3.maxCount = maxCount;
       obj3.minUnlockedEmojis = minUnlockedEmojis;
-      const tmp7Result = chatInputStateRef(13330)(obj3);
+      const tmp7Result = chatInputStateRef(13344)(obj3);
       unlockedEmojis = tmp7Result.unlockedEmojis;
       queryEnd = tmp7Result.queryEnd;
       clear = tmp7Result.clear;
@@ -595,7 +595,7 @@ export const useEmojiSuggestionBarState = ReactCompilerGating.isReactCompilerEna
         const obj4 = { emoji, displayedSuggestions: unlockedEmojis };
         ref = queryEnd + combined.length;
       }, items2);
-      const tmp7 = chatInputStateRef(13330);
+      const tmp7 = chatInputStateRef(13344);
       return {
         unlockedEmojis,
         lockedEmojis: tmp7Result.lockedEmojis,

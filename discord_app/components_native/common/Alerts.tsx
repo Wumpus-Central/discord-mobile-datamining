@@ -74,7 +74,7 @@ let items3 = [SurveyStore];
 obj3.stores = items3;
 items1[2] = obj3;
 const stores = new ModalRegistryDefault(items1);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj4 = { alertWrapper: null, alertContentWrapper: null };
 let obj6 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -851,7 +851,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return __initData(closure_22, { item, transitionState, cleanUp }, arg0);
 }
-let closure_26 = Object.freeze({ renderAlert: "children", renderKey: "k", props: "borderRadius" });
+let closure_26 = Object.freeze({ renderAlert: "Array", renderKey: "unicodeVersion", props: "children" });
 ReactCompilerGating = fn(558);
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
@@ -889,7 +889,7 @@ export default noop.memo(
                   return <openModal.component />;
                 };
               } else {
-                return { renderAlert: "children", renderKey: "k", props: "borderRadius" };
+                return { renderAlert: "Array", renderKey: "unicodeVersion", props: "children" };
               }
             }
           };
@@ -944,7 +944,7 @@ export default noop.memo(
                 obj3.renderItem = renderAlertItem;
                 obj3.getItemKey = getAlertItemKey;
                 obj3.wrapChildren = wrapAlerts;
-                const tmp22 = closure_12(tmp(5037).TransitionGroup, obj3);
+                const tmp22 = closure_12(tmp(5038).TransitionGroup, obj3);
                 cResult[10] = tmp17;
                 cResult[11] = tmp22;
                 let tmp18 = tmp22;
@@ -1000,7 +1000,7 @@ export default noop.memo(
                 return <openModal.component />;
               };
             } else {
-              return { renderAlert: "children", renderKey: "k", props: "borderRadius" };
+              return { renderAlert: "Array", renderKey: "unicodeVersion", props: "children" };
             }
           }
         });

@@ -545,7 +545,7 @@ let closure_39 = async function _getSession() {
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_8, AppStates: closure_9, RTCConnectionStates: c10 } = Constants);
 let closure_11 = 15 * DurationsDefault.Millis.MINUTE;
 const SECOND = DurationsDefault.Millis.SECOND;
@@ -557,9 +557,9 @@ let c18 = 0;
 let c19 = 0;
 let closure_20 = { state: "uninitialized" };
 let state = RTCConnectionStore.getState();
-const SessionForegroundUtils = fn(7572);
+const SessionForegroundUtils = fn(7573);
 let closure_22 = SessionForegroundUtils.isForegrounded();
-const SessionRouteUtils = fn(7573);
+const SessionRouteUtils = fn(7574);
 let closure_23 = SessionRouteUtils.isActiveUserRoute();
 let token = AuthenticationStore.getToken();
 const size = fn(2);

@@ -9,8 +9,8 @@ import useMediaItemSpoilerState from "../useMediaItemSpoilerState.tsx";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = View(5052);
-const VisualEffectViewDefault = View(5586);
+const ReanimatedRexportDefault = View(5053);
+const VisualEffectViewDefault = View(5587);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
@@ -92,7 +92,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
       }
       return tmp10Result;
     };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_11 = createStyles.createStyles({
   containerPortrait: { height: 60 },
   thumbnailButtonPortrait: { overflow: "hidden", marginHorizontal: THUMBNAIL_MARGIN, borderRadius: 2 },

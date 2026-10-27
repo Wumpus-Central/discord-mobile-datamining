@@ -3,13 +3,13 @@ import c from "../../../../_runtime/00576_c.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const NOOP = fn(1098).NOOP;
+const NOOP = fn(1095).NOOP;
 const jsx = fn(21).jsx;
 const redux = noop.createContext({
   registerDismiss() {
     return NOOP;
   },
-  handleDismissCoachmarkOnScroll: "Array",
+  handleDismissCoachmarkOnScroll: "y",
 });
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();

@@ -11,10 +11,10 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const getGuildIconSource = fn(4841).getGuildIconSource;
-const ME = fn(1087).ME;
+const getGuildIconSource = fn(4842).getGuildIconSource;
+const ME = fn(1084).ME;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_10 = createStyles.createStyles({ dmsWrapper: { flex: 1, justifyContent: "center", alignItems: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         badge,
       } = arg0);
       if (undefined === iconSize) {
-        iconSize = guildId(6883).GuildIconSizes.LARGE;
+        iconSize = guildId(6885).GuildIconSizes.LARGE;
       }
       const tmp7 = closure_10();
       const obj = guildId(576);
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult = guildId(504);
       const stateFromStoresObject = guildId(504).useStateFromStoresObject(tmp14, tmp16, tmp17);
       ({ unread: unread2, badge: badge2 } = stateFromStoresObject);
-      const tmpResult5 = guildId(18692);
+      const tmpResult5 = guildId(18728);
       const tmp20 = tmp4 ? tmpResult5.SimpleGuildContainerAnimated : tmpResult5.SimpleGuildContainer;
       if (cResult[7] === size) {
         if (cResult[8] === style) {
@@ -112,9 +112,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             if (badge2 > 0) {
               if (cResult[10] === badge2) {
               }
-              const intl3 = guildId(1128).intl;
+              const intl3 = guildId(1125).intl;
               const obj2 = { guildName: str, mentions: badge2 };
-              const formatToPlainStringResult = intl3.formatToPlainString(guildId(1128).t["/uzRss"], obj2);
+              const formatToPlainStringResult = intl3.formatToPlainString(guildId(1125).t["/uzRss"], obj2);
               cResult[10] = badge2;
               cResult[11] = str;
               cResult[12] = formatToPlainStringResult;
@@ -127,18 +127,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
               tmp23 = tmp26;
             }
-            const intl2 = guildId(1128).intl;
+            const intl2 = guildId(1125).intl;
             const obj3 = { guildName: str, mentions: badge2 };
-            const formatToPlainStringResult1 = intl2.formatToPlainString(guildId(1128).t["/uzRss"], obj3);
+            const formatToPlainStringResult1 = intl2.formatToPlainString(guildId(1125).t["/uzRss"], obj3);
             cResult[15] = badge2;
             cResult[16] = str;
             cResult[17] = formatToPlainStringResult1;
             tmp26 = formatToPlainStringResult1;
           } else {
             if (cResult[13] !== str) {
-              const intl = guildId(1128).intl;
+              const intl = guildId(1125).intl;
               const obj4 = { guildName: str };
-              const formatToPlainStringResult2 = intl.formatToPlainString(guildId(1128).t.lzqe42, obj4);
+              const formatToPlainStringResult2 = intl.formatToPlainString(guildId(1125).t.lzqe42, obj4);
               cResult[13] = str;
               cResult[14] = formatToPlainStringResult2;
               let tmp24 = formatToPlainStringResult2;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const tmp22 = useSimpleGuildSizeDefault(tmp21);
-        const activityIndicatorState = guildId(17778).useActivityIndicatorState(guildId);
+        const activityIndicatorState = guildId(17819).useActivityIndicatorState(guildId);
         let tmp32 = unread2;
         if (!unread2) {
           tmp32 = tmp6;
@@ -449,7 +449,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[21] = tmp32;
         cResult[22] = tmp35Result;
         tmp33 = tmp35Result;
-        const tmpResult6 = guildId(17778);
+        const tmpResult6 = guildId(17819);
       }
       const obj10 = { size, style };
       cResult[7] = size;

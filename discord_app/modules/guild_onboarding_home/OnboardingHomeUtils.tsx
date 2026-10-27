@@ -11,9 +11,9 @@ import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore.t
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ GuildFeatures: closure_7, ME: closure_8 } = Constants);
-const ChannelFlags = fn(4830).ChannelFlags;
+const ChannelFlags = fn(4831).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_onboarding_home/OnboardingHomeUtils.tsx");
@@ -40,7 +40,7 @@ export const useCanSeeOnboardingHome = ReactCompilerGating.isReactCompilerEnable
       }
       const fn = function f() {
         if (closure_0 !== closure_2_8) {
-          if (!obj3.isFavoritesGuildId(closure_0)) {
+          if (!obj2.isFavoritesGuildId(closure_0)) {
             let has = GuildStore.getGuild(closure_0);
             let hasItem;
             if (has != null) {
@@ -67,13 +67,10 @@ export const useCanSeeOnboardingHome = ReactCompilerGating.isReactCompilerEnable
                 hasItem1 = !(has(constants.GUILD_ONBOARDING) && !enabled);
                 const tmp21 = has(constants.GUILD_ONBOARDING) && !enabled;
               }
-              let result = hasItem1;
+              let tmp10 = hasItem1;
             } else {
-              result = GuildOnboardingUtils.isGuildOnboardingSettingsAvailable(closure_0);
-              if (!result) {
-                result = guildHasOnboardingHomeDefault(has);
-              }
-              if (result) {
+              tmp10 = guildHasOnboardingHomeDefault(has);
+              if (tmp10) {
                 let tmp11 = closure_1;
                 if (!closure_1) {
                   const mutableGuildChannelsForGuild = ChannelStore.getMutableGuildChannelsForGuild(closure_0);
@@ -82,21 +79,20 @@ export const useCanSeeOnboardingHome = ReactCompilerGating.isReactCompilerEnable
                   if (keys !== undefined) {
                     flag = false;
                     while (keys[tmp] !== undefined) {
-                      let obj4 = mutableGuildChannelsForGuild[tmp16];
+                      let obj3 = mutableGuildChannelsForGuild[tmp16];
                       flag = true;
-                      if (obj4.hasFlag(ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) {
+                      if (obj3.hasFlag(ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) {
                         break;
                       }
                     }
                   }
                   tmp11 = flag;
                 }
-                result = tmp11;
+                tmp10 = tmp11;
               }
-              const tmp23Result = GuildOnboardingUtils;
             }
           }
-          obj3 = FavoritesUtils;
+          obj2 = FavoritesUtils;
         }
         return false;
       };
@@ -120,7 +116,7 @@ export const useCanSeeOnboardingHome = ReactCompilerGating.isReactCompilerEnable
         items,
         () => {
           if (closure_0 !== closure_2_8) {
-            if (!obj3.isFavoritesGuildId(closure_0)) {
+            if (!obj2.isFavoritesGuildId(closure_0)) {
               let has = GuildStore.getGuild(closure_0);
               let hasItem;
               if (has != null) {
@@ -147,13 +143,10 @@ export const useCanSeeOnboardingHome = ReactCompilerGating.isReactCompilerEnable
                   hasItem1 = !(has(constants.GUILD_ONBOARDING) && !enabled);
                   const tmp21 = has(constants.GUILD_ONBOARDING) && !enabled;
                 }
-                let result = hasItem1;
+                let tmp10 = hasItem1;
               } else {
-                result = GuildOnboardingUtils.isGuildOnboardingSettingsAvailable(closure_0);
-                if (!result) {
-                  result = guildHasOnboardingHomeDefault(has);
-                }
-                if (result) {
+                tmp10 = guildHasOnboardingHomeDefault(has);
+                if (tmp10) {
                   let tmp11 = closure_1;
                   if (!closure_1) {
                     const mutableGuildChannelsForGuild = ChannelStore.getMutableGuildChannelsForGuild(closure_0);
@@ -162,21 +155,20 @@ export const useCanSeeOnboardingHome = ReactCompilerGating.isReactCompilerEnable
                     if (keys !== undefined) {
                       flag = false;
                       while (keys[tmp] !== undefined) {
-                        let obj4 = mutableGuildChannelsForGuild[tmp16];
+                        let obj3 = mutableGuildChannelsForGuild[tmp16];
                         flag = true;
-                        if (obj4.hasFlag(ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) {
+                        if (obj3.hasFlag(ChannelFlags.IS_GUILD_RESOURCE_CHANNEL)) {
                           break;
                         }
                       }
                     }
                     tmp11 = flag;
                   }
-                  result = tmp11;
+                  tmp10 = tmp11;
                 }
-                const tmp23Result = GuildOnboardingUtils;
               }
             }
-            obj3 = FavoritesUtils;
+            obj2 = FavoritesUtils;
           }
           return false;
         },

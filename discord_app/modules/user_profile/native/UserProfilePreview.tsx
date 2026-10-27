@@ -10,11 +10,11 @@ function filterLayer(responsive) {
   return true !== responsive.responsive;
 }
 const View = fn(17).View;
-const Constants = fn(7304);
+const Constants = fn(7306);
 ({ PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_7, UserProfileThemeTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_12 = createStyles.createStyles((arg0, arg1, arg2) => {
   let num = arg2;
   if (arg2 == null) {
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               tmp11(8732)();
               const tmp14 = tmp11(8718)(tmp13);
               const tmp16 = null != primaryColor;
-              const customStatusActivity = guildId(11058).useCustomStatusActivity();
+              const customStatusActivity = guildId(11061).useCustomStatusActivity();
               if (cResult[9] === primaryColor) {
                 if (cResult[10] === secondaryColor) {
                   if (cResult[11] === theme) {
@@ -435,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               cResult[11] = theme;
               cResult[12] = obj5;
               tmp22 = obj5;
-              const tmpResult6 = guildId(11058);
+              const tmpResult6 = guildId(11061);
             }
           }
         }
@@ -562,9 +562,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         pendingThemeColors,
         isPreview: isPremiumTryItOut,
       });
-      const customStatusActivity = guildId(11058).useCustomStatusActivity();
+      const customStatusActivity = guildId(11061).useCustomStatusActivity();
       let tmp28Result5 = null != customStatusActivity && !flag;
-      const obj2 = guildId(11058);
+      const obj2 = guildId(11061);
       const userProfileColors = guildId(8729).useUserProfileColors({ theme, primaryColor, secondaryColor });
       ({ containerBackground, gradientFallbackBackground, avatarBackground } = userProfileColors);
       if (undefined !== avatarDecorationOverride) {
@@ -722,7 +722,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         disableInteraction: true,
       };
       const tmpResult8 = guildId(8654);
-      obj11.bannerHeight = guildId(9396).PFX_MOBILE_ACTION_SHEET_BANNER_HEIGHT;
+      obj11.bannerHeight = guildId(9395).PFX_MOBILE_ACTION_SHEET_BANNER_HEIGHT;
       obj11.pendingBanner = pendingBanner;
       obj11.pendingAvatarSrc = pendingAvatarSrc;
       let tmp36;
@@ -773,7 +773,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           emojiOnlyStyle: null,
         };
         ({ customStatusBubble: obj20.style, emojiOnlyCustomStatusBubble: obj20.emojiOnlyStyle } = tmp9);
-        tmp28Result5 = closure_9(tmp4(11059), obj16);
+        tmp28Result5 = closure_9(tmp4(11062), obj16);
       }
       const items8 = [tmp28Result5, ,];
       const obj17 = {
@@ -789,7 +789,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         guildId: null,
         hideBadges: null,
       };
-      const tmp4Result9 = isPremiumTryItOut(11078);
+      const tmp4Result9 = isPremiumTryItOut(11081);
       if (displayName == null) {
         displayName = pendingGlobalName;
       }
@@ -816,7 +816,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj17.primaryGuildOverride = tmp46;
       obj17.guildId = guildId;
       obj17.hideBadges = flag3;
-      items8[1] = closure_9(isPremiumTryItOut(11079), obj17);
+      items8[1] = closure_9(isPremiumTryItOut(11082), obj17);
       let tmp28Result6 = !flag;
       if (!flag) {
         const obj18 = {
@@ -830,7 +830,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj19 = { backgroundColor: containerBackground };
         items9[2] = obj19;
         obj18.style = items9;
-        tmp28Result6 = closure_9(tmp4(11160), obj18);
+        tmp28Result6 = closure_9(tmp4(11163), obj18);
       }
       items8[2] = tmp28Result6;
       obj13.children = items8;
@@ -859,7 +859,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj8.children = items4;
         obj7.children = closure_10(tmp29, obj8);
         obj6.children = closure_9(tmp29, obj7);
-        return closure_9(guildId(5037).ThemeContextProvider, obj6);
+        return closure_9(guildId(5038).ThemeContextProvider, obj6);
       } else {
         const obj22 = { skuId: str.skuId, style: tmp8.profileEffect };
         if (null != profileEffectRestartKey) {
@@ -869,8 +869,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           skuId = `-`.skuId;
         }
-        closure_9(tmp4(9394), obj22, skuId);
-        const tmp4Result12 = tmp4(9394);
+        closure_9(tmp4(9393), obj22, skuId);
+        const tmp4Result12 = tmp4(9393);
       }
-      const tmp4Result10 = isPremiumTryItOut(11079);
+      const tmp4Result10 = isPremiumTryItOut(11082);
     };

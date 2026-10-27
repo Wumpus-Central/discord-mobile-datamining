@@ -290,7 +290,7 @@ function indexChannelUpdates(items) {
     }
   }
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ME: c10, ChannelTypes: closure_11, Links: closure_12, Permissions: map1, Routes: closure_14 } = Constants);
 const constants4 = { GUILD: 100, [100]: "GUILD", DM: 75, [75]: "DM", OTHER_CHANNEL: 50, [50]: "OTHER_CHANNEL" };
 class NativeIntentsManager extends tmp3 {

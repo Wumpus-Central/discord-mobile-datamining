@@ -2,7 +2,7 @@
 import SnowflakeUtilsDefault from "../../utils/SnowflakeUtils.tsx";
 import util from "../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
-import _modDef2049 from "../../../_runtime/metro/02049__.js";
+import _modDef2046 from "../../../_runtime/metro/02046__.js";
 import AppAnalyticsUtils from "../app_analytics/AppAnalyticsUtils.tsx";
 import NotificationSettingsUtils from "../../utils/NotificationSettingsUtils.tsx";
 import threads_getTimestampStringDefault from "getTimestampString.tsx";
@@ -22,8 +22,8 @@ function getAccessibilityLabelFormatter() {
   return time;
 }
 let closure_3 = ["can_send_message", "parent_channel_type"];
-const ThreadMemberFlags = fn(1127).ThreadMemberFlags;
-const Constants = fn(1087);
+const ThreadMemberFlags = fn(1124).ThreadMemberFlags;
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_9, UserNotificationSettings: c10 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -156,8 +156,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
       if (cResult[5] !== createTimestamp) {
         let valueOfResult = null;
         if (null != createTimestamp) {
-          valueOfResult = _modDef2049(createTimestamp).valueOf();
-          const obj4 = _modDef2049(createTimestamp);
+          valueOfResult = _modDef2046(createTimestamp).valueOf();
+          const obj4 = _modDef2046(createTimestamp);
         }
         cResult[5] = createTimestamp;
         cResult[6] = valueOfResult;
@@ -204,8 +204,8 @@ export const useLastMessageTimestamp = ReactCompilerGating.isReactCompilerEnable
       }
       let valueOfResult = null;
       if (null != createTimestamp) {
-        valueOfResult = _modDef2049(createTimestamp).valueOf();
-        const obj3 = _modDef2049(createTimestamp);
+        valueOfResult = _modDef2046(createTimestamp).valueOf();
+        const obj3 = _modDef2046(createTimestamp);
       }
       if (extractTimestampResult == null) {
         extractTimestampResult = valueOfResult;

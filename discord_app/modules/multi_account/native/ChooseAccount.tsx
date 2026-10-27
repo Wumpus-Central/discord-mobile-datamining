@@ -11,14 +11,14 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(13316).MultiAccountTokenStatus;
-let Constants = fn(13317);
+const MultiAccountTokenStatus = fn(13330).MultiAccountTokenStatus;
+let Constants = fn(13331);
 ({ MAX_ACCOUNTS: closure_7, MultiAccountSwitchLocation: closure_8 } = Constants);
-Constants = fn(1087);
+Constants = fn(1084);
 ({ AnalyticEvents: closure_9, AuthStates: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
@@ -63,9 +63,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = navigation(576).c(29);
       const tmp4 = closure_13();
       let obj = navigation(576);
-      navigation = navigation(1505).useNavigation();
-      let obj2 = navigation(1505);
-      const multiAccountUsers = navigation(17367).useMultiAccountUsers().multiAccountUsers;
+      navigation = navigation(1502).useNavigation();
+      let obj2 = navigation(1502);
+      const multiAccountUsers = navigation(17408).useMultiAccountUsers().multiAccountUsers;
       if (cResult[0] !== navigation) {
         function handlePressUser(tokenStatus) {
           if (tokenStatus.tokenStatus === MultiAccountTokenStatus.INVALID) {
@@ -123,11 +123,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       cancelText: null,
                       isDismissable: true,
                     };
-                    const intl3 = navigation(1128).intl;
-                    obj5.title = intl3.string(navigation(1128).t.n0Fbg6);
-                    const intl4 = navigation(1128).intl;
+                    const intl3 = navigation(1125).intl;
+                    obj5.title = intl3.string(navigation(1125).t.n0Fbg6);
+                    const intl4 = navigation(1125).intl;
                     let intl = intl4.formatToPlainString;
-                    let intl2 = navigation(1128).t.phEQmS;
+                    let intl2 = navigation(1125).t.phEQmS;
                     if ("0" === navigation.discriminator) {
                       const _HermesInternal2 = HermesInternal;
                       let combined = "" + string.username;
@@ -137,16 +137,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                     const obj6 = { username: combined };
                     obj5.body = intl(intl2, obj6);
-                    intl = navigation(1128).intl;
-                    obj5.confirmText = intl.string(navigation(1128).t.N86XcP);
-                    obj5.confirmColor = navigation(1202).ButtonColors.RED;
-                    intl2 = navigation(1128).intl;
+                    intl = navigation(1125).intl;
+                    obj5.confirmText = intl.string(navigation(1125).t.N86XcP);
+                    obj5.confirmColor = navigation(1199).ButtonColors.RED;
+                    intl2 = navigation(1125).intl;
                     string = intl2.string;
-                    obj5.cancelText = string(navigation(1128).t["ETE/oC"]);
-                    obj5 = tmp2(5909).confirm(obj5);
+                    obj5.cancelText = string(navigation(1125).t["ETE/oC"]);
+                    obj5 = tmp2(5910).confirm(obj5);
                     dependencyMap = 1;
                     c4 = 1;
-                    const obj8 = tmp2(5909);
+                    const obj8 = tmp2(5910);
                   }
                 } else if (arg0 === 1) {
                   c4 = 3;
@@ -157,10 +157,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return obj7;
                 } else {
                   if (value) {
-                    tmp2(5210).hideActionSheet();
-                    const obj = tmp2(5210);
-                    tmp5(13320).removeAccount(closure_129_0.id);
-                    const obj2 = tmp5(13320);
+                    tmp2(5211).hideActionSheet();
+                    const obj = tmp2(5211);
+                    tmp5(13334).removeAccount(closure_129_0.id);
+                    const obj2 = tmp5(13334);
                   }
                   c4 = 3;
                   return { value: "IconComponent", done: null };
@@ -190,25 +190,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[6] !== tmp6) {
           function handlePressMore(arg0) {
             closure_0 = arg0;
-            multiAccountUsers(5210).hideActionSheet();
-            const obj = multiAccountUsers(5210);
+            multiAccountUsers(5211).hideActionSheet();
+            const obj = multiAccountUsers(5211);
             const obj3 = { key: "RemoveAccount", options: null, hasIcons: false };
             const obj4 = { label: null, onPress: null };
-            const intl = navigation(1128).intl;
-            obj4.label = intl.string(navigation(1128).t["DSN+hw"]);
+            const intl = navigation(1125).intl;
+            obj4.label = intl.string(navigation(1125).t["DSN+hw"]);
             obj4.onPress = function onPress() {
               return closure_2(closure_0);
             };
             const items = [obj4];
             const obj5 = { label: null, onPress: null, isDestructive: true };
-            const intl2 = navigation(1128).intl;
-            obj5.label = intl2.string(navigation(1128).t.lSLMaU);
+            const intl2 = navigation(1125).intl;
+            obj5.label = intl2.string(navigation(1125).t.lSLMaU);
             obj5.onPress = function onPress() {
               return closure_3(closure_0);
             };
             items[1] = obj5;
             obj3.options = items;
-            const result = navigation(7290).showSimpleActionSheet(obj3);
+            const result = navigation(7292).showSimpleActionSheet(obj3);
           }
           cResult[6] = tmp6;
           cResult[7] = handlePressMore;
@@ -219,8 +219,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         asyncGeneratorStep = tmp12;
         const _Symbol2 = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          let intl = tmp(1128).intl;
-          const stringResult = intl.string(tmp(1128).t.bVbB63);
+          let intl = tmp(1125).intl;
+          const stringResult = intl.string(tmp(1125).t.bVbB63);
           cResult[8] = stringResult;
           let tmp13 = stringResult;
         } else {
@@ -229,9 +229,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol3 = Symbol;
         if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
           let obj4 = { variant: "text-sm/medium", color: "text-default", children: null };
-          let intl2 = tmp(1128).intl;
-          obj4.children = intl2.string(tmp(1128).t["0M5fN7"]);
-          const tmp17 = closure_11(tmp(5234).Text, obj4);
+          let intl2 = tmp(1125).intl;
+          obj4.children = intl2.string(tmp(1125).t["0M5fN7"]);
+          const tmp17 = closure_11(tmp(5235).Text, obj4);
           cResult[9] = tmp17;
           let tmp15 = tmp17;
         } else {
@@ -244,12 +244,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
                 let obj5 = {
                   themedColor: multiAccountUsers(587).colors.TEXT_LINK,
-                  size: tmp(1202).Icon.Sizes.SMALL_20,
-                  source: multiAccountUsers(17369),
+                  size: tmp(1199).Icon.Sizes.SMALL_20,
+                  source: multiAccountUsers(17410),
                 };
                 const tmp28 = closure_11(tmp(8951).FormRow.Icon, obj5);
-                let intl3 = tmp(1128).intl;
-                const stringResult1 = intl3.string(tmp(1128).t.bPP34Q);
+                let intl3 = tmp(1125).intl;
+                const stringResult1 = intl3.string(tmp(1125).t.bPP34Q);
                 cResult[17] = stringResult1;
                 cResult[18] = tmp28;
                 let tmp25 = tmp28;
@@ -276,12 +276,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     let obj6 = {
                       headerText: tmp13,
                       subHeader: tmp15,
-                      backgroundImageSource: multiAccountUsers(15107),
+                      backgroundImageSource: multiAccountUsers(15143),
                       backgroundImageCover: true,
                       contentStyle: tmp18,
                       children: tmp33,
                     };
-                    const tmp40 = multiAccountUsers(7065);
+                    const tmp40 = multiAccountUsers(7067);
                     cResult[26] = tmp4.container;
                     cResult[27] = tmp33;
                     class R {
@@ -312,8 +312,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         return closure_1_11(tmp, obj, arg0.id);
                       }
                     }
-                    tmp37 = closure_11(multiAccountUsers(7065), obj6);
-                    const tmp41 = closure_11(multiAccountUsers(7065), obj6);
+                    tmp37 = closure_11(multiAccountUsers(7067), obj6);
+                    const tmp41 = closure_11(multiAccountUsers(7067), obj6);
                   }
                 }
                 let obj7 = { style: tmp19, children: null };
@@ -437,7 +437,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = navigation;
       cResult[4] = tmp8;
       tmp7 = tmp8;
-      let obj3 = navigation(17367);
+      let obj3 = navigation(17408);
     }
   : function ChooseAccount() {
       closure_2 = async function _handlePressRemove2(arg0) {
@@ -475,11 +475,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   cancelText: null,
                   isDismissable: true,
                 };
-                const intl3 = closure_0(1128).intl;
-                obj5.title = intl3.string(closure_0(1128).t.n0Fbg6);
-                const intl4 = closure_0(1128).intl;
+                const intl3 = closure_0(1125).intl;
+                obj5.title = intl3.string(closure_0(1125).t.n0Fbg6);
+                const intl4 = closure_0(1125).intl;
                 let intl = intl4.formatToPlainString;
-                let intl2 = closure_0(1128).t.phEQmS;
+                let intl2 = closure_0(1125).t.phEQmS;
                 if ("0" === closure_0.discriminator) {
                   const _HermesInternal2 = HermesInternal;
                   let combined = "" + string.username;
@@ -489,16 +489,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const obj6 = { username: combined };
                 obj5.body = intl(intl2, obj6);
-                intl = closure_0(1128).intl;
-                obj5.confirmText = intl.string(closure_0(1128).t.N86XcP);
-                obj5.confirmColor = closure_0(1202).ButtonColors.RED;
-                intl2 = closure_0(1128).intl;
+                intl = closure_0(1125).intl;
+                obj5.confirmText = intl.string(closure_0(1125).t.N86XcP);
+                obj5.confirmColor = closure_0(1199).ButtonColors.RED;
+                intl2 = closure_0(1125).intl;
                 string = intl2.string;
-                obj5.cancelText = string(closure_0(1128).t["ETE/oC"]);
-                obj5 = tmp2(5909).confirm(obj5);
+                obj5.cancelText = string(closure_0(1125).t["ETE/oC"]);
+                obj5 = tmp2(5910).confirm(obj5);
                 dependencyMap = 1;
                 c4 = 1;
-                const obj8 = tmp2(5909);
+                const obj8 = tmp2(5910);
               }
             } else if (arg0 === 1) {
               c4 = 3;
@@ -509,10 +509,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return obj7;
             } else {
               if (value) {
-                tmp2(5210).hideActionSheet();
-                const obj = tmp2(5210);
-                tmp5(13320).removeAccount(closure_129_0.id);
-                const obj2 = tmp5(13320);
+                tmp2(5211).hideActionSheet();
+                const obj = tmp2(5211);
+                tmp5(13334).removeAccount(closure_129_0.id);
+                const obj2 = tmp5(13334);
               }
               c4 = 3;
               return { value: "IconComponent", done: null };
@@ -542,7 +542,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let intl2 = require("util").intl;
       obj4.children = intl2.string(require("util").t["0M5fN7"]);
       obj3.subHeader = closure_11(require("Text/Text").Text, obj4);
-      obj3.backgroundImageSource = multiAccountUsers(15107);
+      obj3.backgroundImageSource = multiAccountUsers(15143);
       obj3.contentStyle = tmp.container;
       let obj5 = { style: tmp.mainCard, children: null };
       let items = [
@@ -552,11 +552,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onPressUser() {
               if (user.tokenStatus === constants.INVALID) {
                 user.push(constants4.LOGIN);
-                multiAccountUsers(1267).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
-                const obj2 = multiAccountUsers(1267);
+                multiAccountUsers(1264).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
+                const obj2 = multiAccountUsers(1264);
               } else {
-                closure_1_2(13320).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
-                const obj = closure_1_2(13320);
+                closure_1_2(13334).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
+                const obj = closure_1_2(13334);
               }
               return tmp4;
             },
@@ -565,27 +565,27 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let obj2 = {
             accessibilityRole: "button",
             onPress() {
-              multiAccountUsers(5210).hideActionSheet();
-              let obj = multiAccountUsers(5210);
+              multiAccountUsers(5211).hideActionSheet();
+              let obj = multiAccountUsers(5211);
               const obj3 = { key: "RemoveAccount", options: null, hasIcons: false };
               const obj4 = { label: null, onPress: null };
-              const intl = user(1128).intl;
-              obj4.label = intl.string(user(1128).t["DSN+hw"]);
+              const intl = user(1125).intl;
+              obj4.label = intl.string(user(1125).t["DSN+hw"]);
               obj4.onPress = function onPress() {
                 if (closure_0.tokenStatus === constants.INVALID) {
                   closure_0.push(constants4.LOGIN);
-                  closure_1_1(1267).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
-                  const obj2 = closure_1_1(1267);
+                  closure_1_1(1264).track(constants3.LOGIN_VIEWED, { source: "choose_account_user_invalid" });
+                  const obj2 = closure_1_1(1264);
                 } else {
-                  closure_1_2(13320).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
-                  const obj = closure_1_2(13320);
+                  closure_1_2(13334).switchAccount(tmp.id, undefined, constants2.CHOOSE_ACCOUNT);
+                  const obj = closure_1_2(13334);
                 }
                 return tmp4;
               };
               const items = [obj4];
               const obj5 = { label: null, onPress: null, isDestructive: true };
-              const intl2 = user(1128).intl;
-              obj5.label = intl2.string(user(1128).t.lSLMaU);
+              const intl2 = user(1125).intl;
+              obj5.label = intl2.string(user(1125).t.lSLMaU);
               obj5.onPress = function onPress() {
                 return (function handlePressRemove(arg0) {
                   const self = this;
@@ -600,26 +600,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               };
               items[1] = obj5;
               obj3.options = items;
-              const result = user(7290).showSimpleActionSheet(obj3);
+              const result = user(7292).showSimpleActionSheet(obj3);
             },
             children: null,
           };
-          const tmp = multiAccountUsers(17368);
-          obj2.children = closure_1_11(user(1202).Icon, {
-            size: user(1202).Icon.Sizes.SMALL_20,
+          const tmp = multiAccountUsers(17409);
+          obj2.children = closure_1_11(user(1199).Icon, {
+            size: user(1199).Icon.Sizes.SMALL_20,
             source: multiAccountUsers(9032),
             disableColor: true,
           });
-          obj.trailing = closure_1_11(user(6908).PressableOpacity, obj2);
+          obj.trailing = closure_1_11(user(6910).PressableOpacity, obj2);
           return closure_1_11(tmp, obj, user.id);
         }),
       ];
       let obj6 = { leading: null, label: null, labelStyle: null, onPress: null };
-      const tmp2 = multiAccountUsers(7065);
+      const tmp2 = multiAccountUsers(7067);
       obj6.leading = closure_11(require("Form").FormRow.Icon, {
         themedColor: multiAccountUsers(587).colors.TEXT_LINK,
         size: require("native").Icon.Sizes.SMALL_20,
-        source: multiAccountUsers(17369),
+        source: multiAccountUsers(17410),
       });
       let intl3 = require("util").intl;
       obj6.label = intl3.string(require("util").t.bPP34Q);

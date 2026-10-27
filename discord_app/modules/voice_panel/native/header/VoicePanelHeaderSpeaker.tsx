@@ -21,8 +21,8 @@ require = fn;
 let closure_3 = ["ref"];
 let closure_4 = ["ref"];
 const NativeModules = fn(17).NativeModules;
-const setVoiceUpsellDismissed = fn(18552).setVoiceUpsellDismissed;
-const PlatformTypes = fn(1087).PlatformTypes;
+const setVoiceUpsellDismissed = fn(18586).setVoiceUpsellDismissed;
+const PlatformTypes = fn(1084).PlatformTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
 let closure_18 = [];
@@ -539,7 +539,7 @@ export default noop.memo(
           function renderButton(arg0) {
             let tmp = arg0;
             if (arg0 == null) {
-              const obj = { onPress, ref: "Array" };
+              const obj = { onPress, ref: "y" };
               tmp = obj;
             }
             const obj2 = { targetRef: ref, canShowTooltip: null };

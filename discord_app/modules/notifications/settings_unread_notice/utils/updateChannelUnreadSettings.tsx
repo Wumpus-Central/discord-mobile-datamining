@@ -5,9 +5,9 @@ import notificationSettingsFlagUtils from "../../settings/utils/notificationSett
 import UserGuildSettingsStore from "../../../../stores/UserGuildSettingsStore.tsx";
 
 require = fn;
-const AnalyticsObjects = fn(1087).AnalyticsObjects;
-const UnreadSetting = fn(6705).UnreadSetting;
-const constants = fn(1097).ChannelNotificationSettingsFlags;
+const AnalyticsObjects = fn(1084).AnalyticsObjects;
+const UnreadSetting = fn(6706).UnreadSetting;
+const constants = fn(1094).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting(
   "modules/notifications/settings_unread_notice/utils/updateChannelUnreadSettings.tsx",

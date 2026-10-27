@@ -1,6 +1,6 @@
 // discord_app/modules/orbs_arcade/native/OrbsArcadeGameScreen.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
-import Link from "../../../../_runtime/01506_Link.js";
+import Link from "../../../../_runtime/01503_Link.js";
 import leaveFrame from "../../frames/leaveFrame.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import FramesStore from "../../frames/FramesStore.tsx";
@@ -8,18 +8,18 @@ import OrbsArcadeStore from "../OrbsArcadeStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ThemeTypes = fn(1087).ThemeTypes;
-const FramesConstants = fn(6776);
+const ThemeTypes = fn(1084).ThemeTypes;
+const FramesConstants = fn(6777);
 ({ isLaunched: closure_8, FrameLayoutModes } = FramesConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const OrbsArcadeGame = "OrbsArcadeGame";
-const presentation = { layoutMode: FrameLayoutModes.FOCUSED, portraitSafeAreasConfig: fn(18375).DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG };
-const createStyles = fn(4971);
+const presentation = { layoutMode: FrameLayoutModes.FOCUSED, portraitSafeAreasConfig: fn(18409).DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG };
+const createStyles = fn(4972);
 const obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BLACK }, wrapper: null, header: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 obj2.wrapper = { flex: 1, overflow: "hidden", borderTopStartRadius: nativeDefault.radii.lg, borderTopEndRadius: nativeDefault.radii.lg, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
-let rect = { position: "absolute", top: 0, left: 0, right: 0, height: fn(5609).ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK };
+let rect = { position: "absolute", top: 0, left: 0, right: 0, height: fn(5610).ACTIVITY_PANEL_PORTRAIT_HEADER_HEIGHT, flexDirection: "row", alignItems: "center", justifyContent: "space-between", gap: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.VOICE_VIDEO_VIDEO_TILE_BLUR_FALLBACK };
 obj2.header = rect;
 let closure_13 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

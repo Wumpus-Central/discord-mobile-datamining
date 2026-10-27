@@ -3,13 +3,13 @@ import URLUtilsDefault from "../../../utils/URLUtils.tsx";
 import getDevicePixelRatioDefault from "../../../utils/getDevicePixelRatio.native.tsx";
 import FirstPartyQuestTaskTypes2 from "../../../../discord_common/js/shared/shared-constants/FirstPartyQuestTaskTypes.tsx";
 import QuestRewardTypes from "../../../../discord_common/js/shared/shared-constants/QuestRewardTypes.tsx";
-import _modDef9585 from "../../../../discord_assets/assets/orbs/tier1_rewardTile_animated.webm.js";
-import _modDef9586 from "../../../../discord_assets/assets/orbs/tier2_rewardTile_animated.webm.js";
-import _modDef9587 from "../../../../discord_assets/assets/orbs/tier3_rewardTile_animated.webm.js";
-import _modDef9588 from "../../../../discord_assets/assets/orbs/tier4_rewardTile_animated.webm.js";
+import _modDef9587 from "../../../../discord_assets/assets/orbs/tier1_rewardTile_animated.webm.js";
+import _modDef9588 from "../../../../discord_assets/assets/orbs/tier2_rewardTile_animated.webm.js";
+import _modDef9589 from "../../../../discord_assets/assets/orbs/tier3_rewardTile_animated.webm.js";
+import _modDef9590 from "../../../../discord_assets/assets/orbs/tier4_rewardTile_animated.webm.js";
 import QuestRewardUtils from "../utils/QuestRewardUtils.tsx";
-import _modDef9596 from "../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
-import _modDef9597 from "../../../../discord_assets/assets/orbs/reward_tile_v3.webm.js";
+import _modDef9598 from "../../../../discord_assets/assets/orbs/reward_tile_v3_mobile.mp4.js";
+import _modDef9599 from "../../../../discord_assets/assets/orbs/reward_tile_v3.webm.js";
 import QuestConstants from "../QuestConstants.tsx";
 import Constants from "../../../Constants.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
@@ -216,7 +216,7 @@ let closure_11 = {
   [QuestAssetType.VIDEO_PLAYER_CAPTION]: { variant: obj2.VIDEO, property: obj3.CAPTION },
   [QuestAssetType.VIDEO_PLAYER_TRANSCRIPT]: { variant: obj2.VIDEO, property: obj3.TRANSCRIPT },
 };
-const obj11 = { [TIER_1]: _modDef9585, [TIER_2]: _modDef9586, [TIER_3]: _modDef9587, [TIER_4]: _modDef9588 };
+const obj11 = { [TIER_1]: _modDef9587, [TIER_2]: _modDef9588, [TIER_3]: _modDef9589, [TIER_4]: _modDef9590 };
 ({ TIER_1, TIER_2, TIER_3, TIER_4 } = obj4);
 let result = size.fileFinishedImporting("modules/quests/lib/AssetUtils.tsx");
 
@@ -271,10 +271,10 @@ export const getQuestAsset = function getQuestAsset(quest, VIDEO_PLAYER_THUMBNAI
         const obj3 = { url: tmp29, mimetype: "video/webm", isAnimated: true };
         let obj5 = obj3;
       } else if (arg3) {
-        const obj4 = { url: _modDef9596, mimetype: "video/mp4", isAnimated: true };
+        const obj4 = { url: _modDef9598, mimetype: "video/mp4", isAnimated: true };
         obj5 = obj4;
       } else {
-        obj5 = { url: _modDef9597, mimetype: "video/webm", isAnimated: true };
+        obj5 = { url: _modDef9599, mimetype: "video/webm", isAnimated: true };
       }
       return obj5;
     } else {
@@ -456,16 +456,16 @@ export const buildUrl = function buildUrl(arg0, str, theme) {
     return combined;
   }
 };
-export const resolveOptionalAdCreativeCdnUrl = function resolveOptionalAdCreativeCdnUrl(hero_video) {
-  if (null != hero_video) {
-    let combined = hero_video;
-    if (!hero_video.startsWith("http://")) {
-      combined = hero_video;
-      if (!hero_video.startsWith("https://")) {
-        combined = hero_video;
-        if (!hero_video.startsWith("blob:")) {
+export const resolveOptionalAdCreativeCdnUrl = function resolveOptionalAdCreativeCdnUrl(image_preview) {
+  if (null != image_preview) {
+    let combined = image_preview;
+    if (!image_preview.startsWith("http://")) {
+      combined = image_preview;
+      if (!image_preview.startsWith("https://")) {
+        combined = image_preview;
+        if (!image_preview.startsWith("blob:")) {
           const _HermesInternal = HermesInternal;
-          combined = "" + React3 + hero_video;
+          combined = "" + React3 + image_preview;
         }
       }
     }

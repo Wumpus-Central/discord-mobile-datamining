@@ -1,7 +1,7 @@
 // discord_app/modules/guild_role_subscriptions/native/emoji_upsell/RoleSubscriptionEmojiUpsellAlert.tsx
 import util from "../../../../intl/index.native.tsx";
 import GuildActionCreatorsDefault from "../../../../actions/GuildActionCreators.tsx";
-import _modDef9673 from "../../../../../_runtime/metro/09673__.js";
+import _modDef9675 from "../../../../../_runtime/metro/09675__.js";
 import CreatorRevenueButton from "../components/CreatorRevenueButton.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
@@ -9,7 +9,7 @@ import GuildStore from "../../../../stores/GuildStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const StaticChannelRoute = fn(4830).StaticChannelRoute;
+const StaticChannelRoute = fn(4831).StaticChannelRoute;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -22,7 +22,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = guildId(576).c(18);
       guildId = guildId.guildId;
       const onClose = guildId.onClose;
-      const size = onClose(1499)();
+      const size = onClose(1496)();
       const diff = Math.min(0.9 * Math.min(size.width, size.height), 500) - 32;
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const items = [GuildStore];
@@ -52,12 +52,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         name = stateFromStores.name;
       }
       if (cResult[3] !== name) {
-        const obj2 = { image: tmp4(9673), title: null, description: null };
-        let intl = tmp(1128).intl;
-        obj2.title = intl.string(tmp(1128).t.cBjkcx);
-        const intl2 = tmp(1128).intl;
+        const obj2 = { image: tmp4(9675), title: null, description: null };
+        let intl = tmp(1125).intl;
+        obj2.title = intl.string(tmp(1125).t.cBjkcx);
+        const intl2 = tmp(1125).intl;
         const obj3 = { serverName: name };
-        obj2.description = intl2.formatToPlainString(tmp(1128).t["h0u/Hi"], obj3);
+        obj2.description = intl2.formatToPlainString(tmp(1125).t["h0u/Hi"], obj3);
         cResult[3] = name;
         cResult[4] = obj2;
         let tmp11 = obj2;
@@ -71,8 +71,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         dependencyMap = tmp12;
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl3 = tmp(1128).intl;
-          const stringResult = intl3.string(tmp(1128).t.cpT0Cq);
+          const intl3 = tmp(1125).intl;
+          const stringResult = intl3.string(tmp(1125).t.cpT0Cq);
           cResult[8] = stringResult;
           let tmp13 = stringResult;
         } else {
@@ -119,14 +119,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           const obj4 = { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 };
-          const tmp21 = jsx(tmp4(5978), { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 });
+          const tmp21 = jsx(tmp4(5979), { cancelText: tmp13, onClose, renderConfirmButton: P, children: tmp16 });
           cResult[14] = onClose;
           cResult[15] = P;
           cResult[16] = tmp16;
           cResult[17] = tmp21;
         }
         const obj5 = { alertWidth: diff, upsellItem: tmp11 };
-        const tmp18 = jsx(tmp(9864).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
+        const tmp18 = jsx(tmp(9866).PremiumUpsellItem, { alertWidth: diff, upsellItem: tmp11 });
         cResult[11] = diff;
         cResult[12] = tmp11;
         cResult[13] = tmp18;
@@ -180,7 +180,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (stateFromStores != null) {
           name = stateFromStores.name;
         }
-        const obj = { image: _modDef9673, title: null, description: null };
+        const obj = { image: _modDef9675, title: null, description: null };
         const intl = util.intl;
         obj.title = intl.string(util.t.cBjkcx);
         const intl2 = util.intl;

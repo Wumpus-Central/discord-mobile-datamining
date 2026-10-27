@@ -1,7 +1,7 @@
 // discord_app/modules/toast/native/ToastUtils.tsx
 import Constants from "../../../Constants.tsx";
 import util from "../../../intl/index.native.tsx";
-import v1 from "../../../../_runtime/01281_v1.js";
+import v1 from "../../../../_runtime/01278_v1.js";
 import AvatarUtilsDefault from "../../../utils/AvatarUtils.tsx";
 import ToastActionCreatorsDefault from "ToastActionCreators.tsx";
 import FriendsIcon from "../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
@@ -40,10 +40,10 @@ export const presentFriendRequestAcceptedToast = function presentFriendRequestAc
   const obj = ToastActionCreatorsDefault;
   obj.open("TOAST_FRIEND_REQUEST_ACCEPTED", {
     text: stringResult,
-    icon: tmp2(5672).UserPlusIcon,
+    icon: tmp2(5673).UserPlusIcon,
     iconColor: "status-positive",
   });
-  const obj3 = { text: stringResult, icon: tmp2(5672).UserPlusIcon, iconColor: "status-positive" };
+  const obj3 = { text: stringResult, icon: tmp2(5673).UserPlusIcon, iconColor: "status-positive" };
 };
 export const presentGameFriendRequestAcceptedToast = function presentGameFriendRequestAcceptedToast() {
   const obj2 = { text: null, icon: null, iconColor: "status-positive" };

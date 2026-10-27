@@ -82,11 +82,11 @@ let closure_13 = async function _authorizeLink(arg0) {
   }
 };
 const View = fn(17).View;
-const WebBrowserType = fn(1087).WebBrowserType;
+const WebBrowserType = fn(1084).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = new LoggerDefault("TwoWayLink");
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_11 = createStyles.createStyles({ image: { marginBottom: 32 }, redirect: { marginTop: 8 } });
 const ReactCompilerGating = fn(558);
 const tmp3 = new LoggerDefault("TwoWayLink");

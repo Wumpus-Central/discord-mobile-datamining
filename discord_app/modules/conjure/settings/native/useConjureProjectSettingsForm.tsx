@@ -12,11 +12,11 @@ const ActionSheetActionCreatorsDefault = ActionSheetActionCreators;
 
 require = fn;
 const View = fn(17).View;
-const DEFAULT_ROLE_COLOR_HEX = fn(1087).DEFAULT_ROLE_COLOR_HEX;
+const DEFAULT_ROLE_COLOR_HEX = fn(1084).DEFAULT_ROLE_COLOR_HEX;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 const ConjureCollaboratorRolesSheet = "ConjureCollaboratorRolesSheet";
-let createStyles = fn(4971);
+let createStyles = fn(4972);
 let obj2 = { content: { gap: nativeDefault.space.PX_16 }, roleLabel: null, roleListContent: null, roleListEmpty: null, roleListFooter: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.roleLabel = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -27,7 +27,7 @@ obj2.roleListEmpty = { alignItems: "center", paddingVertical: nativeDefault.spac
 let obj6 = { alignItems: "center", paddingVertical: nativeDefault.space.PX_24 };
 obj2.roleListFooter = { alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_12, paddingBottom: nativeDefault.space.PX_48, backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
 let closure_11 = createStyles.createStyles(obj2);
-createStyles = fn(4971);
+createStyles = fn(4972);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = { circle: null };
   const size = { width: 12, height: 12, borderRadius: nativeDefault.radii.round, backgroundColor, flexShrink: 0 };
@@ -820,7 +820,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
 }) : (function useConjureProjectSettingsForm(projectId, arg1) {
   _require = arg1;
   const tmp = closure_11();
-  const tmp4 = selectedRoleIds(12152)(projectId, arg1);
+  const tmp4 = selectedRoleIds(12180)(projectId, arg1);
   ({ liveReload, isGuildCollaboration, selectedRoleIds } = tmp4);
   ({ supportsVisibility, saving, saveError, experimentalError, handleFlagChange: dependencyMap, handleRoleSelectionChange } = tmp4);
   let items = [arg1, handleRoleSelectionChange, selectedRoleIds];
@@ -847,17 +847,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (supportsVisibility) {
     let obj2 = { hasIcons: false, children: null };
     let obj3 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-    const intl = tmp9(1128).intl;
-    obj3.label = intl.string(selectedRoleIds(3830).ujIxRm);
-    const intl2 = tmp9(1128).intl;
-    obj3.subLabel = intl2.string(selectedRoleIds(3830).gT8zk1);
+    const intl = tmp9(1125).intl;
+    obj3.label = intl.string(selectedRoleIds(3831).ujIxRm);
+    const intl2 = tmp9(1125).intl;
+    obj3.subLabel = intl2.string(selectedRoleIds(3831).gT8zk1);
     obj3.checked = isPublic;
     obj3.disabled = saving;
     obj3.onPress = function onPress(arg0) {
       return dependencyMap(ConjureProjectTypes.ConjureProjectFlags.PUBLIC, arg0);
     };
-    obj2.children = closure_8(tmp9(6900).TableCheckboxRow, obj3);
-    tmp8Result = closure_8(tmp9(6987).TableRowGroup, obj2);
+    obj2.children = closure_8(tmp9(6902).TableCheckboxRow, obj3);
+    tmp8Result = closure_8(tmp9(6989).TableRowGroup, obj2);
   }
   items1[1] = tmp8Result;
   let tmp8Result6 = null;
@@ -866,17 +866,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     if (supportsCollaboration) {
       const obj4 = { hasIcons: false, children: null };
       const obj5 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-      const intl3 = tmp9(1128).intl;
-      obj5.label = intl3.string(selectedRoleIds(3830).lVvR4E);
-      const intl4 = tmp9(1128).intl;
-      obj5.subLabel = intl4.string(selectedRoleIds(3830).SQZGoV);
+      const intl3 = tmp9(1125).intl;
+      obj5.label = intl3.string(selectedRoleIds(3831).lVvR4E);
+      const intl4 = tmp9(1125).intl;
+      obj5.subLabel = intl4.string(selectedRoleIds(3831).SQZGoV);
       obj5.checked = isGuildCollaboration;
       obj5.disabled = saving;
       obj5.onPress = function onPress(arg0) {
         return dependencyMap(ConjureProjectTypes.ConjureProjectFlags.GUILD_COLLABORATION, arg0);
       };
-      obj4.children = closure_8(tmp9(6900).TableCheckboxRow, obj5);
-      tmp8Result6 = closure_8(tmp9(6987).TableRowGroup, obj4);
+      obj4.children = closure_8(tmp9(6902).TableCheckboxRow, obj5);
+      tmp8Result6 = closure_8(tmp9(6989).TableRowGroup, obj4);
     }
   }
   items1[2] = tmp8Result6;
@@ -884,22 +884,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (liveReload.available) {
     const obj6 = { hasIcons: false, children: null };
     const obj8 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-    const intl5 = tmp9(1128).intl;
-    obj8.label = intl5.string(selectedRoleIds(3830).eEo0ye);
+    const intl5 = tmp9(1125).intl;
+    obj8.label = intl5.string(selectedRoleIds(3831).eEo0ye);
     ({ description: obj7.subLabel, checked: obj7.checked } = liveReload);
     obj8.disabled = saving;
     obj8.onPress = handleLiveReloadChange;
-    obj6.children = closure_8(tmp9(6900).TableCheckboxRow, obj8);
-    tmp8Result7 = closure_8(tmp9(6987).TableRowGroup, obj6);
+    obj6.children = closure_8(tmp9(6902).TableCheckboxRow, obj8);
+    tmp8Result7 = closure_8(tmp9(6989).TableRowGroup, obj6);
   }
   items1[3] = tmp8Result7;
   let tmp8Result8 = null;
   if (supportsCollaboratorRoles) {
     const obj9 = { label: null, subLabel: null, arrow: true, disabled: null, accessibilityHint: null, onPress: null };
-    const intl6 = tmp9(1128).intl;
-    obj9.label = intl6.string(selectedRoleIds(3830)["pO3+p5"]);
-    const intl7 = tmp9(1128).intl;
-    obj9.subLabel = intl7.string(selectedRoleIds(3830)["9MdtK9"]);
+    const intl6 = tmp9(1125).intl;
+    obj9.label = intl6.string(selectedRoleIds(3831)["pO3+p5"]);
+    const intl7 = tmp9(1125).intl;
+    obj9.subLabel = intl7.string(selectedRoleIds(3831)["9MdtK9"]);
     let tmp14 = saving;
     if (!saving) {
       tmp14 = !isGuildCollaboration;
@@ -907,21 +907,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     obj9.disabled = tmp14;
     let stringResult;
     if (!isGuildCollaboration) {
-      const intl8 = tmp9(1128).intl;
-      stringResult = intl8.string(selectedRoleIds(3830).nZw5r9);
+      const intl8 = tmp9(1125).intl;
+      stringResult = intl8.string(selectedRoleIds(3831).nZw5r9);
     }
     const obj10 = { hasIcons: false, children: null };
     obj9.accessibilityHint = stringResult;
     obj9.onPress = callback;
-    obj10.children = closure_8(tmp9(6903).TableRow, obj9);
-    tmp8Result8 = closure_8(tmp9(6987).TableRowGroup, obj10);
+    obj10.children = closure_8(tmp9(6905).TableRow, obj9);
+    tmp8Result8 = closure_8(tmp9(6989).TableRowGroup, obj10);
   }
   items1[4] = tmp8Result8;
   let tmp8Result9 = null;
   if (null != saveError) {
     const obj11 = { accessibilityRole: "alert", children: null };
     const obj12 = { variant: "text-xs/normal", color: "text-feedback-critical", children: saveError };
-    obj11.children = closure_8(tmp9(5234).Text, obj12);
+    obj11.children = closure_8(tmp9(5235).Text, obj12);
     tmp8Result9 = closure_8(View, obj11);
   }
   const obj13 = { fields: closure_9(View, obj), experimentalFields: null, canSave: null, saving: null, nameChanged: null, submit: null };
@@ -930,19 +930,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   const obj14 = { style: tmp.content, children: null };
   const obj15 = { hasIcons: false, children: null };
   const obj16 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-  const intl9 = tmp9(1128).intl;
-  obj16.label = intl9.string(selectedRoleIds(3830)["4liZ45"]);
-  const intl10 = tmp9(1128).intl;
-  obj16.subLabel = intl10.string(selectedRoleIds(3830).I5cl7p);
+  const intl9 = tmp9(1125).intl;
+  obj16.label = intl9.string(selectedRoleIds(3831)["4liZ45"]);
+  const intl10 = tmp9(1125).intl;
+  obj16.subLabel = intl10.string(selectedRoleIds(3831).I5cl7p);
   obj16.checked = smartContext.checked;
   obj16.disabled = saving;
   obj16.onPress = handleSmartContextChange;
   const items2 = [closure_8(require("TableCheckboxRow").TableCheckboxRow, obj16), ];
   const obj17 = { label: null, subLabel: null, checked: null, disabled: null, onPress: null };
-  const intl11 = tmp9(1128).intl;
-  obj17.label = intl11.string(selectedRoleIds(3830).mpjaVm);
-  const intl12 = tmp9(1128).intl;
-  obj17.subLabel = intl12.string(selectedRoleIds(3830)["2PxChh"]);
+  const intl11 = tmp9(1125).intl;
+  obj17.label = intl11.string(selectedRoleIds(3831).mpjaVm);
+  const intl12 = tmp9(1125).intl;
+  obj17.subLabel = intl12.string(selectedRoleIds(3831)["2PxChh"]);
   obj17.checked = hostApproval.checked;
   obj17.disabled = saving;
   obj17.onPress = handleRequireHostApprovalChange;
@@ -953,7 +953,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (null != experimentalError) {
     const obj19 = { accessibilityRole: "alert", children: null };
     const obj37 = { variant: "text-xs/normal", color: "text-feedback-critical", children: experimentalError };
-    obj19.children = closure_8(tmp9(5234).Text, obj37);
+    obj19.children = closure_8(tmp9(5235).Text, obj37);
     tmp8Result10 = closure_8(View, obj19);
   }
   items3[2] = tmp8Result10;

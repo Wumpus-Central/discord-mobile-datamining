@@ -29,7 +29,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
   closure_7 = undefined;
   let selectedCharacterTraits;
   c9 = undefined;
-  function transition(arg0) {
+  function transition(direction) {
     let obj = arg1;
     if (arg1 === undefined) {
       obj = {};
@@ -40,16 +40,16 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
     }
     const timestamp = Date.now();
     if (flag) {
-      const obj2 = CheckpointFlows;
-      const adjacentCheckpointRoute = obj2.getAdjacentCheckpointRoute(closure_0, first, arg0, closure_1);
+      const obj3 = { flow, stats, currentRoute, direction };
+      const adjacentCheckpointRoute = CheckpointFlows.getAdjacentCheckpointRoute(obj3);
       if (null != adjacentCheckpointRoute) {
         ref.current = timestamp;
         const SILENT_CHECKPOINT_ROUTES = CheckpointNavigation.SILENT_CHECKPOINT_ROUTES;
-        if (!SILENT_CHECKPOINT_ROUTES.has(first)) {
+        if (!SILENT_CHECKPOINT_ROUTES.has(currentRoute)) {
           closure_7();
         }
         closure_3(adjacentCheckpointRoute);
-      } else if (1 === arg0) {
+      } else if (1 === direction) {
         ModalActionCreatorsDefault.pop();
       }
     }
@@ -162,7 +162,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
   const tmp = closure_18();
   const rect = require("useSafeAreaInsets")();
   const effect = noop.useEffect(() => {
-    closure_0(first[12]).resetEditedCharacter();
+    flow(first[12]).resetEditedCharacter();
   }, []);
   _require = require("CheckpointFlows").getCheckpointFlow(flag);
   let obj2 = require("CheckpointFlows");
@@ -208,7 +208,7 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
     }
     const tmp5Result8 = tmp5(tmp3[22]);
   }
-  const tmp26 = require("CheckpointCustomizationUtils").CUSTOMIZATION_OPTION_TRAITS[tmp23];
+  const tmp26 = require("CheckpointCustomizationUtils").CUSTOMIZATION_OPTION_TO_TRAIT[tmp23];
   const tmp27 = require("useCheckpointCustomization")();
   selectedCharacterTraits = tmp27.selectedCharacterTraits;
   const blockedTraits = tmp27.blockedTraits;
@@ -437,14 +437,14 @@ function CheckpointModal(didPlayerShareDataWithDiscord) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointFetchStates = fn(12956).CheckpointFetchStates;
-const CheckpointConstants = fn(6015);
+const CheckpointFetchStates = fn(12968).CheckpointFetchStates;
+const CheckpointConstants = fn(6016);
 ({ CHECKPOINT_LOGO_SIZE, CHECKPOINT_NAV_HEIGHT } = CheckpointConstants);
 ({ CHECKPOINT_PRIMARY: closure_12, CheckpointVersions: map1, CHECKPOINT_CONTROL_SIZE } = CheckpointConstants);
-const ThemeTypes = fn(1098).ThemeTypes;
+const ThemeTypes = fn(1095).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, Fragment: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   loader: { flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.colors.BLACK },
   container: { height: "100%" },

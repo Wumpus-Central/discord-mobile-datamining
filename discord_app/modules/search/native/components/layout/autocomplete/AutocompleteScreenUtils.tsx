@@ -6,8 +6,8 @@ import ImageIcon from "../../../../../../design/components/Icon/native/redesign/
 import PollsIcon from "../../../../../../design/components/Icon/native/redesign/generated/PollsIcon.tsx";
 import AttachmentIcon from "../../../../../../design/components/Icon/native/redesign/generated/AttachmentIcon.tsx";
 import VideoIcon from "../../../../../../design/components/Icon/native/redesign/generated/VideoIcon.tsx";
-import UserIcon from "../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import RobotIcon from "../../../../../../design/components/Icon/native/redesign/generated/RobotIcon.tsx";
+import UserIcon from "../../../../../../design/components/Icon/native/redesign/generated/UserIcon.tsx";
 import ForwardingIconDefault from "../../../../../forwarding/native/ForwardingIcon.tsx";
 import SearchUtils from "../../../../SearchUtils.tsx";
 import SoundboardIcon from "../../../../../../design/components/Icon/native/redesign/generated/SoundboardIcon.tsx";
@@ -20,8 +20,8 @@ import UserStore from "../../../../../../stores/UserStore.tsx";
 import SearchQueryStore from "../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchListItemTypes = fn(9714).SearchListItemTypes;
-const RelationshipTypes = fn(1087).RelationshipTypes;
+const SearchListItemTypes = fn(9716).SearchListItemTypes;
+const RelationshipTypes = fn(1084).RelationshipTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/search/native/components/layout/autocomplete/AutocompleteScreenUtils.tsx",

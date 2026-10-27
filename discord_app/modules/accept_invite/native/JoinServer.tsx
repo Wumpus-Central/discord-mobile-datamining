@@ -12,11 +12,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const CreateGuildConstants = fn(7073);
+const CreateGuildConstants = fn(7075);
 ({ CREATE_GUILD_SMALL_SCREEN_MAX_HEIGHT: metroRequire, CreateGuildModalStates: closure_7 } = CreateGuildConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   growSpacing: { flexGrow: 2, minHeight: nativeDefault.space.PX_24 },
   container: null,
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ error, inviteString, onInviteChange, onDone, submitting } = arg0);
       const tmp4 = closure_11();
       const obj = navigation(576);
-      navigation = navigation(1505).useNavigation();
+      navigation = navigation(1502).useNavigation();
       const tmp7 = useWindowDimensionsDefault().height <= closure_6;
       if (cResult[0] !== navigation) {
         const fn = function n() {
@@ -181,8 +181,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol = Symbol;
             if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl3 = tmp(1128).intl;
-              const stringResult = intl3.string(tmp(1128).t.qreV25);
+              const intl3 = tmp(1125).intl;
+              const stringResult = intl3.string(tmp(1125).t.qreV25);
               cResult[11] = stringResult;
               let tmp18 = stringResult;
             } else {
@@ -190,8 +190,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const _Symbol2 = Symbol;
             if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-              const intl4 = tmp(1128).intl;
-              const stringResult1 = intl4.string(tmp(1128).t.qreV25);
+              const intl4 = tmp(1125).intl;
+              const stringResult1 = intl4.string(tmp(1125).t.qreV25);
               cResult[12] = stringResult1;
               let tmp20 = stringResult1;
             } else {
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                     const _Symbol3 = Symbol;
                     if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-                      const intl5 = tmp(1128).intl;
+                      const intl5 = tmp(1125).intl;
                       const obj4 = { example1: null, example2: null, example3: null, exampleHook: null };
                       [obj8.example1, obj8.example2, obj8.example3] = items;
                       obj4.exampleHook = function exampleHook(children, arg1) {
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           arg1,
                         );
                       };
-                      const formatResult = intl5.format(tmp(1128).t.vwWaTe, obj4);
+                      const formatResult = intl5.format(tmp(1125).t.vwWaTe, obj4);
                       cResult[19] = formatResult;
                       let tmp26 = formatResult;
                     } else {
@@ -229,7 +229,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         color: "text-muted",
                         children: tmp26,
                       };
-                      const tmp31 = closure_8(tmp(5234).Text, obj5);
+                      const tmp31 = closure_8(tmp(5235).Text, obj5);
                       cResult[20] = tmp4.exampleText;
                       cResult[21] = tmp31;
                       let tmp29 = tmp31;
@@ -252,10 +252,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         }
                         const _Symbol4 = Symbol;
                         if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
-                          const intl6 = tmp(1128).intl;
-                          const stringResult2 = intl6.string(tmp(1128).t["+H/coT"]);
-                          const intl7 = tmp(1128).intl;
-                          const stringResult3 = intl7.string(tmp(1128).t["+H/coT"]);
+                          const intl6 = tmp(1125).intl;
+                          const stringResult2 = intl6.string(tmp(1125).t["+H/coT"]);
+                          const intl7 = tmp(1125).intl;
+                          const stringResult3 = intl7.string(tmp(1125).t["+H/coT"]);
                           cResult[28] = stringResult2;
                           cResult[29] = stringResult3;
                           let tmp41 = stringResult3;
@@ -278,10 +278,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           }
                           const _Symbol6 = Symbol;
                           if (cResult[34] === Symbol.for("react.memo_cache_sentinel")) {
-                            const intl8 = tmp(1128).intl;
-                            const stringResult4 = intl8.string(tmp(1128).t["MOqX/G"]);
-                            const intl9 = tmp(1128).intl;
-                            const stringResult5 = intl9.string(tmp(1128).t["MOqX/G"]);
+                            const intl8 = tmp(1125).intl;
+                            const stringResult4 = intl8.string(tmp(1125).t["MOqX/G"]);
+                            const intl9 = tmp(1125).intl;
+                            const stringResult5 = intl9.string(tmp(1125).t["MOqX/G"]);
                             cResult[34] = stringResult4;
                             cResult[35] = stringResult5;
                             let tmp52 = stringResult5;
@@ -298,7 +298,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                               accessibilityLabel: tmp52,
                               onPress: tmp8,
                             };
-                            const tmp57 = closure_8(tmp(5244).Button, obj7);
+                            const tmp57 = closure_8(tmp(5245).Button, obj7);
                             cResult[36] = tmp8;
                             cResult[37] = tmp57;
                             let tmp55 = tmp57;
@@ -351,7 +351,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           disabled: submitting,
                           onPress: onDone,
                         };
-                        const tmp46 = closure_8(tmp(5244).Button, obj11);
+                        const tmp46 = closure_8(tmp(5245).Button, obj11);
                         cResult[30] = onDone;
                         cResult[31] = submitting;
                         cResult[32] = tmp46;
@@ -405,13 +405,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             color: "mobile-text-heading-primary",
             children: null,
           };
-          const intl = tmp(1128).intl;
-          obj15.children = intl.string(tmp(1128).t.jlfuFW);
-          const items3 = [closure_8(tmp(5234).Text, obj15)];
+          const intl = tmp(1125).intl;
+          obj15.children = intl.string(tmp(1125).t.jlfuFW);
+          const items3 = [closure_8(tmp(5235).Text, obj15)];
           const obj28 = { style: tmp4.description, variant: "text-sm/medium", color: "text-default", children: null };
-          const intl2 = tmp(1128).intl;
-          obj28.children = intl2.string(tmp(1128).t.lVvN3A);
-          items3[1] = closure_8(tmp(5234).Text, obj28);
+          const intl2 = tmp(1125).intl;
+          obj28.children = intl2.string(tmp(1125).t.lVvN3A);
+          items3[1] = closure_8(tmp(5235).Text, obj28);
           obj14.children = items3;
           tmp13 = closure_9(closure_10, obj14);
         }
@@ -426,14 +426,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[5] = tmp10;
       cResult[6] = items4;
       tmp11 = items4;
-      const obj2 = navigation(1505);
+      const obj2 = navigation(1502);
     }
   : function JoinServer(arg0) {
       ({ onDone, submitting } = arg0);
       let navigation;
       ({ error, inviteString, onInviteChange } = arg0);
       const tmp = closure_11();
-      navigation = navigation(1505).useNavigation();
+      navigation = navigation(1502).useNavigation();
       items = [navigation];
       const obj2 = { keyboardShouldPersistTaps: "handled", contentContainerStyle: null, children: null };
       const items1 = [tmp.container];
@@ -454,13 +454,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           color: "mobile-text-heading-primary",
           children: null,
         };
-        const intl = tmp4(1128).intl;
-        obj5.children = intl.string(tmp4(1128).t.jlfuFW);
-        const items2 = [closure_8(tmp4(5234).Text, obj5)];
+        const intl = tmp4(1125).intl;
+        obj5.children = intl.string(tmp4(1125).t.jlfuFW);
+        const items2 = [closure_8(tmp4(5235).Text, obj5)];
         const obj6 = { style: tmp.description, variant: "text-sm/medium", color: "text-default", children: null };
-        const intl2 = tmp4(1128).intl;
-        obj6.children = intl2.string(tmp4(1128).t.lVvN3A);
-        items2[1] = closure_8(tmp4(5234).Text, obj6);
+        const intl2 = tmp4(1125).intl;
+        obj6.children = intl2.string(tmp4(1125).t.lVvN3A);
+        items2[1] = closure_8(tmp4(5235).Text, obj6);
         obj4.children = items2;
         tmp7Result = closure_9(closure_10, obj4);
       }
@@ -480,21 +480,21 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         textStyle: null,
         onSubmitEditing: null,
       };
-      const obj = navigation(1505);
-      const intl3 = tmp4(1128).intl;
-      obj8.label = intl3.string(navigation(1128).t.qreV25);
+      const obj = navigation(1502);
+      const intl3 = tmp4(1125).intl;
+      obj8.label = intl3.string(navigation(1125).t.qreV25);
       obj8.error = error;
       obj8.value = inviteString;
       obj8.onChangeText = onInviteChange;
       obj8.placeholder = placeholder;
-      const intl4 = tmp4(1128).intl;
-      obj8.accessibilityLabel = intl4.string(navigation(1128).t.qreV25);
+      const intl4 = tmp4(1125).intl;
+      obj8.accessibilityLabel = intl4.string(navigation(1125).t.qreV25);
       obj8.textStyle = tmp.textInput;
       obj8.onSubmitEditing = onDone;
       items3[1] = closure_8(FreeFormInputGroupDefault, obj8);
       const obj9 = { style: tmp.exampleText, variant: "text-sm/medium", color: "text-muted", children: null };
-      const intl5 = tmp4(1128).intl;
-      obj9.children = intl5.format(navigation(1128).t.vwWaTe, {
+      const intl5 = tmp4(1125).intl;
+      obj9.children = intl5.format(navigation(1125).t.vwWaTe, {
         example1: items[0],
         example2: items[1],
         example3: items[2],
@@ -506,28 +506,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           );
         },
       });
-      items3[2] = closure_8(navigation(5234).Text, obj9);
+      items3[2] = closure_8(navigation(5235).Text, obj9);
       obj7.children = items3;
       const items4 = [closure_9(closure_4, obj7)];
       const obj11 = { children: null };
       const items5 = [closure_8(closure_4, { style: tmp.growSpacing }), , ,];
       const obj13 = { size: "lg", text: null, accessibilityLabel: null, loading: null, disabled: null, onPress: null };
-      const intl6 = tmp4(1128).intl;
-      obj13.text = intl6.string(navigation(1128).t["+H/coT"]);
-      const intl7 = tmp4(1128).intl;
-      obj13.accessibilityLabel = intl7.string(navigation(1128).t["+H/coT"]);
+      const intl6 = tmp4(1125).intl;
+      obj13.text = intl6.string(navigation(1125).t["+H/coT"]);
+      const intl7 = tmp4(1125).intl;
+      obj13.accessibilityLabel = intl7.string(navigation(1125).t["+H/coT"]);
       obj13.loading = submitting;
       obj13.disabled = submitting;
       obj13.onPress = onDone;
-      items5[1] = closure_8(navigation(5244).Button, obj13);
+      items5[1] = closure_8(navigation(5245).Button, obj13);
       items5[2] = closure_8(closure_14, {});
       const obj14 = { size: "lg", variant: "secondary", text: null, accessibilityLabel: null, onPress: null };
-      const intl8 = tmp4(1128).intl;
-      obj14.text = intl8.string(navigation(1128).t["MOqX/G"]);
-      const intl9 = tmp4(1128).intl;
-      obj14.accessibilityLabel = intl9.string(navigation(1128).t["MOqX/G"]);
+      const intl8 = tmp4(1125).intl;
+      obj14.text = intl8.string(navigation(1125).t["MOqX/G"]);
+      const intl9 = tmp4(1125).intl;
+      obj14.accessibilityLabel = intl9.string(navigation(1125).t["MOqX/G"]);
       obj14.onPress = callback;
-      items5[3] = closure_8(navigation(5244).Button, obj14);
+      items5[3] = closure_8(navigation(5245).Button, obj14);
       obj11.children = items5;
       items4[1] = closure_9(closure_10, obj11);
       obj2.children = items4;

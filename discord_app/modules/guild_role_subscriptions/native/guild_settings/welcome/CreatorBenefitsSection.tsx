@@ -15,10 +15,10 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(16562).CREATOR_REVENUE_SHARE_PERCENTAGE;
+let closure_4 = fn(16604).CREATOR_REVENUE_SHARE_PERCENTAGE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   horizontalContainer: { flex: 1, flexDirection: "row" },
   benefitAvatarContainer: {

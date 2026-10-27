@@ -40,7 +40,7 @@ function useHandleBuyNow(product) {
           } else {
             v1 = 1;
             dependencyMap = 1;
-            const obj6 = { value: tmp4(7649).fetchCollectiblesPurchases(), done: false };
+            const obj6 = { value: tmp4(7650).fetchCollectiblesPurchases(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {
@@ -52,14 +52,14 @@ function useHandleBuyNow(product) {
           return obj7;
         } else {
           closure_128_4(false);
-          v1(5210).hideAllActionSheets();
-          const obj = v1(5210);
+          v1(5211).hideAllActionSheets();
+          const obj = v1(5211);
           const obj8 = {
             product: closure_128_0,
             useCategoryImage: true,
             stageCollectibleChangeForEditProfile: closure_128_2,
           };
-          v1(13944).open(obj8);
+          v1(13958).open(obj8);
           dependencyMap = 3;
           return { value: "IconComponent", done: null };
         }
@@ -71,7 +71,7 @@ function useHandleBuyNow(product) {
   };
   ({ analyticsLocations, orderId } = product);
   [isBuying, _slicedToArray] = noop.useState(false);
-  const tmp3 = onBuySettled(13883)({
+  const tmp3 = onBuySettled(13897)({
     product,
     analyticsLocations,
     onPurchaseComplete() {
@@ -232,7 +232,7 @@ function useHandleBuyNow(product) {
   );
   return obj2;
 }
-const Routes = fn(1087).Routes;
+const Routes = fn(1084).Routes;
 let closure_7 = new LoggerDefault("useHandleBuyNow");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/useHandleBuyNow.tsx");

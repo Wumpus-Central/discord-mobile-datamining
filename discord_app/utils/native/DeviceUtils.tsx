@@ -16,6 +16,9 @@ export const isIpadOS = function isIpadOS() {
   }
   return tmp;
 };
+export const isDuo = function isDuo() {
+  return "iPhone19,4" === closure_3.deviceProduct;
+};
 export const isGestureNavigationEnabled = function isGestureNavigationEnabled() {
   return closure_3.isGestureNavigationEnabled;
 };

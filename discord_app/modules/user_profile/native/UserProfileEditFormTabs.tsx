@@ -11,10 +11,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7304).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7306).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   container: { marginTop: nativeDefault.space.PX_16, marginHorizontal: -PROFILE_SIDE_PADDING },
   page: { paddingHorizontal: PROFILE_SIDE_PADDING },
@@ -114,8 +114,8 @@ export default noop.memo(
               return;
             }
           }
-          const intl = isBoardTabOnScreen(1128).intl;
-          tmp12[1] = intl.string(isBoardTabOnScreen(1128).t.LXw470);
+          const intl = isBoardTabOnScreen(1125).intl;
+          tmp12[1] = intl.string(isBoardTabOnScreen(1125).t.LXw470);
           tmp12[2] = closure_6(closure_9, {});
           cResult[2] = tmp12;
         } else {
@@ -137,7 +137,7 @@ export default noop.memo(
               return;
             }
           }
-          const stringResult = obj2.string(isBoardTabOnScreen(1128).t.laViwx);
+          const stringResult = obj2.string(isBoardTabOnScreen(1125).t.laViwx);
           cResult[3] = stringResult;
         } else {
           class H {

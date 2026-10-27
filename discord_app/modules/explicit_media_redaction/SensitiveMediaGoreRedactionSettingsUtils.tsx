@@ -73,7 +73,7 @@ function resolveGoreSettingWithDefaults(isFriend) {
   }
   obj = RegionalFeatureConfigUtils;
 }
-const HelpdeskArticles = fn(1087).HelpdeskArticles;
+const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const ReactCompilerGating = fn(558);
 function resolveGoreSettingWithDefaultsForTeen(isDm) {
   let flag = isDm.isDm;

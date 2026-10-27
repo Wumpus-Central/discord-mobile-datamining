@@ -29,14 +29,14 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes: closure_8, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   row: {
-    height: fn(10113).AUTOCOMPLETE_ROW_HEIGHT,
+    height: fn(10115).AUTOCOMPLETE_ROW_HEIGHT,
     paddingVertical: 0,
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
   },
@@ -55,7 +55,7 @@ let obj2 = {
   labelRow: null,
 };
 let obj3 = {
-  height: fn(10113).AUTOCOMPLETE_ROW_HEIGHT,
+  height: fn(10115).AUTOCOMPLETE_ROW_HEIGHT,
   paddingVertical: 0,
   backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
 };
@@ -221,8 +221,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
                 tmp20 = items1;
               }
             }
-            const obj6 = { status, user, size: tmp(1202).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
-            const tmp19 = closure_9(tmp(1202).Avatar, obj6);
+            const obj6 = { status, user, size: tmp(1199).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
+            const tmp19 = closure_9(tmp(1199).Avatar, obj6);
             cResult[10] = guildId;
             cResult[11] = status;
             cResult[12] = user;
@@ -235,8 +235,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           name = stateFromStores;
         }
         if (name == null) {
-          name = guildId(5025).getName(user);
-          const obj3 = guildId(5025);
+          name = guildId(5026).getName(user);
+          const obj3 = guildId(5026);
         }
         cResult[4] = stateFromStores;
         cResult[5] = nick;
@@ -283,15 +283,15 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
         nick = stateFromStores;
       }
       if (nick == null) {
-        nick = guildId(5025).getName(user);
-        const obj3 = guildId(5025);
+        nick = guildId(5026).getName(user);
+        const obj3 = guildId(5026);
       }
       obj2.label = closure_9(closure_12, { text: nick });
       const obj = user(504);
-      obj2.leading = closure_9(user(1202).Avatar, {
+      obj2.leading = closure_9(user(1199).Avatar, {
         status,
         user,
-        size: user(1202).AvatarSizes.SMALL,
+        size: user(1199).AvatarSizes.SMALL,
         guildId,
         autoStatusCutout: true,
       });

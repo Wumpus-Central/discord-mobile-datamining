@@ -23,11 +23,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-fn(7525).GPlayBillingResult;
-const PremiumConstants = fn(1394);
+const AnalyticEvents = fn(1084).AnalyticEvents;
+fn(7526).GPlayBillingResult;
+const PremiumConstants = fn(1391);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
-let PaymentGateways = fn(1098).PaymentGateways;
+let PaymentGateways = fn(1095).PaymentGateways;
 let jsx = fn(21).jsx;
 let closure_17 = new LoggerDefault("NativeGiftContext");
 const tmp4 = new LoggerDefault("NativeGiftContext");
@@ -971,9 +971,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj4 = {
         orderId: "a",
-        planId: "computer",
+        planId: 1610613164,
         planSelection: { premiumType, planInterval },
-        giftInfo: "computer",
+        giftInfo: 1090519905,
       };
       cResult[0] = planInterval;
       cResult[1] = premiumType;
@@ -996,9 +996,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const setError = order.setError;
       let obj = {
         orderId: "a",
-        planId: "computer",
+        planId: 1610613164,
         planSelection: { premiumType, planInterval },
-        giftInfo: "computer",
+        giftInfo: 1090519905,
       };
       closure_13 = externalGatewayFacet.useRef(obj);
       externalGatewayFacet.useRef(false);

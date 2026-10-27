@@ -9,16 +9,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 const useConjureProjectIconDefault = useConjureProjectIcon;
 
-const AvatarUtils = obj(1417);
-const FastImageDefault = tmp3(5669);
+const AvatarUtils = obj(1414);
+const FastImageDefault = tmp3(5670);
 const AppsIcon = obj(8577);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const dependencyMap = { header: 20, list: 32, card: 40 };
-let createStyles = fn(4971);
+const dependencyMap = { header: 20, list: 32, card: 40, dialog: 48 };
+let createStyles = fn(4972);
 let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {
   const obj = {
     frame: { width, height: width, borderRadius, overflow: "hidden", alignItems: "center", justifyContent: "center" },
@@ -37,7 +37,7 @@ let closure_8 = createStyles.createStyles((width, borderRadius, width2) => {
   return obj;
 });
 fn(558);
-createStyles = fn(4971);
+createStyles = fn(4972);
 let closure_9 = createStyles.createStyles((backgroundColor) => {
   const obj = { tile: { backgroundColor } };
   return obj;

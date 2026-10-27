@@ -9,15 +9,15 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 const VoicePanelVideoGuardErrorAlertDefault = VoicePanelVideoGuardErrorAlert;
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
-const MetaQuestUtils = fn(1630);
+const MetaQuestUtils = fn(1627);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13456).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13470).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(18641).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(18677).MobilePhoneShareIcon;
 }
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_8 = createStyles.createStyles({
   iconContainer: {
     position: "absolute",

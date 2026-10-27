@@ -1,13 +1,14 @@
 // discord_app/modules/app_launcher/native/base_components/CommandRowButton.tsx
 import c from "../../../../../_runtime/00576_c.js";
+import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const util = TableRowArrow(1128);
-const components_Button_Button = TableRowArrow(5244);
-const SendMessageIcon = TableRowArrow(5680);
-const TableRowArrow2 = TableRowArrow(6912);
+const util = TableRowArrow(1125);
+const components_Button_Button = TableRowArrow(5245);
+const SendMessageIcon = TableRowArrow(5681);
+const TableRowArrow2 = TableRowArrow(6914);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -44,7 +45,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         obj3.text = intl.string(util.t.TXNS7S);
         obj3.onPress = onPressSend;
-        obj3.icon = jsx(SendMessageIcon.SendMessageIcon, { size: "sm" });
+        const obj4 = { size: "sm", color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
+        obj3.icon = jsx(SendMessageIcon.SendMessageIcon, {
+          size: "sm",
+          color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT,
+        });
         obj3.disabled = sending;
         tmp2Result = jsx(components_Button_Button.Button, {
           size: "sm",
@@ -79,7 +84,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl = util.intl;
         obj.text = intl.string(util.t.TXNS7S);
         obj.onPress = tmp2;
-        obj.icon = jsx(SendMessageIcon.SendMessageIcon, { size: "sm" });
+        const obj2 = { size: "sm", color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT };
+        obj.icon = jsx(SendMessageIcon.SendMessageIcon, {
+          size: "sm",
+          color: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_TEXT,
+        });
         obj.disabled = tmp;
         tmp3Result = jsx(components_Button_Button.Button, {
           size: "sm",
@@ -100,19 +109,19 @@ export const useCommandRowSend = function useCommandRowSend(command) {
   const onExecuteCommand = command.onExecuteCommand;
   const tryExecuteCommand = command.tryExecuteCommand;
   const sectionName = command.sectionName;
-  closure_5 = undefined;
+  noop = undefined;
   let commandContext;
   let callback;
   let options = command.options;
   if (options == null) {
     options = [];
   }
-  const tmp2 = tryExecuteCommand(sectionName.useState(false), 2);
-  closure_5 = tmp2[1];
-  commandContext = command(beforeExecuteCommand[4]).useCommandContext(command.context);
+  const tmp2 = sectionName(noop.useState(false), 2);
+  noop = tmp2[1];
+  commandContext = command(onExecuteCommand[4]).useCommandContext(command.context);
   const items = [onExecuteCommand, command, commandContext, beforeExecuteCommand, sectionName];
-  callback = sectionName.useCallback(
-    onExecuteCommand(function* () {
+  callback = noop.useCallback(
+    tryExecuteCommand(function* () {
       if (c4 === 2) {
         c4 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
@@ -128,7 +137,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
       } else {
         try {
           c4 = 2;
-          if (0 === dependencyMap) {
+          if (0 === c1) {
             if (arg0 === 1) {
               c4 = 3;
               throw value;
@@ -143,12 +152,12 @@ export const useCommandRowSend = function useCommandRowSend(command) {
               }
               c3 = 1;
               const obj6 = { command, optionValues: null, context: null, sectionName: null, commandOrigin: null };
-              const obj2 = tmp3(9649);
-              obj6.optionValues = tmp3(11989).parseOptionValuesForSend(commandContext.channel, command, {});
+              const obj2 = tmp3(tmp27[5]);
+              obj6.optionValues = tmp3(tmp27[6]).parseOptionValuesForSend(commandContext.channel, command, {});
               obj6.context = commandContext;
               obj6.sectionName = sectionName;
-              obj6.commandOrigin = tmp3(5634).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
-              dependencyMap = 2;
+              obj6.commandOrigin = tmp3(tmp27[7]).CommandOrigin.APP_LAUNCHER_APPLICATION_VIEW;
+              c1 = 2;
               c4 = 1;
               const obj7 = { value: obj2.executeAppLauncherCommand(obj6), done: false };
               return obj7;
@@ -156,7 +165,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
           } else if (1 === tmp7) {
             c3 = 0;
             closure_128_5(false);
-            throw closure_2;
+            throw tmp27;
           } else if (arg0 === 1) {
             c4 = 3;
             throw value;
@@ -176,12 +185,11 @@ export const useCommandRowSend = function useCommandRowSend(command) {
             return { value: "IconComponent", done: null };
           }
         } catch (tmp27) {
-          closure_2 = tmp27;
           if (tmp4 === c3) {
             c4 = tmp2;
             throw tmp27;
           } else {
-            dependencyMap = tmp;
+            c1 = tmp;
           }
         }
       }
@@ -190,7 +198,7 @@ export const useCommandRowSend = function useCommandRowSend(command) {
   );
   let obj2 = { hasOptions: options.length > 0, sending: tmp2[0], onPressSend: null };
   const items1 = [tryExecuteCommand, callback];
-  obj2.onPressSend = sectionName.useCallback(() => {
+  obj2.onPressSend = noop.useCallback(() => {
     if (null != tryExecuteCommand) {
       tmp(callback);
     } else {

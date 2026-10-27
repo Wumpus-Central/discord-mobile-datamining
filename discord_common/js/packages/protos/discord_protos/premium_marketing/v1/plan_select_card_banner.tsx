@@ -1,12 +1,12 @@
 // discord_common/js/packages/protos/discord_protos/premium_marketing/v1/plan_select_card_banner.tsx
-import _mod1212 from "../../../../../../../_runtime/metro/01212__.js";
+import _mod1209 from "../../../../../../../_runtime/metro/01209__.js";
 import localized_string from "../../common/v1/localized_string.tsx";
 import help_article from "help_article.tsx";
 import theme_aware_asset from "theme_aware_asset.tsx";
 import _slicedToArray from "../../../../../../../_runtime/metro/00032__.js";
 
 require = fn;
-const MessageType = fn(1212).MessageType;
+const MessageType = fn(1209).MessageType;
 class PlanSelectCardBanner$Type extends MessageType {
   constructor() {
     obj = {
@@ -44,10 +44,10 @@ const prototype = PlanSelectCardBanner$Type.prototype;
 prototype["create"] = function create(partialSettings) {
   const obj = { body: "" };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1209.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1212;
+    const result = _mod1209.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1209;
   }
   return obj;
 };
@@ -90,7 +90,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1212.UnknownFieldHandler.onRead;
+              onRead = _mod1209.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -103,54 +103,54 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 prototype["internalBinaryWrite"] = function internalBinaryWrite(asset, tag, writeUnknownFields) {
   if (asset.asset) {
     const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
-    const tagResult = tag.tag(1, _mod1212.WireType.LengthDelimited);
+    const tagResult = tag.tag(1, _mod1209.WireType.LengthDelimited);
     const joined = ThemeAwareAsset.internalBinaryWrite(
       asset.asset,
-      tag.tag(1, _mod1212.WireType.LengthDelimited).fork(),
+      tag.tag(1, _mod1209.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(
       asset.asset,
-      tag.tag(1, _mod1212.WireType.LengthDelimited).fork(),
+      tag.tag(1, _mod1209.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if ("" !== asset.body) {
-    tag.tag(2, _mod1212.WireType.LengthDelimited).string(asset.body);
-    const tagResult1 = tag.tag(2, _mod1212.WireType.LengthDelimited);
+    tag.tag(2, _mod1209.WireType.LengthDelimited).string(asset.body);
+    const tagResult1 = tag.tag(2, _mod1209.WireType.LengthDelimited);
   }
   if (asset.bodyLocalized) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult2 = tag.tag(3, _mod1212.WireType.LengthDelimited);
+    const tagResult2 = tag.tag(3, _mod1209.WireType.LengthDelimited);
     const joined1 = LocalizedString.internalBinaryWrite(
       asset.bodyLocalized,
-      tag.tag(3, _mod1212.WireType.LengthDelimited).fork(),
+      tag.tag(3, _mod1209.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult1 = LocalizedString.internalBinaryWrite(
       asset.bodyLocalized,
-      tag.tag(3, _mod1212.WireType.LengthDelimited).fork(),
+      tag.tag(3, _mod1209.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   if (asset.helpArticle) {
     const HelpArticle = help_article.HelpArticle;
-    const tagResult3 = tag.tag(4, _mod1212.WireType.LengthDelimited);
+    const tagResult3 = tag.tag(4, _mod1209.WireType.LengthDelimited);
     const joined2 = HelpArticle.internalBinaryWrite(
       asset.helpArticle,
-      tag.tag(4, _mod1212.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1209.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     ).join();
     const internalBinaryWriteResult2 = HelpArticle.internalBinaryWrite(
       asset.helpArticle,
-      tag.tag(4, _mod1212.WireType.LengthDelimited).fork(),
+      tag.tag(4, _mod1209.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1212.UnknownFieldHandler.onWrite;
+      onWrite = _mod1209.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, asset, tag);

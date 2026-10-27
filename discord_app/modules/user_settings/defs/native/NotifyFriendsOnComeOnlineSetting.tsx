@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/NotifyFriendsOnComeOnlineSetting.tsx
 import util from "../../../../intl/index.native.tsx";
-import _modDef2704 from "../../../activity_privacy/ActivityPrivacy.messages.js";
+import _modDef2705 from "../../../activity_privacy/ActivityPrivacy.messages.js";
 import UserSettings from "../../UserSettings.tsx";
 import SettingsConstants from "../../core/native/SettingsConstants.tsx";
 import FriendOnlineNotificationUtils from "../../../notifications/friend_online/FriendOnlineNotificationUtils.tsx";
@@ -10,11 +10,11 @@ import size from "../../../../../_runtime/metro/00002__.js";
 const toggle = SettingBuilders.createToggle({
   useTitle() {
     const intl = util.intl;
-    return intl.string(_modDef2704.A0FVCV);
+    return intl.string(_modDef2705.A0FVCV);
   },
   useDescription() {
     const intl = util.intl;
-    return intl.string(_modDef2704.vHX6RG);
+    return intl.string(_modDef2705.vHX6RG);
   },
   parent: SettingsConstants.MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: UserSettings.NotifyFriendsOnComeOnline.useSetting,

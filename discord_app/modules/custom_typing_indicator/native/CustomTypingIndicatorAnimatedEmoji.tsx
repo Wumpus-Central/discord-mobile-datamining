@@ -7,11 +7,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 
 require = fn;
-const AppStates = fn(1087).AppStates;
+const AppStates = fn(1084).AppStates;
 const jsx = fn(21).jsx;
 let c8 = 320;
 let c9 = 0.0625;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_10 = createStyles.createStyles((fontSize) => ({
   textEmoji: { fontSize },
   imageEmoji: { width: fontSize, height: fontSize },

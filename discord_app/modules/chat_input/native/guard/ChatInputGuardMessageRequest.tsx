@@ -427,16 +427,16 @@ export default noop.memo(
             }
           }
         };
-        importDefault = channel(1505).useNavigation();
-        let obj = channel(1505);
-        const isMessageRequestRestrictedViewer = channel(13351).useIsMessageRequestRestrictedViewer();
-        let obj2 = channel(13351);
+        importDefault = channel(1502).useNavigation();
+        let obj = channel(1502);
+        const isMessageRequestRestrictedViewer = channel(13365).useIsMessageRequestRestrictedViewer();
+        let obj2 = channel(13365);
         const items = [closure_4];
         const stateFromStores = channel(504).useStateFromStores(items, () =>
           UserStore.getUser(channel.getRecipientId()),
         );
         let obj3 = channel(504);
-        const messageRequestActions = channel(13352).useMessageRequestActions({
+        const messageRequestActions = channel(13366).useMessageRequestActions({
           user: stateFromStores,
           onError: function handleRequestError() {
             const obj2 = { text: null, variant: "critical" };
@@ -483,7 +483,7 @@ export default noop.memo(
           buttonSecondaryDisabled: null,
           buttonSecondaryLoading: null,
         };
-        let obj4 = channel(13352);
+        let obj4 = channel(13366);
         let obj5 = {
           user: stateFromStores,
           onError: function handleRequestError() {
@@ -497,13 +497,13 @@ export default noop.memo(
           },
         };
         const tmp7 = closure_5;
-        let intl = tmp(1128).intl;
-        obj6.message = intl.string(channel(1128).t["e/eQVB"]);
-        const intl2 = tmp(1128).intl;
-        const t = tmp(1128).t;
+        let intl = tmp(1125).intl;
+        obj6.message = intl.string(channel(1125).t["e/eQVB"]);
+        const intl2 = tmp(1125).intl;
+        const t = tmp(1125).t;
         obj6.subtext = intl2.string(isMessageRequestRestrictedViewer ? t.YQ0uUE : t.HcVzGI);
-        const intl3 = tmp(1128).intl;
-        obj6.buttonPrimaryText = intl3.string(channel(1128).t.Kz8Pwr);
+        const intl3 = tmp(1125).intl;
+        obj6.buttonPrimaryText = intl3.string(channel(1125).t.Kz8Pwr);
         obj6.buttonPrimaryOnPress = function onAcceptClick(arg0) {
           const self = this;
           const apply = closure_4.apply;
@@ -522,8 +522,8 @@ export default noop.memo(
           isAcceptLoading = isOptimisticAccepted;
         }
         obj6.buttonPrimaryLoading = isAcceptLoading;
-        const intl4 = tmp(1128).intl;
-        const t2 = tmp(1128).t;
+        const intl4 = tmp(1125).intl;
+        const t2 = tmp(1125).t;
         obj6.buttonSecondaryText = intl4.string(isMessageRequestRestrictedViewer ? t2.BVN4pL : t2.B2nygW);
         obj6.buttonSecondaryOnPress = function onRejectClick(arg0) {
           const self = this;

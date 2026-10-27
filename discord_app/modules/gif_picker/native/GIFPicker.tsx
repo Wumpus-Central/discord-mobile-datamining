@@ -10,7 +10,7 @@ import GIFPickerViewStore from "../../../stores/views/GIFPickerViewStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({
   AnalyticEvents: closure_8,
   ChatInputComponentViewedTypes: closure_9,
@@ -20,7 +20,7 @@ const Constants = fn(1087);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_15 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

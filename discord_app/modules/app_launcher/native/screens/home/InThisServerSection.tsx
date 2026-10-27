@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 ({ View: c3, ScrollView: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: { marginBottom: 16 },
   headerContainer: { justifyContent: "center" },
@@ -54,11 +54,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_7();
       const application = onAppSelected.appItem.application;
       if (cResult[0] !== application) {
-        const appLauncherIconSource = tmp(11922).getAppLauncherIconSource(application);
+        const appLauncherIconSource = tmp(11923).getAppLauncherIconSource(application);
         cResult[0] = application;
         cResult[1] = appLauncherIconSource;
         let tmp5 = appLauncherIconSource;
-        const tmpResult = tmp(11922);
+        const tmpResult = tmp(11923);
       } else {
         tmp5 = cResult[1];
       }
@@ -77,7 +77,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
               lineClamp: 1,
               children: application.name,
             };
-            const tmp14 = closure_5(tmp(5234).Text, obj2);
+            const tmp14 = closure_5(tmp(5235).Text, obj2);
             cResult[8] = application.name;
             cResult[9] = tmp14;
             let tmp12 = tmp14;
@@ -140,7 +140,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         let tmp9 = null;
         if (null != tmp5) {
           const obj4 = { iconSource: tmp5, wrapperStyle: tmp4.iconContainer, iconSize: 36 };
-          tmp9 = closure_5(application(11927), obj4);
+          tmp9 = closure_5(application(11928), obj4);
         }
         cResult[5] = tmp5;
         cResult[6] = tmp4.iconContainer;
@@ -177,7 +177,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       onAppSelected = onAppSelected.onAppSelected;
       const tmp = closure_7();
       const application = onAppSelected.appItem.application;
-      const appLauncherIconSource = onAppSelected(11922).getAppLauncherIconSource(application);
+      const appLauncherIconSource = onAppSelected(11923).getAppLauncherIconSource(application);
       const obj2 = {
         accessible: true,
         accessibilityLabel: application.name,
@@ -198,11 +198,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       let tmp6 = null;
       if (null != appLauncherIconSource) {
         const obj3 = { iconSource: appLauncherIconSource, wrapperStyle: tmp.iconContainer, iconSize: 36 };
-        tmp6 = closure_5(application(11927), obj3);
+        tmp6 = closure_5(application(11928), obj3);
       }
       const items = [
         tmp6,
-        closure_5(onAppSelected(5234).Text, {
+        closure_5(onAppSelected(5235).Text, {
           variant: "text-md/semibold",
           color: "mobile-text-heading-primary",
           lineClamp: 1,

@@ -7,7 +7,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 import AppStateStore from "../../../stores/native/AppStateStore.tsx";
 import LifecycleManager from "../../../lib/LifecycleManager.tsx";
 
-const AppStates = fn(1087).AppStates;
+const AppStates = fn(1084).AppStates;
 class TelemetryRingLifecycleImpl extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -18,9 +18,9 @@ class TelemetryRingLifecycleImpl extends tmp2 {
       const result = applyArgumentsResult._updateZoomedInExport();
     };
     applyArgumentsResult._handleLogout = function _handleLogout() {
-      applyArgumentsResult(2009).clear();
-      const obj = applyArgumentsResult(2009);
-      applyArgumentsResult(2005).reset();
+      applyArgumentsResult(2006).clear();
+      const obj = applyArgumentsResult(2006);
+      applyArgumentsResult(2002).reset();
     };
     return applyArgumentsResult;
   }
@@ -53,9 +53,9 @@ prototype["_initialize"] = function _initialize() {
       ApexExperimentStore.removeChangeListener(self._handleEligibilityChange);
     };
     const obj = self(584);
-    self(2005).initialize();
+    self(2002).initialize();
     const result = self._updateZoomedInExport();
-    const obj2 = self(2005);
+    const obj2 = self(2002);
   }
 };
 prototype["_terminate"] = function _terminate() {

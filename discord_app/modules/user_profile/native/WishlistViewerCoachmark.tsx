@@ -2,14 +2,14 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
-import _modDef14446 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
+import _modDef14482 from "../../../../discord_assets/assets/assets/mobile_wishlist_coachmark.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_7 = createStyles.createStyles({
   imageContainer: { alignItems: "center", justifyContent: "center" },
   image: { width: 160, height: 106 },
@@ -20,7 +20,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(6);
       const tmp3 = closure_7();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const obj2 = { uri: _modDef14446 };
+        const obj2 = { uri: _modDef14482 };
         cResult[0] = obj2;
         let first = obj2;
       } else {
@@ -52,7 +52,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       const tmp = closure_7();
       const obj = { style: tmp.imageContainer, children: null };
       const obj2 = { source: null, style: null };
-      const obj3 = { uri: _modDef14446 };
+      const obj3 = { uri: _modDef14482 };
       obj2.source = obj3;
       obj2.style = tmp.image;
       obj.children = jsx(FastImageDefault, { source: null, style: null });
@@ -78,10 +78,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = markAsDismissed(1128).intl;
-        const stringResult = intl.string(markAsDismissed(1128).t["+b6iUl"]);
-        const intl2 = markAsDismissed(1128).intl;
-        const stringResult1 = intl2.string(markAsDismissed(1128).t.Howsng);
+        const intl = markAsDismissed(1125).intl;
+        const stringResult = intl.string(markAsDismissed(1125).t["+b6iUl"]);
+        const intl2 = markAsDismissed(1125).intl;
+        const stringResult1 = intl2.string(markAsDismissed(1125).t.Howsng);
         cResult[2] = stringResult;
         cResult[3] = stringResult1;
         let tmp6 = stringResult1;
@@ -104,8 +104,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const fn3 = function _() {
           return <closure_1_8 />;
         };
-        const intl3 = markAsDismissed(1128).intl;
-        const stringResult2 = intl3.string(markAsDismissed(1128).t.TxBQzD);
+        const intl3 = markAsDismissed(1125).intl;
+        const stringResult2 = intl3.string(markAsDismissed(1125).t.TxBQzD);
         cResult[6] = fn3;
         cResult[7] = stringResult2;
         let tmp11 = stringResult2;
@@ -119,7 +119,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (cResult[10] === tmp9) {
             let tmp13 = cResult[11];
           }
-          const coachmark = markAsDismissed(9840).useCoachmark(onViewWishlist.anchorRef, tmp13);
+          const coachmark = markAsDismissed(9842).useCoachmark(onViewWishlist.anchorRef, tmp13);
           return null;
         }
       }

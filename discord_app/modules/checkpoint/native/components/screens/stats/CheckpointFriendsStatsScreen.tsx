@@ -5,8 +5,8 @@ import nativeDefault from "../../../../../../../discord_common/js/packages/token
 import util from "../../../../../../intl/index.native.tsx";
 import AvatarUtilsDefault from "../../../../../../utils/AvatarUtils.tsx";
 import useWindowDimensionsDefault from "../../../../../screen/useWindowDimensions.native.tsx";
-import _modDef3056 from "../../../../Checkpoint.messages.js";
-import _modDef3088 from "../../../../Checkpoint2026.messages.js";
+import _modDef3057 from "../../../../Checkpoint.messages.js";
+import _modDef3089 from "../../../../Checkpoint2026.messages.js";
 import UserUtils from "../../../../../../utils/UserUtils.tsx";
 import CheckpointFriendsRive from "../../../../../../../discord_common/js/packages/design/components/Rive/native/generated/CheckpointFriendsRive.tsx";
 import FriendsIcon from "../../../../../../design/components/Icon/native/redesign/generated/FriendsIcon.tsx";
@@ -150,15 +150,15 @@ function SidekickMessageInput(user) {
     }
     obj2.editable = tmp16;
     obj2.placeholderTextColor = CHECKPOINT_WHITE;
-    let intl = tmp15(1128).intl;
+    let intl = tmp15(1125).intl;
     if (tmp5) {
-      let stringResult = intl.string(tmp15(1128).t.fjcCk5);
+      let stringResult = intl.string(tmp15(1125).t.fjcCk5);
     } else {
       const obj3 = { name: user.username };
-      stringResult = intl.formatToPlainString(tmp15(1128).t["0ZQw/X"], obj3);
+      stringResult = intl.formatToPlainString(tmp15(1125).t["0ZQw/X"], obj3);
     }
     obj2.placeholder = stringResult;
-    let items = [closure_13(user(1202).TextInput, obj2)];
+    let items = [closure_13(user(1199).TextInput, obj2)];
     let obj4 = { style: tmp.messageInputActions, children: null };
     let obj5 = {
       onPress: function handleGift() {
@@ -171,10 +171,10 @@ function SidekickMessageInput(user) {
       accessibilityLabel: null,
       children: null,
     };
-    const intl2 = tmp15(1128).intl;
-    obj5.accessibilityLabel = intl2.string(user(1128).t.Ve9Ge6);
+    const intl2 = tmp15(1125).intl;
+    obj5.accessibilityLabel = intl2.string(user(1125).t.Ve9Ge6);
     let obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj5.children = closure_13(user(12888).GiftIcon, obj6);
+    obj5.children = closure_13(user(12897).GiftIcon, obj6);
     const items1 = [closure_13(closure_6, obj5)];
     const obj7 = {
       onPress: function handleSend() {
@@ -199,12 +199,12 @@ function SidekickMessageInput(user) {
       disabled = tmp.disabled;
     }
     obj7.style = disabled;
-    const intl3 = tmp15(1128).intl;
-    obj7.accessibilityLabel = intl3.string(user(1128).t.oeb1vg);
+    const intl3 = tmp15(1125).intl;
+    obj7.accessibilityLabel = intl3.string(user(1125).t.oeb1vg);
     const obj8 = { disabled: !tmp10 };
     obj7.accessibilityState = obj8;
     const obj9 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj7.children = closure_13(user(5680).SendMessageIcon, obj9);
+    obj7.children = closure_13(user(5681).SendMessageIcon, obj9);
     items1[1] = closure_13(closure_6, obj7);
     obj4.children = items1;
     items[1] = closure_14(closure_7, obj4);
@@ -215,7 +215,7 @@ function SidekickMessageInput(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6015);
+const CheckpointConstants = fn(6016);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
@@ -233,7 +233,7 @@ let closure_15 = {
   "Avatar05/Fill": CHECKPOINT_PRIMARY,
   ConnectorColor: CHECKPOINT_PRIMARY,
 };
-const PlatformUtils = fn(1385);
+const PlatformUtils = fn(1382);
 let tmp5;
 if (PlatformUtils.isIOS()) {
   let obj2 = { "unifont-17.0.03": null };
@@ -242,7 +242,7 @@ if (PlatformUtils.isIOS()) {
   tmp5 = obj2;
 }
 obj2 = tmp5;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj5 = {
   container: { width: "100%", flexGrow: 1, justifyContent: "flex-end", paddingBottom: nativeDefault.space.PX_64 },
   animation: null,
@@ -335,10 +335,10 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const toLocaleUpperCaseResult = intl.string(_modDef3056.ZQakPR).toLocaleUpperCase();
+        const toLocaleUpperCaseResult = intl.string(_modDef3057.ZQakPR).toLocaleUpperCase();
         cResult[1] = toLocaleUpperCaseResult;
         let tmp9 = toLocaleUpperCaseResult;
-        const stringResult = intl.string(_modDef3056.ZQakPR);
+        const stringResult = intl.string(_modDef3057.ZQakPR);
       } else {
         tmp9 = cResult[1];
       }
@@ -435,12 +435,12 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       const obj4 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
       const tmp2 = CheckpointTextDefault;
-      obj5.children = intl.string(_modDef3056.ZQakPR).toLocaleUpperCase();
+      obj5.children = intl.string(_modDef3057.ZQakPR).toLocaleUpperCase();
       items[1] = map1(tmp2, obj5);
       obj3.children = items;
       const items1 = [closure_1_14(React5, obj3)];
       const obj6 = { children: null };
-      const stringResult = intl.string(_modDef3056.ZQakPR);
+      const stringResult = intl.string(_modDef3057.ZQakPR);
       obj6.children = title.toLocaleUpperCase();
       items1[1] = map1(CheckpointDisplayTextDefault, obj6);
       obj2.children = items1;
@@ -539,7 +539,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const rounded1 = Math.round(stats.numVoiceMinutes);
       const intl = util.intl;
       const intl2 = util.intl;
-      const stringResult = intl.string(_modDef3056.wWKySP);
+      const stringResult = intl.string(_modDef3057.wWKySP);
       const stats2 = tmp4.stats;
       const combined1 = "" + tmp5 + " " + stringResult.toLocaleLowerCase();
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
@@ -588,7 +588,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[19] = tmp22;
       cResult[20] = tmp26;
       tmp25 = tmp26;
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef3056.UZbUtl, { numMinutes: rounded1 });
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef3057.UZbUtl, { numMinutes: rounded1 });
     }
   : function SidekickStats(sidekick) {
       sidekick = sidekick.sidekick;
@@ -597,7 +597,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
       const rounded1 = Math.round(sidekick.numVoiceMinutes);
       const intl = util.intl;
       const intl2 = util.intl;
-      const stringResult = intl.string(_modDef3056.wWKySP);
+      const stringResult = intl.string(_modDef3057.wWKySP);
       const obj = { style: tmp.stats, children: null };
       obj2 = {
         accessible: true,
@@ -617,7 +617,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
           "" +
           rounded1 +
           " " +
-          intl2.formatToPlainString(_modDef3056.UZbUtl, { numMinutes: rounded1 }).toLocaleLowerCase(),
+          intl2.formatToPlainString(_modDef3057.UZbUtl, { numMinutes: rounded1 }).toLocaleLowerCase(),
         style: tmp.stat,
         children: null,
       };
@@ -961,9 +961,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                             return closure_1_9.getCurrentUser();
                                           }
                                         }
-                                        obj4.title = obj21.string(_modDef3056.OzY5Ns);
+                                        obj4.title = obj21.string(_modDef3057.OzY5Ns);
                                         const intl = util.intl;
-                                        obj4.description = intl.string(_modDef3088.EqdLDd);
+                                        obj4.description = intl.string(_modDef3089.EqdLDd);
                                         tmp78 = map1(closure_18, obj4);
                                       }
                                       class R {
@@ -1035,9 +1035,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       const obj7 = { style: tmp4.sidekickDetails, children: null };
                                       const obj8 = { title: null, description: null };
                                       const intl2 = util.intl;
-                                      obj8.title = intl2.string(_modDef3056["+uwOHt"]);
+                                      obj8.title = intl2.string(_modDef3057["+uwOHt"]);
                                       const intl3 = util.intl;
-                                      obj8.description = intl3.string(_modDef3088["/ctmGw"]);
+                                      obj8.description = intl3.string(_modDef3089["/ctmGw"]);
                                       const items5 = [map1(closure_18, obj8)];
                                       const obj9 = { sidekick: stateFromStores1 };
                                       items5[1] = map1(closure_19, obj9);

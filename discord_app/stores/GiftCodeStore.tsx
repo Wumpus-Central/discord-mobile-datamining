@@ -1,7 +1,7 @@
 // discord_app/stores/GiftCodeStore.tsx
 import initializeDefault from "../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../Dispatcher.tsx";
-import _modDef2049 from "../../_runtime/metro/02049__.js";
+import _modDef2046 from "../../_runtime/metro/02046__.js";
 import GiftCodeUtils from "../utils/GiftCodeUtils.tsx";
 import GiftCodeActionCreatorsDefault from "../actions/GiftCodeActionCreators.tsx";
 import GiftCodeRecord from "../records/GiftCodeRecord.tsx";
@@ -16,14 +16,14 @@ function updateGiftCode(giftCode) {
   } else {
     const result1 = set(code, fromServer);
     if (null != fromServer.expiresAt) {
-      const timeout = new code(4818).Timeout();
+      const timeout = new code(4819).Timeout();
       dependencyMap[code] = timeout;
       value2 = map.get(code);
       if (null != value2) {
         if (null != value2.expiresAt) {
           const expiresAt = value2.expiresAt;
           const valueOfResult = expiresAt.valueOf();
-          const diff = valueOfResult - _modDef2049().valueOf();
+          const diff = valueOfResult - _modDef2046().valueOf();
           if (diff <= 0) {
             map.delete(code);
             delete tmp2[tmp];
@@ -108,7 +108,7 @@ function updateGiftCode(giftCode) {
               }
             });
           }
-          const obj4 = _modDef2049();
+          const obj4 = _modDef2046();
         }
       }
     }
@@ -184,7 +184,7 @@ function handleLoadThreadsSuccess(firstMessages) {
     });
   }
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AbortCodes: closure_4, MAX_TIMEOUT_MS: hasOwnProperty, NOOP_NULL: metroRequire } = Constants);
 const dependencyMap = {};
 const map = new Map();

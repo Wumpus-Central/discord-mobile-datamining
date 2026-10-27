@@ -6,7 +6,6 @@ import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import IOSPushNotificationRawPayloadFixExperiment from "../../notifications/IOSPushNotificationRawPayloadFixExperiment.tsx";
 import IOSAnchoredChatScrollerExperiment from "../../messages/native/IOSAnchoredChatScrollerExperiment.tsx";
 import YYTextReplacementExperiment from "../../messages/YYTextReplacementExperiment.tsx";
-import VideoStutterMitigationExperimentDefault from "../../media_engine/VideoStutterMitigationExperiment.tsx";
 import NotificationLoadMessagesExperimentDefault from "../../cache/NotificationLoadMessagesExperiment.tsx";
 import LocaleStore from "../../user_settings/LocaleStore.tsx";
 import AuthenticationStore from "../../../stores/AuthenticationStore.tsx";
@@ -64,18 +63,15 @@ function updateIOSExperiments() {
       const tmpResult4 = IOSAnchoredChatScrollerExperiment;
     }
   }
-  obj = PlatformUtils;
-  if (obj5.getConfig({ location: "NativeExperimentBridgeManager" }).enabled) {
-    const RNVVideo = NativeModules.RNVVideo;
-    if (RNVVideo != null) {
-      const result3 = RNVVideo.setOptimizeConfigureAudio(true);
-    }
-    const RNVVideo2 = NativeModules.RNVVideo;
-    if (RNVVideo2 != null) {
-      const result4 = RNVVideo2.setUseBackgroundProgressQueue(true);
-    }
+  const RNVVideo = NativeModules.RNVVideo;
+  if (RNVVideo != null) {
+    const result3 = RNVVideo.setOptimizeConfigureAudio(true);
   }
-  obj5 = VideoStutterMitigationExperimentDefault;
+  const RNVVideo2 = NativeModules.RNVVideo;
+  if (RNVVideo2 != null) {
+    const result4 = RNVVideo2.setUseBackgroundProgressQueue(true);
+  }
+  obj = PlatformUtils;
 }
 function updateAndroidExperiments() {
   const obj = {

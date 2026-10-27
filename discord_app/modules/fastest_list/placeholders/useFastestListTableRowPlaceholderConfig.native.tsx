@@ -5,7 +5,7 @@ import FastestListPropsPlaceholder from "../props/FastestListPropsPlaceholder.ts
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   placeholder: { backgroundColor: nativeDefault.colors.CARD_BACKGROUND_DEFAULT },
   placeholderAvatar: null,
@@ -13,8 +13,8 @@ let obj2 = {
   placeholderDivider: null,
 };
 let size = {
-  width: fn(1202).AVATAR_SIZE_MAP[fn(undefined, 1202).AvatarSizes.REFRESH_MEDIUM_32],
-  height: fn(1202).AVATAR_SIZE_MAP[fn(undefined, 1202).AvatarSizes.REFRESH_MEDIUM_32],
+  width: fn(1199).AVATAR_SIZE_MAP[fn(undefined, 1199).AvatarSizes.REFRESH_MEDIUM_32],
+  height: fn(1199).AVATAR_SIZE_MAP[fn(undefined, 1199).AvatarSizes.REFRESH_MEDIUM_32],
   borderRadius: nativeDefault.radii.xl,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
@@ -30,10 +30,10 @@ let obj4 = {
   borderRadius: nativeDefault.radii.md,
   backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED,
 };
-obj2.placeholderDivider = { backgroundColor: fn(6707).DIVIDER_BACKGROUND };
+obj2.placeholderDivider = { backgroundColor: fn(6708).DIVIDER_BACKGROUND };
 const styles = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj5 = { backgroundColor: fn(6707).DIVIDER_BACKGROUND };
+let obj5 = { backgroundColor: fn(6708).DIVIDER_BACKGROUND };
 size = fn(2);
 const result = size.fileFinishedImporting(
   "modules/fastest_list/placeholders/useFastestListTableRowPlaceholderConfig.native.tsx",

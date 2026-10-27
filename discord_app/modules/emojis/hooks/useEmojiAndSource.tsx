@@ -7,9 +7,9 @@ import GuildStore from "../../../stores/GuildStore.tsx";
 import EmojiStore from "../EmojiStore.tsx";
 
 require = fn;
-const ExpressionSourceRecord = fn(6884);
+const ExpressionSourceRecord = fn(6886);
 ({ ExpressionSourceGuildRecord: closure_7, EmojiSourceDataTypes: closure_8, getEmojiSourceData: closure_9 } = ExpressionSourceRecord);
-const GuildFeatures = fn(1087).GuildFeatures;
+const GuildFeatures = fn(1084).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/emojis/hooks/useEmojiAndSource.tsx");
@@ -506,7 +506,7 @@ export const useEmojiAndSource = ReactCompilerGating.isReactCompilerEnabled() ? 
       if (current != null) {
         currentResult = current();
       }
-      closure_0 = closure_2(/* F159893 */ function() { ... });
+      closure_0 = closure_2(/* F160242 */ function() { ... });
       if (closure_2) {
         tmp4 = (function fetch() { ... })();
       } else {

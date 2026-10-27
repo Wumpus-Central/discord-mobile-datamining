@@ -1,6 +1,6 @@
 // discord_app/modules/messages/native/renderer/system_messages/GuildSpaceSystemMessage.tsx
 import GlobalUtils from "../../../../../utils/GlobalUtils.tsx";
-import _modDef2440 from "../../../../guild_space/GuildSpace.messages.js";
+import _modDef2439 from "../../../../guild_space/GuildSpace.messages.js";
 import formatUsernameOnClickDefault from "formatUsernameOnClick.tsx";
 import GuildSpaceLeaderboardSystemMessage from "GuildSpaceLeaderboardSystemMessage.tsx";
 import GuildSpaceMusicSystemMessage from "GuildSpaceMusicSystemMessage.tsx";
@@ -34,10 +34,10 @@ export const createGuildSpaceSystemMessage = function createGuildSpaceSystemMess
         const channel = ChannelStore.getChannel(message.channel_id);
         [tmp21, tmp22] = substr;
         const tmp20 = _slicedToArray(substr, 2);
-        const userAuthorWithProcessedColor = string(8318).getUserAuthorWithProcessedColor(tmp21, channel);
-        const stringResult = string(8318);
-        const userAuthorWithProcessedColor1 = string(8318).getUserAuthorWithProcessedColor(tmp22, channel);
-        const intl2 = string(1128).intl;
+        const userAuthorWithProcessedColor = string(8317).getUserAuthorWithProcessedColor(tmp21, channel);
+        const stringResult = string(8317);
+        const userAuthorWithProcessedColor1 = string(8317).getUserAuthorWithProcessedColor(tmp22, channel);
+        const intl2 = string(1125).intl;
         let tmp14 = importDefault;
         const obj3 = {
           displayCount: substr.length,
@@ -53,19 +53,19 @@ export const createGuildSpaceSystemMessage = function createGuildSpaceSystemMess
         let tmp11;
         if (null != tmp22) {
           const obj5 = { userId: tmp22.id, message, author: userAuthorWithProcessedColor1, roleStyle };
-          tmp11 = tmp14(8320)(obj5);
+          tmp11 = tmp14(8319)(obj5);
         }
         obj3.username2OnClick = tmp11;
         obj3.additionalCount = diff;
-        let formatToPartsResult = intl2.formatToParts(_modDef2440.zUiZPF, obj3);
-        const stringResult1 = string(8318);
+        let formatToPartsResult = intl2.formatToParts(_modDef2439.zUiZPF, obj3);
+        const stringResult1 = string(8317);
       }
       const obj6 = { content: formatToPartsResult };
-      merged = Object.assign(tmp14(8322)(message));
+      merged = Object.assign(tmp14(8321)(message));
     }
-    const intl = string(1128).intl;
+    const intl = string(1125).intl;
     string = intl.string;
-    formatToPartsResult = string(_modDef2440.Sxxqdx);
+    formatToPartsResult = string(_modDef2439.Sxxqdx);
     tmp14 = importDefault;
   } else {
     const guildSpaceData3 = message.message.guildSpaceData;

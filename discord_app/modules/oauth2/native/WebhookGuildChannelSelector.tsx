@@ -1,7 +1,7 @@
 // discord_app/modules/oauth2/native/WebhookGuildChannelSelector.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -11,10 +11,10 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const createChannelRecord = fn(4827).createChannelRecord;
+const createChannelRecord = fn(4828).createChannelRecord;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   selectorGroup: { flexDirection: "column", gap: 8 },
   select: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, borderRadius: nativeDefault.radii.xs },
@@ -56,7 +56,7 @@ export default function WebhookGuildChannelSelector(selectedGuildId) {
       const channels = first.channels;
       obj2.items = channels.map((id) => {
         const obj = {
-          label: selectedGuildId(5604).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8),
+          label: selectedGuildId(5605).computeChannelName(closure_1_7(id), closure_1_9, closure_1_8),
           value: id.id,
         };
         return obj;

@@ -122,7 +122,7 @@ let closure_6 = async function _resetAgeVerification() {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/ReactiveCheckActionCreators.tsx");
 

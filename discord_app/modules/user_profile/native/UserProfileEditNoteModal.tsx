@@ -207,9 +207,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.title = intl.string(util.t.sHHsOM);
       obj5.headerTitle = function headerTitle() {
         const obj = { variant: "redesign/heading-18/bold", accessibilityRole: "header", children: null };
-        const intl = userId(1128).intl;
-        obj.children = intl.string(userId(1128).t.sHHsOM);
-        return jsx(userId(5234).Text, {
+        const intl = userId(1125).intl;
+        obj.children = intl.string(userId(1125).t.sHHsOM);
+        return jsx(userId(5235).Text, {
           variant: "redesign/heading-18/bold",
           accessibilityRole: "header",
           children: null,

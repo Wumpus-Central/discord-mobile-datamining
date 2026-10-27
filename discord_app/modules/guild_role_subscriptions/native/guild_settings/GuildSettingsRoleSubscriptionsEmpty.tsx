@@ -5,12 +5,12 @@ import useGuildApplicationDefault from "../../../applications/useGuildApplicatio
 import noop from "../../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../../stores/GuildStore.tsx";
 
-const PlaceholderDefault = tmp3(19214);
-const GuildSettingsRoleSubscriptionWelcomeViewDefault = tmp3(19215);
+const PlaceholderDefault = tmp3(19252);
+const GuildSettingsRoleSubscriptionWelcomeViewDefault = tmp3(19253);
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ GuildFeatures: closure_4, GuildSettingsSections: hasOwnProperty } = Constants);
-const ApplicationTypes = fn(1375).ApplicationTypes;
+const ApplicationTypes = fn(1372).ApplicationTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()

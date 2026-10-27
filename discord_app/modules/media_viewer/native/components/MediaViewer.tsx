@@ -17,15 +17,15 @@ function MediaViewer(arg0) {
   let sharedValue1;
   __initData2 = undefined;
   ({ renderOverlay, swipeVelocityThreshold } = arg0);
-  value = [height(7278).MEDIA_VIEWER];
-  const tmp3 = height(7253);
+  value = [height(7280).MEDIA_VIEWER];
+  const tmp3 = height(7255);
   [tmp5, tmp6] = sharedValue(sharedValue1.useState(true), 2);
   _require = tmp6;
   const tmp4 = sharedValue(sharedValue1.useState(true), 2);
   const tmp7 = _require;
   const mediaViewerDimensions = require("MediaViewerDimensionsContext").useMediaViewerDimensions();
   ({ width, height } = mediaViewerDimensions);
-  const tmp9 = height(14245)({ index, onClose, sources, windowHeight: height, windowWidth: width });
+  const tmp9 = height(14272)({ index, onClose, sources, windowHeight: height, windowWidth: width });
   dependencyMap = tmp9;
   let obj = require("MediaViewerDimensionsContext");
   sharedValue = require("ReanimatedRexport").useSharedValue(0);
@@ -52,7 +52,7 @@ function MediaViewer(arg0) {
   const overlayEnabled = mediaViewerPanGestureConfig.overlayEnabled;
   const items1 = [dismiss, isClosing];
   const obj6 = require("useMediaViewerPanGesture");
-  height(5972)(
+  height(5973)(
     sharedValue1.useCallback(() => {
       if (!isClosing.get()) {
         dismiss();
@@ -61,7 +61,7 @@ function MediaViewer(arg0) {
     }, items1),
   );
   const absoluteFillObject = closure_6.absoluteFillObject;
-  const tmp17 = height(5972);
+  const tmp17 = height(5973);
   function te() {
     const obj = {};
     const merged = Object.assign(absoluteFillObject);
@@ -250,8 +250,8 @@ function MediaViewer(arg0) {
   });
   const obj17 = { style: closure_6.absoluteFill, onAccessibilityEscape: dismiss, onLayout: callback1, children: null };
   const items6 = [
-    dismiss(height(10890), { barStyle: "light-content", hidden: !tmp5 }),
-    dismiss(height(5052).View, { style: animatedStyle }),
+    dismiss(height(10893), { barStyle: "light-content", hidden: !tmp5 }),
+    dismiss(height(5053).View, { style: animatedStyle }),
     ,
     ,
   ];
@@ -275,31 +275,31 @@ function MediaViewer(arg0) {
       windowHeight: height,
       zoomed,
     };
-    tmp29Result = tmp29(tmp(14247), obj20);
+    tmp29Result = tmp29(tmp(14274), obj20);
   }
   obj19.children = tmp29Result;
-  items6[2] = dismiss(height(5053), obj19);
+  items6[2] = dismiss(height(5054), obj19);
   const obj21 = { style: null, pointerEvents: null, children: null };
   const items7 = [sharedValue(sharedValue1.useState(obj9), 1)[0], animatedStyle1];
   obj21.style = items7;
   let str = "none";
-  const tmp33 = height(5053);
+  const tmp33 = height(5054);
   if (tmp5) {
     str = "box-none";
   }
   obj21.pointerEvents = str;
   obj21.children = renderOverlay(dismiss, overlayEnabled);
-  items6[3] = dismiss(height(5053), obj21);
-  items6[4] = dismiss(height(11370), {});
+  items6[3] = dismiss(height(5054), obj21);
+  items6[4] = dismiss(height(11373), {});
   obj17.children = items6;
   const children = tmp31(tmp32, obj17);
-  return dismiss(tmp7(7253).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
+  return dismiss(tmp7(7255).AnalyticsLocationProvider, { value: tmp3(value).analyticsLocations, children });
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 let closure_9 = PlatformUtils.isAndroid();
 let closure_10 = {
   code: "function MediaViewerTsx1(){const{zoomed,pinching}=this.__closure;return!zoomed.get()&&!pinching.get();}",

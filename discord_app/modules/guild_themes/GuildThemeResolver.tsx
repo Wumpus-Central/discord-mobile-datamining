@@ -54,7 +54,7 @@ function resolveSavedActiveGuildTheme(stateFromStores) {
   }
   return tmp2;
 }
-const GuildFeatures = fn(1087).GuildFeatures;
+const GuildFeatures = fn(1084).GuildFeatures;
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useSavedActiveGuildThemeForGuildId(arg0, arg1) {

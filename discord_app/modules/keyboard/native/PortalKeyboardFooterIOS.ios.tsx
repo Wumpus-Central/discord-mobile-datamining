@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { keyboardStickyFooter: null };
 const rect = {
   position: "absolute",
@@ -136,13 +136,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let animatedStyle;
       const tmp = progress();
       dependencyMap = tmp;
-      const bottom = flag(1633)().bottom;
-      const reanimatedKeyboardAnimation = animatedSheetIndex(1647).useReanimatedKeyboardAnimation();
+      const bottom = flag(1630)().bottom;
+      const reanimatedKeyboardAnimation = animatedSheetIndex(1644).useReanimatedKeyboardAnimation();
       const height = reanimatedKeyboardAnimation.height;
       progress = reanimatedKeyboardAnimation.progress;
-      let obj = animatedSheetIndex(1647);
-      const keyboardTypeSharedValue = animatedSheetIndex(5161).useKeyboardTypeSharedValue();
-      let obj2 = animatedSheetIndex(5161);
+      let obj = animatedSheetIndex(1644);
+      const keyboardTypeSharedValue = animatedSheetIndex(5162).useKeyboardTypeSharedValue();
+      let obj2 = animatedSheetIndex(5162);
       const fn = function b() {
         ReanimatedRexport;
         [0][1] = bottom;
@@ -167,17 +167,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj.transform = items2;
         const tmpResult = ReanimatedRexport;
       };
-      let obj3 = animatedSheetIndex(5052);
+      let obj3 = animatedSheetIndex(5053);
       fn.__closure = {
-        interpolate: animatedSheetIndex(5052).interpolate,
+        interpolate: animatedSheetIndex(5053).interpolate,
         progress,
         bottom,
         followSystemKeyboard: flag,
         keyboardType: keyboardTypeSharedValue,
-        KeyboardTypes: animatedSheetIndex(1631).KeyboardTypes,
+        KeyboardTypes: animatedSheetIndex(1628).KeyboardTypes,
         animatedSheetIndex,
         height,
-        EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(1107).EXPRESSION_FOOTER_HEIGHT,
+        EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(1104).EXPRESSION_FOOTER_HEIGHT,
       };
       fn.__workletHash = 13852594478360;
       fn.__initData = animatedStyle;
@@ -188,18 +188,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         return items;
       }, items);
       let obj4 = {
-        interpolate: animatedSheetIndex(5052).interpolate,
+        interpolate: animatedSheetIndex(5053).interpolate,
         progress,
         bottom,
         followSystemKeyboard: flag,
         keyboardType: keyboardTypeSharedValue,
-        KeyboardTypes: animatedSheetIndex(1631).KeyboardTypes,
+        KeyboardTypes: animatedSheetIndex(1628).KeyboardTypes,
         animatedSheetIndex,
         height,
-        EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(1107).EXPRESSION_FOOTER_HEIGHT,
+        EXPRESSION_FOOTER_HEIGHT: animatedSheetIndex(1104).EXPRESSION_FOOTER_HEIGHT,
       };
-      return height(flag(5052).View, {
+      return height(flag(5053).View, {
         style: memo,
-        children: height(animatedSheetIndex(5166).PortalHost, { name: str }),
+        children: height(animatedSheetIndex(5167).PortalHost, { name: str }),
       });
     };

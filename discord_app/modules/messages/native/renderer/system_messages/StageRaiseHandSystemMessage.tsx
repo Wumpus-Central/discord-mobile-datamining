@@ -11,7 +11,7 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 import PermissionStore from "../../../../../stores/PermissionStore.tsx";
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({
   HelpdeskArticles: metroRequire,
   MessageFlags: closure_7,

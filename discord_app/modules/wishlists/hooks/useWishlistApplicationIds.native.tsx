@@ -3,7 +3,7 @@ import c from "../../../../_runtime/00576_c.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-let closure_3 = fn(1087).COLLECTIBLES_APPLICATION_ID;
+let closure_3 = fn(1084).COLLECTIBLES_APPLICATION_ID;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistApplicationIds.native.tsx");

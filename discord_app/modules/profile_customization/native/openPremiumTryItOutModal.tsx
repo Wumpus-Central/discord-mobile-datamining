@@ -1,5 +1,5 @@
 // discord_app/modules/profile_customization/native/openPremiumTryItOutModal.tsx
-import asyncRequireImpl from "../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../../actions/ModalActionCreators.tsx";
 import UserProfileAnalyticsUtils from "../../user_profile/UserProfileAnalyticsUtils.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -21,7 +21,7 @@ export const openPremiumTryItOutModal = function openPremiumTryItOutModal(avatar
   });
   const obj2 = { userId: id, action: constants.ENTER_TRY_OUT_PREMIUM_PREVIEW };
   ModalActionCreatorsDefault.pushLazy(
-    asyncRequireImpl(15939, dependencyMap.paths),
+    asyncRequireImpl(15977, dependencyMap.paths),
     { initialTarget: avatar },
     undefined,
     { presentation: "fullScreenModal", fullScreenGestureEnabled: true },

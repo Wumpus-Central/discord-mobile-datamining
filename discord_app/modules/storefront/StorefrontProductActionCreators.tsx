@@ -284,7 +284,7 @@ let closure_10 = async function _maybeFetchProductsBySkuIds(arg0) {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontProductActionCreators.tsx");
 

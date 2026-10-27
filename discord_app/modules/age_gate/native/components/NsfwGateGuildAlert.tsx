@@ -7,8 +7,8 @@ import GuildMemberStore from "../../../../stores/GuildMemberStore.tsx";
 import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
-const NsfwGateSource = fn(7315).NsfwGateSource;
-const Constants = fn(1087);
+const NsfwGateSource = fn(7317).NsfwGateSource;
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, HelpdeskArticles: closure_8 } = Constants);
 const jsx = fn(21).jsx;
 let c10 = "nsfw-guild-alert";
@@ -66,10 +66,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp7, tmp8);
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t.JqfHGt);
-        const intl2 = tmp(1128).intl;
-        const stringResult1 = intl2.string(tmp(1128).t.EdXn1A);
+        const intl = tmp(1125).intl;
+        const stringResult = intl.string(tmp(1125).t.JqfHGt);
+        const intl2 = tmp(1125).intl;
+        const stringResult1 = intl2.string(tmp(1125).t.EdXn1A);
         cResult[4] = stringResult;
         cResult[5] = stringResult1;
         let tmp11 = stringResult1;
@@ -80,13 +80,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         let obj2 = { text: null, onPress: null };
-        const intl3 = tmp(1128).intl;
-        obj2.text = intl3.string(tmp(1128).t.wi6hPV);
+        const intl3 = tmp(1125).intl;
+        obj2.text = intl3.string(tmp(1125).t.wi6hPV);
         obj2.onPress = function onPress() {
-          const obj = first(5660);
-          return obj.openURL(first(2067).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
+          const obj = first(5661);
+          return obj.openURL(first(2064).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
         };
-        const tmp16 = jsx(tmp(5914).AlertActionButton, { text: null, onPress: null }, "help-center");
+        const tmp16 = jsx(tmp(5915).AlertActionButton, { text: null, onPress: null }, "help-center");
         cResult[6] = tmp16;
         let tmp14 = tmp16;
       } else {
@@ -96,11 +96,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         let obj3 = { title: tmp10, content: tmp11, actions: null };
         const items1 = [tmp14];
         const obj4 = { variant: "secondary", text: null };
-        const intl4 = tmp(1128).intl;
-        obj4.text = intl4.string(tmp(1128).t.WAI6xu);
-        items1[1] = jsx(tmp(5914).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
+        const intl4 = tmp(1125).intl;
+        obj4.text = intl4.string(tmp(1125).t.WAI6xu);
+        items1[1] = jsx(tmp(5915).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
         obj3.actions = items1;
-        const tmp19 = jsx(tmp(5914).AlertModal, { title: tmp10, content: tmp11, actions: null });
+        const tmp19 = jsx(tmp(5915).AlertModal, { title: tmp10, content: tmp11, actions: null });
         cResult[7] = tmp19;
         let tmp17 = tmp19;
       } else {
@@ -142,24 +142,24 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         AnalyticsUtilsDefault.track(constants.GUILD_NSFW_GATE_VIEWED, obj2);
       }, items);
       let obj = { title: null, content: null, actions: null };
-      const intl = guildId(1128).intl;
-      obj.title = intl.string(guildId(1128).t.JqfHGt);
-      const intl2 = guildId(1128).intl;
-      obj.content = intl2.string(guildId(1128).t.EdXn1A);
+      const intl = guildId(1125).intl;
+      obj.title = intl.string(guildId(1125).t.JqfHGt);
+      const intl2 = guildId(1125).intl;
+      obj.content = intl2.string(guildId(1125).t.EdXn1A);
       let obj2 = { text: null, onPress: null };
-      const intl3 = guildId(1128).intl;
-      obj2.text = intl3.string(guildId(1128).t.wi6hPV);
+      const intl3 = guildId(1125).intl;
+      obj2.text = intl3.string(guildId(1125).t.wi6hPV);
       obj2.onPress = function onPress() {
-        const obj = currentUser(5660);
-        return obj.openURL(currentUser(2067).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
+        const obj = currentUser(5661);
+        return obj.openURL(currentUser(2064).getArticleURL(constants.NSFW_GUILD_GUIDELINES));
       };
-      const items1 = [jsx(guildId(5914).AlertActionButton, { text: null, onPress: null }, "help-center")];
+      const items1 = [jsx(guildId(5915).AlertActionButton, { text: null, onPress: null }, "help-center")];
       let obj3 = { variant: "secondary", text: null };
-      const intl4 = guildId(1128).intl;
-      obj3.text = intl4.string(guildId(1128).t.WAI6xu);
-      items1[1] = jsx(guildId(5914).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
+      const intl4 = guildId(1125).intl;
+      obj3.text = intl4.string(guildId(1125).t.WAI6xu);
+      items1[1] = jsx(guildId(5915).AlertActionButton, { variant: "secondary", text: null }, "dismiss");
       obj.actions = items1;
-      return jsx(guildId(5914).AlertModal, { title: null, content: null, actions: null });
+      return jsx(guildId(5915).AlertModal, { title: null, content: null, actions: null });
     };
 let closure_11 = tmp3;
 const size = fn(2);

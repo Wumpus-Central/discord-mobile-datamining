@@ -5,7 +5,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_4 = createStyles.createStyles({
   scrollContainer: { flex: 1 },
   contentContainer: {

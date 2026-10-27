@@ -4,7 +4,7 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
-import _modDef2928 from "../intl/DisplayNameStyles.messages.js";
+import _modDef2929 from "../intl/DisplayNameStyles.messages.js";
 import DateUtils from "../../../utils/DateUtils.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import useAvatarDecoration from "../../collectibles/avatar_decorations/useAvatarDecoration.tsx";
@@ -21,7 +21,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4971);
+let createStyles = fn(4972);
 let obj2 = {
   previewSection: {
     marginBottom: nativeDefault.space.PX_24,
@@ -87,7 +87,7 @@ obj2.chatUsername = { flexShrink: 1, minWidth: 0 };
 obj2.chatTimestamp = { marginTop: -8, flexShrink: 0 };
 obj2.chatMessageText = {};
 let closure_9 = createStyles.createStyles(obj2);
-createStyles = fn(4971);
+createStyles = fn(4972);
 let closure_10 = createStyles.createStyles((scale) => {
   const obj = { appIconTilted: null };
   const rect = {
@@ -188,7 +188,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
                               const _Symbol3 = Symbol;
                               if (cResult[24] === Symbol.for("react.memo_cache_sentinel")) {
                                 const intl = util.intl;
-                                const stringResult = intl.string(_modDef2928.h5Cuej);
+                                const stringResult = intl.string(_modDef2929.h5Cuej);
                                 cResult[24] = stringResult;
                                 let tmp44 = stringResult;
                               } else {
@@ -364,7 +364,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled()
       const items3 = [closure_1_8(View, obj7)];
       const obj10 = { variant: "text-md/normal", color: "text-default", style: tmp.chatMessageText, children: null };
       const intl = util.intl;
-      obj10.children = intl.string(_modDef2928.h5Cuej);
+      obj10.children = intl.string(_modDef2929.h5Cuej);
       items3[1] = React5(Text_Text.Text, obj10);
       obj6.children = items3;
       items1[1] = closure_1_8(View, obj6);
@@ -404,11 +404,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const guildMemberAndUserPendingNameplate = user(8655).useGuildMemberAndUserPendingNameplate(user, guildId);
       ({ userNameplate, guildNameplate, pendingNameplate } = guildMemberAndUserPendingNameplate);
       if (cResult[0] !== guildNameplate) {
-        const nameplateData = tmp(1992).getNameplateData(guildNameplate);
+        const nameplateData = tmp(1989).getNameplateData(guildNameplate);
         cResult[0] = guildNameplate;
         cResult[1] = nameplateData;
         let tmp12 = nameplateData;
-        const tmpResult3 = tmp(1992);
+        const tmpResult3 = tmp(1989);
       } else {
         tmp12 = cResult[1];
       }
@@ -444,8 +444,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 const _Symbol = Symbol;
                 if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                  const intl = tmp(1128).intl;
-                  const stringResult = intl.string(guildId(2928).zoh6MT);
+                  const intl = tmp(1125).intl;
+                  const stringResult = intl.string(guildId(2929).zoh6MT);
                   cResult[14] = stringResult;
                   let tmp21 = stringResult;
                 } else {
@@ -528,7 +528,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                     size: 102,
                                                                     style: tmp10.appIconTilted,
                                                                   };
-                                                                  tmp46 = closure_7(guildId(16384), obj3);
+                                                                  tmp46 = closure_7(guildId(16423), obj3);
                                                                 }
                                                                 cResult[49] = appIconId;
                                                                 cResult[50] = tmp10;
@@ -568,7 +568,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                 obj5.pendingAvatarSrc = stateFromStores;
                                                 obj5.pendingDisplayNameStyles = tmp18;
                                                 obj5.pendingGlobalName = displayName;
-                                                obj4.children = closure_7(tmp(11175).NameplatePreview, obj5);
+                                                obj4.children = closure_7(tmp(11178).NameplatePreview, obj5);
                                                 tmp39Result = closure_7(View, obj4);
                                               }
                                               cResult[38] = stateFromStores;
@@ -641,7 +641,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   style: profilePreviewTilted,
                   accessibilityLabel: tmp21,
                 };
-                const tmp27 = closure_7(guildId(11057), obj8);
+                const tmp27 = closure_7(guildId(11060), obj8);
                 cResult[15] = displayName;
                 cResult[16] = tmp18;
                 cResult[17] = guildId;

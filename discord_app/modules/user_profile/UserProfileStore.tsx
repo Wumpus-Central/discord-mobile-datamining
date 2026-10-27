@@ -602,7 +602,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "unicodeVersion",
+      fetchError: "code",
     };
     value4 = obj;
   }
@@ -791,7 +791,7 @@ function resetProfileFetch(id) {
     }
   }
 }
-const MAX_TIMEOUT_MS = fn(1087).MAX_TIMEOUT_MS;
+const MAX_TIMEOUT_MS = fn(1084).MAX_TIMEOUT_MS;
 let closure_10 = Symbol("NO GUILD ID");
 let map = new Map();
 let set = new Set();

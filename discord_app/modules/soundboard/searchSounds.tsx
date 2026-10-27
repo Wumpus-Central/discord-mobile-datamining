@@ -22,7 +22,7 @@ function trackSearchResultViewed(total_results, location_stack, channel_id, quer
     location_stack,
   });
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_4, SearchTypes: hasOwnProperty } = Constants);
 let closure_6 = debounceDefault(trackSearchStart, 350);
 let closure_7 = debounceDefault(trackSearchResultViewed, 350);

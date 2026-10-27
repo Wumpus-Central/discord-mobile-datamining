@@ -94,18 +94,18 @@ function getDismissableCTAProps(arg0) {
   }
 }
 const Pressable = fn(17).Pressable;
-let closure_8 = fn(6784).isGuildScheduledEventActive;
-const constants = fn(4829).GuildScheduledEventEntityTypes;
+let closure_8 = fn(6785).isGuildScheduledEventActive;
+const constants = fn(4830).GuildScheduledEventEntityTypes;
 const jsx = fn(21).jsx;
 const OverrideFloatingCTA = { BAD_CONNECTION: "BAD_CONNECTION" };
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGuildEventControlsProps(id) {
       const cResult = imminentUpcomingGuildEvents(576).c(28);
-      stateFromStores(5205)();
+      stateFromStores(5206)();
       let obj = imminentUpcomingGuildEvents(576);
       const tmp4 = stateFromStores;
-      const tmp6 = stateFromStores(18486)(noop.useContext(stateFromStores(10900)).channelId);
+      const tmp6 = stateFromStores(18520)(noop.useContext(stateFromStores(10903)).channelId);
       id = undefined;
       if (id != null) {
         id = id.id;
@@ -378,13 +378,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           if (tmp4) {
             if (stateFromStores) {
               const obj2 = { label: null, subLabel: null, icon: null, onPress: null };
-              const intl = tmp(1128).intl;
-              obj2.label = intl.string(tmp(1128).t.N4nebq);
-              const intl2 = tmp(1128).intl;
-              obj2.subLabel = intl2.string(tmp(1128).t.o2XPr2);
-              const obj3 = { IconComponent: tmp(10860).GroupPlusIcon, variant: "translucent" };
+              const intl = tmp(1125).intl;
+              obj2.label = intl.string(tmp(1125).t.N4nebq);
+              const intl2 = tmp(1125).intl;
+              obj2.subLabel = intl2.string(tmp(1125).t.o2XPr2);
+              const obj3 = { IconComponent: tmp(10863).GroupPlusIcon, variant: "translucent" };
               obj2.icon = jsx(tmp(8953).RowButton.Icon, {
-                IconComponent: tmp(10860).GroupPlusIcon,
+                IconComponent: tmp(10863).GroupPlusIcon,
                 variant: "translucent",
               });
               obj2.onPress = inviteMembersCallback;
@@ -426,13 +426,13 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
           if (tmp2) {
             if (stateFromStores) {
               const obj2 = { label: null, subLabel: null, icon: null, onPress: null };
-              const intl = tmp3(1128).intl;
-              obj2.label = intl.string(tmp3(1128).t.N4nebq);
-              const intl2 = tmp3(1128).intl;
-              obj2.subLabel = intl2.string(tmp3(1128).t.o2XPr2);
-              const obj3 = { IconComponent: tmp3(10860).GroupPlusIcon, variant: "translucent" };
+              const intl = tmp3(1125).intl;
+              obj2.label = intl.string(tmp3(1125).t.N4nebq);
+              const intl2 = tmp3(1125).intl;
+              obj2.subLabel = intl2.string(tmp3(1125).t.o2XPr2);
+              const obj3 = { IconComponent: tmp3(10863).GroupPlusIcon, variant: "translucent" };
               obj2.icon = jsx(tmp3(8953).RowButton.Icon, {
-                IconComponent: tmp3(10860).GroupPlusIcon,
+                IconComponent: tmp3(10863).GroupPlusIcon,
                 variant: "translucent",
               });
               obj2.onPress = tmp6;
@@ -489,7 +489,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function useOverrideFloatingCTAProps(arg0) {
       closure_0 = arg0;
-      setShowFloatingCTA = noop.useContext(setShowFloatingCTA(10900)).setShowFloatingCTA;
+      setShowFloatingCTA = noop.useContext(setShowFloatingCTA(10903)).setShowFloatingCTA;
       const items = [setShowFloatingCTA, arg0];
       return noop.useMemo(() => {
         let tmp = null;

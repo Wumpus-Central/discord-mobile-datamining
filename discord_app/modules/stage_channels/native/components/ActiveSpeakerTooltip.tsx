@@ -7,11 +7,11 @@ import ChannelRTCStore from "../../../calls/ChannelRTCStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const StageChannelListStore = fn(11700);
+const StageChannelListStore = fn(11702);
 ({ useActiveSpeakerPillScrollHandler: metroRequire, useActiveSpeakerPillState: closure_7 } = StageChannelListStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   container: { width: "100%", flexDirection: "column", alignItems: "center", justifyContent: "center" },
   participantItemContainer: {
@@ -37,7 +37,7 @@ let obj3 = {
 };
 obj.participantAvatarText = {
   fontSize: 12,
-  fontFamily: fn(1087).Fonts.PRIMARY_SEMIBOLD,
+  fontFamily: fn(1084).Fonts.PRIMARY_SEMIBOLD,
   color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
   lineHeight: 18,
 };
@@ -49,7 +49,7 @@ obj.participantNameplateContainer = {
 };
 let obj4 = {
   fontSize: 12,
-  fontFamily: fn(1087).Fonts.PRIMARY_SEMIBOLD,
+  fontFamily: fn(1084).Fonts.PRIMARY_SEMIBOLD,
   color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY,
   lineHeight: 18,
 };
@@ -94,7 +94,7 @@ export default noop.memo(
         }
         const obj = channel(576);
         const first1 = _slicedToArray(
-          channel(504).useStateFromStores(first, tmp7, tmp8, tmp(6695).isVersionEqual),
+          channel(504).useStateFromStores(first, tmp7, tmp8, tmp(6696).isVersionEqual),
           1,
         )[0];
         const tmp9 = _slicedToArray(closure_6(), 2)[1];
@@ -121,9 +121,9 @@ export default noop.memo(
                     }
                     ({ participantNameplateContainer, participantNameplateSpeakingText } = tmp4);
                     if (cResult[14] !== first1.length) {
-                      const intl = tmp(1128).intl;
+                      const intl = tmp(1125).intl;
                       const obj2 = { count: first1.length };
-                      const formatResult = intl.format(tmp(1128).t["+dia6l"], obj2);
+                      const formatResult = intl.format(tmp(1125).t["+dia6l"], obj2);
                       cResult[14] = first1.length;
                       cResult[15] = formatResult;
                       let tmp20 = formatResult;
@@ -157,7 +157,7 @@ export default noop.memo(
                               onPress: tmp9,
                               children: tmp29,
                             };
-                            const tmp35 = closure_8(tmp(6908).PressableOpacity, obj3);
+                            const tmp35 = closure_8(tmp(6910).PressableOpacity, obj3);
                             cResult[26] = tmp9;
                             cResult[27] = tmp4.container;
                             cResult[28] = tmp29;
@@ -188,7 +188,7 @@ export default noop.memo(
                       color: "text-default",
                       children: tmp20,
                     };
-                    const tmp24 = closure_8(tmp(5234).Text, obj6);
+                    const tmp24 = closure_8(tmp(5235).Text, obj6);
                     cResult[16] = tmp4.participantNameplateSpeakingText;
                     cResult[17] = tmp20;
                     cResult[18] = tmp24;
@@ -238,7 +238,7 @@ export default noop.memo(
               return items;
             },
             items1,
-            channel(6695).isVersionEqual,
+            channel(6696).isVersionEqual,
           ),
           1,
         )[0];
@@ -265,14 +265,14 @@ export default noop.memo(
               color: "text-default",
               children: null,
             };
-            const intl = tmp2(1128).intl;
+            const intl = tmp2(1125).intl;
             const obj8 = { count: first.length };
-            obj7.children = intl.format(tmp2(1128).t["+dia6l"], obj8);
-            obj6.children = closure_8(tmp2(5234).Text, obj7);
+            obj7.children = intl.format(tmp2(1125).t["+dia6l"], obj8);
+            obj6.children = closure_8(tmp2(5235).Text, obj7);
             items2[1] = closure_8(View, obj6);
             obj3.children = items2;
             obj2.children = closure_9(View, obj3);
-            tmp5 = closure_8(tmp2(6908).PressableOpacity, obj2);
+            tmp5 = closure_8(tmp2(6910).PressableOpacity, obj2);
           }
         }
         return tmp5;

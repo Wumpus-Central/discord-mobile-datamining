@@ -6,7 +6,7 @@ import useSafeAreaInsetsKeyboardAwareDefault from "../../safe_area/useSafeAreaIn
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const EXPRESSION_FOOTER_HEIGHT = fn(1087).EXPRESSION_FOOTER_HEIGHT;
+const EXPRESSION_FOOTER_HEIGHT = fn(1084).EXPRESSION_FOOTER_HEIGHT;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerInsets.tsx");

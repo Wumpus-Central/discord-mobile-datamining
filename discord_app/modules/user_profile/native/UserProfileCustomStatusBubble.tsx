@@ -9,7 +9,7 @@ import Text_Text from "../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import EmojiDefault from "../../emojis/native/Emoji.tsx";
 import AnalyticsLocationDefault from "../../app_analytics/AnalyticsLocation.tsx";
-import inlineStyles from "../../../../_runtime/07962_inlineStyles.js";
+import inlineStyles from "../../../../_runtime/07960_inlineStyles.js";
 import CustomStatusUtils from "../../custom_status/native/CustomStatusUtils.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
@@ -22,16 +22,16 @@ require = fn;
 let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: closure_7, View: closure_8 } = get_ActivityIndicator);
-const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
-let Fonts = fn(1098).Fonts;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
+let Fonts = fn(1095).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 let str = "";
 if (PlatformUtils.isAndroid()) {
   str = "\u00A0";
 }
-let createStyles = fn(4971);
+let createStyles = fn(4972);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = {
     container: { position: "relative" },
@@ -137,7 +137,7 @@ let closure_17 = {
   statusBubblePaddingVertical: 7,
 };
 const dependencyMap = {
-  [fn(7304).UserProfileThemeTypes.PREVIEW]: {
+  [fn(7306).UserProfileThemeTypes.PREVIEW]: {
     textVariant: "text-sm/normal",
     emojiOnlyEmojiSize: 26,
     textMinWidth: 53,
@@ -248,7 +248,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           } else {
             let obj3 = { fontStyle: "italic" };
           }
-          tmpResult = emoji(1384);
+          tmpResult = emoji(1381);
         }
       } else {
         tmp6 = cResult[1];
@@ -299,7 +299,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
           };
           let items = [tmp13, text, tmp15];
           obj4.children = items;
-          const tmp18 = closure_12(emoji(5234).Text, obj4);
+          const tmp18 = closure_12(emoji(5235).Text, obj4);
           cResult[10] = lineClamp;
           cResult[11] = onTextLayout;
           cResult[12] = tmp13;
@@ -430,7 +430,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         obj2 = PlatformUtils2;
       }
     };
-createStyles = fn(4971);
+createStyles = fn(4972);
 let closure_21 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled()

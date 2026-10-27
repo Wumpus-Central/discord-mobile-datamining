@@ -13,12 +13,12 @@ import UserStore from "../../../../stores/UserStore.tsx";
 const PremiumUtilsDefault = PremiumUtils;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsPages: metroRequire, AnalyticsSections: closure_7 } = Constants);
-const PremiumConstants = fn(1394);
+const PremiumConstants = fn(1391);
 ({ PremiumSubscriptionSKUs: closure_8, PremiumUpsellTypes: closure_9, SubscriptionPlans: c10 } = PremiumConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_12 = createStyles.createStyles({ nitroIcon: { marginRight: 8, alignSelf: "center" } });
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
@@ -93,18 +93,18 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = onPress(576).c(6);
       ({ analyticsLocations, useTier0UpsellContent } = arg0);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const upsellType = onPress(9683).getUpsellType(onPress(5030).EntitlementFeatureNames.EMOJIS_EVERYWHERE);
+        const upsellType = onPress(9685).getUpsellType(onPress(5031).EntitlementFeatureNames.EMOJIS_EVERYWHERE);
         cResult[0] = upsellType;
         let first = upsellType;
-        const tmpResult = onPress(9683);
+        const tmpResult = onPress(9685);
       } else {
         first = cResult[0];
       }
       let obj = onPress(576);
-      const tmpResult2 = onPress(9672);
+      const tmpResult2 = onPress(9674);
       ({ loading, onPress } = usePremiumFeatureUpsellGetNitroDefault(
         useTier0UpsellContent,
-        onPress(9672).usePremiumUpsellConfig(first, analyticsLocations).onViewAllPerks,
+        onPress(9674).usePremiumUpsellConfig(first, analyticsLocations).onViewAllPerks,
         constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
       ));
       if (cResult[1] !== onPress) {
@@ -137,18 +137,18 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
       tmp8 = obj2;
       const tmp6 = usePremiumFeatureUpsellGetNitroDefault(
         useTier0UpsellContent,
-        onPress(9672).usePremiumUpsellConfig(first, analyticsLocations).onViewAllPerks,
+        onPress(9674).usePremiumUpsellConfig(first, analyticsLocations).onViewAllPerks,
         constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
       );
     }
   : function useEmojiPickerPremiumSearchUpsellClick(arg0) {
       let onPress;
       ({ analyticsLocations, useTier0UpsellContent } = arg0);
-      let obj = onPress(9672);
+      let obj = onPress(9674);
       const tmp = usePremiumFeatureUpsellGetNitroDefault(
         useTier0UpsellContent,
         obj.usePremiumUpsellConfig(
-          onPress(9683).getUpsellType(onPress(5030).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
+          onPress(9685).getUpsellType(onPress(5031).EntitlementFeatureNames.EMOJIS_EVERYWHERE),
           analyticsLocations,
         ).onViewAllPerks,
         constants2.PREMIUM_UPSELL_EMOJI_EVERYWHERE,
@@ -266,16 +266,16 @@ export const PremiumSearchUpsell = noop.memo(
           tmp10 = require;
         }
         const obj2 = { body: formatToPlainStringResult, ctaText: null, icon: null, loading: null, onPress: null };
-        const intl2 = tmp10(1128).intl;
+        const intl2 = tmp10(1125).intl;
         const string = intl2.string;
-        const t = tmp10(1128).t;
+        const t = tmp10(1125).t;
         if (useTier0UpsellContent.useTier0UpsellContent) {
           let stringResult = string(t["9CM5v9"]);
         } else {
           stringResult = string(t.pj0XBN);
         }
         obj2.ctaText = stringResult;
-        obj2.icon = jsx(tmp10(9425).NitroWheelIcon, {
+        obj2.icon = jsx(tmp10(9424).NitroWheelIcon, {
           size: "sm",
           color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE,
           style: tmp.nitroIcon,

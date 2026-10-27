@@ -5,7 +5,7 @@ import noop from "../../../_runtime/metro/00019__.js";
 import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore.tsx";
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting(

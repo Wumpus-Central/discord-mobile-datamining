@@ -8,9 +8,9 @@ import UploadAttachmentStore from "../../../../../stores/UploadAttachmentStore.t
 
 require = fn;
 let View = fn(17).View;
-const DraftType = fn(7631).DraftType;
+const DraftType = fn(7632).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { imageIconWrapper: null, selectedImage: null };
 let size = {
   justifyContent: "center",
@@ -102,10 +102,10 @@ const result = size.fileFinishedImporting(
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function AppLauncherAttachmentOption(option) {
-      const cResult = option(onSelectAttachment[8]).c(29);
+      const cResult = option(onSelectAttachment[8]).c(28);
       option = option.option;
       const channel = option.channel;
-      ({ style, autoFocus, hasError, onPress, onSelectAttachment } = option);
+      ({ autoFocus, hasError, onPress, onSelectAttachment } = option);
       const tmp4 = closure_8();
       let fileTypes;
       if (option.type === option(onSelectAttachment[11]).ApplicationCommandOptionType.ATTACHMENT) {
@@ -133,25 +133,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const effect = stateFromStores.useEffect(tmp11, tmp12);
           View = stateFromStores.useRef(onSelectAttachment);
           if (cResult[8] !== onSelectAttachment) {
-            class P {
-              constructor() {
-                closure_4.current = onSelectAttachment;
-                return;
-              }
-            }
+            const fn3 = function w() {
+              closure_4.current = onSelectAttachment;
+            };
             cResult[8] = onSelectAttachment;
-            cResult[9] = P;
+            cResult[9] = fn3;
+            let tmp14 = fn3;
           } else {
-            class P {
-              constructor() {
-                closure_4.current = onSelectAttachment;
-                return;
-              }
-            }
+            tmp14 = cResult[9];
           }
-          const effect1 = obj4.useEffect(P);
+          const effect1 = obj4.useEffect(tmp14);
           if (cResult[10] !== stateFromStores) {
-            class V {
+            class P {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -168,9 +161,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             cResult[10] = stateFromStores;
-            cResult[11] = V;
+            cResult[11] = P;
           } else {
-            class V {
+            class P {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -188,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (stateFromStores != null) {
-            class V {
+            class P {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -206,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[12] !== undefined) {
-            class V {
+            class P {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -226,7 +219,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[12] = tmp18;
             cResult[13] = tmp20;
           } else {
-            class V {
+            class P {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -243,9 +236,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
           }
-          const effect2 = obj4.useEffect(V, tmp20);
+          const effect2 = obj4.useEffect(P, tmp20);
           if (null != stateFromStores) {
-            class V {
+            class P {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -263,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[14] !== fileTypesFormattedString) {
-            class V {
+            class P {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -280,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               }
             }
             if (null != fileTypesFormattedString) {
-              class V {
+              class P {
                 constructor() {
                   tmp = closure_3;
                   filename = undefined;
@@ -302,7 +295,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[14] = fileTypesFormattedString;
             cResult[15] = formatResult;
           } else {
-            class V {
+            class P {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -320,7 +313,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (cResult[16] === stateFromStores) {
-            class V {
+            class P {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -338,7 +331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           if (null == stateFromStores) {
-            class V {
+            class P {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -370,7 +363,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[17] = tmp4;
             cResult[18] = tmp27;
           } else {
-            class V {
+            class P {
               constructor() {
                 tmp = closure_3;
                 filename = undefined;
@@ -391,7 +384,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ({ isImage: obj8.isImage, isVideo: obj8.isVideo } = stateFromStores);
           tmp27 = <closure_9 uri={stateFromStores.item.uri} isImage={null} isVideo={null} />;
         }
-        const fn2 = function b() {
+        const fn2 = function _() {
           return () => channel(onSelectAttachment[14]).remove(id.id, name.name, DraftType.ApplicationLauncherCommand);
         };
         const items1 = [channel.id, option.name];
@@ -418,7 +411,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const onSelectAttachment = option.onSelectAttachment;
       let stateFromStores;
       let ref;
-      ({ style, autoFocus, hasError, onPress } = option);
+      ({ autoFocus, hasError, onPress } = option);
       let fileTypes;
       if (option.type === option(onSelectAttachment[11]).ApplicationCommandOptionType.ATTACHMENT) {
         fileTypes = option.fileTypes;
@@ -457,7 +450,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items2);
       const obj = {
-        style,
         hasError,
         option,
         selected: null != stateFromStores,

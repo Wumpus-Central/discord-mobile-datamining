@@ -6,7 +6,7 @@ import GameProfileCommunitiesLocaleFilterStore from "../GameProfileCommunitiesLo
 const require = globalThis.__r;
 
 require = fn;
-let closure_4 = fn(9511).useGameProfileCommunitiesLocaleFilterExclusions;
+let closure_4 = fn(9510).useGameProfileCommunitiesLocaleFilterExclusions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/useGameProfileCommunitiesLocaleOptions.tsx");
@@ -34,15 +34,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           closure_0 = locale;
           if ("en-US" === locale) {
             const obj2 = { locale, label: null };
-            const intl2 = closure_0(1128).intl;
-            obj2.label = intl2.string(closure_0(1128).t.LQLMGP);
+            const intl2 = closure_0(1125).intl;
+            obj2.label = intl2.string(closure_0(1125).t.LQLMGP);
             return obj2;
           } else {
             const found = closure_0.find((value) => value.value === closure_0);
             const obj = { locale, label: null };
             let stringResult = locale;
             if (null != found) {
-              const intl = closure_0(1128).intl;
+              const intl = closure_0(1125).intl;
               stringResult = intl.string(found.localizedName);
             }
             obj.label = stringResult;
@@ -148,15 +148,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           closure_0 = locale;
           if ("en-US" === locale) {
             const obj2 = { locale, label: null };
-            const intl2 = closure_0(1128).intl;
-            obj2.label = intl2.string(closure_0(1128).t.LQLMGP);
+            const intl2 = closure_0(1125).intl;
+            obj2.label = intl2.string(closure_0(1125).t.LQLMGP);
             return obj2;
           } else {
             const found = closure_0.find((value) => value.value === closure_0);
             const obj = { locale, label: null };
             let stringResult = locale;
             if (null != found) {
-              const intl = closure_0(1128).intl;
+              const intl = closure_0(1125).intl;
               stringResult = intl.string(found.localizedName);
             }
             obj.label = stringResult;

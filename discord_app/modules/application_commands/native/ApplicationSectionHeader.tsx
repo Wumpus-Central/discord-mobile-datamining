@@ -7,7 +7,7 @@ const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   applicationHeaderWrapper: {
     flexDirection: "row",
@@ -64,9 +64,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             name = section.name;
           }
           if (cResult[7] !== name) {
-            const intl = tmp(1128).intl;
+            const intl = tmp(1125).intl;
             const obj2 = { applicationName: name };
-            const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t["Ocw/sM"], obj2);
+            const formatToPlainStringResult = intl.formatToPlainString(tmp(1125).t["Ocw/sM"], obj2);
             cResult[7] = name;
             cResult[8] = formatToPlainStringResult;
             let tmp13 = formatToPlainStringResult;
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[12] !== name) {
               const obj3 = { variant: "eyebrow", color: "interactive-text-default", children: name };
-              const tmp21 = closure_5(tmp(5234).Text, obj3);
+              const tmp21 = closure_5(tmp(5235).Text, obj3);
               cResult[12] = name;
               cResult[13] = tmp21;
               let tmp19 = tmp21;
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let tmp16 = null != tmp9;
           if (tmp16) {
             const obj5 = { style: tmp4.applicationIcon, source: tmp9 };
-            tmp16 = closure_5(guildId(5669), obj5);
+            tmp16 = closure_5(guildId(5670), obj5);
           }
           cResult[9] = tmp9;
           cResult[10] = tmp4.applicationIcon;
@@ -118,12 +118,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp15 = tmp16;
         }
         const tmpResult = tmp(504);
-        const applicationCommandsIconSource = tmp(13130).getApplicationCommandsIconSource(section, stateFromStores);
+        const applicationCommandsIconSource = tmp(13144).getApplicationCommandsIconSource(section, stateFromStores);
         cResult[4] = stateFromStores;
         cResult[5] = section;
         cResult[6] = applicationCommandsIconSource;
         tmp9 = applicationCommandsIconSource;
-        const tmpResult2 = tmp(13130);
+        const tmpResult2 = tmp(13144);
       }
       const fn = function u() {
         if (null != guildId) {
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       });
       const obj = section(504);
-      const applicationCommandsIconSource = section(13130).getApplicationCommandsIconSource(section, stateFromStores);
+      const applicationCommandsIconSource = section(13144).getApplicationCommandsIconSource(section, stateFromStores);
       let nick;
       if (stateFromStores != null) {
         nick = stateFromStores.nick;
@@ -170,16 +170,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         name = section.name;
       }
       const obj3 = { style: tmp.applicationHeaderWrapper, accessibilityLabel: null, children: null };
-      const intl = tmp2(1128).intl;
-      obj3.accessibilityLabel = intl.formatToPlainString(section(1128).t["Ocw/sM"], { applicationName: name });
+      const intl = tmp2(1125).intl;
+      obj3.accessibilityLabel = intl.formatToPlainString(section(1125).t["Ocw/sM"], { applicationName: name });
       let tmp9 = null != applicationCommandsIconSource;
       if (tmp9) {
         const obj4 = { style: tmp.applicationIcon, source: applicationCommandsIconSource };
-        tmp9 = closure_5(guildId(5669), obj4);
+        tmp9 = closure_5(guildId(5670), obj4);
       }
       const items1 = [
         tmp9,
-        closure_5(section(5234).Text, { variant: "eyebrow", color: "interactive-text-default", children: name }),
+        closure_5(section(5235).Text, { variant: "eyebrow", color: "interactive-text-default", children: name }),
       ];
       obj3.children = items1;
       return closure_6(View, obj3);

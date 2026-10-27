@@ -17,13 +17,13 @@ let closure_3 = ["style", "blurTheme", "pressed"];
 const StyleSheet = fn(17).StyleSheet;
 const jsx = fn(21).jsx;
 const BLACK = nativeDefault.unsafe_rawColors.BLACK;
-let ColorUtils = fn(4968);
+let ColorUtils = fn(4969);
 let closure_8 = ColorUtils.hexWithOpacity(BLACK, 0);
-ColorUtils = fn(4968);
+ColorUtils = fn(4969);
 let closure_9 = ColorUtils.hexWithOpacity(BLACK, 0.2);
-ColorUtils = fn(4968);
+ColorUtils = fn(4969);
 let closure_10 = ColorUtils.hexWithOpacity(BLACK, 0.4);
-ColorUtils = fn(4968);
+ColorUtils = fn(4969);
 let closure_11 = ColorUtils.hexWithOpacity(BLACK, 0.5);
 let ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
@@ -324,8 +324,8 @@ const result = size.fileFinishedImporting(
   "design/components/experimental/BackgroundBlurView/native/BackgroundBlurFill.native.tsx",
 );
 
-export const BlurTheme = fn(5586).BlurTheme;
-export const BlurStyle = fn(5586).BlurStyle;
+export const BlurTheme = fn(5587).BlurTheme;
+export const BlurStyle = fn(5587).BlurStyle;
 export const BackgroundBlurFill = tmp2;
 export const BackgroundBlurFillAnimated = tmp3;
 export const BackgroundBlurFillWithPress = ReactCompilerGating.isReactCompilerEnabled()
@@ -336,28 +336,28 @@ export const BackgroundBlurFillWithPress = ReactCompilerGating.isReactCompilerEn
       const tmp5 = closure_12(blurTheme.blurTheme);
       const tmp6 = closure_13(tmp5, undefined);
       if (cResult[0] !== tmp5) {
-        const normalizeBlurThemeResult = pressed(5586).normalizeBlurTheme(tmp5);
+        const normalizeBlurThemeResult = pressed(5587).normalizeBlurTheme(tmp5);
         cResult[0] = tmp5;
         cResult[1] = normalizeBlurThemeResult;
         let tmp7 = normalizeBlurThemeResult;
-        const tmpResult = pressed(5586);
+        const tmpResult = pressed(5587);
       } else {
         tmp7 = cResult[1];
       }
       const tmp4 = token1(blurTheme, token);
-      const tmp9 = pressed(5586).isBlurThemeLight(tmp5) ? closure_8 : closure_10;
+      const tmp9 = pressed(5587).isBlurThemeLight(tmp5) ? closure_8 : closure_10;
       importDefault = tmp9;
-      const tmpResult8 = pressed(5586);
-      const tmp10 = pressed(5586).isBlurThemeLight(tmp5) ? closure_9 : closure_11;
+      const tmpResult8 = pressed(5587);
+      const tmp10 = pressed(5587).isBlurThemeLight(tmp5) ? closure_9 : closure_11;
       dependencyMap = tmp10;
-      const tmpResult9 = pressed(5586);
-      token = pressed(5252).useToken(nativeDefault.colors.BACKGROUND_SCRIM, tmp7);
-      const tmpResult10 = pressed(5252);
-      token1 = pressed(5252).useToken(nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, tmp7);
-      const tmpResult11 = pressed(5252);
-      const isBlurDisabledResult = pressed(5586).isBlurDisabled(tmp4);
+      const tmpResult9 = pressed(5587);
+      token = pressed(5253).useToken(nativeDefault.colors.BACKGROUND_SCRIM, tmp7);
+      const tmpResult10 = pressed(5253);
+      token1 = pressed(5253).useToken(nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, tmp7);
+      const tmpResult11 = pressed(5253);
+      const isBlurDisabledResult = pressed(5587).isBlurDisabled(tmp4);
       noop = isBlurDisabledResult;
-      const tmpResult12 = pressed(5586);
+      const tmpResult12 = pressed(5587);
       const fn = function w() {
         const obj = { backgroundColor: null };
         const obj2 = spring;
@@ -369,25 +369,25 @@ export const BackgroundBlurFillWithPress = ReactCompilerGating.isReactCompilerEn
         );
         return obj;
       };
-      const tmpResult13 = pressed(5052);
+      const tmpResult13 = pressed(5053);
       fn.__closure = {
-        withSpring: pressed(5247).withSpring,
-        interpolateColor: pressed(5052).interpolateColor,
+        withSpring: pressed(5248).withSpring,
+        interpolateColor: pressed(5053).interpolateColor,
         pressed,
         fallbackColor: token,
         fallbackColorPressed: token1,
-        ON_PRESS_SPRING: pressed(5248).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5249).ON_PRESS_SPRING,
       };
       fn.__workletHash = 8923865688660;
       fn.__initData = __initData;
       const animatedStyle = tmpResult13.useAnimatedStyle(fn);
       let obj2 = {
-        withSpring: pressed(5247).withSpring,
-        interpolateColor: pressed(5052).interpolateColor,
+        withSpring: pressed(5248).withSpring,
+        interpolateColor: pressed(5053).interpolateColor,
         pressed,
         fallbackColor: token,
         fallbackColorPressed: token1,
-        ON_PRESS_SPRING: pressed(5248).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5249).ON_PRESS_SPRING,
       };
       class I {
         constructor() {
@@ -414,15 +414,15 @@ export const BackgroundBlurFillWithPress = ReactCompilerGating.isReactCompilerEn
           return { tintColor: withSpringResult };
         }
       }
-      const tmpResult14 = pressed(5052);
+      const tmpResult14 = pressed(5053);
       I.__closure = {
         shouldUseFallback: isBlurDisabledResult,
-        withSpring: pressed(5247).withSpring,
-        interpolateColor: pressed(5052).interpolateColor,
+        withSpring: pressed(5248).withSpring,
+        interpolateColor: pressed(5053).interpolateColor,
         pressed,
         restingTint: tmp9,
         pressedTint: tmp10,
-        ON_PRESS_SPRING: pressed(5248).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5249).ON_PRESS_SPRING,
       };
       I.__workletHash = 15619337296749;
       I.__initData = __initData2;
@@ -486,12 +486,12 @@ export const BackgroundBlurFillWithPress = ReactCompilerGating.isReactCompilerEn
       tmp17 = obj6;
       let obj3 = {
         shouldUseFallback: isBlurDisabledResult,
-        withSpring: pressed(5247).withSpring,
-        interpolateColor: pressed(5052).interpolateColor,
+        withSpring: pressed(5248).withSpring,
+        interpolateColor: pressed(5053).interpolateColor,
         pressed,
         restingTint: tmp9,
         pressedTint: tmp10,
-        ON_PRESS_SPRING: pressed(5248).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5249).ON_PRESS_SPRING,
       };
     }
   : function BackgroundBlurFillWithPress(pressed) {
@@ -500,21 +500,21 @@ export const BackgroundBlurFillWithPress = ReactCompilerGating.isReactCompilerEn
       const merged = Object.assign(pressed, Object.assign({ style: 0, blurTheme: 0, pressed: 0 }));
       const tmp2 = closure_12(blurTheme);
       const tmp3 = closure_13(tmp2, undefined);
-      const normalizeBlurThemeResult = pressed(5586).normalizeBlurTheme(tmp2);
-      let obj = pressed(5586);
-      const tmp7 = pressed(5586).isBlurThemeLight(tmp2) ? closure_8 : closure_10;
+      const normalizeBlurThemeResult = pressed(5587).normalizeBlurTheme(tmp2);
+      let obj = pressed(5587);
+      const tmp7 = pressed(5587).isBlurThemeLight(tmp2) ? closure_8 : closure_10;
       importDefault = tmp7;
-      let obj2 = pressed(5586);
-      const tmp8 = pressed(5586).isBlurThemeLight(tmp2) ? closure_9 : closure_11;
+      let obj2 = pressed(5587);
+      const tmp8 = pressed(5587).isBlurThemeLight(tmp2) ? closure_9 : closure_11;
       dependencyMap = tmp8;
-      const tmp4Result = pressed(5586);
-      const token = pressed(5252).useToken(nativeDefault.colors.BACKGROUND_SCRIM, normalizeBlurThemeResult);
-      const tmp4Result6 = pressed(5252);
-      const token1 = pressed(5252).useToken(nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, normalizeBlurThemeResult);
-      const tmp4Result7 = pressed(5252);
-      const isBlurDisabledResult = pressed(5586).isBlurDisabled(merged);
+      const tmp4Result = pressed(5587);
+      const token = pressed(5253).useToken(nativeDefault.colors.BACKGROUND_SCRIM, normalizeBlurThemeResult);
+      const tmp4Result6 = pressed(5253);
+      const token1 = pressed(5253).useToken(nativeDefault.colors.BACKGROUND_SCRIM_LIGHTBOX, normalizeBlurThemeResult);
+      const tmp4Result7 = pressed(5253);
+      const isBlurDisabledResult = pressed(5587).isBlurDisabled(merged);
       c5 = isBlurDisabledResult;
-      const tmp4Result8 = pressed(5586);
+      const tmp4Result8 = pressed(5587);
       class C {
         constructor() {
           obj = { backgroundColor: null };
@@ -532,25 +532,25 @@ export const BackgroundBlurFillWithPress = ReactCompilerGating.isReactCompilerEn
           return obj;
         }
       }
-      const tmp4Result9 = pressed(5052);
+      const tmp4Result9 = pressed(5053);
       C.__closure = {
-        withSpring: pressed(5247).withSpring,
-        interpolateColor: pressed(5052).interpolateColor,
+        withSpring: pressed(5248).withSpring,
+        interpolateColor: pressed(5053).interpolateColor,
         pressed,
         fallbackColor: token,
         fallbackColorPressed: token1,
-        ON_PRESS_SPRING: pressed(5248).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5249).ON_PRESS_SPRING,
       };
       C.__workletHash = 16933322441398;
       C.__initData = __initData3;
       let animatedStyle = tmp4Result9.useAnimatedStyle(C);
       let obj3 = {
-        withSpring: pressed(5247).withSpring,
-        interpolateColor: pressed(5052).interpolateColor,
+        withSpring: pressed(5248).withSpring,
+        interpolateColor: pressed(5053).interpolateColor,
         pressed,
         fallbackColor: token,
         fallbackColorPressed: token1,
-        ON_PRESS_SPRING: pressed(5248).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5249).ON_PRESS_SPRING,
       };
       class T {
         constructor() {
@@ -577,15 +577,15 @@ export const BackgroundBlurFillWithPress = ReactCompilerGating.isReactCompilerEn
           return { tintColor: withSpringResult };
         }
       }
-      const tmp4Result10 = pressed(5052);
+      const tmp4Result10 = pressed(5053);
       T.__closure = {
         shouldUseFallback: isBlurDisabledResult,
-        withSpring: pressed(5247).withSpring,
-        interpolateColor: pressed(5052).interpolateColor,
+        withSpring: pressed(5248).withSpring,
+        interpolateColor: pressed(5053).interpolateColor,
         pressed,
         restingTint: tmp7,
         pressedTint: tmp8,
-        ON_PRESS_SPRING: pressed(5248).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5249).ON_PRESS_SPRING,
       };
       T.__workletHash = 1826548941643;
       T.__initData = __initData4;
@@ -594,12 +594,12 @@ export const BackgroundBlurFillWithPress = ReactCompilerGating.isReactCompilerEn
       let items = [StyleSheet.absoluteFill, style];
       const obj4 = {
         shouldUseFallback: isBlurDisabledResult,
-        withSpring: pressed(5247).withSpring,
-        interpolateColor: pressed(5052).interpolateColor,
+        withSpring: pressed(5248).withSpring,
+        interpolateColor: pressed(5053).interpolateColor,
         pressed,
         restingTint: tmp7,
         pressedTint: tmp8,
-        ON_PRESS_SPRING: pressed(5248).ON_PRESS_SPRING,
+        ON_PRESS_SPRING: pressed(5249).ON_PRESS_SPRING,
       };
       if (!isBlurDisabledResult) {
         animatedStyle = {};

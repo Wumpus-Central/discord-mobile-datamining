@@ -154,7 +154,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                     stateFromStores = dependencyMap;
                     closure_3 = dependencyMap[Symbol.iterator]();
                     if (closure_3 === undefined) {
-                      let obj5 = searchQuery(7563);
+                      let obj5 = searchQuery(7564);
                       c9 = 4;
                       c10 = 1;
                       let obj6 = {
@@ -167,7 +167,7 @@ export const useReferralProgramEligibleUsers = function useReferralProgramEligib
                       closure_133_3 = tmp44;
                       closure_133_4 = stateFromStores(closure_133_3, 2);
                       closure_133_5 = closure_133_4[0];
-                      if (closure_133_4[1] === searchQuery(7563).ReferralOfferStatus.PENDING) {
+                      if (closure_133_4[1] === searchQuery(7564).ReferralOfferStatus.PENDING) {
                         if (!closure_134_12.has(closure_133_5)) {
                           obj3 = searchQuery(8670);
                           c9 = 5;

@@ -3,7 +3,7 @@ import initialize from "../../../../../../discord_common/js/packages/flux/index.
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../../intl/index.native.tsx";
 import native from "../../../../../design/void/native.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import utils_StringUtils from "../../../../../../discord_common/js/shared/utils/StringUtils.tsx";
 import UserUtils from "../../../../../utils/UserUtils.tsx";
 import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
@@ -34,14 +34,14 @@ const UserUtilsDefault = UserUtils;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10616).UserRowModes;
-const Constants = fn(1087);
+const UserRowModes = fn(10619).UserRowModes;
+const Constants = fn(1084);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-const PlatformUtils = fn(1385);
+const PlatformUtils = fn(1382);
 if (PlatformUtils.isIOS()) {
-  let obj = { lineHeight: "Array" };
+  let obj = { lineHeight: "rejectWithError" };
 }
 let closure_18 = {
   CALL: "call",
@@ -53,7 +53,7 @@ let closure_18 = {
   IGNORE_SUGGESTION: "ignore-suggestion",
   TOGGLE: "toggle",
 };
-let createStyles = fn(4971);
+let createStyles = fn(4972);
 let closure_19 = createStyles.createStyles({
   avatar: { flexShrink: 0, flexGrow: 0 },
   actions: { flexDirection: "row" },
@@ -64,7 +64,7 @@ let closure_19 = createStyles.createStyles({
   usernameLabelContainer: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 },
   usernameLabel: { display: "flex", flexShrink: 1 },
 });
-createStyles = fn(4971);
+createStyles = fn(4972);
 let obj3 = { activityText: { color: nativeDefault.colors.TEXT_SUBTLE }, gameContainer: null, gameIcon: null };
 let obj6 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj3.gameContainer = { flexDirection: "row", gap: 4, cornerRadius: nativeDefault.radii.xs };
@@ -122,17 +122,17 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (!isGameRelationship.isGameRelationship) {
         if (cResult[19] !== user) {
-          const userTag = applicationId(5025).getUserTag(user);
+          const userTag = applicationId(5026).getUserTag(user);
           cResult[19] = user;
           cResult[20] = userTag;
           let tmp12 = userTag;
-          const tmpResult2 = applicationId(5025);
+          const tmpResult2 = applicationId(5026);
         } else {
           tmp12 = cResult[20];
         }
         if (cResult[21] !== tmp12) {
           const obj3 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: tmp12 };
-          const tmp16 = closure_14(applicationId(5234).Text, obj3);
+          const tmp16 = closure_14(applicationId(5235).Text, obj3);
           cResult[21] = tmp12;
           cResult[22] = tmp16;
         }
@@ -169,7 +169,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
                 color: "text-subtle",
                 children: stateFromStores.name,
               };
-              const tmp24 = closure_14(applicationId(5234).Text, obj5);
+              const tmp24 = closure_14(applicationId(5235).Text, obj5);
               cResult[13] = stateFromStores.name;
               cResult[14] = tmp24;
               let tmp22 = tmp24;
@@ -191,7 +191,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
         const obj7 = { style: gameIcon.gameIcon, resizeMode: "contain", source: tmp18, disableColor: true };
-        const tmp21 = closure_14(applicationId(1202).Icon, obj7, stateFromStores.id);
+        const tmp21 = closure_14(applicationId(1199).Icon, obj7, stateFromStores.id);
         cResult[9] = stateFromStores.id;
         cResult[10] = gameIcon.gameIcon;
         cResult[11] = tmp18;
@@ -386,7 +386,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj2 = { accessibilityActions: items, actions: "Array" };
+      let obj2 = { accessibilityActions: items, actions: "y" };
       return obj2;
     } else {
       if (constants.PENDING_INCOMING === type) {
@@ -447,11 +447,11 @@ export default noop.memo(function UserRow(type) {
             location: isMobileOnline,
             onConfirm() {
               if (null != closure_0) {
-                const result = type(5662).presentGameFriendRequestAcceptedToast();
-                const obj2 = type(5662);
+                const result = type(5663).presentGameFriendRequestAcceptedToast();
+                const obj2 = type(5663);
               } else {
-                const result1 = type(5662).presentFriendRequestAcceptedToast();
-                obj = type(5662);
+                const result1 = type(5663).presentFriendRequestAcceptedToast();
+                obj = type(5663);
               }
             },
           });
@@ -560,14 +560,14 @@ export default noop.memo(function UserRow(type) {
               channel = channel.getChannel(result);
               if (null != channel) {
                 user(38)(channel.isPrivate(), "must be a DM");
-                const obj2 = user(10628)(channel, false);
+                const obj2 = user(10631)(channel, false);
                 if (!obj2.inCall) {
                   obj2.onPress();
                 }
                 const tmp3 = user(38);
                 obj = { recipientIds: current.id };
-                user(7411).openPrivateChannel(obj);
-                const tmpResult = user(7411);
+                user(7413).openPrivateChannel(obj);
+                const tmpResult = user(7413);
               }
             });
         };
@@ -616,14 +616,14 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(10628)(channel, false);
+          const obj2 = user(10631)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }
           const tmp3 = user(38);
           obj = { recipientIds: current.id };
-          user(7411).openPrivateChannel(obj);
-          const tmpResult = user(7411);
+          user(7413).openPrivateChannel(obj);
+          const tmpResult = user(7413);
         }
       });
       const ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(user.id);
@@ -641,11 +641,11 @@ export default noop.memo(function UserRow(type) {
         location: Friends_v2,
         onConfirm() {
           if (null != closure_0) {
-            const result = type(5662).presentGameFriendRequestAcceptedToast();
-            const obj2 = type(5662);
+            const result = type(5663).presentGameFriendRequestAcceptedToast();
+            const obj2 = type(5663);
           } else {
-            const result1 = type(5662).presentFriendRequestAcceptedToast();
-            obj = type(5662);
+            const result1 = type(5663).presentFriendRequestAcceptedToast();
+            obj = type(5663);
           }
         },
       };

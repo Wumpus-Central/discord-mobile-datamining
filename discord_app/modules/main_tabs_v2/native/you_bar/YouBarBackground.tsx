@@ -4,20 +4,20 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import _modDef683 from "../../../../../_runtime/metro/00683__.js";
 import spring from "../../../../design/animation/reanimated/spring/spring.tsx";
 import useToken from "../../../../design/tokens/native/useToken.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05258_LinearGradient.js";
-import _modDef6966 from "../../../../../_runtime/metro/06966__.js";
+import LinearGradientDefault from "../../../../../_runtime/05259_LinearGradient.js";
+import _modDef6968 from "../../../../../_runtime/metro/06968__.js";
 import useQuestDockAnimatedBorderRadiusDefault from "../../../quests/native/QuestDock/useQuestDockAnimatedBorderRadius.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-const ReanimatedRexportDefault = tmp4(5052);
+const ReanimatedRexportDefault = tmp4(5053);
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16444);
+const YouBarConstants = fn(16483);
 const YOU_BAR_HEIGHT = YouBarConstants.YOU_BAR_HEIGHT;
 const YOU_BAR_SPRING_CONFIG = YouBarConstants.YOU_BAR_SPRING_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = {
   youRowFloating: {
     borderWidth: 1,
@@ -151,7 +151,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
                 return tmp39;
               }
               const obj6 = { style: first, maskElement: tmp31, children: tmp35 };
-              const tmp42 = timestampProducer(_modDef6966, obj6);
+              const tmp42 = timestampProducer(_modDef6968, obj6);
               cResult[24] = tmp31;
               cResult[25] = tmp35;
               cResult[26] = tmp42;
@@ -234,7 +234,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           backgroundColor: "black",
         },
       };
-      const tmp3 = _modDef6966;
+      const tmp3 = _modDef6968;
       const tmp4 = LinearGradientDefault;
       const obj9 = _modDef683("#000000");
       const items1 = [_modDef683("#000000").alpha(0).hex(), "#000000"];

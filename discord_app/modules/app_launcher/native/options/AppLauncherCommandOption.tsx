@@ -15,15 +15,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(1504).AppLauncherOptionAutoFocusType;
+let closure_4 = fn(1501).AppLauncherOptionAutoFocusType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   dismissableOptionWrapper: { flexDirection: "row", alignItems: "center" },
   optionViewContainer: { flex: 1 },
   dismissButton: { marginLeft: 8, marginRight: -4, padding: 4, borderRadius: nativeDefault.radii.round },
-  option: { flex: 1 },
 };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -33,7 +32,7 @@ let result = size.fileFinishedImporting("modules/app_launcher/native/options/App
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function AppLauncherCommandOption(option) {
-      const cResult = option(onEndEditing[7]).c(162);
+      const cResult = option(onEndEditing[7]).c(154);
       option = option.option;
       const onStartEditing = option.onStartEditing;
       onEndEditing = option.onEndEditing;
@@ -47,29 +46,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (tmp(tmp2[8]).ApplicationCommandOptionType.INTEGER !== type) {
           if (tmp(tmp2[8]).ApplicationCommandOptionType.NUMBER !== type) {
             if (tmp(tmp2[8]).ApplicationCommandOptionType.ATTACHMENT === type) {
-              if (cResult[62] === onEndEditing) {
-                if (cResult[63] === onOptionValueChange) {
-                  if (cResult[64] === option) {
-                    let tmp55 = cResult[65];
+              if (cResult[59] === onEndEditing) {
+                if (cResult[60] === onOptionValueChange) {
+                  if (cResult[61] === option) {
+                    let tmp55 = cResult[62];
                   }
-                  if (cResult[66] === channel) {
-                    if (cResult[67] === hasError) {
-                      if (cResult[68] === onPressAttachmentOption) {
-                        if (cResult[69] === option) {
-                          if (cResult[70] === dismissableOptionWrapper.option) {
-                            if (cResult[71] === tmp55) {
-                              if (cResult[72] === tmp57) {
-                                let tmp58 = cResult[73];
-                              }
-                              let tmp12 = tmp58;
+                  if (cResult[63] === channel) {
+                    if (cResult[64] === hasError) {
+                      if (cResult[65] === onPressAttachmentOption) {
+                        if (cResult[66] === option) {
+                          if (cResult[67] === tmp55) {
+                            if (cResult[68] === tmp57) {
+                              let tmp58 = cResult[69];
                             }
+                            let tmp12 = tmp58;
                           }
                         }
                       }
                     }
                   }
                   let obj2 = {
-                    style: dismissableOptionWrapper.option,
                     option,
                     onSelectAttachment: tmp55,
                     channel,
@@ -78,18 +74,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     onPress: onPressAttachmentOption,
                   };
                   const tmp61 = onDismiss(onStartEditing(tmp2[12]), obj2, option.name);
-                  cResult[66] = channel;
-                  cResult[67] = hasError;
-                  cResult[68] = onPressAttachmentOption;
-                  cResult[69] = option;
-                  cResult[70] = dismissableOptionWrapper.option;
-                  cResult[71] = tmp55;
-                  cResult[72] = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
-                  cResult[73] = tmp61;
+                  cResult[63] = channel;
+                  cResult[64] = hasError;
+                  cResult[65] = onPressAttachmentOption;
+                  cResult[66] = option;
+                  cResult[67] = tmp55;
+                  cResult[68] = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
+                  cResult[69] = tmp61;
                   tmp58 = tmp61;
                 }
               }
-              function ne(text) {
+              function ee(text) {
                 onEndEditing(option);
                 if (null != text) {
                   const obj = { type: "text", text };
@@ -100,84 +95,75 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 onOptionValueChange(option, items1);
               }
-              cResult[62] = onEndEditing;
-              cResult[63] = onOptionValueChange;
-              cResult[64] = option;
-              cResult[65] = ne;
-              tmp55 = ne;
+              cResult[59] = onEndEditing;
+              cResult[60] = onOptionValueChange;
+              cResult[61] = option;
+              cResult[62] = ee;
+              tmp55 = ee;
             } else if (tmp(tmp2[8]).ApplicationCommandOptionType.BOOLEAN === type) {
               if (optionValues.current[option.name] != null) {
                 const first = tmp47[0];
               }
-              if (cResult[74] === onPress) {
-                if (cResult[75] === onEndEditing) {
-                  if (cResult[76] === onOptionValueChange) {
-                    if (cResult[77] === option) {
-                      let tmp50 = cResult[78];
+              if (cResult[70] === onPress) {
+                if (cResult[71] === onEndEditing) {
+                  if (cResult[72] === onOptionValueChange) {
+                    if (cResult[73] === option) {
+                      let tmp50 = cResult[74];
                     }
-                    if (cResult[79] === hasError) {
-                      if (cResult[80] === option) {
-                        if (cResult[81] === dismissableOptionWrapper.option) {
-                          if (cResult[82] === first) {
-                            if (cResult[83] === tmp50) {
-                              let tmp51 = cResult[84];
-                            }
-                            tmp12 = tmp51;
+                    if (cResult[75] === hasError) {
+                      if (cResult[76] === option) {
+                        if (cResult[77] === first) {
+                          if (cResult[78] === tmp50) {
+                            let tmp51 = cResult[79];
                           }
+                          tmp12 = tmp51;
                         }
                       }
                     }
-                    let obj3 = {
-                      style: dismissableOptionWrapper.option,
-                      option,
-                      initialValue: first,
-                      onPress: tmp50,
-                      hasError,
-                    };
+                    let obj3 = { option, initialValue: first, onPress: tmp50, hasError };
                     const tmp54 = onDismiss(onStartEditing(tmp2[13]), obj3, option.name);
-                    cResult[79] = hasError;
-                    cResult[80] = option;
-                    cResult[81] = dismissableOptionWrapper.option;
-                    cResult[82] = first;
-                    cResult[83] = tmp50;
-                    cResult[84] = tmp54;
+                    cResult[75] = hasError;
+                    cResult[76] = option;
+                    cResult[77] = first;
+                    cResult[78] = tmp50;
+                    cResult[79] = tmp54;
                     tmp51 = tmp54;
                   }
                 }
               }
-              function ie(arg0) {
+              function oe(arg0) {
                 onPress();
                 onEndEditing(option);
                 const items = [{ type: "text", text: arg0.toString() }];
                 onOptionValueChange(option, items);
               }
-              cResult[74] = onPress;
-              cResult[75] = onEndEditing;
-              cResult[76] = onOptionValueChange;
-              cResult[77] = option;
-              cResult[78] = ie;
-              tmp50 = ie;
+              cResult[70] = onPress;
+              cResult[71] = onEndEditing;
+              cResult[72] = onOptionValueChange;
+              cResult[73] = option;
+              cResult[74] = oe;
+              tmp50 = oe;
             } else if (tmp(tmp2[8]).ApplicationCommandOptionType.MENTIONABLE === type) {
               if (optionValues.current[option.name] != null) {
                 const first1 = tmp36[0];
               }
-              if (cResult[85] === onOptionValueChange) {
-                if (cResult[86] === option) {
-                  let tmp39 = cResult[87];
+              if (cResult[80] === onOptionValueChange) {
+                if (cResult[81] === option) {
+                  let tmp39 = cResult[82];
                 }
-                if (cResult[88] === onEndEditing) {
-                  if (cResult[89] === option) {
-                    let tmp40 = cResult[90];
+                if (cResult[83] === onEndEditing) {
+                  if (cResult[84] === option) {
+                    let tmp40 = cResult[85];
                   }
-                  if (cResult[91] === channel) {
-                    if (cResult[92] === onPress) {
-                      if (cResult[93] === hasError) {
-                        if (cResult[94] === option) {
-                          if (cResult[95] === first1) {
-                            if (cResult[96] === tmp39) {
-                              if (cResult[97] === tmp40) {
-                                if (cResult[98] === tmp42) {
-                                  let tmp43 = cResult[99];
+                  if (cResult[86] === channel) {
+                    if (cResult[87] === onPress) {
+                      if (cResult[88] === hasError) {
+                        if (cResult[89] === option) {
+                          if (cResult[90] === first1) {
+                            if (cResult[91] === tmp39) {
+                              if (cResult[92] === tmp40) {
+                                if (cResult[93] === tmp42) {
+                                  let tmp43 = cResult[94];
                                 }
                                 tmp12 = tmp43;
                               }
@@ -198,26 +184,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     onPress,
                   };
                   const tmp46 = onDismiss(onStartEditing(tmp2[16]), obj4);
-                  cResult[91] = channel;
-                  cResult[92] = onPress;
-                  cResult[93] = hasError;
-                  cResult[94] = option;
-                  cResult[95] = first1;
-                  cResult[96] = tmp39;
-                  cResult[97] = tmp40;
-                  cResult[98] = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
-                  cResult[99] = tmp46;
+                  cResult[86] = channel;
+                  cResult[87] = onPress;
+                  cResult[88] = hasError;
+                  cResult[89] = option;
+                  cResult[90] = first1;
+                  cResult[91] = tmp39;
+                  cResult[92] = tmp40;
+                  cResult[93] = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
+                  cResult[94] = tmp46;
                   tmp43 = tmp46;
                 }
-                function pe() {
+                function re() {
                   return onEndEditing(option);
                 }
-                cResult[88] = onEndEditing;
-                cResult[89] = option;
-                cResult[90] = pe;
-                tmp40 = pe;
+                cResult[83] = onEndEditing;
+                cResult[84] = option;
+                cResult[85] = re;
+                tmp40 = re;
               }
-              function re(mentionable) {
+              function se(mentionable) {
                 mentionable = mentionable.mentionable;
                 if (null != mentionable) {
                   const type = mentionable.type;
@@ -245,41 +231,33 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   onOptionValueChange(option, []);
                 }
               }
-              cResult[85] = onOptionValueChange;
-              cResult[86] = option;
-              cResult[87] = re;
-              tmp39 = re;
+              cResult[80] = onOptionValueChange;
+              cResult[81] = option;
+              cResult[82] = se;
+              tmp39 = se;
             } else if (tmp(tmp2[8]).ApplicationCommandOptionType.ROLE === type) {
               if (optionValues.current[option.name] != null) {
                 const first2 = tmp25[0];
               }
-              if (cResult[100] === onOptionValueChange) {
-                if (cResult[101] === option) {
-                  let tmp28 = cResult[102];
+              if (cResult[95] === onOptionValueChange) {
+                if (cResult[96] === option) {
+                  let tmp28 = cResult[97];
                 }
-                if (cResult[103] === onEndEditing) {
-                  if (cResult[104] === option) {
-                    let tmp29 = cResult[105];
+                if (cResult[98] === onEndEditing) {
+                  if (cResult[99] === option) {
+                    let tmp29 = cResult[100];
                   }
-                  class Oe {
-                    constructor() {
-                      tmp = onEndEditing(option);
-                      return;
-                    }
-                  }
-                  if (cResult[106] === channel) {
-                    if (cResult[107] === onPress) {
-                      if (cResult[108] === hasError) {
-                        if (cResult[109] === option) {
-                          if (cResult[110] === dismissableOptionWrapper.option) {
-                            if (cResult[111] === first2) {
-                              if (cResult[112] === tmp28) {
-                                if (cResult[113] === tmp29) {
-                                  if (cResult[114] === tmp31) {
-                                    let tmp32 = cResult[115];
-                                  }
-                                  tmp12 = tmp32;
+                  if (cResult[101] === channel) {
+                    if (cResult[102] === onPress) {
+                      if (cResult[103] === hasError) {
+                        if (cResult[104] === option) {
+                          if (cResult[105] === first2) {
+                            if (cResult[106] === tmp28) {
+                              if (cResult[107] === tmp29) {
+                                if (cResult[108] === tmp31) {
+                                  let tmp32 = cResult[109];
                                 }
+                                tmp12 = tmp32;
                               }
                             }
                           }
@@ -288,41 +266,36 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj5 = {
-                    style: dismissableOptionWrapper.option,
                     option,
                     initialValue: first2,
                     onRolePress: tmp28,
                     onActionSheetDismiss: tmp29,
                     channel,
-                    autoFocus: tmp31,
+                    autoFocus: autoFocusType === onPress.OPTIONAL_OPTION_ADDED,
                     hasError,
                     onPress,
                   };
                   const tmp35 = onDismiss(onStartEditing(tmp2[17]), obj5, option.name);
-                  cResult[106] = channel;
-                  cResult[107] = onPress;
-                  cResult[108] = hasError;
-                  cResult[109] = option;
-                  cResult[110] = dismissableOptionWrapper.option;
-                  cResult[111] = first2;
-                  cResult[112] = tmp28;
-                  cResult[113] = tmp29;
-                  cResult[114] = tmp31;
-                  cResult[115] = tmp35;
+                  cResult[101] = channel;
+                  cResult[102] = onPress;
+                  cResult[103] = hasError;
+                  cResult[104] = option;
+                  cResult[105] = first2;
+                  cResult[106] = tmp28;
+                  cResult[107] = tmp29;
+                  cResult[108] = autoFocusType === onPress.OPTIONAL_OPTION_ADDED;
+                  cResult[109] = tmp35;
                   tmp32 = tmp35;
                 }
-                class Oe {
-                  constructor() {
-                    tmp = onEndEditing(option);
-                    return;
-                  }
+                function me() {
+                  onEndEditing(option);
                 }
-                cResult[103] = onEndEditing;
-                cResult[104] = option;
-                cResult[105] = Oe;
-                tmp29 = Oe;
+                cResult[98] = onEndEditing;
+                cResult[99] = option;
+                cResult[100] = me;
+                tmp29 = me;
               }
-              function me(role) {
+              function ue(role) {
                 role = role.role;
                 if (null == role) {
                   let items = [];
@@ -332,47 +305,38 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 onOptionValueChange(option, items);
               }
-              cResult[100] = onOptionValueChange;
-              cResult[101] = option;
-              cResult[102] = me;
-              tmp28 = me;
+              cResult[95] = onOptionValueChange;
+              cResult[96] = option;
+              cResult[97] = ue;
+              tmp28 = ue;
             } else if (tmp(tmp2[8]).ApplicationCommandOptionType.USER === type) {
-              class Oe {
-                constructor() {
-                  tmp = onEndEditing(option);
-                  return;
-                }
-              }
               if (optionValues.current[option.name] != null) {
                 const first3 = tmp15[0];
               }
-              if (cResult[116] === onOptionValueChange) {
-                if (cResult[117] === option) {
-                  let tmp18 = cResult[118];
+              if (cResult[110] === onOptionValueChange) {
+                if (cResult[111] === option) {
+                  let tmp18 = cResult[112];
                 }
-                if (cResult[119] === onEndEditing) {
-                  if (cResult[120] === option) {
-                    let tmp19 = cResult[121];
+                if (cResult[113] === onEndEditing) {
+                  if (cResult[114] === option) {
+                    let tmp19 = cResult[115];
                   }
-                  class Oe {
+                  class Ee {
                     constructor() {
-                      tmp = onEndEditing(option);
-                      return;
+                      return onEndEditing(option);
                     }
                   }
-                  if (cResult[122] === channel) {
-                    if (cResult[123] === onPress) {
-                      if (cResult[124] === hasError) {
-                        if (cResult[125] === option) {
-                          if (cResult[126] === dismissableOptionWrapper.option) {
-                            if (cResult[127] === first3) {
-                              if (cResult[128] === tmp18) {
-                                if (cResult[129] === tmp19) {
-                                  if (cResult[130] === tmp21) {
-                                    let tmp22 = cResult[131];
-                                  }
-                                  tmp12 = tmp22;
+                  if (cResult[116] === channel) {
+                    if (cResult[117] === onPress) {
+                      if (cResult[118] === hasError) {
+                        if (cResult[119] === option) {
+                          if (cResult[120] === first3) {
+                            if (cResult[121] === tmp18) {
+                              if (cResult[122] === tmp19) {
+                                if (cResult[123] === tmp21) {
+                                  let tmp22 = cResult[124];
                                 }
+                                tmp12 = tmp22;
                               }
                             }
                           }
@@ -402,7 +366,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj6 = {
-                    style: dismissableOptionWrapper.option,
                     option,
                     initialValue: first3,
                     onUserPress: tmp18,
@@ -413,25 +376,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     onPress,
                   };
                   const tmp24 = onDismiss(onStartEditing(tmp2[18]), obj6, option.name);
-                  cResult[122] = channel;
-                  cResult[123] = onPress;
-                  cResult[124] = hasError;
-                  cResult[125] = option;
-                  cResult[126] = dismissableOptionWrapper.option;
-                  cResult[127] = first3;
-                  cResult[128] = tmp18;
-                  cResult[129] = tmp19;
-                  cResult[130] = tmp21;
-                  cResult[131] = tmp24;
+                  cResult[116] = channel;
+                  cResult[117] = onPress;
+                  cResult[118] = hasError;
+                  cResult[119] = option;
+                  cResult[120] = first3;
+                  cResult[121] = tmp18;
+                  cResult[122] = tmp19;
+                  cResult[123] = tmp21;
+                  cResult[124] = tmp24;
                   tmp22 = tmp24;
                 }
-                class Oe {
+                class Ee {
                   constructor() {
-                    tmp = onEndEditing(option);
-                    return;
+                    return onEndEditing(option);
                   }
                 }
-                cResult[119] = onEndEditing;
+                cResult[113] = onEndEditing;
                 class Ae {
                   constructor(arg0) {
                     user = option.user;
@@ -453,8 +414,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                cResult[120] = option;
-                cResult[121] = Ee;
+                cResult[114] = option;
+                cResult[115] = Ee;
                 tmp19 = Ee;
               }
               class Ae {
@@ -478,45 +439,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              cResult[116] = onOptionValueChange;
-              cResult[117] = option;
-              cResult[118] = Ae;
+              cResult[110] = onOptionValueChange;
+              cResult[111] = option;
+              cResult[112] = Ae;
               tmp18 = Ae;
             } else if (tmp(tmp2[8]).ApplicationCommandOptionType.CHANNEL === type) {
-              class Oe {
+              class Ee {
                 constructor() {
-                  tmp = onEndEditing(option);
-                  return;
+                  return onEndEditing(option);
                 }
               }
               if (optionValues.current[option.name] != null) {
                 const first4 = tmp5[0];
               }
-              if (cResult[132] === onOptionValueChange) {
-                if (cResult[133] === option) {
-                  let tmp8 = cResult[134];
+              if (cResult[125] === onOptionValueChange) {
+                if (cResult[126] === option) {
+                  let tmp8 = cResult[127];
                 }
-                if (cResult[135] === onEndEditing) {
-                  if (cResult[136] === option) {
-                    let tmp9 = cResult[137];
+                if (cResult[128] === onEndEditing) {
+                  if (cResult[129] === option) {
+                    let tmp9 = cResult[130];
                   }
-                  class Oe {
+                  class Ee {
                     constructor() {
-                      tmp = onEndEditing(option);
-                      return;
+                      return onEndEditing(option);
                     }
                   }
-                  if (cResult[138] === channel) {
-                    if (cResult[139] === onPress) {
-                      if (cResult[140] === hasError) {
-                        if (cResult[141] === option) {
-                          if (cResult[142] === dismissableOptionWrapper.option) {
-                            if (cResult[143] === first4) {
-                              if (cResult[144] === tmp8) {
-                                if (cResult[145] === tmp9) {
-                                  if (cResult[146] === tmp11) {
-                                    tmp12 = cResult[147];
-                                  }
+                  if (cResult[131] === channel) {
+                    if (cResult[132] === onPress) {
+                      if (cResult[133] === hasError) {
+                        if (cResult[134] === option) {
+                          if (cResult[135] === first4) {
+                            if (cResult[136] === tmp8) {
+                              if (cResult[137] === tmp9) {
+                                if (cResult[138] === tmp11) {
+                                  tmp12 = cResult[139];
                                 }
                               }
                             }
@@ -547,7 +504,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }
                   }
                   const obj7 = {
-                    style: dismissableOptionWrapper.option,
                     option,
                     initialValue: first4,
                     onChannelPress: tmp8,
@@ -558,25 +514,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     onPress,
                   };
                   const tmp14 = onDismiss(onStartEditing(tmp2[19]), obj7, option.name);
-                  cResult[138] = channel;
-                  cResult[139] = onPress;
-                  cResult[140] = hasError;
-                  cResult[141] = option;
-                  cResult[142] = dismissableOptionWrapper.option;
-                  cResult[143] = first4;
-                  cResult[144] = tmp8;
-                  cResult[145] = tmp9;
-                  cResult[146] = tmp11;
-                  cResult[147] = tmp14;
+                  cResult[131] = channel;
+                  cResult[132] = onPress;
+                  cResult[133] = hasError;
+                  cResult[134] = option;
+                  cResult[135] = first4;
+                  cResult[136] = tmp8;
+                  cResult[137] = tmp9;
+                  cResult[138] = tmp11;
+                  cResult[139] = tmp14;
                   tmp12 = tmp14;
                 }
-                class Oe {
+                class Ee {
                   constructor() {
-                    tmp = onEndEditing(option);
-                    return;
+                    return onEndEditing(option);
                   }
                 }
-                cResult[135] = onEndEditing;
+                cResult[128] = onEndEditing;
                 class Ae {
                   constructor(arg0) {
                     user = option.user;
@@ -598,9 +552,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                cResult[136] = option;
-                cResult[137] = Ne;
-                tmp9 = Ne;
+                cResult[129] = option;
+                cResult[130] = Pe;
+                tmp9 = Pe;
               }
               class Ae {
                 constructor(arg0) {
@@ -623,10 +577,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              cResult[132] = onOptionValueChange;
-              cResult[133] = option;
-              cResult[134] = Pe;
-              tmp8 = Pe;
+              cResult[125] = onOptionValueChange;
+              cResult[126] = option;
+              cResult[127] = De;
+              tmp8 = De;
             } else {
               return null;
             }
@@ -634,13 +588,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (null == onDismiss) {
             return tmp12;
           } else {
-            if (cResult[148] === tmp12) {
-              if (cResult[149] === dismissableOptionWrapper.optionViewContainer) {
-                let tmp89 = cResult[150];
+            if (cResult[140] === tmp12) {
+              if (cResult[141] === dismissableOptionWrapper.optionViewContainer) {
+                let tmp79 = cResult[142];
               }
-              if (cResult[151] === onDismiss) {
-                if (cResult[152] === option) {
-                  let tmp92 = cResult[153];
+              if (cResult[143] === onDismiss) {
+                if (cResult[144] === option) {
+                  let tmp82 = cResult[145];
                 }
                 class O {
                   constructor() {
@@ -668,12 +622,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return;
                   }
                 }
-                if (cResult[155] === dismissableOptionWrapper.dismissButton) {
-                  if (cResult[156] === tmp92) {
-                    let tmp96 = cResult[157];
+                if (cResult[147] === dismissableOptionWrapper.dismissButton) {
+                  if (cResult[148] === tmp82) {
+                    let tmp86 = cResult[149];
                   }
-                  if (cResult[158] === dismissableOptionWrapper.dismissableOptionWrapper) {
-                    if (cResult[159] === tmp89) {
+                  if (cResult[150] === dismissableOptionWrapper.dismissableOptionWrapper) {
+                    if (cResult[151] === tmp79) {
                     }
                   }
                   class O {
@@ -681,7 +635,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return onDismiss(option);
                     }
                   }
-                  const obj9 = { style: null, children: null };
+                  const obj8 = { style: null, children: null };
                   class Ae {
                     constructor(arg0) {
                       user = option.user;
@@ -703,28 +657,28 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  let items = [tmp89, tmp96];
-                  obj9.children = items;
-                  const tmp101 = closure_6(onOptionValueChange, obj9);
+                  let items = [tmp79, tmp86];
+                  obj8.children = items;
+                  const tmp91 = closure_6(onOptionValueChange, obj8);
                   dismissableOptionWrapper = dismissableOptionWrapper.dismissableOptionWrapper;
-                  cResult[158] = dismissableOptionWrapper;
-                  cResult[159] = tmp89;
-                  cResult[160] = tmp96;
-                  cResult[161] = tmp101;
+                  cResult[150] = dismissableOptionWrapper;
+                  cResult[151] = tmp79;
+                  cResult[152] = tmp86;
+                  cResult[153] = tmp91;
                 }
-                const obj10 = { style: dismissableOptionWrapper.dismissButton, onPress: tmp92, children: tmp95 };
-                const tmp98 = onDismiss(tmp(tmp2[21]).PressableOpacity, obj10);
-                cResult[155] = dismissableOptionWrapper.dismissButton;
-                cResult[156] = tmp92;
-                cResult[157] = tmp98;
-                tmp96 = tmp98;
+                const obj9 = { style: dismissableOptionWrapper.dismissButton, onPress: tmp82, children: tmp85 };
+                const tmp88 = onDismiss(tmp(tmp2[21]).PressableOpacity, obj9);
+                cResult[147] = dismissableOptionWrapper.dismissButton;
+                cResult[148] = tmp82;
+                cResult[149] = tmp88;
+                tmp86 = tmp88;
               }
               class O {
                 constructor() {
                   return onDismiss(option);
                 }
               }
-              cResult[151] = onDismiss;
+              cResult[143] = onDismiss;
               class Ae {
                 constructor(arg0) {
                   user = option.user;
@@ -746,17 +700,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              cResult[152] = option;
-              cResult[153] = O;
-              tmp92 = O;
+              cResult[144] = option;
+              cResult[145] = O;
+              tmp82 = O;
             }
-            class Oe {
+            class Ee {
               constructor() {
-                tmp = onEndEditing(option);
-                return;
+                return onEndEditing(option);
               }
             }
-            const obj11 = { style: dismissableOptionWrapper.optionViewContainer, children: null };
+            const obj10 = { style: dismissableOptionWrapper.optionViewContainer, children: null };
             class Ae {
               constructor(arg0) {
                 user = option.user;
@@ -778,11 +731,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 return;
               }
             }
-            const tmp91 = onDismiss(onOptionValueChange, obj11);
-            cResult[148] = tmp12;
-            cResult[149] = dismissableOptionWrapper.optionViewContainer;
-            cResult[150] = tmp91;
-            tmp89 = tmp91;
+            const tmp81 = onDismiss(onOptionValueChange, obj10);
+            cResult[140] = tmp12;
+            cResult[141] = dismissableOptionWrapper.optionViewContainer;
+            cResult[142] = tmp81;
+            tmp79 = tmp81;
           }
         }
       }
@@ -795,16 +748,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[0] === onEndEditing) {
           if (cResult[1] === onOptionValueChange) {
             if (cResult[2] === option) {
-              let tmp79 = cResult[3];
+              let tmp69 = cResult[3];
             }
             if (cResult[4] === onPress) {
               if (cResult[5] === onStartEditing) {
                 if (cResult[6] === option) {
-                  let tmp80 = cResult[7];
+                  let tmp70 = cResult[7];
                 }
                 if (cResult[8] === onEndEditing) {
                   if (cResult[9] === option) {
-                    let tmp81 = cResult[10];
+                    let tmp71 = cResult[10];
                   }
                   class O {
                     constructor() {
@@ -813,12 +766,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   if (cResult[11] === hasError) {
                     if (cResult[12] === option) {
-                      if (cResult[13] === dismissableOptionWrapper.option) {
-                        if (cResult[14] === tmp78) {
-                          if (cResult[15] === tmp79) {
-                            if (cResult[16] === tmp80) {
-                              if (cResult[17] === tmp81) {
-                              }
+                      if (cResult[13] === tmp68) {
+                        if (cResult[14] === tmp69) {
+                          if (cResult[15] === tmp70) {
+                            if (cResult[16] === tmp71) {
                             }
                           }
                         }
@@ -864,27 +815,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       return;
                     }
                   }
-                  const obj12 = {
-                    style: dismissableOptionWrapper.option,
+                  const obj11 = {
                     option,
-                    initialValue: tmp78,
-                    onSelect: tmp79,
-                    onOpenChoicesSheet: tmp80,
-                    onDismissChoicesSheet: tmp81,
-                    autoFocus: tmp84,
+                    initialValue: tmp68,
+                    onSelect: tmp69,
+                    onOpenChoicesSheet: tmp70,
+                    onDismissChoicesSheet: tmp71,
+                    autoFocus: tmp74,
                     hasError,
                   };
-                  const tmp86 = onDismiss(onStartEditing(tmp2[9]), obj12, option.name);
+                  const tmp76 = onDismiss(onStartEditing(tmp2[9]), obj11, option.name);
                   cResult[11] = hasError;
                   cResult[12] = option;
-                  hasError = dismissableOptionWrapper.option;
-                  cResult[13] = hasError;
-                  cResult[14] = tmp78;
-                  cResult[15] = tmp79;
-                  cResult[16] = tmp80;
-                  cResult[17] = tmp81;
-                  cResult[18] = tmp84;
-                  cResult[19] = tmp86;
+                  cResult[13] = tmp68;
+                  cResult[14] = tmp69;
+                  cResult[15] = tmp70;
+                  cResult[16] = tmp71;
+                  cResult[17] = tmp74;
+                  cResult[18] = tmp76;
                 }
                 class O {
                   constructor() {
@@ -931,8 +879,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 cResult[9] = option;
-                cResult[10] = tmp82;
-                tmp81 = tmp82;
+                cResult[10] = tmp72;
+                tmp71 = tmp72;
               }
             }
             class O {
@@ -982,7 +930,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[5] = onStartEditing;
             cResult[6] = option;
             cResult[7] = F;
-            tmp80 = F;
+            tmp70 = F;
           }
         }
         class R {
@@ -1028,7 +976,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[1] = onOptionValueChange;
         cResult[2] = option;
         cResult[3] = R;
-        tmp79 = R;
+        tmp69 = R;
       } else if (option.autocomplete) {
         class O {
           constructor() {
@@ -1071,16 +1019,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        cResult[20] = onEndEditing;
-        cResult[21] = onOptionValueChange;
-        cResult[22] = option;
-        cResult[23] = U;
+        cResult[19] = onEndEditing;
+        cResult[20] = onOptionValueChange;
+        cResult[21] = option;
+        cResult[22] = U;
       } else {
         class O {
           constructor() {
             return onDismiss(option);
           }
         }
+        const guild_id = channel.guild_id;
         class R {
           constructor(arg0) {
             tmp = option;
@@ -1117,148 +1066,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        if (cResult[43] === onEndEditing) {
-          if (cResult[44] === option) {
-            let tmp66 = cResult[45];
-          }
-          if (cResult[46] === onOptionValueChange) {
-            if (cResult[47] === onStartEditing) {
-              if (cResult[48] === option) {
-                let tmp67 = cResult[49];
-              }
-              class O {
-                constructor() {
-                  return onDismiss(option);
-                }
-              }
-              class R {
-                constructor(arg0) {
-                  tmp = option;
-                  tmp2 = onEndEditing(option);
-                  str = undefined;
-                  tmp3 = onOptionValueChange;
-                  if (option != null) {
-                    str = option.displayName;
-                  }
-                  if (str == null) {
-                    str = "";
-                  }
-                  items = [];
-                  items[0] = { type: "text", text: str };
-                  tmp3Result = tmp3(tmp, items);
-                  return;
-                }
-              }
-              class U {
-                constructor(arg0) {
-                  tmp = option;
-                  tmp2 = onEndEditing(option);
-                  str = undefined;
-                  tmp3 = onOptionValueChange;
-                  if (option != null) {
-                    str = option.displayName;
-                  }
-                  if (str == null) {
-                    str = "";
-                  }
-                  items = [];
-                  items[0] = { type: "text", text: str };
-                  tmp3Result = tmp3(tmp, items);
-                  return;
-                }
-              }
-              const hasItem = obj8.includes(autoFocusType);
-              class Q {
-                constructor() {
-                  return onEndEditing(option);
-                }
-              }
-              const obj13 = {
-                style: tmp62,
-                option,
-                guildId: tmp63,
-                initialValue: tmp65,
-                onEndEditing: tmp66,
-                onChangeText: tmp67,
-                onFocus,
-                autoFocus: hasItem,
-                hasError,
-                onPressIn: onPress,
-              };
-              const tmp73 = onDismiss(onStartEditing(tmp2[11]), obj13, option.name);
-              cResult[51] = channel.guild_id;
-              cResult[52] = onPress;
-              cResult[53] = hasError;
-              cResult[54] = onFocus;
-              cResult[55] = option;
-              cResult[56] = dismissableOptionWrapper.option;
-              cResult[57] = tmp65;
-              cResult[58] = tmp66;
-              cResult[59] = tmp67;
-              cResult[60] = hasItem;
-              cResult[61] = tmp73;
-            }
-          }
-          class O {
-            constructor() {
-              return onDismiss(option);
-            }
-          }
-          class R {
-            constructor(arg0) {
-              tmp = option;
-              tmp2 = onEndEditing(option);
-              str = undefined;
-              tmp3 = onOptionValueChange;
-              if (option != null) {
-                str = option.displayName;
-              }
-              if (str == null) {
-                str = "";
-              }
-              items = [];
-              items[0] = { type: "text", text: str };
-              tmp3Result = tmp3(tmp, items);
-              return;
-            }
-          }
-          class U {
-            constructor(arg0) {
-              tmp = option;
-              tmp2 = onEndEditing(option);
-              str = undefined;
-              tmp3 = onOptionValueChange;
-              if (option != null) {
-                str = option.displayName;
-              }
-              if (str == null) {
-                str = "";
-              }
-              items = [];
-              items[0] = { type: "text", text: str };
-              tmp3Result = tmp3(tmp, items);
-              return;
-            }
-          }
-          cResult[47] = onStartEditing;
-          class Q {
-            constructor() {
-              return onEndEditing(option);
-            }
-          }
-          cResult[48] = option;
-          cResult[49] = X;
-          tmp67 = X;
-        }
         class Q {
           constructor() {
             return onEndEditing(option);
           }
         }
-        cResult[43] = onEndEditing;
-        cResult[44] = option;
-        cResult[45] = Q;
-        tmp66 = Q;
+        cResult[41] = onEndEditing;
+        cResult[42] = option;
+        cResult[43] = Q;
       }
       let obj = option(onEndEditing[7]);
     }
@@ -1270,12 +1085,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ onPressAttachmentOption, onFocus, command } = option);
       const tmp = closure_7();
       let type = name.type;
-      if (name(2000).ApplicationCommandOptionType.STRING !== type) {
-        if (tmp2(2000).ApplicationCommandOptionType.INTEGER !== type) {
-          if (tmp2(2000).ApplicationCommandOptionType.NUMBER !== type) {
-            if (tmp2(2000).ApplicationCommandOptionType.ATTACHMENT === type) {
+      if (name(1997).ApplicationCommandOptionType.STRING !== type) {
+        if (tmp2(1997).ApplicationCommandOptionType.INTEGER !== type) {
+          if (tmp2(1997).ApplicationCommandOptionType.NUMBER !== type) {
+            if (tmp2(1997).ApplicationCommandOptionType.ATTACHMENT === type) {
               let obj2 = {
-                style: tmp.option,
                 option: name,
                 onSelectAttachment(text) {
                   dependencyMap(name);
@@ -1295,8 +1109,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               };
               let tmp28Result = onDismiss(AppLauncherAttachmentOptionDefault, obj2, name.name);
               let tmp13 = onDismiss;
-            } else if (tmp2(2000).ApplicationCommandOptionType.BOOLEAN === type) {
-              let obj3 = { style: tmp.option, option: name, initialValue: null, onPress: null, hasError: null };
+            } else if (tmp2(1997).ApplicationCommandOptionType.BOOLEAN === type) {
+              let obj3 = { option: name, initialValue: null, onPress: null, hasError: null };
               let first;
               if (optionValues.current[name.name] != null) {
                 first = tmp38[0];
@@ -1311,7 +1125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj3.hasError = hasError;
               tmp28Result = tmp35(AppLauncherBooleanOptionDefault, obj3, name.name);
               tmp13 = tmp35;
-            } else if (tmp2(2000).ApplicationCommandOptionType.MENTIONABLE === type) {
+            } else if (tmp2(1997).ApplicationCommandOptionType.MENTIONABLE === type) {
               let obj4 = {
                 option: name,
                 initialValue: null,
@@ -1364,9 +1178,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj4.onPress = onPress;
               tmp28Result = tmp28(AppLauncherMentionableOptionDefault, obj4);
               tmp13 = tmp28;
-            } else if (tmp2(2000).ApplicationCommandOptionType.ROLE === type) {
+            } else if (tmp2(1997).ApplicationCommandOptionType.ROLE === type) {
               const obj5 = {
-                style: tmp.option,
                 option: name,
                 initialValue: null,
                 onRolePress: null,
@@ -1400,9 +1213,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj5.onPress = onPress;
               tmp28Result = tmp21(AppLauncherRoleOptionDefault, obj5, name.name);
               tmp13 = tmp21;
-            } else if (tmp2(2000).ApplicationCommandOptionType.USER === type) {
+            } else if (tmp2(1997).ApplicationCommandOptionType.USER === type) {
               const obj6 = {
-                style: tmp.option,
                 option: name,
                 initialValue: null,
                 onUserPress: null,
@@ -1440,9 +1252,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               obj6.onPress = onPress;
               tmp28Result = tmp14(AppLauncherUserOptionDefault, obj6, name.name);
               tmp13 = tmp14;
-            } else if (tmp2(2000).ApplicationCommandOptionType.CHANNEL === type) {
+            } else if (tmp2(1997).ApplicationCommandOptionType.CHANNEL === type) {
               let obj = {
-                style: tmp.option,
                 option: name,
                 initialValue: null,
                 onChannelPress: null,
@@ -1490,9 +1301,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 onPress() {
                   return onDismiss(name);
                 },
-                children: tmp13(tmp2(7018).CircleXIcon, { size: "md" }),
+                children: tmp13(tmp2(7020).CircleXIcon, { size: "md" }),
               };
-              items[1] = tmp13(tmp2(6908).PressableOpacity, obj9);
+              items[1] = tmp13(tmp2(6910).PressableOpacity, obj9);
               obj7.children = items;
               tmp62 = closure_6(View, obj7);
             }
@@ -1503,7 +1314,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let tmp44 = null;
       if (null != name.choices) {
         const obj10 = {
-          style: tmp.option,
           option: name,
           initialValue: null,
           onSelect: null,
@@ -1544,7 +1354,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         onDismiss(AppLauncherChoicesOptionDefault, obj10, name);
       } else if (name.autocomplete) {
         const obj11 = {
-          style: tmp.option,
           channel,
           option: name,
           activeCommand: command,
@@ -1586,7 +1395,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const tmp64Result = AppLauncherAutocompleteOptionDefault;
       } else {
         const obj12 = {
-          style: tmp.option,
           option: name,
           guildId: channel.guild_id,
           initialValue: null,

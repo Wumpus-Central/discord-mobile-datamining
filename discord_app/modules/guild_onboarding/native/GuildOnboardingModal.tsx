@@ -41,7 +41,7 @@ function getScreens(guildId) {
     fullscreen: true,
     headerTitle,
     headerRight,
-    headerLeft: guildId(6924).getHeaderCloseButton(() => {
+    headerLeft: guildId(6926).getHeaderCloseButton(() => {
       if (backShouldLeaveGuild) {
         let tmp4 = onClose;
         let channel = ChannelStore.getChannel(SelectedChannelStore.getLastSelectedChannelId());
@@ -92,8 +92,8 @@ function getScreens(guildId) {
   };
   return obj;
 }
-let constants = fn(7192).GuildOnboardingModalStates;
-const Constants = fn(1087);
+let constants = fn(7194).GuildOnboardingModalStates;
+const Constants = fn(1084);
 ({ GuildFeatures: c10, Routes: closure_11 } = Constants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

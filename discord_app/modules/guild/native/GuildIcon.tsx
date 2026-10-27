@@ -4,10 +4,10 @@ import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_5 = fn(6884).ExpressionSourceGuildRecord;
-const GuildRecord = fn(4841);
+let closure_5 = fn(6886).ExpressionSourceGuildRecord;
+const GuildRecord = fn(4842);
 ({ getGuildIconSource: metroRequire, getGuildAcronym: closure_7 } = GuildRecord);
-const Fonts = fn(1087).Fonts;
+const Fonts = fn(1084).Fonts;
 const jsx = fn(21).jsx;
 const GuildIconSizes = {
   XXXSMALL: "XXXSMALL",
@@ -51,7 +51,7 @@ let obj2 = {
   [GuildIconSizes.XLARGE]: 64,
   [GuildIconSizes.XXLARGE]: 80,
 };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj3 = { guildIcon: { justifyContent: "center", alignItems: "center", overflow: "hidden" } };
 obj3[GuildIconSizes.XXXSMALL] = { width: 10, height: 10, borderRadius: 3.3333333333333335 };
 obj3[GuildIconSizes.XXSMALL_12] = { width: 12, height: 12, borderRadius: 4 };

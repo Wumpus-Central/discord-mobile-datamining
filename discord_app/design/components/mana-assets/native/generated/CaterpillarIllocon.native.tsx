@@ -2,20 +2,20 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import assetHelpers from "../assetHelpers.native.tsx";
-import _modDef12396 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-1x.png.js";
-import _modDef12397 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-2x.png.js";
-import _modDef12398 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-3x.png.js";
+import _modDef12402 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-1x.png.js";
+import _modDef12403 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-2x.png.js";
+import _modDef12404 from "../../../../../../discord_assets/assets/mana/asset-library/generated/CaterpillarIllocon-3x.png.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12396 }, 3: null };
-const obj2 = { uri: _modDef12396 };
-obj[2] = { uri: _modDef12397 };
-const obj3 = { uri: _modDef12397 };
-obj[3] = { uri: _modDef12398 };
+let obj = { 1: null, 2: { uri: _modDef12402 }, 3: null };
+const obj2 = { uri: _modDef12402 };
+obj[2] = { uri: _modDef12403 };
+const obj3 = { uri: _modDef12403 };
+obj[3] = { uri: _modDef12404 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12398 };
+const obj4 = { uri: _modDef12404 };
 let size = fn(2);
 const result = size.fileFinishedImporting(
   "design/components/mana-assets/native/generated/CaterpillarIllocon.native.tsx",
@@ -92,7 +92,7 @@ export const CaterpillarIllocon = ReactCompilerGating.isReactCompilerEnabled()
         accessibilityLabel: null,
         resizeMode: null,
       };
-      obj.source = num(6995).getAssetSource(obj);
+      obj.source = num(6997).getAssetSource(obj);
       obj.style = memo;
       obj.accessible = accessible;
       obj.accessibilityLabel = accessibilityLabel;

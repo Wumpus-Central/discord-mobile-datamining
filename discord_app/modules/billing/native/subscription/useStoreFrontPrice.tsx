@@ -4,7 +4,7 @@ import PremiumUtils from "../../../../utils/PremiumUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const constants = fn(1087).PriceSetAssignmentPurchaseTypes;
+const constants = fn(1084).PriceSetAssignmentPurchaseTypes;
 const PriceStates = {
   PRICE_AVAILABLE: "PRICE_AVAILABLE",
   SUBSCRIPTION_PLAN_UNAVAILABLE: "SUBSCRIPTION_PLAN_UNAVAILABLE",

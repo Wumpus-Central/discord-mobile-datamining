@@ -127,14 +127,14 @@ let closure_11 = async function _saveProfileAndAccountRequest(arg0) {
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({
   Endpoints: closure_4,
   Routes: hasOwnProperty,
   DEVICE_TOKEN: metroRequire,
   DEVICE_VOIP_TOKEN: closure_7,
 } = Constants);
-const PushNotificationConstants = fn(6671);
+const PushNotificationConstants = fn(6672);
 ({ DEVICE_PUSH_VOIP_PROVIDER: closure_8, getDevicePushProvider: closure_9 } = PushNotificationConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsAccountActionCreators.tsx");
@@ -227,8 +227,8 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   if (undefined !== typingIndicatorStyle) {
     let result = null;
     if (null != typingIndicatorStyle) {
-      result = avatar(1413).serializeTypingIndicatorStyle(typingIndicatorStyle);
-      const obj3 = avatar(1413);
+      result = avatar(1410).serializeTypingIndicatorStyle(typingIndicatorStyle);
+      const obj3 = avatar(1410);
     }
     user.typing_indicator_style = result;
   }
@@ -252,10 +252,10 @@ export const saveProfileAndAccountChanges = function saveProfileAndAccountChange
   const obj4 = { headers: null };
   const obj = avatarId(584);
   tmp13 = null != tmp12 && null != value;
-  obj4.headers = avatarId(7079).buildHeadersForMd5({
-    [avatar(7083).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
+  obj4.headers = avatarId(7081).buildHeadersForMd5({
+    [avatar(7085).SafetyScannedUploadSurface.USER_DEFAULT_PROFILE_AVATAR]: avatarOriginalMd5,
   });
-  let tmpResult = avatarId(7079);
+  let tmpResult = avatarId(7081);
   return saveProfileAndAccountRequest(user, obj4).then(
     (result) => {
       DispatcherDefault.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS" });

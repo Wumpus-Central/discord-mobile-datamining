@@ -124,8 +124,8 @@ function navigateActiveTabHistory(arg0) {
     return ChannelTabsStore.Passthrough;
   }
 }
-const Routes = fn(1087).Routes;
-const isStaticChannelRoute = fn(4830).isStaticChannelRoute;
+const Routes = fn(1084).Routes;
+const isStaticChannelRoute = fn(4831).isStaticChannelRoute;
 const TabHistoryNavResult = { Passthrough: "passthrough", Noop: "noop", Navigated: "navigated" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/tabs/ChannelTabsActionCreators.tsx");

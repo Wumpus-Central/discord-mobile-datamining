@@ -179,8 +179,8 @@ function useAgeVerificationRunner(onComplete) {
     }, items2),
   };
 }
-const AbortCodes = fn(1087).AbortCodes;
-const SafetyToastType = fn(7416).SafetyToastType;
+const AbortCodes = fn(1084).AbortCodes;
+const SafetyToastType = fn(7418).SafetyToastType;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()

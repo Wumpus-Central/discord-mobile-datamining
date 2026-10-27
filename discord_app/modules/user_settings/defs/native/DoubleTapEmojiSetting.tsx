@@ -10,10 +10,10 @@ import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const EmojiIntention = fn(1395).EmojiIntention;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const EmojiIntention = fn(1392).EmojiIntention;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { textEmoji: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT } };
 let closure_7 = createStyles.createStyles(obj2);
 fn(558);
@@ -179,7 +179,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
     };
 ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useDoubleTapEmojiDescription() {
       const cResult = c.c(2);
@@ -217,7 +217,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t["96WKNB"]);
   },
-  parent: fn(8332).MobileUserSettings.CHAT,
+  parent: fn(8331).MobileUserSettings.CHAT,
   useTrailing: tmp3,
   onPress: function onPressSetting() {
     let obj2 = { pickerIntention: EmojiIntention.DEFAULT_REACT_EMOJI, onPressEmoji: null, startExpanded: true };

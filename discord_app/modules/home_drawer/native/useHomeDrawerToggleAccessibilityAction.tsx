@@ -19,9 +19,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (!arg0) {
         return null;
       } else if (cResult[0] !== arg1) {
-        let intl = tmp(1128).intl;
+        let intl = tmp(1125).intl;
         let string = intl.string;
-        let h8xFEv = tmp(1128).t;
+        let h8xFEv = tmp(1125).t;
         if (arg1) {
           h8xFEv = h8xFEv.h8xFEv;
           let stringResult = string(h8xFEv);
@@ -78,18 +78,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             name,
             label: stringResult,
             action() {
-              closure_0(5150).setHomeDrawerState(!dependencyMap);
-              const intl = closure_0(1128).intl;
+              closure_0(5151).setHomeDrawerState(!dependencyMap);
+              const intl = closure_0(1125).intl;
               const string = intl.string;
-              const t = closure_0(1128).t;
+              const t = closure_0(1125).t;
               if (dependencyMap) {
                 let stringResult = string(t["0s/g+O"]);
               } else {
                 stringResult = string(t.hfxfVb);
               }
-              const AccessibilityAnnouncer = closure_0(4980).AccessibilityAnnouncer;
+              const AccessibilityAnnouncer = closure_0(4981).AccessibilityAnnouncer;
               AccessibilityAnnouncer.announce(stringResult);
-              const obj = closure_0(5150);
+              const obj = closure_0(5151);
             },
           };
           return obj;

@@ -1,17 +1,17 @@
 // discord_app/modules/app_launcher/native/options/choices/AppLauncherChoicesOption.tsx
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import KeyboardManagerUtils from "../../../../../utils/native/KeyboardManagerUtils.tsx";
-import asyncRequireImpl from "../../../../../../_runtime/02002_asyncRequireImpl.js";
+import asyncRequireImpl from "../../../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: {
-    backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,
+    backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT,
     borderRadius: nativeDefault.radii.lg,
     alignItems: "center",
     padding: 12,
@@ -26,7 +26,7 @@ export default function AppLauncherChoicesOption(option) {
   ({ initialValue: importDefault, onSelect } = option);
   const onOpenChoicesSheet = option.onOpenChoicesSheet;
   const onDismissChoicesSheet = option.onDismissChoicesSheet;
-  ({ style, autoFocus, hasError } = option);
+  ({ autoFocus, hasError } = option);
   const tmp3 = onOpenChoicesSheet(
     onDismissChoicesSheet.useState(() => {
       if (null != type) {
@@ -70,22 +70,20 @@ export default function AppLauncherChoicesOption(option) {
       onSelect(choice);
     };
     obj3.onDismiss = onDismissChoicesSheet;
-    obj2.openLazy(asyncRequireImpl(12049, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj3);
+    obj2.openLazy(asyncRequireImpl(12050, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj3);
   }, items);
   const tmp = closure_6();
   const animationDelayedAutoFocus = option(onSelect[9]).useAnimationDelayedAutoFocus(autoFocus, callback);
   let obj2 = {
     start: true,
     end: true,
-    style: null,
+    style: tmp.container,
     hasError,
     label: null,
     subLabel: null,
     trailing: null,
     onPress: null,
   };
-  const items1 = [tmp.container, style];
-  obj2.style = items1;
   let str = "text-sm/medium";
   if (null == first) {
     str = "text-md/medium";
@@ -104,7 +102,7 @@ export default function AppLauncherChoicesOption(option) {
     tmp10Result = tmp10(tmp7(tmp8[11]).Text, obj4);
   }
   obj2.subLabel = tmp10Result;
-  obj2.trailing = first(option(onSelect[10]).FormArrow, {});
+  obj2.trailing = first(option(onSelect[12]).TableRowArrow, {});
   obj2.onPress = callback;
   return first(option(onSelect[10]).FormRow, obj2);
 }

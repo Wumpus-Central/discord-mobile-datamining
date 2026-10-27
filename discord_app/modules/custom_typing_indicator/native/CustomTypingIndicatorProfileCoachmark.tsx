@@ -3,19 +3,19 @@ import c from "../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import user from "../../../../discord_common/js/packages/protos/discord_protos/users/v1/user.tsx";
-import _modDef3832 from "../intl/CustomTypingIndicator.messages.js";
+import _modDef3833 from "../intl/CustomTypingIndicator.messages.js";
 import openUserSettings from "../../user_settings/core/native/openUserSettings.tsx";
 import CustomTypingIndicatorDynamicAssetDefault from "CustomTypingIndicatorDynamicAsset.tsx";
-import _modDef13077 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
-import _modDef13078 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
+import _modDef13091 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiDuckSweatExample-1x.png.js";
+import _modDef13092 from "../../../../discord_assets/assets/mana/asset-library/generated/EmojiEzExample-1x.png.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const UserSettingsSections = fn(1087).UserSettingsSections;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const UserSettingsSections = fn(1084).UserSettingsSections;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   coachmarkImageContainer: { alignItems: "center", justifyContent: "center", paddingTop: nativeDefault.space.PX_10 },
   typingText: { maxWidth: 100 },
@@ -29,7 +29,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       const cResult = c.c(6);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const items = [_modDef13077, _modDef13078, _modDef13077];
+        const items = [_modDef13091, _modDef13092, _modDef13091];
         cResult[0] = items;
         let first = items;
       } else {
@@ -91,7 +91,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         textStyle: tmp.typingText,
         emojiSource: null,
       };
-      const items = [_modDef13077, _modDef13078, _modDef13077];
+      const items = [_modDef13091, _modDef13092, _modDef13091];
       obj2.emojiSource = items;
       obj.children = jsx(CustomTypingIndicatorDynamicAssetDefault, {
         name: "Locke",
@@ -121,16 +121,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         str = position;
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = markAsDismissed(1128).intl;
-        const stringResult = intl.string(analyticsLocations(3832).Eq5jIA);
+        const intl = markAsDismissed(1125).intl;
+        const stringResult = intl.string(analyticsLocations(3833).Eq5jIA);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
         first = cResult[0];
       }
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl2 = markAsDismissed(1128).intl;
-        const stringResult1 = intl2.string(analyticsLocations(3832).lSBp2M);
+        const intl2 = markAsDismissed(1125).intl;
+        const stringResult1 = intl2.string(analyticsLocations(3833).lSBp2M);
         cResult[1] = stringResult1;
         let tmp7 = stringResult1;
       } else {
@@ -138,8 +138,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = markAsDismissed(576);
       const tmp10 = analyticsLocations;
-      analyticsLocations = analyticsLocations(7253)(
-        analyticsLocations(7278).CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK,
+      analyticsLocations = analyticsLocations(7255)(
+        analyticsLocations(7280).CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK,
       ).analyticsLocations;
       if (cResult[2] !== markAsDismissed) {
         class P {
@@ -173,8 +173,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return;
           }
         }
-        const intl3 = markAsDismissed(1128).intl;
-        const stringResult2 = intl3.string(tmp10(3832)["6NP6ic"]);
+        const intl3 = markAsDismissed(1125).intl;
+        const stringResult2 = intl3.string(tmp10(3833)["6NP6ic"]);
         cResult[4] = tmp16;
         cResult[5] = stringResult2;
         let tmp15 = stringResult2;
@@ -230,7 +230,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       cResult[6] = analyticsLocations;
       cResult[7] = markAsDismissed;
       cResult[8] = fn;
-      const tmp11 = analyticsLocations(7253);
+      const tmp11 = analyticsLocations(7255);
     }
   : function CustomTypingIndicatorProfileCoachmark(visible) {
       visible = visible.visible;
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return closure_1_7(closure_1_9, {});
         };
         const intl = util.intl;
-        obj.buttonLabel = intl.string(_modDef3832["6NP6ic"]);
+        obj.buttonLabel = intl.string(_modDef3833["6NP6ic"]);
         obj.onButtonPress = function onButtonPress() {
           const obj2 = { screen: analyticsLocations.TYPING_INDICATOR, params: { analyticsLocations } };
           visible(str[13]).openUserSettings(obj2, () => {

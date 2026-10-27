@@ -10,9 +10,9 @@ import UserStore from "../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const useContactSyncModalStore = fn(13582).useContactSyncModalStore;
+const useContactSyncModalStore = fn(13596).useContactSyncModalStore;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   header: {
     borderBottomWidth: 0,
@@ -31,7 +31,7 @@ obj2.container = {
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   justifyContent: "center",
   paddingBottom: 44,
-  paddingTop: fn(5268).NAV_BAR_HEIGHT + 32,
+  paddingTop: fn(5269).NAV_BAR_HEIGHT + 32,
 };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -220,7 +220,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           tmp15 = tmp18;
         }
         const obj3 = { onNext: tmp9, loading: false, initialName: name };
-        const tmp14 = jsx(allowPhone(13603), { onNext: tmp9, loading: false, initialName: name });
+        const tmp14 = jsx(allowPhone(13617), { onNext: tmp9, loading: false, initialName: name });
         cResult[6] = tmp9;
         cResult[7] = name;
         cResult[8] = tmp14;
@@ -263,7 +263,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
         name = "";
       }
       obj2.initialName = name;
-      obj.children = jsx(allowPhone(13603), { onNext: callback, loading: false, initialName: null });
+      obj.children = jsx(allowPhone(13617), { onNext: callback, loading: false, initialName: null });
       return <View style={tmp.container}>{null}</View>;
     };
 ReactCompilerGating = fn(558);
@@ -288,7 +288,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = {};
         const obj3 = {
           ignoreKeyboard: true,
-          impressionName: tmp(1275).ImpressionNames.DISCOVERABILITY,
+          impressionName: tmp(1272).ImpressionNames.DISCOVERABILITY,
           fullscreen: true,
           headerLeft() {
             return null;
@@ -308,10 +308,10 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             return <closure_2_9 onComplete={onComplete} />;
           },
         };
-        obj2[tmp(1107).DiscoverabilityScenes.LANDING] = obj3;
+        obj2[tmp(1104).DiscoverabilityScenes.LANDING] = obj3;
         const obj4 = {
           ignoreKeyboard: true,
-          impressionName: tmp(1275).ImpressionNames.DISCOVERABILITY,
+          impressionName: tmp(1272).ImpressionNames.DISCOVERABILITY,
           fullscreen: true,
           headerTitle() {
             return null;
@@ -320,7 +320,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
             return <closure_2_10 onComplete={onComplete} />;
           },
         };
-        obj2[tmp(1107).DiscoverabilityScenes.NAME] = obj4;
+        obj2[tmp(1104).DiscoverabilityScenes.NAME] = obj4;
         cResult[2] = tmp5;
         cResult[3] = obj2;
         let tmp7 = obj2;
@@ -328,8 +328,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[3];
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t["13/7kX"]);
+        const intl = tmp(1125).intl;
+        const stringResult = intl.string(tmp(1125).t["13/7kX"]);
         cResult[4] = stringResult;
         let tmp8 = stringResult;
       } else {
@@ -364,7 +364,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       let obj = {
         headerStyle: closure_8().header,
         screens: null,
-        initialRouteName: onComplete(1107).DiscoverabilityScenes.LANDING,
+        initialRouteName: onComplete(1104).DiscoverabilityScenes.LANDING,
         headerBackTitle: null,
       };
       const items = [onComplete];
@@ -430,16 +430,16 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         return obj;
       }, items);
-      const intl = onComplete(1128).intl;
-      obj.headerBackTitle = intl.string(onComplete(1128).t["13/7kX"]);
-      return jsx(onComplete(7095).Navigator, {
+      const intl = onComplete(1125).intl;
+      obj.headerBackTitle = intl.string(onComplete(1125).t["13/7kX"]);
+      return jsx(onComplete(7097).Navigator, {
         headerStyle: closure_8().header,
         screens: null,
-        initialRouteName: onComplete(1107).DiscoverabilityScenes.LANDING,
+        initialRouteName: onComplete(1104).DiscoverabilityScenes.LANDING,
         headerBackTitle: null,
       });
     };
-tmp2.modalConfig = { animation: fn(1087).ModalAnimation.SLIDE_IN_OUT };
+tmp2.modalConfig = { animation: fn(1084).ModalAnimation.SLIDE_IN_OUT };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/components/RedesignDiscoverabilityModal.tsx");
 

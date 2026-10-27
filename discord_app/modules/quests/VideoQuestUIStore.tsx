@@ -40,17 +40,17 @@ const VideoProgressState = {
   IN_PROGRESS: "IN_PROGRESS",
   COMPLETED: "COMPLETED",
 };
-let identity = fn(1269);
+let identity = fn(1266);
 identity = identity.createWithEqualityFn();
-fn(5164);
+fn(5165);
 const obj4 = { name: "videoQuestUIState", storage: null, partialize: null, version: 0 };
-const module_5164 = fn(5164);
-obj4.storage = module_5164.createJSONStorage(() => require("LocalStorageWrapper"));
+const module_5165 = fn(5165);
+obj4.storage = module_5165.createJSONStorage(() => require("LocalStorageWrapper"));
 obj4.partialize = function partialize(volume) {
   return { volume: volume.volume, muted: volume.muted, videoProgress: volume.videoProgress };
 };
 const withEqualityFnResult = identity(
-  module_5164.persist((arg0, arg1) => {
+  module_5165.persist((arg0, arg1) => {
     _require = arg0;
     closure_1 = arg1;
     return {
@@ -61,10 +61,10 @@ const withEqualityFnResult = identity(
       videoProgress: {},
       transcript: null,
       setVolume(volume) {
-        volume(1274).batchUpdates(() => volume({ volume }));
+        volume(1271).batchUpdates(() => volume({ volume }));
       },
       setMuted(muted) {
-        muted(1274).batchUpdates(() => muted({ muted }));
+        muted(1271).batchUpdates(() => muted({ muted }));
       },
       setVideoProgress(arg0, timestampSec, duration) {
         closure_0 = arg0;
@@ -77,7 +77,7 @@ const withEqualityFnResult = identity(
           num = 0;
         }
         const maxTimestampSec = Math.max(num, timestampSec);
-        closure_0(1274).batchUpdates(() => {
+        closure_0(1271).batchUpdates(() => {
           const obj = { videoProgress: null };
           const obj2 = {};
           const merged = Object.assign(timestampSec().videoProgress);
@@ -87,10 +87,10 @@ const withEqualityFnResult = identity(
         });
       },
       setTranscriptEnabled(transcriptEnabled) {
-        transcriptEnabled(1274).batchUpdates(() => transcriptEnabled({ transcriptEnabled }));
+        transcriptEnabled(1271).batchUpdates(() => transcriptEnabled({ transcriptEnabled }));
       },
       setCaptionEnabled(captionEnabled) {
-        captionEnabled(1274).batchUpdates(() => captionEnabled({ captionEnabled }));
+        captionEnabled(1271).batchUpdates(() => captionEnabled({ captionEnabled }));
       },
       getVideoProgress(questId) {
         return closure_1().videoProgress[questId];
@@ -109,7 +109,7 @@ const withEqualityFnResult = identity(
         return IN_PROGRESS;
       },
       resetQuest(questId) {
-        questId(1274).batchUpdates(() => {
+        questId(1271).batchUpdates(() => {
           const items = [questId];
           questId({ videoProgress: _objectWithoutProperties(closure_1().videoProgress, items.map(_toPropertyKey)) });
         });
@@ -120,7 +120,7 @@ const withEqualityFnResult = identity(
         });
       },
       setTranscriptAsset(transcript) {
-        transcript(1274).batchUpdates(() => {
+        transcript(1271).batchUpdates(() => {
           transcript({ transcript });
         });
       },

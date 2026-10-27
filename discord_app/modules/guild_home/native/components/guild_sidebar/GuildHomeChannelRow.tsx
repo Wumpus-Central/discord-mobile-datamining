@@ -5,13 +5,13 @@ import BaseChannelItemDefault from "../../../../guild_sidebar/native/BaseChannel
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const Routes = fn(1087).Routes;
-const StaticChannelRoute = fn(4830).StaticChannelRoute;
+const Routes = fn(1084).Routes;
+const StaticChannelRoute = fn(4831).StaticChannelRoute;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = {
   container: {
-    marginVertical: fn(11953).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11954).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: 8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -19,7 +19,7 @@ let obj2 = {
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11953).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11954).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: 8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -42,11 +42,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp5 = cResult[1];
       }
-      const ChannelModes = tmp(13276).ChannelModes;
+      const ChannelModes = tmp(13290).ChannelModes;
       const tmp6 = selected ? ChannelModes.SELECTED : ChannelModes.DEFAULT;
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t.VbpLyU);
+        const intl = tmp(1125).intl;
+        const stringResult = intl.string(tmp(1125).t.VbpLyU);
         cResult[2] = stringResult;
         let tmp7 = stringResult;
       } else {
@@ -61,8 +61,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp9 = cResult[4];
       }
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl2 = tmp(1128).intl;
-        const stringResult1 = intl2.string(tmp(1128).t.VbpLyU);
+        const intl2 = tmp(1125).intl;
+        const stringResult1 = intl2.string(tmp(1125).t.VbpLyU);
         cResult[5] = stringResult1;
         let tmp10 = stringResult1;
       } else {
@@ -70,9 +70,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] !== tmp6) {
         const obj3 = { name: tmp10, mode: tmp6 };
-        const tmp15 = jsx(tmp(13276).BaseChannelName, { name: tmp10, mode: tmp6 });
-        const obj4 = { mode: tmp6, IconComponent: tmp(15082).SignPostIcon };
-        const tmp16 = jsx(tmp(13276).BaseChannelIcon, { mode: tmp6, IconComponent: tmp(15082).SignPostIcon });
+        const tmp15 = jsx(tmp(13290).BaseChannelName, { name: tmp10, mode: tmp6 });
+        const obj4 = { mode: tmp6, IconComponent: tmp(15118).SignPostIcon };
+        const tmp16 = jsx(tmp(13290).BaseChannelIcon, { mode: tmp6, IconComponent: tmp(15118).SignPostIcon });
         cResult[6] = tmp6;
         cResult[7] = tmp15;
         cResult[8] = tmp16;
@@ -123,7 +123,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback = noop.useCallback(() => {
         router_utils.transitionTo(Routes.CHANNEL(id, StaticChannelRoute.GUILD_HOME));
       }, items);
-      const ChannelModes = id(13276).ChannelModes;
+      const ChannelModes = id(13290).ChannelModes;
       if (selected) {
         let DEFAULT = ChannelModes.SELECTED;
         let tmp5 = tmp3;
@@ -142,16 +142,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         icon: null,
       };
       const tmp = closure_7();
-      const intl = tmp5(1128).intl;
-      obj.accessibilityLabel = intl.string(tmp5(1128).t.VbpLyU);
+      const intl = tmp5(1125).intl;
+      obj.accessibilityLabel = intl.string(tmp5(1125).t.VbpLyU);
       obj.accessibilityState = { selected };
       obj.mode = DEFAULT;
       const obj2 = { name: null, mode: null };
-      const intl2 = tmp5(1128).intl;
-      obj2.name = intl2.string(tmp5(1128).t.VbpLyU);
+      const intl2 = tmp5(1125).intl;
+      obj2.name = intl2.string(tmp5(1125).t.VbpLyU);
       obj2.mode = DEFAULT;
-      obj.name = jsx(tmp5(13276).BaseChannelName, { name: null, mode: null });
-      obj.icon = jsx(tmp5(13276).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(15082).SignPostIcon });
+      obj.name = jsx(tmp5(13290).BaseChannelName, { name: null, mode: null });
+      obj.icon = jsx(tmp5(13290).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp5(15118).SignPostIcon });
       return (
         <tmp7
           onPress={callback}

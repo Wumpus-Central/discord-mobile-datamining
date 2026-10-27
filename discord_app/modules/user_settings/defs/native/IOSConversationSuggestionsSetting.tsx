@@ -3,11 +3,11 @@ import LoggerDefault from "../../../debug/Logger.tsx";
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import PlatformUtils from "../../../../utils/PlatformUtils.tsx";
-import _mod4886 from "../../../../../_runtime/metro/04886__.js";
+import _mod4887 from "../../../../../_runtime/metro/04887__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const identity = fn(1269);
+const identity = fn(1266);
 let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -22,14 +22,14 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_4(first, _mod4886.shallow);
+      return closure_4(first, _mod4887.shallow);
     }
   : function useConversationSuggestionsEnabled() {
-      return closure_4((isEnabled) => isEnabled.isEnabled, _mod4886.shallow);
+      return closure_4((isEnabled) => isEnabled.isEnabled, _mod4887.shallow);
     };
 fn(17).NativeModules.IntentsHandler;
 ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIOSConversationSuggestionsSettingValue() {
       const cResult = c.c(2);
@@ -67,7 +67,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.J8foZq);
   },
-  parent: fn(8332).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8331).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useIOSConversationSuggestionsSettingValue() {
         const cResult = c.c(2);
@@ -105,7 +105,7 @@ const toggle = SettingBuilders.createToggle({
     result
       .then((result) => {
         closure_0 = result;
-        closure_0(1274).batchUpdates(() => state.setState({ isEnabled }));
+        closure_0(1271).batchUpdates(() => state.setState({ isEnabled }));
       })
       .catch((error) => {
         new LoggerDefault("ConversationSuggestions").error("Error suggesting conversations", error);

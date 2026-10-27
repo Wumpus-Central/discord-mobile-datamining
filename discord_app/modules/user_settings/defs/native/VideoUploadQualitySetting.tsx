@@ -7,9 +7,9 @@ import UserSettingsText from "../../chat/native/UserSettingsText.tsx";
 import UnsyncedUserSettingsStore from "../../UnsyncedUserSettingsStore.tsx";
 
 require = fn;
-const VideoQualitySettings = fn(1209).VideoQualitySettings;
+const VideoQualitySettings = fn(1206).VideoQualitySettings;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useVideoUploadQualitySettingValue() {
       const cResult = c.c(2);
@@ -36,7 +36,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t.PXq9f1);
   },
-  parent: fn(8332).MobileUserSettings.CHAT,
+  parent: fn(8331).MobileUserSettings.CHAT,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useVideoUploadQualitySettingValue() {
         const cResult = c.c(2);

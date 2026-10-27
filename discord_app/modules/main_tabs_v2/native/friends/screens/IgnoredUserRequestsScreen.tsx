@@ -5,8 +5,8 @@ import RelationshipStore from "../../../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const UserRowModes = fn(10616).UserRowModes;
-const RelationshipTypes = fn(1087).RelationshipTypes;
+const UserRowModes = fn(10619).UserRowModes;
+const RelationshipTypes = fn(1084).RelationshipTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

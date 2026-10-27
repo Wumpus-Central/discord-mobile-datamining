@@ -3,8 +3,8 @@ import ComponentDispatchUtils from "../../../../utils/ComponentDispatchUtils.tsx
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ComponentActions = fn(1087).ComponentActions;
-let closure_5 = fn(10745).OAUTH2_AUTHORIZE_MODAL_KEY;
+const ComponentActions = fn(1084).ComponentActions;
+let closure_5 = fn(10748).OAUTH2_AUTHORIZE_MODAL_KEY;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/native/useHandleOAuthNavigation.tsx");
 
@@ -21,7 +21,7 @@ export default function useHandleOAuthNavigation() {
       };
       obj2.pushLazy(showOAuth2Modal(paths[5])(paths[4], paths.paths), obj3, closure_1_5);
     }
-    let ComponentDispatch = showOAuth2Modal(1123).ComponentDispatch;
+    let ComponentDispatch = showOAuth2Modal(1120).ComponentDispatch;
     const subscription = ComponentDispatch.subscribe(SHOW_OAUTH2_MODAL.SHOW_OAUTH2_MODAL, showOAuth2Modal);
     return () => {
       const ComponentDispatch = ComponentDispatchUtils.ComponentDispatch;

@@ -8,9 +8,9 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const maxLength = fn(1394).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
+const maxLength = fn(1391).CUSTOM_GIFT_MESSAGE_MAX_LENGTH;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { container: { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
