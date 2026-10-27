@@ -1,26 +1,26 @@
-// === Module 16885: AppIconRows ===
+// === Module 16927: AppIconRows ===
 
-// Module 16885 (AppIconRows)
+// Module 16927 (AppIconRows)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
-import AppIconTypes from "AppIconTypes" /* 9866 */;
-import AppIconUtils from "AppIconUtils" /* 14767 */;
-import AppIconRowDefault from "AppIconRow" /* 16886 */;
-import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 16887 */;
+import util from "util" /* 1125 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
+import AppIconTypes from "AppIconTypes" /* 9868 */;
+import AppIconUtils from "AppIconUtils" /* 14803 */;
+import AppIconRowDefault from "AppIconRow" /* 16928 */;
+import HexagonCampaignAppIconSectionDefault from "HexagonCampaignAppIconSection" /* 16929 */;
 import _slicedToArray from "module_32" /* 32 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13138 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13152 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const isHexagonCampaignAppIcon = fn(9865).isHexagonCampaignAppIcon;
+const isHexagonCampaignAppIcon = fn(9867).isHexagonCampaignAppIcon;
 const createElement = fn(19).createElement;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_13 = createStyles.createStyles({ container: { padding: 16 }, bottomUpsellPadding: { paddingBottom: 56 } });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function BackwardsCompatibleAppIconRows(arg0) {
@@ -43,10 +43,10 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
   } else {
     onLongPress = cResult[0];
   }
-  const TableRowGroup = tmp(6987).TableRowGroup;
+  const TableRowGroup = tmp(6989).TableRowGroup;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1128).intl;
-    const stringResult = intl.string(tmp(1128).t.N4YDao);
+    const intl = tmp(1125).intl;
+    const stringResult = intl.string(tmp(1125).t.N4YDao);
     cResult[1] = stringResult;
     let tmp10 = stringResult;
   } else {
@@ -112,8 +112,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
     const icons = merged.icons;
     let obj = { style: tmp4.container, children: null };
     const obj2 = { title: merged.title, accessibilityRole: "radiogroup", accessibilityLabel: null, hasIcons: true, children: null };
-    const intl = merged(1128).intl;
-    obj2.accessibilityLabel = intl.string(merged(1128).t.N4YDao);
+    const intl = merged(1125).intl;
+    obj2.accessibilityLabel = intl.string(merged(1125).t.N4YDao);
     obj2.children = icons.map((id) => {
       const obj = {};
       merged = Object.assign(merged);
@@ -123,7 +123,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Backwa
       obj.onLongPress = onLongPress;
       return createElement(AppIconRowDefault, {});
     });
-    obj.children = closure_10(merged(6987).TableRowGroup, obj2);
+    obj.children = closure_10(merged(6989).TableRowGroup, obj2);
     return closure_10(View, obj);
   }
 });

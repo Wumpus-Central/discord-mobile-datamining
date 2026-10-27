@@ -1,16 +1,16 @@
-// === Module 5146: useColorThemeBackground ===
+// === Module 5147: useColorThemeBackground ===
 
-// Module 5146 (useColorThemeBackground)
+// Module 5147 (useColorThemeBackground)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1256 */;
-import GuildThemePresets from "GuildThemePresets" /* 5147 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5149 */;
-import MobileThemesUtils from "MobileThemesUtils" /* 5202 */;
+import util from "util" /* 1125 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
+import GuildThemePresets from "GuildThemePresets" /* 5148 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5150 */;
+import MobileThemesUtils from "MobileThemesUtils" /* 5203 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1207 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4995 */;
+import ThemeStore from "ThemeStore" /* 1204 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4996 */;
 
 const require = globalThis.__r;
 
@@ -110,7 +110,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useColor
   tmp15 = tmp16;
   const tmpResult3 = useStateFromStores;
 }) : (function useColorThemeBackground() {
-  const tmp = stateFromStores(5149)();
+  const tmp = stateFromStores(5150)();
   _require = tmp;
   const items = [ThemeStore];
   stateFromStores = require("useStateFromStores").useStateFromStores(items, () => theme.theme);

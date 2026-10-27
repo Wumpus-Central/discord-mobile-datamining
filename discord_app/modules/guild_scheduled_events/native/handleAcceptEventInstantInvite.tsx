@@ -1,8 +1,8 @@
-// === Module 10014: handleAcceptEventInstantInvite ===
+// === Module 10016: handleAcceptEventInstantInvite ===
 
-// Module 10014 (handleAcceptEventInstantInvite)
+// Module 10016 (handleAcceptEventInstantInvite)
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8866 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6784 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6785 */;
 
 const require = fn;
 const size = fn(2);
@@ -40,10 +40,10 @@ export default function handleAcceptEventInstantInvite(code) {
           guildScheduledEvent(8866).acceptInvite(obj3);
           const obj4 = guildScheduledEvent(8866);
         }
-        tmpResult = tmp(10015);
+        tmpResult = tmp(10017);
       }
     }
   }
-  obj = code(7808);
+  obj = code(7809);
   tmp = code;
 };

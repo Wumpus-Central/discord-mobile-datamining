@@ -1,8 +1,8 @@
 // === Module 9215: useIsSecureFramesUIEnabled ===
 
 // Module 9215 (useIsSecureFramesUIEnabled)
-import ChannelStore from "ChannelStore" /* 4823 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
 
 const require = fn;
 function isSecureFramesUIEnabled(isCallRTCConnectionEmpty) {

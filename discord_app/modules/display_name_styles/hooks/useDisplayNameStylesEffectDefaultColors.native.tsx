@@ -1,15 +1,15 @@
-// === Module 10665: useDisplayNameStylesEffectDefaultColors ===
+// === Module 10668: useDisplayNameStylesEffectDefaultColors ===
 
-// Module 10665 (useDisplayNameStylesEffectDefaultColors)
+// Module 10668 (useDisplayNameStylesEffectDefaultColors)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1411 */;
-import useToken from "useToken" /* 5252 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1408 */;
+import useToken from "useToken" /* 5253 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1410);
+const DisplayNameStylesConstants = fn(1407);
 ({ DISPLAY_NAME_STYLES_GRADIENT_PRESETS: closure_4, DISPLAY_NAME_STYLES_GUMMY_PRESETS: hasOwnProperty, DISPLAY_NAME_STYLES_PRISM_PRESETS: metroRequire } = DisplayNameStylesConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

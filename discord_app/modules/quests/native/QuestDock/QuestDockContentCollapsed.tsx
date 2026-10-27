@@ -1,16 +1,16 @@
-// === Module 16526: QuestDockContentCollapsed ===
+// === Module 16565: QuestDockContentCollapsed ===
 
-// Module 16526 (QuestDockContentCollapsed)
-import spring from "spring" /* 5247 */;
+// Module 16565 (QuestDockContentCollapsed)
+import spring from "spring" /* 5248 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const QuestDockMode = fn(6710).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16441).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(6711).QuestDockMode;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16480).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { questDockContentCollapsed: null };
 let obj3 = {};
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
@@ -31,7 +31,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ children, hideOnExpand } = arg0);
   _require = tmp4;
   const tmp5 = closure_7();
-  const activeQuestDockMode = noop.useContext(tmp(16442).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = noop.useContext(tmp(16481).QuestDockGestureContext).activeQuestDockMode;
   let obj = require("c");
   class C {
     constructor() {
@@ -81,7 +81,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
     const obj3 = { style: tmp8, animatedProps, children };
-    const tmp12 = jsx(activeQuestDockMode(7168), { style: tmp8, animatedProps, children });
+    const tmp12 = jsx(activeQuestDockMode(7170), { style: tmp8, animatedProps, children });
     cResult[3] = children;
     cResult[4] = tmp8;
     cResult[5] = animatedProps;
@@ -101,7 +101,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp = hideOnExpand;
   }
   hideOnExpand = tmp;
-  const activeQuestDockMode = noop.useContext(hideOnExpand(16442).QuestDockGestureContext).activeQuestDockMode;
+  const activeQuestDockMode = noop.useContext(hideOnExpand(16481).QuestDockGestureContext).activeQuestDockMode;
   const tmp2 = closure_7();
   class D {
     constructor() {
@@ -118,12 +118,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return obj1;
     }
   }
-  let obj = hideOnExpand(5052);
-  D.__closure = { withSpring: hideOnExpand(5247).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  let obj = hideOnExpand(5053);
+  D.__closure = { withSpring: hideOnExpand(5248).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   D.__workletHash = 3717871904776;
   D.__initData = __initData3;
   const animatedStyle = obj.useAnimatedStyle(D);
-  const obj2 = { withSpring: hideOnExpand(5247).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  const obj2 = { withSpring: hideOnExpand(5248).withSpring, activeQuestDockMode, QuestDockMode, hideOnExpand: tmp, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   const fn = function _() {
     let pointerEvents = "auto";
     if (activeQuestDockMode.get() !== QuestDockMode.COLLAPSED) {
@@ -137,9 +137,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   fn.__closure = { activeQuestDockMode, QuestDockMode, hideOnExpand: tmp };
   fn.__workletHash = 6904949409659;
   fn.__initData = __initData4;
-  const animatedProps = hideOnExpand(5052).useAnimatedProps(fn);
+  const animatedProps = hideOnExpand(5053).useAnimatedProps(fn);
   const obj4 = { style: null, animatedProps, children: children.children };
   const items = [tmp2.questDockContentCollapsed, animatedStyle];
   obj4.style = items;
-  return jsx(activeQuestDockMode(7168), { style: null, animatedProps, children: children.children });
+  return jsx(activeQuestDockMode(7170), { style: null, animatedProps, children: children.children });
 }));

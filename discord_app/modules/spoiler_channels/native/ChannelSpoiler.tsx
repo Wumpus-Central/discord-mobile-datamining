@@ -1,27 +1,27 @@
-// === Module 10898: ChannelSpoiler ===
+// === Module 10901: ChannelSpoiler ===
 
-// Module 10898 (ChannelSpoiler)
+// Module 10901 (ChannelSpoiler)
 import nativeDefault from "native" /* 587 */;
-import RootNavigationRef from "RootNavigationRef" /* 5151 */;
-import useChannelNameDefault from "useChannelName" /* 5604 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5710 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6830 */;
-import GatedContentDefault from "GatedContent" /* 10897 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10900 */;
+import RootNavigationRef from "RootNavigationRef" /* 5152 */;
+import useChannelNameDefault from "useChannelName" /* 5605 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5711 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6832 */;
+import GatedContentDefault from "GatedContent" /* 10900 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10903 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6772 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6773 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VoicePanelControlsModes = fn(10899).VoicePanelControlsModes;
+const VoicePanelControlsModes = fn(10902).VoicePanelControlsModes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { subtitle: { textAlign: "center", lineHeight: 22 }, subtitleContainer: { alignItems: "center" }, divider: null, subtitleMeasure: null };
 let size = { height: 1, width: "100%", backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginVertical: 16 };
 obj2.divider = size;
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
     isVocalResult = stateFromStores1.isVocal();
   }
   dependencyMap = isVocalResult;
-  setControlsMode = noop.useContext(tmp6(10900)).setControlsMode;
+  setControlsMode = noop.useContext(tmp6(10903)).setControlsMode;
   const items2 = [, , , ];
   ({ guildId: arr3[0], channelId: arr3[1] } = channelId);
   items2[2] = setControlsMode;
@@ -193,12 +193,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
     let obj3 = { style: { flexDirection: "row", alignItems: "center", gap: 4, flexShrink: 1 }, children: null };
     const items4 = [closure_10(channelIconComponent, { size: "lg", color: "mobile-text-heading-primary" }), ];
     const obj5 = { variant: "heading-xxl/bold", color: "mobile-text-heading-primary", lineClamp: 1, style: { flexShrink: 1 }, children: tmp7 };
-    items4[1] = closure_10(tmp(5234).Text, obj5);
+    items4[1] = closure_10(tmp(5235).Text, obj5);
     obj3.children = items4;
     let stringResult = closure_11(View, obj3);
   } else {
-    const intl = tmp(1128).intl;
-    stringResult = intl.string(tmp(1128).t["q38/ae"]);
+    const intl = tmp(1125).intl;
+    stringResult = intl.string(tmp(1125).t["q38/ae"]);
   }
   let topic;
   if (stateFromStores1 != null) {
@@ -212,29 +212,29 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
       const obj7 = { style: tmp4.subtitleMeasure, pointerEvents: "none", children: null };
       const obj8 = { variant: "text-md/medium", maxFontSizeMultiplier: 2, onTextLayout: callback1, children: null };
       const obj9 = { channelId: stateFromStores1.id };
-      obj8.children = tmp6(5705).parseTopic(stateFromStores1.topic, true, obj9);
-      obj7.children = closure_10(tmp(5234).Text, obj8);
+      obj8.children = tmp6(5706).parseTopic(stateFromStores1.topic, true, obj9);
+      obj7.children = closure_10(tmp(5235).Text, obj8);
       const items5 = [closure_10(View, obj7), , , ];
       const obj10 = { color: "text-muted", variant: "text-md/medium", style: tmp4.subtitle, maxFontSizeMultiplier: 2, lineClamp: 3, children: null };
-      const tmp6Result = tmp6(5705);
+      const tmp6Result = tmp6(5706);
       const obj11 = { channelId: stateFromStores1.id };
-      obj10.children = tmp6(5705).parseTopic(stateFromStores1.topic, true, obj11);
-      items5[1] = closure_10(tmp(5234).Text, obj10);
+      obj10.children = tmp6(5706).parseTopic(stateFromStores1.topic, true, obj11);
+      items5[1] = closure_10(tmp(5235).Text, obj10);
       let tmp24Result = null;
       if (tmp5[0]) {
         const obj12 = { onPress: callback2, accessibilityRole: "button", children: null };
         const obj13 = { variant: "text-sm/medium", color: "text-brand", style: { textDecorationLine: "underline" }, children: null };
-        const intl2 = tmp(1128).intl;
-        obj13.children = intl2.string(tmp(1128).t["/QvRak"]);
-        obj12.children = closure_10(tmp(5234).Text, obj13);
-        tmp24Result = closure_10(tmp(6908).PressableHighlight, obj12);
+        const intl2 = tmp(1125).intl;
+        obj13.children = intl2.string(tmp(1125).t["/QvRak"]);
+        obj12.children = closure_10(tmp(5235).Text, obj13);
+        tmp24Result = closure_10(tmp(6910).PressableHighlight, obj12);
       }
       items5[2] = tmp24Result;
       const obj14 = { style: tmp4.divider };
       items5[3] = closure_10(View, obj14);
       obj6.children = items5;
-      tmp23Result = closure_11(tmp(5977).Stack, obj6);
-      const tmp6Result3 = tmp6(5705);
+      tmp23Result = closure_11(tmp(5978).Stack, obj6);
+      const tmp6Result3 = tmp6(5706);
     }
     str = stateFromStores1.topic;
   }
@@ -247,11 +247,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
   obj15.onDisagree = callback;
   obj15.title = stringResult;
   obj15.subtitle = tmp23Result;
-  const intl3 = tmp(1128).intl;
+  const intl3 = tmp(1125).intl;
   obj15.description = intl3.string(require("util").t["08bm2Z"]);
-  const intl4 = tmp(1128).intl;
+  const intl4 = tmp(1125).intl;
   obj15.agreement = intl4.string(require("util").t.KmRwcW);
-  const intl5 = tmp(1128).intl;
+  const intl5 = tmp(1125).intl;
   obj15.disagreement = intl5.string(require("util").t["/g10LC"]);
   let id;
   if (stateFromStores != null) {

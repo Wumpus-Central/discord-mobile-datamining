@@ -1,17 +1,17 @@
-// === Module 11111: useTenureBadging ===
+// === Module 11114: useTenureBadging ===
 
-// Module 11111 (useTenureBadging)
+// Module 11114 (useTenureBadging)
 import _mod19 from "module_19" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7712 */;
-import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11112 */;
-import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 11113 */;
-import UserProfileStore from "UserProfileStore" /* 7703 */;
-import UserStore from "UserStore" /* 1392 */;
-import SubscriptionStore from "SubscriptionStore" /* 2058 */;
-import PremiumConstants from "PremiumConstants" /* 1394 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7713 */;
+import useTieredTenureBadgeForUser from "useTieredTenureBadgeForUser" /* 11115 */;
+import TenureBadgeWithheldStateExperiment from "TenureBadgeWithheldStateExperiment" /* 11116 */;
+import UserProfileStore from "UserProfileStore" /* 7704 */;
+import UserStore from "UserStore" /* 1389 */;
+import SubscriptionStore from "SubscriptionStore" /* 2055 */;
+import PremiumConstants from "PremiumConstants" /* 1391 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import "ReactCompilerGating";
 import size from "module_2" /* 2 */;
@@ -168,11 +168,11 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePremium
   const obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
-    const isPremiumExactlyResult = tmp(1991).isPremiumExactly(stateFromStores, closure_6.TIER_2);
+    const isPremiumExactlyResult = tmp(1988).isPremiumExactly(stateFromStores, closure_6.TIER_2);
     cResult[2] = stateFromStores;
     cResult[3] = isPremiumExactlyResult;
     let tmp8 = isPremiumExactlyResult;
-    const tmpResult3 = tmp(1991);
+    const tmpResult3 = tmp(1988);
   } else {
     tmp8 = cResult[3];
   }

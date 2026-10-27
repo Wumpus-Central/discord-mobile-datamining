@@ -7,8 +7,8 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const Text = fn(17).Text;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
-let closure_4 = createStyles.createStyles({ text: { fontFamily: fn(1087).Fonts.PRIMARY_MEDIUM, includeFontPadding: false } });
+const createStyles = fn(4972);
+let closure_4 = createStyles.createStyles({ text: { fontFamily: fn(1084).Fonts.PRIMARY_MEDIUM, includeFontPadding: false } });
 const size = fn(2);
 const result = size.fileFinishedImporting("design/void/LegacyText/native/LegacyText.tsx");
 

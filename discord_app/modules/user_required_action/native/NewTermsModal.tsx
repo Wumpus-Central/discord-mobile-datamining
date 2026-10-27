@@ -1,18 +1,18 @@
-// === Module 18989: NewTermsModal ===
+// === Module 19027: NewTermsModal ===
 
-// Module 18989 (NewTermsModal)
+// Module 19027 (NewTermsModal)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6668 */;
-import showSimpleActionSheet from "showSimpleActionSheet" /* 7290 */;
+import util from "util" /* 1125 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6669 */;
+import showSimpleActionSheet from "showSimpleActionSheet" /* 7292 */;
 import _modDef9032 from "module_9032" /* 9032 */;
 import TouchableHitBoxDefault from "TouchableHitBox" /* 9041 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 9361 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 9360 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4817 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4818 */;
 
 const require = globalThis.__r;
 
@@ -34,11 +34,11 @@ function handleMoreActions() {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, Keyboard: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MarketingURLs: c10, UserRequiredActions: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { contentContainer: { paddingHorizontal: nativeDefault.space.PX_16, flexGrow: 1, display: "flex", alignContent: "center", justifyContent: "center" }, scrollView: { flex: 1 }, container: null, description: null, agreementDescription: null, navbarRight: null, stickyFooter: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_16, flexGrow: 1, display: "flex", alignContent: "center", justifyContent: "center" };
 obj2.container = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
     tmp15 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { type: tmp(1275).ImpressionTypes.VIEW, name: tmp(1275).ImpressionNames.USER_AGREEMENTS, properties: null };
+    const obj2 = { type: tmp(1272).ImpressionTypes.VIEW, name: tmp(1272).ImpressionNames.USER_AGREEMENTS, properties: null };
     let obj3 = { required_action: first };
     obj2.properties = obj3;
     let obj4 = {};
@@ -185,9 +185,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         ({ scrollView, contentContainer } = tmp4);
         if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
           let obj5 = { maxFontSizeMultiplier: 2, variant: "heading-xxl/bold", children: null };
-          const intl = tmp(1128).intl;
-          obj5.children = intl.string(tmp(1128).t["7glvXu"]);
-          const tmp24 = closure_12(tmp(5234).Text, obj5);
+          const intl = tmp(1125).intl;
+          obj5.children = intl.string(tmp(1125).t["7glvXu"]);
+          const tmp24 = closure_12(tmp(5235).Text, obj5);
           cResult[12] = tmp24;
           let tmp22 = tmp24;
         } else {
@@ -195,9 +195,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         }
         const _Symbol2 = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl2 = tmp(1128).intl;
+          const intl2 = tmp(1125).intl;
           const obj6 = { url: constants.TERMS_SUMMARY };
-          const formatResult = intl2.format(tmp(1128).t.CN0Hvb, obj6);
+          const formatResult = intl2.format(tmp(1125).t.CN0Hvb, obj6);
           cResult[13] = formatResult;
           let tmp25 = formatResult;
         } else {
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         }
         if (cResult[14] !== tmp4.description) {
           const obj7 = { variant: "text-md/normal", style: tmp4.description, children: tmp25 };
-          const tmp30 = closure_12(tmp(5234).Text, obj7);
+          const tmp30 = closure_12(tmp(5235).Text, obj7);
           cResult[14] = tmp4.description;
           cResult[15] = tmp30;
           let tmp28 = tmp30;
@@ -215,10 +215,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         const _Symbol3 = Symbol;
         if (cResult[16] === Symbol.for("react.memo_cache_sentinel")) {
           const obj8 = { variant: "text-md/normal", children: null };
-          const intl3 = tmp(1128).intl;
+          const intl3 = tmp(1125).intl;
           const obj9 = { url: constants.TERMS };
-          obj8.children = intl3.format(tmp(1128).t.iw0hFi, obj9);
-          const tmp34 = closure_12(tmp(5234).Text, obj8);
+          obj8.children = intl3.format(tmp(1125).t.iw0hFi, obj9);
+          const tmp34 = closure_12(tmp(5235).Text, obj8);
           cResult[16] = tmp34;
           let tmp31 = tmp34;
         } else {
@@ -227,10 +227,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         const _Symbol4 = Symbol;
         if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
           const obj10 = { variant: "text-md/normal", children: null };
-          const intl4 = tmp(1128).intl;
+          const intl4 = tmp(1125).intl;
           const obj11 = { url: constants.PAID_TERMS };
-          obj10.children = intl4.format(tmp(1128).t["36klnD"], obj11);
-          const tmp38 = closure_12(tmp(5234).Text, obj10);
+          obj10.children = intl4.format(tmp(1125).t["36klnD"], obj11);
+          const tmp38 = closure_12(tmp(5235).Text, obj10);
           cResult[17] = tmp38;
           let tmp35 = tmp38;
         } else {
@@ -239,10 +239,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         const _Symbol5 = Symbol;
         if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
           const obj12 = { variant: "text-md/normal", children: null };
-          const intl5 = tmp(1128).intl;
+          const intl5 = tmp(1125).intl;
           const obj13 = { url: constants.PRIVACY };
-          obj12.children = intl5.format(tmp(1128).t.TquFBF, obj13);
-          const tmp42 = closure_12(tmp(5234).Text, obj12);
+          obj12.children = intl5.format(tmp(1125).t.TquFBF, obj13);
+          const tmp42 = closure_12(tmp(5235).Text, obj12);
           cResult[18] = tmp42;
           let tmp39 = tmp42;
         } else {
@@ -251,10 +251,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         const _Symbol6 = Symbol;
         if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
           const obj14 = { variant: "text-md/normal", children: null };
-          const intl6 = tmp(1128).intl;
+          const intl6 = tmp(1125).intl;
           const obj15 = { url: constants.GUIDELINES };
-          obj14.children = intl6.format(tmp(1128).t.ia96Tb, obj15);
-          const tmp46 = closure_12(tmp(5234).Text, obj14);
+          obj14.children = intl6.format(tmp(1125).t.ia96Tb, obj15);
+          const tmp46 = closure_12(tmp(5235).Text, obj14);
           cResult[19] = tmp46;
           let tmp43 = tmp46;
         } else {
@@ -262,8 +262,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         }
         const _Symbol7 = Symbol;
         if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl7 = tmp(1128).intl;
-          const stringResult = intl7.string(tmp(1128).t["+USXQE"]);
+          const intl7 = tmp(1125).intl;
+          const stringResult = intl7.string(tmp(1125).t["+USXQE"]);
           cResult[20] = stringResult;
           let tmp47 = stringResult;
         } else {
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         }
         if (cResult[21] !== tmp4.agreementDescription) {
           const obj16 = { variant: "text-md/normal", style: tmp4.agreementDescription, children: tmp47 };
-          const tmp51 = closure_12(tmp(5234).Text, obj16);
+          const tmp51 = closure_12(tmp(5235).Text, obj16);
           cResult[21] = tmp4.agreementDescription;
           cResult[22] = tmp51;
           let tmp49 = tmp51;
@@ -286,8 +286,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
               }
               const _Symbol8 = Symbol;
               if (cResult[28] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl8 = tmp(1128).intl;
-                const stringResult1 = intl8.string(tmp(1128).t["+TBKL1"]);
+                const intl8 = tmp(1125).intl;
+                const stringResult1 = intl8.string(tmp(1125).t["+TBKL1"]);
                 cResult[28] = stringResult1;
                 let tmp57 = stringResult1;
               } else {
@@ -295,7 +295,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
               }
               if (cResult[29] !== tmp11) {
                 const obj17 = { loading: tmp11, onPress: tmp15, text: tmp57 };
-                const tmp61 = closure_12(tmp(5244).Button, obj17);
+                const tmp61 = closure_12(tmp(5245).Button, obj17);
                 cResult[29] = tmp11;
                 cResult[30] = tmp61;
                 let tmp59 = tmp61;
@@ -320,8 +320,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
                   }
                   const _Symbol9 = Symbol;
                   if (cResult[39] === Symbol.for("react.memo_cache_sentinel")) {
-                    const intl9 = tmp(1128).intl;
-                    const stringResult2 = intl9.string(tmp(1128).t["UKOtz+"]);
+                    const intl9 = tmp(1125).intl;
+                    const stringResult2 = intl9.string(tmp(1125).t["UKOtz+"]);
                     cResult[39] = stringResult2;
                     let tmp68 = stringResult2;
                   } else {
@@ -406,7 +406,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
   const memo = noop.useMemo(() => action.getAction(), []);
   const tmp5 = _slicedToArray(noop.useState(false), 2);
   importDefault = tmp5[1];
-  memo(6930).useNavigatorBackPressHandler(memo(5972).BackPressHandler.minimize);
+  memo(6932).useNavigatorBackPressHandler(memo(5973).BackPressHandler.minimize);
   dependencyMap = noop.useCallback(asyncGeneratorStep(async () => {
     if (c3 === 2) {
       c3 = 3;
@@ -459,9 +459,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
     }
   }), []);
   const obj2 = { type: null, name: null, properties: null };
-  let obj = memo(6930);
-  obj2.type = memo(1275).ImpressionTypes.VIEW;
-  obj2.name = memo(1275).ImpressionNames.USER_AGREEMENTS;
+  let obj = memo(6932);
+  obj2.type = memo(1272).ImpressionTypes.VIEW;
+  obj2.name = memo(1272).ImpressionNames.USER_AGREEMENTS;
   obj2.properties = { required_action: memo };
   useTrackImpressionDefault(obj2, {}, []);
   let tmp10 = null;
@@ -475,38 +475,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
     ({ scrollView: obj5.style, contentContainer: obj5.contentContainerStyle } = tmp);
     obj6.onTouchStart = handleTouch;
     const obj7 = { maxFontSizeMultiplier: 2, variant: "heading-xxl/bold", children: null };
-    const intl = tmp6(1128).intl;
-    obj7.children = intl.string(tmp6(1128).t["7glvXu"]);
-    const items1 = [closure_12(tmp6(5234).Text, obj7), , , , , , ];
+    const intl = tmp6(1125).intl;
+    obj7.children = intl.string(tmp6(1125).t["7glvXu"]);
+    const items1 = [closure_12(tmp6(5235).Text, obj7), , , , , , ];
     const obj8 = { variant: "text-md/normal", style: tmp.description, children: null };
-    const intl2 = tmp6(1128).intl;
+    const intl2 = tmp6(1125).intl;
     const obj9 = { url: constants.TERMS_SUMMARY };
-    obj8.children = intl2.format(tmp6(1128).t.CN0Hvb, obj9);
-    items1[1] = closure_12(tmp6(5234).Text, obj8);
+    obj8.children = intl2.format(tmp6(1125).t.CN0Hvb, obj9);
+    items1[1] = closure_12(tmp6(5235).Text, obj8);
     const obj10 = { variant: "text-md/normal", children: null };
-    const intl3 = tmp6(1128).intl;
+    const intl3 = tmp6(1125).intl;
     const obj11 = { url: constants.TERMS };
-    obj10.children = intl3.format(tmp6(1128).t.iw0hFi, obj11);
-    items1[2] = closure_12(tmp6(5234).Text, obj10);
+    obj10.children = intl3.format(tmp6(1125).t.iw0hFi, obj11);
+    items1[2] = closure_12(tmp6(5235).Text, obj10);
     const obj12 = { variant: "text-md/normal", children: null };
-    const intl4 = tmp6(1128).intl;
+    const intl4 = tmp6(1125).intl;
     const obj13 = { url: constants.PAID_TERMS };
-    obj12.children = intl4.format(tmp6(1128).t["36klnD"], obj13);
-    items1[3] = closure_12(tmp6(5234).Text, obj12);
+    obj12.children = intl4.format(tmp6(1125).t["36klnD"], obj13);
+    items1[3] = closure_12(tmp6(5235).Text, obj12);
     const obj14 = { variant: "text-md/normal", children: null };
-    const intl5 = tmp6(1128).intl;
+    const intl5 = tmp6(1125).intl;
     const obj15 = { url: constants.PRIVACY };
-    obj14.children = intl5.format(tmp6(1128).t.TquFBF, obj15);
-    items1[4] = closure_12(tmp6(5234).Text, obj14);
+    obj14.children = intl5.format(tmp6(1125).t.TquFBF, obj15);
+    items1[4] = closure_12(tmp6(5235).Text, obj14);
     const obj16 = { variant: "text-md/normal", children: null };
-    const intl6 = tmp6(1128).intl;
+    const intl6 = tmp6(1125).intl;
     const obj17 = { url: constants.GUIDELINES };
-    obj16.children = intl6.format(tmp6(1128).t.ia96Tb, obj17);
-    items1[5] = closure_12(tmp6(5234).Text, obj16);
+    obj16.children = intl6.format(tmp6(1125).t.ia96Tb, obj17);
+    items1[5] = closure_12(tmp6(5235).Text, obj16);
     const obj18 = { variant: "text-md/normal", style: tmp.agreementDescription, children: null };
-    const intl7 = tmp6(1128).intl;
-    obj18.children = intl7.string(tmp6(1128).t["+USXQE"]);
-    items1[6] = closure_12(tmp6(5234).Text, obj18);
+    const intl7 = tmp6(1125).intl;
+    obj18.children = intl7.string(tmp6(1125).t["+USXQE"]);
+    items1[6] = closure_12(tmp6(5235).Text, obj18);
     obj6.children = items1;
     const items2 = [closure_13(closure_8, obj6), , ];
     const obj19 = { style: tmp.stickyFooter, children: null };
@@ -519,9 +519,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
         },
       text: null
     };
-    const intl8 = tmp6(1128).intl;
-    obj20.text = intl8.string(tmp6(1128).t["+TBKL1"]);
-    obj19.children = closure_12(tmp6(5244).Button, obj20);
+    const intl8 = tmp6(1125).intl;
+    obj20.text = intl8.string(tmp6(1125).t["+TBKL1"]);
+    obj19.children = closure_12(tmp6(5245).Button, obj20);
     items2[1] = closure_12(closure_6, obj19);
     const obj21 = { style: null, source: null, color: null, onPress: null, accessibilityRole: "button", accessibilityLabel: null };
     const items3 = [tmp.navbarRight, ];
@@ -531,8 +531,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function NewTerms
     obj21.source = tmp2(9032);
     obj21.color = tmp.navbarRight.tintColor;
     obj21.onPress = handleMoreActions;
-    const intl9 = tmp6(1128).intl;
-    obj21.accessibilityLabel = intl9.string(tmp6(1128).t["UKOtz+"]);
+    const intl9 = tmp6(1125).intl;
+    obj21.accessibilityLabel = intl9.string(tmp6(1125).t["UKOtz+"]);
     items2[2] = closure_12(tmp2(9041), obj21);
     obj3.children = items2;
     tmp10 = closure_13(closure_6, obj3);

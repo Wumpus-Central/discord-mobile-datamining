@@ -1,12 +1,12 @@
-// === Module 14353: useBadgeDirectoryNuxEntryPoint ===
+// === Module 14389: useBadgeDirectoryNuxEntryPoint ===
 
-// Module 14353 (useBadgeDirectoryNuxEntryPoint)
+// Module 14389 (useBadgeDirectoryNuxEntryPoint)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/native/useBadgeDirectoryNuxEntryPoint.tsx");

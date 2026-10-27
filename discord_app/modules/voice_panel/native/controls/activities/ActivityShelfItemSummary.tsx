@@ -1,15 +1,15 @@
-// === Module 18583: ActivityShelfItemSummary ===
+// === Module 18619: ActivityShelfItemSummary ===
 
-// Module 18583 (ActivityShelfItemSummary)
+// Module 18619 (ActivityShelfItemSummary)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5052 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import ButtonPill from "ButtonPill" /* 5256 */;
-import ButtonEllipsis from "ButtonEllipsis" /* 5262 */;
-import UserSummaryItemDefault from "UserSummaryItem" /* 11268 */;
-import useActivityUsersDefault from "useActivityUsers" /* 18584 */;
+import native from "native" /* 1199 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5053 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import ButtonPill from "ButtonPill" /* 5257 */;
+import ButtonEllipsis from "ButtonEllipsis" /* 5263 */;
+import UserSummaryItemDefault from "UserSummaryItem" /* 11271 */;
+import useActivityUsersDefault from "useActivityUsers" /* 18620 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,10 +17,10 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { ongoingActivityContainer: { position: "absolute", width: "100%", height: "100%", backgroundColor: "rgba(0,0,0,0.4)", alignItems: "center", justifyContent: "center" }, overlayActivityName: null, overlayActivityNameText: null, loadingTextColor: null, ellipsis: null };
 let obj3 = { paddingHorizontal: 12, paddingVertical: 4, borderRadius: nativeDefault.radii.round, backgroundColor: null, marginBottom: 8 };
-const ColorUtils = fn(4968);
+const ColorUtils = fn(4969);
 obj3.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.BLACK, 0.64);
 obj2.overlayActivityName = obj3;
 obj2.overlayActivityNameText = { color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };

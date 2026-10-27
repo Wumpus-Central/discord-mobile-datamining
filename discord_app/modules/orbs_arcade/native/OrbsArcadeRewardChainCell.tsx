@@ -1,13 +1,13 @@
-// === Module 16423: OrbsArcadeRewardChainCell ===
+// === Module 16462: OrbsArcadeRewardChainCell ===
 
-// Module 16423 (OrbsArcadeRewardChainCell)
+// Module 16462 (OrbsArcadeRewardChainCell)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -23,7 +23,7 @@ let c15 = 250;
 let c16 = 300;
 let c17 = 1100;
 let c18 = 500;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { cell: { width: 50, height: 50, alignItems: "center", justifyContent: "center" }, circle: null, ring: null, confetti: null, stem: null, checkBadge: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -45,7 +45,7 @@ function getWindowProgress(arg0, arg1, arg2) {
   return num;
 }
 let obj5 = { position: "absolute", left: 24, width: 2, backgroundColor: nativeDefault.colors.STATUS_POSITIVE };
-getWindowProgress.__closure = { interpolate: fn(5052).interpolate, Extrapolation: fn(5052).Extrapolation };
+getWindowProgress.__closure = { interpolate: fn(5053).interpolate, Extrapolation: fn(5053).Extrapolation };
 getWindowProgress.__workletHash = 10001292080604;
 getWindowProgress.__initData = { code: "function getWindowProgress_OrbsArcadeRewardChainCellTsx1(timeMs,startMs,durationMs){const{interpolate,Extrapolation}=this.__closure;if(startMs==null){return 1;}return interpolate(timeMs,[startMs,startMs+durationMs],[0,1],Extrapolation.CLAMP);}" };
 fn(558);
@@ -65,7 +65,7 @@ const __initData13 = { code: "function OrbsArcadeRewardChainCellTsx14(reached,wa
 const __initData14 = { code: "function OrbsArcadeRewardChainCellTsx15(){const{fillProgress}=this.__closure;return{opacity:fillProgress.get()};}" };
 const __initData15 = { code: "function OrbsArcadeRewardChainCellTsx16(){const{interpolate,getWindowProgress,timeline,checkAtMs,GRANT_CHECK_MS,GRANT_CONFETTI_MS}=this.__closure;return{transform:[{scale:interpolate(getWindowProgress(timeline.get(),checkAtMs,GRANT_CHECK_MS+GRANT_CONFETTI_MS),[0,0.6,1],[0,1.2,1])}]};}" };
 const __initData16 = { code: "function OrbsArcadeRewardChainCellTsx17(){const{stemLength,stemProgress}=this.__closure;var _stemLength,_stemLength2;return{top:-((_stemLength=stemLength)!==null&&_stemLength!==void 0?_stemLength:0)*stemProgress.get(),height:((_stemLength2=stemLength)!==null&&_stemLength2!==void 0?_stemLength2:0)*stemProgress.get()};}" };
-let obj6 = { interpolate: fn(5052).interpolate, Extrapolation: fn(5052).Extrapolation };
+let obj6 = { interpolate: fn(5053).interpolate, Extrapolation: fn(5053).Extrapolation };
 const ReactCompilerGating = fn(558);
 const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOrbsArcadeRewardChainTimeline(grantedRewardIds) {
   const cResult = grantedRewardIds(grantAnimatedOnOpenRewardIds[9]).c(19);

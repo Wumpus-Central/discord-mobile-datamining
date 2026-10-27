@@ -1,12 +1,12 @@
-// === Module 13124: useNativeForumPostContent ===
+// === Module 13138: useNativeForumPostContent ===
 
-// Module 13124 (useNativeForumPostContent)
+// Module 13138 (useNativeForumPostContent)
 import c from "c" /* 576 */;
-import Constants from "Constants" /* 1087 */;
-import util from "util" /* 1128 */;
-import StickersUtils from "StickersUtils" /* 6488 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6816 */;
-import createStyles from "createStyles" /* 4971 */;
+import Constants from "Constants" /* 1084 */;
+import util from "util" /* 1125 */;
+import StickersUtils from "StickersUtils" /* 6489 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6818 */;
+import createStyles from "createStyles" /* 4972 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

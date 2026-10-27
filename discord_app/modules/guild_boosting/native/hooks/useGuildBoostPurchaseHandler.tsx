@@ -1,6 +1,6 @@
-// === Module 13464: useGuildBoostPurchaseHandler ===
+// === Module 13478: useGuildBoostPurchaseHandler ===
 
-// Module 13464 (useGuildBoostPurchaseHandler)
+// Module 13478 (useGuildBoostPurchaseHandler)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 let closure_6 = new LoggerDefault("useGuildBoostPurchaseHandler");
 const ReactCompilerGating = fn(558);
 const tmp2 = new LoggerDefault("useGuildBoostPurchaseHandler");
@@ -54,8 +54,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
             } else {
               let newAnalyticsLoadId = tmp2;
               newAnalyticsLoadId = undefined;
-              newAnalyticsLoadId = args(10448).getNewAnalyticsLoadId();
-              const obj7 = args(7514);
+              newAnalyticsLoadId = args(10450).getNewAnalyticsLoadId();
+              const obj7 = args(7515);
               c3 = 1;
               c4 = 1;
               const obj4 = {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
             const obj5 = { value, done: true };
             return obj5;
           } else {
-            args(6697).closeApplyBoostModal();
+            args(6698).closeApplyBoostModal();
             c4 = 3;
             return { value: "IconComponent", done: null };
           }
@@ -153,8 +153,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           } else {
             let newAnalyticsLoadId = tmp2;
             newAnalyticsLoadId = undefined;
-            newAnalyticsLoadId = args(10448).getNewAnalyticsLoadId();
-            const obj7 = args(7514);
+            newAnalyticsLoadId = args(10450).getNewAnalyticsLoadId();
+            const obj7 = args(7515);
             c3 = 1;
             c4 = 1;
             const obj4 = {
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           const obj5 = { value, done: true };
           return obj5;
         } else {
-          args(6697).closeApplyBoostModal();
+          args(6698).closeApplyBoostModal();
           c4 = 3;
           return { value: "IconComponent", done: null };
         }

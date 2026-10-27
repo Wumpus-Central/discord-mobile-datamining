@@ -1,40 +1,40 @@
-// === Module 16235: UserSettingsAuthedApp ===
+// === Module 16273: UserSettingsAuthedApp ===
 
-// Module 16235 (UserSettingsAuthedApp)
+// Module 16273 (UserSettingsAuthedApp)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import Link from "Link" /* 1506 */;
-import RootNavigationRef from "RootNavigationRef" /* 5151 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5686 */;
-import useAlertStore from "useAlertStore" /* 5910 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7087 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7091 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7210 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7215 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7259 */;
+import util from "util" /* 1125 */;
+import Link from "Link" /* 1503 */;
+import RootNavigationRef from "RootNavigationRef" /* 5152 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5687 */;
+import useAlertStore from "useAlertStore" /* 5911 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7089 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7093 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7212 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7217 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7261 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8860 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10771 */;
-import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13525 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10774 */;
+import UserSettingsAuthedAppDeleteWarningModalDefault from "UserSettingsAuthedAppDeleteWarningModal" /* 13539 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7203 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7205 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ UserSettingsSections: closure_12, AnalyticsSections: map1, AnalyticsPages: closure_14 } = Constants);
-let closure_15 = fn(10024).ChannelDetailsNavigatorScreens;
-let closure_16 = fn(10960).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+let closure_15 = fn(10026).ChannelDetailsNavigatorScreens;
+let closure_16 = fn(10963).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { paddingHorizontal: 16, paddingVertical: 24 }, section: { marginBottom: 24 }, header: { flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12 }, appAboutDescription: { width: "100%" }, warningContainer: { marginTop: nativeDefault.space.PX_12, display: "flex", flexDirection: "row" }, warningIcon: null };
 let size = { width: 16, height: 16, marginRight: 8, color: nativeDefault.colors.TEXT_MUTED };
 obj2.warningIcon = size;
@@ -91,7 +91,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Author
   const cResult = navigation(576).c(7);
   application = application.application;
   const obj = navigation(576);
-  navigation = navigation(1505).useNavigation();
+  navigation = navigation(1502).useNavigation();
   if (cResult[0] !== navigation) {
     const fn = function t() {
       const CommonActions = Link.CommonActions;
@@ -118,25 +118,25 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Author
     }
     return tmp8;
   }
-  const intl = tmp(1128).intl;
-  const formatResult = intl.format(navigation(1128).t.jUhnwb, { applicationName: application.name, onConnectionPress: tmp5 });
+  const intl = tmp(1125).intl;
+  const formatResult = intl.format(navigation(1125).t.jUhnwb, { applicationName: application.name, onConnectionPress: tmp5 });
   cResult[2] = application.name;
   cResult[3] = tmp5;
   cResult[4] = formatResult;
   tmp6 = formatResult;
-  const obj2 = navigation(1505);
+  const obj2 = navigation(1502);
   const obj4 = { applicationName: application.name, onConnectionPress: tmp5 };
 }) : (function AuthorizedAppTwoWay(application) {
   let navigation;
-  navigation = navigation(1505).useNavigation();
+  navigation = navigation(1502).useNavigation();
   const items = [navigation];
   const obj2 = { text: null };
   const callback = noop.useCallback(() => {
     const CommonActions = Link.CommonActions;
     navigation.dispatch(CommonActions.navigate(constants.CONNECTIONS));
   }, items);
-  const intl = navigation(1128).intl;
-  obj2.text = intl.format(navigation(1128).t.jUhnwb, { applicationName: application.application.name, onConnectionPress: callback });
+  const intl = navigation(1125).intl;
+  obj2.text = intl.format(navigation(1125).t.jUhnwb, { applicationName: application.application.name, onConnectionPress: callback });
   return closure_17(closure_20, obj2);
 });
 ReactCompilerGating = fn(558);

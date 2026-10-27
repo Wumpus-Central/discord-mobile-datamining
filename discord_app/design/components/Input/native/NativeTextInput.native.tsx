@@ -1,18 +1,18 @@
-// === Module 7026: NativeTextInput ===
+// === Module 7028: NativeTextInput ===
 
-// Module 7026 (NativeTextInput)
+// Module 7028 (NativeTextInput)
 import c from "c" /* 576 */;
-import native from "native" /* 5037 */;
-import native2 from "native" /* 5139 */;
-import useMountEffect from "useMountEffect" /* 5263 */;
-import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 7028 */;
+import native from "native" /* 5038 */;
+import native2 from "native" /* 5140 */;
+import useMountEffect from "useMountEffect" /* 5264 */;
+import useBottomSheetKeyboardHandlingDefault from "useBottomSheetKeyboardHandling" /* 7030 */;
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1501 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1498 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, TextInput: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const KeyboardThemes = fn(1087).KeyboardThemes;
+const KeyboardThemes = fn(1084).KeyboardThemes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -80,7 +80,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCon
         const mountLayoutEffect = useMountEffect.useMountLayoutEffect(tmp8);
         const _Symbol = Symbol;
         if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj2 = { value: "Array", defaultValue: "Reflect" };
+          const obj2 = { value: "toCharArray$esjava$1", defaultValue: "Symbol" };
           cResult[8] = obj2;
           let tmp11 = obj2;
         } else {
@@ -143,7 +143,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCon
       current.setNativeProps(obj);
     }
   });
-  return { value: "Array", defaultValue: "Reflect" };
+  return { value: "toCharArray$esjava$1", defaultValue: "Symbol" };
 });
 ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePanGestureWrapper(arg0) {

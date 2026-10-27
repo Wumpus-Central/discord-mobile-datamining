@@ -1,10 +1,10 @@
-// === Module 9739: ConversationsAnalytics ===
+// === Module 9741: ConversationsAnalytics ===
 
-// Module 9739 (ConversationsAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+// Module 9741 (ConversationsAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conversations/ConversationsAnalytics.tsx");
 

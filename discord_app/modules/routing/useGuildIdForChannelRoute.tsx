@@ -1,13 +1,13 @@
-// === Module 5708: useGuildIdForChannelRoute ===
+// === Module 5709: useGuildIdForChannelRoute ===
 
-// Module 5708 (useGuildIdForChannelRoute)
+// Module 5709 (useGuildIdForChannelRoute)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import FavoriteStore from "FavoriteStore" /* 4826 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
+import FavoriteStore from "FavoriteStore" /* 4827 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
 
 require = fn;
-const FAVORITES = fn(1087).FAVORITES;
+const FAVORITES = fn(1084).FAVORITES;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/useGuildIdForChannelRoute.tsx");

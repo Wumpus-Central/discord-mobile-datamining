@@ -3,7 +3,7 @@
 // Module 8756 (useMediaItemHasSpoiler)
 import MediaSourceUtil from "MediaSourceUtil" /* 8757 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 const require = globalThis.__r;
 

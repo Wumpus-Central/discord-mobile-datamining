@@ -1,11 +1,11 @@
-// === Module 7424: GuildTemplateTooltipActionCreators ===
+// === Module 7426: GuildTemplateTooltipActionCreators ===
 
-// Module 7424 (GuildTemplateTooltipActionCreators)
+// Module 7426 (GuildTemplateTooltipActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_templates/GuildTemplateTooltipActionCreators.tsx");
 

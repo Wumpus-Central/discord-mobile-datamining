@@ -1,7 +1,7 @@
-// === Module 15728: helpers ===
+// === Module 15764: helpers ===
 
-// Module 15728 (helpers)
-import Constants from "Constants" /* 1098 */;
+// Module 15764 (helpers)
+import Constants from "Constants" /* 1095 */;
 import size from "module_2" /* 2 */;
 
 ({ RPCCommands, RPCEvents } = Constants);

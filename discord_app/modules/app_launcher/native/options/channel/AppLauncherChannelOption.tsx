@@ -1,12 +1,12 @@
-// === Module 12095: AppLauncherChannelOption ===
+// === Module 12096: AppLauncherChannelOption ===
 
-// Module 12095 (AppLauncherChannelOption)
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import AppLauncherChannelListActionSheet from "AppLauncherChannelListActionSheet" /* 12096 */;
+// Module 12096 (AppLauncherChannelOption)
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import AppLauncherChannelListActionSheet from "AppLauncherChannelListActionSheet" /* 12097 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 const require = globalThis.__r;
 
@@ -21,7 +21,7 @@ export default function AppLauncherChannelOption(option) {
   ({ onActionSheetDismiss: _slicedToArray, channel: noop, onPress: ChannelStore } = option);
   first = undefined;
   closure_7 = undefined;
-  ({ style, autoFocus, hasError } = option);
+  ({ autoFocus, hasError } = option);
   [first, closure_7] = noop.useState(() => {
     let channelId = null;
     if (null != importDefault) {
@@ -49,7 +49,7 @@ export default function AppLauncherChannelOption(option) {
   let obj = option(onChannelPress[4]);
   const tmp3 = option;
   const tmp4 = onChannelPress;
-  const obj2 = { style, option, hasError, selected: null != stateFromStores, selectedItemName: null, leading: null, onPress: null, autoFocus: null };
+  const obj2 = { option, hasError, selected: null != stateFromStores, selectedItemName: null, leading: null, onPress: null, autoFocus: null };
   let tmp10;
   const tmp7 = require("useChannelName")(stateFromStores);
   if (null != stateFromStores) {
@@ -62,7 +62,7 @@ export default function AppLauncherChannelOption(option) {
       tmp();
     }
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(12096, dependencyMap.paths), AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY, {
+    obj.openLazy(asyncRequireImpl(12097, dependencyMap.paths), AppLauncherChannelListActionSheet.APP_LAUNCHER_CHANNEL_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onChannelPress(channel) {

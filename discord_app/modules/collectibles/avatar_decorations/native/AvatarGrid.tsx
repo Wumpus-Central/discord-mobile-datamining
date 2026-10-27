@@ -1,18 +1,18 @@
-// === Module 14501: AvatarGrid ===
+// === Module 14537: AvatarGrid ===
 
-// Module 14501 (AvatarGrid)
+// Module 14537 (AvatarGrid)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
+import native from "native" /* 1199 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { avatarRow: { flexDirection: "row", alignItems: "center", justifyContent: "space-around" }, avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, gridContainer: { width: 108, height: 108, justifyContent: "space-around", marginLeft: 28 } };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -124,7 +124,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GridAva
           }
           obj3.guildId = guildId;
           const merged1 = Object.assign(tmp14);
-          const tmp20 = closure_5(tmp(1202).Avatar, obj3);
+          const tmp20 = closure_5(tmp(1199).Avatar, obj3);
           cResult[18] = guildId;
           cResult[19] = tmp14;
           cResult[20] = user;
@@ -173,7 +173,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function GridAva
     obj5 = { user, guildId };
     const merged1 = Object.assign(obj3);
   }
-  return closure_5(user(1202).Avatar, obj5);
+  return closure_5(user(1199).Avatar, obj5);
 });
 ReactCompilerGating = fn(558);
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };

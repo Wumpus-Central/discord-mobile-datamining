@@ -1,12 +1,12 @@
-// === Module 9984: useCanRemoveAllReactions ===
+// === Module 9986: useCanRemoveAllReactions ===
 
-// Module 9984 (useCanRemoveAllReactions)
-import PermissionStore from "PermissionStore" /* 4903 */;
+// Module 9986 (useCanRemoveAllReactions)
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/useCanRemoveAllReactions.tsx");

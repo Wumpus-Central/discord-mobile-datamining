@@ -1,14 +1,14 @@
-// === Module 11240: handleMessagesTapImage ===
+// === Module 11243: handleMessagesTapImage ===
 
-// Module 11240 (handleMessagesTapImage)
-import LinkingDefault from "Linking" /* 5660 */;
+// Module 11243 (handleMessagesTapImage)
+import LinkingDefault from "Linking" /* 5661 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8757 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7696 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7697 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const MessageTypes = fn(1087).MessageTypes;
+const MessageTypes = fn(1084).MessageTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapImage.tsx");
 
@@ -55,7 +55,7 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
       type1 = messageReference.type;
     }
     let tmp12 = tmp7;
-    if (type1 !== embedId(1110).MessageReferenceTypes.FORWARD) {
+    if (type1 !== embedId(1107).MessageReferenceTypes.FORWARD) {
       const attachments = tmp7.attachments;
       const found = attachments.filter((item) => !embedId(8757).isThumbnailAttachment(item));
       if ("attachment" === type) {
@@ -89,7 +89,7 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
           const obj3 = { disableDownload: tmp47, initialSources: found2, initialIndex: importDefault, originViewOrOriginLayout: tapImageData.layout, analyticsSource: "Channel", channelId: messageChannel.id, contextName: null, contextIcon: null };
           let channelName;
           if (showContextName) {
-            const tmp25Result3 = tmp25(5604);
+            const tmp25Result3 = tmp25(5605);
             channelName = tmp25Result3.computeChannelName(messageChannel, UserStore, RelationshipStore, false);
           }
           obj3.contextName = channelName;
@@ -132,7 +132,7 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
             if (null != components) {
               if (0 !== components.length) {
                 const tmp10Result13 = embedId(8757);
-                const result2 = tmp10Result13.extractMediaSourcesFromComponent(tmp7, components, messageChannel.guild_id, embedId(6022).asComponentId(componentId), componentMediaIndex);
+                const result2 = tmp10Result13.extractMediaSourcesFromComponent(tmp7, components, messageChannel.guild_id, embedId(6023).asComponentId(componentId), componentMediaIndex);
                 if (null != result2) {
                   ({ sources, initialIndex: closure_1 } = result2);
                   embedId(8757).setMediaSourcePortal(sources[importDefault], portal);
@@ -140,7 +140,7 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
                   tmp25 = embedId;
                   const tmp10Result15 = embedId(8757);
                 }
-                const tmp10Result14 = embedId(6022);
+                const tmp10Result14 = embedId(6023);
               }
             }
           }
@@ -206,6 +206,6 @@ export const handleMessagesTapImage = function handleMessagesTapImage(tapImageDa
       tmp12 = message1;
     }
   } else {
-    embedId(10021);
+    embedId(10023);
   }
 };

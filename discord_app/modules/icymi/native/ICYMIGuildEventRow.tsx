@@ -1,26 +1,26 @@
-// === Module 17970: ICYMIGuildEventRow ===
+// === Module 18004: ICYMIGuildEventRow ===
 
-// Module 17970 (ICYMIGuildEventRow)
+// Module 18004 (ICYMIGuildEventRow)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import transitionToGuild from "transitionToGuild" /* 7449 */;
+import util from "util" /* 1125 */;
+import transitionToGuild from "transitionToGuild" /* 7450 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8841 */;
 import GuildScheduledEventModalActionCreators from "GuildScheduledEventModalActionCreators" /* 8883 */;
 import ScheduleUtils from "ScheduleUtils" /* 8890 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6784 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6785 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let GuildScheduledEventStore = fn(6784);
+let GuildScheduledEventStore = fn(6785);
 ({ isGuildEventEnded: metroRequire, isGuildScheduledEventActive: closure_7 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createICYMIStyles = fn(17908);
+const createICYMIStyles = fn(17942);
 let closure_13 = createICYMIStyles.createICYMIStyles((marginHorizontal) => {
   const obj = { container: { marginHorizontal: marginHorizontal.margin, marginBottom: marginHorizontal.margin, marginLeft: marginHorizontal.margin + marginHorizontal.inset }, card: { marginTop: nativeDefault.space.PX_12 }, title: null, timeAndUserPillContainer: null, separator: null, eventsChannelIcon: null, infoContainer: null, locationContainer: null };
   const obj2 = { marginTop: nativeDefault.space.PX_12 };
@@ -75,7 +75,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
   if (cResult[4] === tmp7) {
     if (cResult[5] === tmp11) {
       const startDateTimeString = cResult[6].startDateTimeString;
-      guild(5604)(channel);
+      guild(5605)(channel);
       const locationFromEvent = tmp(8893).getLocationFromEvent(event);
       if (cResult[7] === channel) {
         if (cResult[10] === channel) {
@@ -216,7 +216,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
               }
             }
             const tmp28Result = tmp28(undefined, undefined, tmp23);
-            guild(17954);
+            guild(17988);
             const _Symbol = Symbol;
             if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
               class F {
@@ -244,7 +244,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
                   return;
                 }
               }
-              const stringResult = obj6.string(tmp(1128).t["6pFsLQ"]);
+              const stringResult = obj6.string(tmp(1125).t["6pFsLQ"]);
             } else {
               class F {
                 constructor() {
@@ -572,7 +572,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
                         }
                       }
                       const obj8 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: tmp62 };
-                      const tmp64 = closure_11(tmp(5234).Text, obj8);
+                      const tmp64 = closure_11(tmp(5235).Text, obj8);
                       class M {
                         constructor() {
                           obj = closure_1(closure_2[16]);
@@ -673,7 +673,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
                 }
                 tmp49[0] = tmp27;
                 tmp49[2] = event.name;
-                const tmp50 = closure_11(tmp(5234).Text, tmp49);
+                const tmp50 = closure_11(tmp(5235).Text, tmp49);
                 cResult[29] = event.name;
                 cResult[30] = tmp27;
                 cResult[31] = tmp50;
@@ -698,7 +698,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
               cResult[28] = tmp46;
             }
             const obj10 = { variant: "text-sm/semibold", color: "text-brand", children: startDateTimeString };
-            const tmp41 = closure_11(tmp(5234).Text, obj10);
+            const tmp41 = closure_11(tmp(5235).Text, obj10);
             cResult[23] = startDateTimeString;
             cResult[24] = "text-brand";
             cResult[25] = tmp41;
@@ -746,8 +746,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
         return;
       }
     }
-    const intl = tmp(1128).intl;
-    tmp15[0] = intl.string(tmp(1128).t.TxqPQR);
+    const intl = tmp(1125).intl;
+    tmp15[0] = intl.string(tmp(1125).t.TxqPQR);
     class M {
       constructor() {
         obj = closure_1(closure_2[16]);
@@ -795,7 +795,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
   }
   noop = toISOStringResult;
   const items = [toISOStringResult, tmp5];
-  const tmp7 = guild(5604)(channel);
+  const tmp7 = guild(5605)(channel);
   const locationFromEvent = event(8893).getLocationFromEvent(event);
   let obj = event(8893);
   const eventLocationIconSource = event(9016).getEventLocationIconSource(event, channel, true);
@@ -833,8 +833,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
   const tmp2Result = guild(8886);
   const obj5 = { actionLabel: null, id: null, interactionType: "guild_event", channelId: null, guildId: null, timestamp: null, onHeaderPress: null, onHeaderLongPress: null, children: null };
   const tmp2ResultResult = guild(8886)(guild_id, id, nextRecurrenceIdInEvent);
-  let intl = tmp8(1128).intl;
-  obj5.actionLabel = intl.string(event(1128).t["6pFsLQ"]);
+  let intl = tmp8(1125).intl;
+  obj5.actionLabel = intl.string(event(1125).t["6pFsLQ"]);
   obj5.id = event.id;
   let id1;
   if (channel != null) {
@@ -842,7 +842,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
   }
   obj5.channelId = id1;
   obj5.guildId = guild.id;
-  const tmp2Result3 = guild(17954);
+  const tmp2Result3 = guild(17988);
   obj5.timestamp = guild(11).extractTimestamp(event.id);
   obj5.onHeaderPress = callback1;
   obj5.onHeaderLongPress = callback1;
@@ -852,7 +852,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
   if (tmp5) {
     str = "status-positive";
   }
-  obj7.children = closure_11(event(5234).Text, {
+  obj7.children = closure_11(event(5235).Text, {
     variant: "text-sm/semibold",
     color: str,
     children: noop.useMemo(() => {
@@ -872,7 +872,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
   if (title) {
     title = tmp.title;
   }
-  items3[1] = closure_11(event(5234).Text, { style: title, variant: "text-lg/semibold", children: event.name });
+  items3[1] = closure_11(event(5235).Text, { style: title, variant: "text-lg/semibold", children: event.name });
   let tmp19Result = null != event.description;
   if (tmp19Result) {
     tmp19Result = event.description.length > 0;
@@ -881,7 +881,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
     const obj9 = { variant: "text-md/normal", color: "text-subtle", lineClamp: 5, children: null };
     const obj10 = { guildId: guild.id };
     obj9.children = tmp8(9017).guildEventDetailsParser(event.description, true, obj10);
-    tmp19Result = closure_11(tmp8(5234).Text, obj9);
+    tmp19Result = closure_11(tmp8(5235).Text, obj9);
     const tmp8Result = tmp8(9017);
   }
   items3[2] = tmp19Result;
@@ -890,9 +890,9 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
   const obj13 = { style: tmp.locationContainer, children: null };
   const items4 = [closure_11(event(8560).GroupIcon, { size: "xs", style: tmp.eventsChannelIcon }), ];
   const obj15 = { lineClamp: 1, variant: "text-xs/normal", color: "text-muted", children: null };
-  const intl2 = tmp8(1128).intl;
-  obj15.children = intl2.format(event(1128).t["+DLsD8"], { count: tmp2ResultResult });
-  items4[1] = closure_11(event(5234).Text, obj15);
+  const intl2 = tmp8(1125).intl;
+  obj15.children = intl2.format(event(1125).t["+DLsD8"], { count: tmp2ResultResult });
+  items4[1] = closure_11(event(5235).Text, obj15);
   obj13.children = items4;
   const items5 = [closure_12(closure_5, obj13), ];
   const obj16 = { style: tmp.locationContainer, children: null };
@@ -902,8 +902,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
   } else {
     tmp19Result2 = null != eventLocationIconSource;
     if (tmp19Result2) {
-      const obj18 = { source: eventLocationIconSource, size: tmp8(1202).Icon.Sizes.EXTRA_SMALL, style: tmp.eventsChannelIcon, disableColor: true };
-      tmp19Result2 = closure_11(tmp8(1202).Icon, obj18);
+      const obj18 = { source: eventLocationIconSource, size: tmp8(1199).Icon.Sizes.EXTRA_SMALL, style: tmp.eventsChannelIcon, disableColor: true };
+      tmp19Result2 = closure_11(tmp8(1199).Icon, obj18);
     }
   }
   const items6 = [tmp19Result2, ];
@@ -916,7 +916,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMIG
     }
     tmp27 = result;
   }
-  items6[1] = closure_11(event(5234).Text, { lineClamp: 2, variant: "text-xs/normal", color: "text-muted", children: tmp27 });
+  items6[1] = closure_11(event(5235).Text, { lineClamp: 2, variant: "text-xs/normal", color: "text-muted", children: tmp27 });
   obj16.children = items6;
   items5[1] = closure_12(closure_5, obj16);
   obj12.children = items5;

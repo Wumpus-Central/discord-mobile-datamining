@@ -1,19 +1,19 @@
-// === Module 7630: ApplicationCommandUtils ===
+// === Module 7631: ApplicationCommandUtils ===
 
-// Module 7630 (ApplicationCommandUtils)
+// Module 7631 (ApplicationCommandUtils)
 import _modDef12 from "module_12" /* 12 */;
 import IntegerDefault from "Integer" /* 14 */;
 import _modDef38 from "module_38" /* 38 */;
-import Constants2 from "Constants" /* 1098 */;
-import Server from "Server" /* 2000 */;
-import ChannelRecord from "ChannelRecord" /* 4827 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5634 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
-import DraftStore from "DraftStore" /* 7631 */;
-import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7633 */;
-import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5983 */;
-import Constants from "Constants" /* 1087 */;
-import BigFlagUtils from "BigFlagUtils" /* 1099 */;
+import Constants2 from "Constants" /* 1095 */;
+import Server from "Server" /* 1997 */;
+import ChannelRecord from "ChannelRecord" /* 4828 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5635 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5712 */;
+import DraftStore from "DraftStore" /* 7632 */;
+import IntegrationPermissionUtils from "IntegrationPermissionUtils" /* 7634 */;
+import ApplicationCommandConstants from "ApplicationCommandConstants" /* 5984 */;
+import Constants from "Constants" /* 1084 */;
+import BigFlagUtils from "BigFlagUtils" /* 1096 */;
 import size from "module_2" /* 2 */;
 
 function buildCommand(arg0) {

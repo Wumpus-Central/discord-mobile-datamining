@@ -1,23 +1,23 @@
-// === Module 19248: AvatarGraggleExample ===
+// === Module 19286: AvatarGraggleExample ===
 
-// Module 19248 (AvatarGraggleExample)
+// Module 19286 (AvatarGraggleExample)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef19249 from "module_19249" /* 19249 */;
-import _modDef19250 from "module_19250" /* 19250 */;
-import _modDef19251 from "module_19251" /* 19251 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import assetHelpers from "assetHelpers" /* 6997 */;
+import _modDef19287 from "module_19287" /* 19287 */;
+import _modDef19288 from "module_19288" /* 19288 */;
+import _modDef19289 from "module_19289" /* 19289 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19249 }, 3: null };
-let obj2 = { uri: _modDef19249 };
-obj[2] = { uri: _modDef19250 };
-const obj3 = { uri: _modDef19250 };
-obj[3] = { uri: _modDef19251 };
+let obj = { 1: null, 2: { uri: _modDef19287 }, 3: null };
+let obj2 = { uri: _modDef19287 };
+obj[2] = { uri: _modDef19288 };
+const obj3 = { uri: _modDef19288 };
+obj[3] = { uri: _modDef19289 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef19251 };
+const obj4 = { uri: _modDef19289 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarGraggleExample.native.tsx");
 

@@ -1,14 +1,14 @@
-// === Module 14326: useUserProfileActivity ===
+// === Module 14362: useUserProfileActivity ===
 
-// Module 14326 (useUserProfileActivity)
+// Module 14362 (useUserProfileActivity)
 import _mod19 from "module_19" /* 19 */;
-import Constants from "Constants" /* 5718 */;
+import Constants from "Constants" /* 5719 */;
 import utils from "utils" /* 8617 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8829 */;
-import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 14327 */;
-import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9386 */;
-import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
+import UserProfileStackedActivityCardUtils from "UserProfileStackedActivityCardUtils" /* 14363 */;
+import ContentInventoryOutboxStore from "ContentInventoryOutboxStore" /* 9385 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   let tmp8 = null;
   if (stateFromStores) {
-    tmp8 = userProfileLiveActivities(10636)(arg0);
+    tmp8 = userProfileLiveActivities(10639)(arg0);
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [PresenceStore];

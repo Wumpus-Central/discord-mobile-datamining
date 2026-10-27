@@ -1,15 +1,15 @@
-// === Module 13154: useVoiceMessageTooltip ===
+// === Module 13168: useVoiceMessageTooltip ===
 
-// Module 13154 (useVoiceMessageTooltip)
-import util from "util" /* 1128 */;
-import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7027 */;
+// Module 13168 (useVoiceMessageTooltip)
+import util from "util" /* 1125 */;
+import useKeyboardIsOpen from "useKeyboardIsOpen" /* 7029 */;
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1501 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1498 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const VoiceMessagesUIStore = fn(13062);
+const VoiceMessagesUIStore = fn(13076);
 ({ hideVoiceMessagesTooltip: closure_4, showVoiceMessagesTooltip: hasOwnProperty, useVoiceMessagesUIStore: metroRequire } = VoiceMessagesUIStore);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -30,8 +30,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useVoice
   const tmp6 = closure_6(first);
   _require = tmp6;
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1128).intl;
-    const stringResult = intl.string(tmp(1128).t["hP6+07"]);
+    const intl = tmp(1125).intl;
+    const stringResult = intl.string(tmp(1125).t["hP6+07"]);
     cResult[1] = stringResult;
     let tmp7 = stringResult;
   } else {

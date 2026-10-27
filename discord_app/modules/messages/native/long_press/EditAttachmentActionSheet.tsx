@@ -1,27 +1,27 @@
-// === Module 13985: EditAttachmentActionSheet ===
+// === Module 13999: EditAttachmentActionSheet ===
 
-// Module 13985 (EditAttachmentActionSheet)
-import util from "util" /* 1128 */;
-import FlagUtils from "FlagUtils" /* 1405 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4980 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import Stack_Stack from "Stack/Stack" /* 5977 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6900 */;
-import TextArea from "TextArea" /* 7180 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 7248 */;
-import ActionSheet from "ActionSheet" /* 7298 */;
+// Module 13999 (EditAttachmentActionSheet)
+import util from "util" /* 1125 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4981 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import Stack_Stack from "Stack/Stack" /* 5978 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6902 */;
+import TextArea from "TextArea" /* 7182 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 7250 */;
+import ActionSheet from "ActionSheet" /* 7300 */;
 import useBottomSheetRef from "useBottomSheetRef" /* 8659 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 6010 */;
+import MessageStore from "MessageStore" /* 6011 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_7 = fn(4976).LEGACY_SPOILER_ATTACHMENT_PREFIX;
-let MessageAttachmentFlags = fn(1087).MessageAttachmentFlags;
+let closure_7 = fn(4977).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let MessageAttachmentFlags = fn(1084).MessageAttachmentFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const ReactCompilerGating = fn(558);

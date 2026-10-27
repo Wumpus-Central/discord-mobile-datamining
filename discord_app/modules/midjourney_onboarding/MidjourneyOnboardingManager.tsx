@@ -1,12 +1,12 @@
-// === Module 19370: MidjourneyOnboardingManager ===
+// === Module 19408: MidjourneyOnboardingManager ===
 
-// Module 19370 (MidjourneyOnboardingManager)
+// Module 19408 (MidjourneyOnboardingManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 
 const require = fn;
-const MIDJOURNEY_GUILD_ID = fn(15103).MIDJOURNEY_GUILD_ID;
-const Routes = fn(1087).Routes;
+const MIDJOURNEY_GUILD_ID = fn(15139).MIDJOURNEY_GUILD_ID;
+const Routes = fn(1084).Routes;
 class MidjourneyOnboardingManager extends tmp2 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -44,19 +44,19 @@ MidjourneyOnboardingManager.prototype["handleChannelCreate"] = function handleCh
             if (obj6.isEligibleForMidjourneyRedirect(channel)) {
               v1 = 1;
               dependencyMap = 1;
-              const obj4 = { value: tmp2(15102).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
+              const obj4 = { value: tmp2(15138).hasRedirectedToGuild(MIDJOURNEY_GUILD_ID), done: false };
               return obj4;
             } else {
               dependencyMap = 3;
             }
-            obj6 = tmp2(15102);
+            obj6 = tmp2(15138);
           }
         } else if (arg0 === 1) {
           dependencyMap = 3;
           throw value;
         } else if (arg0 !== 2) {
-          v1(7347)(Routes.CHANNEL(null, closure_128_0.id));
-          const tmp9 = v1(7347);
+          v1(7349)(Routes.CHANNEL(null, closure_128_0.id));
+          const tmp9 = v1(7349);
         }
         dependencyMap = 3;
         const obj = { value, done: true };

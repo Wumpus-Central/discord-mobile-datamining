@@ -1,14 +1,14 @@
-// === Module 18663: useTransitionToConnectedActivityInVoice ===
+// === Module 18699: useTransitionToConnectedActivityInVoice ===
 
-// Module 18663 (useTransitionToConnectedActivityInVoice)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
+// Module 18699 (useTransitionToConnectedActivityInVoice)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
 
 require = fn;
-const ComponentActions = fn(1087).ComponentActions;
+const ComponentActions = fn(1084).ComponentActions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/useTransitionToConnectedActivityInVoice.tsx");
@@ -55,15 +55,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrans
                   closure_129_3 = undefined;
                   _location = _location.location;
                   closure_129_0 = _location;
-                  const embeddedActivityLocationChannelId = handler(4892).getEmbeddedActivityLocationChannelId(_location);
+                  const embeddedActivityLocationChannelId = handler(4893).getEmbeddedActivityLocationChannelId(_location);
                   closure_129_1 = embeddedActivityLocationChannelId;
                   if (null != embeddedActivityLocationChannelId) {
-                    if (closure_2_1(5629)(embeddedActivityLocationChannelId)) {
+                    if (closure_2_1(5630)(embeddedActivityLocationChannelId)) {
                       if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
                         const obj4 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 1;
                         c4 = 1;
-                        const obj5 = { value: closure_2_1(11418)(obj4), done: false };
+                        const obj5 = { value: closure_2_1(11421)(obj4), done: false };
                         return obj5;
                       }
                     }
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrans
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(11365)(closure_1_3, _location);
+                closure_3_1(11368)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }
@@ -191,14 +191,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrans
                   const obj4 = { value, done: true };
                   return obj4;
                 } else {
-                  embeddedActivityLocationChannelId = handler(4892).getEmbeddedActivityLocationChannelId(_location2);
+                  embeddedActivityLocationChannelId = handler(4893).getEmbeddedActivityLocationChannelId(_location2);
                   if (null != embeddedActivityLocationChannelId) {
-                    if (closure_2_1(5629)(embeddedActivityLocationChannelId)) {
+                    if (closure_2_1(5630)(embeddedActivityLocationChannelId)) {
                       if (voiceChannelId.getVoiceChannelId() !== embeddedActivityLocationChannelId) {
                         const obj5 = { channelId: embeddedActivityLocationChannelId };
                         c3 = 2;
                         c4 = 1;
-                        const obj6 = { value: closure_2_1(11418)(obj5), done: false };
+                        const obj6 = { value: closure_2_1(11421)(obj5), done: false };
                         return obj6;
                       }
                     }
@@ -222,7 +222,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useTrans
               closure_129_3 = guild_id;
               const _setTimeout = setTimeout;
               const timerId = setTimeout(() => {
-                closure_3_1(11365)(closure_1_3, _location);
+                closure_3_1(11368)(closure_1_3, _location);
                 if (closure_0 != null) {
                   closure_0();
                 }

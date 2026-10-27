@@ -1,20 +1,20 @@
-// === Module 12277: ConjureRemovedItems ===
+// === Module 12282: ConjureRemovedItems ===
 
-// Module 12277 (ConjureRemovedItems)
+// Module 12282 (ConjureRemovedItems)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import _modDef3830 from "module_3830" /* 3830 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5039 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import Stack_Stack from "Stack/Stack" /* 5977 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6900 */;
-import FormCheckbox from "FormCheckbox" /* 6901 */;
-import TableRowGroup from "TableRowGroup" /* 6987 */;
+import util from "util" /* 1125 */;
+import _modDef3831 from "module_3831" /* 3831 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5040 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import Stack_Stack from "Stack/Stack" /* 5978 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6902 */;
+import FormCheckbox from "FormCheckbox" /* 6903 */;
+import TableRowGroup from "TableRowGroup" /* 6989 */;
 import FolderIcon from "FolderIcon" /* 8545 */;
 import AppsIcon from "AppsIcon" /* 8577 */;
 import BotTagDefault from "BotTag" /* 9134 */;
-import RobotIcon from "RobotIcon" /* 12240 */;
+import RobotIcon from "RobotIcon" /* 12155 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { box: { padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE }, boxDimmed: { opacity: 0.5 }, optionalLabel: { flex: 1 } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -298,7 +298,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureRemov
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { variant: "text-md/semibold", color: "text-strong", children: null };
     const intl = util.intl;
-    obj2.children = intl.string(_modDef3830["+E2PqP"]);
+    obj2.children = intl.string(_modDef3831["+E2PqP"]);
     const tmp7 = timestampProducer(Text_Text.Text, obj2);
     cResult[0] = tmp7;
     let first = tmp7;
@@ -336,7 +336,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureRemov
   const optionalItem = items.optionalItem;
   const obj = { variant: "text-md/semibold", color: "text-strong", children: null };
   const intl = util.intl;
-  obj.children = intl.string(_modDef3830["+E2PqP"]);
+  obj.children = intl.string(_modDef3831["+E2PqP"]);
   items = [timestampProducer(Text_Text.Text, obj), ];
   const obj2 = { items: items.items, children: null };
   let tmp2Result = null;
@@ -369,7 +369,7 @@ export const ConjureRemoveEverythingField = ReactCompilerGating.isReactCompilerE
   ({ checked, onChange, items } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3830.gKA9tU);
+    const stringResult = intl.string(_modDef3831.gKA9tU);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -418,7 +418,7 @@ export const ConjureRemoveEverythingField = ReactCompilerGating.isReactCompilerE
   const obj2 = { hasIcons: false, children: null };
   const obj3 = { label: null, checked: null, onPress: null };
   const intl = util.intl;
-  obj3.label = intl.string(_modDef3830.gKA9tU);
+  obj3.label = intl.string(_modDef3831.gKA9tU);
   obj3.checked = checked;
   obj3.onPress = onChange;
   obj2.children = timestampProducer(TableCheckboxRow.TableCheckboxRow, obj3);

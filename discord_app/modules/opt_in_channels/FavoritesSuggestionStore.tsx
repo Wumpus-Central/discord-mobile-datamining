@@ -1,11 +1,11 @@
-// === Module 7639: FavoritesSuggestionStore ===
+// === Module 7640: FavoritesSuggestionStore ===
 
-// Module 7639 (FavoritesSuggestionStore)
+// Module 7640 (FavoritesSuggestionStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
 
 function handleChange() {
   const channelId = SelectedChannelStore.getChannelId();

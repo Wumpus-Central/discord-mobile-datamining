@@ -3,8 +3,8 @@
 // Module 9207 (useIsSecureFramesKeyInconsistent)
 import SecureFramesUtils from "SecureFramesUtils" /* 9196 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7814 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7815 */;
 
 require = fn;
 let ReactCompilerGating = fn(558);

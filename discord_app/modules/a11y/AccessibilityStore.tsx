@@ -1,16 +1,16 @@
-// === Module 4972: AccessibilityStore ===
+// === Module 4973: AccessibilityStore ===
 
-// Module 4972 (AccessibilityStore)
+// Module 4973 (AccessibilityStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage7 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4977 */;
-import shared from "shared" /* 4978 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4978 */;
+import shared from "shared" /* 4979 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import GameModeStore from "GameModeStore" /* 4973 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
-import ThemeStore from "ThemeStore" /* 1207 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
+import GameModeStore from "GameModeStore" /* 4974 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1205 */;
+import ThemeStore from "ThemeStore" /* 1204 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 
 require = fn;
 function maybeApplyNoTextColorForLightCustomTheme() {
@@ -91,10 +91,10 @@ function handleReducedMotionUpdated() {
   obj.youBarAvatarDecoAnimation = str;
 }
 let closure_3 = ["fontScale"];
-const Constants = fn(1087);
+const Constants = fn(1084);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(4976);
+const MessageConstants = fn(4977);
 ({ MESSAGE_GROUP_SPACING: closure_11, DEFAULT_COMPACT_SPACING: closure_12, DEFAULT_COZY_SPACING: map1 } = MessageConstants);
 let obj = { DEFAULT: "default", HIGH: "high" };
 let obj2 = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };

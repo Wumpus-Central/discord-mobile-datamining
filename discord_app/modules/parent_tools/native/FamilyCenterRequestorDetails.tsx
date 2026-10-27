@@ -1,21 +1,21 @@
-// === Module 16213: FamilyCenterRequestorDetails ===
+// === Module 16251: FamilyCenterRequestorDetails ===
 
-// Module 16213 (FamilyCenterRequestorDetails)
+// Module 16251 (FamilyCenterRequestorDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import useUserLinks from "useUserLinks" /* 8125 */;
-import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 16184 */;
+import native from "native" /* 1199 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import useUserLinks from "useUserLinks" /* 8123 */;
+import FamilyCenterUsernameHeaderDefault from "FamilyCenterUsernameHeader" /* 16222 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
-let obj2 = { container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 }, avatar: { borderRadius: fn(1202).AVATAR_SIZE_MAP[fn(undefined, 1202).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, detailsContainer: null };
-let obj3 = { borderRadius: fn(1202).AVATAR_SIZE_MAP[fn(undefined, 1202).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createStyles = fn(4972);
+let obj2 = { container: { display: "flex", flexDirection: "row", flexGrow: 1, flexShrink: 1 }, avatar: { borderRadius: fn(1199).AVATAR_SIZE_MAP[fn(undefined, 1199).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, detailsContainer: null };
+let obj3 = { borderRadius: fn(1199).AVATAR_SIZE_MAP[fn(undefined, 1199).AvatarSizes.NORMAL] / 2, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.detailsContainer = { paddingLeft: nativeDefault.space.PX_12, paddingRight: nativeDefault.space.PX_4, flexGrow: 1, flexShrink: 1 };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

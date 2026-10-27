@@ -1,10 +1,10 @@
-// === Module 7783: getQuestLogger ===
+// === Module 7784: getQuestLogger ===
 
-// Module 7783 (getQuestLogger)
+// Module 7784 (getQuestLogger)
 import LoggerDefault from "Logger" /* 3 */;
-import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1372 */;
+import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1369 */;
 
-const NOOP = fn(1098).NOOP;
+const NOOP = fn(1095).NOOP;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/lib/getQuestLogger.tsx");
 

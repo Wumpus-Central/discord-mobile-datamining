@@ -1,16 +1,16 @@
-// === Module 7833: _guildRoomConnect ===
+// === Module 7834: _guildRoomConnect ===
 
-// Module 7833 (_guildRoomConnect)
+// Module 7834 (_guildRoomConnect)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import GuildRoomTypes from "GuildRoomTypes" /* 7835 */;
-import GuildRoomSeats from "GuildRoomSeats" /* 7836 */;
-import GuildRoomAnalytics from "GuildRoomAnalytics" /* 7855 */;
-import GuildRoomsExperiment from "GuildRoomsExperiment" /* 7865 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import GuildRoomTypes from "GuildRoomTypes" /* 7836 */;
+import GuildRoomSeats from "GuildRoomSeats" /* 7837 */;
+import GuildRoomAnalytics from "GuildRoomAnalytics" /* 7856 */;
+import GuildRoomsExperiment from "GuildRoomsExperiment" /* 7866 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildRoomStore from "GuildRoomStore" /* 7834 */;
+import GuildRoomStore from "GuildRoomStore" /* 7835 */;
 
 require = fn;
 let closure_8 = async function _guildRoomConnect(arg0) {
@@ -567,7 +567,7 @@ let closure_18 = async function _fetchGuildRoom(arg0) {
   }
   return value;
 };
-let Endpoints = fn(1087).Endpoints;
+let Endpoints = fn(1084).Endpoints;
 let closure_7 = { x: 0, y: 0 };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_rooms/GuildRoomActionCreators.shared.tsx");

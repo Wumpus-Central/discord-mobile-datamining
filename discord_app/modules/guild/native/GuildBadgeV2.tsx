@@ -7,13 +7,13 @@ import BadgeCategory from "BadgeCategory" /* 9235 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const native = Icon(1202);
-const shared = Icon(4978);
+const native = Icon(1199);
+const shared = Icon(4979);
 const GuildBadgeImageSource = Icon(9237);
 require = fn;
 let closure_2 = ["guild", "size"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_5 = createStyles.createStyles({ icon: { marginRight: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -2,22 +2,22 @@
 
 // Module 8747 (HeaderAvatar)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
+import native from "native" /* 1199 */;
 import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8738 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["user", "guildId", "disableStatus", "pendingAvatarSrc", "pendingAvatarDecoration", "style", "statusStyle", "onPress", "size", "animate", "ref"];
 const View = fn(17).View;
-const ActivityTypes = fn(1087).ActivityTypes;
+const ActivityTypes = fn(1084).ActivityTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { avatarStatusStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH } };
 let closure_11 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -59,7 +59,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderAv
     dependencyMap = cResult[12];
   }
   if (undefined === XXLARGE) {
-    XXLARGE = tmp(1202).AvatarSizes.XXLARGE;
+    XXLARGE = tmp(1199).AvatarSizes.XXLARGE;
   }
   closure_11();
   id = tmp14.id;
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderAv
   ({ pendingAvatarSrc, style, onPress, size } = animate);
   ({ disableStatus, pendingAvatarDecoration, statusStyle } = animate);
   if (size === undefined) {
-    size = guildId(1202).AvatarSizes.XXLARGE;
+    size = guildId(1199).AvatarSizes.XXLARGE;
   }
   let flag = animate.animate;
   if (flag === undefined) {
@@ -278,8 +278,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderAv
       obj10 = { user, guildId };
       const merged2 = Object.assign(obj7);
     }
-    obj8.children = jsx(obj(1202).Avatar, obj10);
-    jsx(obj(6908).PressableOpacity, { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" });
+    obj8.children = jsx(obj(1199).Avatar, obj10);
+    jsx(obj(6910).PressableOpacity, { ref, onPress, onLongPress: onPress, style, activeOpacity: 0.8, accessibilityRole: "imagebutton" });
   } else {
     const obj11 = { ref, style, accessibilityRole: "image", accessible: true };
     const merged3 = Object.assign(merged);
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HeaderAv
       obj13 = { user, guildId };
       const merged5 = Object.assign(obj7);
     }
-    obj11.children = jsx(obj(1202).Avatar, obj13);
+    obj11.children = jsx(obj(1199).Avatar, obj13);
     return <View ref={ref} style={style} accessibilityRole="image" accessible />;
   }
   const tmp10Result = tmp10(guildId(8655).getProfilePreviewValue(obj6));

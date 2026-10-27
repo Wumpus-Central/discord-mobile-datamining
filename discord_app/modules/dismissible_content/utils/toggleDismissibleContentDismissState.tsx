@@ -1,19 +1,19 @@
-// === Module 16979: toggleDismissibleContentDismissState ===
+// === Module 17021: toggleDismissibleContentDismissState ===
 
-// Module 16979 (toggleDismissibleContentDismissState)
+// Module 17021 (toggleDismissibleContentDismissState)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _mod19 from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const UserSettingsProtoActionCreators = obj(4804);
-const DismissibleContentUtils = obj(4808);
-const DismissibleContentTypes = obj(4814);
-const VersionedDismissibleContentUtils = obj(4821);
-const DismissibleContentFrameworkActionCreators = obj(5641);
+const UserSettingsProtoActionCreators = obj(4805);
+const DismissibleContentUtils = obj(4809);
+const DismissibleContentTypes = obj(4815);
+const VersionedDismissibleContentUtils = obj(4822);
+const DismissibleContentFrameworkActionCreators = obj(5642);
 _mod19.useCallback;
 let result = size.fileFinishedImporting("modules/dismissible_content/utils/toggleDismissibleContentDismissState.tsx");
 
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useToggl
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
-    let obj2 = { cooldownDurationMs: stateFromStores(1104).Millis.WEEK, guildId: stateFromStores };
+    let obj2 = { cooldownDurationMs: stateFromStores(1101).Millis.WEEK, guildId: stateFromStores };
     cResult[2] = stateFromStores;
     cResult[3] = obj2;
     let tmp8 = obj2;
@@ -285,10 +285,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useToggl
   const stateFromStores = require("initialize").useStateFromStores(items, () => guildId.getGuildId());
   let obj = require("initialize");
   let obj2 = require("DismissibleContentUnsafeUtils");
-  let result = obj2.useIsDismissibleContentDismissed_UNSAFE(arg0, { cooldownDurationMs: stateFromStores(1104).Millis.WEEK, guildId: stateFromStores });
+  let result = obj2.useIsDismissibleContentDismissed_UNSAFE(arg0, { cooldownDurationMs: stateFromStores(1101).Millis.WEEK, guildId: stateFromStores });
   dependencyMap = result;
   const items1 = [arg0, stateFromStores, result];
-  const obj3 = { cooldownDurationMs: stateFromStores(1104).Millis.WEEK, guildId: stateFromStores };
+  const obj3 = { cooldownDurationMs: stateFromStores(1101).Millis.WEEK, guildId: stateFromStores };
   return {
     isDismissed: result,
     handleToggleDismissState: useCallback(() => {

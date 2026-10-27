@@ -1,11 +1,11 @@
-// === Module 10553: useWishlistSkuFilter ===
+// === Module 10556: useWishlistSkuFilter ===
 
-// Module 10553 (useWishlistSkuFilter)
+// Module 10556 (useWishlistSkuFilter)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-let closure_3 = fn(7331).WishlistRecommendationReason;
-const SKUProductLines = fn(1087).SKUProductLines;
+let closure_3 = fn(7333).WishlistRecommendationReason;
+const SKUProductLines = fn(1084).SKUProductLines;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/wishlists/hooks/useWishlistSkuFilter.native.tsx");

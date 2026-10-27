@@ -1,15 +1,15 @@
-// === Module 18866: JSWatchdogManager ===
+// === Module 18904: JSWatchdogManager ===
 
-// Module 18866 (JSWatchdogManager)
+// Module 18904 (JSWatchdogManager)
 import LoggerDefault from "Logger" /* 3 */;
-import DurationsDefault from "Durations" /* 1104 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7584 */;
+import DurationsDefault from "Durations" /* 1101 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import TTIAnalyticsUtils from "TTIAnalyticsUtils" /* 7585 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AppStates: closure_4, AnalyticEvents: hasOwnProperty } = Constants);
 const logger = new LoggerDefault("JSWatchdogManager");
 const HALF_SECOND = DurationsDefault.Millis.HALF_SECOND;
@@ -224,7 +224,7 @@ prototype["startWatchdog"] = function startWatchdog() {
             closure_128_0 = undefined;
             closure_128_1 = undefined;
             if (null == self._timeoutId) {
-              if (null != tmp2(18867)) {
+              if (null != tmp2(18905)) {
                 dependencyMap = 1;
                 c3 = 1;
                 const obj4 = { value: self.getCurrentSessionId(), done: false };
@@ -244,7 +244,7 @@ prototype["startWatchdog"] = function startWatchdog() {
               closure_129_0._enabled = true;
               if (closure_129_0._pingCompleted) {
                 let checkForStallReportResult;
-                const obj = tmp2(18867);
+                const obj = tmp2(18905);
                 if (obj != null) {
                   checkForStallReportResult = obj.checkForStallReport();
                 }
@@ -323,11 +323,11 @@ prototype["getCurrentSessionId"] = function getCurrentSessionId() {
                 const uuid = closure_129_0._cachedSession.uuid;
                 c3 = 3;
               }
-              obj2 = tmp2(7581);
+              obj2 = tmp2(7582);
             }
             dependencyMap = 1;
             c3 = 1;
-            const obj6 = { value: tmp2(7571).getSession(), done: false };
+            const obj6 = { value: tmp2(7572).getSession(), done: false };
             return obj6;
           }
         } else if (arg0 === 1) {

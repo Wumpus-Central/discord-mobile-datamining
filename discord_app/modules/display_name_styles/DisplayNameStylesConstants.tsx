@@ -1,8 +1,8 @@
-// === Module 1410: DisplayNameStylesConstants ===
+// === Module 1407: DisplayNameStylesConstants ===
 
-// Module 1410 (DisplayNameStylesConstants)
-import DisplayNameEffect from "DisplayNameEffect" /* 1411 */;
-import DisplayNameFont from "DisplayNameFont" /* 1412 */;
+// Module 1407 (DisplayNameStylesConstants)
+import DisplayNameEffect from "DisplayNameEffect" /* 1408 */;
+import DisplayNameFont from "DisplayNameFont" /* 1409 */;
 import size from "module_2" /* 2 */;
 
 let items = [DisplayNameEffect.DisplayNameEffect.SOLID, DisplayNameEffect.DisplayNameEffect.GRADIENT, DisplayNameEffect.DisplayNameEffect.NEON, DisplayNameEffect.DisplayNameEffect.TOON, DisplayNameEffect.DisplayNameEffect.POP];

@@ -1,9 +1,9 @@
-// === Module 10136: FavoriteGIFHooks ===
+// === Module 10138: FavoriteGIFHooks ===
 
-// Module 10136 (FavoriteGIFHooks)
+// Module 10138 (FavoriteGIFHooks)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
-import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10137 */;
+import FrecencyUserSettingsHooks from "FrecencyUserSettingsHooks" /* 10139 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

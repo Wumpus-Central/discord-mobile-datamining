@@ -1,17 +1,17 @@
-// === Module 13347: useChangelogRenderedAnalytics ===
+// === Module 13361: useChangelogRenderedAnalytics ===
 
-// Module 13347 (useChangelogRenderedAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8467 */;
+// Module 13361 (useChangelogRenderedAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ChangeLogActionCreatorsDefault from "ChangeLogActionCreators" /* 8466 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
-import ReadStateStore from "ReadStateStore" /* 6771 */;
-import ChangelogStore from "ChangelogStore" /* 7412 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
+import ReadStateStore from "ReadStateStore" /* 6772 */;
+import ChangelogStore from "ChangelogStore" /* 7414 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/changelog/useChangelogRenderedAnalytics.tsx");

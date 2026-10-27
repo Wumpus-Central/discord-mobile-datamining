@@ -1,6 +1,6 @@
-// === Module 15401: LocalImageThumbnailNativeComponent ===
+// === Module 15437: LocalImageThumbnailNativeComponent ===
 
-// Module 15401 (LocalImageThumbnailNativeComponent)
+// Module 15437 (LocalImageThumbnailNativeComponent)
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;
 

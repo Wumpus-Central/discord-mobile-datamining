@@ -1,23 +1,23 @@
-// === Module 15736: links ===
+// === Module 15772: links ===
 
-// Module 15736 (links)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4892 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4977 */;
-import openUserSettings from "openUserSettings" /* 7490 */;
+// Module 15772 (links)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4893 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4978 */;
+import openUserSettings from "openUserSettings" /* 7491 */;
 import RPCErrorDefault from "RPCError" /* 9264 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11476 */;
-import RPCHelpers from "RPCHelpers" /* 11479 */;
-import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15710 */;
-import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15737 */;
-import internalDeepLinks from "internalDeepLinks" /* 15738 */;
-import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15739 */;
-import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15741 */;
-import getFrameChannelIdDefault from "getFrameChannelId" /* 15744 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11479 */;
+import RPCHelpers from "RPCHelpers" /* 11482 */;
+import validateEmbeddedAppFrame from "validateEmbeddedAppFrame" /* 15746 */;
+import getEmbeddedActivityPopoutWindowKeyDefault from "getEmbeddedActivityPopoutWindowKey" /* 15773 */;
+import internalDeepLinks from "internalDeepLinks" /* 15774 */;
+import fetchIsLinkTrusted from "fetchIsLinkTrusted" /* 15775 */;
+import openActivityShareLinkModal from "openActivityShareLinkModal" /* 15777 */;
+import getFrameChannelIdDefault from "getFrameChannelId" /* 15780 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
-import ApplicationStore from "ApplicationStore" /* 2045 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
+import ApplicationStore from "ApplicationStore" /* 2042 */;
 
 require = fn;
 function trackExternalLink(application, arg1, arg2) {
@@ -162,7 +162,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(5656)(href);
+                  closure_1(5657)(href);
                   const str = new URL(href);
                   let tmp5 = "client.vibeyard.tools" === str.hostname;
                   if (tmp5) {
@@ -179,7 +179,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   if (application != null) {
                     id = application.id;
                   }
-                  const tmpResult = closure_1(1267);
+                  const tmpResult = closure_1(1264);
                   tmpResult.track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url: str.toString(), opened: true });
                   closure_0({ opened: true });
                   const obj = { application_id: id, url: str.toString(), opened: true };
@@ -201,7 +201,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   if (application != null) {
                     id = application.id;
                   }
-                  const obj = closure_1(1267);
+                  const obj = closure_1(1264);
                   obj.track(constants.RPC_OPEN_EXTERNAL_LINK_CALLED, { application_id: id, url: str.toString(), opened: false });
                   closure_0({ opened: false });
                   const obj2 = { application_id: id, url: str.toString(), opened: false };
@@ -225,17 +225,17 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(6378);
+let Constants = fn(6379);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
-Constants = fn(1087);
+Constants = fn(1084);
 ({ RPCCommands, RPCErrors: metroRequire, UserSettingsSections: closure_7, AnalyticEvents: closure_8 } = Constants);
-Constants = fn(2026);
+Constants = fn(2023);
 const items = [, ];
 ({ AM_HARMONY_PRD_APPLICATION_ID: arr[0], AM_HARMONY_STG_APPLICATION_ID: arr[1] } = Constants);
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15725);
+let CONTEXT_MENU_ICON_NAMES = fn(15761);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -367,16 +367,16 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15725);
+CONTEXT_MENU_ICON_NAMES = fn(15761);
 let obj6 = {
   scope: null,
   handler(socket) {
     socket = socket.socket;
     ({ custom_id: importDefault, message: dependencyMap, link_id: asyncGeneratorStep } = socket.args);
-    let result = socket(11479).validatePostMessageTransport(socket.transport);
-    let obj = socket(11479);
+    let result = socket(11482).validatePostMessageTransport(socket.transport);
+    let obj = socket(11482);
     let tmp = socket;
-    const validateApplicationResult = socket(11479).validateApplication(socket.application);
+    const validateApplicationResult = socket(11482).validateApplication(socket.application);
     c4 = validateApplicationResult;
     if (null == validateApplicationResult) {
       const obj3 = { errorCode: constants.INVALID_COMMAND };
@@ -407,9 +407,9 @@ let obj6 = {
         const tmp10 = new RPCErrorDefault(obj4, "This application cannot access this API");
         throw tmp10;
       }
-      tmpResult = tmp(2031);
+      tmpResult = tmp(2028);
     }
-    let obj2 = socket(11479);
+    let obj2 = socket(11482);
   }
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];

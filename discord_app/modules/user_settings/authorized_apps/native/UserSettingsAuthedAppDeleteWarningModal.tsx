@@ -1,11 +1,11 @@
-// === Module 13525: UserSettingsAuthedAppDeleteWarningModal ===
+// === Module 13539: UserSettingsAuthedAppDeleteWarningModal ===
 
-// Module 13525 (UserSettingsAuthedAppDeleteWarningModal)
-import util from "util" /* 1128 */;
-import AlertModal from "AlertModal" /* 5914 */;
-import InfoBox from "InfoBox" /* 11055 */;
-import isSocialLayerApplication from "isSocialLayerApplication" /* 11229 */;
-import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 13526 */;
+// Module 13539 (UserSettingsAuthedAppDeleteWarningModal)
+import util from "util" /* 1125 */;
+import AlertModal from "AlertModal" /* 5915 */;
+import InfoBox from "InfoBox" /* 11058 */;
+import isSocialLayerApplication from "isSocialLayerApplication" /* 11232 */;
+import shouldWarnAuthorizedAppTwoWayDefault from "shouldWarnAuthorizedAppTwoWay" /* 13540 */;
 import jsxProd from "jsxProd" /* 21 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -63,8 +63,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
               }
               const _Symbol = Symbol;
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl3 = tmp(1128).intl;
-                const stringResult = intl3.string(tmp(1128).t.xUqheM);
+                const intl3 = tmp(1125).intl;
+                const stringResult = intl3.string(tmp(1125).t.xUqheM);
                 cResult[14] = stringResult;
                 let tmp16 = stringResult;
               } else {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
               }
               if (cResult[15] !== onDelete) {
                 let obj2 = { variant: "destructive", text: tmp16, onPress: onDelete };
-                const tmp20 = closure_3(tmp(5914).AlertActionButton, obj2, "confirm");
+                const tmp20 = closure_3(tmp(5915).AlertActionButton, obj2, "confirm");
                 cResult[15] = onDelete;
                 cResult[16] = tmp20;
                 let tmp18 = tmp20;
@@ -82,9 +82,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
               const _Symbol2 = Symbol;
               if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
                 let obj3 = { variant: "secondary", text: null };
-                const intl4 = tmp(1128).intl;
-                obj3.text = intl4.string(tmp(1128).t["ETE/oC"]);
-                const tmp23 = closure_3(tmp(5914).AlertActionButton, obj3, "cancel");
+                const intl4 = tmp(1125).intl;
+                obj3.text = intl4.string(tmp(1125).t["ETE/oC"]);
+                const tmp23 = closure_3(tmp(5915).AlertActionButton, obj3, "cancel");
                 cResult[17] = tmp23;
                 let tmp21 = tmp23;
               } else {
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 }
               }
               const obj5 = { title: tmp6, content: tmp9, extraContent: tmp13, actions: tmp24 };
-              const tmp30 = closure_3(tmp(5914).AlertModal, obj5);
+              const tmp30 = closure_3(tmp(5915).AlertModal, obj5);
               cResult[20] = tmp9;
               cResult[21] = tmp13;
               cResult[22] = tmp24;
@@ -127,9 +127,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             tmp13 = tmp12Result;
           }
         }
-        let intl2 = tmp(1128).intl;
+        let intl2 = tmp(1125).intl;
         const formatToPlainString = intl2.formatToPlainString;
-        let name = tmp(1128).t;
+        let name = tmp(1125).t;
         if (tmp4) {
           const obj6 = { applicationName: application.name };
           let formatToPlainStringResult = formatToPlainString(name.inM1Yt, obj6);
@@ -143,12 +143,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         cResult[8] = formatToPlainStringResult;
       }
     }
-    let intl = tmp(1128).intl;
+    let intl = tmp(1125).intl;
     if (tmp4) {
       const obj8 = { applicationName: application.name };
-      let formatToPlainStringResult1 = intl.formatToPlainString(tmp(1128).t["paC+US"], obj8);
+      let formatToPlainStringResult1 = intl.formatToPlainString(tmp(1125).t["paC+US"], obj8);
     } else {
-      formatToPlainStringResult1 = intl.string(tmp(1128).t["DT39A+"]);
+      formatToPlainStringResult1 = intl.string(tmp(1125).t["DT39A+"]);
     }
     cResult[3] = application.name;
     cResult[4] = tmp4;

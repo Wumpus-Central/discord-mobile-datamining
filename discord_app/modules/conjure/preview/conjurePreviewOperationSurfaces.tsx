@@ -1,7 +1,7 @@
-// === Module 10764: conjurePreviewOperationSurfaces ===
+// === Module 10767: conjurePreviewOperationSurfaces ===
 
-// Module 10764 (conjurePreviewOperationSurfaces)
-import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10762 */;
+// Module 10767 (conjurePreviewOperationSurfaces)
+import conjurePreviewControlLease from "conjurePreviewControlLease" /* 10765 */;
 import size from "module_2" /* 2 */;
 
 function bestEffort(arg0, fn) {

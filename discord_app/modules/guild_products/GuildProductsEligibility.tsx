@@ -1,12 +1,12 @@
-// === Module 7358: GuildProductsEligibility ===
+// === Module 7360: GuildProductsEligibility ===
 
-// Module 7358 (GuildProductsEligibility)
-import GuildStore from "GuildStore" /* 4845 */;
+// Module 7360 (GuildProductsEligibility)
+import GuildStore from "GuildStore" /* 4846 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1087).GuildFeatures;
+const GuildFeatures = fn(1084).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_products/GuildProductsEligibility.tsx");

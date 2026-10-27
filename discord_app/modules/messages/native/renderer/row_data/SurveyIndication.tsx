@@ -1,10 +1,10 @@
-// === Module 14510: SurveyIndication ===
+// === Module 14546: SurveyIndication ===
 
-// Module 14510 (SurveyIndication)
-import util from "util" /* 1128 */;
-import PushNotificationConstants from "PushNotificationConstants" /* 6671 */;
-import _modDef14511 from "module_14511" /* 14511 */;
-import _modDef14512 from "module_14512" /* 14512 */;
+// Module 14546 (SurveyIndication)
+import util from "util" /* 1125 */;
+import PushNotificationConstants from "PushNotificationConstants" /* 6672 */;
+import _modDef14547 from "module_14547" /* 14547 */;
+import _modDef14548 from "module_14548" /* 14548 */;
 import size from "module_2" /* 2 */;
 
 const NotificationTypes = PushNotificationConstants.NotificationTypes;
@@ -19,18 +19,18 @@ export const createSurveyIndication = function createSurveyIndication(message, f
     tmp2 = require;
     GwWhce = util.t["46+Iqc"];
   }
-  const intl = tmp2(1128).intl;
+  const intl = tmp2(1125).intl;
   const obj = { action: "bindUserSurvey", message, notificationType: null };
   if (TOP_MESSAGE_PUSH == null) {
     TOP_MESSAGE_PUSH = NotificationTypes.TOP_MESSAGE_PUSH;
   }
   const obj2 = { content: intl.formatToParts(GwWhce, { handleMessage: obj }), feedbackIconUrl: null };
   obj.notificationType = TOP_MESSAGE_PUSH;
-  const tmp2Result = tmp2(8277);
+  const tmp2Result = tmp2(8275);
   if (tmp2Result2.isThemeDark(forcedTheme)) {
-    let tmp7Result = _modDef14511;
+    let tmp7Result = _modDef14547;
   } else {
-    tmp7Result = _modDef14512;
+    tmp7Result = _modDef14548;
   }
   obj2.feedbackIconUrl = tmp2Result.getAssetUriForEmbed(tmp7Result);
   return obj2;

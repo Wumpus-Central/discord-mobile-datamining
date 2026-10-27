@@ -1,16 +1,16 @@
-// === Module 17089: TextDisplayComponent ===
+// === Module 17130: TextDisplayComponent ===
 
-// Module 17089 (TextDisplayComponent)
+// Module 17130 (TextDisplayComponent)
 import _modDef38 from "module_38" /* 38 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5705 */;
-import renderMessageMarkup from "renderMessageMarkup" /* 8482 */;
-import handleMessagesTapLink from "handleMessagesTapLink" /* 10008 */;
-import TextDisplayComponentViewNativeComponentDefault from "TextDisplayComponentViewNativeComponent" /* 17090 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5706 */;
+import renderMessageMarkup from "renderMessageMarkup" /* 8481 */;
+import handleMessagesTapLink from "handleMessagesTapLink" /* 10010 */;
+import TextDisplayComponentViewNativeComponentDefault from "TextDisplayComponentViewNativeComponent" /* 17131 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
 
 require = fn;
 const renderOptions = fn(8594).TEXT_DISPLAY_COMPONENT_MARKDOWN_RENDER_OPTIONS;
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TextDisp
       }
       const tmpResult = tmp(504);
       [tmp17, tmp18] = tmp(504).useStateFromStoresArray(tmp12, tmp13);
-      const AnimateEmoji = tmp(4799).AnimateEmoji;
+      const AnimateEmoji = tmp(4800).AnimateEmoji;
       const setting = AnimateEmoji.useSetting();
       const _Symbol2 = Symbol;
       if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
@@ -110,8 +110,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TextDisp
                   }
                   return tmp31;
                 }
-                const obj4 = { model: tmp10, markdownTextRenderOptions: tmp27, onTapLink: tmp29, onLongPressLink: tmp(11280).contentHandlers.onLongPressLink, onTapAttachmentLink: tmp(11280).contentHandlers.onTapAttachmentLink, onLongPressAttachmentLink: tmp(11280).contentHandlers.onLongPressAttachmentLink, onTapMention: tmp(11280).contentHandlers.onTapMention, onTapTimestamp: tmp(11280).contentHandlers.onTapTimestamp, onTapInlineCode: tmp(11280).contentHandlers.onTapInlineCode, onTapEmoji: tmp(11280).contentHandlers.onTapEmoji, style: tmp30 };
-                const tmp34 = jsx(TextDisplayComponentViewNativeComponentDefault, { model: tmp10, markdownTextRenderOptions: tmp27, onTapLink: tmp29, onLongPressLink: tmp(11280).contentHandlers.onLongPressLink, onTapAttachmentLink: tmp(11280).contentHandlers.onTapAttachmentLink, onLongPressAttachmentLink: tmp(11280).contentHandlers.onLongPressAttachmentLink, onTapMention: tmp(11280).contentHandlers.onTapMention, onTapTimestamp: tmp(11280).contentHandlers.onTapTimestamp, onTapInlineCode: tmp(11280).contentHandlers.onTapInlineCode, onTapEmoji: tmp(11280).contentHandlers.onTapEmoji, style: tmp30 });
+                const obj4 = { model: tmp10, markdownTextRenderOptions: tmp27, onTapLink: tmp29, onLongPressLink: tmp(11283).contentHandlers.onLongPressLink, onTapAttachmentLink: tmp(11283).contentHandlers.onTapAttachmentLink, onLongPressAttachmentLink: tmp(11283).contentHandlers.onLongPressAttachmentLink, onTapMention: tmp(11283).contentHandlers.onTapMention, onTapTimestamp: tmp(11283).contentHandlers.onTapTimestamp, onTapInlineCode: tmp(11283).contentHandlers.onTapInlineCode, onTapEmoji: tmp(11283).contentHandlers.onTapEmoji, style: tmp30 };
+                const tmp34 = jsx(TextDisplayComponentViewNativeComponentDefault, { model: tmp10, markdownTextRenderOptions: tmp27, onTapLink: tmp29, onLongPressLink: tmp(11283).contentHandlers.onLongPressLink, onTapAttachmentLink: tmp(11283).contentHandlers.onTapAttachmentLink, onLongPressAttachmentLink: tmp(11283).contentHandlers.onLongPressAttachmentLink, onTapMention: tmp(11283).contentHandlers.onTapMention, onTapTimestamp: tmp(11283).contentHandlers.onTapTimestamp, onTapInlineCode: tmp(11283).contentHandlers.onTapInlineCode, onTapEmoji: tmp(11283).contentHandlers.onTapEmoji, style: tmp30 });
                 cResult[18] = tmp10;
                 cResult[19] = tmp27;
                 cResult[20] = tmp34;
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TextDisp
   const obj6 = { type, id, content: null };
   const obj2 = channelId(8595);
   const tmp8Result2 = MarkupUtilsDefault;
-  obj6.content = tmp8Result2.parseToAST(content, true, channelId(8482).getInitialParserState({ channelId, renderOptions }));
+  obj6.content = tmp8Result2.parseToAST(content, true, channelId(8481).getInitialParserState({ channelId, renderOptions }));
   const json = JSON.stringify(obj6);
   cResult[1] = content;
   cResult[2] = id;
@@ -145,7 +145,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TextDisp
   cResult[4] = json;
   tmp10 = json;
   const obj7 = { channelId, renderOptions };
-  const tmpResult6 = channelId(8482);
+  const tmpResult6 = channelId(8481);
 }) : (function TextDisplayComponent(type) {
   type = type.type;
   const id = type.id;

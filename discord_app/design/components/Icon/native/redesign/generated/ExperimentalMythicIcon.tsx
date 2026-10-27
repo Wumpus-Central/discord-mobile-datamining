@@ -1,10 +1,10 @@
-// === Module 11142: ExperimentalMythicIcon ===
+// === Module 11145: ExperimentalMythicIcon ===
 
-// Module 11142 (ExperimentalMythicIcon)
+// Module 11145 (ExperimentalMythicIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5668 */;
-import _mod11143 from "module_11143" /* 11143 */;
+import BaseIconImage from "BaseIconImage" /* 5669 */;
+import _mod11146 from "module_11146" /* 11146 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ExperimentalMythicIcon = ReactCompilerGating.isReactCompilerEnabled
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11143;
+    const tmpResult = _mod11146;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ExperimentalMythicIcon = ReactCompilerGating.isReactCompilerEnabled
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11143, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11146, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

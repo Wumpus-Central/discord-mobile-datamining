@@ -1,24 +1,24 @@
-// === Module 14457: FractionalNitroPreview ===
+// === Module 14493: FractionalNitroPreview ===
 
-// Module 14457 (FractionalNitroPreview)
+// Module 14493 (FractionalNitroPreview)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import LinearGradientDefault from "LinearGradient" /* 5258 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7230 */;
-import _modDef14458 from "module_14458" /* 14458 */;
-import NitroIconDefault from "NitroIcon" /* 14459 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import LinearGradientDefault from "LinearGradient" /* 5259 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import CheckmarkSmallIcon from "CheckmarkSmallIcon" /* 7232 */;
+import _modDef14494 from "module_14494" /* 14494 */;
+import NitroIconDefault from "NitroIcon" /* 14495 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VerticalGradient = fn(1087).VerticalGradient;
-const PremiumTypes = fn(1394).PremiumTypes;
+const VerticalGradient = fn(1084).VerticalGradient;
+const PremiumTypes = fn(1391).PremiumTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flexDirection: "column", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.lg, overflow: "hidden", alignSelf: "center", gap: nativeDefault.space.PX_16 }, gradient: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0 }, headerImage: { width: 211, height: 157, resizeMode: "cover" }, nitroIconContainer: { alignSelf: "flex-start" }, benefits: null, benefitRow: null };
 let obj3 = { flexDirection: "column", alignItems: "center", justifyContent: "center", padding: nativeDefault.space.PX_24, borderRadius: nativeDefault.radii.lg, overflow: "hidden", alignSelf: "center", gap: nativeDefault.space.PX_16 };
 obj2.benefits = { display: "flex", flexDirection: "column", gap: nativeDefault.space.PX_8 };
@@ -35,26 +35,26 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
   const tmp4 = closure_8();
   _require = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1128).intl;
-    let items = [intl.string(tmp(1128).t.E1NP2x), , , , ];
-    const intl2 = tmp(1128).intl;
-    items[1] = intl2.string(tmp(1128).t.kpMomJ);
+    const intl = tmp(1125).intl;
+    let items = [intl.string(tmp(1125).t.E1NP2x), , , , ];
+    const intl2 = tmp(1125).intl;
+    items[1] = intl2.string(tmp(1125).t.kpMomJ);
     const obj2 = { legacyCopy: null, rolloutCopy: null };
-    const intl3 = tmp(1128).intl;
-    obj2.legacyCopy = intl3.string(tmp(1128).t.xT1Vfn);
-    const intl4 = tmp(1128).intl;
+    const intl3 = tmp(1125).intl;
+    obj2.legacyCopy = intl3.string(tmp(1125).t.xT1Vfn);
+    const intl4 = tmp(1125).intl;
     const obj3 = { maxFileSize: null };
-    const tmpResult = tmp(5032);
-    obj3.maxFileSize = tmp(2053).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
-    obj2.rolloutCopy = intl4.formatToPlainString(tmp(1128).t.IDAfOy, obj3);
+    const tmpResult = tmp(5033);
+    obj3.maxFileSize = tmp(2050).getMaxFileSizeForPremiumType(PremiumTypes.TIER_2, { useSpace: false });
+    obj2.rolloutCopy = intl4.formatToPlainString(tmp(1125).t.IDAfOy, obj3);
     items[2] = tmpResult.getNitroFileUploadRolloutCopy(obj2);
-    const intl5 = tmp(1128).intl;
-    items[3] = intl5.string(tmp(1128).t.myyAEr);
-    const intl6 = tmp(1128).intl;
-    items[4] = intl6.string(tmp(1128).t.zTk8Ul);
+    const intl5 = tmp(1125).intl;
+    items[3] = intl5.string(tmp(1125).t.myyAEr);
+    const intl6 = tmp(1125).intl;
+    items[4] = intl6.string(tmp(1125).t.zTk8Ul);
     cResult[0] = items;
     let first = items;
-    const tmpResult2 = tmp(2053);
+    const tmpResult2 = tmp(2050);
   } else {
     first = cResult[0];
   }
@@ -77,7 +77,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
     tmp7 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { uri: _modDef14458 };
+    const obj5 = { uri: _modDef14494 };
     cResult[4] = obj5;
     let tmp12 = obj5;
   } else {
@@ -181,7 +181,7 @@ export const FractionalNitroPreview = ReactCompilerGating.isReactCompilerEnabled
   const obj8 = { uri: null };
   const obj4 = require("PremiumUtils");
   const obj6 = { colors: ["#000000", "#36266d"], start: VerticalGradient.START, end: VerticalGradient.END, style: tmp.gradient };
-  obj8.uri = _modDef14458;
+  obj8.uri = _modDef14494;
   obj7.source = obj8;
   obj7.style = tmp.headerImage;
   items1[1] = closure_6(FastImageDefault, obj7);

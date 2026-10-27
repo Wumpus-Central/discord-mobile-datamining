@@ -1,8 +1,8 @@
-// === Module 16424: OrbsArcadeRewardRing ===
+// === Module 16463: OrbsArcadeRewardRing ===
 
-// Module 16424 (OrbsArcadeRewardRing)
+// Module 16463 (OrbsArcadeRewardRing)
 import c from "c" /* 576 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5052 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5053 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexport = ReanimatedRexport2;
@@ -10,7 +10,7 @@ const ReanimatedRexport = ReanimatedRexport2;
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
 let jsx = fn(21).jsx;
-let closure_4 = ReanimatedRexport.createAnimatedComponent(fn(7962).Path);
+let closure_4 = ReanimatedRexport.createAnimatedComponent(fn(7960).Path);
 const __initData = { code: "function OrbsArcadeRewardRingTsx1(){const{arcLength,progress}=this.__closure;return{strokeDashoffset:arcLength*(1-progress.get()),strokeOpacity:progress.get()>0?1:0};}" };
 const __initData2 = { code: "function OrbsArcadeRewardRingTsx2(){const{arcLength,progress}=this.__closure;return{strokeDashoffset:arcLength*(1-progress.get()),strokeOpacity:progress.get()>0?1:0};}" };
 let ReactCompilerGating = fn(558);

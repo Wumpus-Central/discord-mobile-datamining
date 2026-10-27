@@ -1,8 +1,8 @@
-// === Module 14304: isOnMetaHorizon ===
+// === Module 14334: isOnMetaHorizon ===
 
-// Module 14304 (isOnMetaHorizon)
-import Constants from "Constants" /* 1087 */;
-import Constants2 from "Constants" /* 2026 */;
+// Module 14334 (isOnMetaHorizon)
+import Constants from "Constants" /* 1084 */;
+import Constants2 from "Constants" /* 2023 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = Constants2.META_PRESENCE_APPLICATION_ID;

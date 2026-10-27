@@ -1,12 +1,12 @@
-// === Module 10670: LeaderboardWinnerBadge ===
+// === Module 10673: LeaderboardWinnerBadge ===
 
-// Module 10670 (LeaderboardWinnerBadge)
+// Module 10673 (LeaderboardWinnerBadge)
 import c from "c" /* 576 */;
-import useActiveLeaderboardWinnerData from "useActiveLeaderboardWinnerData" /* 10671 */;
-import GuildLeaderboardUtils from "GuildLeaderboardUtils" /* 10672 */;
-import MedalFirstBadge from "MedalFirstBadge" /* 10674 */;
-import StreakTrophyBadge from "StreakTrophyBadge" /* 10678 */;
-import WinnerTrophyBadge2 from "WinnerTrophyBadge" /* 10682 */;
+import useActiveLeaderboardWinnerData from "useActiveLeaderboardWinnerData" /* 10674 */;
+import GuildLeaderboardUtils from "GuildLeaderboardUtils" /* 10675 */;
+import MedalFirstBadge from "MedalFirstBadge" /* 10677 */;
+import StreakTrophyBadge from "StreakTrophyBadge" /* 10681 */;
+import WinnerTrophyBadge2 from "WinnerTrophyBadge" /* 10685 */;
 import noop from "module_19" /* 19 */;
 
 const useActiveLeaderboardWinnerDataDefault = useActiveLeaderboardWinnerData;
@@ -15,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 let c5 = 16;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_6 = createStyles.createStyles({ container: { marginLeft: 4 } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);

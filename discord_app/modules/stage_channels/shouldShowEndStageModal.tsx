@@ -1,10 +1,10 @@
-// === Module 11536: shouldShowEndStageModal ===
+// === Module 11538: shouldShowEndStageModal ===
 
-// Module 11536 (shouldShowEndStageModal)
+// Module 11538 (shouldShowEndStageModal)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6641 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6686 */;
-import StageInstanceStore from "StageInstanceStore" /* 4828 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6642 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6687 */;
+import StageInstanceStore from "StageInstanceStore" /* 4829 */;
 
 const require = globalThis.__r;
 

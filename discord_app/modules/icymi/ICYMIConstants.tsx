@@ -1,7 +1,7 @@
-// === Module 17907: ICYMIConstants ===
+// === Module 17941: ICYMIConstants ===
 
-// Module 17907 (ICYMIConstants)
-import DurationsDefault from "Durations" /* 1104 */;
+// Module 17941 (ICYMIConstants)
+import DurationsDefault from "Durations" /* 1101 */;
 
 const result = 15 * DurationsDefault.Millis.MINUTE;
 const size = fn(2);

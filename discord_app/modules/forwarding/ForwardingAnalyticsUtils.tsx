@@ -1,15 +1,15 @@
-// === Module 12903: ForwardingAnalyticsUtils ===
+// === Module 12912: ForwardingAnalyticsUtils ===
 
-// Module 12903 (ForwardingAnalyticsUtils)
+// Module 12912 (ForwardingAnalyticsUtils)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5712 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackForwardAddRecipientOnce() {

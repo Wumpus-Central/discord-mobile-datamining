@@ -1,6 +1,6 @@
-// === Module 11071: ViewMeasureUtils ===
+// === Module 11074: ViewMeasureUtils ===
 
-// Module 11071 (ViewMeasureUtils)
+// Module 11074 (ViewMeasureUtils)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/view_measure/ViewMeasureUtils.native.tsx");

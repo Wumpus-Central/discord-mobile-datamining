@@ -1,12 +1,12 @@
-// === Module 7347: safeTransitionTo ===
+// === Module 7349: safeTransitionTo ===
 
-// Module 7347 (safeTransitionTo)
-import router_utils from "router_utils" /* 1114 */;
-import LinkUtils from "LinkUtils" /* 5606 */;
-import DiceRollActionCreators from "DiceRollActionCreators" /* 7348 */;
-import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7349 */;
+// Module 7349 (safeTransitionTo)
+import router_utils from "router_utils" /* 1111 */;
+import LinkUtils from "LinkUtils" /* 5607 */;
+import DiceRollActionCreators from "DiceRollActionCreators" /* 7350 */;
+import isAccessibleChannelOrThreadPathDefault from "isAccessibleChannelOrThreadPath" /* 7351 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import GuildStore from "GuildStore" /* 4846 */;
 
 require = fn;
 let closure_6 = async function _safeTransitionTo(arg0) {
@@ -141,7 +141,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       }
       closure_2 = closure_131_2;
       if (closure_131_2 == null) {
-        closure_2 = { guildId: "Array" };
+        closure_2 = { guildId: "rejectWithError" };
       }
       c5 = 2;
       c6 = 1;
@@ -153,7 +153,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
     }
   }
 };
-const Routes = fn(1087).Routes;
+const Routes = fn(1084).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/links/safeTransitionTo.native.tsx");
 

@@ -1,8 +1,8 @@
-// === Module 11418: selectAndWaitForVoiceChannelJoin ===
+// === Module 11421: selectAndWaitForVoiceChannelJoin ===
 
-// Module 11418 (selectAndWaitForVoiceChannelJoin)
+// Module 11421 (selectAndWaitForVoiceChannelJoin)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
 
 let closure_5 = async function _selectAndWaitForVoiceChannelJoin(arg0) {
   if (c6 === 2) {

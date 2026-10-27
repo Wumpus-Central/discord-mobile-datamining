@@ -1,10 +1,10 @@
-// === Module 5890: NetworkStore ===
+// === Module 5891: NetworkStore ===
 
-// Module 5890 (NetworkStore)
+// Module 5891 (NetworkStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import NetworkUtilsDefault from "NetworkUtils" /* 1483 */;
-import Constants from "Constants" /* 1087 */;
+import NetworkUtilsDefault from "NetworkUtils" /* 1480 */;
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 function handleConnectionInfoChange(type) {

@@ -1,19 +1,19 @@
-// === Module 8403: GuildAlertModeSystemMessage ===
+// === Module 8402: GuildAlertModeSystemMessage ===
 
-// Module 8403 (GuildAlertModeSystemMessage)
+// Module 8402 (GuildAlertModeSystemMessage)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import AvatarUtils from "AvatarUtils" /* 1417 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1420 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8311 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8318 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8320 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8322 */;
-import getTagPropertiesDefault from "getTagProperties" /* 8404 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import util from "util" /* 1125 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8310 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8317 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8319 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8321 */;
+import getTagPropertiesDefault from "getTagProperties" /* 8403 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 require = fn;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 const nativeStyleProperties = createStyles.createNativeStyleProperties({ automodUsernameColor: nativeDefault.colors.TEXT_BRAND });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildAlertModeSystemMessage.tsx");

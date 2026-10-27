@@ -1,16 +1,16 @@
-// === Module 11683: ScreenshareParticipant ===
+// === Module 11685: ScreenshareParticipant ===
 
-// Module 11683 (ScreenshareParticipant)
+// Module 11685 (ScreenshareParticipant)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6643 */;
 
 const require = fn;
 const View = fn(17).View;
-const ApplicationStreamStates = fn(1087).ApplicationStreamStates;
+const ApplicationStreamStates = fn(1084).ApplicationStreamStates;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { alignItems: "center", justifyContent: "center", flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, image: { marginBottom: 12 }, title: { textAlign: "center", marginBottom: 8 }, description: { lineHeight: 18, textAlign: "center", marginBottom: 16 } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

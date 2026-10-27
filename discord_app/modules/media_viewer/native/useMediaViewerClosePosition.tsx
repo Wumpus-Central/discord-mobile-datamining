@@ -1,13 +1,13 @@
-// === Module 14245: useMediaViewerClosePosition ===
+// === Module 14272: useMediaViewerClosePosition ===
 
-// Module 14245 (useMediaViewerClosePosition)
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 14242 */;
+// Module 14272 (useMediaViewerClosePosition)
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import getMediaViewerStateForScreenDefault from "getMediaViewerStateForScreen" /* 14269 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const NOOP = fn(1087).NOOP;
+const NOOP = fn(1084).NOOP;
 let __initData = { code: "function useMediaViewerClosePositionTsx1(){const{index}=this.__closure;return index.get();}" };
 const __initData2 = { code: "function useMediaViewerClosePositionTsx2(index_1){const{runOnJS,setClosePosition}=this.__closure;runOnJS(setClosePosition)(index_1);}" };
 const __initData3 = { code: "function useMediaViewerClosePositionTsx3(){const{index}=this.__closure;return index.get();}" };

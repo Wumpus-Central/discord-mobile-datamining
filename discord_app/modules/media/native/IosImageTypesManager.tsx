@@ -1,10 +1,10 @@
-// === Module 8164: IosImageTypesManager ===
+// === Module 8162: IosImageTypesManager ===
 
-// Module 8164 (IosImageTypesManager)
+// Module 8162 (IosImageTypesManager)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1447 */;
+import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1444 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LifecycleManager from "LifecycleManager" /* 2004 */;
+import LifecycleManager from "LifecycleManager" /* 2001 */;
 
 const logger = new LoggerDefault("IosImageTypesManager");
 let closure_4 = null;

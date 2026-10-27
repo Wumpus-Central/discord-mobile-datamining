@@ -1,8 +1,8 @@
-// === Module 11963: useFormattedTimestamp ===
+// === Module 11964: useFormattedTimestamp ===
 
-// Module 11963 (useFormattedTimestamp)
-import DurationsDefault from "Durations" /* 1104 */;
-import _modDef2049 from "module_2049" /* 2049 */;
+// Module 11964 (useFormattedTimestamp)
+import DurationsDefault from "Durations" /* 1101 */;
+import _modDef2046 from "module_2046" /* 2046 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useForma
       let result = 1000 * closure_1_6;
       const _Math = Math;
       const parsed = tmp.parsed;
-      const absolute = Math.abs(parsed.diff(_modDef2049()));
+      const absolute = Math.abs(parsed.diff(_modDef2046()));
       let obj = dependencyMap2[Symbol.iterator]();
       while (obj !== undefined) {
         let tmp14 = _slicedToArray(tmp11, 2);
@@ -93,7 +93,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useForma
       let result = 1000 * closure_1_6;
       const _Math = Math;
       const parsed = tmp.parsed;
-      const absolute = Math.abs(parsed.diff(_modDef2049()));
+      const absolute = Math.abs(parsed.diff(_modDef2046()));
       let obj = dependencyMap2[Symbol.iterator]();
       while (obj !== undefined) {
         let tmp14 = _slicedToArray(tmp11, 2);

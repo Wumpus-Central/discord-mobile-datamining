@@ -3,7 +3,7 @@
 // Module 8704 (useMaybeTrackProfileFrameViewed)
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8680 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7650 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7651 */;
 import size from "module_2" /* 2 */;
 
 ({ useEffect: c2, useRef: c3 } = noop);

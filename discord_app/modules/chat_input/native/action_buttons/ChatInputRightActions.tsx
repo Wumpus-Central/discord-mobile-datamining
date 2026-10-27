@@ -1,22 +1,22 @@
-// === Module 13332: ChatInputRightActions ===
+// === Module 13346: ChatInputRightActions ===
 
-// Module 13332 (ChatInputRightActions)
+// Module 13346 (ChatInputRightActions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 5037 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5052 */;
-import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 12511 */;
-import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12513 */;
-import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 13143 */;
+import native from "native" /* 5038 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5053 */;
+import ChatInputActionButtonTransitionItem from "ChatInputActionButtonTransitionItem" /* 12519 */;
+import useChatInputFloatingBounceDefault from "useChatInputFloatingBounce" /* 12521 */;
+import ChatInputActionButtonGiftOrThreadDefault from "ChatInputActionButtonGiftOrThread" /* 13157 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const enterDelayMs = fn(12512).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
+const enterDelayMs = fn(12520).CHAT_INPUT_FLOATING_BOUNCE_ENTER_DELAY_MS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_9 = createStyles.createStyles(() => {
   const obj = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.modules.mobile.CHAT_INPUT_ACTION_BUTTON_GAP }, leftSlot: { alignItems: "center", justifyContent: "center" } };
   return obj;
@@ -29,13 +29,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputR
   ({ keyboardType, showKeyboardIcon, shouldShowGiftButton, onPressAction } = channel);
   ({ onPressExpression, suggestedExpressions, suggestedExpressionsRef, ref } = channel);
   const obj = channel(576);
-  const token = channel(5252).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  const obj2 = channel(5252);
-  const sum = token + 2 * channel(5252).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  const token = channel(5253).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const obj2 = channel(5253);
+  const sum = token + 2 * channel(5253).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   dependencyMap = sum;
   const tmp7 = closure_9();
   const _slicedToArray = tmp7;
-  const obj3 = channel(5252);
+  const obj3 = channel(5253);
   [tmp9, noop] = noop.useState(true);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function l() {
@@ -105,13 +105,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputR
               }
             }
             if (null != suggestedExpressions) {
-              const obj7 = { ref: suggestedExpressionsRef, active: keyboardType === tmp(1631).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression, channel };
+              const obj7 = { ref: suggestedExpressionsRef, active: keyboardType === tmp(1628).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression, channel };
               merged = Object.assign(suggestedExpressions);
-              let tmp23 = closure_7(tmp(13333).EmojiSuggestionChatButton, obj7);
+              let tmp23 = closure_7(tmp(13347).EmojiSuggestionChatButton, obj7);
             } else {
-              const obj8 = { active: keyboardType === tmp(1631).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
-              tmp23 = closure_7(onPressAction(12059), obj8);
-              const tmp4Result = onPressAction(12059);
+              const obj8 = { active: keyboardType === tmp(1628).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
+              tmp23 = closure_7(onPressAction(12060), obj8);
+              const tmp4Result = onPressAction(12060);
             }
             cResult[12] = channel;
             cResult[13] = keyboardType;
@@ -129,7 +129,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputR
             tmp18 = tmp13;
           }
           const obj9 = { item: tmp18, renderItem: tmp14 };
-          tmp17Result = closure_7(tmp(5037).TransitionItem, obj9);
+          tmp17Result = closure_7(tmp(5038).TransitionItem, obj9);
         }
         cResult[8] = tmp14;
         cResult[9] = shouldShowGiftButton;
@@ -158,13 +158,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputR
   ({ onPressExpression, suggestedExpressions } = channel);
   noop = undefined;
   ({ shouldShowGiftButton, suggestedExpressionsRef, ref } = channel);
-  const token = channel(5252).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
-  const obj = channel(5252);
-  const sum = token + 2 * channel(5252).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
+  const token = channel(5253).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_SIZE);
+  const obj = channel(5253);
+  const sum = token + 2 * channel(5253).useToken(onPressAction(587).modules.mobile.CHAT_INPUT_ACTION_BUTTON_MARGIN);
   dependencyMap = sum;
   const tmp6 = closure_9();
   const _slicedToArray = tmp6;
-  const obj2 = channel(5252);
+  const obj2 = channel(5253);
   [tmp8, c4] = noop.useState(true);
   const imperativeHandle = noop.useImperativeHandle(ref, () => ({
     onDismissActions() {
@@ -184,17 +184,17 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChatInputR
       tmp16 = memo;
     }
     const obj4 = { item: tmp16, renderItem: tmp11 };
-    tmp15Result = closure_7(tmp(5037).TransitionItem, obj4);
+    tmp15Result = closure_7(tmp(5038).TransitionItem, obj4);
   }
   const items1 = [tmp15Result, ];
   if (null != suggestedExpressions) {
-    const obj5 = { ref: suggestedExpressionsRef, active: keyboardType === tmp(1631).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression, channel };
+    const obj5 = { ref: suggestedExpressionsRef, active: keyboardType === tmp(1628).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression, channel };
     const merged = Object.assign(suggestedExpressions);
-    let tmp19 = closure_7(tmp(13333).EmojiSuggestionChatButton, obj5);
+    let tmp19 = closure_7(tmp(13347).EmojiSuggestionChatButton, obj5);
   } else {
-    const obj6 = { active: keyboardType === tmp(1631).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
-    tmp19 = closure_7(onPressAction(12059), obj6);
-    const tmp3Result = onPressAction(12059);
+    const obj6 = { active: keyboardType === tmp(1628).KeyboardTypes.EXPRESSION, showKeyboardIcon, onPress: onPressExpression };
+    tmp19 = closure_7(onPressAction(12060), obj6);
+    const tmp3Result = onPressAction(12060);
   }
   items1[1] = tmp19;
   obj3.children = items1;
@@ -257,7 +257,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function LeftSl
             cResult[18] = tmp21;
             tmp16 = tmp21;
           }
-          const obj4 = { canStartThreads: false, channel, onPress, styleButton: "Reflect", shouldShowThread: "PLAY_ON_PLAYSTATION" };
+          const obj4 = { canStartThreads: false, channel, onPress, styleButton: "Reflect", shouldShowThread: "Solomon Islands" };
           const tmp15 = React5(ChatInputActionButtonGiftOrThreadDefault, obj4);
           cResult[12] = channel;
           cResult[13] = onPress;
@@ -290,7 +290,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function LeftSl
   obj2.style = items;
   const tmp = useChatInputFloatingBounceDefault({ visible: state !== native.TransitionStates.YEETED, initiallyVisible: state !== native.TransitionStates.ENTERED, enterDelayMs, onExitComplete: cleanup });
   const merged = Object.assign(ChatInputActionButtonTransitionItem.interactivityProps(isInteractive));
-  obj2.children = React5(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "Reflect", shouldShowThread: "PLAY_ON_PLAYSTATION" });
+  obj2.children = React5(ChatInputActionButtonGiftOrThreadDefault, { canStartThreads: false, channel, onPress, styleButton: "Reflect", shouldShowThread: "Solomon Islands" });
   return React5(ReanimatedRexportDefault.View, obj2);
 });
 const size = fn(2);

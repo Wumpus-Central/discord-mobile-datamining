@@ -1,7 +1,7 @@
-// === Module 10763: conjurePreviewNativeSurfaces ===
+// === Module 10766: conjurePreviewNativeSurfaces ===
 
-// Module 10763 (conjurePreviewNativeSurfaces)
-import Constants from "Constants" /* 1087 */;
+// Module 10766 (conjurePreviewNativeSurfaces)
+import Constants from "Constants" /* 1084 */;
 import RpcCommandInterception from "RpcCommandInterception" /* 9269 */;
 import size from "module_2" /* 2 */;
 
@@ -164,8 +164,8 @@ let obj = {
   [RPCCommands.HIDE_TOOLTIP]: () => ({ result: { hidden: true }, answered: "hidden" }),
   [RPCCommands.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: true }, answered: "opened" }),
   [RPCCommands.SHOW_TOAST]: () => ({ result: { shown: true }, answered: "shown" }),
-  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "ix", answered: true }),
-  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "ix", answered: true })
+  [RPCCommands.OPEN_INVITE_DIALOG]: () => ({ result: "unicodeVersion", answered: "set" }),
+  [RPCCommands.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: "unicodeVersion", answered: "set" })
 };
 let closure_5 = {
   drain() {

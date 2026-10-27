@@ -1,9 +1,9 @@
-// === Module 9776: ConversationFocusScreen ===
+// === Module 9778: ConversationFocusScreen ===
 
-// Module 9776 (ConversationFocusScreen)
-import ConversationFocusViewDefault from "ConversationFocusView" /* 9777 */;
+// Module 9778 (ConversationFocusScreen)
+import ConversationFocusViewDefault from "ConversationFocusView" /* 9779 */;
 import noop from "module_19" /* 19 */;
-import SelectedConversationStore from "SelectedConversationStore" /* 9737 */;
+import SelectedConversationStore from "SelectedConversationStore" /* 9739 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -14,7 +14,7 @@ const result = size.fileFinishedImporting("modules/conversations/components/nati
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConversationFocusScreen() {
   const cResult = channelId(576).c(16);
   let obj = channelId(576);
-  const params = channelId(1508).useRoute().params;
+  const params = channelId(1505).useRoute().params;
   channelId = params.channelId;
   ({ conversationId, messageId } = params);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -38,7 +38,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
     tmp6 = cResult[2];
     tmp7 = cResult[3];
   }
-  const obj2 = channelId(1508);
+  const obj2 = channelId(1505);
   const stateFromStores = channelId(504).useStateFromStores(first, tmp6, tmp7);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [SelectedConversationStore];
@@ -102,10 +102,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Conversa
   tmp14 = tmp15;
   const tmpResult2 = channelId(504);
 }) : (function ConversationFocusScreen() {
-  const params = channelId(1508).useRoute().params;
+  const params = channelId(1505).useRoute().params;
   channelId = params.channelId;
   ({ conversationId, messageId } = params);
-  let obj = channelId(1508);
+  let obj = channelId(1505);
   const items = [SelectedConversationStore];
   const items1 = [channelId];
   const messages = channelId(504).useStateFromStores(items, () => SelectedConversationStore.getHydratedMessages(channelId), items1);

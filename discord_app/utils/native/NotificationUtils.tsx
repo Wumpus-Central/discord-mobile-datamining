@@ -1,17 +1,17 @@
-// === Module 13321: NotificationUtils ===
+// === Module 13335: NotificationUtils ===
 
-// Module 13321 (NotificationUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7891 */;
-import PushNotificationDefault from "PushNotification" /* 10753 */;
-import SoundUtils from "SoundUtils" /* 11526 */;
+// Module 13335 (NotificationUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7892 */;
+import PushNotificationDefault from "PushNotification" /* 10756 */;
+import SoundUtils from "SoundUtils" /* 11528 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const PermissionStateType = fn(13312).PermissionStateType;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const PermissionStateType = fn(13326).PermissionStateType;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/NotificationUtils.tsx");
 
@@ -34,7 +34,7 @@ export default {
     let obj = require("PushNotificationActionCreators");
     AnalyticsUtilsDefault.track(AnalyticEvents.PERMISSIONS_REQUESTED, { type: "notification" });
     const permissions = PushNotificationDefault.requestPermissions();
-    permissions.then((sound) => {
+    return permissions.then((sound) => {
       ({ alert: _alert, badge } = sound);
       if (!_alert) {
         _alert = sound.sound;

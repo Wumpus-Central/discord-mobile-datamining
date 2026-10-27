@@ -1,17 +1,17 @@
-// === Module 8426: ReferralProgramUtils ===
+// === Module 8425: ReferralProgramUtils ===
 
-// Module 8426 (ReferralProgramUtils)
+// Module 8425 (ReferralProgramUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import DurationsDefault from "Durations" /* 1104 */;
-import util from "util" /* 1128 */;
-import dismissible_content from "dismissible_content" /* 4807 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4808 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5001 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7562 */;
+import DurationsDefault from "Durations" /* 1101 */;
+import util from "util" /* 1125 */;
+import dismissible_content from "dismissible_content" /* 4808 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4809 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5002 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7563 */;
 
 require = fn;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 ReactCompilerGating = fn(558);
@@ -86,7 +86,7 @@ export const markReferralIncentivePopoverSeen = function markReferralIncentivePo
 export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsReferralProgramPopoverShowable() {
   const cResult = stateFromStores1(576).c(7);
   let obj = stateFromStores1(576);
-  let isEligibleSenderForReferralProgram = stateFromStores1(8427).useIsEligibleSenderForReferralProgram(false);
+  let isEligibleSenderForReferralProgram = stateFromStores1(8426).useIsEligibleSenderForReferralProgram(false);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ReferralTrialStore];
     const fn = function t() {
@@ -99,7 +99,7 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
   } else {
     [tmp5, tmp6] = cResult;
   }
-  const obj2 = stateFromStores1(8427);
+  const obj2 = stateFromStores1(8426);
   const stateFromStores = stateFromStores1(504).useStateFromStores(tmp5, tmp6);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const items1 = [ReferralTrialStore];
@@ -197,8 +197,8 @@ export const useIsReferralProgramPopoverShowable = ReactCompilerGating.isReactCo
   }
   return tmp17;
 }) : (function useIsReferralProgramPopoverShowable() {
-  let isEligibleSenderForReferralProgram = stateFromStores1(8427).useIsEligibleSenderForReferralProgram(false);
-  let obj = stateFromStores1(8427);
+  let isEligibleSenderForReferralProgram = stateFromStores1(8426).useIsEligibleSenderForReferralProgram(false);
+  let obj = stateFromStores1(8426);
   const items = [ReferralTrialStore];
   const stateFromStores = stateFromStores1(504).useStateFromStores(items, () => ReferralTrialStore.getReferralsRemaining());
   const obj2 = stateFromStores1(504);

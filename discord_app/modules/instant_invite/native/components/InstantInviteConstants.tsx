@@ -3,12 +3,12 @@
 // Module 9092 (components/InstantInviteConstants)
 import _mod17 from "module_17" /* 17 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import _modDef5679 from "module_5679" /* 5679 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7566 */;
+import util from "util" /* 1125 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import _modDef5680 from "module_5680" /* 5680 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5910 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7567 */;
 import getInviteURLDefault from "getInviteURL" /* 9061 */;
 import icons_ShareDefault from "icons/Share" /* 9093 */;
 import _modDef9096 from "module_9096" /* 9096 */;
@@ -26,10 +26,10 @@ import _modDef9124 from "module_9124" /* 9124 */;
 import _modDef9125 from "module_9125" /* 9125 */;
 import _modDef9126 from "module_9126" /* 9126 */;
 import InstantInviteConstants from "InstantInviteConstants" /* 9056 */;
-import Constants from "Constants" /* 1087 */;
-import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
-import PlatformUtils_mod from "PlatformUtils" /* 1384 */;
-import DCDSendUtils_mod from "DCDSendUtils" /* 7823 */;
+import Constants from "Constants" /* 1084 */;
+import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
+import PlatformUtils_mod from "PlatformUtils" /* 1381 */;
+import DCDSendUtils_mod from "DCDSendUtils" /* 7824 */;
 import InstantInviteUtils_mod from "instant_invite/InstantInviteUtils" /* 9050 */;
 import size from "module_2" /* 2 */;
 
@@ -84,7 +84,7 @@ items[1] = {
   type: obj.COPY,
   icon: _modDef9097,
   isAvailable: Promise.resolve(true),
-  IconComponent: _modDef5679,
+  IconComponent: _modDef5680,
   getLabel() {
     const intl = util.intl;
     return intl.string(util.t.WqhZss);
@@ -140,11 +140,11 @@ obj5.onPress = function onPress(channel) {
   let obj = channel(9050);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(5210).hideActionSheet();
-    let obj3 = code(5210);
+    code(5211).hideActionSheet();
+    let obj3 = code(5211);
   }
-  obj2 = channel(1384);
-  tmp(7823).sendSMS({ body: message }, (arg0, arg1, arg2) => {
+  obj2 = channel(1381);
+  tmp(7824).sendSMS({ body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = { inviteKey: code, channelId: null, messageId: null, location: "SMS Option", overrideProperties: null };
       let id;
@@ -166,7 +166,7 @@ obj5.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj5);
     }
   });
-  const tmpResult = tmp(7823);
+  const tmpResult = tmp(7824);
 };
 items[3] = obj5;
 const obj6 = { type: obj.MAIL, fullIcon: null, icon: null, isAvailable: null, getLabel: null, onPress: null };
@@ -196,11 +196,11 @@ obj6.onPress = function onPress(channel) {
   let obj = channel(9050);
   const tmp = channel;
   if (obj2.isIOS()) {
-    code(5210).hideActionSheet();
-    let obj3 = code(5210);
+    code(5211).hideActionSheet();
+    let obj3 = code(5211);
   }
-  obj2 = channel(1384);
-  tmp(7823).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
+  obj2 = channel(1381);
+  tmp(7824).sendMail({ subject: "", body: message }, (arg0, arg1, arg2) => {
     if (arg0) {
       const obj2 = { inviteKey: code, channelId: null, messageId: null, location: "Email Option", overrideProperties: null };
       let id;
@@ -222,7 +222,7 @@ obj6.onPress = function onPress(channel) {
       actions_AlertActionCreatorsDefault.show(obj5);
     }
   });
-  const tmpResult = tmp(7823);
+  const tmpResult = tmp(7824);
 };
 items[4] = obj6;
 const obj7 = { type: obj.FB_MESSENGER, fullIcon: _modDef9121, isAvailable: null, getLabel: null, onPress: null };

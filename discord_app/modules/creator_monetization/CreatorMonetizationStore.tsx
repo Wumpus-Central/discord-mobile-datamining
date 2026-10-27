@@ -1,6 +1,6 @@
-// === Module 15002: CreatorMonetizationStore ===
+// === Module 15038: CreatorMonetizationStore ===
 
-// Module 15002 (CreatorMonetizationStore)
+// Module 15038 (CreatorMonetizationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

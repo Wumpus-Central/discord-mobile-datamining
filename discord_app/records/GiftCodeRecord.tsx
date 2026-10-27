@@ -1,14 +1,14 @@
-// === Module 10451: GiftCodeRecord ===
+// === Module 10453: GiftCodeRecord ===
 
-// Module 10451 (GiftCodeRecord)
-import _modDef2049 from "module_2049" /* 2049 */;
-import Record from "Record" /* 1407 */;
-import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7565 */;
-import PromotionRecord from "PromotionRecord" /* 9521 */;
-import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 2051 */;
+// Module 10453 (GiftCodeRecord)
+import _modDef2046 from "module_2046" /* 2046 */;
+import Record from "Record" /* 1404 */;
+import SubscriptionTrialRecord from "SubscriptionTrialRecord" /* 7566 */;
+import PromotionRecord from "PromotionRecord" /* 9520 */;
+import SubscriptionPlanRecord from "SubscriptionPlanRecord" /* 2048 */;
 
 const require = fn;
-let closure_6 = fn(1394).PremiumSubscriptionSKUToPremiumType;
+let closure_6 = fn(1391).PremiumSubscriptionSKUToPremiumType;
 const frozen = Object.freeze({ PAYMENT_SOURCE_REQUIRED: 1, EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2, NOT_SELF_REDEEMABLE: 4 });
 let GiftCodeRecord;
 class GiftCodeRecord extends tmp2 {
@@ -31,7 +31,7 @@ GiftCodeRecord["createFromServer"] = function createFromServer(user) {
   }
   let tmp5 = null;
   if (null != user.expires_at) {
-    tmp5 = _modDef2049(user.expires_at);
+    tmp5 = _modDef2046(user.expires_at);
   }
   const redeemed = user.redeemed;
   if (null != user.subscription_plan) {
@@ -88,8 +88,8 @@ prototype["isExpired"] = function isExpired() {
   const expiresAt = this.expiresAt;
   let isAfterResult = null != expiresAt;
   if (isAfterResult) {
-    isAfterResult = _modDef2049().isAfter(expiresAt);
-    const obj = _modDef2049();
+    isAfterResult = _modDef2046().isAfter(expiresAt);
+    const obj = _modDef2046();
   }
   return isAfterResult;
 };

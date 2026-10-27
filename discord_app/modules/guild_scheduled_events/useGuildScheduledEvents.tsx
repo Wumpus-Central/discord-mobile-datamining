@@ -1,24 +1,24 @@
 // === Module 9022: useGuildScheduledEvents ===
 
 // Module 9022 (useGuildScheduledEvents)
-import DurationsDefault from "Durations" /* 1104 */;
+import DurationsDefault from "Durations" /* 1101 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6784 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6785 */;
 import UpcomingEventNoticesStore from "UpcomingEventNoticesStore" /* 9023 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let GuildScheduledEventStore = fn(6784);
+let GuildScheduledEventStore = fn(6785);
 ({ isGuildScheduledEventActive: closure_7, StaticGuildEventIndexes: closure_8 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const GuildScheduledEventsConstants = fn(4829);
+const GuildScheduledEventsConstants = fn(4830);
 ({ GuildScheduledEventEntityTypes: closure_11, GuildScheduledEventStatus: closure_12 } = GuildScheduledEventsConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ BasicPermissions: map1, GuildFeatures: closure_14 } = Constants);
 let closure_15 = [];
 let closure_16 = 15 * DurationsDefault.Millis.MINUTE;

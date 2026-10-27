@@ -1,8 +1,8 @@
 // === Module 8678: DisplayProfile ===
 
 // Module 8678 (DisplayProfile)
-import PremiumConstants from "PremiumConstants" /* 1394 */;
-import AvatarUtils from "AvatarUtils" /* 1417 */;
+import PremiumConstants from "PremiumConstants" /* 1391 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
 import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8655 */;
 import size from "module_2" /* 2 */;
 

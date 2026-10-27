@@ -1,10 +1,10 @@
-// === Module 13087: useTextareaPlaceholderAndLabels ===
+// === Module 13101: useTextareaPlaceholderAndLabels ===
 
-// Module 13087 (useTextareaPlaceholderAndLabels)
+// Module 13101 (useTextareaPlaceholderAndLabels)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import useChannelNameDefault from "useChannelName" /* 5604 */;
-import Constants from "Constants" /* 1087 */;
+import util from "util" /* 1125 */;
+import useChannelNameDefault from "useChannelName" /* 5605 */;
+import Constants from "Constants" /* 1084 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

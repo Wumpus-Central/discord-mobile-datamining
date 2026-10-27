@@ -1,26 +1,26 @@
-// === Module 15899: EditProfileFrameSection ===
+// === Module 15937: EditProfileFrameSection ===
 
-// Module 15899 (EditProfileFrameSection)
+// Module 15937 (EditProfileFrameSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
-import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9415 */;
-import useCollectibleListLayout from "useCollectibleListLayout" /* 14495 */;
-import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 14496 */;
-import useProfileFrameSections from "useProfileFrameSections" /* 15898 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7280 */;
+import ProfileFrameSamplePreviewDefault from "ProfileFrameSamplePreview" /* 9414 */;
+import useCollectibleListLayout from "useCollectibleListLayout" /* 14531 */;
+import CollectiblesEditUserProfileListItems from "CollectiblesEditUserProfileListItems" /* 14532 */;
+import useProfileFrameSections from "useProfileFrameSections" /* 15936 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const isProfileFrameRecord = fn(7657).isProfileFrameRecord;
+const isProfileFrameRecord = fn(7658).isProfileFrameRecord;
 let closure_6 = fn(8712).PROFILE_FRAME_ASPECT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
-const createStyles = fn(4971);
-let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14495).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
-let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14495).GUTTER_SIZE };
-obj.rowSpacer = { height: fn(14495).GUTTER_SIZE };
+const createStyles = fn(4972);
+let obj = { row: { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14531).GUTTER_SIZE }, rowSpacer: null, previewContainer: null };
+let obj3 = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", paddingHorizontal: fn(14531).GUTTER_SIZE };
+obj.rowSpacer = { height: fn(14531).GUTTER_SIZE };
 obj.previewContainer = { width: "100%", height: "100%", paddingVertical: PX_8, overflow: "hidden", alignItems: "center", justifyContent: "center" };
 let closure_11 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

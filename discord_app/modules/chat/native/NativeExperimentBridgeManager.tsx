@@ -1,19 +1,18 @@
-// === Module 19382: NativeExperimentBridgeManager ===
+// === Module 19420: NativeExperimentBridgeManager ===
 
-// Module 19382 (NativeExperimentBridgeManager)
+// Module 19420 (NativeExperimentBridgeManager)
 import _mod17 from "module_17" /* 17 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6494 */;
-import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 7748 */;
-import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 19383 */;
-import VideoStutterMitigationExperimentDefault from "VideoStutterMitigationExperiment" /* 19384 */;
-import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 19385 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6495 */;
+import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 7749 */;
+import YYTextReplacementExperiment from "YYTextReplacementExperiment" /* 19421 */;
+import NotificationLoadMessagesExperimentDefault from "NotificationLoadMessagesExperiment" /* 19422 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import MediaPlaybackExperiment_mod from "MediaPlaybackExperiment" /* 8792 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 import size from "module_2" /* 2 */;
 
 function syncYYTextReplacementExperiment() {
@@ -56,18 +55,15 @@ function updateIOSExperiments() {
       const tmpResult4 = IOSAnchoredChatScrollerExperiment;
     }
   }
-  obj = PlatformUtils;
-  if (obj5.getConfig({ location: "NativeExperimentBridgeManager" }).enabled) {
-    const RNVVideo = NativeModules.RNVVideo;
-    if (RNVVideo != null) {
-      const result3 = RNVVideo.setOptimizeConfigureAudio(true);
-    }
-    const RNVVideo2 = NativeModules.RNVVideo;
-    if (RNVVideo2 != null) {
-      const result4 = RNVVideo2.setUseBackgroundProgressQueue(true);
-    }
+  const RNVVideo = NativeModules.RNVVideo;
+  if (RNVVideo != null) {
+    const result3 = RNVVideo.setOptimizeConfigureAudio(true);
   }
-  obj5 = VideoStutterMitigationExperimentDefault;
+  const RNVVideo2 = NativeModules.RNVVideo;
+  if (RNVVideo2 != null) {
+    const result4 = RNVVideo2.setUseBackgroundProgressQueue(true);
+  }
+  obj = PlatformUtils;
 }
 function updateAndroidExperiments() {
   const obj = { "X-Super-Properties": AnalyticsUtilsDefault.getSuperPropertiesBase64(), "X-Fingerprint": AuthenticationStore.getFingerprint(), "X-Installation-ID": AuthenticationStore.getInstallationForTracking(), "X-Discord-Locale": LocaleStore.locale };

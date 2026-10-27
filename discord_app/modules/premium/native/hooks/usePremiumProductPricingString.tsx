@@ -1,12 +1,12 @@
-// === Module 10507: usePremiumProductPricingString ===
+// === Module 10510: usePremiumProductPricingString ===
 
-// Module 10507 (usePremiumProductPricingString)
-import IAPStore from "IAPStore" /* 7524 */;
+// Module 10510 (usePremiumProductPricingString)
+import IAPStore from "IAPStore" /* 7525 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const PRICE_PLACEHOLDER = fn(1394).PRICE_PLACEHOLDER;
+const PRICE_PLACEHOLDER = fn(1391).PRICE_PLACEHOLDER;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/native/hooks/usePremiumProductPricingString.tsx");

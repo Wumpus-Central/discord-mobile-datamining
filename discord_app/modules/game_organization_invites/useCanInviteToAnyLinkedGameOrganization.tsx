@@ -1,10 +1,10 @@
-// === Module 11289: useCanInviteToAnyLinkedGameOrganization ===
+// === Module 11292: useCanInviteToAnyLinkedGameOrganization ===
 
-// Module 11289 (useCanInviteToAnyLinkedGameOrganization)
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+// Module 11292 (useCanInviteToAnyLinkedGameOrganization)
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
@@ -15,7 +15,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanIn
   const cResult = linkedGameOrgInvitesEnabled(576).c(4);
   const obj = linkedGameOrgInvitesEnabled(576);
   const tmp = linkedGameOrgInvitesEnabled;
-  linkedGameOrgInvitesEnabled = linkedGameOrgInvitesEnabled(11290).useLinkedGameOrgInvitesEnabled(arg0);
+  linkedGameOrgInvitesEnabled = linkedGameOrgInvitesEnabled(11293).useLinkedGameOrgInvitesEnabled(arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [GuildStore, GuildMemberStore, GuildRoleStore, PermissionStore];
     cResult[0] = items;
@@ -42,11 +42,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCanIn
     tmp10 = cResult[2];
     tmp11 = cResult[3];
   }
-  const obj2 = linkedGameOrgInvitesEnabled(11290);
+  const obj2 = linkedGameOrgInvitesEnabled(11293);
   return tmp(504).useStateFromStores(first, tmp10, tmp11);
 }) : (function useCanInviteToAnyLinkedGameOrganization(arg0) {
-  linkedGameOrgInvitesEnabled = linkedGameOrgInvitesEnabled(11290).useLinkedGameOrgInvitesEnabled(arg0);
-  const obj = linkedGameOrgInvitesEnabled(11290);
+  linkedGameOrgInvitesEnabled = linkedGameOrgInvitesEnabled(11293).useLinkedGameOrgInvitesEnabled(arg0);
+  const obj = linkedGameOrgInvitesEnabled(11293);
   const items = [GuildStore, GuildMemberStore, GuildRoleStore, PermissionStore];
   const items1 = [linkedGameOrgInvitesEnabled];
   return linkedGameOrgInvitesEnabled(504).useStateFromStores(items, () => {

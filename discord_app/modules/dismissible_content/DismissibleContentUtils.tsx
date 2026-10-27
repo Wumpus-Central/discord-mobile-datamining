@@ -1,21 +1,21 @@
-// === Module 4808: DismissibleContentUtils ===
+// === Module 4809: DismissibleContentUtils ===
 
-// Module 4808 (DismissibleContentUtils)
+// Module 4809 (DismissibleContentUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4804 */;
-import dismissible_content from "dismissible_content" /* 4807 */;
-import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4811 */;
-import DismissibleContentTypes from "DismissibleContentTypes" /* 4814 */;
-import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 4821 */;
-import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5023 */;
-import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5641 */;
-import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5642 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4805 */;
+import dismissible_content from "dismissible_content" /* 4808 */;
+import DismissibleContentFatigueConfig from "DismissibleContentFatigueConfig" /* 4812 */;
+import DismissibleContentTypes from "DismissibleContentTypes" /* 4815 */;
+import VersionedDismissibleContentUtils from "VersionedDismissibleContentUtils" /* 4822 */;
+import NewUserDismissibleContentRegistry from "NewUserDismissibleContentRegistry" /* 5024 */;
+import DismissibleContentFrameworkActionCreators from "DismissibleContentFrameworkActionCreators" /* 5642 */;
+import trackDismissibleContentActioned from "trackDismissibleContentActioned" /* 5643 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4810 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import DismissibleContentFrameworkStore from "DismissibleContentFrameworkStore" /* 4811 */;
 
 const require = globalThis.__r;
 
@@ -439,11 +439,11 @@ function trackDismissibleContentDismissed(content, dismissAction) {
   obj4.track(AnalyticEvents.DISMISSIBLE_CONTENT_DISMISSED, obj3);
   const tmp16Result = DismissibleContentFatigueConfig;
 }
-const DCFEventTypes = fn(4809).DCFEventTypes;
-const DismissibleContentShownStateStore = fn(4815);
+const DCFEventTypes = fn(4810).DCFEventTypes;
+const DismissibleContentShownStateStore = fn(4816);
 ({ addCandidateContent: closure_8, removeCandidateContent: closure_9, isContentShown: c10, getCurrentlyShownCounts: closure_11 } = DismissibleContentShownStateStore);
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 let c14 = 2592000000;
 const ReactCompilerGating = fn(558);
 class UNSAFE_isSingleUseGuildDismissibleContentDismissed {
@@ -492,7 +492,7 @@ function getGuildNextNumTimesDismissed(arg0, stateFromStores) {
   }
   return num + 1;
 }
-let items = [fn(4807).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(4807).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK];
+let items = [fn(4808).DismissibleContent.ACCOUNT_LINK_INVITE_FRIENDS, fn(4808).DismissibleContent.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK];
 const set = new Set(items);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/dismissible_content/DismissibleContentUtils.tsx");
@@ -614,7 +614,7 @@ export const isTimeRecurringDismissibleContentDismissed = function isTimeRecurri
       }
     }
     if (undefined === tmp5) {
-      return { isDismissed: false, lastDismissedAtMs: "a" };
+      return { isDismissed: false, lastDismissedAtMs: "Array" };
     } else {
       let flag = true;
       if (null != cooldownConfig) {

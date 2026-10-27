@@ -1,12 +1,12 @@
-// === Module 14736: navigateToSocialLayerStorefront ===
+// === Module 14772: navigateToSocialLayerStorefront ===
 
-// Module 14736 (navigateToSocialLayerStorefront)
-import router_utils from "router_utils" /* 1114 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7330 */;
-import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10556 */;
+// Module 14772 (navigateToSocialLayerStorefront)
+import router_utils from "router_utils" /* 1111 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7332 */;
+import SocialLayerStorefrontActionCreators from "SocialLayerStorefrontActionCreators" /* 10559 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7332 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7334 */;
 
 require = fn;
 function navigateToSocialLayerStorefrontWithGuildPreview() {
@@ -139,7 +139,7 @@ let closure_9 = async function _navigateToSocialLayerStorefrontWithGuildPreview(
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ GuildFeatures: metroRequire, Routes: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/slayer_storefront/navigateToSocialLayerStorefront.tsx");

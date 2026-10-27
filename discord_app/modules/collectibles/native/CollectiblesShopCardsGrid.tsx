@@ -1,19 +1,19 @@
-// === Module 17227: CollectiblesShopCardsGrid ===
+// === Module 17268: CollectiblesShopCardsGrid ===
 
-// Module 17227 (CollectiblesShopCardsGrid)
+// Module 17268 (CollectiblesShopCardsGrid)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
-import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9357 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9360 */;
+import CollectiblesShopCardV2Default from "CollectiblesShopCardV2" /* 9356 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9359 */;
 import noop from "module_19" /* 19 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7650 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7651 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
-let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9357).COLLECTIBLES_SHOP_CARD_GAP } };
+const createStyles = fn(4972);
+let obj2 = { rowContainer: { flexDirection: "row", gap: fn(9356).COLLECTIBLES_SHOP_CARD_GAP } };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShopCardGridItem(arg0) {
@@ -69,7 +69,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ShopCar
   return jsx(CollectiblesAnalyticsContext.CollectiblesAnalyticsProvider, { newValue: memo, children: jsx(CollectiblesShopCardV2Default, { unpublishedAt, product, cardWidth, preferVCPrice, disableBundleStaticBackground, muteBundleStaticBackground }) });
 });
 ReactCompilerGating = fn(558);
-let obj3 = { flexDirection: "row", gap: fn(9357).COLLECTIBLES_SHOP_CARD_GAP };
+let obj3 = { flexDirection: "row", gap: fn(9356).COLLECTIBLES_SHOP_CARD_GAP };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopCardsGrid.tsx");
 
@@ -210,14 +210,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Collecti
   ({ disableBundleStaticBackground: noop, muteBundleStaticBackground: closure_4 } = accessibilityLabel);
   ({ onScroll, paddingTop, paddingBottom } = accessibilityLabel);
   const rowContainer = closure_8();
-  const cardLayout = products(17226).useCardLayout();
+  const cardLayout = products(17267).useCardLayout();
   const columns = cardLayout.columns;
   const cardWidth = cardLayout.cardWidth;
   const items = [products, columns];
   const memo = noop.useMemo(() => _modDef12.chunk(products, columns), items);
   const obj2 = { accessibilityLabel: accessibilityLabel.accessibilityLabel, accessibilityRole: "list", scrollEnabled, showsVerticalScrollIndicator: false, onScroll, contentContainerStyle: null, children: null };
-  let obj = products(17226);
-  obj2.contentContainerStyle = { gap: products(9357).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: cardLayout.rowWidth, alignSelf: "center" };
+  let obj = products(17267);
+  obj2.contentContainerStyle = { gap: products(9356).COLLECTIBLES_SHOP_CARD_GAP, paddingTop, paddingBottom, width: cardLayout.rowWidth, alignSelf: "center" };
   obj2.children = memo.map((arr, index) => {
     closure_0 = index;
     return cardWidth(muteBundleStaticBackground, {

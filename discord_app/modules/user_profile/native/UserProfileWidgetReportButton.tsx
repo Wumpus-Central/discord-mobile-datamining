@@ -1,12 +1,12 @@
-// === Module 14392: UserProfileWidgetReportButton ===
+// === Module 14428: UserProfileWidgetReportButton ===
 
-// Module 14392 (UserProfileWidgetReportButton)
+// Module 14428 (UserProfileWidgetReportButton)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9644 */;
-import ContextMenu from "ContextMenu" /* 9761 */;
-import FlagIcon from "FlagIcon" /* 9971 */;
-import showReportModalForUserWidget from "showReportModalForUserWidget" /* 14393 */;
+import util from "util" /* 1125 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9646 */;
+import ContextMenu from "ContextMenu" /* 9763 */;
+import FlagIcon from "FlagIcon" /* 9973 */;
+import showReportModalForUserWidget from "showReportModalForUserWidget" /* 14429 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -24,8 +24,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   userId = userId.userId;
   const widget = userId.widget;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let intl = tmp(1128).intl;
-    const stringResult = intl.string(tmp(1128).t.D4GvHE);
+    let intl = tmp(1125).intl;
+    const stringResult = intl.string(tmp(1125).t.D4GvHE);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -42,9 +42,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         const merged = Object.assign(_objectWithoutProperties(ref, closure_1_3));
         obj.hitSlop = hitSlop;
         obj.accessibilityRole = "button";
-        const intl = userId(1128).intl;
-        obj.accessibilityLabel = intl.string(userId(1128).t.xpSHSk);
-        obj.children = jsx(userId(9644).MoreHorizontalIcon, { size: "sm", color: widget(587).colors.TEXT_MUTED });
+        const intl = userId(1125).intl;
+        obj.accessibilityLabel = intl.string(userId(1125).t.xpSHSk);
+        obj.children = jsx(userId(9646).MoreHorizontalIcon, { size: "sm", color: widget(587).colors.TEXT_MUTED });
         return <Pressable ref={ref.ref} />;
       };
       cResult[4] = fn;
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     }
     if (cResult[5] !== tmp6) {
       const obj2 = { items: tmp6, children: tmp7 };
-      const tmp10 = jsx(tmp(9761).ContextMenu, { items: tmp6, children: tmp7 });
+      const tmp10 = jsx(tmp(9763).ContextMenu, { items: tmp6, children: tmp7 });
       cResult[5] = tmp6;
       cResult[6] = tmp10;
       let tmp8 = tmp10;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     {
       label: first,
       variant: "destructive",
-      IconComponent: userId(9971).FlagIcon,
+      IconComponent: userId(9973).FlagIcon,
       action() {
         return showReportModalForUserWidget.showReportModalForUserWidget(userId, widget);
       }
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   const obj3 = {
     label: first,
     variant: "destructive",
-    IconComponent: userId(9971).FlagIcon,
+    IconComponent: userId(9973).FlagIcon,
     action() {
       return showReportModalForUserWidget.showReportModalForUserWidget(userId, widget);
     }

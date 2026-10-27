@@ -1,12 +1,12 @@
-// === Module 5988: useHasEnhancedRoleColors ===
+// === Module 5989: useHasEnhancedRoleColors ===
 
-// Module 5988 (useHasEnhancedRoleColors)
-import GuildStore from "GuildStore" /* 4845 */;
+// Module 5989 (useHasEnhancedRoleColors)
+import GuildStore from "GuildStore" /* 4846 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildFeatures = fn(1087).GuildFeatures;
+const GuildFeatures = fn(1084).GuildFeatures;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasEnhancedRoleColors(arg0) {

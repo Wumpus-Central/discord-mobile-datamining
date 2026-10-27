@@ -1,11 +1,11 @@
-// === Module 7018: CircleXIcon ===
+// === Module 7020: CircleXIcon ===
 
-// Module 7018 (CircleXIcon)
+// Module 7020 (CircleXIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5668 */;
-import _mod7019 from "module_7019" /* 7019 */;
-import _mod7020 from "module_7020" /* 7020 */;
+import BaseIconImage from "BaseIconImage" /* 5669 */;
+import _mod7021 from "module_7021" /* 7021 */;
+import _mod7022 from "module_7022" /* 7022 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,7 +46,7 @@ export const CircleXIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod7019;
+    const tmpResult = _mod7021;
     cResult[5] = tmpResult;
     let tmp11 = tmpResult;
   } else {
@@ -59,7 +59,7 @@ export const CircleXIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
       const _Symbol = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult2 = _mod7020;
+        const tmpResult2 = _mod7022;
         cResult[10] = tmpResult2;
         let tmp16 = tmpResult2;
       } else {
@@ -132,8 +132,8 @@ export const CircleXIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const merged = Object.assign(color, Object.assign({ style: 0, secondaryColor: 0, color: 0 }));
   const obj = { children: null };
   const merged1 = Object.assign(merged);
-  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod7019, color: secondaryColor, style }), ];
-  const obj3 = { source: _mod7020, color: INTERACTIVE_ICON_DEFAULT, style: null };
+  const items = [timestampProducer(BaseIconImage.BaseIconImage, { source: _mod7021, color: secondaryColor, style }), ];
+  const obj3 = { source: _mod7022, color: INTERACTIVE_ICON_DEFAULT, style: null };
   const items1 = [style];
   const items2 = [];
   items2[HermesBuiltin.arraySpread(items1.flat(), 0)] = { position: "absolute", top: 0 };

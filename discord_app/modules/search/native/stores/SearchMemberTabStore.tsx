@@ -1,15 +1,15 @@
-// === Module 13253: SearchMemberTabStore ===
+// === Module 13267: SearchMemberTabStore ===
 
-// Module 13253 (SearchMemberTabStore)
+// Module 13267 (SearchMemberTabStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4908 */;
-import GuildUtilsDefault from "GuildUtils" /* 6829 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4909 */;
+import GuildUtilsDefault from "GuildUtils" /* 6831 */;
 import sortByMatchScoreDefault from "sortByMatchScore" /* 9067 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 const require = fn;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 let closure_6 = [];
 class GuildMemberSearchManager {
   constructor() {

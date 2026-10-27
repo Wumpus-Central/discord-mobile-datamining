@@ -8,7 +8,7 @@ import reverseDefault from "reverse" /* 8871 */;
 import _modDef8872 from "module_8872" /* 8872 */;
 import InviteRecord from "InviteRecord" /* 8868 */;
 
-const InviteTargetTypes = fn(7809).InviteTargetTypes;
+const InviteTargetTypes = fn(7810).InviteTargetTypes;
 let closure_5 = {};
 const dependencyMap = {};
 const dependencyMap2 = {};

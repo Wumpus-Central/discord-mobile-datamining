@@ -1,7 +1,7 @@
-// === Module 11665: transferToXbox ===
+// === Module 11667: transferToXbox ===
 
-// Module 11665 (transferToXbox)
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11657 */;
+// Module 11667 (transferToXbox)
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11659 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -125,7 +125,7 @@ let closure_8 = async function _transferToXbox(arg0) {
   }
 };
 const Linking = fn(17).Linking;
-const PlatformTypes = fn(1087).PlatformTypes;
+const PlatformTypes = fn(1084).PlatformTypes;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/transferToXbox.tsx");

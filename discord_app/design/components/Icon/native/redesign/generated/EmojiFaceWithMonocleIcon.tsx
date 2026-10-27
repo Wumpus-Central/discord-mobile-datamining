@@ -1,10 +1,10 @@
-// === Module 16731: EmojiFaceWithMonocleIcon ===
+// === Module 16773: EmojiFaceWithMonocleIcon ===
 
-// Module 16731 (EmojiFaceWithMonocleIcon)
+// Module 16773 (EmojiFaceWithMonocleIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5668 */;
-import _mod16732 from "module_16732" /* 16732 */;
+import BaseIconImage from "BaseIconImage" /* 5669 */;
+import _mod16774 from "module_16774" /* 16774 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const EmojiFaceWithMonocleIcon = ReactCompilerGating.isReactCompilerEnabl
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16732;
+    const tmpResult = _mod16774;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const EmojiFaceWithMonocleIcon = ReactCompilerGating.isReactCompilerEnabl
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16732, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16774, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

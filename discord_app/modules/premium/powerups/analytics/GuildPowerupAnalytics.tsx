@@ -1,13 +1,13 @@
-// === Module 13469: GuildPowerupAnalytics ===
+// === Module 13483: GuildPowerupAnalytics ===
 
-// Module 13469 (GuildPowerupAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+// Module 13483 (GuildPowerupAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/analytics/GuildPowerupAnalytics.tsx");

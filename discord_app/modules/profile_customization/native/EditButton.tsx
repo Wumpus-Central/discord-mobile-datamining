@@ -1,9 +1,9 @@
-// === Module 15852: EditButton ===
+// === Module 15890: EditButton ===
 
-// Module 15852 (EditButton)
+// Module 15890 (EditButton)
 import c from "c" /* 576 */;
-import IconButton from "IconButton" /* 7959 */;
-import _modDef8324 from "module_8324" /* 8324 */;
+import IconButton from "IconButton" /* 7957 */;
+import _modDef8323 from "module_8323" /* 8323 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -41,20 +41,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditButt
       }
     }
   }
-  const tmp5 = jsx(IconButton.IconButton, { icon: _modDef8324, variant: str, size: "sm", onPress, accessibilityLabel, disabled });
+  const tmp5 = jsx(IconButton.IconButton, { icon: _modDef8323, variant: str, size: "sm", onPress, accessibilityLabel, disabled });
   cResult[0] = accessibilityLabel;
   cResult[1] = disabled;
   cResult[2] = onPress;
   cResult[3] = str;
   cResult[4] = tmp5;
   tmp4 = tmp5;
-  const obj3 = { icon: _modDef8324, variant: str, size: "sm", onPress, accessibilityLabel, disabled };
+  const obj3 = { icon: _modDef8323, variant: str, size: "sm", onPress, accessibilityLabel, disabled };
 }) : (function EditButton(disabled) {
   let str = disabled.variant;
   ({ onPress, accessibilityLabel, style } = disabled);
   if (str === undefined) {
     str = "primary-overlay";
   }
-  const obj = { style, children: jsx(IconButton.IconButton, { icon: _modDef8324, variant: str, size: "sm", onPress, accessibilityLabel, disabled: disabled.disabled }) };
-  return <View style={style}>{jsx(IconButton.IconButton, { icon: _modDef8324, variant: str, size: "sm", onPress, accessibilityLabel, disabled: disabled.disabled })}</View>;
+  const obj = { style, children: jsx(IconButton.IconButton, { icon: _modDef8323, variant: str, size: "sm", onPress, accessibilityLabel, disabled: disabled.disabled }) };
+  return <View style={style}>{jsx(IconButton.IconButton, { icon: _modDef8323, variant: str, size: "sm", onPress, accessibilityLabel, disabled: disabled.disabled })}</View>;
 });

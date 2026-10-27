@@ -1,23 +1,23 @@
-// === Module 19260: StarCoinsSpotIllustration ===
+// === Module 19298: StarCoinsSpotIllustration ===
 
-// Module 19260 (StarCoinsSpotIllustration)
+// Module 19298 (StarCoinsSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef19261 from "module_19261" /* 19261 */;
-import _modDef19262 from "module_19262" /* 19262 */;
-import _modDef19263 from "module_19263" /* 19263 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import assetHelpers from "assetHelpers" /* 6997 */;
+import _modDef19299 from "module_19299" /* 19299 */;
+import _modDef19300 from "module_19300" /* 19300 */;
+import _modDef19301 from "module_19301" /* 19301 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19261 }, 3: null };
-let obj2 = { uri: _modDef19261 };
-obj[2] = { uri: _modDef19262 };
-const obj3 = { uri: _modDef19262 };
-obj[3] = { uri: _modDef19263 };
+let obj = { 1: null, 2: { uri: _modDef19299 }, 3: null };
+let obj2 = { uri: _modDef19299 };
+obj[2] = { uri: _modDef19300 };
+const obj3 = { uri: _modDef19300 };
+obj[3] = { uri: _modDef19301 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef19263 };
+const obj4 = { uri: _modDef19301 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/StarCoinsSpotIllustration.native.tsx");
 

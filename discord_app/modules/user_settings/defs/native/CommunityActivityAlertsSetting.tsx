@@ -1,14 +1,14 @@
-// === Module 16878: CommunityActivityAlertsSetting ===
+// === Module 16920: CommunityActivityAlertsSetting ===
 
-// Module 16878 (CommunityActivityAlertsSetting)
+// Module 16920 (CommunityActivityAlertsSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11239 */;
+import util from "util" /* 1125 */;
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11242 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasCommunityActivityAlertsSetting() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -33,7 +33,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.D9yVAH);
   },
-  parent: fn(8332).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8331).MobileUserSettings.NOTIFICATIONS,
   useDescription: function useCommunityActivityAlertsSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["0PhAOH"]);
@@ -58,7 +58,7 @@ const route = SettingBuilders.createRoute({
     return initialize.useStateFromStores(items, () => Object.keys(guildAlertSettings.getGuildAlertSettings()).length > 0);
   }),
   screen: {
-    route: fn(1087).UserSettingsSections.COMMUNITY_ALERTS,
+    route: fn(1084).UserSettingsSections.COMMUNITY_ALERTS,
     getComponent() {
       return require("UserSettingsCommunityNotifications").default;
     }

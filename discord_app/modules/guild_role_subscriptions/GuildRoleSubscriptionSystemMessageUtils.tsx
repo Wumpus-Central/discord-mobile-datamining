@@ -1,12 +1,12 @@
-// === Module 8349: GuildRoleSubscriptionSystemMessageUtils ===
+// === Module 8348: GuildRoleSubscriptionSystemMessageUtils ===
 
-// Module 8349 (GuildRoleSubscriptionSystemMessageUtils)
+// Module 8348 (GuildRoleSubscriptionSystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1128 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5711 */;
-import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7351 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserStore from "UserStore" /* 1392 */;
+import util from "util" /* 1125 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5712 */;
+import useIsCreatorMonetizationEnabledGuild from "useIsCreatorMonetizationEnabledGuild" /* 7353 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function identityHook(arg0) {
@@ -57,9 +57,9 @@ function getRoleSubscriptionPurchaseSystemMessageContent(usernameOnClickHandler)
     return obj;
   }
 }
-const GuildRoleSubscriptionSystemMessageConstants = fn(8350);
+const GuildRoleSubscriptionSystemMessageConstants = fn(8349);
 ({ getJoinButtonLabels: hasOwnProperty, getRenewButtonLabels: metroRequire, STICKERS: closure_7 } = GuildRoleSubscriptionSystemMessageConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_8, NOOP: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/GuildRoleSubscriptionSystemMessageUtils.tsx");
@@ -136,7 +136,7 @@ export const getRoleSubscriptionPurchaseSystemMessageContentMobile = function ge
       OxP1NC = t["6Z1E+7"];
       tmp7 = require;
     }
-    const intl = tmp7(1128).intl;
+    const intl = tmp7(1125).intl;
     let name;
     if (guild != null) {
       name = guild.name;

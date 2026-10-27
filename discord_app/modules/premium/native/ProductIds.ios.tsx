@@ -1,8 +1,8 @@
-// === Module 7527: premium/ProductIds ===
+// === Module 7528: premium/ProductIds ===
 
-// Module 7527 (premium/ProductIds)
-import AppleProductIds from "AppleProductIds" /* 7528 */;
-import PremiumConstants from "PremiumConstants" /* 1394 */;
+// Module 7528 (premium/ProductIds)
+import AppleProductIds from "AppleProductIds" /* 7529 */;
+import PremiumConstants from "PremiumConstants" /* 1391 */;
 import size from "module_2" /* 2 */;
 
 ({ PremiumTypes, SubscriptionIntervalTypes, SubscriptionPlans } = PremiumConstants);

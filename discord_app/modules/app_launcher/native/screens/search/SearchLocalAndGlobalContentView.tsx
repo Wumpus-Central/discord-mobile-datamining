@@ -1,19 +1,19 @@
-// === Module 11986: SearchLocalAndGlobalContentView ===
+// === Module 11987: SearchLocalAndGlobalContentView ===
 
-// Module 11986 (SearchLocalAndGlobalContentView)
+// Module 11987 (SearchLocalAndGlobalContentView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4980 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5634 */;
-import TableRow from "TableRow" /* 6903 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7630 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9649 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11170 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11922 */;
-import usePlaceholderSize from "usePlaceholderSize" /* 11925 */;
-import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 11927 */;
-import CommandRowButton from "CommandRowButton" /* 11987 */;
+import util from "util" /* 1125 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4981 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5635 */;
+import TableRow from "TableRow" /* 6905 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7631 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9651 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11173 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11923 */;
+import usePlaceholderSize from "usePlaceholderSize" /* 11926 */;
+import EntityBorderAppIconDefault from "EntityBorderAppIcon" /* 11928 */;
+import CommandRowButton from "CommandRowButton" /* 11988 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -47,9 +47,9 @@ function keyExtractor(type, arg1) {
   return id;
 }
 const View = fn(17).View;
-const getSection = fn(9650).getSection;
-const FetchState = fn(11938).FetchState;
-const AppLauncherNativeConstants = fn(1504);
+const getSection = fn(9652).getSection;
+const FetchState = fn(11939).FetchState;
+const AppLauncherNativeConstants = fn(1501);
 const DEFAULT_CONTENT_PADDING = AppLauncherNativeConstants.DEFAULT_CONTENT_PADDING;
 const useAppLauncherNavigation = AppLauncherNativeConstants.useAppLauncherNavigation;
 const jsxProd = fn(21);
@@ -60,7 +60,7 @@ const array = new Array(6);
 let closure_17 = array.fill("placeholder");
 const array2 = new Array(3);
 let closure_18 = array2.fill({ type: obj.PLACERHOLDER });
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj3 = { sectionHeader: { marginBottom: 8 }, list: { paddingHorizontal: DEFAULT_CONTENT_PADDING, backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND }, loadingCommandAppIcon: null, loadingTextPlaceholder: null, loadingTextPlaceholderSmall: null, divider: null, commandsHeaderContainer: null, commandsCTA: null, commandsCTAUnderlayColor: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
 obj3.loadingCommandAppIcon = size;
@@ -75,7 +75,7 @@ obj3.commandsHeaderContainer = { justifyContent: "space-between", flexDirection:
 let obj8 = { marginTop: nativeDefault.space.PX_16 };
 obj3.commandsCTA = { borderRadius: nativeDefault.radii.sm, paddingHorizontal: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_4, justifyContent: "center" };
 let obj9 = { borderRadius: nativeDefault.radii.sm, paddingHorizontal: nativeDefault.space.PX_4, marginBottom: nativeDefault.space.PX_4, justifyContent: "center" };
-obj3.commandsCTAUnderlayColor = { color: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+obj3.commandsCTAUnderlayColor = { color: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 let closure_19 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
 let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function CommandRow(arg0) {
@@ -209,15 +209,15 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Comman
   let hasOptions;
   let onPressSend;
   ({ context, onPress, isFirstRow, isLastRow, beforeExecuteCommand, onExecuteCommand } = arg0);
-  const appLauncherIconSource = hasOptions(11922).getAppLauncherIconSource(application);
+  const appLauncherIconSource = hasOptions(11923).getAppLauncherIconSource(application);
   let tmp4 = null != appLauncherIconSource;
   if (tmp4) {
     const obj2 = { iconSource: appLauncherIconSource };
-    tmp4 = closure_10(onPressSend(11927), obj2);
+    tmp4 = closure_10(onPressSend(11928), obj2);
   }
-  obj = hasOptions(11922);
-  const tmpResult = hasOptions(11987);
-  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11170).AppLauncherSectionName.SEARCH });
+  obj = hasOptions(11923);
+  const tmpResult = hasOptions(11988);
+  const commandRowSend = tmpResult.useCommandRowSend({ command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11173).AppLauncherSectionName.SEARCH });
   hasOptions = commandRowSend.hasOptions;
   onPressSend = commandRowSend.onPressSend;
   let items = [hasOptions];
@@ -239,15 +239,15 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Comman
     }
   }, items1);
   const obj4 = { icon: tmp4, label: command.displayName, subLabel: null, subLabelLineClamp: 1, start: null, end: null, onPress: null, accessibilityActions: null, onAccessibilityAction: null, trailing: null };
-  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11170).AppLauncherSectionName.SEARCH };
-  obj4.subLabel = hasOptions(9649).getSectionName(application);
+  const obj3 = { command, context, beforeExecuteCommand, onExecuteCommand, sectionName: hasOptions(11173).AppLauncherSectionName.SEARCH };
+  obj4.subLabel = hasOptions(9651).getSectionName(application);
   obj4.start = isFirstRow;
   obj4.end = isLastRow;
   obj4.onPress = onPress;
   obj4.accessibilityActions = memo;
   obj4.onAccessibilityAction = callback;
-  obj4.trailing = closure_10(onPressSend(11987), { hasOptions, sending: commandRowSend.sending, onPressSend });
-  return closure_10(hasOptions(6903).TableRow, obj4);
+  obj4.trailing = closure_10(onPressSend(11988), { hasOptions, sending: commandRowSend.sending, onPressSend });
+  return closure_10(hasOptions(6905).TableRow, obj4);
 });
 ReactCompilerGating = fn(558);
 let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function PlaceholderCommandRow(arg0) {

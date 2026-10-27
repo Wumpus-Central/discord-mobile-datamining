@@ -1,7 +1,7 @@
-// === Module 7577: ClickstreamEvents ===
+// === Module 7578: ClickstreamEvents ===
 
-// Module 7577 (ClickstreamEvents)
-import Constants from "Constants" /* 1087 */;
+// Module 7578 (ClickstreamEvents)
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

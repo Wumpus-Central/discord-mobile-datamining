@@ -1,13 +1,13 @@
-// === Module 17670: UnknownChannel ===
+// === Module 17711: UnknownChannel ===
 
-// Module 17670 (UnknownChannel)
+// Module 17711 (UnknownChannel)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import useChannelNameDefault from "useChannelName" /* 5604 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5686 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10691 */;
-import ChannelItemDefault from "ChannelItem" /* 17555 */;
+import util from "util" /* 1125 */;
+import useChannelNameDefault from "useChannelName" /* 5605 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5664 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5687 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10694 */;
+import ChannelItemDefault from "ChannelItem" /* 17596 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,13 +18,13 @@ function handlePress() {
   obj2.icon = CircleInformationIcon.CircleInformationIcon;
   ToastActionCreatorsDefault.open("UNKNOWN_CHANNEL_UPDATE_DISCORD", obj2);
 }
-const UnreadSetting = fn(6705).UnreadSetting;
+const UnreadSetting = fn(6706).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
-let obj = { container: { marginVertical: fn(11953).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(4972);
+let obj = { container: { marginVertical: fn(11954).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(11953).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11954).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/UnknownChannel.tsx");
 
@@ -45,9 +45,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp7 = cResult[1];
   }
   if (cResult[2] !== tmp6) {
-    const intl = tmp(1128).intl;
+    const intl = tmp(1125).intl;
     const obj2 = { channelName: tmp6 };
-    const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t.yjQ9P8, obj2);
+    const formatToPlainStringResult = intl.formatToPlainString(tmp(1125).t.yjQ9P8, obj2);
     cResult[2] = tmp6;
     cResult[3] = formatToPlainStringResult;
     let tmp8 = formatToPlainStringResult;
@@ -97,8 +97,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }, items);
   const obj = { onPress: handlePress, onLongPress: callback, style: tmp.container, accessible: true, accessibilityLabel: null, accessibilityState: null, channel: null, selected: null, resolvedUnreadSetting: null };
   const tmp2 = useChannelNameDefault(channel);
-  const intl = channel(1128).intl;
-  obj.accessibilityLabel = intl.formatToPlainString(channel(1128).t.yjQ9P8, { channelName: tmp2 });
+  const intl = channel(1125).intl;
+  obj.accessibilityLabel = intl.formatToPlainString(channel(1125).t.yjQ9P8, { channelName: tmp2 });
   obj.accessibilityState = { selected };
   obj.channel = channel;
   obj.selected = selected;

@@ -2,16 +2,16 @@
 
 // Module 8984 (CreateChannelTypeDescription)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import GuildProfileVisibility from "GuildProfileVisibility" /* 6853 */;
+import util from "util" /* 1125 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import GuildProfileVisibility from "GuildProfileVisibility" /* 6855 */;
 import useGuildProfile from "useGuildProfile" /* 8986 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const GuildProfileFetchStatus = fn(8985).GuildProfileFetchStatus;
-const ChannelTypes = fn(1087).ChannelTypes;
+const ChannelTypes = fn(1084).ChannelTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

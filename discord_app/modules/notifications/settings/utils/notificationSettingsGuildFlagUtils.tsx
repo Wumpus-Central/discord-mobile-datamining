@@ -1,17 +1,17 @@
-// === Module 19347: notificationSettingsGuildFlagUtils ===
+// === Module 19385: notificationSettingsGuildFlagUtils ===
 
-// Module 19347 (notificationSettingsGuildFlagUtils)
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7210 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7215 */;
-import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8299 */;
-import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10993 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
+// Module 19385 (notificationSettingsGuildFlagUtils)
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7212 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7217 */;
+import notificationSettingsPresetUtils from "notificationSettingsPresetUtils" /* 8297 */;
+import notificationSettingsFlagUtils from "notificationSettingsFlagUtils" /* 10996 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const UserNotificationSettings = fn(1087).UserNotificationSettings;
-const constants = fn(1097).GuildNotificationSettingsFlags;
+const UserNotificationSettings = fn(1084).UserNotificationSettings;
+const constants = fn(1094).GuildNotificationSettingsFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/notifications/settings/utils/notificationSettingsGuildFlagUtils.tsx");

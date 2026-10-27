@@ -1,12 +1,12 @@
-// === Module 19362: useInviteApplicationBypassInfo ===
+// === Module 19400: useInviteApplicationBypassInfo ===
 
-// Module 19362 (useInviteApplicationBypassInfo)
-import PermissionStore from "PermissionStore" /* 4903 */;
+// Module 19400 (useInviteApplicationBypassInfo)
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ GuildFeatures: c3, Permissions: closure_4 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

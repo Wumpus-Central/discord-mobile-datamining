@@ -1,8 +1,8 @@
-// === Module 10802: conjurePublishApprovalPrompt ===
+// === Module 10805: conjurePublishApprovalPrompt ===
 
-// Module 10802 (conjurePublishApprovalPrompt)
-import LinkingDefault from "Linking" /* 5660 */;
-import ConjurePublishBlockedSheetDefault from "ConjurePublishBlockedSheet" /* 10803 */;
+// Module 10805 (conjurePublishApprovalPrompt)
+import LinkingDefault from "Linking" /* 5661 */;
+import ConjurePublishBlockedSheetDefault from "ConjurePublishBlockedSheet" /* 10806 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -16,7 +16,7 @@ export const promptPublishApproval = function promptPublishApproval(approval_url
     str = "enroll";
   }
   if (obj.validPublishApproval(approval_url, str)) {
-    ConjurePublishBlockedSheetDefault(tmp(10804).ConjurePublishBlockedReason.PUBLISH_APPROVAL_REQUIRED, undefined, () => {
+    ConjurePublishBlockedSheetDefault(tmp(10807).ConjurePublishBlockedReason.PUBLISH_APPROVAL_REQUIRED, undefined, () => {
       LinkingDefault.openURL(closure_0);
     });
   }

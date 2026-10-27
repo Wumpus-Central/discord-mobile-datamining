@@ -1,15 +1,15 @@
-// === Module 11200: ExternalStreamingStore ===
+// === Module 11203: ExternalStreamingStore ===
 
-// Module 11200 (ExternalStreamingStore)
+// Module 11203 (ExternalStreamingStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1104 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import _modDef1357 from "module_1357" /* 1357 */;
-import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7274 */;
+import DurationsDefault from "Durations" /* 1101 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import _modDef1354 from "module_1354" /* 1354 */;
+import ConnectedAccountsActionCreatorsDefault from "ConnectedAccountsActionCreators" /* 7276 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6500 */;
-import StreamerModeStore from "StreamerModeStore" /* 5026 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6501 */;
+import StreamerModeStore from "StreamerModeStore" /* 5027 */;
 
 require = fn;
 function makeTwitchRequest(arg0, query, arg2) {
@@ -41,7 +41,7 @@ function streamerModeUpdate() {
     obj3.stop();
   }
 }
-const PlatformTypes = fn(1087).PlatformTypes;
+const PlatformTypes = fn(1084).PlatformTypes;
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let closure_8 = 5 * DurationsDefault.Millis.MINUTE;
 const re9 = /live_user_(.*)-\{width\}/;
@@ -499,7 +499,7 @@ prototype2["getStream"] = function getStream() {
 ExternalStreamingStore.displayName = "ExternalStreamingStore";
 const externalStreamingStore = new ExternalStreamingStore(DispatcherDefault, {
   STREAMING_UPDATE: function streamUpdate(stream) {
-    if (_modDef1357(stream.stream, stream)) {
+    if (_modDef1354(stream.stream, stream)) {
       return false;
     } else {
       stream = stream.stream;

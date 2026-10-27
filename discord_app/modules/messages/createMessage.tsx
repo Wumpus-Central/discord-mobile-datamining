@@ -1,15 +1,15 @@
-// === Module 10207: createMessage ===
+// === Module 10209: createMessage ===
 
-// Module 10207 (createMessage)
+// Module 10209 (createMessage)
 import _modDef38 from "module_38" /* 38 */;
-import createNonce from "createNonce" /* 10203 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7696 */;
-import UserRecord from "UserRecord" /* 1406 */;
-import UserStore from "UserStore" /* 1392 */;
+import createNonce from "createNonce" /* 10205 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7697 */;
+import UserRecord from "UserRecord" /* 1403 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const ReferencedMessageState = fn(7696).ReferencedMessageState;
-const Constants = fn(1087);
+const ReferencedMessageState = fn(7697).ReferencedMessageState;
+const Constants = fn(1084);
 ({ MessageStates: closure_7, MessageTypes: closure_8, LOCAL_BOT_ID: closure_9, NON_USER_BOT_DISCRIMINATOR: c10, MessageFlags: closure_11 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/createMessage.tsx");
@@ -26,7 +26,7 @@ export default function createMessage(tts) {
   }
   ({ messageReference, allowedMentions, author, nonce, state } = tts);
   const items = [];
-  ({ flags, poll, sharedCustomTheme, changelogId, giftingPrompt, boostingPrompt, mediaMention } = tts);
+  ({ flags, poll, sharedCustomTheme, changelogId, giftingPrompt, mediaMention } = tts);
   if (DEFAULT === constants2.REPLY) {
     _modDef38(null != messageReference, "Replies must have a message reference");
     if (null == allowedMentions) {
@@ -56,7 +56,7 @@ export default function createMessage(tts) {
   if (nonce == null) {
     nonce1 = createNonce.createNonce();
   }
-  const obj5 = { id: nonce1, type: DEFAULT, content, channel_id: channelId, author: tmp8, attachments: [], embeds: [], pinned: false, mentions: items, mention_channels: [], mention_roles: [], mention_everyone: false, timestamp: new Date().toISOString(), state: null, tts: null, message_reference: null, message_snapshots: null, flags: null, nonce: null, poll: null, shared_client_theme: null, changelog_id: null, gifting_prompt: null, boosting_prompt: null, media_mention: null };
+  const obj5 = { id: nonce1, type: DEFAULT, content, channel_id: channelId, author: tmp8, attachments: [], embeds: [], pinned: false, mentions: items, mention_channels: [], mention_roles: [], mention_everyone: false, timestamp: new Date().toISOString(), state: null, tts: null, message_reference: null, message_snapshots: null, flags: null, nonce: null, poll: null, shared_client_theme: null, changelog_id: null, gifting_prompt: null, media_mention: null };
   if (state == null) {
     state = constants.SENDING;
   }
@@ -70,7 +70,6 @@ export default function createMessage(tts) {
   obj5.shared_client_theme = sharedCustomTheme;
   obj5.changelog_id = changelogId;
   obj5.gifting_prompt = giftingPrompt;
-  obj5.boosting_prompt = boostingPrompt;
   obj5.media_mention = mediaMention;
   return obj5;
 };

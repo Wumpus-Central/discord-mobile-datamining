@@ -1,11 +1,11 @@
-// === Module 8440: VoiceSessionSystemMessage ===
+// === Module 8439: VoiceSessionSystemMessage ===
 
-// Module 8440 (VoiceSessionSystemMessage)
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8318 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8320 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8322 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8337 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+// Module 8439 (VoiceSessionSystemMessage)
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8317 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8319 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8321 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8336 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 const require = globalThis.__r;
 
@@ -25,13 +25,13 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
     return obj;
   });
   if (null == tmp3) {
-    const intl = tmp4(1128).intl;
+    const intl = tmp4(1125).intl;
     const obj3 = { username: messageAuthorWithProcessedColor.nick, usernameOnClick: null };
     const obj4 = { message, author: messageAuthorWithProcessedColor, roleStyle };
     obj3.usernameOnClick = formatUsernameOnClickDefault(obj4);
-    let formatToPartsResult = intl.formatToParts(tmp4(1128).t.HzBfIN, obj3);
+    let formatToPartsResult = intl.formatToParts(tmp4(1125).t.HzBfIN, obj3);
   } else {
-    const intl2 = tmp4(1128).intl;
+    const intl2 = tmp4(1125).intl;
     const obj5 = { userCount: mapped.length + 1, username: messageAuthorWithProcessedColor.nick, usernameOnClick: null, username2: null, username2OnClick: null, username3: null, username3OnClick: null, otherCount: null, duration: null };
     const obj6 = { message, author: messageAuthorWithProcessedColor, roleStyle };
     obj5.usernameOnClick = formatUsernameOnClickDefault(obj6);
@@ -60,7 +60,7 @@ export const createVoiceSessionSystemMessage = function createVoiceSessionSystem
     obj5.username3OnClick = tmp10;
     obj5.otherCount = mapped.length - 1;
     obj5.duration = tmp3;
-    formatToPartsResult = intl2.formatToParts(tmp4(1128).t.atbXuX, obj5);
+    formatToPartsResult = intl2.formatToParts(tmp4(1125).t.atbXuX, obj5);
   }
   const merged = Object.assign(createCommonMessageDefault(message));
   return { content: formatToPartsResult };

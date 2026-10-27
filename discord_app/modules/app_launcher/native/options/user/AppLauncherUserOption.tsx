@@ -1,21 +1,21 @@
-// === Module 12089: AppLauncherUserOption ===
+// === Module 12090: AppLauncherUserOption ===
 
-// Module 12089 (AppLauncherUserOption)
+// Module 12090 (AppLauncherUserOption)
 import nativeDefault from "native" /* 587 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12081 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12085 */;
-import UsernameTextDefault from "UsernameText" /* 12087 */;
-import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12090 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import AppLauncherSelectOptionFormRowDefault from "AppLauncherSelectOptionFormRow" /* 12082 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12086 */;
+import UsernameTextDefault from "UsernameText" /* 12088 */;
+import AppLauncherUserListActionSheet from "AppLauncherUserListActionSheet" /* 12091 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 
 require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 let closure_7 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -27,7 +27,7 @@ export default function AppLauncherUserOption(option) {
   const onPress = option.onPress;
   jsx = undefined;
   c7 = undefined;
-  ({ style, autoFocus, hasError } = option);
+  ({ autoFocus, hasError } = option);
   const guild_id = channel.guild_id;
   const tmp = c7();
   const items = [onPress];
@@ -54,7 +54,7 @@ export default function AppLauncherUserOption(option) {
     return userId;
   }), 2);
   [tmp8, c7] = channel.useState(null);
-  let obj2 = { style, option, hasError, selected: null, onPress: null, leading: null, selectedItemName: null, autoFocus: null };
+  let obj2 = { option, hasError, selected: null, onPress: null, leading: null, selectedItemName: null, autoFocus: null };
   let tmp12 = null != tmp8;
   const tmp7 = _slicedToArray(channel.useState(null), 2);
   if (!tmp12) {
@@ -67,7 +67,7 @@ export default function AppLauncherUserOption(option) {
     }
     const result = KeyboardManagerUtils.dismissGlobalKeyboard();
     const obj2 = ActionSheetActionCreatorsDefault;
-    obj2.openLazy(asyncRequireImpl(12090, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, {
+    obj2.openLazy(asyncRequireImpl(12091, dependencyMap.paths), AppLauncherUserListActionSheet.APP_LAUNCHER_USER_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onUserPress(user) {
@@ -84,10 +84,10 @@ export default function AppLauncherUserOption(option) {
     });
   };
   if (null != tmp8) {
-    const obj3 = { user: tmp8, guildId: guild_id, animate: !stateFromStores, size: tmp2(1202).AvatarSizes.REFRESH_MEDIUM_32 };
-    let tmp9Result = tmp9(tmp2(1202).Avatar, obj3);
+    const obj3 = { user: tmp8, guildId: guild_id, animate: !stateFromStores, size: tmp2(1199).AvatarSizes.REFRESH_MEDIUM_32 };
+    let tmp9Result = tmp9(tmp2(1199).Avatar, obj3);
   } else {
-    const obj4 = { icon: tmp9(tmp2(10819).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
+    const obj4 = { icon: tmp9(tmp2(10822).UserCircleIcon, { size: "sm", color: "interactive-text-default" }), wrapperStyle: tmp.iconWrapper };
     tmp9Result = tmp9(AppLauncherOptionIconDefault, obj4);
     const tmp10Result = AppLauncherOptionIconDefault;
   }
@@ -99,7 +99,7 @@ export default function AppLauncherUserOption(option) {
     tmp9Result2 = null;
     if (null != tmp6) {
       const obj6 = { variant: "text-md/medium", color: "text-default", children: tmp6 };
-      tmp9Result2 = tmp9(tmp2(5234).Text, obj6);
+      tmp9Result2 = tmp9(tmp2(5235).Text, obj6);
     }
   }
   obj2.selectedItemName = tmp9Result2;

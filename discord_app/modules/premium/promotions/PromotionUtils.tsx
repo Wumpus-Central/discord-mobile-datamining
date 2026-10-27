@@ -1,16 +1,16 @@
-// === Module 9560: PromotionUtils ===
+// === Module 9559: PromotionUtils ===
 
-// Module 9560 (PromotionUtils)
+// Module 9559 (PromotionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import FlagUtils from "FlagUtils" /* 1405 */;
-import dismissible_content from "dismissible_content" /* 4807 */;
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4808 */;
-import constants from "constants" /* 9558 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import dismissible_content from "dismissible_content" /* 4808 */;
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4809 */;
+import constants from "constants" /* 9557 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import PromotionRecord from "PromotionRecord" /* 9521 */;
-import PromotionsStore from "PromotionsStore" /* 9520 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import PromotionRecord from "PromotionRecord" /* 9520 */;
+import PromotionsStore from "PromotionsStore" /* 9519 */;
 
 require = fn;
 function claimedOutboundPromotionCodeFromServer(code) {
@@ -110,8 +110,8 @@ let closure_12 = async function _claimOutboundPromotion(arg0) {
     }
   }
 };
-const PromotionFlags = fn(1394).PromotionFlags;
-const Constants = fn(1087);
+const PromotionFlags = fn(1391).PromotionFlags;
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_8, Endpoints: closure_9, Platforms: c10 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/promotions/PromotionUtils.tsx");

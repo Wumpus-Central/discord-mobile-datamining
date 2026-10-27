@@ -1,8 +1,8 @@
-// === Module 15860: UserProfilePremiumTryItOutMobileRefreshExperiment ===
+// === Module 15898: UserProfilePremiumTryItOutMobileRefreshExperiment ===
 
-// Module 15860 (UserProfilePremiumTryItOutMobileRefreshExperiment)
+// Module 15898 (UserProfilePremiumTryItOutMobileRefreshExperiment)
 import c from "c" /* 576 */;
-import ApexExperiment from "ApexExperiment" /* 1455 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

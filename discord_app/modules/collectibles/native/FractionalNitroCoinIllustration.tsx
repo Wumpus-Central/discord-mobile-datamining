@@ -1,13 +1,13 @@
-// === Module 9438: FractionalNitroCoinIllustration ===
+// === Module 9437: FractionalNitroCoinIllustration ===
 
-// Module 9438 (FractionalNitroCoinIllustration)
+// Module 9437 (FractionalNitroCoinIllustration)
 import c from "c" /* 576 */;
-import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9439 */;
-import NitroCoinStackSpotIllustration2 from "NitroCoinStackSpotIllustration" /* 9443 */;
+import NitroCoinSpotIllustration from "NitroCoinSpotIllustration" /* 9438 */;
+import NitroCoinStackSpotIllustration2 from "NitroCoinStackSpotIllustration" /* 9442 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EXTERNAL_PRODUCT_SKU_IDS = fn(1089).EXTERNAL_PRODUCT_SKU_IDS;
+const EXTERNAL_PRODUCT_SKU_IDS = fn(1086).EXTERNAL_PRODUCT_SKU_IDS;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

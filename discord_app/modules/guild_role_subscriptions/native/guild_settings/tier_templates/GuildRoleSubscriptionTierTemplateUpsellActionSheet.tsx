@@ -1,28 +1,28 @@
-// === Module 17680: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
+// === Module 17721: GuildRoleSubscriptionTierTemplateUpsellActionSheet ===
 
-// Module 17680 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
+// Module 17721 (GuildRoleSubscriptionTierTemplateUpsellActionSheet)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5265 */;
+import util from "util" /* 1125 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5266 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 8691 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ GuildSettingsSections: closure_7, GuildSettingsSubsections: closure_8 } = Constants);
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = 1.7289156626506024;
 const src = { videoURI: "https://cdn.discordapp.com/assets/server-subscription-tier-template/upsell.mov" };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" }, videoContainer: null, info: null, title: null, subtitle: null, footer: null, button: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, paddingTop: 24, justifyContent: "center" };
 obj2.videoContainer = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildRol
           return closure_4(guildId.nativeEvent.layout.width);
         }
       }
-      const stringResult = obj5.string(tmp(1128).t.gCgirr);
+      const stringResult = obj5.string(tmp(1125).t.gCgirr);
       class C {
         constructor() {
           return closure_1_6.useReducedMotion;

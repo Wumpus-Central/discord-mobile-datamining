@@ -1,37 +1,37 @@
-// === Module 19120: GuildSettingsRoleTemplate ===
+// === Module 19158: GuildSettingsRoleTemplate ===
 
-// Module 19120 (GuildSettingsRoleTemplate)
+// Module 19158 (GuildSettingsRoleTemplate)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5267 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
-import useIsWindowLargeDefault from "useIsWindowLarge" /* 7038 */;
+import native from "native" /* 1199 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5268 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5712 */;
+import useIsWindowLargeDefault from "useIsWindowLarge" /* 7040 */;
 import _modDef8769 from "module_8769" /* 8769 */;
-import PaginationDefault from "Pagination" /* 10515 */;
-import _modDef11258 from "module_11258" /* 11258 */;
+import PaginationDefault from "Pagination" /* 10518 */;
+import _modDef11261 from "module_11261" /* 11261 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import GuildStore from "GuildStore" /* 4846 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Dimensions, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildSettingsRoleConstants = fn(19116);
+const GuildSettingsRoleConstants = fn(19154);
 ({ PermissionTemplateTypes: closure_9, PermissionTemplates: c10, DEFAULT_TEMPLATE_TYPE: closure_11 } = GuildSettingsRoleConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_12, GuildFeatures: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
 let width = Dimensions.get("window").width;
 let c17 = 300;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 }, carousel: { flex: 1 }, cardWrapper: { width: 300, alignSelf: "center", paddingHorizontal: 10, flex: 1 }, card: null, templateTitle: null, templateSubtitle: null, templateContentWrapper: null, templateContent: null, templateContentText: null, templateButton: null, sliderContainer: null, slider: null, sliderLabels: null, sliderLabel: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, flex: 1 };
 obj2.card = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.sm, borderStyle: "solid", borderWidth: 1, flex: 1, flexDirection: "column", marginVertical: 16, padding: 16, paddingTop: 20 };
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         const obj4 = { style: closure_3.templateSubtitle, variant: "text-sm/medium", children: item.description() };
         obj8.children = item.contents().map((children, index) => {
           const obj = { style: closure_3.templateContent, children: null };
-          const items = [closure_3_14(native.Icon, { source: _modDef11258, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), closure_3_14(Text_Text.Text, { style: closure_3.templateContentText, variant: "text-sm/medium", children })];
+          const items = [closure_3_14(native.Icon, { source: _modDef11261, size: native.IconSizes.MEDIUM, color: nativeDefault.unsafe_rawColors.GREEN_360 }), closure_3_14(Text_Text.Text, { style: closure_3.templateContentText, variant: "text-sm/medium", children })];
           obj.children = items;
           return value2(hasOwnProperty, obj, "" + item.key + "_content_" + index);
         });

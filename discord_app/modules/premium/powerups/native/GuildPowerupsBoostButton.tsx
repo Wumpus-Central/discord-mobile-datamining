@@ -1,15 +1,15 @@
-// === Module 13513: GuildPowerupsBoostButton ===
+// === Module 13527: GuildPowerupsBoostButton ===
 
-// Module 13513 (GuildPowerupsBoostButton)
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7505 */;
+// Module 13527 (GuildPowerupsBoostButton)
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7506 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserStore from "UserStore" /* 1392 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7511 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserStore from "UserStore" /* 1389 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7512 */;
 
-const GuildBoostingSubscribeButtonDefault = tmp13(7510);
+const GuildBoostingSubscribeButtonDefault = tmp13(7511);
 const require = fn;
-const AnalyticsSections = fn(1087).AnalyticsSections;
+const AnalyticsSections = fn(1084).AnalyticsSections;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -204,13 +204,13 @@ export const GuildPowerupsBoostButton = ReactCompilerGating.isReactCompilerEnabl
   const stateFromStores1 = guildId(504).useStateFromStores(items1, () => boostSlots.boostSlots);
   let obj2 = guildId(504);
   const tmp5 = stateFromStores1;
-  const tmp6 = stateFromStores1(7505)({ forceFetch: true });
+  const tmp6 = stateFromStores1(7506)({ forceFetch: true });
   const items2 = [UserStore];
   const stateFromStores2 = guildId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
   if (null != stateFromStores2) {
     let UNSPECIFIED = stateFromStores2.premiumGroupRole;
   } else {
-    UNSPECIFIED = tmp(1400).PremiumSubscriptionGroupRole.UNSPECIFIED;
+    UNSPECIFIED = tmp(1397).PremiumSubscriptionGroupRole.UNSPECIFIED;
   }
   const items3 = [stateFromStores1];
   const memo = noop.useMemo(() => {
@@ -220,7 +220,7 @@ export const GuildPowerupsBoostButton = ReactCompilerGating.isReactCompilerEnabl
   let tmp10 = null;
   if (null != stateFromStores) {
     const obj4 = { guild: stateFromStores, previousGuildSubscriptionSlot: memo, analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR, fractionalPremiumState: tmp6.fractionalState, onAvailableSlotPress: tmp9, premiumGroupRole: UNSPECIFIED };
-    tmp10 = jsx(tmp5(7510), { guild: stateFromStores, previousGuildSubscriptionSlot: memo, analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR, fractionalPremiumState: tmp6.fractionalState, onAvailableSlotPress: tmp9, premiumGroupRole: UNSPECIFIED });
+    tmp10 = jsx(tmp5(7511), { guild: stateFromStores, previousGuildSubscriptionSlot: memo, analyticsSection: AnalyticsSections.GUILD_POWERUPS_OVERVIEW_SIDEBAR, fractionalPremiumState: tmp6.fractionalState, onAvailableSlotPress: tmp9, premiumGroupRole: UNSPECIFIED });
   }
   return tmp10;
 });

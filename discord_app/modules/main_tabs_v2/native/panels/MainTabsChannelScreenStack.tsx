@@ -1,27 +1,27 @@
-// === Module 17983: MainTabsChannelScreenStack ===
+// === Module 18017: MainTabsChannelScreenStack ===
 
-// Module 17983 (MainTabsChannelScreenStack)
+// Module 18017 (MainTabsChannelScreenStack)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Link from "Link" /* 1506 */;
-import native from "native" /* 5037 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 5053 */;
-import useChatLayout from "useChatLayout" /* 5153 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5155 */;
-import ChatInputUtils from "ChatInputUtils" /* 5159 */;
-import useThemeDefault from "useTheme" /* 5205 */;
-import useMountEffect from "useMountEffect" /* 5263 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5297 */;
-import Suspender from "Suspender" /* 5939 */;
-import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11226 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11775 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17426 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 17427 */;
-import navigationTTIEnabled from "navigationTTIEnabled" /* 17984 */;
-import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 17986 */;
-import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 17987 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 17988 */;
+import Link from "Link" /* 1503 */;
+import native from "native" /* 5038 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 5054 */;
+import useChatLayout from "useChatLayout" /* 5154 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5156 */;
+import ChatInputUtils from "ChatInputUtils" /* 5160 */;
+import useThemeDefault from "useTheme" /* 5206 */;
+import useMountEffect from "useMountEffect" /* 5264 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5298 */;
+import Suspender from "Suspender" /* 5940 */;
+import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11229 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11776 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17467 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 17468 */;
+import navigationTTIEnabled from "navigationTTIEnabled" /* 18018 */;
+import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 18020 */;
+import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 18021 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 18022 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,13 +34,13 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ONYX_BORDER_WIDTH = fn(9700).ONYX_BORDER_WIDTH;
-const Constants = fn(1087);
+const ONYX_BORDER_WIDTH = fn(9702).ONYX_BORDER_WIDTH;
+const Constants = fn(1084);
 ({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticsSections: c10 } = Constants);
-let ThemeTypes = fn(1098).ThemeTypes;
+let ThemeTypes = fn(1095).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_14 = createStyles.createStyles({ onyxContainerStyles: { marginTop: -ONYX_BORDER_WIDTH, marginLeft: -ONYX_BORDER_WIDTH } });
 const __initData = { code: "function MainTabsChannelScreenStackTsx1(){const{isStackVisible,highestFullyRenderedScreenIndex,index,alwaysVisible,translateX,maxWidth}=this.__closure;return isStackVisible&&highestFullyRenderedScreenIndex.get()<=index&&(alwaysVisible||translateX.get()<maxWidth);}" };
 const __initData2 = { code: "function MainTabsChannelScreenStackTsx2(visible,wasVisible){const{runOnJS,setIsVisible}=this.__closure;if(visible===wasVisible){return;}runOnJS(setIsVisible)(visible);}" };

@@ -4,8 +4,8 @@
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8676 */;
 import DisplayProfileDefault from "DisplayProfile" /* 8678 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
-import UserProfileStore from "UserProfileStore" /* 7703 */;
+import UserStore from "UserStore" /* 1389 */;
+import UserProfileStore from "UserProfileStore" /* 7704 */;
 
 const require = globalThis.__r;
 
@@ -107,7 +107,7 @@ function getDisplayProfile(id1, guildId) {
     return tmp8;
   }
 }
-const FunctionUtils = fn(2041);
+const FunctionUtils = fn(2038);
 let closure_7 = FunctionUtils.cachedFunction((arg0, arg1) => new DisplayProfileDefault(arg0, arg1));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useDisplayProfile.tsx");

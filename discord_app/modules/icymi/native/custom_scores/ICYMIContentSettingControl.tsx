@@ -1,26 +1,26 @@
-// === Module 17917: ICYMIContentSettingControl ===
+// === Module 17951: ICYMIContentSettingControl ===
 
-// Module 17917 (ICYMIContentSettingControl)
+// Module 17951 (ICYMIContentSettingControl)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
 import ICYMIUtils from "ICYMIUtils" /* 8840 */;
 import SegmentedControlState from "SegmentedControlState" /* 8901 */;
 import SegmentedControl from "SegmentedControl" /* 9146 */;
-import _modDef17918 from "module_17918" /* 17918 */;
-import _modDef17919 from "module_17919" /* 17919 */;
-import _modDef17920 from "module_17920" /* 17920 */;
-import NativeICYMIActionCreatorsDefault from "NativeICYMIActionCreators" /* 17921 */;
+import _modDef17952 from "module_17952" /* 17952 */;
+import _modDef17953 from "module_17953" /* 17953 */;
+import _modDef17954 from "module_17954" /* 17954 */;
+import NativeICYMIActionCreatorsDefault from "NativeICYMIActionCreators" /* 17955 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
 import ICYMIStore from "ICYMIStore" /* 8823 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { customScoreWrapper: { marginVertical: nativeDefault.space.PX_16 }, warningText: null, icon: null, iconSelected: null, muted: null };
 let obj3 = { marginVertical: nativeDefault.space.PX_16 };
 obj2.warningText = { marginTop: nativeDefault.space.PX_8, marginHorizontal: nativeDefault.space.PX_12 };
@@ -39,8 +39,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   const obj = onValueUpdated(576);
   [tmp6, importDefault] = noop.useState(onValueUpdated.initialValue);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1128).intl;
-    const stringResult = intl.string(tmp(1128).t.rdt65I);
+    const intl = tmp(1125).intl;
+    const stringResult = intl.string(tmp(1125).t.rdt65I);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -56,8 +56,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
     }
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = tmp(1128).intl;
-      const stringResult1 = intl2.string(tmp(1128).t.SnrG00);
+      const intl2 = tmp(1125).intl;
+      const stringResult1 = intl2.string(tmp(1125).t.SnrG00);
       cResult[4] = stringResult1;
       let tmp11 = stringResult1;
     } else {
@@ -73,8 +73,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
       }
       const _Symbol2 = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = tmp(1128).intl;
-        const stringResult2 = intl3.string(tmp(1128).t.Rxe3jF);
+        const intl3 = tmp(1125).intl;
+        const stringResult2 = intl3.string(tmp(1125).t.Rxe3jF);
         cResult[8] = stringResult2;
         let tmp17 = stringResult2;
       } else {
@@ -250,30 +250,30 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
         tmp23 = items;
       }
       const obj3 = { label: tmp17, id: "1", icon: null, page: null };
-      const obj4 = { source: _modDef17920, style: null };
+      const obj4 = { source: _modDef17954, style: null };
       const items1 = [tmp4.icon, iconSelected2];
       obj4.style = items1;
-      obj3.icon = closure_8(tmp(1202).Icon, obj4);
+      obj3.icon = closure_8(tmp(1199).Icon, obj4);
       cResult[9] = tmp4.icon;
       cResult[10] = iconSelected2;
       cResult[11] = obj3;
       tmp20 = obj3;
     }
     const obj5 = { label: tmp11, id: "0", icon: null, page: null };
-    const obj6 = { source: _modDef17919, style: null };
+    const obj6 = { source: _modDef17953, style: null };
     const items2 = [tmp4.icon, iconSelected1];
     obj6.style = items2;
-    obj5.icon = closure_8(tmp(1202).Icon, obj6);
+    obj5.icon = closure_8(tmp(1199).Icon, obj6);
     cResult[5] = tmp4.icon;
     cResult[6] = iconSelected1;
     cResult[7] = obj5;
     tmp14 = obj5;
   }
   const obj7 = { label: first, id: "-1", icon: null, page: null };
-  const obj8 = { source: _modDef17918, style: null };
+  const obj8 = { source: _modDef17952, style: null };
   const items3 = [tmp4.icon, iconSelected];
   obj8.style = items3;
-  obj7.icon = closure_8(onValueUpdated(1202).Icon, obj8);
+  obj7.icon = closure_8(onValueUpdated(1199).Icon, obj8);
   cResult[1] = tmp4.icon;
   cResult[2] = iconSelected;
   cResult[3] = obj7;
@@ -287,7 +287,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   const obj = { label: null, id: "-1", icon: null, page: null };
   const intl = util.intl;
   obj.label = intl.string(util.t.rdt65I);
-  const obj2 = { source: _modDef17918, style: null };
+  const obj2 = { source: _modDef17952, style: null };
   const items = [tmp.icon, ];
   let iconSelected = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.LESS) {
@@ -300,7 +300,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   const obj3 = { label: null, id: "0", icon: null, page: null };
   const intl2 = util.intl;
   obj3.label = intl2.string(util.t.SnrG00);
-  const obj4 = { source: _modDef17919, style: null };
+  const obj4 = { source: _modDef17953, style: null };
   const items2 = [tmp.icon, ];
   let iconSelected1 = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.DEFAULT) {
@@ -313,7 +313,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   const obj5 = { label: null, id: "1", icon: null, page: null };
   const intl3 = util.intl;
   obj5.label = intl3.string(util.t.Rxe3jF);
-  const obj6 = { source: _modDef17920, style: null };
+  const obj6 = { source: _modDef17954, style: null };
   const items3 = [tmp.icon, ];
   let iconSelected2 = null;
   if (tmp3 === ICYMIUtils.ICYMICustomScore.MORE) {
@@ -425,18 +425,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildScore
     const _Symbol = Symbol;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
       let obj2 = { variant: "text-sm/semibold", color: "text-default", children: null };
-      const intl = tmp(1128).intl;
-      obj2.children = intl.string(tmp(1128).t.Clq6km);
-      const tmp16 = closure_8(tmp(5234).Text, obj2);
+      const intl = tmp(1125).intl;
+      obj2.children = intl.string(tmp(1125).t.Clq6km);
+      const tmp16 = closure_8(tmp(5235).Text, obj2);
       cResult[10] = tmp16;
       let tmp14 = tmp16;
     } else {
       tmp14 = cResult[10];
     }
     if (cResult[11] !== guild.name) {
-      const intl2 = tmp(1128).intl;
+      const intl2 = tmp(1125).intl;
       let obj3 = { guildName: guild.name };
-      const formatResult = intl2.format(tmp(1128).t["0DhU2P"], obj3);
+      const formatResult = intl2.format(tmp(1125).t["0DhU2P"], obj3);
       cResult[11] = guild.name;
       cResult[12] = formatResult;
       let tmp17 = formatResult;
@@ -445,7 +445,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildScore
     }
     if (cResult[13] !== tmp17) {
       const obj4 = { variant: "text-xs/normal", color: "text-default", children: tmp17 };
-      const tmp21 = closure_8(tmp(5234).Text, obj4);
+      const tmp21 = closure_8(tmp(5235).Text, obj4);
       cResult[13] = tmp17;
       cResult[14] = tmp21;
       let tmp19 = tmp21;
@@ -465,8 +465,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildScore
           }
           const _Symbol2 = Symbol;
           if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl3 = tmp(1128).intl;
-            const stringResult = intl3.string(tmp(1128).t.oujX73);
+            const intl3 = tmp(1125).intl;
+            const stringResult = intl3.string(tmp(1125).t.oujX73);
             cResult[20] = stringResult;
             let tmp28 = stringResult;
           } else {
@@ -482,8 +482,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildScore
               }
               const _Symbol3 = Symbol;
               if (cResult[27] === Symbol.for("react.memo_cache_sentinel")) {
-                const intl4 = tmp(1128).intl;
-                const stringResult1 = intl4.string(tmp(1128).t.vRVs07);
+                const intl4 = tmp(1125).intl;
+                const stringResult1 = intl4.string(tmp(1125).t.vRVs07);
                 cResult[27] = stringResult1;
                 let tmp38 = stringResult1;
               } else {
@@ -491,7 +491,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildScore
               }
               if (cResult[28] !== tmp13.warningText) {
                 const obj5 = { variant: "text-xs/normal", color: "text-muted", style: tmp13.warningText, children: tmp38 };
-                const tmp42 = closure_8(tmp(5234).Text, obj5);
+                const tmp42 = closure_8(tmp(5235).Text, obj5);
                 cResult[28] = tmp13.warningText;
                 cResult[29] = tmp42;
                 let tmp40 = tmp42;
@@ -543,7 +543,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildScore
             tmp34 = tmp37;
           }
           const obj8 = { value: !tmp22, onValueChange: tmp10, label: tmp28, start: true, end: true };
-          const tmp33 = closure_8(tmp(7295).TableSwitchRow, obj8);
+          const tmp33 = closure_8(tmp(7297).TableSwitchRow, obj8);
           cResult[21] = tmp10;
           cResult[22] = !tmp22;
           cResult[23] = tmp33;
@@ -621,13 +621,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildScore
   }, items2);
   const tmp8 = closure_10();
   let obj3 = { variant: "text-sm/semibold", color: "text-default", children: null };
-  const intl = id(1128).intl;
-  obj3.children = intl.string(id(1128).t.Clq6km);
-  const items3 = [closure_8(id(5234).Text, obj3), , , , ];
+  const intl = id(1125).intl;
+  obj3.children = intl.string(id(1125).t.Clq6km);
+  const items3 = [closure_8(id(5235).Text, obj3), , , , ];
   const obj4 = { variant: "text-xs/normal", color: "text-default", children: null };
-  const intl2 = id(1128).intl;
-  obj4.children = intl2.format(id(1128).t["0DhU2P"], { guildName: guild.name });
-  items3[1] = closure_8(id(5234).Text, obj4);
+  const intl2 = id(1125).intl;
+  obj4.children = intl2.format(id(1125).t["0DhU2P"], { guildName: guild.name });
+  items3[1] = closure_8(id(5235).Text, obj4);
   let tmp11Result = null;
   if (!tmp5) {
     const obj6 = { style: tmp8.customScoreWrapper, children: null };
@@ -643,14 +643,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildScore
   const obj8 = { children: null };
   const obj9 = { style: muted, children: null };
   const obj10 = { value: !tmp5, onValueChange: callback, label: null, start: true, end: true };
-  const intl3 = tmp(1128).intl;
-  obj10.label = intl3.string(id(1128).t.oujX73);
-  obj9.children = closure_8(id(7295).TableSwitchRow, obj10);
+  const intl3 = tmp(1125).intl;
+  obj10.label = intl3.string(id(1125).t.oujX73);
+  obj9.children = closure_8(id(7297).TableSwitchRow, obj10);
   items3[3] = closure_8(View, obj9);
   const obj11 = { variant: "text-xs/normal", color: "text-muted", style: tmp8.warningText, children: null };
-  const intl4 = tmp(1128).intl;
-  obj11.children = intl4.string(id(1128).t.vRVs07);
-  items3[4] = closure_8(id(5234).Text, obj11);
+  const intl4 = tmp(1125).intl;
+  obj11.children = intl4.string(id(1125).t.vRVs07);
+  items3[4] = closure_8(id(5235).Text, obj11);
   obj8.children = items3;
   return closure_9(View, obj8);
 });

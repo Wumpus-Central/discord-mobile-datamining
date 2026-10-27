@@ -1,19 +1,19 @@
-// === Module 8400: StageRaiseHandSystemMessage ===
+// === Module 8399: StageRaiseHandSystemMessage ===
 
-// Module 8400 (StageRaiseHandSystemMessage)
+// Module 8399 (StageRaiseHandSystemMessage)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1128 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5996 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8318 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8320 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8322 */;
-import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6641 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import util from "util" /* 1125 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
+import useAudienceRequestToSpeakState from "useAudienceRequestToSpeakState" /* 5997 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8317 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8319 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8321 */;
+import StageChannelParticipantStore from "StageChannelParticipantStore" /* 6642 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ HelpdeskArticles: metroRequire, MessageFlags: closure_7, MessageTypes: closure_8, Permissions: closure_9 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/StageRaiseHandSystemMessage.tsx");

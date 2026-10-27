@@ -1,13 +1,13 @@
-// === Module 11456: getEmbeddedActivityJoinability ===
+// === Module 11459: getEmbeddedActivityJoinability ===
 
-// Module 11456 (getEmbeddedActivityJoinability)
-import ChannelUtils from "ChannelUtils" /* 5994 */;
-import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11457 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import UserStore from "UserStore" /* 1392 */;
-import VoiceStateStore from "VoiceStateStore" /* 5630 */;
+// Module 11459 (getEmbeddedActivityJoinability)
+import ChannelUtils from "ChannelUtils" /* 5995 */;
+import isActivitySupportedOnClientPlatformDefault from "isActivitySupportedOnClientPlatform" /* 11460 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import UserStore from "UserStore" /* 1389 */;
+import VoiceStateStore from "VoiceStateStore" /* 5631 */;
 
 require = fn;
 function getEmbeddedActivityJoinability(arg0) {
@@ -106,7 +106,7 @@ function getEmbeddedActivityJoinability(arg0) {
     }
   }
 }
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 const EmbeddedActivityJoinability = { CAN_JOIN: 0, [0]: "CAN_JOIN", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 1, [1]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", NO_CHANNEL_CONNECT_PERMISSION: 2, [2]: "NO_CHANNEL_CONNECT_PERMISSION", CHANNEL_FULL: 3, [3]: "CHANNEL_FULL", NO_CHANNEL: 4, [4]: "NO_CHANNEL", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 5, [5]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", ACTIVITY_NOT_SUPPORTED_ON_OS: 6, [6]: "ACTIVITY_NOT_SUPPORTED_ON_OS", ACTIVITY_AGE_GATED: 7, [7]: "ACTIVITY_AGE_GATED", NO_USER: 8, [8]: "NO_USER", IS_AFK_CHANNEL: 9, [9]: "IS_AFK_CHANNEL", NO_GUILD: 10, [10]: "NO_GUILD", CHANNEL_CONTENT_GATED: 11, [11]: "CHANNEL_CONTENT_GATED" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,7 +1,7 @@
-// === Module 4872: isChangelogUser ===
+// === Module 4873: isChangelogUser ===
 
-// Module 4872 (isChangelogUser)
-import ChangelogConstants from "ChangelogConstants" /* 4873 */;
+// Module 4873 (isChangelogUser)
+import ChangelogConstants from "ChangelogConstants" /* 4874 */;
 import size from "module_2" /* 2 */;
 
 const SYSTEM_UPDATES_USER_ID = ChangelogConstants.SYSTEM_UPDATES_USER_ID;

@@ -1,6 +1,6 @@
-// === Module 10561: redirectToSlayerStorefrontWeb ===
+// === Module 10564: redirectToSlayerStorefrontWeb ===
 
-// Module 10561 (redirectToSlayerStorefrontWeb)
+// Module 10564 (redirectToSlayerStorefrontWeb)
 import LoggerDefault from "Logger" /* 3 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -105,7 +105,7 @@ let closure_6 = async function _redirectToSlayerStorefrontWeb(arg0) {
     }
   }
 };
-const Routes = fn(1087).Routes;
+const Routes = fn(1084).Routes;
 let closure_5 = new LoggerDefault("redirectToSlayerStorefrontWeb");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/slayer_storefront/native/redirectToSlayerStorefrontWeb.tsx");

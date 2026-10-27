@@ -1,14 +1,14 @@
-// === Module 18043: JoinRequestOtherApplications ===
+// === Module 18077: JoinRequestOtherApplications ===
 
-// Module 18043 (JoinRequestOtherApplications)
+// Module 18077 (JoinRequestOtherApplications)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import DateUtils from "DateUtils" /* 4796 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5005 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import CircleXIcon from "CircleXIcon" /* 7018 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7267 */;
-import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18040 */;
+import DateUtils from "DateUtils" /* 4797 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5006 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import CircleXIcon from "CircleXIcon" /* 7020 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7269 */;
+import openJoinRequestActionSheetDefault from "openJoinRequestActionSheet" /* 18074 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -18,7 +18,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { label: { marginHorizontal: 16, marginBottom: 8 }, container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, marginHorizontal: 16, marginBottom: 12, borderRadius: nativeDefault.radii.md }, row: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", padding: 16 }, divider: null };
 let size = { width: "100%", height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
 obj.divider = size;
@@ -79,14 +79,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       if (cResult[2] === userId) {
         let tmp5 = cResult[3];
       }
-      row = tmp(18044).useOtherGuildJoinRequestsForUser(tmp5);
+      row = tmp(18078).useOtherGuildJoinRequestsForUser(tmp5);
       if (0 === row.length) {
         return null;
       } else {
         const _Symbol = Symbol;
         if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1128).intl;
-          const stringResult = intl.string(tmp(1128).t["hxa+G3"]);
+          const intl = tmp(1125).intl;
+          const stringResult = intl.string(tmp(1125).t["hxa+G3"]);
           cResult[4] = stringResult;
           let tmp6 = stringResult;
         } else {
@@ -94,7 +94,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         if (cResult[5] !== tmp4.label) {
           let obj2 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp4.label, children: tmp6 };
-          const tmp10 = closure_6(tmp(5234).Text, obj2);
+          const tmp10 = closure_6(tmp(5235).Text, obj2);
           cResult[5] = tmp4.label;
           cResult[6] = tmp10;
           let tmp8 = tmp10;
@@ -173,7 +173,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         cResult[13] = fn;
         tmp13 = fn;
       }
-      const tmpResult = tmp(18044);
+      const tmpResult = tmp(18078);
     }
   }
   let obj5 = { guildId, userId, selectedJoinRequestId };
@@ -192,9 +192,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (0 !== otherGuildJoinRequestsForUser.length) {
     let obj2 = { children: null };
     let obj3 = { variant: "text-sm/semibold", color: "text-subtle", style: tmp.label, children: null };
-    const intl = tmp2(1128).intl;
-    obj3.children = intl.string(tmp2(1128).t["hxa+G3"]);
-    let items = [closure_6(tmp2(5234).Text, obj3), ];
+    const intl = tmp2(1125).intl;
+    obj3.children = intl.string(tmp2(1125).t["hxa+G3"]);
+    let items = [closure_6(tmp2(5235).Text, obj3), ];
     let obj4 = {
       style: tmp.container,
       children: otherGuildJoinRequestsForUser.map((createdAt, index) => {

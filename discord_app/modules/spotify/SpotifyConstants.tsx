@@ -1,7 +1,7 @@
 // === Module 8828: SpotifyConstants ===
 
 // Module 8828 (SpotifyConstants)
-import Platforms from "Platforms" /* 6502 */;
+import Platforms from "Platforms" /* 6503 */;
 
 const spotify = "spotify";
 let c1 = "spotify:";
@@ -57,7 +57,7 @@ const obj2 = {
   APP_STORE: null,
   IOS_APP_STORE: "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8"
 };
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 let str = "https://itunes.apple.com/us/app/spotify-music/id324684580?mt=8";
 if (PlatformUtils.isAndroid()) {
   str = "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US";
@@ -69,7 +69,7 @@ const result = size.fileFinishedImporting("modules/spotify/SpotifyConstants.tsx"
 
 export const SPOTIFY_APP_PROTOCOL = "spotify";
 export const SPOTIFY_PARTY_PREFIX = "spotify:";
-export const SPOTIFY_PLATFORM_NAME = Platforms.get(fn(1087).PlatformTypes.SPOTIFY).name;
+export const SPOTIFY_PLATFORM_NAME = Platforms.get(fn(1084).PlatformTypes.SPOTIFY).name;
 export const isSpotifyParty = function isSpotifyParty(id) {
   let startsWithResult = null != id;
   if (startsWithResult) {

@@ -1,13 +1,13 @@
-// === Module 18273: ThreadAutoArchiveBottomSheet ===
+// === Module 18307: ThreadAutoArchiveBottomSheet ===
 
-// Module 18273 (ThreadAutoArchiveBottomSheet)
-import TableRadioRow from "TableRadioRow" /* 6984 */;
+// Module 18307 (ThreadAutoArchiveBottomSheet)
+import TableRadioRow from "TableRadioRow" /* 6986 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelFlags = fn(4830).ChannelFlags;
+const ChannelFlags = fn(4831).ChannelFlags;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -71,8 +71,8 @@ export const AutoArchiveDurationOptions = noop.memo(ReactCompilerGating.isReactC
   }
   _require = tmp12;
   if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1128).intl;
-    const stringResult = intl.string(tmp(1128).t.H4mGfI);
+    const intl = tmp(1125).intl;
+    const stringResult = intl.string(tmp(1125).t.H4mGfI);
     cResult[15] = stringResult;
     let tmp16 = stringResult;
   } else {
@@ -121,7 +121,7 @@ export const AutoArchiveDurationOptions = noop.memo(ReactCompilerGating.isReactC
   }
   _require = hasFlagResult;
   const obj2 = { value: selected, title, description, accessibilityLabel: null, onChange: null, hasIcons: false, children: null };
-  const intl = tmp(1128).intl;
+  const intl = tmp(1125).intl;
   obj2.accessibilityLabel = intl.string(require("util").t.H4mGfI);
   obj2.onChange = onSelectDuration;
   obj2.children = autoArchiveOptions.map((value) => jsx(TableRadioRow.TableRadioRow, { value: value.value, disabled, label: value.label }, value.value));

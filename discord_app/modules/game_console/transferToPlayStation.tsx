@@ -1,10 +1,10 @@
-// === Module 11656: transferToPlayStation ===
+// === Module 11658: transferToPlayStation ===
 
-// Module 11656 (transferToPlayStation)
+// Module 11658 (transferToPlayStation)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11657 */;
-import ConsoleCommands from "ConsoleCommands" /* 11661 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11659 */;
+import ConsoleCommands from "ConsoleCommands" /* 11663 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -206,7 +206,7 @@ let closure_6 = async function _sendConnectVoiceCommand() {
     }
   })();
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/transferToPlayStation.tsx");
 

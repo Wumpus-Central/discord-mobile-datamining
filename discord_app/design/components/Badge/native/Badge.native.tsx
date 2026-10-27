@@ -1,17 +1,17 @@
-// === Module 7233: Badge ===
+// === Module 7235: Badge ===
 
-// Module 7233 (Badge)
+// Module 7235 (Badge)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import useBadgeTextVariant from "useBadgeTextVariant" /* 5038 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import useToken from "useToken" /* 5252 */;
-import LinearGradientDefault from "LinearGradient" /* 5258 */;
-import BadgeShared from "BadgeShared" /* 7234 */;
+import util from "util" /* 1125 */;
+import useBadgeTextVariant from "useBadgeTextVariant" /* 5039 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import useToken from "useToken" /* 5253 */;
+import LinearGradientDefault from "LinearGradient" /* 5259 */;
+import BadgeShared from "BadgeShared" /* 7236 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4971 */;
+import createStyles from "createStyles" /* 4972 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

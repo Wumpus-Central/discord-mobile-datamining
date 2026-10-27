@@ -1,31 +1,31 @@
-// === Module 11479: RPCHelpers ===
+// === Module 11482: RPCHelpers ===
 
-// Module 11479 (RPCHelpers)
+// Module 11482 (RPCHelpers)
 import _modDef12 from "module_12" /* 12 */;
-import DurationsDefault from "Durations" /* 1104 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import UrlDefault from "Url" /* 1389 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 5623 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5989 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7566 */;
+import DurationsDefault from "Durations" /* 1101 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import UrlDefault from "Url" /* 1386 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 5624 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5990 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7567 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8827 */;
 import transformUserDefault from "transformUser" /* 9262 */;
 import transformAvatarDecorationDefault from "transformAvatarDecoration" /* 9263 */;
 import RPCErrorDefault from "RPCError" /* 9264 */;
-import transformMessage from "transformMessage" /* 11480 */;
-import LeakyBucketDefault from "LeakyBucket" /* 11482 */;
+import transformMessage from "transformMessage" /* 11483 */;
+import LeakyBucketDefault from "LeakyBucket" /* 11485 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2045 */;
-import ApplicationRecord from "ApplicationRecord" /* 2024 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import MessageStore from "MessageStore" /* 6010 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
-import UserStore from "UserStore" /* 1392 */;
-import VoiceStateStore from "VoiceStateStore" /* 5630 */;
-import URLUtils from "URLUtils" /* 1386 */;
+import ApplicationStore from "ApplicationStore" /* 2042 */;
+import ApplicationRecord from "ApplicationRecord" /* 2021 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import MessageStore from "MessageStore" /* 6011 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
+import UserStore from "UserStore" /* 1389 */;
+import VoiceStateStore from "VoiceStateStore" /* 5631 */;
+import URLUtils from "URLUtils" /* 1383 */;
 import "RegexUtils";
-import RegexUtils from "RegexUtils" /* 5608 */;
+import RegexUtils from "RegexUtils" /* 5609 */;
 
 require = fn;
 function validateOrigin(arg0) {
@@ -93,36 +93,38 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
             application2 = application.getApplication(closure_1);
             if (typeof closure_2 === "string") {
               if (transport.transport === constants.POST_MESSAGE) {
-                const tmp21 = getURLForApplicationDefault(closure_1);
-                if (null != tmp21) {
-                  const items = [tmp21];
+                const toOriginSafeResult = URLUtils.toOriginSafe(getURLForApplicationDefault(closure_1));
+                if (null != toOriginSafeResult) {
+                  if (null != toOriginSafeResult1) {
+                    const items = [toOriginSafeResult];
+                  }
                 }
                 const obj4 = { closeCode: constants2.INVALID_ORIGIN };
-                const tmp67 = new RPCErrorDefault(obj4, "Invalid Origin");
-                throw tmp67;
+                const tmp72 = new RPCErrorDefault(obj4, "Invalid Origin");
+                throw tmp72;
               } else {
                 c7 = 1;
                 c8 = 1;
-                const obj5 = { value: fetchApplicationRPC(closure_1), done: false };
-                return obj5;
+                const obj7 = { value: fetchApplicationRPC(closure_1), done: false };
+                return obj7;
               }
             }
-            let tmp27 = closure_134_0.transport === closure_133_14.POST_MESSAGE;
-            if (tmp27) {
-              tmp27 = !closure_133_4.isHydrated(closure_134_1);
+            let tmp32 = closure_134_0.transport === closure_133_14.POST_MESSAGE;
+            if (tmp32) {
+              tmp32 = !closure_133_4.isHydrated(closure_134_1);
             }
-            closure_134_5 = tmp27;
-            let tmp35 = null == application2;
-            if (!tmp35) {
-              tmp35 = closure_134_5;
+            closure_134_5 = tmp32;
+            let tmp40 = null == application2;
+            if (!tmp40) {
+              tmp40 = closure_134_5;
             }
-            if (tmp35) {
+            if (tmp40) {
               closure_4 = closure_133_5;
               createFromServer = closure_133_5.createFromServer;
               c7 = 2;
               c8 = 1;
-              const obj6 = { value: closure_133_26(closure_134_1), done: false };
-              return obj6;
+              const obj8 = { value: closure_133_26(closure_134_1), done: false };
+              return obj8;
             } else {
               closure_134_6 = application2;
               id = closure_134_6.id;
@@ -133,8 +135,8 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
               parentId = closure_134_6.parentId;
               bot = closure_134_6.bot;
               embeddedSurfaces = closure_134_6.embeddedSurfaces;
-              const obj7 = { id, parentId, name, icon, coverImage, flags, bot, embeddedSurfaces };
-              closure_134_0.application = obj7;
+              const obj9 = { id, parentId, name, icon, coverImage, flags, bot, embeddedSurfaces };
+              closure_134_0.application = obj9;
               c8 = 3;
             }
           }
@@ -144,14 +146,14 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
             throw value;
           } else if (arg0 === 2) {
             c8 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            const obj10 = { value, done: true };
+            return obj10;
           } else {
             closure_134_4 = value;
             application2 = closure_133_5.createFromServer(closure_134_4);
             if (!closure_133_25(closure_134_2, closure_134_4.rpc_origins)) {
-              const obj9 = { closeCode: closure_133_19.INVALID_ORIGIN };
-              const tmp16 = new closure_133_1(closure_133_2[24])(obj9, "Invalid Origin");
+              const obj11 = { closeCode: closure_133_19.INVALID_ORIGIN };
+              const tmp16 = new closure_133_1(closure_133_2[24])(obj11, "Invalid Origin");
               throw tmp16;
             }
           }
@@ -164,9 +166,9 @@ let closure_27 = async function _validateSocketApplication(arg0, arg1, arg2) {
         c8 = 3;
         const obj = { value, done: true };
         return obj;
-      } catch (tmp69) {
+      } catch (tmp74) {
         c8 = tmp;
-        throw tmp69;
+        throw tmp74;
       }
     }
   })();
@@ -242,10 +244,10 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(4827).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6378);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(4828).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(6379);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
-Constants = fn(1087);
+Constants = fn(1084);
 ({ ActivityActionTypes: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, MAX_MESSAGES_PER_CHANNEL: closure_18, RPCCloseCodes: closure_19, RPCErrors: closure_20, RTCConnectionStates: closure_21 } = Constants);
 const toURLSafeResult = URLUtils.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT);
 let str;
@@ -406,7 +408,7 @@ export const transformChannel = function transformChannel(channel, result) {
           const error = new Error("Invalid user id: " + userId);
           throw error;
         } else {
-          const obj = { nick: closure_1(5989).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
+          const obj = { nick: closure_1(5990).getName(dependencyMap, id.id, user), mute: MediaEngineStore.isLocalMute(user.id), volume: MediaEngineStore.getLocalVolume(user.id), pan: MediaEngineStore.getLocalPan(user.id), voice_state: null, user: null };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
           obj.user = closure_1(9262)(user);

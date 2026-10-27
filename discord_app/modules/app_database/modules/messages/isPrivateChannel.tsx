@@ -1,6 +1,6 @@
-// === Module 7592: isPrivateChannel ===
+// === Module 7593: isPrivateChannel ===
 
-// Module 7592 (isPrivateChannel)
+// Module 7593 (isPrivateChannel)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_database/modules/messages/isPrivateChannel.tsx");

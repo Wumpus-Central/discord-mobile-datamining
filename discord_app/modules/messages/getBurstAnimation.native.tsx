@@ -1,14 +1,9 @@
-// === Module 4930: getBurstAnimation ===
+// === Module 4931: getBurstAnimation ===
 
-// Module 4930 (getBurstAnimation)
+// Module 4931 (getBurstAnimation)
 import asyncGeneratorStepDefault from "asyncGeneratorStep" /* 5 */;
 
 const items = [
-  {
-    load() {
-      return closure_0(4931);
-    }
-  },
   {
     load() {
       return closure_0(4932);
@@ -93,14 +88,14 @@ const items = [
     load() {
       return closure_0(4948);
     }
-  }
-];
-const items1 = [
+  },
   {
     load() {
       return closure_0(4949);
     }
-  },
+  }
+];
+const items1 = [
   {
     load() {
       return closure_0(4950);
@@ -184,6 +179,11 @@ const items1 = [
   {
     load() {
       return closure_0(4966);
+    }
+  },
+  {
+    load() {
+      return closure_0(4967);
     }
   }
 ];

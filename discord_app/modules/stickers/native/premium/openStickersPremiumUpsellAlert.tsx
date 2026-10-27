@@ -1,9 +1,9 @@
-// === Module 10179: openStickersPremiumUpsellAlert ===
+// === Module 10181: openStickersPremiumUpsellAlert ===
 
-// Module 10179 (openStickersPremiumUpsellAlert)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6463 */;
-import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7357 */;
+// Module 10181 (openStickersPremiumUpsellAlert)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6464 */;
+import SubscriptionPlanActionCreators from "SubscriptionPlanActionCreators" /* 7359 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -81,7 +81,7 @@ let closure_7 = async function _openStickersPremiumUpsellAlert() {
     }
   })();
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_4, AnalyticsSections: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);

@@ -3,8 +3,8 @@
 // Module 8620 (ApplicationAssetUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1452 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationAssetsStore from "ApplicationAssetsStore" /* 8621 */;
@@ -320,7 +320,7 @@ let closure_22 = async function _fetchAssetIds(arg0) {
   closure_131_2 = num13;
   return "Reflect";
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Endpoints: metroRequire, PlatformTypes } = Constants);
 let c8 = "https://i.scdn.co/image/";
 const re9 = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/;

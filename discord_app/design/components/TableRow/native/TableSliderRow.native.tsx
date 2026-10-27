@@ -1,11 +1,11 @@
-// === Module 15277: TableSliderRow ===
+// === Module 15313: TableSliderRow ===
 
-// Module 15277 (TableSliderRow)
+// Module 15313 (TableSliderRow)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6904 */;
-import Card from "Card" /* 6905 */;
-import Slider from "Slider" /* 15278 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 6906 */;
+import Card from "Card" /* 6907 */;
+import Slider from "Slider" /* 15314 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ let closure_2 = ["label", "start", "end", "value", "defaultValue", "minValue", "
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_9 = createStyles.createStyles({ header: { flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center" }, label: { flexShrink: 1 }, slider: { marginStart: -4, marginTop: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

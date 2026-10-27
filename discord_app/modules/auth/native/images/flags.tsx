@@ -1,39 +1,39 @@
-// === Module 16780: flags ===
+// === Module 16822: flags ===
 
-// Module 16780 (flags)
-import _mod16781 from "module_16781" /* 16781 */;
-import _mod16782 from "module_16782" /* 16782 */;
-import _mod16783 from "module_16783" /* 16783 */;
-import _mod16784 from "module_16784" /* 16784 */;
-import _mod16785 from "module_16785" /* 16785 */;
-import _mod16786 from "module_16786" /* 16786 */;
-import _mod16787 from "module_16787" /* 16787 */;
-import _mod16788 from "module_16788" /* 16788 */;
-import _mod16789 from "module_16789" /* 16789 */;
-import _mod16790 from "module_16790" /* 16790 */;
-import _mod16791 from "module_16791" /* 16791 */;
-import _mod16792 from "module_16792" /* 16792 */;
-import _mod16793 from "module_16793" /* 16793 */;
-import _mod16794 from "module_16794" /* 16794 */;
-import _mod16795 from "module_16795" /* 16795 */;
-import _mod16796 from "module_16796" /* 16796 */;
-import _mod16797 from "module_16797" /* 16797 */;
-import _mod16798 from "module_16798" /* 16798 */;
-import _mod16799 from "module_16799" /* 16799 */;
-import _mod16800 from "module_16800" /* 16800 */;
-import _mod16801 from "module_16801" /* 16801 */;
-import _mod16802 from "module_16802" /* 16802 */;
-import _mod16803 from "module_16803" /* 16803 */;
-import _mod16804 from "module_16804" /* 16804 */;
-import _mod16805 from "module_16805" /* 16805 */;
-import _mod16806 from "module_16806" /* 16806 */;
-import _mod16807 from "module_16807" /* 16807 */;
-import _mod16808 from "module_16808" /* 16808 */;
-import _mod16809 from "module_16809" /* 16809 */;
-import _mod16810 from "module_16810" /* 16810 */;
-import _mod16811 from "module_16811" /* 16811 */;
+// Module 16822 (flags)
+import _mod16823 from "module_16823" /* 16823 */;
+import _mod16824 from "module_16824" /* 16824 */;
+import _mod16825 from "module_16825" /* 16825 */;
+import _mod16826 from "module_16826" /* 16826 */;
+import _mod16827 from "module_16827" /* 16827 */;
+import _mod16828 from "module_16828" /* 16828 */;
+import _mod16829 from "module_16829" /* 16829 */;
+import _mod16830 from "module_16830" /* 16830 */;
+import _mod16831 from "module_16831" /* 16831 */;
+import _mod16832 from "module_16832" /* 16832 */;
+import _mod16833 from "module_16833" /* 16833 */;
+import _mod16834 from "module_16834" /* 16834 */;
+import _mod16835 from "module_16835" /* 16835 */;
+import _mod16836 from "module_16836" /* 16836 */;
+import _mod16837 from "module_16837" /* 16837 */;
+import _mod16838 from "module_16838" /* 16838 */;
+import _mod16839 from "module_16839" /* 16839 */;
+import _mod16840 from "module_16840" /* 16840 */;
+import _mod16841 from "module_16841" /* 16841 */;
+import _mod16842 from "module_16842" /* 16842 */;
+import _mod16843 from "module_16843" /* 16843 */;
+import _mod16844 from "module_16844" /* 16844 */;
+import _mod16845 from "module_16845" /* 16845 */;
+import _mod16846 from "module_16846" /* 16846 */;
+import _mod16847 from "module_16847" /* 16847 */;
+import _mod16848 from "module_16848" /* 16848 */;
+import _mod16849 from "module_16849" /* 16849 */;
+import _mod16850 from "module_16850" /* 16850 */;
+import _mod16851 from "module_16851" /* 16851 */;
+import _mod16852 from "module_16852" /* 16852 */;
+import _mod16853 from "module_16853" /* 16853 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/images/flags.tsx");
 
-export const flags = { bg: _mod16781, cs: _mod16782, da: _mod16783, de: _mod16784, el: _mod16785, "en-GB": _mod16786, "en-US": _mod16787, "es-ES": _mod16788, "es-419": _mod16789, fi: _mod16790, fr: _mod16791, hi: _mod16792, hr: _mod16793, hu: _mod16794, it: _mod16795, ja: _mod16796, ko: _mod16797, lt: _mod16798, nl: _mod16799, no: _mod16800, pl: _mod16801, "pt-BR": _mod16802, ro: _mod16803, ru: _mod16804, "sv-SE": _mod16805, th: _mod16806, tr: _mod16807, uk: _mod16808, vi: _mod16809, "zh-CN": _mod16810, "zh-TW": _mod16811 };
+export const flags = { bg: _mod16823, cs: _mod16824, da: _mod16825, de: _mod16826, el: _mod16827, "en-GB": _mod16828, "en-US": _mod16829, "es-ES": _mod16830, "es-419": _mod16831, fi: _mod16832, fr: _mod16833, hi: _mod16834, hr: _mod16835, hu: _mod16836, it: _mod16837, ja: _mod16838, ko: _mod16839, lt: _mod16840, nl: _mod16841, no: _mod16842, pl: _mod16843, "pt-BR": _mod16844, ro: _mod16845, ru: _mod16846, "sv-SE": _mod16847, th: _mod16848, tr: _mod16849, uk: _mod16850, vi: _mod16851, "zh-CN": _mod16852, "zh-TW": _mod16853 };

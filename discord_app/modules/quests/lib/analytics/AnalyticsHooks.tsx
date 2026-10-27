@@ -1,24 +1,24 @@
-// === Module 16372: AnalyticsHooks ===
+// === Module 16411: AnalyticsHooks ===
 
-// Module 16372 (AnalyticsHooks)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import v1 from "v1" /* 1281 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import AdCreativeType from "AdCreativeType" /* 6717 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7750 */;
-import QuestDataUtils from "QuestDataUtils" /* 7772 */;
-import AnalyticsActions from "AnalyticsActions" /* 7792 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
-import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7807 */;
+// Module 16411 (AnalyticsHooks)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import v1 from "v1" /* 1278 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import AdCreativeType from "AdCreativeType" /* 6718 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7751 */;
+import QuestDataUtils from "QuestDataUtils" /* 7773 */;
+import AnalyticsActions from "AnalyticsActions" /* 7793 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7802 */;
+import QuestHomeSearchSession from "QuestHomeSearchSession" /* 7808 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let AnalyticEvents = fn(1087).AnalyticEvents;
+let AnalyticEvents = fn(1084).AnalyticEvents;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackQuestEventWithImpression() {
   const cResult = getQuestImpressionId(576).c(2);
   const obj = getQuestImpressionId(576);
-  getQuestImpressionId = getQuestImpressionId(9605).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(9608).useGetQuestImpressionId();
   if (cResult[0] !== getQuestImpressionId) {
     const fn = function t(properties) {
       const obj2 = {};
@@ -37,7 +37,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackQues
   }
   return tmp3;
 }) : (function useTrackQuestEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(9605).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(9608).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return noop.useCallback((properties) => {
     const obj2 = {};
@@ -55,7 +55,7 @@ ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackAdContentEventWithImpression() {
   const cResult = getQuestImpressionId(576).c(2);
   const obj = getQuestImpressionId(576);
-  getQuestImpressionId = getQuestImpressionId(9605).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(9608).useGetQuestImpressionId();
   if (cResult[0] !== getQuestImpressionId) {
     const fn = function t(properties) {
       const obj2 = {};
@@ -74,7 +74,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackAd
   }
   return tmp3;
 }) : (function useTrackAdContentEventWithImpression() {
-  getQuestImpressionId = getQuestImpressionId(9605).useGetQuestImpressionId();
+  getQuestImpressionId = getQuestImpressionId(9608).useGetQuestImpressionId();
   const items = [getQuestImpressionId];
   return noop.useCallback((properties) => {
     const obj2 = {};
@@ -97,12 +97,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackQues
       questId = questId.questId;
       const questContent = questId.questContent;
       ({ questContentCTA: closure_2, questContentPosition: closure_3, questContentRowIndex: closure_4, trackGuildAndChannelMetadata: closure_5, sourceQuestContent } = questId);
-      const adMetadataSealed = questId(7772).getAdMetadataSealed(sourceQuestContent);
-      let obj = questId(7772);
-      const adTrafficMetadataSealed = questId(7772).getAdTrafficMetadataSealed(sourceQuestContent, questId);
-      let obj2 = questId(7772);
-      let obj3 = questId(7802);
-      const adUser = obj3.getAdUser(questId(7801).getQuestContentName(questContent));
+      const adMetadataSealed = questId(7773).getAdMetadataSealed(sourceQuestContent);
+      let obj = questId(7773);
+      const adTrafficMetadataSealed = questId(7773).getAdTrafficMetadataSealed(sourceQuestContent, questId);
+      let obj2 = questId(7773);
+      let obj3 = questId(7803);
+      const adUser = obj3.getAdUser(questId(7802).getQuestContentName(questContent));
       adUser.then((advertisingId) => {
         const obj = { questId, event: AnalyticEvents.QUEST_CONTENT_CLICKED, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
         const obj2 = {};
@@ -171,12 +171,12 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackQues
     questId = questId.questId;
     const questContent = questId.questContent;
     ({ questContentCTA: closure_2, questContentPosition: closure_3, questContentRowIndex: closure_4, trackGuildAndChannelMetadata: closure_5, sourceQuestContent } = questId);
-    const adMetadataSealed = questId(7772).getAdMetadataSealed(sourceQuestContent);
-    let obj = questId(7772);
-    const adTrafficMetadataSealed = questId(7772).getAdTrafficMetadataSealed(sourceQuestContent, questId);
-    let obj2 = questId(7772);
-    let obj3 = questId(7802);
-    const adUser = obj3.getAdUser(questId(7801).getQuestContentName(questContent));
+    const adMetadataSealed = questId(7773).getAdMetadataSealed(sourceQuestContent);
+    let obj = questId(7773);
+    const adTrafficMetadataSealed = questId(7773).getAdTrafficMetadataSealed(sourceQuestContent, questId);
+    let obj2 = questId(7773);
+    let obj3 = questId(7803);
+    const adUser = obj3.getAdUser(questId(7802).getQuestContentName(questContent));
     adUser.then((advertisingId) => {
       const obj = { questId, event: AnalyticEvents.QUEST_CONTENT_CLICKED, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
       const obj2 = {};
@@ -240,8 +240,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackAd
     const fn = function t(arg0) {
       ({ adContentId: closure_0, relatedQuestId: closure_1, adCreativeType: closure_2, questContent } = arg0);
       ({ questContentCTA: closure_4, questContentPosition: closure_5, questContentRowIndex: closure_6, trackGuildAndChannelMetadata: closure_7, sourceQuestContent: closure_8 } = arg0);
-      let obj = adContentId(7802);
-      const adUser = obj.getAdUser(adContentId(7801).getQuestContentName(questContent));
+      let obj = adContentId(7803);
+      const adUser = obj.getAdUser(adContentId(7802).getQuestContentName(questContent));
       adUser.then((advertisingId) => {
         const obj = { adContentId, relatedQuestId, adCreativeType, event: AnalyticEvents.QUEST_CONTENT_CLICKED, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
         const obj2 = {};
@@ -299,8 +299,8 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackAd
   return noop.useCallback((arg0) => {
     ({ adContentId: closure_0, relatedQuestId: closure_1, adCreativeType: closure_2, questContent } = arg0);
     ({ questContentCTA: closure_4, questContentPosition: closure_5, questContentRowIndex: closure_6, trackGuildAndChannelMetadata: closure_7, sourceQuestContent: closure_8 } = arg0);
-    let obj = adContentId(7802);
-    const adUser = obj.getAdUser(adContentId(7801).getQuestContentName(questContent));
+    let obj = adContentId(7803);
+    const adUser = obj.getAdUser(adContentId(7802).getQuestContentName(questContent));
     adUser.then((advertisingId) => {
       const obj = { adContentId, relatedQuestId, adCreativeType, event: AnalyticEvents.QUEST_CONTENT_CLICKED, properties: null, trackGuildAndChannelMetadata: null, shouldExtendSession: null, sourceQuestContent: null };
       const obj2 = {};
@@ -419,16 +419,16 @@ export const useQuestHomeEntrypointAnalyticsEvents = ReactCompilerGating.isReact
   const cResult = questHomeHero(576).c(19);
   questHomeHero = questHomeHero.questHomeHero;
   const shouldShowQuestHomeHeroContent = questHomeHero.shouldShowQuestHomeHeroContent;
-  const QuestContent = questHomeHero(6713).QuestContent;
+  const QuestContent = questHomeHero(6714).QuestContent;
   const tmp6 = shouldShowQuestHomeHeroContent ? QuestContent.QUEST_HOME_ENTRYPOINT_THEMED : QuestContent.QUEST_HOME_ENTRYPOINT;
   dependencyMap = tmp6;
   if (cResult[0] !== tmp6) {
-    const contentProperties = tmp3(7801).getContentProperties(tmp6);
+    const contentProperties = tmp3(7802).getContentProperties(tmp6);
     delete tmp[tmp2];
     cResult[0] = tmp6;
     cResult[1] = contentProperties;
     let tmp7 = contentProperties;
-    const tmp3Result = tmp3(7801);
+    const tmp3Result = tmp3(7802);
   } else {
     tmp7 = cResult[1];
   }
@@ -605,7 +605,7 @@ export const useQuestHomeEntrypointAnalyticsEvents = ReactCompilerGating.isReact
   questHomeHero = questHomeHero.questHomeHero;
   const shouldShowQuestHomeHeroContent = questHomeHero.shouldShowQuestHomeHeroContent;
   let memo;
-  const QuestContent = questHomeHero(6713).QuestContent;
+  const QuestContent = questHomeHero(6714).QuestContent;
   const tmp = shouldShowQuestHomeHeroContent ? QuestContent.QUEST_HOME_ENTRYPOINT_THEMED : QuestContent.QUEST_HOME_ENTRYPOINT;
   dependencyMap = tmp;
   const items = [tmp];

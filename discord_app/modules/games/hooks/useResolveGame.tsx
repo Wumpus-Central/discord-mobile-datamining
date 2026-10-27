@@ -2,8 +2,8 @@
 
 // Module 9250 (useResolveGame)
 import c from "c" /* 576 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7257 */;
-import useGame from "useGame" /* 7406 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7259 */;
+import useGame from "useGame" /* 7408 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

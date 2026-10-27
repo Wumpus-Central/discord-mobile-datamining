@@ -1,15 +1,15 @@
-// === Module 16605: InputModeSetting ===
+// === Module 16647: InputModeSetting ===
 
-// Module 16605 (InputModeSetting)
+// Module 16647 (InputModeSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import MediaEngineStore from "MediaEngineStore" /* 2014 */;
+import util from "util" /* 1125 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 require = fn;
-const InputModes = fn(5718).InputModes;
+const InputModes = fn(5719).InputModes;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInputModeSettingTrailing() {
   let Q8gkVL = dependencyMap;
   const cResult = c.c(4);
@@ -57,7 +57,7 @@ const pressable = SettingBuilders.createPressable({
     const intl = util.intl;
     return intl.string(util.t["pS+K2L"]);
   },
-  parent: fn(8332).MobileUserSettings.VOICE,
+  parent: fn(8331).MobileUserSettings.VOICE,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useInputModeSettingTrailing() {
     let Q8gkVL = dependencyMap;
     const cResult = c.c(4);
@@ -100,7 +100,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return stringResult;
   }),
-  onPress: fn(11620).handleInputModePress,
+  onPress: fn(11622).handleInputModePress,
   useSearchTerms() {
     const intl = util.intl;
     const items = [intl.string(util.t.nuFtHH)];

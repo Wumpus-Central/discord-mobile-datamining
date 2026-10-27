@@ -1,8 +1,8 @@
-// === Module 9490: useGameProfilePlatforms ===
+// === Module 9489: useGameProfilePlatforms ===
 
-// Module 9490 (useGameProfilePlatforms)
+// Module 9489 (useGameProfilePlatforms)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
+import util from "util" /* 1125 */;
 import PlatformType from "PlatformType" /* 8830 */;
 import noop from "module_19" /* 19 */;
 

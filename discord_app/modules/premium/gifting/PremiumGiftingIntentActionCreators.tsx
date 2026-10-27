@@ -1,19 +1,19 @@
-// === Module 10497: PremiumGiftingIntentActionCreators ===
+// === Module 10500: PremiumGiftingIntentActionCreators ===
 
-// Module 10497 (PremiumGiftingIntentActionCreators)
+// Module 10500 (PremiumGiftingIntentActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SentryUtilsDefault from "SentryUtils" /* 1257 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7732 */;
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7733 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MessageStore from "MessageStore" /* 6010 */;
+import MessageStore from "MessageStore" /* 6011 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GiftIntentType = fn(1394).GiftIntentType;
-const Constants = fn(1087);
+const GiftIntentType = fn(1391).GiftIntentType;
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/gifting/PremiumGiftingIntentActionCreators.tsx");
@@ -35,8 +35,8 @@ export const fetchAndReconcileGiftIntentDismissals = function fetchAndReconcileG
       DispatcherDefault.dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
     }
   }, (arg0) => {
-    closure_1(1257).captureException(arg0, { tags: { feature: "gift_intent" } });
-    const obj = closure_1(1257);
+    closure_1(1254).captureException(arg0, { tags: { feature: "gift_intent" } });
+    const obj = closure_1(1254);
     closure_1(584).dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
   });
 };

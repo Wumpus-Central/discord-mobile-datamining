@@ -1,14 +1,14 @@
-// === Module 13036: RarityBadge ===
+// === Module 13050: RarityBadge ===
 
-// Module 13036 (RarityBadge)
+// Module 13050 (RarityBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6016 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6362 */;
-import inlineStyles from "inlineStyles" /* 7962 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9425 */;
+import util from "util" /* 1125 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6017 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6364 */;
+import inlineStyles from "inlineStyles" /* 7960 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9424 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,11 +17,11 @@ const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6015);
-({ CHECKPOINT_NITRO_GRADIENT_COLORS: metroRequire, CHECKPOINT_NITRO_BADGE_GRADIENT_ID: closure_7, CHECKPOINT_RARITY_COLORS: closure_8, CHECKPOINT_RARITY_LABEL_MESSAGES: closure_9 } = CheckpointConstants);
+const CheckpointConstants = fn(6016);
+({ CHECKPOINT_NITRO_GRADIENT_COLORS: metroRequire, CHECKPOINT_NITRO_BADGE_GRADIENT_ID: closure_7, CHECKPOINT_RARITY_TO_COLOR: closure_8, CHECKPOINT_RARITY_TO_LABEL_MESSAGE: closure_9 } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 const obj2 = { badge: { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "center" }, badgeShape: { position: "absolute", top: 0, left: 0 }, badgeContent: null, badgeLabel: null, badgeHidden: null };
 let obj3 = { paddingVertical: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_8, justifyContent: "center" };
 obj2.badgeContent = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };

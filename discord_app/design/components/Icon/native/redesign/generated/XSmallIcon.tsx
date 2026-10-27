@@ -1,10 +1,10 @@
-// === Module 6931: XSmallIcon ===
+// === Module 6933: XSmallIcon ===
 
-// Module 6931 (XSmallIcon)
+// Module 6933 (XSmallIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5668 */;
-import _mod6932 from "module_6932" /* 6932 */;
+import BaseIconImage from "BaseIconImage" /* 5669 */;
+import _mod6934 from "module_6934" /* 6934 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const XSmallIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod6932;
+    const tmpResult = _mod6934;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const XSmallIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod6932, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod6934, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

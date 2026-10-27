@@ -1,14 +1,14 @@
-// === Module 10128: useExpressionPickerInsets ===
+// === Module 10130: useExpressionPickerInsets ===
 
-// Module 10128 (useExpressionPickerInsets)
+// Module 10130 (useExpressionPickerInsets)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5593 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5594 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const EXPRESSION_FOOTER_HEIGHT = fn(1087).EXPRESSION_FOOTER_HEIGHT;
+const EXPRESSION_FOOTER_HEIGHT = fn(1084).EXPRESSION_FOOTER_HEIGHT;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/expression_picker/native/useExpressionPickerInsets.tsx");

@@ -3,9 +3,9 @@
 // Module 9165 (VoiceStateIcons)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import inlineStyles from "inlineStyles" /* 7962 */;
+import native from "native" /* 1199 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import inlineStyles from "inlineStyles" /* 7960 */;
 import VoiceStateIconUtils from "VoiceStateIconUtils" /* 9166 */;
 import HeadphonesDenyIcon from "HeadphonesDenyIcon" /* 9167 */;
 import HeadphonesSlashIcon from "HeadphonesSlashIcon" /* 9169 */;
@@ -24,11 +24,11 @@ let closure_4 = ["state"];
 const StyleSheet = fn(17).StyleSheet;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { redTint: { tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL }, defaultTint: null, noTint: null };
 let obj3 = { tintColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
 obj.defaultTint = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };
-obj.noTint = { tintColor: "Array" };
+obj.noTint = { tintColor: "rejectWithError" };
 let closure_9 = createStyles.createStyles(obj);
 fn(558);
 let obj4 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT };

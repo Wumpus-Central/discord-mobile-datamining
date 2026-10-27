@@ -1,9 +1,9 @@
-// === Module 15028: LocalAppDetectionUtils ===
+// === Module 15064: LocalAppDetectionUtils ===
 
-// Module 15028 (LocalAppDetectionUtils)
-import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 15027 */;
+// Module 15064 (LocalAppDetectionUtils)
+import LocalAppDetectionTypes from "LocalAppDetectionTypes" /* 15063 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConsentStore from "ConsentStore" /* 6670 */;
+import ConsentStore from "ConsentStore" /* 6671 */;
 
 require = fn;
 function getDetectableApp(arg0) {
@@ -136,7 +136,7 @@ let closure_8 = async function _detectLocalApps(arg0) {
     }
   })();
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, Consents: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/local_app_detection/native/LocalAppDetectionUtils.tsx");

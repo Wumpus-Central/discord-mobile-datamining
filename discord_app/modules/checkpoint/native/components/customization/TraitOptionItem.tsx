@@ -1,28 +1,28 @@
-// === Module 13032: TraitOptionItem ===
+// === Module 13046: TraitOptionItem ===
 
-// Module 13032 (TraitOptionItem)
+// Module 13046 (TraitOptionItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5039 */;
-import LinearGradientDefault from "LinearGradient" /* 5258 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6016 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6040 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6362 */;
-import _modDef6966 from "module_6966" /* 6966 */;
-import inlineStyles from "inlineStyles" /* 7962 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9425 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5040 */;
+import LinearGradientDefault from "LinearGradient" /* 5259 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6017 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6043 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6364 */;
+import _modDef6968 from "module_6968" /* 6968 */;
+import inlineStyles from "inlineStyles" /* 7960 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9424 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import CheckpointConstants from "CheckpointConstants" /* 6015 */;
+import CheckpointConstants from "CheckpointConstants" /* 6016 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4971 */;
+import createStyles from "createStyles" /* 4972 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const inlineStylesDefault = inlineStyles;
 
 ({ Pressable: c3, View: closure_4 } = get_ActivityIndicator);
-({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_NITRO_GRADIENT_COLORS: metroRequire, CHECKPOINT_PRIMARY: closure_7, CHECKPOINT_RARITY_COLORS: closure_8, TRAIT_OPTION_HEIGHT } = CheckpointConstants);
+({ CHECKPOINT_DARK_CYAN: hasOwnProperty, CHECKPOINT_NITRO_GRADIENT_COLORS: metroRequire, CHECKPOINT_PRIMARY: closure_7, CHECKPOINT_RARITY_TO_COLOR: closure_8, TRAIT_OPTION_HEIGHT } = CheckpointConstants);
 const TRAIT_OPTION_WIDTH = CheckpointConstants.TRAIT_OPTION_WIDTH;
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const checkpointTraitGradient = "checkpointTraitGradient";
@@ -71,7 +71,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Rarity
         return tmp23;
       }
       const obj3 = { style: tmp11, maskElement: tmp13, pointerEvents: "none", children: tmp16 };
-      const tmp26 = closure_1_11(_modDef6966, obj3);
+      const tmp26 = closure_1_11(_modDef6968, obj3);
       cResult[6] = tmp11;
       cResult[7] = tmp16;
       cResult[8] = tmp26;
@@ -127,7 +127,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Rarity
     obj2.maskElement = closure_1_11(NitroWheelIcon.NitroWheelIcon, { size: "xxs" });
     const obj3 = { colors, start, end, style: tmp.cornerNitroIconGradient };
     obj2.children = closure_1_11(LinearGradientDefault, obj3);
-    let tmp4Result = closure_1_11(_modDef6966, obj2);
+    let tmp4Result = closure_1_11(_modDef6968, obj2);
   } else {
     const items1 = [, , ];
     ({ rarityIndicator: arr[0], cornerFlag: arr[1] } = tmp);

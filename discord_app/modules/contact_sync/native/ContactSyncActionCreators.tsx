@@ -1,8 +1,8 @@
-// === Module 13589: ContactSyncActionCreators ===
+// === Module 13603: ContactSyncActionCreators ===
 
-// Module 13589 (ContactSyncActionCreators)
+// Module 13603 (ContactSyncActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6500 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6501 */;
 
 const require = globalThis.__r;
 
@@ -41,7 +41,7 @@ let closure_8 = async function _updateDiscoverability(arg0) {
           closure_131_0 = phone;
           const email = closure_0.email;
           closure_131_1 = email;
-          const FriendDiscoverySettings2 = React(4799).FriendDiscoverySettings;
+          const FriendDiscoverySettings2 = React(4800).FriendDiscoverySettings;
           const setting = FriendDiscoverySettings2.getSetting();
           closure_131_2 = setting;
           localAccount = localAccount.getLocalAccount(constants2.CONTACTS);
@@ -52,15 +52,15 @@ let closure_8 = async function _updateDiscoverability(arg0) {
           closure_131_3 = name;
           let setFlagResult = setting;
           if (null != phone) {
-            setFlagResult = React(1405).setFlag(setting, constants.FIND_BY_PHONE, phone);
-            const obj5 = React(1405);
+            setFlagResult = React(1402).setFlag(setting, constants.FIND_BY_PHONE, phone);
+            const obj5 = React(1402);
           }
           let setFlagResult1 = setFlagResult;
           if (null != email) {
-            setFlagResult1 = React(1405).setFlag(setFlagResult, constants.FIND_BY_EMAIL, email);
-            const obj6 = React(1405);
+            setFlagResult1 = React(1402).setFlag(setFlagResult, constants.FIND_BY_EMAIL, email);
+            const obj6 = React(1402);
           }
-          const FriendDiscoverySettings = React(4799).FriendDiscoverySettings;
+          const FriendDiscoverySettings = React(4800).FriendDiscoverySettings;
           c5 = 1;
           c6 = 1;
           const obj8 = { value: FriendDiscoverySettings.updateSetting(setFlagResult1), done: false };
@@ -99,7 +99,7 @@ let closure_8 = async function _updateDiscoverability(arg0) {
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, FriendDiscoveryFlags: metroRequire, PlatformTypes: closure_7 } = Constants);
 asyncGeneratorStep(async (name) => {
   c3 = 0;

@@ -1,19 +1,19 @@
-// === Module 14092: CrunchyrollLinkModal ===
+// === Module 14106: CrunchyrollLinkModal ===
 
-// Module 14092 (CrunchyrollLinkModal)
+// Module 14106 (CrunchyrollLinkModal)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import Navigator from "Navigator" /* 7095 */;
-import HeaderActionButton from "HeaderActionButton" /* 7485 */;
-import _modDef8115 from "module_8115" /* 8115 */;
-import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9619 */;
-import useAccountLinkStepTracking from "useAccountLinkStepTracking" /* 14079 */;
-import CrunchyrollLinkModalActionCreatorsDefault from "CrunchyrollLinkModalActionCreators" /* 14091 */;
-import CrunchyrollLinkLandingDefault from "CrunchyrollLinkLanding" /* 14094 */;
-import CrunchyrollLinkPreConnectDefault from "CrunchyrollLinkPreConnect" /* 14096 */;
-import CrunchyrollLinkDiscordConsentDefault from "CrunchyrollLinkDiscordConsent" /* 14098 */;
-import CrunchyrollLinkSuccessDefault from "CrunchyrollLinkSuccess" /* 14099 */;
-import CrunchyrollLinkErrorDefault from "CrunchyrollLinkError" /* 14101 */;
+import util from "util" /* 1125 */;
+import Navigator from "Navigator" /* 7097 */;
+import HeaderActionButton from "HeaderActionButton" /* 7486 */;
+import _modDef8113 from "module_8113" /* 8113 */;
+import TwoWayLinkStyles from "TwoWayLinkStyles" /* 9621 */;
+import useAccountLinkStepTracking from "useAccountLinkStepTracking" /* 14093 */;
+import CrunchyrollLinkModalActionCreatorsDefault from "CrunchyrollLinkModalActionCreators" /* 14105 */;
+import CrunchyrollLinkLandingDefault from "CrunchyrollLinkLanding" /* 14108 */;
+import CrunchyrollLinkPreConnectDefault from "CrunchyrollLinkPreConnect" /* 14110 */;
+import CrunchyrollLinkDiscordConsentDefault from "CrunchyrollLinkDiscordConsent" /* 14112 */;
+import CrunchyrollLinkSuccessDefault from "CrunchyrollLinkSuccess" /* 14113 */;
+import CrunchyrollLinkErrorDefault from "CrunchyrollLinkError" /* 14115 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -39,7 +39,7 @@ function getScreens(headerStyle) {
       headerRight,
       headerStyle: headerStyle.navHeader,
       headerTitle() {
-        return jsx(onClose(9620).TwoWayLinkStepHeader, { idx: 1, total: 2 });
+        return jsx(onClose(9622).TwoWayLinkStepHeader, { idx: 1, total: 2 });
       },
       render() {
         return jsx(CrunchyrollLinkPreConnectDefault, {});
@@ -50,7 +50,7 @@ function getScreens(headerStyle) {
       headerRight,
       headerStyle: headerStyle.navHeader,
       headerTitle() {
-        return jsx(onClose(9620).TwoWayLinkStepHeader, { idx: 2, total: 2 });
+        return jsx(onClose(9622).TwoWayLinkStepHeader, { idx: 2, total: 2 });
       },
       render(arg0) {
         ({ callbackCode, callbackState } = arg0);
@@ -77,8 +77,8 @@ function getScreens(headerStyle) {
     }
   };
 }
-const constants = fn(14093).CrunchyrollLinkModalScenes;
-const PlatformTypes = fn(1087).PlatformTypes;
+const constants = fn(14107).CrunchyrollLinkModalScenes;
+const PlatformTypes = fn(1084).PlatformTypes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 const headerRight = ReactCompilerGating.isReactCompilerEnabled() ? (function CloseButton() {
@@ -93,10 +93,10 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled() ? (function Clo
     first = cResult[0];
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef8115, onPress: first, accessibilityLabel: null };
+    const obj2 = { source: _modDef8113, onPress: first, accessibilityLabel: null };
     const intl = util.intl;
     obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
-    const tmp8 = jsx(HeaderActionButton.HeaderActionButton, { source: _modDef8115, onPress: first, accessibilityLabel: null });
+    const tmp8 = jsx(HeaderActionButton.HeaderActionButton, { source: _modDef8113, onPress: first, accessibilityLabel: null });
     cResult[1] = tmp8;
     let tmp5 = tmp8;
   } else {
@@ -105,7 +105,7 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled() ? (function Clo
   return tmp5;
 }) : (function CloseButton() {
   const obj = {
-    source: _modDef8115,
+    source: _modDef8113,
     onPress: function onClose() {
       return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
     },
@@ -114,7 +114,7 @@ const headerRight = ReactCompilerGating.isReactCompilerEnabled() ? (function Clo
   const intl = util.intl;
   obj.accessibilityLabel = intl.string(util.t.cpT0Cq);
   return jsx(HeaderActionButton.HeaderActionButton, {
-    source: _modDef8115,
+    source: _modDef8113,
     onPress: function onClose() {
       return CrunchyrollLinkModalActionCreatorsDefault.hideModal();
     },
@@ -160,13 +160,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Crunchyr
   const tmpResult = useAccountLinkStepTracking;
 }) : (function CrunchyrollLinkModal(locationStack) {
   let twoWayLinkStyles;
-  twoWayLinkStyles = twoWayLinkStyles(9619).useTwoWayLinkStyles();
+  twoWayLinkStyles = twoWayLinkStyles(9621).useTwoWayLinkStyles();
   const items = [twoWayLinkStyles];
   const memo = noop.useMemo(() => getScreens(twoWayLinkStyles), items);
-  const obj = twoWayLinkStyles(9619);
-  const accountLinkStepTracking = twoWayLinkStyles(14079).useAccountLinkStepTracking(PlatformTypes.CRUNCHYROLL, locationStack.locationStack);
+  const obj = twoWayLinkStyles(9621);
+  const accountLinkStepTracking = twoWayLinkStyles(14093).useAccountLinkStepTracking(PlatformTypes.CRUNCHYROLL, locationStack.locationStack);
   const obj3 = { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null };
-  const intl = twoWayLinkStyles(1128).intl;
-  obj3.headerBackTitle = intl.string(twoWayLinkStyles(1128).t["13/7kX"]);
-  return jsx(twoWayLinkStyles(7095).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null });
+  const intl = twoWayLinkStyles(1125).intl;
+  obj3.headerBackTitle = intl.string(twoWayLinkStyles(1125).t["13/7kX"]);
+  return jsx(twoWayLinkStyles(7097).Navigator, { onStateChange: accountLinkStepTracking, screens: memo, initialRouteName: constants.LANDING, headerBackTitle: null });
 });

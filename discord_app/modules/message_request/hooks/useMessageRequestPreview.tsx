@@ -1,12 +1,12 @@
-// === Module 13522: useMessageRequestPreview ===
+// === Module 13536: useMessageRequestPreview ===
 
-// Module 13522 (useMessageRequestPreview)
+// Module 13536 (useMessageRequestPreview)
 import _modDef12 from "module_12" /* 12 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import MessageStore from "MessageStore" /* 6010 */;
-import ReadStateStore from "ReadStateStore" /* 6771 */;
-import MessageRequestPreviewStore from "MessageRequestPreviewStore" /* 13523 */;
+import MessageStore from "MessageStore" /* 6011 */;
+import ReadStateStore from "ReadStateStore" /* 6772 */;
+import MessageRequestPreviewStore from "MessageRequestPreviewStore" /* 13537 */;
 
 require = fn;
 function loadMessageRequestData() {
@@ -200,7 +200,7 @@ let closure_13 = async function _loadMessageRequestDataHelper() {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const set = new Set();
 let c9 = null;
 const ReactCompilerGating = fn(558);

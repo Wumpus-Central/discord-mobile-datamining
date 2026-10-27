@@ -1,7 +1,7 @@
-// === Module 11254: RecentChannelsActionCreators ===
+// === Module 11257: RecentChannelsActionCreators ===
 
-// Module 11254 (RecentChannelsActionCreators)
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4804 */;
+// Module 11257 (RecentChannelsActionCreators)
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4805 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -67,7 +67,7 @@ let closure_5 = async function _bulkClearRecents(arg0) {
     }
   }
 };
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/recent_channels/RecentChannelsActionCreators.tsx");
 

@@ -1,9 +1,9 @@
-// === Module 13491: GuildBoostingMarketingConstants ===
+// === Module 13505: GuildBoostingMarketingConstants ===
 
-// Module 13491 (GuildBoostingMarketingConstants)
-import util from "util" /* 1128 */;
-import Constants from "Constants" /* 1087 */;
-import PremiumConstants from "PremiumConstants" /* 1394 */;
+// Module 13505 (GuildBoostingMarketingConstants)
+import util from "util" /* 1125 */;
+import Constants from "Constants" /* 1084 */;
+import PremiumConstants from "PremiumConstants" /* 1391 */;
 import size from "module_2" /* 2 */;
 
 const BoostedGuildTiers = Constants.BoostedGuildTiers;

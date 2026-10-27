@@ -1,15 +1,15 @@
-// === Module 8432: useDiscountOffer ===
+// === Module 8431: useDiscountOffer ===
 
-// Module 8432 (useDiscountOffer)
+// Module 8431 (useDiscountOffer)
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
-import UserOfferStore from "UserOfferStore" /* 7560 */;
+import UserStore from "UserStore" /* 1389 */;
+import UserOfferStore from "UserOfferStore" /* 7561 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const CHURN_DISCOUNT_IDS = fn(1394).CHURN_DISCOUNT_IDS;
+const CHURN_DISCOUNT_IDS = fn(1391).CHURN_DISCOUNT_IDS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/hooks/useDiscountOffer.tsx");

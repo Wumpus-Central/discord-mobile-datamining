@@ -2,23 +2,23 @@
 
 // Module 9232 (GuildProfileHeader)
 import nativeDefault from "native" /* 587 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4837 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
-import transitionToGuild from "transitionToGuild" /* 7449 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4838 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5664 */;
+import transitionToGuild from "transitionToGuild" /* 7450 */;
 import GuildTraits from "GuildTraits" /* 9234 */;
 import BadgeCategory from "BadgeCategory" /* 9235 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
 
 require = fn;
 const View = fn(17).View;
 const getBadgeTooltip = fn(9233).getBadgeTooltip;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { header: { paddingHorizontal: 16, marginTop: -32, display: "flex", flexDirection: "column", gap: 0 }, avatarBackground: null, members: null, memberCount: null, dot: null, dotOnline: null, established: null, nameRow: null, guildName: null, guildIcon: null };
 let size = { width: 86, height: 86, borderRadius: 28.666666666666668, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", justifyContent: "center", alignItems: "center", overflow: "hidden" };
 obj2.avatarBackground = size;

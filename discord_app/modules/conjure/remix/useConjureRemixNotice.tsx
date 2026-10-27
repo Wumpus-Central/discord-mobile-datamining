@@ -1,10 +1,10 @@
-// === Module 12286: useConjureRemixNotice ===
+// === Module 12292: useConjureRemixNotice ===
 
-// Module 12286 (useConjureRemixNotice)
-import _modDef3830 from "module_3830" /* 3830 */;
-import conjureRemixConnection from "conjureRemixConnection" /* 10808 */;
+// Module 12292 (useConjureRemixNotice)
+import _modDef3831 from "module_3831" /* 3831 */;
+import conjureRemixConnection from "conjureRemixConnection" /* 10811 */;
 import noop from "module_19" /* 19 */;
-import ConjureRemixStore from "ConjureRemixStore" /* 10715 */;
+import ConjureRemixStore from "ConjureRemixStore" /* 10718 */;
 
 const require = globalThis.__r;
 
@@ -47,9 +47,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjure
     return null;
   } else {
     if (cResult[5] !== stateFromStores) {
-      const intl = tmp(1128).intl;
+      const intl = tmp(1125).intl;
       const obj2 = { reason: stateFromStores };
-      const formatResult = intl.format(_modDef3830.Up6Ssw, obj2);
+      const formatResult = intl.format(_modDef3831.Up6Ssw, obj2);
       cResult[5] = stateFromStores;
       cResult[6] = formatResult;
       let tmp9 = formatResult;
@@ -58,8 +58,8 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjure
     }
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = tmp(1128).intl;
-      const stringResult = intl2.string(_modDef3830["ywA+ET"]);
+      const intl2 = tmp(1125).intl;
+      const stringResult = intl2.string(_modDef3831["ywA+ET"]);
       cResult[7] = stringResult;
       let tmp12 = stringResult;
     } else {
@@ -89,12 +89,12 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjure
   let tmp5 = null;
   if (null != stateFromStores) {
     const obj2 = { message: null, retry: null };
-    const intl = tmp(1128).intl;
+    const intl = tmp(1125).intl;
     const obj3 = { reason: stateFromStores };
-    obj2.message = intl.format(_modDef3830.Up6Ssw, obj3);
+    obj2.message = intl.format(_modDef3831.Up6Ssw, obj3);
     const obj4 = { text: null, onClick: null };
-    const intl2 = tmp(1128).intl;
-    obj4.text = intl2.string(_modDef3830["ywA+ET"]);
+    const intl2 = tmp(1125).intl;
+    obj4.text = intl2.string(_modDef3831["ywA+ET"]);
     obj4.onClick = tmp4;
     obj2.retry = obj4;
     tmp5 = obj2;

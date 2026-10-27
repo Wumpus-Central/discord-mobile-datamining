@@ -1,9 +1,9 @@
-// === Module 10099: ForegroundServiceManager ===
+// === Module 10101: ForegroundServiceManager ===
 
-// Module 10099 (ForegroundServiceManager)
+// Module 10101 (ForegroundServiceManager)
 import _mod17 from "module_17" /* 17 */;
-import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10100 */;
-import LifecycleManager from "LifecycleManager" /* 2004 */;
+import RequestGatewaySocketAll from "RequestGatewaySocket" /* 10102 */;
+import LifecycleManager from "LifecycleManager" /* 2001 */;
 import size from "module_2" /* 2 */;
 
 let obj = importDefault;
@@ -73,7 +73,7 @@ prototype["updateServiceHandler"] = function updateServiceHandler(arg0, usesGate
       const result = serviceNotifications.set(arg0, usesGateway);
       self.handleChange();
     }
-    tmp16 = obj(1357);
+    tmp16 = obj(1354);
   }
 };
 prototype["removeServiceHandler"] = function removeServiceHandler(arg0) {

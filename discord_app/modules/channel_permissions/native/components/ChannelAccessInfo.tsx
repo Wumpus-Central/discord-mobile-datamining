@@ -1,22 +1,22 @@
-// === Module 13394: ChannelAccessInfo ===
+// === Module 13408: ChannelAccessInfo ===
 
-// Module 13394 (ChannelAccessInfo)
+// Module 13408 (ChannelAccessInfo)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
+import util from "util" /* 1125 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
 import ChannelPermissionsUtils from "ChannelPermissionsUtils" /* 8972 */;
-import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11310 */;
+import channel_permissions_ChannelPermissionsUtils from "channel_permissions/ChannelPermissionsUtils" /* 11313 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
 
 require = fn;
 const View = fn(17).View;
-const isGuildOwner = fn(4841).isGuildOwner;
+const isGuildOwner = fn(4842).isGuildOwner;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 let c11 = 100;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { section: { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, color: nativeDefault.colors.TEXT_DEFAULT, flexDirection: "row", marginBottom: 8, marginTop: 8, padding: 16 }, sectionContent: { alignItems: "center", flexDirection: "row", flexGrow: 1 }, avatar: { marginRight: 8 }, labelDetail: { marginRight: 12 }, sectionIcon: { marginRight: 6 } };
 let closure_12 = createStyles.createStyles(obj2);
 const constants = { MEMBERS: 0, [0]: "MEMBERS", ROLES: 1, [1]: "ROLES" };
@@ -267,7 +267,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
           const obj7 = { size: "sm", style: str.sectionIcon };
           const items = [closure_2_8(arg3, obj7), ];
           const obj8 = { style: str.labelDetail, variant: "text-sm/medium", children: tmp5 };
-          items[1] = closure_2_8(tmp4(5234).Text, obj8);
+          items[1] = closure_2_8(tmp4(5235).Text, obj8);
           obj6.children = items;
           return React6(noop.Fragment, obj6);
         }
@@ -308,8 +308,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
   const channel = guild.channel;
   const tmp = closure_12();
   dependencyMap = tmp;
-  let intl = guild(1128).intl;
-  const stringResult = intl.string(guild(1128).t.li1wKf);
+  let intl = guild(1125).intl;
+  const stringResult = intl.string(guild(1125).t.li1wKf);
   let items = [GuildRoleStore];
   const items1 = [guild, channel];
   const stateFromStoresArray = guild(504).useStateFromStoresArray(items, () => ChannelPermissionsUtils.getExistingRoles(guild, GuildRoleStore.getSortedRoles(guild.id), channel, channel.accessPermissions), items1);
@@ -331,7 +331,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
   if (tmp8) {
     first = existingMembers[0];
   }
-  const items2 = [closure_8(guild(5234).Text, { variant: "eyebrow", children: stringResult }), ];
+  const items2 = [closure_8(guild(5235).Text, { variant: "eyebrow", children: stringResult }), ];
   let obj2 = {
     accessibilityLabel: stringResult,
     accessibilityRole: "button",
@@ -344,15 +344,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
   let obj3 = { style: tmp.sectionContent, children: null };
   if (null != first) {
     let obj4 = { children: null };
-    let obj5 = { style: tmp.avatar, user: first, guildId: guild.id, size: tmp2(1202).AvatarSizes.XSMALL };
-    const items3 = [closure_8(tmp2(1202).Avatar, obj5), ];
+    let obj5 = { style: tmp.avatar, user: first, guildId: guild.id, size: tmp2(1199).AvatarSizes.XSMALL };
+    const items3 = [closure_8(tmp2(1199).Avatar, obj5), ];
     let obj6 = { children: null };
     let obj7 = { variant: "text-sm/semibold", children: first.tag };
-    const items4 = [closure_8(tmp2(5234).Text, obj7), ];
+    const items4 = [closure_8(tmp2(5235).Text, obj7), ];
     let obj8 = { variant: "text-xs/medium", children: null };
-    let intl2 = tmp2(1128).intl;
-    obj8.children = intl2.string(tmp2(1128).t.rt0ERW);
-    items4[1] = closure_8(tmp2(5234).Text, obj8);
+    let intl2 = tmp2(1125).intl;
+    obj8.children = intl2.string(tmp2(1125).t.rt0ERW);
+    items4[1] = closure_8(tmp2(5235).Text, obj8);
     obj6.children = items4;
     items3[1] = closure_9(View, obj6);
     obj4.children = items3;
@@ -394,14 +394,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
         const obj7 = { size: "sm", style: closure_2.sectionIcon };
         const items = [closure_2_8(GroupIcon, obj7), ];
         const obj8 = { style: closure_2.labelDetail, variant: "text-sm/medium", children: tmp5 };
-        items[1] = closure_2_8(tmp4(5234).Text, obj8);
+        items[1] = closure_2_8(tmp4(5235).Text, obj8);
         obj6.children = items;
         return React6(noop.Fragment, obj6);
       }
     }
     obj9 = { children: null };
     const MEMBERS = constants.MEMBERS;
-    channel(13393);
+    channel(13407);
     const items5 = [renderCounts(MEMBERS, existingMembers.length, 0, tmp2(8560).GroupIcon), ];
     const ROLES = constants.ROLES;
     channel(8992);
@@ -412,9 +412,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelA
   obj3.children = closure_9(closure_10, obj9);
   const items6 = [closure_8(View, obj3), ];
   const tmp2Result = guild(8972);
-  items6[1] = closure_8(guild(1202).Icon, { source: channel(11564), size: guild(1202).Icon.Sizes.SMALL });
+  items6[1] = closure_8(guild(1199).Icon, { source: channel(11566), size: guild(1199).Icon.Sizes.SMALL });
   obj2.children = items6;
-  items2[1] = closure_9(guild(6908).PressableOpacity, obj2);
+  items2[1] = closure_9(guild(6910).PressableOpacity, obj2);
   obj10.children = items2;
   return closure_9(closure_10, obj10);
 });

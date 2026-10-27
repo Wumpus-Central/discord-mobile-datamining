@@ -1,9 +1,9 @@
-// === Module 5669: FastImage ===
+// === Module 5670: FastImage ===
 
-// Module 5669 (FastImage)
+// Module 5670 (FastImage)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5671 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import FastImageNativeComponentDefault from "FastImageNativeComponent" /* 5672 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ let closure_3 = ["accessible", "accessibilityLabel", "autoPlay", "enableAnimatio
 get_ActivityIndicator = fn(17);
 ({ Image: hasOwnProperty, StyleSheet: metroRequire } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-let FastImageApngExperiment = fn(5670);
+let FastImageApngExperiment = fn(5671);
 FastImageApngExperiment = FastImageApngExperiment.initializeFastImageApngExperiment();
 const ReactCompilerGating = fn(558);
 let size = fn(2);

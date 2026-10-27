@@ -1,14 +1,14 @@
-// === Module 12480: ConjurePublishScheduleProposalCard ===
+// === Module 12488: ConjurePublishScheduleProposalCard ===
 
-// Module 12480 (ConjurePublishScheduleProposalCard)
+// Module 12488 (ConjurePublishScheduleProposalCard)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import _modDef3830 from "module_3830" /* 3830 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import Stack_Stack from "Stack/Stack" /* 5977 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12168 */;
-import useConjurePublishScheduleProposalDefault from "useConjurePublishScheduleProposal" /* 12481 */;
+import util from "util" /* 1125 */;
+import _modDef3831 from "module_3831" /* 3831 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import Stack_Stack from "Stack/Stack" /* 5978 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12188 */;
+import useConjurePublishScheduleProposalDefault from "useConjurePublishScheduleProposal" /* 12489 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl = util.intl;
-    obj2.children = intl.string(_modDef3830.ZtfX9V);
+    obj2.children = intl.string(_modDef3831.ZtfX9V);
     const tmp8 = React3(Text_Text.Text, obj2);
     cResult[0] = tmp8;
     let first = tmp8;
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
     const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl2 = util.intl;
-    obj5.children = intl2.string(_modDef3830.cxNHma);
+    obj5.children = intl2.string(_modDef3831.cxNHma);
     const tmp17 = React3(Text_Text.Text, obj5);
     cResult[5] = tmp17;
     let tmp15 = tmp17;
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     if ("on" === tmp5.status) {
       const obj6 = { variant: "text-sm/normal", color: "text-default", accessibilityRole: "alert", children: null };
       const intl3 = util.intl;
-      obj6.children = intl3.string(_modDef3830.k4IRsm);
+      obj6.children = intl3.string(_modDef3831.k4IRsm);
       tmp19 = React3(Text_Text.Text, obj6);
     }
     cResult[6] = tmp5.status;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
           if (null != tmp5.onTurnOn) {
             const obj9 = { text: null, variant: "secondary", loading: null, disabled: null, onPress: null };
             const intl4 = util.intl;
-            obj9.text = intl4.string(_modDef3830.EuhBSG);
+            obj9.text = intl4.string(_modDef3831.EuhBSG);
             obj9.loading = "sending" === tmp5.status;
             obj9.disabled = "sending" === tmp5.status;
             obj9.onPress = tmp5.onTurnOn;
@@ -151,7 +151,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   const tmp3 = useConjurePublishScheduleProposalDefault(projectId, proposal, current);
   const obj = { variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl = util.intl;
-  obj.children = intl.string(_modDef3830.ZtfX9V);
+  obj.children = intl.string(_modDef3831.ZtfX9V);
   const items = [React3(Text_Text.Text, obj), , ];
   const items1 = [React3(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: tmp3.summary }), , , , ];
   let tmp4Result = null;
@@ -162,13 +162,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   items1[1] = tmp4Result;
   const obj4 = { variant: "text-sm/normal", color: "text-muted", children: null };
   const intl2 = util.intl;
-  obj4.children = intl2.string(_modDef3830.cxNHma);
+  obj4.children = intl2.string(_modDef3831.cxNHma);
   items1[2] = React3(Text_Text.Text, obj4);
   let tmp4Result4 = null;
   if ("on" === tmp3.status) {
     const obj5 = { variant: "text-sm/normal", color: "text-default", accessibilityRole: "alert", children: null };
     const intl3 = util.intl;
-    obj5.children = intl3.string(_modDef3830.k4IRsm);
+    obj5.children = intl3.string(_modDef3831.k4IRsm);
     tmp4Result4 = React3(Text_Text.Text, obj5);
   }
   items1[3] = tmp4Result4;
@@ -183,7 +183,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   if (null != tmp3.onTurnOn) {
     const obj7 = { text: null, variant: "secondary", loading: null, disabled: null, onPress: null };
     const intl4 = util.intl;
-    obj7.text = intl4.string(_modDef3830.EuhBSG);
+    obj7.text = intl4.string(_modDef3831.EuhBSG);
     obj7.loading = "sending" === tmp3.status;
     obj7.disabled = "sending" === tmp3.status;
     obj7.onPress = tmp3.onTurnOn;

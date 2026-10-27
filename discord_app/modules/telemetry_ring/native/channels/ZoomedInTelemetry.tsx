@@ -1,10 +1,10 @@
-// === Module 2005: ZoomedInTelemetry ===
+// === Module 2002: ZoomedInTelemetry ===
 
-// Module 2005 (ZoomedInTelemetry)
-import ZoomedInAnalyticsExperiment from "ZoomedInAnalyticsExperiment" /* 2006 */;
-import TelemetryRingNative2 from "TelemetryRingNative" /* 2009 */;
+// Module 2002 (ZoomedInTelemetry)
+import ZoomedInAnalyticsExperiment from "ZoomedInAnalyticsExperiment" /* 2003 */;
+import TelemetryRingNative2 from "TelemetryRingNative" /* 2006 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import BaseTelemetryExportChannel from "BaseTelemetryExportChannel" /* 2007 */;
+import BaseTelemetryExportChannel from "BaseTelemetryExportChannel" /* 2004 */;
 
 const TelemetryRingNative = TelemetryRingNative2;
 
@@ -125,7 +125,7 @@ prototype["exportEntries"] = function exportEntries(arg0, arg1) {
     }
   })();
 };
-let items = [fn(2009).TelemetryChannel.ZOOMED];
+let items = [fn(2006).TelemetryChannel.ZOOMED];
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/telemetry_ring/native/channels/ZoomedInTelemetry.tsx");
 

@@ -1,13 +1,13 @@
-// === Module 15017: OnlineFriendsStore ===
+// === Module 15053: OnlineFriendsStore ===
 
-// Module 15017 (OnlineFriendsStore)
+// Module 15053 (OnlineFriendsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ApexExperiment from "ApexExperiment" /* 1455 */;
-import SetUtils from "SetUtils" /* 4840 */;
-import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6794 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
+import SetUtils from "SetUtils" /* 4841 */;
+import FriendsSidebarExperimentDefault from "FriendsSidebarExperiment" /* 6795 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
 
 require = fn;
 function isEnabled() {
@@ -57,7 +57,7 @@ function clear() {
   set = new Set();
   return set.size > 0;
 }
-const StatusTypes = fn(1087).StatusTypes;
+const StatusTypes = fn(1084).StatusTypes;
 let set = new Set();
 let closure_7 = false;
 const Store = initializeDefault.Store;

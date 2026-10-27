@@ -1,8 +1,8 @@
-// === Module 4885: GuildDisableCommunicationConstants ===
+// === Module 4886: GuildDisableCommunicationConstants ===
 
-// Module 4885 (GuildDisableCommunicationConstants)
-import util from "util" /* 1128 */;
-import HelpdeskUtils from "HelpdeskUtils" /* 2067 */;
+// Module 4886 (GuildDisableCommunicationConstants)
+import util from "util" /* 1125 */;
+import HelpdeskUtils from "HelpdeskUtils" /* 2064 */;
 
 require = fn;
 function getFriendlyDurationString(timeout_seconds) {
@@ -27,7 +27,7 @@ function getFriendlyDurationString(timeout_seconds) {
   }
 }
 const DisableCommunicationDuration = { DURATION_60_SEC: 60, [60]: "DURATION_60_SEC", DURATION_5_MIN: 300, [300]: "DURATION_5_MIN", DURATION_10_MIN: 600, [600]: "DURATION_10_MIN", DURATION_1_HOUR: 3600, [3600]: "DURATION_1_HOUR", DURATION_1_DAY: 86400, [86400]: "DURATION_1_DAY", DURATION_1_WEEK: 604800, [604800]: "DURATION_1_WEEK" };
-const articleURL = HelpdeskUtils.getArticleURL(fn(1087).HelpdeskArticles.DISABLE_GUILD_COMMUNICATION);
+const articleURL = HelpdeskUtils.getArticleURL(fn(1084).HelpdeskArticles.DISABLE_GUILD_COMMUNICATION);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_communication_disabled/GuildDisableCommunicationConstants.tsx");
 

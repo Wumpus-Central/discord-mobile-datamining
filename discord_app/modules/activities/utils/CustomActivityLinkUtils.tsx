@@ -1,10 +1,10 @@
-// === Module 14193: CustomActivityLinkUtils ===
+// === Module 14220: CustomActivityLinkUtils ===
 
-// Module 14193 (CustomActivityLinkUtils)
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 14196 */;
+// Module 14220 (CustomActivityLinkUtils)
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import utils_CustomActivityLinkUtils from "utils/CustomActivityLinkUtils" /* 14223 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import CustomActivityLinksStore from "CustomActivityLinksStore" /* 14194 */;
+import CustomActivityLinksStore from "CustomActivityLinksStore" /* 14221 */;
 
 require = fn;
 function fetchCustomActivityLink() {
@@ -158,7 +158,7 @@ let closure_8 = async function _getCustomActivityLinkParams(arg0) {
       } else if (1 === tmp6) {
         c6 = 0;
         c7 = 3;
-        const obj9 = { value: { customId: "Array" }, done: true };
+        const obj9 = { value: { customId: "rejectWithError" }, done: true };
         return obj9;
       } else if (arg0 === 1) {
         c7 = 3;
@@ -216,7 +216,7 @@ let closure_10 = async function _loadCustomActivityLink() {
   }
   return Promise.reject("appId or linkId null");
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const set = new Set();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/CustomActivityLinkUtils.tsx");

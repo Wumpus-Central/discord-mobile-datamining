@@ -1,25 +1,25 @@
-// === Module 7703: UserProfileStore ===
+// === Module 7704: UserProfileStore ===
 
-// Module 7703 (UserProfileStore)
+// Module 7704 (UserProfileStore)
 import _modDef12 from "module_12" /* 12 */;
-import util from "util" /* 1128 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
-import Timers from "Timers" /* 4818 */;
-import WidgetType from "WidgetType" /* 7704 */;
-import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7705 */;
-import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7708 */;
-import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7709 */;
-import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7711 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7712 */;
-import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7713 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
-import UserRecord from "UserRecord" /* 1406 */;
+import util from "util" /* 1125 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import Timers from "Timers" /* 4819 */;
+import WidgetType from "WidgetType" /* 7705 */;
+import UserProfileGameWidgetTypes from "UserProfileGameWidgetTypes" /* 7706 */;
+import UserProfileApplicationWidgetTypes from "UserProfileApplicationWidgetTypes" /* 7709 */;
+import UserProfilePersonalWidget from "UserProfilePersonalWidget" /* 7710 */;
+import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes" /* 7712 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7713 */;
+import parseUserProfileCollectiblesDefault from "parseUserProfileCollectibles" /* 7714 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
+import UserRecord from "UserRecord" /* 1403 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1086 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
-import SortedGuildStore from "SortedGuildStore" /* 6701 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import MobileCacheSnapshotStore from "MobileCacheSnapshotStore" /* 1083 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
+import SortedGuildStore from "SortedGuildStore" /* 6702 */;
 
 require = fn;
 function createUserWidgetFromServer(data) {
@@ -526,7 +526,7 @@ function handleProfileFetchFailure(arg0) {
   set.delete(userId);
   value4 = map1.get(userId);
   if (value4 == null) {
-    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "unicodeVersion" };
+    obj = { connectedAccounts: [], applicationRoleConnections: [], premiumSince: null, premiumGuildSince: null, application: null, legacyUsername: null, userId, banner: null, accentColor: null, bio: "", pronouns: "", premiumType: null, fetchStartedAt: 0, fetchEndedAt: 0, fetchError: "code" };
     value4 = obj;
   }
   const timestamp = Date.now();
@@ -706,7 +706,7 @@ function resetProfileFetch(id) {
     }
   }
 }
-const MAX_TIMEOUT_MS = fn(1087).MAX_TIMEOUT_MS;
+const MAX_TIMEOUT_MS = fn(1084).MAX_TIMEOUT_MS;
 let closure_10 = Symbol("NO GUILD ID");
 let map = new Map();
 let set = new Set();

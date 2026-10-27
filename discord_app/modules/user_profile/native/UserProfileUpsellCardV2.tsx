@@ -1,21 +1,21 @@
-// === Module 15942: UserProfileUpsellCardV2 ===
+// === Module 15980: UserProfileUpsellCardV2 ===
 
-// Module 15942 (UserProfileUpsellCardV2)
+// Module 15980 (UserProfileUpsellCardV2)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ConstantsIOS from "ConstantsIOS" /* 1107 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import LinearGradientDefault from "LinearGradient" /* 5258 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9425 */;
+import ConstantsIOS from "ConstantsIOS" /* 1104 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import LinearGradientDefault from "LinearGradient" /* 5259 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9424 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Gradients = fn(7544).Gradients;
+const Gradients = fn(7545).Gradients;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { outer: { borderRadius: nativeDefault.radii.lg, padding: 1 }, inner: null, text: null, textCenter: null };
 let obj3 = { borderRadius: nativeDefault.radii.lg, padding: 1 };
 obj2.inner = { borderRadius: nativeDefault.radii.lg - 1, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: nativeDefault.space.PX_16 };

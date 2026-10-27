@@ -1,16 +1,16 @@
 // === Module 8945: EditGuildEventWhere ===
 
 // Module 8945 (EditGuildEventWhere)
-import util from "util" /* 1128 */;
-import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1896 */;
-import _modDef2049 from "module_2049" /* 2049 */;
+import util from "util" /* 1125 */;
+import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1893 */;
+import _modDef2046 from "module_2046" /* 2046 */;
 import EditGuildEventUtils from "EditGuildEventUtils" /* 8889 */;
 import EntityUtils from "EntityUtils" /* 8893 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = globalThis.__r;
 
@@ -42,14 +42,14 @@ function assertGuildEventWhereIsValid(guildEvent) {
     }
   }
 }
-let closure_8 = fn(6784).isGuildScheduledEventActive;
-const GuildScheduledEventsConstants = fn(4829);
+let closure_8 = fn(6785).isGuildScheduledEventActive;
+const GuildScheduledEventsConstants = fn(4830);
 ({ AGE_VERIFICATION_STAGE_CHANNEL_TYPES: closure_9, GuildScheduledEventEntityTypes: c10 } = GuildScheduledEventsConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Permissions: closure_11, GuildSettingsSections: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_16 = createStyles.createStyles({ channelSelection: { marginTop: 16 }, error: { paddingVertical: 8 }, text: { marginTop: 24 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -225,11 +225,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
     }
     function handleChangeEventEntityType(entityType) {
       _slicedToArray(null);
-      const obj = { entityType, scheduledEndTime: "Array" };
+      const obj = { entityType, scheduledEndTime: "y" };
       if (entityType === constants.EXTERNAL) {
-        let obj2 = _modDef2049(guildEvent.scheduledStartTime);
+        let obj2 = _modDef2046(guildEvent.scheduledStartTime);
         if (obj2 == null) {
-          obj2 = _modDef2049();
+          obj2 = _modDef2046();
         }
         obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
         const addResult = obj2.add(1, "hour");
@@ -356,11 +356,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
       entityType: guildEvent.entityType,
       onChange: function handleChangeEventEntityType(entityType) {
         _undefined(null);
-        const obj = { entityType, scheduledEndTime: "Array" };
+        const obj = { entityType, scheduledEndTime: "y" };
         if (entityType === constants.EXTERNAL) {
-          let obj2 = _modDef2049(guildEvent.scheduledStartTime);
+          let obj2 = _modDef2046(guildEvent.scheduledStartTime);
           if (obj2 == null) {
-            obj2 = _modDef2049();
+            obj2 = _modDef2046();
           }
           obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
           const addResult = obj2.add(1, "hour");
@@ -378,11 +378,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditGuil
     entityType: guildEvent.entityType,
     onChange: function handleChangeEventEntityType(entityType) {
       _undefined(null);
-      const obj = { entityType, scheduledEndTime: "Array" };
+      const obj = { entityType, scheduledEndTime: "y" };
       if (entityType === constants.EXTERNAL) {
-        let obj2 = _modDef2049(guildEvent.scheduledStartTime);
+        let obj2 = _modDef2046(guildEvent.scheduledStartTime);
         if (obj2 == null) {
-          obj2 = _modDef2049();
+          obj2 = _modDef2046();
         }
         obj.scheduledEndTime = obj2.add(1, "hour").toISOString();
         const addResult = obj2.add(1, "hour");

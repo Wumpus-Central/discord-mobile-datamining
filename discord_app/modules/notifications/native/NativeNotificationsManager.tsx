@@ -1,16 +1,16 @@
-// === Module 19371: NativeNotificationsManager ===
+// === Module 19409: NativeNotificationsManager ===
 
-// Module 19371 (NativeNotificationsManager)
+// Module 19409 (NativeNotificationsManager)
 import LoggerDefault from "Logger" /* 3 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import PushNotificationDefault from "PushNotification" /* 10753 */;
-import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10756 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import PushNotificationDefault from "PushNotification" /* 10756 */;
+import NativeNotificationManagerModuleDefault from "NativeNotificationManagerModule" /* 10759 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6814 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6816 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 let closure_6 = new LoggerDefault("NativeNotificationsManager");
 const prototype = function NativeNotificationsManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

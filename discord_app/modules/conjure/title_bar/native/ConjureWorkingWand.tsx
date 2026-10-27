@@ -1,13 +1,13 @@
-// === Module 17843: ConjureWorkingWand ===
+// === Module 14173: ConjureWorkingWand ===
 
-// Module 17843 (ConjureWorkingWand)
+// Module 14173 (ConjureWorkingWand)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import ReanimatedRexport2 from "ReanimatedRexport" /* 5052 */;
-import timing from "timing" /* 5206 */;
-import inlineStylesDefault from "inlineStyles" /* 7962 */;
+import ReanimatedRexport2 from "ReanimatedRexport" /* 5053 */;
+import timing from "timing" /* 5207 */;
+import inlineStylesDefault from "inlineStyles" /* 7960 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 
 const require = globalThis.__r;
 const ReanimatedRexport = ReanimatedRexport2;
@@ -17,7 +17,7 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const Easing = fn(5052).Easing;
+const Easing = fn(5053).Easing;
 const easing = Easing.bezier(0.42, 0, 0.58, 1);
 let c11 = 24;
 let c12 = "0 0 24 24";
@@ -34,8 +34,8 @@ let obj4 = _modDef683(nativeDefault.unsafe_rawColors.ILLO_PURPLE_30);
 let result4 = _modDef683(nativeDefault.unsafe_rawColors.ILLO_PINK_40).set("oklch.l", "*0.95");
 let result5 = result4.set("oklch.c", "*0.8");
 const fill = result5.hex();
-let closure_18 = ReanimatedRexport.createAnimatedComponent(fn(7962).Rect);
-const createStyles = fn(4971);
+let closure_18 = ReanimatedRexport.createAnimatedComponent(fn(7960).Rect);
+const createStyles = fn(4972);
 let closure_19 = createStyles.createStyles((width) => ({ root: { width, height: width }, sparkleSmall: { transformOrigin: "33.6% 18.6%" }, sparkleLarge: { transformOrigin: "75% 75%" } }));
 function twinkle(arg0) {
   const obj = { opacity: 0.35 + 0.65 * arg0, transform: null };
@@ -86,7 +86,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function WandPa
     W.__closure = obj2;
     W.__workletHash = 10738212380370;
     W.__initData = __initData;
-    const animatedProps = band(5052).useAnimatedProps(W);
+    const animatedProps = band(5053).useAnimatedProps(W);
     if (cResult[3] === color) {
       if (cResult[4] === path) {
         let tmp13 = cResult[5];
@@ -162,13 +162,13 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function WandPa
         const _HermesInternal = HermesInternal;
         obj4.id = "" + tmp4 + "band";
         const obj5 = { offset: "0", stopColor: nativeDefault.unsafe_rawColors.WHITE, stopOpacity: 0 };
-        const items1 = [closure_7(band(7962).Stop, obj5), , ];
+        const items1 = [closure_7(band(7960).Stop, obj5), , ];
         const obj6 = { offset: "0.5", stopColor: nativeDefault.unsafe_rawColors.WHITE, stopOpacity: 1 };
-        items1[1] = closure_7(band(7962).Stop, obj6);
+        items1[1] = closure_7(band(7960).Stop, obj6);
         const obj7 = { offset: "1", stopColor: nativeDefault.unsafe_rawColors.WHITE, stopOpacity: 0 };
-        items1[2] = closure_7(band(7962).Stop, obj7);
+        items1[2] = closure_7(band(7960).Stop, obj7);
         obj4.children = items1;
-        const items2 = [closure_8(band(7962).LinearGradient, obj4), ];
+        const items2 = [closure_8(band(7960).LinearGradient, obj4), ];
         const size2 = { id: null, maskUnits: "userSpaceOnUse", x: 0, y: 0, width: null, height: null, children: null };
         const _HermesInternal2 = HermesInternal;
         size2.id = "" + tmp4 + "mask";
@@ -178,13 +178,13 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function WandPa
         const _HermesInternal3 = HermesInternal;
         size3.fill = "url(#" + tmp4 + "band)";
         size2.children = closure_7(closure_18, size3);
-        items2[1] = closure_7(band(7962).Mask, size2);
+        items2[1] = closure_7(band(7960).Mask, size2);
         obj3.children = items2;
-        const items3 = [closure_8(band(7962).Defs, obj3), ];
+        const items3 = [closure_8(band(7960).Defs, obj3), ];
         const obj8 = { d: path, fill, mask: null };
         const _HermesInternal4 = HermesInternal;
         obj8.mask = "url(#" + tmp4 + "mask)";
-        items3[1] = closure_7(band(7962).Path, obj8);
+        items3[1] = closure_7(band(7960).Path, obj8);
         tmp20[0] = items3;
         const tmp17 = closure_8(closure_9, tmp20);
       }
@@ -196,12 +196,12 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function WandPa
       tmp16 = tmp17;
     }
     const obj9 = { d: path, fill: color };
-    const tmp15 = closure_7(band(7962).Path, obj9);
+    const tmp15 = closure_7(band(7960).Path, obj9);
     cResult[3] = color;
     cResult[4] = path;
     cResult[5] = tmp15;
     tmp13 = tmp15;
-    const tmpResult = band(5052);
+    const tmpResult = band(5053);
   }
   const obj = band(576);
 }) : (function WandPart(fill) {
@@ -221,11 +221,11 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function WandPa
   fn.__closure = { band, BAND_FROM };
   fn.__workletHash = 9301414249299;
   fn.__initData = __initData2;
-  const animatedProps = band(5052).useAnimatedProps(fn);
+  const animatedProps = band(5053).useAnimatedProps(fn);
   const size1 = { width: size, height: size, viewBox, children: null };
-  const obj = band(5052);
+  const obj = band(5053);
   obj2 = { band, BAND_FROM };
-  const items = [closure_7(band(7962).Path, { d: path, fill: fill.color }), ];
+  const items = [closure_7(band(7960).Path, { d: path, fill: fill.color }), ];
   let tmp5Result = null;
   if (null != band) {
     const obj3 = { children: null };
@@ -234,13 +234,13 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function WandPa
     const _HermesInternal = HermesInternal;
     obj5.id = "" + replaced + "band";
     const obj6 = { offset: "0", stopColor: nativeDefault.unsafe_rawColors.WHITE, stopOpacity: 0 };
-    const items1 = [closure_7(band(7962).Stop, obj6), , ];
+    const items1 = [closure_7(band(7960).Stop, obj6), , ];
     const obj7 = { offset: "0.5", stopColor: nativeDefault.unsafe_rawColors.WHITE, stopOpacity: 1 };
-    items1[1] = closure_7(band(7962).Stop, obj7);
+    items1[1] = closure_7(band(7960).Stop, obj7);
     const obj8 = { offset: "1", stopColor: nativeDefault.unsafe_rawColors.WHITE, stopOpacity: 0 };
-    items1[2] = closure_7(band(7962).Stop, obj8);
+    items1[2] = closure_7(band(7960).Stop, obj8);
     obj5.children = items1;
-    const items2 = [closure_8(band(7962).LinearGradient, obj5), ];
+    const items2 = [closure_8(band(7960).LinearGradient, obj5), ];
     const size2 = { id: null, maskUnits: "userSpaceOnUse", x: 0, y: 0, width: null, height: null, children: null };
     const _HermesInternal2 = HermesInternal;
     size2.id = "" + replaced + "mask";
@@ -250,13 +250,13 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function WandPa
     const _HermesInternal3 = HermesInternal;
     size3.fill = "url(#" + replaced + "band)";
     size2.children = closure_7(closure_18, size3);
-    items2[1] = closure_7(band(7962).Mask, size2);
+    items2[1] = closure_7(band(7960).Mask, size2);
     obj4.children = items2;
-    const items3 = [closure_8(band(7962).Defs, obj4), ];
+    const items3 = [closure_8(band(7960).Defs, obj4), ];
     const obj9 = { d: path, fill, mask: null };
     const _HermesInternal4 = HermesInternal;
     obj9.mask = "url(#" + replaced + "mask)";
-    items3[1] = closure_7(band(7962).Path, obj9);
+    items3[1] = closure_7(band(7960).Path, obj9);
     obj3.children = items3;
     tmp5Result = closure_8(closure_9, obj3);
   }

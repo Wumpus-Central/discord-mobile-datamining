@@ -1,21 +1,21 @@
-// === Module 12091: PrivateChannelUserList ===
+// === Module 12092: PrivateChannelUserList ===
 
-// Module 12091 (PrivateChannelUserList)
+// Module 12092 (PrivateChannelUserList)
 import _modDef12 from "module_12" /* 12 */;
-import util from "util" /* 1128 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
+import util from "util" /* 1125 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9425 */;
-import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12093 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9424 */;
+import openGroupDMNitroCapInfoActionSheetDefault from "openGroupDMNitroCapInfoActionSheet" /* 12094 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ RelationshipTypes: closure_9, MAX_GROUP_DM_PARTICIPANTS: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);

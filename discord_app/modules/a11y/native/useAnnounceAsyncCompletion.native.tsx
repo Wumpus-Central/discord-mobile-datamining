@@ -1,6 +1,6 @@
-// === Module 10033: useAnnounceAsyncCompletion ===
+// === Module 10035: useAnnounceAsyncCompletion ===
 
-// Module 10033 (useAnnounceAsyncCompletion)
+// Module 10035 (useAnnounceAsyncCompletion)
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAnnou
       if (undefined !== polite) {
         str = polite;
       }
-      const AccessibilityAnnouncer = ref(4978).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = ref(4979).AccessibilityAnnouncer;
       AccessibilityAnnouncer.announce(intl, str);
       if (obj.isIOS()) {
         if (tmpResult.getIsScreenReaderEnabled()) {
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAnnou
         return resolved;
       }
       resolved = Promise.resolve();
-      obj = intl(1384);
+      obj = intl(1381);
     };
     cResult[2] = fn2;
     let tmp5 = fn2;
@@ -97,7 +97,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAnnou
     if (polite === undefined) {
       str = "assertive";
     }
-    const AccessibilityAnnouncer = ref(4978).AccessibilityAnnouncer;
+    const AccessibilityAnnouncer = ref(4979).AccessibilityAnnouncer;
     AccessibilityAnnouncer.announce(intl, str);
     if (obj.isIOS()) {
       if (tmpResult.getIsScreenReaderEnabled()) {
@@ -133,6 +133,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAnnou
       return resolved;
     }
     resolved = Promise.resolve();
-    obj = intl(1384);
+    obj = intl(1381);
   }, []);
 });

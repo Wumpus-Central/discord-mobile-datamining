@@ -1,8 +1,8 @@
-// === Module 4831: StageChannelPermissions ===
+// === Module 4832: StageChannelPermissions ===
 
-// Module 4831 (StageChannelPermissions)
-import Constants from "Constants" /* 1087 */;
-import BigFlagUtils_mod from "BigFlagUtils" /* 1099 */;
+// Module 4832 (StageChannelPermissions)
+import Constants from "Constants" /* 1084 */;
+import BigFlagUtils_mod from "BigFlagUtils" /* 1096 */;
 import "BigFlagUtils";
 import size from "module_2" /* 2 */;
 

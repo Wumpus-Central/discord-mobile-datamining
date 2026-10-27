@@ -1,10 +1,10 @@
-// === Module 7359: canUserSeeMonetizationOnboarding ===
+// === Module 7361: canUserSeeMonetizationOnboarding ===
 
-// Module 7359 (canUserSeeMonetizationOnboarding)
-import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4895 */;
-import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7360 */;
-import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 7361 */;
-import UserStore from "UserStore" /* 1392 */;
+// Module 7361 (canUserSeeMonetizationOnboarding)
+import CreatorMonetizationRestrictionsUtils from "CreatorMonetizationRestrictionsUtils" /* 4896 */;
+import GuildRoleSubscriptionSettingUtils from "GuildRoleSubscriptionSettingUtils" /* 7362 */;
+import CreatorMonetizationEligibilityExperimentUtils from "CreatorMonetizationEligibilityExperimentUtils" /* 7363 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const size = fn(2);

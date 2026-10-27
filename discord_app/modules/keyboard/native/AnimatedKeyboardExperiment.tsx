@@ -1,8 +1,8 @@
-// === Module 10914: AnimatedKeyboardExperiment ===
+// === Module 10917: AnimatedKeyboardExperiment ===
 
-// Module 10914 (AnimatedKeyboardExperiment)
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import ApexExperiment from "ApexExperiment" /* 1455 */;
+// Module 10917 (AnimatedKeyboardExperiment)
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 let obj = { name: "2025-08-animated-keyboard-android", kind: "user", defaultConfig: { enabled: false }, variations: null };

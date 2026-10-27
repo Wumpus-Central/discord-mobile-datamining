@@ -1,6 +1,6 @@
-// === Module 19124: GuildSettingsModalRolesActionCreators ===
+// === Module 19162: GuildSettingsModalRolesActionCreators ===
 
-// Module 19124 (GuildSettingsModalRolesActionCreators)
+// Module 19162 (GuildSettingsModalRolesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -101,7 +101,7 @@ let closure_6 = async function _updateGuildRole(arg0) {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsModalRolesActionCreators.tsx");
 

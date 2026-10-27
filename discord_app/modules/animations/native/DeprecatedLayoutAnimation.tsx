@@ -1,9 +1,9 @@
-// === Module 5595: DeprecatedLayoutAnimation ===
+// === Module 5596: DeprecatedLayoutAnimation ===
 
-// Module 5595 (DeprecatedLayoutAnimation)
-import PlatformUtils from "PlatformUtils" /* 1384 */;
+// Module 5596 (DeprecatedLayoutAnimation)
+import PlatformUtils from "PlatformUtils" /* 1381 */;
 import get_ActivityIndicator from "module_17" /* 17 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 import size from "module_2" /* 2 */;
 
 ({ Keyboard: c2, LayoutAnimation } = get_ActivityIndicator);

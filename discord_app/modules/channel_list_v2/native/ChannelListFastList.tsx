@@ -1,9 +1,9 @@
-// === Module 17689: ChannelListFastList ===
+// === Module 17730: ChannelListFastList ===
 
-// Module 17689 (ChannelListFastList)
+// Module 17730 (ChannelListFastList)
 import c from "c" /* 576 */;
-import FastList from "FastList" /* 7167 */;
-import useForwardedRefDefault from "useForwardedRef" /* 17690 */;
+import FastList from "FastList" /* 7169 */;
+import useForwardedRefDefault from "useForwardedRef" /* 17731 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -79,7 +79,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }
-  const tmp8 = jsx(FastListDefault, { insetEnd, scrollIndicatorInsets: tmp6, waitFor, ref: tmp5, chunkBase: listViewportHeight, batchesToRender: num3, stickyHeaderFooter: true, renderHeader, headerSize, endReachedThreshold, onEndReached, renderAccessory, disableContentWrappers: true, sections, stickySectionsVariant: "disabled", renderSection: renderSectionHeader, sectionSize: getSectionHeaderSize, renderItem, itemSize: getItemSize, renderSectionFooter, sectionFooterSize: getSectionFooterSize, optimizeListItemRender: true, getRecyclerKey, initialScrollSection, initialScrollItem, initialScrollOrientation: "center", onScroll, onScrollWorklet });
+  const tmp8 = jsx(FastListDefault, { insetEnd, scrollIndicatorInsets: tmp6, automaticallyAdjustsScrollIndicatorInsets: false, waitFor, ref: tmp5, chunkBase: listViewportHeight, batchesToRender: num3, stickyHeaderFooter: true, renderHeader, headerSize, endReachedThreshold, onEndReached, renderAccessory, disableContentWrappers: true, sections, stickySectionsVariant: "disabled", renderSection: renderSectionHeader, sectionSize: getSectionHeaderSize, renderItem, itemSize: getItemSize, renderSectionFooter, sectionFooterSize: getSectionFooterSize, optimizeListItemRender: true, getRecyclerKey, initialScrollSection, initialScrollItem, initialScrollOrientation: "center", onScroll, onScrollWorklet });
   cResult[2] = endReachedThreshold;
   cResult[3] = getItemSize;
   cResult[4] = getRecyclerKey;
@@ -110,7 +110,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ endReachedThreshold, getItemSize, getRecyclerKey, getSectionFooterSize, getSectionHeaderSize, headerSize, initialScrollItem, initialScrollSection, insetEnd, listViewportHeight, onEndReached, onScroll, onScrollWorklet, renderAccessory, renderHeader, renderItem, renderSectionFooter, renderSectionHeader, sections, waitFor, drawDistanceMode, ref } = scrollIndicatorInsetBottom);
   const items = [scrollIndicatorInsetBottom];
   const memo = noop.useMemo(() => ({ bottom: scrollIndicatorInsetBottom }), items);
-  const obj = { insetEnd, scrollIndicatorInsets: memo, waitFor, ref: _slicedToArray(useForwardedRefDefault(ref), 2)[1], chunkBase: listViewportHeight, batchesToRender: null, stickyHeaderFooter: true, renderHeader: null, headerSize: null, endReachedThreshold: null, onEndReached: null, renderAccessory: null, disableContentWrappers: true, sections: null, stickySectionsVariant: "disabled", renderSection: null, sectionSize: null, renderItem: null, itemSize: null, renderSectionFooter: null, sectionFooterSize: null, optimizeListItemRender: true, getRecyclerKey: null, initialScrollSection: null, initialScrollItem: null, initialScrollOrientation: "center", onScroll: null, onScrollWorklet: null };
+  const obj = { insetEnd, scrollIndicatorInsets: memo, automaticallyAdjustsScrollIndicatorInsets: false, waitFor, ref: _slicedToArray(useForwardedRefDefault(ref), 2)[1], chunkBase: listViewportHeight, batchesToRender: null, stickyHeaderFooter: true, renderHeader: null, headerSize: null, endReachedThreshold: null, onEndReached: null, renderAccessory: null, disableContentWrappers: true, sections: null, stickySectionsVariant: "disabled", renderSection: null, sectionSize: null, renderItem: null, itemSize: null, renderSectionFooter: null, sectionFooterSize: null, optimizeListItemRender: true, getRecyclerKey: null, initialScrollSection: null, initialScrollItem: null, initialScrollOrientation: "center", onScroll: null, onScrollWorklet: null };
   let num = 6;
   if ("viewport" === drawDistanceMode) {
     num = FastList.DEFAULT_BATCHES_TO_RENDER;
@@ -133,5 +133,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj.initialScrollItem = initialScrollItem;
   obj.onScroll = onScroll;
   obj.onScrollWorklet = onScrollWorklet;
-  return jsx(FastListDefault, { insetEnd, scrollIndicatorInsets: memo, waitFor, ref: _slicedToArray(useForwardedRefDefault(ref), 2)[1], chunkBase: listViewportHeight, batchesToRender: null, stickyHeaderFooter: true, renderHeader: null, headerSize: null, endReachedThreshold: null, onEndReached: null, renderAccessory: null, disableContentWrappers: true, sections: null, stickySectionsVariant: "disabled", renderSection: null, sectionSize: null, renderItem: null, itemSize: null, renderSectionFooter: null, sectionFooterSize: null, optimizeListItemRender: true, getRecyclerKey: null, initialScrollSection: null, initialScrollItem: null, initialScrollOrientation: "center", onScroll: null, onScrollWorklet: null });
+  return jsx(FastListDefault, { insetEnd, scrollIndicatorInsets: memo, automaticallyAdjustsScrollIndicatorInsets: false, waitFor, ref: _slicedToArray(useForwardedRefDefault(ref), 2)[1], chunkBase: listViewportHeight, batchesToRender: null, stickyHeaderFooter: true, renderHeader: null, headerSize: null, endReachedThreshold: null, onEndReached: null, renderAccessory: null, disableContentWrappers: true, sections: null, stickySectionsVariant: "disabled", renderSection: null, sectionSize: null, renderItem: null, itemSize: null, renderSectionFooter: null, sectionFooterSize: null, optimizeListItemRender: true, getRecyclerKey: null, initialScrollSection: null, initialScrollItem: null, initialScrollOrientation: "center", onScroll: null, onScrollWorklet: null });
 }));

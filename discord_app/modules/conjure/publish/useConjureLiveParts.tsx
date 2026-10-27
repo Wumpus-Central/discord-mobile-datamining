@@ -1,16 +1,16 @@
-// === Module 12247: useConjureLiveParts ===
+// === Module 12162: useConjureLiveParts ===
 
-// Module 12247 (useConjureLiveParts)
-import ApplicationStore from "ApplicationStore" /* 2045 */;
-import GuildChannelStore from "GuildChannelStore" /* 4901 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5194 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
+// Module 12162 (useConjureLiveParts)
+import ApplicationStore from "ApplicationStore" /* 2042 */;
+import GuildChannelStore from "GuildChannelStore" /* 4902 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5195 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_4 = fn(4901).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_4 = fn(4902).GUILD_SELECTABLE_CHANNELS_KEY;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjureLiveParts.tsx");

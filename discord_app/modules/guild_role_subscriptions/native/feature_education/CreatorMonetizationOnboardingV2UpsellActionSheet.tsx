@@ -1,22 +1,22 @@
-// === Module 17678: CreatorMonetizationOnboardingV2UpsellActionSheet ===
+// === Module 17719: CreatorMonetizationOnboardingV2UpsellActionSheet ===
 
-// Module 17678 (CreatorMonetizationOnboardingV2UpsellActionSheet)
-import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5265 */;
-import FastImageDefault from "FastImage" /* 5669 */;
+// Module 17719 (CreatorMonetizationOnboardingV2UpsellActionSheet)
+import util from "util" /* 1125 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5266 */;
+import FastImageDefault from "FastImage" /* 5670 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
-import _modDef17679 from "module_17679" /* 17679 */;
+import _modDef17720 from "module_17720" /* 17720 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const GuildSettingsSections = fn(1087).GuildSettingsSections;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const GuildSettingsSections = fn(1084).GuildSettingsSections;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_8 = createStyles.createStyles({ container: { paddingLeft: 24, paddingRight: 24, paddingTop: 24 }, title: { marginBottom: 6 }, description: { marginBottom: 24 }, image: { marginBottom: 24, width: "100%" }, dismissButton: { marginTop: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
           return markAsDismissed(ContentDismissActionType.UNKNOWN);
         }
       }
-      const stringResult = obj2.string(tmp(1128).t["v+Jm6X"]);
+      const stringResult = obj2.string(tmp(1125).t["v+Jm6X"]);
       cResult[5] = stringResult;
       const tmp8 = stringResult;
     } else {
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
         }
       }
       const obj3 = { style: title, accessibilityRole: "header", variant: "heading-lg/extrabold", color: "mobile-text-heading-primary", children: tmp8 };
-      const tmp11 = closure_6(tmp(5234).Text, obj3);
+      const tmp11 = closure_6(tmp(5235).Text, obj3);
       cResult[6] = tmp4.title;
       cResult[7] = tmp11;
     } else {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
           return markAsDismissed(ContentDismissActionType.UNKNOWN);
         }
       }
-      const stringResult1 = obj4.string(tmp(1128).t.kUUFbG);
+      const stringResult1 = obj4.string(tmp(1125).t.kUUFbG);
       cResult[8] = stringResult1;
       const tmp12 = stringResult1;
     } else {
@@ -105,7 +105,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
         }
       }
       const obj5 = { style: tmp4.description, accessibilityRole: "text", variant: "text-sm/medium", color: "text-default", children: tmp12 };
-      const tmp15 = closure_6(tmp(5234).Text, obj5);
+      const tmp15 = closure_6(tmp(5235).Text, obj5);
       cResult[9] = tmp4.description;
       cResult[10] = tmp15;
     } else {
@@ -121,11 +121,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
           return markAsDismissed(ContentDismissActionType.UNKNOWN);
         }
       }
-      const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(17679) };
-      const tmp19 = closure_6(markAsDismissed(5669), obj6);
+      const obj6 = { style: tmp4.image, resizeMode: "contain", source: markAsDismissed(17720) };
+      const tmp19 = closure_6(markAsDismissed(5670), obj6);
       cResult[11] = tmp4.image;
       cResult[12] = tmp19;
-      const tmp18 = markAsDismissed(5669);
+      const tmp18 = markAsDismissed(5670);
     } else {
       class N {
         constructor() {
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
           return markAsDismissed(ContentDismissActionType.UNKNOWN);
         }
       }
-      const stringResult2 = obj7.string(tmp(1128).t.OgQQbG);
+      const stringResult2 = obj7.string(tmp(1125).t.OgQQbG);
       cResult[13] = stringResult2;
       const tmp20 = stringResult2;
     } else {
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
         }
       }
       const obj8 = { onPress: tmp5, text: tmp20 };
-      const tmp23 = closure_6(tmp(5244).Button, obj8);
+      const tmp23 = closure_6(tmp(5245).Button, obj8);
       cResult[14] = tmp5;
       cResult[15] = tmp23;
     } else {
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
           return markAsDismissed(ContentDismissActionType.UNKNOWN);
         }
       }
-      const stringResult3 = obj9.string(tmp(1128).t.WAI6xu);
+      const stringResult3 = obj9.string(tmp(1125).t.WAI6xu);
       cResult[18] = stringResult3;
       const tmp25 = stringResult3;
     } else {
@@ -206,7 +206,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
         }
       }
       const obj10 = { onPress: A, text: tmp25, variant: "secondary" };
-      const tmp28 = closure_6(tmp(5244).Button, obj10);
+      const tmp28 = closure_6(tmp(5245).Button, obj10);
       cResult[19] = A;
       cResult[20] = tmp28;
     } else {
@@ -275,7 +275,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreatorM
   const intl2 = util.intl;
   obj4.children = intl2.string(util.t.kUUFbG);
   items[1] = closure_6(Text_Text.Text, obj4);
-  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef17679 };
+  const obj5 = { style: tmp.image, resizeMode: "contain", source: _modDef17720 };
   items[2] = closure_6(FastImageDefault, obj5);
   const obj6 = {
     onPress: function handleCheckItOut() {

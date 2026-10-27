@@ -1,17 +1,17 @@
-// === Module 7874: StageChannelUtils ===
+// === Module 7875: StageChannelUtils ===
 
-// Module 7874 (StageChannelUtils)
+// Module 7875 (StageChannelUtils)
 import _mod12 from "module_12" /* 12 */;
-import util from "util" /* 1128 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4908 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5989 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
-import StageInstanceStore from "StageInstanceStore" /* 4828 */;
+import util from "util" /* 1125 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4909 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5990 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
+import StageInstanceStore from "StageInstanceStore" /* 4829 */;
 
 require = fn;
-const constants = fn(6637).RequestToSpeakPermissionStates;
-const Permissions = fn(1087).Permissions;
-const RowType = fn(7875).RowType;
+const constants = fn(6638).RequestToSpeakPermissionStates;
+const Permissions = fn(1084).Permissions;
+const RowType = fn(7876).RowType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/StageChannelUtils.tsx");
 

@@ -1,17 +1,17 @@
-// === Module 13757: useFormattedMessagePreview ===
+// === Module 13771: useFormattedMessagePreview ===
 
-// Module 13757 (useFormattedMessagePreview)
+// Module 13771 (useFormattedMessagePreview)
 import _mod12 from "module_12" /* 12 */;
-import MessageTypes from "MessageTypes" /* 1103 */;
-import util from "util" /* 1128 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5602 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 6366 */;
-import useIsCallActiveDefault from "useIsCallActive" /* 8338 */;
-import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8343 */;
-import VoiceSessionUtils from "VoiceSessionUtils" /* 8441 */;
+import MessageTypes from "MessageTypes" /* 1100 */;
+import util from "util" /* 1125 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5603 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 6367 */;
+import useIsCallActiveDefault from "useIsCallActive" /* 8337 */;
+import SystemMessageUtilsDefault from "SystemMessageUtils" /* 8342 */;
+import VoiceSessionUtils from "VoiceSessionUtils" /* 8440 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -341,7 +341,7 @@ function formatMessagePreview(type, isBlocked) {
     flag = true;
   }
 }
-const MessageFlags = fn(1087).MessageFlags;
+const MessageFlags = fn(1084).MessageFlags;
 const ReactCompilerGating = fn(558);
 function isMessageContentPreviewable(message) {
   const type = message.type;
@@ -414,8 +414,8 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
   if (author.type !== require("MessageTypes").MessageTypes.USER_JOIN) {
     stringResult = nick;
     if (author.author.id === stateFromStores) {
-      const intl = tmp(1128).intl;
-      stringResult = intl.string(tmp(1128).t.LuZzxn);
+      const intl = tmp(1125).intl;
+      stringResult = intl.string(tmp(1125).t.LuZzxn);
     }
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
@@ -431,7 +431,7 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
     }
     const stateFromStores1 = tmp(504).useStateFromStores(tmp16, tmp18);
     const tmpResult6 = tmp(504);
-    const tmpResult7 = tmp(6366);
+    const tmpResult7 = tmp(6367);
     const obj2 = { message: author, channel: id, currentUserId: stateFromStores, authorNick: stringResult, actorNick: null, otherUser: null, otherUserNick: null, isBlocked: null, isIgnored: null, isCallActive: null };
     let nick1;
     if (null != author.actor) {
@@ -472,8 +472,8 @@ export const useFormattedMessagePreview = ReactCompilerGating.isReactCompilerEna
   if (author.type !== require("MessageTypes").MessageTypes.USER_JOIN) {
     stringResult = nick;
     if (author.author.id === stateFromStores) {
-      const intl = tmp(1128).intl;
-      stringResult = intl.string(tmp(1128).t.LuZzxn);
+      const intl = tmp(1125).intl;
+      stringResult = intl.string(tmp(1125).t.LuZzxn);
     }
   }
   const obj2 = require("initialize");

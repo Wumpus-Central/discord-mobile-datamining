@@ -1,13 +1,13 @@
-// === Module 1249: ProtoUtils ===
+// === Module 1246: ProtoUtils ===
 
-// Module 1249 (ProtoUtils)
-import _mod1212 from "module_1212" /* 1212 */;
+// Module 1246 (ProtoUtils)
+import _mod1209 from "module_1209" /* 1209 */;
 import size from "module_2" /* 2 */;
 
 const BINARY_READ_OPTIONS = {
   readerFactory(dependencyMap) {
     const textDecoder = new TextDecoder("utf-8");
-    const binaryReader = new _mod1212.BinaryReader(dependencyMap, textDecoder);
+    const binaryReader = new _mod1209.BinaryReader(dependencyMap, textDecoder);
     return binaryReader;
   }
 };
@@ -17,11 +17,11 @@ export { BINARY_READ_OPTIONS };
 export const b64ToProto = function b64ToProto(fromBinary, actionData) {
   let fromBinaryResult = null;
   if (null != actionData) {
-    const obj = _mod1212;
+    const obj = _mod1209;
     fromBinaryResult = fromBinary.fromBinary(obj.base64decode(actionData), obj);
   }
   return fromBinaryResult;
 };
 export const protoToB64 = function protoToB64(toBinary, favoriteGifs) {
-  return _mod1212.base64encode(toBinary.toBinary(favoriteGifs));
+  return _mod1209.base64encode(toBinary.toBinary(favoriteGifs));
 };

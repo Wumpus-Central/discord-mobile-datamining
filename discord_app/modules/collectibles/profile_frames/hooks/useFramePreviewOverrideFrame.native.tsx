@@ -2,9 +2,9 @@
 
 // Module 8693 (useFramePreviewOverrideFrame)
 import c from "c" /* 576 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
 import noop from "module_19" /* 19 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7657 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7658 */;
 
 require = fn;
 let closure_4 = fn(8694).useFramePreviewOverrideStore;

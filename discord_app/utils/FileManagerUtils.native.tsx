@@ -2,7 +2,7 @@
 
 // Module 8696 (FileManagerUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeFileModuleDefault from "NativeFileModule" /* 1164 */;
+import NativeFileModuleDefault from "NativeFileModule" /* 1161 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -39,16 +39,16 @@ let closure_5 = async function _readFile(arg0) {
           const tmp41 = (function getBaseDirectory(arg0) {
             if ("shared" === arg0) {
               if (!obj.isAndroid()) {
-                return closure_1_1(1164).getConstants().SharedDirPath;
+                return closure_1_1(1161).getConstants().SharedDirPath;
               }
-              obj = closure_1_0(1384);
+              obj = closure_1_0(1381);
             }
             if ("cache" === arg0) {
-              let DocumentsDirPath = closure_1_1(1164).getConstants().CacheDirPath;
-              const obj4 = closure_1_1(1164);
+              let DocumentsDirPath = closure_1_1(1161).getConstants().CacheDirPath;
+              const obj4 = closure_1_1(1161);
             } else {
-              DocumentsDirPath = closure_1_1(1164).getConstants().DocumentsDirPath;
-              const obj3 = closure_1_1(1164);
+              DocumentsDirPath = closure_1_1(1161).getConstants().DocumentsDirPath;
+              const obj3 = closure_1_1(1161);
             }
           })(closure_0);
           closure_131_2 = tmp41;
@@ -133,11 +133,11 @@ export const writeFile = function writeFile(cache, combined2, arg2, utf8) {
 export const moveFile = function moveFile(arg0, arg1, arg2) {
   return NativeFileModuleDefault.moveFile(arg0, arg1, arg2);
 };
-export const removeFile = function removeFile(cache, combined) {
-  return NativeFileModuleDefault.removeFile(cache, combined);
+export const removeFile = function removeFile(cache, filePathForGif) {
+  return NativeFileModuleDefault.removeFile(cache, filePathForGif);
 };
-export const clearFolder = function clearFolder(cache, c5) {
-  return NativeFileModuleDefault.clearFolder(cache, c5);
+export const clearFolder = function clearFolder(cache, combined1) {
+  return NativeFileModuleDefault.clearFolder(cache, combined1);
 };
 export const readFile = function readFile() {
   const self = this;

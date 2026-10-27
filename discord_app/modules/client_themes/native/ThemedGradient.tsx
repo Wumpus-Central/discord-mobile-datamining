@@ -1,24 +1,24 @@
-// === Module 10625: ThemedGradient ===
+// === Module 10628: ThemedGradient ===
 
-// Module 10625 (ThemedGradient)
+// Module 10628 (ThemedGradient)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1256 */;
-import SentryUtilsDefault from "SentryUtils" /* 1257 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import ColorUtils from "ColorUtils" /* 4968 */;
-import utils_ColorDefault from "utils/Color" /* 4969 */;
-import shared from "shared" /* 4978 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5144 */;
-import GuildThemePresets from "GuildThemePresets" /* 5147 */;
-import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5149 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5204 */;
-import useThemeDefault from "useTheme" /* 5205 */;
-import LinearGradientDefault from "LinearGradient" /* 5258 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import ColorUtils from "ColorUtils" /* 4969 */;
+import utils_ColorDefault from "utils/Color" /* 4970 */;
+import shared from "shared" /* 4979 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5145 */;
+import GuildThemePresets from "GuildThemePresets" /* 5148 */;
+import useRoutedActiveGuildThemeDefault from "useRoutedActiveGuildTheme" /* 5150 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5205 */;
+import useThemeDefault from "useTheme" /* 5206 */;
+import LinearGradientDefault from "LinearGradient" /* 5259 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4995 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4996 */;
 
 require = fn;
 function getMixedGradientColor(mixColorOverride) {
@@ -92,7 +92,7 @@ let closure_5 = ["overlayOpacity", "gradientOverride"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_12 = createStyles.createStyles({ softenGradient: { flex: 1 }, linearGradient: { flex: 1 }, absolute: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 } });
 let angleCenter = { x: 0.5, y: 0.5 };
 let c14 = 0.7;
@@ -380,7 +380,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
     tmp4 = cResult[1];
   }
   dependencyMap = tmp4;
-  const tmp5 = mixColorOverride(5205)();
+  const tmp5 = mixColorOverride(5206)();
   theme = tmp5;
   if (cResult[2] === mix) {
     if (cResult[3] === tmp4) {
@@ -445,7 +445,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
     }
   }
   let obj = mix(576);
-  const guildThemePresetAppearance = mix(5147).getGuildThemePresetAppearance(preset, tmp5);
+  const guildThemePresetAppearance = mix(5148).getGuildThemePresetAppearance(preset, tmp5);
   if (cResult[11] === mix) {
     if (cResult[12] === tmp4) {
       if (cResult[13] === mixColorOverride) {
@@ -524,7 +524,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildT
   cResult[14] = tmp5;
   cResult[15] = A;
   tmp10 = A;
-  const tmpResult = mix(5147);
+  const tmpResult = mix(5148);
 }) : (function GuildThemePresetGradient(mixColorOverride) {
   ({ angleOverride, mix: require, mixAmount } = mixColorOverride);
   ({ preset, absolute, wide, tall, componentStyles } = mixColorOverride);
@@ -812,7 +812,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
   closure_129_2 = undefined;
   closure_129_3 = undefined;
   closure_129_0 = baseMix;
-  ({ width, height } = reduced(1499)());
+  ({ width, height } = reduced(1496)());
   if (mixAmount === undefined) {
     mixAmount = {};
   }
@@ -941,8 +941,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Custom
     items2[3] = absolute;
     items2[4] = componentStyles;
     obj.style = items2;
-    tmp10Result = closure_10(reduced(5258), obj);
-    const tmp2Result = reduced(5258);
+    tmp10Result = closure_10(reduced(5259), obj);
+    const tmp2Result = reduced(5259);
   }
   return tmp10Result;
 });

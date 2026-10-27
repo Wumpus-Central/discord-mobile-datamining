@@ -1,14 +1,14 @@
-// === Module 11291: useCanInviteToLinkedGameOrganization ===
+// === Module 11294: useCanInviteToLinkedGameOrganization ===
 
-// Module 11291 (useCanInviteToLinkedGameOrganization)
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+// Module 11294 (useCanInviteToLinkedGameOrganization)
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 const ReactCompilerGating = fn(558);
 function hasCanInviteRole(arg0, roles, arg2) {
   closure_0 = arg0;

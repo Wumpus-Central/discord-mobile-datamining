@@ -1,7 +1,7 @@
 // === Module 8982: getAppChannelApplicationUnsupportedText ===
 
 // Module 8982 (getAppChannelApplicationUnsupportedText)
-import util from "util" /* 1128 */;
+import util from "util" /* 1125 */;
 import GuildEmbeddedApplicationUnsupportedReason from "GuildEmbeddedApplicationUnsupportedReason" /* 8983 */;
 import size from "module_2" /* 2 */;
 

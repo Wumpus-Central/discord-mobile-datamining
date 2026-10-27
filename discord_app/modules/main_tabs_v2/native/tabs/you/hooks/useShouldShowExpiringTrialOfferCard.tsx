@@ -1,16 +1,16 @@
-// === Module 18260: useShouldShowExpiringTrialOfferCard ===
+// === Module 18294: useShouldShowExpiringTrialOfferCard ===
 
-// Module 18260 (useShouldShowExpiringTrialOfferCard)
+// Module 18294 (useShouldShowExpiringTrialOfferCard)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import DurationsDefault from "Durations" /* 1104 */;
-import useCountdownDefault from "useCountdown" /* 7554 */;
-import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7557 */;
-import NoticeStore from "NoticeStore" /* 15034 */;
+import DurationsDefault from "Durations" /* 1101 */;
+import useCountdownDefault from "useCountdown" /* 7555 */;
+import usePremiumTrialOffer from "usePremiumTrialOffer" /* 7558 */;
+import NoticeStore from "NoticeStore" /* 15070 */;
 
 require = fn;
-const NoticeTypes = fn(1087).NoticeTypes;
-const PremiumSubscriptionSKUs = fn(1394).PremiumSubscriptionSKUs;
+const NoticeTypes = fn(1084).NoticeTypes;
+const PremiumSubscriptionSKUs = fn(1391).PremiumSubscriptionSKUs;
 let closure_6 = 10 * DurationsDefault.Millis.SECOND;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

@@ -1,63 +1,55 @@
-// === Module 12473: ConjurePublishCtaCard ===
+// === Module 12481: ConjurePublishCtaCard ===
 
-// Module 12473 (ConjurePublishCtaCard)
+// Module 12481 (ConjurePublishCtaCard)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import Stack_Stack from "Stack/Stack" /* 5977 */;
-import useConjurePublishAction from "useConjurePublishAction" /* 11765 */;
-import ConjurePublishSheetDefault from "ConjurePublishSheet" /* 12239 */;
-import conjurePublishCard from "conjurePublishCard" /* 12287 */;
-import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 12474 */;
-import ConjurePublishRatingDefault from "ConjurePublishRating" /* 12475 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import Stack_Stack from "Stack/Stack" /* 5978 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 11767 */;
+import useConjureStartPublishDefault from "useConjureStartPublish" /* 12152 */;
+import conjurePublishCard from "conjurePublishCard" /* 12293 */;
+import ConjureTipInlineCalloutDefault from "ConjureTipInlineCallout" /* 12482 */;
+import ConjurePublishRatingDefault from "ConjurePublishRating" /* 12483 */;
 import noop from "module_19" /* 19 */;
-
-const useConjurePublishActionDefault = useConjurePublishAction;
 
 require = fn;
 const jsxProd = fn(21);
-({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
+({ jsx: c3, jsxs: closure_4 } = jsxProd);
 let ReactCompilerGating = fn(558);
-let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function PublishCta(projectId) {
-  const cResult = projectId(576).c(7);
-  projectId = projectId.projectId;
-  const publish = projectId.publish;
-  const context = noop.useContext(projectId(11765).ConjurePublishActionContext);
-  if (cResult[0] === context) {
-    if (cResult[1] === projectId) {
-      let tmp6 = cResult[2];
-    }
-    if (cResult[3] === publish.label) {
-      if (cResult[4] === tmp5) {
-        if (cResult[5] === tmp6) {
-          let tmp7 = cResult[6];
-        }
-        return tmp7;
-      }
-    }
-    const obj2 = { direction: "horizontal", children: null };
-    const obj3 = { text: publish.label, variant: "primary", size: "sm", loading: tmp5, onPress: tmp6 };
-    obj2.children = closure_4(tmp(5244).Button, obj3);
-    const tmp9 = closure_4(tmp(5977).Stack, obj2);
-    cResult[3] = publish.label;
-    cResult[4] = tmp5;
-    cResult[5] = tmp6;
-    cResult[6] = tmp9;
-    tmp7 = tmp9;
+let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function PublishCta(publish) {
+  const cResult = c.c(6);
+  publish = publish.publish;
+  const tmp4 = useConjureStartPublishDefault(publish.projectId, publish);
+  closure_0 = tmp4;
+  if (cResult[0] !== tmp4) {
+    const fn = function n() {
+      return closure_0("card");
+    };
+    cResult[0] = tmp4;
+    cResult[1] = fn;
+    let tmp6 = fn;
+  } else {
+    tmp6 = cResult[1];
   }
-  const fn = function u() {
-    if (null != context) {
-      ConjurePublishSheetDefault(projectId, tmp.guildId, "card");
+  if (cResult[2] === publish.label) {
+    if (cResult[3] === tmp5) {
+      if (cResult[4] === tmp6) {
+        let tmp7 = cResult[5];
+      }
+      return tmp7;
     }
-  };
-  cResult[0] = context;
-  cResult[1] = projectId;
-  cResult[2] = fn;
-  tmp6 = fn;
-  const obj = projectId(576);
-}) : (function PublishCta(arg0) {
-  ({ projectId: require, publish } = arg0);
-  closure_1 = noop.useContext(useConjurePublishAction.ConjurePublishActionContext);
+  }
+  const obj2 = { direction: "horizontal", children: React3(components_Button_Button.Button, { text: publish.label, variant: "primary", size: "sm", loading: publish.publishing && !publish.showsProgress, onPress: tmp6 }) };
+  const tmp8 = React3(Stack_Stack.Stack, obj2);
+  cResult[2] = publish.label;
+  cResult[3] = publish.publishing && !publish.showsProgress;
+  cResult[4] = tmp6;
+  cResult[5] = tmp8;
+  tmp7 = tmp8;
+  const obj3 = { text: publish.label, variant: "primary", size: "sm", loading: publish.publishing && !publish.showsProgress, onPress: tmp6 };
+}) : (function PublishCta(publish) {
+  publish = publish.publish;
+  closure_0 = useConjureStartPublishDefault(publish.projectId, publish);
   const obj = { text: publish.label, variant: "primary", size: "sm", loading: null, onPress: null };
   let publishing = publish.publishing;
   if (publishing) {
@@ -65,11 +57,9 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function Publish
   }
   obj.loading = publishing;
   obj.onPress = function onPress() {
-    if (null != closure_1) {
-      ConjurePublishSheetDefault(require, tmp.guildId, "card");
-    }
+    return closure_0("card");
   };
-  return closure_4(Stack_Stack.Stack, { direction: "horizontal", children: closure_4(components_Button_Button.Button, obj) });
+  return React3(Stack_Stack.Stack, { direction: "horizontal", children: React3(components_Button_Button.Button, obj) });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -94,24 +84,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     tmp8Result4 = null;
     if (tmpResult.isConjurePublishCtaVisible(tmp5, cta)) {
       const obj2 = { projectId, publish: tmp5 };
-      const items = [React4(closure_6, obj2), , ];
+      const items = [React3(closure_5, obj2), , ];
       let tmp8Result = null;
       if (null != tmp5.failure) {
         const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: tmp5.failure };
-        tmp8Result = React4(Text_Text.Text, obj3);
+        tmp8Result = React3(Text_Text.Text, obj3);
       }
       items[1] = tmp8Result;
       let tmp8Result3 = null;
       if (null != turnId) {
         const obj4 = { projectId, turnId, cta, status: tmp5.status };
-        tmp8Result3 = React4(ConjurePublishRatingDefault, obj4, turnId);
+        tmp8Result3 = React3(ConjurePublishRatingDefault, obj4, turnId);
       }
       const obj5 = { children: null };
       const obj6 = { spacing: 12, children: null };
       items[2] = tmp8Result3;
       obj6.children = items;
-      obj5.children = hasOwnProperty(Stack_Stack.Stack, obj6);
-      tmp8Result4 = React4(ConjureTipInlineCalloutDefault, obj5);
+      obj5.children = React4(Stack_Stack.Stack, obj6);
+      tmp8Result4 = React3(ConjureTipInlineCalloutDefault, obj5);
       const tmp4Result = ConjureTipInlineCalloutDefault;
     }
     tmpResult = conjurePublishCard;
@@ -130,24 +120,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
     tmp6Result4 = null;
     if (obj.isConjurePublishCtaVisible(tmp3, cta)) {
       const obj2 = { projectId, publish: tmp3 };
-      const items = [React4(closure_6, obj2), , ];
+      const items = [React3(closure_5, obj2), , ];
       let tmp6Result = null;
       if (null != tmp3.failure) {
         const obj3 = { variant: "text-sm/normal", color: "text-feedback-critical", accessibilityRole: "alert", children: tmp3.failure };
-        tmp6Result = React4(Text_Text.Text, obj3);
+        tmp6Result = React3(Text_Text.Text, obj3);
       }
       items[1] = tmp6Result;
       let tmp6Result3 = null;
       if (null != turnId) {
         const obj4 = { projectId, turnId, cta, status: tmp3.status };
-        tmp6Result3 = React4(ConjurePublishRatingDefault, obj4, turnId);
+        tmp6Result3 = React3(ConjurePublishRatingDefault, obj4, turnId);
       }
       const obj5 = { children: null };
       const obj6 = { spacing: 12, children: null };
       items[2] = tmp6Result3;
       obj6.children = items;
-      obj5.children = hasOwnProperty(Stack_Stack.Stack, obj6);
-      tmp6Result4 = React4(ConjureTipInlineCalloutDefault, obj5);
+      obj5.children = React4(Stack_Stack.Stack, obj6);
+      tmp6Result4 = React3(ConjureTipInlineCalloutDefault, obj5);
       const tmpResult = ConjureTipInlineCalloutDefault;
     }
     obj = conjurePublishCard;

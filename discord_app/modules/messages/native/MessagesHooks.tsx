@@ -1,25 +1,25 @@
-// === Module 11215: MessagesHooks ===
+// === Module 11218: MessagesHooks ===
 
-// Module 11215 (MessagesHooks)
+// Module 11218 (MessagesHooks)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6809 */;
-import InviteTypeUtils from "InviteTypeUtils" /* 7808 */;
-import messages_MessagesUtils from "messages/MessagesUtils" /* 9781 */;
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11216 */;
-import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11217 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6811 */;
+import InviteTypeUtils from "InviteTypeUtils" /* 7809 */;
+import messages_MessagesUtils from "messages/MessagesUtils" /* 9783 */;
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11219 */;
+import ChatUpdatesQueueDefault from "ChatUpdatesQueue" /* 11220 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10003 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6703 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10005 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6704 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
 
 require = fn;
 const findNodeHandle = fn(17).findNodeHandle;
-let closure_7 = fn(9782).updateShouldShowJumpToPresentButton;
+let closure_7 = fn(9784).updateShouldShowJumpToPresentButton;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMessageAuthorActivities(arr) {

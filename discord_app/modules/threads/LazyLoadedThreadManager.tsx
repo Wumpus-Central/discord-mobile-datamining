@@ -1,10 +1,10 @@
-// === Module 7410: LazyLoadedThreadManager ===
+// === Module 7412: LazyLoadedThreadManager ===
 
-// Module 7410 (LazyLoadedThreadManager)
+// Module 7412 (LazyLoadedThreadManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6497 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
 
 const require = fn;
 function initialize() {
@@ -57,17 +57,17 @@ function loadThread(channelId) {
       } else {
         const _location = location;
         let obj2 = { path: null, exact: true };
-        const RouteParam = tmp13(5020).RouteParam;
-        const tmp13Result = tmp13(5007);
-        const RouteParam2 = tmp13(5020).RouteParam;
+        const RouteParam = tmp13(5021).RouteParam;
+        const tmp13Result = tmp13(5008);
+        const RouteParam2 = tmp13(5021).RouteParam;
         obj2.path = closure_9.CHANNEL(RouteParam.guildId(), RouteParam2.channelId(), ":messageId");
         importDefault = tmp13Result.matchPath(location.pathname, obj2);
-        const HTTP = tmp13(1297).HTTP;
+        const HTTP = tmp13(1294).HTTP;
         const obj3 = { url: closure_8.CHANNEL(channelId), rejectWithError: null };
         const guildIdResult = RouteParam.guildId();
-        obj3.rejectWithError = tmp13(1297).rejectWithMigratedError();
+        obj3.rejectWithError = tmp13(1294).rejectWithMigratedError();
         value = HTTP.get(obj3);
-        const tmp13Result2 = tmp13(1297);
+        const tmp13Result2 = tmp13(1294);
         const catchPromise = value.then((body) => {
           body = body.body;
           closure_11[closure_0] = { type: "LOADED" };
@@ -105,11 +105,11 @@ function loadThread(channelId) {
     }
   }
 }
-const ChannelRecord = fn(4827);
+const ChannelRecord = fn(4828);
 ({ createChannelRecordFromServer: closure_4, THREAD_CHANNEL_TYPES: hasOwnProperty } = ChannelRecord);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Endpoints: closure_8, Routes: closure_9 } = Constants);
-const isStaticChannelRoute = fn(4830).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4831).isStaticChannelRoute;
 const dependencyMap = {};
 let c12 = false;
 const size = fn(2);
@@ -133,7 +133,7 @@ export default {
       let nextResult = iter.next();
       while (iter !== undefined) {
         let tmp9 = nextResult;
-        if (nextResult !== items1(7323).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (nextResult !== items1(7325).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           if (!isStaticChannelRoute(tmp9)) {
             if (null == ChannelStore.getChannel(tmp9)) {
               let tmp18 = dependencyMap[tmp9];
@@ -153,12 +153,12 @@ export default {
 
         });
       } else {
-        const HTTP = items1(1297).HTTP;
+        const HTTP = items1(1294).HTTP;
         const request = { url: closure_8.THREADS_BULK, body: null, rejectWithError: null };
         const obj2 = { thread_ids: items1 };
         request.body = obj2;
-        request.rejectWithError = items1(1297).rejectWithMigratedError();
-        const obj4 = items1(1297);
+        request.rejectWithError = items1(1294).rejectWithMigratedError();
+        const obj4 = items1(1294);
         const postResult = HTTP.post(request);
         const catchPromise = HTTP.post(request).then((result) => {
           set = new Set();

@@ -1,13 +1,13 @@
-// === Module 17118: ExperimentOverrideActiveSetting ===
+// === Module 17159: ExperimentOverrideActiveSetting ===
 
-// Module 17118 (ExperimentOverrideActiveSetting)
+// Module 17159 (ExperimentOverrideActiveSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import DevToolsNavigator from "DevToolsNavigator" /* 15828 */;
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16134 */;
-import DevToolsContent from "DevToolsContent" /* 17119 */;
-import ExperimentStore from "ExperimentStore" /* 5190 */;
-import ApexExperimentStore from "ApexExperimentStore" /* 1261 */;
+import DevToolsNavigator from "DevToolsNavigator" /* 15866 */;
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16172 */;
+import DevToolsContent from "DevToolsContent" /* 17160 */;
+import ExperimentStore from "ExperimentStore" /* 5191 */;
+import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -75,7 +75,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useExperim
   const str = closure_5();
   return jsx(DevToolsContent.DevToolsContentSubLabel, { label: "Experiments overridden: ", value: closure_5().toString() });
 });
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasExperimentOverrideActive() {
   const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
   return closure_5() > 0 && staffOrDeveloperSettingPredicate;
@@ -88,7 +88,7 @@ const pressable = SettingBuilders.createPressable({
     return "Experiments Overrides Active";
   },
   parent: null,
-  IconComponent: fn(16946).BeakerIcon,
+  IconComponent: fn(16988).BeakerIcon,
   useDescription: tmp2,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useHasExperimentOverrideActive() {
     const staffOrDeveloperSettingPredicate = useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();

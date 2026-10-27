@@ -1,21 +1,21 @@
-// === Module 17916: ItemDetailsActionSheet ===
+// === Module 17950: ItemDetailsActionSheet ===
 
-// Module 17916 (ItemDetailsActionSheet)
+// Module 17950 (ItemDetailsActionSheet)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import useChannelNameDefault from "useChannelName" /* 5604 */;
-import GuildIcon from "GuildIcon" /* 6883 */;
-import TableRow from "TableRow" /* 6903 */;
-import useDesignToggleDefault from "useDesignToggle" /* 6926 */;
-import TableRowGroup from "TableRowGroup" /* 6987 */;
-import ActionSheet from "ActionSheet" /* 7298 */;
+import native from "native" /* 1199 */;
+import useChannelNameDefault from "useChannelName" /* 5605 */;
+import GuildIcon from "GuildIcon" /* 6885 */;
+import TableRow from "TableRow" /* 6905 */;
+import useDesignToggleDefault from "useDesignToggle" /* 6928 */;
+import TableRowGroup from "TableRowGroup" /* 6989 */;
+import ActionSheet from "ActionSheet" /* 7300 */;
 import ICYMIUtils from "ICYMIUtils" /* 8840 */;
-import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11014 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 17917 */;
+import ActionSheetIconHeader from "ActionSheetIconHeader" /* 11017 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 17951 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
 import ICYMIStore from "ICYMIStore" /* 8823 */;
 
 const GuildIconDefault = GuildIcon;
@@ -24,7 +24,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { divider: { height: 1, backgroundColor: nativeDefault.colors.BORDER_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

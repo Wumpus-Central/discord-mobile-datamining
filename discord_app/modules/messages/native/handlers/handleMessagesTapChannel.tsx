@@ -1,11 +1,11 @@
-// === Module 11241: handleMessagesTapChannel ===
+// === Module 11244: handleMessagesTapChannel ===
 
-// Module 11241 (handleMessagesTapChannel)
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7448 */;
+// Module 11244 (handleMessagesTapChannel)
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7449 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = fn;
 function maybeStartLurking() {
@@ -271,9 +271,9 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
   ({ onBeforeNavigate: closure_129_2, dismissKeyboard: closure_129_3 } = closure_0);
   return "Reflect";
 };
-const isGuildVocalChannelType = fn(4827).isGuildVocalChannelType;
-const isGuildLurker = fn(4841).isGuildLurker;
-const Constants = fn(1087);
+const isGuildVocalChannelType = fn(4828).isGuildVocalChannelType;
+const isGuildLurker = fn(4842).isGuildLurker;
+const Constants = fn(1084);
 ({ ChannelTypes: c10, LinkingTypes: closure_11, Permissions: closure_12, Routes: map1 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/handlers/handleMessagesTapChannel.tsx");

@@ -1,29 +1,27 @@
-// === Module 18242: YouScreenContainer ===
+// === Module 18276: YouScreenContainer ===
 
-// Module 18242 (YouScreenContainer)
+// Module 18276 (YouScreenContainer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17441 */;
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17482 */;
 import noop from "module_19" /* 19 */;
 
-const useWindowDimensionsDefault = tmp4(1499);
-const useChatLayoutDefault = tmp4(5153);
-const YouScreenDefault = tmp4(18243);
+const useWindowDimensionsDefault = tmp4(1496);
+const useChatLayoutDefault = tmp4(5154);
+const YouScreenDefault = tmp4(18277);
 require = fn;
 const View = fn(17).View;
-const RootNavigatorScreen = fn(11184).RootNavigatorScreen;
+const RootNavigatorScreen = fn(11187).RootNavigatorScreen;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
-let obj = { container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xl }, androidContainer: null, wrapper: null };
-let obj3 = { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.xl };
-obj.androidContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none };
-let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none };
+const createStyles = fn(4972);
+let obj = { container: { flex: 1, overflow: "hidden", alignItems: "center", justifyContent: "center" }, androidContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none }, wrapper: null };
+let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SCRIM, borderRadius: nativeDefault.radii.none };
 obj.wrapper = { flex: 1, borderRadius: nativeDefault.radii.xl, overflow: "hidden" };
 let closure_6 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj5 = { flex: 1, borderRadius: nativeDefault.radii.xl, overflow: "hidden" };
+let obj4 = { flex: 1, borderRadius: nativeDefault.radii.xl, overflow: "hidden" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/tabs/you/YouScreenContainer.tsx");
 

@@ -1,11 +1,11 @@
-// === Module 9664: ThreadAutoArchive ===
+// === Module 9666: ThreadAutoArchive ===
 
-// Module 9664 (ThreadAutoArchive)
+// Module 9666 (ThreadAutoArchive)
 import memoizeDefault from "memoize" /* 606 */;
-import DurationsDefault from "Durations" /* 1104 */;
-import ThreadConstants from "ThreadConstants" /* 1127 */;
-import util from "util" /* 1128 */;
-import _modDef2049 from "module_2049" /* 2049 */;
+import DurationsDefault from "Durations" /* 1101 */;
+import ThreadConstants from "ThreadConstants" /* 1124 */;
+import util from "util" /* 1125 */;
+import _modDef2046 from "module_2046" /* 2046 */;
 import size from "module_2" /* 2 */;
 
 function getAutoArchiveOptions() {
@@ -46,8 +46,8 @@ export const getAutoArchiveDurationText = function getAutoArchiveDurationText(ar
     label = found.label;
   }
   if (label == null) {
-    label = _modDef2049.duration(arg0, "minutes").humanize();
-    const durationResult = _modDef2049.duration(arg0, "minutes");
+    label = _modDef2046.duration(arg0, "minutes").humanize();
+    const durationResult = _modDef2046.duration(arg0, "minutes");
   }
   return label;
 };

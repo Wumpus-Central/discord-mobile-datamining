@@ -1,11 +1,11 @@
-// === Module 15402: Tooltip/Tooltip ===
+// === Module 15438: Tooltip/Tooltip ===
 
-// Module 15402 (Tooltip/Tooltip)
+// Module 15438 (Tooltip/Tooltip)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import Text_Text from "Text/Text" /* 5234 */;
+import native from "native" /* 1199 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import Text_Text from "Text/Text" /* 5235 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,16 +14,16 @@ const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const TooltipArrowDirections = { UP: "UP", DOWN: "DOWN" };
 let obj2 = { CENTER: "CENTER", RIGHT: "RIGHT", LEFT: "LEFT" };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj4 = { container: { padding: 10, borderRadius: nativeDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND }, label: null, title: null, arrow: null };
 let obj5 = { padding: 10, borderRadius: nativeDefault.radii.xs, alignSelf: "flex-start", minWidth: 60, alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
-obj4.label = { fontFamily: fn(1087).Fonts.PRIMARY_MEDIUM, fontSize: 12, color: nativeDefault.colors.WHITE };
+obj4.label = { fontFamily: fn(1084).Fonts.PRIMARY_MEDIUM, fontSize: 12, color: nativeDefault.colors.WHITE };
 obj4.title = { marginBottom: 4 };
 let size = { width: 0, height: 0, borderStyle: "solid", borderLeftColor: "transparent", borderRightColor: "transparent", borderTopColor: nativeDefault.colors.BACKGROUND_BRAND, borderBottomColor: nativeDefault.colors.BACKGROUND_BRAND };
 obj4.arrow = size;
 let closure_8 = createStyles.createStyles(obj4);
 const ReactCompilerGating = fn(558);
-let obj6 = { fontFamily: fn(1087).Fonts.PRIMARY_MEDIUM, fontSize: 12, color: nativeDefault.colors.WHITE };
+let obj6 = { fontFamily: fn(1084).Fonts.PRIMARY_MEDIUM, fontSize: 12, color: nativeDefault.colors.WHITE };
 size = fn(2);
 const result = size.fileFinishedImporting("design/void/Tooltip/native/Tooltip.tsx");
 

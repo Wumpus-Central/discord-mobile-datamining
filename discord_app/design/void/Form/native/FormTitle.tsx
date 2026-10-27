@@ -3,7 +3,7 @@
 // Module 8959 (FormTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
+import native from "native" /* 1199 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -11,19 +11,19 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let PlatformUtils = fn(1384);
+let PlatformUtils = fn(1381);
 let num = 58;
 if (PlatformUtils.isAndroid()) {
   num = 48;
 }
-PlatformUtils = fn(1384);
+PlatformUtils = fn(1381);
 let num2 = 48;
 if (PlatformUtils.isAndroid()) {
   num2 = 56;
 }
-const createStyles = fn(4971);
-const obj4 = { titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 }, horizontalPadding: { paddingHorizontal: 16 }, thinTitle: { paddingTop: 26 }, titleText: { fontFamily: fn(1087).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE }, error: null };
-const obj5 = { fontFamily: fn(1087).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE };
+const createStyles = fn(4972);
+const obj4 = { titleWrapper: { flexDirection: "row", justifyContent: "space-between", paddingTop: 16, paddingBottom: 16 }, horizontalPadding: { paddingHorizontal: 16 }, thinTitle: { paddingTop: 26 }, titleText: { fontFamily: fn(1084).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE }, error: null };
+const obj5 = { fontFamily: fn(1084).Fonts.PRIMARY_SEMIBOLD, fontSize: 13, color: nativeDefault.colors.TEXT_SUBTLE };
 obj4.error = { color: nativeDefault.unsafe_rawColors.RED_400 };
 let closure_5 = createStyles.createStyles(obj4);
 const ReactCompilerGating = fn(558);

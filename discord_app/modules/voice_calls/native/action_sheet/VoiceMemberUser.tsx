@@ -1,43 +1,43 @@
-// === Module 14622: VoiceMemberUser ===
+// === Module 14658: VoiceMemberUser ===
 
-// Module 14622 (VoiceMemberUser)
+// Module 14658 (VoiceMemberUser)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import UserUtilsDefault from "UserUtils" /* 5025 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5150 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import useIsSpeakingDefault from "useIsSpeaking" /* 6781 */;
-import CallActionCreatorsDefault from "CallActionCreators" /* 7413 */;
-import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7811 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7867 */;
-import _modDef11446 from "module_11446" /* 11446 */;
-import _modDef14623 from "module_14623" /* 14623 */;
-import _modDef14624 from "module_14624" /* 14624 */;
-import _modDef14625 from "module_14625" /* 14625 */;
-import _modDef14626 from "module_14626" /* 14626 */;
-import _modDef14627 from "module_14627" /* 14627 */;
-import _modDef14628 from "module_14628" /* 14628 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import UserUtilsDefault from "UserUtils" /* 5026 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5151 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import useIsSpeakingDefault from "useIsSpeaking" /* 6782 */;
+import CallActionCreatorsDefault from "CallActionCreators" /* 7415 */;
+import StreamerApplicationSelectors from "StreamerApplicationSelectors" /* 7812 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7868 */;
+import _modDef11449 from "module_11449" /* 11449 */;
+import _modDef14659 from "module_14659" /* 14659 */;
+import _modDef14660 from "module_14660" /* 14660 */;
+import _modDef14661 from "module_14661" /* 14661 */;
+import _modDef14662 from "module_14662" /* 14662 */;
+import _modDef14663 from "module_14663" /* 14663 */;
+import _modDef14664 from "module_14664" /* 14664 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 6006 */;
-import ThemeStore from "ThemeStore" /* 1207 */;
+import SoundboardStore from "SoundboardStore" /* 6007 */;
+import ThemeStore from "ThemeStore" /* 1204 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6497 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
+import CallStore from "CallStore" /* 6498 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
 
 require = fn;
 let user = ["user", "name", "channel", "voiceState", "withStream", "isSpectating", "isActionSheet", "onPress"];
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Platform } = get_ActivityIndicator);
-const Fonts = fn(1087).Fonts;
+const Fonts = fn(1084).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
-let createStyles = fn(4971);
+let createStyles = fn(4972);
 let obj = { row: { flexDirection: "row" }, voiceStatusIcon: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8 }, voiceStatusIconMargin: { marginLeft: 8 }, streamPreview: { marginHorizontal: 16, marginBottom: 16, alignItems: "center", flex: 1 }, ringingButton: null, ringingButtonLabel: null, autoDisabledVideo: null, autoDisabledVideoLabel: null };
 let obj3 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginLeft: 8 };
 obj.ringingButton = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderRadius: nativeDefault.radii.xs, height: 32, alignItems: "center", justifyContent: "center" };
@@ -46,7 +46,7 @@ obj.ringingButtonLabel = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 14, lin
 obj.autoDisabledVideo = { flexDirection: "row", alignItems: "center" };
 obj.autoDisabledVideoLabel = { marginLeft: 4 };
 let closure_17 = createStyles.createStyles(obj);
-createStyles = fn(4971);
+createStyles = fn(4972);
 let obj6 = { labelCallScreen: null, voiceStatusIcon: null, ringingButton: null, ringingButtonLabel: null };
 let obj5 = { fontFamily: Fonts.PRIMARY_SEMIBOLD, fontSize: 14, lineHeight: 18, marginHorizontal: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE };
 obj6.labelCallScreen = { fontFamily: Fonts.PRIMARY_MEDIUM, color: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
@@ -373,7 +373,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const tmp3 = closure_18();
   const id = AuthenticationStore.getId();
   const obj2 = { userId: user.id };
-  const tmp7 = channel(6781)({ userId: user.id });
+  const tmp7 = channel(6782)({ userId: user.id });
   const items = [SoundboardStore];
   const stateFromStores = user(504).useStateFromStores(items, () => SoundboardStore.isUserPlayingSounds(user.id));
   const obj3 = user(504);
@@ -466,10 +466,10 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     guild_id = channel.guild_id;
   }
   obj8.guildId = guild_id;
-  obj8.size = user(1202).AvatarSizes.REFRESH_MEDIUM_32;
+  obj8.size = user(1199).AvatarSizes.REFRESH_MEDIUM_32;
   obj8.speaking = tmp7;
   obj8.playingSoundboard = stateFromStores;
-  obj7.leading = closure_14(user(1202).Avatar, obj8);
+  obj7.leading = closure_14(user(1199).Avatar, obj8);
   let tmp24Result = null;
   if (flag3) {
     tmp24Result = null;
@@ -477,16 +477,16 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const obj9 = { style: tmp2.row, children: null };
       let tmp21Result = null;
       if (user.isSpectating) {
-        const obj10 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14628), style: tmp20 };
-        tmp21Result = closure_14(tmp8(1202).Icon, obj10);
+        const obj10 = { size: tmp8(1199).Icon.Sizes.REFRESH_SMALL_16, source: channel(14664), style: tmp20 };
+        tmp21Result = closure_14(tmp8(1199).Icon, obj10);
       }
       const items4 = [tmp21Result, , , , ];
       if (!tmp16) {
         items4[1] = null;
         let tmp21Result5 = null;
         if (tmp15) {
-          const obj11 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14625), style: tmp20 };
-          tmp21Result5 = closure_14(tmp8(1202).Icon, obj11);
+          const obj11 = { size: tmp8(1199).Icon.Sizes.REFRESH_SMALL_16, source: channel(14661), style: tmp20 };
+          tmp21Result5 = closure_14(tmp8(1199).Icon, obj11);
         }
         items4[2] = tmp21Result5;
         if (!tmp14) {
@@ -494,29 +494,29 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           let tmp21Result6 = null;
           if (flag2) {
             const obj12 = { style: tmp20 };
-            tmp21Result6 = closure_14(tmp8(1202).LiveTag, obj12);
+            tmp21Result6 = closure_14(tmp8(1199).LiveTag, obj12);
           }
           items4[4] = tmp21Result6;
           obj9.children = items4;
           tmp24Result = closure_15(closure_5, obj9);
         } else {
           if (localVideoDisabled) {
-            const obj13 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14626), style: tmp2.voiceStatusIconMargin, disableColor: true };
+            const obj13 = { size: tmp8(1199).Icon.Sizes.REFRESH_SMALL_16, source: channel(14662), style: tmp2.voiceStatusIconMargin, disableColor: true };
             let obj14 = obj13;
           } else {
-            obj14 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: channel(14627), style: tmp20 };
+            obj14 = { size: tmp8(1199).Icon.Sizes.REFRESH_SMALL_16, source: channel(14663), style: tmp20 };
           }
-          closure_14(tmp8(1202).Icon, obj14);
+          closure_14(tmp8(1199).Icon, obj14);
         }
       } else {
         if (tmp8Result.isThemeDark(stateFromStores1)) {
-          let tmp5Result = channel(14623);
+          let tmp5Result = channel(14659);
         } else {
-          tmp5Result = channel(14624);
+          tmp5Result = channel(14660);
         }
-        const obj15 = { size: tmp8(1202).Icon.Sizes.REFRESH_SMALL_16, source: tmp5Result, style: tmp2.voiceStatusIconMargin, color: tmp20.tintColor, disableColor: localMute };
-        closure_14(tmp8(1202).Icon, obj15);
-        tmp8Result = tmp8(4978);
+        const obj15 = { size: tmp8(1199).Icon.Sizes.REFRESH_SMALL_16, source: tmp5Result, style: tmp2.voiceStatusIconMargin, color: tmp20.tintColor, disableColor: localMute };
+        closure_14(tmp8(1199).Icon, obj15);
+        tmp8Result = tmp8(4979);
       }
     }
   }
@@ -529,10 +529,10 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     const obj17 = { children: null };
     const items5 = [name, ];
     const obj18 = { variant: "text-md/semibold", lineClamp: 1, color: "status-positive", children: null };
-    const intl = tmp8(1128).intl;
-    const items6 = ["\u00A0", intl.string(tmp8(1128).t["pFO/Ph"])];
+    const intl = tmp8(1125).intl;
+    const items6 = ["\u00A0", intl.string(tmp8(1125).t["pFO/Ph"])];
     obj18.children = items6;
-    items5[1] = closure_15(tmp8(5234).Text, obj18);
+    items5[1] = closure_15(tmp8(5235).Text, obj18);
     obj17.children = items5;
     tmp36 = closure_15(closure_16, obj17);
   }
@@ -545,19 +545,19 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   obj16.label = closure_14(user(8951).FormRow.Label, obj19);
   if (localVideoAutoDisabled) {
     const obj20 = { style: tmp2.autoDisabledVideo, children: null };
-    const obj21 = { source: channel(11446), size: tmp8(1202).Icon.Sizes.EXTRA_SMALL, disableColor: true };
-    const items7 = [closure_14(tmp8(1202).Icon, obj21), ];
+    const obj21 = { source: channel(11449), size: tmp8(1199).Icon.Sizes.EXTRA_SMALL, disableColor: true };
+    const items7 = [closure_14(tmp8(1199).Icon, obj21), ];
     const obj22 = { variant: "text-xs/medium", color: "text-default", style: tmp2.autoDisabledVideoLabel, children: null };
-    const intl3 = tmp8(1128).intl;
-    obj22.children = intl3.string(tmp8(1128).t.m2Hyj0);
-    items7[1] = closure_14(tmp8(5234).Text, obj22);
+    const intl3 = tmp8(1125).intl;
+    obj22.children = intl3.string(tmp8(1125).t.m2Hyj0);
+    items7[1] = closure_14(tmp8(5235).Text, obj22);
     obj20.children = items7;
     let stringResult = closure_15(closure_5, obj20);
   } else {
     stringResult = null;
     if (flag) {
-      const intl2 = tmp8(1128).intl;
-      stringResult = intl2.string(tmp8(1128).t.IyYqqY);
+      const intl2 = tmp8(1125).intl;
+      stringResult = intl2.string(tmp8(1125).t.IyYqqY);
     }
   }
   obj16.subLabel = stringResult;
@@ -591,12 +591,12 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
   const stateFromStores = user(504).useStateFromStores(first, tmp8);
   if (cResult[3] !== stateFromStores) {
     if (null == stateFromStores) {
-      const intl = tmp(1128).intl;
-      const stringResult = intl.string(tmp(1128).t.eXan7B);
+      const intl = tmp(1125).intl;
+      const stringResult = intl.string(tmp(1125).t.eXan7B);
       cResult[3] = stateFromStores;
       cResult[4] = stringResult;
     }
-    const intl2 = tmp(1128).intl;
+    const intl2 = tmp(1125).intl;
     if (null == stateFromStores.details) {
       let obj2 = { name: stateFromStores.name };
       intl2.format(tmp13, obj2);
@@ -659,9 +659,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
                       }
                     }
           };
-          obj4.children = closure_14(channel(11712), obj5);
+          obj4.children = closure_14(channel(11714), obj5);
           tmp31Result = closure_14(closure_5, obj4);
-          const tmp34 = channel(11712);
+          const tmp34 = channel(11714);
         }
         cResult[11] = channel;
         cResult[12] = tmp4;
@@ -694,7 +694,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
   const items = [PresenceStore];
   let stateFromStores = user(504).useStateFromStores(items, () => StreamerApplicationSelectors.getStreamerActivityByUserId(user.id, PresenceStore));
   if (null != stateFromStores) {
-    const intl2 = tmp3(1128).intl;
+    const intl2 = tmp3(1125).intl;
     if (null == stateFromStores.details) {
       stateFromStores = { name: null };
       stateFromStores.name = stateFromStores.name;
@@ -702,10 +702,10 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
     }
     const details = stateFromStores.details;
   } else {
-    const intl = tmp3(1128).intl;
+    const intl = tmp3(1125).intl;
     let obj2 = {};
     const merged = Object.assign(user);
-    let obj3 = { text: intl.string(tmp3(1128).t.eXan7B), style: null };
+    let obj3 = { text: intl.string(tmp3(1125).t.eXan7B), style: null };
     let labelCallScreen = null;
     if (user.isActionSheet) {
       labelCallScreen = tmp2.labelCallScreen;
@@ -736,9 +736,9 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Stream
               }
             }
       };
-      obj4.children = closure_14(channel(11712), obj5);
+      obj4.children = closure_14(channel(11714), obj5);
       tmp10Result = closure_14(closure_5, obj4);
-      const tmp20 = channel(11712);
+      const tmp20 = channel(11714);
     }
     const obj6 = { children: null };
     items1[1] = tmp10Result;
@@ -765,8 +765,8 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function RingBu
         const tmp8 = isActionSheet ? tmp5.ringingButtonLabel : tmp4.ringingButtonLabel;
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1128).intl;
-          const stringResult = intl.string(tmp(1128).t.bHa9kN);
+          const intl = tmp(1125).intl;
+          const stringResult = intl.string(tmp(1125).t.bHa9kN);
           cResult[3] = stringResult;
           let tmp10 = stringResult;
         } else {
@@ -774,7 +774,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function RingBu
         }
         if (cResult[4] !== tmp8) {
           const obj2 = { style: tmp8, children: tmp10 };
-          const tmp14 = closure_14(tmp(1202).LegacyText, obj2);
+          const tmp14 = closure_14(tmp(1199).LegacyText, obj2);
           cResult[4] = tmp8;
           cResult[5] = tmp14;
           let tmp12 = tmp14;
@@ -790,7 +790,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function RingBu
           }
         }
         const obj3 = { onPress: tmp6, accessibilityRole: "button", style: tmp7, children: tmp12 };
-        const tmp17 = closure_14(tmp(6908).PressableOpacity, obj3);
+        const tmp17 = closure_14(tmp(6910).PressableOpacity, obj3);
         cResult[6] = tmp6;
         cResult[7] = tmp7;
         cResult[8] = tmp12;
@@ -828,12 +828,12 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function RingBu
         children: null
       };
       const obj2 = { style: isActionSheet ? tmp4Result.ringingButtonLabel : tmp.ringingButtonLabel, children: null };
-      const intl = tmp5(1128).intl;
-      const stringResult = intl.string(tmp5(1128).t.bHa9kN);
+      const intl = tmp5(1125).intl;
+      const stringResult = intl.string(tmp5(1125).t.bHa9kN);
       obj2.children = stringResult;
-      tmp4Result = closure_14(tmp5(1202).LegacyText, obj2);
+      tmp4Result = closure_14(tmp5(1199).LegacyText, obj2);
       obj.children = tmp4Result;
-      closure_14(channelId(6908).PressableOpacity, obj);
+      closure_14(channelId(6910).PressableOpacity, obj);
     }
   }
   return tmp3;
@@ -856,8 +856,8 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function StopRi
         const tmp8 = isActionSheet ? tmp5.ringingButtonLabel : tmp4.ringingButtonLabel;
         const _Symbol = Symbol;
         if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1128).intl;
-          const stringResult = intl.string(tmp(1128).t.ygslb0);
+          const intl = tmp(1125).intl;
+          const stringResult = intl.string(tmp(1125).t.ygslb0);
           cResult[3] = stringResult;
           let tmp10 = stringResult;
         } else {
@@ -865,7 +865,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function StopRi
         }
         if (cResult[4] !== tmp8) {
           const obj2 = { style: tmp8, children: tmp10 };
-          const tmp14 = closure_14(tmp(1202).LegacyText, obj2);
+          const tmp14 = closure_14(tmp(1199).LegacyText, obj2);
           cResult[4] = tmp8;
           cResult[5] = tmp14;
           let tmp12 = tmp14;
@@ -881,7 +881,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function StopRi
           }
         }
         const obj3 = { onPress: tmp6, accessibilityRole: "button", style: tmp7, children: tmp12 };
-        const tmp17 = closure_14(tmp(6908).PressableOpacity, obj3);
+        const tmp17 = closure_14(tmp(6910).PressableOpacity, obj3);
         cResult[6] = tmp6;
         cResult[7] = tmp7;
         cResult[8] = tmp12;
@@ -919,12 +919,12 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function StopRi
         children: null
       };
       const obj2 = { style: isActionSheet ? tmp4Result.ringingButtonLabel : tmp.ringingButtonLabel, children: null };
-      const intl = tmp5(1128).intl;
-      const stringResult = intl.string(tmp5(1128).t.ygslb0);
+      const intl = tmp5(1125).intl;
+      const stringResult = intl.string(tmp5(1125).t.ygslb0);
       obj2.children = stringResult;
-      tmp4Result = closure_14(tmp5(1202).LegacyText, obj2);
+      tmp4Result = closure_14(tmp5(1199).LegacyText, obj2);
       obj.children = tmp4Result;
-      closure_14(channelId(6908).PressableOpacity, obj);
+      closure_14(channelId(6910).PressableOpacity, obj);
     }
   }
   return tmp3;
@@ -1102,8 +1102,8 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     return hasItem;
   }, items1);
   const obj = id(504);
-  const name = id2(5989).getName(id2.guild_id, id2.id, id);
-  const obj2 = id2(5989);
+  const name = id2(5990).getName(id2.guild_id, id2.id, id);
+  const obj2 = id2(5990);
   const obj4 = {
     onPress() {
       return dependencyMap(id);
@@ -1112,7 +1112,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     leading: null,
     trailing: null
   };
-  const canRing = id(7423).useCanRing(id);
+  const canRing = id(7425).useCanRing(id);
   const obj5 = { text: name, style: null };
   let labelCallScreen = null;
   if (isActionSheet) {
@@ -1120,8 +1120,8 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   obj5.style = labelCallScreen;
   obj4.label = closure_14(id(8951).FormRow.Label, obj5);
-  const obj3 = id(7423);
-  obj4.leading = closure_14(id(1202).Avatar, { user: id, guildId: id2.guild_id, size: id(1202).AvatarSizes.REFRESH_MEDIUM_32 });
+  const obj3 = id(7425);
+  obj4.leading = closure_14(id(1199).Avatar, { user: id, guildId: id2.guild_id, size: id(1199).AvatarSizes.REFRESH_MEDIUM_32 });
   if (!canRing) {
     obj4.trailing = null;
     const obj7 = {};
@@ -1136,7 +1136,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
     obj8.isActionSheet = isActionSheet;
     closure_14(stateFromStores ? closure_22 : closure_21, obj8);
   }
-  const obj6 = { user: id, guildId: id2.guild_id, size: id(1202).AvatarSizes.REFRESH_MEDIUM_32 };
+  const obj6 = { user: id, guildId: id2.guild_id, size: id(1199).AvatarSizes.REFRESH_MEDIUM_32 };
 }));
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_calls/native/action_sheet/VoiceMemberUser.tsx");

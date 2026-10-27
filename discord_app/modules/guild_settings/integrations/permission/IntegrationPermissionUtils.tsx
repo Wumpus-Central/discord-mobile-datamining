@@ -1,8 +1,8 @@
-// === Module 7633: IntegrationPermissionUtils ===
+// === Module 7634: IntegrationPermissionUtils ===
 
-// Module 7633 (IntegrationPermissionUtils)
-import Server from "Server" /* 2000 */;
-import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5634 */;
+// Module 7634 (IntegrationPermissionUtils)
+import Server from "Server" /* 1997 */;
+import ApplicationCommandTypes from "ApplicationCommandTypes" /* 5635 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

@@ -1,13 +1,13 @@
-// === Module 13431: useCanPurchaseBoosts ===
+// === Module 13445: useCanPurchaseBoosts ===
 
-// Module 13431 (useCanPurchaseBoosts)
+// Module 13445 (useCanPurchaseBoosts)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7505 */;
-import UserStore from "UserStore" /* 1392 */;
+import useFractionalPremiumInfoDefault from "useFractionalPremiumInfo" /* 7506 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const FractionalPremiumStates = fn(1394).FractionalPremiumStates;
+const FractionalPremiumStates = fn(1391).FractionalPremiumStates;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useCanPurchaseBoosts.tsx");

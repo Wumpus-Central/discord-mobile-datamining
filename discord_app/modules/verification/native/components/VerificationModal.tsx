@@ -1,29 +1,29 @@
-// === Module 18981: VerificationModal ===
+// === Module 19019: VerificationModal ===
 
-// Module 18981 (VerificationModal)
+// Module 19019 (VerificationModal)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
-import Link from "Link" /* 1506 */;
-import ChatInputUtils from "ChatInputUtils" /* 5159 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import NavigatorHeader from "NavigatorHeader" /* 6924 */;
-import ResendEmailDefault from "ResendEmail" /* 6996 */;
-import ConfirmEmailChangeStartDefault from "ConfirmEmailChangeStart" /* 7002 */;
-import ConfirmEmailChangeCodeDefault from "ConfirmEmailChangeCode" /* 7005 */;
-import EnterEmailDefault from "EnterEmail" /* 7076 */;
-import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 7089 */;
-import Navigator from "Navigator" /* 7095 */;
-import VerifyPhoneDefault from "VerifyPhone" /* 7173 */;
-import HeaderActionButton from "HeaderActionButton" /* 7485 */;
+import util from "util" /* 1125 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import Link from "Link" /* 1503 */;
+import ChatInputUtils from "ChatInputUtils" /* 5160 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import NavigatorHeader from "NavigatorHeader" /* 6926 */;
+import ResendEmailDefault from "ResendEmail" /* 6998 */;
+import ConfirmEmailChangeStartDefault from "ConfirmEmailChangeStart" /* 7004 */;
+import ConfirmEmailChangeCodeDefault from "ConfirmEmailChangeCode" /* 7007 */;
+import EnterEmailDefault from "EnterEmail" /* 7078 */;
+import UserSettingsConfirmPasswordDefault from "UserSettingsConfirmPassword" /* 7091 */;
+import Navigator from "Navigator" /* 7097 */;
+import VerifyPhoneDefault from "VerifyPhone" /* 7175 */;
+import HeaderActionButton from "HeaderActionButton" /* 7486 */;
 import _modDef9032 from "module_9032" /* 9032 */;
-import OverviewDefault from "Overview" /* 18987 */;
+import OverviewDefault from "Overview" /* 19025 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PhoneVerificationStore from "PhoneVerificationStore" /* 18982 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4817 */;
-import UserStore from "UserStore" /* 1392 */;
+import PhoneVerificationStore from "PhoneVerificationStore" /* 19020 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4818 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function getScreens() {
@@ -57,14 +57,14 @@ function getScreens() {
     obj.onPress = function onPress() {
       const obj2 = { key: "VerificationOverviewMore", options: null, hasIcons: false };
       const obj3 = { label: null, isDestructive: true, onPress: null };
-      const intl = closure_1_0(1128).intl;
-      obj3.label = intl.string(closure_1_0(1128).t["2jxGer"]);
+      const intl = closure_1_0(1125).intl;
+      obj3.label = intl.string(closure_1_0(1125).t["2jxGer"]);
       obj3.onPress = function onPress() {
         return closure_1_1(dependencyMap[21]).logout("verification_modal");
       };
       const items = [obj3];
       obj2.options = items;
-      const result = closure_1_0(7290).showSimpleActionSheet(obj2);
+      const result = closure_1_0(7292).showSimpleActionSheet(obj2);
     };
     return jsx(HeaderActionButton.HeaderActionButton, { source: _modDef9032, accessibilityLabel: null, onPress: null });
   };
@@ -120,7 +120,7 @@ function getScreens() {
     closure_0 = arg1;
     let obj = {};
     const merged = Object.assign(arg0);
-    obj.reason = closure_0(7140).ChangePhoneReason.USER_ACTION_REQUIRED;
+    obj.reason = closure_0(7142).ChangePhoneReason.USER_ACTION_REQUIRED;
     obj.onComplete = function onComplete(phone) {
       return closure_0.push(constants.VERIFY_PHONE, {
         phone,
@@ -154,20 +154,20 @@ function getScreens() {
                   } else {
                     c4 = 1;
                     currentUser = currentUser.getCurrentUser();
-                    const result = v3(6997).isPhoneReverification(currentUser, closure_2_7.getAction());
-                    const obj10 = v3(7140);
+                    const result = v3(6999).isPhoneReverification(currentUser, closure_2_7.getAction());
+                    const obj10 = v3(7142);
                     if (result) {
                       c2 = 3;
                       c1 = 1;
-                      const obj4 = { value: obj10.reverifyPhone(closure_0, closure_0, closure_0(7140).ChangePhoneReason.USER_ACTION_REQUIRED), done: false };
+                      const obj4 = { value: obj10.reverifyPhone(closure_0, closure_0, closure_0(7142).ChangePhoneReason.USER_ACTION_REQUIRED), done: false };
                       return obj4;
                     } else {
                       c2 = 2;
                       c1 = 1;
-                      const obj5 = { value: obj10.addPhone(closure_0, closure_0, closure_0(7140).ChangePhoneReason.USER_ACTION_REQUIRED), done: false };
+                      const obj5 = { value: obj10.addPhone(closure_0, closure_0, closure_0(7142).ChangePhoneReason.USER_ACTION_REQUIRED), done: false };
                       return obj5;
                     }
-                    const obj9 = v3(6997);
+                    const obj9 = v3(6999);
                   }
                 } else if (1 === tmp6) {
                   c4 = 0;
@@ -285,7 +285,7 @@ function getScreens() {
         }
       });
     };
-    return closure_11(closure_1(7139), obj);
+    return closure_11(closure_1(7141), obj);
   };
   obj[constants.ADD_PHONE] = obj26;
   const obj29 = { impressionName: discord_common_AnalyticsUtils.ImpressionNames.USER_VERIFICATION_MODAL, impressionProperties: null, headerTitle: null, render: null };
@@ -317,10 +317,10 @@ function getScreens() {
   return obj;
 }
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ UserRequiredActions: closure_9, VerificationModalScenes: c10 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_12 = createStyles.createStyles({ button: { position: "absolute", right: 32, bottom: 32, left: 32 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PhoneThenEmailInterstitial(navigation) {
@@ -328,10 +328,10 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PhoneT
   navigation = navigation.navigation;
   const tmp4 = closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1128).intl;
-    const stringResult = intl.string(tmp(1128).t.KLnLIP);
-    const intl2 = tmp(1128).intl;
-    const stringResult1 = intl2.string(tmp(1128).t.XGbCq3);
+    const intl = tmp(1125).intl;
+    const stringResult = intl.string(tmp(1125).t.KLnLIP);
+    const intl2 = tmp(1125).intl;
+    const stringResult1 = intl2.string(tmp(1125).t.XGbCq3);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp5 = stringResult;
@@ -340,8 +340,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PhoneT
     [tmp5, tmp6] = cResult;
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl3 = tmp(1128).intl;
-    const stringResult2 = intl3.string(tmp(1128).t["3oK4qw"]);
+    const intl3 = tmp(1125).intl;
+    const stringResult2 = intl3.string(tmp(1125).t["3oK4qw"]);
     cResult[2] = stringResult2;
     let tmp9 = stringResult2;
   } else {
@@ -365,7 +365,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PhoneT
           navigation.dispatch(StackActions.push(ENTER_EMAIL));
         }
     };
-    const tmp13 = jsx(tmp(5244).Button, {
+    const tmp13 = jsx(tmp(5245).Button, {
       text: tmp9,
       onPress() {
           const currentUser = UserStore.getCurrentUser();
@@ -395,23 +395,23 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PhoneT
     return tmp14;
   }
   const obj = navigation(576);
-  const tmp15 = jsx(navigation(1202).EmptyState, { Illustration: navigation(18983).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> });
+  const tmp15 = jsx(navigation(1199).EmptyState, { Illustration: navigation(19021).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> });
   cResult[5] = tmp4.button;
   cResult[6] = tmp11;
   cResult[7] = tmp15;
   tmp14 = tmp15;
-  const obj3 = { Illustration: navigation(18983).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> };
+  const obj3 = { Illustration: navigation(19021).VerifyPhone, title: tmp5, body: tmp6, children: <View style={tmp4.button}>{tmp11}</View> };
 }) : (function PhoneThenEmailInterstitial(navigation) {
   navigation = navigation.navigation;
-  const obj = { Illustration: navigation(18983).VerifyPhone, title: null, body: null, children: null };
-  const intl = navigation(1128).intl;
-  obj.title = intl.string(navigation(1128).t.KLnLIP);
-  const intl2 = navigation(1128).intl;
-  obj.body = intl2.string(navigation(1128).t.XGbCq3);
+  const obj = { Illustration: navigation(19021).VerifyPhone, title: null, body: null, children: null };
+  const intl = navigation(1125).intl;
+  obj.title = intl.string(navigation(1125).t.KLnLIP);
+  const intl2 = navigation(1125).intl;
+  obj.body = intl2.string(navigation(1125).t.XGbCq3);
   const obj2 = { style: closure_12().button, children: null };
   const obj3 = { text: null, onPress: null };
-  const intl3 = navigation(1128).intl;
-  obj3.text = intl3.string(navigation(1128).t["3oK4qw"]);
+  const intl3 = navigation(1125).intl;
+  obj3.text = intl3.string(navigation(1125).t["3oK4qw"]);
   obj3.onPress = function onPress() {
     const currentUser = UserStore.getCurrentUser();
     let email;
@@ -426,9 +426,9 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function PhoneT
     const StackActions = Link.StackActions;
     navigation.dispatch(StackActions.push(ENTER_EMAIL));
   };
-  obj2.children = jsx(navigation(5244).Button, { text: null, onPress: null });
+  obj2.children = jsx(navigation(5245).Button, { text: null, onPress: null });
   obj.children = <View style={closure_12().button}>{null}</View>;
-  return jsx(navigation(1202).EmptyState, { Illustration: navigation(18983).VerifyPhone, title: null, body: null, children: null });
+  return jsx(navigation(1199).EmptyState, { Illustration: navigation(19021).VerifyPhone, title: null, body: null, children: null });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -530,10 +530,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Verifica
   }, items1);
   const effect = noop.useEffect(() => {
     ActionSheetActionCreatorsDefault.hideActionSheet();
-    stateFromStores(5159).dismissKeyboard();
+    stateFromStores(5160).dismissKeyboard();
   }, []);
   let obj2 = { screens: noop.useMemo(() => getScreens(), []), initialRouteStack: memo, headerBackTitle: null };
-  const intl = stateFromStores(1128).intl;
-  obj2.headerBackTitle = intl.string(stateFromStores(1128).t["13/7kX"]);
-  return jsx(stateFromStores(7095).Navigator, { screens: noop.useMemo(() => getScreens(), []), initialRouteStack: memo, headerBackTitle: null });
+  const intl = stateFromStores(1125).intl;
+  obj2.headerBackTitle = intl.string(stateFromStores(1125).t["13/7kX"]);
+  return jsx(stateFromStores(7097).Navigator, { screens: noop.useMemo(() => getScreens(), []), initialRouteStack: memo, headerBackTitle: null });
 });

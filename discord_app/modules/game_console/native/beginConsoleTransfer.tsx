@@ -1,8 +1,8 @@
-// === Module 11652: beginConsoleTransfer ===
+// === Module 11654: beginConsoleTransfer ===
 
-// Module 11652 (beginConsoleTransfer)
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11653 */;
-import transferToXboxDefault from "transferToXbox" /* 11665 */;
+// Module 11654 (beginConsoleTransfer)
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11655 */;
+import transferToXboxDefault from "transferToXbox" /* 11667 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -90,7 +90,7 @@ let closure_5 = async function _beginConsoleTransfer(arg0) {
   }
 };
 const items = [, ];
-({ PLAYSTATION: arr[0], PLAYSTATION_STAGING: arr[1] } = fn(1087).PlatformTypes);
+({ PLAYSTATION: arr[0], PLAYSTATION_STAGING: arr[1] } = fn(1084).PlatformTypes);
 const set = new Set(items);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/native/beginConsoleTransfer.tsx");

@@ -1,14 +1,14 @@
-// === Module 19267: useOnboardingMonetizationEnableFlow ===
+// === Module 19305: useOnboardingMonetizationEnableFlow ===
 
-// Module 19267 (useOnboardingMonetizationEnableFlow)
+// Module 19305 (useOnboardingMonetizationEnableFlow)
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const isGuildOwner = fn(4841).isGuildOwner;
-const Constants = fn(1087);
+const isGuildOwner = fn(4842).isGuildOwner;
+const Constants = fn(1084);
 ({ GuildFeatures: metroRequire, HelpdeskArticles: closure_7, MarketingURLs: closure_8 } = Constants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -106,9 +106,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
       }
     }
   }
-  const tmp20 = refresh(19268);
-  ({ error, loading, createEnableRequest, submittedRequest } = refresh(19268)(undefined));
-  const tmp20Result = refresh(19268)(undefined);
+  const tmp20 = refresh(19306);
+  ({ error, loading, createEnableRequest, submittedRequest } = refresh(19306)(undefined));
+  const tmp20Result = refresh(19306)(undefined);
   if (features != null) {
     class T {
       constructor() {
@@ -121,11 +121,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
       }
     }
   }
-  const tmp19ResultResult = refresh(19269)(undefined);
+  const tmp19ResultResult = refresh(19307)(undefined);
   ({ loading: loading2, error: error2, refresh } = tmp19ResultResult);
   const eligibility = tmp19ResultResult.eligibility;
-  const tmp19Result = refresh(19269);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(19270)(eligibility));
+  const tmp19Result = refresh(19307);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(19308)(eligibility));
   if (features != null) {
     class T {
       constructor() {
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
       }
     }
   }
-  const tmp24 = refresh(19270)(eligibility);
+  const tmp24 = refresh(19308)(eligibility);
   if (features != null) {
     class T {
       constructor() {
@@ -276,10 +276,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
         return tmp3;
       }
     }
-    const obj3 = { faqUrl: refresh(2067).getArticleURL(constants2.CREATOR_FAQ) };
-    const formatResult = obj7.format(tmp(1128).t.aJUdOi, obj3);
+    const obj3 = { faqUrl: refresh(2064).getArticleURL(constants2.CREATOR_FAQ) };
+    const formatResult = obj7.format(tmp(1125).t.aJUdOi, obj3);
     cResult[9] = formatResult;
-    const tmp19Result2 = refresh(2067);
+    const tmp19Result2 = refresh(2064);
   } else {
     class T {
       constructor() {
@@ -451,7 +451,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
             return tmp3;
           }
         }
-        formatResult1 = obj11.format(tmp(1128).t.wbVIUB, {});
+        formatResult1 = obj11.format(tmp(1125).t.wbVIUB, {});
       }
     }
   }
@@ -485,18 +485,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
   if (features != null) {
     id = features.id;
   }
-  const tmp10 = refresh(19268);
-  ({ submittedRequest, error, loading, createEnableRequest } = refresh(19268)(id));
+  const tmp10 = refresh(19306);
+  ({ submittedRequest, error, loading, createEnableRequest } = refresh(19306)(id));
   let id1;
-  const tmp10Result = refresh(19268)(id);
+  const tmp10Result = refresh(19306)(id);
   if (features != null) {
     id1 = features.id;
   }
-  const tmp9ResultResult = refresh(19269)(id1);
+  const tmp9ResultResult = refresh(19307)(id1);
   refresh = tmp9ResultResult.refresh;
   ({ eligibility, loading: loading2, error: error2 } = tmp9ResultResult);
-  const tmp9Result = refresh(19269);
-  ({ isApplicationRejected, requestCooldownDuration } = refresh(19270)(eligibility));
+  const tmp9Result = refresh(19307);
+  ({ isApplicationRejected, requestCooldownDuration } = refresh(19308)(eligibility));
   let hasItem2;
   if (features != null) {
     const features3 = features.features;
@@ -511,7 +511,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
     }
     tmp19 = true === hasItem3;
   }
-  const tmp16 = refresh(19270)(eligibility);
+  const tmp16 = refresh(19308)(eligibility);
   let id2;
   if (features != null) {
     id2 = features.id;
@@ -528,21 +528,21 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
   if (eligibility != null) {
     canApply = eligibility.canApply;
   }
-  const intl = tmp(1128).intl;
+  const intl = tmp(1125).intl;
   const obj2 = { faqUrl: null };
   const tmpResult3 = require("CreatorMonetizationRestrictionsHooks");
-  obj2.faqUrl = refresh(2067).getArticleURL(constants2.CREATOR_FAQ);
-  const tmp9Result3 = refresh(2067);
+  obj2.faqUrl = refresh(2064).getArticleURL(constants2.CREATOR_FAQ);
+  const tmp9Result3 = refresh(2064);
   if (isApplicationRejected) {
     if (tmpResult3.useIsMonetizationReapplicationDisabled(id2).isMonetizationReapplicationDisabled) {
       if (true === hasItem) {
-        const intl4 = tmp(1128).intl;
+        const intl4 = tmp(1125).intl;
         const obj3 = { communityGuidelineUrl: constants3.GUIDELINES };
-        let formatResult1 = intl4.format(tmp(1128).t["0o1Q+t"], obj3);
+        let formatResult1 = intl4.format(tmp(1125).t["0o1Q+t"], obj3);
       } else {
-        const intl3 = tmp(1128).intl;
+        const intl3 = tmp(1125).intl;
         const obj4 = { communityGuidelineUrl: constants3.GUIDELINES };
-        formatResult1 = intl3.format(tmp(1128).t.b6h59n, obj4);
+        formatResult1 = intl3.format(tmp(1125).t.b6h59n, obj4);
       }
     }
   }
@@ -552,10 +552,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
   }
   let formatResult2;
   if (tmp28) {
-    const intl2 = tmp(1128).intl;
-    const obj5 = { requestCooldownDuration, creatorRevenuePolicyUrl: tmp9(2067).getArticleURL(constants2.CREATOR_POLICY) };
-    formatResult2 = intl2.format(tmp(1128).t.TvX207, obj5);
-    const tmp9Result4 = tmp9(2067);
+    const intl2 = tmp(1125).intl;
+    const obj5 = { requestCooldownDuration, creatorRevenuePolicyUrl: tmp9(2064).getArticleURL(constants2.CREATOR_POLICY) };
+    formatResult2 = intl2.format(tmp(1125).t.TvX207, obj5);
+    const tmp9Result4 = tmp9(2064);
   }
   let tmp34 = isExpeditedOnboardingGuild;
   if (isExpeditedOnboardingGuild) {
@@ -574,8 +574,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useOnboa
   if (isApplicationRejected) {
     if (tmp35) {
       if (stateFromStores) {
-        const intl5 = tmp(1128).intl;
-        formatResult3 = intl5.format(tmp(1128).t.wbVIUB, {});
+        const intl5 = tmp(1125).intl;
+        formatResult3 = intl5.format(tmp(1125).t.wbVIUB, {});
       }
     }
   }

@@ -1,9 +1,9 @@
-// === Module 19156: InviteEmpty ===
+// === Module 19194: InviteEmpty ===
 
-// Module 19156 (InviteEmpty)
+// Module 19194 (InviteEmpty)
 import c from "c" /* 576 */;
-import shared from "shared" /* 4978 */;
-import FastImageDefault from "FastImage" /* 5669 */;
+import shared from "shared" /* 4979 */;
+import FastImageDefault from "FastImage" /* 5670 */;
 import _mod8724 from "module_8724" /* 8724 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInviteEmp
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_10841");
+          return require("module_10844");
         },
       darker() {
-          return require("module_19157");
+          return require("module_19195");
         },
       light() {
-          return require("module_10840");
+          return require("module_10843");
         }
     };
     const illustrationSource = _mod8724.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInviteEmp
   const obj = shared;
   return _mod8724.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_10841");
+      return require("module_10844");
     },
     darker() {
-      return require("module_19157");
+      return require("module_19195");
     },
     light() {
-      return require("module_10840");
+      return require("module_10843");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getInviteEmptySource(theme) {
   return _mod8724.getIllustrationSource(theme, {
     dark() {
-      return require("module_10841");
+      return require("module_10844");
     },
     darker() {
-      return require("module_19157");
+      return require("module_19195");
     },
     light() {
-      return require("module_10840");
+      return require("module_10843");
     }
   });
 }

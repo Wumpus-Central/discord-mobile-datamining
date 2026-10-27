@@ -1,20 +1,20 @@
-// === Module 11667: XboxInstallAlert ===
+// === Module 11669: XboxInstallAlert ===
 
-// Module 11667 (XboxInstallAlert)
+// Module 11669 (XboxInstallAlert)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import LinkingDefault from "Linking" /* 5660 */;
-import common_AlertDefault from "common/Alert" /* 5978 */;
-import _modDef11668 from "module_11668" /* 11668 */;
+import native from "native" /* 1199 */;
+import LinkingDefault from "Linking" /* 5661 */;
+import common_AlertDefault from "common/Alert" /* 5979 */;
+import _modDef11670 from "module_11670" /* 11670 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GameConsoleConstants = fn(9626);
+const GameConsoleConstants = fn(9628);
 ({ XBOX_ANDROID_APP_LINK: c3, XBOX_IOS_APP_LINK: closure_4 } = GameConsoleConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { externalLinkIcon: null };
 let size = { tintColor: nativeDefault.colors.WHITE, width: 20, height: 20, marginLeft: 8 };
 obj2.externalLinkIcon = size;
@@ -28,14 +28,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxInst
   const tmp4 = closure_6();
   _require = tmp4;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1128).intl;
-    const stringResult = intl.string(tmp(1128).t["12Kx2v"]);
-    const intl2 = tmp(1128).intl;
-    const stringResult1 = intl2.string(tmp(1128).t.msZW3j);
-    const intl3 = tmp(1128).intl;
-    const stringResult2 = intl3.string(tmp(1128).t["n+VrqG"]);
-    const intl4 = tmp(1128).intl;
-    const stringResult3 = intl4.string(tmp(1128).t.kYaBOg);
+    const intl = tmp(1125).intl;
+    const stringResult = intl.string(tmp(1125).t["12Kx2v"]);
+    const intl2 = tmp(1125).intl;
+    const stringResult1 = intl2.string(tmp(1125).t.msZW3j);
+    const intl3 = tmp(1125).intl;
+    const stringResult2 = intl3.string(tmp(1125).t["n+VrqG"]);
+    const intl4 = tmp(1125).intl;
+    const stringResult3 = intl4.string(tmp(1125).t.kYaBOg);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     cResult[2] = stringResult2;
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxInst
   }
   if (cResult[4] !== tmp4.externalLinkIcon) {
     const fn = function _() {
-      return jsx(native.Icon, { source: _modDef11668, style: closure_0.externalLinkIcon });
+      return jsx(native.Icon, { source: _modDef11670, style: closure_0.externalLinkIcon });
     };
     cResult[4] = tmp4.externalLinkIcon;
     cResult[5] = fn;
@@ -59,8 +59,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxInst
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function u() {
-      const obj = closure_0(1384);
-      const isAndroidResult = closure_0(1384).isAndroid();
+      const obj = closure_0(1381);
+      const isAndroidResult = closure_0(1381).isAndroid();
       const openURL = LinkingDefault.openURL;
       if (isAndroidResult) {
         openURL(closure_1_3);
@@ -108,11 +108,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxInst
   obj.cancelText = intl4.string(require("util").t.kYaBOg);
   obj.fillCancelText = true;
   obj.renderConfirmRightIcon = function renderConfirmRightIcon() {
-    return jsx(native.Icon, { source: _modDef11668, style: closure_0.externalLinkIcon });
+    return jsx(native.Icon, { source: _modDef11670, style: closure_0.externalLinkIcon });
   };
   obj.onConfirm = function onConfirm() {
-    const obj = closure_0(1384);
-    const isAndroidResult = closure_0(1384).isAndroid();
+    const obj = closure_0(1381);
+    const isAndroidResult = closure_0(1381).isAndroid();
     const openURL = LinkingDefault.openURL;
     if (isAndroidResult) {
       openURL(closure_1_3);

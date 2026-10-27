@@ -1,14 +1,14 @@
-// === Module 18940: ProximitySensorManager ===
+// === Module 18978: ProximitySensorManager ===
 
-// Module 18940 (ProximitySensorManager)
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import VoiceCallTypes from "VoiceCallTypes" /* 5735 */;
-import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 18941 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
-import AudioRouteStore from "AudioRouteStore" /* 5734 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+// Module 18978 (ProximitySensorManager)
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import VoiceCallTypes from "VoiceCallTypes" /* 5736 */;
+import NativeProximitySensorManagerModuleDefault from "NativeProximitySensorManagerModule" /* 18979 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6643 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
+import AudioRouteStore from "AudioRouteStore" /* 5735 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 
 require = fn;
 function handleChange() {

@@ -1,15 +1,15 @@
-// === Module 10648: getActivityStatusText ===
+// === Module 10651: getActivityStatusText ===
 
-// Module 10648 (getActivityStatusText)
-import Constants from "Constants" /* 1087 */;
-import util from "util" /* 1128 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7812 */;
+// Module 10651 (getActivityStatusText)
+import Constants from "Constants" /* 1084 */;
+import util from "util" /* 1125 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7813 */;
 import isCrunchyrollActivityDefault from "isCrunchyrollActivity" /* 8832 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10646 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10649 */;
-import getChannelCopyForEmbeddedActivityDefault from "getChannelCopyForEmbeddedActivity" /* 10650 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10651 */;
-import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10652 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10649 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10652 */;
+import getChannelCopyForEmbeddedActivityDefault from "getChannelCopyForEmbeddedActivity" /* 10653 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10654 */;
+import StageChannelRichPresenceUtils from "StageChannelRichPresenceUtils" /* 10655 */;
 import size from "module_2" /* 2 */;
 
 const ActivityTypes = Constants.ActivityTypes;

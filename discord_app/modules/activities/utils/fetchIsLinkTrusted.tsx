@@ -1,8 +1,8 @@
-// === Module 15739: fetchIsLinkTrusted ===
+// === Module 15775: fetchIsLinkTrusted ===
 
-// Module 15739 (fetchIsLinkTrusted)
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import URLUtilsDefault from "URLUtils" /* 1386 */;
+// Module 15775 (fetchIsLinkTrusted)
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -202,7 +202,7 @@ let closure_7 = async function _fetchIsLinkTrusted(arg0) {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const map = new Map();
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/fetchIsLinkTrusted.tsx");

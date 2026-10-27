@@ -1,17 +1,17 @@
-// === Module 14181: useOnConnectToConsole ===
+// === Module 14208: useOnConnectToConsole ===
 
-// Module 14181 (useOnConnectToConsole)
-import dismissible_content from "dismissible_content" /* 4807 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5001 */;
-import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9610 */;
-import beginConsoleTransfer from "beginConsoleTransfer" /* 11652 */;
-import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 14080 */;
+// Module 14208 (useOnConnectToConsole)
+import dismissible_content from "dismissible_content" /* 4808 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5002 */;
+import XboxLinkModalActionCreatorsDefault from "XboxLinkModalActionCreators" /* 9612 */;
+import beginConsoleTransfer from "beginConsoleTransfer" /* 11654 */;
+import PlayStationLinkModalActionCreatorsDefault from "PlayStationLinkModalActionCreators" /* 14094 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticsLocations: closure_4, PlatformTypes: hasOwnProperty } = Constants);
 const ReactCompilerGating = fn(558);
 function onConnectToConsole(channel, found) {

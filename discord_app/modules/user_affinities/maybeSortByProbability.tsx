@@ -1,7 +1,7 @@
-// === Module 8442: maybeSortByProbability ===
+// === Module 8441: maybeSortByProbability ===
 
-// Module 8442 (maybeSortByProbability)
-import VoiceUserAffinityExperiment from "VoiceUserAffinityExperiment" /* 8443 */;
+// Module 8441 (maybeSortByProbability)
+import VoiceUserAffinityExperiment from "VoiceUserAffinityExperiment" /* 8442 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/user_affinities/maybeSortByProbability.tsx");

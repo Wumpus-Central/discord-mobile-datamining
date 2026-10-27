@@ -1,10 +1,10 @@
-// === Module 11596: getStreamSettingsForPreset ===
+// === Module 11598: getStreamSettingsForPreset ===
 
-// Module 11596 (getStreamSettingsForPreset)
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 5845 */;
-import canStreamWithSettingsDefault from "canStreamWithSettings" /* 11597 */;
-import StreamSettingsConstants from "StreamSettingsConstants" /* 5814 */;
+// Module 11598 (getStreamSettingsForPreset)
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import getFrontierTuningConfigIfEligibleDefault from "getFrontierTuningConfigIfEligible" /* 5846 */;
+import canStreamWithSettingsDefault from "canStreamWithSettings" /* 11599 */;
+import StreamSettingsConstants from "StreamSettingsConstants" /* 5815 */;
 import size from "module_2" /* 2 */;
 
 function getApplicationStreamPresetValues() {

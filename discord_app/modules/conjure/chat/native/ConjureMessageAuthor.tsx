@@ -1,25 +1,25 @@
-// === Module 12341: ConjureMessageAuthor ===
+// === Module 12347: ConjureMessageAuthor ===
 
-// Module 12341 (ConjureMessageAuthor)
+// Module 12347 (ConjureMessageAuthor)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import _modDef3830 from "module_3830" /* 3830 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import Pressables from "Pressables" /* 6908 */;
-import ConjureMessageTime from "ConjureMessageTime" /* 12342 */;
-import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12343 */;
-import _modDef12346 from "module_12346" /* 12346 */;
+import util from "util" /* 1125 */;
+import _modDef3831 from "module_3831" /* 3831 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import Pressables from "Pressables" /* 6910 */;
+import ConjureMessageTime from "ConjureMessageTime" /* 12348 */;
+import ConjureMessageActionSheet from "ConjureMessageActionSheet" /* 12349 */;
+import _modDef12352 from "module_12352" /* 12352 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { header: { flexDirection: "row", alignItems: "baseline", gap: nativeDefault.space.PX_8 }, name: { flexShrink: 1 }, time: { flexShrink: 0 }, agentAvatar: null };
-let size = { width: fn(12328).MESSAGE_AVATAR_SIZE, height: fn(12328).MESSAGE_AVATAR_SIZE, borderRadius: fn(12328).MESSAGE_AVATAR_SIZE / 2 };
+let size = { width: fn(12334).MESSAGE_AVATAR_SIZE, height: fn(12334).MESSAGE_AVATAR_SIZE, borderRadius: fn(12334).MESSAGE_AVATAR_SIZE / 2 };
 obj2.agentAvatar = size;
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -139,9 +139,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserH
   const cResult = messageAuthorUser(576).c(6);
   ({ at, userId } = arg0);
   let obj = messageAuthorUser(576);
-  messageAuthorUser = messageAuthorUser(12339).useMessageAuthorUser(userId);
-  const obj2 = messageAuthorUser(12339);
-  const name = messageAuthorUser(5025).useName(messageAuthorUser);
+  messageAuthorUser = messageAuthorUser(12345).useMessageAuthorUser(userId);
+  const obj2 = messageAuthorUser(12345);
+  const name = messageAuthorUser(5026).useName(messageAuthorUser);
   if (cResult[0] !== messageAuthorUser) {
     const fn = function t() {
       if (null != messageAuthorUser) {
@@ -174,9 +174,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserH
 }) : (function ConjureUserHeader(arg0) {
   let messageAuthorUser;
   ({ userId, at } = arg0);
-  messageAuthorUser = messageAuthorUser(12339).useMessageAuthorUser(userId);
-  let obj = messageAuthorUser(12339);
-  const name = messageAuthorUser(5025).useName(messageAuthorUser);
+  messageAuthorUser = messageAuthorUser(12345).useMessageAuthorUser(userId);
+  let obj = messageAuthorUser(12345);
+  const name = messageAuthorUser(5026).useName(messageAuthorUser);
   [][0] = messageAuthorUser;
   let tmp4 = null;
   if (null != messageAuthorUser) {
@@ -194,7 +194,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureHeade
   const at = arg0.at;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3830.uk6jhJ);
+    const stringResult = intl.string(_modDef3831.uk6jhJ);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -213,7 +213,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureHeade
 }) : (function ConjureHeader(arg0) {
   const obj = { name: null, color: "text-brand", at: null };
   const intl = util.intl;
-  obj.name = intl.string(_modDef3830.uk6jhJ);
+  obj.name = intl.string(_modDef3831.uk6jhJ);
   obj.at = arg0.at;
   return hasOwnProperty(closure_8, obj);
 });
@@ -224,10 +224,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
   const cResult = messageAuthorUser(576).c(9);
   ({ size, userId } = arg0);
   if (undefined === size) {
-    size = PressableOpacity(1202).AvatarSizes.NORMAL;
+    size = PressableOpacity(1199).AvatarSizes.NORMAL;
   }
   let obj = messageAuthorUser(576);
-  messageAuthorUser = PressableOpacity(12339).useMessageAuthorUser(userId);
+  messageAuthorUser = PressableOpacity(12345).useMessageAuthorUser(userId);
   if (cResult[0] !== messageAuthorUser) {
     const fn = function t() {
       if (null != messageAuthorUser) {
@@ -245,8 +245,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
   } else {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = PressableOpacity(1128).intl;
-      const stringResult = intl.string(PressableOpacity(1128).t.iXAna6);
+      const intl = PressableOpacity(1125).intl;
+      const stringResult = intl.string(PressableOpacity(1125).t.iXAna6);
       cResult[2] = stringResult;
       let tmp6 = stringResult;
     } else {
@@ -258,7 +258,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
       }
       if (cResult[6] === tmp4) {
       }
-      PressableOpacity = PressableOpacity(6908).PressableOpacity;
+      PressableOpacity = PressableOpacity(6910).PressableOpacity;
       const obj2 = { onPress: tmp4, onLongPress: tmp4, accessibilityRole: "button", accessibilityLabel: tmp6, children: tmp8 };
       tmp = closure_5(PressableOpacity, obj2);
       cResult[6] = tmp4;
@@ -266,20 +266,20 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
       cResult[8] = tmp;
     }
     const obj3 = { size, user: messageAuthorUser, guildId: "Array" };
-    const tmp10 = closure_5(PressableOpacity(1202).Avatar, obj3);
+    const tmp10 = closure_5(PressableOpacity(1199).Avatar, obj3);
     cResult[3] = size;
     cResult[4] = messageAuthorUser;
     cResult[5] = tmp10;
     tmp8 = tmp10;
   }
-  const PressableOpacityResult = PressableOpacity(12339);
+  const PressableOpacityResult = PressableOpacity(12345);
 }) : (function ConjureUserAvatar(size) {
   let NORMAL = size.size;
   if (NORMAL === undefined) {
-    NORMAL = messageAuthorUser(1202).AvatarSizes.NORMAL;
+    NORMAL = messageAuthorUser(1199).AvatarSizes.NORMAL;
   }
   messageAuthorUser = undefined;
-  messageAuthorUser = messageAuthorUser(12339).useMessageAuthorUser(size.userId);
+  messageAuthorUser = messageAuthorUser(12345).useMessageAuthorUser(size.userId);
   const items = [messageAuthorUser];
   const callback = noop.useCallback(() => {
     if (null != messageAuthorUser) {
@@ -289,11 +289,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureUserA
   let tmp7 = null;
   if (null != messageAuthorUser) {
     const obj2 = { onPress: callback, onLongPress: callback, accessibilityRole: "button", accessibilityLabel: null, children: null };
-    const intl = tmp3(1128).intl;
-    obj2.accessibilityLabel = intl.string(tmp3(1128).t.iXAna6);
+    const intl = tmp3(1125).intl;
+    obj2.accessibilityLabel = intl.string(tmp3(1125).t.iXAna6);
     const obj3 = { size: NORMAL, user: messageAuthorUser, guildId: "Array" };
-    obj2.children = closure_5(tmp3(1202).Avatar, obj3);
-    tmp7 = closure_5(tmp3(6908).PressableOpacity, obj2);
+    obj2.children = closure_5(tmp3(1199).Avatar, obj3);
+    tmp7 = closure_5(tmp3(6910).PressableOpacity, obj2);
   }
   return tmp7;
 });
@@ -308,7 +308,7 @@ export const ConjureAvatar = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   const cResult = c.c(2);
   const tmp3 = closure_7();
   if (cResult[0] !== tmp3.agentAvatar) {
-    const obj2 = { source: _modDef12346, style: tmp3.agentAvatar };
+    const obj2 = { source: _modDef12352, style: tmp3.agentAvatar };
     const tmp8 = hasOwnProperty(FastImageDefault, obj2);
     cResult[0] = tmp3.agentAvatar;
     cResult[1] = tmp8;
@@ -320,7 +320,7 @@ export const ConjureAvatar = ReactCompilerGating.isReactCompilerEnabled() ? (fun
 }) : (function ConjureAvatar() {
   const obj = { source: null, style: null };
   const tmp = closure_7();
-  obj.source = _modDef12346;
+  obj.source = _modDef12352;
   obj.style = tmp.agentAvatar;
   return hasOwnProperty(FastImageDefault, obj);
 });

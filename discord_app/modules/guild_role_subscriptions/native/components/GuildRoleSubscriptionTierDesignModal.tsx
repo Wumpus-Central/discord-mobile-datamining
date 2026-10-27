@@ -1,19 +1,19 @@
-// === Module 19322: GuildRoleSubscriptionTierDesignModal ===
+// === Module 19360: GuildRoleSubscriptionTierDesignModal ===
 
-// Module 19322 (GuildRoleSubscriptionTierDesignModal)
+// Module 19360 (GuildRoleSubscriptionTierDesignModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import useToken from "useToken" /* 5252 */;
-import RoleIconUtils from "RoleIconUtils" /* 7283 */;
+import util from "util" /* 1125 */;
+import useToken from "useToken" /* 5253 */;
+import RoleIconUtils from "RoleIconUtils" /* 7285 */;
 import FormHeaderDefault from "FormHeader" /* 9044 */;
-import FormStylesDefault from "FormStyles" /* 15145 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16584 */;
-import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 16595 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19284 */;
-import FormImagePicker from "FormImagePicker" /* 19289 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19290 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 19305 */;
+import FormStylesDefault from "FormStyles" /* 15181 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16626 */;
+import GuildRoleSubscriptionMemberPreview from "GuildRoleSubscriptionMemberPreview" /* 16637 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19322 */;
+import FormImagePicker from "FormImagePicker" /* 19327 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19328 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 19343 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,11 +21,11 @@ const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(16562).GuildRoleSubscriptionsTierScenes;
-const UPLOAD_SMALL_SIZE = fn(1087).UPLOAD_SMALL_SIZE;
+const constants = fn(16604).GuildRoleSubscriptionsTierScenes;
+const UPLOAD_SMALL_SIZE = fn(1084).UPLOAD_SMALL_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { memberPreviews: { paddingHorizontal: 16, paddingTop: 26 }, member: { padding: 16, borderRadius: nativeDefault.radii.none, borderWidth: 0, borderLeftWidth: 1, borderRightWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG }, memberLight: { borderTopLeftRadius: 8, borderTopRightRadius: 8, borderTopWidth: 1 }, memberDark: { borderBottomLeftRadius: 8, borderBottomRightRadius: 8, borderBottomWidth: 1 } };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -235,7 +235,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   if (cResult[10] !== tmp8) {
     class M {
       constructor(arg0) {
-        obj = { icon: arg0.uri, unicodeEmoji: "Array" };
+        obj = { icon: arg0.uri, unicodeEmoji: "y" };
         return closure_0(obj);
       }
     }
@@ -244,7 +244,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   } else {
     class M {
       constructor(arg0) {
-        obj = { icon: arg0.uri, unicodeEmoji: "Array" };
+        obj = { icon: arg0.uri, unicodeEmoji: "y" };
         return closure_0(obj);
       }
     }
@@ -252,7 +252,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   if (cResult[12] === tmp12) {
     class M {
       constructor(arg0) {
-        obj = { icon: arg0.uri, unicodeEmoji: "Array" };
+        obj = { icon: arg0.uri, unicodeEmoji: "y" };
         return closure_0(obj);
       }
     }
@@ -269,7 +269,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   cResult[15] = React6(FormImagePickerDefault, obj9);
   const tmp29 = React6(FormImagePickerDefault, obj9);
 }) : (function Content() {
-  const tmp3 = role(15145)();
+  const tmp3 = role(15181)();
   const editStateContext = require("EditStateContextProvider").useEditStateContext();
   ({ editStateId, guildId } = editStateContext);
   const obj = require("EditStateContextProvider");
@@ -295,27 +295,27 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   const items1 = [closure_9(closure_13, { role }), , , , ];
   const obj7 = { style: tmp3.header, children: null };
   const tmp4Result = require("RoleSubscriptionSettingsDisabledContext");
-  const intl = tmp4(1128).intl;
+  const intl = tmp4(1125).intl;
   obj7.children = intl.string(require("util").t.sEr1zr);
   items1[1] = closure_9(role(9044), obj7);
   const obj8 = { description: null, image: null, imageUploadSize: null, previewShape: null, previewResizeMode: "cover", setImage: null, disabled: null };
   const tmpResult = role(9044);
-  const intl2 = tmp4(1128).intl;
+  const intl2 = tmp4(1125).intl;
   obj8.description = intl2.string(require("util").t.Glqj9m);
   obj8.image = tmp10;
   obj8.imageUploadSize = UPLOAD_SMALL_SIZE;
   obj8.previewShape = require("FormImagePicker").PreviewShape.SQUIRCLE;
   obj8.setImage = function setImage(icon) {
-    return closure_0({ icon: icon.uri, unicodeEmoji: "Array" });
+    return closure_0({ icon: icon.uri, unicodeEmoji: "y" });
   };
   obj8.disabled = roleSubscriptionSettingsDisabled;
-  items1[2] = closure_9(role(19289), obj8);
+  items1[2] = closure_9(role(19327), obj8);
   const obj9 = { style: tmp3.header, children: null };
-  const tmpResult3 = role(19289);
-  const intl3 = tmp4(1128).intl;
+  const tmpResult3 = role(19327);
+  const intl3 = tmp4(1125).intl;
   obj9.children = intl3.string(require("util").t["W7hH+z"]);
   items1[3] = closure_9(role(9044), obj9);
-  items1[4] = closure_9(role(19323), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
+  items1[4] = closure_9(role(19361), { color: tmp7, onChange: tmp8, disabled: roleSubscriptionSettingsDisabled });
   obj6.children = items1;
   return closure_10(closure_11, obj6);
 });

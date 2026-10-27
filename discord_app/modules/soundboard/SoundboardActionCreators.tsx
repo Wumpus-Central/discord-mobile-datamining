@@ -1,13 +1,13 @@
-// === Module 7444: SoundboardActionCreators ===
+// === Module 7445: SoundboardActionCreators ===
 
-// Module 7444 (SoundboardActionCreators)
+// Module 7445 (SoundboardActionCreators)
 import _modDef12 from "module_12" /* 12 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1128 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4804 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
+import util from "util" /* 1125 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4805 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5909 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SoundboardStore from "SoundboardStore" /* 6006 */;
+import SoundboardStore from "SoundboardStore" /* 6007 */;
 
 const require = globalThis.__r;
 
@@ -65,7 +65,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7447).getGuildIdsToFetchSoundsFor();
+  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7448).getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
   } else {
@@ -83,7 +83,7 @@ function _maybeFetchGuildSoundboardSounds() {
     DispatcherDefault.dispatch(obj4);
     return promise;
   }
-  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7447);
+  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7448);
 }
 let closure_14 = async function _maybeFetchSoundboardSounds(arg0) {
   let disableAnalytics = arg0;
@@ -397,10 +397,10 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(6008).DEFAULT_SOUND_GUILD_ID;
-const Constants = fn(1087);
+const DEFAULT_SOUND_GUILD_ID = fn(6009).DEFAULT_SOUND_GUILD_ID;
+const Constants = fn(1084);
 ({ Endpoints: metroRequire, AnalyticEvents: closure_7 } = Constants);
-const UserSettingsConstants = fn(1097);
+const UserSettingsConstants = fn(1094);
 ({ MAX_FAVORITES: closure_8, UserSettingsDelay: closure_9 } = UserSettingsConstants);
 let c10 = false;
 const size = fn(2);

@@ -1,10 +1,10 @@
-// === Module 16426: OrbsArcadeInfoSheet ===
+// === Module 16465: OrbsArcadeInfoSheet ===
 
-// Module 16426 (OrbsArcadeInfoSheet)
-import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 16413 */;
-import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 16414 */;
+// Module 16465 (OrbsArcadeInfoSheet)
+import OrbsArcadeGameGraphicDefault from "OrbsArcadeGameGraphic" /* 16452 */;
+import OrbsArcadeSheetActionsDefault from "OrbsArcadeSheetActions" /* 16453 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16395 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16434 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -57,10 +57,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
     }
     const _Symbol = Symbol;
     if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = tmp(1128).intl;
-      const stringResult = intl.string(tmp(1128).t["3AT3DL"]);
-      const intl2 = tmp(1128).intl;
-      const stringResult1 = intl2.string(tmp(1128).t.GSj8gp);
+      const intl = tmp(1125).intl;
+      const stringResult = intl.string(tmp(1125).t["3AT3DL"]);
+      const intl2 = tmp(1125).intl;
+      const stringResult1 = intl2.string(tmp(1125).t.GSj8gp);
       cResult[6] = stringResult;
       cResult[7] = stringResult1;
       let tmp14 = stringResult1;
@@ -70,8 +70,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       tmp14 = cResult[7];
     }
     if (cResult[8] !== stateFromStores) {
-      const obj3 = { game: stateFromStores, sheetKey: OrbsArcadeInfoSheet, secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY, direction: "vertical" };
-      const tmp22 = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: OrbsArcadeInfoSheet, secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY, direction: "vertical" });
+      const obj3 = { game: stateFromStores, sheetKey: OrbsArcadeInfoSheet, secondaryAction: tmp(16453).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY, direction: "vertical" };
+      const tmp22 = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: OrbsArcadeInfoSheet, secondaryAction: tmp(16453).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY, direction: "vertical" });
       cResult[8] = stateFromStores;
       cResult[9] = tmp22;
       let tmp17 = tmp22;
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       return tmp23;
     }
     const obj4 = { illustration: tmp9, title: tmp13, description: tmp14, actions: tmp17 };
-    const tmp25 = jsx(tmp(10856).PromoSheet, { illustration: tmp9, title: tmp13, description: tmp14, actions: tmp17 });
+    const tmp25 = jsx(tmp(10859).PromoSheet, { illustration: tmp9, title: tmp13, description: tmp14, actions: tmp17 });
     cResult[10] = tmp9;
     cResult[11] = tmp17;
     cResult[12] = tmp25;
@@ -107,13 +107,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       tmp9Result = jsx(OrbsArcadeGameGraphicDefault, { asset });
     }
     const obj3 = { illustration: tmp9Result, title: null, description: null, actions: null };
-    const intl = tmp(1128).intl;
-    obj3.title = intl.string(tmp(1128).t["3AT3DL"]);
-    const intl2 = tmp(1128).intl;
-    obj3.description = intl2.string(tmp(1128).t.GSj8gp);
-    const obj4 = { game: stateFromStores, sheetKey: OrbsArcadeInfoSheet, secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY, direction: "vertical" };
-    obj3.actions = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: OrbsArcadeInfoSheet, secondaryAction: tmp(16414).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY, direction: "vertical" });
-    return jsx(tmp(10856).PromoSheet, { illustration: tmp9Result, title: null, description: null, actions: null });
+    const intl = tmp(1125).intl;
+    obj3.title = intl.string(tmp(1125).t["3AT3DL"]);
+    const intl2 = tmp(1125).intl;
+    obj3.description = intl2.string(tmp(1125).t.GSj8gp);
+    const obj4 = { game: stateFromStores, sheetKey: OrbsArcadeInfoSheet, secondaryAction: tmp(16453).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY, direction: "vertical" };
+    obj3.actions = jsx(OrbsArcadeSheetActionsDefault, { game: stateFromStores, sheetKey: OrbsArcadeInfoSheet, secondaryAction: tmp(16453).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY, direction: "vertical" });
+    return jsx(tmp(10859).PromoSheet, { illustration: tmp9Result, title: null, description: null, actions: null });
   }
   const obj = gameId(504);
 });

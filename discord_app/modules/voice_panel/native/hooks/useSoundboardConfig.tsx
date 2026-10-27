@@ -1,15 +1,15 @@
-// === Module 18639: useSoundboardConfig ===
+// === Module 18675: useSoundboardConfig ===
 
-// Module 18639 (useSoundboardConfig)
-import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18486 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 18520 */;
+// Module 18675 (useSoundboardConfig)
+import useIsConnectedToVoiceChannelDefault from "useIsConnectedToVoiceChannel" /* 18520 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 18554 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import MediaEngineStore from "MediaEngineStore" /* 2014 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 const require = globalThis.__r;
 
-const canChannelUseSoundboardDefault = tmp4(7483);
+const canChannelUseSoundboardDefault = tmp4(7484);
 require = fn;
 const SoundboardButtonLocation = { VOICE_CONTROLS: "call control drawer", VOICE_PANEL_CONTROLS: "voice panel controls" };
 const ReactCompilerGating = fn(558);
@@ -82,7 +82,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSound
       }
       if (cResult[10] !== stateFromStores) {
         if (stateFromStores) {
-          const string = tmp(1128).intl.string;
+          const string = tmp(1125).intl.string;
           class C {
             constructor() {
               channel = closure_4.getChannel(closure_0);
@@ -207,8 +207,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSound
   obj2.disabled = tmp7;
   let stringResult;
   if (stateFromStores) {
-    const intl = tmp3(1128).intl;
-    stringResult = intl.string(tmp3(1128).t.X1lQli);
+    const intl = tmp3(1125).intl;
+    stringResult = intl.string(tmp3(1125).t.X1lQli);
   }
   obj2.disabledAccessibilityHint = stringResult;
   return obj2;

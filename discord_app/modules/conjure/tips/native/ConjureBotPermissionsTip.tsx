@@ -1,8 +1,8 @@
-// === Module 12325: ConjureBotPermissionsTip ===
+// === Module 12331: ConjureBotPermissionsTip ===
 
-// Module 12325 (ConjureBotPermissionsTip)
-import _modDef3830 from "module_3830" /* 3830 */;
-import ConjureTipHintDefault from "ConjureTipHint" /* 12326 */;
+// Module 12331 (ConjureBotPermissionsTip)
+import _modDef3831 from "module_3831" /* 3831 */;
+import ConjureTipHintDefault from "ConjureTipHint" /* 12332 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -95,9 +95,9 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function BotPerm
   let obj = require("c");
 }) : (function BotPermissionsHint(projectId) {
   projectId = projectId.projectId;
-  dependencyMap = noop.useContext(projectId(11765).ConjurePublishActionContext);
-  let obj = { icon: projectId(10954).ShieldIcon, children: null };
-  const intl = projectId(1128).intl;
+  dependencyMap = noop.useContext(projectId(11767).ConjurePublishActionContext);
+  let obj = { icon: projectId(10957).ShieldIcon, children: null };
+  const intl = projectId(1125).intl;
   const obj2 = { onReview: null };
   importDefault = asyncGeneratorStep(async () => {
     if (v3 === 2) {
@@ -155,11 +155,11 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled() ? (function BotPerm
     }
     return applyArgumentsResult;
   };
-  obj.children = intl.format(_modDef3830["0S9HY8"], obj2);
-  return jsx(ConjureTipHintDefault, { icon: projectId(10954).ShieldIcon, children: null });
+  obj.children = intl.format(_modDef3831["0S9HY8"], obj2);
+  return jsx(ConjureTipHintDefault, { icon: projectId(10957).ShieldIcon, children: null });
 });
 let obj2 = {};
-const merged = Object.assign(fn(12330).CONJURE_BOT_PERMISSIONS_TIP_BASE);
+const merged = Object.assign(fn(12336).CONJURE_BOT_PERMISSIONS_TIP_BASE);
 obj2.render = function render(arg0, context) {
   return <closure_6 projectId={context.context.projectId} />;
 };

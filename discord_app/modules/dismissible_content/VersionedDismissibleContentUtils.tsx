@@ -1,14 +1,14 @@
-// === Module 4821: VersionedDismissibleContentUtils ===
+// === Module 4822: VersionedDismissibleContentUtils ===
 
-// Module 4821 (VersionedDismissibleContentUtils)
-import Server from "Server" /* 2000 */;
-import dismissible_content from "dismissible_content" /* 4807 */;
-import TypeUtils from "TypeUtils" /* 4835 */;
-import CollectiblesMarketingSurface from "CollectiblesMarketingSurface" /* 5636 */;
-import AppLauncherBadgeUtils from "AppLauncherBadgeUtils" /* 5637 */;
-import WideBannerDismissibleContentVersion from "WideBannerDismissibleContentVersion" /* 5638 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
-import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5635 */;
+// Module 4822 (VersionedDismissibleContentUtils)
+import Server from "Server" /* 1997 */;
+import dismissible_content from "dismissible_content" /* 4808 */;
+import TypeUtils from "TypeUtils" /* 4836 */;
+import CollectiblesMarketingSurface from "CollectiblesMarketingSurface" /* 5637 */;
+import AppLauncherBadgeUtils from "AppLauncherBadgeUtils" /* 5638 */;
+import WideBannerDismissibleContentVersion from "WideBannerDismissibleContentVersion" /* 5639 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
+import CollectiblesMarketingsStore from "CollectiblesMarketingsStore" /* 5636 */;
 
 require = fn;
 const size = fn(2);

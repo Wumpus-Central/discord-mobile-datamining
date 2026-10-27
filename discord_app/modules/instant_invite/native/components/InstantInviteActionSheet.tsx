@@ -3,28 +3,28 @@
 // Module 9059 (InstantInviteActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import InviteCodeUtils from "InviteCodeUtils" /* 5701 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import InviteCodeUtils from "InviteCodeUtils" /* 5702 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
 import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils" /* 9050 */;
 import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9060 */;
 import HubProgressActionCreators from "HubProgressActionCreators" /* 9062 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import StageInstanceStore from "StageInstanceStore" /* 4828 */;
+import StageInstanceStore from "StageInstanceStore" /* 4829 */;
 import CreateInviteModalStore from "CreateInviteModalStore" /* 9051 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InviteTargetTypes = fn(7809).InviteTargetTypes;
-const Permissions = fn(1087).Permissions;
+const InviteTargetTypes = fn(7810).InviteTargetTypes;
+const Permissions = fn(1084).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { placeholderHeader: null, placeholderLabel: null, errorEmptyState: null, searchAndShareContainer: null, inviteAgeText: null, shareApps: null };
 let size = { height: 16, width: "80%", margin: 16, marginBottom: 8, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.placeholderHeader = size;

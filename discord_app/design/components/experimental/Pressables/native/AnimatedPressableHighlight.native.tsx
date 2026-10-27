@@ -1,20 +1,20 @@
-// === Module 6907: AnimatedPressableHighlight ===
+// === Module 6909: AnimatedPressableHighlight ===
 
-// Module 6907 (AnimatedPressableHighlight)
+// Module 6909 (AnimatedPressableHighlight)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 5252 */;
-import useIOSPressEffects from "useIOSPressEffects" /* 6910 */;
+import useToken from "useToken" /* 5253 */;
+import useIOSPressEffects from "useIOSPressEffects" /* 6912 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
 
 require = fn;
 let closure_3 = ["children"];
 let closure_4 = ["children"];
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6908).PressableHighlight);
+let closure_9 = ReanimatedRexport.createAnimatedComponent(fn(6910).PressableHighlight);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedPressableHighlightiOS(children) {
   const cResult = c.c(12);
@@ -78,7 +78,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function AnimatedPres
   return <closure_9 accessibilityRole="button" onPressIn={iOSPressEffects.onPressIn} onPressOut={iOSPressEffects.onPressOut} />;
 });
 ReactCompilerGating = fn(558);
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 if (PlatformUtils.isAndroid()) {
   tmp2 = tmp3;
 }

@@ -1,11 +1,11 @@
-// === Module 10079: canForwardMessage ===
+// === Module 10081: canForwardMessage ===
 
-// Module 10079 (canForwardMessage)
-import FlagUtils from "FlagUtils" /* 1405 */;
-import GatedChannelStore from "GatedChannelStore" /* 4875 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+// Module 10081 (canForwardMessage)
+import FlagUtils from "FlagUtils" /* 1402 */;
+import GatedChannelStore from "GatedChannelStore" /* 4876 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = globalThis.__r;
 
@@ -96,7 +96,7 @@ function canForwardMessage(state) {
     }
   }
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ GuildFeatures: metroRequire, MessageFlags, MessageStates: closure_7, MessageTypesSets: closure_8, Permissions: closure_9 } = Constants);
 let closure_10 = MessageFlags.CROSSPOSTED | MessageFlags.FAILED_TO_MENTION_SOME_ROLES_IN_THREAD | MessageFlags.GUILD_FEED_HIDDEN | MessageFlags.HAS_SNAPSHOT | MessageFlags.HAS_THREAD | MessageFlags.IS_CROSSPOST | MessageFlags.IS_VOICE_MESSAGE | MessageFlags.SHOULD_SHOW_LINK_NOT_DISCORD_WARNING | MessageFlags.SUPPRESS_EMBEDS | MessageFlags.SUPPRESS_NOTIFICATIONS | MessageFlags.URGENT | MessageFlags.IS_COMPONENTS_V2 | MessageFlags.IS_GUILD_OFFICIAL | MessageFlags.IS_SCHEDULED;
 const ReactCompilerGating = fn(558);

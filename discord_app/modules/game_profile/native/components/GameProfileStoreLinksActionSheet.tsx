@@ -2,14 +2,14 @@
 
 // Module 9296 (GameProfileStoreLinksActionSheet)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import BottomSheetModal from "BottomSheetModal" /* 5269 */;
-import LinkingDefault from "Linking" /* 5660 */;
-import ActionSheet from "ActionSheet" /* 7298 */;
+import util from "util" /* 1125 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import BottomSheetModal from "BottomSheetModal" /* 5270 */;
+import LinkingDefault from "Linking" /* 5661 */;
+import ActionSheet from "ActionSheet" /* 7300 */;
 import useOpenExternalUrlFromGameProfileDefault from "useOpenExternalUrlFromGameProfile" /* 9254 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { header: { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 }, headerText: { textAlign: "center" }, buttons: null };
 let obj3 = { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_24 };
 obj2.buttons = { gap: nativeDefault.space.PX_12 };
@@ -47,8 +47,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   }
   ({ header, headerText } = tmp4);
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = trackAction(1128).intl;
-    const stringResult = intl.string(trackAction(1128).t["/4gj6r"]);
+    const intl = trackAction(1125).intl;
+    const stringResult = intl.string(trackAction(1125).t["/4gj6r"]);
     cResult[2] = stringResult;
     let tmp9 = stringResult;
   } else {
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   }
   if (cResult[3] !== tmp4.headerText) {
     const obj3 = { variant: "heading-lg/semibold", color: "mobile-text-heading-primary", style: headerText, children: tmp9 };
-    const tmp13 = closure_4(trackAction(5234).Text, obj3);
+    const tmp13 = closure_4(trackAction(5235).Text, obj3);
     cResult[3] = tmp4.headerText;
     cResult[4] = tmp13;
     let tmp11 = tmp13;
@@ -64,9 +64,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
     tmp11 = cResult[4];
   }
   if (cResult[5] !== gameName) {
-    const intl2 = trackAction(1128).intl;
+    const intl2 = trackAction(1125).intl;
     const obj4 = { gameName };
-    const formatResult = intl2.format(trackAction(1128).t["0acM2Y"], obj4);
+    const formatResult = intl2.format(trackAction(1125).t["0acM2Y"], obj4);
     cResult[5] = gameName;
     cResult[6] = formatResult;
     let tmp14 = formatResult;
@@ -101,8 +101,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
                 const obj6 = { contentContainerStyle: tmp8, children: null };
                 const items = [tmp18, tmp27];
                 obj6.children = items;
-                obj5.children = closure_5(trackAction(5269).BottomSheetScrollView, obj6);
-                const tmp34 = closure_4(trackAction(7298).ActionSheet, obj5);
+                obj5.children = closure_5(trackAction(5270).BottomSheetScrollView, obj6);
+                const tmp34 = closure_4(trackAction(7300).ActionSheet, obj5);
                 cResult[24] = tmp18;
                 cResult[25] = tmp27;
                 cResult[26] = tmp8;
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
     cResult[13] = tmp21;
     tmp18 = tmp21;
   }
-  const tmp17 = closure_4(trackAction(5234).Text, { variant: "text-md/medium", color: "text-subtle", style: tmp4.headerText, children: tmp14 });
+  const tmp17 = closure_4(trackAction(5235).Text, { variant: "text-md/medium", color: "text-subtle", style: tmp4.headerText, children: tmp14 });
   cResult[7] = tmp4.headerText;
   cResult[8] = tmp14;
   cResult[9] = tmp17;

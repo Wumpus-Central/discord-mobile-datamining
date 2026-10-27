@@ -1,8 +1,8 @@
-// === Module 18460: applyActivityOrientationLock ===
+// === Module 18494: applyActivityOrientationLock ===
 
-// Module 18460 (applyActivityOrientationLock)
-import Constants from "Constants" /* 2026 */;
-import applyOrientationLock from "applyOrientationLock" /* 14149 */;
+// Module 18494 (applyActivityOrientationLock)
+import Constants from "Constants" /* 2023 */;
+import applyOrientationLock from "applyOrientationLock" /* 14163 */;
 import size from "module_2" /* 2 */;
 
 const OrientationLockState = Constants.OrientationLockState;

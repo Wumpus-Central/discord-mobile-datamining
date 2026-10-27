@@ -1,12 +1,12 @@
 // === Module 8763: computeGlobalSpoilerDisplay ===
 
 // Module 8763 (computeGlobalSpoilerDisplay)
-import PermissionStore from "PermissionStore" /* 4903 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Permissions: c3, SpoilerRenderSetting: closure_4 } = Constants);
 const ReactCompilerGating = fn(558);
 function computeGlobalSpoilerDisplay(arg0, arg1) {
@@ -45,7 +45,7 @@ export const useShouldDisplaySpoilerObscurity = ReactCompilerGating.isReactCompi
   }
   const obj = require("c");
   const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp6);
-  const RenderSpoilers = tmp(4799).RenderSpoilers;
+  const RenderSpoilers = tmp(4800).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   if (cResult[3] === stateFromStores) {
     if (cResult[4] === setting) {

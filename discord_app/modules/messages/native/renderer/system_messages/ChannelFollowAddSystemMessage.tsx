@@ -1,10 +1,10 @@
-// === Module 8376: ChannelFollowAddSystemMessage ===
+// === Module 8375: ChannelFollowAddSystemMessage ===
 
-// Module 8376 (ChannelFollowAddSystemMessage)
-import util from "util" /* 1128 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8318 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8320 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8322 */;
+// Module 8375 (ChannelFollowAddSystemMessage)
+import util from "util" /* 1125 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8317 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8319 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8321 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelFollowAddSystemMessage.tsx");

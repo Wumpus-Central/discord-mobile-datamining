@@ -1,27 +1,27 @@
-// === Module 15995: UserSettingsChangeUsername ===
+// === Module 16033: UserSettingsChangeUsername ===
 
-// Module 15995 (UserSettingsChangeUsername)
+// Module 16033 (UserSettingsChangeUsername)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5234 */;
+import util from "util" /* 1125 */;
+import Text_Text from "Text/Text" /* 5235 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function UsernameStatusMessage(showHint) {
   showHint = showHint.showHint;
-  const match = showHint(6484).match(showHint.usernameStatus);
-  let obj = { type: showHint(15996).NameValidationState.ERROR, message: null };
-  const P = showHint(6484).P;
+  const match = showHint(6485).match(showHint.usernameStatus);
+  let obj = { type: showHint(16034).NameValidationState.ERROR, message: null };
+  const P = showHint(6485).P;
   obj.message = P.select();
-  const str = showHint(6484);
-  const obj2 = { type: showHint(15996).NameValidationState.AVAILABLE, message: null };
-  const P2 = showHint(6484).P;
+  const str = showHint(6485);
+  const obj2 = { type: showHint(16034).NameValidationState.AVAILABLE, message: null };
+  const P2 = showHint(6485).P;
   obj2.message = P2.select();
-  const withResult = match.with(obj, (children) => closure_1_11(showHint(5234).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
-  return match.with(obj, (children) => closure_1_11(showHint(5234).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(5234).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
+  const withResult = match.with(obj, (children) => closure_1_11(showHint(5235).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children }));
+  return match.with(obj, (children) => closure_1_11(showHint(5235).Text, { variant: "text-xs/medium", color: "text-feedback-critical", children })).with(obj2, (children) => closure_1_11(showHint(5235).Text, { variant: "text-xs/medium", color: "text-feedback-positive", children })).otherwise(() => {
     let tmp = null;
     if (showHint) {
       const obj = { variant: "text-xs/medium", color: "text-default", children: null };
@@ -34,10 +34,10 @@ function UsernameStatusMessage(showHint) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const UserSettingsSections = fn(1087).UserSettingsSections;
+const UserSettingsSections = fn(1084).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { padding: 16 }, inputs: { flex: 1, flexDirection: "row", marginTop: 8 }, username: { flex: 2 }, discriminator: { flex: 1 }, divider: null, dividerInner: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.divider = { width: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
@@ -275,12 +275,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           const tmp34 = first1;
         }
         user.discriminator = tmp34;
-        yield closure_2_2(7078).saveAccountChanges(user, { close: false });
+        yield closure_2_2(7080).saveAccountChanges(user, { close: false });
         closure_129_0 = value;
         if (!closure_129_0.ok) {
-          const v6OrEarlierAPIError = new closure_0(1297).V6OrEarlierAPIError(closure_129_0);
+          const v6OrEarlierAPIError = new closure_0(1294).V6OrEarlierAPIError(closure_129_0);
           closure_129_1 = v6OrEarlierAPIError;
-          const CommonActions = closure_0(1506).CommonActions;
+          const CommonActions = closure_0(1503).CommonActions;
           closure_0.dispatch(CommonActions.navigate(constants.ACCOUNT_CHANGE_USERNAME));
           closure_1_6(closure_129_1);
           c4 = 3;

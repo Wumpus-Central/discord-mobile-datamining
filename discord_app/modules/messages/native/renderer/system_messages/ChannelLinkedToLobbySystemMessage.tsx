@@ -1,16 +1,16 @@
-// === Module 8414: ChannelLinkedToLobbySystemMessage ===
+// === Module 8413: ChannelLinkedToLobbySystemMessage ===
 
-// Module 8414 (ChannelLinkedToLobbySystemMessage)
-import util from "util" /* 1128 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8311 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8318 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8320 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8322 */;
-import ApplicationStore from "ApplicationStore" /* 2045 */;
+// Module 8413 (ChannelLinkedToLobbySystemMessage)
+import util from "util" /* 1125 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8310 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8317 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8319 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8321 */;
+import ApplicationStore from "ApplicationStore" /* 2042 */;
 
 require = fn;
-const HelpdeskArticles = fn(1087).HelpdeskArticles;
+const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/ChannelLinkedToLobbySystemMessage.tsx");
 

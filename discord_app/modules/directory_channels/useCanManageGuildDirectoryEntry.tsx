@@ -1,14 +1,14 @@
-// === Module 13194: useCanManageGuildDirectoryEntry ===
+// === Module 13208: useCanManageGuildDirectoryEntry ===
 
-// Module 13194 (useCanManageGuildDirectoryEntry)
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+// Module 13208 (useCanManageGuildDirectoryEntry)
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanManageGuildDirectoryEntry(guildId) {

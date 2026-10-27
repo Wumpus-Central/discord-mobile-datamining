@@ -1,22 +1,22 @@
-// === Module 9839: useBurstToggleCoachmark ===
+// === Module 9841: useBurstToggleCoachmark ===
 
-// Module 9839 (useBurstToggleCoachmark)
+// Module 9841 (useBurstToggleCoachmark)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 9806 */;
+import util from "util" /* 1125 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9808 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsx = fn(21).jsx;
-let closure_9 = fn(4807).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
-const createStyles = fn(4971);
+let closure_9 = fn(4808).DismissibleContent.SUPER_REACTION_TOGGLE_EDUCATION_MOBILE;
+const createStyles = fn(4972);
 let obj2 = { upsellImageContainer: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, borderRadius: nativeDefault.radii.round, height: 40, width: 40, display: "flex", alignItems: "center", justifyContent: "center" };
 obj2.upsellImageContainer = size;
@@ -85,19 +85,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
       }
     }
     cResult[3] = items2;
-    tmpResult4 = tmp(2053);
+    tmpResult4 = tmp(2050);
   } else {
     class C {
       constructor() {
         return closure_1_6.getCurrentUser();
       }
     }
-    const tmp11 = _slicedToArray(tmp(7496).useSelectedDismissibleContent(cResult[3]), 2);
+    const tmp11 = _slicedToArray(tmp(7497).useSelectedDismissibleContent(cResult[3]), 2);
     _require = tmp12;
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = tmp(1128).intl;
-      const stringResult = intl.string(tmp(1128).t.nyYohm);
+      const intl = tmp(1125).intl;
+      const stringResult = intl.string(tmp(1125).t.nyYohm);
       class C {
         constructor() {
           return closure_1_6.getCurrentUser();
@@ -130,7 +130,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
           return closure_1_8(closure_1_11, {});
         }
       }
-      const string = tmp(1128).intl.string;
+      const string = tmp(1125).intl.string;
       class C {
         constructor() {
           return closure_1_6.getCurrentUser();
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
           return closure_1_8(closure_1_11, {});
         }
       }
-      tmp(9840);
+      tmp(9842);
       class C {
         constructor() {
           return closure_1_6.getCurrentUser();
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
     cResult[9] = tmp15;
     cResult[10] = tmp11[0] === closure_9;
     cResult[11] = obj2;
-    const tmpResult5 = tmp(7496);
+    const tmpResult5 = tmp(7497);
   }
   const tmpResult = require("initialize");
 }) : (function useBurstToggleCoachmark(arg0) {
@@ -178,8 +178,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
   } else {
     items2 = [];
   }
-  obj2 = first(2053);
-  const tmp5 = _slicedToArray(first(7496).useSelectedDismissibleContent(items2), 2);
+  obj2 = first(2050);
+  const tmp5 = _slicedToArray(first(7497).useSelectedDismissibleContent(items2), 2);
   first = tmp5[0];
   closure_1 = tmp7;
   const items3 = [first, tmp5[1]];
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useBurst
     obj.visible = first === closure_9;
     return obj;
   }, items3);
-  const tmpResult = first(7496);
-  const coachmark = first(9840).useCoachmark(arg0, memo);
+  const tmpResult = first(7497);
+  const coachmark = first(9842).useCoachmark(arg0, memo);
   return tmp5[1];
 });

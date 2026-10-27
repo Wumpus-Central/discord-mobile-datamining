@@ -1,16 +1,16 @@
-// === Module 10653: VoiceActivityStatus ===
+// === Module 10656: VoiceActivityStatus ===
 
-// Module 10653 (VoiceActivityStatus)
+// Module 10656 (VoiceActivityStatus)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10643 */;
-import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 10654 */;
+import util from "util" /* 1125 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10646 */;
+import UserProfileVoiceActivityIconDefault from "UserProfileVoiceActivityIcon" /* 10657 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_6 = createStyles.createStyles({ icon: { flexShrink: 0 } });
 const ReactCompilerGating = fn(558);
 function getVoiceActivityStatusText(voiceChannel) {

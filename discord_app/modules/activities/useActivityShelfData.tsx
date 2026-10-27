@@ -1,12 +1,12 @@
-// === Module 11911: useActivityShelfData ===
+// === Module 11912: useActivityShelfData ===
 
-// Module 11911 (useActivityShelfData)
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
+// Module 11912 (useActivityShelfData)
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5627 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
-import TestModeStore from "TestModeStore" /* 5624 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
+import UserStore from "UserStore" /* 1389 */;
+import TestModeStore from "TestModeStore" /* 5625 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
 
 const require = globalThis.__r;
 
@@ -152,8 +152,8 @@ export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled()
               if (supported_platforms == null) {
                 supported_platforms = [];
               }
-              const tmp = stateFromStores(5633);
-              return supported_platforms.includes(tmp(closure_1_0(1384).getOS()));
+              const tmp = stateFromStores(5634);
+              return supported_platforms.includes(tmp(closure_1_0(1381).getOS()));
             });
             found1 = found.filter((activity) => {
               const requires_age_gate = activity.activity.requires_age_gate;
@@ -370,8 +370,8 @@ export const useActivityShelfData = ReactCompilerGating.isReactCompilerEnabled()
       if (supported_platforms == null) {
         supported_platforms = [];
       }
-      const tmp = stateFromStores(5633);
-      return supported_platforms.includes(tmp(closure_1_0(1384).getOS()));
+      const tmp = stateFromStores(5634);
+      return supported_platforms.includes(tmp(closure_1_0(1381).getOS()));
     });
     const found1 = found.filter((activity) => {
       const requires_age_gate = activity.activity.requires_age_gate;

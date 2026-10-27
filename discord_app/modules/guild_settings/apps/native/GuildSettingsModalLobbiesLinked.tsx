@@ -1,14 +1,14 @@
-// === Module 19108: GuildSettingsModalLobbiesLinked ===
+// === Module 19146: GuildSettingsModalLobbiesLinked ===
 
-// Module 19108 (GuildSettingsModalLobbiesLinked)
+// Module 19146 (GuildSettingsModalLobbiesLinked)
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildSettingsSections = fn(1087).GuildSettingsSections;
+const GuildSettingsSections = fn(1084).GuildSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -112,10 +112,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Syncing
 }) : (function SyncingToGamesItem(channels) {
   channels = channels.channels;
   const isOnlySection = channels.isOnlySection;
-  dependencyMap = channels(1505).useNavigation();
-  let obj = channels(1505);
+  dependencyMap = channels(1502).useNavigation();
+  let obj = channels(1502);
   const tmp = channels;
-  const getOrFetchApplication = channels(7257).useGetOrFetchApplication(channels.applicationId);
+  const getOrFetchApplication = channels(7259).useGetOrFetchApplication(channels.applicationId);
   let tmp5Result = null;
   if (0 !== channels.length) {
     let name;
@@ -127,11 +127,11 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Syncing
       hasIcons: true,
       children: channels.map((id) => {
           const channel = id;
-          let obj = { label: channels(5604).computeChannelName(id, UserStore, RelationshipStore), icon: null, arrow: true, onPress: null };
+          let obj = { label: channels(5605).computeChannelName(id, UserStore, RelationshipStore), icon: null, arrow: true, onPress: null };
           const obj3 = { IconComponent: null };
-          const obj2 = channels(5604);
+          const obj2 = channels(5605);
           obj3.IconComponent = channels(8502).getChannelIconComponent(id);
-          obj.icon = closure_1_6(channels(6903).TableRow.Icon, obj3);
+          obj.icon = closure_1_6(channels(6905).TableRow.Icon, obj3);
           obj.onPress = function onPress() {
             const obj = { channel, numScreensToPop: null };
             let num = 1;
@@ -144,10 +144,10 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Syncing
             obj.numScreensToPop = num;
             closure_2.push(GuildSettingsSections.EDIT_LINKED_LOBBY, obj);
           };
-          return closure_1_6(channels(6903).TableRow, obj, id.id);
+          return closure_1_6(channels(6905).TableRow, obj, id.id);
         })
     };
-    tmp5Result = closure_6(tmp(6987).TableRowGroup, obj3);
+    tmp5Result = closure_6(tmp(6989).TableRowGroup, obj3);
   }
   return tmp5Result;
 });
@@ -231,7 +231,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
           }
           const _Symbol3 = Symbol;
           if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp28 = closure_6(tmp(5592).NavScrim, {});
+            const tmp28 = closure_6(tmp(5593).NavScrim, {});
             cResult[19] = tmp28;
             let tmp26 = tmp28;
           } else {
@@ -258,7 +258,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildSet
         tmp23 = tmp25;
       }
       const obj8 = { style: tmp17, spacing: tmp4(587).space.PX_24, children: tmp18 };
-      const tmp22 = closure_6(tmp(5977).Stack, obj8);
+      const tmp22 = closure_6(tmp(5978).Stack, obj8);
       cResult[13] = tmp17;
       cResult[14] = tmp18;
       cResult[15] = tmp22;

@@ -1,15 +1,15 @@
-// === Module 11399: openFrame ===
+// === Module 11402: openFrame ===
 
-// Module 11399 (openFrame)
-import router_utils from "router_utils" /* 1114 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10767 */;
-import FramesStore from "FramesStore" /* 6775 */;
+// Module 11402 (openFrame)
+import router_utils from "router_utils" /* 1111 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5627 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10770 */;
+import FramesStore from "FramesStore" /* 6776 */;
 
 require = fn;
-const FramesConstants = fn(6776);
+const FramesConstants = fn(6777);
 ({ MAIN_SURFACE: closure_4, makeFrameId: hasOwnProperty } = FramesConstants);
-const Routes = fn(1087).Routes;
+const Routes = fn(1084).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/openFrame.tsx");
 

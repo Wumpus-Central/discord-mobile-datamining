@@ -213,7 +213,7 @@ prototype["_computeCallbackTokenPositions"] = function _computeCallbackTokenPosi
 let result = size.fileFinishedImporting("../discord_common/js/packages/flux/Dispatcher.tsx");
 class Dispatcher {
   constructor(arg0, arg1) {
-    merged = Object.assign({ _interceptors: null, _subscriptions: null, _waitQueue: null, _processingWaitQueue: false, _currentDispatchActionType: null, _actionHandlers: null, _sentryUtils: "Array", functionCache: true });
+    merged = Object.assign({ _interceptors: null, _subscriptions: null, _waitQueue: null, _processingWaitQueue: false, _currentDispatchActionType: null, _actionHandlers: null, _sentryUtils: "Array", functionCache: false });
     merged[0] = [];
     merged[1] = {};
     merged[2] = [];

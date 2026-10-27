@@ -1,7 +1,7 @@
-// === Module 5602: isForwardMessage ===
+// === Module 5603: isForwardMessage ===
 
-// Module 5602 (isForwardMessage)
-import Constants from "Constants" /* 1087 */;
+// Module 5603 (isForwardMessage)
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const MessageReferenceTypes = Constants.MessageReferenceTypes;

@@ -1,26 +1,26 @@
-// === Module 18263: UserProfileYourFriendsCard ===
+// === Module 18297: UserProfileYourFriendsCard ===
 
-// Module 18263 (UserProfileYourFriendsCard)
+// Module 18297 (UserProfileYourFriendsCard)
 import _modDef12 from "module_12" /* 12 */;
-import native from "native" /* 1202 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
+import native from "native" /* 1199 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7732 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7733 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const RelationshipTypes = fn(1087).RelationshipTypes;
+const RelationshipTypes = fn(1084).RelationshipTypes;
 const jsx = fn(21).jsx;
-let closure_11 = Object.freeze({ direction: fn(1202).CutoutDirection.RIGHT, inset: -4 });
-const createStyles = fn(4971);
+let closure_11 = Object.freeze({ direction: fn(1199).CutoutDirection.RIGHT, inset: -4 });
+const createStyles = fn(4972);
 let closure_12 = createStyles.createStyles({ facepile: { flexDirection: "row", alignItems: "center" }, avatars: { flexDirection: "row" } });
 const ReactCompilerGating = fn(558);
-let obj = { direction: fn(1202).CutoutDirection.RIGHT, inset: -4 };
+let obj = { direction: fn(1199).CutoutDirection.RIGHT, inset: -4 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/UserProfileYourFriendsCard.tsx");
 
@@ -201,13 +201,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         const items = [{ translateX: 4 * (first.length - 1 - index) }];
         obj2.transform = items;
         obj.style = obj2;
-        const obj4 = { user, guildId: "r", size: closure_0(1202).AvatarSizes.XSMALL, cutout: null };
+        const obj4 = { user, guildId: "r", size: closure_0(1199).AvatarSizes.XSMALL, cutout: null };
         let tmp3;
         if (index < first.length - 1) {
           tmp3 = closure_2_11;
         }
         obj4.cutout = tmp3;
-        obj.children = jsx(closure_0(1202).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1202).AvatarSizes.XSMALL, cutout: null });
+        obj.children = jsx(closure_0(1199).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1199).AvatarSizes.XSMALL, cutout: null });
         return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
       })}</View>
     };
@@ -217,13 +217,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       const items = [{ translateX: 4 * (first.length - 1 - index) }];
       obj2.transform = items;
       obj.style = obj2;
-      const obj4 = { user, guildId: "r", size: closure_0(1202).AvatarSizes.XSMALL, cutout: null };
+      const obj4 = { user, guildId: "r", size: closure_0(1199).AvatarSizes.XSMALL, cutout: null };
       let tmp3;
       if (index < first.length - 1) {
         tmp3 = closure_2_11;
       }
       obj4.cutout = tmp3;
-      obj.children = jsx(closure_0(1202).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1202).AvatarSizes.XSMALL, cutout: null });
+      obj.children = jsx(closure_0(1199).CutoutableAvatarImage, { user, guildId: "r", size: closure_0(1199).AvatarSizes.XSMALL, cutout: null });
       return <gameRelationshipsByType key={user.id} style={null}>{null}</gameRelationshipsByType>;
     })}</View></View>;
   }, items3);

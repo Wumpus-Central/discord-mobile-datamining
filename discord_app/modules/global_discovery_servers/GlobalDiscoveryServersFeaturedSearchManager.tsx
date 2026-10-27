@@ -1,14 +1,14 @@
-// === Module 19392: GlobalDiscoveryServersFeaturedSearchManager ===
+// === Module 19429: GlobalDiscoveryServersFeaturedSearchManager ===
 
-// Module 19392 (GlobalDiscoveryServersFeaturedSearchManager)
-import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 15020 */;
+// Module 19429 (GlobalDiscoveryServersFeaturedSearchManager)
+import GlobalDiscoveryServersSearchResultsStoreDefault from "GlobalDiscoveryServersSearchResultsStore" /* 15056 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 
 let require = fn;
 GlobalDiscoveryServersSearchResultsStoreDefault;
 let closure_6 = fn(9007).DISCOVERY_ALL_CATEGORIES_ID;
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const prototype = function GlobalDiscoveryServersFeaturedSearchManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;

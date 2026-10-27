@@ -1,18 +1,18 @@
-// === Module 11006: ForumPostTagsActionSheet ===
+// === Module 11009: ForumPostTagsActionSheet ===
 
-// Module 11006 (ForumPostTagsActionSheet)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import ForumActionCreatorsDefault from "ForumActionCreators" /* 9727 */;
-import AvailableForumTagDefault from "AvailableForumTag" /* 11007 */;
+// Module 11009 (ForumPostTagsActionSheet)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import ForumActionCreatorsDefault from "ForumActionCreators" /* 9729 */;
+import AvailableForumTagDefault from "AvailableForumTag" /* 11010 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const MAX_FORUM_POST_TAGS = fn(7380).MAX_FORUM_POST_TAGS;
+const MAX_FORUM_POST_TAGS = fn(7382).MAX_FORUM_POST_TAGS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_9 = createStyles.createStyles({ tagsContainer: { display: "flex", flexDirection: "row", flexWrap: "wrap" }, saveButton: { marginTop: 8, marginHorizontal: 16, marginBottom: 16 }, subtitle: { marginTop: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -211,8 +211,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   }
   ({ onSave: dependencyMap, title } = thread);
   if (title === undefined) {
-    const intl = thread(1128).intl;
-    title = intl.string(thread(1128).t["436ZFw"]);
+    const intl = thread(1125).intl;
+    title = intl.string(thread(1125).t["436ZFw"]);
   }
   ({ tags, onClose: _slicedToArray } = thread);
   first = undefined;
@@ -231,15 +231,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
     }
   }
   const tmp3 = closure_9();
-  let appliedTags = thread(7382).useAppliedTags(thread);
+  let appliedTags = thread(7384).useAppliedTags(thread);
   if (null != tags) {
     appliedTags = tags;
   }
-  let obj = thread(7382);
+  let obj = thread(7384);
   [first, closure_5] = first.useState(new Set(appliedTags));
   closure_6 = first.size >= closure_6;
   let set = new Set(appliedTags);
-  const visibleForumTags = thread(7382).useVisibleForumTags(thread.parentChannel);
+  const visibleForumTags = thread(7384).useVisibleForumTags(thread.parentChannel);
   let obj2 = {
     onDismiss() {
       let tmp;
@@ -252,11 +252,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
     children: null
   };
   const obj3 = { title, subtitle: null, subtitleStyle: null };
-  const intl2 = tmp4(1128).intl;
-  obj3.subtitle = intl2.string(thread(1128).t["+HS9+m"]);
+  const intl2 = tmp4(1125).intl;
+  obj3.subtitle = intl2.string(thread(1125).t["+HS9+m"]);
   obj3.subtitleStyle = tmp3.subtitle;
-  obj2.header = toggleTag(thread(7248).BottomSheetTitleHeader, obj3);
-  const tmp4Result = thread(7382);
+  obj2.header = toggleTag(thread(7250).BottomSheetTitleHeader, obj3);
+  const tmp4Result = thread(7384);
   let items = [
     toggleTag(closure_5, {
       style: tmp3.tagsContainer,
@@ -281,8 +281,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
   ];
   const obj5 = { style: tmp3.saveButton, children: null };
   const obj6 = { text: null, onPress: null };
-  const intl3 = tmp4(1128).intl;
-  obj6.text = intl3.string(thread(1128).t["R3BPH+"]);
+  const intl3 = tmp4(1125).intl;
+  obj6.text = intl3.string(thread(1125).t["R3BPH+"]);
   obj6.onPress = function handleSave() {
     Array.from(first);
     if (null != dependencyMap) {
@@ -294,8 +294,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ForumPos
     }
     ActionSheetActionCreatorsDefault.hideActionSheet();
   };
-  obj5.children = toggleTag(thread(5244).Button, obj6);
+  obj5.children = toggleTag(thread(5245).Button, obj6);
   items[1] = toggleTag(closure_5, obj5);
   obj2.children = items;
-  return closure_8(thread(7298).ActionSheet, obj2);
+  return closure_8(thread(7300).ActionSheet, obj2);
 });

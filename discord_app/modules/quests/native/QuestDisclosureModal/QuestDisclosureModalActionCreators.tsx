@@ -1,13 +1,13 @@
-// === Module 16457: QuestDisclosureModalActionCreators ===
+// === Module 16496: QuestDisclosureModalActionCreators ===
 
-// Module 16457 (QuestDisclosureModalActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
-import AdCreativeType from "AdCreativeType" /* 6717 */;
-import QuestTaskUtils from "QuestTaskUtils" /* 7798 */;
-import captureAdUserAction from "captureAdUserAction" /* 9573 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9576 */;
-import AdCreativeUtils from "AdCreativeUtils" /* 16448 */;
+// Module 16496 (QuestDisclosureModalActionCreators)
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
+import AdCreativeType from "AdCreativeType" /* 6718 */;
+import QuestTaskUtils from "QuestTaskUtils" /* 7799 */;
+import captureAdUserAction from "captureAdUserAction" /* 9575 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9578 */;
+import AdCreativeUtils from "AdCreativeUtils" /* 16487 */;
 import size from "module_2" /* 2 */;
 
 const QUEST_DISCLOSURE_MODAL = "QUEST_DISCLOSURE_MODAL";
@@ -41,12 +41,15 @@ export default {
     } else if (AdCreativeType.AdCreativeType.BOUNTY === type) {
       const obj7 = { adCreativeType: AdCreativeType.AdCreativeType.BOUNTY, gamePublisher: creative.bounty.advertiserName };
       tmp6 = obj7;
+    } else if (AdCreativeType.AdCreativeType.PLAYABLE === type) {
+      const obj8 = { adCreativeType: AdCreativeType.AdCreativeType.PLAYABLE, gamePublisher: creative.playable.advertiserName };
+      tmp6 = obj8;
     }
-    const obj8 = {};
+    const obj9 = {};
     const merged1 = Object.assign(tmp6);
-    obj8.isTargetedDisclosure = isTargetedDisclosure.isTargetedDisclosure;
-    obj4.pushLazy(asyncRequireImpl(16458, dependencyMap.paths), obj8, QUEST_DISCLOSURE_MODAL);
-    const tmp5 = asyncRequireImpl(16458, dependencyMap.paths);
+    obj9.isTargetedDisclosure = isTargetedDisclosure.isTargetedDisclosure;
+    obj4.pushLazy(asyncRequireImpl(16497, dependencyMap.paths), obj9, QUEST_DISCLOSURE_MODAL);
+    const tmp5 = asyncRequireImpl(16497, dependencyMap.paths);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(QUEST_DISCLOSURE_MODAL);

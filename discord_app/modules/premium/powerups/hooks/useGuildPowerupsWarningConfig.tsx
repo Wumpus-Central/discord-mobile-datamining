@@ -1,11 +1,11 @@
-// === Module 13487: useGuildPowerupsWarningConfig ===
+// === Module 13501: useGuildPowerupsWarningConfig ===
 
-// Module 13487 (useGuildPowerupsWarningConfig)
-import util from "util" /* 1128 */;
-import _modDef2568 from "module_2568" /* 2568 */;
-import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8371 */;
+// Module 13501 (useGuildPowerupsWarningConfig)
+import util from "util" /* 1125 */;
+import _modDef2567 from "module_2567" /* 2567 */;
+import useGuildPowerupsBoostCountDefault from "useGuildPowerupsBoostCount" /* 8370 */;
 import noop from "module_19" /* 19 */;
-import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13488 */;
+import AppliedGuildBoostStore from "AppliedGuildBoostStore" /* 13502 */;
 
 const require = globalThis.__r;
 
@@ -77,8 +77,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   } else {
     const _Symbol2 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = tmp(1128).intl;
-      const stringResult = intl.string(_modDef2568.n5hQhc);
+      const intl = tmp(1125).intl;
+      const stringResult = intl.string(_modDef2567.n5hQhc);
       cResult[7] = stringResult;
       let tmp12 = stringResult;
     } else {
@@ -100,9 +100,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       cResult[13] = obj3;
       tmp17 = obj3;
     }
-    const intl2 = tmp(1128).intl;
+    const intl2 = tmp(1125).intl;
     const obj4 = { boostCount: diff, perksString: join.join(", ") };
-    const formatToPlainStringResult = intl2.formatToPlainString(_modDef2568.iAaAiG, obj4);
+    const formatToPlainStringResult = intl2.formatToPlainString(_modDef2567.iAaAiG, obj4);
     cResult[8] = join;
     cResult[9] = diff;
     cResult[10] = formatToPlainStringResult;
@@ -147,10 +147,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
     } else {
       obj = { shouldShow: true, title: null, description: null, requiredBoostCount: null };
       const intl = util.intl;
-      obj.title = intl.string(_modDef2568.n5hQhc);
+      obj.title = intl.string(_modDef2567.n5hQhc);
       const intl2 = util.intl;
       const obj2 = { boostCount: diff, perksString: closure_1.join(", ") };
-      obj.description = intl2.formatToPlainString(_modDef2568.iAaAiG, obj2);
+      obj.description = intl2.formatToPlainString(_modDef2567.iAaAiG, obj2);
       obj.requiredBoostCount = diff;
     }
     return obj;

@@ -1,18 +1,18 @@
-// === Module 1409: DisplayNameStylesUtils ===
+// === Module 1406: DisplayNameStylesUtils ===
 
-// Module 1409 (DisplayNameStylesUtils)
+// Module 1406 (DisplayNameStylesUtils)
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import _modDef683 from "module_683" /* 683 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1411 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1408 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DisplayNameStylesConstants = fn(1410);
+const DisplayNameStylesConstants = fn(1407);
 ({ DISPLAY_NAME_STYLES_GUMMY_HUE_LIGHTNESS: closure_4, DISPLAY_NAME_STYLES_GUMMY_HUE_SATURATION: hasOwnProperty, getColorPresetsForEffect: metroRequire, HEXAGON_CAMPAIGN_FONTS: closure_7 } = DisplayNameStylesConstants);
-let items = [fn(1411).DisplayNameEffect.NEON, fn(1411).DisplayNameEffect.TOON, fn(1411).DisplayNameEffect.POP, fn(1411).DisplayNameEffect.GUMMY];
+let items = [fn(1408).DisplayNameEffect.NEON, fn(1408).DisplayNameEffect.TOON, fn(1408).DisplayNameEffect.POP, fn(1408).DisplayNameEffect.GUMMY];
 const set = new Set(items);
 const items1 = [{ hueShift: -18, saturation: 0.54, lightness: 0.72 }, { hueShift: -5, saturation: 0.66, lightness: 0.6 }, { hueShift: 9, saturation: 0.56, lightness: 0.68 }, { hueShift: 22, saturation: 0.6, lightness: 0.63 }];
 const size = fn(2);

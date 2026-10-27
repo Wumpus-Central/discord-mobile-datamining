@@ -1,13 +1,13 @@
-// === Module 13591: RedesignContactSyncDiscoverabilityFooter ===
+// === Module 13605: RedesignContactSyncDiscoverabilityFooter ===
 
-// Module 13591 (RedesignContactSyncDiscoverabilityFooter)
+// Module 13605 (RedesignContactSyncDiscoverabilityFooter)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import Constants from "Constants" /* 1087 */;
-import util from "util" /* 1128 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import TableRowGroup from "TableRowGroup" /* 6987 */;
-import TableSwitchRow from "TableSwitchRow" /* 7295 */;
+import Constants from "Constants" /* 1084 */;
+import util from "util" /* 1125 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
+import TableRowGroup from "TableRowGroup" /* 6989 */;
+import TableSwitchRow from "TableSwitchRow" /* 7297 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

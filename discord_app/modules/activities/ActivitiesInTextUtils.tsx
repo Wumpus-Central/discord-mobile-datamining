@@ -1,9 +1,9 @@
 // === Module 8882: ActivitiesInTextUtils ===
 
 // Module 8882 (ActivitiesInTextUtils)
-import ChannelTypes from "ChannelTypes" /* 1108 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import ChannelTypes from "ChannelTypes" /* 1105 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ function isActivityInTextSupportedForChannel(channel) {
     return hasItem;
   }
 }
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsActivitiesInTextEnabled(arg0) {

@@ -1,17 +1,17 @@
-// === Module 8410: GuildReportRaidSystemMessage ===
+// === Module 8409: GuildReportRaidSystemMessage ===
 
-// Module 8410 (GuildReportRaidSystemMessage)
-import util from "util" /* 1128 */;
-import AvatarUtils from "AvatarUtils" /* 1417 */;
-import utils_AvatarUtils from "utils/AvatarUtils" /* 1420 */;
-import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8311 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8318 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8320 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8322 */;
-import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8403 */;
-import getTagPropertiesDefault from "getTagProperties" /* 8404 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
+// Module 8409 (GuildReportRaidSystemMessage)
+import util from "util" /* 1125 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import utils_AvatarUtils from "utils/AvatarUtils" /* 1417 */;
+import resolveMessageContentColorsDefault from "resolveMessageContentColors" /* 8310 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8317 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8319 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8321 */;
+import GuildAlertModeSystemMessage from "GuildAlertModeSystemMessage" /* 8402 */;
+import getTagPropertiesDefault from "getTagProperties" /* 8403 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
 
 require = fn;
 const size = fn(2);

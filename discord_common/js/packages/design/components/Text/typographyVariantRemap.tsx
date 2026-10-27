@@ -1,7 +1,7 @@
-// === Module 5240: typographyVariantRemap ===
+// === Module 5241: typographyVariantRemap ===
 
-// Module 5240 (typographyVariantRemap)
-import TypographyVariantRemap from "TypographyVariantRemap" /* 5241 */;
+// Module 5241 (typographyVariantRemap)
+import TypographyVariantRemap from "TypographyVariantRemap" /* 5242 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

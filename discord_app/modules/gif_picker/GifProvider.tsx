@@ -1,7 +1,7 @@
-// === Module 10133: GifProvider ===
+// === Module 10135: GifProvider ===
 
-// Module 10133 (GifProvider)
-import util from "util" /* 1128 */;
+// Module 10135 (GifProvider)
+import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gif_picker/GifProvider.tsx");

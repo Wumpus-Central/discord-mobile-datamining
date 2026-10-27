@@ -1,8 +1,8 @@
-// === Module 11410: ApplicationSubscriptionsHttpApi ===
+// === Module 11413: ApplicationSubscriptionsHttpApi ===
 
-// Module 11410 (ApplicationSubscriptionsHttpApi)
+// Module 11413 (ApplicationSubscriptionsHttpApi)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import APIErrorDefault from "APIError" /* 6375 */;
+import APIErrorDefault from "APIError" /* 6376 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -34,7 +34,7 @@ let closure_8 = async function _fetchEligibleApplicationSubscriptionGuilds() {
     return value.body;
   })();
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium_apps/ApplicationSubscriptionsHttpApi.tsx");
 

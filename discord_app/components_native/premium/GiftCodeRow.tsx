@@ -1,20 +1,20 @@
-// === Module 14877: GiftCodeRow ===
+// === Module 14913: GiftCodeRow ===
 
-// Module 14877 (GiftCodeRow)
+// Module 14913 (GiftCodeRow)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6372 */;
+import native from "native" /* 1199 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6373 */;
 import showShareActionSheet from "showShareActionSheet" /* 8851 */;
-import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11037 */;
+import GiftCodeActionCreatorsDefault from "GiftCodeActionCreators" /* 11040 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, TouchableWithoutFeedback: closure_4, StyleSheet } = get_ActivityIndicator);
-const AnalyticsSections = fn(1087).AnalyticsSections;
+const AnalyticsSections = fn(1084).AnalyticsSections;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { giftCodeRow: { paddingHorizontal: 16 }, giftCodeRowLegacy: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, giftCodeShare: null, giftCodeInput: null, giftCodeInputContent: null, giftCodeShareButton: null, codeText: null, subTextRow: null, expiryText: null, revokeHint: null, firstRow: null, buttonContainer: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.giftCodeShare = { flexDirection: "row", alignItems: "center", justifyContent: "space-between", marginVertical: 8, padding: 8, borderRadius: nativeDefault.radii.xs, borderWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.INPUT_BACKGROUND_DEFAULT };
@@ -93,7 +93,7 @@ prototype["render"] = function render() {
     const intl2 = tmp6(tmp7[13]).intl;
     const obj11 = { hours: null, revokeHook: null };
     const expiresAt = giftCode.expiresAt;
-    obj11.hours = expiresAt.diff(require("module_2049")(), "h");
+    obj11.hours = expiresAt.diff(require("module_2046")(), "h");
     obj11.revokeHook = function revokeHook(children, arg1) {
       const obj = {
         accessibilityRole: "button",
@@ -117,7 +117,7 @@ prototype["render"] = function render() {
   obj.children = items3;
   return closure_7(closure_3, obj);
 };
-GiftCodeRow.contextType = fn(5037).ThemeContext;
+GiftCodeRow.contextType = fn(5038).ThemeContext;
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/premium/GiftCodeRow.tsx");
 

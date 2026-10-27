@@ -1,10 +1,10 @@
-// === Module 15969: AccountSetting ===
+// === Module 16007: AccountSetting ===
 
-// Module 15969 (AccountSetting)
-import Constants from "Constants" /* 1087 */;
-import util from "util" /* 1128 */;
-import UserCircleIcon from "UserCircleIcon" /* 10819 */;
-import SettingBuilders from "SettingBuilders" /* 11209 */;
+// Module 16007 (AccountSetting)
+import Constants from "Constants" /* 1084 */;
+import util from "util" /* 1125 */;
+import UserCircleIcon from "UserCircleIcon" /* 10822 */;
+import SettingBuilders from "SettingBuilders" /* 11212 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

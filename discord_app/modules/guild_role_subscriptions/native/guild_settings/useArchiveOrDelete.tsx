@@ -1,9 +1,9 @@
-// === Module 19294: useArchiveOrDelete ===
+// === Module 19332: useArchiveOrDelete ===
 
-// Module 19294 (useArchiveOrDelete)
-import util from "util" /* 1128 */;
-import ToastUtilsAll from "ToastUtils" /* 5662 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16584 */;
+// Module 19332 (useArchiveOrDelete)
+import util from "util" /* 1125 */;
+import ToastUtilsAll from "ToastUtils" /* 5663 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16626 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -312,7 +312,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useArchi
       }
     }
     let obj10 = { tierName: first };
-    const formatToPlainStringResult = obj7.formatToPlainString(tmp(1128).t.x2qwWL, obj10);
+    const formatToPlainStringResult = obj7.formatToPlainString(tmp(1125).t.x2qwWL, obj10);
     cResult[9] = first;
     cResult[10] = formatToPlainStringResult;
   } else {
@@ -356,7 +356,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useArchi
         return;
       }
     }
-    const stringResult = obj9.string(tmp(1128).t.GMtG6p);
+    const stringResult = obj9.string(tmp(1125).t.GMtG6p);
     cResult[11] = stringResult;
   } else {
     class F {
@@ -399,14 +399,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useArchi
         return;
       }
     }
-    const intl2 = tmp(1128).intl;
-    stringResult1 = intl2.string(tmp(1128).t["4H6RLl"]);
-    const intl3 = tmp(1128).intl;
-    stringResult2 = intl3.string(tmp(1128).t.uG6b1w);
-    const intl4 = tmp(1128).intl;
-    stringResult3 = intl4.string(tmp(1128).t.JoCdPC);
+    const intl2 = tmp(1125).intl;
+    stringResult1 = intl2.string(tmp(1125).t["4H6RLl"]);
+    const intl3 = tmp(1125).intl;
+    stringResult2 = intl3.string(tmp(1125).t.uG6b1w);
+    const intl4 = tmp(1125).intl;
+    stringResult3 = intl4.string(tmp(1125).t.JoCdPC);
   }
-  let intl = tmp(1128).intl;
+  let intl = tmp(1125).intl;
   if (undefined === subscriptionListing) {
     class F {
       constructor() {
@@ -427,7 +427,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useArchi
         return;
       }
     }
-    const stringResult4 = intl.string(tmp(1128).t);
+    const stringResult4 = intl.string(tmp(1125).t);
   } else {
     class F {
       constructor() {
@@ -481,10 +481,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useArchi
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            const obj4 = { title, body, confirmText, confirmColor: tmp2(1202).ButtonColors.RED };
+            const obj4 = { title, body, confirmText, confirmColor: tmp2(1199).ButtonColors.RED };
             v2 = 1;
             c2 = 1;
-            const obj5 = { value: v2(5909).confirm(obj4), done: false };
+            const obj5 = { value: v2(5910).confirm(obj4), done: false };
             return obj5;
           }
         } else {
@@ -571,18 +571,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useArchi
   }
   if (true !== archived) {
     if (!tmp9) {
-      let intl = tmp(1128).intl;
+      let intl = tmp(1125).intl;
       let obj6 = { tierName: first };
-      const intl2 = tmp(1128).intl;
-      const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t.OuuIOY, obj6);
-      const intl3 = tmp(1128).intl;
-      const stringResult = intl2.string(tmp(1128).t.RL0wjm);
-      const intl4 = tmp(1128).intl;
-      closure_4 = intl4.string(tmp(1128).t.N5AIuE);
-      const intl5 = tmp(1128).intl;
-      _slicedToArray = intl5.string(tmp(1128).t.TEKiiP);
-      const intl6 = tmp(1128).intl;
-      stringResult3 = intl6.string(tmp(1128).t["170XOL"]);
+      const intl2 = tmp(1125).intl;
+      const formatToPlainStringResult = intl.formatToPlainString(tmp(1125).t.OuuIOY, obj6);
+      const intl3 = tmp(1125).intl;
+      const stringResult = intl2.string(tmp(1125).t.RL0wjm);
+      const intl4 = tmp(1125).intl;
+      closure_4 = intl4.string(tmp(1125).t.N5AIuE);
+      const intl5 = tmp(1125).intl;
+      _slicedToArray = intl5.string(tmp(1125).t.TEKiiP);
+      const intl6 = tmp(1125).intl;
+      stringResult3 = intl6.string(tmp(1125).t["170XOL"]);
       const items = [error];
       stringResult3(() => {
         let tmp2;
@@ -598,7 +598,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useArchi
       let obj7 = {
         headerText: formatToPlainStringResult,
         buttonText: stringResult,
-        descriptionText: intl3.string(tmp(1128).t["5/Jeg2"]),
+        descriptionText: intl3.string(tmp(1125).t["5/Jeg2"]),
         handleArchiveOrDelete() {
               const self = this;
               const apply = closure_14.apply;
@@ -615,23 +615,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useArchi
       return obj7;
     }
   }
-  const intl7 = tmp(1128).intl;
+  const intl7 = tmp(1125).intl;
   intl7.formatToPlainString(require("util").t.x2qwWL, { tierName: first });
-  const intl8 = tmp(1128).intl;
+  const intl8 = tmp(1125).intl;
   intl8.string(require("util").t.GMtG6p);
-  let intl9 = tmp(1128).intl;
+  let intl9 = tmp(1125).intl;
   let intl10 = intl9.string;
-  let string = tmp(1128).t;
+  let string = tmp(1125).t;
   if (undefined === subscriptionListing) {
     intl10(string.DHWKJS);
   } else {
     intl10(string.Y4KjUN);
   }
-  const intl11 = tmp(1128).intl;
-  closure_4 = intl11.string(tmp(1128).t["4H6RLl"]);
-  intl9 = tmp(1128).intl;
-  _slicedToArray = intl9.string(tmp(1128).t.uG6b1w);
-  intl10 = tmp(1128).intl;
+  const intl11 = tmp(1125).intl;
+  closure_4 = intl11.string(tmp(1125).t["4H6RLl"]);
+  intl9 = tmp(1125).intl;
+  _slicedToArray = intl9.string(tmp(1125).t.uG6b1w);
+  intl10 = tmp(1125).intl;
   string = intl10.string;
-  stringResult3 = string(tmp(1128).t.JoCdPC);
+  stringResult3 = string(tmp(1125).t.JoCdPC);
 });

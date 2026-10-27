@@ -1,18 +1,18 @@
-// === Module 19069: GuildSettingsModalEmoji ===
+// === Module 19107: GuildSettingsModalEmoji ===
 
-// Module 19069 (GuildSettingsModalEmoji)
+// Module 19107 (GuildSettingsModalEmoji)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 4925 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 19072 */;
-import HeaderRow from "HeaderRow" /* 19076 */;
-import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 19077 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import RoleSubscriptionEmojiUtils from "RoleSubscriptionEmojiUtils" /* 4926 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import GuildSettingsModalEmoji_EmojiRow from "GuildSettingsModalEmoji/EmojiRow" /* 19110 */;
+import HeaderRow from "HeaderRow" /* 19114 */;
+import EmptyServerSettingsEmoji from "EmptyServerSettingsEmoji" /* 19115 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 19070 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import GuildSettingsEmojiStore from "GuildSettingsEmojiStore" /* 19108 */;
 import apply_mod from "module_12" /* 12 */;
 
 const require = globalThis.__r;
@@ -25,8 +25,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
 let apply = apply_mod;
-let closure_11 = apply.throttle(fn(9943).fetchEmoji, 1000);
-const createStyles = fn(4971);
+let closure_11 = apply.throttle(fn(9945).fetchEmoji, 1000);
+const createStyles = fn(4972);
 let obj = { loadingContainer: { flex: 1, paddingTop: 40 }, emptyState: { paddingTop: 30 }, list: { paddingHorizontal: nativeDefault.space.PX_12 }, section: null, titleContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_12 };
 obj.section = { paddingVertical: nativeDefault.space.PX_16 };

@@ -1,13 +1,13 @@
-// === Module 16832: SwipeRightToLeftScreen ===
+// === Module 16874: SwipeRightToLeftScreen ===
 
-// Module 16832 (SwipeRightToLeftScreen)
+// Module 16874 (SwipeRightToLeftScreen)
 import c from "c" /* 576 */;
-import SettingBuilders from "SettingBuilders" /* 11209 */;
-import SettingLayoutDefault from "SettingLayout" /* 15978 */;
+import SettingBuilders from "SettingBuilders" /* 11212 */;
+import SettingLayoutDefault from "SettingLayout" /* 16016 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const MobileUserSettings = fn(8332).MobileUserSettings;
+const MobileUserSettings = fn(8331).MobileUserSettings;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

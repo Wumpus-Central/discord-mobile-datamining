@@ -1,7 +1,7 @@
-// === Module 8156: ImagePickerUtils ===
+// === Module 8154: ImagePickerUtils ===
 
-// Module 8156 (ImagePickerUtils)
-import MetaQuestUtils from "MetaQuestUtils" /* 1630 */;
+// Module 8154 (ImagePickerUtils)
+import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/image/native/ImagePickerUtils.tsx");

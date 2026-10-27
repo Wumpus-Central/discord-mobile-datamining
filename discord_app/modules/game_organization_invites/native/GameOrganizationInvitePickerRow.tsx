@@ -1,28 +1,28 @@
-// === Module 11316: GameOrganizationInvitePickerRow ===
+// === Module 11319: GameOrganizationInvitePickerRow ===
 
-// Module 11316 (GameOrganizationInvitePickerRow)
+// Module 11319 (GameOrganizationInvitePickerRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import _modDef2406 from "module_2406" /* 2406 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import Stack_Stack from "Stack/Stack" /* 5977 */;
-import TableRow from "TableRow" /* 6903 */;
-import _modDef7265 from "module_7265" /* 7265 */;
+import util from "util" /* 1125 */;
+import _modDef2403 from "module_2403" /* 2403 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import Stack_Stack from "Stack/Stack" /* 5978 */;
+import TableRow from "TableRow" /* 6905 */;
+import _modDef7267 from "module_7267" /* 7267 */;
 import GroupIcon from "GroupIcon" /* 8560 */;
 import InviteButtonDefault from "InviteButton" /* 9136 */;
-import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 11317 */;
+import getGameOrganizationInviteSendStateKey from "getGameOrganizationInviteSendStateKey" /* 11320 */;
 import noop from "module_19" /* 19 */;
 
 const getGameOrganizationInviteSendStateKeyDefault = getGameOrganizationInviteSendStateKey;
 
 require = fn;
 let closure_4 = fn(9131).useInstantInviteSendStates;
-const InviteSendStates = fn(7809).InviteSendStates;
+const InviteSendStates = fn(7810).InviteSendStates;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { icon: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, borderRadius: nativeDefault.radii.md };
 obj.icon = size;
@@ -63,7 +63,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           const obj2 = { uri: organization.iconUrl };
           let tmp16 = obj2;
         } else {
-          tmp16 = _modDef7265;
+          tmp16 = _modDef7267;
         }
         cResult[8] = organization.iconUrl;
         cResult[9] = tmp16;
@@ -121,7 +121,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               const obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
               const intl = util.intl;
               const obj8 = { count: memberCount, max: maxMembers };
-              obj7.children = intl.formatToPlainString(_modDef2406.VuENGl, obj8);
+              obj7.children = intl.formatToPlainString(_modDef2403.VuENGl, obj8);
               items[1] = timestampProducer(Text_Text.Text, obj7);
               obj5.children = items;
               tmp24 = React5(Stack_Stack.Stack, obj5);
@@ -185,7 +185,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj2 = { uri: organization.iconUrl };
     let tmp2Result = obj2;
   } else {
-    tmp2Result = _modDef7265;
+    tmp2Result = _modDef7267;
   }
   const obj3 = { icon: timestampProducer(FastImageDefault, { source: tmp2Result, style: tmp.icon }), label: organization.name, subLabel: null, trailing: null, onPress: null, disabled: null };
   let tmp11;
@@ -197,7 +197,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj7 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl = util.intl;
       const obj8 = { count: memberCount, max: maxMembers };
-      obj7.children = intl.formatToPlainString(_modDef2406.VuENGl, obj8);
+      obj7.children = intl.formatToPlainString(_modDef2403.VuENGl, obj8);
       items1[1] = timestampProducer(Text_Text.Text, obj7);
       obj5.children = items1;
       tmp11 = React5(Stack_Stack.Stack, obj5);

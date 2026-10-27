@@ -1,23 +1,23 @@
-// === Module 19006: AssetChooser ===
+// === Module 19044: AssetChooser ===
 
-// Module 19006 (AssetChooser)
+// Module 19044 (AssetChooser)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import Pressables from "Pressables" /* 6908 */;
-import _modDef19007 from "module_19007" /* 19007 */;
-import _modDef19008 from "module_19008" /* 19008 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import Pressables from "Pressables" /* 6910 */;
+import _modDef19045 from "module_19045" /* 19045 */;
+import _modDef19046 from "module_19046" /* 19046 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, TouchableWithoutFeedback: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const UPLOAD_MEDIUM_SIZE = fn(1087).UPLOAD_MEDIUM_SIZE;
+const UPLOAD_MEDIUM_SIZE = fn(1084).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { assetWrapper: { width: "100%", alignItems: "center" }, asset: null, assetImage: null, uploadIconWrapper: null, uploadIcon: null, remove: null };
 let size = { width: "100%", height: 192, borderRadius: nativeDefault.radii.xs, overflow: "hidden", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.asset = size;
@@ -137,13 +137,13 @@ prototype["render"] = function render() {
   const obj2 = { style: tmp.asset, children: null };
   let tmp9Result = source;
   if (null == source) {
-    tmp9Result = _modDef19007;
+    tmp9Result = _modDef19045;
   }
   const items = [React5(FastImageDefault, { source: tmp9Result, style: tmp.assetImage }), ];
   let tmp5Result = null;
   if (!disabled) {
     const obj4 = { style: tmp.uploadIconWrapper, children: null };
-    const obj5 = { style: tmp.uploadIcon, source: _modDef19008 };
+    const obj5 = { style: tmp.uploadIcon, source: _modDef19046 };
     obj4.children = React5(FastImageDefault, obj5);
     tmp5Result = React5(React4, obj4);
     const tmp9Result2 = FastImageDefault;
@@ -167,7 +167,7 @@ prototype["render"] = function render() {
   children[1] = tmp5Result2;
   return closure_1_8(React6, { children });
 };
-AssetChooser.contextType = fn(5037).ThemeContext;
+AssetChooser.contextType = fn(5038).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/AssetChooser.tsx");
 

@@ -1,13 +1,13 @@
-// === Module 7431: SimpleLoadingModalUI ===
+// === Module 7433: SimpleLoadingModalUI ===
 
-// Module 7431 (SimpleLoadingModalUI)
+// Module 7433 (SimpleLoadingModalUI)
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ Modal: c3, View: closure_4 } = get_ActivityIndicator);
 let jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_6 = createStyles.createStyles({ modalBackground: { flex: 1, alignItems: "center", flexDirection: "column", justifyContent: "center" } });
 let constants = { OPENING: 0, [0]: "OPENING", SHOWN: 1, [1]: "SHOWN", DISMISSED: 2, [2]: "DISMISSED" };
 const ReactCompilerGating = fn(558);
@@ -222,8 +222,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SimpleLo
     callback();
   }, items1);
   const items2 = [callback, I];
-  const callback2 = onRejected.useCallback((_55) => {
-    onRejected(_55);
+  const callback2 = onRejected.useCallback((_z) => {
+    onRejected(_z);
     callback();
   }, items2);
   const items3 = [operation, callback1, callback2];

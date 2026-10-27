@@ -1,6 +1,6 @@
-// === Module 12952: ContentInventoryPlatformActionCreators ===
+// === Module 12964: ContentInventoryPlatformActionCreators ===
 
-// Module 12952 (ContentInventoryPlatformActionCreators)
+// Module 12964 (ContentInventoryPlatformActionCreators)
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
 import size from "module_2" /* 2 */;
 

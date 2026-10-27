@@ -1,23 +1,23 @@
-// === Module 19274: MarketStallSpotIllustration ===
+// === Module 19312: MarketStallSpotIllustration ===
 
-// Module 19274 (MarketStallSpotIllustration)
+// Module 19312 (MarketStallSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef19275 from "module_19275" /* 19275 */;
-import _modDef19276 from "module_19276" /* 19276 */;
-import _modDef19277 from "module_19277" /* 19277 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import assetHelpers from "assetHelpers" /* 6997 */;
+import _modDef19313 from "module_19313" /* 19313 */;
+import _modDef19314 from "module_19314" /* 19314 */;
+import _modDef19315 from "module_19315" /* 19315 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19275 }, 3: null };
-let obj2 = { uri: _modDef19275 };
-obj[2] = { uri: _modDef19276 };
-const obj3 = { uri: _modDef19276 };
-obj[3] = { uri: _modDef19277 };
+let obj = { 1: null, 2: { uri: _modDef19313 }, 3: null };
+let obj2 = { uri: _modDef19313 };
+obj[2] = { uri: _modDef19314 };
+const obj3 = { uri: _modDef19314 };
+obj[3] = { uri: _modDef19315 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef19277 };
+const obj4 = { uri: _modDef19315 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MarketStallSpotIllustration.native.tsx");
 

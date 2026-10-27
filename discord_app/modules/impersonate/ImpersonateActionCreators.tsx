@@ -1,19 +1,19 @@
-// === Module 6854: ImpersonateActionCreators ===
+// === Module 6856: ImpersonateActionCreators ===
 
-// Module 6854 (ImpersonateActionCreators)
+// Module 6856 (ImpersonateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import router_utils from "router_utils" /* 1114 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ImpersonateTypes from "ImpersonateTypes" /* 4882 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildChannelStore from "GuildChannelStore" /* 4901 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
-import ImpersonateStore from "ImpersonateStore" /* 4876 */;
+import router_utils from "router_utils" /* 1111 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ImpersonateTypes from "ImpersonateTypes" /* 4883 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5712 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildChannelStore from "GuildChannelStore" /* 4902 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
+import ImpersonateStore from "ImpersonateStore" /* 4877 */;
 
 require = fn;
 function updateImpersonating(guildId, type) {
@@ -45,9 +45,9 @@ function updateImpersonating(guildId, type) {
   }
   tmp2 = null != data && data.type === type.type;
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Permissions: closure_11, Routes: closure_12, AnalyticEvents: map1 } = Constants);
-const isStaticChannelRoute = fn(4830).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4831).isStaticChannelRoute;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/impersonate/ImpersonateActionCreators.tsx");
 

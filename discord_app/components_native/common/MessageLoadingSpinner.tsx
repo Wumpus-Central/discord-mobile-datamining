@@ -1,15 +1,15 @@
-// === Module 11438: MessageLoadingSpinner ===
+// === Module 11441: MessageLoadingSpinner ===
 
-// Module 11438 (MessageLoadingSpinner)
+// Module 11441 (MessageLoadingSpinner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 5252 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6880 */;
+import useToken from "useToken" /* 5253 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6882 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 let result = null;
 if (!PlatformUtils.isAndroid()) {
   result = fn(17).requireNativeComponent("DCDMessageLoadingSpinner");

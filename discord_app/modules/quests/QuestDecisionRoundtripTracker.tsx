@@ -1,14 +1,14 @@
-// === Module 9578: QuestDecisionRoundtripTracker ===
+// === Module 9580: QuestDecisionRoundtripTracker ===
 
-// Module 9578 (QuestDecisionRoundtripTracker)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AdCreativeType from "AdCreativeType" /* 6717 */;
-import NetStats from "NetStats" /* 7569 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 7572 */;
-import getDeviceMetadataDefault from "getDeviceMetadata" /* 7750 */;
-import AdDecisionUtils from "AdDecisionUtils" /* 7774 */;
-import AdDeliveryStore from "AdDeliveryStore" /* 7773 */;
-import NetworkStore from "NetworkStore" /* 5890 */;
+// Module 9580 (QuestDecisionRoundtripTracker)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import AdCreativeType from "AdCreativeType" /* 6718 */;
+import NetStats from "NetStats" /* 7570 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 7573 */;
+import getDeviceMetadataDefault from "getDeviceMetadata" /* 7751 */;
+import AdDecisionUtils from "AdDecisionUtils" /* 7775 */;
+import AdDeliveryStore from "AdDeliveryStore" /* 7774 */;
+import NetworkStore from "NetworkStore" /* 5891 */;
 
 require = fn;
 function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
@@ -59,7 +59,7 @@ function trackRoundtrip(apiResponseTimestamp, transition_case, fetched_at) {
     const tmp2Result = SessionForegroundUtils;
   }
 }
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 class QuestDecisionRoundtripTracker {
   constructor() {
     merged = Object.assign({ pendingRequests: null });
@@ -136,8 +136,11 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         if (AdCreativeType.AdCreativeType.QUEST !== type) {
           str4 = "bounty";
           if (AdCreativeType.AdCreativeType.BOUNTY !== type) {
-            if (AdCreativeType.AdCreativeType.QUEST_HOME_HERO === type) {
-              str4 = "quest_home_hero";
+            str4 = "playable";
+            if (AdCreativeType.AdCreativeType.PLAYABLE !== type) {
+              if (AdCreativeType.AdCreativeType.QUEST_HOME_HERO === type) {
+                str4 = "quest_home_hero";
+              }
             }
           }
         }
@@ -154,8 +157,11 @@ prototype["recordQuestRequestApiResponse"] = function recordQuestRequestApiRespo
         if (AdCreativeType.AdCreativeType.QUEST !== type2) {
           str7 = "bounty";
           if (AdCreativeType.AdCreativeType.BOUNTY !== type2) {
-            if (AdCreativeType.AdCreativeType.QUEST_HOME_HERO === type2) {
-              str7 = "quest_home_hero";
+            str7 = "playable";
+            if (AdCreativeType.AdCreativeType.PLAYABLE !== type2) {
+              if (AdCreativeType.AdCreativeType.QUEST_HOME_HERO === type2) {
+                str7 = "quest_home_hero";
+              }
             }
           }
         }

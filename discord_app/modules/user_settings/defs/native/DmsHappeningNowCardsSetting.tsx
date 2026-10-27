@@ -1,10 +1,10 @@
-// === Module 16680: DmsHappeningNowCardsSetting ===
+// === Module 16722: DmsHappeningNowCardsSetting ===
 
-// Module 16680 (DmsHappeningNowCardsSetting)
-import util from "util" /* 1128 */;
-import UserSettings from "UserSettings" /* 4799 */;
-import SettingsConstants from "SettingsConstants" /* 8332 */;
-import SettingBuilders from "SettingBuilders" /* 11209 */;
+// Module 16722 (DmsHappeningNowCardsSetting)
+import util from "util" /* 1125 */;
+import UserSettings from "UserSettings" /* 4800 */;
+import SettingsConstants from "SettingsConstants" /* 8331 */;
+import SettingBuilders from "SettingBuilders" /* 11212 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

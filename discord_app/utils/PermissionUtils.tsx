@@ -1,22 +1,22 @@
-// === Module 4908: PermissionUtils ===
+// === Module 4909: PermissionUtils ===
 
-// Module 4908 (PermissionUtils)
+// Module 4909 (PermissionUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import Server from "Server" /* 2000 */;
-import GuildRoleUtils from "GuildRoleUtils" /* 4881 */;
-import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4890 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4909 */;
-import AppChannelPermissions from "AppChannelPermissions" /* 4910 */;
-import ImpersonateStore from "ImpersonateStore" /* 4876 */;
-import LurkingStore from "LurkingStore" /* 4904 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4905 */;
+import Server from "Server" /* 1997 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 4882 */;
+import CommunicationDisabledUtils from "CommunicationDisabledUtils" /* 4891 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4910 */;
+import AppChannelPermissions from "AppChannelPermissions" /* 4911 */;
+import ImpersonateStore from "ImpersonateStore" /* 4877 */;
+import LurkingStore from "LurkingStore" /* 4905 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4906 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserStore from "UserStore" /* 1392 */;
-import BigFlagUtils_mod from "BigFlagUtils" /* 1099 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserStore from "UserStore" /* 1389 */;
+import BigFlagUtils_mod from "BigFlagUtils" /* 1096 */;
 import apply from "module_12" /* 12 */;
 
 require = fn;
@@ -302,17 +302,17 @@ function applyThreadPermissions(context, permissions, hasJoinedResult, GuildMemb
     let combine = dependencyMap;
     let SEND_MESSAGES = Permissions;
     if (!obj2.has(permissions, Permissions.SEND_MESSAGES_IN_THREADS)) {
-      tmp8(1099).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
-      const tmp8Result = tmp8(1099);
+      tmp8(1096).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
+      const tmp8Result = tmp8(1096);
     }
     if (context.isLockedThread()) {
       if (!tmp8Result3.has(permissions, SEND_MESSAGES.MANAGE_THREADS)) {
-        let removeResult1 = tmp8(1099).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
-        const tmp8Result4 = tmp8(1099);
+        let removeResult1 = tmp8(1096).remove(permissions, SEND_MESSAGES.SEND_MESSAGES);
+        const tmp8Result4 = tmp8(1096);
       }
-      tmp8Result3 = tmp8(1099);
+      tmp8Result3 = tmp8(1096);
     }
-    tmp8 = tmp8(1099);
+    tmp8 = tmp8(1096);
     combine = tmp8.combine;
     SEND_MESSAGES = SEND_MESSAGES.SEND_MESSAGES;
     removeResult1 = combine(permissions, SEND_MESSAGES);
@@ -351,12 +351,12 @@ function getSyncedPermissionOverwrites(guild_id, appChannelBotUserId) {
   }
   return obj;
 }
-const ChannelRecord = fn(4827);
+const ChannelRecord = fn(4828);
 ({ THREAD_CHANNEL_TYPES: closure_7, ChannelRecordBase: closure_8 } = ChannelRecord);
-const GuildRecord = fn(4841);
+const GuildRecord = fn(4842);
 ({ getGuildEveryoneRoleId: closure_9, isGuildOwner: c10 } = GuildRecord);
-const hasPermission = fn(4878).hasPermission;
-const Constants = fn(1087);
+const hasPermission = fn(4879).hasPermission;
+const Constants = fn(1084);
 const Permissions = Constants.Permissions;
 ({ ElevatedPermissions: closure_19, MFALevels: closure_20, ChannelTypes: closure_21, EMPTY_STRING_SNOWFLAKE_ID: closure_22 } = Constants);
 let BigFlagUtils = BigFlagUtils_mod;
@@ -458,7 +458,7 @@ export const areChannelsLocked = function areChannelsLocked(c18, c19, appChannel
           const tmp12 = getSyncedPermissionOverwrites(guild_id, appChannelBotUserId);
           closure_1 = tmp12;
           if (null == obj2[guild_id]) {
-            let obj = { id: guild_id, type: obj2(2000).PermissionOverwriteType.ROLE, allow: deserializeResult, deny: deserializeResult };
+            let obj = { id: guild_id, type: obj2(1997).PermissionOverwriteType.ROLE, allow: deserializeResult, deny: deserializeResult };
             obj2[guild_id] = obj;
           }
           const _Object = Object;

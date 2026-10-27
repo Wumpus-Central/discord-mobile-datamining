@@ -1,6 +1,6 @@
-// === Module 19440: ResendVerificationCodeButton ===
+// === Module 19478: ResendVerificationCodeButton ===
 
-// Module 19440 (ResendVerificationCodeButton)
+// Module 19478 (ResendVerificationCodeButton)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;

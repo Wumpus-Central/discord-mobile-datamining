@@ -1,19 +1,19 @@
-// === Module 19215: GuildSettingsRoleSubscriptionWelcomeView ===
+// === Module 19253: GuildSettingsRoleSubscriptionWelcomeView ===
 
-// Module 19215 (GuildSettingsRoleSubscriptionWelcomeView)
+// Module 19253 (GuildSettingsRoleSubscriptionWelcomeView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import NavigatorConstants from "NavigatorConstants" /* 5268 */;
-import ErrorBlockDefault from "ErrorBlock" /* 12135 */;
-import WarningNoticeDefault from "WarningNotice" /* 19217 */;
-import EligibilityActionSheet from "EligibilityActionSheet" /* 19220 */;
-import HowItWorksSectionDefault from "HowItWorksSection" /* 19226 */;
-import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 19239 */;
-import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 19264 */;
+import util from "util" /* 1125 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import NavigatorConstants from "NavigatorConstants" /* 5269 */;
+import ErrorBlockDefault from "ErrorBlock" /* 12136 */;
+import WarningNoticeDefault from "WarningNotice" /* 19255 */;
+import EligibilityActionSheet from "EligibilityActionSheet" /* 19258 */;
+import HowItWorksSectionDefault from "HowItWorksSection" /* 19264 */;
+import CreatorBenefitsSectionDefault from "CreatorBenefitsSection" /* 19277 */;
+import CreatorHighlightSectionDefault from "CreatorHighlightSection" /* 19302 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -38,7 +38,7 @@ function StartEarningButton(isTermsAccepted) {
   const callback = noop.useCallback(() => submitAcceptTermsRequest(), items);
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    return obj.openLazy(asyncRequireImpl(19220, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
+    return obj.openLazy(asyncRequireImpl(19258, dependencyMap.paths), EligibilityActionSheet.ELIGIBILITY_ACTION_SHEET_KEY, {
       eligibility,
       onRequireModeratorMFAClick() {
         navigation.push(constants.SECURITY);
@@ -111,12 +111,12 @@ function StartEarningButton(isTermsAccepted) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const creatorPortalUrl = fn(16562).CREATOR_REVENUE_PORTAL_URL;
-const GuildSettingsSections = fn(1087).GuildSettingsSections;
-const constants = fn(19216).CreatorMonetizationOnboardingMarketingSection;
+const creatorPortalUrl = fn(16604).CREATOR_REVENUE_PORTAL_URL;
+const GuildSettingsSections = fn(1084).GuildSettingsSections;
+const constants = fn(19254).CreatorMonetizationOnboardingMarketingSection;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flex: 1 }, contentContainer: { flex: 1, padding: 24 }, heroImage: { alignItems: "center", paddingTop: 24 }, subtitle: { marginTop: 8 }, tos: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderRadius: nativeDefault.radii.sm, marginTop: 10 }, startEarningButton: { marginTop: 12 }, startEarningButtonContainer: { marginTop: 14 }, startEarningFabContainer: { marginHorizontal: 24 }, divider: null, sectionTitle: null, sectionFooter: null, statusNoticeContainer: null };
 let size = { width: "100%", height: 0.8, marginTop: 36, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED };
 obj2.divider = size;
@@ -347,11 +347,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function MarketingSec
   const cResult = require("c").c(16);
   ({ onboardingMarketing, onHowItWorksLayoutChange } = arg0);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let intl = tmp(1128).intl;
-    const stringResult = intl.string(tmp(1128).t.R9rNIk);
-    const intl2 = tmp(1128).intl;
+    let intl = tmp(1125).intl;
+    const stringResult = intl.string(tmp(1125).t.R9rNIk);
+    const intl2 = tmp(1125).intl;
     let obj2 = { creatorPortalUrl };
-    const formatResult = intl2.format(tmp(1128).t.oxW30N, obj2);
+    const formatResult = intl2.format(tmp(1125).t.oxW30N, obj2);
     cResult[0] = stringResult;
     cResult[1] = formatResult;
     tmp4 = stringResult;
@@ -377,8 +377,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function MarketingSec
   }
   _require = tmp13;
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl3 = tmp(1128).intl;
-    const stringResult1 = intl3.string(tmp(1128).t["1QHJaW"]);
+    const intl3 = tmp(1125).intl;
+    const stringResult1 = intl3.string(tmp(1125).t["1QHJaW"]);
     cResult[5] = stringResult1;
     let tmp18 = stringResult1;
   } else {

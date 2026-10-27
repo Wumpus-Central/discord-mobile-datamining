@@ -1,8 +1,8 @@
-// === Module 13054: PrivateChannelRecipientActionCreators ===
+// === Module 13068: PrivateChannelRecipientActionCreators ===
 
-// Module 13054 (PrivateChannelRecipientActionCreators)
-import Constants from "Constants" /* 1087 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
+// Module 13068 (PrivateChannelRecipientActionCreators)
+import Constants from "Constants" /* 1084 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

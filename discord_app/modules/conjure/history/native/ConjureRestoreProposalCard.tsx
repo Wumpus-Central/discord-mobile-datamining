@@ -1,14 +1,14 @@
-// === Module 12479: ConjureRestoreProposalCard ===
+// === Module 12487: ConjureRestoreProposalCard ===
 
-// Module 12479 (ConjureRestoreProposalCard)
+// Module 12487 (ConjureRestoreProposalCard)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import _modDef3830 from "module_3830" /* 3830 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import Stack_Stack from "Stack/Stack" /* 5977 */;
-import ConjureHistoryFormat from "ConjureHistoryFormat" /* 11768 */;
-import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12168 */;
+import util from "util" /* 1125 */;
+import _modDef3831 from "module_3831" /* 3831 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import Stack_Stack from "Stack/Stack" /* 5978 */;
+import ConjureNativeCardSurfaceDefault from "ConjureNativeCardSurface" /* 12188 */;
+import ConjureHistoryFormat from "ConjureHistoryFormat" /* 12232 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,7 +34,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
     const intl = util.intl;
-    obj2.children = intl.string(_modDef3830["t+b0rz"]);
+    obj2.children = intl.string(_modDef3831["t+b0rz"]);
     const tmp9 = React3(Text_Text.Text, obj2);
     cResult[2] = tmp9;
     let tmp6 = tmp9;
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
       if (null != onRestore) {
         const obj5 = { text: null, variant: "secondary", onPress: null };
         const intl2 = util.intl;
-        obj5.text = intl2.string(_modDef3830.H8Jfhu);
+        obj5.text = intl2.string(_modDef3831.H8Jfhu);
         obj5.onPress = onRestore;
         tmp19 = React3(components_Button_Button.Button, obj5);
       }
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   const relative = ConjureHistoryFormat.formatAuthoredAt(proposal.authored_at).relative;
   const obj2 = { variant: "text-sm/semibold", color: "text-muted", children: null };
   const intl = util.intl;
-  obj2.children = intl.string(_modDef3830["t+b0rz"]);
+  obj2.children = intl.string(_modDef3831["t+b0rz"]);
   const items = [React3(Text_Text.Text, obj2), , ];
   const items1 = [React3(Text_Text.Text, { variant: "text-md/medium", color: "text-default", children: proposal.subject }), ];
   let tmp3Result = null;
@@ -125,7 +125,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   if (null != onRestore) {
     const obj5 = { text: null, variant: "secondary", onPress: null };
     const intl2 = util.intl;
-    obj5.text = intl2.string(_modDef3830.H8Jfhu);
+    obj5.text = intl2.string(_modDef3831.H8Jfhu);
     obj5.onPress = onRestore;
     tmp3Result2 = React3(components_Button_Button.Button, obj5);
   }

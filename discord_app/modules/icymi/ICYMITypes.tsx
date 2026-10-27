@@ -1,7 +1,7 @@
 // === Module 8836: ICYMITypes ===
 
 // Module 8836 (ICYMITypes)
-import Constants from "Constants" /* 1087 */;
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 ({ ChannelTypes: closure_0, MessageEmbedTypes } = Constants);

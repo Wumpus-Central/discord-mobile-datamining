@@ -1,16 +1,16 @@
-// === Module 8416: JoinRequestNotificationSystemMessage ===
+// === Module 8415: JoinRequestNotificationSystemMessage ===
 
-// Module 8416 (JoinRequestNotificationSystemMessage)
+// Module 8415 (JoinRequestNotificationSystemMessage)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1128 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8322 */;
-import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6844 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5003 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserStore from "UserStore" /* 1392 */;
+import util from "util" /* 1125 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8321 */;
+import GuildJoinRequestStore from "GuildJoinRequestStore" /* 6846 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5004 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const MessageTypes = fn(1087).MessageTypes;
+const MessageTypes = fn(1084).MessageTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/JoinRequestNotificationSystemMessage.tsx");
 

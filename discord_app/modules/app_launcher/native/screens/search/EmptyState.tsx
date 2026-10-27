@@ -1,14 +1,14 @@
-// === Module 11993: search/EmptyState ===
+// === Module 11994: search/EmptyState ===
 
-// Module 11993 (search/EmptyState)
-import util from "util" /* 1128 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4980 */;
+// Module 11994 (search/EmptyState)
+import util from "util" /* 1125 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4981 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_5 = createStyles.createStyles({ container: { position: "relative", justifyContent: "center", alignItems: "center" }, textContainer: { justifyContent: "center", width: "100%" }, text: { marginTop: 16, textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -24,7 +24,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmptySta
   showsGenericMessage = tmp4;
   const tmp5 = closure_5();
   const obj = showsGenericMessage(576);
-  const logAppLauncherEmptyStateView = showsGenericMessage(11922).useLogAppLauncherEmptyStateView(tmp(11170).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  const logAppLauncherEmptyStateView = showsGenericMessage(11923).useLogAppLauncherEmptyStateView(tmp(11173).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
   if (cResult[0] !== tmp4) {
     const fn = function o() {
       const intl = util.intl;
@@ -50,9 +50,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmptySta
   }
   const effect = noop.useEffect(tmp7, tmp8);
   if (cResult[3] !== tmp4) {
-    let intl = tmp(1128).intl;
+    let intl = tmp(1125).intl;
     let string = intl.string;
-    let aOkFv8 = tmp(1128).t;
+    let aOkFv8 = tmp(1125).t;
     if (tmp4) {
       aOkFv8 = aOkFv8.aOkFv8;
       let stringResult = string(aOkFv8);
@@ -91,20 +91,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmptySta
       tmp16 = tmp19;
     }
     const obj4 = { style: tmp5.text, variant: "text-sm/medium", color: "text-default", children: cResult[4] };
-    const tmp15 = jsx(tmp(5234).Text, { style: tmp5.text, variant: "text-sm/medium", color: "text-default", children: cResult[4] });
+    const tmp15 = jsx(tmp(5235).Text, { style: tmp5.text, variant: "text-sm/medium", color: "text-default", children: cResult[4] });
     cResult[5] = tmp5.text;
     cResult[6] = cResult[4];
     cResult[7] = tmp15;
     tmp13 = tmp15;
   }
-  const tmpResult = showsGenericMessage(11922);
+  const tmpResult = showsGenericMessage(11923);
 }) : (function EmptyState(showsGenericMessage) {
   let flag = showsGenericMessage.showsGenericMessage;
   if (flag === undefined) {
     flag = false;
   }
   const tmp = closure_5();
-  const logAppLauncherEmptyStateView = flag(11922).useLogAppLauncherEmptyStateView(flag(11170).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
+  const logAppLauncherEmptyStateView = flag(11923).useLogAppLauncherEmptyStateView(flag(11173).AppLauncherEmptyStateType.SEARCH_EMPTY, showsGenericMessage.query);
   const items = [flag];
   const effect = noop.useEffect(() => {
     const intl = util.intl;
@@ -121,16 +121,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmptySta
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { style: tmp.textContainer, children: null };
   const obj4 = { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null };
-  let intl = flag(1128).intl;
+  let intl = flag(1125).intl;
   let string = intl.string;
-  let t = flag(1128).t;
+  let t = flag(1125).t;
   if (flag) {
     let stringResult = string(t.aOkFv8);
   } else {
     stringResult = string(t.LSNOYf);
   }
   obj4.children = stringResult;
-  obj3.children = jsx(flag(5234).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null });
+  obj3.children = jsx(flag(5235).Text, { style: tmp.text, variant: "text-sm/medium", color: "text-default", children: null });
   obj2.children = <View style={tmp.textContainer}>{null}</View>;
   return <View style={tmp.container}>{null}</View>;
 });

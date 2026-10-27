@@ -1,8 +1,8 @@
-// === Module 9712: ChannelDetailsStore ===
+// === Module 9714: ChannelDetailsStore ===
 
-// Module 9712 (ChannelDetailsStore)
+// Module 9714 (ChannelDetailsStore)
 import c from "c" /* 576 */;
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import "ReactCompilerGating";
@@ -109,12 +109,12 @@ export const setIsChannelDetailsSearchActive = function setIsChannelDetailsSearc
   const merged2 = Object.assign(obj);
   const map = new Map(states);
   const result = map.set(arg0, {});
-  map(1274).batchUpdates(() => {
+  map(1271).batchUpdates(() => {
     const obj = { states: map };
     return obj.setState(obj);
   });
   const obj3 = {};
-  const obj5 = map(1274);
+  const obj5 = map(1271);
 };
 export const getIsChannelDetailsSearchActive = function getIsChannelDetailsSearchActive(arg0) {
   const states = obj.getState().states;
@@ -130,7 +130,7 @@ export const deleteChannelDetailsSearchState = function deleteChannelDetailsSear
   const states = obj.getState().states;
   states.delete(arg0);
   const map = new Map(states);
-  obj = map(1274);
+  obj = map(1271);
   obj.batchUpdates(() => {
     const obj = { states: map };
     return obj.setState(obj);

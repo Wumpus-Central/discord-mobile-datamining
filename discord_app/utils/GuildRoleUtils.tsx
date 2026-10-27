@@ -1,10 +1,10 @@
-// === Module 4881: GuildRoleUtils ===
+// === Module 4882: GuildRoleUtils ===
 
-// Module 4881 (GuildRoleUtils)
+// Module 4882 (GuildRoleUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
-import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 4879 */;
-import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4880 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
+import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 4880 */;
+import EnhancedRoleColorUtils from "EnhancedRoleColorUtils" /* 4881 */;
 import size from "module_2" /* 2 */;
 
 function compareGuildRoles(guildId, id) {

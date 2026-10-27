@@ -1,23 +1,23 @@
-// === Module 7372: ChannelMemberStore ===
+// === Module 7374: ChannelMemberStore ===
 
-// Module 7372 (ChannelMemberStore)
+// Module 7374 (ChannelMemberStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1266 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4908 */;
-import ExperimentStore from "ExperimentStore" /* 5190 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1263 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4909 */;
+import ExperimentStore from "ExperimentStore" /* 5191 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6643 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5194 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6498 */;
-import UserStore from "UserStore" /* 1392 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5195 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6499 */;
+import UserStore from "UserStore" /* 1389 */;
 
 let require = fn;
 function getMemberListId(arg0) {
@@ -68,7 +68,7 @@ function handleLocalPresenceUpdate() {
   const id = AuthenticationStore.getId();
   const item = merged.forEach(null, (rebuildMember) => rebuildMember.rebuildMember(closure_0));
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ StatusTypes: closure_15, Permissions: closure_16 } = Constants);
 const everyone = "everyone";
 const MemberListRowTypes = { GROUP: "GROUP", MEMBER: "MEMBER", CONTENT_INVENTORY: "CONTENT_INVENTORY", CONTENT_INVENTORY_GROUP: "CONTENT_INVENTORY_GROUP", HIDDEN_CONTENT_INVENTORY: "HIDDEN_CONTENT_INVENTORY", CONTENT_INVENTORY_LEADERBOARD: "CONTENT_INVENTORY_LEADERBOARD" };
@@ -138,14 +138,14 @@ prototype["setGroups"] = function setGroups(groups) {
     Object.defineProperty(obj2, "title", {
       get: () => {
         if (constants.ONLINE === id) {
-          const intl3 = id(1128).intl;
-          return intl3.string(id(1128).t.WbGtnH);
+          const intl3 = id(1125).intl;
+          return intl3.string(id(1125).t.WbGtnH);
         } else if (tmp2.OFFLINE === tmp) {
-          const intl2 = id(1128).intl;
-          return intl2.string(id(1128).t.Vv0abJ);
+          const intl2 = id(1125).intl;
+          return intl2.string(id(1125).t.Vv0abJ);
         } else {
-          const intl = id(1128).intl;
-          return intl.string(id(1128).t["UQMV/E"]);
+          const intl = id(1125).intl;
+          return intl.string(id(1125).t["UQMV/E"]);
         }
       },
       set: undefined
@@ -195,7 +195,7 @@ prototype["insert"] = function insert(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id);
           }
-          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "k" };
+          let obj2 = { type: obj.GROUP, key: id, id, title: null, count: null, index: "applicationId" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -211,14 +211,14 @@ prototype["insert"] = function insert(arg0, arg1) {
     Object.defineProperty(obj3, "title", {
       get: () => {
           if (constants.ONLINE === id) {
-            const intl3 = id(1128).intl;
-            return intl3.string(id(1128).t.WbGtnH);
+            const intl3 = id(1125).intl;
+            return intl3.string(id(1125).t.WbGtnH);
           } else if (tmp2.OFFLINE === tmp) {
-            const intl2 = id(1128).intl;
-            return intl2.string(id(1128).t.Vv0abJ);
+            const intl2 = id(1125).intl;
+            return intl2.string(id(1125).t.Vv0abJ);
           } else {
-            const intl = id(1128).intl;
-            return intl.string(id(1128).t["UQMV/E"]);
+            const intl = id(1125).intl;
+            return intl.string(id(1125).t["UQMV/E"]);
           }
         },
       set: undefined
@@ -290,7 +290,7 @@ prototype["update"] = function update(arg0, arg1) {
           if (null != guild) {
             role = GuildRoleStore.getRole(guild.id, id2);
           }
-          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "k" };
+          let obj2 = { type: obj.GROUP, key: id2, id: id2, title: null, count: null, index: "applicationId" };
           let str = "";
           if (null != role) {
             str = role.name;
@@ -306,14 +306,14 @@ prototype["update"] = function update(arg0, arg1) {
     Object.defineProperty(obj3, "title", {
       get: () => {
           if (constants.ONLINE === id) {
-            const intl3 = id(1128).intl;
-            return intl3.string(id(1128).t.WbGtnH);
+            const intl3 = id(1125).intl;
+            return intl3.string(id(1125).t.WbGtnH);
           } else if (tmp2.OFFLINE === tmp) {
-            const intl2 = id(1128).intl;
-            return intl2.string(id(1128).t.Vv0abJ);
+            const intl2 = id(1125).intl;
+            return intl2.string(id(1125).t.Vv0abJ);
           } else {
-            const intl = id(1128).intl;
-            return intl.string(id(1128).t["UQMV/E"]);
+            const intl = id(1125).intl;
+            return intl.string(id(1125).t["UQMV/E"]);
           }
         },
       set: undefined
@@ -461,14 +461,14 @@ prototype["rebuildGroup"] = function rebuildGroup(id) {
     Object.defineProperty(obj2, "title", {
       get: () => {
           if (constants.ONLINE === id) {
-            const intl3 = id(1128).intl;
-            return intl3.string(id(1128).t.WbGtnH);
+            const intl3 = id(1125).intl;
+            return intl3.string(id(1125).t.WbGtnH);
           } else if (tmp2.OFFLINE === tmp) {
-            const intl2 = id(1128).intl;
-            return intl2.string(id(1128).t.Vv0abJ);
+            const intl2 = id(1125).intl;
+            return intl2.string(id(1125).t.Vv0abJ);
           } else {
-            const intl = id(1128).intl;
-            return intl.string(id(1128).t["UQMV/E"]);
+            const intl = id(1125).intl;
+            return intl.string(id(1125).t["UQMV/E"]);
           }
         },
       set: undefined

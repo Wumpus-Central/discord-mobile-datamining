@@ -1,7 +1,7 @@
 // === Module 8624: CheckpointCardColors ===
 
 // Module 8624 (CheckpointCardColors)
-import CheckpointCharacterBase from "CheckpointCharacterBase" /* 6041 */;
+import CheckpointCharacterBase from "CheckpointCharacterBase" /* 6044 */;
 import _modDef8625 from "module_8625" /* 8625 */;
 import _modDef8626 from "module_8626" /* 8626 */;
 import _modDef8627 from "module_8627" /* 8627 */;

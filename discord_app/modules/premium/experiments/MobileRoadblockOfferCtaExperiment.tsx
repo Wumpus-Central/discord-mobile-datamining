@@ -1,7 +1,7 @@
-// === Module 14050: MobileRoadblockOfferCtaExperiment ===
+// === Module 14064: MobileRoadblockOfferCtaExperiment ===
 
-// Module 14050 (MobileRoadblockOfferCtaExperiment)
-import ApexExperiment from "ApexExperiment" /* 1455 */;
+// Module 14064 (MobileRoadblockOfferCtaExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-09-mobile-roadblock-offer-cta", defaultConfig: false, variations: { 0: false, 1: true } });

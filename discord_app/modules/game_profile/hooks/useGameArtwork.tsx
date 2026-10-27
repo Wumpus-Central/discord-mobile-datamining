@@ -2,7 +2,7 @@
 
 // Module 9306 (useGameArtwork)
 import c from "c" /* 576 */;
-import getGameMediaRefURL from "getGameMediaRefURL" /* 2032 */;
+import getGameMediaRefURL from "getGameMediaRefURL" /* 2029 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

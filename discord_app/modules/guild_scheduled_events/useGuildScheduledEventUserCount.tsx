@@ -3,7 +3,7 @@
 // Module 8886 (useGuildScheduledEventUserCount)
 import _mod19 from "module_19" /* 19 */;
 import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8887 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6784 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6785 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

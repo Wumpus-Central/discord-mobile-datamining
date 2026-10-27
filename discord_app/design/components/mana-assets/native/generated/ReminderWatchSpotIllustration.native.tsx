@@ -1,23 +1,23 @@
-// === Module 13831: ReminderWatchSpotIllustration ===
+// === Module 13845: ReminderWatchSpotIllustration ===
 
-// Module 13831 (ReminderWatchSpotIllustration)
+// Module 13845 (ReminderWatchSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef13832 from "module_13832" /* 13832 */;
-import _modDef13833 from "module_13833" /* 13833 */;
-import _modDef13834 from "module_13834" /* 13834 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import assetHelpers from "assetHelpers" /* 6997 */;
+import _modDef13846 from "module_13846" /* 13846 */;
+import _modDef13847 from "module_13847" /* 13847 */;
+import _modDef13848 from "module_13848" /* 13848 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef13832 }, 3: null };
-let obj2 = { uri: _modDef13832 };
-obj[2] = { uri: _modDef13833 };
-const obj3 = { uri: _modDef13833 };
-obj[3] = { uri: _modDef13834 };
+let obj = { 1: null, 2: { uri: _modDef13846 }, 3: null };
+let obj2 = { uri: _modDef13846 };
+obj[2] = { uri: _modDef13847 };
+const obj3 = { uri: _modDef13847 };
+obj[3] = { uri: _modDef13848 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef13834 };
+const obj4 = { uri: _modDef13848 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ReminderWatchSpotIllustration.native.tsx");
 

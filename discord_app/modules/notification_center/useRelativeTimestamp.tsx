@@ -1,7 +1,7 @@
-// === Module 17463: useRelativeTimestamp ===
+// === Module 17504: useRelativeTimestamp ===
 
-// Module 17463 (useRelativeTimestamp)
-import NotificationCenterUtils from "NotificationCenterUtils" /* 6789 */;
+// Module 17504 (useRelativeTimestamp)
+import NotificationCenterUtils from "NotificationCenterUtils" /* 6790 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -29,21 +29,21 @@ export const useRelativeTimestamp = ReactCompilerGating.isReactCompilerEnabled()
       return tmp6;
     }
     const fn2 = function c() {
-      dependencyMap(timestamp(6789).getRelativeTimestamp(interval, closure_1));
+      dependencyMap(timestamp(6790).getRelativeTimestamp(interval, closure_1));
       const diff = Date.now() - interval;
-      if (diff <= closure_1(1104).Millis.DAY) {
-        if (diff >= closure_1(1104).Millis.HOUR) {
-          let MINUTE = closure_1(1104).Millis.HOUR;
+      if (diff <= closure_1(1101).Millis.DAY) {
+        if (diff >= closure_1(1101).Millis.HOUR) {
+          let MINUTE = closure_1(1101).Millis.HOUR;
         } else {
-          MINUTE = closure_1(1104).Millis.MINUTE;
+          MINUTE = closure_1(1101).Millis.MINUTE;
         }
         const _setInterval = setInterval;
         interval = setInterval(() => {
-          dependencyMap(timestamp(6789).getRelativeTimestamp(closure_0, closure_1_1));
+          dependencyMap(timestamp(6790).getRelativeTimestamp(closure_0, closure_1_1));
         }, MINUTE, MINUTE - diff % MINUTE);
         return () => clearInterval(closure_0);
       }
-      const obj = timestamp(6789);
+      const obj = timestamp(6790);
     };
     const items = [timestamp, tmp2];
     cResult[3] = tmp2;
@@ -72,21 +72,21 @@ export const useRelativeTimestamp = ReactCompilerGating.isReactCompilerEnabled()
   dependencyMap = tmp[1];
   const items = [timestamp, flag];
   const effect = noop.useEffect(() => {
-    dependencyMap(timestamp(6789).getRelativeTimestamp(interval, flag));
+    dependencyMap(timestamp(6790).getRelativeTimestamp(interval, flag));
     const diff = Date.now() - interval;
-    if (diff <= flag(1104).Millis.DAY) {
-      if (diff >= flag(1104).Millis.HOUR) {
-        let MINUTE = flag(1104).Millis.HOUR;
+    if (diff <= flag(1101).Millis.DAY) {
+      if (diff >= flag(1101).Millis.HOUR) {
+        let MINUTE = flag(1101).Millis.HOUR;
       } else {
-        MINUTE = flag(1104).Millis.MINUTE;
+        MINUTE = flag(1101).Millis.MINUTE;
       }
       const _setInterval = setInterval;
       interval = setInterval(() => {
-        dependencyMap(timestamp(6789).getRelativeTimestamp(closure_0, flag));
+        dependencyMap(timestamp(6790).getRelativeTimestamp(closure_0, flag));
       }, MINUTE, MINUTE - diff % MINUTE);
       return () => clearInterval(closure_0);
     }
-    const obj = timestamp(6789);
+    const obj = timestamp(6790);
   }, items);
   return tmp[0];
 });

@@ -1,34 +1,34 @@
-// === Module 14849: PremiumSubscriptionUpsell ===
+// === Module 14885: PremiumSubscriptionUpsell ===
 
-// Module 14849 (PremiumSubscriptionUpsell)
+// Module 14885 (PremiumSubscriptionUpsell)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ConstantsIOS from "ConstantsIOS" /* 1107 */;
-import util from "util" /* 1128 */;
-import NumberUtils from "NumberUtils" /* 1903 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import LinearGradientDefault from "LinearGradient" /* 5258 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6919 */;
-import PremiumFeatureListDefault from "PremiumFeatureList" /* 9822 */;
-import _modDef14850 from "module_14850" /* 14850 */;
-import _modDef14851 from "module_14851" /* 14851 */;
+import ConstantsIOS from "ConstantsIOS" /* 1104 */;
+import util from "util" /* 1125 */;
+import NumberUtils from "NumberUtils" /* 1900 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import LinearGradientDefault from "LinearGradient" /* 5259 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6921 */;
+import PremiumFeatureListDefault from "PremiumFeatureList" /* 9824 */;
+import _modDef14886 from "module_14886" /* 14886 */;
+import _modDef14887 from "module_14887" /* 14887 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
-import UserStore from "UserStore" /* 1392 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, StyleSheet } = get_ActivityIndicator);
-const Gradients = fn(7544).Gradients;
-const PremiumConstants = fn(1394);
+const Gradients = fn(7545).Gradients;
+const PremiumConstants = fn(1391);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_7, GUILD_BOOST_COST_FOR_PREMIUM_USER_DISCOUNT_PERCENT: closure_8 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { title: { textAlign: "center" }, subtitle: { lineHeight: 20, marginTop: 8, textAlign: "center" }, upsell: { paddingTop: 32, borderTopWidth: 2 * StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE }, upsellCard: null, upsellFeatures: null, upsellFeatureSubLogo: null, upsellFeatureList: null, upsellButton: null, upsellFeatureLogoTier2: null, upsellLabel: null, upsellRow: null };
 let obj3 = { paddingTop: 32, borderTopWidth: 2 * StyleSheet.hairlineWidth, borderTopColor: nativeDefault.colors.BORDER_SUBTLE };
 obj2.upsellCard = { borderRadius: nativeDefault.radii.xs, padding: 16, alignItems: "center" };
@@ -39,8 +39,8 @@ obj2.upsellFeatureList = { marginTop: 8 };
 obj2.upsellButton = { marginTop: 16 };
 obj2.upsellFeatureLogoTier2 = { alignSelf: "center", height: 20, marginTop: 6, width: 84 };
 let obj5 = { borderRadius: nativeDefault.radii.sm, padding: 16, marginTop: 12, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BORDER_SUBTLE };
-obj2.upsellLabel = { color: nativeDefault.unsafe_rawColors.WHITE, fontFamily: fn(1087).Fonts.PRIMARY_SEMIBOLD, fontSize: 16, lineHeight: 20 };
-let obj6 = { color: nativeDefault.unsafe_rawColors.WHITE, fontFamily: fn(1087).Fonts.PRIMARY_SEMIBOLD, fontSize: 16, lineHeight: 20 };
+obj2.upsellLabel = { color: nativeDefault.unsafe_rawColors.WHITE, fontFamily: fn(1084).Fonts.PRIMARY_SEMIBOLD, fontSize: 16, lineHeight: 20 };
+let obj6 = { color: nativeDefault.unsafe_rawColors.WHITE, fontFamily: fn(1084).Fonts.PRIMARY_SEMIBOLD, fontSize: 16, lineHeight: 20 };
 obj2.upsellRow = { paddingVertical: 0, marginTop: 8, color: nativeDefault.unsafe_rawColors.WHITE };
 let closure_12 = createStyles.createStyles(obj2);
 function FEATURES_UPSELL_PREMIUM_TIER_2() {
@@ -91,7 +91,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
         if (cResult[6] === tmp4.subtitle) {
           if (cResult[7] === tmp4.title) {
             if (cResult[9] !== tmp4.upsellFeatureSubLogo) {
-              const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef14850 };
+              const obj2 = { style: tmp4.upsellFeatureSubLogo, source: _modDef14886 };
               const tmp22 = React6(FastImageDefault, obj2);
               cResult[9] = tmp4.upsellFeatureSubLogo;
               cResult[10] = tmp22;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
               tmp19 = cResult[10];
             }
             if (cResult[11] !== tmp4.upsellFeatureLogoTier2) {
-              const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef14851 };
+              const obj4 = { style: tmp4.upsellFeatureLogoTier2, source: _modDef14887 };
               const tmp26 = React6(FastImageDefault, obj4);
               cResult[11] = tmp4.upsellFeatureLogoTier2;
               cResult[12] = tmp26;
@@ -286,11 +286,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumS
     const obj10 = { style: tmp.upsellFeatures, children: null };
     const obj11 = { style: tmp.upsellFeatureSubLogo, source: null };
     intlResult1 = PremiumUtilsDefault;
-    obj11.source = _modDef14850;
+    obj11.source = _modDef14886;
     const items4 = [React6(FastImageDefault, obj11), , ];
     const obj12 = { style: tmp.upsellFeatureLogoTier2, source: null };
     const intlResult2 = FastImageDefault;
-    obj12.source = _modDef14851;
+    obj12.source = _modDef14887;
     items4[1] = React6(FastImageDefault, obj12);
     const obj13 = { style: tmp.upsellFeatureList, features: null, labelStyle: null, rowStyle: null };
     const intlResult3 = FastImageDefault;

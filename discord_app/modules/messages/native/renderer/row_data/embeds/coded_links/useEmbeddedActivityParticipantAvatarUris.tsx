@@ -1,10 +1,10 @@
-// === Module 14542: useEmbeddedActivityParticipantAvatarUris ===
+// === Module 14578: useEmbeddedActivityParticipantAvatarUris ===
 
-// Module 14542 (useEmbeddedActivityParticipantAvatarUris)
-import GlobalUtils from "GlobalUtils" /* 1388 */;
+// Module 14578 (useEmbeddedActivityParticipantAvatarUris)
+import GlobalUtils from "GlobalUtils" /* 1385 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
-import UserStore from "UserStore" /* 1392 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -77,7 +77,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbed
   } else {
     tmp13 = cResult[10];
   }
-  const found = stateFromStoresArray.filter(guildId(1388).isNotNullish);
+  const found = stateFromStoresArray.filter(guildId(1385).isNotNullish);
   mapped = found.map(tmp13);
   cResult[6] = guildId;
   cResult[7] = stateFromStoresArray;

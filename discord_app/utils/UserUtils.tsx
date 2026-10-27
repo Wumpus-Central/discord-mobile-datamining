@@ -1,11 +1,11 @@
-// === Module 5025: UserUtils ===
+// === Module 5026: UserUtils ===
 
-// Module 5025 (UserUtils)
+// Module 5026 (UserUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import StreamerModeStore from "StreamerModeStore" /* 5026 */;
-import UserStore from "UserStore" /* 1392 */;
+import util from "util" /* 1125 */;
+import StreamerModeStore from "StreamerModeStore" /* 5027 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function nameFromUser(primary1) {
@@ -83,7 +83,7 @@ function presentUserTag(username, identifiable, tmpResult) {
     }
   }
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ NON_USER_BOT_DISCRIMINATOR: closure_4, StatusTypes: hasOwnProperty } = Constants);
 let c6 = 86400000;
 let c7 = "???";

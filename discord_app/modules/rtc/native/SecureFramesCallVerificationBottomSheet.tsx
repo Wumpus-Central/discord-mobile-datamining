@@ -1,14 +1,14 @@
-// === Module 18546: SecureFramesCallVerificationBottomSheet ===
+// === Module 18580: SecureFramesCallVerificationBottomSheet ===
 
-// Module 18546 (SecureFramesCallVerificationBottomSheet)
+// Module 18580 (SecureFramesCallVerificationBottomSheet)
 import showShareActionSheet from "showShareActionSheet" /* 8851 */;
 import SecureFramesTracking from "SecureFramesTracking" /* 9199 */;
 import SecureFramesVerificationBottomSheetDefault from "SecureFramesVerificationBottomSheet" /* 9212 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
 
 require = fn;
-const AnalyticsSections = fn(1087).AnalyticsSections;
+const AnalyticsSections = fn(1084).AnalyticsSections;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -49,13 +49,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
     tmp8 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1128).intl;
-    const stringResult = intl.string(tmp(1128).t.cTQI5t);
-    const intl2 = tmp(1128).intl;
-    const stringResult1 = intl2.string(tmp(1128).t["MPp7+C"]);
-    const intl3 = tmp(1128).intl;
+    const intl = tmp(1125).intl;
+    const stringResult = intl.string(tmp(1125).t.cTQI5t);
+    const intl2 = tmp(1125).intl;
+    const stringResult1 = intl2.string(tmp(1125).t["MPp7+C"]);
+    const intl3 = tmp(1125).intl;
     let obj2 = { helpArticle: tmp(9196).getSecureFramesHelpdeskArticle() };
-    const formatResult = intl3.format(tmp(1128).t.wKxADe, obj2);
+    const formatResult = intl3.format(tmp(1125).t.wKxADe, obj2);
     cResult[4] = stringResult;
     cResult[5] = stringResult1;
     cResult[6] = formatResult;
@@ -99,14 +99,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SecureFr
   }, items1);
   let obj2 = { title: null, subtitle: null, footer: null, epochAuthenticator: null, onShareClick: null };
   let obj = channelId(504);
-  const intl = channelId(1128).intl;
-  obj2.title = intl.string(channelId(1128).t.cTQI5t);
-  const intl2 = channelId(1128).intl;
-  obj2.subtitle = intl2.string(channelId(1128).t["MPp7+C"]);
-  const intl3 = channelId(1128).intl;
+  const intl = channelId(1125).intl;
+  obj2.title = intl.string(channelId(1125).t.cTQI5t);
+  const intl2 = channelId(1125).intl;
+  obj2.subtitle = intl2.string(channelId(1125).t["MPp7+C"]);
+  const intl3 = channelId(1125).intl;
   const obj3 = { helpArticle: null };
   obj3.helpArticle = channelId(9196).getSecureFramesHelpdeskArticle();
-  obj2.footer = intl3.format(channelId(1128).t.wKxADe, obj3);
+  obj2.footer = intl3.format(channelId(1125).t.wKxADe, obj3);
   obj2.epochAuthenticator = stateFromStores;
   obj2.onShareClick = callback;
   return <tmp3 title={null} subtitle={null} footer={null} epochAuthenticator={null} onShareClick={null} />;

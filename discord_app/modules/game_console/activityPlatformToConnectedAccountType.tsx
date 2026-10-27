@@ -1,7 +1,7 @@
-// === Module 18556: activityPlatformToConnectedAccountType ===
+// === Module 18590: activityPlatformToConnectedAccountType ===
 
-// Module 18556 (activityPlatformToConnectedAccountType)
-import Constants from "Constants" /* 1087 */;
+// Module 18590 (activityPlatformToConnectedAccountType)
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityGamePlatforms: closure_0, PlatformTypes: closure_1 } = Constants);

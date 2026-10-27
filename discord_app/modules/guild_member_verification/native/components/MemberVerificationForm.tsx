@@ -1,22 +1,22 @@
-// === Module 6893: MemberVerificationForm ===
+// === Module 6895: MemberVerificationForm ===
 
-// Module 6893 (MemberVerificationForm)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5005 */;
-import useInitialValueDefault from "useInitialValue" /* 5599 */;
+// Module 6895 (MemberVerificationForm)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5006 */;
+import useInitialValueDefault from "useInitialValue" /* 5600 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6875 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6877 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let View = fn(17).View;
-let closure_8 = fn(6875).NO_MEMBER_VERIFICATION_FORM;
-const VerificationLevels = fn(1087).VerificationLevels;
+let closure_8 = fn(6877).NO_MEMBER_VERIFICATION_FORM;
+const VerificationLevels = fn(1084).VerificationLevels;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_12 = createStyles.createStyles({ container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 0 }, submitButton: { marginTop: 12, marginBottom: 12 }, error: { alignSelf: "center", paddingVertical: 16, fontSize: 16 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRequiredVerificationFields(id) {
@@ -32,7 +32,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useReq
     if (cResult[1] === phone) {
       let tmp6 = cResult[2];
     }
-    return initialVerification(5599)(tmp6);
+    return initialVerification(5600)(tmp6);
   }
   cResult[0] = id.verificationLevel;
   let phone1;
@@ -377,9 +377,9 @@ export default function MemberVerificationForm(guild) {
               if (memo) {
                 (function showIncompleteToast() {
                   const obj2 = { text: null, variant: "critical" };
-                  const intl = closure_1_0(1128).intl;
-                  obj2.text = intl.string(closure_1_0(1128).t.StC497);
-                  closure_1_1(5663).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
+                  const intl = closure_1_0(1125).intl;
+                  obj2.text = intl.string(closure_1_0(1125).t.StC497);
+                  closure_1_1(5664).open("MEMBER_VERIFICATION_FORM_INCOMPLETE", obj2);
                 })();
                 c6 = 3;
                 return { value: "IconComponent", done: null };

@@ -1,10 +1,10 @@
-// === Module 11029: GameOrganizationInviteStore ===
+// === Module 11032: GameOrganizationInviteStore ===
 
-// Module 11029 (GameOrganizationInviteStore)
+// Module 11032 (GameOrganizationInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11030 */;
-import fromServerGameOrganization from "fromServerGameOrganization" /* 11031 */;
+import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11033 */;
+import fromServerGameOrganization from "fromServerGameOrganization" /* 11034 */;
 import size from "module_2" /* 2 */;
 
 const constants = GameOrganizationInviteConstants.GameOrganizationInviteStates;
@@ -45,7 +45,7 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
     invite = invite.invite;
     map = new Map(map);
     const application_config = invite.application_config;
-    const obj = { code: invite.code, state: constants.RESOLVED, organization: fromServerGameOrganization.fromServerGameOrganization(game_organization), application: null, displayNoun: null, linkedGuild: null };
+    const obj = { code: invite.code, state: constants.RESOLVED, inviterId: invite.inviter_id, accepted: invite.accepted, guildId: invite.guild.id, organization: fromServerGameOrganization.fromServerGameOrganization(game_organization), application: null, displayNoun: null, linkedGuild: null };
     ({ game_organization, application, guild } = invite);
     obj.application = fromServerGameOrganization.fromServerGameOrganizationApplication(application);
     let display_noun;
@@ -73,6 +73,24 @@ const gameOrganizationInviteStore = new GameOrganizationInviteStore(DispatcherDe
       const _Map = Map;
       map = new Map(map);
       const obj = { code, state: tmp3.ERROR, error: code.error };
+      const result = map.set(code, obj);
+    }
+  },
+  GAME_ORGANIZATION_INVITE_ACCEPT_SUCCESS: function handleAcceptSuccess(code) {
+    code = code.code;
+    value = map.get(code);
+    let state;
+    if (value != null) {
+      state = value.state;
+    }
+    if (state !== constants.RESOLVED) {
+      return false;
+    } else {
+      const _Map = Map;
+      map = new Map(map);
+      const obj = {};
+      const merged = Object.assign(value);
+      obj.accepted = true;
       const result = map.set(code, obj);
     }
   }

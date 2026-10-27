@@ -1,9 +1,9 @@
-// === Module 14637: isClipsEnabled ===
+// === Module 14673: isClipsEnabled ===
 
-// Module 14637 (isClipsEnabled)
+// Module 14673 (isClipsEnabled)
 import c from "c" /* 576 */;
-import ClipsExperiment from "ClipsExperiment" /* 14638 */;
-import ClipsStore from "ClipsStore" /* 2020 */;
+import ClipsExperiment from "ClipsExperiment" /* 14674 */;
+import ClipsStore from "ClipsStore" /* 2017 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

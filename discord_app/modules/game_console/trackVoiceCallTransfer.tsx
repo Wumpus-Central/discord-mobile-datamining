@@ -1,12 +1,12 @@
-// === Module 11660: trackVoiceCallTransfer ===
+// === Module 11662: trackVoiceCallTransfer ===
 
-// Module 11660 (trackVoiceCallTransfer)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
-import SessionsStore from "SessionsStore" /* 5716 */;
+// Module 11662 (trackVoiceCallTransfer)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
+import SessionsStore from "SessionsStore" /* 5717 */;
 
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_console/trackVoiceCallTransfer.tsx");
 

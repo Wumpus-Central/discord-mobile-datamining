@@ -1,7 +1,7 @@
-// === Module 17428: PanelsConfig ===
+// === Module 17469: PanelsConfig ===
 
-// Module 17428 (PanelsConfig)
-import native from "native" /* 1202 */;
+// Module 17469 (PanelsConfig)
+import native from "native" /* 1199 */;
 import size from "module_2" /* 2 */;
 
 function isTimingConfig(duration) {

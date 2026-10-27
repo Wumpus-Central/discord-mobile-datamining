@@ -1,9 +1,9 @@
-// === Module 5123: MicrophoneRive ===
+// === Module 5124: MicrophoneRive ===
 
-// Module 5123 (MicrophoneRive)
+// Module 5124 (MicrophoneRive)
 import c from "c" /* 576 */;
-import BaseRive from "BaseRive" /* 5046 */;
-import RiveErrorBoundary from "RiveErrorBoundary" /* 5100 */;
+import BaseRive from "BaseRive" /* 5047 */;
+import RiveErrorBoundary from "RiveErrorBoundary" /* 5101 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -184,7 +184,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Microp
           }
         }
       }
-      obj2 = { ref: tmp6, src: tmp(5124), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: null };
+      obj2 = { ref: tmp6, src: tmp(5125), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: null };
       class V {
         constructor(arg0) {
           tmp = closure_9[closure_2];
@@ -205,7 +205,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Microp
         }
       }
       let merged = Object.assign(tmp7);
-      const tmp22 = jsx(tmp(5046).BaseRive, { ref: tmp6, src: tmp(5124), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: null });
+      const tmp22 = jsx(tmp(5047).BaseRive, { ref: tmp6, src: tmp(5125), artboard: str, artboardProperties, artboardViewModelInstances, defaultViewModelInstance: str2, stateMachine: tmp8, renderDataBinding: null });
       cResult[12] = str;
       cResult[13] = str2;
       cResult[14] = tmp6;

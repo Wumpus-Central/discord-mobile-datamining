@@ -1,22 +1,29 @@
-// === Module 9577: VirtualCurrencyUtils ===
+// === Module 9579: VirtualCurrencyUtils ===
 
-// Module 9577 (VirtualCurrencyUtils)
-import Constants from "Constants" /* 1087 */;
-import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1089 */;
-import PremiumConstants from "PremiumConstants" /* 1394 */;
-import dismissible_content from "dismissible_content" /* 4807 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5001 */;
-import DismissibleContentConstants from "DismissibleContentConstants" /* 4820 */;
+// Module 9579 (VirtualCurrencyUtils)
+import Constants from "Constants" /* 1084 */;
+import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1086 */;
+import PremiumConstants from "PremiumConstants" /* 1391 */;
+import dismissible_content from "dismissible_content" /* 4808 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5002 */;
+import SocialLayerStorefrontConstants from "SocialLayerStorefrontConstants" /* 7335 */;
+import DismissibleContentConstants from "DismissibleContentConstants" /* 4821 */;
 import size from "module_2" /* 2 */;
 
 let closure_2 = Constants.COLLECTIBLES_APPLICATION_ID;
 const EXTERNAL_PRODUCT_SKU_IDS = CollectiblesShopConstants.EXTERNAL_PRODUCT_SKU_IDS;
 ({ DismissibleContentGroupName: closure_4, ContentDismissActionType: hasOwnProperty } = DismissibleContentConstants);
 let closure_6 = PremiumConstants.PREMIUM_SUBSCRIPTION_APPLICATION;
+SocialLayerStorefrontConstants.BLOONS_TD6_SPLIT_TENDER_COUPON_SKU_IDS;
 let result = size.fileFinishedImporting("modules/virtual_currency/VirtualCurrencyUtils.tsx");
 
 export const get1PShopApplicationIdForSKU = function get1PShopApplicationIdForSKU(skuId) {
-  return skuId === EXTERNAL_PRODUCT_SKU_IDS.FRACTIONAL_PREMIUM ? closure_6 : closure_2;
+  if (skuId === EXTERNAL_PRODUCT_SKU_IDS.FRACTIONAL_PREMIUM) {
+    let tmp3 = closure_6;
+  } else {
+    tmp3 = closure_2;
+  }
+  return tmp3;
 };
 export const dismissOrbsOnboardingExperience = function dismissOrbsOnboardingExperience() {
   if (!obj.UNSAFE_isDismissibleContentDismissed(dismissible_content.DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL)) {

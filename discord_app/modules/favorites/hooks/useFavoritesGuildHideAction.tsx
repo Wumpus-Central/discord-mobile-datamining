@@ -1,17 +1,17 @@
-// === Module 17565: useFavoritesGuildHideAction ===
+// === Module 17606: useFavoritesGuildHideAction ===
 
-// Module 17565 (useFavoritesGuildHideAction)
+// Module 17606 (useFavoritesGuildHideAction)
 import c from "c" /* 576 */;
-import router_utils from "router_utils" /* 1114 */;
-import util from "util" /* 1128 */;
-import _modDef3412 from "module_3412" /* 3412 */;
-import FavoritesUtils from "FavoritesUtils" /* 4848 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10845 */;
+import router_utils from "router_utils" /* 1111 */;
+import util from "util" /* 1125 */;
+import _modDef3413 from "module_3413" /* 3413 */;
+import FavoritesUtils from "FavoritesUtils" /* 4849 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10848 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
 
 require = fn;
-const Routes = fn(1087).Routes;
+const Routes = fn(1084).Routes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildHideAction.tsx");
@@ -35,9 +35,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { label: null, subLabel: null, perform: null };
     const intl = util.intl;
-    obj2.label = intl.string(_modDef3412["8FO0y9"]);
+    obj2.label = intl.string(_modDef3413["8FO0y9"]);
     const intl2 = util.intl;
-    obj2.subLabel = intl2.string(_modDef3412.FaHxWl);
+    obj2.subLabel = intl2.string(_modDef3413.FaHxWl);
     obj2.perform = first;
     cResult[1] = obj2;
     let tmp5 = obj2;
@@ -56,9 +56,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
     obj2 = FavoritesUtils;
   }, []);
   const intl = util.intl;
-  obj.label = intl.string(_modDef3412["8FO0y9"]);
+  obj.label = intl.string(_modDef3413["8FO0y9"]);
   const intl2 = util.intl;
-  obj.subLabel = intl2.string(_modDef3412.FaHxWl);
+  obj.subLabel = intl2.string(_modDef3413.FaHxWl);
   obj.perform = callback;
   return obj;
 });

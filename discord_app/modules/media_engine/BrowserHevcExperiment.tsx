@@ -1,7 +1,7 @@
-// === Module 15363: BrowserHevcExperiment ===
+// === Module 15399: BrowserHevcExperiment ===
 
-// Module 15363 (BrowserHevcExperiment)
-import ApexExperiment from "ApexExperiment" /* 1455 */;
+// Module 15399 (BrowserHevcExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2025-08-browser-hevc", kind: "user", defaultConfig: { enabled: false }, variations: null };

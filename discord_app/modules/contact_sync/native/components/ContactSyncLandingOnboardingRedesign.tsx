@@ -1,12 +1,12 @@
-// === Module 13598: ContactSyncLandingOnboardingRedesign ===
+// === Module 13612: ContactSyncLandingOnboardingRedesign ===
 
-// Module 13598 (ContactSyncLandingOnboardingRedesign)
+// Module 13612 (ContactSyncLandingOnboardingRedesign)
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7885 */;
-import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13591 */;
-import _modDef13599 from "module_13599" /* 13599 */;
-import ContactSyncErrorDefault from "ContactSyncError" /* 13600 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import NativePermissionUtilsDefault from "NativePermissionUtils" /* 7886 */;
+import RedesignContactSyncDiscoverabilityFooterDefault from "RedesignContactSyncDiscoverabilityFooter" /* 13605 */;
+import _modDef13613 from "module_13613" /* 13613 */;
+import ContactSyncErrorDefault from "ContactSyncError" /* 13614 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,12 +14,12 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const NativePermissionTypes = fn(7868).NativePermissionTypes;
+const NativePermissionTypes = fn(7869).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { content: null, headerImage: null, title: null, subtitle: null, buttonContainer: null, trailing: null };
-let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -nativeDefault.space.PX_32 - fn(5268).NAV_BAR_HEIGHT };
+let obj3 = { flex: 1, justifyContent: "center", alignItems: "center", textAlign: "center", marginTop: -nativeDefault.space.PX_32 - fn(5269).NAV_BAR_HEIGHT };
 obj2.content = obj3;
 let size = { height: 135, width: 216, marginBottom: nativeDefault.space.PX_24 };
 obj2.headerImage = size;
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
     tmp5 = cResult[1];
   }
   if (cResult[2] !== tmp4.headerImage) {
-    const obj2 = { resizeMode: "contain", style: tmp4.headerImage, source: _modDef13599 };
+    const obj2 = { resizeMode: "contain", style: tmp4.headerImage, source: _modDef13613 };
     const tmp11 = closure_7(FastImageDefault, obj2);
     cResult[2] = tmp4.headerImage;
     cResult[3] = tmp11;
@@ -120,8 +120,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
     tmp7 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1128).intl;
-    const stringResult = intl.string(tmp(1128).t["/G+nci"]);
+    const intl = tmp(1125).intl;
+    const stringResult = intl.string(tmp(1125).t["/G+nci"]);
     cResult[4] = stringResult;
     let tmp12 = stringResult;
   } else {
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
   }
   if (cResult[5] !== tmp4.title) {
     let obj3 = { style: tmp4.title, variant: "heading-xl/bold", children: tmp12 };
-    const tmp16 = closure_7(tmp(5234).Text, obj3);
+    const tmp16 = closure_7(tmp(5235).Text, obj3);
     cResult[5] = tmp4.title;
     cResult[6] = tmp16;
     let tmp14 = tmp16;
@@ -137,8 +137,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
     tmp14 = cResult[6];
   }
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = tmp(1128).intl;
-    const stringResult1 = intl2.string(tmp(1128).t.G8zcHt);
+    const intl2 = tmp(1125).intl;
+    const stringResult1 = intl2.string(tmp(1125).t.G8zcHt);
     cResult[7] = stringResult1;
     let tmp17 = stringResult1;
   } else {
@@ -146,7 +146,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
   }
   if (cResult[8] !== tmp4.subtitle) {
     let obj4 = { style: tmp4.subtitle, variant: "text-sm/medium", children: tmp17 };
-    const tmp21 = closure_7(tmp(5234).Text, obj4);
+    const tmp21 = closure_7(tmp(5235).Text, obj4);
     cResult[8] = tmp4.subtitle;
     cResult[9] = tmp21;
     let tmp19 = tmp21;
@@ -154,8 +154,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
     tmp19 = cResult[9];
   }
   if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl3 = tmp(1128).intl;
-    const stringResult2 = intl3.string(tmp(1128).t.LhlgY9);
+    const intl3 = tmp(1125).intl;
+    const stringResult2 = intl3.string(tmp(1125).t.LhlgY9);
     cResult[10] = stringResult2;
     let tmp22 = stringResult2;
   } else {
@@ -311,23 +311,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContactS
       }
     }
   }), items);
-  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13599 };
+  let obj3 = { resizeMode: "contain", style: tmp.headerImage, source: _modDef13613 };
   const items1 = [closure_7(FastImageDefault, obj3), , , , ];
   let obj4 = { style: tmp.title, variant: "heading-xl/bold", children: null };
-  const intl = onNext(1128).intl;
-  obj4.children = intl.string(onNext(1128).t["/G+nci"]);
-  items1[1] = closure_7(onNext(5234).Text, obj4);
+  const intl = onNext(1125).intl;
+  obj4.children = intl.string(onNext(1125).t["/G+nci"]);
+  items1[1] = closure_7(onNext(5235).Text, obj4);
   let obj5 = { style: tmp.subtitle, variant: "text-sm/medium", children: null };
-  const intl2 = onNext(1128).intl;
-  obj5.children = intl2.string(onNext(1128).t.G8zcHt);
-  items1[2] = closure_7(onNext(5234).Text, obj5);
+  const intl2 = onNext(1125).intl;
+  obj5.children = intl2.string(onNext(1125).t.G8zcHt);
+  items1[2] = closure_7(onNext(5235).Text, obj5);
   const obj6 = { style: tmp.buttonContainer, children: null };
   const obj7 = { variant: "primary", size: "lg", text: null, onPress: null, loading: null };
-  const intl3 = onNext(1128).intl;
-  obj7.text = intl3.string(onNext(1128).t.LhlgY9);
+  const intl3 = onNext(1125).intl;
+  obj7.text = intl3.string(onNext(1125).t.LhlgY9);
   obj7.onPress = callback;
   obj7.loading = loading;
-  obj6.children = closure_7(onNext(5244).Button, obj7);
+  obj6.children = closure_7(onNext(5245).Button, obj7);
   items1[3] = closure_7(View, obj6);
   items1[4] = closure_7(ContactSyncErrorDefault, { error });
   obj2.children = items1;

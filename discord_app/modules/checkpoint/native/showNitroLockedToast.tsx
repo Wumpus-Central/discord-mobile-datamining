@@ -1,37 +1,16 @@
-// === Module 13027: showNitroLockedToast ===
+// === Module 13041: showNitroLockedToast ===
 
-// Module 13027 (showNitroLockedToast)
-import util from "util" /* 1128 */;
-import _modDef3088 from "module_3088" /* 3088 */;
-import ToastUtils from "ToastUtils" /* 5662 */;
+// Module 13041 (showNitroLockedToast)
+import ToastUtils from "ToastUtils" /* 5663 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6364 */;
+import size from "module_2" /* 2 */;
 
-require = fn;
-let obj = {};
-obj[fn(6039).CheckpointTrait.FACE] = _modDef3088["4IdR/H"];
-obj[fn(6039).CheckpointTrait.OUTFIT] = _modDef3088.NuujPd;
-obj[fn(6039).CheckpointTrait.HAT] = _modDef3088.o1Zign;
-obj[fn(6039).CheckpointTrait.WEARABLE] = _modDef3088.C0CzoH;
-obj[fn(6039).CheckpointTrait.AURA] = _modDef3088["+9TbTS"];
-obj[fn(6039).CheckpointTrait.SHOES] = _modDef3088.sTG4TS;
-const size = fn(2);
 const result = size.fileFinishedImporting("modules/checkpoint/native/showNitroLockedToast.tsx");
 
-export default function showNitroLockedToast(arg0) {
-  let stringResult;
-  if (null != obj[arg0]) {
-    const intl = util.intl;
-    stringResult = intl.string(tmp);
+export default function showNitroLockedToast(nextBlockedTrait) {
+  const nitroLockedMessage = CheckpointCustomizationUtils.getNitroLockedMessage(nextBlockedTrait);
+  if (null != nitroLockedMessage) {
+    ToastUtils.presentError(nitroLockedMessage);
+    const tmpResult = ToastUtils;
   }
-  if (null != stringResult) {
-    obj = ToastUtils;
-    obj.presentError(stringResult);
-  }
-};
-export const getNitroLockedMessage = function getNitroLockedMessage(nextBlockedTrait) {
-  let stringResult;
-  if (null != obj[nextBlockedTrait]) {
-    const intl = util.intl;
-    stringResult = intl.string(tmp);
-  }
-  return stringResult;
 };

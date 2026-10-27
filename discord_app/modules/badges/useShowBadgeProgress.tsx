@@ -1,13 +1,13 @@
-// === Module 11132: useShowBadgeProgress ===
+// === Module 11135: useShowBadgeProgress ===
 
-// Module 11132 (useShowBadgeProgress)
+// Module 11135 (useShowBadgeProgress)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import BadgeUtils from "BadgeUtils" /* 11126 */;
-import ConsentStore from "ConsentStore" /* 6670 */;
+import BadgeUtils from "BadgeUtils" /* 11129 */;
+import ConsentStore from "ConsentStore" /* 6671 */;
 
 require = fn;
-const Consents = fn(1087).Consents;
+const Consents = fn(1084).Consents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useShowBadgeProgress.tsx");

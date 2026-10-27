@@ -1,10 +1,10 @@
-// === Module 9722: PhoneHangUpIcon ===
+// === Module 9724: PhoneHangUpIcon ===
 
-// Module 9722 (PhoneHangUpIcon)
+// Module 9724 (PhoneHangUpIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5668 */;
-import _mod9723 from "module_9723" /* 9723 */;
+import BaseIconImage from "BaseIconImage" /* 5669 */;
+import _mod9725 from "module_9725" /* 9725 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const PhoneHangUpIcon = ReactCompilerGating.isReactCompilerEnabled() ? (f
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9723;
+    const tmpResult = _mod9725;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const PhoneHangUpIcon = ReactCompilerGating.isReactCompilerEnabled() ? (f
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9723, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9725, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

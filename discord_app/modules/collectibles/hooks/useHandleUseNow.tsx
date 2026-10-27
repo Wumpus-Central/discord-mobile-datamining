@@ -1,12 +1,12 @@
-// === Module 11185: hooks/useHandleUseNow ===
+// === Module 11188: hooks/useHandleUseNow ===
 
-// Module 11185 (hooks/useHandleUseNow)
+// Module 11188 (hooks/useHandleUseNow)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 let require = fn;
-const isExternalProduct = fn(1089).isExternalProduct;
+const isExternalProduct = fn(1086).isExternalProduct;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useHandleUseNow.tsx");
 

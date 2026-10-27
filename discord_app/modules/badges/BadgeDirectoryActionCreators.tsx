@@ -1,9 +1,9 @@
 // === Module 8686: BadgeDirectoryActionCreators ===
 
 // Module 8686 (BadgeDirectoryActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1297 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 import Dispatcher from "Dispatcher" /* 584 */;
 
 require = fn;
@@ -295,7 +295,7 @@ let closure_12 = async function _requestBadgeSummary(arg0) {
   }
   return value;
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Endpoints: hasOwnProperty, ME: metroRequire } = Constants);
 const map = new Map();
 const map1 = new Map();

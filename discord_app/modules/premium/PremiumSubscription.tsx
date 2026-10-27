@@ -1,7 +1,7 @@
-// === Module 2064: PremiumSubscription ===
+// === Module 2061: PremiumSubscription ===
 
-// Module 2064 (PremiumSubscription)
-import PremiumConstants from "PremiumConstants" /* 1394 */;
+// Module 2061 (PremiumSubscription)
+import PremiumConstants from "PremiumConstants" /* 1391 */;
 import size from "module_2" /* 2 */;
 
 ({ SubscriptionPlans: closure_0, SubscriptionPlanInfo: closure_1, PremiumSubscriptionSKUs: c2 } = PremiumConstants);

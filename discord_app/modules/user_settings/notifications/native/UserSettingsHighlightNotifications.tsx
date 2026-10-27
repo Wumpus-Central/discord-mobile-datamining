@@ -1,16 +1,16 @@
-// === Module 16881: UserSettingsHighlightNotifications ===
+// === Module 16923: UserSettingsHighlightNotifications ===
 
-// Module 16881 (UserSettingsHighlightNotifications)
-import GuildIconDefault from "GuildIcon" /* 6883 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7210 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7215 */;
+// Module 16923 (UserSettingsHighlightNotifications)
+import GuildIconDefault from "GuildIcon" /* 6885 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7212 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7217 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import SortedGuildStore from "SortedGuildStore" /* 6701 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import SortedGuildStore from "SortedGuildStore" /* 6702 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
 
 require = fn;
-const HighlightSettings = fn(1087).HighlightSettings;
+const HighlightSettings = fn(1084).HighlightSettings;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Row(guildId) {
@@ -88,7 +88,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Row(gui
       }
     }
     const obj3 = { label: name, icon: tmp14, value: !muted, onValueChange: tmp4, start: isStart, end: isEnd };
-    const tmp20 = jsx(tmp(7295).TableSwitchRow, { label: name, icon: tmp14, value: !muted, onValueChange: tmp4, start: isStart, end: isEnd });
+    const tmp20 = jsx(tmp(7297).TableSwitchRow, { label: name, icon: tmp14, value: !muted, onValueChange: tmp4, start: isStart, end: isEnd });
     cResult[8] = tmp14;
     cResult[9] = isEnd;
     cResult[10] = isStart;
@@ -124,7 +124,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function Row(gui
     }
     let obj2 = { guild };
     const obj3 = { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd };
-    return jsx(tmp2(7295).TableSwitchRow, { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd });
+    return jsx(tmp2(7297).TableSwitchRow, { label: guild.name, icon: jsx(GuildIconDefault, { guild }), value: !muted, onValueChange: callback, start: isStart, end: isEnd });
   }
   let obj = guildId(504);
   tmp2 = guildId;

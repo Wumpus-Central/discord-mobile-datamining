@@ -2,8 +2,8 @@
 
 // Module 8724
 import c from "c" /* 576 */;
-import Constants from "Constants" /* 1087 */;
-import native from "native" /* 5037 */;
+import Constants from "Constants" /* 1084 */;
+import native from "native" /* 5038 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

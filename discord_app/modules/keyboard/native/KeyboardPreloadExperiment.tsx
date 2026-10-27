@@ -1,7 +1,7 @@
-// === Module 11754: KeyboardPreloadExperiment ===
+// === Module 11756: KeyboardPreloadExperiment ===
 
-// Module 11754 (KeyboardPreloadExperiment)
-import ApexExperiment from "ApexExperiment" /* 1455 */;
+// Module 11756 (KeyboardPreloadExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-10-mobile-keyboard-preload", kind: "user", defaultConfig: { disablePreload: false }, variations: null };

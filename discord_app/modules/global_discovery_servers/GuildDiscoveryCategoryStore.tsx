@@ -1,11 +1,11 @@
-// === Module 17928: GuildDiscoveryCategoryStore ===
+// === Module 17962: GuildDiscoveryCategoryStore ===
 
-// Module 17928 (GuildDiscoveryCategoryStore)
+// Module 17962 (GuildDiscoveryCategoryStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1128 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
+import util from "util" /* 1125 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
 import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9007 */;
 import size from "module_2" /* 2 */;
 

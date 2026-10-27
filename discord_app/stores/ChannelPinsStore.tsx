@@ -1,18 +1,18 @@
-// === Module 13983: ChannelPinsStore ===
+// === Module 13997: ChannelPinsStore ===
 
-// Module 13983 (ChannelPinsStore)
+// Module 13997 (ChannelPinsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6012 */;
-import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7702 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import MessageStore from "MessageStore" /* 6010 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6013 */;
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7703 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import MessageStore from "MessageStore" /* 6011 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function handleChannelDelete(arg0) {

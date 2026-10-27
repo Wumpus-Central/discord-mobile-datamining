@@ -1,9 +1,9 @@
-// === Module 11346: UserActivityActionCreators ===
+// === Module 11349: UserActivityActionCreators ===
 
-// Module 11346 (UserActivityActionCreators)
+// Module 11349 (UserActivityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
 
 const require = globalThis.__r;
 
@@ -41,7 +41,7 @@ let closure_6 = async function _getMetadata(arg0, arg1) {
     return body;
   })();
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/UserActivityActionCreators.tsx");
 
@@ -50,9 +50,9 @@ export const sync = function sync(activity, userId) {
 };
 export const play = function play(activity, userId) {
   _require = activity;
-  const promise = require("asyncRequireImpl")(11343, dependencyMap.paths);
-  const nextPromise = require("asyncRequireImpl")(11343, dependencyMap.paths).then((getSpotifyMetadataFromActivity) => getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1));
-  require("asyncRequireImpl")(11343, dependencyMap.paths).then((getSpotifyMetadataFromActivity) => getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1)).then((metadata) => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId, metadata })).catch(() => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId }));
+  const promise = require("asyncRequireImpl")(11346, dependencyMap.paths);
+  const nextPromise = require("asyncRequireImpl")(11346, dependencyMap.paths).then((getSpotifyMetadataFromActivity) => getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1));
+  require("asyncRequireImpl")(11346, dependencyMap.paths).then((getSpotifyMetadataFromActivity) => getSpotifyMetadataFromActivity.getSpotifyMetadataFromActivity(closure_0, closure_1)).then((metadata) => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId, metadata })).catch(() => DispatcherDefault.dispatch({ type: "ACTIVITY_PLAY", activity, userId }));
 };
 export const getMetadata = function getMetadata() {
   const self = this;

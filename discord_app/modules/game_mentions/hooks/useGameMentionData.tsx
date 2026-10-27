@@ -3,9 +3,9 @@
 // Module 8578 (useGameMentionData)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import useGameProfileObscured from "useGameProfileObscured" /* 8581 */;
-import GameStore from "GameStore" /* 2022 */;
+import GameStore from "GameStore" /* 2019 */;
 import GameAutocompleteStore from "GameAutocompleteStore" /* 8579 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 

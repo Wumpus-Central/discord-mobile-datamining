@@ -1,18 +1,18 @@
-// === Module 7095: Navigator ===
+// === Module 7097: Navigator ===
 
-// Module 7095 (Navigator)
+// Module 7097 (Navigator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import SentryInitUtils from "SentryInitUtils" /* 1258 */;
-import Link from "Link" /* 1506 */;
-import BackPressTracking from "BackPressTracking" /* 5975 */;
-import NavigatorHeader from "NavigatorHeader" /* 6924 */;
-import _mod6933 from "module_6933" /* 6933 */;
-import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7096 */;
-import StackNavigator from "StackNavigator" /* 7097 */;
-import NavigatorScreen from "NavigatorScreen" /* 7130 */;
-import useNavigationTheme from "useNavigationTheme" /* 7136 */;
+import util from "util" /* 1125 */;
+import SentryInitUtils from "SentryInitUtils" /* 1255 */;
+import Link from "Link" /* 1503 */;
+import BackPressTracking from "BackPressTracking" /* 5976 */;
+import NavigatorHeader from "NavigatorHeader" /* 6926 */;
+import _mod6935 from "module_6935" /* 6935 */;
+import useNavigatorShouldCrossfade from "useNavigatorShouldCrossfade" /* 7098 */;
+import StackNavigator from "StackNavigator" /* 7099 */;
+import NavigatorScreen from "NavigatorScreen" /* 7132 */;
+import useNavigationTheme from "useNavigationTheme" /* 7138 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -23,7 +23,7 @@ let closure_4 = ["useContainer", "containerStyle"];
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: closure_8 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: null, navbar: null, headerLeftContainerStyle: null, headerRightContainerStyle: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -795,7 +795,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wrappe
     }
   }
   const tmpResult3 = require("BackPressTracking");
-  const tmp16 = navigationContainerRef(5205)();
+  const tmp16 = navigationContainerRef(5206)();
   const navigationTheme1 = require("useNavigationTheme").useNavigationTheme(tmp16);
   if (null != tmp7) {
     class N {
@@ -874,11 +874,11 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wrappe
       }
     }
     const obj2 = { children: null };
-    const obj3 = { value: "Array", children: 0 };
+    const obj3 = { value: "Array", children: false };
     const obj4 = { ref: navigationContainerRef, theme: navigationTheme1, initialState: tmp6, onReady: R, onStateChange: tmp8, children: tmp20 };
-    obj3.children = jsx(tmp(1506).NavigationContainer, { ref: navigationContainerRef, theme: navigationTheme1, initialState: tmp6, onReady: R, onStateChange: tmp8, children: tmp20 });
-    obj2.children = jsx(tmp(6933).HeaderBackContext.Provider, { value: "Array", children: 0 });
-    const tmp25 = jsx(tmp(1506).NavigationIndependentTree, { children: null });
+    obj3.children = jsx(tmp(1503).NavigationContainer, { ref: navigationContainerRef, theme: navigationTheme1, initialState: tmp6, onReady: R, onStateChange: tmp8, children: tmp20 });
+    obj2.children = jsx(tmp(6935).HeaderBackContext.Provider, { value: "Array", children: false });
+    const tmp25 = jsx(tmp(1503).NavigationIndependentTree, { children: null });
     cResult[14] = navigationContainerRef;
     cResult[15] = tmp8;
     cResult[16] = navigationTheme1;
@@ -908,7 +908,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wrappe
     }
     return tmp2;
   }), 1)[0];
-  const tmp5 = navigationContainerRef(5205)();
+  const tmp5 = navigationContainerRef(5206)();
   let navigationTheme1 = useNavigationTheme.useNavigationTheme(tmp5);
   const obj4 = { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null };
   if (null != navigationTheme) {
@@ -923,7 +923,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wrappe
     initialRouteState = tmp8;
   }
   const obj5 = { children: null };
-  const obj6 = { value: "Array", children: 0 };
+  const obj6 = { value: "Array", children: false };
   obj4.initialState = initialRouteState;
   obj4.onReady = function onReady() {
     const routingInstrumentation = SentryInitUtils.routingInstrumentation;
@@ -933,7 +933,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wrappe
   const merged1 = Object.assign(merged);
   obj4.children = <closure_11 initialRouteName={initialRouteName} />;
   obj6.children = jsx(Link.NavigationContainer, { ref: navigationContainerRef, theme: null, initialState: null, onReady: null, onStateChange: null, children: null });
-  obj5.children = jsx(_mod6933.HeaderBackContext.Provider, { value: "Array", children: 0 });
+  obj5.children = jsx(_mod6935.HeaderBackContext.Provider, { value: "Array", children: false });
   return jsx(Link.NavigationIndependentTree, { children: null });
 });
 ReactCompilerGating = fn(558);

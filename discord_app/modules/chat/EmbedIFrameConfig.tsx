@@ -1,8 +1,8 @@
-// === Module 14232: EmbedIFrameConfig ===
+// === Module 14259: EmbedIFrameConfig ===
 
-// Module 14232 (EmbedIFrameConfig)
-import Constants from "Constants" /* 1087 */;
-import URLUtilsDefault from "URLUtils" /* 1386 */;
+// Module 14259 (EmbedIFrameConfig)
+import Constants from "Constants" /* 1084 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
 import size from "module_2" /* 2 */;
 
 const obj = { YOUTUBE: "YouTube", TIKTOK: "TikTok", TWITCH: "Twitch" };

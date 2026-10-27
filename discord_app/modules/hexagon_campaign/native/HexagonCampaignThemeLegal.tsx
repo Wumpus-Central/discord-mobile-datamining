@@ -1,19 +1,19 @@
-// === Module 16386: HexagonCampaignThemeLegal ===
+// === Module 16425: HexagonCampaignThemeLegal ===
 
-// Module 16386 (HexagonCampaignThemeLegal)
+// Module 16425 (HexagonCampaignThemeLegal)
 import nativeDefault from "native" /* 587 */;
-import _modDef4247 from "module_4247" /* 4247 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 15874 */;
+import _modDef4248 from "module_4248" /* 4248 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import openHexagonCampaignLearnMore from "openHexagonCampaignLearnMore" /* 15912 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HexagonCampaignConstants = fn(4996);
+const HexagonCampaignConstants = fn(4997);
 ({ HEXAGON_CAMPAIGN_NON_PREMIUM_CUTOFF_AT_MS: closure_4, HEXAGON_CAMPAIGN_PREMIUM_CUTOFF_AT_MS: hasOwnProperty } = HexagonCampaignConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { legal: { textAlign: "center" }, legalWithLogo: { flexDirection: "row", gap: nativeDefault.space.PX_8 }, logo: { width: 32, height: 32 }, legalText: { flex: 1 }, link: { textDecorationLine: "underline" } };
 let closure_8 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -46,9 +46,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
           let tmp11 = cResult[6];
         }
         if (cResult[7] !== tmp7) {
-          const intl = tmp(1128).intl;
+          const intl = tmp(1125).intl;
           const obj2 = { nonPremiumEndDate, premiumEndDate, learnMoreHook: tmp7 };
-          const formatResult = intl.format(legalWithLogo(4247).y2YmJv, obj2);
+          const formatResult = intl.format(legalWithLogo(4248).y2YmJv, obj2);
           cResult[7] = tmp7;
           cResult[8] = formatResult;
           let tmp12 = formatResult;
@@ -65,12 +65,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
                 return tmp17;
               } else {
                 if (cResult[14] !== legalWithLogo.logo) {
-                  const obj3 = { source: legalWithLogo(16387), style: legalWithLogo.logo, resizeMode: "contain", accessible: false };
-                  const tmp25 = closure_6(legalWithLogo(5669), obj3);
+                  const obj3 = { source: legalWithLogo(16426), style: legalWithLogo.logo, resizeMode: "contain", accessible: false };
+                  const tmp25 = closure_6(legalWithLogo(5670), obj3);
                   cResult[14] = legalWithLogo.logo;
                   cResult[15] = tmp25;
                   let tmp21 = tmp25;
-                  const tmp24 = legalWithLogo(5669);
+                  const tmp24 = legalWithLogo(5670);
                 } else {
                   tmp21 = cResult[15];
                 }
@@ -92,7 +92,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
           }
         }
         const obj5 = { animated: tmp5, variant: "text-xs/medium", color: str, style: tmp11, children: tmp12 };
-        const tmp19 = closure_6(tmp(5234).Text, obj5);
+        const tmp19 = closure_6(tmp(5235).Text, obj5);
         cResult[9] = tmp5;
         cResult[10] = str;
         cResult[11] = tmp11;
@@ -149,8 +149,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
   }
   let items = [headerSecondary, flag ? tmp.legalText : tmp.legal];
   obj.style = items;
-  const intl = animatedStyles(1128).intl;
-  obj.children = intl.format(_modDef4247.y2YmJv, {
+  const intl = animatedStyles(1125).intl;
+  obj.children = intl.format(_modDef4248.y2YmJv, {
     nonPremiumEndDate,
     premiumEndDate,
     learnMoreHook(children, arg1) {
@@ -170,15 +170,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
       return timestampProducer(Text_Text.Text, obj, arg1);
     }
   });
-  const tmp3Result = closure_6(animatedStyles(5234).Text, obj);
+  const tmp3Result = closure_6(animatedStyles(5235).Text, obj);
   let tmp9 = tmp3Result;
   if (flag) {
     const obj3 = { style: tmp.legalWithLogo, children: null };
-    const obj4 = { source: tmp7(16387), style: tmp.logo, resizeMode: "contain", accessible: false };
-    const items1 = [closure_6(tmp7(5669), obj4), tmp3Result];
+    const obj4 = { source: tmp7(16426), style: tmp.logo, resizeMode: "contain", accessible: false };
+    const items1 = [closure_6(tmp7(5670), obj4), tmp3Result];
     obj3.children = items1;
     tmp9 = closure_7(View, obj3);
-    const tmp7Result = tmp7(5669);
+    const tmp7Result = tmp7(5670);
   }
   return tmp9;
 });

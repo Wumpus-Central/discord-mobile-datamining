@@ -1,12 +1,12 @@
-// === Module 2043: LibraryApplicationStore ===
+// === Module 2040: LibraryApplicationStore ===
 
-// Module 2043 (LibraryApplicationStore)
+// Module 2040 (LibraryApplicationStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage6 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FlagUtilsAll from "FlagUtils" /* 1405 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7507 */;
-import LibraryApplicationRecord from "LibraryApplicationRecord" /* 2044 */;
+import FlagUtilsAll from "FlagUtils" /* 1402 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7508 */;
+import LibraryApplicationRecord from "LibraryApplicationRecord" /* 2041 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -25,7 +25,7 @@ function handleLibraryApplicationUpdate(libraryApplication) {
   closure_9[comboId] = fromServer;
   set.delete(comboId);
 }
-const LibraryApplicationFlags = fn(1087).LibraryApplicationFlags;
+const LibraryApplicationFlags = fn(1084).LibraryApplicationFlags;
 const LibraryApplicationStore = "LibraryApplicationStore";
 let c8 = false;
 const dependencyMap = {};

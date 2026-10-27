@@ -1,18 +1,18 @@
-// === Module 16600: PremiumRestoreSubscriptionSetting ===
+// === Module 16642: PremiumRestoreSubscriptionSetting ===
 
-// Module 16600 (PremiumRestoreSubscriptionSetting)
+// Module 16642 (PremiumRestoreSubscriptionSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
-import BillingActionCreatorsDefault from "BillingActionCreators" /* 7531 */;
-import UserStore from "UserStore" /* 1392 */;
+import util from "util" /* 1125 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5910 */;
+import BillingActionCreatorsDefault from "BillingActionCreators" /* 7532 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasPremiumRestoreSubscriptionSetting() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -57,7 +57,7 @@ const pressable = SettingBuilders.createPressable({
     return intl.string(util.t.s9h22P);
   },
   parent: null,
-  IconComponent: fn(9425).NitroWheelIcon,
+  IconComponent: fn(9424).NitroWheelIcon,
   onPress: function handleNitroRestoreSettingPress() {
     const result = BillingActionCreatorsDefault.restoreAndApplyPurchases(true);
     result.then((result) => {

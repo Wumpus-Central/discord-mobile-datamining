@@ -1,19 +1,19 @@
-// === Module 10163: StickerPackDetailActionSheet ===
+// === Module 10165: StickerPackDetailActionSheet ===
 
-// Module 10163 (StickerPackDetailActionSheet)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import StickerPickerListRowDefault from "StickerPickerListRow" /* 10169 */;
+// Module 10165 (StickerPackDetailActionSheet)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import StickerPickerListRowDefault from "StickerPickerListRow" /* 10171 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const StickerPickerConstants = fn(10124);
+const StickerPickerConstants = fn(10126);
 ({ MIN_MARGIN: hasOwnProperty, STICKER_SIZE: metroRequire } = StickerPickerConstants);
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const ACTION_SHEET_MAX_WIDTH = fn(5266).ACTION_SHEET_MAX_WIDTH;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const ACTION_SHEET_MAX_WIDTH = fn(5267).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_12 = createStyles.createStyles({ focusedStickerPreviewContainer: { position: "absolute", left: 0, top: 0, height: "100%", width: "100%", alignItems: "center", justifyContent: "center", backgroundColor: "rgba(0, 0, 0, 0.85)" }, header: { marginHorizontal: 16, marginVertical: 8, backgroundColor: "transparent", height: "applicationId" }, stickers: { paddingHorizontal: 16, marginBottom: 16 }, popoutContainer: { position: "absolute", bottom: 50 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

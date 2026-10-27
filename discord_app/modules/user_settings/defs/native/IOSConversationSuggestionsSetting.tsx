@@ -1,15 +1,15 @@
-// === Module 16141: IOSConversationSuggestionsSetting ===
+// === Module 16179: IOSConversationSuggestionsSetting ===
 
-// Module 16141 (IOSConversationSuggestionsSetting)
+// Module 16179 (IOSConversationSuggestionsSetting)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import _mod4886 from "module_4886" /* 4886 */;
+import util from "util" /* 1125 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import _mod4887 from "module_4887" /* 4887 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const identity = fn(1269);
+const identity = fn(1266);
 let closure_4 = identity.createWithEqualityFn(() => ({ isEnabled: true }));
 let ReactCompilerGating = fn(558);
 let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConversationSuggestionsEnabled() {
@@ -23,13 +23,13 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConv
   } else {
     first = cResult[0];
   }
-  return closure_4(first, _mod4886.shallow);
+  return closure_4(first, _mod4887.shallow);
 }) : (function useConversationSuggestionsEnabled() {
-  return closure_4((isEnabled) => isEnabled.isEnabled, _mod4886.shallow);
+  return closure_4((isEnabled) => isEnabled.isEnabled, _mod4887.shallow);
 });
 fn(17).NativeModules.IntentsHandler;
 ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIOSConversationSuggestionsSettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -65,7 +65,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.J8foZq);
   },
-  parent: fn(8332).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8331).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useIOSConversationSuggestionsSettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -100,7 +100,7 @@ const toggle = SettingBuilders.createToggle({
     const result = IntentsHandler.setConversationSuggestionsEnabled(arg0);
     result.then((result) => {
       closure_0 = result;
-      closure_0(1274).batchUpdates(() => state.setState({ isEnabled }));
+      closure_0(1271).batchUpdates(() => state.setState({ isEnabled }));
     }).catch((error) => {
       new LoggerDefault("ConversationSuggestions").error("Error suggesting conversations", error);
     });

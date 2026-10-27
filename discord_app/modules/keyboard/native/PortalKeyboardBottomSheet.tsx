@@ -1,18 +1,18 @@
-// === Module 12101: PortalKeyboardBottomSheet ===
+// === Module 12102: PortalKeyboardBottomSheet ===
 
-// Module 12101 (PortalKeyboardBottomSheet)
+// Module 12102 (PortalKeyboardBottomSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import HapticUtils from "HapticUtils" /* 5212 */;
-import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5267 */;
-import BottomSheetModal from "BottomSheetModal" /* 5269 */;
-import isChannelFocused from "isChannelFocused" /* 6802 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import HapticUtils from "HapticUtils" /* 5213 */;
+import useIsScreenReaderEnabled from "useIsScreenReaderEnabled" /* 5268 */;
+import BottomSheetModal from "BottomSheetModal" /* 5270 */;
+import isChannelFocused from "isChannelFocused" /* 6803 */;
 import native from "native" /* 8913 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10090 */;
+import NativeMenuStore from "NativeMenuStore" /* 10092 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
@@ -21,9 +21,9 @@ get_ActivityIndicator = fn(17);
 ({ Platform, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 let closure_9 = PlatformUtils.isIOS();
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj3 = { container: { position: "absolute", top: 0, left: 0 }, background: { backgroundColor: nativeDefault.colors.MOBILE_KEYBOARD_PANEL_BACKGROUND, overflow: "hidden" }, headerContainer: null, headerContainerScreenReaderEnabled: null, roundingView: null };
 let size = { borderTopLeftRadius: nativeDefault.radii.none, borderTopRightRadius: nativeDefault.radii.none, width: "100%", height: fn(8913).ACTION_SHEET_DRAG_HANDLE_HEIGHT, marginBottom: -fn(8913).ACTION_SHEET_DRAG_HANDLE_HEIGHT };
 obj3.headerContainer = size;

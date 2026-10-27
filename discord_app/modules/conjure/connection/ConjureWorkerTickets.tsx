@@ -1,8 +1,8 @@
-// === Module 10725: ConjureWorkerTickets ===
+// === Module 10728: ConjureWorkerTickets ===
 
-// Module 10725 (ConjureWorkerTickets)
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import conjureLocalDev from "conjureLocalDev" /* 10726 */;
+// Module 10728 (ConjureWorkerTickets)
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import conjureLocalDev from "conjureLocalDev" /* 10729 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -35,7 +35,7 @@ function workerTicket(ticket) {
   obj.baseUrl = url;
   return obj;
 }
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const map = new Map();
 let closure_5 = [];
 const size = fn(2);

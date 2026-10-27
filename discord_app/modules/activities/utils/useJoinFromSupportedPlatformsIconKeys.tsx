@@ -1,6 +1,6 @@
-// === Module 14563: useJoinFromSupportedPlatformsIconKeys ===
+// === Module 14599: useJoinFromSupportedPlatformsIconKeys ===
 
-// Module 14563 (useJoinFromSupportedPlatformsIconKeys)
+// Module 14599 (useJoinFromSupportedPlatformsIconKeys)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
@@ -45,7 +45,7 @@ function getJoinFromSupportedPlatformsIconKeys(isGameLaunchable) {
   }
   tmp15 = closure_5;
 }
-const ActivityGamePlatforms = fn(1087).ActivityGamePlatforms;
+const ActivityGamePlatforms = fn(1084).ActivityGamePlatforms;
 const IconKey = { DESKTOP: "desktop", MOBILE: "mobile", ANDROID: "android", IOS: "ios", PLAYSTATION: "playstation", XBOX: "xbox", VR: "vr" };
 let closure_5 = [];
 const ReactCompilerGating = fn(558);

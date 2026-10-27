@@ -1,23 +1,23 @@
-// === Module 12399: ButterflyIllocon ===
+// === Module 12405: ButterflyIllocon ===
 
-// Module 12399 (ButterflyIllocon)
+// Module 12405 (ButterflyIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef12400 from "module_12400" /* 12400 */;
-import _modDef12401 from "module_12401" /* 12401 */;
-import _modDef12402 from "module_12402" /* 12402 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import assetHelpers from "assetHelpers" /* 6997 */;
+import _modDef12406 from "module_12406" /* 12406 */;
+import _modDef12407 from "module_12407" /* 12407 */;
+import _modDef12408 from "module_12408" /* 12408 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12400 }, 3: null };
-const obj2 = { uri: _modDef12400 };
-obj[2] = { uri: _modDef12401 };
-const obj3 = { uri: _modDef12401 };
-obj[3] = { uri: _modDef12402 };
+let obj = { 1: null, 2: { uri: _modDef12406 }, 3: null };
+const obj2 = { uri: _modDef12406 };
+obj[2] = { uri: _modDef12407 };
+const obj3 = { uri: _modDef12407 };
+obj[3] = { uri: _modDef12408 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12402 };
+const obj4 = { uri: _modDef12408 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ButterflyIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const ButterflyIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6995).getAssetSource(obj);
+  obj.source = num(6997).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

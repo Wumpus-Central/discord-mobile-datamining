@@ -1,8 +1,8 @@
-// === Module 14634: Timer ===
+// === Module 14670: Timer ===
 
-// Module 14634 (Timer)
+// Module 14670 (Timer)
 import _modDef12 from "module_12" /* 12 */;
-import native from "native" /* 1202 */;
+import native from "native" /* 1199 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

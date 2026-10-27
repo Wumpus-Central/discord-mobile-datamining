@@ -1,10 +1,10 @@
-// === Module 10973: useInappropriateConversationSafetyToolsWarningForChannel ===
+// === Module 10976: useInappropriateConversationSafetyToolsWarningForChannel ===
 
-// Module 10973 (useInappropriateConversationSafetyToolsWarningForChannel)
+// Module 10976 (useInappropriateConversationSafetyToolsWarningForChannel)
 import c from "c" /* 576 */;
-import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10932 */;
-import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 10934 */;
-import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10935 */;
+import useInappropriateConversationWarningsForChannel from "useInappropriateConversationWarningsForChannel" /* 10935 */;
+import SelfModInappropriateConversationExperiment from "SelfModInappropriateConversationExperiment" /* 10937 */;
+import useSafetyAlertsSettingOrDefault from "useSafetyAlertsSettingOrDefault" /* 10938 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,13 +1,13 @@
-// === Module 15140: RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec ===
+// === Module 15176: RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec ===
 
-// Module 15140 (RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec)
+// Module 15176 (RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec)
 import initialize from "initialize" /* 504 */;
-import util from "util" /* 1128 */;
-import ExperimentStore from "ExperimentStore" /* 5190 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import util from "util" /* 1125 */;
+import ExperimentStore from "ExperimentStore" /* 5191 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/ui/RoleSubscriptionsCreateTierFromTemplatePickerFeatureSpec.tsx");

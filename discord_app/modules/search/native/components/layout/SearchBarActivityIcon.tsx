@@ -1,20 +1,20 @@
-// === Module 18072: SearchBarActivityIcon ===
+// === Module 18106: SearchBarActivityIcon ===
 
-// Module 18072 (SearchBarActivityIcon)
+// Module 18106 (SearchBarActivityIcon)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import timing from "timing" /* 5206 */;
-import SearchUtils from "SearchUtils" /* 13232 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import timing from "timing" /* 5207 */;
+import SearchUtils from "SearchUtils" /* 13246 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6792 */;
-import SearchQueryStore from "SearchQueryStore" /* 13239 */;
+import SearchMessageStore from "SearchMessageStore" /* 6793 */;
+import SearchQueryStore from "SearchQueryStore" /* 13253 */;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-let closure_7 = fn(9714).SEARCH_MESSAGE_TAB_SENTINEL;
+let closure_7 = fn(9716).SEARCH_MESSAGE_TAB_SENTINEL;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { spinnerColor: { color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, spinner: { width: 18, height: 18, alignItems: "center", justifyContent: "center", position: "absolute" }, icon: { marginLeft: 12, marginRight: 4 } };
 let closure_11 = createStyles.createStyles(obj);
 let obj4 = { START: 0, [0]: "START", END: 1, [1]: "END" };

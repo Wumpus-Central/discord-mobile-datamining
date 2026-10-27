@@ -1,20 +1,20 @@
-// === Module 18533: useSoundboardSoundLock ===
+// === Module 18567: useSoundboardSoundLock ===
 
-// Module 18533 (useSoundboardSoundLock)
-import util from "util" /* 1128 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
-import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5030 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
-import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9680 */;
-import BoostGemIcon from "BoostGemIcon" /* 9808 */;
-import SoundboardSoundPreviewMenuExperiment2 from "SoundboardSoundPreviewMenuExperiment" /* 18534 */;
+// Module 18567 (useSoundboardSoundLock)
+import util from "util" /* 1125 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
+import EntitlementFeatureNames from "EntitlementFeatureNames" /* 5031 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5664 */;
+import openPremiumUpsellActionSheetDefault from "openPremiumUpsellActionSheet" /* 9682 */;
+import BoostGemIcon from "BoostGemIcon" /* 9810 */;
+import SoundboardSoundPreviewMenuExperiment2 from "SoundboardSoundPreviewMenuExperiment" /* 18568 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const DEFAULT_SOUND_GUILD_ID = fn(6008).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(6009).DEFAULT_SOUND_GUILD_ID;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/soundboard/native/utils/useSoundboardSoundLock.tsx");
@@ -111,8 +111,8 @@ export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled
                 if (!guildId.available) {
                   const _Symbol = Symbol;
                   if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                    let intl = tmp(1128).intl;
-                    const stringResult = intl.string(tmp(1128).t.MDOXJR);
+                    let intl = tmp(1125).intl;
+                    const stringResult = intl.string(tmp(1125).t.MDOXJR);
                     class E {
                       constructor(arg0) {
                         if (closure_1) {
@@ -328,11 +328,11 @@ export const useSoundboardSoundLock = ReactCompilerGating.isReactCompilerEnabled
     const obj4 = { isLocked: tmp4, lockedAccessibilityHint: undefined, onLockedPress: tmp8 };
     return obj4;
   } else if (tmp6) {
-    const intl2 = tmp(1128).intl;
-    BARTXV = tmp(1128).t.BARTXV;
+    const intl2 = tmp(1125).intl;
+    BARTXV = tmp(1125).t.BARTXV;
     let stringResult = intl2.string(BARTXV);
   } else if (!guildId.available) {
-    let intl = tmp(1128).intl;
-    stringResult = intl.string(tmp(1128).t.MDOXJR);
+    let intl = tmp(1125).intl;
+    stringResult = intl.string(tmp(1125).t.MDOXJR);
   }
 });

@@ -1,22 +1,22 @@
-// === Module 5254: Button/BaseButton ===
+// === Module 5255: Button/BaseButton ===
 
-// Module 5254 (Button/BaseButton)
+// Module 5255 (Button/BaseButton)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import native from "native" /* 5037 */;
-import ButtonHooks from "ButtonHooks" /* 5251 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import native from "native" /* 5038 */;
+import ButtonHooks from "ButtonHooks" /* 5252 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport_mod from "ReanimatedRexport" /* 5052 */;
+import ReanimatedRexport_mod from "ReanimatedRexport" /* 5053 */;
 
 require = fn;
 let closure_2 = ["style"];
 let closure_3 = ["style"];
 get_ActivityIndicator = fn(17);
 ({ Pressable, TouchableOpacity } = get_ActivityIndicator);
-const ThemeTypes = fn(1087).ThemeTypes;
-const IOS_POINTER_STYLE = fn(5255).IOS_POINTER_STYLE;
+const ThemeTypes = fn(1084).ThemeTypes;
+const IOS_POINTER_STYLE = fn(5256).IOS_POINTER_STYLE;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useThemeOverrideVariant(arg0) {
@@ -40,7 +40,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useThem
   }
   return DARK;
 });
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_10 = createStyles.createStyles({ disabled: { opacity: 0.5 } });
 ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useButtonPressAnimationPropsIfPressed(arg0, arg1, onLayout, onPressIn, onPressOut) {
@@ -63,7 +63,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBut
       if (cResult[4] === onPressIn) {
       }
     }
-    const obj3 = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
+    const obj3 = { animatedScaleStyles: "Array", buttonAnimationProps: false };
     const obj4 = { onLayout, onPressIn, onPressOut };
     obj3.buttonAnimationProps = obj4;
     cResult[3] = onLayout;
@@ -86,7 +86,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBut
 }) : (function useButtonPressAnimationPropsIfPressed(arg0, arg1, onLayout, onPressIn, onPressOut) {
   const buttonPressAnimationProps = ButtonHooks.useButtonPressAnimationProps(arg0, arg1, onLayout, onPressIn, onPressOut);
   if (null == arg0) {
-    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: 0 };
+    const obj2 = { animatedScaleStyles: "Array", buttonAnimationProps: false };
     const obj3 = { onLayout, onPressIn, onPressOut };
     obj2.buttonAnimationProps = obj3;
     let obj4 = obj2;

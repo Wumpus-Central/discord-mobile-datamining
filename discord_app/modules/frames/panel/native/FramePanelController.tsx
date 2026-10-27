@@ -1,16 +1,16 @@
-// === Module 18489: FramePanelController ===
+// === Module 18523: FramePanelController ===
 
-// Module 18489 (FramePanelController)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10767 */;
-import conjureBackgroundFrames from "conjureBackgroundFrames" /* 18055 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 18490 */;
+// Module 18523 (FramePanelController)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10770 */;
+import conjureBackgroundFrames from "conjureBackgroundFrames" /* 18089 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 18524 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2045 */;
-import FramesStore from "FramesStore" /* 6775 */;
+import ApplicationStore from "ApplicationStore" /* 2042 */;
+import FramesStore from "FramesStore" /* 6776 */;
 
 require = fn;
-const asLaunched = fn(6776).asLaunched;
-const ActivityPanelModes = fn(5609).ActivityPanelModes;
+const asLaunched = fn(6777).asLaunched;
+const ActivityPanelModes = fn(5610).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -129,7 +129,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FramePan
     }
   }
   const tmpResult = mainFrameId(504);
-  const tmp13 = jsx(mainFrameId(18459).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: tmp10, children });
+  const tmp13 = jsx(mainFrameId(18493).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: tmp10, children });
   cResult[5] = children;
   cResult[6] = connectedActivityAppId;
   cResult[7] = currentApp;
@@ -186,5 +186,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FramePan
     }
   }, items1);
   let obj = mainFrameId(504);
-  return jsx(mainFrameId(18459).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
+  return jsx(mainFrameId(18493).BaseActivityPanelController, { context: FramePanelStateContextDefault, orientationLockStateForApp, mode, hasConnectedActivity: null != mainFrameId, connectedActivityAppId, currentApp, updateActivityPanelMode: callback, children: children.children });
 });

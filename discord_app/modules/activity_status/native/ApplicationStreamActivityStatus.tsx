@@ -1,11 +1,11 @@
-// === Module 10639: ApplicationStreamActivityStatus ===
+// === Module 10642: ApplicationStreamActivityStatus ===
 
-// Module 10639 (ApplicationStreamActivityStatus)
+// Module 10642 (ApplicationStreamActivityStatus)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10640 */;
-import TvIcon from "TvIcon" /* 10641 */;
-import ActivityStatusTextDefault from "ActivityStatusText" /* 10643 */;
+import util from "util" /* 1125 */;
+import ActivityStatusIconDefault from "ActivityStatusIcon" /* 10643 */;
+import TvIcon from "TvIcon" /* 10644 */;
+import ActivityStatusTextDefault from "ActivityStatusText" /* 10646 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Applicat
   }
   let tmp12 = !hideIcon;
   if (!hideIcon) {
-    const obj2 = { icon: tmp7(10641).TvIcon, style: iconStyle };
+    const obj2 = { icon: tmp7(10644).TvIcon, style: iconStyle };
     tmp12 = React3(ActivityStatusIconDefault, obj2);
   }
   const children = [tmp12, ];

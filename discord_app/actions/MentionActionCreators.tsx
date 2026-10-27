@@ -1,9 +1,9 @@
-// === Module 17862: MentionActionCreators ===
+// === Module 17896: MentionActionCreators ===
 
-// Module 17862 (MentionActionCreators)
+// Module 17896 (MentionActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import Constants from "Constants" /* 1087 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 ({ Endpoints: c3, MAX_MENTIONS_PER_FETCH: closure_4 } = Constants);
@@ -39,7 +39,7 @@ export default {
       flag2 = true;
     }
     DispatcherDefault.dispatch({ type: "LOAD_RECENT_MENTIONS", guildId });
-    const HTTP = before(1297).HTTP;
+    const HTTP = before(1294).HTTP;
     const request = { url: constants.MENTIONS, query: { before, limit, guild_id: guildId, roles: flag, everyone: flag2, feature: feature.feature }, retries: 2, oldFormErrors: true, rejectWithError: true };
     value = HTTP.get(request);
     return value.then((body) => {

@@ -1,9 +1,9 @@
 // === Module 8820: DeviceOrientation ===
 
 // Module 8820 (DeviceOrientation)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import DeviceUtils from "DeviceUtils" /* 4928 */;
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import DeviceUtils from "DeviceUtils" /* 4929 */;
 import noop from "module_19" /* 19 */;
 import get_ActivityIndicator_mod from "module_8821" /* 8821 */;
 

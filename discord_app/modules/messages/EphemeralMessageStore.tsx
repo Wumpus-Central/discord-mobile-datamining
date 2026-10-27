@@ -1,11 +1,11 @@
-// === Module 6011: EphemeralMessageStore ===
+// === Module 6012: EphemeralMessageStore ===
 
-// Module 6011 (EphemeralMessageStore)
+// Module 6012 (EphemeralMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FlagUtils from "FlagUtils" /* 1405 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6012 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6013 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 require = fn;
 function dropChannelIfEmpty(channelId, value) {
@@ -20,7 +20,7 @@ function clearAll() {
     map.clear();
   }
 }
-const MessageFlags = fn(1087).MessageFlags;
+const MessageFlags = fn(1084).MessageFlags;
 let closure_4 = [];
 let map = new Map();
 const Store = initializeDefault.Store;

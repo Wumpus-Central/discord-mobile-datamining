@@ -1,10 +1,10 @@
-// === Module 5006: DefaultRouteStore ===
+// === Module 5007: DefaultRouteStore ===
 
-// Module 5006 (DefaultRouteStore)
+// Module 5007 (DefaultRouteStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage3 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1087 */;
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const Routes = Constants.Routes;

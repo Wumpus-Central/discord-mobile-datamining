@@ -1,17 +1,17 @@
 // === Module 9043: usePrivacyLevelHelpText ===
 
 // Module 9043 (usePrivacyLevelHelpText)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4908 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4909 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const HelpdeskArticles = fn(1087).HelpdeskArticles;
-const constants = fn(4829).GuildScheduledEventPrivacyLevel;
-const Permissions = fn(1098).Permissions;
+const HelpdeskArticles = fn(1084).HelpdeskArticles;
+const constants = fn(4830).GuildScheduledEventPrivacyLevel;
+const Permissions = fn(1095).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stage_channels/usePrivacyLevelHelpText.tsx");
@@ -80,7 +80,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStage
         return closure_4.can(Permissions.CREATE_INSTANT_INVITE, closure_0);
       }
     }
-    const stringResult = obj5.string(tmp(1128).t.GFq5Rg);
+    const stringResult = obj5.string(tmp(1125).t.GFq5Rg);
   } else {
     class E {
       constructor() {
@@ -113,24 +113,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useStage
     privacy_level = privacy_level.privacy_level;
   }
   if (privacy_level === constants.PUBLIC) {
-    const intl4 = tmp(1128).intl;
-    let stringResult = intl4.string(tmp(1128).t.GFq5Rg);
+    const intl4 = tmp(1125).intl;
+    let stringResult = intl4.string(tmp(1125).t.GFq5Rg);
   } else if (stateFromStores) {
     if (canEveryoneRoleResult) {
       let formatResult = null;
       if (arg2 === constants.PUBLIC) {
-        const intl3 = tmp(1128).intl;
+        const intl3 = tmp(1125).intl;
         const obj4 = { articleURL: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.STAGE_CHANNEL_GUIDELINES) };
-        formatResult = intl3.format(tmp(1128).t["ew/Jq4"], obj4);
+        formatResult = intl3.format(tmp(1125).t["ew/Jq4"], obj4);
       }
       let stringResult1 = formatResult;
     } else {
-      const intl2 = tmp(1128).intl;
-      stringResult1 = intl2.string(tmp(1128).t.E5T7a3);
+      const intl2 = tmp(1125).intl;
+      stringResult1 = intl2.string(tmp(1125).t.E5T7a3);
     }
   } else {
-    const intl = tmp(1128).intl;
-    stringResult = intl.string(tmp(1128).t.BOjr7t);
+    const intl = tmp(1125).intl;
+    stringResult = intl.string(tmp(1125).t.BOjr7t);
   }
   const obj6 = { helpText: stringResult, guildOnlyDisabled: null, publicDisabled: null };
   let privacy_level1;

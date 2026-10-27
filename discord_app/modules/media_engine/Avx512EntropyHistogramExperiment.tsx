@@ -1,7 +1,7 @@
-// === Module 5843: Avx512EntropyHistogramExperiment ===
+// === Module 5844: Avx512EntropyHistogramExperiment ===
 
-// Module 5843 (Avx512EntropyHistogramExperiment)
-import ApexExperiment from "ApexExperiment" /* 1455 */;
+// Module 5844 (Avx512EntropyHistogramExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ name: "2026-10-avx512-entropy-histogram", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

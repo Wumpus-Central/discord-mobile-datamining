@@ -1,7 +1,7 @@
-// === Module 14290: UserProfileActivityCardBadges ===
+// === Module 14320: UserProfileActivityCardBadges ===
 
-// Module 14290 (UserProfileActivityCardBadges)
-import UserProfileActivityBadges from "UserProfileActivityBadges" /* 14291 */;
+// Module 14320 (UserProfileActivityCardBadges)
+import UserProfileActivityBadges from "UserProfileActivityBadges" /* 14321 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -21,7 +21,7 @@ function getActivityBadges(activity) {
   return items3;
 }
 const View = fn(17).View;
-const ActivityTypes = fn(1087).ActivityTypes;
+const ActivityTypes = fn(1084).ActivityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

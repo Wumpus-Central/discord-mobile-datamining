@@ -1,27 +1,27 @@
-// === Module 18160: GroupDMNitroUpsellBanner ===
+// === Module 18194: GroupDMNitroUpsellBanner ===
 
-// Module 18160 (GroupDMNitroUpsellBanner)
+// Module 18194 (GroupDMNitroUpsellBanner)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import spring from "spring" /* 5247 */;
-import _modDef8422 from "module_8422" /* 8422 */;
-import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11293 */;
-import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11296 */;
-import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11300 */;
-import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 18161 */;
+import util from "util" /* 1125 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import spring from "spring" /* 5248 */;
+import _modDef8421 from "module_8421" /* 8421 */;
+import GroupDMNitroUpsellModel from "GroupDMNitroUpsellModel" /* 11296 */;
+import GroupDMNitroCapExperimentDefault from "GroupDMNitroCapExperiment" /* 11299 */;
+import useGroupDMNitroUpsellActionDefault from "useGroupDMNitroUpsellAction" /* 11303 */;
+import GroupDMNitroCapBannerDefault from "GroupDMNitroCapBanner" /* 18195 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const number = fn(11295).MAX_GROUP_DM_NITRO_PARTICIPANTS;
+const number = fn(11298).MAX_GROUP_DM_NITRO_PARTICIPANTS;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
@@ -31,7 +31,7 @@ const PX_24 = nativeDefault.space.PX_24;
 const PX_8 = nativeDefault.space.PX_8;
 const locations = [0, 0.225, 1];
 let closure_17 = { mass: 0.8, stiffness: 400, damping: 32, overshootClamping: true };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { floatingOverlay: { position: "absolute", left: 0, right: 0, bottom: 0 }, floatingContent: { justifyContent: "flex-end" }, floatingBanner: { backgroundColor: "transparent", paddingTop: 0, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_18 = createStyles.createStyles(obj2);
 const __initData = { code: "function GroupDMNitroUpsellBannerTsx1(){const{opacity,translateY}=this.__closure;return{opacity:opacity.get(),transform:[{translateY:translateY.get()}]};}" };
@@ -832,7 +832,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
                 tmp34 = tmp36;
               }
             }
-            const obj9 = { text: tmp21, size: "sm", variant: "experimental_premium-primary", shiny: tmp23, icon: _modDef8422, onPress: tmp14 };
+            const obj9 = { text: tmp21, size: "sm", variant: "experimental_premium-primary", shiny: tmp23, icon: _modDef8421, onPress: tmp14 };
             const tmp26 = React6(components_Button_Button.Button, obj9);
             cResult[17] = tmp14;
             cResult[18] = tmp21;
@@ -904,7 +904,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GroupDMN
     tmp15 = !stateFromStores;
   }
   obj7.shiny = tmp15;
-  obj7.icon = _modDef8422;
+  obj7.icon = _modDef8421;
   obj7.onPress = tmp7Result;
   obj6.trailing = React6(components_Button_Button.Button, obj7);
   const obj8 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };

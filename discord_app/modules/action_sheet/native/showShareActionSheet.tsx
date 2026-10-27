@@ -2,10 +2,10 @@
 
 // Module 8851 (showShareActionSheet)
 import _mod17 from "module_17" /* 17 */;
-import SentryUtilsDefault from "SentryUtils" /* 1257 */;
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
 import NativeShareManagerModuleDefault from "NativeShareManagerModule" /* 8852 */;
 import ShowShareActionSheetUtils from "ShowShareActionSheetUtils" /* 8853 */;
-import PlatformUtils from "utils/PlatformUtils" /* 1385 */;
+import PlatformUtils from "utils/PlatformUtils" /* 1382 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -27,7 +27,7 @@ export const showShareActionSheet = function showShareActionSheet(source, SECURE
     let mediaShareParams = require("ShowShareActionSheetUtils").getMediaShareParams(source.source);
     const obj2 = require("ShowShareActionSheetUtils");
   } else {
-    mediaShareParams = { mediaFallbackUrl: "Array", mediaStagingOptions: "Reflect" };
+    mediaShareParams = { mediaFallbackUrl: "toCharArray$esjava$1", mediaStagingOptions: "Symbol" };
   }
   ({ mediaFallbackUrl, mediaStagingOptions } = mediaShareParams);
   if (null == source.source) {

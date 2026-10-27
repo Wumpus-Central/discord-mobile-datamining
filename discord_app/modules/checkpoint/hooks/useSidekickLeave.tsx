@@ -1,7 +1,7 @@
-// === Module 13020: useSidekickLeave ===
+// === Module 13033: useSidekickLeave ===
 
-// Module 13020 (useSidekickLeave)
-import CheckpointNavigation from "CheckpointNavigation" /* 6363 */;
+// Module 13033 (useSidekickLeave)
+import CheckpointNavigation from "CheckpointNavigation" /* 6365 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

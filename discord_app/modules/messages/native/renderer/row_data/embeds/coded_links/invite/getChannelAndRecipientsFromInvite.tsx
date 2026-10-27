@@ -1,7 +1,7 @@
-// === Module 10005: getChannelAndRecipientsFromInvite ===
+// === Module 10007: getChannelAndRecipientsFromInvite ===
 
-// Module 10005 (getChannelAndRecipientsFromInvite)
-import ChannelRecord from "ChannelRecord" /* 4827 */;
+// Module 10007 (getChannelAndRecipientsFromInvite)
+import ChannelRecord from "ChannelRecord" /* 4828 */;
 import size from "module_2" /* 2 */;
 
 let closure_0 = ChannelRecord.createChannelRecordFromInvite;

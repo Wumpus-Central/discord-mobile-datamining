@@ -1,12 +1,12 @@
-// === Module 2067: HelpdeskUtils ===
+// === Module 2064: HelpdeskUtils ===
 
-// Module 2067 (HelpdeskUtils)
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import getLocalizedLinkDefault from "getLocalizedLink" /* 4786 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
+// Module 2064 (HelpdeskUtils)
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import getLocalizedLinkDefault from "getLocalizedLink" /* 4787 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 const LocalizedLinks = Constants.LocalizedLinks;
 let combined = "https://" + Constants.SUPPORT_DOMAIN;
 let closure_6 = "https://" + Constants.SUPPORT_DEV_DOMAIN;

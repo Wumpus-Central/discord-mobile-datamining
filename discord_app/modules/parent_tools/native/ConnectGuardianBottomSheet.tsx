@@ -1,27 +1,27 @@
-// === Module 16171: ConnectGuardianBottomSheet ===
+// === Module 16209: ConnectGuardianBottomSheet ===
 
-// Module 16171 (ConnectGuardianBottomSheet)
+// Module 16209 (ConnectGuardianBottomSheet)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import _modDef2536 from "module_2536" /* 2536 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5265 */;
-import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 16172 */;
-import ConnectGuardianCard from "ConnectGuardianCard" /* 16173 */;
+import util from "util" /* 1125 */;
+import _modDef2535 from "module_2535" /* 2535 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5266 */;
+import useOnNewPendingRequestDefault from "useOnNewPendingRequest" /* 16210 */;
+import ConnectGuardianCard from "ConnectGuardianCard" /* 16211 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7645 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7646 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(7646).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_6 = fn(7647).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 let c9 = "https://support.discord.com/hc/articles/14155060633623";
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_24, paddingVertical: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 }, info: null, centered: null, cardContainer: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_24, paddingVertical: nativeDefault.space.PX_24, gap: nativeDefault.space.PX_24 };
 obj2.info = { alignItems: "center", gap: nativeDefault.space.PX_8 };
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
           return;
         }
       }
-      const stringResult = obj4.string(_modDef2536.aCUVfL);
+      const stringResult = obj4.string(_modDef2535.aCUVfL);
     }
     class A {
       constructor() {
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
           }
         }
         obj2.link = link;
-        const formatResult = obj6.format(_modDef2536["2O6ltn"], obj2);
+        const formatResult = obj6.format(_modDef2535["2O6ltn"], obj2);
       }
       class A {
         constructor() {
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
   const obj5 = { style: tmp.centered, accessibilityRole: "header", variant: "heading-xl/bold", color: "mobile-text-heading-primary", children: null };
   if (title == null) {
     const intl = util.intl;
-    title = intl.string(_modDef2536.aCUVfL);
+    title = intl.string(_modDef2535.aCUVfL);
   }
   obj5.children = title;
   const items2 = [React5(Text_Text.Text, obj5), ];
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
   if (body == null) {
     const intl2 = util.intl;
     const obj7 = { link };
-    body = intl2.format(_modDef2536["2O6ltn"], obj7);
+    body = intl2.format(_modDef2535["2O6ltn"], obj7);
   }
   obj6.children = body;
   items2[1] = React5(Text_Text.Text, obj6);
@@ -271,7 +271,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectG
   items3[1] = React5(View, obj8);
   const obj11 = { variant: "secondary", size: "md", text: null, onPress: null };
   const intl3 = util.intl;
-  obj11.text = intl3.string(_modDef2536.Hsm5IF);
+  obj11.text = intl3.string(_modDef2535.Hsm5IF);
   obj11.onPress = callback;
   items3[2] = React5(components_Button_Button.Button, obj11);
   obj3.children = items3;

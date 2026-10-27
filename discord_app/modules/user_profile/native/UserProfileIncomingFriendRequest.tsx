@@ -1,9 +1,9 @@
-// === Module 14434: UserProfileIncomingFriendRequest ===
+// === Module 14470: UserProfileIncomingFriendRequest ===
 
-// Module 14434 (UserProfileIncomingFriendRequest)
+// Module 14470 (UserProfileIncomingFriendRequest)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
+import native from "native" /* 1199 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { rowGap: 16, flexDirection: "column" }, buttons: { flexDirection: "row", columnGap: 12 }, gameIcon: { paddingTop: 2 }, friendRequestNote: { borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

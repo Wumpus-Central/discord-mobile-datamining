@@ -1,22 +1,22 @@
-// === Module 14069: oauth2/Header ===
+// === Module 14083: oauth2/Header ===
 
-// Module 14069 (oauth2/Header)
+// Module 14083 (oauth2/Header)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import FlagUtils from "FlagUtils" /* 1405 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import Text_Text from "Text/Text" /* 5234 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import Text_Text from "Text/Text" /* 5235 */;
 import BotTagDefault from "BotTag" /* 9134 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const UserFlags = fn(1087).UserFlags;
+const UserFlags = fn(1084).UserFlags;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { header: { paddingBottom: 16, marginHorizontal: 16, borderTopLeftRadius: nativeDefault.radii.sm, borderTopRightRadius: nativeDefault.radii.sm, flexDirection: "column", justifyContent: "center", alignItems: "center" }, applicationNameWrapper: { flexDirection: "row" }, headerIcons: { alignItems: "center", flexDirection: "row", justifyContent: "space-between", marginBottom: 24 }, ellipseGroup: { flexDirection: "row", justifyContent: "space-between", marginHorizontal: 24 }, ellipse: null, botTag: null };
 let size = { width: 4, height: 4, marginHorizontal: 2, backgroundColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, opacity: 0.1, borderRadius: 2 };
 obj2.ellipse = size;

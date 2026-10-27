@@ -1,22 +1,22 @@
-// === Module 11075: UserProfileCustomStatusActionSheet ===
+// === Module 11078: UserProfileCustomStatusActionSheet ===
 
-// Module 11075 (UserProfileCustomStatusActionSheet)
+// Module 11078 (UserProfileCustomStatusActionSheet)
 import nativeDefault from "native" /* 587 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5989 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5990 */;
 import HeaderAvatarDefault from "HeaderAvatar" /* 8747 */;
-import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 11059 */;
-import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 11076 */;
-import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 11077 */;
+import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 11062 */;
+import useCustomStatusActivityForUserDefault from "useCustomStatusActivityForUser" /* 11079 */;
+import UserProfileStackedActionSheetDefault from "UserProfileStackedActionSheet" /* 11080 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(7304);
+const Constants = fn(7306);
 ({ AVATAR_CONTAINER_SIZE, AVATAR_CUSTOM_STATUS_GAP } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { statusPreviewContainer: { flexDirection: "row", columnGap: AVATAR_CUSTOM_STATUS_GAP, marginHorizontal: nativeDefault.space.PX_16 }, avatarContainer: { height: AVATAR_CONTAINER_SIZE, width: AVATAR_CONTAINER_SIZE, alignItems: "center", justifyContent: "center" }, avatarStatus: null, customStatusBubble: null };
 let obj3 = { flexDirection: "row", columnGap: AVATAR_CUSTOM_STATUS_GAP, marginHorizontal: nativeDefault.space.PX_16 };
 obj2.avatarStatus = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };
@@ -140,12 +140,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       tmp15 = tmp17;
     }
   }
-  const intl = tmp(1128).intl;
+  const intl = tmp(1125).intl;
   if (stateFromStores) {
-    let stringResult = intl.string(tmp(1128).t.AHoLf4);
+    let stringResult = intl.string(tmp(1125).t.AHoLf4);
   } else {
     const obj8 = { username: name };
-    stringResult = intl.formatToPlainString(tmp(1128).t["pP5Aa+"], obj8);
+    stringResult = intl.formatToPlainString(tmp(1125).t["pP5Aa+"], obj8);
   }
   cResult[5] = name;
   cResult[6] = stateFromStores;
@@ -167,12 +167,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   const obj = user(504);
   const tmp6 = useCustomStatusActivityForUserDefault(user.id);
   const name = NicknameUtilsDefault.useName(guildId, channelId, user);
-  const intl = user(1128).intl;
+  const intl = user(1125).intl;
   if (stateFromStores) {
-    let stringResult = intl.string(tmp2(1128).t.AHoLf4);
+    let stringResult = intl.string(tmp2(1125).t.AHoLf4);
   } else {
     const obj3 = { username: name };
-    stringResult = intl.formatToPlainString(tmp2(1128).t["pP5Aa+"], obj3);
+    stringResult = intl.formatToPlainString(tmp2(1125).t["pP5Aa+"], obj3);
   }
   const obj4 = { title: stringResult, children: null };
   const obj5 = { style: tmp.statusPreviewContainer, children: null };

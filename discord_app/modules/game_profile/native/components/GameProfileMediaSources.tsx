@@ -1,25 +1,27 @@
 // === Module 9311: GameProfileMediaSources ===
 
 // Module 9311 (GameProfileMediaSources)
-import ImageLoaderUtils from "ImageLoaderUtils" /* 1452 */;
-import ImageProxyUtils from "ImageProxyUtils" /* 2037 */;
-import StoreUtils from "StoreUtils" /* 6383 */;
-import size from "module_2" /* 2 */;
+import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
+import ImageProxyUtils from "ImageProxyUtils" /* 2034 */;
+import StoreUtils from "StoreUtils" /* 6384 */;
+import size_mod from "module_2" /* 2 */;
 
 let c2 = 366;
-let closure_3 = { width: 1920, height: 1080 };
+let size = { width: 1920, height: 1080 };
+let size = size_mod;
 const result = size.fileFinishedImporting("modules/game_profile/native/components/GameProfileMediaSources.tsx");
 
 export const MEDIA_ITEM_MAX_WIDTH = 366;
 export const MEDIA_ITEM_MAX_HEIGHT = 200;
 export const MEDIA_ITEM_ASPECT_RATIO = 1.83;
+export const MEDIA_VIEWER_ITEM_SIZE = size;
 export const getCarouselPreviewPixelSize = function getCarouselPreviewPixelSize() {
   let devicePixelRatio = arg0;
   if (arg0 === undefined) {
     devicePixelRatio = ImageLoaderUtils.getDevicePixelRatio();
   }
   const bestMediaProxySize = ImageLoaderUtils.getBestMediaProxySize(c2 * devicePixelRatio);
-  const size = { width: bestMediaProxySize, height: Math.round(bestMediaProxySize / 1.83) };
+  size = { width: bestMediaProxySize, height: Math.round(bestMediaProxySize / 1.83) };
   return size;
 };
 export const buildMediaEntries = function buildMediaEntries(game) {
@@ -48,20 +50,37 @@ export const buildMediaEntries = function buildMediaEntries(game) {
   return items;
 };
 export const buildMediaViewerSources = function buildMediaViewerSources(arr2, cResult) {
-  closure_0 = cResult;
-  return arr2.map((originalUrl, mediaIndex) => {
-    const obj = { uri: originalUrl.originalUrl, videoURI: null, mediaIndex: null };
-    originalUrl = undefined;
-    if ("trailer" === originalUrl.type) {
-      originalUrl = originalUrl.originalUrl;
+  const styles = cResult;
+  let map = dimensions;
+  if (dimensions === undefined) {
+    const _Map = Map;
+    map = new Map();
+  }
+  return arr2.map((uri, mediaIndex) => {
+    value = undefined;
+    if ("image" === uri.type) {
+      value = map.get(uri.originalUrl);
+    }
+    if (null == value) {
+      let height = styles.height;
+      let tmp4 = styles;
+    } else {
+      const _Math = Math;
+      tmp4 = styles;
+      height = Math.round(styles.width * value.height / value.width);
+    }
+    const obj = { uri: uri.originalUrl, videoURI: null, mediaIndex: null };
+    let originalUrl;
+    if ("trailer" === uri.type) {
+      originalUrl = uri.originalUrl;
     }
     obj.videoURI = originalUrl;
     obj.mediaIndex = mediaIndex;
-    const merged = Object.assign(closure_3);
-    const obj2 = {};
-    const merged1 = Object.assign(closure_0);
-    obj2.uri = originalUrl.previewUrl;
-    obj.thumbnail = obj2;
+    if (value == null) {
+      value = size;
+    }
+    const merged = Object.assign(value);
+    obj.thumbnail = { width: tmp4.width, height, uri: uri.previewUrl };
     obj.accessoryType = "embed";
     obj.disableDownload = true;
     return obj;

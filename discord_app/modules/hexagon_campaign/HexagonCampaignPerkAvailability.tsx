@@ -1,11 +1,11 @@
-// === Module 4999: HexagonCampaignPerkAvailability ===
+// === Module 5000: HexagonCampaignPerkAvailability ===
 
-// Module 4999 (HexagonCampaignPerkAvailability)
+// Module 5000 (HexagonCampaignPerkAvailability)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4998 */;
-import HexagonCampaignExperiment from "HexagonCampaignExperiment" /* 5000 */;
-import UserStore from "UserStore" /* 1392 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4999 */;
+import HexagonCampaignExperiment from "HexagonCampaignExperiment" /* 5001 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

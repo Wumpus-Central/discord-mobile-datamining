@@ -1,18 +1,18 @@
-// === Module 13035: TraitOptionDetails ===
+// === Module 13049: TraitOptionDetails ===
 
-// Module 13035 (TraitOptionDetails)
+// Module 13049 (TraitOptionDetails)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef3088 from "module_3088" /* 3088 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import RarityBadgeDefault from "RarityBadge" /* 13036 */;
+import _modDef3089 from "module_3089" /* 3089 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import RarityBadgeDefault from "RarityBadge" /* 13050 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty, Fragment: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { titleRow: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8 }, title: { textTransform: "capitalize" }, subscribeLink: { textDecorationLine: "underline" } };
 let closure_7 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -23,9 +23,9 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
   _require = tmp4;
   let tmp5 = null;
   if (!asset.hidden) {
-    if (asset.status === tmp(6040).CheckpointTraitOptionStatus.NITRO_LOCKED) {
+    if (asset.status === tmp(6043).CheckpointTraitOptionStatus.NITRO_LOCKED) {
       if (cResult[0] !== tmp4) {
-        const intl = tmp(1128).intl;
+        const intl = tmp(1125).intl;
         const obj2 = {
           subscribeHook(children, arg1) {
                   return React4(Text_Text.Text, {
@@ -34,26 +34,26 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
                     style: subscribeLink.subscribeLink,
                     onPress() {
                       const obj = { analyticsLocations: null };
-                      const items = [closure_1_1(7278).CHECKPOINT];
+                      const items = [closure_1_1(7280).CHECKPOINT];
                       obj.analyticsLocations = items;
-                      return closure_1_1(9792)(obj);
+                      return closure_1_1(9794)(obj);
                     },
                     accessibilityRole: "link",
                     children
                   }, arg1);
                 }
         };
-        const formatResult = intl.format(_modDef3088["3Wq/bk"], obj2);
+        const formatResult = intl.format(_modDef3089["3Wq/bk"], obj2);
         cResult[0] = tmp4;
         cResult[1] = formatResult;
       }
     } else {
       if (cResult[2] !== asset) {
-        const assetDescription = tmp(6362).getAssetDescription(asset);
+        const assetDescription = tmp(6364).getAssetDescription(asset);
         cResult[2] = asset;
         cResult[3] = assetDescription;
         let tmp6 = assetDescription;
-        const tmpResult = tmp(6362);
+        const tmpResult = tmp(6364);
       } else {
         tmp6 = cResult[3];
       }
@@ -82,7 +82,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
     let format = _require;
     let obj = dependencyMap;
     if (asset.status === require("CheckpointCharacterAssets").CheckpointTraitOptionStatus.NITRO_LOCKED) {
-      const intl = format(1128).intl;
+      const intl = format(1125).intl;
       format = intl.format;
       obj = {
         subscribeHook(children, arg1) {
@@ -92,19 +92,19 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function AssetDe
                 style: subscribeLink.subscribeLink,
                 onPress() {
                   const obj = { analyticsLocations: null };
-                  const items = [closure_1_1(7278).CHECKPOINT];
+                  const items = [closure_1_1(7280).CHECKPOINT];
                   obj.analyticsLocations = items;
-                  return closure_1_1(9792)(obj);
+                  return closure_1_1(9794)(obj);
                 },
                 accessibilityRole: "link",
                 children
               }, arg1);
             }
       };
-      let formatResult = format(_modDef3088["3Wq/bk"], obj);
+      let formatResult = format(_modDef3089["3Wq/bk"], obj);
     } else {
-      formatResult = format(6362).getAssetDescription(asset);
-      const formatResult1 = format(6362);
+      formatResult = format(6364).getAssetDescription(asset);
+      const formatResult1 = format(6364);
     }
   }
 });

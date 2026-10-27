@@ -1,21 +1,21 @@
-// === Module 8287: ThreadActionCreators ===
+// === Module 8285: ThreadActionCreators ===
 
-// Module 8287 (ThreadActionCreators)
+// Module 8285 (ThreadActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1128 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8304 */;
-import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 8305 */;
+import util from "util" /* 1125 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5712 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5909 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8302 */;
+import ApplicationCommandActionCreators from "ApplicationCommandActionCreators" /* 8303 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8288 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4905 */;
-import ThreadSummaryStore from "ThreadSummaryStore" /* 8303 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import ArchivedThreadsStore from "ArchivedThreadsStore" /* 8286 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4906 */;
+import ThreadSummaryStore from "ThreadSummaryStore" /* 8301 */;
 
 const require = globalThis.__r;
 
@@ -44,11 +44,11 @@ function dispatchThreadMemberLocalUpdate(id, isJoining) {
   const obj = DispatcherDefault;
   obj.dispatch({ type: "THREAD_MEMBER_LOCAL_UPDATE", id: id.id, guildId: id.getGuildId(), userId: AuthenticationStore.getId(), isJoining });
 }
-let closure_4 = fn(4827).createChannelRecordFromServer;
-const PAGE_SIZE = fn(8288).PAGE_SIZE;
-const Constants = fn(1087);
+let closure_4 = fn(4828).createChannelRecordFromServer;
+const PAGE_SIZE = fn(8286).PAGE_SIZE;
+const Constants = fn(1084);
 ({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-const ChannelFlags = fn(4830).ChannelFlags;
+const ChannelFlags = fn(4831).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadActionCreators.tsx");
 
@@ -677,8 +677,8 @@ export default {
     const request = { url: __initData.CHANNEL(id.id), body: { auto_archive_duration }, rejectWithError: HTTPUtils.rejectWithMigratedError() };
     return HTTP.patch(request);
   },
-  pin(thread) {
-    this.updateFlags(thread, thread.flags | ChannelFlags.PINNED, thread.isArchivedThread());
+  pin(dependencyMap) {
+    this.updateFlags(dependencyMap, dependencyMap.flags | ChannelFlags.PINNED, dependencyMap.isArchivedThread());
   },
   unpin(thread) {
     this.updateFlags(thread, thread.flags & ~ChannelFlags.PINNED);
@@ -686,8 +686,8 @@ export default {
   updateFlags(thread, arg1) {
     closure_0 = thread;
     closure_1 = arg1;
-    let flag = thread2;
-    if (thread2 === undefined) {
+    let flag = dependencyMap2;
+    if (dependencyMap2 === undefined) {
       flag = false;
     }
     return (async () => {
@@ -696,7 +696,7 @@ export default {
       if (flag) {
         obj7.archived = false;
       }
-      const HTTP = tmp3(1297).HTTP;
+      const HTTP = tmp3(1294).HTTP;
       const request = { url: closure_1_12.CHANNEL(tmp3.id), body: obj7, rejectWithError: true };
       await HTTP.patch(request);
       if (1 === tmp7) {
@@ -780,7 +780,7 @@ export default {
               return obj14;
             } else {
               dependencyMap = 1;
-              const HTTP2 = tmp3(1297).HTTP;
+              const HTTP2 = tmp3(1294).HTTP;
               const request = { url: closure_1_12.CHANNEL(closure_128_0.id), body: null, rejectWithError: true };
               const obj15 = { flags: closure_128_0.flags & ~constants.PINNED };
               request.body = obj15;
@@ -817,7 +817,7 @@ export default {
                 return obj21;
               } else {
                 dependencyMap = 2;
-                const HTTP = tmp3(1297).HTTP;
+                const HTTP = tmp3(1294).HTTP;
                 const request1 = { url: closure_1_12.CHANNEL(closure_128_1.id), body: null, rejectWithError: true };
                 const obj22 = { flags: closure_128_1.flags | constants.PINNED };
                 request1.body = obj22;
@@ -862,14 +862,13 @@ export default {
     const obj4 = { parentMessageId: id, isPrivate: false, location: Message };
   },
   setNotificationSettings(channel, muteSettings) {
-    closure_0 = channel;
     closure_1 = muteSettings;
     const self = this;
     return (async () => {
-      if (dependencyMap === 2) {
-        dependencyMap = 3;
+      if (c5 === 2) {
+        c5 = 3;
         throw new TypeError("Generator functions may not be called on executing generators");
-      } else if (tmp3 === 3) {
+      } else if (tmp6 === 3) {
         if (arg0 === 1) {
           throw value;
         } else if (arg0 === 2) {
@@ -880,41 +879,75 @@ export default {
         }
       } else {
         try {
-          dependencyMap = 2;
-          if (0 === c1) {
+          c5 = 2;
+          if (0 === c4) {
             if (arg0 === 1) {
-              dependencyMap = 3;
+              c5 = 3;
               throw value;
             } else if (arg0 === 2) {
-              dependencyMap = 3;
-              const obj3 = { value, done: true };
-              return obj3;
+              c5 = 3;
+              const obj4 = { value, done: true };
+              return obj4;
             } else {
-              const result = tmp4(8308).trackThreadNotificationSettingsUpdated(tmp4, closure_1);
-              if (!JoinedThreadsStore.hasJoined(tmp4.id)) {
-                c1 = 1;
-                dependencyMap = 1;
-                const obj5 = { value: self.joinThread(tmp4, "Change Notification Settings"), done: false };
+              channel = tmp7;
+              const result = channel(tmp32[17]).trackThreadNotificationSettingsUpdated(channel, tmp3);
+              if (!JoinedThreadsStore.hasJoined(channel.id)) {
+                c4 = 1;
+                c5 = 1;
+                const obj5 = { value: self.joinThread(channel, "Change Notification Settings"), done: false };
                 return obj5;
               }
-              const obj8 = tmp4(8308);
+              const obj12 = channel(tmp32[17]);
+            }
+          } else if (1 === tmp7) {
+            if (arg0 === 1) {
+              c5 = 3;
+              throw value;
+            } else if (arg0 === 2) {
+              c5 = 3;
+              const obj6 = { value, done: true };
+              return obj6;
+            }
+          } else if (2 === tmp7) {
+            c3 = 0;
+            closure_128_0 = tmp32;
+            if (429 === closure_128_0.status) {
+              const intl = channel(tmp32[13]).intl;
+              tmp3(tmp32[18]).showError(intl.string(channel(tmp32[13]).t.T15lqn));
+              c5 = 3;
+              const obj7 = { value: undefined, done: true };
+              return obj7;
+            } else {
+              throw closure_128_0;
             }
           } else if (arg0 === 1) {
-            dependencyMap = 3;
+            c5 = 3;
             throw value;
           } else if (arg0 === 2) {
-            dependencyMap = 3;
+            c3 = 0;
+            c5 = 3;
+            const obj9 = { value, done: true };
+            return obj9;
+          } else {
+            c3 = 0;
+            c5 = 3;
             const obj = { value, done: true };
             return obj;
           }
-          const HTTP = tmp4(1297).HTTP;
-          const request = { url: closure_1_12.THREAD_MEMBER_SETTINGS(closure_128_0.id), body: closure_128_1, rejectWithError: tmp4(1297).rejectWithMigratedError() };
-          dependencyMap = 3;
-          const obj6 = { value: HTTP.patch(request), done: true };
-          return obj6;
-        } catch (tmp15) {
-          dependencyMap = tmp;
-          throw tmp15;
+          c3 = 1;
+          const HTTP = channel(tmp32[10]).HTTP;
+          const request = { url: closure_1_12.THREAD_MEMBER_SETTINGS(closure_129_0.id), body: closure_129_1, rejectWithError: channel(tmp32[10]).rejectWithMigratedError(), failImmediatelyWhenRateLimited: true };
+          c4 = 3;
+          c5 = 1;
+          const obj10 = { value: HTTP.patch(request), done: false };
+          return obj10;
+        } catch (tmp32) {
+          if (tmp4 === c3) {
+            c5 = tmp2;
+            throw tmp32;
+          } else {
+            c4 = tmp;
+          }
         }
       }
     })();
@@ -952,7 +985,7 @@ export default {
           if (members == null) {
             members = [];
           }
-          obj4.members = members.map((item) => channelId(sortOrder[18])(item));
+          obj4.members = members.map((item) => channelId(sortOrder[19])(item));
           const mapped = threads.map((owner) => owner.owner);
           obj4.owners = mapped.filter(GlobalUtils.isNotNullish);
           obj4.hasMore = tmp;

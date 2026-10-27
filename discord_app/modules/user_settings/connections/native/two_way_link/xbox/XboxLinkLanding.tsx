@@ -1,13 +1,13 @@
-// === Module 9613: XboxLinkLanding ===
+// === Module 9615: XboxLinkLanding ===
 
-// Module 9613 (XboxLinkLanding)
-import util from "util" /* 1128 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
+// Module 9615 (XboxLinkLanding)
+import util from "util" /* 1125 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
 import GroupIcon from "GroupIcon" /* 8560 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 8572 */;
-import ScreenStreamIcon from "ScreenStreamIcon" /* 9614 */;
-import GameControllerIcon from "GameControllerIcon" /* 9616 */;
-import _modDef9617 from "module_9617" /* 9617 */;
+import ScreenStreamIcon from "ScreenStreamIcon" /* 9616 */;
+import GameControllerIcon from "GameControllerIcon" /* 9618 */;
+import _modDef9619 from "module_9619" /* 9619 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -34,11 +34,11 @@ function getXboxValueProps() {
   items[3] = obj4;
   return items;
 }
-const XboxLinkModalScenes = fn(9612).XboxLinkModalScenes;
-const Constants = fn(1087);
+const XboxLinkModalScenes = fn(9614).XboxLinkModalScenes;
+const Constants = fn(1084);
 ({ HelpdeskArticles: hasOwnProperty, PlatformTypes: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_8 = createStyles.createStyles({ image: { width: 230, height: 160 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -48,12 +48,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
   const cResult = navigation(576).c(10);
   const tmp4 = closure_8();
   const obj = navigation(576);
-  navigation = navigation(1505).useNavigation();
+  navigation = navigation(1502).useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const articleURL = HelpdeskUtilsDefault.getArticleURL(constants.XBOX_CONNECTION);
-    const intl = tmp(1128).intl;
+    const intl = tmp(1125).intl;
     const obj4 = { helpdeskArticleUrl: articleURL };
-    const formatResult = intl.format(tmp(1128).t.CIc3IN, obj4);
+    const formatResult = intl.format(tmp(1125).t.CIc3IN, obj4);
     cResult[0] = formatResult;
     let first = formatResult;
   } else {
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
         return;
       }
     }
-    tmp16[0] = _modDef9617;
+    tmp16[0] = _modDef9619;
     cResult[4] = tmp16;
   } else {
     class N {
@@ -107,9 +107,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
         return;
       }
     }
-    const stringResult = obj5.string(tmp(1128).t.m8aahn);
-    const intl2 = tmp(1128).intl;
-    const stringResult1 = intl2.string(tmp(1128).t.z3rAhq);
+    const stringResult = obj5.string(tmp(1125).t.m8aahn);
+    const intl2 = tmp(1125).intl;
+    const stringResult1 = intl2.string(tmp(1125).t.z3rAhq);
     cResult[5] = stringResult;
     cResult[6] = stringResult1;
     let tmp19 = stringResult1;
@@ -132,31 +132,31 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function XboxLink
     }
     return tmp22;
   }
-  tmp22 = jsx(navigation(9618).TwoWayLinkLanding, { platformType: constants2.XBOX, img: tmp16, imgStyle: tmp4.image, headerConnect: tmp18, headerReconnect: tmp19, body: first, onNext: N, valueProps: tmp11 });
+  tmp22 = jsx(navigation(9620).TwoWayLinkLanding, { platformType: constants2.XBOX, img: tmp16, imgStyle: tmp4.image, headerConnect: tmp18, headerReconnect: tmp19, body: first, onNext: N, valueProps: tmp11 });
   cResult[7] = N;
   cResult[8] = tmp4.image;
   cResult[9] = tmp22;
-  const obj2 = navigation(1505);
+  const obj2 = navigation(1502);
   const obj6 = { platformType: constants2.XBOX, img: tmp16, imgStyle: tmp4.image, headerConnect: tmp18, headerReconnect: tmp19, body: first, onNext: N, valueProps: tmp11 };
 }) : (function XboxLinkLanding() {
   const tmp = closure_8();
-  navigation = navigation(1505).useNavigation();
-  const obj = navigation(1505);
+  navigation = navigation(1502).useNavigation();
+  const obj = navigation(1502);
   const articleURL = HelpdeskUtilsDefault.getArticleURL(constants.XBOX_CONNECTION);
-  const intl = navigation(1128).intl;
+  const intl = navigation(1125).intl;
   const items = [navigation];
   const memo = noop.useMemo(() => getXboxValueProps(), []);
   const callback = noop.useCallback(() => {
     navigation.push(XboxLinkModalScenes.PRE_CONNECT);
   }, items);
-  const memo1 = noop.useMemo(() => ({ uri: _modDef9617 }), []);
+  const memo1 = noop.useMemo(() => ({ uri: _modDef9619 }), []);
   const obj3 = { platformType: constants2.XBOX, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null };
-  const intl2 = navigation(1128).intl;
-  obj3.headerConnect = intl2.string(navigation(1128).t.m8aahn);
-  const intl3 = navigation(1128).intl;
-  obj3.headerReconnect = intl3.string(navigation(1128).t.z3rAhq);
-  obj3.body = intl.format(navigation(1128).t.CIc3IN, { helpdeskArticleUrl: articleURL });
+  const intl2 = navigation(1125).intl;
+  obj3.headerConnect = intl2.string(navigation(1125).t.m8aahn);
+  const intl3 = navigation(1125).intl;
+  obj3.headerReconnect = intl3.string(navigation(1125).t.z3rAhq);
+  obj3.body = intl.format(navigation(1125).t.CIc3IN, { helpdeskArticleUrl: articleURL });
   obj3.onNext = callback;
   obj3.valueProps = memo;
-  return jsx(navigation(9618).TwoWayLinkLanding, { platformType: constants2.XBOX, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
+  return jsx(navigation(9620).TwoWayLinkLanding, { platformType: constants2.XBOX, img: memo1, imgStyle: tmp.image, headerConnect: null, headerReconnect: null, body: null, onNext: null, valueProps: null });
 });

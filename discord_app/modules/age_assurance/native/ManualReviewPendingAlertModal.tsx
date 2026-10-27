@@ -1,10 +1,10 @@
-// === Module 8101: ManualReviewPendingAlertModal ===
+// === Module 8099: ManualReviewPendingAlertModal ===
 
-// Module 8101 (ManualReviewPendingAlertModal)
+// Module 8099 (ManualReviewPendingAlertModal)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import _modDef3154 from "module_3154" /* 3154 */;
-import AlertModal from "AlertModal" /* 5914 */;
+import util from "util" /* 1125 */;
+import _modDef3155 from "module_3155" /* 3155 */;
+import AlertModal from "AlertModal" /* 5915 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,9 +17,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3154.CNm4w6);
+    const stringResult = intl.string(_modDef3155.CNm4w6);
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef3154["14Fje3"]);
+    const stringResult1 = intl2.string(_modDef3155["14Fje3"]);
     cResult[0] = stringResult;
     cResult[1] = stringResult1;
     tmp4 = stringResult;
@@ -45,9 +45,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
 }) : (function ManualReviewPendingAlertModal() {
   const obj = { title: null, content: null, actions: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef3154.CNm4w6);
+  obj.title = intl.string(_modDef3155.CNm4w6);
   const intl2 = util.intl;
-  obj.content = intl2.string(_modDef3154["14Fje3"]);
+  obj.content = intl2.string(_modDef3155["14Fje3"]);
   const obj2 = { children: null };
   const obj3 = { text: null };
   const intl3 = util.intl;

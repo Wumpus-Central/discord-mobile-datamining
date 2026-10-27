@@ -1,11 +1,11 @@
-// === Module 18838: SoundpackActions ===
+// === Module 18876: SoundpackActions ===
 
-// Module 18838 (SoundpackActions)
+// Module 18876 (SoundpackActions)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import SoundpackStore from "SoundpackStore" /* 11527 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import SoundpackStore from "SoundpackStore" /* 11529 */;
 
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/soundpacks/SoundpackActions.tsx");
 

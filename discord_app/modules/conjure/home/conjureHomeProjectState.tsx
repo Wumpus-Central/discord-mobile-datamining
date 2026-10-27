@@ -1,13 +1,13 @@
-// === Module 17839: conjureHomeProjectState ===
+// === Module 14171: conjureHomeProjectState ===
 
-// Module 17839 (conjureHomeProjectState)
-import conjureUnread from "conjureUnread" /* 10722 */;
-import conjureProjectMute from "conjureProjectMute" /* 10723 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import ReadStateStore from "ReadStateStore" /* 6771 */;
-import ConjureChatStore from "ConjureChatStore" /* 10699 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10714 */;
+// Module 14171 (conjureHomeProjectState)
+import conjureUnread from "conjureUnread" /* 10725 */;
+import conjureProjectMute from "conjureProjectMute" /* 10726 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import ReadStateStore from "ReadStateStore" /* 6772 */;
+import ConjureChatStore from "ConjureChatStore" /* 10702 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10717 */;
 
 const require = globalThis.__r;
 

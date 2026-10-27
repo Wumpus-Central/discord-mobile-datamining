@@ -1,13 +1,13 @@
 // === Module 9199: SecureFramesTracking ===
 
 // Module 9199 (SecureFramesTracking)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5711 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5712 */;
 import UserProfileAnalyticsUtils from "UserProfileAnalyticsUtils" /* 8680 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/SecureFramesTracking.tsx");
 

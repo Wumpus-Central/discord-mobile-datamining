@@ -1,11 +1,11 @@
-// === Module 13593: NewUserPermissionsOnboarding ===
+// === Module 13607: NewUserPermissionsOnboarding ===
 
-// Module 13593 (NewUserPermissionsOnboarding)
+// Module 13607 (NewUserPermissionsOnboarding)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
+import util from "util" /* 1125 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -13,9 +13,9 @@ get_ActivityIndicator = fn(17);
 ({ View: c2, ScrollView: c3 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
-let obj2 = { scrollContainer: { minHeight: "100%" }, container: { flexGrow: 1, alignItems: "center", justifyContent: "center" }, alertContainer: { paddingTop: 80 + fn(5268).NAV_BAR_HEIGHT }, alertContainerInsideCard: null, alert: null, alertInsideCard: null, alertContent: null, alertContentInsideCard: null, header: null, alertTitle: null, alertSubtitle: null, buttonWrapper: null, primaryButtonContainer: null, trailing: null };
-let obj3 = { paddingTop: 80 + fn(5268).NAV_BAR_HEIGHT };
+const createStyles = fn(4972);
+let obj2 = { scrollContainer: { minHeight: "100%" }, container: { flexGrow: 1, alignItems: "center", justifyContent: "center" }, alertContainer: { paddingTop: 80 + fn(5269).NAV_BAR_HEIGHT }, alertContainerInsideCard: null, alert: null, alertInsideCard: null, alertContent: null, alertContentInsideCard: null, header: null, alertTitle: null, alertSubtitle: null, buttonWrapper: null, primaryButtonContainer: null, trailing: null };
+let obj3 = { paddingTop: 80 + fn(5269).NAV_BAR_HEIGHT };
 obj2.alertContainerInsideCard = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: 0 };
 let obj4 = { width: "100%", paddingHorizontal: nativeDefault.space.PX_16, paddingTop: 0 };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_HIGH);

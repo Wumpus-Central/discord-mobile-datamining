@@ -1,7 +1,7 @@
-// === Module 15780: unavailableCommand ===
+// === Module 15818: unavailableCommand ===
 
-// Module 15780 (unavailableCommand)
-import Constants from "Constants" /* 1087 */;
+// Module 15818 (unavailableCommand)
+import Constants from "Constants" /* 1084 */;
 import RPCErrorDefault from "RPCError" /* 9264 */;
 import size from "module_2" /* 2 */;
 

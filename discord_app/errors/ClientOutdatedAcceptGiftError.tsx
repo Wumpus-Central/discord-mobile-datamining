@@ -1,7 +1,7 @@
-// === Module 6381: ClientOutdatedAcceptGiftError ===
+// === Module 6382: ClientOutdatedAcceptGiftError ===
 
-// Module 6381 (ClientOutdatedAcceptGiftError)
-import Constants from "Constants" /* 1087 */;
+// Module 6382 (ClientOutdatedAcceptGiftError)
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const AbortCodes = Constants.AbortCodes;

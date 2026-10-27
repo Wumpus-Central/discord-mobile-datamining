@@ -1,18 +1,18 @@
-// === Module 11198: ConjureRichPresenceStore ===
+// === Module 11201: ConjureRichPresenceStore ===
 
-// Module 11198 (ConjureRichPresenceStore)
+// Module 11201 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6808 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10646 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6809 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10649 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import IdleStore from "IdleStore" /* 6633 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
+import IdleStore from "IdleStore" /* 6634 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
 
 require = fn;
 function updateActivity(withGracePeriod) {
@@ -207,7 +207,7 @@ function updateActivity(withGracePeriod) {
                         let merged = Object.assign(closure_1_13);
                         details = closure_1_13.details;
                         let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F109522 */ function() { ... });
+                        let found = prop.filter(/* F109747 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
@@ -316,9 +316,9 @@ let closure_18 = async function _resumeRunningProjects() {
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ActivityTypes: closure_8, Endpoints: closure_9 } = Constants);
-const StaticChannelRoute = fn(4830).StaticChannelRoute;
+const StaticChannelRoute = fn(4831).StaticChannelRoute;
 let c11 = 300000;
 let c12 = null;
 let c13 = null;

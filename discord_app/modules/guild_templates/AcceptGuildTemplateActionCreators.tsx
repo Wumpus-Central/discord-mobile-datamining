@@ -1,13 +1,13 @@
-// === Module 12743: AcceptGuildTemplateActionCreators ===
+// === Module 12752: AcceptGuildTemplateActionCreators ===
 
-// Module 12743 (AcceptGuildTemplateActionCreators)
+// Module 12752 (AcceptGuildTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import transitionToGuild from "transitionToGuild" /* 7449 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import transitionToGuild from "transitionToGuild" /* 7450 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6497 */;
+import GuildStore from "GuildStore" /* 4846 */;
 
 require = fn;
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_templates/AcceptGuildTemplateActionCreators.tsx");
 

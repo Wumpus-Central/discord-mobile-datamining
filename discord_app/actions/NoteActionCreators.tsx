@@ -1,8 +1,8 @@
-// === Module 14343: NoteActionCreators ===
+// === Module 14379: NoteActionCreators ===
 
-// Module 14343 (NoteActionCreators)
-import Constants from "Constants" /* 1087 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
+// Module 14379 (NoteActionCreators)
+import Constants from "Constants" /* 1084 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

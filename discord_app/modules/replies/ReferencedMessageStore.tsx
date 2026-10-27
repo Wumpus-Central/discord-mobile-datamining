@@ -1,16 +1,16 @@
-// === Module 7696: ReferencedMessageStore ===
+// === Module 7697: ReferencedMessageStore ===
 
-// Module 7696 (ReferencedMessageStore)
+// Module 7697 (ReferencedMessageStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import privDefault from "priv" /* 1459 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6012 */;
-import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7702 */;
+import privDefault from "priv" /* 1456 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6013 */;
+import handleExplicitMediaScanTimeoutForMessage from "handleExplicitMediaScanTimeoutForMessage" /* 7703 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ChannelConversationsStore from "ChannelConversationsStore" /* 7697 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7701 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import MessageStore from "MessageStore" /* 6010 */;
+import ChannelConversationsStore from "ChannelConversationsStore" /* 7698 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7702 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import MessageStore from "MessageStore" /* 6011 */;
 
 require = fn;
 function processMessage(message) {
@@ -95,7 +95,7 @@ function handleLoadThreadsSuccess(firstMessages) {
   }
   return tmp;
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MessageTypes: closure_8, MessageTypesWithLazyLoadedReferences: closure_9 } = Constants);
 const ReferencedMessageState = { LOADED: 0, [0]: "LOADED", NOT_LOADED: 1, [1]: "NOT_LOADED", DELETED: 2, [2]: "DELETED" };
 let closure_11 = Object.freeze({ state: ReferencedMessageState.NOT_LOADED });

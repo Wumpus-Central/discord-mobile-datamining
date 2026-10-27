@@ -3,7 +3,7 @@
 // Module 8577 (AppsIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5668 */;
+import BaseIconImage from "BaseIconImage" /* 5669 */;
 import _mod8507 from "module_8507" /* 8507 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;

@@ -1,20 +1,20 @@
-// === Module 16518: QuestEmbedPreview ===
+// === Module 16557: QuestEmbedPreview ===
 
-// Module 16518 (QuestEmbedPreview)
+// Module 16557 (QuestEmbedPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import CodedLink from "CodedLink" /* 5703 */;
-import RowGeneratorDefault from "RowGenerator" /* 8133 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9594 */;
-import ChatItemDefault from "ChatItem" /* 9772 */;
-import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer" /* 16517 */;
+import util from "util" /* 1125 */;
+import CodedLink from "CodedLink" /* 5704 */;
+import RowGeneratorDefault from "RowGenerator" /* 8131 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9596 */;
+import ChatItemDefault from "ChatItem" /* 9774 */;
+import MobileQuestPreviewContainerDefault from "MobileQuestPreviewContainer" /* 16556 */;
 import noop from "module_19" /* 19 */;
-import MessageRecord from "MessageRecord" /* 4914 */;
-import UserStore from "UserStore" /* 1392 */;
+import MessageRecord from "MessageRecord" /* 4915 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const MessageTypes = fn(1087).MessageTypes;
+const MessageTypes = fn(1084).MessageTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -129,12 +129,12 @@ export const QuestEmbedPreview = ReactCompilerGating.isReactCompilerEnabled() ? 
   let tmp6 = null;
   if (null != memo1) {
     let obj2 = { title: null, children: null };
-    const intl = tmp2(1128).intl;
-    obj2.title = intl.string(tmp2(1128).t["habP/M"]);
+    const intl = tmp2(1125).intl;
+    obj2.title = intl.string(tmp2(1125).t["habP/M"]);
     let obj3 = { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" };
-    obj2.children = jsx(stateFromStores(9772), { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" });
-    tmp6 = jsx(stateFromStores(16517), { title: null, children: null });
-    const tmp9 = stateFromStores(16517);
+    obj2.children = jsx(stateFromStores(9774), { rowGenerator: memo, message: memo1, horizontalOffset: 0, pointerEvents: "none" });
+    tmp6 = jsx(stateFromStores(16556), { title: null, children: null });
+    const tmp9 = stateFromStores(16556);
   }
   return tmp6;
 });

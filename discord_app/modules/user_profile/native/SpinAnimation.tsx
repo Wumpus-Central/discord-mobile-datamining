@@ -1,8 +1,8 @@
-// === Module 15944: SpinAnimation ===
+// === Module 15982: SpinAnimation ===
 
-// Module 15944 (SpinAnimation)
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import timing from "timing" /* 5206 */;
+// Module 15982 (SpinAnimation)
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import timing from "timing" /* 5207 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,8 +18,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpinAnim
   shouldAnimate = shouldAnimate.shouldAnimate;
   const children = shouldAnimate.children;
   let obj = shouldAnimate(576);
-  const sharedValue = shouldAnimate(5052).useSharedValue(0);
-  let obj2 = shouldAnimate(5052);
+  const sharedValue = shouldAnimate(5053).useSharedValue(0);
+  let obj2 = shouldAnimate(5053);
   let fn = function c() {
     const obj = { transform: null };
     const items = [{ rotateZ: "" + sharedValue.get() + "deg" }];
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpinAnim
   fn.__closure = { rotation: sharedValue };
   fn.__workletHash = 7820847848206;
   fn.__initData = __initData;
-  const animatedStyle = shouldAnimate(5052).useAnimatedStyle(fn);
+  const animatedStyle = shouldAnimate(5053).useAnimatedStyle(fn);
   if (cResult[0] === sharedValue) {
     if (cResult[1] === shouldAnimate) {
       let tmp5 = cResult[2];
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpinAnim
       return tmp9;
     }
     let obj4 = { style: animatedStyle, children };
-    const tmp12 = jsx(sharedValue(5052).View, { style: animatedStyle, children });
+    const tmp12 = jsx(sharedValue(5053).View, { style: animatedStyle, children });
     cResult[4] = children;
     cResult[5] = animatedStyle;
     cResult[6] = tmp12;
@@ -70,11 +70,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpinAnim
   cResult[3] = items;
   tmp6 = items;
   tmp5 = fn2;
-  let obj3 = shouldAnimate(5052);
+  let obj3 = shouldAnimate(5053);
 }) : (function SpinAnimation(children) {
   const shouldAnimate = children.shouldAnimate;
-  const sharedValue = shouldAnimate(5052).useSharedValue(0);
-  let obj = shouldAnimate(5052);
+  const sharedValue = shouldAnimate(5053).useSharedValue(0);
+  let obj = shouldAnimate(5053);
   let fn = function u() {
     const obj = { transform: null };
     const items = [{ rotateZ: "" + sharedValue.get() + "deg" }];
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpinAnim
   fn.__workletHash = 8321578527405;
   fn.__initData = __initData2;
   let items = [sharedValue, shouldAnimate];
-  const style = shouldAnimate(5052).useAnimatedStyle(fn);
+  const style = shouldAnimate(5053).useAnimatedStyle(fn);
   const effect = noop.useEffect(() => {
     if (shouldAnimate) {
       const obj2 = ReanimatedRexport;
@@ -100,5 +100,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SpinAnim
     }
     return fn;
   }, items);
-  return jsx(sharedValue(5052).View, { style, children: children.children });
+  return jsx(sharedValue(5053).View, { style, children: children.children });
 });

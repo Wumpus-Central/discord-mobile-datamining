@@ -1,7 +1,7 @@
 // === Module 8502: utils/ChannelUtils ===
 
 // Module 8502 (utils/ChannelUtils)
-import isRoleRequiredDefault from "isRoleRequired" /* 7202 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7204 */;
 import _modDef8503 from "module_8503" /* 8503 */;
 import _modDef8504 from "module_8504" /* 8504 */;
 import _modDef8505 from "module_8505" /* 8505 */;
@@ -76,10 +76,10 @@ import AppsWarningIcon from "AppsWarningIcon" /* 8574 */;
 import AppsSpoilerIcon2 from "AppsSpoilerIcon" /* 8575 */;
 import AppsLockIcon from "AppsLockIcon" /* 8576 */;
 import AppsIcon2 from "AppsIcon" /* 8577 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserStore from "UserStore" /* 1392 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function getChannelIcon(channel, ignoreTraits) {
@@ -738,7 +738,7 @@ function getChannelIconComponent(channel, ignoreTraits) {
     }
   }
 }
-const ChannelTypes = fn(1087).ChannelTypes;
+const ChannelTypes = fn(1084).ChannelTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("utils/native/ChannelUtils.tsx");
 

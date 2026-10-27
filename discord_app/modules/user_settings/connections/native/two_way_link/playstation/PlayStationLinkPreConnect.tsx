@@ -1,13 +1,13 @@
-// === Module 14085: PlayStationLinkPreConnect ===
+// === Module 14099: PlayStationLinkPreConnect ===
 
-// Module 14085 (PlayStationLinkPreConnect)
-import _modDef14086 from "module_14086" /* 14086 */;
+// Module 14099 (PlayStationLinkPreConnect)
+import _modDef14100 from "module_14100" /* 14100 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const constants = fn(14082).PlayStationLinkModalScenes;
+const constants = fn(14096).PlayStationLinkModalScenes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_6 = createStyles.createStyles({ image: { width: 231, height: 160 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -18,7 +18,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
   platformType = platformType.platformType;
   const tmp4 = closure_6();
   const obj = navigation(576);
-  navigation = navigation(1505).useNavigation();
+  navigation = navigation(1502).useNavigation();
   if (cResult[0] !== navigation) {
     const fn = function s(arg0) {
       navigation.push(constants.DISCORD_CONSENT, arg0);
@@ -53,7 +53,7 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
         return;
       }
     }
-    tmp9[0] = _modDef14086;
+    tmp9[0] = _modDef14100;
     cResult[4] = tmp9;
   } else {
     class S {
@@ -70,9 +70,9 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
         return;
       }
     }
-    const stringResult = obj3.string(tmp(1128).t["6n+UPR"]);
-    const intl = tmp(1128).intl;
-    const stringResult1 = intl.string(tmp(1128).t.JaaqIf);
+    const stringResult = obj3.string(tmp(1125).t["6n+UPR"]);
+    const intl = tmp(1125).intl;
+    const stringResult1 = intl.string(tmp(1125).t.JaaqIf);
     cResult[5] = stringResult;
     cResult[6] = stringResult1;
     let tmp12 = stringResult1;
@@ -94,17 +94,17 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
       }
     }
   }
-  const obj2 = navigation(1505);
+  const obj2 = navigation(1502);
   cResult[7] = S;
   cResult[8] = tmp6;
   cResult[9] = platformType;
   cResult[10] = tmp4.image;
-  cResult[11] = jsx(navigation(9623).TwoWayLinkPreConnect, { platformType, onError: S, onNext: tmp6, img: tmp9, imgStyle: tmp4.image, title: tmp11, body: tmp12 });
-  const tmp15 = jsx(navigation(9623).TwoWayLinkPreConnect, { platformType, onError: S, onNext: tmp6, img: tmp9, imgStyle: tmp4.image, title: tmp11, body: tmp12 });
+  cResult[11] = jsx(navigation(9625).TwoWayLinkPreConnect, { platformType, onError: S, onNext: tmp6, img: tmp9, imgStyle: tmp4.image, title: tmp11, body: tmp12 });
+  const tmp15 = jsx(navigation(9625).TwoWayLinkPreConnect, { platformType, onError: S, onNext: tmp6, img: tmp9, imgStyle: tmp4.image, title: tmp11, body: tmp12 });
 }) : (function PlayStationLinkPreConnect(platformType) {
   let navigation;
   const tmp = closure_6();
-  navigation = navigation(1505).useNavigation();
+  navigation = navigation(1502).useNavigation();
   const items = [navigation];
   const items1 = [navigation];
   const callback = noop.useCallback((arg0) => {
@@ -113,11 +113,11 @@ export const PlayStationLinkPreConnect = ReactCompilerGating.isReactCompilerEnab
   const callback1 = noop.useCallback(() => {
     navigation.push(constants.ERROR, {});
   }, items1);
-  const memo = noop.useMemo(() => ({ uri: _modDef14086 }), []);
+  const memo = noop.useMemo(() => ({ uri: _modDef14100 }), []);
   const obj2 = { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null };
-  const intl = navigation(1128).intl;
-  obj2.title = intl.string(navigation(1128).t["6n+UPR"]);
-  const intl2 = navigation(1128).intl;
-  obj2.body = intl2.string(navigation(1128).t.JaaqIf);
-  return jsx(navigation(9623).TwoWayLinkPreConnect, { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
+  const intl = navigation(1125).intl;
+  obj2.title = intl.string(navigation(1125).t["6n+UPR"]);
+  const intl2 = navigation(1125).intl;
+  obj2.body = intl2.string(navigation(1125).t.JaaqIf);
+  return jsx(navigation(9625).TwoWayLinkPreConnect, { platformType: platformType.platformType, onError: callback1, onNext: callback, img: memo, imgStyle: tmp.image, title: null, body: null });
 });

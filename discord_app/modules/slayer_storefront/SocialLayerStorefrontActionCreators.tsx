@@ -1,12 +1,12 @@
-// === Module 10556: SocialLayerStorefrontActionCreators ===
+// === Module 10559: SocialLayerStorefrontActionCreators ===
 
-// Module 10556 (SocialLayerStorefrontActionCreators)
+// Module 10559 (SocialLayerStorefrontActionCreators)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1104 */;
+import DurationsDefault from "Durations" /* 1101 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9380 */;
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7332 */;
+import StorefrontPromotionOverrideStore from "StorefrontPromotionOverrideStore" /* 9379 */;
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7334 */;
 
 const require = globalThis.__r;
 
@@ -880,7 +880,7 @@ let closure_27 = async function _fetchSocialLayerStorefrontLaunchAnnouncement() 
   }
   return value;
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 let closure_7 = 30 * DurationsDefault.Millis.SECOND;
 let closure_8 = 30 * DurationsDefault.Millis.MINUTE;
 let closure_9 = 60 * DurationsDefault.Millis.MINUTE;

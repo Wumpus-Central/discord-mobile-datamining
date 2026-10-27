@@ -1,13 +1,13 @@
-// === Module 16580: useManageSubscriptionCardData ===
+// === Module 16622: useManageSubscriptionCardData ===
 
-// Module 16580 (useManageSubscriptionCardData)
-import util from "util" /* 1128 */;
-import _modDef2049 from "module_2049" /* 2049 */;
-import PriceUtils from "PriceUtils" /* 7339 */;
+// Module 16622 (useManageSubscriptionCardData)
+import util from "util" /* 1125 */;
+import _modDef2046 from "module_2046" /* 2046 */;
+import PriceUtils from "PriceUtils" /* 7341 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4896 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4897 */;
 
 const require = globalThis.__r;
 
@@ -15,12 +15,12 @@ require = fn;
 function computeSubscriptionInfo(subscription) {
   subscription = subscription.subscription;
   let str = "";
-  const obj = _modDef2049(subscription.currentPeriodEnd);
+  const obj = _modDef2046(subscription.currentPeriodEnd);
   if (null != subscription.price) {
     str = PriceUtils.formatPrice(subscription.price, subscription.currency);
   }
-  const formatResult = _modDef2049(subscription.currentPeriodEnd).format("M/D/YY");
-  const obj4 = { memberSince: _modDef2049(subscription.createdAt).format("M/D/YY"), nextRenewalDate: formatResult, nextRenewalLabel: null, subscriptionPrice: null, isCancelled: null, isPastDue: null, isTrial: null };
+  const formatResult = _modDef2046(subscription.currentPeriodEnd).format("M/D/YY");
+  const obj4 = { memberSince: _modDef2046(subscription.createdAt).format("M/D/YY"), nextRenewalDate: formatResult, nextRenewalLabel: null, subscriptionPrice: null, isCancelled: null, isPastDue: null, isTrial: null };
   const intl = util.intl;
   const string = intl.string;
   const t = util.t;
@@ -36,7 +36,7 @@ function computeSubscriptionInfo(subscription) {
   obj4.isTrial = subscription.hasActiveTrial;
   return obj4;
 }
-const SubscriptionStatusTypes = fn(1087).SubscriptionStatusTypes;
+const SubscriptionStatusTypes = fn(1084).SubscriptionStatusTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/manage_subscriptions/useManageSubscriptionCardData.tsx");

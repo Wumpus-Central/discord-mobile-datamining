@@ -1,6 +1,6 @@
-// === Module 4802: StickersConstants ===
+// === Module 4803: StickersConstants ===
 
-// Module 4802 (StickersConstants)
+// Module 4803 (StickersConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/stickers/StickersConstants.tsx");

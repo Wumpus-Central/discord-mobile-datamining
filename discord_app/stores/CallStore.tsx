@@ -1,13 +1,13 @@
-// === Module 6497: CallStore ===
+// === Module 6498: CallStore ===
 
-// Module 6497 (CallStore)
+// Module 6498 (CallStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
 
 require = fn;
 function callConnect() {
@@ -44,7 +44,7 @@ function callConnect() {
   }
   return flag;
 }
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 let calls = {};
 const enqueuedRings = {};
 const Store = initializeDefault.Store;

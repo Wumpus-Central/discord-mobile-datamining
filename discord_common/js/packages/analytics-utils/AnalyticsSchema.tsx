@@ -1,7 +1,7 @@
-// === Module 1361: AnalyticsSchema ===
+// === Module 1358: AnalyticsSchema ===
 
-// Module 1361 (AnalyticsSchema)
-import Constants from "Constants" /* 1098 */;
+// Module 1358 (AnalyticsSchema)
+import Constants from "Constants" /* 1095 */;
 import size from "module_2" /* 2 */;
 
 const WebAnalyticsEvents = Constants.WebAnalyticsEvents;

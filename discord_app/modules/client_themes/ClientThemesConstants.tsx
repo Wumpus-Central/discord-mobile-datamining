@@ -1,11 +1,11 @@
-// === Module 1255: ClientThemesConstants ===
+// === Module 1252: ClientThemesConstants ===
 
-// Module 1255 (ClientThemesConstants)
-import Constants from "Constants" /* 1098 */;
-import util from "util" /* 1128 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1256 */;
-import _modDef4247 from "module_4247" /* 4247 */;
+// Module 1252 (ClientThemesConstants)
+import Constants from "Constants" /* 1095 */;
+import util from "util" /* 1125 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
+import _modDef4248 from "module_4248" /* 4248 */;
 import apply from "module_12" /* 12 */;
 import size from "module_2" /* 2 */;
 
@@ -364,7 +364,7 @@ const obj24 = {
   angle: 135,
   getName() {
     const intl = util.intl;
-    return intl.string(_modDef4247["+xs8ZP"]);
+    return intl.string(_modDef4248["+xs8ZP"]);
   },
   midpointPercentage: 35,
   unsupported_overlayOpacityMultiplier: 0.8

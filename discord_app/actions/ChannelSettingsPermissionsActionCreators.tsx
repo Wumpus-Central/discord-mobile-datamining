@@ -2,7 +2,7 @@
 
 // Module 8973 (ChannelSettingsPermissionsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7413 */;
 import DefaultChannelThresholdUtils from "DefaultChannelThresholdUtils" /* 8974 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

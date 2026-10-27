@@ -1,15 +1,15 @@
-// === Module 11521: GuildScheduledEventPrompts ===
+// === Module 11523: GuildScheduledEventPrompts ===
 
-// Module 11521 (GuildScheduledEventPrompts)
+// Module 11523 (GuildScheduledEventPrompts)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
+import util from "util" /* 1125 */;
 import guild_scheduled_events_GuildScheduledEventModalActionCreators from "guild_scheduled_events/GuildScheduledEventModalActionCreators" /* 8906 */;
 import Form from "Form" /* 8951 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { actionBarCTAContainer: { marginVertical: 4 }, iconStyle: null, iconContainerStyle: null, greenIcon: null, promptIconStyle: null };
 let size = { tintColor: nativeDefault.colors.WHITE, width: 20, height: 20 };
 obj2.iconStyle = size;
@@ -37,10 +37,10 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function ScheduleEv
       const _Symbol = Symbol;
       ({ actionBarCTAContainer, promptIconStyle } = tmp4);
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t["60lJ0C"]);
-        const intl2 = tmp(1128).intl;
-        const stringResult1 = intl2.string(tmp(1128).t["EYn7/y"]);
+        const intl = tmp(1125).intl;
+        const stringResult = intl.string(tmp(1125).t["60lJ0C"]);
+        const intl2 = tmp(1125).intl;
+        const stringResult1 = intl2.string(tmp(1125).t["EYn7/y"]);
         cResult[3] = stringResult;
         cResult[4] = stringResult1;
         let tmp9 = stringResult1;
@@ -135,9 +135,9 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled() ? (
           let tmp9 = cResult[5];
         }
         if (cResult[6] !== name) {
-          const intl = tmp(1128).intl;
+          const intl = tmp(1125).intl;
           const obj3 = { eventName: name };
-          const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t["1vGXqM"], obj3);
+          const formatToPlainStringResult = intl.formatToPlainString(tmp(1125).t["1vGXqM"], obj3);
           cResult[6] = name;
           cResult[7] = formatToPlainStringResult;
           let tmp10 = formatToPlainStringResult;
@@ -145,13 +145,13 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled() ? (
           tmp10 = cResult[7];
         }
         if (cResult[8] !== scheduled_start_time) {
-          const intl2 = tmp(1128).intl;
-          const obj4 = { startTime: tmp(4796).calendarFormat(recurrenceId(2049)(scheduled_start_time)) };
-          const formatToPlainStringResult1 = intl2.formatToPlainString(tmp(1128).t.PTebCR, obj4);
+          const intl2 = tmp(1125).intl;
+          const obj4 = { startTime: tmp(4797).calendarFormat(recurrenceId(2046)(scheduled_start_time)) };
+          const formatToPlainStringResult1 = intl2.formatToPlainString(tmp(1125).t.PTebCR, obj4);
           cResult[8] = scheduled_start_time;
           cResult[9] = formatToPlainStringResult1;
           let tmp12 = formatToPlainStringResult1;
-          const tmpResult = tmp(4796);
+          const tmpResult = tmp(4797);
         } else {
           tmp12 = cResult[9];
         }
@@ -225,12 +225,12 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled() ? (
     ({ iconContainerStyle: arr[0], greenIcon: arr[1] } = tmp);
     obj2.iconContainerStyle = items;
     obj2.completed = isLive;
-    const intl = tmp2(1128).intl;
+    const intl = tmp2(1125).intl;
     const obj3 = { eventName: name };
-    obj2.title = intl.formatToPlainString(tmp2(1128).t["1vGXqM"], obj3);
-    const intl2 = tmp2(1128).intl;
-    const obj4 = { startTime: tmp2(4796).calendarFormat(recurrenceId(2049)(scheduled_start_time)) };
-    obj2.subtitle = intl2.formatToPlainString(tmp2(1128).t.PTebCR, obj4);
+    obj2.title = intl.formatToPlainString(tmp2(1125).t["1vGXqM"], obj3);
+    const intl2 = tmp2(1125).intl;
+    const obj4 = { startTime: tmp2(4797).calendarFormat(recurrenceId(2046)(scheduled_start_time)) };
+    obj2.subtitle = intl2.formatToPlainString(tmp2(1125).t.PTebCR, obj4);
     tmp4 = jsx(tmp2(8951).FormCTA, {
       style: tmp.actionBarCTAContainer,
       onPress: function handleStartEvent() {
@@ -243,7 +243,7 @@ export const StartEventPrompt = ReactCompilerGating.isReactCompilerEnabled() ? (
       title: null,
       subtitle: null
     });
-    const tmp2Result = tmp2(4796);
+    const tmp2Result = tmp2(4797);
   }
   return tmp4;
 });

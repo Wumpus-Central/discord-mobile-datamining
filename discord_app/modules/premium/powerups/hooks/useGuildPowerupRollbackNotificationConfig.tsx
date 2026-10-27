@@ -1,11 +1,11 @@
-// === Module 13423: useGuildPowerupRollbackNotificationConfig ===
+// === Module 13437: useGuildPowerupRollbackNotificationConfig ===
 
-// Module 13423 (useGuildPowerupRollbackNotificationConfig)
-import util from "util" /* 1128 */;
-import _modDef2568 from "module_2568" /* 2568 */;
-import dismissible_content from "dismissible_content" /* 4807 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13424 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5181 */;
+// Module 13437 (useGuildPowerupRollbackNotificationConfig)
+import util from "util" /* 1125 */;
+import _modDef2567 from "module_2567" /* 2567 */;
+import dismissible_content from "dismissible_content" /* 4808 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13438 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5182 */;
 
 const require = globalThis.__r;
 
@@ -21,11 +21,11 @@ function getGuildThemeRollbackNotificationConfig(storeRemovalDate) {
       const obj = { dismissibleContent: dismissible_content.DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
       const intl = util.intl;
       const obj2 = { dateString: tmp3 };
-      obj.title = intl.formatToPlainString(_modDef2568["6e2ry1"], obj2);
+      obj.title = intl.formatToPlainString(_modDef2567["6e2ry1"], obj2);
       const intl2 = util.intl;
       const obj5 = { startDate: tmp3, endDate: tmp3, perkName: null, boostCount: null };
       ({ title: obj3.perkName, cost: obj3.boostCount } = storeRemovalDate);
-      obj.description = intl2.formatToPlainString(_modDef2568.jd8fki, obj5);
+      obj.description = intl2.formatToPlainString(_modDef2567.jd8fki, obj5);
       return obj;
     }
   }
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
   let tmp8;
   if (stateFromStores != null) {
-    tmp8 = stateFromStores.allPowerups[tmp(undefined, 5185).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+    tmp8 = stateFromStores.allPowerups[tmp(undefined, 5186).GUILD_POWERUP_GUILD_THEME_SKU_ID];
   }
   const tmpResult = require("initialize");
   const shouldShowGuildThemeRollback = require("guildTheme").useShouldShowGuildThemeRollback(arg0, arg1);
@@ -78,14 +78,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       tmp12 = null;
       if (null != storeRemovalDate) {
         const tmp14 = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
-        const obj2 = { dismissibleContent: tmp(4807).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
-        const intl = tmp(1128).intl;
+        const obj2 = { dismissibleContent: tmp(4808).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
+        const intl = tmp(1125).intl;
         const obj3 = { dateString: tmp14 };
-        obj2.title = intl.formatToPlainString(_modDef2568["6e2ry1"], obj3);
-        const intl2 = tmp(1128).intl;
+        obj2.title = intl.formatToPlainString(_modDef2567["6e2ry1"], obj3);
+        const intl2 = tmp(1125).intl;
         const obj4 = { startDate: tmp14, endDate: tmp14, perkName: null, boostCount: null };
         ({ title: obj6.perkName, cost: obj6.boostCount } = tmp8);
-        obj2.description = intl2.formatToPlainString(_modDef2568.jd8fki, obj4);
+        obj2.description = intl2.formatToPlainString(_modDef2567.jd8fki, obj4);
         tmp12 = obj2;
       }
     }
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   const items = [GuildPowerupsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   if (stateFromStores != null) {
-    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 5185).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 5186).GUILD_POWERUP_GUILD_THEME_SKU_ID];
   }
   const obj = require("initialize");
   let tmp5 = null;
@@ -114,14 +114,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       tmp6 = null;
       if (null != storeRemovalDate) {
         const tmp8 = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
-        const obj2 = { dismissibleContent: tmp(4807).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
-        const intl = tmp(1128).intl;
+        const obj2 = { dismissibleContent: tmp(4808).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
+        const intl = tmp(1125).intl;
         const obj3 = { dateString: tmp8 };
-        obj2.title = intl.formatToPlainString(_modDef2568["6e2ry1"], obj3);
-        const intl2 = tmp(1128).intl;
+        obj2.title = intl.formatToPlainString(_modDef2567["6e2ry1"], obj3);
+        const intl2 = tmp(1125).intl;
         const obj4 = { startDate: tmp8, endDate: tmp8, perkName: null, boostCount: null };
         ({ title: obj5.perkName, cost: obj5.boostCount } = tmp4);
-        obj2.description = intl2.formatToPlainString(_modDef2568.jd8fki, obj4);
+        obj2.description = intl2.formatToPlainString(_modDef2567.jd8fki, obj4);
         tmp6 = obj2;
       }
     }

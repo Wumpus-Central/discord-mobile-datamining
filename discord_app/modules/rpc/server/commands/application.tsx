@@ -1,19 +1,19 @@
-// === Module 15718: application ===
+// === Module 15754: application ===
 
-// Module 15718 (application)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6811 */;
+// Module 15754 (application)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6813 */;
 import RPCErrorDefault from "RPCError" /* 9264 */;
-import TestModeUtils from "TestModeUtils" /* 9454 */;
-import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11476 */;
-import RPCHelpers from "RPCHelpers" /* 11479 */;
-import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 15719 */;
-import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 15720 */;
-import ApplicationStore from "ApplicationStore" /* 2045 */;
+import TestModeUtils from "TestModeUtils" /* 9453 */;
+import createRpcJoiSchemaObjectDefault from "createRpcJoiSchemaObject" /* 11479 */;
+import RPCHelpers from "RPCHelpers" /* 11482 */;
+import getCurrentEmbeddedActivityChannelDefault from "getCurrentEmbeddedActivityChannel" /* 15755 */;
+import ActivitySessionAnalytics from "ActivitySessionAnalytics" /* 15756 */;
+import ApplicationStore from "ApplicationStore" /* 2042 */;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ApplicationFlags: closure_4, Endpoints: hasOwnProperty, RPCCommands, RPCErrors: metroRequire } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/server/commands/application.tsx");
@@ -69,7 +69,7 @@ export default {
     }
   },
   [RPCCommands.GET_APPLICATION_TICKET]: {
-    scope: fn(6378).RPC_LOCAL_SCOPE,
+    scope: fn(6379).RPC_LOCAL_SCOPE,
     handler(socket) {
       const id = socket.socket.application.id;
       if (null == id) {

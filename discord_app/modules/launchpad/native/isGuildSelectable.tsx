@@ -1,10 +1,10 @@
-// === Module 18695: isGuildSelectable ===
+// === Module 18731: isGuildSelectable ===
 
-// Module 18695 (isGuildSelectable)
-import StageInstanceStore from "StageInstanceStore" /* 4828 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6814 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
+// Module 18731 (isGuildSelectable)
+import StageInstanceStore from "StageInstanceStore" /* 4829 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6643 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6816 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/launchpad/native/isGuildSelectable.tsx");

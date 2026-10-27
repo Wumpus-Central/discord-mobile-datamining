@@ -1,18 +1,18 @@
-// === Module 18253: DisplayNameStylesFlywheelProfileCoachmark ===
+// === Module 18287: DisplayNameStylesFlywheelProfileCoachmark ===
 
-// Module 18253 (DisplayNameStylesFlywheelProfileCoachmark)
+// Module 18287 (DisplayNameStylesFlywheelProfileCoachmark)
 import c from "c" /* 576 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
-import _modDef2928 from "module_2928" /* 2928 */;
-import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 18254 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
+import _modDef2929 from "module_2929" /* 2929 */;
+import DisplayNameLockeAbstractUI from "DisplayNameLockeAbstractUI" /* 18288 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_8 = createStyles.createStyles({ coachmarkImageContainer: { alignItems: "center", justifyContent: "center" } });
 fn(558);
 const ReactCompilerGating = fn(558);
@@ -68,9 +68,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     tmp8 = cResult[3];
   }
   if (cResult[4] !== tmp8) {
-    const intl = markAsDismissed(1128).intl;
+    const intl = markAsDismissed(1125).intl;
     const string = intl.string;
-    let h6sykk = _modDef2928;
+    let h6sykk = _modDef2929;
     if (tmp8) {
       h6sykk = h6sykk.h6sykk;
       let stringResult = string(h6sykk);
@@ -80,9 +80,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
     cResult[4] = tmp8;
     cResult[5] = stringResult;
   } else if (cResult[6] !== tmp8) {
-    const intl2 = markAsDismissed(1128).intl;
+    const intl2 = markAsDismissed(1125).intl;
     const string2 = intl2.string;
-    let TyUdka = _modDef2928;
+    let TyUdka = _modDef2929;
     if (tmp8) {
       TyUdka = TyUdka.TyUdka;
       let string2Result = string2(TyUdka);
@@ -142,19 +142,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const stateFromStores = visible(504).useStateFromStores(items, () => currentUser.getCurrentUser());
   const obj = visible(504);
   const tmp4 = markAsDismissed;
-  const result = markAsDismissed(2053).canUsePremiumProfileCustomization(stateFromStores);
-  const intl = visible(1128).intl;
+  const result = markAsDismissed(2050).canUsePremiumProfileCustomization(stateFromStores);
+  const intl = visible(1125).intl;
   const string = intl.string;
-  const tmp6 = markAsDismissed(2928);
+  const tmp6 = markAsDismissed(2929);
   if (result) {
     let stringResult = string(tmp6.h6sykk);
   } else {
     stringResult = string(tmp6.M5amXH);
   }
   dependencyMap = stringResult;
-  const intl2 = tmp(1128).intl;
+  const intl2 = tmp(1125).intl;
   const string2 = intl2.string;
-  const tmp4Result = tmp4(2928);
+  const tmp4Result = tmp4(2929);
   if (result) {
     let string2Result = string2(tmp4Result.TyUdka);
   } else {
@@ -176,7 +176,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
       return closure_1_7(closure_1_9, {});
     }
   }), items2);
-  const obj2 = markAsDismissed(2053);
-  const coachmark = visible(9840).useCoachmark(visible.targetRef, memo);
+  const obj2 = markAsDismissed(2050);
+  const coachmark = visible(9842).useCoachmark(visible.targetRef, memo);
   return null;
 });

@@ -1,12 +1,12 @@
-// === Module 9833: useTopAndNewlyAddedEmojis ===
+// === Module 9835: useTopAndNewlyAddedEmojis ===
 
-// Module 9833 (useTopAndNewlyAddedEmojis)
-import EmojiStore from "EmojiStore" /* 6725 */;
+// Module 9835 (useTopAndNewlyAddedEmojis)
+import EmojiStore from "EmojiStore" /* 6726 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiIntention = fn(1395).EmojiIntention;
+const EmojiIntention = fn(1392).EmojiIntention;
 let closure_4 = [];
 const ReactCompilerGating = fn(558);
 function getTopAndNewlyAddedEmojis(emojiStoreInstance) {

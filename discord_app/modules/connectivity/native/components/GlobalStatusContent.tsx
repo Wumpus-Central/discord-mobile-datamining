@@ -1,30 +1,30 @@
-// === Module 11575: GlobalStatusContent ===
+// === Module 11577: GlobalStatusContent ===
 
-// Module 11575 (GlobalStatusContent)
+// Module 11577 (GlobalStatusContent)
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import useThemeDefault from "useTheme" /* 5205 */;
-import StatusBarDefault from "StatusBar" /* 10890 */;
-import ChannelCallModalDefault from "ChannelCallModal" /* 11366 */;
-import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11390 */;
-import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11568 */;
-import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 11571 */;
-import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 11576 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import useThemeDefault from "useTheme" /* 5206 */;
+import StatusBarDefault from "StatusBar" /* 10893 */;
+import ChannelCallModalDefault from "ChannelCallModal" /* 11369 */;
+import useCanSpeakInChannelDefault from "useCanSpeakInChannel" /* 11393 */;
+import useIsInvitedToSpeakDefault from "useIsInvitedToSpeak" /* 11570 */;
+import useVoiceStateForRemoteSessionDefault from "useVoiceStateForRemoteSession" /* 11573 */;
+import GlobalStageChannelStatusDefault from "GlobalStageChannelStatus" /* 11578 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
-import SessionsStore from "SessionsStore" /* 5716 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
+import SessionsStore from "SessionsStore" /* 5717 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(11570).RTC_PANEL_HEIGHT;
-const RTCConnectionStates = fn(1087).RTCConnectionStates;
+const RTC_PANEL_HEIGHT = fn(11572).RTC_PANEL_HEIGHT;
+const RTCConnectionStates = fn(1084).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { bgNeutral: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, bg: null, container: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.bg = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -123,11 +123,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
   const tmp5Result = useCanSpeakInChannelDefault;
   const tmp23 = useThemeDefault();
   if (cResult[6] !== tmp23) {
-    const isThemeDarkResult = tmp(4978).isThemeDark(tmp23);
+    const isThemeDarkResult = tmp(4979).isThemeDark(tmp23);
     cResult[6] = tmp23;
     cResult[7] = isThemeDarkResult;
     let tmp24 = isThemeDarkResult;
-    const tmpResult5 = tmp(4978);
+    const tmpResult5 = tmp(4979);
   } else {
     tmp24 = cResult[7];
   }
@@ -149,12 +149,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
             if (cResult[15] !== isScreenLandscape) {
               let isModalOpenResult = isScreenLandscape;
               if (isScreenLandscape) {
-                isModalOpenResult = tmp(5150).isModalOpen(ChannelCallModalDefault);
-                const tmpResult7 = tmp(5150);
+                isModalOpenResult = tmp(5151).isModalOpen(ChannelCallModalDefault);
+                const tmpResult7 = tmp(5151);
               }
               if (isModalOpenResult) {
-                isModalOpenResult = tmp(1384).isAndroid();
-                const tmpResult8 = tmp(1384);
+                isModalOpenResult = tmp(1381).isAndroid();
+                const tmpResult8 = tmp(1381);
               }
               cResult[15] = isScreenLandscape;
               cResult[16] = isModalOpenResult;
@@ -323,12 +323,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecti
   const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
   let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(5150).isModalOpen(ChannelCallModalDefault);
-    const tmp5Result5 = tmp5(5150);
+    isScreenLandscape = tmp5(5151).isModalOpen(ChannelCallModalDefault);
+    const tmp5Result5 = tmp5(5151);
   }
   if (isScreenLandscape) {
-    isScreenLandscape = tmp5(1384).isAndroid();
-    const tmp5Result6 = tmp5(1384);
+    isScreenLandscape = tmp5(1381).isAndroid();
+    const tmp5Result6 = tmp5(1381);
   }
   let num = 0;
   if (!isScreenLandscape) {

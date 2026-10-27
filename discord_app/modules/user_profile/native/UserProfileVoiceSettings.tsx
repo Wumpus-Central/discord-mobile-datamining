@@ -1,26 +1,26 @@
-// === Module 14329: UserProfileVoiceSettings ===
+// === Module 14365: UserProfileVoiceSettings ===
 
-// Module 14329 (UserProfileVoiceSettings)
+// Module 14365 (UserProfileVoiceSettings)
 import c from "c" /* 576 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5852 */;
 import SecureFramesPlatformUtilsDefault from "SecureFramesPlatformUtils" /* 9200 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13546 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13560 */;
 import noop from "module_19" /* 19 */;
-import SoundboardStore from "SoundboardStore" /* 6006 */;
-import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
+import SoundboardStore from "SoundboardStore" /* 6007 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_8, VideoToggleState: closure_9 } = Constants);
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_13 = createStyles.createStyles({ card: { paddingBottom: 0 }, cardTitle: { marginBottom: 0 }, volumeSlider: { paddingVertical: 20 }, disableVideoSublabel: { flexDirection: "row", alignItems: "center", gap: 4 } });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserVoiceSettings(user) {
@@ -484,7 +484,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
             return isPrivateResult;
           }
         }
-        const stringResult = obj5.string(tmp(1128).t.NiTd0e);
+        const stringResult = obj5.string(tmp(1125).t.NiTd0e);
         cResult[8] = stringResult;
       } else {
         class U {
@@ -526,7 +526,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
               return isPrivateResult;
             }
           }
-          const stringResult1 = obj6.string(tmp(1128).t);
+          const stringResult1 = obj6.string(tmp(1125).t);
         } else {
           class U {
             constructor() {
@@ -616,8 +616,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
         }
         const obj3 = { children: null };
         const obj4 = { label: tmp16, icon: tmp19, onPress: P };
-        obj3.children = closure_11(tmp(7303).UserProfileFormRow, obj4, "mute");
-        const tmp23 = closure_11(tmp(7303).UserProfileCardRows, obj3);
+        obj3.children = closure_11(tmp(7305).UserProfileFormRow, obj4, "mute");
+        const tmp23 = closure_11(tmp(7305).UserProfileCardRows, obj3);
         cResult[13] = tmp16;
         cResult[14] = tmp19;
         cResult[15] = P;
@@ -656,12 +656,12 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
     const obj4 = { style: null, title: null, titleStyle: null, children: null };
     const items2 = [tmp.card, style];
     obj4.style = items2;
-    const intl = tmp2(1128).intl;
-    obj4.title = intl.string(tmp2(1128).t.NiTd0e);
+    const intl = tmp2(1125).intl;
+    obj4.title = intl.string(tmp2(1125).t.NiTd0e);
     obj4.titleStyle = tmp.cardTitle;
-    const intl2 = tmp2(1128).intl;
+    const intl2 = tmp2(1125).intl;
     const string = intl2.string;
-    const t = tmp2(1128).t;
+    const t = tmp2(1125).t;
     if (stateFromStores) {
       let stringResult = string(t.NHJxcg);
     } else {
@@ -671,7 +671,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
     if (stateFromStores) {
       let MicrophoneIcon = tmp2(9173).MicrophoneSlashIcon;
     } else {
-      MicrophoneIcon = tmp2(11646).MicrophoneIcon;
+      MicrophoneIcon = tmp2(11648).MicrophoneIcon;
     }
     const obj6 = { children: null };
     obj5.icon = MicrophoneIcon;
@@ -679,11 +679,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Curren
       trackUserProfileAction({ action: "MUTE" });
       AudioActionCreatorsDefault.toggleSelfMute();
     };
-    obj6.children = closure_11(tmp2(7303).UserProfileFormRow, obj5, "mute");
-    tmp9Result = closure_11(tmp2(7303).UserProfileCardRows, obj6);
+    obj6.children = closure_11(tmp2(7305).UserProfileFormRow, obj5, "mute");
+    tmp9Result = closure_11(tmp2(7305).UserProfileCardRows, obj6);
     obj4.children = tmp9Result;
-    closure_11(trackUserProfileAction(7303), obj4);
-    const tmp6Result = trackUserProfileAction(7303);
+    closure_11(trackUserProfileAction(7305), obj4);
+    const tmp6Result = trackUserProfileAction(7305);
   }
   return tmp8;
 });

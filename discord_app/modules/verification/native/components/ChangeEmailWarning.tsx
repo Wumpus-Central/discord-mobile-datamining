@@ -1,20 +1,20 @@
-// === Module 6990: ChangeEmailWarning ===
+// === Module 6992: ChangeEmailWarning ===
 
-// Module 6990 (ChangeEmailWarning)
+// Module 6992 (ChangeEmailWarning)
 import nativeDefault from "native" /* 587 */;
-import ConstantsIOS from "ConstantsIOS" /* 1107 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import ConstantsIOS from "ConstantsIOS" /* 1104 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const hcArticle = fn(6983).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const hcArticle = fn(6985).COMMON_SCAMS_EDUCATION_HC_ARTICLE;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flex: 1, padding: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" }, title: null, body: null, buttonContainer: null };
 let obj3 = { flex: 1, padding: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "center" };
 obj2.title = { marginTop: nativeDefault.space.PX_16 };
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
   changeEmailReason = changeEmailReason.changeEmailReason;
   const tmp4 = closure_11();
   const obj = changeEmailReason(576);
-  const navigation = changeEmailReason(1505).useNavigation();
+  const navigation = changeEmailReason(1502).useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [UserStore];
     const fn = function _() {
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
     } else {
       const _Symbol6 = Symbol;
       if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp15 = closure_9(tmp(6991).TrafficConeSpotIllustration, {});
+        const tmp15 = closure_9(tmp(6993).TrafficConeSpotIllustration, {});
         cResult[5] = tmp15;
         let tmp13 = tmp15;
       } else {
@@ -62,8 +62,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
       }
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1128).intl;
-        const stringResult = intl.string(tmp(1128).t.hhR7gX);
+        const intl = tmp(1125).intl;
+        const stringResult = intl.string(tmp(1125).t.hhR7gX);
         cResult[6] = stringResult;
         let tmp16 = stringResult;
       } else {
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
       }
       if (cResult[7] !== tmp4.title) {
         const obj3 = { style: tmp4.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp16 };
-        const tmp20 = closure_9(tmp(5234).Text, obj3);
+        const tmp20 = closure_9(tmp(5235).Text, obj3);
         cResult[7] = tmp4.title;
         cResult[8] = tmp20;
         let tmp18 = tmp20;
@@ -80,9 +80,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
       }
       const _Symbol2 = Symbol;
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl2 = tmp(1128).intl;
+        const intl2 = tmp(1125).intl;
         const obj4 = { hcArticle };
-        const formatResult = intl2.format(tmp(1128).t.rqWXUf, obj4);
+        const formatResult = intl2.format(tmp(1125).t.rqWXUf, obj4);
         cResult[9] = formatResult;
         let tmp21 = formatResult;
       } else {
@@ -90,8 +90,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
       }
       const _Symbol3 = Symbol;
       if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = tmp(1128).intl;
-        const stringResult1 = intl3.string(tmp(1128).t["3LW10C"]);
+        const intl3 = tmp(1125).intl;
+        const stringResult1 = intl3.string(tmp(1125).t["3LW10C"]);
         cResult[10] = stringResult1;
         let tmp24 = stringResult1;
       } else {
@@ -103,8 +103,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
         }
         const _Symbol4 = Symbol;
         if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl4 = tmp(1128).intl;
-          const stringResult2 = intl4.string(tmp(1128).t.rwTBFs);
+          const intl4 = tmp(1125).intl;
+          const stringResult2 = intl4.string(tmp(1125).t.rwTBFs);
           cResult[14] = stringResult2;
           let tmp29 = stringResult2;
         } else {
@@ -112,7 +112,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
         }
         if (cResult[15] !== tmp11) {
           const obj5 = { size: "md", variant: "tertiary", text: tmp29, onPress: tmp11, shrink: true };
-          const tmp33 = closure_9(tmp(5244).Button, obj5);
+          const tmp33 = closure_9(tmp(5245).Button, obj5);
           cResult[15] = tmp11;
           cResult[16] = tmp33;
           let tmp31 = tmp33;
@@ -122,12 +122,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
         const _Symbol5 = Symbol;
         if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
           const obj6 = { size: "md", variant: "primary", text: null, onPress: null, shrink: true };
-          const intl5 = tmp(1128).intl;
-          obj6.text = intl5.string(tmp(1128).t["ETE/oC"]);
+          const intl5 = tmp(1125).intl;
+          obj6.text = intl5.string(tmp(1125).t["ETE/oC"]);
           obj6.onPress = function onPress() {
             return navigation(dependencyMap[18]).close();
           };
-          const tmp36 = closure_9(tmp(5244).Button, obj6);
+          const tmp36 = closure_9(tmp(5245).Button, obj6);
           cResult[17] = tmp36;
           let tmp34 = tmp36;
         } else {
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
       const obj10 = { style: tmp4.body, accessibilityRole: "header", variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
       const items3 = [tmp21, "\n\n", tmp24];
       obj10.children = items3;
-      const tmp28 = closure_10(tmp(5234).Text, obj10);
+      const tmp28 = closure_10(tmp(5235).Text, obj10);
       cResult[11] = tmp4.body;
       cResult[12] = tmp21;
       cResult[13] = tmp28;
@@ -187,12 +187,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
   cResult[3] = navigation;
   cResult[4] = fn2;
   tmp11 = fn2;
-  const obj2 = changeEmailReason(1505);
+  const obj2 = changeEmailReason(1502);
 }) : (function ChangeEmailWarning(changeEmailReason) {
   changeEmailReason = changeEmailReason.changeEmailReason;
   const tmp = closure_11();
-  const navigation = changeEmailReason(1505).useNavigation();
-  const obj = changeEmailReason(1505);
+  const navigation = changeEmailReason(1502).useNavigation();
+  const obj = changeEmailReason(1502);
   const items = [UserStore];
   const items1 = [navigation, changeEmailReason];
   const stateFromStores = changeEmailReason(504).useStateFromStores(items, () => currentUser.getCurrentUser());
@@ -200,32 +200,32 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChangeEm
   if (null != stateFromStores) {
     const obj3 = { keyboardShouldPersistTaps: "handled", alwaysBounceVertical: false, children: null };
     const obj4 = { style: tmp.container, children: null };
-    const items2 = [closure_9(tmp2(6991).TrafficConeSpotIllustration, {}), , , ];
+    const items2 = [closure_9(tmp2(6993).TrafficConeSpotIllustration, {}), , , ];
     const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
-    const intl = tmp2(1128).intl;
-    obj5.children = intl.string(tmp2(1128).t.hhR7gX);
-    items2[1] = closure_9(tmp2(5234).Text, obj5);
+    const intl = tmp2(1125).intl;
+    obj5.children = intl.string(tmp2(1125).t.hhR7gX);
+    items2[1] = closure_9(tmp2(5235).Text, obj5);
     const obj6 = { style: tmp.body, accessibilityRole: "header", variant: "text-md/normal", color: "mobile-text-heading-primary", children: null };
-    const intl2 = tmp2(1128).intl;
+    const intl2 = tmp2(1125).intl;
     const obj7 = { hcArticle };
-    const items3 = [intl2.format(tmp2(1128).t.rqWXUf, obj7), "\n\n", ];
-    const intl3 = tmp2(1128).intl;
-    items3[2] = intl3.string(tmp2(1128).t["3LW10C"]);
+    const items3 = [intl2.format(tmp2(1125).t.rqWXUf, obj7), "\n\n", ];
+    const intl3 = tmp2(1125).intl;
+    items3[2] = intl3.string(tmp2(1125).t["3LW10C"]);
     obj6.children = items3;
-    items2[2] = closure_10(tmp2(5234).Text, obj6);
+    items2[2] = closure_10(tmp2(5235).Text, obj6);
     const obj8 = { style: tmp.buttonContainer, children: null };
     const obj9 = { size: "md", variant: "tertiary", text: null, onPress: null, shrink: true };
-    const intl4 = tmp2(1128).intl;
-    obj9.text = intl4.string(tmp2(1128).t.rwTBFs);
+    const intl4 = tmp2(1125).intl;
+    obj9.text = intl4.string(tmp2(1125).t.rwTBFs);
     obj9.onPress = tmp6;
-    const items4 = [closure_9(tmp2(5244).Button, obj9), ];
+    const items4 = [closure_9(tmp2(5245).Button, obj9), ];
     const obj10 = { size: "md", variant: "primary", text: null, onPress: null, shrink: true };
-    const intl5 = tmp2(1128).intl;
-    obj10.text = intl5.string(tmp2(1128).t["ETE/oC"]);
+    const intl5 = tmp2(1125).intl;
+    obj10.text = intl5.string(tmp2(1125).t["ETE/oC"]);
     obj10.onPress = function onPress() {
       return navigation(dependencyMap[18]).close();
     };
-    items4[1] = closure_9(tmp2(5244).Button, obj10);
+    items4[1] = closure_9(tmp2(5245).Button, obj10);
     obj8.children = items4;
     items2[3] = closure_10(closure_4, obj8);
     obj4.children = items2;

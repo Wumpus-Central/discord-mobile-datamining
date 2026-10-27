@@ -1,20 +1,20 @@
-// === Module 15724: channels ===
+// === Module 15760: channels ===
 
-// Module 15724 (channels)
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6778 */;
+// Module 15760 (channels)
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6779 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8827 */;
 import InstantInviteActionCreatorsDefault from "InstantInviteActionCreators" /* 8866 */;
 import isPostMessageSocketDefault from "isPostMessageSocket" /* 9258 */;
 import RPCErrorDefault from "RPCError" /* 9264 */;
 import botScopedAccess from "botScopedAccess" /* 9267 */;
-import RPCHelpers from "RPCHelpers" /* 11479 */;
+import RPCHelpers from "RPCHelpers" /* 11482 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
-import VoiceStateStore from "VoiceStateStore" /* 5630 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
+import VoiceStateStore from "VoiceStateStore" /* 5631 */;
 
 require = fn;
 let closure_15 = async function _validateUserAllowsJoiningVoice() {
@@ -32,14 +32,14 @@ let closure_15 = async function _validateUserAllowsJoiningVoice() {
   ({ frame: closure_129_0, iframeId: closure_129_1 } = closure_0);
   return "Reflect";
 };
-const ChannelRecord = fn(4827);
+const ChannelRecord = fn(4828);
 ({ isVoiceChannel: hasOwnProperty, isTextChannel: metroRequire } = ChannelRecord);
-let Constants = fn(6378);
+let Constants = fn(6379);
 ({ RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
-Constants = fn(1087);
+Constants = fn(1084);
 ({ Routes: closure_12, Permissions: map1, RPCCommands, RPCErrors: closure_14 } = Constants);
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15725);
+let CONTEXT_MENU_ICON_NAMES = fn(15761);
 let obj3 = { scope: null, validateAccess: null, handler: null };
 let obj4 = {};
 let items = [fn(8827).OAuth2Scopes.RPC, fn(8827).OAuth2Scopes.GUILDS, fn(8827).OAuth2Scopes.GUILDS_CHANNELS_READ, fn(8827).OAuth2Scopes.BOT];
@@ -81,7 +81,7 @@ obj3.handler = function handler(args) {
   }
 };
 obj[RPCCommands.GET_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CHANNEL, obj3);
-CONTEXT_MENU_ICON_NAMES = fn(15725);
+CONTEXT_MENU_ICON_NAMES = fn(15761);
 let obj6 = { scope: null, validateAccess: null, handler: null };
 let obj7 = {};
 const items1 = [fn(8827).OAuth2Scopes.RPC, fn(8827).OAuth2Scopes.BOT];
@@ -130,7 +130,7 @@ obj6.handler = function handler(args) {
   return obj3;
 };
 obj[RPCCommands.GET_CHANNELS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CHANNELS, obj6);
-CONTEXT_MENU_ICON_NAMES = fn(15725);
+CONTEXT_MENU_ICON_NAMES = fn(15761);
 let obj9 = { scope: null, validateAccess: null, handler: null };
 let obj10 = {};
 const items2 = [fn(8827).OAuth2Scopes.GUILDS_MEMBERS_READ, fn(8827).OAuth2Scopes.GUILDS_CHANNELS_READ, fn(8827).OAuth2Scopes.BOT];
@@ -170,7 +170,7 @@ obj9.handler = function handler(socket) {
   }
 };
 obj[RPCCommands.GET_CHANNEL_PERMISSIONS] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_CHANNEL_PERMISSIONS, obj9);
-CONTEXT_MENU_ICON_NAMES = fn(15725);
+CONTEXT_MENU_ICON_NAMES = fn(15761);
 let obj12 = { scope: null, handler: null };
 const obj13 = {};
 const items3 = [fn(8827).OAuth2Scopes.RPC, RPC_EMBEDDED_APP_SCOPE];
@@ -430,7 +430,7 @@ obj12.handler = function handler(args) {
   }
 };
 obj[RPCCommands.SELECT_VOICE_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SELECT_VOICE_CHANNEL, obj12);
-CONTEXT_MENU_ICON_NAMES = fn(15725);
+CONTEXT_MENU_ICON_NAMES = fn(15761);
 const obj15 = { scope: null, handler: null };
 const obj16 = {};
 const items4 = [fn(8827).OAuth2Scopes.RPC, fn(8827).OAuth2Scopes.RPC_VOICE_READ];
@@ -451,7 +451,7 @@ obj15.handler = function handler(socket) {
   return transformChannelResult;
 };
 obj[RPCCommands.GET_SELECTED_VOICE_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.GET_SELECTED_VOICE_CHANNEL, obj15);
-CONTEXT_MENU_ICON_NAMES = fn(15725);
+CONTEXT_MENU_ICON_NAMES = fn(15761);
 obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(RPCCommands.SELECT_TEXT_CHANNEL, {
   scope: fn(8827).OAuth2Scopes.RPC,
   handler(args) {
@@ -463,9 +463,9 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
       num = 0;
     }
     if (null == channel_id) {
-      socket(1114).transitionTo(constants.ME);
+      socket(1111).transitionTo(constants.ME);
       let nextPromise1 = null;
-      let obj = socket(1114);
+      let obj = socket(1111);
     } else {
       const storeWaitResult = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num);
       const catchPromise = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
@@ -492,11 +492,11 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
       }).then((result) => {
         [tmp, tmp2] = result;
         if (null == tmp2.guild_id) {
-          const privateChannel = channel_id(6634).selectPrivateChannel(tmp.id);
-          const obj3 = channel_id(6634);
+          const privateChannel = channel_id(6635).selectPrivateChannel(tmp.id);
+          const obj3 = channel_id(6635);
         } else if (PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
-          socket(1114).replaceWith(closure_1_12.CHANNEL(tmp2.guild_id, tmp.id));
-          const obj2 = socket(1114);
+          socket(1111).replaceWith(closure_1_12.CHANNEL(tmp2.guild_id, tmp.id));
+          const obj2 = socket(1111);
         } else {
           const obj = { errorCode: constants2.INVALID_CHANNEL };
           const tmp9 = new channel_id(9264)(obj, "No permission to see channel");
@@ -527,7 +527,7 @@ obj[RPCCommands.SELECT_TEXT_CHANNEL] = CONTEXT_MENU_ICON_NAMES.createRPCCommand(
     return nextPromise1;
   }
 });
-CONTEXT_MENU_ICON_NAMES = fn(15725);
+CONTEXT_MENU_ICON_NAMES = fn(15761);
 const obj18 = {
   scope: fn(8827).OAuth2Scopes.RPC,
   handler(args) {
@@ -539,9 +539,9 @@ const obj18 = {
       num = 0;
     }
     if (null == channel_id) {
-      socket(1114).transitionTo(constants.ME);
+      socket(1111).transitionTo(constants.ME);
       let nextPromise1 = null;
-      let obj = socket(1114);
+      let obj = socket(1111);
     } else {
       const storeWaitResult = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num);
       const catchPromise = server.storeWait(socket, () => ChannelStore.getChannel(channel_id), num).catch(() => {
@@ -568,11 +568,11 @@ const obj18 = {
       }).then((result) => {
         [tmp, tmp2] = result;
         if (null == tmp2.guild_id) {
-          const privateChannel = channel_id(6634).selectPrivateChannel(tmp.id);
-          const obj3 = channel_id(6634);
+          const privateChannel = channel_id(6635).selectPrivateChannel(tmp.id);
+          const obj3 = channel_id(6635);
         } else if (PermissionStore.can(constants.VIEW_CHANNEL, tmp)) {
-          socket(1114).replaceWith(closure_1_12.CHANNEL(tmp2.guild_id, tmp.id));
-          const obj2 = socket(1114);
+          socket(1111).replaceWith(closure_1_12.CHANNEL(tmp2.guild_id, tmp.id));
+          const obj2 = socket(1111);
         } else {
           const obj = { errorCode: constants2.INVALID_CHANNEL };
           const tmp9 = new channel_id(9264)(obj, "No permission to see channel");

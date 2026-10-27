@@ -1,17 +1,17 @@
-// === Module 14796: usePremiumGroupFeaturesTableCardText ===
+// === Module 14832: usePremiumGroupFeaturesTableCardText ===
 
-// Module 14796 (usePremiumGroupFeaturesTableCardText)
+// Module 14832 (usePremiumGroupFeaturesTableCardText)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import user from "user" /* 1400 */;
-import _modDef3250 from "module_3250" /* 3250 */;
-import PremiumGroupUtils from "PremiumGroupUtils" /* 8420 */;
-import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 14797 */;
-import SubscriptionStore from "SubscriptionStore" /* 2058 */;
+import util from "util" /* 1125 */;
+import user from "user" /* 1397 */;
+import _modDef3251 from "module_3251" /* 3251 */;
+import PremiumGroupUtils from "PremiumGroupUtils" /* 8419 */;
+import usePremiumGroupPrimaryNameDefault from "usePremiumGroupPrimaryName" /* 14833 */;
+import SubscriptionStore from "SubscriptionStore" /* 2055 */;
 
 require = fn;
-const PremiumGroupConstants = fn(2066);
+const PremiumGroupConstants = fn(2063);
 ({ getPremiumGroupProductName: closure_4, HELP_CENTER_LINK: hasOwnProperty } = PremiumGroupConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
           }
         }
         obj4.premiumGroupProductName = React4();
-        priceString = intl.format(_modDef3250.Nu9LNm, obj4);
+        priceString = intl.format(_modDef3251.Nu9LNm, obj4);
       }
     }
     class S {
@@ -132,7 +132,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
       if (null != tmp2) {
         const intl2 = util.intl;
         const obj4 = { primaryName: tmp2, premiumGroupProductName: React4() };
-        priceString = intl2.format(_modDef3250.Nu9LNm, obj4);
+        priceString = intl2.format(_modDef3251.Nu9LNm, obj4);
       }
     }
     let str = "...";
@@ -142,12 +142,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
     const obj5 = { subheaderString: str, bodyString: null };
     if (arg0 === user.PremiumSubscriptionGroupRole.PRIMARY) {
       intl = util.intl;
-      prop = _modDef3250["+R/K74"];
+      prop = _modDef3251["+R/K74"];
       obj = { helpCenterLink, premiumGroupProductName: React4() };
       let formatResult = intl.format(prop, obj);
     } else {
       const intl3 = util.intl;
-      const propResult = _modDef3250;
+      const propResult = _modDef3251;
       const obj6 = { helpCenterLink };
       formatResult = intl3.format(arg1 ? propResult["xF+upx"] : propResult.qqfnOm, obj6);
     }

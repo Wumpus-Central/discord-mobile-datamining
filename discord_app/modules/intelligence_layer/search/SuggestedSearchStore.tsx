@@ -1,11 +1,11 @@
-// === Module 13226: SuggestedSearchStore ===
+// === Module 13240: SuggestedSearchStore ===
 
-// Module 13226 (SuggestedSearchStore)
+// Module 13240 (SuggestedSearchStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import privDefault from "priv" /* 1459 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 13228 */;
-import SmartSearchConstants from "SmartSearchConstants" /* 13227 */;
+import privDefault from "priv" /* 1456 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 13242 */;
+import SmartSearchConstants from "SmartSearchConstants" /* 13241 */;
 import size from "module_2" /* 2 */;
 
 function handleReset() {

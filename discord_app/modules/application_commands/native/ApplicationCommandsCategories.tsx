@@ -1,20 +1,20 @@
-// === Module 13303: ApplicationCommandsCategories ===
+// === Module 13317: ApplicationCommandsCategories ===
 
-// Module 13303 (ApplicationCommandsCategories)
+// Module 13317 (ApplicationCommandsCategories)
 import nativeDefault from "native" /* 587 */;
-import HapticUtils from "HapticUtils" /* 5212 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5213 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13130 */;
+import HapticUtils from "HapticUtils" /* 5213 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5214 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import application_commands_ApplicationCommandUtils from "application_commands/ApplicationCommandUtils" /* 13144 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
 
 require = fn;
 const View = fn(17).View;
-const ApplicationCommandsCategoriesConstants = fn(13298);
+const ApplicationCommandsCategoriesConstants = fn(13312);
 ({ ICON_SIZE, NODE_SIZE, NODE_MARGIN, ITEM_WIDTH: metroRequire } = ApplicationCommandsCategoriesConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_COMMAND_CATEGORIES_BACKGROUND, borderTopWidth: nativeDefault.modules.mobile.CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH, borderTopColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 8, paddingVertical: 4, flexDirection: "row", alignItems: "center" }, categoryImage: null, fadedItem: { opacity: 0.5 }, activeItem: null, item: null };
 let size = { height: ICON_SIZE, width: ICON_SIZE, borderRadius: ICON_SIZE / 2 };
 obj.categoryImage = size;
@@ -169,9 +169,9 @@ let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functi
     accessibilityLabel: null,
     children: null
   };
-  const intl = tmp2(1128).intl;
+  const intl = tmp2(1125).intl;
   const formatToPlainString = intl.formatToPlainString;
-  const t = tmp2(1128).t;
+  const t = tmp2(1125).t;
   if (active) {
     const obj4 = { applicationName: section.name };
     let formatToPlainStringResult = formatToPlainString(t.yl24Gd, obj4);
@@ -182,7 +182,7 @@ let closure_9 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functi
   obj3.accessibilityLabel = formatToPlainStringResult;
   const items2 = [tmp.item, active ? tmp.activeItem : tmp.fadedItem];
   obj3.children = <stateFromStores style={items2}>{tmp6}</stateFromStores>;
-  return jsx(section(6908).PressableOpacity, {
+  return jsx(section(6910).PressableOpacity, {
     onPress() {
       return importDefault(dependencyMap);
     },

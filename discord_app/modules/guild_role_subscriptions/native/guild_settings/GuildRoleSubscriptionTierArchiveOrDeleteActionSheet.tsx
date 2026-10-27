@@ -1,18 +1,18 @@
-// === Module 19293: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
+// === Module 19331: GuildRoleSubscriptionTierArchiveOrDeleteActionSheet ===
 
-// Module 19293 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
+// Module 19331 (GuildRoleSubscriptionTierArchiveOrDeleteActionSheet)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5265 */;
-import BottomSheetModal from "BottomSheetModal" /* 5269 */;
-import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 19294 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5266 */;
+import BottomSheetModal from "BottomSheetModal" /* 5270 */;
+import useArchiveOrDeleteDefault from "useArchiveOrDelete" /* 19332 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24 }, cancel: { alignSelf: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

@@ -1,17 +1,17 @@
-// === Module 10959: StrangerDangerWarningBanner ===
+// === Module 10962: StrangerDangerWarningBanner ===
 
-// Module 10959 (StrangerDangerWarningBanner)
+// Module 10962 (StrangerDangerWarningBanner)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
-import SafetyWarningUtils from "SafetyWarningUtils" /* 10940 */;
-import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 10941 */;
-import StrangerDangerMoreTipsModalActionItemsDefault from "StrangerDangerMoreTipsModalActionItems" /* 10963 */;
+import util from "util" /* 1125 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
+import SafetyWarningUtils from "SafetyWarningUtils" /* 10943 */;
+import ChannelSafetyWarningsActionCreators from "ChannelSafetyWarningsActionCreators" /* 10944 */;
+import StrangerDangerMoreTipsModalActionItemsDefault from "StrangerDangerMoreTipsModalActionItems" /* 10966 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
 
 require = fn;
 class StrangerDangerWarningBanner {
@@ -75,11 +75,11 @@ class StrangerDangerWarningBanner {
         };
         obj2.onIgnore = function onIgnore() {
           closure_1_4();
-          const obj = channelId(10940);
-          obj.trackCtaEvent({ channelId, warningId, senderId, warningType: constants.STRANGER_DANGER, cta: channelId(10940).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM });
+          const obj = channelId(10943);
+          obj.trackCtaEvent({ channelId, warningId, senderId, warningType: constants.STRANGER_DANGER, cta: channelId(10943).CtaEventTypes.USER_BANNER_IGNORE_CONFIRM });
         };
         obj2.impressionName = discord_common_AnalyticsUtils.ImpressionNames.BLOCK_USER_CONFIRMATION;
-        obj.openLazy(asyncRequireImpl(10961, dependencyMap.paths), closure_9, obj2);
+        obj.openLazy(asyncRequireImpl(10964, dependencyMap.paths), closure_9, obj2);
       };
     }, items5);
     closure_6 = callback2;
@@ -99,7 +99,7 @@ class StrangerDangerWarningBanner {
       const obj = ModalActionCreatorsDefault;
       const intl = util.intl;
       obj2.description = intl.string(util.t.DJMZX6);
-      const tmp = asyncRequireImpl(10947, dependencyMap.paths);
+      const tmp = asyncRequireImpl(10950, dependencyMap.paths);
       obj2.safetyTips = React5().map((children, index) => closure_1_10(channelId(senderId[20]).Text, { variant: "text-sm/medium", children }, index));
       const obj3 = { channelId, warningId, senderId, onBlockPressed: null };
       const arr = React5();
@@ -126,13 +126,13 @@ class StrangerDangerWarningBanner {
     return tmp8(tmp9, obj1);
   }
 }
-const SafetyWarningTypes = fn(10693).SafetyWarningTypes;
-const Constants = fn(10927);
+const SafetyWarningTypes = fn(10696).SafetyWarningTypes;
+const Constants = fn(10930);
 ({ STRANGER_DANGER_MORE_TIPS_MODAL_KEY: metroRequire, getStrangerDangerSafetyTips: closure_7 } = Constants);
-const AnalyticEvents = fn(1087).AnalyticEvents;
-let closure_9 = fn(10960).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+let closure_9 = fn(10963).BLOCK_CONFIRMATION_ACTION_SHEET_KEY;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { moreTipsHeader: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);

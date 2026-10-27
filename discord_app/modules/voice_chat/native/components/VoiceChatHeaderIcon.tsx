@@ -1,29 +1,29 @@
-// === Module 11641: VoiceChatHeaderIcon ===
+// === Module 11643: VoiceChatHeaderIcon ===
 
-// Module 11641 (VoiceChatHeaderIcon)
+// Module 11643 (VoiceChatHeaderIcon)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import native2 from "native" /* 5037 */;
-import Pressables from "Pressables" /* 6908 */;
-import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11549 */;
+import native from "native" /* 1199 */;
+import native2 from "native" /* 5038 */;
+import Pressables from "Pressables" /* 6910 */;
+import ChannelCallNavigatorIconDefault from "ChannelCallNavigatorIcon" /* 11551 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6771 */;
+import ReadStateStore from "ReadStateStore" /* 6772 */;
 
 require = fn;
 const View = fn(17).View;
-const ThemeTypes = fn(1087).ThemeTypes;
+const ThemeTypes = fn(1084).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { headerButton: null, disabledOpacity: null, chatIconContainer: null, chatIcon: null, badge: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.lg, alignSelf: "center", padding: 6, backgroundColor: nativeDefault.colors.REDESIGN_BUTTON_TERTIARY_BACKGROUND };
 obj2.headerButton = size;
 obj2.disabledOpacity = { opacity: 0.6 };
-obj2.chatIconContainer = { marginRight: 12, height: fn(5268).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+obj2.chatIconContainer = { marginRight: 12, height: fn(5269).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.chatIcon = { marginHorizontal: 0, width: 32, height: 32 };
-let obj3 = { marginRight: 12, height: fn(5268).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
+let obj3 = { marginRight: 12, height: fn(5269).NAV_BAR_HEIGHT, flexDirection: "row", alignItems: "center" };
 obj2.badge = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let closure_8 = createStyles.createStyles(obj2);
 fn(558);

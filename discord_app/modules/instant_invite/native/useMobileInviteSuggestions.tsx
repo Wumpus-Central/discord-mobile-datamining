@@ -1,20 +1,20 @@
 // === Module 9064: useMobileInviteSuggestions ===
 
 // Module 9064 (useMobileInviteSuggestions)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildStore from "GuildStore" /* 4846 */;
 import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9065 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5717 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5718 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const InviteTargetTypes = fn(7809).InviteTargetTypes;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const NOOP_NULL = fn(1098).NOOP_NULL;
+const InviteTargetTypes = fn(7810).InviteTargetTypes;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const NOOP_NULL = fn(1095).NOOP_NULL;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/instant_invite/native/useMobileInviteSuggestions.tsx");
 

@@ -1,14 +1,14 @@
-// === Module 12778: GuildAntiRaidActionCreators ===
+// === Module 12787: GuildAntiRaidActionCreators ===
 
-// Module 12778 (GuildAntiRaidActionCreators)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import _modDef2049 from "module_2049" /* 2049 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
+// Module 12787 (GuildAntiRaidActionCreators)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import _modDef2046 from "module_2046" /* 2046 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5712 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
-import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 12779 */;
+import getGuildSafetyAlertsChannelIdDefault from "getGuildSafetyAlertsChannelId" /* 12788 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import GuildStore from "GuildStore" /* 4846 */;
 
 require = fn;
 let closure_9 = async function _setGuildRaidAlerts(arg0, arg1) {
@@ -91,9 +91,9 @@ let closure_10 = async function _setGuildIncidentActions() {
   }
   let toISOStringResult = null;
   if (tmp5) {
-    _modDef2049();
-    toISOStringResult = _modDef2049().add(tmp8, "hours").toISOString();
-    _modDef2049().add(tmp8, "hours");
+    _modDef2046();
+    toISOStringResult = _modDef2046().add(tmp8, "hours").toISOString();
+    _modDef2046().add(tmp8, "hours");
   }
   let tmp12 = null;
   if (closure_1) {
@@ -243,8 +243,8 @@ let closure_12 = async function _handleReportRaid(arg0) {
     }
   }
 };
-const DEFAULT_LOCKDOWN_DURATION = fn(8386).DEFAULT_LOCKDOWN_DURATION;
-const Constants = fn(1087);
+const DEFAULT_LOCKDOWN_DURATION = fn(8385).DEFAULT_LOCKDOWN_DURATION;
+const Constants = fn(1084);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7, GuildFeatures: closure_8 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_antiraid/GuildAntiRaidActionCreators.tsx");

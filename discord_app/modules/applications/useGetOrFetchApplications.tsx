@@ -1,16 +1,16 @@
-// === Module 7257: useGetOrFetchApplications ===
+// === Module 7259: useGetOrFetchApplications ===
 
-// Module 7257 (useGetOrFetchApplications)
+// Module 7259 (useGetOrFetchApplications)
 import _modDef12 from "module_12" /* 12 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import c from "c" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6809 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6811 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2045 */;
+import ApplicationStore from "ApplicationStore" /* 2042 */;
 
 require = fn;
-const NOOP = fn(1087).NOOP;
+const NOOP = fn(1084).NOOP;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGetOrFetchApplications(current, arg1) {
   _require = current;

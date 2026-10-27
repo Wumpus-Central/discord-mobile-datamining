@@ -1,29 +1,29 @@
-// === Module 5202: MobileThemesUtils ===
+// === Module 5203: MobileThemesUtils ===
 
-// Module 5202 (MobileThemesUtils)
+// Module 5203 (MobileThemesUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import ClientThemesTypes from "ClientThemesTypes" /* 1256 */;
-import _modDef2768 from "module_2768" /* 2768 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4998 */;
-import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 4999 */;
-import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5204 */;
-import ThemeStore from "ThemeStore" /* 1207 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4995 */;
-import SavedCustomThemeStore from "SavedCustomThemeStore" /* 5203 */;
-import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1253 */;
+import util from "util" /* 1125 */;
+import ClientThemesTypes from "ClientThemesTypes" /* 1253 */;
+import _modDef2769 from "module_2769" /* 2769 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4999 */;
+import HexagonCampaignPerkAvailability from "HexagonCampaignPerkAvailability" /* 5000 */;
+import useCustomThemeDisplaySettings from "useCustomThemeDisplaySettings" /* 5205 */;
+import ThemeStore from "ThemeStore" /* 1204 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4996 */;
+import SavedCustomThemeStore from "SavedCustomThemeStore" /* 5204 */;
+import CustomThemeMobileStore from "CustomThemeMobileStore" /* 1250 */;
 
 const require = globalThis.__r;
 
 require = fn;
 function getCustomThemesName() {
   const intl = util.intl;
-  return intl.string(_modDef2768.yl1iMm);
+  return intl.string(_modDef2769.yl1iMm);
 }
-const ClientThemesConstants = fn(1255);
+const ClientThemesConstants = fn(1252);
 ({ BACKGROUND_GRADIENT_PRESETS_MOBILE: closure_7, HEXAGON_GRADIENT_PRESET: closure_8, REFRESH_STANDARD_BACKGROUND_THEMES: closure_9 } = ClientThemesConstants);
-const HexagonCampaignConstants = fn(4996);
+const HexagonCampaignConstants = fn(4997);
 ({ HexagonCampaignPerk: c10, HexagonCampaignPerkAvailability: closure_11 } = HexagonCampaignConstants);
 const MobileThemesUtils = "MobileThemesUtils";
 let ReactCompilerGating = fn(558);
@@ -295,10 +295,10 @@ export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled() ?
         HermesBuiltin.arraySpread(closure_7, 1);
         tmp16 = items2;
       }
-      tmpResult6 = tmp(4999);
+      tmpResult6 = tmp(5000);
     }
     tmp16 = closure_7;
-    tmpResult5 = tmp(4998);
+    tmpResult5 = tmp(4999);
   }
   if (null != tmp4) {
     const items3 = [];
@@ -335,10 +335,10 @@ export const useAllMobileThemes = ReactCompilerGating.isReactCompilerEnabled() ?
         HermesBuiltin.arraySpread(closure_7, 1);
         tmp12 = items2;
       }
-      tmp2Result2 = tmp2(4999);
+      tmp2Result2 = tmp2(5000);
     }
     tmp12 = closure_7;
-    tmp2Result = tmp2(4998);
+    tmp2Result = tmp2(4999);
   }
   if (null != tmp) {
     const items3 = [];

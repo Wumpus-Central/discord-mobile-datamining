@@ -1,20 +1,20 @@
-// === Module 13867: useConjureAppChannelSheet ===
+// === Module 13881: useConjureAppChannelSheet ===
 
-// Module 13867 (useConjureAppChannelSheet)
+// Module 13881 (useConjureAppChannelSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import _modDef3830 from "module_3830" /* 3830 */;
-import UserUtils from "UserUtils" /* 5025 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import useConjureAppCreatorDefault from "useConjureAppCreator" /* 13868 */;
+import util from "util" /* 1125 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import _modDef3831 from "module_3831" /* 3831 */;
+import UserUtils from "UserUtils" /* 5026 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import useConjureAppCreatorDefault from "useConjureAppCreator" /* 13882 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { icon: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.lg };
 obj2.icon = size;
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (arg1) {
     tmp5 = guild_id;
   }
-  const appChannelApplication = guild_id(7346).useAppChannelApplication(tmp5);
+  const appChannelApplication = guild_id(7348).useAppChannelApplication(tmp5);
   let tmp7 = null;
   if (arg1) {
     let conjureProjectId;
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     tmp11 = cResult[2];
     tmp12 = cResult[3];
   }
-  const tmpResult = guild_id(7346);
+  const tmpResult = guild_id(7348);
   const stateFromStores = guild_id(504).useStateFromStores(first, tmp11, tmp12);
   let tmp16 = null != tmp7;
   const tmpResult3 = guild_id(504);
@@ -147,10 +147,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     obj3.title = tmp7.name;
     let formatToPlainStringResult;
     if (null != creator) {
-      const intl = tmp(1128).intl;
-      const obj5 = { name: tmp(5025).getName(creator) };
-      formatToPlainStringResult = intl.formatToPlainString(_modDef3830["6/x9LD"], obj5);
-      const tmpResult4 = tmp(5025);
+      const intl = tmp(1125).intl;
+      const obj5 = { name: tmp(5026).getName(creator) };
+      formatToPlainStringResult = intl.formatToPlainString(_modDef3831["6/x9LD"], obj5);
+      const tmpResult4 = tmp(5026);
     }
     obj3.subtitle = formatToPlainStringResult;
     tmp20 = obj3;
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       if (null != creator) {
         const intl = util.intl;
         const obj3 = { name: UserUtils.getName(tmp5) };
-        formatToPlainStringResult = intl.formatToPlainString(_modDef3830["6/x9LD"], obj3);
+        formatToPlainStringResult = intl.formatToPlainString(_modDef3831["6/x9LD"], obj3);
       }
       obj.subtitle = formatToPlainStringResult;
       tmp2 = obj;

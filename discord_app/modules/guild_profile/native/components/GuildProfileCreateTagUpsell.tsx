@@ -1,15 +1,15 @@
-// === Module 14169: GuildProfileCreateTagUpsell ===
+// === Module 14196: GuildProfileCreateTagUpsell ===
 
-// Module 14169 (GuildProfileCreateTagUpsell)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
-import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 14173 */;
+// Module 14196 (GuildProfileCreateTagUpsell)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7280 */;
+import openGuildTagCreateFlowDefault from "openGuildTagCreateFlow" /* 14200 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const Pressable = fn(17).Pressable;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_5 = createStyles.createStyles({ upsell: { minHeight: 44, alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -20,7 +20,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
   guildId = guildId.guildId;
   const tmp4 = closure_5();
   let obj = guildId(576);
-  const guildTagCreationUpsell = guildId(14170).useGuildTagCreationUpsell("GuildProfileCreateTagUpsell", creatableGuilds(14172));
+  const guildTagCreationUpsell = guildId(14197).useGuildTagCreationUpsell("GuildProfileCreateTagUpsell", creatableGuilds(14199));
   creatableGuilds = guildTagCreationUpsell.creatableGuilds;
   if (guildTagCreationUpsell.isUpsellVisible) {
     if (cResult[0] === creatableGuilds) {
@@ -30,9 +30,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
       const _Symbol = Symbol;
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
-        const intl = tmp(1128).intl;
-        obj3.children = intl.string(tmp(1128).t.J0YWRq);
-        const tmp11 = jsx(tmp(5234).Text, { variant: "text-md/medium", color: "text-muted", children: null });
+        const intl = tmp(1125).intl;
+        obj3.children = intl.string(tmp(1125).t.J0YWRq);
+        const tmp11 = jsx(tmp(5235).Text, { variant: "text-md/medium", color: "text-muted", children: null });
         cResult[3] = tmp11;
         let tmp9 = tmp11;
       } else {
@@ -62,12 +62,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
   } else {
     return null;
   }
-  const obj2 = guildId(14170);
+  const obj2 = guildId(14197);
 }) : (function GuildProfileCreateTagUpsell(guildId) {
   guildId = guildId.guildId;
   let creatableGuilds;
   const tmp = closure_5();
-  const guildTagCreationUpsell = guildId(14170).useGuildTagCreationUpsell("GuildProfileCreateTagUpsell", creatableGuilds(14172));
+  const guildTagCreationUpsell = guildId(14197).useGuildTagCreationUpsell("GuildProfileCreateTagUpsell", creatableGuilds(14199));
   creatableGuilds = guildTagCreationUpsell.creatableGuilds;
   let tmp5 = null;
   if (guildTagCreationUpsell.isUpsellVisible) {
@@ -81,9 +81,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPro
       children: null
     };
     const obj3 = { variant: "text-md/medium", color: "text-muted", children: null };
-    const intl = tmp2(1128).intl;
-    obj3.children = intl.string(tmp2(1128).t.J0YWRq);
-    obj2.children = jsx(tmp2(5234).Text, { variant: "text-md/medium", color: "text-muted", children: null });
+    const intl = tmp2(1125).intl;
+    obj3.children = intl.string(tmp2(1125).t.J0YWRq);
+    obj2.children = jsx(tmp2(5235).Text, { variant: "text-md/medium", color: "text-muted", children: null });
     tmp5 = <Pressable style={tmp.upsell} role="button" onPress={function handlePress() {
       ActionSheetActionCreatorsDefault.hideActionSheet("GuildProfileActionSheet:" + guildId);
       openGuildTagCreateFlowDefault(creatableGuilds, AnalyticsLocationDefault.GUILD_PROFILE);

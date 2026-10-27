@@ -1,29 +1,29 @@
-// === Module 7089: UserSettingsConfirmPassword ===
+// === Module 7091: UserSettingsConfirmPassword ===
 
-// Module 7089 (UserSettingsConfirmPassword)
+// Module 7091 (UserSettingsConfirmPassword)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7007 */;
-import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7033 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7090 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7091 */;
-import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7093 */;
+import util from "util" /* 1125 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import FreeFormInputGroupDefault from "FreeFormInputGroup" /* 7009 */;
+import FreeFormErrorLabelDefault from "FreeFormErrorLabel" /* 7035 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7092 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7093 */;
+import UserSettingsAccountUnverifiedHeaderDefault from "UserSettingsAccountUnverifiedHeader" /* 7095 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const UserSettingsSections = fn(1087).UserSettingsSections;
+const UserSettingsSections = fn(1084).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, container: { paddingVertical: 12, paddingHorizontal: 16 }, title: { textAlign: "center" }, prompt: { marginTop: 8, lineHeight: 18, textAlign: "center" }, input: { marginTop: 24 }, redesignInput: null, button: null, hint: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.redesignInput = { borderRadius: nativeDefault.radii.lg };

@@ -1,25 +1,25 @@
-// === Module 18264: ChannelDetailsNavigator ===
+// === Module 18298: ChannelDetailsNavigator ===
 
-// Module 18264 (ChannelDetailsNavigator)
-import util from "util" /* 1128 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import HeaderShared from "HeaderShared" /* 9699 */;
-import navigateToThreadCreation from "navigateToThreadCreation" /* 13349 */;
-import _modDef13723 from "module_13723" /* 13723 */;
-import ChannelSettingsModal from "ChannelSettingsModal" /* 18265 */;
+// Module 18298 (ChannelDetailsNavigator)
+import util from "util" /* 1125 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import HeaderShared from "HeaderShared" /* 9701 */;
+import navigateToThreadCreation from "navigateToThreadCreation" /* 13363 */;
+import _modDef13737 from "module_13737" /* 13737 */;
+import ChannelSettingsModal from "ChannelSettingsModal" /* 18299 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(10024).ChannelDetailsNavigatorScreens;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const SearchNavigatorScreens = fn(18092).SearchNavigatorScreens;
+const constants = fn(10026).ChannelDetailsNavigatorScreens;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const SearchNavigatorScreens = fn(18126).SearchNavigatorScreens;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = Object.freeze({});
-const NativeStackNavigator = fn(9743);
+const NativeStackNavigator = fn(9745);
 let closure_13 = NativeStackNavigator.createNativeStackNavigator();
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConnectedCreateThreadHeaderButton(channelId) {
@@ -71,7 +71,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Create
   const cResult = channel(576).c(5);
   channel = channel.channel;
   const obj = channel(576);
-  const canStartThread = channel(7369).useCanStartThread(channel);
+  const canStartThread = channel(7371).useCanStartThread(channel);
   if (cResult[0] !== channel) {
     const fn = function t() {
       const result = navigateToThreadCreation.navigateToThreadCreation(channel, "Thread Browser Toolbar");
@@ -87,36 +87,36 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function Create
   } else {
     const _Symbol = Symbol;
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = HeaderIconButton(1128).intl;
-      const stringResult = intl.string(HeaderIconButton(1128).t.rBIGBL);
+      const intl = HeaderIconButton(1125).intl;
+      const stringResult = intl.string(HeaderIconButton(1125).t.rBIGBL);
       cResult[2] = stringResult;
       let tmp6 = stringResult;
     } else {
       tmp6 = cResult[2];
     }
     if (cResult[3] !== tmp4) {
-      HeaderIconButton = HeaderIconButton(9699).HeaderIconButton;
+      HeaderIconButton = HeaderIconButton(9701).HeaderIconButton;
       const obj3 = { accessibilityLabel: tmp6, onPress: tmp4, source: null };
-      tmp = _modDef13723;
+      tmp = _modDef13737;
       obj3.source = tmp;
       const tmp11 = closure_10(HeaderIconButton, obj3);
       cResult[3] = tmp4;
       cResult[4] = tmp11;
     }
   }
-  const obj2 = channel(7369);
+  const obj2 = channel(7371);
 }) : (function CreateThreadHeaderButton(channel) {
   channel = channel.channel;
   [][0] = channel;
-  const canStartThread = channel(7369).useCanStartThread(channel);
+  const canStartThread = channel(7371).useCanStartThread(channel);
   let tmp5 = null;
   if (canStartThread) {
     const obj2 = { accessibilityLabel: null, onPress: null, source: null };
-    const intl = tmp(1128).intl;
-    obj2.accessibilityLabel = intl.string(tmp(1128).t.rBIGBL);
+    const intl = tmp(1125).intl;
+    obj2.accessibilityLabel = intl.string(tmp(1125).t.rBIGBL);
     obj2.onPress = tmp4;
-    obj2.source = _modDef13723;
-    tmp5 = closure_10(tmp(9699).HeaderIconButton, obj2);
+    obj2.source = _modDef13737;
+    tmp5 = closure_10(tmp(9701).HeaderIconButton, obj2);
   }
   return tmp5;
 });
@@ -266,8 +266,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                                 header(arg0) {
                                                   const obj2 = {};
                                                   const merged = Object.assign(arg0);
-                                                  const obj = route(9699);
-                                                  obj2.shouldHandleSafeArea = route(1384).isAndroid();
+                                                  const obj = route(9701);
+                                                  obj2.shouldHandleSafeArea = route(1381).isAndroid();
                                                   return obj.renderHeader(obj2);
                                                 },
                                                 headerTitle() {
@@ -594,8 +594,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           header(arg0) {
             const obj2 = {};
             const merged = Object.assign(arg0);
-            const obj = route(9699);
-            obj2.shouldHandleSafeArea = route(1384).isAndroid();
+            const obj = route(9701);
+            obj2.shouldHandleSafeArea = route(1381).isAndroid();
             return obj.renderHeader(obj2);
           },
           headerTitle() {
@@ -632,8 +632,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         header(arg0) {
           const obj2 = {};
           const merged = Object.assign(arg0);
-          const obj = route(9699);
-          obj2.shouldHandleSafeArea = route(1384).isAndroid();
+          const obj = route(9701);
+          obj2.shouldHandleSafeArea = route(1381).isAndroid();
           return obj.renderHeader(obj2);
         },
         headerTitle() {

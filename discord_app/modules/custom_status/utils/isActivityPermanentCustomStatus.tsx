@@ -1,7 +1,7 @@
-// === Module 17491: isActivityPermanentCustomStatus ===
+// === Module 17532: isActivityPermanentCustomStatus ===
 
-// Module 17491 (isActivityPermanentCustomStatus)
-import Constants from "Constants" /* 1087 */;
+// Module 17532 (isActivityPermanentCustomStatus)
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const ActivityTypes = Constants.ActivityTypes;

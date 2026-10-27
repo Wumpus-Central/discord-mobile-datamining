@@ -1,24 +1,24 @@
-// === Module 19315: GuildRoleSubscriptionBenefitPreview ===
+// === Module 19353: GuildRoleSubscriptionBenefitPreview ===
 
-// Module 19315 (GuildRoleSubscriptionBenefitPreview)
+// Module 19353 (GuildRoleSubscriptionBenefitPreview)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4917 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import useChannelNameDefault from "useChannelName" /* 5604 */;
-import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7305 */;
+import util from "util" /* 1125 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4918 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import useChannelNameDefault from "useChannelName" /* 5605 */;
+import ChevronSmallRightIcon from "ChevronSmallRightIcon" /* 7307 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8502 */;
 import TextIcon2 from "TextIcon" /* 8551 */;
-import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 16590 */;
-import EmojiIconDefault from "EmojiIcon" /* 16597 */;
+import GuildRoleSubscriptionTierTemplatesUtils from "GuildRoleSubscriptionTierTemplatesUtils" /* 16632 */;
+import EmojiIconDefault from "EmojiIcon" /* 16639 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const constants = fn(16562).GuildRoleSubscriptionBenefitTypes;
+const constants = fn(16604).GuildRoleSubscriptionBenefitTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", justifyContent: "flex-start" }, emojiContainer: { width: 24, height: 24, alignSelf: "flex-start", alignItems: "center", justifyContent: "center", marginEnd: 16 }, benefitColumn: { flexDirection: "column", flexGrow: 1, flex: 1, alignItems: "flex-start", justifyContent: "center" }, benefitDescription: { flex: 1, marginTop: 2 }, channelRow: { flexDirection: "row", alignItems: "center", justifyContent: "center" }, channelIcon: { marginEnd: 8 }, emojiRow: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center" }, emojiColons: { paddingHorizontal: 2 } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function BaseBenefitRow(arg0) {

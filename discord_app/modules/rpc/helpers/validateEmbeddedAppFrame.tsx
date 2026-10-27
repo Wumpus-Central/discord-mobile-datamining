@@ -1,14 +1,14 @@
-// === Module 15710: validateEmbeddedAppFrame ===
+// === Module 15746: validateEmbeddedAppFrame ===
 
-// Module 15710 (validateEmbeddedAppFrame)
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2031 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
+// Module 15746 (validateEmbeddedAppFrame)
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2028 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5627 */;
 import getSocketFrameDefault from "getSocketFrame" /* 9257 */;
 import isPostMessageSocketDefault from "isPostMessageSocket" /* 9258 */;
 import RPCErrorDefault from "RPCError" /* 9264 */;
-import conjurePreviewSurface from "conjurePreviewSurface" /* 10728 */;
-import RPCHelpers from "RPCHelpers" /* 11479 */;
-import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15711 */;
+import conjurePreviewSurface from "conjurePreviewSurface" /* 10731 */;
+import RPCHelpers from "RPCHelpers" /* 11482 */;
+import ConjureBuilderPreviewStore from "ConjureBuilderPreviewStore" /* 15747 */;
 
 require = fn;
 function validateEmbeddedAppFrame(socket) {
@@ -88,7 +88,7 @@ function validateFrame(transport, arg1) {
   }
   obj3 = EmbeddedSurfaceUtils;
 }
-const RPCErrors = fn(1087).RPCErrors;
+const RPCErrors = fn(1084).RPCErrors;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/rpc/helpers/validateEmbeddedAppFrame.tsx");
 

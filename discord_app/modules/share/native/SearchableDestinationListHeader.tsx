@@ -1,18 +1,18 @@
-// === Module 12917: SearchableDestinationListHeader ===
+// === Module 12926: SearchableDestinationListHeader ===
 
-// Module 12917 (SearchableDestinationListHeader)
+// Module 12926 (SearchableDestinationListHeader)
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import Link from "Link" /* 1506 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import NavigatorHeader from "NavigatorHeader" /* 6924 */;
-import _mod6933 from "module_6933" /* 6933 */;
-import HeaderShared from "HeaderShared" /* 9699 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import Link from "Link" /* 1503 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import NavigatorHeader from "NavigatorHeader" /* 6926 */;
+import _mod6935 from "module_6935" /* 6935 */;
+import HeaderShared from "HeaderShared" /* 9701 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { headerLeftContainer: { paddingLeft: nativeDefault.space.PX_16 }, headerRightContainer: null, header: null };
 let obj3 = { paddingLeft: nativeDefault.space.PX_16 };
 obj2.headerRightContainer = { paddingRight: nativeDefault.space.PX_16 };
@@ -30,10 +30,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
   subtitleColor = subtitleColor.subtitleColor;
   ({ headerRight, headerStatusBarHeight, onClose } = subtitleColor);
   const tmp4 = closure_5();
-  const context = noop.useContext(subtitle(1506).NavigationRouteContext);
+  const context = noop.useContext(subtitle(1503).NavigationRouteContext);
   const obj = subtitle(576);
   const tmp5 = subtitleColor;
-  let isIOSResult = subtitle(1384).isIOS();
+  let isIOSResult = subtitle(1381).isIOS();
   if (isIOSResult) {
     let presentation;
     if (context != null) {
@@ -51,8 +51,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     if (cResult[3] !== onClose) {
       let headerCloseButton;
       if (null != onClose) {
-        headerCloseButton = subtitle(6924).getHeaderCloseButton(onClose);
-        const tmpResult = subtitle(6924);
+        headerCloseButton = subtitle(6926).getHeaderCloseButton(onClose);
+        const tmpResult = subtitle(6926);
       }
       cResult[3] = onClose;
       cResult[4] = headerCloseButton;
@@ -63,7 +63,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     if (headerStatusBarHeight == null) {
       let num3 = 0;
       if (!isIOSResult) {
-        num3 = subtitleColor(1633)().top;
+        num3 = subtitleColor(1630)().top;
       }
       headerStatusBarHeight = num3 + tmp5(587).space.PX_8;
     }
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     const obj3 = { headerStyle: tmp4.header, title, headerTitle: tmp10, headerTitleAlign: "center", headerLeft: tmp11, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null };
     ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp4);
     obj3.headerStatusBarHeight = headerStatusBarHeight;
-    const tmp17 = jsx(subtitle(6933).Header, { headerStyle: tmp4.header, title, headerTitle: tmp10, headerTitleAlign: "center", headerLeft: tmp11, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null });
+    const tmp17 = jsx(subtitle(6935).Header, { headerStyle: tmp4.header, title, headerTitle: tmp10, headerTitleAlign: "center", headerLeft: tmp11, headerRight, headerLeftContainerStyle: null, headerRightContainerStyle: null, headerStatusBarHeight: null });
     cResult[5] = headerRight;
     cResult[6] = tmp4.header;
     cResult[7] = tmp4.headerLeftContainer;
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
   cResult[1] = subtitleColor;
   cResult[2] = fn;
   tmp10 = fn;
-  const obj2 = subtitle(1384);
+  const obj2 = subtitle(1381);
 }) : (function SearchableDestinationListHeader(arg0) {
   ({ subtitle: require, subtitleColor: importDefault, headerStatusBarHeight, onClose } = arg0);
   ({ title, headerRight } = arg0);
@@ -153,7 +153,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Searchab
     headerStatusBarHeight = num + nativeDefault.space.PX_8;
   }
   obj3.headerStatusBarHeight = headerStatusBarHeight;
-  return jsx(_mod6933.Header, {
+  return jsx(_mod6935.Header, {
     headerStyle: tmp.header,
     title,
     headerTitle(children) {

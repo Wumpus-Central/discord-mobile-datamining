@@ -1,23 +1,23 @@
-// === Module 13162: JumpToPresentButton ===
+// === Module 13176: JumpToPresentButton ===
 
-// Module 13162 (JumpToPresentButton)
+// Module 13176 (JumpToPresentButton)
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 5252 */;
+import useToken from "useToken" /* 5253 */;
 import noop from "module_19" /* 19 */;
-import useChatBottomManagerUIStore_mod from "useChatBottomManagerUIStore" /* 9782 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
-import MessageStore from "MessageStore" /* 6010 */;
+import useChatBottomManagerUIStore_mod from "useChatBottomManagerUIStore" /* 9784 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6497 */;
+import MessageStore from "MessageStore" /* 6011 */;
 
 require = fn;
 const View = fn(17).View;
-let useChatBottomManagerUIStore = fn(9782);
+let useChatBottomManagerUIStore = fn(9784);
 ({ useChatInputContainerHeight: closure_4, useSmallSuggestionBarHeight: hasOwnProperty } = useChatBottomManagerUIStore);
 let useChatBottomManagerUIStore = useChatBottomManagerUIStore_mod;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { borderRadius: nativeDefault.radii.round, position: "absolute", right: nativeDefault.modules.mobile.JUMP_TO_PRESENT_RIGHT_SPACING }, containerIOS: { bottom: "100%", pointerEvents: "box-none" } };
 let closure_10 = createStyles.createStyles(obj2);
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 let closure_11 = PlatformUtils.isIOS() ? ((View) => {
   const obj = { marginBottom: null };
   const token = useToken.useToken(nativeDefault.modules.mobile.JUMP_TO_PRESENT_BOTTOM_SPACING);
@@ -208,10 +208,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JumpToPr
     return tmp;
   });
   const obj = channelId(504);
-  const isVoicePanelMounted = channelId(11572).useIsVoicePanelMounted(channelId);
-  const obj2 = channelId(11572);
-  const isVoicePanelOpen = channelId(11572).useIsVoicePanelOpen(channelId);
-  const obj3 = channelId(11572);
+  const isVoicePanelMounted = channelId(11574).useIsVoicePanelMounted(channelId);
+  const obj2 = channelId(11574);
+  const isVoicePanelOpen = channelId(11574).useIsVoicePanelOpen(channelId);
+  const obj3 = channelId(11574);
   const items1 = [MessageStore];
   const stateFromStores = channelId(504).useStateFromStores(items1, () => null != MessageStore.getMessages(channelId).jumpReturnTargetId);
   if (!tmp5) {
@@ -223,9 +223,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JumpToPr
     const items2 = [tmp.containerIOS, tmp2];
     tmp10 = items2;
   }
-  const intl = tmp3(1128).intl;
+  const intl = tmp3(1125).intl;
   const string = intl.string;
-  const t = tmp3(1128).t;
+  const t = tmp3(1125).t;
   if (stateFromStores) {
     let stringResult = string(t.dpjpOp);
   } else {
@@ -235,11 +235,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function JumpToPr
   const items3 = [tmp.container, tmp10];
   obj5.style = items3;
   if (tmp5) {
-    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13164), onPress: channelId.onJumpToPresent };
-    let tmp12Result = jsx(screenIndex(13163), { accessibilityLabel: stringResult, icon: screenIndex(13164), onPress: channelId.onJumpToPresent });
-    const tmp16 = screenIndex(13163);
+    const obj6 = { accessibilityLabel: stringResult, icon: screenIndex(13178), onPress: channelId.onJumpToPresent };
+    let tmp12Result = jsx(screenIndex(13177), { accessibilityLabel: stringResult, icon: screenIndex(13178), onPress: channelId.onJumpToPresent });
+    const tmp16 = screenIndex(13177);
   } else {
-    tmp12Result = jsx(tmp3(13165).MemoedVoicePanelDismissChatButton, {});
+    tmp12Result = jsx(tmp3(13179).MemoedVoicePanelDismissChatButton, {});
   }
   obj5.children = tmp12Result;
   return <View style={null}>{null}</View>;

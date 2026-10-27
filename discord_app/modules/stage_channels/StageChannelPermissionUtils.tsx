@@ -1,21 +1,21 @@
-// === Module 6638: StageChannelPermissionUtils ===
+// === Module 6639: StageChannelPermissionUtils ===
 
-// Module 6638 (StageChannelPermissionUtils)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 4831 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4908 */;
-import LurkingStore from "LurkingStore" /* 4904 */;
+// Module 6639 (StageChannelPermissionUtils)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 4832 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4909 */;
+import LurkingStore from "LurkingStore" /* 4905 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import StageInstanceStore from "StageInstanceStore" /* 4828 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import StageInstanceStore from "StageInstanceStore" /* 4829 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const isGuildOwner = fn(4841).isGuildOwner;
-const Constants = fn(1087);
+const isGuildOwner = fn(4842).isGuildOwner;
+const Constants = fn(1084);
 ({ GuildFeatures: c10, Permissions: closure_11 } = Constants);
 fn(558);
 let ReactCompilerGating = fn(558);

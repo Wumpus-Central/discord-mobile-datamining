@@ -3,7 +3,7 @@
 // Module 8823 (ICYMIStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1104 */;
+import DurationsDefault from "Durations" /* 1101 */;
 import utils from "utils" /* 8617 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8829 */;
 import ICYMITypes from "ICYMITypes" /* 8836 */;
@@ -11,17 +11,17 @@ import isItemUnreadInChannel from "isItemUnreadInChannel" /* 8838 */;
 import ICYMIUtils from "ICYMIUtils" /* 8840 */;
 import _slicedToArray from "module_32" /* 32 */;
 import ContentInventoryStore from "ContentInventoryStore" /* 8824 */;
-import ExperimentStore from "ExperimentStore" /* 5190 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6784 */;
+import ExperimentStore from "ExperimentStore" /* 5191 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6785 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 import GuildAffinitiesStore from "GuildAffinitiesStore" /* 8833 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import MessageStore from "MessageStore" /* 6010 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import ReadStateStore from "ReadStateStore" /* 6771 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import MessageStore from "MessageStore" /* 6011 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import ReadStateStore from "ReadStateStore" /* 6772 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
 import ICYMIFiltersStore from "ICYMIFiltersStore" /* 8835 */;
 import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8837 */;
 
@@ -590,10 +590,10 @@ function handleAck(channelId) {
   }
   arr8 = getNewUnreadItems(_slicedToArray(items6, 2)[0], channelId);
 }
-let GuildScheduledEventStore = fn(6784);
+let GuildScheduledEventStore = fn(6785);
 ({ eventScheduledToStartWithin: metroRequire, isGuildEventEnded: closure_7, isGuildScheduledEventActive: closure_8 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes: closure_21, GuildFeatures: closure_22, Permissions: closure_23 } = Constants);
 const ContentInventoryFeedKey = fn(8839).ContentInventoryFeedKey;
 const DAY = DurationsDefault.Millis.DAY;

@@ -1,13 +1,13 @@
-// === Module 14648: useCheckoutPlanPriceString ===
+// === Module 14684: useCheckoutPlanPriceString ===
 
-// Module 14648 (useCheckoutPlanPriceString)
+// Module 14684 (useCheckoutPlanPriceString)
 import c from "c" /* 576 */;
 import noop from "module_19" /* 19 */;
 
-const PlatformUtils = obj(1384);
-const PremiumBundledPlansUtils = obj(7518);
+const PlatformUtils = obj(1381);
+const PremiumBundledPlansUtils = obj(7519);
 require = fn;
-const useNativeCheckoutStore = fn(7536).useNativeCheckoutStore;
+const useNativeCheckoutStore = fn(7537).useNativeCheckoutStore;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCheckoutPlan(productId) {
   let obj = require;

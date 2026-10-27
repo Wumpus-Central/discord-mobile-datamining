@@ -1,13 +1,13 @@
-// === Module 14642: PoggermodeStore ===
+// === Module 14678: PoggermodeStore ===
 
-// Module 14642 (PoggermodeStore)
+// Module 14678 (PoggermodeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
-import PoggermodeUtils from "PoggermodeUtils" /* 14643 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
+import PoggermodeUtils from "PoggermodeUtils" /* 14679 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
-import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7751 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
+import PoggermodeSettingsStore from "PoggermodeSettingsStore" /* 7752 */;
 
 require = fn;
 function updateCombo(userId) {
@@ -45,7 +45,7 @@ function updateCombo(userId) {
     decayInterval1 = iter.decayInterval;
   }
   if (decayInterval1 == null) {
-    decayInterval1 = new obj2(4818).Interval();
+    decayInterval1 = new obj2(4819).Interval();
   }
   obj2.decayInterval = decayInterval1;
   const result = secondaryIndexMap.set("" + userId.userId + "-" + userId.channelId, obj2);
@@ -82,18 +82,18 @@ function updateCombo(userId) {
     }
   }
 }
-const PoggermodeConstants = fn(7752);
+const PoggermodeConstants = fn(7753);
 ({ ShakeLevel: hasOwnProperty, ShakeLocation: metroRequire } = PoggermodeConstants);
-const ComponentActions = fn(1087).ComponentActions;
+const ComponentActions = fn(1084).ComponentActions;
 const set = new Set();
-const secondaryIndexMap = new fn(4898).SecondaryIndexMap(function indexedBy(arg0) {
+const secondaryIndexMap = new fn(4899).SecondaryIndexMap(function indexedBy(arg0) {
   const items = [, ];
   ({ userId: arr[0], channelId: arr[1] } = arg0);
   return items;
 }, function sortBy(channelId) {
   return "" + channelId.channelId + "-" + channelId.userId;
 });
-const secondaryIndexMap1 = new fn(4898).SecondaryIndexMap(function indexedBy(combo) {
+const secondaryIndexMap1 = new fn(4899).SecondaryIndexMap(function indexedBy(combo) {
   const items = [, , ];
   ({ messageId: arr[0], channelId: arr[1] } = combo);
   items[2] = combo.combo.userId;

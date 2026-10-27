@@ -1,18 +1,18 @@
-// === Module 17149: UserSettingsDesignSystemTabs ===
+// === Module 17190: UserSettingsDesignSystemTabs ===
 
-// Module 17149 (UserSettingsDesignSystemTabs)
+// Module 17190 (UserSettingsDesignSystemTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ColorUtils from "ColorUtils" /* 4968 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import useToken from "useToken" /* 5252 */;
-import Stack_Stack from "Stack/Stack" /* 5977 */;
-import TableSwitchRow from "TableSwitchRow" /* 7295 */;
+import ColorUtils from "ColorUtils" /* 4969 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import useToken from "useToken" /* 5253 */;
+import Stack_Stack from "Stack/Stack" /* 5978 */;
+import TableSwitchRow from "TableSwitchRow" /* 7297 */;
 import SegmentedControlState from "SegmentedControlState" /* 8901 */;
-import SegmentedControlPages from "SegmentedControlPages" /* 11148 */;
-import Tabs_Tabs from "Tabs/Tabs" /* 12204 */;
-import TabsGradientDefault from "TabsGradient" /* 13705 */;
+import SegmentedControlPages from "SegmentedControlPages" /* 11151 */;
+import Tabs_Tabs from "Tabs/Tabs" /* 12222 */;
+import TabsGradientDefault from "TabsGradient" /* 13719 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: closure_7, jsx: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { margin: 16, flex: 1, alignItems: "center" }, item: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderWidth: 2, borderColor: nativeDefault.colors.BORDER_STRONG, flex: 1, alignItems: "center", justifyContent: "center", height: 400 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

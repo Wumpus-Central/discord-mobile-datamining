@@ -1,19 +1,19 @@
-// === Module 15911: usePremiumTryItOutPresetShuffle ===
+// === Module 15949: usePremiumTryItOutPresetShuffle ===
 
-// Module 15911 (usePremiumTryItOutPresetShuffle)
-import util from "util" /* 1128 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import shared from "shared" /* 4978 */;
-import useThemeDefault from "useTheme" /* 5205 */;
-import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7086 */;
+// Module 15949 (usePremiumTryItOutPresetShuffle)
+import util from "util" /* 1125 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import shared from "shared" /* 4979 */;
+import useThemeDefault from "useTheme" /* 5206 */;
+import ProfilePendingImageTypes from "ProfilePendingImageTypes" /* 7088 */;
 import UserProfileActionCreators from "UserProfileActionCreators" /* 8656 */;
-import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 15840 */;
-import TryItOutPresets from "TryItOutPresets" /* 15912 */;
+import ProfilePendingImageUtils from "ProfilePendingImageUtils" /* 15878 */;
+import TryItOutPresets from "TryItOutPresets" /* 15950 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8649 */;
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/usePremiumTryItOutPresetShuffle.tsx");
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
   }
   return I;
 }) : (function usePremiumTryItOutPresetShuffle() {
-  const tmp = callback(5205)();
+  const tmp = callback(5206)();
   const isThemeLightResult = shared.isThemeLight(tmp);
   const require = isThemeLightResult;
   const items = [isThemeLightResult];

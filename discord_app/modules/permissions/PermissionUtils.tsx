@@ -1,9 +1,9 @@
-// === Module 18297: permissions/PermissionUtils ===
+// === Module 18331: permissions/PermissionUtils ===
 
-// Module 18297 (permissions/PermissionUtils)
-import Constants from "Constants" /* 1098 */;
-import util from "util" /* 1128 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
+// Module 18331 (permissions/PermissionUtils)
+import Constants from "Constants" /* 1095 */;
+import util from "util" /* 1125 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
 import size from "module_2" /* 2 */;
 
 function getGuildPermissionSpec(permissionOptions) {

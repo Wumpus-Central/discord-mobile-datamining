@@ -1,21 +1,21 @@
-// === Module 14019: useActivityStatusLabel ===
+// === Module 14033: useActivityStatusLabel ===
 
-// Module 14019 (useActivityStatusLabel)
-import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10636 */;
-import useUserVoiceActivity from "useUserVoiceActivity" /* 10637 */;
-import isGameActivityDefault from "isGameActivity" /* 10644 */;
-import getActivityStatusTextDefault from "getActivityStatusText" /* 10648 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import VoiceStateStore from "VoiceStateStore" /* 5630 */;
+// Module 14033 (useActivityStatusLabel)
+import useDiscoverableApplicationStream from "useDiscoverableApplicationStream" /* 10639 */;
+import useUserVoiceActivity from "useUserVoiceActivity" /* 10640 */;
+import isGameActivityDefault from "isGameActivity" /* 10647 */;
+import getActivityStatusTextDefault from "getActivityStatusText" /* 10651 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6643 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import VoiceStateStore from "VoiceStateStore" /* 5631 */;
 
-const util = v0wJXSh(1128);
-const VoiceActivityStatus = v0wJXSh(10653);
+const util = v0wJXSh(1125);
+const VoiceActivityStatus = v0wJXSh(10656);
 require = fn;
-const ActivityTypes = fn(1087).ActivityTypes;
+const ActivityTypes = fn(1084).ActivityTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activity_status/native/useActivityStatusLabel.tsx");

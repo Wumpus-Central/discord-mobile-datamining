@@ -1,15 +1,15 @@
-// === Module 10577: SocialLayerStorefrontGiftModal ===
+// === Module 10580: SocialLayerStorefrontGiftModal ===
 
-// Module 10577 (SocialLayerStorefrontGiftModal)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10555 */;
-import SocialLayerStorefrontGiftProductDetailsDefault from "SocialLayerStorefrontGiftProductDetails" /* 10579 */;
-import SocialLayerStorefrontGiftPurchaseSectionDefault from "SocialLayerStorefrontGiftPurchaseSection" /* 10580 */;
+// Module 10580 (SocialLayerStorefrontGiftModal)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10558 */;
+import SocialLayerStorefrontGiftProductDetailsDefault from "SocialLayerStorefrontGiftProductDetails" /* 10582 */;
+import SocialLayerStorefrontGiftPurchaseSectionDefault from "SocialLayerStorefrontGiftPurchaseSection" /* 10583 */;
 import noop from "module_19" /* 19 */;
-import SKUStore from "SKUStore" /* 6824 */;
+import SKUStore from "SKUStore" /* 6826 */;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_4, PaymentGateways: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

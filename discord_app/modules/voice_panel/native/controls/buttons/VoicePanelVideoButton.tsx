@@ -1,27 +1,27 @@
-// === Module 18636: VoicePanelVideoButton ===
+// === Module 18672: VoicePanelVideoButton ===
 
-// Module 18636 (VoicePanelVideoButton)
+// Module 18672 (VoicePanelVideoButton)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import CameraRive from "CameraRive" /* 5107 */;
-import useAlertStore from "useAlertStore" /* 5910 */;
-import StreamPermissionUtils from "StreamPermissionUtils" /* 6652 */;
+import util from "util" /* 1125 */;
+import CameraRive from "CameraRive" /* 5108 */;
+import useAlertStore from "useAlertStore" /* 5911 */;
+import StreamPermissionUtils from "StreamPermissionUtils" /* 6653 */;
 import CallsUtils from "CallsUtils" /* 9153 */;
-import VideoIcon from "VideoIcon" /* 11328 */;
-import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 11392 */;
-import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14014 */;
-import VideoSlashIcon2 from "VideoSlashIcon" /* 14332 */;
-import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 18637 */;
+import VideoIcon from "VideoIcon" /* 11331 */;
+import openIgnoreThermalStateAlert from "openIgnoreThermalStateAlert" /* 11395 */;
+import VoicePanelVideoGuardErrorAlert from "VoicePanelVideoGuardErrorAlert" /* 14028 */;
+import VideoSlashIcon2 from "VideoSlashIcon" /* 14368 */;
+import VoicePanelNoVideoPermissionsAlert from "VoicePanelNoVideoPermissionsAlert" /* 18673 */;
 import noop from "module_19" /* 19 */;
-import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11372 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import ChannelCallLifecycleStore from "ChannelCallLifecycleStore" /* 11375 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 require = fn;
 const View = fn(17).View;
-const Features = fn(5718).Features;
+const Features = fn(5719).Features;
 const jsx = fn(21).jsx;
 fn(558);
 const ReactCompilerGating = fn(558);

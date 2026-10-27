@@ -1,26 +1,26 @@
-// === Module 18190: AutocompleteScreen ===
+// === Module 18224: AutocompleteScreen ===
 
-// Module 18190 (AutocompleteScreen)
-import UserUtilsDefault from "UserUtils" /* 5025 */;
-import useChannelName from "useChannelName" /* 5604 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13225 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13246 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13250 */;
-import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 18192 */;
+// Module 18224 (AutocompleteScreen)
+import UserUtilsDefault from "UserUtils" /* 5026 */;
+import useChannelName from "useChannelName" /* 5605 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13239 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13260 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13264 */;
+import AutocompleteScreenUtils from "AutocompleteScreenUtils" /* 18226 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
-import SearchAutocompleteStore from "SearchAutocompleteStore" /* 18191 */;
-import SearchQueryStore from "SearchQueryStore" /* 13239 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
+import SearchAutocompleteStore from "SearchAutocompleteStore" /* 18225 */;
+import SearchQueryStore from "SearchQueryStore" /* 13253 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const SearchConstants = fn(9714);
+const SearchConstants = fn(9716);
 ({ SearchListItemTypes: c10, SearchQueryTagTypes: closure_11, USER_ESTIMATED_ITEM_SIZE: closure_12 } = SearchConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ SearchPopoutModes: map1, SearchTokenTypes: closure_14 } = Constants);
 const jsx = fn(21).jsx;
 let closure_16 = [];
@@ -88,7 +88,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp16 = cResult[8];
   }
   const tmpResult5 = searchContext(504);
-  const fullscreenPlaceholderCount = searchContext(18095).useFullscreenPlaceholderCount(tmp16);
+  const fullscreenPlaceholderCount = searchContext(18129).useFullscreenPlaceholderCount(tmp16);
   if (cResult[9] !== searchContext) {
     class P {
       constructor() {
@@ -671,10 +671,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return;
             }
           }
-          const tmpResult7 = tmp(18192);
+          const tmpResult7 = tmp(18226);
           const _Set = Set;
-          const set = new Set(tmp(18192).getSearchQueryUserIds(searchContext));
-          set1 = new Set(tmp(18192).getSearchQueryChannelIds(searchContext));
+          const set = new Set(tmp(18226).getSearchQueryUserIds(searchContext));
+          set1 = new Set(tmp(18226).getSearchQueryChannelIds(searchContext));
           maybeAddUserItem = function maybeAddUserItem(arg0, arg1) {
 
           };
@@ -879,7 +879,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               }
             }
           }
-          const tmpResult8 = tmp(18192);
+          const tmpResult8 = tmp(18226);
         }
         cResult[26] = stateFromStores;
         cResult[27] = tmp23;
@@ -986,7 +986,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[11] = searchContext;
   cResult[12] = P;
   cResult[13] = Q;
-  const tmpResult6 = searchContext(18095);
+  const tmpResult6 = searchContext(18129);
 }) : (function AutocompleteScreen(searchContext) {
   searchContext = searchContext.searchContext;
   first = undefined;

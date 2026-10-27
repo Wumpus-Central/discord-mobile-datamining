@@ -1,32 +1,32 @@
-// === Module 11084: TieredTenureBadgeActionSheet ===
+// === Module 11087: TieredTenureBadgeActionSheet ===
 
-// Module 11084 (TieredTenureBadgeActionSheet)
+// Module 11087 (TieredTenureBadgeActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import openUserSettings from "openUserSettings" /* 7490 */;
-import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7712 */;
+import util from "util" /* 1125 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import openUserSettings from "openUserSettings" /* 7491 */;
+import TieredTenureBadgeUtils from "TieredTenureBadgeUtils" /* 7713 */;
 import showUserProfileActionSheet from "showUserProfileActionSheet" /* 8668 */;
-import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11085 */;
-import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 11110 */;
+import useMobileTenureBadgeImages from "useMobileTenureBadgeImages" /* 11088 */;
+import useTenureBadgeRequirementString from "useTenureBadgeRequirementString" /* 11113 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const PremiumConstants = fn(1394);
+const PremiumConstants = fn(1391);
 ({ PremiumTypes: metroRequire, TieredTenureBadge: closure_7 } = PremiumConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticsPages: closure_8, UserSettingsSections: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const TIERED_TENURE_BADGE_ACTION_SHEET = "TIERED_TENURE_BADGE_ACTION_SHEET";
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { headerContainer: { paddingHorizontal: 24, alignItems: "center" }, title: { marginTop: 8, paddingHorizontal: 12, textAlign: "center" }, subtitle: { marginTop: 8, textAlign: "center" }, container: { flexDirection: "row", flexWrap: "wrap", justifyContent: "center", paddingHorizontal: 24, marginTop: 16 }, rowContainer: { flexDirection: "row", width: "100%", height: 160, gap: 8, justifyContent: "center", alignItems: "center", marginTop: 24 }, rowContainerWithUsersBadge: { height: 186 }, badgeContainer: { minWidth: 110, height: "100%", paddingTop: 16, alignItems: "center", paddingHorizontal: 8 }, usersBadgeContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, borderWidth: 1.2, borderColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, borderRadius: nativeDefault.radii.sm }, badgeName: { marginTop: 8 }, badgeRequirement: { marginTop: 4 }, badgePremiumSince: { width: 90, marginTop: 4, textAlign: "center" }, footer: { marginHorizontal: 24 } };
 let closure_13 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

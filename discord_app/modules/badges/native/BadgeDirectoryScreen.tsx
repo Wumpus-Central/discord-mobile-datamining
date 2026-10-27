@@ -1,19 +1,19 @@
-// === Module 11123: BadgeDirectoryScreen ===
+// === Module 11126: BadgeDirectoryScreen ===
 
-// Module 11123 (BadgeDirectoryScreen)
+// Module 11126 (BadgeDirectoryScreen)
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6924 */;
-import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11122 */;
-import BadgeDirectoryViewDefault from "BadgeDirectoryView" /* 11124 */;
+import NavigatorHeader from "NavigatorHeader" /* 6926 */;
+import openBadgeDirectoryScreen from "openBadgeDirectoryScreen" /* 11125 */;
+import BadgeDirectoryViewDefault from "BadgeDirectoryView" /* 11127 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 let c6 = "badge-directory";
-const createStyles = fn(4971);
-let obj2 = { sheetHeader: { height: fn(5268).NAV_BAR_HEIGHT }, view: null };
-let obj3 = { height: fn(5268).NAV_BAR_HEIGHT };
+const createStyles = fn(4972);
+let obj2 = { sheetHeader: { height: fn(5269).NAV_BAR_HEIGHT }, view: null };
+let obj3 = { height: fn(5269).NAV_BAR_HEIGHT };
 obj2.view = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -83,10 +83,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
     if (cResult[6] === stateFromStores1) {
       const _Symbol = Symbol;
       if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-        const headerCloseButton = Navigator(6924).getHeaderCloseButton(Navigator(11122).closeBadgeDirectoryScreen);
+        const headerCloseButton = Navigator(6926).getHeaderCloseButton(Navigator(11125).closeBadgeDirectoryScreen);
         cResult[8] = headerCloseButton;
         let tmp15 = headerCloseButton;
-        const NavigatorResult2 = Navigator(6924);
+        const NavigatorResult2 = Navigator(6926);
       } else {
         tmp15 = cResult[8];
       }
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
               if (cResult[14] === view.sheetHeader) {
               }
             }
-            Navigator = Navigator(7095).Navigator;
+            Navigator = Navigator(7097).Navigator;
             const obj2 = { screens: sheetHeader, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null };
             ({ sheetHeader: obj9.headerStyle, view: obj9.viewStyle } = view);
             tmp = <Navigator screens={sheetHeader} initialRouteName={initialRouteName} headerStatusBarHeight={0} headerStyle={null} viewStyle={null} />;
@@ -118,13 +118,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
               return tmp18;
             }
             const obj3 = { screens: sheetHeader, initialRouteName, viewStyle: view.view };
-            const tmp21 = jsx(Navigator(11150).Modal, { screens: sheetHeader, initialRouteName, viewStyle: view.view });
+            const tmp21 = jsx(Navigator(11153).Modal, { screens: sheetHeader, initialRouteName, viewStyle: view.view });
             cResult[17] = sheetHeader;
             cResult[18] = view.view;
             cResult[19] = tmp21;
             tmp18 = tmp21;
           }
-          NavigatorResult3 = Navigator(11122);
+          NavigatorResult3 = Navigator(11125);
         }
       }
       const obj4 = {};
@@ -144,14 +144,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
     }
   }
   if (!(null != targetUserId && targetUserId !== stateFromStores)) {
-    const intl = Navigator(1128).intl;
-    let stringResult = intl.string(Navigator(1128).t.UqnlQF);
+    const intl = Navigator(1125).intl;
+    let stringResult = intl.string(Navigator(1125).t.UqnlQF);
     cResult[5] = tmp11;
     cResult[6] = stateFromStores1;
     cResult[7] = stringResult;
   }
-  const intl2 = Navigator(1128).intl;
-  stringResult = intl2.formatToPlainString(Navigator(1128).t.EIcwoe, { username: stateFromStores1 });
+  const intl2 = Navigator(1125).intl;
+  stringResult = intl2.formatToPlainString(Navigator(1125).t.EIcwoe, { username: stateFromStores1 });
   const NavigatorResult1 = Navigator(504);
 }) : (function BadgeDirectoryScreen(targetUserId) {
   targetUserId = targetUserId.targetUserId;
@@ -188,9 +188,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
   if (null != targetUserId) {
     if (targetUserId !== stateFromStores) {
       if (null != stateFromStores1) {
-        const intl2 = tmp2(1128).intl;
+        const intl2 = tmp2(1125).intl;
         const obj3 = { username: stateFromStores1 };
-        let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1128).t.EIcwoe, obj3);
+        let formatToPlainStringResult = intl2.formatToPlainString(tmp2(1125).t.EIcwoe, obj3);
       }
       dependencyMap = formatToPlainStringResult;
       const items2 = [formatToPlainStringResult, targetUserId, stateFromStores1];
@@ -209,15 +209,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BadgeDir
       if (tmp2Result.isBadgeDirectoryIOSPageSheet()) {
         const obj4 = { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null };
         ({ sheetHeader: obj6.headerStyle, view: obj6.viewStyle } = tmp);
-        let tmp9Result = jsx(tmp2(7095).Navigator, { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null });
+        let tmp9Result = jsx(tmp2(7097).Navigator, { screens: memo, initialRouteName, headerStatusBarHeight: 0, headerStyle: null, viewStyle: null });
       } else {
         const obj5 = { screens: memo, initialRouteName, viewStyle: tmp.view };
-        tmp9Result = jsx(tmp2(11150).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
+        tmp9Result = jsx(tmp2(11153).Modal, { screens: memo, initialRouteName, viewStyle: tmp.view });
       }
       return tmp9Result;
     }
   }
-  const intl = tmp2(1128).intl;
-  formatToPlainStringResult = intl.string(tmp2(1128).t.UqnlQF);
+  const intl = tmp2(1125).intl;
+  formatToPlainStringResult = intl.string(tmp2(1125).t.UqnlQF);
   let obj2 = targetUserId(504);
 });

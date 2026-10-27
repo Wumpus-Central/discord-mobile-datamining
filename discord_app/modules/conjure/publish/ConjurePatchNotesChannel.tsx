@@ -1,9 +1,9 @@
-// === Module 12368: ConjurePatchNotesChannel ===
+// === Module 12374: ConjurePatchNotesChannel ===
 
-// Module 12368 (ConjurePatchNotesChannel)
+// Module 12374 (ConjurePatchNotesChannel)
 import Storage3 from "Storage" /* 510 */;
-import util from "util" /* 1128 */;
-import _modDef3830 from "module_3830" /* 3830 */;
+import util from "util" /* 1125 */;
+import _modDef3831 from "module_3831" /* 3831 */;
 import size from "module_2" /* 2 */;
 
 const ConjurePatchNotesLastChannelsByApp = "ConjurePatchNotesLastChannelsByApp";
@@ -13,7 +13,7 @@ let result = size.fileFinishedImporting("modules/conjure/publish/ConjurePatchNot
 export const PLAY_LINE_CHANNEL_PLACEHOLDER = combined;
 export const formatPlaySuffix = function formatPlaySuffix(PLAY_LINE_CHANNEL_PLACEHOLDER) {
   const intl = util.intl;
-  return "\n\n" + intl.formatToPlainString(_modDef3830["2ECgBx"], { channel: PLAY_LINE_CHANNEL_PLACEHOLDER });
+  return "\n\n" + intl.formatToPlainString(_modDef3831["2ECgBx"], { channel: PLAY_LINE_CHANNEL_PLACEHOLDER });
 };
 export const lastPatchNotesChannel = function lastPatchNotesChannel(applicationId) {
   const Storage = Storage3.Storage;

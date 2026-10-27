@@ -1,21 +1,21 @@
-// === Module 17449: useHomeDrawerGesture ===
+// === Module 17490: useHomeDrawerGesture ===
 
-// Module 17449 (useHomeDrawerGesture)
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5150 */;
-import timing from "timing" /* 5206 */;
-import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5208 */;
-import HapticUtils from "HapticUtils" /* 5212 */;
-import HomeDrawerAnimations from "HomeDrawerAnimations" /* 17445 */;
+// Module 17490 (useHomeDrawerGesture)
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5151 */;
+import timing from "timing" /* 5207 */;
+import reanimated_AccessibilityPreferencesSharedValue from "reanimated/AccessibilityPreferencesSharedValue" /* 5209 */;
+import HapticUtils from "HapticUtils" /* 5213 */;
+import HomeDrawerAnimations from "HomeDrawerAnimations" /* 17486 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 17444 */;
-import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 17450 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 17485 */;
+import HomeDrawerSubtitleStore from "HomeDrawerSubtitleStore" /* 17491 */;
 
 require = fn;
-const computeMaxX = fn(17444).computeMaxX;
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const LaunchPadTypes = fn(11205).LaunchPadTypes;
+const computeMaxX = fn(17485).computeMaxX;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const LaunchPadTypes = fn(11208).LaunchPadTypes;
 let c10 = 144;
 let c11 = 0.5;
 let c12 = 400;
@@ -67,17 +67,17 @@ let closure_57 = { code: "function useHomeDrawerGestureTsx39(event_0,manager){co
 let closure_58 = { code: "function useHomeDrawerGestureTsx40(event){const{isPanelTouchActive,dragOffsetX,activationOffsetX,didSettle,didSnapThisGesture,snappedByDrag,hasThrown,flingThrow,withTiming,HOME_DRAWER_FLING_RETURN_TIMING,gestureState,panelX,snapX}=this.__closure;isPanelTouchActive.set(true);dragOffsetX.set(0);activationOffsetX.set(0);didSettle.set(false);didSnapThisGesture.set(false);snappedByDrag.set(false);hasThrown.set(false);flingThrow.set(withTiming(0,HOME_DRAWER_FLING_RETURN_TIMING));gestureState.set({active:false,initialX:event.absoluteX,initialY:event.absoluteY,panelX:panelX.get()+snapX.get()});}" };
 fn(558);
 let obj = { gesture: null, panelStyles: null, gestureState: null, panelX: null, panelTranslateX: null, guildsBarDrawerStyle: null, guildsBarPullX: null };
-let Gesture = fn(5297).Gesture;
+let Gesture = fn(5298).Gesture;
 obj.gesture = Gesture.Pan();
 obj.panelStyles = {};
-let ReanimatedHelperTypes = fn(7169);
+let ReanimatedHelperTypes = fn(7171);
 obj.gestureState = ReanimatedHelperTypes.createFakeSharedValue({ active: false, initialX: 0, initialY: 0, panelX: 0 });
-ReanimatedHelperTypes = fn(7169);
+ReanimatedHelperTypes = fn(7171);
 obj.panelX = ReanimatedHelperTypes.createFakeSharedValue(0);
-ReanimatedHelperTypes = fn(7169);
+ReanimatedHelperTypes = fn(7171);
 obj.panelTranslateX = ReanimatedHelperTypes.createFakeSharedValue(0);
 obj.guildsBarDrawerStyle = {};
-ReanimatedHelperTypes = fn(7169);
+ReanimatedHelperTypes = fn(7171);
 obj.guildsBarPullX = ReanimatedHelperTypes.createFakeSharedValue(0);
 const context = noop.createContext({ homeDrawerState: obj, enableHome: false, landOnHome: false });
 let ReactCompilerGating = fn(558);
@@ -92,7 +92,7 @@ let result3 = size.fileFinishedImporting("modules/home_drawer/native/useHomeDraw
 export const INITIAL_OPEN_WIDTH = 144;
 export const HOME_DRAWER_FLING_PHYSICS = { mass: 0.4, damping: 100, stiffness: 250 };
 export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (function useHomeGesture() {
-  const cResult = panelX(isOpenTarget[7]).c(138);
+  const cResult = panelX(isOpenTarget[7]).c(134);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { location: "gesture" };
     cResult[0] = obj2;
@@ -231,935 +231,167 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
       }
     }
   }
-  if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    class J {
-      constructor(arg0) {
-        obj = snapX(isOpenTarget[11]);
-        obj1 = { action: arg0 };
-        trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
-        return;
-      }
-    }
-    cResult[2] = tmp23;
-  } else {
-    class J {
-      constructor(arg0) {
-        obj = snapX(isOpenTarget[11]);
-        obj1 = { action: arg0 };
-        trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
-        return;
-      }
-    }
-  }
-  const obj16 = updateMaxX;
-  let obj4 = { gestureState, didSnapThisGesture: sharedValue3, snapX, withTiming: panelX(isOpenTarget[12]).withTiming, SNAP_OPEN_DISTANCE: sharedValue4, HOME_DRAWER_SNAP_TIMING: panelX(isOpenTarget[13]).HOME_DRAWER_SNAP_TIMING, runOnJS: panelX(isOpenTarget[9]).runOnJS, triggerHapticFeedback: panelX(isOpenTarget[14]).triggerHapticFeedback, HapticFeedbackTypes: panelX(isOpenTarget[14]).HapticFeedbackTypes, flingThrow: sharedValue5, HOME_DRAWER_UNSNAP_TIMING: panelX(isOpenTarget[13]).HOME_DRAWER_UNSNAP_TIMING, hasThrown: sharedValue7, snappedByDrag: sharedValue6 };
-  [r10152, closure_23] = gestureState(updateMaxX.useState(tmp23), 2);
-  if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    class He {
-      constructor() {
-        obj = panelX(isOpenTarget[19]);
-        rootNavigationRef = obj.getRootNavigationRef();
-        closure_0 = rootNavigationRef;
-        if (null != rootNavigationRef) {
-          state = undefined;
-          if (rootNavigationRef != null) {
-            state = rootNavigationRef.getState();
-          }
-          tmp2 = null != state;
-          if (tmp2) {
-            tmp3 = state.routes[state.index];
-            name = undefined;
-            if (tmp3 != null) {
-              name = tmp3.name;
-            }
-            str = "main";
-            tmp2 = "main" === name;
-          }
-          closure_0 = tmp2;
-          tmp5 = closure_23;
-          handleRootStateChange = function handleRootStateChange() {
-            state = undefined;
-            if (state != null) {
-              state = state.getState();
-            }
-            let tmp2 = null != state;
-            if (tmp2) {
-              let name;
-              if (state.routes[state.index] != null) {
-                name = tmp3.name;
-              }
-              tmp2 = "main" === name;
-            }
-            state = tmp2;
-            closure_2_23(() => { ... });
-          };
-          tmp6 = closure_23((isOnMain) => {
-            let tmp = isOnMain;
-            if (isOnMain.isOnMain !== closure_0) {
-              const obj = { isOnMain: tmp2 };
-              tmp = obj;
-            }
-            return tmp;
-          });
-          str2 = "state";
-          return rootNavigationRef.addListener("state", handleRootStateChange);
-        } else {
-          return;
-        }
-      }
-    }
-    let items = [];
-    cResult[3] = He;
-    cResult[4] = items;
-    let tmp26 = items;
-  } else {
-    class He {
-      constructor() {
-        obj = panelX(isOpenTarget[19]);
-        rootNavigationRef = obj.getRootNavigationRef();
-        closure_0 = rootNavigationRef;
-        if (null != rootNavigationRef) {
-          state = undefined;
-          if (rootNavigationRef != null) {
-            state = rootNavigationRef.getState();
-          }
-          tmp2 = null != state;
-          if (tmp2) {
-            tmp3 = state.routes[state.index];
-            name = undefined;
-            if (tmp3 != null) {
-              name = tmp3.name;
-            }
-            str = "main";
-            tmp2 = "main" === name;
-          }
-          closure_0 = tmp2;
-          tmp5 = closure_23;
-          handleRootStateChange = function handleRootStateChange() {
-            state = undefined;
-            if (state != null) {
-              state = state.getState();
-            }
-            let tmp2 = null != state;
-            if (tmp2) {
-              let name;
-              if (state.routes[state.index] != null) {
-                name = tmp3.name;
-              }
-              tmp2 = "main" === name;
-            }
-            state = tmp2;
-            closure_2_23(() => { ... });
-          };
-          tmp6 = closure_23((isOnMain) => {
-            let tmp = isOnMain;
-            if (isOnMain.isOnMain !== closure_0) {
-              const obj = { isOnMain: tmp2 };
-              tmp = obj;
-            }
-            return tmp;
-          });
-          str2 = "state";
-          return rootNavigationRef.addListener("state", handleRootStateChange);
-        } else {
-          return;
-        }
-      }
-    }
-    tmp26 = cResult[4];
-  }
-  const effect = obj16.useEffect(He, tmp26);
   panelX(isOpenTarget[10]);
   if (enableHome) {
-    class He {
-      constructor() {
-        obj = panelX(isOpenTarget[19]);
-        rootNavigationRef = obj.getRootNavigationRef();
-        closure_0 = rootNavigationRef;
-        if (null != rootNavigationRef) {
-          state = undefined;
-          if (rootNavigationRef != null) {
-            state = rootNavigationRef.getState();
-          }
-          tmp2 = null != state;
-          if (tmp2) {
-            tmp3 = state.routes[state.index];
-            name = undefined;
-            if (tmp3 != null) {
-              name = tmp3.name;
-            }
-            str = "main";
-            tmp2 = "main" === name;
-          }
-          closure_0 = tmp2;
-          tmp5 = closure_23;
-          handleRootStateChange = function handleRootStateChange() {
-            state = undefined;
-            if (state != null) {
-              state = state.getState();
-            }
-            let tmp2 = null != state;
-            if (tmp2) {
-              let name;
-              if (state.routes[state.index] != null) {
-                name = tmp3.name;
-              }
-              tmp2 = "main" === name;
-            }
-            state = tmp2;
-            closure_2_23(() => { ... });
-          };
-          tmp6 = closure_23((isOnMain) => {
-            let tmp = isOnMain;
-            if (isOnMain.isOnMain !== closure_0) {
-              const obj = { isOnMain: tmp2 };
-              tmp = obj;
-            }
-            return tmp;
-          });
-          str2 = "state";
-          return rootNavigationRef.addListener("state", handleRootStateChange);
-        } else {
-          return;
-        }
+    class J {
+      constructor(arg0) {
+        obj = snapX(isOpenTarget[11]);
+        obj1 = { action: arg0 };
+        trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
+        return;
       }
     }
   }
-  const tmp24 = gestureState(updateMaxX.useState(tmp23), 2);
+  let obj4 = { gestureState, didSnapThisGesture: sharedValue3, snapX, withTiming: panelX(isOpenTarget[12]).withTiming, SNAP_OPEN_DISTANCE: sharedValue4, HOME_DRAWER_SNAP_TIMING: panelX(isOpenTarget[13]).HOME_DRAWER_SNAP_TIMING, runOnJS: panelX(isOpenTarget[9]).runOnJS, triggerHapticFeedback: panelX(isOpenTarget[14]).triggerHapticFeedback, HapticFeedbackTypes: panelX(isOpenTarget[14]).HapticFeedbackTypes, flingThrow: sharedValue5, HOME_DRAWER_UNSNAP_TIMING: panelX(isOpenTarget[13]).HOME_DRAWER_UNSNAP_TIMING, hasThrown: sharedValue7, snappedByDrag: sharedValue6 };
   const sharedValue8 = panelX(isOpenTarget[9]).useSharedValue(0);
   const tmpResult26 = panelX(isOpenTarget[9]);
   if (enableHome) {
-    class He {
-      constructor() {
-        obj = panelX(isOpenTarget[19]);
-        rootNavigationRef = obj.getRootNavigationRef();
-        closure_0 = rootNavigationRef;
-        if (null != rootNavigationRef) {
-          state = undefined;
-          if (rootNavigationRef != null) {
-            state = rootNavigationRef.getState();
-          }
-          tmp2 = null != state;
-          if (tmp2) {
-            tmp3 = state.routes[state.index];
-            name = undefined;
-            if (tmp3 != null) {
-              name = tmp3.name;
-            }
-            str = "main";
-            tmp2 = "main" === name;
-          }
-          closure_0 = tmp2;
-          tmp5 = closure_23;
-          handleRootStateChange = function handleRootStateChange() {
-            state = undefined;
-            if (state != null) {
-              state = state.getState();
-            }
-            let tmp2 = null != state;
-            if (tmp2) {
-              let name;
-              if (state.routes[state.index] != null) {
-                name = tmp3.name;
-              }
-              tmp2 = "main" === name;
-            }
-            state = tmp2;
-            closure_2_23(() => { ... });
-          };
-          tmp6 = closure_23((isOnMain) => {
-            let tmp = isOnMain;
-            if (isOnMain.isOnMain !== closure_0) {
-              const obj = { isOnMain: tmp2 };
-              tmp = obj;
-            }
-            return tmp;
-          });
-          str2 = "state";
-          return rootNavigationRef.addListener("state", handleRootStateChange);
-        } else {
-          return;
-        }
+    class J {
+      constructor(arg0) {
+        obj = snapX(isOpenTarget[11]);
+        obj1 = { action: arg0 };
+        trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
+        return;
       }
     }
   }
-  const homeDrawerPeekHint = panelX(isOpenTarget[20]).useHomeDrawerPeekHint(enableHome, sharedValue8);
-  if (cResult[5] !== navigation) {
-    class He {
-      constructor() {
-        obj = panelX(isOpenTarget[19]);
-        rootNavigationRef = obj.getRootNavigationRef();
-        closure_0 = rootNavigationRef;
-        if (null != rootNavigationRef) {
-          state = undefined;
-          if (rootNavigationRef != null) {
-            state = rootNavigationRef.getState();
-          }
-          tmp2 = null != state;
-          if (tmp2) {
-            tmp3 = state.routes[state.index];
-            name = undefined;
-            if (tmp3 != null) {
-              name = tmp3.name;
-            }
-            str = "main";
-            tmp2 = "main" === name;
-          }
-          closure_0 = tmp2;
-          tmp5 = closure_23;
-          handleRootStateChange = function handleRootStateChange() {
-            state = undefined;
-            if (state != null) {
-              state = state.getState();
-            }
-            let tmp2 = null != state;
-            if (tmp2) {
-              let name;
-              if (state.routes[state.index] != null) {
-                name = tmp3.name;
-              }
-              tmp2 = "main" === name;
-            }
-            state = tmp2;
-            closure_2_23(() => { ... });
-          };
-          tmp6 = closure_23((isOnMain) => {
-            let tmp = isOnMain;
-            if (isOnMain.isOnMain !== closure_0) {
-              const obj = { isOnMain: tmp2 };
-              tmp = obj;
-            }
-            return tmp;
-          });
-          str2 = "state";
-          return rootNavigationRef.addListener("state", handleRootStateChange);
-        } else {
+  const homeDrawerPeekHint = panelX(isOpenTarget[19]).useHomeDrawerPeekHint(enableHome, sharedValue8);
+  if (cResult[2] !== navigation) {
+    class J {
+      constructor(arg0) {
+        obj = snapX(isOpenTarget[11]);
+        obj1 = { action: arg0 };
+        trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
+        return;
+      }
+    }
+    let tmp28;
+    if (tmp26 != null) {
+      class J {
+        constructor(arg0) {
+          obj = snapX(isOpenTarget[11]);
+          obj1 = { action: arg0 };
+          trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
           return;
         }
       }
-    }
-    let tmp34;
-    if (tmp32 != null) {
-      class He {
-        constructor() {
-          obj = panelX(isOpenTarget[19]);
-          rootNavigationRef = obj.getRootNavigationRef();
-          closure_0 = rootNavigationRef;
-          if (null != rootNavigationRef) {
-            state = undefined;
-            if (rootNavigationRef != null) {
-              state = rootNavigationRef.getState();
-            }
-            tmp2 = null != state;
-            if (tmp2) {
-              tmp3 = state.routes[state.index];
-              name = undefined;
-              if (tmp3 != null) {
-                name = tmp3.name;
-              }
-              str = "main";
-              tmp2 = "main" === name;
-            }
-            closure_0 = tmp2;
-            tmp5 = closure_23;
-            handleRootStateChange = function handleRootStateChange() {
-              state = undefined;
-              if (state != null) {
-                state = state.getState();
-              }
-              let tmp2 = null != state;
-              if (tmp2) {
-                let name;
-                if (state.routes[state.index] != null) {
-                  name = tmp3.name;
-                }
-                tmp2 = "main" === name;
-              }
-              state = tmp2;
-              closure_2_23(() => { ... });
-            };
-            tmp6 = closure_23((isOnMain) => {
-              let tmp = isOnMain;
-              if (isOnMain.isOnMain !== closure_0) {
-                const obj = { isOnMain: tmp2 };
-                tmp = obj;
-              }
-              return tmp;
-            });
-            str2 = "state";
-            return rootNavigationRef.addListener("state", handleRootStateChange);
-          } else {
+      if (tmp29 != null) {
+        class J {
+          constructor(arg0) {
+            obj = snapX(isOpenTarget[11]);
+            obj1 = { action: arg0 };
+            trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
             return;
           }
         }
-      }
-      if (tmp35 != null) {
-        class He {
-          constructor() {
-            obj = panelX(isOpenTarget[19]);
-            rootNavigationRef = obj.getRootNavigationRef();
-            closure_0 = rootNavigationRef;
-            if (null != rootNavigationRef) {
-              state = undefined;
-              if (rootNavigationRef != null) {
-                state = rootNavigationRef.getState();
-              }
-              tmp2 = null != state;
-              if (tmp2) {
-                tmp3 = state.routes[state.index];
-                name = undefined;
-                if (tmp3 != null) {
-                  name = tmp3.name;
-                }
-                str = "main";
-                tmp2 = "main" === name;
-              }
-              closure_0 = tmp2;
-              tmp5 = closure_23;
-              handleRootStateChange = function handleRootStateChange() {
-                state = undefined;
-                if (state != null) {
-                  state = state.getState();
-                }
-                let tmp2 = null != state;
-                if (tmp2) {
-                  let name;
-                  if (state.routes[state.index] != null) {
-                    name = tmp3.name;
-                  }
-                  tmp2 = "main" === name;
-                }
-                state = tmp2;
-                closure_2_23(() => { ... });
-              };
-              tmp6 = closure_23((isOnMain) => {
-                let tmp = isOnMain;
-                if (isOnMain.isOnMain !== closure_0) {
-                  const obj = { isOnMain: tmp2 };
-                  tmp = obj;
-                }
-                return tmp;
-              });
-              str2 = "state";
-              return rootNavigationRef.addListener("state", handleRootStateChange);
-            } else {
+        if (tmp26 != null) {
+          class J {
+            constructor(arg0) {
+              obj = snapX(isOpenTarget[11]);
+              obj1 = { action: arg0 };
+              trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
               return;
             }
           }
         }
-        if (tmp32 != null) {
-          class He {
-            constructor() {
-              obj = panelX(isOpenTarget[19]);
-              rootNavigationRef = obj.getRootNavigationRef();
-              closure_0 = rootNavigationRef;
-              if (null != rootNavigationRef) {
-                state = undefined;
-                if (rootNavigationRef != null) {
-                  state = rootNavigationRef.getState();
-                }
-                tmp2 = null != state;
-                if (tmp2) {
-                  tmp3 = state.routes[state.index];
-                  name = undefined;
-                  if (tmp3 != null) {
-                    name = tmp3.name;
-                  }
-                  str = "main";
-                  tmp2 = "main" === name;
-                }
-                closure_0 = tmp2;
-                tmp5 = closure_23;
-                handleRootStateChange = function handleRootStateChange() {
-                  state = undefined;
-                  if (state != null) {
-                    state = state.getState();
-                  }
-                  let tmp2 = null != state;
-                  if (tmp2) {
-                    let name;
-                    if (state.routes[state.index] != null) {
-                      name = tmp3.name;
-                    }
-                    tmp2 = "main" === name;
-                  }
-                  state = tmp2;
-                  closure_2_23(() => { ... });
-                };
-                tmp6 = closure_23((isOnMain) => {
-                  let tmp = isOnMain;
-                  if (isOnMain.isOnMain !== closure_0) {
-                    const obj = { isOnMain: tmp2 };
-                    tmp = obj;
-                  }
-                  return tmp;
-                });
-                str2 = "state";
-                return rootNavigationRef.addListener("state", handleRootStateChange);
-              } else {
-                return;
-              }
+        if (tmp30 == null) {
+          class J {
+            constructor(arg0) {
+              obj = snapX(isOpenTarget[11]);
+              obj1 = { action: arg0 };
+              trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
+              return;
             }
           }
         }
-        if (tmp36 == null) {
-          class He {
-            constructor() {
-              obj = panelX(isOpenTarget[19]);
-              rootNavigationRef = obj.getRootNavigationRef();
-              closure_0 = rootNavigationRef;
-              if (null != rootNavigationRef) {
-                state = undefined;
-                if (rootNavigationRef != null) {
-                  state = rootNavigationRef.getState();
-                }
-                tmp2 = null != state;
-                if (tmp2) {
-                  tmp3 = state.routes[state.index];
-                  name = undefined;
-                  if (tmp3 != null) {
-                    name = tmp3.name;
-                  }
-                  str = "main";
-                  tmp2 = "main" === name;
-                }
-                closure_0 = tmp2;
-                tmp5 = closure_23;
-                handleRootStateChange = function handleRootStateChange() {
-                  state = undefined;
-                  if (state != null) {
-                    state = state.getState();
-                  }
-                  let tmp2 = null != state;
-                  if (tmp2) {
-                    let name;
-                    if (state.routes[state.index] != null) {
-                      name = tmp3.name;
-                    }
-                    tmp2 = "main" === name;
-                  }
-                  state = tmp2;
-                  closure_2_23(() => { ... });
-                };
-                tmp6 = closure_23((isOnMain) => {
-                  let tmp = isOnMain;
-                  if (isOnMain.isOnMain !== closure_0) {
-                    const obj = { isOnMain: tmp2 };
-                    tmp = obj;
-                  }
-                  return tmp;
-                });
-                str2 = "state";
-                return rootNavigationRef.addListener("state", handleRootStateChange);
-              } else {
-                return;
-              }
-            }
-          }
-        }
-        tmp34 = tmp35[tmp36];
+        tmp28 = tmp29[tmp30];
       }
     }
-    let coerceGuildsRouteResult = tmp(tmp2[21]).coerceGuildsRoute(tmp34);
-    cResult[5] = navigation;
-    cResult[6] = coerceGuildsRouteResult;
-    const tmp31 = coerceGuildsRouteResult;
-    const tmpResult28 = tmp(tmp2[21]);
+    let coerceGuildsRouteResult = tmp(tmp2[20]).coerceGuildsRoute(tmp28);
+    cResult[2] = navigation;
+    cResult[3] = coerceGuildsRouteResult;
+    const tmp25 = coerceGuildsRouteResult;
+    const tmpResult28 = tmp(tmp2[20]);
   } else {
-    class He {
-      constructor() {
-        obj = panelX(isOpenTarget[19]);
-        rootNavigationRef = obj.getRootNavigationRef();
-        closure_0 = rootNavigationRef;
-        if (null != rootNavigationRef) {
-          state = undefined;
-          if (rootNavigationRef != null) {
-            state = rootNavigationRef.getState();
-          }
-          tmp2 = null != state;
-          if (tmp2) {
-            tmp3 = state.routes[state.index];
-            name = undefined;
-            if (tmp3 != null) {
-              name = tmp3.name;
-            }
-            str = "main";
-            tmp2 = "main" === name;
-          }
-          closure_0 = tmp2;
-          tmp5 = closure_23;
-          handleRootStateChange = function handleRootStateChange() {
-            state = undefined;
-            if (state != null) {
-              state = state.getState();
-            }
-            let tmp2 = null != state;
-            if (tmp2) {
-              let name;
-              if (state.routes[state.index] != null) {
-                name = tmp3.name;
-              }
-              tmp2 = "main" === name;
-            }
-            state = tmp2;
-            closure_2_23(() => { ... });
-          };
-          tmp6 = closure_23((isOnMain) => {
-            let tmp = isOnMain;
-            if (isOnMain.isOnMain !== closure_0) {
-              const obj = { isOnMain: tmp2 };
-              tmp = obj;
-            }
-            return tmp;
-          });
-          str2 = "state";
-          return rootNavigationRef.addListener("state", handleRootStateChange);
-        } else {
-          return;
-        }
+    class J {
+      constructor(arg0) {
+        obj = snapX(isOpenTarget[11]);
+        obj1 = { action: arg0 };
+        trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
+        return;
       }
     }
   }
-  let tmp38 = enableHome;
+  let tmp32 = enableHome;
   if (enableHome) {
-    class He {
-      constructor() {
-        obj = panelX(isOpenTarget[19]);
-        rootNavigationRef = obj.getRootNavigationRef();
-        closure_0 = rootNavigationRef;
-        if (null != rootNavigationRef) {
-          state = undefined;
-          if (rootNavigationRef != null) {
-            state = rootNavigationRef.getState();
-          }
-          tmp2 = null != state;
-          if (tmp2) {
-            tmp3 = state.routes[state.index];
-            name = undefined;
-            if (tmp3 != null) {
-              name = tmp3.name;
-            }
-            str = "main";
-            tmp2 = "main" === name;
-          }
-          closure_0 = tmp2;
-          tmp5 = closure_23;
-          handleRootStateChange = function handleRootStateChange() {
-            state = undefined;
-            if (state != null) {
-              state = state.getState();
-            }
-            let tmp2 = null != state;
-            if (tmp2) {
-              let name;
-              if (state.routes[state.index] != null) {
-                name = tmp3.name;
-              }
-              tmp2 = "main" === name;
-            }
-            state = tmp2;
-            closure_2_23(() => { ... });
-          };
-          tmp6 = closure_23((isOnMain) => {
-            let tmp = isOnMain;
-            if (isOnMain.isOnMain !== closure_0) {
-              const obj = { isOnMain: tmp2 };
-              tmp = obj;
-            }
-            return tmp;
-          });
-          str2 = "state";
-          return rootNavigationRef.addListener("state", handleRootStateChange);
-        } else {
+    class J {
+      constructor(arg0) {
+        obj = snapX(isOpenTarget[11]);
+        obj1 = { action: arg0 };
+        trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
+        return;
+      }
+    }
+    if (tmp25 != null) {
+      class J {
+        constructor(arg0) {
+          obj = snapX(isOpenTarget[11]);
+          obj1 = { action: arg0 };
+          trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
           return;
         }
       }
-    }
-    if (tmp31 != null) {
-      class He {
-        constructor() {
-          obj = panelX(isOpenTarget[19]);
-          rootNavigationRef = obj.getRootNavigationRef();
-          closure_0 = rootNavigationRef;
-          if (null != rootNavigationRef) {
-            state = undefined;
-            if (rootNavigationRef != null) {
-              state = rootNavigationRef.getState();
-            }
-            tmp2 = null != state;
-            if (tmp2) {
-              tmp3 = state.routes[state.index];
-              name = undefined;
-              if (tmp3 != null) {
-                name = tmp3.name;
-              }
-              str = "main";
-              tmp2 = "main" === name;
-            }
-            closure_0 = tmp2;
-            tmp5 = closure_23;
-            handleRootStateChange = function handleRootStateChange() {
-              state = undefined;
-              if (state != null) {
-                state = state.getState();
-              }
-              let tmp2 = null != state;
-              if (tmp2) {
-                let name;
-                if (state.routes[state.index] != null) {
-                  name = tmp3.name;
-                }
-                tmp2 = "main" === name;
-              }
-              state = tmp2;
-              closure_2_23(() => { ... });
-            };
-            tmp6 = closure_23((isOnMain) => {
-              let tmp = isOnMain;
-              if (isOnMain.isOnMain !== closure_0) {
-                const obj = { isOnMain: tmp2 };
-                tmp = obj;
-              }
-              return tmp;
-            });
-            str2 = "state";
-            return rootNavigationRef.addListener("state", handleRootStateChange);
-          } else {
+      if (tmp34 != null) {
+        class J {
+          constructor(arg0) {
+            obj = snapX(isOpenTarget[11]);
+            obj1 = { action: arg0 };
+            trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
             return;
-          }
-        }
-      }
-      if (tmp40 != null) {
-        class He {
-          constructor() {
-            obj = panelX(isOpenTarget[19]);
-            rootNavigationRef = obj.getRootNavigationRef();
-            closure_0 = rootNavigationRef;
-            if (null != rootNavigationRef) {
-              state = undefined;
-              if (rootNavigationRef != null) {
-                state = rootNavigationRef.getState();
-              }
-              tmp2 = null != state;
-              if (tmp2) {
-                tmp3 = state.routes[state.index];
-                name = undefined;
-                if (tmp3 != null) {
-                  name = tmp3.name;
-                }
-                str = "main";
-                tmp2 = "main" === name;
-              }
-              closure_0 = tmp2;
-              tmp5 = closure_23;
-              handleRootStateChange = function handleRootStateChange() {
-                state = undefined;
-                if (state != null) {
-                  state = state.getState();
-                }
-                let tmp2 = null != state;
-                if (tmp2) {
-                  let name;
-                  if (state.routes[state.index] != null) {
-                    name = tmp3.name;
-                  }
-                  tmp2 = "main" === name;
-                }
-                state = tmp2;
-                closure_2_23(() => { ... });
-              };
-              tmp6 = closure_23((isOnMain) => {
-                let tmp = isOnMain;
-                if (isOnMain.isOnMain !== closure_0) {
-                  const obj = { isOnMain: tmp2 };
-                  tmp = obj;
-                }
-                return tmp;
-              });
-              str2 = "state";
-              return rootNavigationRef.addListener("state", handleRootStateChange);
-            } else {
-              return;
-            }
           }
         }
       }
     }
     if (undefined == null) {
-      class He {
-        constructor() {
-          obj = panelX(isOpenTarget[19]);
-          rootNavigationRef = obj.getRootNavigationRef();
-          closure_0 = rootNavigationRef;
-          if (null != rootNavigationRef) {
-            state = undefined;
-            if (rootNavigationRef != null) {
-              state = rootNavigationRef.getState();
-            }
-            tmp2 = null != state;
-            if (tmp2) {
-              tmp3 = state.routes[state.index];
-              name = undefined;
-              if (tmp3 != null) {
-                name = tmp3.name;
-              }
-              str = "main";
-              tmp2 = "main" === name;
-            }
-            closure_0 = tmp2;
-            tmp5 = closure_23;
-            handleRootStateChange = function handleRootStateChange() {
-              state = undefined;
-              if (state != null) {
-                state = state.getState();
-              }
-              let tmp2 = null != state;
-              if (tmp2) {
-                let name;
-                if (state.routes[state.index] != null) {
-                  name = tmp3.name;
-                }
-                tmp2 = "main" === name;
-              }
-              state = tmp2;
-              closure_2_23(() => { ... });
-            };
-            tmp6 = closure_23((isOnMain) => {
-              let tmp = isOnMain;
-              if (isOnMain.isOnMain !== closure_0) {
-                const obj = { isOnMain: tmp2 };
-                tmp = obj;
-              }
-              return tmp;
-            });
-            str2 = "state";
-            return rootNavigationRef.addListener("state", handleRootStateChange);
-          } else {
-            return;
-          }
-        }
-      }
-    }
-    tmp38 = tmp39;
-  }
-  c25 = tmp38;
-  if (cResult[7] === tmp38) {
-    class He {
-      constructor() {
-        obj = panelX(isOpenTarget[19]);
-        rootNavigationRef = obj.getRootNavigationRef();
-        closure_0 = rootNavigationRef;
-        if (null != rootNavigationRef) {
-          state = undefined;
-          if (rootNavigationRef != null) {
-            state = rootNavigationRef.getState();
-          }
-          tmp2 = null != state;
-          if (tmp2) {
-            tmp3 = state.routes[state.index];
-            name = undefined;
-            if (tmp3 != null) {
-              name = tmp3.name;
-            }
-            str = "main";
-            tmp2 = "main" === name;
-          }
-          closure_0 = tmp2;
-          tmp5 = closure_23;
-          handleRootStateChange = function handleRootStateChange() {
-            state = undefined;
-            if (state != null) {
-              state = state.getState();
-            }
-            let tmp2 = null != state;
-            if (tmp2) {
-              let name;
-              if (state.routes[state.index] != null) {
-                name = tmp3.name;
-              }
-              tmp2 = "main" === name;
-            }
-            state = tmp2;
-            closure_2_23(() => { ... });
-          };
-          tmp6 = closure_23((isOnMain) => {
-            let tmp = isOnMain;
-            if (isOnMain.isOnMain !== closure_0) {
-              const obj = { isOnMain: tmp2 };
-              tmp = obj;
-            }
-            return tmp;
-          });
-          str2 = "state";
-          return rootNavigationRef.addListener("state", handleRootStateChange);
-        } else {
+      class J {
+        constructor(arg0) {
+          obj = snapX(isOpenTarget[11]);
+          obj1 = { action: arg0 };
+          trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
           return;
         }
       }
     }
+    tmp32 = tmp33;
   }
-  let num8 = 0;
-  if (tmp38) {
-    class He {
-      constructor() {
-        obj = panelX(isOpenTarget[19]);
-        rootNavigationRef = obj.getRootNavigationRef();
-        closure_0 = rootNavigationRef;
-        if (null != rootNavigationRef) {
-          state = undefined;
-          if (rootNavigationRef != null) {
-            state = rootNavigationRef.getState();
-          }
-          tmp2 = null != state;
-          if (tmp2) {
-            tmp3 = state.routes[state.index];
-            name = undefined;
-            if (tmp3 != null) {
-              name = tmp3.name;
-            }
-            str = "main";
-            tmp2 = "main" === name;
-          }
-          closure_0 = tmp2;
-          tmp5 = closure_23;
-          handleRootStateChange = function handleRootStateChange() {
-            state = undefined;
-            if (state != null) {
-              state = state.getState();
-            }
-            let tmp2 = null != state;
-            if (tmp2) {
-              let name;
-              if (state.routes[state.index] != null) {
-                name = tmp3.name;
-              }
-              tmp2 = "main" === name;
-            }
-            state = tmp2;
-            closure_2_23(() => { ... });
-          };
-          tmp6 = closure_23((isOnMain) => {
-            let tmp = isOnMain;
-            if (isOnMain.isOnMain !== closure_0) {
-              const obj = { isOnMain: tmp2 };
-              tmp = obj;
-            }
-            return tmp;
-          });
-          str2 = "state";
-          return rootNavigationRef.addListener("state", handleRootStateChange);
-        } else {
-          return;
-        }
+  c24 = tmp32;
+  if (cResult[4] === tmp32) {
+    class J {
+      constructor(arg0) {
+        obj = snapX(isOpenTarget[11]);
+        obj1 = { action: arg0 };
+        trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
+        return;
       }
     }
-    num8 = setPanelX(tmp19, tmp20);
   }
-  cResult[7] = tmp38;
-  cResult[8] = tmp20;
-  cResult[9] = tmp19;
-  cResult[10] = num8;
-  const tmpResult27 = panelX(isOpenTarget[20]);
+  let num5 = 0;
+  if (tmp32) {
+    class J {
+      constructor(arg0) {
+        obj = snapX(isOpenTarget[11]);
+        obj1 = { action: arg0 };
+        trackResult = obj.track(noteInteraction.SERVER_DRAWER_INTERACT, obj1);
+        return;
+      }
+    }
+    num5 = setPanelX(tmp19, tmp20);
+  }
+  cResult[4] = tmp32;
+  cResult[5] = tmp20;
+  cResult[6] = tmp19;
+  cResult[7] = num5;
+  const tmpResult27 = panelX(isOpenTarget[19]);
 }) : (function useHomeGesture() {
   const MobileHomeDrawerExperiment = landOnHome(snapX[8]).MobileHomeDrawerExperiment;
   const config = MobileHomeDrawerExperiment.useConfig({ location: "gesture" });
@@ -1301,65 +533,9 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   if (enableHome) {
     enableHome = !panelX(snapX[17])().isChatBesideChannelList;
   }
-  const tmp22 = isOpenTarget(gestureState.useState({ isOnMain: true }), 2);
-  const first = tmp22[0];
-  closure_25 = tmp22[1];
-  const effect = obj11.useEffect(() => {
-    const rootNavigationRef = landOnHome(snapX[19]).getRootNavigationRef();
-    let state = rootNavigationRef;
-    if (null != rootNavigationRef) {
-      state = undefined;
-      if (rootNavigationRef != null) {
-        state = rootNavigationRef.getState();
-      }
-      let tmp2 = null != state;
-      if (tmp2) {
-        let name;
-        if (state.routes[state.index] != null) {
-          name = tmp3.name;
-        }
-        tmp2 = "main" === name;
-      }
-      state = tmp2;
-      function handleRootStateChange() {
-        state = undefined;
-        if (state != null) {
-          state = state.getState();
-        }
-        let tmp2 = null != state;
-        if (tmp2) {
-          let name;
-          if (state.routes[state.index] != null) {
-            name = tmp3.name;
-          }
-          tmp2 = "main" === name;
-        }
-        state = tmp2;
-        closure_25((isOnMain) => {
-          let tmp = isOnMain;
-          if (isOnMain.isOnMain !== closure_0) {
-            const obj = { isOnMain: tmp2 };
-            tmp = obj;
-          }
-          return tmp;
-        });
-      }
-      closure_25((isOnMain) => {
-        let tmp = isOnMain;
-        if (isOnMain.isOnMain !== closure_0) {
-          const obj = { isOnMain: tmp2 };
-          tmp = obj;
-        }
-        return tmp;
-      });
-      return rootNavigationRef.addListener("state", handleRootStateChange);
-    }
-    let obj = landOnHome(snapX[19]);
-  }, []);
   const obj13 = { gestureState, didSnapThisGesture: sharedValue3, snapX, withTiming: landOnHome(snapX[12]).withTiming, SNAP_OPEN_DISTANCE: sharedValue3, HOME_DRAWER_SNAP_TIMING: landOnHome(snapX[13]).HOME_DRAWER_SNAP_TIMING, runOnJS: landOnHome(snapX[9]).runOnJS, triggerHapticFeedback: landOnHome(snapX[14]).triggerHapticFeedback, HapticFeedbackTypes: landOnHome(snapX[14]).HapticFeedbackTypes, flingThrow: sharedValue5, HOME_DRAWER_UNSNAP_TIMING: landOnHome(snapX[13]).HOME_DRAWER_UNSNAP_TIMING, hasThrown: sharedValue7, snappedByDrag: sharedValue6 };
   const tmp15 = sharedValue3;
   tmp20 = tmp19 === noteInteraction.GESTURE_FULL || tmp19 === noteInteraction.GESTURE_EDGE;
-  const tmp21 = isOpenTarget;
   let isFocused = enableHome;
   if (enableHome) {
     isFocused = tmpResult.useIsFocused();
@@ -1371,10 +547,10 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   if (enableHome) {
     enablePeekHint = config.enablePeekHint;
   }
-  const homeDrawerPeekHint = landOnHome(snapX[20]).useHomeDrawerPeekHint(enablePeekHint, sharedValue8);
+  const homeDrawerPeekHint = landOnHome(snapX[19]).useHomeDrawerPeekHint(enablePeekHint, sharedValue8);
   let state = navigation.getState();
-  const tmpResult11 = landOnHome(snapX[20]);
-  let tmp29;
+  const tmpResult11 = landOnHome(snapX[19]);
+  let tmp25;
   if (state != null) {
     let routes = state.routes;
     if (routes != null) {
@@ -1385,11 +561,11 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
       if (num == null) {
         num = 0;
       }
-      tmp29 = routes[num];
+      tmp25 = routes[num];
     }
   }
-  let coerceGuildsRouteResult = landOnHome(snapX[21]).coerceGuildsRoute(tmp29);
-  let tmp31 = enableHome;
+  let coerceGuildsRouteResult = landOnHome(snapX[20]).coerceGuildsRoute(tmp25);
+  let tmp27 = enableHome;
   if (enableHome) {
     let drawerOpen;
     if (coerceGuildsRouteResult != null) {
@@ -1401,15 +577,15 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     if (drawerOpen == null) {
       drawerOpen = landOnHome;
     }
-    tmp31 = drawerOpen;
+    tmp27 = drawerOpen;
   }
-  drawerOpen = tmp31;
+  drawerOpen = tmp27;
   let num2 = 0;
-  if (tmp31) {
+  if (tmp27) {
     num2 = maxX(tmp17, tmp18);
   }
   let items = [tmp17, tmp18, updateMaxX, enableHome];
-  const effect1 = obj11.useEffect(() => {
+  const effect = obj11.useEffect(() => {
     if (enableHome) {
       updateMaxX(closure_21, closure_22);
     } else {
@@ -1417,7 +593,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     }
   }, items);
   const items1 = [enableHome, panelX, snapX, isOpenTarget];
-  const effect2 = obj11.useEffect(() => {
+  const effect1 = obj11.useEffect(() => {
     if (!enableHome) {
       const result = panelX.set(0);
       const result1 = snapX.set(0);
@@ -1426,7 +602,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     }
   }, items1);
   const items2 = [navigation, setPanelX, enableHome];
-  const effect3 = obj11.useEffect(() => {
+  const effect2 = obj11.useEffect(() => {
     function handleStateChange(data) {
       const state = data.data.state;
       let tmp;
@@ -1443,7 +619,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
           tmp = routes[num];
         }
       }
-      const coerceGuildsRouteResult = landOnHome(snapX[21]).coerceGuildsRoute(tmp);
+      const coerceGuildsRouteResult = landOnHome(snapX[20]).coerceGuildsRoute(tmp);
       if (null != coerceGuildsRouteResult) {
         if (enableHome) {
           const params = coerceGuildsRouteResult.params;
@@ -1464,7 +640,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
           }
         }
       }
-      const obj = landOnHome(snapX[21]);
+      const obj = landOnHome(snapX[20]);
     }
     navigation.addListener("state", handleStateChange);
     return () => {
@@ -1474,7 +650,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     };
   }, items2);
   gestureState.useRef(false);
-  const items3 = [enableHome, tmp31, num2, panelX, isOpenTarget];
+  const items3 = [enableHome, tmp27, num2, panelX, isOpenTarget];
   const layoutEffect = obj11.useLayoutEffect(() => {
     let tmp = enableHome;
     if (enableHome) {
@@ -1490,35 +666,33 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
       ref.current = true;
     }
   }, items3);
-  const tmpResult12 = landOnHome(snapX[21]);
-  class Fe {
-    constructor() {
-      value = panelX.get();
-      sum = value + snapX.get();
-      return sum + closure_27.get();
-    }
+  const tmpResult12 = landOnHome(snapX[20]);
+  function me() {
+    value = panelX.get();
+    const sum = value + snapX.get();
+    return sum + sharedValue8.get();
   }
-  Fe.__closure = { panelX, snapX, peekX: sharedValue8 };
-  Fe.__workletHash = 9690292606643;
-  Fe.__initData = __initData6;
-  const derivedValue1 = landOnHome(snapX[9]).useDerivedValue(Fe);
+  me.__closure = { panelX, snapX, peekX: sharedValue8 };
+  me.__workletHash = 9690292606643;
+  me.__initData = __initData6;
+  const derivedValue1 = landOnHome(snapX[9]).useDerivedValue(me);
   const tmpResult13 = landOnHome(snapX[9]);
-  class Le {
+  class Pe {
     constructor() {
       obj = { transform: null };
-      obj1 = { translateX: closure_31.get() };
+      obj1 = { translateX: closure_29.get() };
       items = [];
       items[0] = obj1;
       obj.transform = items;
       return obj;
     }
   }
-  Le.__closure = { panelTranslateX: derivedValue1 };
-  Le.__workletHash = 5267878012006;
-  Le.__initData = __initData7;
-  const animatedStyle = landOnHome(snapX[9]).useAnimatedStyle(Le);
+  Pe.__closure = { panelTranslateX: derivedValue1 };
+  Pe.__workletHash = 5267878012006;
+  Pe.__initData = __initData7;
+  const animatedStyle = landOnHome(snapX[9]).useAnimatedStyle(Pe);
   const tmpResult14 = landOnHome(snapX[9]);
-  class Ce {
+  class We {
     constructor() {
       value = isOpenTarget.get();
       if (!value) {
@@ -1526,33 +700,39 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
         value1 = isPanelTouchActive.get();
         tmp4 = !value1;
         if (!value1) {
-          tmp5 = closure_31;
+          tmp5 = closure_29;
           num = 0;
-          tmp4 = closure_31.get() <= 0;
+          tmp4 = closure_29.get() <= 0;
         }
         value = tmp4;
       }
       return value;
     }
   }
-  Ce.__closure = { isOpenTarget, isPanelTouchActive, panelTranslateX: derivedValue1 };
-  Ce.__workletHash = 16461301551041;
-  Ce.__initData = __initData8;
-  function be(arg0) {
-    value = arg0;
-    if (arg0) {
-      value = sharedValue4.get();
-    }
-    if (value) {
-      const result = sharedValue4.set(false);
+  We.__closure = { isOpenTarget, isPanelTouchActive, panelTranslateX: derivedValue1 };
+  We.__workletHash = 16461301551041;
+  We.__initData = __initData8;
+  class Ge {
+    constructor(arg0) {
+      value = arg0;
+      if (arg0) {
+        tmp2 = closure_14;
+        value = closure_14.get();
+      }
+      if (value) {
+        tmp3 = closure_14;
+        flag = false;
+        result = closure_14.set(false);
+      }
+      return;
     }
   }
-  be.__closure = { isPullActive: sharedValue4 };
-  be.__workletHash = 8757763202417;
-  be.__initData = __initData9;
-  const animatedReaction1 = landOnHome(snapX[9]).useAnimatedReaction(Ce, be);
+  Ge.__closure = { isPullActive: sharedValue4 };
+  Ge.__workletHash = 8757763202417;
+  Ge.__initData = __initData9;
+  const animatedReaction1 = landOnHome(snapX[9]).useAnimatedReaction(We, Ge);
   const tmpResult15 = landOnHome(snapX[9]);
-  function xe() {
+  function be() {
     value = derivedValue1.get();
     let num = 0;
     if (sharedValue4.get()) {
@@ -1570,23 +750,23 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     }
     return num;
   }
-  xe.__closure = { panelTranslateX: derivedValue1, isPullActive: sharedValue4, HOME_DRAWER_PULL_SETTLE_WIDTH: sharedValue7, MAX_HOME_DRAWER_ANIMATING_WIDTH: sharedValue4, SNAP_OPEN_DISTANCE: tmp15 };
-  xe.__workletHash = 3876942972214;
-  xe.__initData = __initData10;
-  const derivedValue2 = landOnHome(snapX[9]).useDerivedValue(xe);
+  be.__closure = { panelTranslateX: derivedValue1, isPullActive: sharedValue4, HOME_DRAWER_PULL_SETTLE_WIDTH: sharedValue7, MAX_HOME_DRAWER_ANIMATING_WIDTH: sharedValue4, SNAP_OPEN_DISTANCE: tmp15 };
+  be.__workletHash = 3876942972214;
+  be.__initData = __initData10;
+  const derivedValue2 = landOnHome(snapX[9]).useDerivedValue(be);
   const obj15 = { panelTranslateX: derivedValue1, isPullActive: sharedValue4, HOME_DRAWER_PULL_SETTLE_WIDTH: sharedValue7, MAX_HOME_DRAWER_ANIMATING_WIDTH: sharedValue4, SNAP_OPEN_DISTANCE: tmp15 };
   const tmpResult16 = landOnHome(snapX[9]);
-  class Ue {
+  class Ce {
     constructor() {
-      accessibilityPreferencesSharedValue = closure_0(closure_2[22]).accessibilityPreferencesSharedValue;
+      accessibilityPreferencesSharedValue = closure_0(closure_2[21]).accessibilityPreferencesSharedValue;
       num = 0;
       if (!accessibilityPreferencesSharedValue.get().reduceMotion) {
         tmp = globalThis;
         _Math = Math;
-        tmp2 = closure_33;
+        tmp2 = closure_31;
         tmp3 = c15;
         tmp5 = closure_15;
-        result = closure_33.get() * c15;
+        result = closure_31.get() * c15;
         tmp6 = c16;
         num = Math.max(result, closure_15.get() * c16);
       }
@@ -1594,26 +774,22 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     }
   }
   const tmpResult17 = landOnHome(snapX[9]);
-  Ue.__closure = { accessibilityPreferencesSharedValue: landOnHome(snapX[22]).accessibilityPreferencesSharedValue, pullFraction: derivedValue2, HOME_DRAWER_PULL_DISTANCE: sharedValue5, flingThrow: sharedValue5, HOME_DRAWER_FLING_THROW_DISTANCE: sharedValue6 };
-  Ue.__workletHash = 1305582168128;
-  Ue.__initData = __initData11;
-  const derivedValue3 = tmpResult17.useDerivedValue(Ue);
-  const obj16 = { accessibilityPreferencesSharedValue: landOnHome(snapX[22]).accessibilityPreferencesSharedValue, pullFraction: derivedValue2, HOME_DRAWER_PULL_DISTANCE: sharedValue5, flingThrow: sharedValue5, HOME_DRAWER_FLING_THROW_DISTANCE: sharedValue6 };
-  class Ve {
-    constructor() {
-      obj = { transform: null };
-      obj1 = { translateX: closure_34.get() };
-      items = [];
-      items[0] = obj1;
-      obj.transform = items;
-      return obj;
-    }
+  Ce.__closure = { accessibilityPreferencesSharedValue: landOnHome(snapX[21]).accessibilityPreferencesSharedValue, pullFraction: derivedValue2, HOME_DRAWER_PULL_DISTANCE: sharedValue5, flingThrow: sharedValue5, HOME_DRAWER_FLING_THROW_DISTANCE: sharedValue6 };
+  Ce.__workletHash = 1305582168128;
+  Ce.__initData = __initData11;
+  const derivedValue3 = tmpResult17.useDerivedValue(Ce);
+  const obj16 = { accessibilityPreferencesSharedValue: landOnHome(snapX[21]).accessibilityPreferencesSharedValue, pullFraction: derivedValue2, HOME_DRAWER_PULL_DISTANCE: sharedValue5, flingThrow: sharedValue5, HOME_DRAWER_FLING_THROW_DISTANCE: sharedValue6 };
+  function ke() {
+    const obj = { transform: null };
+    const items = [{ translateX: derivedValue3.get() }];
+    obj.transform = items;
+    return obj;
   }
-  Ve.__closure = { guildsBarPullX: derivedValue3 };
-  Ve.__workletHash = 3913124214690;
-  Ve.__initData = __initData12;
-  const guildsBarDrawerStyle = landOnHome(snapX[9]).useAnimatedStyle(Ve);
-  const items4 = [gestureState, panelX, snapX, isOpenTarget, sharedValue2, sharedValue3, derivedValue, sharedValue4, derivedValue2, sharedValue5, sharedValue6, sharedValue7, sharedValue, sharedValue1, isFocused, maxX, isPanelTouchActive, noteInteraction, trackServerDrawerInteract, first];
+  ke.__closure = { guildsBarPullX: derivedValue3 };
+  ke.__workletHash = 3913124214690;
+  ke.__initData = __initData12;
+  const guildsBarDrawerStyle = landOnHome(snapX[9]).useAnimatedStyle(ke);
+  const items4 = [gestureState, panelX, snapX, isOpenTarget, sharedValue2, sharedValue3, derivedValue, sharedValue4, derivedValue2, sharedValue5, sharedValue6, sharedValue7, sharedValue, sharedValue1, isFocused, maxX, isPanelTouchActive, noteInteraction, trackServerDrawerInteract];
   const memo = obj11.useMemo(() => {
     function visualPanelX() {
       value = settleDrawer.get();
@@ -1636,10 +812,10 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
       const obj = landOnHome(snapX[12]);
       const result2 = fireThrow.set(landOnHome(snapX[12]).withTiming(0, landOnHome(snapX[13]).HOME_DRAWER_SETTLE_TIMING, "animate-always"));
       const tmp3Result = landOnHome(snapX[12]);
-      landOnHome(snapX[9]).runOnJS(landOnHome(snapX[21]).setHomeDrawerState)(arg0);
+      landOnHome(snapX[9]).runOnJS(landOnHome(snapX[20]).setHomeDrawerState)(arg0);
       const tmp3Result2 = landOnHome(snapX[9]);
     };
-    settleDrawer.__closure = { isOpenTarget: beginDrag, panelX: settleDrawer, withTiming: landOnHome(snapX[12]).withTiming, maxX, HOME_DRAWER_SETTLE_TIMING: landOnHome(snapX[13]).HOME_DRAWER_SETTLE_TIMING, snapX: fireThrow, runOnJS: landOnHome(snapX[9]).runOnJS, setHomeDrawerState: landOnHome(snapX[21]).setHomeDrawerState };
+    settleDrawer.__closure = { isOpenTarget: beginDrag, panelX: settleDrawer, withTiming: landOnHome(snapX[12]).withTiming, maxX, HOME_DRAWER_SETTLE_TIMING: landOnHome(snapX[13]).HOME_DRAWER_SETTLE_TIMING, snapX: fireThrow, runOnJS: landOnHome(snapX[9]).runOnJS, setHomeDrawerState: landOnHome(snapX[20]).setHomeDrawerState };
     settleDrawer.__workletHash = 2188020220373;
     settleDrawer.__initData = __initData2;
     fireThrow = function fireThrow() {
@@ -1660,8 +836,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
       }
     };
     let obj = { panelX: settleDrawer, isSnappedOpen: derivedValue, SNAP_OPEN_DISTANCE: sharedValue3 };
-    let obj2 = { isOpenTarget: beginDrag, panelX: settleDrawer, withTiming: landOnHome(snapX[12]).withTiming, maxX, HOME_DRAWER_SETTLE_TIMING: landOnHome(snapX[13]).HOME_DRAWER_SETTLE_TIMING, snapX: fireThrow, runOnJS: landOnHome(snapX[9]).runOnJS, setHomeDrawerState: landOnHome(snapX[21]).setHomeDrawerState };
-    let tmp3 = beginDrag;
+    let obj2 = { isOpenTarget: beginDrag, panelX: settleDrawer, withTiming: landOnHome(snapX[12]).withTiming, maxX, HOME_DRAWER_SETTLE_TIMING: landOnHome(snapX[13]).HOME_DRAWER_SETTLE_TIMING, snapX: fireThrow, runOnJS: landOnHome(snapX[9]).runOnJS, setHomeDrawerState: landOnHome(snapX[20]).setHomeDrawerState };
     fireThrow.__closure = { hasThrown: sharedValue7, isPullActive: sharedValue4, flingThrow: sharedValue5, clamp: landOnHome(snapX[9]).clamp, pullFraction: derivedValue2, HOME_DRAWER_PULL_DISTANCE: sharedValue5, HOME_DRAWER_FLING_THROW_DISTANCE: sharedValue6, withSequence: landOnHome(snapX[9]).withSequence, withTiming: landOnHome(snapX[12]).withTiming, HOME_DRAWER_FLING_THROW_TIMING: landOnHome(snapX[13]).HOME_DRAWER_FLING_THROW_TIMING, HOME_DRAWER_FLING_RETURN_TIMING: landOnHome(snapX[13]).HOME_DRAWER_FLING_RETURN_TIMING };
     fireThrow.__workletHash = 6364057094792;
     fireThrow.__initData = __initData3;
@@ -1710,18 +885,14 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     shouldOpenFromPosition.__closure = { visualPanelX, FRACTION_OF_WIDTH_FOR_DRAWER_TO_REMAIN_OPEN: sharedValue1, maxX, INITIAL_OPEN_WIDTH: sharedValue, dragOffsetX: sharedValue };
     shouldOpenFromPosition.__workletHash = 12906331917783;
     shouldOpenFromPosition.__initData = __initData5;
-    const Gesture = landOnHome(snapX[23]).Gesture;
+    const Gesture = landOnHome(snapX[22]).Gesture;
     let obj3 = { hasThrown: sharedValue7, isPullActive: sharedValue4, flingThrow: sharedValue5, clamp: landOnHome(snapX[9]).clamp, pullFraction: derivedValue2, HOME_DRAWER_PULL_DISTANCE: sharedValue5, HOME_DRAWER_FLING_THROW_DISTANCE: sharedValue6, withSequence: landOnHome(snapX[9]).withSequence, withTiming: landOnHome(snapX[12]).withTiming, HOME_DRAWER_FLING_THROW_TIMING: landOnHome(snapX[13]).HOME_DRAWER_FLING_THROW_TIMING, HOME_DRAWER_FLING_RETURN_TIMING: landOnHome(snapX[13]).HOME_DRAWER_FLING_RETURN_TIMING };
     let obj4 = { panelX: settleDrawer, snapX: fireThrow, activationOffsetX: sharedValue1, gestureState: shouldOpenFromPosition, isPullActive: sharedValue4, PULL_ACTIVE_MAX_START: 16 };
     let obj5 = { visualPanelX, FRACTION_OF_WIDTH_FOR_DRAWER_TO_REMAIN_OPEN: sharedValue1, maxX, INITIAL_OPEN_WIDTH: sharedValue, dragOffsetX: sharedValue };
-    let isOnMain = isFocused;
-    if (isFocused) {
-      isOnMain = first.isOnMain;
-    }
     const PanResult = Gesture.Pan();
-    const enabledResult = Gesture.Pan().enabled(isOnMain);
-    let result = Gesture.Pan().enabled(isOnMain).manualActivation(true).shouldCancelWhenOutside(false);
-    const manualActivationResult = Gesture.Pan().enabled(isOnMain).manualActivation(true);
+    const enabledResult = Gesture.Pan().enabled(isFocused);
+    let result = Gesture.Pan().enabled(isFocused).manualActivation(true).shouldCancelWhenOutside(false);
+    const manualActivationResult = Gesture.Pan().enabled(isFocused).manualActivation(true);
     const fn = function _(absoluteX) {
       const result = isPanelTouchActive.set(true);
       const result1 = sharedValue.set(0);
@@ -1775,7 +946,7 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
         activate.fail();
       }
     };
-    fn2.__closure = { gestureState: shouldOpenFromPosition, isOpenTarget: tmp3, ACTIVATION_MIN_DISTANCE: 10, beginDrag };
+    fn2.__closure = { gestureState: shouldOpenFromPosition, isOpenTarget: beginDrag, ACTIVATION_MIN_DISTANCE: 10, beginDrag };
     fn2.__workletHash = 9648053766823;
     fn2.__initData = __initData9;
     const onBeginResult = maxPointersResult.onBegin(fn);
@@ -1934,11 +1105,11 @@ export const useHomeGesture = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     fn5.__initData = __initData6;
     return onEndResult.onFinalize(fn5);
   }, items4);
-  const first1 = tmp21(obj11.useState(() => ({ gesture: memo, panelStyles: animatedStyle, gestureState, panelX, panelTranslateX: derivedValue1, guildsBarDrawerStyle, guildsBarPullX: derivedValue3 })), 1)[0];
-  const items5 = [first1, memo];
+  const first = isOpenTarget(obj11.useState(() => ({ gesture: memo, panelStyles: animatedStyle, gestureState, panelX, panelTranslateX: derivedValue1, guildsBarDrawerStyle, guildsBarPullX: derivedValue3 })), 1)[0];
+  const items5 = [first, memo];
   const memo1 = obj11.useMemo(() => {
     const obj = {};
-    const merged = Object.assign(first1);
+    const merged = Object.assign(first);
     obj.gesture = memo;
     return obj;
   }, items5);

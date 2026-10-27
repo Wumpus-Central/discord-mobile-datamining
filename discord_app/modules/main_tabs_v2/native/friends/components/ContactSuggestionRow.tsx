@@ -1,19 +1,19 @@
-// === Module 18227: ContactSuggestionRow ===
+// === Module 18261: ContactSuggestionRow ===
 
-// Module 18227 (ContactSuggestionRow)
-import util from "util" /* 1128 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UserUtilsDefault from "UserUtils" /* 5025 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17470 */;
+// Module 18261 (ContactSuggestionRow)
+import util from "util" /* 1125 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import UserUtilsDefault from "UserUtils" /* 5026 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17511 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_3 = ["suggestedFriend", "added", "onAddSuggestion"];
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, InstantInviteSources: closure_8, RelationshipTypes: closure_9 } = Constants);
 const jsx = fn(21).jsx;
 const constants4 = { ADD: "add" };
@@ -45,7 +45,7 @@ export const ContactSuggestionRow = ReactCompilerGating.isReactCompilerEnabled()
   }
   if (cResult[5] === tmp7.friendSuggestionName) {
     if (cResult[6] === tmp7.user) {
-      sharedValue = tmp(5052).useSharedValue(false);
+      sharedValue = tmp(5053).useSharedValue(false);
       if (cResult[8] === tmp4) {
         if (cResult[9] === sharedValue) {
           let tmp15 = cResult[10];
@@ -57,8 +57,8 @@ export const ContactSuggestionRow = ReactCompilerGating.isReactCompilerEnabled()
             const items = [];
           } else {
             const obj3 = { name: constants4.ADD, label: null };
-            const intl = tmp(1128).intl;
-            obj3.label = intl.string(tmp(1128).t["ed99+i"]);
+            const intl = tmp(1125).intl;
+            obj3.label = intl.string(tmp(1125).t["ed99+i"]);
             class F {
               constructor() {
                 result = closure_4.set(closure_0);
@@ -122,12 +122,12 @@ export const ContactSuggestionRow = ReactCompilerGating.isReactCompilerEnabled()
                   return;
                 }
               }
-              const suggestedContactNameForSuggestion = tmp(17469).getSuggestedContactNameForSuggestion(tmp11, tmp7);
+              const suggestedContactNameForSuggestion = tmp(17510).getSuggestedContactNameForSuggestion(tmp11, tmp7);
               cResult[20] = tmp7;
               cResult[21] = tmp11;
               cResult[22] = suggestedContactNameForSuggestion;
               tmp30 = null != undefined;
-              const tmpResult2 = tmp(17469);
+              const tmpResult2 = tmp(17510);
             }
           }
           const fn = function h(nativeEvent) {
@@ -156,7 +156,7 @@ export const ContactSuggestionRow = ReactCompilerGating.isReactCompilerEnabled()
       cResult[11] = items2;
       tmp16 = items2;
       tmp15 = F;
-      const tmpResult = tmp(5052);
+      const tmpResult = tmp(5053);
     }
   }
   if (null == tmp7.friendSuggestionName) {

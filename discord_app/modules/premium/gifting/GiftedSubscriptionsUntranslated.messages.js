@@ -1,20 +1,20 @@
-// === Module 2636: ? ===
+// === Module 2635: ? ===
 
-// Module 2636
-import AssetJsonUtils from "AssetJsonUtils" /* 1132 */;
-import _mod2637 from "module_2637" /* 2637 */;
-import module_1167_mod from "module_1167" /* 1167 */;
+// Module 2635
+import AssetJsonUtils from "AssetJsonUtils" /* 1129 */;
+import _mod2636 from "module_2636" /* 2636 */;
+import module_1164_mod from "module_1164" /* 1164 */;
 import size from "module_2" /* 2 */;
 
-let module_1167 = module_1167_mod;
-const loader = module_1167.createLoader({
+let module_1164 = module_1164_mod;
+const loader = module_1164.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2637);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2636);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1167 = module_1167_mod;
-const messagesProxy = module_1167.makeMessagesProxy(loader);
+let module_1164 = module_1164_mod;
+const messagesProxy = module_1164.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/premium/gifting/GiftedSubscriptionsUntranslated.messages.js");
 
 export default messagesProxy;

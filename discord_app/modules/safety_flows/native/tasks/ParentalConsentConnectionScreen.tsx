@@ -1,25 +1,25 @@
-// === Module 19444: ParentalConsentConnectionScreen ===
+// === Module 19482: ParentalConsentConnectionScreen ===
 
-// Module 19444 (ParentalConsentConnectionScreen)
+// Module 19482 (ParentalConsentConnectionScreen)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import _modDef2832 from "module_2832" /* 2832 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import shareGuardianConnectLink from "shareGuardianConnectLink" /* 16170 */;
+import util from "util" /* 1125 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import _modDef2833 from "module_2833" /* 2833 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import shareGuardianConnectLink from "shareGuardianConnectLink" /* 16208 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7645 */;
-import UserStore from "UserStore" /* 1392 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7646 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_9 = fn(7646).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
+let closure_9 = fn(7647).CONNECT_GUARDIAN_BOTTOM_SHEET_KEY;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let c12 = "https://support.discord.com/hc/articles/14155060633623";
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { body: { marginTop: nativeDefault.space.PX_24 }, cardSection: { alignItems: "center" }, cardTitle: null };
 let obj3 = { marginTop: nativeDefault.space.PX_24 };
 obj2.cardTitle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_24, textAlign: "center" };
@@ -191,10 +191,10 @@ export default function ParentalConsentConnectionScreen() {
     const obj2 = { linkCode: str2, expiresAt: parsed, onRefresh: getLinkCode, title: null, body: null };
     const obj = ActionSheetActionCreatorsDefault;
     const intl = util.intl;
-    obj2.title = intl.string(_modDef2832.dMMSA0);
+    obj2.title = intl.string(_modDef2833.dMMSA0);
     const intl2 = util.intl;
-    obj2.body = intl2.format(_modDef2832["6GaRTu"], { link });
-    obj.openLazy(asyncRequireImpl(16171, dependencyMap.paths), closure_9, obj2);
+    obj2.body = intl2.format(_modDef2833["6GaRTu"], { link });
+    obj.openLazy(asyncRequireImpl(16209, dependencyMap.paths), closure_9, obj2);
   }, items7);
   let obj4 = { title: null, subtitle: null, subtitleColor: "text-muted", submitting: null, footer: null, children: null };
   const tmp14Result = tmp14(noop.useState(false), 2);

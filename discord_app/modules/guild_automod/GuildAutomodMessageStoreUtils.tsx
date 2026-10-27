@@ -1,7 +1,7 @@
-// === Module 15074: GuildAutomodMessageStoreUtils ===
+// === Module 15110: GuildAutomodMessageStoreUtils ===
 
-// Module 15074 (GuildAutomodMessageStoreUtils)
-import MessageEmbedTypes from "MessageEmbedTypes" /* 1109 */;
+// Module 15110 (GuildAutomodMessageStoreUtils)
+import MessageEmbedTypes from "MessageEmbedTypes" /* 1106 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_automod/GuildAutomodMessageStoreUtils.tsx");

@@ -1,9 +1,9 @@
-// === Module 14813: SubscriptionPlaceholderPattern ===
+// === Module 14849: SubscriptionPlaceholderPattern ===
 
-// Module 14813 (SubscriptionPlaceholderPattern)
+// Module 14849 (SubscriptionPlaceholderPattern)
 import c from "c" /* 576 */;
-import shared from "shared" /* 4978 */;
-import FastImageDefault from "FastImage" /* 5669 */;
+import shared from "shared" /* 4979 */;
+import FastImageDefault from "FastImage" /* 5670 */;
 import _mod8724 from "module_8724" /* 8724 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscript
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_14814");
+          return require("module_14850");
         },
       darker() {
-          return require("module_14815");
+          return require("module_14851");
         },
       light() {
-          return require("module_14816");
+          return require("module_14852");
         }
     };
     const illustrationSource = _mod8724.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscript
   const obj = shared;
   return _mod8724.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_14814");
+      return require("module_14850");
     },
     darker() {
-      return require("module_14815");
+      return require("module_14851");
     },
     light() {
-      return require("module_14816");
+      return require("module_14852");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getSubscriptionPlaceholderPatternSource(theme) {
   return _mod8724.getIllustrationSource(theme, {
     dark() {
-      return require("module_14814");
+      return require("module_14850");
     },
     darker() {
-      return require("module_14815");
+      return require("module_14851");
     },
     light() {
-      return require("module_14816");
+      return require("module_14852");
     }
   });
 }

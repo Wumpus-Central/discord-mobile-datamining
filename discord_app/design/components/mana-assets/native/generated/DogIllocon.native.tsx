@@ -1,23 +1,23 @@
-// === Module 12403: DogIllocon ===
+// === Module 12409: DogIllocon ===
 
-// Module 12403 (DogIllocon)
+// Module 12409 (DogIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef12404 from "module_12404" /* 12404 */;
-import _modDef12405 from "module_12405" /* 12405 */;
-import _modDef12406 from "module_12406" /* 12406 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import assetHelpers from "assetHelpers" /* 6997 */;
+import _modDef12410 from "module_12410" /* 12410 */;
+import _modDef12411 from "module_12411" /* 12411 */;
+import _modDef12412 from "module_12412" /* 12412 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef12404 }, 3: null };
-const obj2 = { uri: _modDef12404 };
-obj[2] = { uri: _modDef12405 };
-const obj3 = { uri: _modDef12405 };
-obj[3] = { uri: _modDef12406 };
+let obj = { 1: null, 2: { uri: _modDef12410 }, 3: null };
+const obj2 = { uri: _modDef12410 };
+obj[2] = { uri: _modDef12411 };
+const obj3 = { uri: _modDef12411 };
+obj[3] = { uri: _modDef12412 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef12406 };
+const obj4 = { uri: _modDef12412 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/DogIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const DogIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6995).getAssetSource(obj);
+  obj.source = num(6997).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

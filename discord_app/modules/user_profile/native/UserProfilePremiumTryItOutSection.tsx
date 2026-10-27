@@ -1,20 +1,20 @@
-// === Module 15910: UserProfilePremiumTryItOutSection ===
+// === Module 15948: UserProfilePremiumTryItOutSection ===
 
-// Module 15910 (UserProfilePremiumTryItOutSection)
+// Module 15948 (UserProfilePremiumTryItOutSection)
 import nativeDefault from "native" /* 587 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7253 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9792 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9793 */;
-import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 15911 */;
-import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 15933 */;
-import UserProfileUpsellCardV2Default from "UserProfileUpsellCardV2" /* 15942 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7255 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9794 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9795 */;
+import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 15949 */;
+import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 15971 */;
+import UserProfileUpsellCardV2Default from "UserProfileUpsellCardV2" /* 15980 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { marginTop: nativeDefault.space.PX_16 }, cardInner: null, divider: null, dividerLine: null, lockCircle: null, lockIcon: null };
 let obj3 = { marginTop: nativeDefault.space.PX_16 };
 obj2.cardInner = { paddingTop: nativeDefault.space.PX_24 };
@@ -50,9 +50,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   }
   ({ container, cardInner } = tmp4);
   if (cResult[2] !== tmp7) {
-    const intl = tmp(1128).intl;
+    const intl = tmp(1125).intl;
     const obj2 = { onClick: tmp7 };
-    const formatResult = intl.format(tmp(1128).t.TmfgI2, obj2);
+    const formatResult = intl.format(tmp(1125).t.TmfgI2, obj2);
     cResult[2] = tmp7;
     cResult[3] = formatResult;
     let tmp8 = formatResult;
@@ -60,8 +60,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     tmp8 = cResult[3];
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = tmp(1128).intl;
-    const stringResult = intl2.string(tmp(1128).t.PxUx8e);
+    const intl2 = tmp(1125).intl;
+    const stringResult = intl2.string(tmp(1125).t.PxUx8e);
     cResult[4] = stringResult;
     let tmp10 = stringResult;
   } else {
@@ -162,10 +162,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     openPremiumModalDefault(obj);
   }, items);
   let obj = { style: tmp.container, innerStyle: tmp.cardInner, text: null, textAlign: "center", buttonText: null, onButtonPress: null, onLayout: null, children: null };
-  const intl = analyticsLocations(1128).intl;
-  obj.text = intl.format(analyticsLocations(1128).t.TmfgI2, { onClick: callback });
-  const intl2 = analyticsLocations(1128).intl;
-  obj.buttonText = intl2.string(analyticsLocations(1128).t.PxUx8e);
+  const intl = analyticsLocations(1125).intl;
+  obj.text = intl.format(analyticsLocations(1125).t.TmfgI2, { onClick: callback });
+  const intl2 = analyticsLocations(1125).intl;
+  obj.buttonText = intl2.string(analyticsLocations(1125).t.PxUx8e);
   obj.onButtonPress = onPreviewPremium;
   obj.onLayout = onLayout;
   const obj2 = { style: tmp.divider, children: null };

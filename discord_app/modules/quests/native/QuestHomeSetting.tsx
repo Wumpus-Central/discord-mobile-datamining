@@ -1,21 +1,21 @@
-// === Module 16290: QuestHomeSetting ===
+// === Module 16328: QuestHomeSetting ===
 
-// Module 16290 (QuestHomeSetting)
+// Module 16328 (QuestHomeSetting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useNavigation from "useNavigation" /* 1505 */;
-import _mod4886 from "module_4886" /* 4886 */;
-import useQuestHomeHeaderDefault from "useQuestHomeHeader" /* 16291 */;
-import QuestHomeDefault from "QuestHome" /* 16293 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import _mod4887 from "module_4887" /* 4887 */;
+import useQuestHomeHeaderDefault from "useQuestHomeHeader" /* 16329 */;
+import QuestHomeDefault from "QuestHome" /* 16331 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9568 */;
+import QuestHomeNavigationStore from "QuestHomeNavigationStore" /* 9570 */;
 
 require = fn;
-const QuestConstants = fn(6710);
+const QuestConstants = fn(6711);
 ({ QuestHomeSortMethods: metroRequire, getQuestHomeFilterOptionItem: closure_7 } = QuestConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -305,7 +305,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function QuestHom
       }
       closure_1_1(found);
     }
-  }, { equalityFn: _mod4886.shallow, fireImmediately: true }), []);
+  }, { equalityFn: _mod4887.shallow, fireImmediately: true }), []);
   const tmp5 = _slicedToArray(noop.useState(() => {
     const str = QuestHomeNavigationStore.getField("filter");
     if (null == str) {

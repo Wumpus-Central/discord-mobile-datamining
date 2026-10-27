@@ -1,9 +1,9 @@
-// === Module 10637: useUserVoiceActivity ===
+// === Module 10640: useUserVoiceActivity ===
 
-// Module 10637 (useUserVoiceActivity)
-import ChannelStore from "ChannelStore" /* 4823 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import VoiceStateStore from "VoiceStateStore" /* 5630 */;
+// Module 10640 (useUserVoiceActivity)
+import ChannelStore from "ChannelStore" /* 4824 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import VoiceStateStore from "VoiceStateStore" /* 5631 */;
 
 const require = fn;
 function getVisibleUserVoiceActivity(arg0, arg1) {
@@ -73,9 +73,9 @@ function getVisibleUserVoiceActivity(arg0, arg1) {
     }
   }
 }
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 let closure_6 = { ChannelStore, PermissionStore, VoiceStateStore };
-let closure_7 = Object.freeze({ voiceState: "Array", voiceChannel: "Reflect" });
+let closure_7 = Object.freeze({ voiceState: "toCharArray$esjava$1", voiceChannel: "Symbol" });
 const ReactCompilerGating = fn(558);
 function getUserVoiceState(arg0) {
   ({ userId, guildId, includeNonDiscoverable } = arg0);

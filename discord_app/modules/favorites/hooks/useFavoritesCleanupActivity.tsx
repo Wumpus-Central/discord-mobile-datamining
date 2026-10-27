@@ -1,12 +1,12 @@
-// === Module 17571: useFavoritesCleanupActivity ===
+// === Module 17612: useFavoritesCleanupActivity ===
 
-// Module 17571 (useFavoritesCleanupActivity)
-import DurationsDefault from "Durations" /* 1104 */;
-import _modDef3412 from "module_3412" /* 3412 */;
-import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6822 */;
+// Module 17612 (useFavoritesCleanupActivity)
+import DurationsDefault from "Durations" /* 1101 */;
+import _modDef3413 from "module_3413" /* 3413 */;
+import getThreadAutoArchiveTimeOnce from "getThreadAutoArchiveTimeOnce" /* 6824 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6771 */;
+import ReadStateStore from "ReadStateStore" /* 6772 */;
 
 const require = globalThis.__r;
 
@@ -57,13 +57,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   }
   if (Number.isFinite(stateFromStores)) {
     if (stateFromStores > 0) {
-      const intl2 = tmp(1128).intl;
+      const intl2 = tmp(1125).intl;
       const obj2 = { days: null };
       const _Math = Math;
       const _Math2 = Math;
       const diff = first - stateFromStores;
       obj2.days = Math.max(0, Math.floor(diff / DurationsDefault.Millis.DAY));
-      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3412.IzxPdG, obj2);
+      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3413.IzxPdG, obj2);
     }
     const threadMetadata2 = threadMetadata.threadMetadata;
     let archived1;
@@ -72,9 +72,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
     }
     let formatToPlainStringResult1 = formatToPlainStringResult;
     if (archived1) {
-      const intl3 = tmp(1128).intl;
+      const intl3 = tmp(1125).intl;
       const obj3 = { activity: formatToPlainStringResult };
-      formatToPlainStringResult1 = intl3.formatToPlainString(_modDef3412.Dr1FWM, obj3);
+      formatToPlainStringResult1 = intl3.formatToPlainString(_modDef3413.Dr1FWM, obj3);
     }
     const threadMetadata3 = threadMetadata.threadMetadata;
     let archived2;
@@ -87,8 +87,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
     cResult[7] = formatToPlainStringResult1;
     tmp11 = formatToPlainStringResult1;
   }
-  const intl = tmp(1128).intl;
-  formatToPlainStringResult = intl.string(_modDef3412.rYws6y);
+  const intl = tmp(1125).intl;
+  formatToPlainStringResult = intl.string(_modDef3413.rYws6y);
   const tmpResult = require("initialize");
 }) : (function useFavoritesCleanupActivity(threadMetadata) {
   _require = threadMetadata;
@@ -97,13 +97,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   const stateFromStores = require("initialize").useStateFromStores(items, () => getThreadAutoArchiveTimeOnce.getThreadLastActivityTime(closure_0), items1);
   if (Number.isFinite(stateFromStores)) {
     if (stateFromStores > 0) {
-      const intl2 = tmp(1128).intl;
+      const intl2 = tmp(1125).intl;
       const obj2 = { days: null };
       const _Math = Math;
       const _Math2 = Math;
       const diff = _slicedToArray(noop.useState(Date.now), 1)[0] - stateFromStores;
       obj2.days = Math.max(0, Math.floor(diff / DurationsDefault.Millis.DAY));
-      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3412.IzxPdG, obj2);
+      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3413.IzxPdG, obj2);
     }
     threadMetadata = threadMetadata.threadMetadata;
     let archived;
@@ -112,13 +112,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
     }
     let formatToPlainStringResult1 = formatToPlainStringResult;
     if (archived) {
-      const intl3 = tmp(1128).intl;
+      const intl3 = tmp(1125).intl;
       const obj3 = { activity: formatToPlainStringResult };
-      formatToPlainStringResult1 = intl3.formatToPlainString(_modDef3412.Dr1FWM, obj3);
+      formatToPlainStringResult1 = intl3.formatToPlainString(_modDef3413.Dr1FWM, obj3);
     }
     return formatToPlainStringResult1;
   }
-  const intl = tmp(1128).intl;
-  formatToPlainStringResult = intl.string(_modDef3412.rYws6y);
+  const intl = tmp(1125).intl;
+  formatToPlainStringResult = intl.string(_modDef3413.rYws6y);
   const obj = require("initialize");
 });

@@ -1,10 +1,10 @@
-// === Module 13747: NotificationSettingsStore ===
+// === Module 13761: NotificationSettingsStore ===
 
-// Module 13747 (NotificationSettingsStore)
+// Module 13761 (NotificationSettingsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import Constants from "Constants" /* 1087 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const DesktopNotificationTypes = Constants.DesktopNotificationTypes;

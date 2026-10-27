@@ -2,8 +2,8 @@
 
 // Module 8739 (VideoBackground)
 import c from "c" /* 576 */;
-import native from "native" /* 1202 */;
-import LinearGradientDefault from "LinearGradient" /* 5258 */;
+import native from "native" /* 1199 */;
+import LinearGradientDefault from "LinearGradient" /* 5259 */;
 import VideoBackgroundManagerDefault from "VideoBackgroundManager" /* 8741 */;
 import useProfileTileGradientDefault from "useProfileTileGradient" /* 8742 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
@@ -43,11 +43,11 @@ function useDominantRGBFromImage(arg0, arg1) {
       let nextPromise = dependencyMap;
       if (null == VideoBackgroundManagerDefault.cachedDominantColors[closure_0]) {
         if (typeof first === "number") {
-          const dominantColorsLocalAsset = getDominantColorsLocalAsset(1901);
+          const dominantColorsLocalAsset = getDominantColorsLocalAsset(1898);
           getDominantColorsLocalAsset = dominantColorsLocalAsset.getDominantColorsLocalAsset;
           let dominantColorsLocalAsset1 = getDominantColorsLocalAsset(closure_2_8.resolveAssetSource(first));
         } else {
-          const dominantColorsLocalAsset2 = getDominantColorsLocalAsset(1901);
+          const dominantColorsLocalAsset2 = getDominantColorsLocalAsset(1898);
           dominantColorsLocalAsset1 = dominantColorsLocalAsset2.getDominantColors(closure_2_8.resolveAssetSource(first));
         }
         nextPromise = dominantColorsLocalAsset1.then((result) => {
@@ -70,10 +70,10 @@ function useDominantRGBFromImage(arg0, arg1) {
 let closure_3 = ["style", "url", "isStageCall", "avatarStyle", "user", "guildId", "renderVideoDetails"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, Image: closure_8 } = get_ActivityIndicator);
-const NOOP = fn(1087).NOOP;
+const NOOP = fn(1084).NOOP;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_12 = createStyles.createStyles({ videoBackground: { alignItems: "center" }, videoDetailsSpacer: { paddingTop: 12 } });
 const memoizeResult = apply.memoize((uri) => {
   let tmp = null;
@@ -216,7 +216,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoBackgro
                                 }
                               }
                             }
-                            tmp23 = tmp23(5258);
+                            tmp23 = tmp23(5259);
                             const obj2 = { colors: tmp24, start: tmp46, end: items, style: tmp31, children: null };
                             items = [tmp35, tmp26];
                             obj2.children = items;
@@ -373,12 +373,12 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function VideoBackgro
     return tmp23;
   }
 });
-tmp6.AvatarSizes = fn(1202).AvatarSizes;
+tmp6.AvatarSizes = fn(1199).AvatarSizes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/VideoBackground.tsx");
 
 export default noop.memo(tmp6);
-export const AvatarSizes = fn(1202).AvatarSizes;
+export const AvatarSizes = fn(1199).AvatarSizes;
 export const memoizedImageSource = memoizeResult;
 export { useDominantRGBFromImage };
 export const useDominantColorFromImage = tmp5;

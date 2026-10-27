@@ -1,8 +1,8 @@
-// === Module 10636: useDiscoverableApplicationStream ===
+// === Module 10639: useDiscoverableApplicationStream ===
 
-// Module 10636 (useDiscoverableApplicationStream)
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
+// Module 10639 (useDiscoverableApplicationStream)
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6643 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
 
 const require = globalThis.__r;
 
@@ -32,7 +32,7 @@ function getDiscoverableApplicationStream(userId) {
   }
   return tmp6;
 }
-const RelationshipTypes = fn(1087).RelationshipTypes;
+const RelationshipTypes = fn(1084).RelationshipTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/blocking/useDiscoverableApplicationStream.tsx");

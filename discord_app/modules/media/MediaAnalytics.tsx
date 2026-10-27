@@ -1,8 +1,8 @@
-// === Module 12825: MediaAnalytics ===
+// === Module 12834: MediaAnalytics ===
 
-// Module 12825 (MediaAnalytics)
-import Constants from "Constants" /* 1087 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+// Module 12834 (MediaAnalytics)
+import Constants from "Constants" /* 1084 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

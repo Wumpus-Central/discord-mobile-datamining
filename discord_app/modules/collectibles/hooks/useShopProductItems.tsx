@@ -2,7 +2,7 @@
 
 // Module 8660 (useShopProductItems)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
+import util from "util" /* 1125 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,6 +1,6 @@
-// === Module 15297: OverlayTypes ===
+// === Module 15333: OverlayTypes ===
 
-// Module 15297 (OverlayTypes)
+// Module 15333 (OverlayTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/overlay/OverlayTypes.tsx");

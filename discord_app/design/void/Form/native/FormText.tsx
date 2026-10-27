@@ -3,13 +3,13 @@
 // Module 8961 (FormText)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import LegacyTokens from "LegacyTokens" /* 6707 */;
+import native from "native" /* 1199 */;
+import LegacyTokens from "LegacyTokens" /* 6708 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_3 = createStyles.createStyles((arg0) => {
   const obj = { primary: { color: LegacyTokens.DARK_PRIMARY_100_LIGHT_PRIMARY_500 }, text: null };
   let num = 16;

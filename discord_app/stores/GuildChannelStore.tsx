@@ -1,20 +1,20 @@
-// === Module 4901: GuildChannelStore ===
+// === Module 4902: GuildChannelStore ===
 
-// Module 4901 (GuildChannelStore)
+// Module 4902 (GuildChannelStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4908 */;
-import useChannelName from "useChannelName" /* 5604 */;
-import GatedChannelStore from "GatedChannelStore" /* 4875 */;
-import FavoriteStore from "FavoriteStore" /* 4826 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4909 */;
+import useChannelName from "useChannelName" /* 5605 */;
+import GatedChannelStore from "GatedChannelStore" /* 4876 */;
+import FavoriteStore from "FavoriteStore" /* 4827 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function comparator(comparator, comparator2) {
@@ -72,7 +72,7 @@ function rebuildGuildChannels(guildId) {
       }
     }
   }
-  obj2 = obj(4848);
+  obj2 = obj(4849);
   const item = id(12).forEach(tmp7, (channel) => {
     channel = channel.channel;
     obj.count = obj.count + 1;
@@ -189,10 +189,10 @@ function hasElevatedPermissions(user, context) {
 function handleFavoritesUpdate() {
   rebuildGuildChannels(constants);
 }
-let closure_6 = fn(4902).createFavoritesGuildChannelRecord;
-const ChannelRecord = fn(4827);
+let closure_6 = fn(4903).createFavoritesGuildChannelRecord;
+const ChannelRecord = fn(4828);
 ({ isGuildSelectableChannelType: closure_7, GUILD_NON_CATEGORY_CHANNEL_TYPES: closure_8, isGuildVocalChannelType: closure_9, createChannelRecord } = ChannelRecord);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ FAVORITES: closure_17, ChannelTypes } = Constants);
 ({ Permissions: closure_19, ElevatedPermissions: closure_20 } = Constants);
 const SELECTABLE = "SELECTABLE";

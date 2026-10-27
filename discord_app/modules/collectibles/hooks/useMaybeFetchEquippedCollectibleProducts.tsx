@@ -4,7 +4,7 @@
 import useDisplayProfileDefault from "useDisplayProfile" /* 8675 */;
 import StorefrontProductActionCreators from "StorefrontProductActionCreators" /* 8708 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 

@@ -1,15 +1,15 @@
-// === Module 13610: NUFActionCreators ===
+// === Module 13624: NUFActionCreators ===
 
-// Module 13610 (NUFActionCreators)
+// Module 13624 (NUFActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13585 */;
-import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 13589 */;
-import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 13692 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13695 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13599 */;
+import ContactSyncActionCreatorsDefault from "ContactSyncActionCreators" /* 13603 */;
+import HubEmailConnectionModalActionCreatorsDefault from "HubEmailConnectionModalActionCreators" /* 13706 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13709 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6500 */;
-import UserStore from "UserStore" /* 1392 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6501 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -95,23 +95,23 @@ let closure_13 = async function _startContactSyncForDiscoverability() {
     }
   })();
 };
-const ContactSyncModalStore = fn(13582);
+const ContactSyncModalStore = fn(13596);
 ({ setAllowEmail: closure_4, setAllowSync: hasOwnProperty, setName: metroRequire, useContactSyncModalStore: closure_7 } = ContactSyncModalStore);
-let closure_10 = fn(13611).NUF_DISCOVERABILITY_MODAL_KEY;
-const PlatformTypes = fn(1087).PlatformTypes;
-let closure_12 = fn(7073).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
+let closure_10 = fn(13625).NUF_DISCOVERABILITY_MODAL_KEY;
+const PlatformTypes = fn(1084).PlatformTypes;
+let closure_12 = fn(7075).IN_APP_GUILD_TEMPLATES_MODAL_KEY;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/nuf/native/NUFActionCreators.tsx");
 
 export const startOnboarding = function startOnboarding() {
   DispatcherDefault.dispatch({ type: "ONBOARDING_START" });
 };
-export const nextOnboardingStep = function nextOnboardingStep(skip) {
-  let flag = skip.skip;
+export const nextOnboardingStep = function nextOnboardingStep(ONBOARDING) {
+  let flag = ONBOARDING.skip;
   if (flag === undefined) {
     flag = false;
   }
-  let flag2 = skip.skipAttempt;
+  let flag2 = ONBOARDING.skipAttempt;
   if (flag2 === undefined) {
     flag2 = false;
   }

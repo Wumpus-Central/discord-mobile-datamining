@@ -3,7 +3,7 @@
 // Module 9288 (MinecraftNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5668 */;
+import BaseIconImage from "BaseIconImage" /* 5669 */;
 import _mod9289 from "module_9289" /* 9289 */;
 import _mod9290 from "module_9290" /* 9290 */;
 import _mod9291 from "module_9291" /* 9291 */;

@@ -1,23 +1,23 @@
-// === Module 7725: GuildsRequiringChannelSync ===
+// === Module 7726: GuildsRequiringChannelSync ===
 
-// Module 7725 (GuildsRequiringChannelSync)
+// Module 7726 (GuildsRequiringChannelSync)
 import LoggerDefault from "Logger" /* 3 */;
-import Constants2 from "Constants" /* 1098 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import v1 from "v1" /* 1281 */;
-import FlagUtils from "FlagUtils" /* 1405 */;
-import ChannelConstants from "ChannelConstants" /* 4830 */;
-import DatabaseDaosDefault from "DatabaseDaos" /* 4849 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4893 */;
-import ChannelRecord from "ChannelRecord" /* 4827 */;
+import Constants2 from "Constants" /* 1095 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import v1 from "v1" /* 1278 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import ChannelConstants from "ChannelConstants" /* 4831 */;
+import DatabaseDaosDefault from "DatabaseDaos" /* 4850 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4894 */;
+import ChannelRecord from "ChannelRecord" /* 4828 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import Constants from "Constants" /* 1087 */;
-import BigFlagUtils from "BigFlagUtils" /* 1099 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import Constants from "Constants" /* 1084 */;
+import BigFlagUtils from "BigFlagUtils" /* 1096 */;
 import size from "module_2" /* 2 */;
 
 ({ createChannelRecordFromServer: closure_4, ChannelRecordBase: hasOwnProperty } = ChannelRecord);

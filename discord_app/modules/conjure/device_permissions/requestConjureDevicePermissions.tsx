@@ -1,11 +1,11 @@
-// === Module 10797: requestConjureDevicePermissions ===
+// === Module 10800: requestConjureDevicePermissions ===
 
-// Module 10797 (requestConjureDevicePermissions)
-import DurationsDefault from "Durations" /* 1104 */;
+// Module 10800 (requestConjureDevicePermissions)
+import DurationsDefault from "Durations" /* 1101 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2045 */;
-import FramesStore from "FramesStore" /* 6775 */;
-import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 10798 */;
+import ApplicationStore from "ApplicationStore" /* 2042 */;
+import FramesStore from "FramesStore" /* 6776 */;
+import ConjureDevicePermissionStore from "ConjureDevicePermissionStore" /* 10801 */;
 
 const require = fn;
 let closure_10 = async function _requestConjureDevicePermissions(arg0) {
@@ -238,7 +238,7 @@ let closure_10 = async function _requestConjureDevicePermissions(arg0) {
     }
   }
 };
-const FrameLayoutModes = fn(6776).FrameLayoutModes;
+const FrameLayoutModes = fn(6777).FrameLayoutModes;
 const set = new Set();
 const SECOND = DurationsDefault.Millis.SECOND;
 const size = fn(2);

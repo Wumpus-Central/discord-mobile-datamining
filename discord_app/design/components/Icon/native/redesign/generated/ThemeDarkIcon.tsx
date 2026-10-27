@@ -1,10 +1,10 @@
-// === Module 13841: ThemeDarkIcon ===
+// === Module 13855: ThemeDarkIcon ===
 
-// Module 13841 (ThemeDarkIcon)
+// Module 13855 (ThemeDarkIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5668 */;
-import _mod13842 from "module_13842" /* 13842 */;
+import BaseIconImage from "BaseIconImage" /* 5669 */;
+import _mod13856 from "module_13856" /* 13856 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ThemeDarkIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod13842;
+    const tmpResult = _mod13856;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ThemeDarkIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fun
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod13842, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod13856, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

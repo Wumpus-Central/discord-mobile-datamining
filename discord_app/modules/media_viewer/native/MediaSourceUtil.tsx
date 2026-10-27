@@ -2,22 +2,22 @@
 
 // Module 8757 (MediaSourceUtil)
 import c from "c" /* 576 */;
-import ConstantsIOS from "ConstantsIOS" /* 1107 */;
-import util from "util" /* 1128 */;
-import FlagUtils from "FlagUtils" /* 1405 */;
-import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1447 */;
-import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1498 */;
-import Server from "Server" /* 2000 */;
-import ToastUtils from "ToastUtils" /* 5662 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5999 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6014 */;
-import EmbedUtils from "EmbedUtils" /* 6486 */;
-import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6682 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7389 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7395 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8277 */;
-import renderMessageMarkupDefault from "renderMessageMarkup" /* 8482 */;
+import ConstantsIOS from "ConstantsIOS" /* 1104 */;
+import util from "util" /* 1125 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import NativeMediaManagerModuleDefault from "NativeMediaManagerModule" /* 1444 */;
+import utils_ImageUtilsDefault from "utils/ImageUtils" /* 1495 */;
+import Server from "Server" /* 1997 */;
+import ToastUtils from "ToastUtils" /* 5663 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5910 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6000 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6015 */;
+import EmbedUtils from "EmbedUtils" /* 6487 */;
+import SpoilerChannelUtils from "SpoilerChannelUtils" /* 6683 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7391 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7397 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8275 */;
+import renderMessageMarkupDefault from "renderMessageMarkup" /* 8481 */;
 import transformMessageComponents from "transformMessageComponents" /* 8593 */;
 import RowGeneratorTypes from "RowGeneratorTypes" /* 8609 */;
 import MediaViewerAnalyticsManager from "MediaViewerAnalyticsManager" /* 8753 */;
@@ -25,7 +25,7 @@ import getDisplayFilenameDefault from "getDisplayFilename" /* 8758 */;
 import useStateFromSharedValueDefault from "useStateFromSharedValue" /* 8759 */;
 import MediaModalPortal from "MediaModalPortal" /* 8760 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 const require = globalThis.__r;
 
@@ -594,7 +594,7 @@ function handleDownloadError() {
   obj2.body = intl2.string(util.t.r4Zjzv);
   actions_AlertActionCreatorsDefault.show(obj2);
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MessageAttachmentFlags: hasOwnProperty, WEBP_RE_IOS: metroRequire } = Constants);
 const re7 = /\.avif$/i;
 const ReactCompilerGating = fn(558);
@@ -866,7 +866,7 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
     return null;
   } else {
     const type = value.type;
-    if (tmp(2000).ComponentType.MEDIA_GALLERY === type) {
+    if (tmp(1997).ComponentType.MEDIA_GALLERY === type) {
       let num2 = 0;
       if (null != componentMediaIndex) {
         num2 = 0;
@@ -887,9 +887,9 @@ export const extractMediaSourcesFromComponent = function extractMediaSourcesFrom
         }
         return tmp;
       });
-      obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1388).isNotNullish) };
+      obj2 = { initialIndex: dependencyMap, sources: mapped.filter(tmp(1385).isNotNullish) };
       return obj2;
-    } else if (tmp(2000).ComponentType.THUMBNAIL === type) {
+    } else if (tmp(1997).ComponentType.THUMBNAIL === type) {
       const tmp7 = toMediaSourceFromUnfurledMedia(message2, guild_id, value.media, value.description, value.spoiler);
       let tmp8 = null;
       if (null != tmp7) {

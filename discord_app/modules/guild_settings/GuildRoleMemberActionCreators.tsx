@@ -1,11 +1,11 @@
-// === Module 7226: GuildRoleMemberActionCreators ===
+// === Module 7228: GuildRoleMemberActionCreators ===
 
-// Module 7226 (GuildRoleMemberActionCreators)
+// Module 7228 (GuildRoleMemberActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import privDefault from "priv" /* 1459 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6830 */;
+import privDefault from "priv" /* 1456 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6832 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7225 */;
+import GuildRoleMemberCountStore from "GuildRoleMemberCountStore" /* 7227 */;
 
 const require = globalThis.__r;
 
@@ -95,7 +95,7 @@ let closure_7 = async function _fetchMemberCounts(arg0) {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 let closure_8 = new privDefault({ maxAge: 10000 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_settings/GuildRoleMemberActionCreators.tsx");

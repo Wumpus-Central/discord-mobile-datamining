@@ -1,15 +1,15 @@
-// === Module 13175: MemberActionUtils ===
+// === Module 13189: MemberActionUtils ===
 
-// Module 13175 (MemberActionUtils)
-import useIsNewMemberDefault from "useIsNewMember" /* 7326 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7325 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8301 */;
+// Module 13189 (MemberActionUtils)
+import useIsNewMemberDefault from "useIsNewMember" /* 7328 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7327 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8299 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4889).GuildMemberFlags;
+const GuildMemberFlags = fn(4890).GuildMemberFlags;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMemberActionsForChannel(arg0, arg1) {
@@ -321,11 +321,11 @@ export const useAllActionsCompleted = ReactCompilerGating.isReactCompilerEnabled
     num4 = 0;
   }
   if (cResult[3] !== num4) {
-    const hasFlagResult = tmp(1405).hasFlag(num4, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
+    const hasFlagResult = tmp(1402).hasFlag(num4, GuildMemberFlags.COMPLETED_HOME_ACTIONS);
     cResult[3] = num4;
     cResult[4] = hasFlagResult;
     let tmp8 = hasFlagResult;
-    const tmpResult2 = tmp(1405);
+    const tmpResult2 = tmp(1402);
   } else {
     tmp8 = cResult[4];
   }

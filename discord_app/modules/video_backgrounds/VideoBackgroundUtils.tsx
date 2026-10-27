@@ -1,11 +1,11 @@
-// === Module 5867: VideoBackgroundUtils ===
+// === Module 5868: VideoBackgroundUtils ===
 
-// Module 5867 (VideoBackgroundUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AvatarUtils from "AvatarUtils" /* 1417 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
+// Module 5868 (VideoBackgroundUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5712 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
 
 require = fn;
 function isAnimatedBackgroundOption(type) {
@@ -92,9 +92,9 @@ function getEffectDetailAnalyticsName(lastUsedVideoBackgroundOption) {
   }
   return str;
 }
-const VideoBackgroundConstants = fn(5863);
+const VideoBackgroundConstants = fn(5864);
 ({ DefaultVideoBackground: hasOwnProperty, VideoFilterType: metroRequire, ANIMATED_DEFAULT_VIDEO_BACKGROUNDS: closure_7 } = VideoBackgroundConstants);
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_backgrounds/VideoBackgroundUtils.tsx");
 
@@ -165,7 +165,7 @@ export const trackBackgroundOptionDeleted = function trackBackgroundOptionDelete
 };
 export const getVideoBackgroundProtoFromOption = function getVideoBackgroundProtoFromOption(type) {
   if (null == type) {
-    let obj = { oneofKind: "Array" };
+    let obj = { oneofKind: "rejectWithError" };
   } else {
     let tmp = null != type && typeof type === "object";
     if (tmp) {

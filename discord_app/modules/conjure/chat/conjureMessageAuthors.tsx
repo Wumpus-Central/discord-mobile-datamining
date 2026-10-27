@@ -1,10 +1,10 @@
-// === Module 12339: conjureMessageAuthors ===
+// === Module 12345: conjureMessageAuthors ===
 
-// Module 12339 (conjureMessageAuthors)
+// Module 12345 (conjureMessageAuthors)
 import UserActionCreatorsAll from "UserActionCreators" /* 8670 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 

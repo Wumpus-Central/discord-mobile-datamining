@@ -1,23 +1,23 @@
-// === Module 13913: PremiumGiftPurchaseButton ===
+// === Module 13927: PremiumGiftPurchaseButton ===
 
-// Module 13913 (PremiumGiftPurchaseButton)
+// Module 13927 (PremiumGiftPurchaseButton)
 import nativeDefault from "native" /* 587 */;
-import ChatInputUtils from "ChatInputUtils" /* 5159 */;
-import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5593 */;
-import PremiumGiftModal from "PremiumGiftModal" /* 10447 */;
-import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10448 */;
-import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10508 */;
+import ChatInputUtils from "ChatInputUtils" /* 5160 */;
+import useSafeAreaInsetsKeyboardAwareDefault from "useSafeAreaInsetsKeyboardAware" /* 5594 */;
+import PremiumGiftModal from "PremiumGiftModal" /* 10449 */;
+import PremiumAnalyticsUtils from "PremiumAnalyticsUtils" /* 10450 */;
+import useShouldShowGiftingPromotionDecoDefault from "useShouldShowGiftingPromotionDeco" /* 10511 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8681 */;
-import PromotionsStore from "PromotionsStore" /* 9520 */;
+import PromotionsStore from "PromotionsStore" /* 9519 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-let HelpdeskArticles = fn(1087).HelpdeskArticles;
+let HelpdeskArticles = fn(1084).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_11 = createStyles.createStyles((arg0) => {
   const obj = { container: null, selectedRewardRow: null, promoDetails: null, previewDetails: null };
   const merged = Object.assign(nativeDefault.shadows.SHADOW_TOP_HIGH);
@@ -265,16 +265,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   closure_9 = undefined;
   closure_10 = undefined;
   const tmp3 = closure_11(useSafeAreaInsetsKeyboardAwareDefault().insets.bottom);
-  importDefault = defaultSelection(1505).useNavigation();
-  let obj = defaultSelection(1505);
-  const nativeGiftContext = defaultSelection(10450).useNativeGiftContext();
+  importDefault = defaultSelection(1502).useNavigation();
+  let obj = defaultSelection(1502);
+  const nativeGiftContext = defaultSelection(10452).useNativeGiftContext();
   ({ onPurchase: c2, isPurchasing, allRewards: c3, claimableRewards } = nativeGiftContext);
   const selectedGiftingPromotionReward = nativeGiftContext.selectedGiftingPromotionReward;
   const setSelectedGiftingPromotionReward = nativeGiftContext.setSelectedGiftingPromotionReward;
   ({ setCurrentAnalyticsStep: c7, productId } = nativeGiftContext);
-  let obj2 = defaultSelection(10450);
-  const canPurchaseIAP = defaultSelection(13914).useCanPurchaseIAP(productId);
-  const obj3 = defaultSelection(13914);
+  let obj2 = defaultSelection(10452);
+  const canPurchaseIAP = defaultSelection(13928).useCanPurchaseIAP(productId);
+  const obj3 = defaultSelection(13928);
   let items = [c7];
   const stateFromStores = defaultSelection(504).useStateFromStores(items, () => {
     const marketingComponentByType = _undefined2.getMarketingComponentByType(defaultSelection(_undefined[14]).MarketingComponentType.GIFT_CUSTOMIZATION_BANNER);
@@ -303,7 +303,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
     tmp11 = null == selectedGiftingPromotionReward;
   }
   closure_10 = tmp11;
-  const GiftingBadgeExperiment = tmp4(10496).GiftingBadgeExperiment;
+  const GiftingBadgeExperiment = tmp4(10499).GiftingBadgeExperiment;
   const obj4 = defaultSelection(504);
   let items1 = [setSelectedGiftingPromotionReward];
   const stateFromStoresObject = defaultSelection(504).useStateFromStoresObject(items1, () => ({ nextTier: setSelectedGiftingPromotionReward.getNextTier(defaultSelection(_undefined[18]).BadgeId.GIFTING), giftsToNextTier: setSelectedGiftingPromotionReward.getRemainingToNextTier(defaultSelection(_undefined[18]).BadgeId.GIFTING) }));
@@ -315,14 +315,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
     }
   }, items2);
   const tmp4Result = defaultSelection(504);
-  const product = defaultSelection(11052).useFetchCollectiblesProduct(selectedGiftingPromotionReward).product;
+  const product = defaultSelection(11055).useFetchCollectiblesProduct(selectedGiftingPromotionReward).product;
   let tmp14 = null != product;
   if (tmp14) {
     tmp14 = product.items.length > 0;
   }
-  const intl = tmp4(1128).intl;
+  const intl = tmp4(1125).intl;
   const string = intl.string;
-  const t = tmp4(1128).t;
+  const t = tmp4(1125).t;
   if (tmp11) {
     let stringResult = string(t["gNZY/B"]);
   } else {
@@ -332,7 +332,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   if (tmp11) {
     str = "primary";
   }
-  defaultSelection(10509);
+  defaultSelection(10512);
   if (stateFromStores != null) {
     const asset = stateFromStores.asset;
   }
@@ -340,22 +340,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
   if (tmp11) {
     if (tmp8) {
       const obj6 = { style: tmp3.promoDetails, imageUrl: tmp17, title: null, subtitle: null };
-      const intl4 = tmp4(1128).intl;
-      obj6.title = intl4.string(tmp(2600)["7yaXr8"]);
-      const intl5 = tmp4(1128).intl;
-      obj6.subtitle = intl5.string(tmp(2600).QojGXK);
-      let tmp21Result = closure_9(tmp(10512), obj6);
-      const tmpResult = tmp(10512);
+      const intl4 = tmp4(1125).intl;
+      obj6.title = intl4.string(tmp(2599)["7yaXr8"]);
+      const intl5 = tmp4(1125).intl;
+      obj6.subtitle = intl5.string(tmp(2599).QojGXK);
+      let tmp21Result = closure_9(tmp(10515), obj6);
+      const tmpResult = tmp(10515);
     }
     const items3 = [tmp21Result, , ];
     let tmp30 = !tmp11;
     if (!tmp11) {
       const obj7 = { variant: "text-sm/normal", children: null };
-      const intl6 = tmp4(1128).intl;
-      const obj8 = { paidURL: tmp(2067).getArticleURL(HelpdeskArticles.PAID_TERMS) };
-      obj7.children = intl6.format(tmp4(1128).t.hYoGUM, obj8);
-      tmp30 = closure_9(tmp4(5234).Text, obj7);
-      const tmpResult3 = tmp(2067);
+      const intl6 = tmp4(1125).intl;
+      const obj8 = { paidURL: tmp(2064).getArticleURL(HelpdeskArticles.PAID_TERMS) };
+      obj7.children = intl6.format(tmp4(1125).t.hYoGUM, obj8);
+      tmp30 = closure_9(tmp4(5235).Text, obj7);
+      const tmpResult3 = tmp(2064);
     }
     items3[1] = tmp30;
     const obj9 = { loading: isPurchasing, variant: str, text: stringResult, disabled: null, onPress: null };
@@ -385,19 +385,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
               obj2.claimableRewards = items1;
               obj2.onSelect = function onSelect(arg0) {
                 setSelectedGiftingPromotionReward(arg0);
-                navigation.navigate(defaultSelection(10447).PremiumGiftScreens.CUSTOMIZATION);
+                navigation.navigate(defaultSelection(10449).PremiumGiftScreens.CUSTOMIZATION);
               };
               navigation.navigate(PremiumGiftModal.PremiumGiftScreens.REWARD_SELECT, obj2);
             }
           }
         }
         _undefined(() => {
-          navigation.navigate(defaultSelection(10447).PremiumGiftScreens.SUCCESS);
+          navigation.navigate(defaultSelection(10449).PremiumGiftScreens.SUCCESS);
         });
       };
     }
     obj9.onPress = onPress;
-    items3[2] = closure_9(tmp4(5244).Button, obj9);
+    items3[2] = closure_9(tmp4(5245).Button, obj9);
     obj5.children = items3;
     return tmp18(tmp19, obj5);
   }
@@ -428,7 +428,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
             obj.claimableRewards = items1;
             obj.onSelect = function onSelect(arg0) {
               setSelectedGiftingPromotionReward(arg0);
-              navigation.navigate(defaultSelection(10447).PremiumGiftScreens.CUSTOMIZATION);
+              navigation.navigate(defaultSelection(10449).PremiumGiftScreens.CUSTOMIZATION);
             };
             navigation.navigate(PremiumGiftModal.PremiumGiftScreens.REWARD_SELECT, obj);
           }
@@ -437,23 +437,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
         obj10.accessibilityRole = "button";
         let formatToPlainStringResult;
         if (!tmp9) {
-          const intl2 = tmp4(1128).intl;
+          const intl2 = tmp4(1125).intl;
           const obj11 = { rewardName: product.name };
-          formatToPlainStringResult = intl2.formatToPlainString(tmp(2600).qbJihM, obj11);
+          formatToPlainStringResult = intl2.formatToPlainString(tmp(2599).qbJihM, obj11);
         }
         obj10.accessibilityLabel = formatToPlainStringResult;
         const obj12 = { style: tmp3.previewDetails, product, title: null, subtitle: null };
-        const intl3 = tmp4(1128).intl;
-        obj12.title = intl3.string(tmp4(1128).t.Rh4oem);
+        const intl3 = tmp4(1125).intl;
+        obj12.title = intl3.string(tmp4(1125).t.Rh4oem);
         let name;
         if (product != null) {
           name = product.name;
         }
         obj12.subtitle = name;
-        const items5 = [closure_9(tmp4(10512).PremiumGiftPromotionCollectibleRewardDetails, obj12), ];
+        const items5 = [closure_9(tmp4(10515).PremiumGiftPromotionCollectibleRewardDetails, obj12), ];
         let tmp25Result = !tmp9;
         if (!tmp9) {
-          tmp25Result = tmp25(tmp4(10120).PencilIcon, { size: "sm" });
+          tmp25Result = tmp25(tmp4(10122).PencilIcon, { size: "sm" });
         }
         items5[1] = tmp25Result;
         obj10.children = items5;
@@ -472,11 +472,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PremiumG
       }
       obj13.nextTierName = str2;
       const tmp21 = closure_9;
-      const tmpResult4 = tmp(10514);
-      obj13.nextTierIcon = tmp4(10502).getGiftingBadgeTierIconUrl(nextTier);
-      obj13.analyticsLocation = tmp(7278).PREMIUM_GIFT_CUSTOMIZATION;
+      const tmpResult4 = tmp(10517);
+      obj13.nextTierIcon = tmp4(10505).getGiftingBadgeTierIconUrl(nextTier);
+      obj13.analyticsLocation = tmp(7280).PREMIUM_GIFT_CUSTOMIZATION;
       tmp21Result = tmp21(tmpResult4, obj13);
-      const tmp4Result6 = tmp4(10502);
+      const tmp4Result6 = tmp4(10505);
     }
   }
 });

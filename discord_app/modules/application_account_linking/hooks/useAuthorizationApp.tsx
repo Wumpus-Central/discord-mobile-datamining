@@ -1,16 +1,16 @@
-// === Module 7256: useAuthorizationApp ===
+// === Module 7258: useAuthorizationApp ===
 
-// Module 7256 (useAuthorizationApp)
+// Module 7258 (useAuthorizationApp)
 import c from "c" /* 576 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7257 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7259 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2045 */;
-import ApplicationRecord from "ApplicationRecord" /* 2024 */;
+import ApplicationStore from "ApplicationStore" /* 2042 */;
+import ApplicationRecord from "ApplicationRecord" /* 2021 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ApplicationTypes = fn(1375).ApplicationTypes;
+const ApplicationTypes = fn(1372).ApplicationTypes;
 const ReactCompilerGating = fn(558);
 function getAuthorizationApp(application) {
   if (null == application) {

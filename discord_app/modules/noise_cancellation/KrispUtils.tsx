@@ -1,7 +1,7 @@
-// === Module 5841: KrispUtils ===
+// === Module 5842: KrispUtils ===
 
-// Module 5841 (KrispUtils)
-import noise_cancellation_KrispUtils from "noise_cancellation/KrispUtils" /* 5842 */;
+// Module 5842 (KrispUtils)
+import noise_cancellation_KrispUtils from "noise_cancellation/KrispUtils" /* 5843 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/noise_cancellation/KrispUtils.tsx");

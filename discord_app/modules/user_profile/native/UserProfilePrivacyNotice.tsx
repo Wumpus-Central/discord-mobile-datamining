@@ -1,30 +1,30 @@
-// === Module 14415: UserProfilePrivacyNotice ===
+// === Module 14451: UserProfilePrivacyNotice ===
 
-// Module 14415 (UserProfilePrivacyNotice)
+// Module 14451 (UserProfilePrivacyNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import UserSettings from "UserSettings" /* 4799 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5686 */;
-import Pressables from "Pressables" /* 6908 */;
-import XSmallIcon from "XSmallIcon" /* 6931 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7496 */;
-import useUserIsTeen from "useUserIsTeen" /* 8124 */;
+import util from "util" /* 1125 */;
+import UserSettings from "UserSettings" /* 4800 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5687 */;
+import Pressables from "Pressables" /* 6910 */;
+import XSmallIcon from "XSmallIcon" /* 6933 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7497 */;
+import useUserIsTeen from "useUserIsTeen" /* 8122 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
-const preloaded_user_settings = PRIVATE_PROFILE_INLINE_NOTICE(1211);
-const dismissible_content = PRIVATE_PROFILE_INLINE_NOTICE(4807);
+const preloaded_user_settings = PRIVATE_PROFILE_INLINE_NOTICE(1208);
+const dismissible_content = PRIVATE_PROFILE_INLINE_NOTICE(4808);
 require = fn;
 const View = fn(17).View;
-const UserSettingsSections = fn(1087).UserSettingsSections;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const UserSettingsSections = fn(1084).UserSettingsSections;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -124,8 +124,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                     }
                     const _Symbol2 = Symbol;
                     if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-                      const intl2 = tmp(1128).intl;
-                      const stringResult = intl2.string(tmp(1128).t.WAI6xu);
+                      const intl2 = tmp(1125).intl;
+                      const stringResult = intl2.string(tmp(1125).t.WAI6xu);
                       cResult[22] = stringResult;
                       let tmp33 = stringResult;
                     } else {
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                     }
                     const _Symbol3 = Symbol;
                     if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                      const tmp38 = closure_7(tmp(6931).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+                      const tmp38 = closure_7(tmp(6933).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
                       cResult[25] = tmp38;
                       let tmp36 = tmp38;
                     } else {
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                       tmp42 = tmp44;
                     }
                     const obj4 = { accessibilityRole: "button", accessibilityLabel: tmp33, onPress: tmp35, style: tmp4.closeButton, children: tmp36 };
-                    const tmp41 = closure_7(tmp(6908).PressableOpacity, obj4);
+                    const tmp41 = closure_7(tmp(6910).PressableOpacity, obj4);
                     cResult[26] = tmp4.closeButton;
                     cResult[27] = tmp35;
                     cResult[28] = tmp41;
@@ -200,18 +200,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         }
       }
     }
-    if (tmp(1211).ProfileVisibility.FRIENDS_ONLY === str) {
-      let dqQ7AN = tmp(1128).t["0UBDvq"];
-    } else if (tmp(1211).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === str) {
-      dqQ7AN = tmp(1128).t["9AvQO/"];
+    if (tmp(1208).ProfileVisibility.FRIENDS_ONLY === str) {
+      let dqQ7AN = tmp(1125).t["0UBDvq"];
+    } else if (tmp(1208).ProfileVisibility.FRIENDS_AND_SMALL_GUILDS === str) {
+      dqQ7AN = tmp(1125).t["9AvQO/"];
     } else {
-      const FRIENDS_AND_ALL_GUILDS = tmp(1211).ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
-      dqQ7AN = tmp(1128).t.dqQ7AN;
+      const FRIENDS_AND_ALL_GUILDS = tmp(1208).ProfileVisibility.FRIENDS_AND_ALL_GUILDS;
+      dqQ7AN = tmp(1125).t.dqQ7AN;
     }
     const container = tmp4.container;
     const _Symbol = Symbol;
     if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp19 = closure_7(tmp(5686).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
+      const tmp19 = closure_7(tmp(5687).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
       cResult[13] = tmp19;
       let str2 = tmp19;
     } else {
@@ -226,9 +226,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     } else {
       tmp20 = cResult[15];
     }
-    const Text = tmp(5234).Text;
+    const Text = tmp(5235).Text;
     const text = tmp4.text;
-    const intl = tmp(1128).intl;
+    const intl = tmp(1125).intl;
     const obj7 = { privacySettingsLink: first };
     const formatResult = intl.format(dqQ7AN, obj7);
     cResult[1] = str;

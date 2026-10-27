@@ -1,13 +1,13 @@
-// === Module 14428: useAddToWishlistGridItems ===
+// === Module 14464: useAddToWishlistGridItems ===
 
-// Module 14428 (useAddToWishlistGridItems)
+// Module 14464 (useAddToWishlistGridItems)
 import c from "c" /* 576 */;
-import useWishlistRecommendations from "useWishlistRecommendations" /* 10550 */;
-import WishlistUtils from "WishlistUtils" /* 14409 */;
+import useWishlistRecommendations from "useWishlistRecommendations" /* 10553 */;
+import WishlistUtils from "WishlistUtils" /* 14445 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const PremiumSubscriptionSKUs = fn(1394).PremiumSubscriptionSKUs;
+const PremiumSubscriptionSKUs = fn(1391).PremiumSubscriptionSKUs;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/wishlists/hooks/useAddToWishlistGridItems.tsx");

@@ -3,8 +3,8 @@
 // Module 9305 (GameCoverArt)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import FastImageDefault from "FastImage" /* 5669 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import FastImageDefault from "FastImage" /* 5670 */;
 import useGameArtworkDefault from "useGameArtwork" /* 9306 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { image: { width: "100%", height: "100%" }, iconContainer: { justifyContent: "center", alignItems: "center" }, icon: { width: "100%", aspectRatio: 1, borderRadius: nativeDefault.radii.sm }, fallback: null, placeholder: null };
 let obj3 = { width: "100%", aspectRatio: 1, borderRadius: nativeDefault.radii.sm };
 obj2.fallback = { justifyContent: "center", alignItems: "center", padding: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

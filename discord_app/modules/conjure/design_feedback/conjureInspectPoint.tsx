@@ -1,7 +1,7 @@
-// === Module 10761: conjureInspectPoint ===
+// === Module 10764: conjureInspectPoint ===
 
-// Module 10761 (conjureInspectPoint)
-import conjurePreviewCall from "conjurePreviewCall" /* 10758 */;
+// Module 10764 (conjureInspectPoint)
+import conjurePreviewCall from "conjurePreviewCall" /* 10761 */;
 import size from "module_2" /* 2 */;
 
 function targetFromPreviewElement(element) {

@@ -1,22 +1,22 @@
-// === Module 7299: VerifiedRoleIcon ===
+// === Module 7301: VerifiedRoleIcon ===
 
-// Module 7299 (VerifiedRoleIcon)
+// Module 7301 (VerifiedRoleIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LinkIcon from "LinkIcon" /* 5678 */;
-import useRoleIconProps from "useRoleIconProps" /* 7282 */;
-import getHigherContrastColor from "getHigherContrastColor" /* 7300 */;
-import RoleIconDefault from "RoleIcon" /* 7301 */;
+import LinkIcon from "LinkIcon" /* 5679 */;
+import useRoleIconProps from "useRoleIconProps" /* 7284 */;
+import getHigherContrastColor from "getHigherContrastColor" /* 7302 */;
+import RoleIconDefault from "RoleIcon" /* 7303 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ DEFAULT_ROLE_COLOR_HEX: closure_4, EMPTY_STRING_SNOWFLAKE_ID: hasOwnProperty } = Constants);
 const jsx = fn(21).jsx;
 const WHITE = nativeDefault.unsafe_rawColors.WHITE;
 const PRIMARY_630 = nativeDefault.unsafe_rawColors.PRIMARY_630;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { iconContainer: { alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.radii.round } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

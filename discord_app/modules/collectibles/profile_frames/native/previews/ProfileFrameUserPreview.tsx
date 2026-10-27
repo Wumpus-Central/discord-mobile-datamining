@@ -1,12 +1,12 @@
-// === Module 11174: ProfileFrameUserPreview ===
+// === Module 11177: ProfileFrameUserPreview ===
 
-// Module 11174 (ProfileFrameUserPreview)
+// Module 11177 (ProfileFrameUserPreview)
 import c from "c" /* 576 */;
-import UserProfilePreviewDefault from "UserProfilePreview" /* 11057 */;
+import UserProfilePreviewDefault from "UserProfilePreview" /* 11060 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const util = prop(1128);
+const util = prop(1125);
 require = fn;
 let closure_3 = ["profileFrame", "avatarDecorationOverride", "profileEffectOverride"];
 const jsx = fn(21).jsx;

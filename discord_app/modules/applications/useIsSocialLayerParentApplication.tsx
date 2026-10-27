@@ -1,12 +1,12 @@
-// === Module 9636: useIsSocialLayerParentApplication ===
+// === Module 9638: useIsSocialLayerParentApplication ===
 
-// Module 9636 (useIsSocialLayerParentApplication)
+// Module 9638 (useIsSocialLayerParentApplication)
 import c from "c" /* 576 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6811 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6813 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const ApplicationFlags = fn(1087).ApplicationFlags;
+const ApplicationFlags = fn(1084).ApplicationFlags;
 const ReactCompilerGating = fn(558);
 function getIsSocialLayerParentApplication(application) {
   return ApplicationFlagUtils.hasApplicationFlag(application, ApplicationFlags.PARENT);

@@ -1,11 +1,11 @@
-// === Module 13501: useGameServerPowerupStatus ===
+// === Module 13515: useGameServerPowerupStatus ===
 
-// Module 13501 (useGameServerPowerupStatus)
-import util from "util" /* 1128 */;
-import _modDef2568 from "module_2568" /* 2568 */;
-import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 13485 */;
+// Module 13515 (useGameServerPowerupStatus)
+import util from "util" /* 1125 */;
+import _modDef2567 from "module_2567" /* 2567 */;
+import useGameServerGetExpiringEntitlementsDefault from "useGameServerGetExpiringEntitlements" /* 13499 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8372 */;
+import GameServerStore from "GameServerStore" /* 8371 */;
 
 const require = globalThis.__r;
 
@@ -62,8 +62,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameS
       const _Symbol = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const obj3 = { type: "active", statusText: null };
-        const intl = tmp(1128).intl;
-        obj3.statusText = intl.string(_modDef2568.FFLkmx);
+        const intl = tmp(1125).intl;
+        obj3.statusText = intl.string(_modDef2567.FFLkmx);
         cResult[6] = obj3;
         let tmp10 = obj3;
       } else {
@@ -85,7 +85,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameS
     }
     return entitlements;
   }, items1);
-  const tmp2 = stateFromStores(13485)(arg0);
+  const tmp2 = stateFromStores(13499)(arg0);
   dependencyMap = tmp2;
   const items2 = [tmp2, stateFromStores];
   return noop.useMemo(() => {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameS
       } else {
         obj3 = { type: "active", statusText: null };
         const intl = util.intl;
-        obj3.statusText = intl.string(_modDef2568.FFLkmx);
+        obj3.statusText = intl.string(_modDef2567.FFLkmx);
       }
       return obj3;
     }

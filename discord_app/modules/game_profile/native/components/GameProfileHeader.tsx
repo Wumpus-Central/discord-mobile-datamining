@@ -3,10 +3,10 @@
 // Module 9302 (GameProfileHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import LinearGradientDefault from "LinearGradient" /* 5258 */;
-import FastImageDefault from "FastImage" /* 5669 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import LinearGradientDefault from "LinearGradient" /* 5259 */;
+import FastImageDefault from "FastImage" /* 5670 */;
 import SKUUtils from "SKUUtils" /* 9303 */;
 import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 9304 */;
 import GameCoverArtDefault from "GameCoverArt" /* 9305 */;
@@ -24,7 +24,7 @@ const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 114;
 let c9 = "rgba(0,0,0,0.3)";
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, artHero: null, artHeroImage: null, artHeroGradient: null, headerContent: null, shadowContainer: null, coverContainer: null, iconContainer: null, titleContainer: null, titleRow: null, title: null, wavingWumpus: null, textShadow: null };
 const rect = { width: "100%", position: "absolute", top: 0, bottom: -nativeDefault.space.PX_80, left: 0, right: 0 };
 obj2.artHero = rect;

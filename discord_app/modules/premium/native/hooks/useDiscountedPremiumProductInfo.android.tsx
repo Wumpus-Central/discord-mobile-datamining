@@ -1,16 +1,16 @@
-// === Module 9812: useDiscountedPremiumProductInfo ===
+// === Module 9814: useDiscountedPremiumProductInfo ===
 
-// Module 9812 (useDiscountedPremiumProductInfo)
+// Module 9814 (useDiscountedPremiumProductInfo)
 import c from "c" /* 576 */;
-import PriceUtils from "PriceUtils" /* 7339 */;
-import ProductIds from "ProductIds" /* 7519 */;
-import useDiscountedPremiumPlan from "useDiscountedPremiumPlan" /* 9813 */;
+import PriceUtils from "PriceUtils" /* 7341 */;
+import ProductIds from "ProductIds" /* 7520 */;
+import useDiscountedPremiumPlan from "useDiscountedPremiumPlan" /* 9815 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const CurrencyCodes = fn(1098).CurrencyCodes;
+const CurrencyCodes = fn(1095).CurrencyCodes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/premium/native/hooks/useDiscountedPremiumProductInfo.android.tsx");

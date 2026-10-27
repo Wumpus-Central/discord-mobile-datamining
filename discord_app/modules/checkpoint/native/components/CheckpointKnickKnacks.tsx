@@ -1,18 +1,18 @@
-// === Module 12975: CheckpointKnickKnacks ===
+// === Module 12987: CheckpointKnickKnacks ===
 
-// Module 12975 (CheckpointKnickKnacks)
+// Module 12987 (CheckpointKnickKnacks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import _mod5044 from "module_5044" /* 5044 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import _mod5045 from "module_5045" /* 5045 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 
 require = fn;
 const View = fn(17).View;
-const CHECKPOINT_PRIMARY = fn(6015).CHECKPOINT_PRIMARY;
+const CHECKPOINT_PRIMARY = fn(6016).CHECKPOINT_PRIMARY;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_7 = createStyles.createStyles({ rive: { width: 143, height: 32 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -53,7 +53,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       }
       if (cResult[7] !== tmp9) {
         const obj3 = { artboard: "Entry", dataBinding: tmp9 };
-        const tmp14 = jsx(_mod5044.CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: tmp9 });
+        const tmp14 = jsx(_mod5045.CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: tmp9 });
         cResult[7] = tmp9;
         cResult[8] = tmp14;
         let tmp12 = tmp14;
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     const items2 = [tmp4.rive, style.style];
     obj3.style = items2;
     const obj4 = { artboard: "Entry", dataBinding: memo };
-    obj3.children = jsx(tmp(5044).CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: memo });
+    obj3.children = jsx(tmp(5045).CheckpointKnickKnacksRive, { artboard: "Entry", dataBinding: memo });
     tmp6 = <View style={null}>{null}</View>;
   }
   return tmp6;

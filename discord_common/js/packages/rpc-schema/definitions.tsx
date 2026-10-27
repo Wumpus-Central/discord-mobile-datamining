@@ -1,16 +1,16 @@
-// === Module 15726: definitions ===
+// === Module 15762: definitions ===
 
-// Module 15726 (definitions)
-import ChannelTypes from "ChannelTypes" /* 1108 */;
-import Constants2 from "Constants" /* 2027 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
+// Module 15762 (definitions)
+import ChannelTypes from "ChannelTypes" /* 1105 */;
+import Constants2 from "Constants" /* 2024 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5627 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8827 */;
-import StatusDisplayTypes from "StatusDisplayTypes" /* 10649 */;
-import ActivityPlatform from "ActivityPlatform" /* 11475 */;
-import SKUTypes from "SKUTypes" /* 15727 */;
-import helpers from "helpers" /* 15728 */;
-import contextMenuIcons from "contextMenuIcons" /* 15729 */;
-import Constants from "Constants" /* 1098 */;
+import StatusDisplayTypes from "StatusDisplayTypes" /* 10652 */;
+import ActivityPlatform from "ActivityPlatform" /* 11478 */;
+import SKUTypes from "SKUTypes" /* 15763 */;
+import helpers from "helpers" /* 15764 */;
+import contextMenuIcons from "contextMenuIcons" /* 15765 */;
+import Constants from "Constants" /* 1095 */;
 import size from "module_2" /* 2 */;
 
 function joiEnum(number, OrientationLockState, arg2) {
@@ -1898,10 +1898,12 @@ export const RPCCommandSchemas = {
     }
   },
   [helpers.RPCCommand.OPEN_USER_PROFILE]: {
+    embeddedAppSDK: true,
     request(string) {
       const obj = { user_id: null };
       const stringResult = string.string();
-      obj.user_id = string.string().max(64).required();
+      const maxResult = string.string().max(64);
+      obj.user_id = string.string().max(64).required().meta({ className: "UserId" });
       return obj;
     },
     response(boolean) {
@@ -2174,7 +2176,7 @@ export const RPCCommandSchemas = {
       return obj;
     }
   },
-  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "context", response: "add" },
+  [helpers.RPCCommand.OPEN_INVITE_DIALOG]: { embeddedAppSDK: true, request: "unicodeVersion", response: "applicationId" },
   [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,
     request(string) {

@@ -1,19 +1,19 @@
-// === Module 17867: useNotificationCenterItemsLoader ===
+// === Module 17901: useNotificationCenterItemsLoader ===
 
-// Module 17867 (useNotificationCenterItemsLoader)
-import ReadStateActionCreators from "ReadStateActionCreators" /* 7206 */;
-import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 17868 */;
+// Module 17901 (useNotificationCenterItemsLoader)
+import ReadStateActionCreators from "ReadStateActionCreators" /* 7208 */;
+import NotificationCenterItemsActions from "NotificationCenterItemsActions" /* 17902 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 6815 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6787 */;
-import NotificationCenterStore from "NotificationCenterStore" /* 17866 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 6817 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6788 */;
+import NotificationCenterStore from "NotificationCenterStore" /* 17900 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ReadStateTypes = fn(6705).ReadStateTypes;
+const ReadStateTypes = fn(6706).ReadStateTypes;
 let c10 = 100;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

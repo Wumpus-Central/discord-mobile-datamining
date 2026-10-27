@@ -1,18 +1,18 @@
-// === Module 12421: ConjureNativeStepImages ===
+// === Module 12427: ConjureNativeStepImages ===
 
-// Module 12421 (ConjureNativeStepImages)
+// Module 12427 (ConjureNativeStepImages)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import openMediaModal from "openMediaModal" /* 8751 */;
-import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12180 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import useConjureAttachmentImage from "useConjureAttachmentImage" /* 12200 */;
+import openConjureNativeImages from "openConjureNativeImages" /* 12428 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: closure_4, Pressable: hasOwnProperty, ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { strip: { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 }, thumb: null, placeholder: null };
 let obj3 = { gap: nativeDefault.space.PX_8, paddingTop: nativeDefault.space.PX_4 };
 obj2.thumb = { height: 96, aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE };
@@ -111,13 +111,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function StepIm
 });
 ReactCompilerGating = fn(558);
 let obj5 = { height: 96, aspectRatio: 1.6, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE, alignItems: "center", justifyContent: "center" };
-let size = fn(2);
-const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNativeStepImages.tsx");
+const size = fn(2);
+let result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureNativeStepImages.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureNativeStepImages(projectId) {
   const cResult = projectId(576).c(13);
   projectId = projectId.projectId;
-  let images = projectId.images;
+  const images = projectId.images;
   const tmp2 = closure_9();
   if (cResult[0] === images) {
     if (cResult[1] === projectId) {
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
               }
               return tmp8;
             }
-            class I {
+            class C {
               constructor(arg0) {
                 obj = { projectId, image: projectId, onOpen: closure_2 };
                 return jsx(StepImage, obj, projectId.id);
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
           let tmp5 = cResult[9];
         }
         let mapped = images.map(tmp5);
-        class I {
+        class C {
           constructor(arg0) {
             obj = { projectId, image: projectId, onOpen: closure_2 };
             return jsx(StepImage, obj, projectId.id);
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
         cResult[5] = projectId;
         cResult[6] = mapped;
       }
-      class I {
+      class C {
         constructor(arg0) {
           obj = { projectId, image: projectId, onOpen: closure_2 };
           return jsx(StepImage, obj, projectId.id);
@@ -175,50 +175,32 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureN
       }
       cResult[7] = tmp3;
       cResult[8] = projectId;
-      cResult[9] = I;
-      tmp5 = I;
+      cResult[9] = C;
+      tmp5 = C;
     }
   }
   const fn = function n(arg0) {
     const id = arg0;
-    images = images.findIndex((id) => id.id === id.id);
-    Promise.all(images.map((id) => projectId(closure_2[9]).getAttachmentUrl(closure_0, id.id))).then((arr) => {
-      const mapped = arr.map((uri, mediaIndex) => {
-        const size = { uri, mediaIndex, width: 1280, height: 800, accessoryType: "embed", description: closure_1_1[mediaIndex].name, disableDownload: true };
-        return size;
-      });
-      const obj = openMediaModal;
-      obj.openMediaModal({ initialSources: mapped, initialIndex: Math.max(0, closure_1), analyticsSource: "ConjureChat", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true });
-    }, () => {
-
-    });
+    const mapped = images.map((id) => ({ id: id.id, alt: id.name }));
+    const result = openConjureNativeImages.openConjureNativeImages(projectId, mapped, images.findIndex((id) => id.id === id.id));
   };
   cResult[0] = images;
   cResult[1] = projectId;
   cResult[2] = fn;
   tmp3 = fn;
-  let obj = projectId(576);
+  const obj = projectId(576);
 }) : (function ConjureNativeStepImages(projectId) {
   projectId = projectId.projectId;
-  let images = projectId.images;
+  const images = projectId.images;
   const items = [images, projectId];
   const onOpen = noop.useCallback((arg0) => {
     const id = arg0;
-    images = images.findIndex((id) => id.id === id.id);
-    Promise.all(images.map((id) => projectId(closure_2[9]).getAttachmentUrl(closure_0, id.id))).then((arr) => {
-      const mapped = arr.map((uri, mediaIndex) => {
-        const size = { uri, mediaIndex, width: 1280, height: 800, accessoryType: "embed", description: closure_1_1[mediaIndex].name, disableDownload: true };
-        return size;
-      });
-      const obj = openMediaModal;
-      obj.openMediaModal({ initialSources: mapped, initialIndex: Math.max(0, closure_1), analyticsSource: "ConjureChat", shareable: false, disableDownload: true, disableMediaOverlayButton: true, disableMediaOverlayFooter: true });
-    }, () => {
-
-    });
+    const mapped = images.map((id) => ({ id: id.id, alt: id.name }));
+    const result = openConjureNativeImages.openConjureNativeImages(projectId, mapped, images.findIndex((id) => id.id === id.id));
   }, items);
   let tmp2 = null;
   if (0 !== images.length) {
-    let obj = { horizontal: true, showsHorizontalScrollIndicator: false, contentContainerStyle: tmp.strip, children: images.map((image) => <closure_10 key={image.id} projectId={projectId} image={image} onOpen={onOpen} />) };
+    const obj = { horizontal: true, showsHorizontalScrollIndicator: false, contentContainerStyle: tmp.strip, children: images.map((image) => <closure_10 key={image.id} projectId={projectId} image={image} onOpen={onOpen} />) };
     tmp2 = <closure_6 horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={tmp.strip}>{images.map((image) => <closure_10 key={image.id} projectId={projectId} image={image} onOpen={onOpen} />)}</closure_6>;
   }
   return tmp2;

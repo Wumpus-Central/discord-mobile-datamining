@@ -1,20 +1,20 @@
-// === Module 12290: conjureScopeSetup ===
+// === Module 12296: conjureScopeSetup ===
 
-// Module 12290 (conjureScopeSetup)
+// Module 12296 (conjureScopeSetup)
 import Storage6 from "Storage" /* 510 */;
-import util from "util" /* 1128 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import _modDef3830 from "module_3830" /* 3830 */;
-import createNonce from "createNonce" /* 10203 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10719 */;
-import ConjureChatActionCreators from "ConjureChatActionCreators" /* 12292 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12293 */;
+import util from "util" /* 1125 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import _modDef3831 from "module_3831" /* 3831 */;
+import createNonce from "createNonce" /* 10205 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10722 */;
+import ConjureChatActionCreators from "ConjureChatActionCreators" /* 12298 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12299 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ConjureChatStore from "ConjureChatStore" /* 10699 */;
-import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 12291 */;
-import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 10698 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
+import ConjureChatStore from "ConjureChatStore" /* 10702 */;
+import ConjureComposerDraftStore from "ConjureComposerDraftStore" /* 12297 */;
+import ConjureConnectionStore_mod from "ConjureConnectionStore" /* 10701 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
 
 require = fn;
 function _toPropertyKey(obj) {
@@ -151,10 +151,10 @@ let closure_20 = async function _putInstallScope(arg0) {
     }
   })();
 };
-let ConjureConnectionStore = fn(10698);
+let ConjureConnectionStore = fn(10701);
 ({ optimisticMessageId: closure_7, sendUserMessage: closure_8, showUserMessage: closure_9, withdrawUserMessage: c10 } = ConjureConnectionStore);
 let ConjureConnectionStore = ConjureConnectionStore_mod;
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const ConjureHeldPrompts = "ConjureHeldPrompts";
 const map = new Map();
 const map1 = new Map();
@@ -284,7 +284,7 @@ export const serverQuestionFields = function serverQuestionFields(conjureEligibl
     const found = conjureEligibleGuilds.find((id) => id.id === closure_0);
     const obj2 = { input: "server", note: null };
     const intl = util.intl;
-    obj2.note = intl.string(_modDef3830.SU9K9U);
+    obj2.note = intl.string(_modDef3831.SU9K9U);
     if (null != found) {
       const obj4 = { default_entities: null };
       ({ id: obj3.id, name: obj3.name } = found);
@@ -305,7 +305,7 @@ export const ownerOnlyClarification = function ownerOnlyClarification(memo) {
   obj.questions = questions.map((id) => {
     const obj = { id: id.id, question: id.question, recommendation_reason: "", options: [], allow_custom: false, note: null };
     const intl = util.intl;
-    obj.note = intl.string(_modDef3830.ZKPaWY);
+    obj.note = intl.string(_modDef3831.ZKPaWY);
     return obj;
   });
   return obj;
@@ -507,12 +507,12 @@ export const switchConjureInstallScope = function switchConjureInstallScope(proj
           return obj;
         } else {
           if ("guild" === closure_129_1) {
-            let prop = tmp5(3830)["8+EcCu"];
+            let prop = tmp5(3831)["8+EcCu"];
           } else {
-            prop = tmp5(3830)["U7+Yeh"];
+            prop = tmp5(3831)["U7+Yeh"];
           }
           closure_128_0 = prop;
-          const intl = tmp2(1128).intl;
+          const intl = tmp2(1125).intl;
           if (closure_1_8(closure_129_0, intl.string(closure_128_0))) {
             c3 = 3;
             return { value: "IconComponent", done: null };

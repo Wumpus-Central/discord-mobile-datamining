@@ -1,20 +1,20 @@
-// === Module 17248: CollectiblesShopViewAllCategoryItemsHeader ===
+// === Module 17289: CollectiblesShopViewAllCategoryItemsHeader ===
 
-// Module 17248 (CollectiblesShopViewAllCategoryItemsHeader)
+// Module 17289 (CollectiblesShopViewAllCategoryItemsHeader)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import useNavigation from "useNavigation" /* 1505 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import HeaderShared from "HeaderShared" /* 9699 */;
-import _modDef9702 from "module_9702" /* 9702 */;
-import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 14771 */;
+import util from "util" /* 1125 */;
+import useNavigation from "useNavigation" /* 1502 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import HeaderShared from "HeaderShared" /* 9701 */;
+import _modDef9704 from "module_9704" /* 9704 */;
+import useYouBarSettingsSafeArea from "useYouBarSettingsSafeArea" /* 14807 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_6 = createStyles.createStyles({ headerContainer: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingBottom: 12, paddingLeft: 8 }, backButton: { flex: 1 }, logo: { flex: 2, height: 36 }, dummyRightButton: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled();
@@ -128,7 +128,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
         cResult[10] = tmp27;
         cResult[11] = tmp34;
       }
-      const obj6 = { source: _modDef9702, color: buttonColor2, accessibilityLabel: tmp24, onPress: S };
+      const obj6 = { source: _modDef9704, color: buttonColor2, accessibilityLabel: tmp24, onPress: S };
       const tmp30 = React4(HeaderShared.HeaderIconButton, obj6);
       cResult[6] = buttonColor2;
       cResult[7] = S;
@@ -157,7 +157,7 @@ export default function CollectiblesShopViewAllCategoryItemsHeader(arg0) {
     obj9.paddingTop = youBarSettingsCustomHeaderPaddingTop1;
     obj8.style = obj9;
     const obj10 = { style: tmp4.backButton, children: null };
-    const obj14 = { source: _modDef9702, color: buttonColor, accessibilityLabel: null, onPress: null };
+    const obj14 = { source: _modDef9704, color: buttonColor, accessibilityLabel: null, onPress: null };
     const intl = util.intl;
     obj14.accessibilityLabel = intl.string(util.t["13/7kX"]);
     obj14.onPress = function onPress() {

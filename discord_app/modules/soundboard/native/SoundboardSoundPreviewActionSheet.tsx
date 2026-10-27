@@ -1,31 +1,31 @@
-// === Module 18536: SoundboardSoundPreviewActionSheet ===
+// === Module 18570: SoundboardSoundPreviewActionSheet ===
 
-// Module 18536 (SoundboardSoundPreviewActionSheet)
+// Module 18570 (SoundboardSoundPreviewActionSheet)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import SoundboardActionCreators from "SoundboardActionCreators" /* 7444 */;
-import SoundboardUtils from "SoundboardUtils" /* 7452 */;
-import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 18520 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import SoundboardActionCreators from "SoundboardActionCreators" /* 7445 */;
+import SoundboardUtils from "SoundboardUtils" /* 7453 */;
+import soundboard_SoundboardActionCreators from "soundboard/SoundboardActionCreators" /* 18554 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import UserStore from "UserStore" /* 1392 */;
-import SoundboardStore from "SoundboardStore" /* 6006 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import UserStore from "UserStore" /* 1389 */;
+import SoundboardStore from "SoundboardStore" /* 6007 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_9, AnalyticsObjects: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { soundPresentation: { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 }, soundPresentationPlaying: null, emoji: null, emojiFastImage: null, emojiText: null, text: null, buttonContainer: null, star: null, primaryIcon: null };
 let obj3 = { borderWidth: 2, borderColor: "transparent", borderRadius: nativeDefault.radii.lg, paddingBottom: nativeDefault.space.PX_16 };
 obj2.soundPresentationPlaying = { borderColor: nativeDefault.colors.STATUS_SPEAKING };
 let size = { marginTop: nativeDefault.space.PX_16, width: 64, height: 64, alignSelf: "center" };
 obj2.emoji = size;
 obj2.emojiFastImage = { width: 128, height: 128 };
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 let num;
 if (PlatformUtils.isIOS()) {
   num = 60;

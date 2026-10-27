@@ -2,8 +2,8 @@
 
 // Module 9221 (useDisplayNameStylesFont)
 import c from "c" /* 576 */;
-import DisplayNameFont from "DisplayNameFont" /* 1412 */;
-import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 6368 */;
+import DisplayNameFont from "DisplayNameFont" /* 1409 */;
+import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 6369 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

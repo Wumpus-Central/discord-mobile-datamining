@@ -1,10 +1,10 @@
-// === Module 10940: SafetyWarningUtils ===
+// === Module 10943: SafetyWarningUtils ===
 
-// Module 10940 (SafetyWarningUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UserStore from "UserStore" /* 1392 */;
+// Module 10943 (SafetyWarningUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import UserStore from "UserStore" /* 1389 */;
 
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/self_mod/shared/SafetyWarningUtils.tsx");
 

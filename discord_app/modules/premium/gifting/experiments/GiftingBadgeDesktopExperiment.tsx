@@ -1,7 +1,7 @@
-// === Module 10503: GiftingBadgeDesktopExperiment ===
+// === Module 10506: GiftingBadgeDesktopExperiment ===
 
-// Module 10503 (GiftingBadgeDesktopExperiment)
-import ApexExperiment from "ApexExperiment" /* 1455 */;
+// Module 10506 (GiftingBadgeDesktopExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-06-gifting-badge-desktop", kind: "user", defaultConfig: { enabled: false }, variations: null };

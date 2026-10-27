@@ -1,17 +1,17 @@
-// === Module 10465: GPlayManager ===
+// === Module 10468: GPlayManager ===
 
-// Module 10465 (GPlayManager)
+// Module 10468 (GPlayManager)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6463 */;
-import GPlayActionCreators from "GPlayActionCreators" /* 9798 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6464 */;
+import GPlayActionCreators from "GPlayActionCreators" /* 9800 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GiftPromotionStore from "GiftPromotionStore" /* 7532 */;
+import GiftPromotionStore from "GiftPromotionStore" /* 7533 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import SubscriptionStore from "SubscriptionStore" /* 2058 */;
-import IAPStore from "IAPStore" /* 7524 */;
+import SubscriptionStore from "SubscriptionStore" /* 2055 */;
+import IAPStore from "IAPStore" /* 7525 */;
 
 require = fn;
 function handleConnectionStateUpdated(connectionState) {
@@ -735,15 +735,15 @@ let closure_43 = async function _handleAppStateUpdated(arg0) {
 let closure_3 = ["succeededOnlyFields"];
 get_ActivityIndicator = fn(17);
 ({ NativeEventEmitter, NativeModules } = get_ActivityIndicator);
-const PremiumPlanPurchasedStore = fn(7533);
+const PremiumPlanPurchasedStore = fn(7534);
 ({ setPaymentSuccess: closure_7, showOldPaymentFlowSuccess: closure_8 } = PremiumPlanPurchasedStore);
-const useGPlayAnalyticsStore = fn(9799).useGPlayAnalyticsStore;
-let Constants = fn(7525);
+const useGPlayAnalyticsStore = fn(9801).useGPlayAnalyticsStore;
+let Constants = fn(7526);
 ({ GPlayConnectionState: map1, GPlayDowngradeCommand: closure_14, GPlayPurchaseState: closure_15 } = Constants);
-Constants = fn(1087);
+Constants = fn(1084);
 ({ AnalyticEvents: closure_16, AppStates: closure_17, PaymentGateways: closure_18 } = Constants);
-const OrderStatus = fn(5698).OrderStatus;
-const SubscriptionPlanInfo = fn(1394).SubscriptionPlanInfo;
+const OrderStatus = fn(5699).OrderStatus;
+const SubscriptionPlanInfo = fn(1391).SubscriptionPlanInfo;
 const jsx = fn(21).jsx;
 let closure_22 = new LoggerDefault("GPlayManager.android");
 const BillingManager = NativeModules.BillingManager;
@@ -753,7 +753,7 @@ let closure_26 = null;
 let closure_27 = null;
 let closure_28 = null;
 let closure_29 = null;
-const items = [fn(7519).ProductIds.PREMIUM_TIER_2_MONTHLY];
+const items = [fn(7520).ProductIds.PREMIUM_TIER_2_MONTHLY];
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/gplay/native/GPlayManager.android.tsx");
 

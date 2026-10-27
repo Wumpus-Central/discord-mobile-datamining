@@ -1,8 +1,8 @@
 // === Module 8977: AppChannelApplicationSelector ===
 
 // Module 8977 (AppChannelApplicationSelector)
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
 import AppChannelApplicationActionSheet from "AppChannelApplicationActionSheet" /* 8981 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,13 +1,13 @@
-// === Module 4837: GuildRecordUtils ===
+// === Module 4838: GuildRecordUtils ===
 
-// Module 4837 (GuildRecordUtils)
+// Module 4838 (GuildRecordUtils)
 import _modDef38 from "module_38" /* 38 */;
-import Constants from "Constants" /* 1087 */;
-import SetUtils from "SetUtils" /* 4840 */;
-import guildIncidentsSerialization from "guildIncidentsSerialization" /* 4843 */;
-import guildThemeSerialization from "guildThemeSerialization" /* 4844 */;
-import PlainRecord from "PlainRecord" /* 4838 */;
-import GuildRecord from "GuildRecord" /* 4841 */;
+import Constants from "Constants" /* 1084 */;
+import SetUtils from "SetUtils" /* 4841 */;
+import guildIncidentsSerialization from "guildIncidentsSerialization" /* 4844 */;
+import guildThemeSerialization from "guildThemeSerialization" /* 4845 */;
+import PlainRecord from "PlainRecord" /* 4839 */;
+import GuildRecord from "GuildRecord" /* 4842 */;
 import size from "module_2" /* 2 */;
 
 function fromGuildPropertiesWithAdditionalFields(properties, joinedAt, guildTheme) {

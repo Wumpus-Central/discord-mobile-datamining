@@ -2,8 +2,8 @@
 
 // Module 8711 (ProfileFrame)
 import c from "c" /* 576 */;
-import timing from "timing" /* 5206 */;
-import FastImageDefault from "FastImage" /* 5669 */;
+import timing from "timing" /* 5207 */;
+import FastImageDefault from "FastImage" /* 5670 */;
 import useProfileFrameLayerAsset from "useProfileFrameLayerAsset" /* 8713 */;
 import FramePreviewOverrideFrameDefault from "FramePreviewOverrideFrame" /* 8716 */;
 import noop from "module_19" /* 19 */;
@@ -16,9 +16,9 @@ const ProfileFrameConstants = fn(8712);
 ({ PROFILE_FRAME_RESPONSIVE_RAIL_MIN_ASPECT_RATIO: metroRequire, PROFILE_FRAME_Z_INDEX: closure_7 } = ProfileFrameConstants);
 let jsx = fn(21).jsx;
 let source = { duration: 150, easing: null };
-const Easing = fn(5052).Easing;
-source.easing = Easing.in(fn(5052).Easing.ease);
-const createStyles = fn(4971);
+const Easing = fn(5053).Easing;
+source.easing = Easing.in(fn(5053).Easing.ease);
+const createStyles = fn(4972);
 let obj3 = { container: null, layer: null };
 let obj4 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -806,7 +806,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function LivePr
   if (settled) {
     num = 1;
   }
-  sharedValue = frame(5052).useSharedValue(num);
+  sharedValue = frame(5053).useSharedValue(num);
   const items1 = [settled, sharedValue];
   const effect = profileThemeType.useEffect(() => {
     let num = 0;
@@ -826,7 +826,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function LivePr
         items2[1] = obj5;
         obj4.style = items2;
         obj4.children = memo.map((layer) => <closure_11 key={layer.id} skuId={frame.skuId} layer={layer} overflowTop={overflowTop} overflowBottom={overflowBottom} overflowHorizontal={overflowHorizontal} containerWidth={containerWidth} containerHeight={containerHeight} />);
-        return jsx(containerWidth(5052).View, { style: null, children: null });
+        return jsx(containerWidth(5053).View, { style: null, children: null });
       }
     }
   }

@@ -1,13 +1,13 @@
-// === Module 18717: superagentPatch ===
+// === Module 18753: superagentPatch ===
 
-// Module 18717 (superagentPatch)
+// Module 18753 (superagentPatch)
 import LogAggregatorAll from "LogAggregator" /* 7 */;
-import SentryUtilsDefault from "SentryUtils" /* 1257 */;
-import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 1298 */;
-import getTimeZoneDefault from "getTimeZone" /* 18720 */;
-import trackHttpRequestDefault from "trackHttpRequest" /* 18721 */;
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import _createForOfIteratorHelperDefault from "_createForOfIteratorHelper" /* 1295 */;
+import getTimeZoneDefault from "getTimeZone" /* 18756 */;
+import trackHttpRequestDefault from "trackHttpRequest" /* 18757 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ExperimentStore from "ExperimentStore" /* 5190 */;
+import ExperimentStore from "ExperimentStore" /* 5191 */;
 import Dispatcher from "Dispatcher" /* 584 */;
 
 function isAnalyticsEndpoint(pathname) {
@@ -19,12 +19,12 @@ function isAnalyticsEndpoint(pathname) {
     return re8.test(tmp);
   }
 }
-const AbortCodes = fn(1087).AbortCodes;
+const AbortCodes = fn(1084).AbortCodes;
 let closure_6 = ["https://cdn.discordapp.com/bad-domains/updated_hashes.json", "https://cdn.discordapp.com/bad-domains/hashes.json"];
 _createForOfIteratorHelperDefault.parse[""] = JSON.parse;
-const idGenerator = new fn(18718).IdGenerator();
+const idGenerator = new fn(18754).IdGenerator();
 const re8 = /\/api(\/v\d+)?\/science/;
-const ApexExperiment = fn(1455);
+const ApexExperiment = fn(1452);
 let obj2 = { name: "2026-07-reject-with-error-kill-switch", kind: "user", defaultConfig: { migrationKilled: false }, variations: null };
 let obj3 = { 1: null };
 obj3[1] = { migrationKilled: true };
@@ -34,7 +34,7 @@ let closure_11 = null;
 const subscription = Dispatcher.subscribe("LOGOUT", () => {
   closure_11 = null;
 });
-let HTTPUtils = fn(1297);
+let HTTPUtils = fn(1294);
 let result = HTTPUtils.setRejectWithMigratedError(function isRejectWithMigratedErrorEnabled() {
   let tmp = closure_11;
   if (null == closure_11) {
@@ -49,15 +49,15 @@ let result = HTTPUtils.setRejectWithMigratedError(function isRejectWithMigratedE
   }
   return tmp;
 });
-HTTPUtils = fn(1297);
+HTTPUtils = fn(1294);
 HTTPUtils.setRequestPatch({
   prepareRequest(promise) {
     const _default = promise(502).default;
-    const _default2 = promise(1372).default;
-    const _default3 = promise(1392).default;
+    const _default2 = promise(1369).default;
+    const _default3 = promise(1389).default;
     importDefault = performance.now();
     if ("/" === promise.url[0]) {
-      promise.url = tmp(1297).getAPIBaseURL() + promise.url;
+      promise.url = tmp(1294).getAPIBaseURL() + promise.url;
       let tmp3 = "Authorization" in promise.header;
       if (!tmp3) {
         tmp3 = "authorization" in promise.header;
@@ -65,8 +65,8 @@ HTTPUtils.setRequestPatch({
       if (!tmp3) {
         const result = promise.set("Authorization", _default.getToken());
       }
-      const tmpResult = tmp(1297);
-      const result1 = tmp(18719).updateDynamicSuperProperties();
+      const tmpResult = tmp(1294);
+      const result1 = tmp(18755).updateDynamicSuperProperties();
       const superPropertiesBase64 = _default4.getSuperPropertiesBase64();
       if (null != superPropertiesBase64) {
         const result2 = promise.set("X-Super-Properties", superPropertiesBase64);
@@ -87,9 +87,9 @@ HTTPUtils.setRequestPatch({
       if (tmp13) {
         const result4 = promise.set("X-Installation-ID", installationForTracking);
       }
-      if (promise(1384).isPlatformEmbedded) {
+      if (promise(1381).isPlatformEmbedded) {
         let items = [];
-        const _default5 = tmp(1129).default;
+        const _default5 = tmp(1126).default;
         if (null != _default5) {
           let Languages = _default5.getConstants().Languages;
           if (Languages == null) {
@@ -112,7 +112,7 @@ HTTPUtils.setRequestPatch({
           return reduced.join(",");
         })(items));
       }
-      const result6 = promise.set("X-Discord-Locale", promise(2068).default.locale);
+      const result6 = promise.set("X-Discord-Locale", promise(2065).default.locale);
       const tmp18 = getTimeZoneDefault();
       if (null != tmp18) {
         const result7 = promise.set("X-Discord-Timezone", tmp18);
@@ -163,12 +163,12 @@ HTTPUtils.setRequestPatch({
         } catch (err) {
         }
       }
-      const tmpResult2 = tmp(18719);
+      const tmpResult2 = tmp(18755);
     }
     importAll = (function shouldTrackHttpRequest(url) {
       return !isAnalyticsEndpoint(url);
     })(promise.url);
-    _default4 = promise(1267).default;
+    _default4 = promise(1264).default;
     LogAggregatorAll.report("Network", "Sending " + promise.method + " to " + promise.url);
     promise.on("response", (status) => {
       let text = null;
@@ -266,7 +266,7 @@ HTTPUtils.setRequestPatch({
         captcha_key = body.captcha_key;
       }
       if (captcha_key) {
-        const items = [statusCode(2002)(18724, dependencyMap.paths), statusCode(2002)(6466, dependencyMap.paths)];
+        const items = [statusCode(1999)(18760, dependencyMap.paths), statusCode(1999)(6467, dependencyMap.paths)];
         const allPromises = Promise.all(items);
         const nextPromise = Promise.all(items).then((result) => {
           const iter = result[Symbol.iterator]();
@@ -365,12 +365,12 @@ HTTPUtils.setRequestPatch({
           mfa = body3.mfa;
         }
         if (mfa) {
-          const promise4 = statusCode(2002)(17030, dependencyMap.paths);
-          statusCode(2002)(17030, dependencyMap.paths).then((openMFAModal) => {
+          const promise4 = statusCode(1999)(17072, dependencyMap.paths);
+          statusCode(1999)(17072, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           }).catch(arg2);
           flag = true;
-          const nextPromise2 = statusCode(2002)(17030, dependencyMap.paths).then((openMFAModal) => {
+          const nextPromise2 = statusCode(1999)(17072, dependencyMap.paths).then((openMFAModal) => {
             openMFAModal.openMFAModal(statusCode.body.mfa, closure_1, closure_2);
           });
         }
@@ -382,11 +382,11 @@ HTTPUtils.setRequestPatch({
       code1 = body4.code;
     }
     if (obj.isLimitedAccessErrorCode(statusCode.statusCode, code1)) {
-      tmp7(2002)(6832, dependencyMap.paths).then((result) => {
+      tmp7(1999)(6834, dependencyMap.paths).then((result) => {
         result.default();
       });
       flag = false;
-      const promise3 = tmp7(2002)(6832, dependencyMap.paths);
+      const promise3 = tmp7(1999)(6834, dependencyMap.paths);
     } else {
       const body5 = statusCode.body;
       let code2;
@@ -394,7 +394,7 @@ HTTPUtils.setRequestPatch({
         code2 = body5.code;
       }
       if (tmp7Result.isLimitedAccessErrorCode(statusCode.statusCode, code2)) {
-        tmp7(2002)(6648, dependencyMap.paths).then((result) => {
+        tmp7(1999)(6649, dependencyMap.paths).then((result) => {
           const body = statusCode.body;
           let guild_id;
           if (body != null) {
@@ -403,7 +403,7 @@ HTTPUtils.setRequestPatch({
           result.default(guild_id);
         });
         flag = false;
-        const promise2 = tmp7(2002)(6648, dependencyMap.paths);
+        const promise2 = tmp7(1999)(6649, dependencyMap.paths);
       } else {
         flag = 403 === statusCode.statusCode;
         if (flag) {
@@ -415,19 +415,19 @@ HTTPUtils.setRequestPatch({
           flag = code3 === AbortCodes.RESTRICTED_HOURS_ACTIVE;
         }
         if (flag) {
-          tmp7(2002)(18735, dependencyMap.paths).then((openRestrictedHoursModal) => {
+          tmp7(1999)(18771, dependencyMap.paths).then((openRestrictedHoursModal) => {
             const result = openRestrictedHoursModal.openRestrictedHoursModal();
           });
           flag = false;
-          const promise = tmp7(2002)(18735, dependencyMap.paths);
+          const promise = tmp7(1999)(18771, dependencyMap.paths);
         }
       }
-      tmp7Result = tmp7(18734);
+      tmp7Result = tmp7(18770);
     }
-    obj = statusCode(7418);
+    obj = statusCode(7420);
   }
 });
-HTTPUtils = fn(1297);
+HTTPUtils = fn(1294);
 let closure_0 = asyncGeneratorStep(async (arg0) => {
   if (c4 === 2) {
     c4 = 3;
@@ -462,10 +462,10 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
           } else {
             dependencyMap = 1;
             c4 = 1;
-            const obj4 = { value: tmp2(1483).awaitOnline(), done: false };
+            const obj4 = { value: tmp2(1480).awaitOnline(), done: false };
             return obj4;
           }
-          obj8 = tmp2(1483);
+          obj8 = tmp2(1480);
         }
       } else if (arg0 === 1) {
         c4 = 3;

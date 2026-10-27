@@ -2,8 +2,8 @@
 
 // Module 9035 (StartEventUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
 
 const require = fn;
 function createStageChannelForEvent() {
@@ -240,10 +240,10 @@ let closure_14 = async function _setEventAsActive(arg0) {
   closure_130_1 = flag;
   return "Reflect";
 };
-let closure_4 = fn(4827).createChannelRecordFromServer;
-const GuildScheduledEventsConstants = fn(4829);
+let closure_4 = fn(4828).createChannelRecordFromServer;
+const GuildScheduledEventsConstants = fn(4830);
 ({ GuildScheduledEventEntityTypes: closure_7, GuildScheduledEventPrivacyLevel: closure_8 } = GuildScheduledEventsConstants);
-const ChannelTypes = fn(1087).ChannelTypes;
+const ChannelTypes = fn(1084).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_scheduled_events/StartEventUtils.tsx");
 

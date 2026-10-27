@@ -1,11 +1,11 @@
-// === Module 18104: guild_channels/ChannelSubtitle ===
+// === Module 18138: guild_channels/ChannelSubtitle ===
 
-// Module 18104 (guild_channels/ChannelSubtitle)
+// Module 18138 (guild_channels/ChannelSubtitle)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11951 */;
-import ChannelListLayout from "ChannelListLayout" /* 11954 */;
-import getChannelSubtitleData from "getChannelSubtitleData" /* 17658 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import MessagePreviewMarkup from "MessagePreviewMarkup" /* 11952 */;
+import ChannelListLayout from "ChannelListLayout" /* 11955 */;
+import getChannelSubtitleData from "getChannelSubtitleData" /* 17699 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

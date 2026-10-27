@@ -1,20 +1,20 @@
-// === Module 13117: ForumPostGridFooter ===
+// === Module 13131: ForumPostGridFooter ===
 
-// Module 13117 (ForumPostGridFooter)
+// Module 13131 (ForumPostGridFooter)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ForumPostReactions from "ForumPostReactions" /* 10995 */;
-import useTypingUsersIds from "useTypingUsersIds" /* 13067 */;
-import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 13118 */;
-import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 13119 */;
+import ForumPostReactions from "ForumPostReactions" /* 10998 */;
+import useTypingUsersIds from "useTypingUsersIds" /* 13081 */;
+import ForumPostMessageCountDefault from "ForumPostMessageCount" /* 13132 */;
+import ForumPostTypingUsersDefault from "ForumPostTypingUsers" /* 13133 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticsObjects = fn(1087).AnalyticsObjects;
+const AnalyticsObjects = fn(1084).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, Fragment: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { footer: { display: "flex", alignItems: "center", flexDirection: "row", justifyContent: "flex-start", marginTop: 12 }, dot: null };
 let size = { height: 4, width: 4, borderRadius: 2, backgroundColor: nativeDefault.colors.BORDER_SUBTLE, marginHorizontal: 8 };
 obj2.dot = size;

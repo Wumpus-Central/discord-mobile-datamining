@@ -1,12 +1,12 @@
-// === Module 8368: actions/BoostingActionCreators ===
+// === Module 8367: actions/BoostingActionCreators ===
 
-// Module 8368 (actions/BoostingActionCreators)
+// Module 8367 (actions/BoostingActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 8369 */;
-import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 8370 */;
-import SubscriptionStore from "SubscriptionStore" /* 2058 */;
+import AppliedGuildBoostRecord from "AppliedGuildBoostRecord" /* 8368 */;
+import GuildBoostSlotRecord from "GuildBoostSlotRecord" /* 8369 */;
+import SubscriptionStore from "SubscriptionStore" /* 2055 */;
 
 require = fn;
 let closure_8 = async function _fetchAppliedGuildBoostsForGuild(arg0) {
@@ -477,7 +477,7 @@ let closure_16 = async function _uncancelGuildBoostSlot() {
   closure_130_1(closure_130_2[6]).dispatch({ type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: closure_129_1 });
   return closure_129_1;
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/BoostingActionCreators.tsx");
 

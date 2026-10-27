@@ -1,16 +1,16 @@
-// === Module 6704: UserGuildSettingsStore ===
+// === Module 6705: UserGuildSettingsStore ===
 
-// Module 6704 (UserGuildSettingsStore)
+// Module 6705 (UserGuildSettingsStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import FlagUtilsAll from "FlagUtils" /* 1405 */;
-import MuteTimers from "MuteTimers" /* 4906 */;
-import ImpersonateStore from "ImpersonateStore" /* 4876 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4905 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserStore from "UserStore" /* 1392 */;
+import FlagUtilsAll from "FlagUtils" /* 1402 */;
+import MuteTimers from "MuteTimers" /* 4907 */;
+import ImpersonateStore from "ImpersonateStore" /* 4877 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4906 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const MuteTimersDefault = MuteTimers;
 
@@ -206,13 +206,13 @@ function updateUserGuildChannelSettingsBulk(guildId, channel_overrides) {
 function handleGuildUpdate() {
   return true;
 }
-const ChannelRecord = fn(4827);
+const ChannelRecord = fn(4828);
 ({ THREAD_CHANNEL_TYPES: metroRequire, isPrivate: closure_7 } = ChannelRecord);
-const Constants = fn(1087);
+const Constants = fn(1084);
 const UserNotificationSettings = Constants.UserNotificationSettings;
-const AccountNotificationFlags = fn(4916).AccountNotificationFlags;
-const UnreadSetting = fn(6705).UnreadSetting;
-const UserSettingsConstants = fn(1097);
+const AccountNotificationFlags = fn(4917).AccountNotificationFlags;
+const UnreadSetting = fn(6706).UnreadSetting;
+const UserSettingsConstants = fn(1094);
 ({ ChannelNotificationSettingsFlags: closure_14, GuildNotificationSettingsFlags: closure_15 } = UserSettingsConstants);
 let userGuildSettings = {};
 let dependencyMap = {};

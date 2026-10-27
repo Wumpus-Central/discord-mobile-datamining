@@ -1,8 +1,8 @@
-// === Module 9355: navigateToGameAnnouncement ===
+// === Module 9354: navigateToGameAnnouncement ===
 
-// Module 9355 (navigateToGameAnnouncement)
+// Module 9354 (navigateToGameAnnouncement)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import GuildStore from "GuildStore" /* 4846 */;
 
 const require = fn;
 let closure_8 = async function _navigateToGameAnnouncement(arg0) {
@@ -135,7 +135,7 @@ let closure_8 = async function _navigateToGameAnnouncement(arg0) {
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ GuildFeatures: hasOwnProperty, JoinGuildSources: metroRequire, Routes: closure_7 } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/navigateToGameAnnouncement.tsx");

@@ -1,14 +1,14 @@
-// === Module 16779: UserSettingsLocale ===
+// === Module 16821: UserSettingsLocale ===
 
-// Module 16779 (UserSettingsLocale)
+// Module 16821 (UserSettingsLocale)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import TableRadioRow from "TableRadioRow" /* 6984 */;
-import flags from "flags" /* 16780 */;
+import util from "util" /* 1125 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import TableRadioRow from "TableRadioRow" /* 6986 */;
+import flags from "flags" /* 16822 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
 
 const require = globalThis.__r;
 
@@ -75,9 +75,9 @@ let closure_10 = async function _handleLanguageChange(arg0) {
   }
 };
 const ScrollView = fn(17).ScrollView;
-const setAppLocale = fn(2069).setAppLocale;
+const setAppLocale = fn(2066).setAppLocale;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { content: { padding: nativeDefault.space.PX_16 }, flagImage: { width: 27, height: 18 } };
 let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -104,7 +104,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let obj = require("c");
   const stateFromStores = require("initialize").useStateFromStores(tmp5, tmp6);
   if (cResult[2] !== tmp4.flagImage) {
-    const availableLocales = tmp(1128).getAvailableLocales();
+    const availableLocales = tmp(1125).getAvailableLocales();
     const mapped = availableLocales.map((localizedName) => {
       ({ name, value } = localizedName);
       const obj = { value, label: name, subLabel: null, icon: null };
@@ -117,7 +117,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[2] = tmp4.flagImage;
     cResult[3] = mapped;
     let tmp9 = mapped;
-    const tmpResult2 = tmp(1128);
+    const tmpResult2 = tmp(1125);
   } else {
     tmp9 = cResult[3];
   }

@@ -3,9 +3,9 @@
 // Module 8708 (StorefrontProductActionCreators)
 import StorefrontCacheUtils from "StorefrontCacheUtils" /* 8710 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
 import StorefrontProductStore from "StorefrontProductStore" /* 8709 */;
-import StorefrontProductRecord from "StorefrontProductRecord" /* 7669 */;
+import StorefrontProductRecord from "StorefrontProductRecord" /* 7670 */;
 
 require = fn;
 let closure_8 = async function _maybeFetchProductsWithSkus(arg0) {
@@ -247,7 +247,7 @@ let closure_10 = async function _maybeFetchProductsBySkuIds(arg0) {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/storefront/StorefrontProductActionCreators.tsx");
 

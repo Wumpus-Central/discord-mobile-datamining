@@ -1,10 +1,10 @@
-// === Module 1262: BaseApexExperimentStore ===
+// === Module 1259: BaseApexExperimentStore ===
 
-// Module 1262 (BaseApexExperimentStore)
+// Module 1259 (BaseApexExperimentStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
-import ApexTypes from "ApexTypes" /* 1264 */;
-import MurmurHashV3Default from "MurmurHashV3" /* 1266 */;
+import ApexTypes from "ApexTypes" /* 1261 */;
+import MurmurHashV3Default from "MurmurHashV3" /* 1263 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 
@@ -40,7 +40,7 @@ function _toPropertyKey(obj) {
   }
   return text;
 }
-const WebAnalyticsEvents = fn(1098).WebAnalyticsEvents;
+const WebAnalyticsEvents = fn(1095).WebAnalyticsEvents;
 const logger = new fn(4).Logger("ApexExperimentStore");
 let tmp3 = typeof window === "undefined";
 if (typeof window !== "undefined") {
@@ -53,9 +53,9 @@ if (typeof window !== "undefined") {
   tmp3 = tmp4;
 }
 if (!tmp3) {
-  fn(1263);
+  fn(1260);
 }
-let items = [fn(1264).UnitType.User, fn(1264).UnitType.Installation];
+let items = [fn(1261).UnitType.User, fn(1261).UnitType.Installation];
 let closure_10 = {};
 let clientOverrides = {};
 const dependencyMap2 = {};
@@ -392,10 +392,10 @@ prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPoint
     const combined = "" + evaluationId + "|" + evaluationId;
     let tmp3 = dependencyMap2[combined];
     if (null == tmp3) {
-      const v3Result = self(1266).v3(combined);
+      const v3Result = self(1263).v3(combined);
       tmp2[combined] = v3Result;
       tmp3 = v3Result;
-      obj = self(1266);
+      obj = self(1263);
     }
     self.withExposureTracking(tmp3, () => self.track(WebAnalyticsEvents.EXPERIMENT_USER_EVALUATION_EXPOSED, { evaluation_id: evaluationId, exposure_location: evaluationId, unit_type: "user" }, { flush: true }));
   }
@@ -410,10 +410,10 @@ prototype["trackCommonTriggerPointExposures"] = function trackCommonTriggerPoint
     const combined = "" + evaluationId + "|" + evaluationId;
     let tmp3 = dependencyMap2[combined];
     if (null == tmp3) {
-      const v3Result = self(1266).v3(combined);
+      const v3Result = self(1263).v3(combined);
       tmp2[combined] = v3Result;
       tmp3 = v3Result;
-      obj = self(1266);
+      obj = self(1263);
     }
     _self.withExposureTracking(tmp3, () => self.track(WebAnalyticsEvents.EXPERIMENT_INSTALLATION_EVALUATION_EXPOSED, { evaluation_id: evaluationId, exposure_location: evaluationId, unit_type: "installation", installation_id }, { flush: true }));
   }

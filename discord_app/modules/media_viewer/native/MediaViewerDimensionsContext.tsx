@@ -3,7 +3,7 @@
 // Module 8784 (MediaViewerDimensionsContext)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,17 +1,17 @@
-// === Module 11930: useEmbeddedAppsForChannel ===
+// === Module 11931: useEmbeddedAppsForChannel ===
 
-// Module 11930 (useEmbeddedAppsForChannel)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4892 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7257 */;
+// Module 11931 (useEmbeddedAppsForChannel)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4893 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7259 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
-import UserStore from "UserStore" /* 1392 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
+import UserStore from "UserStore" /* 1389 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const NO_ACTIVITIES = fn(4822).NO_ACTIVITIES;
+const NO_ACTIVITIES = fn(4823).NO_ACTIVITIES;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbeddedAppsForChannel(arg0, arg1) {
@@ -173,7 +173,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useEmbeddedA
       }
       return tmp13;
     });
-    const found = mapped1.filter(tmp26(1388).isNotNullish);
+    const found = mapped1.filter(tmp26(1385).isNotNullish);
     cResult[10] = tmp8;
     cResult[11] = stateFromStoresArray;
     cResult[12] = arr;

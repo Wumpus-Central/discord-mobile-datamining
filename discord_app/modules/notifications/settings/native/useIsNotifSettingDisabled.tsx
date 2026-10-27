@@ -1,10 +1,10 @@
-// === Module 17336: useIsNotifSettingDisabled ===
+// === Module 17377: useIsNotifSettingDisabled ===
 
-// Module 17336 (useIsNotifSettingDisabled)
-import _modDef2864 from "module_2864" /* 2864 */;
-import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 17327 */;
-import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 17328 */;
-import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 17326 */;
+// Module 17377 (useIsNotifSettingDisabled)
+import _modDef2865 from "module_2865" /* 2865 */;
+import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 17368 */;
+import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 17369 */;
+import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 17367 */;
 
 const require = globalThis.__r;
 
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsNot
           return closure_3.isDisabled(closure_0);
         }
       }
-      const stringResult = obj3.string(_modDef2864.TVZ0Fm);
+      const stringResult = obj3.string(_modDef2865.TVZ0Fm);
       cResult[5] = stringResult;
       const tmp11 = stringResult;
     } else {
@@ -122,7 +122,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useIsNot
   if (!tmp4) {
     const obj2 = { label: null, onPress: null };
     const intl = require("util").intl;
-    obj2.label = intl.string(_modDef2864.TVZ0Fm);
+    obj2.label = intl.string(_modDef2865.TVZ0Fm);
     obj2.onPress = function handleOpenSystem() {
       const result = DeclarativeSystemNotifPermissionAnalytics.trackSystemNotifSettingsOpened(closure_0);
       const openSystemNotifSettings = DeclarativeSystemNotifPermissionHelpersDefault.openSystemNotifSettings;

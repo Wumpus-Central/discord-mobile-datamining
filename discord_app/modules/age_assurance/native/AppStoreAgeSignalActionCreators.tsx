@@ -1,7 +1,7 @@
-// === Module 8079: AppStoreAgeSignalActionCreators ===
+// === Module 8077: AppStoreAgeSignalActionCreators ===
 
-// Module 8079 (AppStoreAgeSignalActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1297 */;
+// Module 8077 (AppStoreAgeSignalActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -210,7 +210,7 @@ let closure_7 = async function _submitAgeSignal(arg0) {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 let closure_4 = { result: "skipped", reason: null };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeSignalActionCreators.tsx");

@@ -1,6 +1,6 @@
-// === Module 1103: MessageTypes ===
+// === Module 1100: MessageTypes ===
 
-// Module 1103 (MessageTypes)
+// Module 1100 (MessageTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { UNDELETABLE: new Set([1, 2, 3, 4, 5, 21, 35, 56, 57, 64, 68]), GUILD_DISCOVERY_STATUS: null, USER_MESSAGE: null, NOTIFIABLE_SYSTEM_MESSAGE: null, REPLYABLE: null, FORWARDABLE: null, REFERENCED_MESSAGE_AVAILABLE: null, AVAILABLE_IN_GUILD_FEED: null, DEADCHAT_PROMPTS: null, NON_COLLAPSIBLE: null, NON_PARSED: null, NON_REPORTABLE: null, AUTOMOD_INCIDENT_ACTIONS: null, SELF_MENTIONABLE_SYSTEM: null, SCHEDULABLE: null, SILENTLY_CREATABLE: null };
@@ -13,8 +13,8 @@ obj.NOTIFIABLE_SYSTEM_MESSAGE = new Set([7, 22, 35, 46, 64]);
 const set3 = new Set([7, 22, 35, 46, 64]);
 obj.REPLYABLE = new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 45, 46, 69]);
 const set4 = new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 45, 46, 69]);
-obj.FORWARDABLE = new Set([0, 19, 20, 23, 35, 69]);
-const set5 = new Set([0, 19, 20, 23, 35, 69]);
+obj.FORWARDABLE = new Set([0, 19, 20, 23, 35]);
+const set5 = new Set([0, 19, 20, 23, 35]);
 obj.REFERENCED_MESSAGE_AVAILABLE = new Set([19, 21, 23]);
 const set6 = new Set([19, 21, 23]);
 obj.AVAILABLE_IN_GUILD_FEED = new Set([0, 19]);

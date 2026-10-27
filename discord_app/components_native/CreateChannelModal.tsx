@@ -4,18 +4,18 @@
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5039 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import useInitialValueDefault from "useInitialValue" /* 5599 */;
-import ChannelUtils from "ChannelUtils" /* 5994 */;
-import TableRow from "TableRow" /* 6903 */;
-import NavigatorHeader from "NavigatorHeader" /* 6924 */;
-import FormRadio from "FormRadio" /* 6988 */;
-import HeaderActionButton from "HeaderActionButton" /* 7485 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5040 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import useInitialValueDefault from "useInitialValue" /* 5600 */;
+import ChannelUtils from "ChannelUtils" /* 5995 */;
+import TableRow from "TableRow" /* 6905 */;
+import NavigatorHeader from "NavigatorHeader" /* 6926 */;
+import FormRadio from "FormRadio" /* 6990 */;
+import HeaderActionButton from "HeaderActionButton" /* 7486 */;
 import Form from "Form" /* 8951 */;
 import useCreateChannelSubmitDefault from "useCreateChannelSubmit" /* 8970 */;
 import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 8975 */;
@@ -23,11 +23,11 @@ import sanitizeChannelNameDefault from "sanitizeChannelName" /* 8976 */;
 import AddModeratorsDefault from "AddModerators" /* 9001 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -162,15 +162,15 @@ function getScreens() {
 }
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const isGuildVocalChannelType = fn(4827).isGuildVocalChannelType;
-let isGuildOwner = fn(4841).isGuildOwner;
-const Constants = fn(1087);
+const isGuildVocalChannelType = fn(4828).isGuildVocalChannelType;
+let isGuildOwner = fn(4842).isGuildOwner;
+const Constants = fn(1084);
 const ChannelTypes = Constants.ChannelTypes;
 ({ GuildFeatures: closure_15, Permissions: closure_16, AnalyticEvents: closure_17, HelpdeskArticles: closure_18 } = Constants);
-const RowType = fn(7875).RowType;
+const RowType = fn(7876).RowType;
 const jsxProd = fn(21);
 ({ jsx: closure_20, Fragment: closure_21, jsxs: closure_22 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { addMembersContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, errorMessage: { marginBottom: 0 }, flexRow: { flexDirection: "row", alignItems: "center" }, horizontalContainer: { flex: 1, flexDirection: "row" } };
 let closure_23 = createStyles.createStyles(obj2);
 let obj4 = {};
@@ -1298,7 +1298,7 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddMem
                         }
                       }
                       const obj7 = { type: "critical", message: tmp28.message, role: "alert" };
-                      obj6.children = closure_20(tmp(7953).InlineNotice, obj7);
+                      obj6.children = closure_20(tmp(7954).InlineNotice, obj7);
                       tmp37 = closure_20(first, obj6);
                     }
                   }
@@ -1369,11 +1369,11 @@ let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function AddMem
         }
         if (tmp) {
           if (row.rowType === constants2.ROLE) {
-            result.push(channelType(5994).permissionOverwriteForRole(row.id, channelType));
-            const obj2 = channelType(5994);
+            result.push(channelType(5995).permissionOverwriteForRole(row.id, channelType));
+            const obj2 = channelType(5995);
           } else if (row.rowType === tmp2.MEMBER) {
-            result.push(channelType(5994).permissionOverwriteForUser(row.id, channelType));
-            const obj = channelType(5994);
+            result.push(channelType(5995).permissionOverwriteForUser(row.id, channelType));
+            const obj = channelType(5995);
           }
         }
       });
@@ -1543,7 +1543,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function CreateCh
     }
     return tmp6;
   }
-  const tmp7 = closure_20(tmp(7095).Navigator, { screens, initialRouteStack: initialStack });
+  const tmp7 = closure_20(tmp(7097).Navigator, { screens, initialRouteStack: initialStack });
   cResult[2] = initialStack;
   cResult[3] = screens;
   cResult[4] = tmp7;

@@ -1,10 +1,10 @@
-// === Module 5253: useFontScale ===
+// === Module 5254: useFontScale ===
 
-// Module 5253 (useFontScale)
+// Module 5254 (useFontScale)
 import c from "c" /* 576 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1502 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
 import noop from "module_19" /* 19 */;
-import DimensionsStore from "DimensionsStore" /* 1500 */;
+import DimensionsStore from "DimensionsStore" /* 1497 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

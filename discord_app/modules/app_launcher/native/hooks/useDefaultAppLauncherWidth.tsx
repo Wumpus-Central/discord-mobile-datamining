@@ -1,9 +1,9 @@
-// === Module 11171: useDefaultAppLauncherWidth ===
+// === Module 11174: useDefaultAppLauncherWidth ===
 
-// Module 11171 (useDefaultAppLauncherWidth)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import ActionSheetConstants from "ActionSheetConstants" /* 5266 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11170 */;
+// Module 11174 (useDefaultAppLauncherWidth)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import ActionSheetConstants from "ActionSheetConstants" /* 5267 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11173 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

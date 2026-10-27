@@ -3,18 +3,18 @@
 // Module 8848 (ForumPostMediaUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
-import URLUtilsDefault from "URLUtils" /* 1386 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import FlagUtils from "FlagUtils" /* 1405 */;
-import UserSettings from "UserSettings" /* 4799 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5999 */;
-import InteractionComponentUtils from "InteractionComponentUtils" /* 6014 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import FlagUtils from "FlagUtils" /* 1402 */;
+import UserSettings from "UserSettings" /* 4800 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6000 */;
+import InteractionComponentUtils from "InteractionComponentUtils" /* 6015 */;
 import noop from "module_19" /* 19 */;
-import ThreadMessageStore from "ThreadMessageStore" /* 7403 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import MessageStore from "MessageStore" /* 6010 */;
-import UserStore from "UserStore" /* 1392 */;
+import ThreadMessageStore from "ThreadMessageStore" /* 7405 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import MessageStore from "MessageStore" /* 6011 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -138,7 +138,7 @@ function getForumPostMedia(attachments) {
     return [];
   }
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MessageAttachmentFlags: closure_8, MessageEmbedMediaFlags: closure_9 } = Constants);
 const ForumPostMediaTypes = { EMBED: "embed", ATTACHMENT: "attachment", COMPONENT: "component" };
 let ReactCompilerGating = fn(558);
@@ -252,7 +252,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFor
             tmp9 = cResult[6];
           }
           const mapped = embeds1.map(tmp9);
-          found = mapped.filter(tmp(1388).isNotNullish);
+          found = mapped.filter(tmp(1385).isNotNullish);
           cResult[2] = embeds1;
           cResult[3] = spoiler;
           cResult[4] = found;
@@ -338,7 +338,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFor
             }
             tmp = null == thumbnail && null != image.images;
           });
-          let found = mapped.filter(tmp(1388).isNotNullish);
+          let found = mapped.filter(tmp(1385).isNotNullish);
         }
         return found;
       }

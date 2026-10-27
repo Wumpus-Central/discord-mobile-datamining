@@ -1,9 +1,9 @@
-// === Module 11400: resolveAppChannel ===
+// === Module 11403: resolveAppChannel ===
 
-// Module 11400 (resolveAppChannel)
+// Module 11403 (resolveAppChannel)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = fn;
 let closure_7 = async function _resolveAppChannel(arg0) {
@@ -133,7 +133,7 @@ let closure_7 = async function _resolveAppChannel(arg0) {
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes: hasOwnProperty, Permissions: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/resolveAppChannel.tsx");

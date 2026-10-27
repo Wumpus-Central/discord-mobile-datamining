@@ -1,15 +1,15 @@
-// === Module 13818: validateJumpWithAlert ===
+// === Module 13832: validateJumpWithAlert ===
 
-// Module 13818 (validateJumpWithAlert)
-import util from "util" /* 1128 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
-import isSpam from "isSpam" /* 7616 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
+// Module 13832 (validateJumpWithAlert)
+import util from "util" /* 1125 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5909 */;
+import isSpam from "isSpam" /* 7617 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
 
 require = fn;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/messages/validateJumpWithAlert.tsx");
 

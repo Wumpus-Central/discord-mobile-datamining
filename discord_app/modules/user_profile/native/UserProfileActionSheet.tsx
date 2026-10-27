@@ -1,12 +1,12 @@
 // === Module 8690: UserProfileActionSheet ===
 
 // Module 8690 (UserProfileActionSheet)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import isChangelogUserDefault from "isChangelogUser" /* 4872 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import BottomSheetModal from "BottomSheetModal" /* 5269 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
-import openUserSettings from "openUserSettings" /* 7490 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import isChangelogUserDefault from "isChangelogUser" /* 4873 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import BottomSheetModal from "BottomSheetModal" /* 5270 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7280 */;
+import openUserSettings from "openUserSettings" /* 7491 */;
 import showUserProfileActionSheetDefault from "showUserProfileActionSheet" /* 8668 */;
 import UserActionCreators from "UserActionCreators" /* 8670 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8676 */;
@@ -16,21 +16,21 @@ import scaleProfileFrameDefault from "scaleProfileFrame" /* 8715 */;
 import ApplicationPresenceUtils from "ApplicationPresenceUtils" /* 8722 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import UserStore from "UserStore" /* 1392 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import UserStore from "UserStore" /* 1389 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8649 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const UserProfileThemeTypes = fn(7304).UserProfileThemeTypes;
-const Constants = fn(1087);
+const UserProfileThemeTypes = fn(7306).UserProfileThemeTypes;
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_12, EMPTY_STRING_SNOWFLAKE_ID: map1, UserSettingsSections: closure_14 } = Constants);
-const ACTION_SHEET_MAX_WIDTH = fn(5266).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5267).ACTION_SHEET_MAX_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_18 = createStyles.createStyles({ container: { flex: 1 }, profileContainer: { position: "relative" }, noPadding: { paddingHorizontal: 0 }, profileEffect: { position: "absolute", top: 0, left: 0, right: 0, zIndex: 1 } });
 const __initData = { code: "function UserProfileActionSheetTsx1(){const{value}=this.__closure;return value.get();}" };
 const __initData2 = { code: "function UserProfileActionSheetTsx2(prepared){const{animatedPosition}=this.__closure;return animatedPosition.set(prepared);}" };
@@ -349,11 +349,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
       const fn = (animatedRef, sharedValue, lockableScrollableContentOffsetY) => {
-        const scrollEventsHandlersDefault = animatedScrollableState(5269).useScrollEventsHandlersDefault(animatedRef, sharedValue, lockableScrollableContentOffsetY);
-        const obj = animatedScrollableState(5269);
-        animatedScrollableState = animatedScrollableState(5269).useBottomSheetInternal().animatedScrollableState;
+        const scrollEventsHandlersDefault = animatedScrollableState(5270).useScrollEventsHandlersDefault(animatedRef, sharedValue, lockableScrollableContentOffsetY);
+        const obj = animatedScrollableState(5270);
+        animatedScrollableState = animatedScrollableState(5270).useBottomSheetInternal().animatedScrollableState;
         const handleOnScroll = scrollEventsHandlersDefault.handleOnScroll;
-        const obj2 = animatedScrollableState(5269);
+        const obj2 = animatedScrollableState(5270);
         const fn = function s(contentOffset, arg1) {
           if (handleOnScroll != null) {
             tmp(contentOffset, arg1);
@@ -365,13 +365,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           const result = animatedScrollableState.set(num);
         };
-        const obj3 = animatedScrollableState(5052);
-        fn.__closure = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(5269).SCROLLABLE_STATE };
+        const obj3 = animatedScrollableState(5053);
+        fn.__closure = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(5270).SCROLLABLE_STATE };
         fn.__workletHash = 1075381102662;
         fn.__initData = __initData;
         const items = [handleOnScroll, animatedScrollableState];
         const obj5 = {};
-        obj4 = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(5269).SCROLLABLE_STATE };
+        obj4 = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(5270).SCROLLABLE_STATE };
         const merged = Object.assign(scrollEventsHandlersDefault);
         obj5.handleOnScroll = obj3.useWorkletCallback(fn, items);
         return obj5;
@@ -644,11 +644,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const memo = onClose.useMemo(() => {
     closure_0 = sharedValue2;
     return (animatedRef, sharedValue, lockableScrollableContentOffsetY) => {
-      const scrollEventsHandlersDefault = animatedScrollableState(5269).useScrollEventsHandlersDefault(animatedRef, sharedValue, lockableScrollableContentOffsetY);
-      const obj = animatedScrollableState(5269);
-      animatedScrollableState = animatedScrollableState(5269).useBottomSheetInternal().animatedScrollableState;
+      const scrollEventsHandlersDefault = animatedScrollableState(5270).useScrollEventsHandlersDefault(animatedRef, sharedValue, lockableScrollableContentOffsetY);
+      const obj = animatedScrollableState(5270);
+      animatedScrollableState = animatedScrollableState(5270).useBottomSheetInternal().animatedScrollableState;
       const handleOnScroll = scrollEventsHandlersDefault.handleOnScroll;
-      const obj2 = animatedScrollableState(5269);
+      const obj2 = animatedScrollableState(5270);
       const fn = function s(contentOffset, arg1) {
         if (handleOnScroll != null) {
           tmp(contentOffset, arg1);
@@ -660,13 +660,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         const result = animatedScrollableState.set(num);
       };
-      const obj3 = animatedScrollableState(5052);
-      fn.__closure = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(5269).SCROLLABLE_STATE };
+      const obj3 = animatedScrollableState(5053);
+      fn.__closure = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(5270).SCROLLABLE_STATE };
       fn.__workletHash = 1075381102662;
       fn.__initData = __initData;
       const items = [handleOnScroll, animatedScrollableState];
       const obj5 = {};
-      obj4 = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(5269).SCROLLABLE_STATE };
+      obj4 = { defaultHandleOnScroll: handleOnScroll, scrollPosition: animatedScrollableState, animatedScrollableState, SCROLLABLE_STATE: animatedScrollableState(5270).SCROLLABLE_STATE };
       const merged = Object.assign(scrollEventsHandlersDefault);
       obj5.handleOnScroll = obj3.useWorkletCallback(fn, items);
       return obj5;

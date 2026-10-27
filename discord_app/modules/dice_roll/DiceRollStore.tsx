@@ -1,6 +1,6 @@
-// === Module 13061: DiceRollStore ===
+// === Module 13075: DiceRollStore ===
 
-// Module 13061 (DiceRollStore)
+// Module 13075 (DiceRollStore)
 import c from "c" /* 576 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

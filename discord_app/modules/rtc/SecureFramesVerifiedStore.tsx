@@ -3,11 +3,11 @@
 // Module 9178 (SecureFramesVerifiedStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5739 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5740 */;
 import SecureFramesUtils from "SecureFramesUtils" /* 9196 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7814 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7815 */;
 import TransientKeyStore from "TransientKeyStore" /* 9179 */;
 import VerifiedKeyStore from "VerifiedKeyStore" /* 9180 */;
 
@@ -70,7 +70,7 @@ function handleUserUpdate(userId) {
     return flag;
   }
 }
-const RTCConnectionStates = fn(1087).RTCConnectionStates;
+const RTCConnectionStates = fn(1084).RTCConnectionStates;
 const map = new Map();
 const map1 = new Map();
 let c10 = false;

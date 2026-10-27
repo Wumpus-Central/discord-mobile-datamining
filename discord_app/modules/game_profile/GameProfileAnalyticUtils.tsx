@@ -1,12 +1,12 @@
 // === Module 9245: GameProfileAnalyticUtils ===
 
 // Module 9245 (GameProfileAnalyticUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import v1 from "v1" /* 1281 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import v1 from "v1" /* 1278 */;
 import ContentInventoryStore from "ContentInventoryStore" /* 8824 */;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_4, GuildFeatures: hasOwnProperty } = Constants);
 const ContentInventoryFeedKey = fn(8839).ContentInventoryFeedKey;
 const size = fn(2);

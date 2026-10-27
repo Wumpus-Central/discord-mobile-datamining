@@ -1,12 +1,12 @@
-// === Module 13155: useChatInputFloatingWidth ===
+// === Module 13169: useChatInputFloatingWidth ===
 
-// Module 13155 (useChatInputFloatingWidth)
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import timing from "timing" /* 5206 */;
+// Module 13169 (useChatInputFloatingWidth)
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import timing from "timing" /* 5207 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_3 = fn(12512).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
+let closure_3 = fn(12520).CHAT_INPUT_FLOATING_SLIDE_TIMING_CONFIG;
 let closure_4 = { code: "function useChatInputFloatingWidthTsx1(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}" };
 const __initData = { code: "function useChatInputFloatingWidthTsx2(){const{collapsedWidth,expandedWidth,progress}=this.__closure;return{width:collapsedWidth+(expandedWidth-collapsedWidth)*progress.get()};}" };
 const ReactCompilerGating = fn(558);

@@ -1,12 +1,12 @@
-// === Module 5979: CustomMarkup ===
+// === Module 5980: CustomMarkup ===
 
-// Module 5979 (CustomMarkup)
-import _modDef1951 from "module_1951" /* 1951 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5705 */;
-import MarkupReactRules from "MarkupReactRules" /* 5706 */;
-import MarkupTypes from "MarkupTypes" /* 5980 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 5981 */;
-import MarkupRulesDefault from "MarkupRules" /* 5982 */;
+// Module 5980 (CustomMarkup)
+import _modDef1948 from "module_1948" /* 1948 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5706 */;
+import MarkupReactRules from "MarkupReactRules" /* 5707 */;
+import MarkupTypes from "MarkupTypes" /* 5981 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 5982 */;
+import MarkupRulesDefault from "MarkupRules" /* 5983 */;
 import size from "module_2" /* 2 */;
 
 const MarkupReactRulesDefault = MarkupReactRules;
@@ -20,19 +20,19 @@ function createRules(arg0) {
   items = [MarkupUtilsDefault.defaultRules, tmp, ];
   const obj2 = {};
   const obj3 = {};
-  const merged = Object.assign(_modDef1951.defaultRules.link);
+  const merged = Object.assign(_modDef1948.defaultRules.link);
   obj3.react = tmp[MarkupTypes.AST_KEY.LINK].react;
   obj2[MarkupTypes.AST_KEY.LINK] = obj3;
   const obj4 = {};
-  const merged1 = Object.assign(_modDef1951.defaultRules.url);
+  const merged1 = Object.assign(_modDef1948.defaultRules.url);
   obj4.react = tmp[MarkupTypes.AST_KEY.URL].react;
   obj2[MarkupTypes.AST_KEY.URL] = obj4;
   const obj5 = {};
-  const merged2 = Object.assign(_modDef1951.defaultRules.autolink);
+  const merged2 = Object.assign(_modDef1948.defaultRules.autolink);
   obj5.react = tmp[MarkupTypes.AST_KEY.AUTOLINK].react;
   obj2[MarkupTypes.AST_KEY.AUTOLINK] = obj5;
   const obj6 = {};
-  const merged3 = Object.assign(_modDef1951.defaultRules.blockQuote);
+  const merged3 = Object.assign(_modDef1948.defaultRules.blockQuote);
   obj6.react = tmp[MarkupTypes.AST_KEY.BLOCK_QUOTE].react;
   obj2[MarkupTypes.AST_KEY.BLOCK_QUOTE] = obj6;
   items[2] = obj2;

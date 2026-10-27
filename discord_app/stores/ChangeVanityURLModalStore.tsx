@@ -1,9 +1,9 @@
-// === Module 19152: ChangeVanityURLModalStore ===
+// === Module 19190: ChangeVanityURLModalStore ===
 
-// Module 19152 (ChangeVanityURLModalStore)
+// Module 19190 (ChangeVanityURLModalStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1087 */;
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const FormStates = Constants.FormStates;

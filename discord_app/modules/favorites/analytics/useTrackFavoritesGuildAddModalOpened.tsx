@@ -1,13 +1,13 @@
-// === Module 13856: useTrackFavoritesGuildAddModalOpened ===
+// === Module 13870: useTrackFavoritesGuildAddModalOpened ===
 
-// Module 13856 (useTrackFavoritesGuildAddModalOpened)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+// Module 13870 (useTrackFavoritesGuildAddModalOpened)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/analytics/useTrackFavoritesGuildAddModalOpened.tsx");

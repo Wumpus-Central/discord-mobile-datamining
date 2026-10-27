@@ -1,22 +1,22 @@
-// === Module 13118: ForumPostMessageCount ===
+// === Module 13132: ForumPostMessageCount ===
 
-// Module 13118 (ForumPostMessageCount)
+// Module 13132 (ForumPostMessageCount)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5234 */;
+import util from "util" /* 1125 */;
+import Text_Text from "Text/Text" /* 5235 */;
 import ChatIcon from "ChatIcon" /* 8542 */;
-import ForumHooks from "ForumHooks" /* 9725 */;
-import AnimatedCounterDefault from "AnimatedCounter" /* 11015 */;
+import ForumHooks from "ForumHooks" /* 9727 */;
+import AnimatedCounterDefault from "AnimatedCounter" /* 11018 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { tintColor: nativeDefault.colors.ICON_MUTED, marginEnd: 4, marginTop: null };
-let PlatformUtils = fn(1384);
+let PlatformUtils = fn(1381);
 let num = 0;
 if (PlatformUtils.isAndroid()) {
   num = 2;
@@ -24,7 +24,7 @@ if (PlatformUtils.isAndroid()) {
 let obj4 = { iconRead: obj2, iconUnread: null, messageUnreadCount: null, container: null };
 obj2.marginTop = num;
 let obj5 = { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, marginEnd: 4, marginTop: null };
-PlatformUtils = fn(1384);
+PlatformUtils = fn(1381);
 let num2 = 0;
 if (PlatformUtils.isAndroid()) {
   num2 = 2;

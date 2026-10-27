@@ -1,22 +1,22 @@
-// === Module 14015: ChannelHeader ===
+// === Module 14029: ChannelHeader ===
 
-// Module 14015 (ChannelHeader)
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import RootNavigationRef from "RootNavigationRef" /* 5151 */;
-import ChatInputUtils from "ChatInputUtils" /* 5159 */;
-import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11207 */;
-import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 14016 */;
-import HomeChannelHeaderDefault from "HomeChannelHeader" /* 14017 */;
-import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 14018 */;
-import ForumChannelHeaderDefault from "ForumChannelHeader" /* 14026 */;
-import GuildChannelHeaderDefault from "GuildChannelHeader" /* 14028 */;
+// Module 14029 (ChannelHeader)
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import RootNavigationRef from "RootNavigationRef" /* 5152 */;
+import ChatInputUtils from "ChatInputUtils" /* 5160 */;
+import SwipeToMemberListUtils from "SwipeToMemberListUtils" /* 11210 */;
+import GuildRoleSubscriptionsChannelHeaderDefault from "GuildRoleSubscriptionsChannelHeader" /* 14030 */;
+import HomeChannelHeaderDefault from "HomeChannelHeader" /* 14031 */;
+import PrivateChannelHeaderDefault from "PrivateChannelHeader" /* 14032 */;
+import ForumChannelHeaderDefault from "ForumChannelHeader" /* 14040 */;
+import GuildChannelHeaderDefault from "GuildChannelHeader" /* 14042 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 require = fn;
-const ComponentActions = fn(1087).ComponentActions;
-const StaticChannelRoute = fn(4830).StaticChannelRoute;
+const ComponentActions = fn(1084).ComponentActions;
+const StaticChannelRoute = fn(4831).StaticChannelRoute;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -47,7 +47,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelH
   const tmp4 = undefined === pressable || pressable;
   const stateFromStores = channelId(573).useStateFromStores(first, tmp9);
   const tmpResult = channelId(573);
-  const isChannelContentGated = channelId(6662).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(6663).useIsChannelContentGated(stateFromStores);
   let tmp11 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp11 = tmp4;
@@ -106,8 +106,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelH
         if (cResult[9] !== stateFromStores) {
           let stringResult;
           if (!stateFromStores.isForumChannel()) {
-            const intl = tmp(1128).intl;
-            stringResult = intl.string(tmp(1128).t["L9fR+P"]);
+            const intl = tmp(1125).intl;
+            stringResult = intl.string(tmp(1125).t["L9fR+P"]);
           }
           cResult[9] = stateFromStores;
           cResult[10] = stringResult;
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelH
       }
     }
   }
-  const tmpResult2 = channelId(6662);
+  const tmpResult2 = channelId(6663);
 }) : (function ChannelHeader(channelId) {
   channelId = channelId.channelId;
   ({ screenIndex, isNavigationScreen, pressable } = channelId);
@@ -195,7 +195,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelH
   const items = [ChannelStore];
   const stateFromStores = channelId(573).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
   const obj = channelId(573);
-  const isChannelContentGated = channelId(6662).useIsChannelContentGated(stateFromStores);
+  const isChannelContentGated = channelId(6663).useIsChannelContentGated(stateFromStores);
   let tmp4 = !isChannelContentGated;
   if (!isChannelContentGated) {
     tmp4 = pressable;
@@ -230,8 +230,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelH
         obj4.screenIndex = screenIndex;
         let stringResult;
         if (!stateFromStores.isForumChannel()) {
-          const intl = tmp(1128).intl;
-          stringResult = intl.string(tmp(1128).t["L9fR+P"]);
+          const intl = tmp(1125).intl;
+          stringResult = intl.string(tmp(1125).t["L9fR+P"]);
         }
         obj4.searchPlaceholder = stringResult;
         tmp8Result = jsx(ForumChannelHeaderDefault, { channelId, guildId: null, pressable: null, isGuildMemberCountVisible: null, isNavigationScreen: null, screenIndex: null, searchPlaceholder: null });

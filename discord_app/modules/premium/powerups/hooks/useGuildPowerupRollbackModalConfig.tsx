@@ -1,14 +1,14 @@
-// === Module 13436: useGuildPowerupRollbackModalConfig ===
+// === Module 13450: useGuildPowerupRollbackModalConfig ===
 
-// Module 13436 (useGuildPowerupRollbackModalConfig)
-import util from "util" /* 1128 */;
-import _modDef2568 from "module_2568" /* 2568 */;
-import dismissible_content from "dismissible_content" /* 4807 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13424 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13437 */;
+// Module 13450 (useGuildPowerupRollbackModalConfig)
+import util from "util" /* 1125 */;
+import _modDef2567 from "module_2567" /* 2567 */;
+import dismissible_content from "dismissible_content" /* 4808 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13438 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13451 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5181 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5182 */;
 
 const require = globalThis.__r;
 
@@ -24,11 +24,11 @@ function getGuildThemeRollbackModalConfig(storeRemovalDate) {
       const intl = util.intl;
       const obj2 = { dateString: tmp3 };
       const _HermesInternal = HermesInternal;
-      obj.header = "" + storeRemovalDate.title + " " + intl.formatToPlainString(_modDef2568["6e2ry1"], obj2);
+      obj.header = "" + storeRemovalDate.title + " " + intl.formatToPlainString(_modDef2567["6e2ry1"], obj2);
       const intl2 = util.intl;
       const obj5 = { startDate: tmp3, endDate: tmp3, perkName: null, boostCount: null };
       ({ title: obj3.perkName, cost: obj3.boostCount } = storeRemovalDate);
-      const items = [intl2.formatToPlainString(_modDef2568.jd8fki, obj5)];
+      const items = [intl2.formatToPlainString(_modDef2567.jd8fki, obj5)];
       obj.bodies = items;
       return obj;
     }

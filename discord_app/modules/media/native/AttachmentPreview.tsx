@@ -1,15 +1,14 @@
-// === Module 12064: AttachmentPreview ===
+// === Module 12065: AttachmentPreview ===
 
-// Module 12064 (AttachmentPreview)
+// Module 12065 (AttachmentPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import FileUtils from "FileUtils" /* 8150 */;
+import native from "native" /* 1199 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import FileUtils from "FileUtils" /* 8148 */;
 import common_Video from "common/Video" /* 8790 */;
-import _modDef12065 from "module_12065" /* 12065 */;
 import _modDef12066 from "module_12066" /* 12066 */;
 import _modDef12067 from "module_12067" /* 12067 */;
 import _modDef12068 from "module_12068" /* 12068 */;
@@ -23,16 +22,17 @@ import _modDef12075 from "module_12075" /* 12075 */;
 import _modDef12076 from "module_12076" /* 12076 */;
 import _modDef12077 from "module_12077" /* 12077 */;
 import _modDef12078 from "module_12078" /* 12078 */;
+import _modDef12079 from "module_12079" /* 12079 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { fileInfoAttachmentPreviewFile: { flexDirection: "row", alignItems: "center", overflow: "hidden", borderRadius: nativeDefault.radii.sm, height: 75, padding: 12, flex: 1, gap: nativeDefault.space.PX_8 }, attachmentFileIcon: { height: 32, width: 24 }, attachmentFileName: { paddingRight: 4, paddingLeft: 4, maxWidth: 136 }, videoIcon: { position: "absolute", top: 0, left: 0, right: 0, bottom: 0, alignItems: "center", justifyContent: "center" } };
 let closure_7 = createStyles.createStyles(obj);
-let obj4 = { archive: _modDef12065, acrobat: _modDef12066, ae: _modDef12067, ai: _modDef12068, audio: _modDef12069, code: _modDef12070, document: _modDef12071, image: _modDef12072, photoshop: _modDef12073, sketch: _modDef12074, spreadsheet: _modDef12075, unknown: _modDef12076, video: _modDef12077, webcode: _modDef12078 };
+let obj4 = { archive: _modDef12066, acrobat: _modDef12067, ae: _modDef12068, ai: _modDef12069, audio: _modDef12070, code: _modDef12071, document: _modDef12072, image: _modDef12073, photoshop: _modDef12074, sketch: _modDef12075, spreadsheet: _modDef12076, unknown: _modDef12077, video: _modDef12078, webcode: _modDef12079 };
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AttachmentIcon(fileName) {
   const cResult = c.c(3);
@@ -44,7 +44,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AttachmentIc
   }
   let tmp4 = obj4[obj2.classifyFileName(obj2, str)];
   if (tmp4 == null) {
-    tmp4 = _modDef12076;
+    tmp4 = _modDef12077;
   }
   if (cResult[0] === tmp4) {
     if (cResult[1] === tmp3.attachmentFileIcon) {
@@ -69,7 +69,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AttachmentIc
     }
     let tmp2 = obj4[obj.classifyFileName(obj, str)];
     if (tmp2 == null) {
-      tmp2 = _modDef12076;
+      tmp2 = _modDef12077;
     }
     return tmp2;
   }, items);

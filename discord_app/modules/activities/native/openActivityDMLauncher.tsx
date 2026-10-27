@@ -1,6 +1,6 @@
-// === Module 15233: openActivityDMLauncher ===
+// === Module 15269: openActivityDMLauncher ===
 
-// Module 15233 (openActivityDMLauncher)
+// Module 15269 (openActivityDMLauncher)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -149,7 +149,7 @@ let closure_5 = async function _openActivityDMLauncher(arg0) {
     }
   }
 };
-const AppLauncherRouteName = fn(1504).AppLauncherRouteName;
+const AppLauncherRouteName = fn(1501).AppLauncherRouteName;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/native/openActivityDMLauncher.tsx");
 

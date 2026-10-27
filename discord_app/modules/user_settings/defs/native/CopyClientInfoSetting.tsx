@@ -1,21 +1,21 @@
-// === Module 16916: CopyClientInfoSetting ===
+// === Module 16958: CopyClientInfoSetting ===
 
-// Module 16916 (CopyClientInfoSetting)
+// Module 16958 (CopyClientInfoSetting)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import DeviceUtils from "DeviceUtils" /* 4928 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import ToastUtils from "ToastUtils" /* 5662 */;
-import CopyIcon from "CopyIcon" /* 5682 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
-import ClipboardUtils from "ClipboardUtils" /* 7285 */;
-import ActionSheetRow from "ActionSheetRow" /* 7294 */;
-import ActionSheet from "ActionSheet" /* 7298 */;
-import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 7748 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12719 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11028 */;
-import ClientInfoUtils from "ClientInfoUtils" /* 1383 */;
+import util from "util" /* 1125 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import DeviceUtils from "DeviceUtils" /* 4929 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import ToastUtils from "ToastUtils" /* 5663 */;
+import CopyIcon from "CopyIcon" /* 5683 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7250 */;
+import ClipboardUtils from "ClipboardUtils" /* 7287 */;
+import ActionSheetRow from "ActionSheetRow" /* 7296 */;
+import ActionSheet from "ActionSheet" /* 7300 */;
+import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 7749 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12727 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11031 */;
+import ClientInfoUtils from "ClientInfoUtils" /* 1380 */;
 
 require = fn;
 function getClientInfo() {
@@ -74,18 +74,18 @@ let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IOSAnchoredChatScrollerRow() {
   const cResult = subLabel(576).c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1128).intl;
-    let result = tmp(7748).isIOSAnchoredChatScrollerEnabled();
-    const t = tmp(1128).t;
+    const intl = tmp(1125).intl;
+    let result = tmp(7749).isIOSAnchoredChatScrollerEnabled();
+    const t = tmp(1125).t;
     const stringResult = intl.string(result ? t.LfEwvz : t["pe/6Ma"]);
     cResult[0] = stringResult;
-    const tmpResult = tmp(7748);
+    const tmpResult = tmp(7749);
   } else {
     subLabel = cResult[0];
     const _Symbol = Symbol;
     if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = tmp(1128).intl;
-      const stringResult1 = intl2.string(tmp(1128).t.iNGJNe);
+      const intl2 = tmp(1125).intl;
+      const stringResult1 = intl2.string(tmp(1125).t.iNGJNe);
       cResult[1] = stringResult1;
       let tmp8 = stringResult1;
     } else {
@@ -101,7 +101,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IOSAnch
               const result = ToastUtils.presentCopiedToClipboard();
             }
       };
-      const tmp12 = closure_4(tmp(7294).ActionSheetRow, obj2);
+      const tmp12 = closure_4(tmp(7296).ActionSheetRow, obj2);
       cResult[2] = tmp12;
       let tmp10 = tmp12;
     } else {
@@ -117,7 +117,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IOSAnch
   const stringResult = intl.string(result ? t.LfEwvz : t["pe/6Ma"]);
   require = stringResult;
   const obj2 = { label: null, subLabel: null, onPress: null };
-  const intl2 = tmp(1128).intl;
+  const intl2 = tmp(1125).intl;
   obj2.label = intl2.string(util.t.iNGJNe);
   obj2.subLabel = stringResult;
   obj2.onPress = function onPress() {
@@ -395,18 +395,18 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(6840).ClipboardListIcon,
+  IconComponent: fn(6842).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_9 }), "ClientClientInfoActionSheet");
   },
-  usePredicate: fn(4799).DeveloperMode.useSetting,
+  usePredicate: fn(4800).DeveloperMode.useSetting,
   withArrow: true
 });
 const size = fn(2);

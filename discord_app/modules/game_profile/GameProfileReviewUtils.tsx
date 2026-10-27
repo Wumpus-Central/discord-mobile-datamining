@@ -1,11 +1,11 @@
-// === Module 9321: GameProfileReviewUtils ===
+// === Module 9322: GameProfileReviewUtils ===
 
-// Module 9321 (GameProfileReviewUtils)
-import util from "util" /* 1128 */;
-import GameDetectionTypes from "GameDetectionTypes" /* 2042 */;
+// Module 9322 (GameProfileReviewUtils)
+import util from "util" /* 1125 */;
+import GameDetectionTypes from "GameDetectionTypes" /* 2039 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9245 */;
 import SteamReleaseStatus from "SteamReleaseStatus" /* 9275 */;
-import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9322 */;
+import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9323 */;
 import size from "module_2" /* 2 */;
 
 const obj = {
@@ -147,10 +147,10 @@ export const getSteamReviewScoreDescriptionIntl = function getSteamReviewScoreDe
     return null;
   }
 };
-export const canShowOpenCriticReview = function canShowOpenCriticReview(game, gameProfileMobileStoreReviews) {
+export const canShowOpenCriticReview = function canShowOpenCriticReview(game, mobileStoreReviews) {
   let tmp = game.steamReleaseStatus !== SteamReleaseStatus.SteamReleaseStatus.RETIRED_ABANDONED;
   if (!tmp) {
-    tmp = gameProfileMobileStoreReviews.length > 0;
+    tmp = mobileStoreReviews.length > 0;
   }
   if (tmp) {
     const reviews = game.reviews;

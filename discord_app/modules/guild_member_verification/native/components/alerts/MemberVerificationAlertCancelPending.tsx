@@ -1,8 +1,8 @@
-// === Module 6842: MemberVerificationAlertCancelPending ===
+// === Module 6844: MemberVerificationAlertCancelPending ===
 
-// Module 6842 (MemberVerificationAlertCancelPending)
-import MemberVerificationAlertDefault from "MemberVerificationAlert" /* 6839 */;
-import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6843 */;
+// Module 6844 (MemberVerificationAlertCancelPending)
+import MemberVerificationAlertDefault from "MemberVerificationAlert" /* 6841 */;
+import GuildJoinRequestActionCreatorsDefault from "GuildJoinRequestActionCreators" /* 6845 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -56,15 +56,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     }
     const _Symbol = Symbol;
     if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = tmp(1128).intl;
-      const stringResult = intl.string(tmp(1128).t.KYiN1Q);
+      const intl = tmp(1125).intl;
+      const stringResult = intl.string(tmp(1125).t.KYiN1Q);
       cResult[9] = stringResult;
     }
     if (cResult[10] !== tmp8) {
       let stringResult1 = tmp8;
       if (tmp8 == null) {
-        const intl2 = tmp(1128).intl;
-        stringResult1 = intl2.string(tmp(1128).t.nQHxqm);
+        const intl2 = tmp(1125).intl;
+        stringResult1 = intl2.string(tmp(1125).t.nQHxqm);
       }
       cResult[10] = tmp8;
       cResult[11] = stringResult1;
@@ -75,8 +75,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
     if (cResult[12] !== tmp4) {
       let stringResult2 = tmp4;
       if (tmp4 == null) {
-        const intl3 = tmp(1128).intl;
-        stringResult2 = intl3.string(tmp(1128).t.OzHPde);
+        const intl3 = tmp(1125).intl;
+        stringResult2 = intl3.string(tmp(1125).t.OzHPde);
       }
       cResult[12] = tmp4;
       cResult[13] = stringResult2;
@@ -90,8 +90,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
       }
       const _Symbol2 = Symbol;
       if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl4 = tmp(1128).intl;
-        const stringResult3 = intl4.string(tmp(1128).t.bANR0R);
+        const intl4 = tmp(1125).intl;
+        const stringResult3 = intl4.string(tmp(1125).t.bANR0R);
         cResult[17] = stringResult3;
         let tmp24 = stringResult3;
       } else {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
       if (cResult[18] !== onClose) {
         const obj2 = { text: tmp24, variant: "secondary", onPress: onClose };
         cResult[18] = onClose;
-        cResult[19] = closure_6(tmp(5244).Button, obj2);
+        cResult[19] = closure_6(tmp(5245).Button, obj2);
         class P {
           constructor() {
             if (closure_1 != null) {
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
             return;
           }
         }
-        const tmp28 = closure_6(tmp(5244).Button, obj2);
+        const tmp28 = closure_6(tmp(5245).Button, obj2);
       }
       if (cResult[20] === tmp22) {
         if (cResult[21] === tmp26) {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
       }
     }
     const obj5 = { variant: "destructive", text: tmp19, onPress: tmp12 };
-    const tmp23 = closure_6(tmp(5244).Button, obj5);
+    const tmp23 = closure_6(tmp(5245).Button, obj5);
     cResult[14] = tmp12;
     cResult[15] = tmp19;
     cResult[16] = tmp23;
@@ -211,25 +211,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MemberVe
   }, items);
   const obj = {};
   const merged1 = Object.assign(merged);
-  const intl = guildId(1128).intl;
-  obj.header = intl.string(guildId(1128).t.KYiN1Q);
+  const intl = guildId(1125).intl;
+  obj.header = intl.string(guildId(1125).t.KYiN1Q);
   if (subtitleText == null) {
-    const intl2 = tmp7(1128).intl;
-    subtitleText = intl2.string(tmp7(1128).t.nQHxqm);
+    const intl2 = tmp7(1125).intl;
+    subtitleText = intl2.string(tmp7(1125).t.nQHxqm);
   }
   obj.subtitle = subtitleText;
   if (confirmText == null) {
-    const intl3 = tmp7(1128).intl;
-    confirmText = intl3.string(tmp7(1128).t.OzHPde);
+    const intl3 = tmp7(1125).intl;
+    confirmText = intl3.string(tmp7(1125).t.OzHPde);
   }
   const obj2 = { children: null };
-  const items1 = [closure_6(guildId(5244).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
+  const items1 = [closure_6(guildId(5245).Button, { variant: "destructive", text: confirmText, onPress: callback }), ];
   const obj3 = { text: null, variant: "secondary", onPress: null };
-  const intl4 = tmp7(1128).intl;
-  obj3.text = intl4.string(guildId(1128).t.bANR0R);
+  const intl4 = tmp7(1125).intl;
+  obj3.text = intl4.string(guildId(1125).t.bANR0R);
   obj3.onPress = onClose;
-  items1[1] = closure_6(guildId(5244).Button, obj3);
+  items1[1] = closure_6(guildId(5245).Button, obj3);
   obj2.children = items1;
   obj.buttons = closure_8(closure_7, obj2);
-  return closure_6(onClose(6839), obj);
+  return closure_6(onClose(6841), obj);
 });

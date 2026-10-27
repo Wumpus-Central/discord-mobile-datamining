@@ -1,7 +1,7 @@
 // === Module 8610: SuspiciousDownloadUtils ===
 
 // Module 8610 (SuspiciousDownloadUtils)
-import URLUtilsDefault from "URLUtils" /* 1386 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
 import _modDef8611 from "module_8611" /* 8611 */;
 
 const set = new Set(_modDef8611);

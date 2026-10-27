@@ -1,11 +1,11 @@
-// === Module 7277: getConnectionsRoles ===
+// === Module 7279: getConnectionsRoles ===
 
-// Module 7277 (getConnectionsRoles)
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import BigFlagUtils from "BigFlagUtils" /* 1099 */;
+// Module 7279 (getConnectionsRoles)
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import BigFlagUtils from "BigFlagUtils" /* 1096 */;
 
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes, Permissions } = Constants);
 let items = [, , , , , , ];
 ({ GUILD_TEXT: arr[0], GUILD_VOICE: arr[1], GUILD_ANNOUNCEMENT: arr[2], GUILD_FORUM: arr[3], GUILD_APP: arr[4], PUBLIC_THREAD: arr[5], PRIVATE_THREAD: arr[6] } = ChannelTypes);

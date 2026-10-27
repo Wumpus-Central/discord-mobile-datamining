@@ -1,11 +1,11 @@
-// === Module 7818: VideoStreamStats ===
+// === Module 7819: VideoStreamStats ===
 
-// Module 7818 (VideoStreamStats)
-import TimeUtils from "TimeUtils" /* 5722 */;
-import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5879 */;
+// Module 7819 (VideoStreamStats)
+import TimeUtils from "TimeUtils" /* 5723 */;
+import ApplicationStreamingSettingsStore from "ApplicationStreamingSettingsStore" /* 5880 */;
 
 require = fn;
-const StreamLayouts = fn(1087).StreamLayouts;
+const StreamLayouts = fn(1084).StreamLayouts;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/go_live/VideoStreamStats.tsx");
 class VideoStreamStats {

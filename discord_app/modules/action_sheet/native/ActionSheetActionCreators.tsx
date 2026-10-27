@@ -1,13 +1,13 @@
-// === Module 5210: ActionSheetActionCreators ===
+// === Module 5211: ActionSheetActionCreators ===
 
-// Module 5210 (ActionSheetActionCreators)
+// Module 5211 (ActionSheetActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
-import HapticUtils from "HapticUtils" /* 5212 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5213 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
+import HapticUtils from "HapticUtils" /* 5213 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5214 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import ActionSheetStore from "ActionSheetStore" /* 5211 */;
+import ActionSheetStore from "ActionSheetStore" /* 5212 */;
 
 require = fn;
 let closure_3 = ["impressionName", "impressionProperties", "backdropKind", "disableHapticOnOpen", "appEntryKey"];
@@ -23,7 +23,7 @@ export default {
     } else {
       nextPromise = promise();
     }
-    nextPromise.then((result) => {
+    return nextPromise.then((result) => {
       let obj = closure_1;
       if (closure_1 == null) {
         obj = {};

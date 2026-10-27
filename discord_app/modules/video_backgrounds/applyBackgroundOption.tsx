@@ -1,16 +1,16 @@
-// === Module 5861: applyBackgroundOption ===
+// === Module 5862: applyBackgroundOption ===
 
-// Module 5861 (applyBackgroundOption)
-import AvatarUtils from "AvatarUtils" /* 1417 */;
-import BaseConnectionEvent from "BaseConnectionEvent" /* 5739 */;
-import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5864 */;
-import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 5866 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5869 */;
-import getFilterImageDefault from "getFilterImage" /* 5874 */;
-import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 5875 */;
+// Module 5862 (applyBackgroundOption)
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import BaseConnectionEvent from "BaseConnectionEvent" /* 5740 */;
+import VideoBackgroundActionCreators from "VideoBackgroundActionCreators" /* 5865 */;
+import LastUsedVideoBackgroundOption from "LastUsedVideoBackgroundOption" /* 5867 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5870 */;
+import getFilterImageDefault from "getFilterImage" /* 5875 */;
+import isVideoBackgroundEnabledDefault from "isVideoBackgroundEnabled" /* 5876 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1392 */;
-import VideoBackgroundStore from "VideoBackgroundStore" /* 5862 */;
+import UserStore from "UserStore" /* 1389 */;
+import VideoBackgroundStore from "VideoBackgroundStore" /* 5863 */;
 
 require = fn;
 let closure_9 = async function _getFilterBlob() {
@@ -252,9 +252,9 @@ let closure_15 = async function _applyBackgroundOptionPreview(arg0, arg1, arg2) 
   iter.next();
   return iter;
 };
-const VideoBackgroundConstants = fn(5863);
+const VideoBackgroundConstants = fn(5864);
 ({ BACKGROUND_REPLACEMENT_SIZE: metroRequire, BLUR_BACKGROUND_OPTION: closure_7 } = VideoBackgroundConstants);
-const NOOP = fn(1087).NOOP;
+const NOOP = fn(1084).NOOP;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/video_backgrounds/applyBackgroundOption.tsx");
 

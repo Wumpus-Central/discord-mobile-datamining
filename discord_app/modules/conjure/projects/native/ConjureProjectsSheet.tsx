@@ -1,36 +1,43 @@
-// === Module 17838: ConjureProjectsSheet ===
+// === Module 14179: ConjureProjectsSheet ===
 
-// Module 17838 (ConjureProjectsSheet)
+// Module 14179 (ConjureProjectsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import _modDef3830 from "module_3830" /* 3830 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import useMountEffectDefault from "useMountEffect" /* 5263 */;
-import BottomSheetModal from "BottomSheetModal" /* 5269 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6880 */;
-import TableRow from "TableRow" /* 6903 */;
-import TableRowGroup from "TableRowGroup" /* 6987 */;
-import Search_SearchBar from "Search/SearchBar" /* 7145 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
-import ActionSheet from "ActionSheet" /* 7298 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10720 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10818 */;
-import ConjureProjectIcon from "ConjureProjectIcon" /* 12250 */;
-import useConjureOwnProjectListStateDefault from "useConjureOwnProjectListState" /* 17840 */;
+import util from "util" /* 1125 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import _modDef3831 from "module_3831" /* 3831 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import useMountEffectDefault from "useMountEffect" /* 5264 */;
+import BottomSheetModal from "BottomSheetModal" /* 5270 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6882 */;
+import TableRow from "TableRow" /* 6905 */;
+import TableRowGroup from "TableRowGroup" /* 6989 */;
+import Search_SearchBar from "Search/SearchBar" /* 7147 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7250 */;
+import ActionSheet from "ActionSheet" /* 7300 */;
+import IconButton from "IconButton" /* 7957 */;
+import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 9565 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10723 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10821 */;
+import _modDef10866 from "module_10866" /* 10866 */;
+import ConjureProjectIcon from "ConjureProjectIcon" /* 12172 */;
+import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin" /* 14180 */;
+import useConjureOwnProjectListStateDefault from "useConjureOwnProjectListState" /* 14183 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10714 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10717 */;
 
 const ConjureProjectIconDefault = ConjureProjectIcon;
 
 require = fn;
+function confirmPin() {
+  confirmConjureYouBarPinDefault(true);
+}
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { scrollContent: { gap: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 + arg0 }, state: null, trailingIndicator: null, unreadDot: null };
   const obj2 = { gap: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 + arg0 };
@@ -47,7 +54,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   project = project.project;
   const tmp4 = closure_9(0);
   const obj = project(576);
-  const conjureHomeProjectState = project(17839).useConjureHomeProjectState(project.id);
+  const conjureHomeProjectState = project(14171).useConjureHomeProjectState(project.id);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConjurePublishStatusStore];
     cResult[0] = items;
@@ -77,7 +84,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const obj2 = project(17839);
+  const obj2 = project(14171);
   const stateFromStores = project(504).useStateFromStores(first, tmp8, tmp9);
   if (cResult[4] === stateFromStores) {
     if (cResult[5] === conjureHomeProjectState) {
@@ -89,8 +96,8 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           if (cResult[12] !== conjureHomeProjectState) {
             let stringResult = null;
             if ("unread" === conjureHomeProjectState) {
-              const intl4 = tmp(1128).intl;
-              stringResult = intl4.string(_modDef3830["N+3Pzk"]);
+              const intl4 = tmp(1125).intl;
+              stringResult = intl4.string(_modDef3831["N+3Pzk"]);
             }
             cResult[12] = conjureHomeProjectState;
             cResult[13] = stringResult;
@@ -142,7 +149,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                     }
                   }
                   const obj4 = { label: project.name, subLabel: tmp30, accessibilityLabel: joined, icon: tmp31, trailing: tmp35, disabled: tmp13, onPress: tmp40 };
-                  const tmp43 = closure_7(tmp(6903).TableRow, obj4);
+                  const tmp43 = closure_7(tmp(6905).TableRow, obj4);
                   cResult[26] = joined;
                   cResult[27] = tmp13;
                   cResult[28] = project.name;
@@ -169,7 +176,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                 const obj6 = { style: tmp4.unreadDot };
                 let tmp36Result = closure_7(View, obj6);
               } else {
-                tmp36Result = closure_7(tmp(6880).ActivityIndicator, { size: "small" });
+                tmp36Result = closure_7(tmp(6882).ActivityIndicator, { size: "small" });
               }
               obj5.children = tmp36Result;
               closure_7(View, obj5);
@@ -191,24 +198,24 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         }
       }
     }
-    const result = tmp(17839).conjureProjectLastActivityTime(project);
+    const result = tmp(14171).conjureProjectLastActivityTime(project);
     if ("deleting" === conjureHomeProjectState) {
-      const intl3 = tmp(1128).intl;
-      let stringResult1 = intl3.string(_modDef3830.Yh5pAc);
+      const intl3 = tmp(1125).intl;
+      let stringResult1 = intl3.string(_modDef3831.Yh5pAc);
     } else if ("in_progress" === conjureHomeProjectState) {
-      const intl2 = tmp(1128).intl;
-      stringResult1 = intl2.string(_modDef3830["Y8pS+n"]);
+      const intl2 = tmp(1125).intl;
+      stringResult1 = intl2.string(_modDef3831["Y8pS+n"]);
     } else {
       let relativeTimestamp = null;
       if (null != result) {
-        relativeTimestamp = tmp(6789).getRelativeTimestamp(result, false);
-        const tmpResult5 = tmp(6789);
+        relativeTimestamp = tmp(6790).getRelativeTimestamp(result, false);
+        const tmpResult5 = tmp(6790);
       }
       const items3 = [relativeTimestamp, ];
       let stringResult2 = null;
       if (tmp11) {
-        const intl = tmp(1128).intl;
-        stringResult2 = intl.string(_modDef3830.CSAaT0);
+        const intl = tmp(1125).intl;
+        stringResult2 = intl.string(_modDef3831.CSAaT0);
       }
       items3[1] = stringResult2;
       const found1 = items3.filter((item) => null != item);
@@ -219,20 +226,20 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[9] = conjureHomeProjectState;
     cResult[10] = "deleting" === conjureHomeProjectState;
     cResult[11] = stringResult1;
-    const tmpResult4 = tmp(17839);
+    const tmpResult4 = tmp(14171);
   }
   const tmpResult = project(504);
-  const result1 = project(17839).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
+  const result1 = project(14171).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
   cResult[4] = stateFromStores;
   cResult[5] = conjureHomeProjectState;
   cResult[6] = result1;
   tmp11 = result1;
-  const tmpResult6 = project(17839);
+  const tmpResult6 = project(14171);
 }) : (function ProjectRow(project) {
   project = project.project;
   let unreadDot = closure_9(0);
-  const conjureHomeProjectState = project(17839).useConjureHomeProjectState(project.id);
-  const obj = project(17839);
+  const conjureHomeProjectState = project(14171).useConjureHomeProjectState(project.id);
+  const obj = project(14171);
   const items = [ConjurePublishStatusStore];
   const items1 = [project.id];
   const stateFromStores = project(504).useStateFromStores(items, () => {
@@ -247,26 +254,26 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     return publishState;
   }, items1);
   const obj2 = project(504);
-  const result = project(17839).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
-  const obj3 = project(17839);
-  const result1 = project(17839).conjureProjectLastActivityTime(project);
+  const result = project(14171).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
+  const obj3 = project(14171);
+  const result1 = project(14171).conjureProjectLastActivityTime(project);
   if ("deleting" === conjureHomeProjectState) {
-    const intl3 = tmp(1128).intl;
-    let stringResult = intl3.string(_modDef3830.Yh5pAc);
+    const intl3 = tmp(1125).intl;
+    let stringResult = intl3.string(_modDef3831.Yh5pAc);
   } else if ("in_progress" === conjureHomeProjectState) {
-    const intl2 = tmp(1128).intl;
-    stringResult = intl2.string(_modDef3830["Y8pS+n"]);
+    const intl2 = tmp(1125).intl;
+    stringResult = intl2.string(_modDef3831["Y8pS+n"]);
   } else {
     let relativeTimestamp = null;
     if (null != result1) {
-      relativeTimestamp = tmp(6789).getRelativeTimestamp(result1, false);
-      const tmpResult = tmp(6789);
+      relativeTimestamp = tmp(6790).getRelativeTimestamp(result1, false);
+      const tmpResult = tmp(6790);
     }
     const items2 = [relativeTimestamp, ];
     let stringResult1 = null;
     if (result) {
-      const intl = tmp(1128).intl;
-      stringResult1 = intl.string(_modDef3830.CSAaT0);
+      const intl = tmp(1125).intl;
+      stringResult1 = intl.string(_modDef3831.CSAaT0);
     }
     items2[1] = stringResult1;
     const found = items2.filter((item) => null != item);
@@ -275,8 +282,8 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const items3 = [project.name, stringResult, ];
   let stringResult2 = null;
   if ("unread" === conjureHomeProjectState) {
-    const intl4 = tmp(1128).intl;
-    stringResult2 = intl4.string(_modDef3830["N+3Pzk"]);
+    const intl4 = tmp(1125).intl;
+    stringResult2 = intl4.string(_modDef3831["N+3Pzk"]);
   }
   items3[2] = stringResult2;
   const found1 = items3.filter((item) => {
@@ -303,7 +310,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         obj5.onPress = function onPress() {
           return openConjureHomeScreenDefault(project.id);
         };
-        return closure_7(tmp(6903).TableRow, obj5);
+        return closure_7(tmp(6905).TableRow, obj5);
       }
     }
   }
@@ -314,14 +321,14 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj7.style = unreadDot;
     let tmp18Result = closure_7(View, obj7);
   } else {
-    tmp18Result = closure_7(tmp(6880).ActivityIndicator, { size: "small" });
+    tmp18Result = closure_7(tmp(6882).ActivityIndicator, { size: "small" });
   }
   obj6.children = tmp18Result;
   closure_7(View, obj6);
-  const obj4 = project(17839);
+  const obj4 = project(14171);
 }));
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ProjectList(query) {
+let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function ProjectList(query) {
   const cResult = c.c(18);
   let num = 0;
   let state = closure_9(0);
@@ -361,7 +368,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const obj3 = { variant: "text-sm/normal", color: "text-subtle", children: null };
       const intl4 = util.intl;
-      obj3.children = intl4.string(_modDef3830.X37fkR);
+      obj3.children = intl4.string(_modDef3831.X37fkR);
       const tmp36 = React5(Text_Text.Text, obj3);
       cResult[5] = tmp36;
       let tmp34 = tmp36;
@@ -380,7 +387,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
       const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
       const intl2 = util.intl;
-      obj5.children = intl2.string(_modDef3830.DJAPMO);
+      obj5.children = intl2.string(_modDef3831.DJAPMO);
       const tmp24 = React5(Text_Text.Text, obj5);
       cResult[8] = tmp24;
       let tmp22 = tmp24;
@@ -391,7 +398,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
       const obj6 = { variant: "secondary", size: "sm", text: null, onPress: null };
       const intl3 = util.intl;
-      obj6.text = intl3.string(_modDef3830["WFJ/vb"]);
+      obj6.text = intl3.string(_modDef3831["WFJ/vb"]);
       obj6.onPress = function onPress() {
         return ConjureActionCreators.listProjects();
       };
@@ -429,7 +436,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
       const obj9 = { variant: "text-sm/normal", color: "text-subtle", children: null };
       const intl = util.intl;
-      obj9.children = intl.string(_modDef3830["9/5sLV"]);
+      obj9.children = intl.string(_modDef3831["9/5sLV"]);
       const tmp7 = React5(Text_Text.Text, obj9);
       cResult[15] = tmp7;
       let tmp5 = tmp7;
@@ -459,18 +466,18 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     const obj3 = { style: tmp.state, children: null };
     const obj4 = { variant: "text-sm/normal", color: "text-subtle", children: null };
     const intl4 = util.intl;
-    obj4.children = intl4.string(_modDef3830.X37fkR);
+    obj4.children = intl4.string(_modDef3831.X37fkR);
     obj3.children = React5(Text_Text.Text, obj4);
     tmp8 = React5(View, obj3);
   } else if ("error" === tmp4.kind) {
     const obj5 = { style: tmp.state, children: null };
     const obj6 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl2 = util.intl;
-    obj6.children = intl2.string(_modDef3830.DJAPMO);
+    obj6.children = intl2.string(_modDef3831.DJAPMO);
     const items = [React5(Text_Text.Text, obj6), ];
     const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl3 = util.intl;
-    obj7.text = intl3.string(_modDef3830["WFJ/vb"]);
+    obj7.text = intl3.string(_modDef3831["WFJ/vb"]);
     obj7.onPress = function onPress() {
       return ConjureActionCreators.listProjects();
     };
@@ -484,7 +491,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     const obj = { style: tmp.state, children: null };
     const obj9 = { variant: "text-sm/normal", color: "text-subtle", children: null };
     const intl = util.intl;
-    obj9.children = intl.string(_modDef3830["9/5sLV"]);
+    obj9.children = intl.string(_modDef3831["9/5sLV"]);
     obj.children = React5(Text_Text.Text, obj9);
     tmp8 = React5(View, obj);
   }
@@ -495,147 +502,196 @@ let size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/projects/native/ConjureProjectsSheet.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureProjectsSheet() {
-  const cResult = c.c(15);
+  const cResult = c.c(22);
   const bottom = useSafeAreaInsetsDefault().bottom;
   const tmp5 = closure_9(bottom);
-  const tmp6 = _slicedToArray(noop.useState(""), 2);
-  const first = tmp6[0];
+  [tmp7, tmp8] = noop.useState("");
+  const tmp9 = useConjureEntryPointPlacementDefault("ConjureProjectsSheet");
+  let placement;
+  if (tmp9 != null) {
+    placement = tmp9.placement;
+  }
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const fn = function l() {
+    const fn = function o() {
       ConjureActionCreators.listProjects();
     };
     cResult[0] = fn;
-    let first1 = fn;
+    let first = fn;
   } else {
-    first1 = cResult[0];
+    first = cResult[0];
   }
-  useMountEffectDefault(first1);
+  useMountEffectDefault(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { title: null };
     const intl = util.intl;
-    obj2.title = intl.string(_modDef3830.uk6jhJ);
-    const tmp12 = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
-    cResult[1] = tmp12;
-    let tmp10 = tmp12;
+    const stringResult = intl.string(_modDef3831.uk6jhJ);
+    cResult[1] = stringResult;
+    let tmp13 = stringResult;
   } else {
-    tmp10 = cResult[1];
+    tmp13 = cResult[1];
   }
-  if (cResult[2] !== bottom) {
-    const obj3 = { bottom };
-    cResult[2] = bottom;
-    cResult[3] = obj3;
-    let tmp13 = obj3;
+  if (cResult[2] !== ("you_screen" === placement)) {
+    let tmp17;
+    if (tmp15) {
+      const obj2 = { icon: _modDef10866, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
+      const intl2 = util.intl;
+      obj2.accessibilityLabel = intl2.string(_modDef3831.qCBh6V);
+      obj2.onPress = confirmPin;
+      tmp17 = React5(IconButton.IconButton, obj2);
+    }
+    cResult[2] = tmp15;
+    cResult[3] = tmp17;
+    let tmp16 = tmp17;
   } else {
-    tmp13 = cResult[3];
+    tmp16 = cResult[3];
   }
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { size: "md", onChange: tmp6[1], placeholder: null, accessibilityLabel: null };
-    const intl2 = util.intl;
-    obj4.placeholder = intl2.string(_modDef3830["2y8sUh"]);
-    const intl3 = util.intl;
-    obj4.accessibilityLabel = intl3.string(_modDef3830.u0kEN9);
-    const tmp16 = React5(Search_SearchBar.SearchBar, obj4);
+  if (cResult[4] !== tmp16) {
+    const obj3 = { title: tmp13, trailing: tmp16 };
+    const tmp22 = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj3);
     cResult[4] = tmp16;
-    let tmp14 = tmp16;
+    cResult[5] = tmp22;
+    let tmp20 = tmp22;
   } else {
-    tmp14 = cResult[4];
+    tmp20 = cResult[5];
   }
-  if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl4 = util.intl;
-    const stringResult = intl4.string(_modDef3830.bnVYYC);
-    const intl5 = util.intl;
-    const stringResult1 = intl5.string(_modDef3830.gnzLwZ);
-    const tmp23 = React5(ConjureProjectIcon.ConjureNewProjectIcon, { size: "list" });
-    cResult[5] = stringResult;
-    cResult[6] = stringResult1;
-    cResult[7] = tmp23;
-    let tmp19 = tmp23;
-    let tmp18 = stringResult1;
-    let tmp17 = stringResult;
+  if (cResult[6] !== bottom) {
+    const obj4 = { bottom };
+    cResult[6] = bottom;
+    cResult[7] = obj4;
+    let tmp23 = obj4;
   } else {
-    tmp17 = cResult[5];
-    tmp18 = cResult[6];
-    tmp19 = cResult[7];
+    tmp23 = cResult[7];
   }
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj5 = { hasIcons: true, children: null };
-    const obj6 = {
-      label: tmp17,
-      subLabel: tmp18,
-      icon: tmp19,
-      arrow: true,
-      onPress() {
-          return openConjureHomeScreenDefault();
-        }
-    };
-    obj5.children = React5(TableRow.TableRow, obj6);
-    const tmp26 = React5(TableRowGroup.TableRowGroup, obj5);
+    const obj5 = { size: "md", onChange: tmp8, placeholder: null, accessibilityLabel: null };
+    const intl3 = util.intl;
+    obj5.placeholder = intl3.string(_modDef3831["2y8sUh"]);
+    const intl4 = util.intl;
+    obj5.accessibilityLabel = intl4.string(_modDef3831.u0kEN9);
+    const tmp26 = React5(Search_SearchBar.SearchBar, obj5);
     cResult[8] = tmp26;
     let tmp24 = tmp26;
   } else {
     tmp24 = cResult[8];
   }
-  if (cResult[9] !== first) {
-    const obj7 = { query: first };
-    const tmp30 = React5(closure_11, obj7);
-    cResult[9] = first;
-    cResult[10] = tmp30;
-    let tmp27 = tmp30;
+  if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
+    const intl5 = util.intl;
+    const stringResult1 = intl5.string(_modDef3831.bnVYYC);
+    const intl6 = util.intl;
+    const stringResult2 = intl6.string(_modDef3831.gnzLwZ);
+    const tmp33 = React5(ConjureProjectIcon.ConjureNewProjectIcon, { size: "list" });
+    cResult[9] = stringResult1;
+    cResult[10] = stringResult2;
+    cResult[11] = tmp33;
+    let tmp29 = tmp33;
+    let tmp28 = stringResult2;
+    let tmp27 = stringResult1;
   } else {
-    tmp27 = cResult[10];
+    tmp27 = cResult[9];
+    tmp28 = cResult[10];
+    tmp29 = cResult[11];
   }
-  if (cResult[11] === tmp5.scrollContent) {
-    if (cResult[12] === tmp13) {
-      if (cResult[13] === tmp27) {
-        let tmp31 = cResult[14];
+  if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj6 = { hasIcons: true, children: null };
+    const obj7 = {
+      label: tmp27,
+      subLabel: tmp28,
+      icon: tmp29,
+      arrow: true,
+      onPress() {
+          return openConjureHomeScreenDefault();
+        }
+    };
+    obj6.children = React5(TableRow.TableRow, obj7);
+    const tmp36 = React5(TableRowGroup.TableRowGroup, obj6);
+    cResult[12] = tmp36;
+    let tmp34 = tmp36;
+  } else {
+    tmp34 = cResult[12];
+  }
+  if (cResult[13] !== tmp7) {
+    const obj8 = { query: tmp7 };
+    const tmp40 = React5(closure_12, obj8);
+    cResult[13] = tmp7;
+    cResult[14] = tmp40;
+    let tmp37 = tmp40;
+  } else {
+    tmp37 = cResult[14];
+  }
+  if (cResult[15] === tmp5.scrollContent) {
+    if (cResult[16] === tmp37) {
+      if (cResult[17] === tmp23) {
+        let tmp41 = cResult[18];
       }
-      return tmp31;
+      if (cResult[19] === tmp41) {
+        if (cResult[20] === tmp20) {
+          let tmp43 = cResult[21];
+        }
+        return tmp43;
+      }
+      const obj9 = { scrollable: true, startExpanded: true, header: tmp20, children: tmp41 };
+      const tmp45 = React5(ActionSheet.ActionSheet, obj9);
+      cResult[19] = tmp41;
+      cResult[20] = tmp20;
+      cResult[21] = tmp45;
+      tmp43 = tmp45;
     }
   }
-  const obj8 = { scrollable: true, startExpanded: true, header: tmp10, children: null };
-  const obj9 = { contentContainerStyle: tmp5.scrollContent, scrollIndicatorInsets: tmp13, keyboardShouldPersistTaps: "handled", children: null };
-  const items = [tmp14, tmp24, tmp27];
-  obj9.children = items;
-  obj8.children = closure_1_8(BottomSheetModal.BottomSheetScrollView, obj9);
-  const tmp32 = React5(ActionSheet.ActionSheet, obj8);
-  cResult[11] = tmp5.scrollContent;
-  cResult[12] = tmp13;
-  cResult[13] = tmp27;
-  cResult[14] = tmp32;
-  tmp31 = tmp32;
+  const obj10 = { contentContainerStyle: tmp5.scrollContent, scrollIndicatorInsets: tmp23, keyboardShouldPersistTaps: "handled", children: null };
+  const items = [tmp24, tmp34, tmp37];
+  obj10.children = items;
+  const tmp42 = closure_1_8(BottomSheetModal.BottomSheetScrollView, obj10);
+  cResult[15] = tmp5.scrollContent;
+  cResult[16] = tmp37;
+  cResult[17] = tmp23;
+  cResult[18] = tmp42;
+  tmp41 = tmp42;
+  const tmp6 = _slicedToArray(noop.useState(""), 2);
 }) : (function ConjureProjectsSheet() {
   const bottom = useSafeAreaInsetsDefault().bottom;
-  const tmp = closure_9(bottom);
-  [tmp3, tmp4] = noop.useState("");
+  const tmp3 = closure_9(bottom);
+  [tmp5, tmp6] = noop.useState("");
+  const tmp7 = useConjureEntryPointPlacementDefault("ConjureProjectsSheet");
+  let placement;
+  if (tmp7 != null) {
+    placement = tmp7.placement;
+  }
   useMountEffectDefault(() => {
     ConjureActionCreators.listProjects();
   });
-  const obj = { scrollable: true, startExpanded: true, header: null, children: null };
-  const obj2 = { title: null };
+  const obj = { title: null, trailing: null };
   const intl = util.intl;
-  obj2.title = intl.string(_modDef3830.uk6jhJ);
-  obj.header = React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj2);
-  const obj3 = { contentContainerStyle: tmp.scrollContent, scrollIndicatorInsets: { bottom }, keyboardShouldPersistTaps: "handled", children: null };
-  const obj4 = { size: "md", onChange: tmp4, placeholder: null, accessibilityLabel: null };
-  const intl2 = util.intl;
-  obj4.placeholder = intl2.string(_modDef3830["2y8sUh"]);
+  obj.title = intl.string(_modDef3831.uk6jhJ);
+  let tmp10Result;
+  if ("you_screen" === placement) {
+    const obj2 = { icon: _modDef10866, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
+    const intl2 = util.intl;
+    obj2.accessibilityLabel = intl2.string(_modDef3831.qCBh6V);
+    obj2.onPress = confirmPin;
+    tmp10Result = React5(IconButton.IconButton, obj2);
+  }
+  const obj3 = { scrollable: true, startExpanded: true, header: React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), children: null };
+  obj.trailing = tmp10Result;
+  const obj4 = { contentContainerStyle: tmp3.scrollContent, scrollIndicatorInsets: { bottom }, keyboardShouldPersistTaps: "handled", children: null };
+  const obj5 = { size: "md", onChange: tmp6, placeholder: null, accessibilityLabel: null };
   const intl3 = util.intl;
-  obj4.accessibilityLabel = intl3.string(_modDef3830.u0kEN9);
-  const items = [React5(Search_SearchBar.SearchBar, obj4), , ];
-  const obj5 = { hasIcons: true, children: null };
-  const obj6 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
+  obj5.placeholder = intl3.string(_modDef3831["2y8sUh"]);
   const intl4 = util.intl;
-  obj6.label = intl4.string(_modDef3830.bnVYYC);
+  obj5.accessibilityLabel = intl4.string(_modDef3831.u0kEN9);
+  const items = [React5(Search_SearchBar.SearchBar, obj5), , ];
+  const obj6 = { hasIcons: true, children: null };
+  const obj7 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
   const intl5 = util.intl;
-  obj6.subLabel = intl5.string(_modDef3830.gnzLwZ);
-  obj6.icon = React5(ConjureProjectIcon.ConjureNewProjectIcon, { size: "list" });
-  obj6.onPress = function onPress() {
+  obj7.label = intl5.string(_modDef3831.bnVYYC);
+  const intl6 = util.intl;
+  obj7.subLabel = intl6.string(_modDef3831.gnzLwZ);
+  obj7.icon = React5(ConjureProjectIcon.ConjureNewProjectIcon, { size: "list" });
+  obj7.onPress = function onPress() {
     return openConjureHomeScreenDefault();
   };
-  obj5.children = React5(TableRow.TableRow, obj6);
-  items[1] = React5(TableRowGroup.TableRowGroup, obj5);
-  items[2] = React5(closure_11, { query: tmp3 });
-  obj3.children = items;
-  obj.children = closure_1_8(BottomSheetModal.BottomSheetScrollView, obj3);
-  return React5(ActionSheet.ActionSheet, obj);
+  obj6.children = React5(TableRow.TableRow, obj7);
+  items[1] = React5(TableRowGroup.TableRowGroup, obj6);
+  items[2] = React5(closure_12, { query: tmp5 });
+  obj4.children = items;
+  obj3.children = closure_1_8(BottomSheetModal.BottomSheetScrollView, obj4);
+  return React5(ActionSheet.ActionSheet, obj3);
 });

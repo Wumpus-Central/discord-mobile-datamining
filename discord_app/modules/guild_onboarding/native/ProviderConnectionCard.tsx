@@ -1,18 +1,18 @@
-// === Module 7270: ProviderConnectionCard ===
+// === Module 7272: ProviderConnectionCard ===
 
-// Module 7270 (ProviderConnectionCard)
-import native from "native" /* 1202 */;
-import AvatarUtils from "AvatarUtils" /* 1417 */;
-import shared from "shared" /* 4978 */;
-import LinkIcon2 from "LinkIcon" /* 5678 */;
-import PlatformsDefault from "Platforms" /* 6502 */;
+// Module 7272 (ProviderConnectionCard)
+import native from "native" /* 1199 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import shared from "shared" /* 4979 */;
+import LinkIcon2 from "LinkIcon" /* 5679 */;
+import PlatformsDefault from "Platforms" /* 6503 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -278,8 +278,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Provider
               return obj3;
             } else {
               const obj4 = {};
-              const obj5 = v3(1267);
-              const merged = Object.assign(provider_id(5711).collectGuildAnalyticsMetadata(guildId));
+              const obj5 = v3(1264);
+              const merged = Object.assign(provider_id(5712).collectGuildAnalyticsMetadata(guildId));
               obj4.connection_type = "provider";
               provider_id = connection.provider_id;
               if (provider_id == null) {

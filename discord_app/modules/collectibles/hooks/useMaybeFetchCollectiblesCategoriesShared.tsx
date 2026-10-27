@@ -1,18 +1,18 @@
-// === Module 10493: useMaybeFetchCollectiblesCategoriesShared ===
+// === Module 10496: useMaybeFetchCollectiblesCategoriesShared ===
 
-// Module 10493 (useMaybeFetchCollectiblesCategoriesShared)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7649 */;
-import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7692 */;
+// Module 10496 (useMaybeFetchCollectiblesCategoriesShared)
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7650 */;
+import ShopVariantsReturnStyle from "ShopVariantsReturnStyle" /* 7693 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5190 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7650 */;
+import ExperimentStore from "ExperimentStore" /* 5191 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7651 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const noop = fn(19);
 ({ useEffect: c3, useCallback: closure_4 } = noop);
-const CollectiblesShopConstants = fn(1089);
+const CollectiblesShopConstants = fn(1086);
 ({ COLLECTIBLES_SHOP_CACHE_DURATION_MS: closure_7, COLLECTIBLES_SHOP_FETCH_ERROR_RETRY_THRESHOLD_MS: closure_8 } = CollectiblesShopConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

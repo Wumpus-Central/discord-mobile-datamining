@@ -1,7 +1,7 @@
-// === Module 17055: CaptchaTestActionCreators ===
+// === Module 17097: CaptchaTestActionCreators ===
 
-// Module 17055 (CaptchaTestActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1297 */;
+// Module 17097 (CaptchaTestActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -60,7 +60,7 @@ let closure_4 = async function _testCaptcha() {
     }
   })();
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/captcha/tooling/CaptchaTestActionCreators.tsx");
 

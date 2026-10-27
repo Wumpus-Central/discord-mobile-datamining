@@ -1,13 +1,13 @@
-// === Module 19406: AVErrorStreamBadNetworkQuality ===
+// === Module 19443: AVErrorStreamBadNetworkQuality ===
 
-// Module 19406 (AVErrorStreamBadNetworkQuality)
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import AVError from "AVError" /* 5897 */;
-import AVErrorContext from "AVErrorContext" /* 19399 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7814 */;
+// Module 19443 (AVErrorStreamBadNetworkQuality)
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import AVError from "AVError" /* 5898 */;
+import AVErrorContext from "AVErrorContext" /* 19436 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7815 */;
 
 require = fn;
-const RTCConnectionQuality = fn(1087).RTCConnectionQuality;
+const RTCConnectionQuality = fn(1084).RTCConnectionQuality;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/errors/av_errors/definitions/AVErrorStreamBadNetworkQuality.tsx");
 

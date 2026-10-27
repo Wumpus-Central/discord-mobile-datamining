@@ -1,8 +1,8 @@
-// === Module 1484: utils/NetworkUtils ===
+// === Module 1481: utils/NetworkUtils ===
 
-// Module 1484 (utils/NetworkUtils)
+// Module 1481 (utils/NetworkUtils)
 import LoggerDefault from "Logger" /* 3 */;
-import configure2 from "configure" /* 1485 */;
+import configure2 from "configure" /* 1482 */;
 
 const configure_mod = configure2;
 

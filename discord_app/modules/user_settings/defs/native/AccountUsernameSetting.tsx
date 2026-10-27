@@ -1,15 +1,15 @@
-// === Module 15994: AccountUsernameSetting ===
+// === Module 16032: AccountUsernameSetting ===
 
-// Module 15994 (AccountUsernameSetting)
+// Module 16032 (AccountUsernameSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import UserUtilsDefault from "UserUtils" /* 5025 */;
-import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12823 */;
+import util from "util" /* 1125 */;
+import UserUtilsDefault from "UserUtils" /* 5026 */;
+import AutomodQuarantineUtils from "AutomodQuarantineUtils" /* 12832 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
-const Text_Text = Text(5234);
+const Text_Text = Text(5235);
 require = fn;
 const jsx = fn(21).jsx;
 fn(558);
@@ -33,7 +33,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccount
   const items = [UserStore];
   return initialize.useStateFromStores(items, () => UserUtilsDefault.getUserTag(currentUser.getCurrentUser(), { decoration: "never" }));
 });
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingDescription() {
   let Text = require;
   let tmp = dependencyMap;
@@ -76,7 +76,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.IEpCBQ);
   },
-  parent: fn(8332).MobileUserSettings.ACCOUNT,
+  parent: fn(8331).MobileUserSettings.ACCOUNT,
   useTrailing: tmp3,
   useDescription: ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountUsernameSettingDescription() {
     let Text = require;
@@ -116,7 +116,7 @@ const route = SettingBuilders.createRoute({
     return tmp5;
   }),
   screen: {
-    route: fn(1087).UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
+    route: fn(1084).UserSettingsSections.ACCOUNT_CHANGE_USERNAME,
     getComponent() {
       return require("UserSettingsChangeUsername").default;
     }

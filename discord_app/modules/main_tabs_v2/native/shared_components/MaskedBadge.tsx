@@ -1,16 +1,16 @@
-// === Module 9703: MaskedBadge ===
+// === Module 9705: MaskedBadge ===
 
-// Module 9703 (MaskedBadge)
+// Module 9705 (MaskedBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import shared_components_BadgeDefault from "shared_components/Badge" /* 9704 */;
+import native from "native" /* 1199 */;
+import shared_components_BadgeDefault from "shared_components/Badge" /* 9706 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
-let obj2 = { maskStyle: { position: "relative", right: "ix" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 } };
+const createStyles = fn(4972);
+let obj2 = { maskStyle: { position: "relative", right: "unicodeVersion" }, unreadDot: { width: 0, height: 0 }, badgeStyle: { flexGrow: 1, flexShrink: 0 }, unreadBadge: { position: "relative", bottom: -3 }, lowPriorityBadge: { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };

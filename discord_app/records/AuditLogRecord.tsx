@@ -1,10 +1,10 @@
-// === Module 19050: AuditLogRecord ===
+// === Module 19088: AuditLogRecord ===
 
-// Module 19050 (AuditLogRecord)
+// Module 19088 (AuditLogRecord)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import SentryUtilsDefault from "SentryUtils" /* 1257 */;
-import _modDef2049 from "module_2049" /* 2049 */;
-import Record from "Record" /* 1407 */;
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import _modDef2046 from "module_2046" /* 2046 */;
+import Record from "Record" /* 1404 */;
 
 function getTargetType(action) {
   if (action === constants2.ALL) {
@@ -266,7 +266,7 @@ function getActionType(action) {
   }
   return constants3.CREATE;
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AuditLogTargetTypes: c2, AuditLogActions: c3, AuditLogActionTypes: closure_4 } = Constants);
 const prototype = function AuditLogRecord(timestampEnd) {
   const tmp5 = new prototype(tmp4, tmp3, tmp2, tmp, new.target);
@@ -274,7 +274,7 @@ const prototype = function AuditLogRecord(timestampEnd) {
   tmp5.actionType = getActionType(tmp5.action);
   ({ targetId: tmp5.targetId, timestampStart } = timestampEnd);
   if (timestampStart == null) {
-    const tmp8 = _modDef2049;
+    const tmp8 = _modDef2046;
     timestampStart = tmp8(SnowflakeUtilsDefault.extractTimestamp(tmp5.id));
   }
   tmp5.timestampStart = timestampStart;

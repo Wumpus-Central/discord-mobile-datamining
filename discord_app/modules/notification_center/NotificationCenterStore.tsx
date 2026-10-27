@@ -1,13 +1,13 @@
-// === Module 17866: NotificationCenterStore ===
+// === Module 17900: NotificationCenterStore ===
 
-// Module 17866 (NotificationCenterStore)
+// Module 17900 (NotificationCenterStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1104 */;
-import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6788 */;
+import DurationsDefault from "Durations" /* 1101 */;
+import NotificationCenterItemsTypes from "NotificationCenterItemsTypes" /* 6789 */;
 import _slicedToArray from "module_32" /* 32 */;
-import RecentMentionsStore from "RecentMentionsStore" /* 6815 */;
+import RecentMentionsStore from "RecentMentionsStore" /* 6817 */;
 
 require = fn;
 function handleLoadFinished() {

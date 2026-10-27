@@ -1,12 +1,12 @@
-// === Module 13300: ApplicationCommandDiscoveryManager ===
+// === Module 13314: ApplicationCommandDiscoveryManager ===
 
-// Module 13300 (ApplicationCommandDiscoveryManager)
+// Module 13314 (ApplicationCommandDiscoveryManager)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
 
-const useCommandDiscoveryManager = module_570.create(() => ({ initialSectionId: "Array" }));
+const useCommandDiscoveryManager = module_570.create(() => ({ initialSectionId: "rejectWithError" }));
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandDiscoveryManager.tsx");
 
 export { useCommandDiscoveryManager };

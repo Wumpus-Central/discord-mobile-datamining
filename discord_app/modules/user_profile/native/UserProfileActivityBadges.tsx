@@ -1,21 +1,21 @@
-// === Module 14291: UserProfileActivityBadges ===
+// === Module 14321: UserProfileActivityBadges ===
 
-// Module 14291 (UserProfileActivityBadges)
+// Module 14321 (UserProfileActivityBadges)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7812 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7813 */;
 import GroupIcon from "GroupIcon" /* 8560 */;
 import AppsIcon2 from "AppsIcon" /* 8577 */;
 import utils from "utils" /* 8617 */;
-import GameControllerIcon from "GameControllerIcon" /* 9616 */;
-import TvIcon from "TvIcon" /* 10641 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10646 */;
-import MusicIcon from "MusicIcon" /* 10647 */;
-import TopicsIcon from "TopicsIcon" /* 11335 */;
-import HourglassIcon from "HourglassIcon" /* 11902 */;
-import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 14293 */;
-import Badges from "Badges" /* 14294 */;
+import GameControllerIcon from "GameControllerIcon" /* 9618 */;
+import TvIcon from "TvIcon" /* 10644 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10649 */;
+import MusicIcon from "MusicIcon" /* 10650 */;
+import TopicsIcon from "TopicsIcon" /* 11338 */;
+import HourglassIcon from "HourglassIcon" /* 11903 */;
+import shouldShowActivityTimeBarDefault from "shouldShowActivityTimeBar" /* 14323 */;
+import Badges from "Badges" /* 14324 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -44,10 +44,10 @@ function getTimestampBadgeIcon(activity, arg1) {
   return AppsIcon;
 }
 const View = fn(17).View;
-const ActivityTypes = fn(1087).ActivityTypes;
+const ActivityTypes = fn(1084).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_7 = createStyles.createStyles({ container: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, bold: { fontWeight: "bold" } });
 fn(558);
 let ReactCompilerGating = fn(558);

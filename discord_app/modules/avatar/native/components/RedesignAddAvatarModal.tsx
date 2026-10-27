@@ -1,8 +1,8 @@
-// === Module 18913: RedesignAddAvatarModal ===
+// === Module 18951: RedesignAddAvatarModal ===
 
-// Module 18913 (RedesignAddAvatarModal)
+// Module 18951 (RedesignAddAvatarModal)
 import nativeDefault from "native" /* 587 */;
-import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 18892 */;
+import AddAvatarModalActionCreators from "AddAvatarModalActionCreators" /* 18930 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,10 +13,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ScrollView: closure_7 } = get_ActivityIndicator);
-const UPLOAD_MEDIUM_SIZE = fn(1087).UPLOAD_MEDIUM_SIZE;
+const UPLOAD_MEDIUM_SIZE = fn(1084).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: { flexGrow: 2, alignItems: "center" }, growContainer: null, headerContainer: null, buttonContainer: null, title: null, subtitle: null, errorContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.growContainer = { flexGrow: 2, minHeight: nativeDefault.space.PX_24 };
@@ -534,7 +534,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
             const obj7 = { size };
             dependencyMap = 1;
             c3 = 1;
-            const obj9 = { value: tmp2(8154).openImagePicker(obj7), done: false };
+            const obj9 = { value: tmp2(8152).openImagePicker(obj7), done: false };
             return obj9;
           }
         } else if (arg0 === 1) {
@@ -550,7 +550,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Redesign
             pendingImage = undefined;
             if (null != base64) {
               const obj11 = { imageUri: base64, description: null };
-              const obj = tmp2(15840);
+              const obj = tmp2(15878);
               obj11.description = tmp2(8658).generateAvatarDescription();
               pendingImage = obj.createPendingImage(obj11);
               const obj3 = tmp2(8658);

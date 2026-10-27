@@ -1,10 +1,10 @@
-// === Module 11002: LockUnlockedIcon ===
+// === Module 11005: LockUnlockedIcon ===
 
-// Module 11002 (LockUnlockedIcon)
+// Module 11005 (LockUnlockedIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5668 */;
-import _mod11003 from "module_11003" /* 11003 */;
+import BaseIconImage from "BaseIconImage" /* 5669 */;
+import _mod11006 from "module_11006" /* 11006 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const LockUnlockedIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod11003;
+    const tmpResult = _mod11006;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const LockUnlockedIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod11003, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod11006, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

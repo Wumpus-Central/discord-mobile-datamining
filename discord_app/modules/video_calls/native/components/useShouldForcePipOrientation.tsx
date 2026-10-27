@@ -1,15 +1,15 @@
-// === Module 11375: useShouldForcePipOrientation ===
+// === Module 11378: useShouldForcePipOrientation ===
 
-// Module 11375 (useShouldForcePipOrientation)
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6780 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11376 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6772 */;
+// Module 11378 (useShouldForcePipOrientation)
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6781 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11379 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6773 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
-const OrientationLockState = fn(2026).OrientationLockState;
-const CallConstants = fn(5632);
+const OrientationLockState = fn(2023).OrientationLockState;
+const CallConstants = fn(5633);
 ({ isStreamParticipant: closure_7, ParticipantTypes: closure_8 } = CallConstants);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

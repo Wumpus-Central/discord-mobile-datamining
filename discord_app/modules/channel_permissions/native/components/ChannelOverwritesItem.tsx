@@ -2,29 +2,29 @@
 
 // Module 8989 (ChannelOverwritesItem)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5039 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import AlertModal from "AlertModal" /* 5914 */;
-import FormCheckbox from "FormCheckbox" /* 6901 */;
-import TableRow from "TableRow" /* 6903 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5040 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import AlertModal from "AlertModal" /* 5915 */;
+import FormCheckbox from "FormCheckbox" /* 6903 */;
+import TableRow from "TableRow" /* 6905 */;
 import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8972 */;
 import ShieldUserIcon from "ShieldUserIcon" /* 8990 */;
 import _modDef8991 from "module_8991" /* 8991 */;
 import _modDef8992 from "module_8992" /* 8992 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 let closure_4 = ["item"];
 let closure_5 = ["checked"];
 const View = fn(17).View;
-const RowType = fn(7875).RowType;
+const RowType = fn(7876).RowType;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_12 = createStyles.createStyles({ nameWrapper: { flexDirection: "row", alignItems: "flex-end", marginRight: 16 }, name: { paddingRight: 4 }, memberName: { flexShrink: 1 }, ownerIcon: { alignSelf: "center" }, roleIcon: { height: 30, width: 30 }, rowRemoveIconDisabled: { opacity: 0.3 } });
 let ReactCompilerGating = fn(558);
 let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function RemoveIcon(item) {
@@ -38,8 +38,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
     const _Symbol = Symbol;
     const disabled = item.disabled;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      let intl = tmp(1128).intl;
-      const stringResult = intl.string(tmp(1128).t.N86XcP);
+      let intl = tmp(1125).intl;
+      const stringResult = intl.string(tmp(1125).t.N86XcP);
       cResult[0] = stringResult;
       let first = stringResult;
     } else {
@@ -89,8 +89,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
               }
             }
           }
-          let tmp9 = closure_10(tmp(7018).CircleXIcon, obj2);
-          const tmp11 = closure_10(tmp(7018).CircleXIcon, obj2);
+          let tmp9 = closure_10(tmp(7020).CircleXIcon, obj2);
+          const tmp11 = closure_10(tmp(7020).CircleXIcon, obj2);
         } else {
           tmp9 = cResult[6];
         }
@@ -138,7 +138,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
         obj3.accessibilityLabel = first;
         obj3.onPress = tmp7;
         obj3.children = tmp9;
-        const tmp14 = closure_10(tmp(6908).PressableOpacity, obj3);
+        const tmp14 = closure_10(tmp(6910).PressableOpacity, obj3);
         cResult[7] = item.disabled;
         cResult[8] = tmp7;
         cResult[9] = tmp9;
@@ -192,8 +192,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
   let tmp3Result = null;
   if (null != channelId) {
     let obj = { disabled: item.disabled, accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    let intl = item(1128).intl;
-    obj.accessibilityLabel = intl.string(item(1128).t.N86XcP);
+    let intl = item(1125).intl;
+    obj.accessibilityLabel = intl.string(item(1125).t.N86XcP);
     obj.onPress = function onPress() {
       if (null != onRemove) {
         return tmp(item);
@@ -224,8 +224,8 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
       prop = tmp.rowRemoveIconDisabled;
     }
     let obj2 = { style: prop };
-    obj.children = closure_10(item(7018).CircleXIcon, obj2);
-    tmp3Result = closure_10(item(6908).PressableOpacity, obj);
+    obj.children = closure_10(item(7020).CircleXIcon, obj2);
+    tmp3Result = closure_10(item(6910).PressableOpacity, obj);
   }
   return tmp3Result;
 });

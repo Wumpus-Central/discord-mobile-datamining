@@ -1,17 +1,17 @@
-// === Module 9655: CommandPermissionContext ===
+// === Module 9657: CommandPermissionContext ===
 
-// Module 9655 (CommandPermissionContext)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
-import Server from "Server" /* 2000 */;
-import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7316 */;
+// Module 9657 (CommandPermissionContext)
+import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
+import Server from "Server" /* 1997 */;
+import AgeRestrictedContentSettingsUtils from "AgeRestrictedContentSettingsUtils" /* 7318 */;
 import noop from "module_19" /* 19 */;
-import ImpersonateStore from "ImpersonateStore" /* 4876 */;
+import ImpersonateStore from "ImpersonateStore" /* 4877 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import UserStore from "UserStore" /* 1392 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -55,9 +55,9 @@ function computePermissions(isPrivate, arg1) {
   obj2.computedPermissions = deserializer.deserialize(0);
   return obj2;
 }
-const ChannelRecordBase = fn(4827).ChannelRecordBase;
-const isGuildNSFW = fn(4841).isGuildNSFW;
-const Constants = fn(1087);
+const ChannelRecordBase = fn(4828).ChannelRecordBase;
+const isGuildNSFW = fn(4842).isGuildNSFW;
+const Constants = fn(1084);
 ({ ChannelTypes: map1, Permissions: closure_14 } = Constants);
 const ReactCompilerGating = fn(558);
 let closure_15 = ReactCompilerGating.isReactCompilerEnabled();

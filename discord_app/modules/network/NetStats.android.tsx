@@ -1,16 +1,16 @@
-// === Module 7569: NetStats ===
+// === Module 7570: NetStats ===
 
-// Module 7569 (NetStats)
+// Module 7570 (NetStats)
 import LoggerDefault from "Logger" /* 3 */;
-import DurationsDefault from "Durations" /* 1104 */;
-import configure from "configure" /* 1485 */;
-import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5157 */;
-import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 5898 */;
+import DurationsDefault from "Durations" /* 1101 */;
+import configure from "configure" /* 1482 */;
+import NativeTTIManagerModuleDefault from "NativeTTIManagerModule" /* 5158 */;
+import RTCBandwidthMonitor from "RTCBandwidthMonitor" /* 5899 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
-import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7570 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import NetworkUtils_mod from "utils/NetworkUtils" /* 1484 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6497 */;
+import AnalyticsTrackingStore from "stores/AnalyticsTrackingStore" /* 7571 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import NetworkUtils_mod from "utils/NetworkUtils" /* 1481 */;
 import Dispatcher_mod from "Dispatcher" /* 584 */;
 
 require = fn;
@@ -48,12 +48,12 @@ function updateNetworkUsage() {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: closure_4, AppState } = get_ActivityIndicator);
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 let closure_9 = new LoggerDefault("NetStats");
 let closure_10 = { signalStrengthLevel: null, isNetworkRoaming: false, cellularReceiveBytes: 0, cellularSendBytes: 0, totalReceiveBytes: 0, totalSendBytes: 0, uidReceiveBytes: 0, uidSendBytes: 0, socketBytesReceived: 0, otaBytesReceived: 0, otaNumRequests: 0, xhrBytesReceived: 0, xhrNumRequests: 0, frescoBytesReceived: 0, frescoNumRequests: 0, downloadBytesReceived: 0, downloadNumRequests: 0, mediaPlayerBytesReceived: 0 };
 let c11 = null;
 const tmp3 = new LoggerDefault("NetStats");
-let global = { type: fn(1485).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
+let global = { type: fn(1482).NetInfoStateType.unknown, effectiveSpeed: null, serviceProvider: null };
 global = null;
 let closure_14 = "active" === AppState.currentState;
 let closure_15 = 0;

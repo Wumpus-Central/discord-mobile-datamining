@@ -1,18 +1,18 @@
-// === Module 14320: getActivityJoinability ===
+// === Module 14356: getActivityJoinability ===
 
-// Module 14320 (getActivityJoinability)
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
-import hasFlagDefault from "hasFlag" /* 7409 */;
-import getPartySize from "getPartySize" /* 11350 */;
-import isPartyFull from "isPartyFull" /* 11352 */;
-import getIsInParty from "getIsInParty" /* 11353 */;
-import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11356 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11357 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11387 */;
-import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11456 */;
-import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 14321 */;
-import Constants from "Constants" /* 1087 */;
+// Module 14356 (getActivityJoinability)
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5627 */;
+import hasFlagDefault from "hasFlag" /* 7411 */;
+import getPartySize from "getPartySize" /* 11353 */;
+import isPartyFull from "isPartyFull" /* 11355 */;
+import getIsInParty from "getIsInParty" /* 11356 */;
+import getCurrentUserPresenceActivityDefault from "getCurrentUserPresenceActivity" /* 11359 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11360 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11390 */;
+import getEmbeddedActivityJoinability from "getEmbeddedActivityJoinability" /* 11459 */;
+import isActivityJoinableOnCurrentPlatformDefault from "isActivityJoinableOnCurrentPlatform" /* 14357 */;
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 ({ ActivityFlags: c3, ChannelTypes: closure_4, GuildFeatures: hasOwnProperty, Permissions: metroRequire } = Constants);

@@ -7,7 +7,7 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes: closure_7, Permissions: closure_8 } = Constants);
 const CreateChannelMode = { PREMIUM_CHANNEL: 0, [0]: "PREMIUM_CHANNEL" };
 const size = fn(2);
@@ -72,9 +72,9 @@ export default function useCreateChannelSubmit(arg0) {
             return obj5;
           } else {
             if (closure_131_3 === constants3.PREMIUM_CHANNEL) {
-              const obj6 = { id: closure_131_4, type: closure_0(2000).PermissionOverwriteType.ROLE, deny: constants2.VIEW_CHANNEL, allow: closure_2(1099).getFlag(0) };
+              const obj6 = { id: closure_131_4, type: closure_0(1997).PermissionOverwriteType.ROLE, deny: constants2.VIEW_CHANNEL, allow: closure_2(1096).getFlag(0) };
               closure_131_0.push(obj6);
-              const obj10 = closure_2(1099);
+              const obj10 = closure_2(1096);
             }
             closure_1(true);
             c6 = 2;
@@ -98,9 +98,9 @@ export default function useCreateChannelSubmit(arg0) {
           if (3 === tmp8) {
             c6 = 1;
             closure_131_13 = closure_5;
-            const AccessibilityAnnouncer = closure_0(4978).AccessibilityAnnouncer;
-            const intl = closure_0(1128).intl;
-            AccessibilityAnnouncer.announce(intl.string(closure_0(1128).t["0SbUzm"]));
+            const AccessibilityAnnouncer = closure_0(4979).AccessibilityAnnouncer;
+            const intl = closure_0(1125).intl;
+            AccessibilityAnnouncer.announce(intl.string(closure_0(1125).t["0SbUzm"]));
             const body = closure_131_13.body;
             let errors;
             if (body != null) {
@@ -129,10 +129,10 @@ export default function useCreateChannelSubmit(arg0) {
               id = closure_131_10.id;
               guild_id = closure_131_10.guild_id;
               if (null != id) {
-                const AccessibilityAnnouncer2 = closure_0(4978).AccessibilityAnnouncer;
-                const intl2 = closure_0(1128).intl;
+                const AccessibilityAnnouncer2 = closure_0(4979).AccessibilityAnnouncer;
+                const intl2 = closure_0(1125).intl;
                 const obj9 = { name: closure_131_5 };
-                AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1128).t.Wke70b, obj9));
+                AccessibilityAnnouncer2.announce(intl2.formatToPlainString(closure_0(1125).t.Wke70b, obj9));
                 if (closure_0 != null) {
                   tmp86(id, guild_id);
                 }

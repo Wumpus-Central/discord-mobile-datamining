@@ -1,20 +1,20 @@
-// === Module 5868: UserSettingsActionCreators ===
+// === Module 5869: UserSettingsActionCreators ===
 
-// Module 5868 (UserSettingsActionCreators)
+// Module 5869 (UserSettingsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import wrappers from "wrappers" /* 1242 */;
-import UserSettings from "UserSettings" /* 4799 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
+import wrappers from "wrappers" /* 1239 */;
+import UserSettings from "UserSettings" /* 4800 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4995 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
-import ThemeStore from "ThemeStore" /* 1207 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4996 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1205 */;
+import ThemeStore from "ThemeStore" /* 1204 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ThemeTypes = fn(1087).ThemeTypes;
-const ThemeConstants = fn(1210);
+const ThemeTypes = fn(1084).ThemeTypes;
+const ThemeConstants = fn(1207);
 ({ SystemTheme, SystemThemeState: closure_8 } = ThemeConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/UserSettingsActionCreators.tsx");
@@ -79,26 +79,26 @@ export default {
               return obj4;
             } else if (tmp3) {
               dependencyMap = 1;
-              const PreloadedUserSettingsActionCreators = tmp3(4804).PreloadedUserSettingsActionCreators;
+              const PreloadedUserSettingsActionCreators = tmp3(4805).PreloadedUserSettingsActionCreators;
               v2 = 2;
               c3 = 1;
               const obj5 = {
                 value: PreloadedUserSettingsActionCreators.updateAsync("appearance", async (arg0) => {
                           theme = theme.theme;
                           if (constants.ASH === theme) {
-                            let DARK = closure_1_0(1211).Theme.DARK;
+                            let DARK = closure_1_0(1208).Theme.DARK;
                             let tmp4 = closure_1_0;
                           } else if (constants.LIGHT === theme) {
-                            DARK = closure_1_0(1211).Theme.LIGHT;
+                            DARK = closure_1_0(1208).Theme.LIGHT;
                             tmp4 = closure_1_0;
                           } else if (constants.DARK === theme) {
-                            DARK = closure_1_0(1211).Theme.DARKER;
+                            DARK = closure_1_0(1208).Theme.DARKER;
                             tmp4 = closure_1_0;
                           } else if (constants.ONYX === theme) {
-                            DARK = closure_1_0(1211).Theme.MIDNIGHT;
+                            DARK = closure_1_0(1208).Theme.MIDNIGHT;
                             tmp4 = closure_1_0;
                           } else {
-                            DARK = closure_1_0(1211).Theme.DARK;
+                            DARK = closure_1_0(1208).Theme.DARK;
                             tmp4 = closure_1_0;
                           }
                           arg0.theme = DARK;
@@ -107,7 +107,7 @@ export default {
                           if (gradientPreset != null) {
                             id = gradientPreset.id;
                           }
-                          const ClientThemeSettings = tmp4(4799).ClientThemeSettings;
+                          const ClientThemeSettings = tmp4(4800).ClientThemeSettings;
                           const setting = ClientThemeSettings.getSetting();
                           let prop;
                           if (setting != null) {
@@ -115,7 +115,7 @@ export default {
                           }
                           let obj2;
                           if (null != id) {
-                            const UInt32Value = tmp4(1242).UInt32Value;
+                            const UInt32Value = tmp4(1239).UInt32Value;
                             const obj = { value: id };
                             obj2 = UInt32Value.create(obj);
                           }
@@ -128,7 +128,7 @@ export default {
                           }
                           obj6.customUserThemeSettings = tmp17;
                           arg0.clientThemeSettings = obj6;
-                        }, tmp3(4804).UserSettingsDelay.INFREQUENT_USER_ACTION),
+                        }, tmp3(4805).UserSettingsDelay.INFREQUENT_USER_ACTION),
                 done: false
               };
               return obj5;
@@ -159,10 +159,10 @@ export default {
               id = gradientPreset.id;
             }
             const obj8 = { backgroundGradientPresetId: id, customUserThemeSettings: null };
-            let ClientThemeSettings = tmp3(4799).ClientThemeSettings;
+            let ClientThemeSettings = tmp3(4800).ClientThemeSettings;
             obj8.customUserThemeSettings = ClientThemeSettings.getSetting().customUserThemeSettings;
             obj7.clientThemeSettings = obj8;
-            const DeveloperMode = tmp3(4799).DeveloperMode;
+            const DeveloperMode = tmp3(4800).DeveloperMode;
             obj7.developerMode = DeveloperMode.getSetting();
           }
           const obj9 = { type: "SELECTIVELY_SYNCED_USER_SETTINGS_UPDATE", changes: null };
@@ -310,7 +310,7 @@ export const saveClientTheme = function saveClientTheme(backgroundGradientPreset
       arg0.theme = DARK;
       let obj2;
       if (null != backgroundGradientPresetId) {
-        const UInt32Value = tmp3(1242).UInt32Value;
+        const UInt32Value = tmp3(1239).UInt32Value;
         const obj = { value: tmp13 };
         obj2 = UInt32Value.create(obj);
       }

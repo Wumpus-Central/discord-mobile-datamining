@@ -1,13 +1,13 @@
-// === Module 16508: PremiumRewardGradient ===
+// === Module 16547: PremiumRewardGradient ===
 
-// Module 16508 (PremiumRewardGradient)
+// Module 16547 (PremiumRewardGradient)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import design_shared from "design/shared" /* 4979 */;
-import useThemeDefault from "useTheme" /* 5205 */;
-import useToken from "useToken" /* 5252 */;
-import LinearGradientDefault from "LinearGradient" /* 5258 */;
-import _modDef6966 from "module_6966" /* 6966 */;
+import design_shared from "design/shared" /* 4980 */;
+import useThemeDefault from "useTheme" /* 5206 */;
+import useToken from "useToken" /* 5253 */;
+import LinearGradientDefault from "LinearGradient" /* 5259 */;
+import _modDef6968 from "module_6968" /* 6968 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,16 +15,16 @@ get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let createStyles = fn(4971);
+let createStyles = fn(4972);
 let closure_8 = createStyles.createStyles({ wrapper: { position: "relative", overflow: "hidden" }, fill: { position: "absolute", left: 0, right: 0, bottom: 0, height: "100%" }, glow: { position: "absolute", left: 0, right: 0, bottom: 0, height: "50%" }, glowLight: { opacity: 0.5 } });
 const start = { x: 0, y: 0.5 };
 const end = { x: 1, y: 0.5 };
 const start2 = { x: 0.5, y: 0 };
 const end2 = { x: 0.5, y: 1 };
-fn(4968);
-const ColorUtils = fn(4968);
+fn(4969);
+const ColorUtils = fn(4969);
 const hexOpacityToRgbaResult = ColorUtils.hexOpacityToRgba("#000000", 0);
-createStyles = fn(4971);
+createStyles = fn(4972);
 let closure_13 = createStyles.createStyleProperties({ transparentBlack: hexOpacityToRgbaResult, opaqueBlack: nativeDefault.colors.BLACK, transparentWhite: ColorUtils.hexOpacityToRgba("#FFFFFF", 0), opaqueWhite: nativeDefault.colors.WHITE });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGradientColors() {
@@ -245,7 +245,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
         tmp28 = tmp31;
       }
       const obj5 = { style: tmp11, maskElement: tmp13, children: tmp19 };
-      const tmp27 = timestampProducer(_modDef6966, obj5);
+      const tmp27 = timestampProducer(_modDef6968, obj5);
       cResult[11] = tmp11;
       cResult[12] = tmp19;
       cResult[13] = tmp27;
@@ -278,7 +278,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Premiu
   }
   const obj3 = { style: items1, maskElement: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: ["transparent", "black"], start: start2, end: end2 }), children: timestampProducer(LinearGradientDefault, { style: React4.absoluteFill, colors: tmp2, start, end }) };
   items1[1] = glowLight;
-  const items2 = [timestampProducer(_modDef6966, obj3), children];
+  const items2 = [timestampProducer(_modDef6968, obj3), children];
   obj2.children = items2;
   return React5(hasOwnProperty, obj2);
 });

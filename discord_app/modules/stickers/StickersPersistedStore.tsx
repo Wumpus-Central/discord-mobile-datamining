@@ -1,13 +1,13 @@
-// === Module 6765: StickersPersistedStore ===
+// === Module 6766: StickersPersistedStore ===
 
-// Module 6765 (StickersPersistedStore)
+// Module 6766 (StickersPersistedStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1104 */;
-import FrecencyDefault from "Frecency" /* 5730 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import StickersStore from "StickersStore" /* 6766 */;
+import DurationsDefault from "Durations" /* 1101 */;
+import FrecencyDefault from "Frecency" /* 5731 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import StickersStore from "StickersStore" /* 6767 */;
 
 function handleStickersStoreUpdate() {
   if (StickersStore.isLoaded) {
@@ -33,7 +33,7 @@ function handleUserSettingsProtoStoreChange() {
     }), global.pendingUsages);
   }
 }
-const UserSettingsTypes = fn(1097).UserSettingsTypes;
+const UserSettingsTypes = fn(1094).UserSettingsTypes;
 let global = { pendingUsages: [] };
 let closure_6 = new FrecencyDefault({
   computeBonus() {

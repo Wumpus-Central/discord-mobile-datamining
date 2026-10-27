@@ -1,27 +1,27 @@
-// === Module 12086: AppLauncherMentionableOption ===
+// === Module 12087: AppLauncherMentionableOption ===
 
-// Module 12086 (AppLauncherMentionableOption)
+// Module 12087 (AppLauncherMentionableOption)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import UserCircleIcon from "UserCircleIcon" /* 10819 */;
-import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 12083 */;
-import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 12084 */;
-import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12085 */;
-import UsernameTextDefault from "UsernameText" /* 12087 */;
+import native from "native" /* 1199 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import UserCircleIcon from "UserCircleIcon" /* 10822 */;
+import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 12084 */;
+import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 12085 */;
+import AppLauncherOptionIconDefault from "AppLauncherOptionIcon" /* 12086 */;
+import UsernameTextDefault from "UsernameText" /* 12088 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
-import UserStore from "UserStore" /* 1392 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const StatusTypes = fn(1098).StatusTypes;
+const StatusTypes = fn(1095).StatusTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -31,7 +31,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Mentio
   const tmp4 = closure_10();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [AccessibilityStore];
-    const fn = function o() {
+    const fn = function l() {
       return useReducedMotion.useReducedMotion;
     };
     cResult[0] = items;
@@ -134,7 +134,7 @@ export default function AppLauncherMentionableOption(option) {
   mentionable = undefined;
   closure_8 = undefined;
   const guild_id = channel.guild_id;
-  ({ style, autoFocus, hasError } = option);
+  ({ autoFocus, hasError } = option);
   [mentionable, closure_8] = channel.useState(() => {
     if (null != initialValue) {
       if ("roleMention" === initialValue.type) {
@@ -186,7 +186,7 @@ export default function AppLauncherMentionableOption(option) {
       }
     }
   }, items1);
-  let obj = { style, option, hasError, selected: null != mentionable, selectedItemName: null, leading: null, onPress: null, autoFocus: null };
+  let obj = { option, hasError, selected: null != mentionable, selectedItemName: null, leading: null, onPress: null, autoFocus: null };
   let tmp7;
   if (null != mentionable) {
     tmp7 = memo;
@@ -198,7 +198,7 @@ export default function AppLauncherMentionableOption(option) {
       tmp();
     }
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(12083, dependencyMap.paths), AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY, {
+    obj.openLazy(asyncRequireImpl(12084, dependencyMap.paths), AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onMentionablePress(mentionable) {
@@ -210,5 +210,5 @@ export default function AppLauncherMentionableOption(option) {
     });
   };
   obj.autoFocus = autoFocus;
-  return jsx(initialValue(onMentionablePress[18]), { style, option, hasError, selected: null != mentionable, selectedItemName: null, leading: null, onPress: null, autoFocus: null });
+  return jsx(initialValue(onMentionablePress[18]), { option, hasError, selected: null != mentionable, selectedItemName: null, leading: null, onPress: null, autoFocus: null });
 };

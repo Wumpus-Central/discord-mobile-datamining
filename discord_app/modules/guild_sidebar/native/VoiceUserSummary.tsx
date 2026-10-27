@@ -1,19 +1,19 @@
-// === Module 17554: VoiceUserSummary ===
+// === Module 17595: VoiceUserSummary ===
 
-// Module 17554 (VoiceUserSummary)
-import native from "native" /* 1202 */;
-import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9709 */;
+// Module 17595 (VoiceUserSummary)
+import native from "native" /* 1199 */;
+import useIsUsingClientThemeDefault from "useIsUsingClientTheme" /* 9711 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-let closure_6 = Object.freeze({ direction: fn(1202).CutoutDirection.RIGHT, inset: -2 });
-const createStyles = fn(4971);
+let closure_6 = Object.freeze({ direction: fn(1199).CutoutDirection.RIGHT, inset: -2 });
+const createStyles = fn(4972);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center", paddingHorizontal: 16, height: 40 }, containerNoPadding: { flexDirection: "row", alignItems: "center", height: 40 }, iconContainer: { height: 40 }, redesignChannelIcon: { marginRight: 4 }, overflow: { height: 20, paddingHorizontal: 4, paddingVertical: 0, display: "flex", flexDirection: "row", alignItems: "center" }, transparentBorder: { borderColor: "transparent" } });
 const ReactCompilerGating = fn(558);
-let obj = { direction: fn(1202).CutoutDirection.RIGHT, inset: -2 };
+let obj = { direction: fn(1199).CutoutDirection.RIGHT, inset: -2 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_sidebar/native/VoiceUserSummary.tsx");
 
@@ -27,7 +27,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     transparentBorder = tmp4.transparentBorder;
   }
   let obj = guildId(576);
-  const clientThemesOverride = guildId(9708).useClientThemesOverride();
+  const clientThemesOverride = guildId(9710).useClientThemesOverride();
   const tmp7 = noPadding.noPadding ? tmp4.containerNoPadding : tmp4.container;
   if (cResult[0] === tmp7) {
     if (cResult[1] === clientThemesOverride) {
@@ -84,8 +84,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 }
               }
             }
-            const obj3 = { offsetAmount: -6, style: tmp4.iconContainer, overflowStyle: tmp13, overflowComponent: guildId(1202).OverflowTextSmall, items: users, max, renderItem: tmp14 };
-            const tmp17 = closure_4(guildId(1202).SummarizedIconRow, obj3);
+            const obj3 = { offsetAmount: -6, style: tmp4.iconContainer, overflowStyle: tmp13, overflowComponent: guildId(1199).OverflowTextSmall, items: users, max, renderItem: tmp14 };
+            const tmp17 = closure_4(guildId(1199).SummarizedIconRow, obj3);
             cResult[12] = max;
             cResult[13] = tmp4.iconContainer;
             cResult[14] = tmp13;
@@ -118,7 +118,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[1] = clientThemesOverride;
   cResult[2] = items2;
   tmp8 = items2;
-  const tmpResult = guildId(9708);
+  const tmpResult = guildId(9710);
 }) : (function UserSummaryItem(guildId) {
   guildId = guildId.guildId;
   ({ users, max, renderIcon, noPadding, stageIcon } = guildId);
@@ -128,7 +128,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     transparentBorder = tmp.transparentBorder;
   }
   const obj2 = { style: null, children: null };
-  const items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(9708).useClientThemesOverride()];
+  const items = [noPadding ? tmp.containerNoPadding : tmp.container, guildId(9710).useClientThemesOverride()];
   obj2.style = items;
   if (renderIcon) {
     if (stageIcon) {
@@ -139,7 +139,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj4 = { offsetAmount: -6, style: tmp.iconContainer, overflowStyle: null, overflowComponent: null, items: null, max: null, renderItem: null };
     const items2 = [tmp.overflow, transparentBorder];
     obj4.overflowStyle = items2;
-    obj4.overflowComponent = tmp4(1202).OverflowTextSmall;
+    obj4.overflowComponent = tmp4(1199).OverflowTextSmall;
     obj4.items = users;
     obj4.max = max;
     obj4.renderItem = function renderItem(user, arg1) {
@@ -151,11 +151,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj.cutout = tmp2;
       return React4(native.CutoutableAvatarImage, obj);
     };
-    items1[1] = closure_4(tmp4(1202).SummarizedIconRow, obj4);
+    items1[1] = closure_4(tmp4(1199).SummarizedIconRow, obj4);
     obj2.children = items1;
     return tmp5(tmp6, obj2);
   }
   VoiceNormalIcon = tmp4(8572).VoiceNormalIcon;
-  let obj = guildId(9708);
+  let obj = guildId(9710);
 }));
 export const VOICE_USER_SUMMARY_HEIGHT = 40;

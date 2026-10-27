@@ -1,12 +1,12 @@
-// === Module 14574: CtaButton ===
+// === Module 14610: CtaButton ===
 
-// Module 14574 (CtaButton)
-import util from "util" /* 1128 */;
-import _modDef3154 from "module_3154" /* 3154 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6654 */;
-import CtaButtonUtils from "CtaButtonUtils" /* 12873 */;
-import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 12875 */;
-import ExplicitMediaStore from "ExplicitMediaStore" /* 7390 */;
+// Module 14610 (CtaButton)
+import util from "util" /* 1125 */;
+import _modDef3155 from "module_3155" /* 3155 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6655 */;
+import CtaButtonUtils from "CtaButtonUtils" /* 12882 */;
+import AgeVerificationSystemNotificationUtils from "AgeVerificationSystemNotificationUtils" /* 12884 */;
+import ExplicitMediaStore from "ExplicitMediaStore" /* 7392 */;
 
 require = fn;
 const size = fn(2);
@@ -46,7 +46,7 @@ export const createCtaButtons = function createCtaButtons(id, channel_id, arg2) 
     if (tmpResult2.isAgeVerificationMessageWithManualReviewCta(channel_id, id)) {
       const obj11 = { text: null, textColor: null, backgroundColor: null, callback: null };
       const intl3 = util.intl;
-      obj11.text = intl3.string(_modDef3154.Z61nkt);
+      obj11.text = intl3.string(_modDef3155.Z61nkt);
       ({ reportFpTextColor: obj9.textColor, reportFpBackgroundColor: obj9.backgroundColor } = arg2);
       let prop2;
       if (result) {

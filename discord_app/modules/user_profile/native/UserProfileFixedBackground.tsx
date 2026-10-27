@@ -2,8 +2,8 @@
 
 // Module 8728 (UserProfileFixedBackground)
 import c from "c" /* 576 */;
-import native from "native" /* 5037 */;
-import LinearGradientDefault from "LinearGradient" /* 5258 */;
+import native from "native" /* 5038 */;
+import LinearGradientDefault from "LinearGradient" /* 5259 */;
 import useUserProfileColors from "useUserProfileColors" /* 8729 */;
 import useUserProfileGradientColors from "useUserProfileGradientColors" /* 8730 */;
 import _slicedToArray from "module_32" /* 32 */;

@@ -1,7 +1,7 @@
-// === Module 5587: VEVOOStore ===
+// === Module 5588: VEVOOStore ===
 
-// Module 5587 (VEVOOStore)
-import ReactBatchUpdates from "ReactBatchUpdates" /* 1274 */;
+// Module 5588 (VEVOOStore)
+import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

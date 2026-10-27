@@ -3,15 +3,15 @@
 // Module 9065 (InviteSuggestionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6828 */;
+import autocompleter_sortByMatchScoreDefault from "autocompleter/sortByMatchScore" /* 6830 */;
 import InstantInviteUtils from "InstantInviteUtils" /* 9052 */;
 import QuickSwitcherStore from "QuickSwitcherStore" /* 9066 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7732 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6689 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7733 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6690 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
 
 require = fn;
 function compareRowsByMatchScore(score, score2) {
@@ -43,9 +43,9 @@ function getOmitGuildId() {
   }
   return id;
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes: closure_16, Permissions: closure_17 } = Constants);
-const InviteTargetTypes = fn(7809).InviteTargetTypes;
+const InviteTargetTypes = fn(7810).InviteTargetTypes;
 let set = new Set();
 let rows = [];
 let map = new Map();
@@ -105,7 +105,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
       if (inviteTargetType === constants.EMBEDDED_APPLICATION) {
         channelHistory = channelHistory.getChannelHistory();
         const mapped = channelHistory.map((item) => channel.getChannel(item));
-        const found = mapped.filter(set1(1388).isNotNullish);
+        const found = mapped.filter(set1(1385).isNotNullish);
         const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
         const found2 = found1.filter((item) => closure_1_14.can(constants2.SEND_MESSAGES, item));
         const substr = found2.slice(0, 3);
@@ -166,7 +166,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
       if (inviteTargetType === constants.EMBEDDED_APPLICATION) {
         channelHistory = channelHistory.getChannelHistory();
         const mapped = channelHistory.map((item) => channel.getChannel(item));
-        const found = mapped.filter(set1(1388).isNotNullish);
+        const found = mapped.filter(set1(1385).isNotNullish);
         const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
         const found2 = found1.filter((item) => closure_1_14.can(constants2.SEND_MESSAGES, item));
         const substr = found2.slice(0, 3);
@@ -220,7 +220,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
       if (inviteTargetType === constants.EMBEDDED_APPLICATION) {
         channelHistory = channelHistory.getChannelHistory();
         const mapped = channelHistory.map((item) => channel.getChannel(item));
-        const found = mapped.filter(set1(1388).isNotNullish);
+        const found = mapped.filter(set1(1385).isNotNullish);
         const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
         const found2 = found1.filter((item) => closure_1_14.can(constants2.SEND_MESSAGES, item));
         const substr = found2.slice(0, 3);
@@ -281,7 +281,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
           if (inviteTargetType === constants.EMBEDDED_APPLICATION) {
             channelHistory = channelHistory.getChannelHistory();
             const mapped = channelHistory.map((item) => channel.getChannel(item));
-            const found = mapped.filter(set1(1388).isNotNullish);
+            const found = mapped.filter(set1(1385).isNotNullish);
             const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
             const found2 = found1.filter((item) => closure_1_14.can(constants2.SEND_MESSAGES, item));
             const substr = found2.slice(0, 3);
@@ -314,7 +314,7 @@ const inviteSuggestionsStore = new InviteSuggestionsStore(DispatcherDefault, {
           if (inviteTargetType === constants.EMBEDDED_APPLICATION) {
             channelHistory = channelHistory.getChannelHistory();
             const mapped = channelHistory.map((item) => channel.getChannel(item));
-            const found = mapped.filter(set1(1388).isNotNullish);
+            const found = mapped.filter(set1(1385).isNotNullish);
             const found1 = found.filter((type) => type.type === constants.GUILD_TEXT);
             const found2 = found1.filter((item) => closure_1_14.can(constants2.SEND_MESSAGES, item));
             const substr = found2.slice(0, 3);

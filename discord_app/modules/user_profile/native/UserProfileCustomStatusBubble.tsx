@@ -1,18 +1,18 @@
-// === Module 11059: UserProfileCustomStatusBubble ===
+// === Module 11062: UserProfileCustomStatusBubble ===
 
-// Module 11059 (UserProfileCustomStatusBubble)
+// Module 11062 (UserProfileCustomStatusBubble)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import PlatformUtils2 from "PlatformUtils" /* 1384 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import UserSettings from "UserSettings" /* 4799 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import EmojiDefault from "Emoji" /* 7227 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
-import inlineStyles from "inlineStyles" /* 7962 */;
-import CustomStatusUtils from "CustomStatusUtils" /* 11062 */;
+import PlatformUtils2 from "PlatformUtils" /* 1381 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import UserSettings from "UserSettings" /* 4800 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import EmojiDefault from "Emoji" /* 7229 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7280 */;
+import inlineStyles from "inlineStyles" /* 7960 */;
+import CustomStatusUtils from "CustomStatusUtils" /* 11065 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -24,16 +24,16 @@ require = fn;
 let closure_3 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: closure_7, View: closure_8 } = get_ActivityIndicator);
-const EMOJI_URL_BASE_SIZE = fn(1395).EMOJI_URL_BASE_SIZE;
-let Fonts = fn(1098).Fonts;
+const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
+let Fonts = fn(1095).Fonts;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 let str = "";
 if (PlatformUtils.isAndroid()) {
   str = "\u00A0";
 }
-let createStyles = fn(4971);
+let createStyles = fn(4972);
 let closure_15 = createStyles.createStyles((arg0) => {
   const obj = { container: { position: "relative" }, bubble: null, statusBubble: null, statusBubbleMeasureable: null, smallCircle: null, largeCircle: null, addStatusIconSpacer: null, statusBubbleLeftAligned: null };
   const colors = nativeDefault.colors;
@@ -108,7 +108,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Status
   return __initData(inlineStylesDefault, size);
 });
 let closure_17 = { textVariant: "text-md/normal", emojiOnlyEmojiSize: 32, textMinWidth: 42, statusBubblePaddingHorizontal: 12, statusBubblePaddingVertical: 7 };
-const dependencyMap = { [fn(7304).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
+const dependencyMap = { [fn(7306).UserProfileThemeTypes.PREVIEW]: { textVariant: "text-sm/normal", emojiOnlyEmojiSize: 26, textMinWidth: 53, statusBubblePaddingHorizontal: 10, statusBubblePaddingVertical: 6 } };
 ReactCompilerGating = fn(558);
 let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiImage(arg0) {
   const cResult = c.c(14);
@@ -209,7 +209,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
       } else {
         let obj3 = { fontStyle: "italic" };
       }
-      tmpResult = emoji(1384);
+      tmpResult = emoji(1381);
     }
   } else {
     tmp6 = cResult[1];
@@ -253,7 +253,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
       let obj4 = { variant: textVariant, color: "text-default", lineClamp, onTextLayout, style: tmp10, children: null };
       let items = [tmp13, text, tmp15];
       obj4.children = items;
-      const tmp18 = closure_12(emoji(5234).Text, obj4);
+      const tmp18 = closure_12(emoji(5235).Text, obj4);
       cResult[10] = lineClamp;
       cResult[11] = onTextLayout;
       cResult[12] = tmp13;
@@ -376,7 +376,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function TextSt
     obj2 = PlatformUtils2;
   }
 });
-createStyles = fn(4971);
+createStyles = fn(4972);
 let closure_21 = createStyles.createStyles(() => ({ container: { alignItems: "center" } }));
 ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiOnlyStatusContent(arg0) {

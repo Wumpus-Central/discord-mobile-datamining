@@ -1,7 +1,7 @@
-// === Module 11053: useSocialLayerStorefrontMobileAccountLinkingDisabled ===
+// === Module 11056: useSocialLayerStorefrontMobileAccountLinkingDisabled ===
 
-// Module 11053 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
-import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7332 */;
+// Module 11056 (useSocialLayerStorefrontMobileAccountLinkingDisabled)
+import SocialLayerStorefrontStore from "SocialLayerStorefrontStore" /* 7334 */;
 
 const require = globalThis.__r;
 

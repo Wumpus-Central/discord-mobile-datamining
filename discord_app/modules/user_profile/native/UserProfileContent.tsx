@@ -1,48 +1,48 @@
-// === Module 14346: UserProfileContent ===
+// === Module 14382: UserProfileContent ===
 
-// Module 14346 (UserProfileContent)
+// Module 14382 (UserProfileContent)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import ToastUtils from "ToastUtils" /* 5662 */;
-import UserProfileRolesCardDefault from "UserProfileRolesCard" /* 7281 */;
-import ClipboardUtils from "ClipboardUtils" /* 7285 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7414 */;
+import util from "util" /* 1125 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import ToastUtils from "ToastUtils" /* 5663 */;
+import UserProfileRolesCardDefault from "UserProfileRolesCard" /* 7283 */;
+import ClipboardUtils from "ClipboardUtils" /* 7287 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7416 */;
 import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8686 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8732 */;
-import closeVoicePanelsDefault from "closeVoicePanels" /* 10768 */;
-import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11160 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13546 */;
-import ProvisionalAccountExplainer from "ProvisionalAccountExplainer" /* 13553 */;
-import UserProfileActivityDefault from "UserProfileActivity" /* 14280 */;
-import UserProfileModeratorActionsDefault from "UserProfileModeratorActions" /* 14334 */;
-import UserProfileNoteDefault from "UserProfileNote" /* 14337 */;
-import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 14375 */;
-import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 14376 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14379 */;
-import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 14400 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 14408 */;
-import WishlistUtils from "WishlistUtils" /* 14409 */;
-import UserProfilePrivateInfoBannerDefault from "UserProfilePrivateInfoBanner" /* 14413 */;
-import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 14414 */;
-import UserProfileGameFriendsCardDefault from "UserProfileGameFriendsCard" /* 14416 */;
-import UserProfileConnections from "UserProfileConnections" /* 14417 */;
-import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 14422 */;
-import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 14426 */;
-import UserProfileMutualsDefault from "UserProfileMutuals" /* 14433 */;
-import UserProfileIncomingFriendRequestDefault from "UserProfileIncomingFriendRequest" /* 14434 */;
-import UserProfileRemediatedNoticeDefault from "UserProfileRemediatedNotice" /* 14439 */;
-import UserProfileContactButtonsDefault from "UserProfileContactButtons" /* 14440 */;
+import closeVoicePanelsDefault from "closeVoicePanels" /* 10771 */;
+import UserProfileAboutMeCardDefault from "UserProfileAboutMeCard" /* 11163 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13560 */;
+import ProvisionalAccountExplainer from "ProvisionalAccountExplainer" /* 13567 */;
+import UserProfileActivityDefault from "UserProfileActivity" /* 14308 */;
+import UserProfileModeratorActionsDefault from "UserProfileModeratorActions" /* 14370 */;
+import UserProfileNoteDefault from "UserProfileNote" /* 14373 */;
+import UserProfileWidgetsBoardEditNoticeDefault from "UserProfileWidgetsBoardEditNotice" /* 14411 */;
+import ConjureCustomWidgetAddOptionDefault from "ConjureCustomWidgetAddOption" /* 14412 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14415 */;
+import UserProfileActivityTabDefault from "UserProfileActivityTab" /* 14436 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 14444 */;
+import WishlistUtils from "WishlistUtils" /* 14445 */;
+import UserProfilePrivateInfoBannerDefault from "UserProfilePrivateInfoBanner" /* 14449 */;
+import UserProfileDismissibleUpsellsDefault from "UserProfileDismissibleUpsells" /* 14450 */;
+import UserProfileGameFriendsCardDefault from "UserProfileGameFriendsCard" /* 14452 */;
+import UserProfileConnections from "UserProfileConnections" /* 14453 */;
+import UserProfileWishlistGrid from "UserProfileWishlistGrid" /* 14458 */;
+import UserProfileWishlistSuggestionsGridDefault from "UserProfileWishlistSuggestionsGrid" /* 14462 */;
+import UserProfileMutualsDefault from "UserProfileMutuals" /* 14469 */;
+import UserProfileIncomingFriendRequestDefault from "UserProfileIncomingFriendRequest" /* 14470 */;
+import UserProfileRemediatedNoticeDefault from "UserProfileRemediatedNotice" /* 14475 */;
+import UserProfileContactButtonsDefault from "UserProfileContactButtons" /* 14476 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8681 */;
-import WishlistStore from "WishlistStore" /* 9370 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import WishlistStore from "WishlistStore" /* 9369 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8649 */;
-import UserProfileStore from "UserProfileStore" /* 7703 */;
+import UserProfileStore from "UserProfileStore" /* 7704 */;
 
 const UserProfileWishlistGridDefault = UserProfileWishlistGrid;
 
@@ -67,7 +67,7 @@ function CustomStatusBubble(guildId) {
   const items2 = [channelId, guildId, user];
   let tmp7 = null;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11075, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, guildId, channelId }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11078, dependencyMap.paths), "UserProfileCustomStatusActionSheet", { user, guildId, channelId }, "stack");
   }, items2);
   if (null == customStatusActivity) {
     tmp7 = null;
@@ -109,7 +109,7 @@ function RemoveGameFriendIconButton(user) {
   const channelId = user.channelId;
   const items = [channelId, guildId, user];
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14348, dependencyMap.paths), "UserProfileGameFriendActionSheet", { user, guildId, channelId }, "stack");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14384, dependencyMap.paths), "UserProfileGameFriendActionSheet", { user, guildId, channelId }, "stack");
   }, items);
   const obj = { size: "sm", variant: "secondary-overlay", icon: closure_19(user(channelId[34]).UserPlatformIcon, { size: "sm", color: "white" }), accessibilityLabel: null, onPress: null };
   const intl = user(channelId[30]).intl;
@@ -119,11 +119,11 @@ function RemoveGameFriendIconButton(user) {
 }
 const View = fn(17).View;
 const UserProfileSections = fn(8672).UserProfileSections;
-const Constants = fn(7304);
+const Constants = fn(7306);
 ({ PROFILE_CONTENT_BOTTOM_PADDING: closure_14, PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING: closure_15 } = Constants);
-const RelationshipTypes = fn(1087).RelationshipTypes;
-const ACTION_SHEET_MAX_WIDTH = fn(5266).ACTION_SHEET_MAX_WIDTH;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const RelationshipTypes = fn(1084).RelationshipTypes;
+const ACTION_SHEET_MAX_WIDTH = fn(5267).ACTION_SHEET_MAX_WIDTH;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -215,8 +215,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
     tmp4 = showBadgeDirectoryNuxCoachmark;
   }
   let obj = userTag(576);
-  userTag = trackUserProfileAction(5025).useUserTag(user);
-  const obj2 = trackUserProfileAction(5025);
+  userTag = trackUserProfileAction(5026).useUserTag(user);
+  const obj2 = trackUserProfileAction(5026);
   if (tmp4) {
     let flag;
     if (displayProfile != null) {
@@ -231,10 +231,10 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
     if (cResult[1] === user.id) {
       let tmp9 = cResult[2];
     }
-    const variantProps = tmp(14350).useBadgeDirectoryNuxCoachmarkVariant(tmp9).variantProps;
+    const variantProps = tmp(14386).useBadgeDirectoryNuxCoachmarkVariant(tmp9).variantProps;
     if (cResult[3] !== variantProps) {
       if (null != variantProps) {
-        const items = [tmp(4807).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER];
+        const items = [tmp(4808).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER];
         let items1 = items;
       } else {
         items1 = [];
@@ -242,14 +242,14 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
       cResult[3] = variantProps;
       cResult[4] = items1;
     } else {
-      const tmpResult4 = tmp(7496);
-      [tmp14, tmp15] = tmp(7496).useSelectedDismissibleContent(cResult[4]);
-      const tmp16 = tmp14 === tmp(4807).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER;
-      const tmp13 = _slicedToArray(tmp(7496).useSelectedDismissibleContent(cResult[4]), 2);
-      const badgeDirectoryNuxEntryPoint = tmp(14353).useBadgeDirectoryNuxEntryPoint(tmp16, tmp15);
+      const tmpResult4 = tmp(7497);
+      [tmp14, tmp15] = tmp(7497).useSelectedDismissibleContent(cResult[4]);
+      const tmp16 = tmp14 === tmp(4808).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER;
+      const tmp13 = _slicedToArray(tmp(7497).useSelectedDismissibleContent(cResult[4]), 2);
+      const badgeDirectoryNuxEntryPoint = tmp(14389).useBadgeDirectoryNuxEntryPoint(tmp16, tmp15);
       ({ entryPointRef, onOpenBadgeDirectory } = badgeDirectoryNuxEntryPoint);
-      const tmpResult5 = tmp(14353);
-      const name = tmp5(5989).useName(guildId, channelId.channelId, user);
+      const tmpResult5 = tmp(14389);
+      const name = tmp5(5990).useName(guildId, channelId.channelId, user);
       if (cResult[5] === name) {
         if (cResult[6] === displayNameOverride) {
           let tmp19 = cResult[7];
@@ -301,8 +301,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
           }
           const _Symbol = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl = tmp(1128).intl;
-            cResult[13] = intl.string(tmp(1128).t.y5MwJy);
+            const intl = tmp(1125).intl;
+            cResult[13] = intl.string(tmp(1125).t.y5MwJy);
             class H {
               constructor() {
                 tmp = trackUserProfileAction({ action: "COPY_USERNAME" });
@@ -313,7 +313,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
                 return;
               }
             }
-            const stringResult = intl.string(tmp(1128).t.y5MwJy);
+            const stringResult = intl.string(tmp(1125).t.y5MwJy);
           } else {
             const tmp28 = cResult[13];
           }
@@ -391,7 +391,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
                                         }
                                       }
                                       obj4.markAsDismissed = tmp15;
-                                      tmp37 = closure_19(tmp5(14354), obj4);
+                                      tmp37 = closure_19(tmp5(14390), obj4);
                                     }
                                     class H {
                                       constructor() {
@@ -423,7 +423,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
             }
           }
           const obj5 = { user, guildId, displayName: tmp19, pronouns: pronounsOverride, badges: badgesOverride, style, badgeContainerBackground, onPressDisplayName: tmp26, displayNameAccessibilityHint: tmp28, onPressUserTag: tmp30, onPressPronouns: tmp31, showBadgeToastOnPress: !isPreviewingChanges, canOpenBadgeDirectory: true, badgeDirectoryEntryPointRef: entryPointRef, onOpenBadgeDirectory, pendingDisplayNameStyles };
-          const tmp35 = closure_19(tmp5(11079), obj5);
+          const tmp35 = closure_19(tmp5(11082), obj5);
           cResult[14] = badgeContainerBackground;
           cResult[15] = entryPointRef;
           cResult[16] = guildId;
@@ -468,9 +468,9 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
       cResult[6] = displayNameOverride;
       cResult[7] = tmp21;
       tmp19 = tmp21;
-      const tmp5Result = tmp5(5989);
+      const tmp5Result = tmp5(5990);
     }
-    const tmpResult = tmp(14350);
+    const tmpResult = tmp(14386);
   }
   const obj6 = { userId: user.id, enabled: tmp4, fetchCatalog: false, location: "UserProfileContent" };
   cResult[0] = tmp4;
@@ -485,8 +485,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
     showBadgeDirectoryNuxCoachmark = false;
   }
   let trackUserProfileAction;
-  const userTag = trackUserProfileAction(5025).useUserTag(user);
-  let obj = trackUserProfileAction(5025);
+  const userTag = trackUserProfileAction(5026).useUserTag(user);
+  let obj = trackUserProfileAction(5026);
   const tmp4 = trackUserProfileAction(8733)(displayProfile);
   const obj3 = { userId: user.id, enabled: null, fetchCatalog: false, location: "UserProfileContent" };
   if (showBadgeDirectoryNuxCoachmark) {
@@ -500,22 +500,22 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
     showBadgeDirectoryNuxCoachmark = flag;
   }
   obj3.enabled = showBadgeDirectoryNuxCoachmark;
-  const variantProps = userTag(14350).useBadgeDirectoryNuxCoachmarkVariant(obj3).variantProps;
-  const obj2 = userTag(14350);
+  const variantProps = userTag(14386).useBadgeDirectoryNuxCoachmarkVariant(obj3).variantProps;
+  const obj2 = userTag(14386);
   if (null != variantProps) {
-    const items = [tmp5(4807).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER];
+    const items = [tmp5(4808).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER];
     let items1 = items;
   } else {
     items1 = [];
   }
-  const tmp5Result = userTag(7496);
-  [tmp8, tmp9] = userTag(7496).useSelectedDismissibleContent(items1);
-  const tmp10 = tmp8 === userTag(4807).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER;
-  const tmp7 = _slicedToArray(userTag(7496).useSelectedDismissibleContent(items1), 2);
-  const badgeDirectoryNuxEntryPoint = userTag(14353).useBadgeDirectoryNuxEntryPoint(tmp10, tmp9);
+  const tmp5Result = userTag(7497);
+  [tmp8, tmp9] = userTag(7497).useSelectedDismissibleContent(items1);
+  const tmp10 = tmp8 === userTag(4808).DismissibleContent.BADGE_DIRECTORY_NUX_POPOVER;
+  const tmp7 = _slicedToArray(userTag(7497).useSelectedDismissibleContent(items1), 2);
+  const badgeDirectoryNuxEntryPoint = userTag(14389).useBadgeDirectoryNuxEntryPoint(tmp10, tmp9);
   ({ entryPointRef, onOpenBadgeDirectory } = badgeDirectoryNuxEntryPoint);
-  const tmp5Result3 = userTag(14353);
-  const name = trackUserProfileAction(5989).useName(guildId, channelId, user);
+  const tmp5Result3 = userTag(14389);
+  const name = trackUserProfileAction(5990).useName(guildId, channelId, user);
   let tmp13 = name;
   if (null != displayNameOverride) {
     tmp13 = name;
@@ -523,7 +523,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
       tmp13 = displayNameOverride;
     }
   }
-  const tmpResult = trackUserProfileAction(5989);
+  const tmpResult = trackUserProfileAction(5990);
   trackUserProfileAction = userTag(8679).useUserProfileAnalyticsContext().trackUserProfileAction;
   const items2 = [trackUserProfileAction, userTag];
   const callback = noop.useCallback(() => {
@@ -552,8 +552,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
     tmp20 = callback;
   }
   obj4.onPressDisplayName = tmp20;
-  const intl = tmp5(1128).intl;
-  obj4.displayNameAccessibilityHint = intl.string(userTag(1128).t.y5MwJy);
+  const intl = tmp5(1125).intl;
+  obj4.displayNameAccessibilityHint = intl.string(userTag(1125).t.y5MwJy);
   let tmp21;
   if (!isPreviewingChanges) {
     tmp21 = callback;
@@ -571,11 +571,11 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function PrimaryInfo(
   obj4.badgeDirectoryEntryPointRef = entryPointRef;
   obj4.onOpenBadgeDirectory = onOpenBadgeDirectory;
   obj4.pendingDisplayNameStyles = pendingDisplayNameStyles;
-  const children = [closure_19(trackUserProfileAction(11079), obj4), ];
+  const children = [closure_19(trackUserProfileAction(11082), obj4), ];
   let tmp17Result = null != variantProps;
   if (tmp17Result) {
     const obj5 = { targetRef: entryPointRef, userId: user.id, variantProps, visible: tmp10, markAsDismissed: tmp9 };
-    tmp17Result = closure_19(tmp(14354), obj5);
+    tmp17Result = closure_19(tmp(14390), obj5);
   }
   children[1] = tmp17Result;
   return closure_21(closure_20, { children });
@@ -607,7 +607,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSe
   }
   const obj2 = guildId(8679);
   const stateFromStores = guildId(504).useStateFromStores(first, tmp8);
-  const tmp10 = trackUserProfileAction(11188)();
+  const tmp10 = trackUserProfileAction(11191)();
   dependencyMap = tmp10;
   if (cResult[3] !== stateFromStores) {
     const obj3 = { guild: stateFromStores };
@@ -617,7 +617,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSe
   } else {
     tmp11 = cResult[4];
   }
-  const tmp12 = trackUserProfileAction(11188)(tmp11);
+  const tmp12 = trackUserProfileAction(11191)(tmp11);
   closure_3 = tmp12;
   if (cResult[5] === tmp10) {
     if (cResult[6] === trackUserProfileAction) {
@@ -630,7 +630,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSe
       const _Symbol = Symbol;
       if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
         const obj4 = { size: "sm", color: tmp4(587).colors.WHITE };
-        const tmp17 = closure_19(tmp(10120).PencilIcon, obj4);
+        const tmp17 = closure_19(tmp(10122).PencilIcon, obj4);
         cResult[11] = tmp17;
         let tmp15 = tmp17;
       } else {
@@ -638,11 +638,11 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSe
       }
       if (cResult[12] !== stateFromStores) {
         if (null != stateFromStores) {
-          const intl2 = tmp(1128).intl;
-          let stringResult = intl2.string(tmp(1128).t.HmFaFB);
+          const intl2 = tmp(1125).intl;
+          let stringResult = intl2.string(tmp(1125).t.HmFaFB);
         } else {
-          const intl = tmp(1128).intl;
-          stringResult = intl.string(tmp(1128).t.s5vZlQ);
+          const intl = tmp(1125).intl;
+          stringResult = intl.string(tmp(1125).t.s5vZlQ);
         }
         cResult[12] = stateFromStores;
         cResult[13] = stringResult;
@@ -664,7 +664,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSe
               }
             }
             const obj5 = { style: tmp5.primaryButtons, maxWidth: ACTION_SHEET_MAX_WIDTH, primaryButton: tmp22, secondaryButton: tmp25 };
-            const tmp32 = closure_19(tmp4(14278), obj5);
+            const tmp32 = closure_19(tmp4(14306), obj5);
             cResult[20] = tmp5.primaryButtons;
             cResult[21] = tmp22;
             cResult[22] = tmp25;
@@ -675,11 +675,11 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSe
           if (null != stateFromStores) {
             const obj6 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
             const obj7 = { size: "sm", color: tmp4(587).colors.WHITE };
-            obj6.icon = closure_19(tmp(10120).PencilIcon, obj7);
-            const intl3 = tmp(1128).intl;
-            obj6.text = intl3.string(tmp(1128).t["PKQB/H"]);
+            obj6.icon = closure_19(tmp(10122).PencilIcon, obj7);
+            const intl3 = tmp(1125).intl;
+            obj6.text = intl3.string(tmp(1125).t["PKQB/H"]);
             obj6.onPress = tmp14;
-            tmp27 = closure_19(tmp(5244).Button, obj6);
+            tmp27 = closure_19(tmp(5245).Button, obj6);
           }
           cResult[17] = stateFromStores;
           cResult[18] = tmp14;
@@ -687,7 +687,7 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSe
           tmp25 = tmp27;
         }
         const obj8 = { variant: "primary", icon: tmp15, text: cResult[13], onPress: tmp13, grow: true };
-        const tmp24 = closure_19(tmp(5244).Button, obj8);
+        const tmp24 = closure_19(tmp(5245).Button, obj8);
         cResult[14] = tmp13;
         cResult[15] = cResult[13];
         cResult[16] = tmp24;
@@ -725,19 +725,19 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSe
   const obj = guildId(8679);
   const items = [GuildStore];
   const stateFromStores = guildId(504).useStateFromStores(items, () => GuildStore.getGuild(guildId));
-  dependencyMap = trackUserProfileAction(11188)();
-  closure_3 = trackUserProfileAction(11188)({ guild: stateFromStores });
+  dependencyMap = trackUserProfileAction(11191)();
+  closure_3 = trackUserProfileAction(11191)({ guild: stateFromStores });
   const obj3 = { style: tmp3.primaryButtons, maxWidth: ACTION_SHEET_MAX_WIDTH, primaryButton: null, secondaryButton: null };
   const obj2 = guildId(504);
   const obj4 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
-  const tmp7 = trackUserProfileAction(14278);
-  obj4.icon = closure_19(guildId(10120).PencilIcon, { size: "sm", color: trackUserProfileAction(587).colors.WHITE });
+  const tmp7 = trackUserProfileAction(14306);
+  obj4.icon = closure_19(guildId(10122).PencilIcon, { size: "sm", color: trackUserProfileAction(587).colors.WHITE });
   if (null != stateFromStores) {
-    const intl2 = tmp4(1128).intl;
-    let stringResult = intl2.string(tmp4(1128).t.HmFaFB);
+    const intl2 = tmp4(1125).intl;
+    let stringResult = intl2.string(tmp4(1125).t.HmFaFB);
   } else {
-    const intl = tmp4(1128).intl;
-    stringResult = intl.string(tmp4(1128).t.s5vZlQ);
+    const intl = tmp4(1125).intl;
+    stringResult = intl.string(tmp4(1125).t.s5vZlQ);
   }
   obj4.text = stringResult;
   obj4.onPress = function handleEditProfile() {
@@ -746,21 +746,21 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditSe
     closeVoicePanelsDefault();
     closure_2();
   };
-  obj3.primaryButton = closure_19(guildId(5244).Button, obj4);
+  obj3.primaryButton = closure_19(guildId(5245).Button, obj4);
   let tmp6Result;
   if (null != stateFromStores) {
     const obj6 = { variant: "primary", icon: null, text: null, onPress: null, grow: true };
     const obj7 = { size: "sm", color: tmp(587).colors.WHITE };
-    obj6.icon = closure_19(tmp4(10120).PencilIcon, obj7);
-    const intl3 = tmp4(1128).intl;
-    obj6.text = intl3.string(tmp4(1128).t["PKQB/H"]);
+    obj6.icon = closure_19(tmp4(10122).PencilIcon, obj7);
+    const intl3 = tmp4(1125).intl;
+    obj6.text = intl3.string(tmp4(1125).t["PKQB/H"]);
     obj6.onPress = function handleEditGuildProfile() {
       trackUserProfileAction({ action: "EDIT_GUILD_PROFILE" });
       ActionSheetActionCreatorsDefault.hideAllActionSheets();
       closeVoicePanelsDefault();
       closure_3();
     };
-    tmp6Result = closure_19(tmp4(5244).Button, obj6);
+    tmp6Result = closure_19(tmp4(5245).Button, obj6);
   }
   obj3.secondaryButton = tmp6Result;
   return closure_19(tmp7, obj3);

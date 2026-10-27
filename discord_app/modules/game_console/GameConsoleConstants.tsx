@@ -1,7 +1,7 @@
-// === Module 9626: GameConsoleConstants ===
+// === Module 9628: GameConsoleConstants ===
 
-// Module 9626 (GameConsoleConstants)
-import Constants from "Constants" /* 1087 */;
+// Module 9628 (GameConsoleConstants)
+import Constants from "Constants" /* 1084 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8827 */;
 import size from "module_2" /* 2 */;
 

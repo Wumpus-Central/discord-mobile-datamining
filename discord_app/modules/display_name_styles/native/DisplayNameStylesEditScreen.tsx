@@ -1,32 +1,32 @@
-// === Module 16693: DisplayNameStylesEditScreen ===
+// === Module 16735: DisplayNameStylesEditScreen ===
 
-// Module 16693 (DisplayNameStylesEditScreen)
+// Module 16735 (DisplayNameStylesEditScreen)
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1409 */;
-import DisplayNameEffect from "DisplayNameEffect" /* 1411 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import HapticUtils from "HapticUtils" /* 5212 */;
-import spring from "spring" /* 5247 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1406 */;
+import DisplayNameEffect from "DisplayNameEffect" /* 1408 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import HapticUtils from "HapticUtils" /* 5213 */;
+import spring from "spring" /* 5248 */;
 import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8653 */;
 import UserProfileActionCreators from "UserProfileActionCreators" /* 8656 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
-import UserStore from "UserStore" /* 1392 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire, Pressable: closure_7 } = get_ActivityIndicator);
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1629).MEDIA_PICKER_SEND_BUTTON_SPRING;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const MEDIA_PICKER_SEND_BUTTON_SPRING = fn(1626).MEDIA_PICKER_SEND_BUTTON_SPRING;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let items = [fn(1411).DisplayNameEffect.GRADIENT, fn(1411).DisplayNameEffect.GUMMY, fn(1411).DisplayNameEffect.PRISM];
+let items = [fn(1408).DisplayNameEffect.GRADIENT, fn(1408).DisplayNameEffect.GUMMY, fn(1408).DisplayNameEffect.PRISM];
 let value = { overrideSettings: true };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, contentContainer: null, fieldButtonGroup: null, fieldButton: null, fieldButtonBorder: null, fieldButtonLabel: null, fieldButtonChevron: null, fieldButtonTrailing: null, buttonContainer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.contentContainer = { padding: nativeDefault.space.PX_16 };
@@ -524,7 +524,7 @@ export default function DisplayNameStylesEditScreen() {
       if (showCampaignFontBadge) {
         dismissCampaignFontBadge();
       }
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16698, dependencyMap.paths), "DisplayNameStylesFontPickerSheet", { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName, isTryItOut });
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16740, dependencyMap.paths), "DisplayNameStylesFontPickerSheet", { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName, isTryItOut });
       const obj2 = { selectedFontId, onSelectFont, displayName: displayNameStylesPendingName, isTryItOut };
     }, items6);
     if (stateFromStores != null) {
@@ -543,9 +543,9 @@ export default function DisplayNameStylesEditScreen() {
       if (stateFromStores != null) {
         id = stateFromStores.id;
       }
-      obj.openLazy(asyncRequireImpl(16701, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", { userId: id, selectedEffectId: first1, onSelectEffect });
+      obj.openLazy(asyncRequireImpl(16743, dependencyMap.paths), "DisplayNameStylesEffectPickerSheet", { userId: id, selectedEffectId: first1, onSelectEffect });
       const obj2 = { userId: id, selectedEffectId: first1, onSelectEffect };
-      const tmp3 = asyncRequireImpl(16701, dependencyMap.paths);
+      const tmp3 = asyncRequireImpl(16743, dependencyMap.paths);
     }, items7);
     const callback7 = obj10.useCallback(() => {
       if (first1 === DisplayNameEffect.DisplayNameEffect.GUMMY) {
@@ -555,7 +555,7 @@ export default function DisplayNameStylesEditScreen() {
               return callback(navigation(isTryItOut[8]).DisplayNameEffect.GUMMY, arg0);
             }
         };
-        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16702, dependencyMap.paths), "DisplayNameStylesGummyColorPickerSheet", obj2);
+        ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16744, dependencyMap.paths), "DisplayNameStylesGummyColorPickerSheet", obj2);
       } else {
         const openLazy = ActionSheetActionCreatorsDefault.openLazy;
         const tmp2Result = asyncRequireImpl;
@@ -567,10 +567,10 @@ export default function DisplayNameStylesEditScreen() {
                   return callback(first1, arg0);
                 }
           };
-          openLazy(tmp2Result(16707, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
+          openLazy(tmp2Result(16749, dependencyMap.paths), "DisplayNameStylesGradientPickerSheet", obj4);
         } else {
           const obj = { selectedColor: first3, selectedEffectId: first1, onSelectColor };
-          openLazy(tmp2Result(16711, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
+          openLazy(tmp2Result(16753, dependencyMap.paths), "DisplayNameStylesColorPickerSheet", obj);
         }
       }
     }, items8);

@@ -1,10 +1,10 @@
-// === Module 14504: transformUploaderAttachments ===
+// === Module 14540: transformUploaderAttachments ===
 
-// Module 14504 (transformUploaderAttachments)
-import util from "util" /* 1128 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5999 */;
-import RowGeneratorConstants from "RowGeneratorConstants" /* 8134 */;
-import CloudUpload from "CloudUpload" /* 8143 */;
+// Module 14540 (transformUploaderAttachments)
+import util from "util" /* 1125 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6000 */;
+import RowGeneratorConstants from "RowGeneratorConstants" /* 8132 */;
+import CloudUpload from "CloudUpload" /* 8141 */;
 import ExplicitMediaUtils from "ExplicitMediaUtils" /* 8608 */;
 import size from "module_2" /* 2 */;
 

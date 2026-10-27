@@ -1,12 +1,12 @@
-// === Module 17531: useIsGameCommunityServerPreview ===
+// === Module 17572: useIsGameCommunityServerPreview ===
 
-// Module 17531 (useIsGameCommunityServerPreview)
-import LurkingStore from "LurkingStore" /* 4904 */;
+// Module 17572 (useIsGameCommunityServerPreview)
+import LurkingStore from "LurkingStore" /* 4905 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const JoinGuildSources = fn(1087).JoinGuildSources;
+const JoinGuildSources = fn(1084).JoinGuildSources;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/lurker_mode/native/useIsGameCommunityServerPreview.tsx");

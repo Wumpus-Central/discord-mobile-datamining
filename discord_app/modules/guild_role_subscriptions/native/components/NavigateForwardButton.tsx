@@ -1,18 +1,18 @@
-// === Module 16578: NavigateForwardButton ===
+// === Module 16620: NavigateForwardButton ===
 
-// Module 16578 (NavigateForwardButton)
+// Module 16620 (NavigateForwardButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import Pressables from "Pressables" /* 6908 */;
-import _modDef16579 from "module_16579" /* 16579 */;
+import native from "native" /* 1199 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import Pressables from "Pressables" /* 6910 */;
+import _modDef16621 from "module_16621" /* 16621 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL, flexDirection: "row", padding: 16 }, text: { flexGrow: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -30,7 +30,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Navigate
     }
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { source: _modDef16579 };
+      const obj2 = { source: _modDef16621 };
       const tmp11 = React3(native.Icon, obj2);
       cResult[3] = tmp11;
       let tmp8 = tmp11;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Navigate
   ({ onPress, text } = arg0);
   const tmp = closure_5();
   const obj = { style: tmp.container, onPress, children: null };
-  const items = [React3(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text }), React3(native.Icon, { source: _modDef16579 })];
+  const items = [React3(Text_Text.Text, { style: tmp.text, variant: "text-md/semibold", color: "interactive-text-active", children: text }), React3(native.Icon, { source: _modDef16621 })];
   obj.children = items;
   return React4(Pressables.PressableHighlight, obj);
 });

@@ -1,16 +1,16 @@
-// === Module 7652: CollectiblesProductRecord ===
+// === Module 7653: CollectiblesProductRecord ===
 
-// Module 7652 (CollectiblesProductRecord)
-import getPricesFromServerDefault from "getPricesFromServer" /* 2050 */;
+// Module 7653 (CollectiblesProductRecord)
+import getPricesFromServerDefault from "getPricesFromServer" /* 2047 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7653 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7659 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7654 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7660 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7654);
+const CollectiblesItemRecord = fn(7655);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
-let closure_7 = fn(1089).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
-const Constants = fn(1087);
+let closure_7 = fn(1086).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
+const Constants = fn(1084);
 ({ PREMIUM_TYPE_NONE: closure_8, PriceSetAssignmentPurchaseTypes: closure_9 } = Constants);
 let CollectiblesProductRecord;
 class CollectiblesProductRecord extends tmp3 {
@@ -172,7 +172,7 @@ CollectiblesProductRecord["fromStorefrontProductRecord"] = function fromStorefro
               }
               ({ items, item } = obj);
               first = _slicedToArray(tenantMetadata.selectedOptions, 1)[0];
-              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "IconComponent", items: "/assets/images/platforms", categorySkuId: 256, categoryWillUnpublishAt: 256, isCategoryReward: null, prices: "08e89c7c23b84c36ce6ed8da12dbbbbb", previewAssets: "img_bungie_light", googleSkuIds: "png", eligibleOffers: "<string:2432697159>", variants: "<string:100663978>", bundledProducts: "<string:1493172907>", isFirstParty: "<string:2852127406>" };
+              const obj3 = { baseVariantName: skus.name, baseVariantSkuId: first.id, variantLabel: null, variantValue: null, storeListingId: null, skuId: null, name: null, summary: null, styles: "t", type: "Array", premiumType: "IconComponent", items: "/assets/images/platforms", categorySkuId: 255, categoryWillUnpublishAt: 255, isCategoryReward: null, prices: "72952773756d8776abb1f02e0c8ab235", previewAssets: "img_account_sync_battlenet_light_and_dark", googleSkuIds: "png", eligibleOffers: true, variants: "/assets/images/platforms", bundledProducts: 255, isFirstParty: 255 };
               let str;
               if (first != null) {
                 str = first.optionValue;

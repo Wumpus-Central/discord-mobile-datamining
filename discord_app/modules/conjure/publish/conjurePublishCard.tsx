@@ -1,7 +1,7 @@
-// === Module 12287: conjurePublishCard ===
+// === Module 12293: conjurePublishCard ===
 
-// Module 12287 (conjurePublishCard)
-import _modDef3830 from "module_3830" /* 3830 */;
+// Module 12293 (conjurePublishCard)
+import _modDef3831 from "module_3831" /* 3831 */;
 import size from "module_2" /* 2 */;
 
 const weakMap = new WeakMap();
@@ -58,15 +58,15 @@ export const livePublishCardMessageId = function livePublishCardMessageId(arg0, 
 };
 export const publishNoticeMessage = function publishNoticeMessage(notice, arg1) {
   if (true === notice.commands_failed) {
-    let prop = _modDef3830["PrQg+B"];
+    let prop = _modDef3831["PrQg+B"];
   } else if (true === notice.channel_skipped) {
-    prop = _modDef3830.ev23Cw;
+    prop = _modDef3831.ev23Cw;
   } else if (notice.update) {
-    prop = _modDef3830.gQzuLC;
+    prop = _modDef3831.gQzuLC;
   } else if (null == arg1) {
-    prop = _modDef3830.MOrR29;
+    prop = _modDef3831.MOrR29;
   } else {
-    prop = _modDef3830["/npn7F"];
+    prop = _modDef3831["/npn7F"];
   }
   return prop;
 };

@@ -1,36 +1,36 @@
-// === Module 15940: UserProfileTryItOutEditForm ===
+// === Module 15978: UserProfileTryItOutEditForm ===
 
-// Module 15940 (UserProfileTryItOutEditForm)
+// Module 15978 (UserProfileTryItOutEditForm)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import native from "native" /* 5037 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7253 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
+import util from "util" /* 1125 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import native from "native" /* 5038 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7255 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7280 */;
 import RecentAvatarUtils from "RecentAvatarUtils" /* 8658 */;
 import useDisplayProfileDefault from "useDisplayProfile" /* 8675 */;
 import useProfileThemeDefault from "useProfileTheme" /* 8718 */;
 import useUserProfileColors from "useUserProfileColors" /* 8729 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8732 */;
 import useBadgesDefault from "useBadges" /* 8733 */;
-import DiceIcon from "DiceIcon" /* 9426 */;
-import userSettingToActivity from "userSettingToActivity" /* 11058 */;
-import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 11059 */;
-import UserProfileGradientContainerDefault from "UserProfileGradientContainer" /* 11078 */;
-import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 11079 */;
-import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 11731 */;
-import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 15838 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15851 */;
-import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 15854 */;
-import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 15860 */;
-import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 15911 */;
-import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 15933 */;
-import UserProfileFloatingUpsell from "UserProfileFloatingUpsell" /* 15941 */;
-import EditUserProfileAvatarDefault from "EditUserProfileAvatar" /* 15943 */;
-import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell" /* 15945 */;
+import DiceIcon from "DiceIcon" /* 9425 */;
+import userSettingToActivity from "userSettingToActivity" /* 11061 */;
+import UserProfileCustomStatusBubbleDefault from "UserProfileCustomStatusBubble" /* 11062 */;
+import UserProfileGradientContainerDefault from "UserProfileGradientContainer" /* 11081 */;
+import UserProfilePrimaryInfoDefault from "UserProfilePrimaryInfo" /* 11082 */;
+import ThemeContextProvider_RootThemeContextProvider from "ThemeContextProvider/RootThemeContextProvider" /* 11733 */;
+import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 15876 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15889 */;
+import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 15892 */;
+import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 15898 */;
+import usePremiumTryItOutPresetShuffleDefault from "usePremiumTryItOutPresetShuffle" /* 15949 */;
+import UserProfileTryItOutFieldsDefault from "UserProfileTryItOutFields" /* 15971 */;
+import UserProfileFloatingUpsell from "UserProfileFloatingUpsell" /* 15979 */;
+import EditUserProfileAvatarDefault from "EditUserProfileAvatar" /* 15981 */;
+import UserProfileTryItOutGetPremiumUpsellDefault from "UserProfileTryItOutGetPremiumUpsell" /* 15983 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8649 */;
@@ -41,7 +41,7 @@ require = fn;
 let closure_3 = ["user"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-let closure_8 = fn(7304).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
+let closure_8 = fn(7306).PROFILE_CONTENT_WITHOUT_STATUS_TOP_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let ReactCompilerGating = fn(558);

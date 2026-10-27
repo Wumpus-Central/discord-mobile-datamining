@@ -2,15 +2,15 @@
 
 // Module 8906 (guild_scheduled_events/GuildScheduledEventModalActionCreators)
 import _modDef38 from "module_38" /* 38 */;
-import util from "util" /* 1128 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import ToastUtils from "ToastUtils" /* 5662 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5663 */;
-import useAlertStore from "useAlertStore" /* 5910 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
-import ClipboardUtils from "ClipboardUtils" /* 7285 */;
-import ReportModals from "ReportModals" /* 8108 */;
+import util from "util" /* 1125 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import ToastUtils from "ToastUtils" /* 5663 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5664 */;
+import useAlertStore from "useAlertStore" /* 5911 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
+import ClipboardUtils from "ClipboardUtils" /* 7287 */;
+import ReportModals from "ReportModals" /* 8106 */;
 import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8888 */;
 import GuildEventRsvpUtils from "GuildEventRsvpUtils" /* 8896 */;
 import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 8903 */;
@@ -18,11 +18,11 @@ import instant_invite_InstantInviteUtils from "instant_invite/InstantInviteUtils
 import restoreEventRecurrenceDefault from "restoreEventRecurrence" /* 9137 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildChannelStore from "GuildChannelStore" /* 4901 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6784 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildChannelStore from "GuildChannelStore" /* 4902 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6785 */;
 
 const require = globalThis.__r;
 
@@ -105,13 +105,13 @@ let closure_21 = async function _transitionToEventDetailsFromInvite(arg0) {
     }
   }
 };
-let GuildScheduledEventStore = fn(6784);
+let GuildScheduledEventStore = fn(6785);
 ({ isGuildEventEnded: closure_9, isGuildScheduledEventActive: c10 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-let closure_12 = fn(4829).GuildScheduledEventUserResponses;
+let closure_12 = fn(4830).GuildScheduledEventUserResponses;
 const GuildEventModalConstants = fn(8884);
 ({ CREATE_GUILD_EVENT_MODAL_KEY: map1, GUILD_EVENTS_LIST_ACTION_SHEET_KEY: closure_14, START_EVENT_MODAL_KEY: closure_15 } = GuildEventModalConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ InstantInviteSources: closure_16, Permissions: closure_17, Routes: closure_18 } = Constants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -332,7 +332,7 @@ export const showGuildEventModeratorActionSheet = function showGuildEventModerat
                 openRsvpPicker(guildScheduledEvent, recurrenceId) {
                   guildId(guild_id[15]).openLazy(id(guild_id[14])(guild_id[26], guild_id.paths), "GuildEventRsvpPickerActionSheet", { event: guildScheduledEvent, recurrenceId, guildId, onRsvp }, "stack");
                 },
-                onRsvp: "k"
+                onRsvp: "applicationId"
               });
             }
       };

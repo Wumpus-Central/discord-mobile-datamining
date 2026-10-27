@@ -1,11 +1,11 @@
-// === Module 11920: ActivitiesBanner ===
+// === Module 11921: ActivitiesBanner ===
 
-// Module 11920 (ActivitiesBanner)
+// Module 11921 (ActivitiesBanner)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import useActivityApplications from "useActivityApplications" /* 11909 */;
-import ApplicationsImageDefault from "ApplicationsImage" /* 11921 */;
-import BannerBaseDefault from "BannerBase" /* 11932 */;
+import util from "util" /* 1125 */;
+import useActivityApplications from "useActivityApplications" /* 11910 */;
+import ApplicationsImageDefault from "ApplicationsImage" /* 11922 */;
+import BannerBaseDefault from "BannerBase" /* 11933 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 

@@ -3,9 +3,9 @@
 // Module 8733 (useBadges)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
-import UserSettings from "UserSettings" /* 4799 */;
-import StreamerModeStore from "StreamerModeStore" /* 5026 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserSettings from "UserSettings" /* 4800 */;
+import StreamerModeStore from "StreamerModeStore" /* 5027 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 

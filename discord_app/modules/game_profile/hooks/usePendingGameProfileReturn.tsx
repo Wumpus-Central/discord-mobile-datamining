@@ -1,15 +1,15 @@
-// === Module 13345: usePendingGameProfileReturn ===
+// === Module 13359: usePendingGameProfileReturn ===
 
-// Module 13345 (usePendingGameProfileReturn)
+// Module 13359 (usePendingGameProfileReturn)
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9245 */;
 import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9251 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GameStore from "GameStore" /* 2022 */;
+import GameStore from "GameStore" /* 2019 */;
 import GameProfileStore from "GameProfileStore" /* 9253 */;
 
 require = fn;
-const AVATAR_SIZE = fn(1087).AVATAR_SIZE;
+const AVATAR_SIZE = fn(1084).AVATAR_SIZE;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_profile/hooks/usePendingGameProfileReturn.tsx");

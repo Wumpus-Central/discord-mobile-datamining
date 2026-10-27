@@ -1,24 +1,24 @@
-// === Module 12001: useAppLauncherFrecents ===
+// === Module 12002: useAppLauncherFrecents ===
 
-// Module 12001 (useAppLauncherFrecents)
+// Module 12002 (useAppLauncherFrecents)
 import c from "c" /* 576 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7259 */;
-import AppLauncherUtils from "AppLauncherUtils" /* 9649 */;
-import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10204 */;
-import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 10206 */;
-import getPrimaryAppCommand from "getPrimaryAppCommand" /* 11404 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7261 */;
+import AppLauncherUtils from "AppLauncherUtils" /* 9651 */;
+import ApplicationCommandQueryApiAll from "ApplicationCommandQueryApi" /* 10206 */;
+import isApplicationAgeRestrictedDefault from "isApplicationAgeRestricted" /* 10208 */;
+import getPrimaryAppCommand from "getPrimaryAppCommand" /* 11407 */;
 import noop from "module_19" /* 19 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7203 */;
-import UserStore from "UserStore" /* 1392 */;
-import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12002 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7205 */;
+import UserStore from "UserStore" /* 1389 */;
+import AppLauncherLastUsedCommandStore from "AppLauncherLastUsedCommandStore" /* 12003 */;
 
 require = fn;
-const FetchState = fn(7203).FetchState;
-const WATCH_YOUTUBE_PROD_APP_ID = fn(2026).WATCH_YOUTUBE_PROD_APP_ID;
-const ApplicationCommandConstants = fn(5983);
+const FetchState = fn(7205).FetchState;
+const WATCH_YOUTUBE_PROD_APP_ID = fn(2023).WATCH_YOUTUBE_PROD_APP_ID;
+const ApplicationCommandConstants = fn(5984);
 const BuiltInSectionId = ApplicationCommandConstants.BuiltInSectionId;
 let filters = { commandTypes: null };
-let items = [fn(2000).ApplicationCommandType.CHAT, fn(2000).ApplicationCommandType.PRIMARY_ENTRY_POINT];
+let items = [fn(1997).ApplicationCommandType.CHAT, fn(1997).ApplicationCommandType.PRIMARY_ENTRY_POINT];
 filters.commandTypes = items;
 const options = { placeholderCount: 0, limit: ApplicationCommandConstants.DISCOVERY_COMMANDS_QUERY_LIMIT, includeFrecency: true };
 fn(558);
@@ -204,7 +204,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
         }
       }
       dependencyMap = tmp20;
-      const sortApplicationsViaFrecency = context(12003).useSortApplicationsViaFrecency(cResult[10], tmp16);
+      const sortApplicationsViaFrecency = context(12004).useSortApplicationsViaFrecency(cResult[10], tmp16);
       const _Symbol = Symbol;
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
         class T {
@@ -232,7 +232,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFre
         }
         tmp22 = cResult[15];
       }
-      const tmpResult5 = context(12003);
+      const tmpResult5 = context(12004);
       stateFromStores1 = context(504).useStateFromStores(tmp21, tmp22);
       if (cResult[16] !== stateFromStores1) {
         class T {

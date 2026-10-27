@@ -1,8 +1,8 @@
-// === Module 17034: SelectScreen ===
+// === Module 17076: SelectScreen ===
 
-// Module 17034 (SelectScreen)
-import NavigatorConstants from "NavigatorConstants" /* 5268 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7037 */;
+// Module 17076 (SelectScreen)
+import NavigatorConstants from "NavigatorConstants" /* 5269 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7039 */;
 import RowButton from "RowButton" /* 8953 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,10 +10,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const SELECT_NAMES = fn(17031).SELECT_NAMES;
+const SELECT_NAMES = fn(17073).SELECT_NAMES;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_7 = createStyles.createStyles((arg0) => {
   const obj = { container: { marginLeft: 16, marginRight: 16 }, selectContainer: null };
   const NAV_BAR_HEIGHT = NavigatorConstants.NAV_BAR_HEIGHT;
@@ -32,15 +32,15 @@ const result = size.fileFinishedImporting("modules/mfa/native/screens/SelectScre
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectScreen(mfaChallenge) {
   _require = mfaChallenge;
   const cResult = require("c").c(15);
-  const tmp4 = navigation(7037)();
+  const tmp4 = navigation(7039)();
   const tmp5 = closure_7(tmp4);
   const obj = require("c");
   navigation = require("useNavigation").useNavigation();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { variant: "heading-xl/extrabold", children: null };
-    const intl = tmp(1128).intl;
-    obj3.children = intl.string(tmp(1128).t.S9b9bX);
-    const tmp10 = closure_5(tmp(5234).Heading, obj3);
+    const intl = tmp(1125).intl;
+    obj3.children = intl.string(tmp(1125).t.S9b9bX);
+    const tmp10 = closure_5(tmp(5235).Heading, obj3);
     cResult[0] = tmp10;
     let first = tmp10;
   } else {
@@ -48,9 +48,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectSc
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj4 = { variant: "text-sm/medium", children: null };
-    const intl2 = tmp(1128).intl;
-    obj4.children = intl2.string(tmp(1128).t.Jz1lXO);
-    const tmp13 = closure_5(tmp(5234).Text, obj4);
+    const intl2 = tmp(1125).intl;
+    obj4.children = intl2.string(tmp(1125).t.Jz1lXO);
+    const tmp13 = closure_5(tmp(5235).Text, obj4);
     cResult[1] = tmp13;
     let tmp11 = tmp13;
   } else {
@@ -100,7 +100,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectSc
     const obj8 = { top: tmp7, style: tmp5.container, children: null };
     const items1 = [tmp14, tmp21];
     obj8.children = items1;
-    const tmp27 = closure_6(tmp(7221).SafeAreaPaddingView, obj8);
+    const tmp27 = closure_6(tmp(7223).SafeAreaPaddingView, obj8);
     cResult[10] = tmp5.container;
     cResult[11] = tmp7;
     cResult[12] = tmp14;

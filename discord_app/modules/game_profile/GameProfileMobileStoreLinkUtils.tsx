@@ -1,7 +1,7 @@
-// === Module 9322: GameProfileMobileStoreLinkUtils ===
+// === Module 9323: GameProfileMobileStoreLinkUtils ===
 
-// Module 9322 (GameProfileMobileStoreLinkUtils)
-import ApplicationDistributors from "ApplicationDistributors" /* 1106 */;
+// Module 9323 (GameProfileMobileStoreLinkUtils)
+import ApplicationDistributors from "ApplicationDistributors" /* 1103 */;
 import ThirdPartyGameApplicationWebsiteCategory from "ThirdPartyGameApplicationWebsiteCategory" /* 9273 */;
 import size from "module_2" /* 2 */;
 

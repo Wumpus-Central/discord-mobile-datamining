@@ -2,7 +2,7 @@
 
 // Module 8759 (useStateFromSharedValue)
 import c from "c" /* 576 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -35,7 +35,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLis
         listeners: set,
         valueListener(arg0) {
             closure_0 = arg0;
-            set(1274).batchUpdates(() => {
+            set(1271).batchUpdates(() => {
               for (const item10005 of set) {
                 let item10005Result = item10005(closure_0);
                 continue;
@@ -57,12 +57,12 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLis
         closure_0 = arg1;
         addListener.addListener(arg0, (arg0) => set(dependencyMap[5]).runOnJS(closure_0)(arg0));
       };
-      const obj4 = { runOnJS: closure_0(5052).runOnJS };
+      const obj4 = { runOnJS: closure_0(5053).runOnJS };
       fn.__closure = obj4;
       fn.__workletHash = 580393174787;
       fn.__initData = __initData;
-      closure_0(5052).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
-      const obj3 = closure_0(5052);
+      closure_0(5053).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
+      const obj3 = closure_0(5053);
     }
     return () => {
       const listeners = set.listeners;
@@ -101,7 +101,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLis
         listeners: set,
         valueListener(arg0) {
             closure_0 = arg0;
-            set(1274).batchUpdates(() => {
+            set(1271).batchUpdates(() => {
               for (const item10005 of set) {
                 let item10005Result = item10005(closure_0);
                 continue;
@@ -121,14 +121,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLis
       const result = map.set(tmp, value);
       let fn = function n(arg0, arg1, addListener) {
         closure_0 = arg1;
-        addListener.addListener(arg0, (arg0) => set(5052).runOnJS(closure_0)(arg0));
+        addListener.addListener(arg0, (arg0) => set(5053).runOnJS(closure_0)(arg0));
       };
-      const obj4 = { runOnJS: closure_0(5052).runOnJS };
+      const obj4 = { runOnJS: closure_0(5053).runOnJS };
       fn.__closure = obj4;
       fn.__workletHash = 4734743082561;
       fn.__initData = __initData;
-      closure_0(5052).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
-      const obj3 = closure_0(5052);
+      closure_0(5053).runOnUI(fn)(value.listenerId, value.valueListener, tmp);
+      const obj3 = closure_0(5053);
     }
     return () => {
       const listeners = set.listeners;

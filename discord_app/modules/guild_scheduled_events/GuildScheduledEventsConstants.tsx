@@ -1,8 +1,8 @@
-// === Module 4829: GuildScheduledEventsConstants ===
+// === Module 4830: GuildScheduledEventsConstants ===
 
-// Module 4829 (GuildScheduledEventsConstants)
-import Constants from "Constants" /* 1087 */;
-import DurationsDefault from "Durations" /* 1104 */;
+// Module 4830 (GuildScheduledEventsConstants)
+import Constants from "Constants" /* 1084 */;
+import DurationsDefault from "Durations" /* 1101 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;

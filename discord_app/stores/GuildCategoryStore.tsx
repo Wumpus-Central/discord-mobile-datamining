@@ -1,14 +1,14 @@
-// === Module 7207: GuildCategoryStore ===
+// === Module 7209: GuildCategoryStore ===
 
-// Module 7207 (GuildCategoryStore)
+// Module 7209 (GuildCategoryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import getFlattedChannelListDefault from "getFlattedChannelList" /* 7208 */;
-import FavoriteStore from "FavoriteStore" /* 4826 */;
+import getFlattedChannelListDefault from "getFlattedChannelList" /* 7210 */;
+import FavoriteStore from "FavoriteStore" /* 4827 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4901 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4902 */;
+import GuildStore from "GuildStore" /* 4846 */;
 
 function setIndex(arg0, index) {
   arg0.index = index;
@@ -236,10 +236,10 @@ function handleFavoritesUpdate() {
   const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
   closure_12[v65535] = obj;
 }
-let GuildChannelStore = fn(4901);
+let GuildChannelStore = fn(4902);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: metroRequire } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes: closure_9, FAVORITES: c10 } = Constants);
 let c11 = null;
 const dependencyMap = {};

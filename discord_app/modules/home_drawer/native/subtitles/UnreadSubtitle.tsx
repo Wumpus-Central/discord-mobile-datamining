@@ -1,7 +1,7 @@
-// === Module 17774: UnreadSubtitle ===
+// === Module 17815: UnreadSubtitle ===
 
-// Module 17774 (UnreadSubtitle)
-import Text_Text from "Text/Text" /* 5234 */;
+// Module 17815 (UnreadSubtitle)
+import Text_Text from "Text/Text" /* 5235 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSu
   const cResult = subtitleStyles(576).c(16);
   ({ guild, channel, channelName, count } = arg0);
   const obj = subtitleStyles(576);
-  subtitleStyles = subtitleStyles(17772).useSubtitleStyles();
+  subtitleStyles = subtitleStyles(17813).useSubtitleStyles();
   if (cResult[0] === channel) {
     if (cResult[1] === guild) {
       let tmp5 = cResult[2];
@@ -52,12 +52,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSu
           }
         }
       }
-      const intl2 = tmp(1128).intl;
+      const intl2 = tmp(1125).intl;
       const obj4 = {
         channelName,
         count: diff,
         labelHook(children, id) {
-              return jsx(subtitleStyles(5234).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children }, id);
+              return jsx(subtitleStyles(5235).Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, children }, id);
             },
         iconHook(arg0, key) {
               return <closure_1 key={key} size="xxs" color="icon-muted" style={subtitleStyles.unreadChannelIcon} />;
@@ -66,10 +66,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSu
               return jsx(Text_Text.Text, { variant: "text-xs/medium", color: "text-muted", lineClamp: 1, style: subtitleStyles.subtitleText, children }, key);
             },
         overflowHook(children, id) {
-              return jsx(subtitleStyles(5234).Text, { variant: "text-xs/medium", color: "text-muted", children }, id);
+              return jsx(subtitleStyles(5235).Text, { variant: "text-xs/medium", color: "text-muted", children }, id);
             }
       };
-      const formatResult = intl2.format(tmp(1128).t.OqlmU6, obj4);
+      const formatResult = intl2.format(tmp(1125).t.OqlmU6, obj4);
       cResult[6] = tmp5;
       cResult[7] = channelName;
       cResult[8] = subtitleStyles.subtitleText;
@@ -78,9 +78,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSu
       cResult[11] = formatResult;
       tmp11 = formatResult;
     }
-    const intl = tmp(1128).intl;
+    const intl = tmp(1125).intl;
     const obj5 = { channelName, count: diff };
-    const formatToPlainStringResult = intl.formatToPlainString(tmp(1128).t.gxD5I6, obj5);
+    const formatToPlainStringResult = intl.formatToPlainString(tmp(1125).t.gxD5I6, obj5);
     cResult[3] = channelName;
     cResult[4] = diff;
     cResult[5] = formatToPlainStringResult;
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UnreadSu
   cResult[1] = guild;
   cResult[2] = channelIconComponentWithGuild;
   tmp5 = channelIconComponentWithGuild;
-  const obj2 = subtitleStyles(17772);
+  const obj2 = subtitleStyles(17813);
 }) : (function UnreadSubtitle(arg0) {
   ({ channel, channelName } = arg0);
   let subtitleStyles;

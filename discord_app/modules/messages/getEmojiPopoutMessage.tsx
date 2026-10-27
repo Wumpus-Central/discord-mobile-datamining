@@ -1,11 +1,11 @@
-// === Module 9946: getEmojiPopoutMessage ===
+// === Module 9948: getEmojiPopoutMessage ===
 
-// Module 9946 (getEmojiPopoutMessage)
-import Constants from "Constants" /* 1087 */;
-import util from "util" /* 1128 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import _modDef4117 from "module_4117" /* 4117 */;
-import ExpressionSourceRecord from "ExpressionSourceRecord" /* 6884 */;
+// Module 9948 (getEmojiPopoutMessage)
+import Constants from "Constants" /* 1084 */;
+import util from "util" /* 1125 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
+import _modDef4118 from "module_4118" /* 4118 */;
+import ExpressionSourceRecord from "ExpressionSourceRecord" /* 6886 */;
 import size from "module_2" /* 2 */;
 
 const EmojiSourceDataTypes = ExpressionSourceRecord.EmojiSourceDataTypes;
@@ -20,7 +20,7 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
     const obj2 = { type: obj.UNAVAILABLE, text: null, description: null, emojiDescription: null, analyticsType: null };
     const intl11 = util.intl;
     const obj3 = { helpdeskArticle: HelpdeskUtilsDefault.getArticleURL(HelpdeskArticles.NITRO_EMOJI_PACKS) };
-    obj2.emojiDescription = intl11.format(_modDef4117["/jdd/7"], obj3);
+    obj2.emojiDescription = intl11.format(_modDef4118["/jdd/7"], obj3);
     obj2.analyticsType = constants.NITRO_EMOJI_PACK;
     return obj2;
   } else {
@@ -47,8 +47,8 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
           if (isPremium2) {
             if (isDiscoverable2) {
               const obj5 = { type: obj.JOIN_GUILD, text: null, description: null };
-              const intl10 = tmp7(1128).intl;
-              obj5.text = intl10.string(tmp7(1128).t.riu2R5);
+              const intl10 = tmp7(1125).intl;
+              obj5.text = intl10.string(tmp7(1125).t.riu2R5);
               let obj7 = obj5;
             }
             const obj6 = {};
@@ -59,8 +59,8 @@ export const getEmojiPopoutData = function getEmojiPopoutData(sourceType) {
           }
           if (!isPremium2) {
             obj7 = { type: obj.GET_PREMIUM, text: null, description: null };
-            const intl9 = tmp7(1128).intl;
-            obj7.text = intl9.string(tmp7(1128).t["gl/XHJ"]);
+            const intl9 = tmp7(1125).intl;
+            obj7.text = intl9.string(tmp7(1125).t["gl/XHJ"]);
           }
           const obj8 = { type: obj.UNAVAILABLE, text: null, description: null };
           obj7 = obj8;

@@ -1,9 +1,9 @@
-// === Module 15302: BitRateStore ===
+// === Module 15338: BitRateStore ===
 
-// Module 15302 (BitRateStore)
+// Module 15338 (BitRateStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 5718 */;
+import Constants from "Constants" /* 5719 */;
 import size from "module_2" /* 2 */;
 
 let bitrate = Constants.DEFAULT_VOICE_BITRATE;

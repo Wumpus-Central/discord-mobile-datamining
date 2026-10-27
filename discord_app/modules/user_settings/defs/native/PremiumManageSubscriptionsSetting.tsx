@@ -1,11 +1,11 @@
-// === Module 16282: PremiumManageSubscriptionsSetting ===
+// === Module 16320: PremiumManageSubscriptionsSetting ===
 
-// Module 16282 (PremiumManageSubscriptionsSetting)
+// Module 16320 (PremiumManageSubscriptionsSetting)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import PremiumUtils from "PremiumUtils" /* 2053 */;
-import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7529 */;
-import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11040 */;
+import util from "util" /* 1125 */;
+import PremiumUtils from "PremiumUtils" /* 2050 */;
+import BlockedPaymentsCountryExperiment from "BlockedPaymentsCountryExperiment" /* 7530 */;
+import openBlockedPaymentsCountryActionSheetDefault from "openBlockedPaymentsCountryActionSheet" /* 11043 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -40,7 +40,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanNavi
     return flag;
   }, []);
 });
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShowManageSubscriptionsSetting() {
   const cResult = c.c(1);
   let hasPremiumSubscriptionToDisplay = PremiumUtils.useHasPremiumSubscriptionToDisplay();
@@ -68,7 +68,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t["z5YcJ+"]);
   },
   parent: null,
-  IconComponent: fn(16283).SubscriptionIcon,
+  IconComponent: fn(16321).SubscriptionIcon,
   usePreNavigationAction: tmp2,
   usePredicate: ReactCompilerGating.isReactCompilerEnabled() ? (function useShowManageSubscriptionsSetting() {
     const cResult = c.c(1);
@@ -92,7 +92,7 @@ const route = SettingBuilders.createRoute({
     return hasPremiumSubscriptionToDisplay;
   }),
   screen: {
-    route: fn(1087).UserSettingsSections.PREMIUM_MANAGE_PLAN,
+    route: fn(1084).UserSettingsSections.PREMIUM_MANAGE_PLAN,
     getComponent() {
       return require("PremiumManagePlanScreen").default;
     }

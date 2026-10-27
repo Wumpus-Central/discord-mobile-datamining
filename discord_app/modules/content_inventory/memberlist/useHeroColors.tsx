@@ -4,14 +4,14 @@
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import _modDef683 from "module_683" /* 683 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
-import tinycolorDefault from "tinycolor" /* 7660 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
+import tinycolorDefault from "tinycolor" /* 7661 */;
 import useAvatarColor from "useAvatarColor" /* 8614 */;
 import getFallbackHeroColor from "getFallbackHeroColor" /* 8616 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
-import ThemeStore from "ThemeStore" /* 1207 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import ThemeStore from "ThemeStore" /* 1204 */;
 
 require = fn;
 let c7 = 0.725;
@@ -221,10 +221,10 @@ export const getHeroColors = function getHeroColors(game_name) {
   let obj = num(8616);
   [tmp7, tmp8] = mapped;
   const tmp6 = _slicedToArray(mapped, 2);
-  const hex2intResult = num(1105).hex2int(tmp7);
-  const tmp2Result = num(1105);
-  const hex2intResult1 = num(1105).hex2int(tmp8);
-  const tmp2Result3 = num(1105);
+  const hex2intResult = num(1102).hex2int(tmp7);
+  const tmp2Result = num(1102);
+  const hex2intResult1 = num(1102).hex2int(tmp8);
+  const tmp2Result3 = num(1102);
   let num2 = 1;
   let tmp11 = hex2intResult;
   let tmp12 = hex2intResult;
@@ -234,7 +234,7 @@ export const getHeroColors = function getHeroColors(game_name) {
     const sum = num2 + 1;
     tmp12 = numResult;
     while (sum < 8) {
-      let obj7 = num(1105);
+      let obj7 = num(1102);
       num2 = sum;
       tmp11 = numResult;
       tmp12 = numResult;
@@ -244,7 +244,7 @@ export const getHeroColors = function getHeroColors(game_name) {
     }
     const darkenResult = _modDef683(tmp11).darken(0.5);
   }
-  tmp2Result4 = num(1105);
+  tmp2Result4 = num(1102);
   let num3 = 1;
   let tmp19 = hex2intResult1;
   let tmp20 = hex2intResult1;
@@ -254,7 +254,7 @@ export const getHeroColors = function getHeroColors(game_name) {
     const sum1 = num3 + 1;
     tmp20 = numResult1;
     while (sum1 < 8) {
-      let obj11 = num(1105);
+      let obj11 = num(1102);
       num3 = sum1;
       tmp19 = numResult1;
       tmp20 = numResult1;
@@ -265,9 +265,9 @@ export const getHeroColors = function getHeroColors(game_name) {
     const darkenResult1 = _modDef683(tmp19).darken(0.5);
   }
   let obj2 = { primaryColor: null, secondaryColor: null };
-  obj8 = num(1105);
-  obj2.primaryColor = num(1105).int2hex(tmp12);
-  const obj13 = num(1105);
-  obj2.secondaryColor = num(1105).int2hex(tmp20);
+  obj8 = num(1102);
+  obj2.primaryColor = num(1102).int2hex(tmp12);
+  const obj13 = num(1102);
+  obj2.secondaryColor = num(1102).int2hex(tmp20);
   return obj2;
 };

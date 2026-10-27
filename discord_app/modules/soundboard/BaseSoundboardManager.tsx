@@ -1,10 +1,10 @@
-// === Module 15805: BaseSoundboardManager ===
+// === Module 15843: BaseSoundboardManager ===
 
-// Module 15805 (BaseSoundboardManager)
+// Module 15843 (BaseSoundboardManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import LifecycleManager from "LifecycleManager" /* 2004 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import LifecycleManager from "LifecycleManager" /* 2001 */;
 
 class BaseSoundboardManager extends tmp2 {
   constructor() {

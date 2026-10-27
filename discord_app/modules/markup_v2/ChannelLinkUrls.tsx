@@ -1,7 +1,7 @@
 // === Module 8584: ChannelLinkUrls ===
 
 // Module 8584 (ChannelLinkUrls)
-import LinkUtils from "LinkUtils" /* 5606 */;
+import LinkUtils from "LinkUtils" /* 5607 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

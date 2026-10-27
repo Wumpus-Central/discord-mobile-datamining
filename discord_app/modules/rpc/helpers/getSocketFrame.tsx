@@ -2,7 +2,7 @@
 
 // Module 9257 (getSocketFrame)
 import isPostMessageSocketDefault from "isPostMessageSocket" /* 9258 */;
-import FramesStore from "FramesStore" /* 6775 */;
+import FramesStore from "FramesStore" /* 6776 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/getSocketFrame.tsx");

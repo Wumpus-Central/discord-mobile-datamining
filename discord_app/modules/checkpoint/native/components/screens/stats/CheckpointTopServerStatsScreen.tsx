@@ -1,30 +1,30 @@
-// === Module 12995: CheckpointTopServerStatsScreen ===
+// === Module 13008: CheckpointTopServerStatsScreen ===
 
-// Module 12995 (CheckpointTopServerStatsScreen)
+// Module 13008 (CheckpointTopServerStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import _modDef3088 from "module_3088" /* 3088 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 12987 */;
-import CheckpointStore from "CheckpointStore" /* 12956 */;
-import CheckpointConstants from "CheckpointConstants" /* 6015 */;
+import _modDef3089 from "module_3089" /* 3089 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13000 */;
+import CheckpointStore from "CheckpointStore" /* 12968 */;
+import CheckpointConstants from "CheckpointConstants" /* 6016 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4971 */;
+import createStyles from "createStyles" /* 4972 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
 const initialize = intl(504);
-const util = intl(1128);
-const Text_Text = intl(5234);
-const GuildIcon = intl(6883);
-const GuildIconDefault = sIDTV1(6883);
-const ServerIcon = intl(9646);
-const CheckpointStatsUtils = intl(12959);
-const CheckpointTextDefault = sIDTV1(12974);
-const CheckpointScreenDefault = sIDTV1(12976);
-const CheckpointCountUpStatNumberDefault = sIDTV1(12984);
-const CheckpointGuildStatsDefault = sIDTV1(12993);
-const CheckpointRankTagDefault = sIDTV1(12994);
+const util = intl(1125);
+const Text_Text = intl(5235);
+const GuildIcon = intl(6885);
+const GuildIconDefault = sIDTV1(6885);
+const ServerIcon = intl(9648);
+const CheckpointStatsUtils = intl(12971);
+const CheckpointTextDefault = sIDTV1(12986);
+const CheckpointScreenDefault = sIDTV1(12988);
+const CheckpointCountUpStatNumberDefault = sIDTV1(12997);
+const CheckpointGuildStatsDefault = sIDTV1(13006);
+const CheckpointRankTagDefault = sIDTV1(13007);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   let percentHook = CheckpointStatsUtils.getCheckpointTopPercent(prop);
   const intl2 = util.intl;
   let sIDTV1 = importDefault;
-  const stringResult = intl2.string(_modDef3088["M+a+t1"]);
+  const stringResult = intl2.string(_modDef3089["M+a+t1"]);
   if (null != percentHook) {
     const intl3 = util.intl;
     const obj6 = {
@@ -194,7 +194,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           return arg0;
         }
     };
-    const formatToPlainStringResult = intl3.formatToPlainString(_modDef3088.sIDTV1, obj6);
+    const formatToPlainStringResult = intl3.formatToPlainString(_modDef3089.sIDTV1, obj6);
   }
   const sIDTV1Result = CheckpointScreenDefault;
   const container = titleText.container;
@@ -244,7 +244,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                 const sIDTV1Result2 = CheckpointTextDefault;
                 if (null != percentHook) {
                   intl = util.intl;
-                  sIDTV1 = _modDef3088.sIDTV1;
+                  sIDTV1 = _modDef3089.sIDTV1;
                   const obj11 = { numDays: rounded, percent: percentHook, percentHook: null };
                   percentHook = function percentHook(children, arg1) {
                     return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
@@ -254,7 +254,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
                 } else {
                   const intl4 = util.intl;
                   const obj12 = { numDays: rounded };
-                  formatResult = intl4.format(_modDef3088.nLCUQ4, obj12);
+                  formatResult = intl4.format(_modDef3089.nLCUQ4, obj12);
                 }
                 cResult[2] = titleText.card;
                 cResult[3] = titleText.container;
@@ -370,7 +370,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }
   const checkpointTopPercent = CheckpointStatsUtils.getCheckpointTopPercent(prop);
   const intl = util.intl;
-  const stringResult = intl.string(_modDef3088["M+a+t1"]);
+  const stringResult = intl.string(_modDef3089["M+a+t1"]);
   let formatToPlainStringResult;
   if (null != checkpointTopPercent) {
     const intl2 = util.intl;
@@ -381,7 +381,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           return arg0;
         }
     };
-    formatToPlainStringResult = intl2.formatToPlainString(_modDef3088.sIDTV1, obj2);
+    formatToPlainStringResult = intl2.formatToPlainString(_modDef3089.sIDTV1, obj2);
   }
   const obj3 = { style: tmp.container, children: null };
   const obj4 = { style: tmp.spotlightContainer, children: null };
@@ -441,11 +441,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
           return closure_1_6(CheckpointEmphasisDefault, { children }, arg1);
         }
     };
-    let formatResult = intl4.format(_modDef3088.sIDTV1, obj17);
+    let formatResult = intl4.format(_modDef3089.sIDTV1, obj17);
   } else {
     const intl3 = util.intl;
     const obj18 = { numDays: rounded };
-    formatResult = intl3.format(_modDef3088.nLCUQ4, obj18);
+    formatResult = intl3.format(_modDef3089.nLCUQ4, obj18);
   }
   const obj19 = { children: null };
   obj16.children = formatResult;

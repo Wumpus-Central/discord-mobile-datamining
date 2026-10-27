@@ -1,9 +1,9 @@
-// === Module 17745: useHomeDrawerToggleAccessibilityAction ===
+// === Module 17786: useHomeDrawerToggleAccessibilityAction ===
 
-// Module 17745 (useHomeDrawerToggleAccessibilityAction)
-import util from "util" /* 1128 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4980 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5150 */;
+// Module 17786 (useHomeDrawerToggleAccessibilityAction)
+import util from "util" /* 1125 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4981 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5151 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -20,9 +20,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHomeD
   if (!arg0) {
     return null;
   } else if (cResult[0] !== arg1) {
-    let intl = tmp(1128).intl;
+    let intl = tmp(1125).intl;
     let string = intl.string;
-    let h8xFEv = tmp(1128).t;
+    let h8xFEv = tmp(1125).t;
     if (arg1) {
       h8xFEv = h8xFEv.h8xFEv;
       let stringResult = string(h8xFEv);
@@ -78,18 +78,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useHomeD
         name,
         label: stringResult,
         action() {
-            closure_0(5150).setHomeDrawerState(!dependencyMap);
-            const intl = closure_0(1128).intl;
+            closure_0(5151).setHomeDrawerState(!dependencyMap);
+            const intl = closure_0(1125).intl;
             const string = intl.string;
-            const t = closure_0(1128).t;
+            const t = closure_0(1125).t;
             if (dependencyMap) {
               let stringResult = string(t["0s/g+O"]);
             } else {
               stringResult = string(t.hfxfVb);
             }
-            const AccessibilityAnnouncer = closure_0(4980).AccessibilityAnnouncer;
+            const AccessibilityAnnouncer = closure_0(4981).AccessibilityAnnouncer;
             AccessibilityAnnouncer.announce(stringResult);
-            const obj = closure_0(5150);
+            const obj = closure_0(5151);
           }
       };
       return obj;

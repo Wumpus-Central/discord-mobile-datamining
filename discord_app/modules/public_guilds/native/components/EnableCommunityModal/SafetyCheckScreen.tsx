@@ -1,6 +1,6 @@
-// === Module 19176: SafetyCheckScreen ===
+// === Module 19214: SafetyCheckScreen ===
 
-// Module 19176 (SafetyCheckScreen)
+// Module 19214 (SafetyCheckScreen)
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import GuildSettingsStore from "GuildSettingsStore" /* 9006 */;
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ VerificationLevels: closure_7, GuildExplicitContentFilterTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);

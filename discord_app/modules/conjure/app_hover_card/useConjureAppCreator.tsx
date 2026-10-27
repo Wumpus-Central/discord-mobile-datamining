@@ -1,11 +1,11 @@
-// === Module 13868: useConjureAppCreator ===
+// === Module 13882: useConjureAppCreator ===
 
-// Module 13868 (useConjureAppCreator)
-import ImagePreload from "ImagePreload" /* 13870 */;
+// Module 13882 (useConjureAppCreator)
+import ImagePreload from "ImagePreload" /* 13884 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (conjureProjectId == null) {
     conjureProjectId = null;
   }
-  const tmp4Result = owner_user_id(13869)(conjureProjectId, arg1, arg2);
+  const tmp4Result = owner_user_id(13883)(conjureProjectId, arg1, arg2);
   ({ project, remixProject } = tmp4Result);
   owner_user_id = undefined;
   if (project != null) {
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (owner_user_id == null) {
     owner_user_id = null;
   }
-  const tmp4 = owner_user_id(13869);
+  const tmp4 = owner_user_id(13883);
   dependencyMap = _slicedToArray(noop.useState(null), 2)[1];
   if (cResult[0] === owner_user_id) {
     if (cResult[1] === arg2) {

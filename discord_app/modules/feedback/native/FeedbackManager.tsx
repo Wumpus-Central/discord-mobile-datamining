@@ -1,16 +1,16 @@
-// === Module 18802: FeedbackManager ===
+// === Module 18840: FeedbackManager ===
 
-// Module 18802 (FeedbackManager)
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4892 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import ApplicationStore from "ApplicationStore" /* 2045 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7814 */;
-import FeedbackManager from "feedback/FeedbackManager" /* 18803 */;
+// Module 18840 (FeedbackManager)
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4893 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import ApplicationStore from "ApplicationStore" /* 2042 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7815 */;
+import FeedbackManager from "feedback/FeedbackManager" /* 18841 */;
 
 require = fn;
-const FeedbackType = fn(10045).FeedbackType;
+const FeedbackType = fn(10047).FeedbackType;
 const prototype = function FeedbackManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   require = applyArgumentsResult;

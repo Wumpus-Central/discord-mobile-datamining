@@ -1,37 +1,37 @@
-// === Module 14743: ReferralProgramPerkCard ===
+// === Module 14779: ReferralProgramPerkCard ===
 
-// Module 14743 (ReferralProgramPerkCard)
+// Module 14779 (ReferralProgramPerkCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7253 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
-import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7563 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7649 */;
-import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 14745 */;
-import _modDef14747 from "module_14747" /* 14747 */;
-import _modDef14748 from "module_14748" /* 14748 */;
-import RewardGrantNoticeDefault from "RewardGrantNotice" /* 14765 */;
+import native from "native" /* 1199 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7255 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7280 */;
+import ReferralTrialActionCreators from "ReferralTrialActionCreators" /* 7564 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7650 */;
+import useReferralProgramBannerDetails from "useReferralProgramBannerDetails" /* 14781 */;
+import _modDef14783 from "module_14783" /* 14783 */;
+import _modDef14784 from "module_14784" /* 14784 */;
+import RewardGrantNoticeDefault from "RewardGrantNotice" /* 14801 */;
 import noop from "module_19" /* 19 */;
-import ReferralTrialStore from "ReferralTrialStore" /* 7562 */;
+import ReferralTrialStore from "ReferralTrialStore" /* 7563 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let Constants = fn(14744);
+let Constants = fn(14780);
 ({ REFERRAL_INCENTIVE_DISCOUNT_PERCENTAGE: metroRequire, REFERRAL_INCENTIVE_ORBS_PER_CONVERSION: closure_7 } = Constants);
-Constants = fn(1087);
+Constants = fn(1084);
 ({ AnalyticEvents: closure_8, HelpdeskArticles: closure_9 } = Constants);
-const CollectibleShopTab = fn(1089).CollectibleShopTab;
+const CollectibleShopTab = fn(1086).CollectibleShopTab;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: null, betaBadge: null, progressIndicatorContainer: null, availableReferralSlot: null, referredFriendAvatar: null, contentContainer: null, heading: null, bodyText: null, buttonContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = { width: 320, borderRadius: nativeDefault.radii.sm, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, alignItems: "center" };
@@ -186,7 +186,7 @@ export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
   let callback = noop.useCallback(() => {
     AnalyticsUtilsDefault.track(constants.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack });
     const obj2 = { location_stack };
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14750, dependencyMap.paths), "referral-program-share-action-sheet");
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14786, dependencyMap.paths), "referral-program-share-action-sheet");
   }, items2);
   const items3 = [analyticsLocations];
   closure_129_0 = 0;
@@ -214,16 +214,16 @@ export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
     tmp11 = referralRewardType;
   }
   const obj4 = require("useReferralIncentiveEligibility");
-  const shouldShowSpendOrbsCta = tmp2(14761).getShouldShowSpendOrbsCta(obj5, tmp11);
+  const shouldShowSpendOrbsCta = tmp2(14797).getShouldShowSpendOrbsCta(obj5, tmp11);
   const obj6 = { style: tmp.container, children: null };
   let tmp15 = isEligibleForIncentive;
   if (isEligibleForIncentive) {
     const obj7 = { text: null, color: null, style: null };
-    const intl = tmp2(1128).intl;
-    obj7.text = intl.string(tmp2(1128).t.oW0eUd);
-    obj7.color = tmp2(1202).BadgeColors.BRAND;
+    const intl = tmp2(1125).intl;
+    obj7.text = intl.string(tmp2(1125).t.oW0eUd);
+    obj7.color = tmp2(1199).BadgeColors.BRAND;
     obj7.style = tmp.betaBadge;
-    tmp15 = closure_11(tmp2(1202).TextBadge, obj7);
+    tmp15 = closure_11(tmp2(1199).TextBadge, obj7);
   }
   const items4 = [tmp15, , , , ];
   const obj8 = { nReferralsSent: obj5.numSent, altImage: null };
@@ -238,19 +238,19 @@ export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
       str = "heading-lg/bold";
     }
     const obj11 = { variant: str, color: "text-strong", style: tmp.heading, children: null };
-    if (tmp11 === tmp2(14746).ReferralRewardType.ORBS) {
-      const intl4 = tmp2(1128).intl;
-      let stringResult = intl4.string(tmp2(1128).t.tAlkl4);
-    } else if (tmp11 === tmp2(14746).ReferralRewardType.DISCOUNT) {
-      const intl3 = tmp2(1128).intl;
+    if (tmp11 === tmp2(14782).ReferralRewardType.ORBS) {
+      const intl4 = tmp2(1125).intl;
+      let stringResult = intl4.string(tmp2(1125).t.tAlkl4);
+    } else if (tmp11 === tmp2(14782).ReferralRewardType.DISCOUNT) {
+      const intl3 = tmp2(1125).intl;
       const obj12 = { discountPercent };
-      stringResult = intl3.formatToPlainString(tmp2(1128).t["/JJ9I5"], obj12);
+      stringResult = intl3.formatToPlainString(tmp2(1125).t["/JJ9I5"], obj12);
     } else {
-      const intl2 = tmp2(1128).intl;
-      stringResult = intl2.string(tmp2(1128).t.USo4s7);
+      const intl2 = tmp2(1125).intl;
+      stringResult = intl2.string(tmp2(1125).t.USo4s7);
     }
     obj11.children = stringResult;
-    const items5 = [closure_11(tmp2(5234).Text, obj11), , ];
+    const items5 = [closure_11(tmp2(5235).Text, obj11), , ];
     let str2 = "text-md/medium";
     if (isEligibleForIncentive) {
       str2 = "text-sm/medium";
@@ -259,62 +259,62 @@ export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
     const obj13 = { variant: str2, color: "text-subtle", style: tmp.bodyText, children: null };
     const articleURL = HelpdeskUtilsDefault.getArticleURL(constants2.REFERRAL_PROGRAM);
     if (null != tmp11) {
-      if (obj5.numRewardGranted !== tmp2(14745).MAX_REFERRALS_SENT) {
-        if (obj5.numSent === tmp2(14745).MAX_REFERRALS_SENT) {
-          if (tmp11 === tmp2(14746).ReferralRewardType.ORBS) {
-            const intl13 = tmp2(1128).intl;
+      if (obj5.numRewardGranted !== tmp2(14781).MAX_REFERRALS_SENT) {
+        if (obj5.numSent === tmp2(14781).MAX_REFERRALS_SENT) {
+          if (tmp11 === tmp2(14782).ReferralRewardType.ORBS) {
+            const intl13 = tmp2(1125).intl;
             const obj14 = { helpdeskArticle: articleURL };
-            let formatResult = intl13.format(tmp2(1128).t["1aV1j9"], obj14);
+            let formatResult = intl13.format(tmp2(1125).t["1aV1j9"], obj14);
           } else {
-            const intl12 = tmp2(1128).intl;
+            const intl12 = tmp2(1125).intl;
             const obj15 = { helpdeskArticle: articleURL };
-            formatResult = intl12.format(tmp2(1128).t.QNrPuS, obj15);
+            formatResult = intl12.format(tmp2(1125).t.QNrPuS, obj15);
           }
         } else if (tmp24) {
-          if (tmp11 === tmp2(14746).ReferralRewardType.ORBS) {
-            const intl11 = tmp2(1128).intl;
+          if (tmp11 === tmp2(14782).ReferralRewardType.ORBS) {
+            const intl11 = tmp2(1125).intl;
             const obj16 = { numOrbs, helpdeskArticle: articleURL };
-            let formatResult1 = intl11.format(tmp2(1128).t.cfE0uG, obj16);
+            let formatResult1 = intl11.format(tmp2(1125).t.cfE0uG, obj16);
           } else {
-            const intl10 = tmp2(1128).intl;
+            const intl10 = tmp2(1125).intl;
             const obj17 = { helpdeskArticle: articleURL };
-            formatResult1 = intl10.format(tmp2(1128).t["+fcvlI"], obj17);
+            formatResult1 = intl10.format(tmp2(1125).t["+fcvlI"], obj17);
           }
         } else {
-          const intl9 = tmp2(1128).intl;
+          const intl9 = tmp2(1125).intl;
           const obj18 = { helpdeskArticle: articleURL };
-          intl9.format(tmp2(1128).t["a0+Jwv"], obj18);
+          intl9.format(tmp2(1125).t["a0+Jwv"], obj18);
         }
       }
-      if (tmp11 === tmp2(14746).ReferralRewardType.ORBS) {
-        const intl15 = tmp2(1128).intl;
+      if (tmp11 === tmp2(14782).ReferralRewardType.ORBS) {
+        const intl15 = tmp2(1125).intl;
         const obj19 = { helpdeskArticle: articleURL };
-        let formatResult3 = intl15.format(tmp2(1128).t.OluhLp, obj19);
+        let formatResult3 = intl15.format(tmp2(1125).t.OluhLp, obj19);
       } else {
-        const intl14 = tmp2(1128).intl;
+        const intl14 = tmp2(1125).intl;
         const obj20 = { helpdeskArticle: articleURL };
-        formatResult3 = intl14.format(tmp2(1128).t["8BYihN"], obj20);
+        formatResult3 = intl14.format(tmp2(1125).t["8BYihN"], obj20);
       }
     } else if (tmp24) {
-      if (obj5.numSent !== tmp2(14745).MAX_REFERRALS_SENT) {
-        const intl6 = tmp2(1128).intl;
+      if (obj5.numSent !== tmp2(14781).MAX_REFERRALS_SENT) {
+        const intl6 = tmp2(1125).intl;
         const obj21 = { helpdeskArticle: articleURL };
-        intl6.format(tmp2(1128).t["omMr+V"], obj21);
+        intl6.format(tmp2(1125).t["omMr+V"], obj21);
       }
-      if (obj5.numRedeemed === tmp2(14745).MAX_REFERRALS_SENT) {
-        const intl8 = tmp2(1128).intl;
+      if (obj5.numRedeemed === tmp2(14781).MAX_REFERRALS_SENT) {
+        const intl8 = tmp2(1125).intl;
         const obj22 = { helpdeskArticle: articleURL };
-        let formatResult5 = intl8.format(tmp2(1128).t["1aEjsH"], obj22);
+        let formatResult5 = intl8.format(tmp2(1125).t["1aEjsH"], obj22);
       } else {
-        const intl7 = tmp2(1128).intl;
+        const intl7 = tmp2(1125).intl;
         const obj23 = { helpdeskArticle: articleURL };
-        formatResult5 = intl7.format(tmp2(1128).t["+u3AOO"], obj23);
+        formatResult5 = intl7.format(tmp2(1125).t["+u3AOO"], obj23);
       }
     } else {
-      const intl5 = tmp2(1128).intl;
+      const intl5 = tmp2(1125).intl;
       const obj24 = { helpdeskArticle: articleURL };
-      obj13.children = intl5.format(tmp2(1128).t["zWhX/Q"], obj24);
-      items5[1] = closure_11(tmp2(5234).Text, obj13);
+      obj13.children = intl5.format(tmp2(1125).t["zWhX/Q"], obj24);
+      items5[1] = closure_11(tmp2(5235).Text, obj13);
       if (isEligibleForIncentive) {
         const obj25 = { nRewardsGranted: obj5.numRewardGranted, referralRewardType: tmp11 };
         isEligibleForIncentive = closure_11(RewardGrantNoticeDefault, obj25);
@@ -326,14 +326,14 @@ export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
       let tmp38 = shouldShowSpendOrbsCta;
       if (!shouldShowSpendOrbsCta) {
         if (tmp24) {
-          tmp24 = obj5.numSent !== tmp2(14745).MAX_REFERRALS_SENT;
+          tmp24 = obj5.numSent !== tmp2(14781).MAX_REFERRALS_SENT;
         }
         tmp38 = tmp24;
       }
       const obj27 = { variant: "primary", size: "sm", disabled: !tmp38, text: null, onPress: null };
-      const intl16 = tmp2(1128).intl;
+      const intl16 = tmp2(1125).intl;
       const string = intl16.string;
-      const t = tmp2(1128).t;
+      const t = tmp2(1125).t;
       if (shouldShowSpendOrbsCta) {
         let stringResult1 = string(t.iw5Ccc);
       } else {
@@ -344,16 +344,16 @@ export const ReferralProgramPerkCard = function ReferralProgramPerkCard() {
         callback = callback1;
       }
       obj27.onPress = callback;
-      obj26.children = closure_11(tmp2(5244).Button, obj27);
+      obj26.children = closure_11(tmp2(5245).Button, obj27);
       items4[4] = closure_11(View, obj26);
       obj6.children = items4;
       return closure_12(View, obj6);
     }
     const tmp5Result = HelpdeskUtilsDefault;
-  } else if (tmp11 === tmp2(14746).ReferralRewardType.ORBS) {
-    let tmp5Result2 = _modDef14747;
-  } else if (tmp11 === tmp2(14746).ReferralRewardType.DISCOUNT) {
-    tmp5Result2 = _modDef14748;
+  } else if (tmp11 === tmp2(14782).ReferralRewardType.ORBS) {
+    let tmp5Result2 = _modDef14783;
+  } else if (tmp11 === tmp2(14782).ReferralRewardType.DISCOUNT) {
+    tmp5Result2 = _modDef14784;
   }
-  const tmp2Result = tmp2(14761);
+  const tmp2Result = tmp2(14797);
 };

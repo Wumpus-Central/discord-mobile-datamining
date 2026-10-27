@@ -1,14 +1,14 @@
-// === Module 10686: UserNameplateRow ===
+// === Module 10689: UserNameplateRow ===
 
-// Module 10686 (UserNameplateRow)
+// Module 10689 (UserNameplateRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 5252 */;
-import TableRowDivider from "TableRowDivider" /* 6898 */;
-import TableRow from "TableRow" /* 6903 */;
-import TableRowGroupContext from "TableRowGroupContext" /* 6904 */;
-import Card from "Card" /* 6905 */;
-import NameplateDefault from "Nameplate" /* 9411 */;
+import useToken from "useToken" /* 5253 */;
+import TableRowDivider from "TableRowDivider" /* 6900 */;
+import TableRow from "TableRow" /* 6905 */;
+import TableRowGroupContext from "TableRowGroupContext" /* 6906 */;
+import Card from "Card" /* 6907 */;
+import NameplateDefault from "Nameplate" /* 9410 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ require = fn;
 let closure_3 = ["label", "subLabel", "icon", "trailing", "arrow", "onPress", "onPressIn", "onPressOut", "disabled", "start", "end", "labelLineClamp", "subLabelLineClamp", "variant", "draggable", "dragHandlePressableProps", "nameplate", "isPreviewRow"];
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { card: { padding: 0, paddingRight: nativeDefault.space.PX_40, overflow: "hidden" } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

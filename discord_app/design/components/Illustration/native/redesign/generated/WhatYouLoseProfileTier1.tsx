@@ -1,9 +1,9 @@
-// === Module 14688: WhatYouLoseProfileTier1 ===
+// === Module 14724: WhatYouLoseProfileTier1 ===
 
-// Module 14688 (WhatYouLoseProfileTier1)
+// Module 14724 (WhatYouLoseProfileTier1)
 import c from "c" /* 576 */;
-import shared from "shared" /* 4978 */;
-import FastImageDefault from "FastImage" /* 5669 */;
+import shared from "shared" /* 4979 */;
+import FastImageDefault from "FastImage" /* 5670 */;
 import _mod8724 from "module_8724" /* 8724 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,13 +16,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWhatYouLo
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_14689");
+          return require("module_14725");
         },
       darker() {
-          return require("module_14690");
+          return require("module_14726");
         },
       light() {
-          return require("module_14691");
+          return require("module_14727");
         }
     };
     const illustrationSource = _mod8724.getIllustrationSource(theme, obj3);
@@ -38,13 +38,13 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWhatYouLo
   const obj = shared;
   return _mod8724.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_14689");
+      return require("module_14725");
     },
     darker() {
-      return require("module_14690");
+      return require("module_14726");
     },
     light() {
-      return require("module_14691");
+      return require("module_14727");
     }
   });
 });
@@ -53,13 +53,13 @@ ReactCompilerGating = fn(558);
 function getWhatYouLoseProfileTier1Source(theme) {
   return _mod8724.getIllustrationSource(theme, {
     dark() {
-      return require("module_14689");
+      return require("module_14725");
     },
     darker() {
-      return require("module_14690");
+      return require("module_14726");
     },
     light() {
-      return require("module_14691");
+      return require("module_14727");
     }
   });
 }

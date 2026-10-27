@@ -1,18 +1,18 @@
-// === Module 14400: UserProfileActivityTab ===
+// === Module 14436: UserProfileActivityTab ===
 
-// Module 14400 (UserProfileActivityTab)
+// Module 14436 (UserProfileActivityTab)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 14405 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import UserProfileRecentActivityCardDefault from "UserProfileRecentActivityCard" /* 14441 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HelpdeskArticles = fn(1087).HelpdeskArticles;
+const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { section: { gap: nativeDefault.space.PX_16 }, sectionHeading: null, introText: null, learnMore: null, loading: null, loadingRow: null, loadingThumbnail: null, loadingLine: null };
 let obj3 = { gap: nativeDefault.space.PX_16 };
 obj2.sectionHeading = { marginBottom: -nativeDefault.space.PX_8 };
@@ -159,7 +159,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Recent
   const tmp4 = closure_8();
   _require = tmp4;
   if (cResult[0] !== tmp4) {
-    const intl = tmp(1128).intl;
+    const intl = tmp(1125).intl;
     let obj2 = {
       learnMoreHook(children, id) {
           return hasOwnProperty(Text_Text.Text, {
@@ -169,14 +169,14 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Recent
             onPress() {
               const obj2 = { href: null };
               const obj = learnMore(8860);
-              obj2.href = closure_1_1(2067).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
+              obj2.href = closure_1_1(2064).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
               return obj.handleClick(obj2);
             },
             children
           }, id);
         }
     };
-    const formatResult = intl.format(tmp(1128).t["4bk9Ak"], obj2);
+    const formatResult = intl.format(tmp(1125).t["4bk9Ak"], obj2);
     cResult[0] = tmp4;
     cResult[1] = formatResult;
     let tmp5 = formatResult;
@@ -196,7 +196,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Recent
         onPress() {
           const obj2 = { href: null };
           const obj = learnMore(8860);
-          obj2.href = closure_1_1(2067).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
+          obj2.href = closure_1_1(2064).getArticleURL(constants.ACTIVITY_STATUS_SETTINGS);
           return obj.handleClick(obj2);
         },
         children
@@ -218,7 +218,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       if (cResult[2] === user.id) {
         let tmp4 = cResult[3];
       }
-      const tmp6 = cardStyle(14401)(tmp4);
+      const tmp6 = cardStyle(14437)(tmp4);
       ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = tmp6);
       if (!hasCurrentActivity) {
         if (!hasRecentActivity) {
@@ -238,7 +238,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                 }
               }
             }
-            let obj2 = tmp(14404);
+            let obj2 = tmp(14440);
             if (isCurrentUser) {
               obj2 = {};
               let tmp7Result = closure_5(obj2.UserProfileActivityEmptyCurrentUser, obj2);
@@ -284,8 +284,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
               let tmp22Result2 = hasRecentActivity;
               if (hasRecentActivity) {
                 const obj5 = { heading: null, introText: null, children: null };
-                const intl2 = tmp(1128).intl;
-                obj5.heading = intl2.string(tmp(1128).t.jzgEoL);
+                const intl2 = tmp(1125).intl;
+                obj5.heading = intl2.string(tmp(1125).t.jzgEoL);
                 let tmp22Result;
                 if (isCurrentUser) {
                   tmp22Result = closure_5(closure_11, {});
@@ -308,10 +308,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       let tmp17 = hasCurrentActivity;
       if (hasCurrentActivity) {
         const obj6 = { heading: null, children: null };
-        const intl = tmp(1128).intl;
-        obj6.heading = intl.string(tmp(1128).t.J6STd9);
+        const intl = tmp(1125).intl;
+        obj6.heading = intl.string(tmp(1125).t.J6STd9);
         const obj7 = { user, currentUser, guildId, style: cardStyle };
-        obj6.children = closure_5(cardStyle(14280), obj7);
+        obj6.children = closure_5(cardStyle(14308), obj7);
         tmp17 = closure_5(closure_10, obj6);
       }
       cResult[10] = cardStyle;
@@ -333,13 +333,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
 }) : (function UserProfileActivityTab(user) {
   user = user.user;
   ({ currentUser, guildId, cardStyle } = user);
-  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(14401)({ userId: user.id, currentUserId: currentUser.id, guildId }));
+  ({ recent, isCurrentUser, hasCurrentActivity, hasRecentActivity } = cardStyle(14437)({ userId: user.id, currentUserId: currentUser.id, guildId }));
   if (!hasCurrentActivity) {
     if (!hasRecentActivity) {
       if (tmp4) {
         let tmp10Result = closure_5(closure_9, {});
       } else {
-        const tmp7 = user(14404);
+        const tmp7 = user(14440);
         if (isCurrentUser) {
           tmp10Result = closure_5(tmp7.UserProfileActivityEmptyCurrentUser, {});
         } else {
@@ -352,17 +352,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   }
   if (hasCurrentActivity) {
     const obj3 = { heading: null, children: null };
-    const intl = user(1128).intl;
-    obj3.heading = intl.string(user(1128).t.J6STd9);
+    const intl = user(1125).intl;
+    obj3.heading = intl.string(user(1125).t.J6STd9);
     const obj4 = { user, currentUser, guildId, style: cardStyle };
-    obj3.children = closure_5(cardStyle(14280), obj4);
+    obj3.children = closure_5(cardStyle(14308), obj4);
     hasCurrentActivity = closure_5(closure_10, obj3);
   }
   const items = [hasCurrentActivity, ];
   if (hasRecentActivity) {
     const obj5 = { heading: null, introText: null, children: null };
-    const intl2 = user(1128).intl;
-    obj5.heading = intl2.string(user(1128).t.jzgEoL);
+    const intl2 = user(1125).intl;
+    obj5.heading = intl2.string(user(1125).t.jzgEoL);
     let tmp15Result;
     if (isCurrentUser) {
       tmp15Result = closure_5(closure_11, {});
@@ -374,5 +374,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   items[1] = hasRecentActivity;
   tmp10Result = closure_6(closure_7, { children: items });
   const obj = { userId: user.id, currentUserId: currentUser.id, guildId };
-  const tmp3 = cardStyle(14401)({ userId: user.id, currentUserId: currentUser.id, guildId });
+  const tmp3 = cardStyle(14437)({ userId: user.id, currentUserId: currentUser.id, guildId });
 });

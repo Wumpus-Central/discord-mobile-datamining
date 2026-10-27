@@ -1,13 +1,13 @@
-// === Module 12152: useConjureProjectSettingsDraft ===
+// === Module 12180: useConjureProjectSettingsDraft ===
 
-// Module 12152 (useConjureProjectSettingsDraft)
-import util from "util" /* 1128 */;
-import _modDef3830 from "module_3830" /* 3830 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6774 */;
+// Module 12180 (useConjureProjectSettingsDraft)
+import util from "util" /* 1125 */;
+import _modDef3831 from "module_3831" /* 3831 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6775 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
 
 const require = globalThis.__r;
 
@@ -202,7 +202,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
     if (arg0.length > ConjureProjectTypes.MAX_PROJECT_COLLABORATOR_ROLES) {
       const intl = util.intl;
       const obj = { max: ConjureProjectTypes.MAX_PROJECT_COLLABORATOR_ROLES };
-      closure_1_19(intl.formatToPlainString(_modDef3830["dH7+/Z"], obj));
+      closure_1_19(intl.formatToPlainString(_modDef3831["dH7+/Z"], obj));
     } else {
       closure_15(arg0);
       closure_1_19(null);

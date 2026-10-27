@@ -1,9 +1,9 @@
-// === Module 7811: StreamerApplicationSelectors ===
+// === Module 7812: StreamerApplicationSelectors ===
 
-// Module 7811 (StreamerApplicationSelectors)
+// Module 7812 (StreamerApplicationSelectors)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7812 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7813 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
 
 const require = globalThis.__r;
 
@@ -26,7 +26,7 @@ function streamApplicationEqualityCheck(arg0, arg1) {
   }
   return tmp;
 }
-const ActivityTypes = fn(1087).ActivityTypes;
+const ActivityTypes = fn(1084).ActivityTypes;
 const ReactCompilerGating = fn(558);
 function getStreamerActivityByUserId(id, PresenceStore) {
   return PresenceStore.findActivity(id, _findPlayingActivity);

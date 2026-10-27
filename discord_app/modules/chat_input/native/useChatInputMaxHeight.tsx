@@ -1,20 +1,20 @@
-// === Module 12516: useChatInputMaxHeight ===
+// === Module 12524: useChatInputMaxHeight ===
 
-// Module 12516 (useChatInputMaxHeight)
-import useWindowDimensions from "useWindowDimensions" /* 1499 */;
-import KeyboardTypes from "KeyboardTypes" /* 1631 */;
-import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1899 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import useKeyboardType from "useKeyboardType" /* 5161 */;
-import timing from "timing" /* 5206 */;
-import timingPresets from "timingPresets" /* 5209 */;
-import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5596 */;
-import useKeyboardStateSharedValue from "useKeyboardStateSharedValue" /* 12517 */;
-import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 12518 */;
-import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12519 */;
+// Module 12524 (useChatInputMaxHeight)
+import useWindowDimensions from "useWindowDimensions" /* 1496 */;
+import KeyboardTypes from "KeyboardTypes" /* 1628 */;
+import useSystemKeyboardHeight from "useSystemKeyboardHeight" /* 1896 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import useKeyboardType from "useKeyboardType" /* 5162 */;
+import timing from "timing" /* 5207 */;
+import timingPresets from "timingPresets" /* 5210 */;
+import useCustomKeyboardHeight from "useCustomKeyboardHeight" /* 5597 */;
+import useKeyboardStateSharedValue from "useKeyboardStateSharedValue" /* 12525 */;
+import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 12526 */;
+import subscribeToWindowDimensionsDefault from "subscribeToWindowDimensions" /* 12527 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1501 */;
+import subscribeToKeyboardUIStore from "subscribeToKeyboardUIStore" /* 1498 */;
 
 const require = globalThis.__r;
 
@@ -28,7 +28,7 @@ function getChatInputMaxHeight() {
   }
   return Math.min(c6, Math.max(2 * CHAT_INPUT_PILL_CONTENT_SIZE, useWindowDimensions.getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - c6));
 }
-const CHAT_INPUT_PILL_CONTENT_SIZE = fn(12512).CHAT_INPUT_PILL_CONTENT_SIZE;
+const CHAT_INPUT_PILL_CONTENT_SIZE = fn(12520).CHAT_INPUT_PILL_CONTENT_SIZE;
 let c6 = 200;
 function getChatInputMaxHeightWorklet() {
   const keyboardStateWorklet = useKeyboardStateSharedValue.getKeyboardStateWorklet();
@@ -38,7 +38,7 @@ function getChatInputMaxHeightWorklet() {
   }
   return Math.min(c6, Math.max(2 * CHAT_INPUT_PILL_CONTENT_SIZE, useWindowDimensionsSharedValue.getWindowDimensionsWorklet({ ignoreKeyboard: true }).height - keyboardHeight - c6));
 }
-getChatInputMaxHeightWorklet.__closure = { getKeyboardStateWorklet: fn(12517).getKeyboardStateWorklet, KeyboardTypes: fn(1631).KeyboardTypes, getWindowDimensionsWorklet: fn(12518).getWindowDimensionsWorklet, MAX_HEIGHT: 200, MIN_HEIGHT: CHAT_INPUT_PILL_CONTENT_SIZE };
+getChatInputMaxHeightWorklet.__closure = { getKeyboardStateWorklet: fn(12525).getKeyboardStateWorklet, KeyboardTypes: fn(1628).KeyboardTypes, getWindowDimensionsWorklet: fn(12526).getWindowDimensionsWorklet, MAX_HEIGHT: 200, MIN_HEIGHT: CHAT_INPUT_PILL_CONTENT_SIZE };
 getChatInputMaxHeightWorklet.__workletHash = 13025947543230;
 getChatInputMaxHeightWorklet.__initData = { code: "function getChatInputMaxHeightWorklet_useChatInputMaxHeightTsx1(){const{getKeyboardStateWorklet,KeyboardTypes,getWindowDimensionsWorklet,MAX_HEIGHT,MIN_HEIGHT}=this.__closure;const{keyboardHeight:keyboardHeightSystem,customKeyboardHeight:customKeyboardHeight,keyboardType:keyboardType}=getKeyboardStateWorklet();const keyboardHeight=keyboardType!==KeyboardTypes.SYSTEM?customKeyboardHeight:keyboardHeightSystem;const window=getWindowDimensionsWorklet({ignoreKeyboard:true});const windowHeightNoKeyboard=window.height-keyboardHeight;return Math.min(MAX_HEIGHT,Math.max(MIN_HEIGHT*2,windowHeightNoKeyboard-MAX_HEIGHT));}" };
 const ReactCompilerGating = fn(558);
@@ -60,10 +60,10 @@ function getChatInputHeightAnimationTimingWorklet(height, textFieldMinHeight) {
   }
 }
 let obj3 = { getChatInputMaxHeightWorklet, withTiming: null, timingFastDuration: null, Easing: null };
-let obj = { getKeyboardStateWorklet: fn(12517).getKeyboardStateWorklet, KeyboardTypes: fn(1631).KeyboardTypes, getWindowDimensionsWorklet: fn(12518).getWindowDimensionsWorklet, MAX_HEIGHT: 200, MIN_HEIGHT: CHAT_INPUT_PILL_CONTENT_SIZE };
-obj3.withTiming = fn(5206).withTiming;
-obj3.timingFastDuration = fn(5209).timingFastDuration;
-obj3.Easing = fn(5052).Easing;
+let obj = { getKeyboardStateWorklet: fn(12525).getKeyboardStateWorklet, KeyboardTypes: fn(1628).KeyboardTypes, getWindowDimensionsWorklet: fn(12526).getWindowDimensionsWorklet, MAX_HEIGHT: 200, MIN_HEIGHT: CHAT_INPUT_PILL_CONTENT_SIZE };
+obj3.withTiming = fn(5207).withTiming;
+obj3.timingFastDuration = fn(5210).timingFastDuration;
+obj3.Easing = fn(5053).Easing;
 getChatInputHeightAnimationTimingWorklet.__closure = obj3;
 getChatInputHeightAnimationTimingWorklet.__workletHash = 17042993287975;
 getChatInputHeightAnimationTimingWorklet.__initData = { code: "function getChatInputHeightAnimationTimingWorklet_useChatInputMaxHeightTsx2(contentSize,minHeight){const{getChatInputMaxHeightWorklet,withTiming,timingFastDuration,Easing}=this.__closure;const value=Math.min(Math.max(contentSize,minHeight),getChatInputMaxHeightWorklet());return withTiming(value,{duration:timingFastDuration,easing:Easing.linear});}" };
@@ -79,17 +79,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChatI
     const fn = function u() {
       function maybeUpdateMaxHeight() {
         closure_1((arg0) => {
-          let systemKeyboardHeight = closure_0(1899).getSystemKeyboardHeight();
-          const obj = closure_0(1899);
-          const customKeyboardHeight = closure_0(5596).getCustomKeyboardHeight();
-          const obj2 = closure_0(5596);
-          const keyboardType = closure_0(5161).getKeyboardType();
-          if (keyboardType !== closure_0(1631).KeyboardTypes.SYSTEM) {
+          let systemKeyboardHeight = closure_0(1896).getSystemKeyboardHeight();
+          const obj = closure_0(1896);
+          const customKeyboardHeight = closure_0(5597).getCustomKeyboardHeight();
+          const obj2 = closure_0(5597);
+          const keyboardType = closure_0(5162).getKeyboardType();
+          if (keyboardType !== closure_0(1628).KeyboardTypes.SYSTEM) {
             systemKeyboardHeight = customKeyboardHeight;
           }
           let tmp6 = arg0;
-          const obj3 = closure_0(5161);
-          const bound = Math.min(closure_2_6, Math.max(2 * closure_2_7, closure_0(1499).getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - closure_2_6));
+          const obj3 = closure_0(5162);
+          const bound = Math.min(closure_2_6, Math.max(2 * closure_2_7, closure_0(1496).getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - closure_2_6));
           if (arg0 !== bound) {
             tmp6 = bound;
             if (closure_1_0 != null) {
@@ -127,17 +127,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChatI
   const effect = noop.useEffect(() => {
     function maybeUpdateMaxHeight() {
       closure_1((arg0) => {
-        let systemKeyboardHeight = closure_0(1899).getSystemKeyboardHeight();
-        const obj = closure_0(1899);
-        const customKeyboardHeight = closure_0(5596).getCustomKeyboardHeight();
-        const obj2 = closure_0(5596);
-        const keyboardType = closure_0(5161).getKeyboardType();
-        if (keyboardType !== closure_0(1631).KeyboardTypes.SYSTEM) {
+        let systemKeyboardHeight = closure_0(1896).getSystemKeyboardHeight();
+        const obj = closure_0(1896);
+        const customKeyboardHeight = closure_0(5597).getCustomKeyboardHeight();
+        const obj2 = closure_0(5597);
+        const keyboardType = closure_0(5162).getKeyboardType();
+        if (keyboardType !== closure_0(1628).KeyboardTypes.SYSTEM) {
           systemKeyboardHeight = customKeyboardHeight;
         }
         let tmp6 = arg0;
-        const obj3 = closure_0(5161);
-        const bound = Math.min(closure_2_6, Math.max(2 * closure_2_7, closure_0(1499).getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - closure_2_6));
+        const obj3 = closure_0(5162);
+        const bound = Math.min(closure_2_6, Math.max(2 * closure_2_7, closure_0(1496).getWindowDimensions({ ignoreKeyboard: true }).height - systemKeyboardHeight - closure_2_6));
         if (arg0 !== bound) {
           tmp6 = bound;
           if (closure_1_0 != null) {

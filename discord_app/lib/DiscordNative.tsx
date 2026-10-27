@@ -1,6 +1,6 @@
-// === Module 4785: DiscordNative ===
+// === Module 4786: DiscordNative ===
 
-// Module 4785 (DiscordNative)
+// Module 4786 (DiscordNative)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("lib/DiscordNative.tsx");

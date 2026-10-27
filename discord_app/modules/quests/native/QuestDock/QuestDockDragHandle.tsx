@@ -1,17 +1,17 @@
-// === Module 16528: QuestDockDragHandle ===
+// === Module 16567: QuestDockDragHandle ===
 
-// Module 16528 (QuestDockDragHandle)
-import spring from "spring" /* 5247 */;
-import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7168 */;
+// Module 16567 (QuestDockDragHandle)
+import spring from "spring" /* 5248 */;
+import ReanimatedNativeViewDefault from "ReanimatedNativeView" /* 7170 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const QuestDockMode = fn(6710).QuestDockMode;
-const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16441).QUEST_DOCK_MODE_CHANGE_PHYSICS;
+const QuestDockMode = fn(6711).QuestDockMode;
+const QUEST_DOCK_MODE_CHANGE_PHYSICS = fn(16480).QUEST_DOCK_MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { dragHandleWrapper: null, dragHandleOverlay: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -37,7 +37,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const cResult = activeQuestDockMode(576).c(23);
   isExpanded = isExpanded.isExpanded;
   const tmp4 = closure_8();
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(16442).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(16481).QuestDockGestureContext).activeQuestDockMode;
   importDefault = tmp5;
   const obj = activeQuestDockMode(576);
   const fn = function c() {
@@ -56,8 +56,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   fn.__closure = { activeQuestDockMode, QuestDockMode };
   fn.__workletHash = 8792527248223;
   fn.__initData = __initData;
-  const animatedStyle = activeQuestDockMode(5052).useAnimatedStyle(fn);
-  let obj2 = activeQuestDockMode(5052);
+  const animatedStyle = activeQuestDockMode(5053).useAnimatedStyle(fn);
+  let obj2 = activeQuestDockMode(5053);
   const obj3 = { activeQuestDockMode, QuestDockMode };
   class M {
     constructor() {
@@ -76,12 +76,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return;
     }
   }
-  const obj4 = activeQuestDockMode(5052);
-  M.__closure = { withSpring: activeQuestDockMode(5247).withSpring, isDefaultVariant: "default" === isExpanded.variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  const obj4 = activeQuestDockMode(5053);
+  M.__closure = { withSpring: activeQuestDockMode(5248).withSpring, isDefaultVariant: "default" === isExpanded.variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   M.__workletHash = 6896281369829;
   M.__initData = __initData2;
   const animatedStyle1 = obj4.useAnimatedStyle(M);
-  const obj5 = { withSpring: activeQuestDockMode(5247).withSpring, isDefaultVariant: "default" === isExpanded.variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  const obj5 = { withSpring: activeQuestDockMode(5248).withSpring, isDefaultVariant: "default" === isExpanded.variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   const fn2 = function k() {
     spring;
     if (!closure_1) {
@@ -93,8 +93,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     num = 0;
   };
-  const obj6 = activeQuestDockMode(5052);
-  fn2.__closure = { withSpring: activeQuestDockMode(5247).withSpring, isDefaultVariant: "default" === isExpanded.variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  const obj6 = activeQuestDockMode(5053);
+  fn2.__closure = { withSpring: activeQuestDockMode(5248).withSpring, isDefaultVariant: "default" === isExpanded.variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   fn2.__workletHash = 7780416831295;
   fn2.__initData = __initData3;
   const animatedStyle2 = obj6.useAnimatedStyle(fn2);
@@ -103,9 +103,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp9 = cResult[2];
     }
     if (cResult[3] !== isExpanded) {
-      const intl = tmp(1128).intl;
+      const intl = tmp(1125).intl;
       const string = intl.string;
-      let t = tmp(1128).t;
+      let t = tmp(1125).t;
       if (isExpanded) {
         t = t["GQ+4bk"];
         let stringResult = string(t);
@@ -117,7 +117,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     } else {
       if (cResult[5] !== cResult[4]) {
         const obj8 = { variant: "overlay", accessibilityLabel: tmp10 };
-        const tmp16 = closure_6(tmp(5582).ActionSheetHeaderBar, obj8);
+        const tmp16 = closure_6(tmp(5583).ActionSheetHeaderBar, obj8);
         cResult[5] = tmp10;
         cResult[6] = tmp16;
         let tmp14 = tmp16;
@@ -134,7 +134,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           const _Symbol = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp25 = closure_6(tmp(5582).ActionSheetHeaderBar, { variant: "default" });
+            const tmp25 = closure_6(tmp(5583).ActionSheetHeaderBar, { variant: "default" });
             cResult[13] = tmp25;
             let tmp23 = tmp25;
           } else {
@@ -168,7 +168,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               tmp35 = tmp38;
             }
           }
-          const obj11 = { style: animatedStyle, layout: tmp(16440).dimensionsLayoutTransition, children: null };
+          const obj11 = { style: animatedStyle, layout: tmp(16479).dimensionsLayoutTransition, children: null };
           let items = [tmp17, tmp26];
           obj11.children = items;
           const tmp34 = closure_7(ReanimatedNativeViewDefault, obj11);
@@ -197,11 +197,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[1] = tmp4.dragHandleOverlay;
   cResult[2] = items2;
   tmp9 = items2;
-  const obj7 = { withSpring: activeQuestDockMode(5247).withSpring, isDefaultVariant: "default" === isExpanded.variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  const obj7 = { withSpring: activeQuestDockMode(5248).withSpring, isDefaultVariant: "default" === isExpanded.variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
 }) : (function QuestDockDragHandle(arg0) {
   ({ isExpanded, variant } = arg0);
   const tmp = closure_8();
-  activeQuestDockMode = noop.useContext(activeQuestDockMode(16442).QuestDockGestureContext).activeQuestDockMode;
+  activeQuestDockMode = noop.useContext(activeQuestDockMode(16481).QuestDockGestureContext).activeQuestDockMode;
   importDefault = tmp4;
   const fn = function c() {
     let num = 0;
@@ -219,8 +219,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   fn.__closure = { activeQuestDockMode, QuestDockMode };
   fn.__workletHash = 15319778954170;
   fn.__initData = __initData4;
-  const animatedStyle = activeQuestDockMode(5052).useAnimatedStyle(fn);
-  const obj = activeQuestDockMode(5052);
+  const animatedStyle = activeQuestDockMode(5053).useAnimatedStyle(fn);
+  const obj = activeQuestDockMode(5053);
   let obj2 = { activeQuestDockMode, QuestDockMode };
   const tmp2 = activeQuestDockMode;
   const fn2 = function l() {
@@ -234,12 +234,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     num = 1;
   };
-  const obj3 = activeQuestDockMode(5052);
-  fn2.__closure = { withSpring: activeQuestDockMode(5247).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  const obj3 = activeQuestDockMode(5053);
+  fn2.__closure = { withSpring: activeQuestDockMode(5248).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   fn2.__workletHash = 6699454768642;
   fn2.__initData = __initData5;
   const animatedStyle1 = obj3.useAnimatedStyle(fn2);
-  const obj4 = { withSpring: activeQuestDockMode(5247).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  const obj4 = { withSpring: activeQuestDockMode(5248).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   const fn3 = function _() {
     spring;
     if (!closure_1) {
@@ -251,34 +251,34 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     num = 0;
   };
-  const obj5 = activeQuestDockMode(5052);
-  fn3.__closure = { withSpring: activeQuestDockMode(5247).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  const obj5 = activeQuestDockMode(5053);
+  fn3.__closure = { withSpring: activeQuestDockMode(5248).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   fn3.__workletHash = 2024198657306;
   fn3.__initData = __initData6;
   const animatedStyle2 = obj5.useAnimatedStyle(fn3);
   const obj7 = { style: tmp.dragHandleWrapper, children: null };
-  const obj6 = { withSpring: activeQuestDockMode(5247).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
+  const obj6 = { withSpring: activeQuestDockMode(5248).withSpring, isDefaultVariant: "default" === variant, activeQuestDockMode, QuestDockMode, QUEST_DOCK_MODE_CHANGE_PHYSICS };
   const obj8 = { style: animatedStyle, layout: null, children: null };
   const tmp10 = ReanimatedNativeViewDefault;
-  obj8.layout = activeQuestDockMode(16440).dimensionsLayoutTransition;
+  obj8.layout = activeQuestDockMode(16479).dimensionsLayoutTransition;
   const obj9 = { style: null, children: null };
   let items = [tmp.dragHandleOverlay, animatedStyle2];
   obj9.style = items;
   const tmp12 = ReanimatedNativeViewDefault;
-  const intl = activeQuestDockMode(1128).intl;
+  const intl = activeQuestDockMode(1125).intl;
   const string = intl.string;
-  const t = activeQuestDockMode(1128).t;
+  const t = activeQuestDockMode(1125).t;
   if (isExpanded) {
     let stringResult = string(t["GQ+4bk"]);
   } else {
     stringResult = string(t.Yplnt6);
   }
-  obj9.children = closure_6(activeQuestDockMode(5582).ActionSheetHeaderBar, { variant: "overlay", accessibilityLabel: stringResult });
+  obj9.children = closure_6(activeQuestDockMode(5583).ActionSheetHeaderBar, { variant: "overlay", accessibilityLabel: stringResult });
   const items1 = [closure_6(ReanimatedNativeViewDefault, obj9), ];
   const obj10 = { style: null, pointerEvents: "none", accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants", children: null };
   const items2 = [tmp.dragHandleOverlay, animatedStyle1];
   obj10.style = items2;
-  obj10.children = closure_6(tmp2(5582).ActionSheetHeaderBar, { variant: "default" });
+  obj10.children = closure_6(tmp2(5583).ActionSheetHeaderBar, { variant: "default" });
   items1[1] = closure_6(ReanimatedNativeViewDefault, obj10);
   obj8.children = items1;
   obj7.children = closure_7(tmp12, obj8);

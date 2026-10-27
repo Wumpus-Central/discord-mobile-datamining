@@ -1,6 +1,6 @@
-// === Module 13404: ? ===
+// === Module 13418: ? ===
 
-// Module 13404
+// Module 13418
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/PlaneIllocon-2x.png.js");

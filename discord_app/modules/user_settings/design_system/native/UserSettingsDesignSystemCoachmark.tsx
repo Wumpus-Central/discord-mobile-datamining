@@ -1,10 +1,10 @@
-// === Module 17161: UserSettingsDesignSystemCoachmark ===
+// === Module 17202: UserSettingsDesignSystemCoachmark ===
 
-// Module 17161 (UserSettingsDesignSystemCoachmark)
+// Module 17202 (UserSettingsDesignSystemCoachmark)
 import c from "c" /* 576 */;
-import LayerScope from "LayerScope" /* 5597 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7221 */;
-import _modDef17162 from "module_17162" /* 17162 */;
+import LayerScope from "LayerScope" /* 5598 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7223 */;
+import _modDef17203 from "module_17203" /* 17203 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_10 = createStyles.createStyles({ container: { paddingTop: 240, flex: 1, alignItems: "center", justifyContent: "center" }, flex: { flex: 1, padding: 16 } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Content() {
@@ -25,9 +25,9 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   const tmp6 = _slicedToArray(noop.useState(false), 2);
   [tmp9, r10029] = noop.useState(false);
   const tmp8 = _slicedToArray(noop.useState(false), 2);
-  const obj3 = visible(17159);
-  [r10035, r10036] = visible(17159).useCanRotate();
-  const tmp10 = _slicedToArray(visible(17159).useCanRotate(), 2);
+  const obj3 = visible(17200);
+  [r10035, r10036] = visible(17200).useCanRotate();
+  const tmp10 = _slicedToArray(visible(17200).useCanRotate(), 2);
   const tmp11 = _slicedToArray(noop.useState(false), 2);
   const first1 = _slicedToArray(noop.useState("primary"), 2)[0];
   const tmp12 = _slicedToArray(noop.useState("primary"), 2);
@@ -65,7 +65,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
         return closure_1(false);
       }
     }
-    tmp21[0] = _modDef17162;
+    tmp21[0] = _modDef17203;
     cResult[2] = tmp21;
   } else {
     class Y {
@@ -181,7 +181,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
       buttonVariant: null,
       gradientColor: null
     };
-    const obj2 = { type: "image", src: { uri: _modDef17162 }, aspectRatio: first5 };
+    const obj2 = { type: "image", src: { uri: _modDef17203 }, aspectRatio: first5 };
     obj.graphic = obj2;
     obj.experimental_withBlurBackground = first1;
     let str2;

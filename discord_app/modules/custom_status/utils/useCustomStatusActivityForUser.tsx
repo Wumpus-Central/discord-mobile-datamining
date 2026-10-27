@@ -1,13 +1,13 @@
-// === Module 11076: useCustomStatusActivityForUser ===
+// === Module 11079: useCustomStatusActivityForUser ===
 
-// Module 11076 (useCustomStatusActivityForUser)
+// Module 11079 (useCustomStatusActivityForUser)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ActivityTypes = fn(1087).ActivityTypes;
+const ActivityTypes = fn(1084).ActivityTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/custom_status/utils/useCustomStatusActivityForUser.tsx");

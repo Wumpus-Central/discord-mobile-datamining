@@ -1,11 +1,11 @@
-// === Module 10509: MarketingComponentHooks ===
+// === Module 10512: MarketingComponentHooks ===
 
-// Module 10509 (MarketingComponentHooks)
+// Module 10512 (MarketingComponentHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import themes from "themes" /* 4993 */;
-import useThemeDefault from "useTheme" /* 5205 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import themes from "themes" /* 4994 */;
+import useThemeDefault from "useTheme" /* 5206 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

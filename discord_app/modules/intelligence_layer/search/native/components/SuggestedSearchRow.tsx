@@ -1,20 +1,20 @@
-// === Module 18085: SuggestedSearchRow ===
+// === Module 18119: SuggestedSearchRow ===
 
-// Module 18085 (SuggestedSearchRow)
+// Module 18119 (SuggestedSearchRow)
 import nativeDefault from "native" /* 587 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13225 */;
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13247 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13249 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13250 */;
-import SuggestedSearchActionCreators from "SuggestedSearchActionCreators" /* 13266 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13239 */;
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13261 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13263 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13264 */;
+import SuggestedSearchActionCreators from "SuggestedSearchActionCreators" /* 13280 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const SmartSearchConstants = fn(13227);
+const SmartSearchConstants = fn(13241);
 ({ SUGGESTED_SEARCHES_WINDOW_SIZE: hasOwnProperty, SUGGESTED_SEARCH_COMPACT_LABEL_HEIGHT } = SmartSearchConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { iconCircle: null, text: null, compactLabel: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center" };
 obj.iconCircle = size;

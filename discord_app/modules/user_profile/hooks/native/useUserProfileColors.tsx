@@ -3,16 +3,16 @@
 // Module 8729 (useUserProfileColors)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useThemeDefault from "useTheme" /* 5205 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7280 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import useThemeDefault from "useTheme" /* 5206 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7282 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 
 const initialize = obj(504);
-const utils_ColorUtils = obj(1105);
-const useToken = obj(5252);
+const utils_ColorUtils = obj(1102);
+const useToken = obj(5253);
 const UserProfileGradientUtils = obj(8720);
 require = fn;
-const ThemeTypes = fn(1098).ThemeTypes;
+const ThemeTypes = fn(1095).ThemeTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/hooks/native/useUserProfileColors.tsx");

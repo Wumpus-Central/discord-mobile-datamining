@@ -1,10 +1,10 @@
-// === Module 15278: Slider ===
+// === Module 15314: Slider ===
 
-// Module 15278 (Slider)
+// Module 15314 (Slider)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import HapticUtils from "HapticUtils" /* 5212 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5213 */;
+import HapticUtils from "HapticUtils" /* 5213 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5214 */;
 import _modDef8769 from "module_8769" /* 8769 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flexGrow: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED }, maximumTrackTintColor: null, startIcon: null, endIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 obj2.maximumTrackTintColor = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
@@ -121,7 +121,7 @@ export const Slider = ReactCompilerGating.isReactCompilerEnabled() ? (function S
             }
             cResult[10] = fn;
             let tmp19 = fn;
-            tmpResult = step(1384);
+            tmpResult = step(1381);
           } else {
             tmp19 = cResult[10];
           }

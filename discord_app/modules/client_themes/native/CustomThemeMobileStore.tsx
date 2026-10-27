@@ -1,15 +1,15 @@
-// === Module 1253: CustomThemeMobileStore ===
+// === Module 1250: CustomThemeMobileStore ===
 
-// Module 1253 (CustomThemeMobileStore)
+// Module 1250 (CustomThemeMobileStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1254 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 5035 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
-import ThemeStore from "ThemeStore" /* 1207 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 5036 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1205 */;
+import ThemeStore from "ThemeStore" /* 1204 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 
 require = fn;
 function reset() {
@@ -59,7 +59,7 @@ function handleSelectivelySyncedUserSettingsUpdate() {
     }
   }
 }
-const UserSettingsTypes = fn(1097).UserSettingsTypes;
+const UserSettingsTypes = fn(1094).UserSettingsTypes;
 const PersistedStore = initializeDefault.PersistedStore;
 class CustomThemeMobileStore extends PersistedStore {
 }
@@ -96,7 +96,7 @@ prototype["getState"] = function getState() {
     const obj2 = { theme, customTheme: prop };
     let obj = obj2;
   } else {
-    obj = { theme: "Array", customTheme: "Reflect" };
+    obj = { theme: "toCharArray$esjava$1", customTheme: "Symbol" };
   }
   return obj;
 };

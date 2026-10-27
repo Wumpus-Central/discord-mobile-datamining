@@ -1,12 +1,12 @@
-// === Module 17116: InternalBuildActiveSetting ===
+// === Module 17157: InternalBuildActiveSetting ===
 
-// Module 17116 (InternalBuildActiveSetting)
-import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16134 */;
-import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 15642 */;
+// Module 17157 (InternalBuildActiveSetting)
+import useIsStaffOrDeveloperSettingPredicate from "useIsStaffOrDeveloperSettingPredicate" /* 16172 */;
+import MobileNativeUpdateStore from "MobileNativeUpdateStore" /* 15678 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasCheckNativeUpdateSetting() {
   return MobileNativeUpdateStore.hasUpdatesConfigured && useIsStaffOrDeveloperSettingPredicate.useStaffOrDeveloperSettingPredicate();
 }) : (function useHasCheckNativeUpdateSetting() {
@@ -17,7 +17,7 @@ const obj3 = {
     return "Internal Build Active";
   },
   parent: null,
-  IconComponent: fn(16918).MobilePhoneSettingsIcon,
+  IconComponent: fn(16960).MobilePhoneSettingsIcon,
   useDescription: function useInternalBuildActiveDescription() {
     return "Build installed from builds.discord.tools";
   },
@@ -35,7 +35,7 @@ export default SettingBuilders.createStatic({
     return "Internal Build Active";
   },
   parent: null,
-  IconComponent: fn(16918).MobilePhoneSettingsIcon,
+  IconComponent: fn(16960).MobilePhoneSettingsIcon,
   useDescription: function useInternalBuildActiveDescription() {
     return "Build installed from builds.discord.tools";
   },

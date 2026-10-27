@@ -1,17 +1,17 @@
-// === Module 10911: useIsSelectedResourceChannel ===
+// === Module 10914: useIsSelectedResourceChannel ===
 
-// Module 10911 (useIsSelectedResourceChannel)
-import FlagUtils from "FlagUtils" /* 1405 */;
-import isSelectedFromHomeChannelDefault from "isSelectedFromHomeChannel" /* 10912 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6791 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
+// Module 10914 (useIsSelectedResourceChannel)
+import FlagUtils from "FlagUtils" /* 1402 */;
+import isSelectedFromHomeChannelDefault from "isSelectedFromHomeChannel" /* 10915 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6792 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
-const ChannelFlags = fn(4830).ChannelFlags;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1084).EMPTY_STRING_SNOWFLAKE_ID;
+const ChannelFlags = fn(4831).ChannelFlags;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_onboarding_home/useIsSelectedResourceChannel.tsx");

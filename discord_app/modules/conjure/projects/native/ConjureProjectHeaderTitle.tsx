@@ -1,13 +1,13 @@
-// === Module 12279: ConjureProjectHeaderTitle ===
+// === Module 12284: ConjureProjectHeaderTitle ===
 
-// Module 12279 (ConjureProjectHeaderTitle)
+// Module 12284 (ConjureProjectHeaderTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import _modDef3830 from "module_3830" /* 3830 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import Pressables from "Pressables" /* 6908 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12250 */;
+import util from "util" /* 1125 */;
+import _modDef3831 from "module_3831" /* 3831 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import Pressables from "Pressables" /* 6910 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12172 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,7 +15,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const hitSlop = { top: 12, bottom: 12, left: 12, right: 12 };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { row: { flexDirection: "row", alignItems: "center", flexShrink: 1, gap: nativeDefault.space.PX_8 }, title: { flexShrink: 1 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -29,7 +29,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   const tmp4 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3830.FzfmQ8);
+    const stringResult = intl.string(_modDef3831.FzfmQ8);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   const obj = { style: tmp.row, children: null };
   const obj2 = { onPress: onPressIcon, hitSlop, accessibilityRole: "button", accessibilityLabel: null, children: null };
   const intl = util.intl;
-  obj2.accessibilityLabel = intl.string(_modDef3830.FzfmQ8);
+  obj2.accessibilityLabel = intl.string(_modDef3831.FzfmQ8);
   obj2.children = React4(ConjureProjectIconDefault, { project, size: "header" });
   const items = [React4(Pressables.PressableOpacity, obj2), React4(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", "aria-level": "1", lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: title })];
   obj.children = items;

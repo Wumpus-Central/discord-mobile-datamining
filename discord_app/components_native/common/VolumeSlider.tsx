@@ -1,14 +1,14 @@
-// === Module 11623: VolumeSlider ===
+// === Module 11625: VolumeSlider ===
 
-// Module 11623 (VolumeSlider)
+// Module 11625 (VolumeSlider)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import PlatformUtils2 from "PlatformUtils" /* 1384 */;
-import useToken from "useToken" /* 5252 */;
-import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5859 */;
+import util from "util" /* 1125 */;
+import PlatformUtils2 from "PlatformUtils" /* 1381 */;
+import useToken from "useToken" /* 5253 */;
+import PerceptualVolumeUtils from "PerceptualVolumeUtils" /* 5860 */;
 import VoiceNormalIcon from "VoiceNormalIcon" /* 8572 */;
 import _modDef8769 from "module_8769" /* 8769 */;
-import VoiceXIcon from "VoiceXIcon" /* 11624 */;
+import VoiceXIcon from "VoiceXIcon" /* 11626 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,15 +17,15 @@ const require = globalThis.__r;
 require = fn;
 let closure_3 = ["style", "maxTrackTintColor", "value", "maxVolume", "onValueChange", "onResponderGrant", "accessibilityLabel"];
 const View = fn(17).View;
-let closure_6 = fn(5718).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
+let closure_6 = fn(5719).MAX_EMBEDDED_VOLUME_PERCEPTUAL;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const PlatformUtils = fn(1384);
+const PlatformUtils = fn(1381);
 let num = 16;
 if (PlatformUtils.isAndroid()) {
   num = 0;
 }
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_9 = createStyles.createStyles({ volumerSlider: { flexDirection: "row", alignItems: "center" }, leftIcon: { marginRight: num }, rightIcon: { marginLeft: num }, volumerSliderNative: { flex: 1, marginVertical: -10, backgroundColor: "transparent" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -79,24 +79,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function VolumeSl
   if (cResult[9] === tmp8) {
     if (cResult[12] !== tmp15.leftIcon) {
       const obj2 = { style: tmp15.leftIcon };
-      const tmp20 = closure_7(tmp(11624).VoiceXIcon, obj2);
+      const tmp20 = closure_7(tmp(11626).VoiceXIcon, obj2);
       cResult[12] = tmp15.leftIcon;
       cResult[13] = tmp20;
     }
     if (cResult[14] !== tmp10) {
-      const result = tmp(5859).amplitudeToPerceptual(tmp10);
+      const result = tmp(5860).amplitudeToPerceptual(tmp10);
       cResult[14] = tmp10;
       cResult[15] = result;
       let tmp21 = result;
-      const tmpResult2 = tmp(5859);
+      const tmpResult2 = tmp(5860);
     } else {
       tmp21 = cResult[15];
     }
     if (cResult[16] !== tmp4) {
       let stringResult = tmp4;
       if (tmp4 == null) {
-        const intl = tmp(1128).intl;
-        stringResult = intl.string(tmp(1128).t.xPHVBs);
+        const intl = tmp(1125).intl;
+        stringResult = intl.string(tmp(1125).t.xPHVBs);
       }
       cResult[16] = tmp4;
       cResult[17] = stringResult;

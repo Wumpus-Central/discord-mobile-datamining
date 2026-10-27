@@ -1,13 +1,13 @@
-// === Module 17712: MobileGameCommunitiesActionCreators ===
+// === Module 17753: MobileGameCommunitiesActionCreators ===
 
-// Module 17712 (MobileGameCommunitiesActionCreators)
+// Module 17753 (MobileGameCommunitiesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1104 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import _modDef1493 from "module_1493" /* 1493 */;
+import DurationsDefault from "Durations" /* 1101 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import _modDef1490 from "module_1490" /* 1490 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15026 */;
-import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 16983 */;
+import LocalAppDetectionStore from "LocalAppDetectionStore" /* 15062 */;
+import MobileGameCommunitiesStore from "MobileGameCommunitiesStore" /* 17025 */;
 
 require = fn;
 let closure_7 = async function _fetchDetectedGameCommunities() {
@@ -53,7 +53,7 @@ let closure_7 = async function _fetchDetectedGameCommunities() {
           const obj4 = { game_ids: tmp19, limit: 20, ignored_guild_ids: null };
           const _Array = Array;
           obj4.ignored_guild_ids = Array.from(dismissedGuildIds.getDismissedGuildIds());
-          request.query = _modDef1493.stringify(obj4);
+          request.query = _modDef1490.stringify(obj4);
           c2 = 1;
           c3 = 1;
           const obj5 = { value: HTTP.get(request), done: false };
@@ -79,7 +79,7 @@ let closure_7 = async function _fetchDetectedGameCommunities() {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const initialize = fn(504);
 let obj2 = {
   getQueryId(arg0) {

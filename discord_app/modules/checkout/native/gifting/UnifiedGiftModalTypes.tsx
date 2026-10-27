@@ -1,6 +1,6 @@
-// === Module 10583: UnifiedGiftModalTypes ===
+// === Module 10586: UnifiedGiftModalTypes ===
 
-// Module 10583 (UnifiedGiftModalTypes)
+// Module 10586 (UnifiedGiftModalTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/checkout/native/gifting/UnifiedGiftModalTypes.tsx");

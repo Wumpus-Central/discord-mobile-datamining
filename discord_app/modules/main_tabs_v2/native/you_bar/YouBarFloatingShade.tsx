@@ -1,26 +1,26 @@
-// === Module 17850: YouBarFloatingShade ===
+// === Module 17884: YouBarFloatingShade ===
 
-// Module 17850 (YouBarFloatingShade)
+// Module 17884 (YouBarFloatingShade)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5144 */;
-import useChatLayoutDefault from "useChatLayout" /* 5153 */;
-import useToken from "useToken" /* 5252 */;
-import LinearGradientDefault from "LinearGradient" /* 5258 */;
-import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16446 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import client_themes_ClientThemesUtils from "client_themes/ClientThemesUtils" /* 5145 */;
+import useChatLayoutDefault from "useChatLayout" /* 5154 */;
+import useToken from "useToken" /* 5253 */;
+import LinearGradientDefault from "LinearGradient" /* 5259 */;
+import useYouBarTotalHeight from "useYouBarTotalHeight" /* 16485 */;
 import noop from "module_19" /* 19 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4995 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4996 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(16444).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
-const GUILD_LIST_WIDTH = fn(17731).GUILD_LIST_WIDTH;
+let closure_5 = fn(16483).YOU_BAR_GRADIENT_EXTRA_HEIGHT;
+const GUILD_LIST_WIDTH = fn(17772).GUILD_LIST_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_10 = createStyles.createStyles({ container: { position: "absolute", bottom: 0, left: 0, right: 0 } });
 let ReactCompilerGating = fn(558);
 let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useYouBarGradientBackground() {

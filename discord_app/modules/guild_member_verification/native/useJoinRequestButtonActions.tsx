@@ -1,15 +1,15 @@
-// === Module 13560: useJoinRequestButtonActions ===
+// === Module 13574: useJoinRequestButtonActions ===
 
-// Module 13560 (useJoinRequestButtonActions)
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+// Module 13574 (useJoinRequestButtonActions)
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 require = fn;
-const Routes = fn(1087).Routes;
+const Routes = fn(1084).Routes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_member_verification/native/useJoinRequestButtonActions.tsx");
 
@@ -259,8 +259,8 @@ export const useJoinRequestButtonActions = function useJoinRequestButtonActions(
       const _HermesInternal = HermesInternal;
       const obj = ActionSheetActionCreatorsDefault;
       const obj2 = { joinRequest, onError, onDismiss };
-      obj.openLazy(asyncRequireImpl(13561, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
-      const tmp9 = asyncRequireImpl(13561, dependencyMap.paths);
+      obj.openLazy(asyncRequireImpl(13575, dependencyMap.paths), "RejectionReason-" + joinRequestId, obj2);
+      const tmp9 = asyncRequireImpl(13575, dependencyMap.paths);
     }
   }, items2);
   obj2.submitting = submitting;

@@ -1,15 +1,15 @@
-// === Module 14870: OutboundPromotionCard ===
+// === Module 14906: OutboundPromotionCard ===
 
-// Module 14870 (OutboundPromotionCard)
+// Module 14906 (OutboundPromotionCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5265 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5705 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
+import util from "util" /* 1125 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5266 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5706 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5910 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7250 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,9 +17,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
-let obj2 = { card: { flex: 1, flexDirection: "column", paddingHorizontal: fn(1087).USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 8 }, mainContainer: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, textContainer: { flexDirection: "row", flexShrink: 1, alignItems: "center" }, imageContainer: null, image: null, title: null, subText: null, claimButton: null, moreDetails: null, termsAndConditionsText: null, buttonContainer: null };
-let size = { width: 32, height: 32, marginRight: 8, borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(6707).DARK_BLACK_500_LIGHT_PRIMARY_100 };
+const createStyles = fn(4972);
+let obj2 = { card: { flex: 1, flexDirection: "column", paddingHorizontal: fn(1084).USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING, paddingVertical: 12, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: 8 }, mainContainer: { flex: 1, flexDirection: "row", alignItems: "center", justifyContent: "space-between" }, textContainer: { flexDirection: "row", flexShrink: 1, alignItems: "center" }, imageContainer: null, image: null, title: null, subText: null, claimButton: null, moreDetails: null, termsAndConditionsText: null, buttonContainer: null };
+let size = { width: 32, height: 32, marginRight: 8, borderRadius: nativeDefault.radii.xs, alignItems: "center", justifyContent: "center", backgroundColor: fn(6708).DARK_BLACK_500_LIGHT_PRIMARY_100 };
 obj2.imageContainer = size;
 obj2.image = { width: 28, height: 28, resizeMode: "contain" };
 obj2.title = { lineHeight: 20 };

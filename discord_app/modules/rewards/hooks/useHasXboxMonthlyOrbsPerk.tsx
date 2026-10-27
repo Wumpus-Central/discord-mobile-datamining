@@ -1,17 +1,17 @@
-// === Module 15040: useHasXboxMonthlyOrbsPerk ===
+// === Module 15076: useHasXboxMonthlyOrbsPerk ===
 
-// Module 15040 (useHasXboxMonthlyOrbsPerk)
+// Module 15076 (useHasXboxMonthlyOrbsPerk)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import PerksStateUtils from "PerksStateUtils" /* 1398 */;
-import user from "user" /* 1400 */;
-import PremiumUtils from "PremiumUtils" /* 2053 */;
-import UserStore from "UserStore" /* 1392 */;
+import PerksStateUtils from "PerksStateUtils" /* 1395 */;
+import user from "user" /* 1397 */;
+import PremiumUtils from "PremiumUtils" /* 2050 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const PremiumUtilsDefault = PremiumUtils;
 
 require = fn;
-const PremiumTypes = fn(1394).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 const ReactCompilerGating = fn(558);
 function hasCrepeMonthlyOrbsPerk(currentUser) {
   if (obj.canUseMonthlyOrbs(currentUser)) {

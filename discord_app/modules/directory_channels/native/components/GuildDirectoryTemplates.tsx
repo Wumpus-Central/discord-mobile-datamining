@@ -1,8 +1,8 @@
-// === Module 13210: GuildDirectoryTemplates ===
+// === Module 13224: GuildDirectoryTemplates ===
 
-// Module 13210 (GuildDirectoryTemplates)
-import native from "native" /* 1202 */;
-import GuildDirectoryTemplatesIcons from "GuildDirectoryTemplatesIcons" /* 13211 */;
+// Module 13224 (GuildDirectoryTemplates)
+import native from "native" /* 1199 */;
+import GuildDirectoryTemplatesIcons from "GuildDirectoryTemplatesIcons" /* 13225 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,12 +10,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-const GuildDirectoryConstants = fn(13192);
+const GuildDirectoryConstants = fn(13206);
 ({ getHubGuildTemplatesMap: metroRequire, HubGuildTemplateId: closure_7 } = GuildDirectoryConstants);
-const GuildDirectoryCreate = fn(13197).GuildDirectoryCreate;
+const GuildDirectoryCreate = fn(13211).GuildDirectoryCreate;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_11 = createStyles.createStyles({ label: { marginTop: 16, marginLeft: 16, marginBottom: 8 }, title: { marginBottom: 8, textAlign: "center" }, description: { textAlign: "center" }, header: { alignItems: "center", justifyContent: "center", padding: 16 }, templateGroup: { marginHorizontal: 16 } });
 let ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildTemplatesItem(guildTemplate) {
@@ -45,7 +45,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildTemplat
       }
     }
     const obj2 = { Icon: tmp3, message: guildTemplate.label, onPress: tmp4 };
-    const tmp8 = closure_9(onGuildTemplatePress(13219), obj2);
+    const tmp8 = closure_9(onGuildTemplatePress(13233), obj2);
     cResult[5] = guildTemplate.label;
     cResult[6] = tmp3;
     cResult[7] = tmp4;
@@ -63,7 +63,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildTemplat
 }) : (function GuildTemplatesItem(guildTemplate) {
   guildTemplate = guildTemplate.guildTemplate;
   const onGuildTemplatePress = guildTemplate.onGuildTemplatePress;
-  return closure_9(onGuildTemplatePress(13219), {
+  return closure_9(onGuildTemplatePress(13233), {
     Icon() {
       return React6(native.Icon, { source: GuildDirectoryTemplatesIcons.GUILD_TEMPLATE_ICONS[guildTemplate.id], disableColor: true, style: { width: 48, height: 48 } });
     },

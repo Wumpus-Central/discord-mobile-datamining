@@ -1,15 +1,15 @@
-// === Module 10514: GiftingBadgeProgressBanner ===
+// === Module 10517: GiftingBadgeProgressBanner ===
 
-// Module 10514 (GiftingBadgeProgressBanner)
+// Module 10517 (GiftingBadgeProgressBanner)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
-import _modDef2632 from "module_2632" /* 2632 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7253 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 9361 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10505 */;
+import util from "util" /* 1125 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import _modDef2631 from "module_2631" /* 2631 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7255 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 9360 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10508 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const PX_40 = nativeDefault.space.PX_40;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: null, iconContainer: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_LOW);
 obj2.container = { flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderStyle: "solid", borderColor: nativeDefault.colors.BORDER_MUTED };
@@ -109,7 +109,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
           }
           const intl = util.intl;
           const obj6 = { giftsRemaining: giftsToNextTier, nextTier: nextTierName };
-          const formatToPlainStringResult = intl.formatToPlainString(_modDef2632["0+xfd9"], obj6);
+          const formatToPlainStringResult = intl.formatToPlainString(_modDef2631["0+xfd9"], obj6);
           cResult[12] = giftsToNextTier;
           cResult[13] = nextTierName;
           cResult[14] = formatToPlainStringResult;
@@ -158,7 +158,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
   const items2 = [React4(View, obj3), ];
   const obj5 = { variant: "text-md/semibold", children: null };
   const intl = util.intl;
-  obj5.children = intl.formatToPlainString(_modDef2632["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
+  obj5.children = intl.formatToPlainString(_modDef2631["0+xfd9"], { giftsRemaining: giftsToNextTier, nextTier: nextTierName });
   items2[1] = React4(Text_Text.Text, obj5);
   obj2.children = items2;
   return hasOwnProperty(View, obj2);

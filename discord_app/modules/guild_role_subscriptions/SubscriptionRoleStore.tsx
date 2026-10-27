@@ -1,16 +1,16 @@
-// === Module 4926: SubscriptionRoleStore ===
+// === Module 4927: SubscriptionRoleStore ===
 
-// Module 4926 (SubscriptionRoleStore)
+// Module 4927 (SubscriptionRoleStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GuildRecord from "GuildRecord" /* 4841 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4878 */;
-import PremiumRoleUtils from "PremiumRoleUtils" /* 4893 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserStore from "UserStore" /* 1392 */;
-import Constants from "Constants" /* 1087 */;
+import GuildRecord from "GuildRecord" /* 4842 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 4879 */;
+import PremiumRoleUtils from "PremiumRoleUtils" /* 4894 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserStore from "UserStore" /* 1389 */;
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 function computeRolesForGuild(guildId) {

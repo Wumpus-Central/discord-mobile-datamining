@@ -1,8 +1,8 @@
-// === Module 1268: ImpressionStore ===
+// === Module 1265: ImpressionStore ===
 
-// Module 1268 (ImpressionStore)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
-import identity from "module_1269" /* 1269 */;
+// Module 1265 (ImpressionStore)
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import identity from "module_1266" /* 1266 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,7 +1,7 @@
-// === Module 17381: getDeviceCountry ===
+// === Module 17422: getDeviceCountry ===
 
-// Module 17381 (getDeviceCountry)
-import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1129 */;
+// Module 17422 (getDeviceCountry)
+import NativeDeviceLocaleModule from "NativeDeviceLocaleModule" /* 1126 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/auth/native/components/utils/getDeviceCountry.tsx");

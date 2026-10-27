@@ -1,9 +1,9 @@
-// === Module 13028: TraitPickerControls ===
+// === Module 13042: TraitPickerControls ===
 
-// Module 13028 (TraitPickerControls)
+// Module 13042 (TraitPickerControls)
 import c from "c" /* 576 */;
-import useTraitPickerSelection from "useTraitPickerSelection" /* 13029 */;
-import TraitPickerDefault from "TraitPicker" /* 13030 */;
+import useTraitPickerSelection from "useTraitPickerSelection" /* 13043 */;
+import TraitPickerDefault from "TraitPicker" /* 13044 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 
 require = fn;

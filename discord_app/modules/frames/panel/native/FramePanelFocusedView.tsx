@@ -1,19 +1,19 @@
-// === Module 18493: FramePanelFocusedView ===
+// === Module 18527: FramePanelFocusedView ===
 
-// Module 18493 (FramePanelFocusedView)
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10767 */;
-import FrameRenderTargetDefault from "FrameRenderTarget" /* 11779 */;
-import FrameStackLevel from "FrameStackLevel" /* 11783 */;
-import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 18473 */;
-import FramePanelStateContextDefault from "FramePanelStateContext" /* 18490 */;
-import FramePanelHeaderDefault from "FramePanelHeader" /* 18494 */;
+// Module 18527 (FramePanelFocusedView)
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10770 */;
+import FrameRenderTargetDefault from "FrameRenderTarget" /* 11780 */;
+import FrameStackLevel from "FrameStackLevel" /* 11784 */;
+import ActivityPanelFocusedView from "ActivityPanelFocusedView" /* 18507 */;
+import FramePanelStateContextDefault from "FramePanelStateContext" /* 18524 */;
+import FramePanelHeaderDefault from "FramePanelHeader" /* 18528 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6775 */;
+import FramesStore from "FramesStore" /* 6776 */;
 
 require = fn;
-const FramesConstants = fn(6776);
+const FramesConstants = fn(6777);
 ({ asLaunched: hasOwnProperty, FrameLayoutModes: metroRequire } = FramesConstants);
-const ActivityPanelModes = fn(5609).ActivityPanelModes;
+const ActivityPanelModes = fn(5610).ActivityPanelModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -49,7 +49,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp8 = cResult[2];
   }
   const tmpResult = stateFromStores(504);
-  const baseActivityPanelFocusedView = stateFromStores(18473).useBaseActivityPanelFocusedView(tmp8);
+  const baseActivityPanelFocusedView = stateFromStores(18507).useBaseActivityPanelFocusedView(tmp8);
   ({ portraitSafeAreasConfig, landscapeSafeAreasConfig } = baseActivityPanelFocusedView);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     const tmp14 = jsx(FramePanelHeaderDefault, {});
@@ -88,7 +88,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
       const obj3 = { transitionState, transitionCleanUp, updateActivityPanelModeToPIP: tmp15, hasActivity: tmp16, context: FramePanelStateContextDefault, header: tmp11, children: tmp17 };
-      const tmp26 = jsx(tmp(18473).BaseActivityPanelFocusedView, { transitionState, transitionCleanUp, updateActivityPanelModeToPIP: tmp15, hasActivity: tmp16, context: FramePanelStateContextDefault, header: tmp11, children: tmp17 });
+      const tmp26 = jsx(tmp(18507).BaseActivityPanelFocusedView, { transitionState, transitionCleanUp, updateActivityPanelModeToPIP: tmp15, hasActivity: tmp16, context: FramePanelStateContextDefault, header: tmp11, children: tmp17 });
       cResult[10] = tmp16;
       cResult[11] = tmp17;
       cResult[12] = transitionCleanUp;
@@ -100,17 +100,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   let tmp18 = null;
   if (null != stateFromStores) {
-    const obj4 = { frameId: stateFromStores, level: tmp(11783).FrameStackLevel.AboveAppContent, presentation: null };
+    const obj4 = { frameId: stateFromStores, level: tmp(11784).FrameStackLevel.AboveAppContent, presentation: null };
     const obj5 = { layoutMode: constants.FOCUSED, portraitSafeAreasConfig, landscapeSafeAreasConfig };
     obj4.presentation = obj5;
-    tmp18 = jsx(FrameRenderTargetDefault, { frameId: stateFromStores, level: tmp(11783).FrameStackLevel.AboveAppContent, presentation: null });
+    tmp18 = jsx(FrameRenderTargetDefault, { frameId: stateFromStores, level: tmp(11784).FrameStackLevel.AboveAppContent, presentation: null });
   }
   cResult[6] = landscapeSafeAreasConfig;
   cResult[7] = stateFromStores;
   cResult[8] = portraitSafeAreasConfig;
   cResult[9] = tmp18;
   tmp17 = tmp18;
-  const tmpResult2 = stateFromStores(18473);
+  const tmpResult2 = stateFromStores(18507);
 }) : (function FramePanelFocusedView(transitionState) {
   transitionState = transitionState.transitionState;
   const transitionCleanUp = transitionState.transitionCleanUp;

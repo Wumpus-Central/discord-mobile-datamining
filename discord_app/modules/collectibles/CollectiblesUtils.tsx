@@ -1,23 +1,23 @@
-// === Module 7662: CollectiblesUtils ===
+// === Module 7663: CollectiblesUtils ===
 
-// Module 7662 (CollectiblesUtils)
+// Module 7663 (CollectiblesUtils)
 import _mod12 from "module_12" /* 12 */;
-import Constants2 from "Constants" /* 1098 */;
-import util from "util" /* 1128 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import PerksStateUtils from "PerksStateUtils" /* 1398 */;
-import user from "user" /* 1400 */;
-import NameplateRecord from "NameplateRecord" /* 1993 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
-import PriceUtils from "PriceUtils" /* 7339 */;
-import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7655 */;
-import ProfileEffectRecord from "ProfileEffectRecord" /* 7656 */;
-import ProfileFrameRecord from "ProfileFrameRecord" /* 7657 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7661 */;
-import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7663 */;
-import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1089 */;
-import Constants from "Constants" /* 1087 */;
+import Constants2 from "Constants" /* 1095 */;
+import util from "util" /* 1125 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import PerksStateUtils from "PerksStateUtils" /* 1395 */;
+import user from "user" /* 1397 */;
+import NameplateRecord from "NameplateRecord" /* 1990 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
+import PriceUtils from "PriceUtils" /* 7341 */;
+import AvatarDecorationRecord from "AvatarDecorationRecord" /* 7656 */;
+import ProfileEffectRecord from "ProfileEffectRecord" /* 7657 */;
+import ProfileFrameRecord from "ProfileFrameRecord" /* 7658 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7662 */;
+import ShopAssetConfigRecord from "ShopAssetConfigRecord" /* 7664 */;
+import CollectiblesShopConstants from "CollectiblesShopConstants" /* 1086 */;
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -283,7 +283,7 @@ export const getBundleItemsPriceSum = function getBundleItemsPriceSum(bundledPro
         return acc + num;
       }, 0);
     } else {
-      tmp(1384);
+      tmp(1381);
     }
     DEFAULT = constants3.DEFAULT;
     obj = require("PlatformUtils");
@@ -392,7 +392,7 @@ export const getProductDiscount = function getProductDiscount(product, hasShopDi
           return acc + num;
         }, 0);
       } else {
-        tmp(1384);
+        tmp(1381);
       }
       DEFAULT = constants3.DEFAULT;
       obj = require("PlatformUtils");

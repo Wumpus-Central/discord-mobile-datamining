@@ -1,10 +1,10 @@
-// === Module 5035: isPerModeThemingActive ===
+// === Module 5036: isPerModeThemingActive ===
 
-// Module 5035 (isPerModeThemingActive)
-import ThemeStore from "ThemeStore" /* 1207 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
+// Module 5036 (isPerModeThemingActive)
+import ThemeStore from "ThemeStore" /* 1204 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
 
-const SystemThemeState = fn(1210).SystemThemeState;
+const SystemThemeState = fn(1207).SystemThemeState;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/isPerModeThemingActive.tsx");
 

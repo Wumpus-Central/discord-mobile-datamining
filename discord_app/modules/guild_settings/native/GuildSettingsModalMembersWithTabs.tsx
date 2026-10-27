@@ -1,21 +1,21 @@
-// === Module 18030: GuildSettingsModalMembersWithTabs ===
+// === Module 18064: GuildSettingsModalMembersWithTabs ===
 
-// Module 18030 (GuildSettingsModalMembersWithTabs)
+// Module 18064 (GuildSettingsModalMembersWithTabs)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5005 */;
-import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7365 */;
-import ContextMenu from "ContextMenu" /* 9761 */;
-import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 18031 */;
-import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 18032 */;
-import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 18034 */;
-import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 18039 */;
+import util from "util" /* 1125 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5006 */;
+import MemberSafetyPermissionsUtils from "MemberSafetyPermissionsUtils" /* 7367 */;
+import ContextMenu from "ContextMenu" /* 9763 */;
+import MemberSafetyPageTypes from "MemberSafetyPageTypes" /* 18065 */;
+import GuildSettingsModalMembersDefault from "GuildSettingsModalMembers" /* 18066 */;
+import showMembersManagementActionSheet from "showMembersManagementActionSheet" /* 18068 */;
+import GuildSettingsModalMemberApplicationsDefault from "GuildSettingsModalMemberApplications" /* 18073 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import UserStore from "UserStore" /* 1392 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -24,7 +24,7 @@ let closure_3 = ["ref"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, content: { flex: 1 }, tabContainer: { marginTop: 12, minHeight: 32 } };
 let closure_13 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -486,11 +486,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               items: membersManagementActions,
               children(ref) {
                 const obj = { source: closure_1_1(9032), accessibilityLabel: null, ref: null };
-                const intl = guildId(1128).intl;
-                obj.accessibilityLabel = intl.string(guildId(1128).t.ogxXGq);
+                const intl = guildId(1125).intl;
+                obj.accessibilityLabel = intl.string(guildId(1125).t.ogxXGq);
                 obj.ref = ref.ref;
                 const merged = Object.assign(navigation(ref, stateFromStores1));
-                return closure_1_11(guildId(7485).HeaderActionButton, obj);
+                return closure_1_11(guildId(7486).HeaderActionButton, obj);
               }
             });
           };
@@ -603,11 +603,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       children(ref) {
         const merged = Object.assign(ref, Object.assign({ ref: 0 }));
         const obj = { source: closure_1_1(9032), accessibilityLabel: null, ref: null };
-        const intl = guildId(1128).intl;
-        obj.accessibilityLabel = intl.string(guildId(1128).t.ogxXGq);
+        const intl = guildId(1125).intl;
+        obj.accessibilityLabel = intl.string(guildId(1125).t.ogxXGq);
         obj.ref = ref.ref;
         const merged1 = Object.assign(merged);
-        return closure_1_11(guildId(7485).HeaderActionButton, obj);
+        return closure_1_11(guildId(7486).HeaderActionButton, obj);
       }
     });
   }, items5);

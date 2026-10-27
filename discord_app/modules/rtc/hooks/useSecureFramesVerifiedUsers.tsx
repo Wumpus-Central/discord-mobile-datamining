@@ -1,6 +1,6 @@
-// === Module 17250: useSecureFramesVerifiedUsers ===
+// === Module 17291: useSecureFramesVerifiedUsers ===
 
-// Module 17250 (useSecureFramesVerifiedUsers)
+// Module 17291 (useSecureFramesVerifiedUsers)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import VerifiedKeyStore from "VerifiedKeyStore" /* 9180 */;

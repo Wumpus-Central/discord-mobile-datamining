@@ -1,18 +1,18 @@
-// === Module 7067: AuthHeader ===
+// === Module 7069: AuthHeader ===
 
-// Module 7067 (AuthHeader)
+// Module 7069 (AuthHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
+import native from "native" /* 1199 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6651 */;
+import TextStyles from "TextStyles" /* 6652 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { header: null };
 const obj3 = {};
-const merged = Object.assign(TextStyles(fn(1087).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+const merged = Object.assign(TextStyles(fn(1084).Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
 obj3.textAlign = "center";
 obj2.header = obj3;
 let closure_3 = createStyles.createStyles(obj2);

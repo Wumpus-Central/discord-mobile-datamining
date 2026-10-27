@@ -1,15 +1,15 @@
-// === Module 10796: conjurePublishConnection ===
+// === Module 10799: conjurePublishConnection ===
 
-// Module 10796 (conjurePublishConnection)
+// Module 10799 (conjurePublishConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10719 */;
-import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10786 */;
-import requestConjureDevicePermissionsDefault from "requestConjureDevicePermissions" /* 10797 */;
-import conjureDevicePermissions from "conjureDevicePermissions" /* 10799 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10722 */;
+import ConjurePublishActionCreators from "ConjurePublishActionCreators" /* 10789 */;
+import requestConjureDevicePermissionsDefault from "requestConjureDevicePermissions" /* 10800 */;
+import conjureDevicePermissions from "conjureDevicePermissions" /* 10802 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationStore from "ApplicationStore" /* 2045 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10714 */;
+import ApplicationStore from "ApplicationStore" /* 2042 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10717 */;
 
 require = fn;
 function rejectPendingPatchNotesDraft(projectId, arg1) {
@@ -36,7 +36,7 @@ function rejectPendingPublishOptions(arg0, arg1) {
 }
 const map = new Map();
 const map1 = new Map();
-let set = new Set(fn(10805).CONJURE_PUBLISH_PROGRESS_STAGES);
+let set = new Set(fn(10808).CONJURE_PUBLISH_PROGRESS_STAGES);
 const set1 = new Set(["activity", "automod", "widget", "bot"]);
 const map2 = new Map();
 const size = fn(2);

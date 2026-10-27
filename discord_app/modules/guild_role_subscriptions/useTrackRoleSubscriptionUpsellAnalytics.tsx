@@ -1,13 +1,13 @@
-// === Module 17997: useTrackRoleSubscriptionUpsellAnalytics ===
+// === Module 18031: useTrackRoleSubscriptionUpsellAnalytics ===
 
-// Module 17997 (useTrackRoleSubscriptionUpsellAnalytics)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
+// Module 18031 (useTrackRoleSubscriptionUpsellAnalytics)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5712 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4896 */;
+import GuildRoleSubscriptionsStore from "GuildRoleSubscriptionsStore" /* 4897 */;
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/useTrackRoleSubscriptionUpsellAnalytics.tsx");

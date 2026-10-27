@@ -1,20 +1,20 @@
-// === Module 18091: useOnPressSearchItem ===
+// === Module 18125: useOnPressSearchItem ===
 
-// Module 18091 (useOnPressSearchItem)
-import util from "util" /* 1128 */;
-import URLUtilsDefault from "URLUtils" /* 1386 */;
-import LinkingDefault from "Linking" /* 5660 */;
-import ToastUtils from "ToastUtils" /* 5662 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
+// Module 18125 (useOnPressSearchItem)
+import util from "util" /* 1125 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
+import LinkingDefault from "Linking" /* 5661 */;
+import ToastUtils from "ToastUtils" /* 5663 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7413 */;
 import MaskedLinkUtils from "MaskedLinkUtils" /* 8860 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13225 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13246 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13250 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13239 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13260 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13264 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7701 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import SearchQueryStore from "SearchQueryStore" /* 13239 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7702 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import SearchQueryStore from "SearchQueryStore" /* 13253 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
@@ -89,13 +89,13 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(9714);
+const SearchConstants = fn(9716);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(18092).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(9713).SearchFilterAddLocations;
-const Constants = fn(1087);
+const SearchNavigatorScreens = fn(18126).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(9715).SearchFilterAddLocations;
+const Constants = fn(1084);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
-const StaticChannelRoute = fn(4830).StaticChannelRoute;
+const StaticChannelRoute = fn(4831).StaticChannelRoute;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressSearchLink(arg0) {
@@ -496,7 +496,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
   const cResult = searchContext(576).c(3);
   searchContext = searchContext.searchContext;
   const obj = searchContext(576);
-  const navigation = searchContext(1505).useNavigation();
+  const navigation = searchContext(1502).useNavigation();
   if (cResult[0] === navigation) {
     if (cResult[1] === searchContext) {
       let tmp3 = cResult[2];
@@ -524,7 +524,7 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
   tmp3 = fn;
 }) : (function useOnPressGroupDMItem(searchContext) {
   searchContext = searchContext.searchContext;
-  const navigation = searchContext(1505).useNavigation();
+  const navigation = searchContext(1502).useNavigation();
   const items = [navigation, searchContext];
   return noop.useCallback((channelId) => {
     closure_0 = searchContext;
@@ -547,7 +547,7 @@ const tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
   const cResult = searchContext(576).c(3);
   searchContext = searchContext.searchContext;
   const obj = searchContext(576);
-  const navigation = searchContext(1505).useNavigation();
+  const navigation = searchContext(1502).useNavigation();
   if (cResult[0] === navigation) {
     if (cResult[1] === searchContext) {
       let tmp3 = cResult[2];
@@ -576,7 +576,7 @@ const tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPress
   tmp3 = fn;
 }) : (function useOnPressDMItem(searchContext) {
   searchContext = searchContext.searchContext;
-  const navigation = searchContext(1505).useNavigation();
+  const navigation = searchContext(1502).useNavigation();
   const items = [navigation, searchContext];
   return noop.useCallback((userId, arg1) => {
     closure_0 = searchContext;
@@ -919,8 +919,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
       searchContext = text;
       const type = searchContext.type;
       if (constants4.DMS === type) {
-        const result = searchContext(13225).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-        let obj2 = searchContext(13225);
+        const result = searchContext(13239).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+        let obj2 = searchContext(13239);
       }
       SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
         if (null != obj) {
@@ -952,8 +952,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(13225).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-      let obj2 = searchContext(13225);
+      const result = searchContext(13239).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+      let obj2 = searchContext(13239);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

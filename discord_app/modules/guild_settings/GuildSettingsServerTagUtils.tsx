@@ -3,11 +3,11 @@
 // Module 9008 (GuildSettingsServerTagUtils)
 import GuildTagUtils from "GuildTagUtils" /* 8654 */;
 import MobileServerTagExperimentDefault from "MobileServerTagExperiment" /* 9009 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 require = fn;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 const GuildSettingsServerTag = "GuildSettingsServerTag";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsServerTagUtils.tsx");

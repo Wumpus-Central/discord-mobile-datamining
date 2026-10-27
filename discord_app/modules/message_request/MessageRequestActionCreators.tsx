@@ -1,9 +1,9 @@
-// === Module 10868: MessageRequestActionCreators ===
+// === Module 10871: MessageRequestActionCreators ===
 
-// Module 10868 (MessageRequestActionCreators)
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6668 */;
-import MessageRequestTypes from "MessageRequestTypes" /* 10869 */;
+// Module 10871 (MessageRequestActionCreators)
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import AuthenticationActionCreatorsDefault from "AuthenticationActionCreators" /* 6669 */;
+import MessageRequestTypes from "MessageRequestTypes" /* 10872 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -64,7 +64,7 @@ let closure_5 = async function _acceptMessageRequest(arg0) {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/message_request/MessageRequestActionCreators.tsx");
 

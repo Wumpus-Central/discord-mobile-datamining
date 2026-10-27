@@ -1,9 +1,9 @@
-// === Module 12087: UsernameText ===
+// === Module 12088: UsernameText ===
 
-// Module 12087 (UsernameText)
+// Module 12088 (UsernameText)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import NicknameUtils from "NicknameUtils" /* 5989 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import NicknameUtils from "NicknameUtils" /* 5990 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

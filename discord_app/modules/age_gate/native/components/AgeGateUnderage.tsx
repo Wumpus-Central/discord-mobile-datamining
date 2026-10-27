@@ -1,17 +1,17 @@
-// === Module 17404: AgeGateUnderage ===
+// === Module 17443: AgeGateUnderage ===
 
-// Module 17404 (AgeGateUnderage)
+// Module 17443 (AgeGateUnderage)
 import nativeDefault from "native" /* 587 */;
-import NavigatorHeader from "NavigatorHeader" /* 6924 */;
-import useWideAuthViewDefault from "useWideAuthView" /* 7037 */;
+import NavigatorHeader from "NavigatorHeader" /* 6926 */;
+import useWideAuthViewDefault from "useWideAuthView" /* 7039 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const HelpdeskArticles = fn(1087).HelpdeskArticles;
+const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 0;
   if (arg0) {
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
   const tmp8 = useWideAuthViewDefault();
   const tmp9 = closure_9(tmp8);
   let obj = onClose(576);
-  const navigation = onClose(1505).useNavigation();
+  const navigation = onClose(1502).useNavigation();
   if (cResult[0] === (undefined !== disableSwipe && disableSwipe)) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === navigation) {
@@ -53,11 +53,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
         } else {
           tmp15 = cResult[7];
         }
-        tmp(6930).useNavigatorBackPressHandler(tmp15);
+        tmp(6932).useNavigatorBackPressHandler(tmp15);
         if (cResult[8] !== tmp4) {
-          const intl = tmp(1128).intl;
+          const intl = tmp(1125).intl;
           const string = intl.string;
-          let t = tmp(1128).t;
+          let t = tmp(1125).t;
           if (tmp4) {
             t = t["NR/zrG"];
             let stringResult = string(t);
@@ -70,7 +70,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
           if (cResult[10] !== tmp8) {
             let tmp22 = null;
             if (!tmp8) {
-              tmp22 = closure_6(tmp7(7068), {});
+              tmp22 = closure_6(tmp7(7070), {});
             }
             cResult[10] = tmp8;
             cResult[11] = tmp22;
@@ -80,8 +80,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp28 = closure_6(tmp7(7071), {});
-            const tmp29 = closure_6(tmp(7902).ShieldSpotIllustration, {});
+            const tmp28 = closure_6(tmp7(7073), {});
+            const tmp29 = closure_6(tmp(7903).ShieldSpotIllustration, {});
             cResult[12] = tmp29;
             cResult[13] = tmp28;
             let tmp26 = tmp28;
@@ -136,14 +136,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
                   if (tmp4) {
                     const obj3 = { children: null };
                     const obj4 = { style: tmp9.body, variant: "text-md/medium", color: "interactive-text-default", children: null };
-                    const intl4 = tmp(1128).intl;
-                    obj4.children = intl4.format(tmp(1128).t["3axQdB"], { days: 30 });
-                    const items1 = [closure_6(tmp(5234).Text, obj4), ];
+                    const intl4 = tmp(1125).intl;
+                    obj4.children = intl4.format(tmp(1125).t["3axQdB"], { days: 30 });
+                    const items1 = [closure_6(tmp(5235).Text, obj4), ];
                     const obj5 = { style: tmp9.buttonWrapper, children: null };
                     const obj6 = { onPress: onClose, text: null, grow: true };
-                    const intl5 = tmp(1128).intl;
-                    obj6.text = intl5.string(tmp(1128).t.JhDw5o);
-                    obj5.children = closure_6(tmp(5244).Button, obj6);
+                    const intl5 = tmp(1125).intl;
+                    obj6.text = intl5.string(tmp(1125).t.JhDw5o);
+                    obj5.children = closure_6(tmp(5245).Button, obj6);
                     items1[1] = closure_6(View, obj5);
                     obj3.children = items1;
                     tmp43 = closure_8(closure_7, obj3);
@@ -156,38 +156,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
                   tmp42 = tmp43;
                 }
                 const obj7 = { style: tmp9.body, variant: "text-md/medium", color: "interactive-text-default", children: cResult[19] };
-                const tmp41 = closure_6(tmp(5234).Text, obj7);
+                const tmp41 = closure_6(tmp(5235).Text, obj7);
                 cResult[20] = tmp9.body;
                 cResult[21] = cResult[19];
                 cResult[22] = tmp41;
                 tmp39 = tmp41;
               }
             }
-            const intl2 = tmp(1128).intl;
+            const intl2 = tmp(1125).intl;
             if (tmp5) {
-              let stringResult1 = intl2.string(tmp(1128).t.GDQgHL);
+              let stringResult1 = intl2.string(tmp(1125).t.GDQgHL);
             } else {
               let stringResult2 = underageMessage;
               if (underageMessage == null) {
-                const intl3 = tmp(1128).intl;
-                stringResult2 = intl3.string(tmp(1128).t.WqEH4D);
+                const intl3 = tmp(1125).intl;
+                stringResult2 = intl3.string(tmp(1125).t.WqEH4D);
               }
-              const obj8 = { underageMessage: stringResult2, helpURL: tmp7(2067).getArticleURL(HelpdeskArticles.AGE_GATE) };
-              stringResult1 = intl2.format(tmp(1128).t.b0QzXe, obj8);
-              const tmp7Result = tmp7(2067);
+              const obj8 = { underageMessage: stringResult2, helpURL: tmp7(2064).getArticleURL(HelpdeskArticles.AGE_GATE) };
+              stringResult1 = intl2.format(tmp(1125).t.b0QzXe, obj8);
+              const tmp7Result = tmp7(2064);
             }
             cResult[17] = tmp5;
             cResult[18] = underageMessage;
             cResult[19] = stringResult1;
           }
           const obj9 = { style: tmp9.header, children: cResult[9] };
-          const tmp32 = closure_6(tmp7(7067), obj9);
+          const tmp32 = closure_6(tmp7(7069), obj9);
           cResult[14] = cResult[9];
           cResult[15] = tmp9.header;
           cResult[16] = tmp32;
           tmp30 = tmp32;
         }
-        const tmpResult2 = tmp(6930);
+        const tmpResult2 = tmp(6932);
       }
     }
   }
@@ -209,7 +209,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AgeGateU
   cResult[5] = items2;
   tmp12 = items2;
   tmp11 = fn;
-  const tmpResult = onClose(1505);
+  const tmpResult = onClose(1502);
 }) : (function AgeGateUnderage(onClose) {
   onClose = onClose.onClose;
   ({ underageMessage, existingUser } = onClose);

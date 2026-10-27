@@ -1,21 +1,21 @@
-// === Module 19121: GuildSettingsRolesUtils ===
+// === Module 19159: GuildSettingsRolesUtils ===
 
-// Module 19121 (GuildSettingsRolesUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import UserUtilsDefault from "UserUtils" /* 5025 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6827 */;
-import GuildUtilsDefault from "GuildUtils" /* 6829 */;
-import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7226 */;
+// Module 19159 (GuildSettingsRolesUtils)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import UserUtilsDefault from "UserUtils" /* 5026 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6829 */;
+import GuildUtilsDefault from "GuildUtils" /* 6831 */;
+import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7228 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import UserStore from "UserStore" /* 1392 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(19112).GuildSettingsRoleEditSections;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const constants = fn(19150).GuildSettingsRoleEditSections;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildMembers(arg0, arg1) {
   _require = arg0;

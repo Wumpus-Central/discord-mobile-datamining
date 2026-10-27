@@ -1,17 +1,17 @@
-// === Module 7382: ForumTagHooks ===
+// === Module 7384: ForumTagHooks ===
 
-// Module 7382 (ForumTagHooks)
+// Module 7384 (ForumTagHooks)
 import c from "c" /* 576 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import ReportToModUtils from "ReportToModUtils" /* 7383 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import ReportToModUtils from "ReportToModUtils" /* 7385 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAvailableTags(parent_id) {
   const cResult = parent_id(576).c(4);
@@ -357,8 +357,8 @@ export const useVisibleAppliedForumTags = ReactCompilerGating.isReactCompilerEna
   }
   let result1 = found;
   if (result) {
-    result1 = tmp(7383).sortedModeratorReportTags(found);
-    const tmpResult2 = tmp(7383);
+    result1 = tmp(7385).sortedModeratorReportTags(found);
+    const tmpResult2 = tmp(7385);
   }
   cResult[5] = arr;
   cResult[6] = parent_id;

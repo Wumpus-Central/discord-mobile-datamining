@@ -1,31 +1,31 @@
-// === Module 18100: DMRow ===
+// === Module 18134: DMRow ===
 
-// Module 18100 (DMRow)
+// Module 18134 (DMRow)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import UserUtilsDefault from "UserUtils" /* 5025 */;
+import native from "native" /* 1199 */;
+import UserUtilsDefault from "UserUtils" /* 5026 */;
 import _modDef8991 from "module_8991" /* 8991 */;
 import BotTagDefault from "BotTag" /* 9134 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10634 */;
-import _modDef14812 from "module_14812" /* 14812 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10637 */;
+import _modDef14848 from "module_14848" /* 14848 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
 
-const UserUtils = Text(5025);
-const Text_Text = Text(5234);
+const UserUtils = Text(5026);
+const Text_Text = Text(5235);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: metroRequire, ActivityIndicator: closure_7 } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ StatusTypes: closure_11, RelationshipTypes: closure_12 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { activityStatusIcon: { width: 14, height: 14 }, activityStatusText: { color: nativeDefault.colors.TEXT_SUBTLE, fontSize: 14, lineHeight: 18, fontWeight: "400" }, tag: { marginLeft: 4 }, title: { flexDirection: "row" } };
 let closure_15 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -220,7 +220,7 @@ export default noop.memo(function DMRow(user) {
       let tmp4Result3 = null != premiumSince;
       if (tmp4Result3) {
         const obj6 = { style: title.tag, children: null };
-        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef14812, disableColor: true };
+        const obj7 = { size: native.Icon.Sizes.REFRESH_SMALL_16, source: _modDef14848, disableColor: true };
         obj6.children = map1(native.Icon, obj7);
         tmp4Result3 = map1(timestampProducer, obj6);
       }

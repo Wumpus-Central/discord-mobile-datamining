@@ -2,10 +2,10 @@
 
 // Module 8750 (openUserProfileAvatarMediaViewer)
 import openMediaModal from "openMediaModal" /* 8751 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 
 require = fn;
-const AVATAR_MAX_SIZE = fn(1087).AVATAR_MAX_SIZE;
+const AVATAR_MAX_SIZE = fn(1084).AVATAR_MAX_SIZE;
 let size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/openUserProfileAvatarMediaViewer.tsx");
 

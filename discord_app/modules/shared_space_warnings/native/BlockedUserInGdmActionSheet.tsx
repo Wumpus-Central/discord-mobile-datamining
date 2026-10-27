@@ -1,21 +1,21 @@
-// === Module 18958: BlockedUserInGdmActionSheet ===
+// === Module 18996: BlockedUserInGdmActionSheet ===
 
-// Module 18958 (BlockedUserInGdmActionSheet)
+// Module 18996 (BlockedUserInGdmActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5686 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5989 */;
-import TableRow from "TableRow" /* 6903 */;
-import CircleCheckIcon from "CircleCheckIcon" /* 7267 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
-import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 18959 */;
+import util from "util" /* 1125 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5687 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5990 */;
+import TableRow from "TableRow" /* 6905 */;
+import CircleCheckIcon from "CircleCheckIcon" /* 7269 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7413 */;
+import SharedSpacesWarningActionCreators from "SharedSpacesWarningActionCreators" /* 18997 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import UserStore from "UserStore" /* 1392 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function getUserCalloutRowText(arg0) {
@@ -136,12 +136,12 @@ function getBlockedUserInGDMTableRows(arg0) {
   tmp3 = ignoredUserIds.length > 0;
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(15048);
+const SharedSpaceWarningConstants = fn(15084);
 ({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" }, headerImage: { alignSelf: "center", width: 73, height: 86 }, title: { textAlign: "center", alignSelf: "center" }, description: { textAlign: "center", alignSelf: "center" }, tableGroup: null, buttons: null, icon: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" };
 obj2.tableGroup = { paddingVertical: nativeDefault.space.PX_24 };
@@ -178,7 +178,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
   const obj = userIds(576);
   const stateFromStoresArray = userIds(504).useStateFromStoresArray(first, tmp5, tmp6);
   if (cResult[4] !== stateFromStoresArray) {
-    const found = stateFromStoresArray.filter(tmp(1388).isNotNullish);
+    const found = stateFromStoresArray.filter(tmp(1385).isNotNullish);
     cResult[4] = stateFromStoresArray;
     cResult[5] = found;
     let tmp7 = found;
@@ -203,11 +203,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
     }
     if (null != tmp12) {
       const obj2 = { user: tmp7[0], guildId, size: null, "aria-hidden": true };
-      REFRESH_MEDIUM_32 = tmp(1202).AvatarSizes.REFRESH_MEDIUM_32;
+      REFRESH_MEDIUM_32 = tmp(1199).AvatarSizes.REFRESH_MEDIUM_32;
       obj2.size = REFRESH_MEDIUM_32;
-      let tmp17 = closure_10(tmp(1202).Avatar, obj2);
+      let tmp17 = closure_10(tmp(1199).Avatar, obj2);
     } else {
-      tmp17 = closure_10(tmp(12188).UserIcon, {});
+      tmp17 = closure_10(tmp(12176).UserIcon, {});
     }
     cResult[8] = guildId;
     cResult[9] = tmp12;
@@ -215,8 +215,8 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
     cResult[11] = tmp17;
   } else {
     if (cResult[12] !== tmp7) {
-      const obj3 = { users: tmp7, size: tmp(1202).AvatarSizes.REFRESH_MEDIUM_32 };
-      const tmp11 = closure_10(tmp(10688).FacepileGroupDMAvatar, obj3);
+      const obj3 = { users: tmp7, size: tmp(1199).AvatarSizes.REFRESH_MEDIUM_32 };
+      const tmp11 = closure_10(tmp(10691).FacepileGroupDMAvatar, obj3);
       cResult[12] = tmp7;
       cResult[13] = tmp11;
       let tmp9 = tmp11;
@@ -232,22 +232,22 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserCa
   const items = [UserStore];
   const items1 = [userIds];
   const stateFromStoresArray = userIds(504).useStateFromStoresArray(items, () => userIds.map((item) => user.getUser(item)), items1);
-  let found = stateFromStoresArray.filter(userIds(1388).isNotNullish);
+  let found = stateFromStoresArray.filter(userIds(1385).isNotNullish);
   if (1 === userIds.length) {
     if (null != UserStore.getUser(userIds[0])) {
       const obj3 = { user: null, guildId: null, size: null, "aria-hidden": true };
       found = found[0];
       obj3.user = found;
       obj3.guildId = userIds.guildId;
-      REFRESH_MEDIUM_32 = tmp(1202).AvatarSizes.REFRESH_MEDIUM_32;
+      REFRESH_MEDIUM_32 = tmp(1199).AvatarSizes.REFRESH_MEDIUM_32;
       obj3.size = REFRESH_MEDIUM_32;
-      let tmp6 = closure_10(tmp(1202).Avatar, obj3);
+      let tmp6 = closure_10(tmp(1199).Avatar, obj3);
     } else {
-      tmp6 = closure_10(tmp(12188).UserIcon, {});
+      tmp6 = closure_10(tmp(12176).UserIcon, {});
     }
   } else {
-    const obj4 = { users: found, size: tmp(1202).AvatarSizes.REFRESH_MEDIUM_32 };
-    return closure_10(tmp(10688).FacepileGroupDMAvatar, obj4);
+    const obj4 = { users: found, size: tmp(1199).AvatarSizes.REFRESH_MEDIUM_32 };
+    return closure_10(tmp(10691).FacepileGroupDMAvatar, obj4);
   }
   const obj = userIds(504);
 });

@@ -1,10 +1,10 @@
-// === Module 17292: InGameDMsSetting ===
+// === Module 17333: InGameDMsSetting ===
 
-// Module 17292 (InGameDMsSetting)
+// Module 17333 (InGameDMsSetting)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import UserSettings from "UserSettings" /* 4799 */;
+import util from "util" /* 1125 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
+import UserSettings from "UserSettings" /* 4800 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -25,7 +25,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInGameD
   }
   return SLAYER_SDK_RECEIVE_IN_GAME_DMS_ALL;
 });
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInGameDMsSettingOptions() {
   const cResult = c.c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -80,7 +80,7 @@ const radio = SettingBuilders.createRadio({
     const intl = util.intl;
     return intl.string(util.t["ms+Tme"]);
   },
-  parent: fn(8332).MobileUserSettings.CONNECTED_GAMES,
+  parent: fn(8331).MobileUserSettings.CONNECTED_GAMES,
   useOptions: ReactCompilerGating.isReactCompilerEnabled() ? (function useInGameDMsSettingOptions() {
     const cResult = c.c(3);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

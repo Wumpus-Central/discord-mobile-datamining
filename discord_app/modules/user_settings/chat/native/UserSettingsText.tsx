@@ -1,35 +1,35 @@
-// === Module 16819: UserSettingsText ===
+// === Module 16861: UserSettingsText ===
 
-// Module 16819 (UserSettingsText)
+// Module 16861 (UserSettingsText)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UserSettings from "UserSettings" /* 4799 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5868 */;
-import TableRadioRow from "TableRadioRow" /* 6984 */;
-import TableRadioGroup from "TableRadioGroup" /* 6985 */;
-import TableRowGroup from "TableRowGroup" /* 6987 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7087 */;
-import TableSwitchRow from "TableSwitchRow" /* 7295 */;
-import _modDef10167 from "module_10167" /* 10167 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import UserSettings from "UserSettings" /* 4800 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import UserSettingsActionCreatorsDefault from "UserSettingsActionCreators" /* 5869 */;
+import TableRadioRow from "TableRadioRow" /* 6986 */;
+import TableRadioGroup from "TableRadioGroup" /* 6987 */;
+import TableRowGroup from "TableRowGroup" /* 6989 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7089 */;
+import TableSwitchRow from "TableSwitchRow" /* 7297 */;
+import _modDef10169 from "module_10169" /* 10169 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
-import SubscriptionStore from "SubscriptionStore" /* 2058 */;
-import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1208 */;
-import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1209 */;
+import UserStore from "UserStore" /* 1389 */;
+import SubscriptionStore from "SubscriptionStore" /* 2055 */;
+import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1205 */;
+import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const VideoQualitySettings = fn(1209).VideoQualitySettings;
-const Constants = fn(1087);
+const VideoQualitySettings = fn(1206).VideoQualitySettings;
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_9, AnalyticsSections: c10, UserSettingsSections: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { flex: { flex: 1 }, nitroUpsell: { flexDirection: "row", alignItems: "center" }, nitroIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.unsafe_rawColors.PRIMARY_400 };
 obj2.nitroIcon = size;
@@ -453,7 +453,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                       }
                       function renderNitroUpsellText() {
                         const obj = { style: closure_0.nitroUpsell, children: null };
-                        const items = [__initData(native.Icon, { source: _modDef10167, size: native.Icon.Sizes.SMALL, style: closure_0.nitroIcon }), ];
+                        const items = [__initData(native.Icon, { source: _modDef10169, size: native.Icon.Sizes.SMALL, style: closure_0.nitroIcon }), ];
                         const obj3 = { variant: "text-sm/medium", color: "text-muted", style: { marginLeft: 4 }, children: null };
                         const intl = util.intl;
                         obj3.children = intl.format(util.t.uW1zul, {

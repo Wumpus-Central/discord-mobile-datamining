@@ -1,8 +1,8 @@
-// === Module 8455: ApplicationCommandUserAppUtils ===
+// === Module 8454: ApplicationCommandUserAppUtils ===
 
-// Module 8455 (ApplicationCommandUserAppUtils)
-import util from "util" /* 1128 */;
-import EphemeralMessageReason from "EphemeralMessageReason" /* 8456 */;
+// Module 8454 (ApplicationCommandUserAppUtils)
+import util from "util" /* 1125 */;
+import EphemeralMessageReason from "EphemeralMessageReason" /* 8455 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/application_commands/ApplicationCommandUserAppUtils.tsx");

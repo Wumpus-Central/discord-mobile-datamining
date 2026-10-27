@@ -1,31 +1,34 @@
-// === Module 18441: FrameView ===
+// === Module 18475: FrameView ===
 
-// Module 18441 (FrameView)
+// Module 18475 (FrameView)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1128 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
-import leaveFrame from "leaveFrame" /* 10766 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 18442 */;
+import util from "util" /* 1125 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5910 */;
+import leaveFrame from "leaveFrame" /* 10769 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 11782 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 18476 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
 
 require = fn;
-const FrameLayoutModes = fn(6776).FrameLayoutModes;
+const FrameLayoutModes = fn(6777).FrameLayoutModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/frames/native/FrameView.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameView(frame) {
-  const cResult = frame(576).c(44);
+  const cResult = frame(layoutMode[6]).c(48);
   frame = frame.frame;
-  ({ iframeId, onActivityCrash, presentation } = frame);
-  const layoutMode = presentation.layoutMode;
+  const iframeId = frame.iframeId;
+  ({ onActivityCrash, presentation } = frame);
+  layoutMode = presentation.layoutMode;
   ({ portraitSafeAreasConfig, landscapeSafeAreasConfig } = presentation);
-  let obj = frame(576);
+  let obj = frame(layoutMode[6]);
   const tmp = frame;
-  const data = frame(6809).useApplication(frame.applicationId).data;
+  const tmp2 = layoutMode;
+  const data = frame(layoutMode[7]).useApplication(frame.applicationId).data;
   const orientationLock = frame.data.orientationLock;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConjureProjectStore];
@@ -44,8 +47,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
   } else {
     tmp6 = cResult[2];
   }
-  const obj2 = frame(6809);
-  let stateFromStores = tmp(504).useStateFromStores(first, tmp6);
+  const obj2 = frame(layoutMode[7]);
+  let stateFromStores = tmp(tmp2[8]).useStateFromStores(first, tmp6);
   if (!stateFromStores) {
     let conjureProjectId;
     if (data != null) {
@@ -53,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
     }
     stateFromStores = null != conjureProjectId;
   }
-  const tmpResult = tmp(504);
+  const tmpResult = tmp(tmp2[8]);
   const first1 = _slicedToArray(noop.useState(true), 2)[0];
   if (cResult[3] === frame.applicationId) {
     if (cResult[4] === frame.id) {
@@ -63,7 +66,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
       }
       const layoutEffect = noop.useLayoutEffect(tmp12, tmp13);
       if (cResult[8] !== frame.id) {
-        class E {
+        class C {
           constructor() {
             obj = closure_0(closure_2[10]);
             leaveFrameResult = obj.leaveFrame(frame.id);
@@ -71,9 +74,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
           }
         }
         cResult[8] = frame.id;
-        cResult[9] = E;
+        cResult[9] = C;
       } else {
-        class E {
+        class C {
           constructor() {
             obj = closure_0(closure_2[10]);
             leaveFrameResult = obj.leaveFrame(frame.id);
@@ -82,47 +85,51 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
         }
       }
       if (cResult[10] !== frame.id) {
-        class R {
-          constructor(arg0, arg1) {
-            obj = closure_0(closure_2[11]);
-            return obj.setOrientationLockState(frame.id, frame, arg1);
+        class C {
+          constructor() {
+            obj = closure_0(closure_2[10]);
+            leaveFrameResult = obj.leaveFrame(frame.id);
+            return;
           }
         }
         cResult[10] = frame.id;
-        cResult[11] = R;
+        cResult[11] = tmp17;
       } else {
-        class R {
-          constructor(arg0, arg1) {
-            obj = closure_0(closure_2[11]);
-            return obj.setOrientationLockState(frame.id, frame, arg1);
+        class C {
+          constructor() {
+            obj = closure_0(closure_2[10]);
+            leaveFrameResult = obj.leaveFrame(frame.id);
+            return;
           }
         }
       }
       if (!first1) {
-        class R {
-          constructor(arg0, arg1) {
-            obj = closure_0(closure_2[11]);
-            return obj.setOrientationLockState(frame.id, frame, arg1);
+        class C {
+          constructor() {
+            obj = closure_0(closure_2[10]);
+            leaveFrameResult = obj.leaveFrame(frame.id);
+            return;
           }
         }
       }
       if (cResult[12] === data) {
-        class R {
-          constructor(arg0, arg1) {
-            obj = closure_0(closure_2[11]);
-            return obj.setOrientationLockState(frame.id, frame, arg1);
+        class C {
+          constructor() {
+            obj = closure_0(closure_2[10]);
+            leaveFrameResult = obj.leaveFrame(frame.id);
+            return;
           }
         }
       }
-      let obj3 = { orientationLockState: orientationLock, showLoadingIndicator: first1, setShowLoadingStateForLockingOrientation: tmp11, application: data, setOrientationLockState: R };
+      let obj3 = { orientationLockState: orientationLock, showLoadingIndicator: first1, setShowLoadingStateForLockingOrientation: tmp11, application: data, setOrientationLockState: tmp17 };
       cResult[12] = data;
       cResult[13] = orientationLock;
-      cResult[14] = R;
+      cResult[14] = tmp17;
       cResult[15] = first1;
       cResult[16] = obj3;
     }
   }
-  class F {
+  class E {
     constructor() {
       obj = closure_1(closure_2[9]);
       obj1 = { type: "FRAME_UPDATE_LAYOUT_MODE", layoutMode, applicationId: frame.applicationId, frameId: frame.id };
@@ -135,22 +142,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
   cResult[3] = frame.applicationId;
   cResult[4] = frame.id;
   cResult[5] = layoutMode;
-  cResult[6] = F;
+  cResult[6] = E;
   cResult[7] = items1;
   tmp13 = items1;
-  tmp12 = F;
+  tmp12 = E;
   const tmp9 = _slicedToArray(noop.useState(true), 2);
 }) : (function FrameView(frame) {
   frame = frame.frame;
+  const iframeId = frame.iframeId;
   const presentation = frame.presentation;
   const layoutMode = presentation.layoutMode;
   let landscapeSafeAreasConfig = presentation.portraitSafeAreasConfig;
-  ({ iframeId, onActivityCrash } = frame);
-  const data = frame(6809).useApplication(frame.applicationId).data;
+  const data = frame(layoutMode[7]).useApplication(frame.applicationId).data;
   const orientationLock = frame.data.orientationLock;
-  let obj = frame(6809);
+  let obj = frame(layoutMode[7]);
   const items = [ConjureProjectStore];
-  let stateFromStores = frame(504).useStateFromStores(items, () => ConjureProjectStore.isConjureProjectApplication(frame.applicationId));
+  let stateFromStores = frame(layoutMode[8]).useStateFromStores(items, () => ConjureProjectStore.isConjureProjectApplication(frame.applicationId));
   if (!stateFromStores) {
     let conjureProjectId;
     if (data != null) {
@@ -174,12 +181,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
   if (!first) {
     first = null == data;
   }
-  const tmpResult = frame(504);
-  const baseActivityView = frame(11460).useBaseActivityView({ orientationLockState: orientationLock, showLoadingIndicator: first, setShowLoadingStateForLockingOrientation: tmp5[1], application: data, setOrientationLockState: callback1 });
+  const tmpResult = frame(layoutMode[8]);
+  const baseActivityView = frame(layoutMode[12]).useBaseActivityView({ orientationLockState: orientationLock, showLoadingIndicator: first, setShowLoadingStateForLockingOrientation: tmp5[1], application: data, setOrientationLockState: callback1 });
   ({ isResetting, isLandscape } = baseActivityView);
   const obj2 = { showLoadingIndicator: first, isResetting, children: null };
   let obj3 = {
-    onActivityCrash,
+    onActivityCrash: frame.onActivityCrash,
     applicationId: frame.applicationId,
     iframeId,
     onDisallowedNavigation() {
@@ -198,6 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
     contextSource: null,
     queryParams: null,
     onLoadError: null,
+    onLoadEnd: null,
     allowPopups: null,
     referrerPolicy: "origin",
     isPipOrGridMode: null,
@@ -205,22 +213,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
     ignoreSilentHardwareSwitch: null
   };
   const obj4 = { type: null, frameId: null };
-  const tmpResult3 = frame(11460);
-  obj4.type = frame(6777).EmbeddedContextSourceType.FRAME;
+  const tmpResult3 = frame(layoutMode[12]);
+  obj4.type = frame(layoutMode[15]).EmbeddedContextSourceType.FRAME;
   obj4.frameId = frame.id;
   obj3.contextSource = obj4;
-  const tmp12 = layoutMode(18446);
-  obj3.queryParams = layoutMode(18443)(frame, frame(11475).ActivityPlatform.MOBILE);
+  const tmp12 = iframeId(layoutMode[20]);
+  obj3.queryParams = iframeId(layoutMode[16])(frame, frame(layoutMode[17]).ActivityPlatform.MOBILE);
   obj3.onLoadError = callback;
-  const tmp13 = layoutMode(18443);
-  obj3.allowPopups = frame(11506).allowPopups(data);
+  obj3.onLoadEnd = function onLoadEnd() {
+    return FramePoolManagerDefault.setWebViewLoaded(frame.id, iframeId);
+  };
+  const tmp13 = iframeId(layoutMode[16]);
+  obj3.allowPopups = frame(layoutMode[19]).allowPopups(data);
   obj3.isPipOrGridMode = layoutMode === FrameLayoutModes.PIP;
   if (isLandscape) {
     landscapeSafeAreasConfig = presentation.landscapeSafeAreasConfig;
   }
   obj3.safeAreasConfig = landscapeSafeAreasConfig;
   obj3.ignoreSilentHardwareSwitch = !stateFromStores;
-  obj2.children = <tmp12 onActivityCrash={onActivityCrash} applicationId={frame.applicationId} iframeId={iframeId} onDisallowedNavigation={function onDisallowedNavigation() {
+  obj2.children = <tmp12 onActivityCrash={frame.onActivityCrash} applicationId={frame.applicationId} iframeId={iframeId} onDisallowedNavigation={function onDisallowedNavigation() {
     leaveFrame.leaveFrame(frame.id);
     const obj3 = { body: null, confirmText: null };
     const intl = util.intl;
@@ -230,6 +241,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FrameVie
     actions_AlertActionCreatorsDefault.show(obj3);
   }} onInvalidUrl={function onInvalidUrl() {
     return leaveFrame.leaveFrame(frame.id);
-  }} activityUrl={frame.data.url} contextSource={null} queryParams={null} onLoadError={null} allowPopups={null} referrerPolicy="origin" isPipOrGridMode={null} safeAreasConfig={null} ignoreSilentHardwareSwitch={null} />;
-  return jsx(frame(11460).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
+  }} activityUrl={frame.data.url} contextSource={null} queryParams={null} onLoadError={null} onLoadEnd={null} allowPopups={null} referrerPolicy="origin" isPipOrGridMode={null} safeAreasConfig={null} ignoreSilentHardwareSwitch={null} />;
+  return jsx(frame(layoutMode[12]).BaseActivityView, { showLoadingIndicator: first, isResetting, children: null });
 });

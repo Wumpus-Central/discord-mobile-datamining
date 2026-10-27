@@ -1,14 +1,14 @@
-// === Module 9502: GameProfileGameClaimCta ===
+// === Module 9501: GameProfileGameClaimCta ===
 
-// Module 9502 (GameProfileGameClaimCta)
-import MobileWebHandoffLinkingDefault from "MobileWebHandoffLinking" /* 7429 */;
+// Module 9501 (GameProfileGameClaimCta)
+import MobileWebHandoffLinkingDefault from "MobileWebHandoffLinking" /* 7431 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const RelativeMarketingURLs = fn(1087).RelativeMarketingURLs;
+const RelativeMarketingURLs = fn(1084).RelativeMarketingURLs;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -49,7 +49,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               v3(v3(9245).GameProfileTrackActionActions.ClaimGame);
               c1 = 1;
               v3 = 1;
-              const obj4 = { value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7433).LoginHandoffSource.GAME_CLAIM), done: false };
+              const obj4 = { value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7435).LoginHandoffSource.GAME_CLAIM), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   const linkedApplications = trackAction.game.linkedApplications;
   let someResult;
   if (linkedApplications != null) {
-    someResult = linkedApplications.some((type) => type.type === closure_0(2000).GameLinkTypes.OFFICIAL);
+    someResult = linkedApplications.some((type) => type.type === closure_0(1997).GameLinkTypes.OFFICIAL);
   }
   if (someResult != null) {
     if (someResult) {
@@ -96,15 +96,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
     }
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = Button(1128).intl;
-    const stringResult = intl.string(Button(1128).t["mqg+to"]);
+    const intl = Button(1125).intl;
+    const stringResult = intl.string(Button(1125).t["mqg+to"]);
     cResult[2] = stringResult;
     let tmp7 = stringResult;
   } else {
     tmp7 = cResult[2];
   }
   if (cResult[3] !== tmp3) {
-    Button = Button(5244).Button;
+    Button = Button(5245).Button;
     let obj2 = { variant: "secondary", size: "md", text: tmp7, onPress: tmp3 };
     tmp = <Button variant="secondary" size="md" text={tmp7} onPress={tmp3} />;
     cResult[3] = tmp3;
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
             trackAction(v3(9245).GameProfileTrackActionActions.ClaimGame);
             v1 = 1;
             v3 = 1;
-            const obj4 = { value: v1(7429).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7433).LoginHandoffSource.GAME_CLAIM), done: false };
+            const obj4 = { value: v1(7431).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7435).LoginHandoffSource.GAME_CLAIM), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -169,10 +169,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   }
   if (someResult == null) {
     let obj = { variant: "secondary", size: "md", text: null, onPress: null };
-    const intl = trackAction(1128).intl;
-    obj.text = intl.string(trackAction(1128).t["mqg+to"]);
+    const intl = trackAction(1125).intl;
+    obj.text = intl.string(trackAction(1125).t["mqg+to"]);
     obj.onPress = callback;
-    let tmp3 = jsx(trackAction(5244).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+    let tmp3 = jsx(trackAction(5245).Button, { variant: "secondary", size: "md", text: null, onPress: null });
   } else {
     tmp3 = null;
   }

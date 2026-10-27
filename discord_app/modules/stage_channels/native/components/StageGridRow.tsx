@@ -1,17 +1,17 @@
-// === Module 11709: StageGridRow ===
+// === Module 11711: StageGridRow ===
 
-// Module 11709 (StageGridRow)
-import StageChannelParticipants from "StageChannelParticipants" /* 6688 */;
+// Module 11711 (StageGridRow)
+import StageChannelParticipants from "StageChannelParticipants" /* 6689 */;
 import useIsScreenLandscape from "useIsScreenLandscape" /* 8691 */;
-import SpeakerTileDefault from "SpeakerTile" /* 11701 */;
-import StageTileTypes from "StageTileTypes" /* 11702 */;
-import MediaTileDefault from "MediaTile" /* 11710 */;
+import SpeakerTileDefault from "SpeakerTile" /* 11703 */;
+import StageTileTypes from "StageTileTypes" /* 11704 */;
+import MediaTileDefault from "MediaTile" /* 11712 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_5 = createStyles.createStyles({ container: { flexDirection: "row", alignItems: "center" }, containerLandscape: { justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 let size = fn(2);
@@ -31,14 +31,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   if (cResult[0] !== num) {
     if (1 === num) {
-      StageTileSize = tmp(11702).StageTileSize;
+      StageTileSize = tmp(11704).StageTileSize;
       let HALF = StageTileSize.FULL;
       cResult[0] = num;
       cResult[1] = HALF;
     } else if (2 !== num) {
-      HALF = tmp(11702).StageTileSize.THIRD;
+      HALF = tmp(11704).StageTileSize.THIRD;
     }
-    HALF = tmp(11702).StageTileSize.HALF;
+    HALF = tmp(11704).StageTileSize.HALF;
   } else {
     const size = tmp5;
     let containerLandscape = isScreenLandscape;

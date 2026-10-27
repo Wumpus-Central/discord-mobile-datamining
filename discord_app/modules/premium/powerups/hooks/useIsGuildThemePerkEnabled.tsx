@@ -1,14 +1,14 @@
-// === Module 17587: useIsGuildThemePerkEnabled ===
+// === Module 17628: useIsGuildThemePerkEnabled ===
 
-// Module 17587 (useIsGuildThemePerkEnabled)
-import Powerups from "Powerups" /* 5185 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5181 */;
+// Module 17628 (useIsGuildThemePerkEnabled)
+import Powerups from "Powerups" /* 5186 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5182 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildFeatures = fn(1087).GuildFeatures;
+const GuildFeatures = fn(1084).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useIsGuildThemePerkEnabled.tsx");

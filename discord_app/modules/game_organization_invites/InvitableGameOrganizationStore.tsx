@@ -1,10 +1,10 @@
-// === Module 11319: InvitableGameOrganizationStore ===
+// === Module 11322: InvitableGameOrganizationStore ===
 
-// Module 11319 (InvitableGameOrganizationStore)
+// Module 11322 (InvitableGameOrganizationStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 1087 */;
-import fromServerGameOrganization from "fromServerGameOrganization" /* 11031 */;
+import Constants from "Constants" /* 1084 */;
+import fromServerGameOrganization from "fromServerGameOrganization" /* 11034 */;
 import size from "module_2" /* 2 */;
 
 function fromServerInvitableGameOrganization(game_organization) {

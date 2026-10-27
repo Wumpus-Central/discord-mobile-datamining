@@ -1,16 +1,16 @@
 // === Module 9018: getChannelA11yLabel ===
 
 // Module 9018 (getChannelA11yLabel)
-import util from "util" /* 1128 */;
-import UserUtils from "UserUtils" /* 5025 */;
-import useChannelName from "useChannelName" /* 5604 */;
-import isRoleRequiredDefault from "isRoleRequired" /* 7202 */;
+import util from "util" /* 1125 */;
+import UserUtils from "UserUtils" /* 5026 */;
+import useChannelName from "useChannelName" /* 5605 */;
+import isRoleRequiredDefault from "isRoleRequired" /* 7204 */;
 import utils from "utils" /* 8617 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes: hasOwnProperty, StatusTypes: metroRequire } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/getChannelA11yLabel.tsx");

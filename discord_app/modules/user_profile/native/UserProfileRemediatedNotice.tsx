@@ -1,19 +1,19 @@
-// === Module 14439: UserProfileRemediatedNotice ===
+// === Module 14475: UserProfileRemediatedNotice ===
 
-// Module 14439 (UserProfileRemediatedNotice)
+// Module 14475 (UserProfileRemediatedNotice)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7414 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7416 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8732 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
 
 require = fn;
 const View = fn(17).View;
-const RelationshipTypes = fn(1087).RelationshipTypes;
+const RelationshipTypes = fn(1084).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { padding: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, flexDirection: "row", alignItems: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -63,9 +63,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Remediat
         let tmp14 = isBlocked;
         if (isBlocked) {
           const obj2 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
-          const intl = tmp(1128).intl;
-          obj2.children = intl.string(tmp(1128).t["oC/fU6"]);
-          tmp14 = closure_6(tmp(5234).Text, obj2);
+          const intl = tmp(1125).intl;
+          obj2.children = intl.string(tmp(1125).t["oC/fU6"]);
+          tmp14 = closure_6(tmp(5235).Text, obj2);
         }
         cResult[7] = isBlocked;
         cResult[8] = tmp14;
@@ -94,10 +94,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Remediat
       if (isIgnored) {
         const obj4 = { children: null };
         const obj5 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
-        const intl2 = tmp(1128).intl;
-        obj5.children = intl2.string(tmp(1128).t.HXz5An);
-        const items2 = [closure_6(tmp(5234).Text, obj5), closure_6(tmp(5234).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
-        const intl3 = tmp(1128).intl;
+        const intl2 = tmp(1125).intl;
+        obj5.children = intl2.string(tmp(1125).t.HXz5An);
+        const items2 = [closure_6(tmp(5235).Text, obj5), closure_6(tmp(5235).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
+        const intl3 = tmp(1125).intl;
         const obj6 = {
           unignoreHook(children) {
                   return timestampProducer(Text_Text.Text, {
@@ -111,7 +111,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Remediat
                   });
                 }
         };
-        items2[2] = intl3.format(tmp(1128).t.PrtAqy, obj6);
+        items2[2] = intl3.format(tmp(1125).t.PrtAqy, obj6);
         obj4.children = items2;
         tmp17 = closure_8(closure_7, obj4);
       }
@@ -141,18 +141,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Remediat
     obj2.style = items1;
     if (isBlocked) {
       const obj3 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
-      const intl = tmp4(1128).intl;
-      obj3.children = intl.string(tmp4(1128).t["oC/fU6"]);
-      isBlocked = closure_6(tmp4(5234).Text, obj3);
+      const intl = tmp4(1125).intl;
+      obj3.children = intl.string(tmp4(1125).t["oC/fU6"]);
+      isBlocked = closure_6(tmp4(5235).Text, obj3);
     }
     const items2 = [isBlocked, ];
     if (isIgnored) {
       const obj4 = { children: null };
       const obj5 = { variant: "text-sm/semibold", color: "text-default", lineClamp: 1, children: null };
-      const intl2 = tmp4(1128).intl;
-      obj5.children = intl2.string(tmp4(1128).t.HXz5An);
-      const items3 = [closure_6(tmp4(5234).Text, obj5), closure_6(tmp4(5234).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
-      const intl3 = tmp4(1128).intl;
+      const intl2 = tmp4(1125).intl;
+      obj5.children = intl2.string(tmp4(1125).t.HXz5An);
+      const items3 = [closure_6(tmp4(5235).Text, obj5), closure_6(tmp4(5235).Text, { variant: "text-sm/semibold", color: "text-default", accessibilityElementsHidden: true, importantForAccessibility: "no", children: "\u2022" }), ];
+      const intl3 = tmp4(1125).intl;
       const obj6 = {
         unignoreHook(children) {
               return timestampProducer(Text_Text.Text, {
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Remediat
               });
             }
       };
-      items3[2] = intl3.format(tmp4(1128).t.PrtAqy, obj6);
+      items3[2] = intl3.format(tmp4(1125).t.PrtAqy, obj6);
       obj4.children = items3;
       isIgnored = closure_8(closure_7, obj4);
     }

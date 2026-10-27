@@ -1,19 +1,19 @@
-// === Module 16491: VideoQuestCaptions ===
+// === Module 16530: VideoQuestCaptions ===
 
-// Module 16491 (VideoQuestCaptions)
+// Module 16530 (VideoQuestCaptions)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import VisualEffectViewDefault from "VisualEffectView" /* 5586 */;
-import useVideoQuestCaptions from "useVideoQuestCaptions" /* 16492 */;
-import VideoQuestCaptionsUtils from "VideoQuestCaptionsUtils" /* 16494 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import VisualEffectViewDefault from "VisualEffectView" /* 5587 */;
+import useVideoQuestCaptions from "useVideoQuestCaptions" /* 16531 */;
+import VideoQuestCaptionsUtils from "VideoQuestCaptionsUtils" /* 16533 */;
 import noop from "module_19" /* 19 */;
 import n from "module_683" /* 683 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: null, captionBox: null, captionText: null };
 const rect = { position: "absolute", bottom: nativeDefault.space.PX_32, left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, alignItems: "center", justifyContent: "flex-end" };
 obj2.container = rect;

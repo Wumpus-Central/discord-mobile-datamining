@@ -1,11 +1,11 @@
-// === Module 1257: SentryUtils ===
+// === Module 1254: SentryUtils ===
 
-// Module 1257 (SentryUtils)
+// Module 1254 (SentryUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import _mod17 from "module_17" /* 17 */;
 import addSentryBreadcrumbDefault from "addSentryBreadcrumb" /* 685 */;
 import _modAll686 from "module_686" /* 686 */;
-import SentryInitUtils_mod from "SentryInitUtils" /* 1258 */;
+import SentryInitUtils_mod from "SentryInitUtils" /* 1255 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

@@ -1,14 +1,14 @@
-// === Module 9480: GameProfileSimilarGames ===
+// === Module 9479: GameProfileSimilarGames ===
 
-// Module 9480 (GameProfileSimilarGames)
+// Module 9479 (GameProfileSimilarGames)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9245 */;
 import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9251 */;
-import GameProfileSkeleton from "GameProfileSkeleton" /* 9335 */;
-import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 9344 */;
-import useSimilarGamesDefault from "useSimilarGames" /* 9481 */;
+import GameProfileSkeleton from "GameProfileSkeleton" /* 9334 */;
+import GameProfileSkeletonCardRowDefault from "GameProfileSkeletonCardRow" /* 9343 */;
+import useSimilarGamesDefault from "useSimilarGames" /* 9480 */;
 import noop from "module_19" /* 19 */;
 
 const GameProfileSkeletonDefault = GameProfileSkeleton;
@@ -21,7 +21,7 @@ const jsx = fn(21).jsx;
 let c9 = 1.34;
 const PX_16 = nativeDefault.space.PX_16;
 const PX_12 = nativeDefault.space.PX_12;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { container: { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 }, header: null, card: null, spacer: null, listPadding: null, coverArtContainer: null, coverArt: null, skeletonCards: null, skeletonArtwork: null };
 let obj3 = { gap: nativeDefault.space.PX_8, marginHorizontal: -1 * nativeDefault.space.PX_16 };
 obj.header = { paddingHorizontal: nativeDefault.space.PX_16 };
@@ -564,7 +564,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
     const obj2 = { style: container, headerStyle: header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: tmp8 };
-    const tmp12 = jsx(tmp(9337).GameProfileSectionSkeleton, { style: container, headerStyle: header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: tmp8 });
+    const tmp12 = jsx(tmp(9336).GameProfileSectionSkeleton, { style: container, headerStyle: header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: tmp8 });
     cResult[5] = tmp4.container;
     cResult[6] = tmp4.header;
     cResult[7] = tmp8;
@@ -584,7 +584,7 @@ let closure_17 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const obj = { style: tmp.container, headerStyle: tmp.header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: null };
   const obj2 = { contentContainerStyle: tmp.skeletonCards, children: Array.from({ length: 4 }, (arg0, key) => <closure_16 key={key} animationDelayMs={key * GameProfileSkeleton.SKELETON_CARD_ANIMATION_DELAY_MS} cardWidth={cardWidth} />) };
   obj.children = jsx(GameProfileSkeletonCardRowDefault, { contentContainerStyle: tmp.skeletonCards, children: Array.from({ length: 4 }, (arg0, key) => <closure_16 key={key} animationDelayMs={key * GameProfileSkeleton.SKELETON_CARD_ANIMATION_DELAY_MS} cardWidth={cardWidth} />) });
-  return jsx(cardWidth(9337).GameProfileSectionSkeleton, { style: tmp.container, headerStyle: tmp.header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: null });
+  return jsx(cardWidth(9336).GameProfileSectionSkeleton, { style: tmp.container, headerStyle: tmp.header, showViewAllSkeleton: false, skeletonTitleWidth: 124, children: null });
 }));
 ReactCompilerGating = fn(558);
 let obj8 = { borderRadius: nativeDefault.radii.sm };
@@ -616,8 +616,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
     const _Symbol = Symbol;
     ({ container, header } = tmp4);
     if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = tmp(1128).intl;
-      const stringResult = intl.string(tmp(1128).t["6rLyQB"]);
+      const intl = tmp(1125).intl;
+      const stringResult = intl.string(tmp(1125).t["6rLyQB"]);
       cResult[2] = stringResult;
       let tmp9 = stringResult;
     } else {
@@ -642,7 +642,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
             }
           }
           const obj3 = { style: container, headerStyle: header, title: tmp9, children: tmp13 };
-          const tmp20 = jsx(tmp5(9337), { style: container, headerStyle: header, title: tmp9, children: tmp13 });
+          const tmp20 = jsx(tmp5(9336), { style: container, headerStyle: header, title: tmp9, children: tmp13 });
           cResult[10] = tmp4.container;
           cResult[11] = tmp4.header;
           cResult[12] = tmp13;
@@ -650,8 +650,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
           tmp18 = tmp20;
         }
       }
-      const obj4 = { horizontal: true, renderScrollComponent: tmp5(9315), data: similarGames, renderItem: tmp11, showsHorizontalScrollIndicator: false, ItemSeparatorComponent, ListHeaderComponent: ListFooterComponent, ListFooterComponent, decelerationRate: "fast", snapToInterval: sum };
-      const tmp17 = jsx(tmp(7220).FlashList, { horizontal: true, renderScrollComponent: tmp5(9315), data: similarGames, renderItem: tmp11, showsHorizontalScrollIndicator: false, ItemSeparatorComponent, ListHeaderComponent: ListFooterComponent, ListFooterComponent, decelerationRate: "fast", snapToInterval: sum });
+      const obj4 = { horizontal: true, renderScrollComponent: tmp5(9316), data: similarGames, renderItem: tmp11, showsHorizontalScrollIndicator: false, ItemSeparatorComponent, ListHeaderComponent: ListFooterComponent, ListFooterComponent, decelerationRate: "fast", snapToInterval: sum };
+      const tmp17 = jsx(tmp(7222).FlashList, { horizontal: true, renderScrollComponent: tmp5(9316), data: similarGames, renderItem: tmp11, showsHorizontalScrollIndicator: false, ItemSeparatorComponent, ListHeaderComponent: ListFooterComponent, ListFooterComponent, decelerationRate: "fast", snapToInterval: sum });
       cResult[6] = similarGames;
       cResult[7] = tmp11;
       cResult[8] = sum;
@@ -681,11 +681,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
     if (0 !== similarGames.length) {
       const obj3 = { style: null, headerStyle: null, title: null, children: null };
       ({ container: obj2.style, header: obj2.headerStyle } = tmp);
-      const intl = trackAction(1128).intl;
-      obj3.title = intl.string(trackAction(1128).t["6rLyQB"]);
+      const intl = trackAction(1125).intl;
+      obj3.title = intl.string(trackAction(1125).t["6rLyQB"]);
       const obj5 = {
         horizontal: true,
-        renderScrollComponent: tmp2(9315),
+        renderScrollComponent: tmp2(9316),
         data: similarGames,
         renderItem(game) {
               return <closure_15 game={game.item} trackAction={trackAction} cardWidth={cardWidth} />;
@@ -697,9 +697,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
         decelerationRate: "fast",
         snapToInterval: result + tmp5
       };
-      obj3.children = jsx(trackAction(7220).FlashList, {
+      obj3.children = jsx(trackAction(7222).FlashList, {
         horizontal: true,
-        renderScrollComponent: tmp2(9315),
+        renderScrollComponent: tmp2(9316),
         data: similarGames,
         renderItem(game) {
               return <closure_15 game={game.item} trackAction={trackAction} cardWidth={cardWidth} />;
@@ -711,8 +711,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
         decelerationRate: "fast",
         snapToInterval: result + tmp5
       });
-      tmp7 = jsx(tmp2(9337), { style: null, headerStyle: null, title: null, children: null });
-      const tmp2Result = tmp2(9337);
+      tmp7 = jsx(tmp2(9336), { style: null, headerStyle: null, title: null, children: null });
+      const tmp2Result = tmp2(9336);
     }
   }
   return tmp7;

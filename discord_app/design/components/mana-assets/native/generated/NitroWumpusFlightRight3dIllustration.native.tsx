@@ -1,23 +1,23 @@
-// === Module 17059: NitroWumpusFlightRight3dIllustration ===
+// === Module 17101: NitroWumpusFlightRight3dIllustration ===
 
-// Module 17059 (NitroWumpusFlightRight3dIllustration)
+// Module 17101 (NitroWumpusFlightRight3dIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef17060 from "module_17060" /* 17060 */;
-import _modDef17061 from "module_17061" /* 17061 */;
-import _modDef17062 from "module_17062" /* 17062 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import assetHelpers from "assetHelpers" /* 6997 */;
+import _modDef17102 from "module_17102" /* 17102 */;
+import _modDef17103 from "module_17103" /* 17103 */;
+import _modDef17104 from "module_17104" /* 17104 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17060 }, 3: null };
-let obj2 = { uri: _modDef17060 };
-obj[2] = { uri: _modDef17061 };
-const obj3 = { uri: _modDef17061 };
-obj[3] = { uri: _modDef17062 };
+let obj = { 1: null, 2: { uri: _modDef17102 }, 3: null };
+let obj2 = { uri: _modDef17102 };
+obj[2] = { uri: _modDef17103 };
+const obj3 = { uri: _modDef17103 };
+obj[3] = { uri: _modDef17104 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17062 };
+const obj4 = { uri: _modDef17104 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/NitroWumpusFlightRight3dIllustration.native.tsx");
 

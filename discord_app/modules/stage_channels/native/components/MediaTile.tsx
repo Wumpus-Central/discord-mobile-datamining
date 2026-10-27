@@ -1,15 +1,15 @@
-// === Module 11710: MediaTile ===
+// === Module 11712: MediaTile ===
 
-// Module 11710 (MediaTile)
+// Module 11712 (MediaTile)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6772 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6773 */;
 
 const require = fn;
 const View = fn(17).View;
-const ParticipantTypes = fn(5632).ParticipantTypes;
+const ParticipantTypes = fn(5633).ParticipantTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { container: { flex: 1, marginHorizontal: 4, marginVertical: 4 }, media: { flex: 1, borderRadius: nativeDefault.radii.sm } };
 let closure_7 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
@@ -24,9 +24,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const size = channel.size;
   const tmp4 = closure_7();
   const obj = channel(576);
-  const speakerTileStyles = channel(11701).useSpeakerTileStyles();
-  const width = participant(1499)().width;
-  const obj2 = channel(11701);
+  const speakerTileStyles = channel(11703).useSpeakerTileStyles();
+  const width = participant(1496)().width;
+  const obj2 = channel(11703);
   const tmp6 = participant;
   const isScreenLandscape = channel(8691).useIsScreenLandscape();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -77,14 +77,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       tmp23 = tmp26;
                     }
                   }
-                  const obj5 = { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: stateFromStores, avatarSize: tmp(1202).AvatarSizes.XLARGE, channel, shrinkStreamEmptyState: false, contentStyle: tmp4.media };
-                  const tmp22 = jsx(tmp6(11711), { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: stateFromStores, avatarSize: tmp(1202).AvatarSizes.XLARGE, channel, shrinkStreamEmptyState: false, contentStyle: tmp4.media });
+                  const obj5 = { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: stateFromStores, avatarSize: tmp(1199).AvatarSizes.XLARGE, channel, shrinkStreamEmptyState: false, contentStyle: tmp4.media };
+                  const tmp22 = jsx(tmp6(11713), { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: stateFromStores, avatarSize: tmp(1199).AvatarSizes.XLARGE, channel, shrinkStreamEmptyState: false, contentStyle: tmp4.media });
                   cResult[16] = channel;
                   cResult[17] = stateFromStores;
                   cResult[18] = tmp4.media;
                   cResult[19] = tmp22;
                   tmp19 = tmp22;
-                  const tmp6Result = tmp6(11711);
+                  const tmp6Result = tmp6(11713);
                 }
               }
               const items1 = [tmp28, tmp14, tmp16];
@@ -95,20 +95,20 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               tmp18 = items1;
             }
           }
-          const tileWidthStyle = tmp(11701).getTileWidthStyle(size, width, isScreenLandscape);
+          const tileWidthStyle = tmp(11703).getTileWidthStyle(size, width, isScreenLandscape);
           cResult[8] = isScreenLandscape;
           cResult[9] = size;
           cResult[10] = width;
           cResult[11] = tileWidthStyle;
           tmp16 = tileWidthStyle;
-          const tmpResult3 = tmp(11701);
+          const tmpResult3 = tmp(11703);
         }
-        const sizeStyle = tmp(11701).getSizeStyle(size, speakerTileStyles);
+        const sizeStyle = tmp(11703).getSizeStyle(size, speakerTileStyles);
         cResult[5] = size;
         cResult[6] = speakerTileStyles;
         cResult[7] = sizeStyle;
         tmp14 = sizeStyle;
-        const tmpResult4 = tmp(11701);
+        const tmpResult4 = tmp(11703);
       }
     }
     return null;
@@ -129,8 +129,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const participant = channel.participant;
   const size = channel.size;
   const tmp = closure_7();
-  const speakerTileStyles = channel(11701).useSpeakerTileStyles();
-  const obj = channel(11701);
+  const speakerTileStyles = channel(11703).useSpeakerTileStyles();
+  const obj = channel(11703);
   const tmp5 = participant;
   const isScreenLandscape = channel(8691).useIsScreenLandscape();
   const obj2 = channel(8691);
@@ -142,18 +142,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp8 = null;
     if (stateFromStores.type !== ParticipantTypes.ACTIVITY) {
       const obj4 = { style: null, children: null };
-      const items2 = [tmp.container, tmp2(11701).getSizeStyle(size, speakerTileStyles), ];
-      const tmp2Result = tmp2(11701);
-      items2[2] = tmp2(11701).getTileWidthStyle(size, participant(1499)().width, isScreenLandscape);
+      const items2 = [tmp.container, tmp2(11703).getSizeStyle(size, speakerTileStyles), ];
+      const tmp2Result = tmp2(11703);
+      items2[2] = tmp2(11703).getTileWidthStyle(size, participant(1496)().width, isScreenLandscape);
       obj4.style = items2;
       const obj5 = { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: stateFromStores, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null };
-      const tmp2Result2 = tmp2(11701);
-      obj5.avatarSize = tmp2(1202).AvatarSizes.XLARGE;
+      const tmp2Result2 = tmp2(11703);
+      obj5.avatarSize = tmp2(1199).AvatarSizes.XLARGE;
       obj5.channel = channel;
       obj5.contentStyle = tmp.media;
-      obj4.children = jsx(tmp5(11711), { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: stateFromStores, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null });
+      obj4.children = jsx(tmp5(11713), { hasBottomSafeArea: false, hasLeftSafeArea: false, hasRightSafeArea: false, hasTopSafeArea: false, participant: stateFromStores, avatarSize: null, channel: null, shrinkStreamEmptyState: false, contentStyle: null });
       tmp8 = <View style={null}>{null}</View>;
-      const tmp5Result = tmp5(11711);
+      const tmp5Result = tmp5(11713);
     }
   }
   return tmp8;

@@ -1,7 +1,7 @@
-// === Module 8171: IosJpegliExperiment ===
+// === Module 8169: IosJpegliExperiment ===
 
-// Module 8171 (IosJpegliExperiment)
-import ApexExperiment from "ApexExperiment" /* 1455 */;
+// Module 8169 (IosJpegliExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const config = ApexExperiment.createApexExperiment({ name: "2025-11-enhanced-jpeg-encoding-on-ios", kind: "user", defaultConfig: { useJpegliEncoder: false }, variations: { 0: { useJpegliEncoder: false }, 1: { useJpegliEncoder: true } } });

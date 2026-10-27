@@ -1,24 +1,24 @@
-// === Module 19338: GuildRoleSubscriptionTierTemplateBasicInfo ===
+// === Module 19376: GuildRoleSubscriptionTierTemplateBasicInfo ===
 
-// Module 19338 (GuildRoleSubscriptionTierTemplateBasicInfo)
+// Module 19376 (GuildRoleSubscriptionTierTemplateBasicInfo)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import PriceUtils from "PriceUtils" /* 7339 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16588 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import PriceUtils from "PriceUtils" /* 7341 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16630 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const SubscriptionIntervalTypes = fn(1394).SubscriptionIntervalTypes;
-const CurrencyCodes = fn(1098).CurrencyCodes;
+const SubscriptionIntervalTypes = fn(1391).SubscriptionIntervalTypes;
+const CurrencyCodes = fn(1095).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { paddingBottom: 24 }, header: { flexDirection: "row" }, image: null };
 let size = { width: 48, height: 48, borderRadius: nativeDefault.radii.sm };
 obj2.image = size;

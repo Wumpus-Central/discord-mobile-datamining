@@ -1,12 +1,12 @@
-// === Module 13521: getApplicationFromBotUserId ===
+// === Module 13535: getApplicationFromBotUserId ===
 
-// Module 13521 (getApplicationFromBotUserId)
-import UserProfileStore from "UserProfileStore" /* 7703 */;
+// Module 13535 (getApplicationFromBotUserId)
+import UserProfileStore from "UserProfileStore" /* 7704 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EMPTY_STRING_SNOWFLAKE_ID = fn(1087).EMPTY_STRING_SNOWFLAKE_ID;
+const EMPTY_STRING_SNOWFLAKE_ID = fn(1084).EMPTY_STRING_SNOWFLAKE_ID;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/getApplicationFromBotUserId.tsx");

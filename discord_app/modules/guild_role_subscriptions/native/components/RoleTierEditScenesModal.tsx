@@ -1,17 +1,17 @@
-// === Module 19298: RoleTierEditScenesModal ===
+// === Module 19336: RoleTierEditScenesModal ===
 
-// Module 19298 (RoleTierEditScenesModal)
+// Module 19336 (RoleTierEditScenesModal)
 import _modDef38 from "module_38" /* 38 */;
-import util from "util" /* 1128 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
-import XSmallIcon from "XSmallIcon" /* 6931 */;
-import HeaderActionButton from "HeaderActionButton" /* 7485 */;
-import GuildRoleSubscriptionGroupDetailsModalDefault from "GuildRoleSubscriptionGroupDetailsModal" /* 19287 */;
-import GuildRoleSubscriptionGroupGatingModalDefault from "GuildRoleSubscriptionGroupGatingModal" /* 19299 */;
-import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 19300 */;
-import GuildRoleSubscriptionTierConfirmationModalDefault from "GuildRoleSubscriptionTierConfirmationModal" /* 19319 */;
-import GuildRoleSubscriptionTierDesignModalDefault from "GuildRoleSubscriptionTierDesignModal" /* 19322 */;
-import GuildRoleSubscriptionTierDetailsModalDefault from "GuildRoleSubscriptionTierDetailsModal" /* 19324 */;
+import util from "util" /* 1125 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
+import XSmallIcon from "XSmallIcon" /* 6933 */;
+import HeaderActionButton from "HeaderActionButton" /* 7486 */;
+import GuildRoleSubscriptionGroupDetailsModalDefault from "GuildRoleSubscriptionGroupDetailsModal" /* 19325 */;
+import GuildRoleSubscriptionGroupGatingModalDefault from "GuildRoleSubscriptionGroupGatingModal" /* 19337 */;
+import GuildRoleSubscriptionTierBenefitsModal from "GuildRoleSubscriptionTierBenefitsModal" /* 19338 */;
+import GuildRoleSubscriptionTierConfirmationModalDefault from "GuildRoleSubscriptionTierConfirmationModal" /* 19357 */;
+import GuildRoleSubscriptionTierDesignModalDefault from "GuildRoleSubscriptionTierDesignModal" /* 19360 */;
+import GuildRoleSubscriptionTierDetailsModalDefault from "GuildRoleSubscriptionTierDetailsModal" /* 19362 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -417,12 +417,12 @@ function buildScreenMap(arg0, handleClose) {
   obj6[constants.DETAILS] = obj17;
   return obj6;
 }
-const RoleTierEditStore = fn(19288);
+const RoleTierEditStore = fn(19326);
 ({ useCurrentTierEditScene: hasOwnProperty, useResetTierEditState: metroRequire } = RoleTierEditStore);
-const constants = fn(16562).GuildRoleSubscriptionsTierScenes;
+const constants = fn(16604).GuildRoleSubscriptionsTierScenes;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_11 = createStyles.createStyles({ stepsIndicator: { position: "absolute", alignSelf: "center", height: 48 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

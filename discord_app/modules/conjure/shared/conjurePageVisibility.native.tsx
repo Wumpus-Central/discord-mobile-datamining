@@ -1,9 +1,9 @@
-// === Module 12233: conjurePageVisibility ===
+// === Module 12252: conjurePageVisibility ===
 
-// Module 12233 (conjurePageVisibility)
-import AppStateStore from "AppStateStore" /* 2001 */;
+// Module 12252 (conjurePageVisibility)
+import AppStateStore from "AppStateStore" /* 1998 */;
 
-const AppStates = fn(1087).AppStates;
+const AppStates = fn(1084).AppStates;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/shared/conjurePageVisibility.native.tsx");
 

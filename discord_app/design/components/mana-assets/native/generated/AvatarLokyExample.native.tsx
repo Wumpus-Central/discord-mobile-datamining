@@ -1,23 +1,23 @@
-// === Module 19244: AvatarLokyExample ===
+// === Module 19282: AvatarLokyExample ===
 
-// Module 19244 (AvatarLokyExample)
+// Module 19282 (AvatarLokyExample)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef19245 from "module_19245" /* 19245 */;
-import _modDef19246 from "module_19246" /* 19246 */;
-import _modDef19247 from "module_19247" /* 19247 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import assetHelpers from "assetHelpers" /* 6997 */;
+import _modDef19283 from "module_19283" /* 19283 */;
+import _modDef19284 from "module_19284" /* 19284 */;
+import _modDef19285 from "module_19285" /* 19285 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19245 }, 3: null };
-let obj2 = { uri: _modDef19245 };
-obj[2] = { uri: _modDef19246 };
-const obj3 = { uri: _modDef19246 };
-obj[3] = { uri: _modDef19247 };
+let obj = { 1: null, 2: { uri: _modDef19283 }, 3: null };
+let obj2 = { uri: _modDef19283 };
+obj[2] = { uri: _modDef19284 };
+const obj3 = { uri: _modDef19284 };
+obj[3] = { uri: _modDef19285 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef19247 };
+const obj4 = { uri: _modDef19285 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarLokyExample.native.tsx");
 

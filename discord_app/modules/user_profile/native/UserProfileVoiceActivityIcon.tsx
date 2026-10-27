@@ -1,16 +1,16 @@
-// === Module 10654: UserProfileVoiceActivityIcon ===
+// === Module 10657: UserProfileVoiceActivityIcon ===
 
-// Module 10654 (UserProfileVoiceActivityIcon)
-import isRoleRequiredDefault from "isRoleRequired" /* 7202 */;
+// Module 10657 (UserProfileVoiceActivityIcon)
+import isRoleRequiredDefault from "isRoleRequired" /* 7204 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 let closure_3 = ["channel"];
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   if (cResult[6] !== tmp4) {
     const obj8 = {};
     const merged5 = Object.assign(tmp4);
-    const tmp54 = jsx(tmp(9720).PhoneCallIcon, {});
+    const tmp54 = jsx(tmp(9722).PhoneCallIcon, {});
     cResult[6] = tmp4;
     cResult[7] = tmp54;
     let tmp49 = tmp54;
@@ -168,5 +168,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     }
   }
   const merged5 = Object.assign(merged);
-  return jsx(channel(9720).PhoneCallIcon, {});
+  return jsx(channel(9722).PhoneCallIcon, {});
 });

@@ -1,15 +1,15 @@
-// === Module 11293: GroupDMNitroUpsellModel ===
+// === Module 11296: GroupDMNitroUpsellModel ===
 
-// Module 11293 (GroupDMNitroUpsellModel)
+// Module 11296 (GroupDMNitroUpsellModel)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
-import UserStore from "UserStore" /* 1392 */;
+import util from "util" /* 1125 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const MAX_GROUP_DM_PARTICIPANTS = fn(1087).MAX_GROUP_DM_PARTICIPANTS;
-const PremiumTypes = fn(1394).PremiumTypes;
+const MAX_GROUP_DM_PARTICIPANTS = fn(1084).MAX_GROUP_DM_PARTICIPANTS;
+const PremiumTypes = fn(1391).PremiumTypes;
 const GroupDMNitroAcquisitionStrategy = { MARKETING: "marketing", CHECKOUT: "checkout" };
 let obj2 = { NONE: "none", MANAGE: "manage", MARKETING: "marketing", CHECKOUT: "checkout" };
 const ReactCompilerGating = fn(558);

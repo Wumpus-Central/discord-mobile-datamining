@@ -1,23 +1,23 @@
-// === Module 12190: SelectComponentActionSheet ===
+// === Module 12208: SelectComponentActionSheet ===
 
-// Module 12190 (SelectComponentActionSheet)
+// Module 12208 (SelectComponentActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5039 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import FormCheckbox from "FormCheckbox" /* 6901 */;
-import TableRow from "TableRow" /* 6903 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5040 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import FormCheckbox from "FormCheckbox" /* 6903 */;
+import TableRow from "TableRow" /* 6905 */;
 import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9135 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(5266).ACTION_SHEET_START_HEIGHT_RATIO;
+let closure_7 = fn(5267).ACTION_SHEET_START_HEIGHT_RATIO;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { selectionOptionItemIconWrapper: { width: nativeDefault.space.PX_32, alignItems: "center" }, tagListIconWrapper: null, tagListIcon: null, textInputWrapper: null };
 let size = { width: nativeDefault.space.PX_16, height: nativeDefault.space.PX_16 };
 obj2.tagListIconWrapper = size;
@@ -252,16 +252,16 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Select
     label = selectionActionComponent.placeholder;
   }
   if (label == null) {
-    const intl = tmp6(1128).intl;
-    label = intl.string(tmp6(1128).t.Otr6W2);
+    const intl = tmp6(1125).intl;
+    label = intl.string(tmp6(1125).t.Otr6W2);
   }
   let obj = { title: label, subtitle: null, trailing: null };
   let formatToPlainStringResult;
   if (selectionActionComponent.maxValues > 1) {
     if (selectionActionComponent.minValues > 0) {
-      const intl2 = tmp6(1128).intl;
+      const intl2 = tmp6(1125).intl;
       let obj2 = { count: selectionActionComponent.minValues };
-      formatToPlainStringResult = intl2.formatToPlainString(tmp6(1128).t.Jmwzdx, obj2);
+      formatToPlainStringResult = intl2.formatToPlainString(tmp6(1125).t.Jmwzdx, obj2);
     }
   }
   obj.subtitle = formatToPlainStringResult;
@@ -272,12 +272,12 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Select
       str = "secondary";
     }
     const obj3 = { size: "sm", variant: str, disabled: selectButtonDisabled, onPress: renderIcon.submitSelection, text: null };
-    const intl3 = tmp6(1128).intl;
-    obj3.text = intl3.string(tmp6(1128).t.XqMe3N);
-    tmp5Result = closure_8(tmp6(5244).Button, obj3);
+    const intl3 = tmp6(1125).intl;
+    obj3.text = intl3.string(tmp6(1125).t.XqMe3N);
+    tmp5Result = closure_8(tmp6(5245).Button, obj3);
   }
   obj.trailing = tmp5Result;
-  const children = [closure_8(renderIcon(7248).BottomSheetTitleHeader, obj), ];
+  const children = [closure_8(renderIcon(7250).BottomSheetTitleHeader, obj), ];
   let tmp5Result4 = null;
   if (null != onQueryChange) {
     tmp5Result4 = null;

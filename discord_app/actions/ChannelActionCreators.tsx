@@ -1,27 +1,27 @@
-// === Module 7411: ChannelActionCreators ===
+// === Module 7413: ChannelActionCreators ===
 
-// Module 7411 (ChannelActionCreators)
+// Module 7413 (ChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1128 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import shared from "shared" /* 4978 */;
-import RootNavigationRef from "RootNavigationRef" /* 5151 */;
-import transitionToChannel from "transitionToChannel" /* 5707 */;
-import preloadChannelDefault from "preloadChannel" /* 5709 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6634 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 6821 */;
+import util from "util" /* 1125 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import shared from "shared" /* 4979 */;
+import RootNavigationRef from "RootNavigationRef" /* 5152 */;
+import transitionToChannel from "transitionToChannel" /* 5708 */;
+import preloadChannelDefault from "preloadChannel" /* 5710 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6635 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 6823 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 7412 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import ReadStateStore from "ReadStateStore" /* 6771 */;
+import ChangelogStore from "ChangelogStore" /* 7414 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import ReadStateStore from "ReadStateStore" /* 6772 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_6 = fn(4827).createChannelRecordFromServer;
-const Constants = fn(1087);
+let closure_6 = fn(4828).createChannelRecordFromServer;
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_9, AbortCodes: c10, Endpoints: closure_11, Routes: closure_12, ChannelTypes: map1 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/ChannelActionCreators.tsx");
@@ -288,10 +288,10 @@ export default {
     closure_0 = id;
     const self = this;
     return (async () => {
-      const HTTP = tmp2(1297).HTTP;
+      const HTTP = tmp2(1294).HTTP;
       const request = { url: constants.USER_CHANNELS, body: { recipients: self._getRecipients(tmp2) }, oldFormErrors: true, rejectWithError: null };
       self._getRecipients(tmp2);
-      request.rejectWithError = tmp2(1297).rejectWithMigratedError();
+      request.rejectWithError = tmp2(1294).rejectWithMigratedError();
       await HTTP.post(request);
       closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0.body);
@@ -359,7 +359,7 @@ export default {
   getDMChannel(id) {
     closure_0 = id;
     return (async () => {
-      const HTTP = tmp5(1297).HTTP;
+      const HTTP = tmp5(1294).HTTP;
       await HTTP.get({ url: closure_1_11.DM_CHANNEL(tmp5), rejectWithError: true });
       closure_128_0 = value;
       closure_128_1 = closure_1_6(closure_128_0.body);
@@ -421,17 +421,17 @@ export default {
     if (flag3 == null) {
       flag3 = false;
     }
-    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" }, silent: flag2 });
+    DispatcherDefault.dispatch({ type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "applicationId" }, silent: flag2 });
     if (flag) {
-      flag3(1114).transitionTo(constants2.FRIENDS);
-      const obj6 = flag3(1114);
+      flag3(1111).transitionTo(constants2.FRIENDS);
+      const obj6 = flag3(1111);
     }
-    const HTTP = flag3(1297).HTTP;
+    const HTTP = flag3(1294).HTTP;
     const request = { url: closure_11.CHANNEL(id), query: { silent: flag2 }, oldFormErrors: true, rejectWithError: null };
-    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "r", parent_id: "toCharArray$esjava$1" }, silent: flag2 };
+    const obj2 = { type: "CHANNEL_DELETE", channel: { id, guild_id: "Array", parent_id: "applicationId" }, silent: flag2 };
     const tmpResult2 = DispatcherDefault;
-    request.rejectWithError = flag3(1297).rejectWithMigratedError();
-    const obj8 = flag3(1297);
+    request.rejectWithError = flag3(1294).rejectWithMigratedError();
+    const obj8 = flag3(1294);
     const delResult = HTTP.del(request);
     return HTTP.del(request).then(() => {
       const AccessibilityAnnouncer = shared.AccessibilityAnnouncer;
@@ -455,8 +455,8 @@ export default {
     closure_1 = arr3;
     return (async () => {
       const body = tmp2;
-      const HTTP = tmp5(1297).HTTP;
-      const request = { url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, body.id), body, oldFormErrors: true, rejectWithError: tmp5(1297).rejectWithMigratedError() };
+      const HTTP = tmp5(1294).HTTP;
+      const request = { url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, body.id), body, oldFormErrors: true, rejectWithError: tmp5(1294).rejectWithMigratedError() };
       await HTTP.put(request);
       closure_128_0 = value;
       body(584).dispatch({ type: "CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS", channelId: closure_129_0, overwrite: closure_129_1 });
@@ -467,8 +467,8 @@ export default {
     closure_0 = channelId;
     closure_1 = id;
     return (async () => {
-      const HTTP = tmp5(1297).HTTP;
-      await HTTP.del({ url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2), oldFormErrors: true, rejectWithError: tmp5(1297).rejectWithMigratedError() });
+      const HTTP = tmp5(1294).HTTP;
+      await HTTP.del({ url: closure_1_11.CHANNEL_PERMISSIONS_OVERWRITE(tmp5, tmp2), oldFormErrors: true, rejectWithError: tmp5(1294).rejectWithMigratedError() });
       closure_128_0 = value;
       tmp2(584).dispatch({ type: "CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS", channelId: closure_129_0, overwriteId: closure_129_1 });
       return closure_128_0;
@@ -526,7 +526,7 @@ export default {
     return (async () => {
       const name = tmp3;
       const channel2 = channel.getChannel(tmp2);
-      const HTTP = tmp2(1297).HTTP;
+      const HTTP = tmp2(1294).HTTP;
       const request = { url: closure_1_11.CHANNEL(tmp2), body: { name }, oldFormErrors: true, rejectWithError: true };
       await HTTP.patch(request);
       closure_128_1 = value;
@@ -544,8 +544,8 @@ export default {
         obj = channel2;
       }
       if (!tmp10) {
-        const result = name(7424).checkGuildTemplateDirty(closure_128_2);
-        name(7424);
+        const result = name(7426).checkGuildTemplateDirty(closure_128_2);
+        name(7426);
       }
       return closure_128_1;
     })();

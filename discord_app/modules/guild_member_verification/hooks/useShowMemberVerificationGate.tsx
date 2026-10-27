@@ -1,10 +1,10 @@
 // === Module 8531: useShowMemberVerificationGate ===
 
 // Module 8531 (useShowMemberVerificationGate)
-import MemberVerificationUtils from "MemberVerificationUtils" /* 6894 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserStore from "UserStore" /* 1392 */;
+import MemberVerificationUtils from "MemberVerificationUtils" /* 6896 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 

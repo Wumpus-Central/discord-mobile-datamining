@@ -1,18 +1,18 @@
-// === Module 11162: BioMarkupUtils ===
+// === Module 11165: BioMarkupUtils ===
 
-// Module 11162 (BioMarkupUtils)
-import privDefault from "priv" /* 1459 */;
-import _modDef1951 from "module_1951" /* 1951 */;
-import MarkupReactRulesDefault from "MarkupReactRules" /* 5706 */;
-import MarkupRulesDefault from "MarkupRules" /* 5982 */;
-import combineMarkupRules_mod from "combineMarkupRules" /* 5981 */;
-import MarkupParser_mod from "MarkupParser" /* 8344 */;
-import MarkupUtils from "MarkupUtils" /* 5705 */;
+// Module 11165 (BioMarkupUtils)
+import privDefault from "priv" /* 1456 */;
+import _modDef1948 from "module_1948" /* 1948 */;
+import MarkupReactRulesDefault from "MarkupReactRules" /* 5707 */;
+import MarkupRulesDefault from "MarkupRules" /* 5983 */;
+import combineMarkupRules_mod from "combineMarkupRules" /* 5982 */;
+import MarkupParser_mod from "MarkupParser" /* 8343 */;
+import MarkupUtils from "MarkupUtils" /* 5706 */;
 import apply from "module_12" /* 12 */;
 
 let combineMarkupRules = combineMarkupRules_mod;
 const items = [MarkupRulesDefault.PROFILE_BIO_RULES, MarkupReactRulesDefault({ enableBuildOverrides: false, mustConfirmExternalLink: true }), ];
-const MarkupReactRules = fn(5706);
+const MarkupReactRules = fn(5707);
 items[2] = MarkupReactRules.createFetchingGameMentionRule();
 const importDefaultResultResult = combineMarkupRules(items);
 let c2 = importDefaultResultResult;
@@ -81,8 +81,8 @@ export const parseBioReactWithCachedAST = function parseBioReactWithCachedAST(cR
       const result = closure_3.set(combined, tmp5);
       value = tmp5;
     }
-    const obj3 = _modDef1951;
-    return obj3.reactFor(_modDef1951.ruleOutput(importDefaultResultResult, "react"))(value);
+    const obj3 = _modDef1948;
+    return obj3.reactFor(_modDef1948.ruleOutput(importDefaultResultResult, "react"))(value);
   }
 };
 export const parseBioReactWithoutScrolling = MarkupParser.reactParserFor(combineMarkupRules(items1));

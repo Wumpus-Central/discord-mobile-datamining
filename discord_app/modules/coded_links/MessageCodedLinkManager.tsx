@@ -1,13 +1,13 @@
-// === Module 18869: MessageCodedLinkManager ===
+// === Module 18907: MessageCodedLinkManager ===
 
-// Module 18869 (MessageCodedLinkManager)
-import findCodedLinksDefault from "findCodedLinks" /* 5699 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18881 */;
+// Module 18907 (MessageCodedLinkManager)
+import findCodedLinksDefault from "findCodedLinks" /* 5700 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18919 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7567 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import InviteStore from "InviteStore" /* 5700 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7568 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import InviteStore from "InviteStore" /* 5701 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 
 const require = fn;
 function resolveMessageCodedLinks(content) {
@@ -164,7 +164,7 @@ function resolveMessageCodedLinks(content) {
                                                       const obj3 = { value, done: true };
                                                       return obj3;
                                                     } else {
-                                                      const useGameOrganizationInviteFetch = tmp4(18877).useGameOrganizationInviteFetch;
+                                                      const useGameOrganizationInviteFetch = tmp4(18915).useGameOrganizationInviteFetch;
                                                       const items = [code];
                                                       v1 = 1;
                                                       dependencyMap = 1;
@@ -179,7 +179,7 @@ function resolveMessageCodedLinks(content) {
                                                     const obj = { value, done: true };
                                                     return obj;
                                                   } else {
-                                                    v1(12737)(closure_128_0).catch(closure_1_6);
+                                                    v1(12746)(closure_128_0).catch(closure_1_6);
                                                     dependencyMap = 3;
                                                     return { value: "IconComponent", done: null };
                                                   }
@@ -377,7 +377,7 @@ function resolveMessageCodedLinks(content) {
                                                           const obj3 = { value, done: true };
                                                           return obj3;
                                                         } else {
-                                                          const useGameOrganizationInviteFetch = tmp4(18877).useGameOrganizationInviteFetch;
+                                                          const useGameOrganizationInviteFetch = tmp4(18915).useGameOrganizationInviteFetch;
                                                           const items = [code];
                                                           v1 = 1;
                                                           dependencyMap = 1;
@@ -392,7 +392,7 @@ function resolveMessageCodedLinks(content) {
                                                         const obj = { value, done: true };
                                                         return obj;
                                                       } else {
-                                                        v1(12737)(closure_128_0).catch(closure_1_6);
+                                                        v1(12746)(closure_128_0).catch(closure_1_6);
                                                         dependencyMap = 3;
                                                         return { value: "IconComponent", done: null };
                                                       }
@@ -442,7 +442,7 @@ function resolveMessageCodedLinks(content) {
     });
   }
 }
-const NOOP = fn(1098).NOOP;
+const NOOP = fn(1095).NOOP;
 class MessageCodedLinkManager extends tmp7 {
   constructor() {
     tmp3 = new MessageCodedLinkManager(tmp2, tmp, new.target);

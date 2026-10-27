@@ -1,6 +1,6 @@
-// === Module 1244: StageAudienceSidebarConstants ===
+// === Module 1241: StageAudienceSidebarConstants ===
 
-// Module 1244 (StageAudienceSidebarConstants)
+// Module 1241 (StageAudienceSidebarConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/stage_channels/StageAudienceSidebarConstants.tsx");

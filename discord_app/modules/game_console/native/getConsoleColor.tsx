@@ -1,8 +1,8 @@
-// === Module 18616: getConsoleColor ===
+// === Module 18652: getConsoleColor ===
 
-// Module 18616 (getConsoleColor)
+// Module 18652 (getConsoleColor)
 import nativeDefault from "native" /* 587 */;
-import Constants from "Constants" /* 1087 */;
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const obj = { [XBOX]: nativeDefault.unsafe_rawColors.PLATFORM_XBOX, [PLAYSTATION]: nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION, [PLAYSTATION_STAGING]: nativeDefault.unsafe_rawColors.PLATFORM_PLAYSTATION };

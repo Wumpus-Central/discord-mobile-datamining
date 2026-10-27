@@ -1,19 +1,19 @@
-// === Module 13367: NewChannelFollower ===
+// === Module 13381: NewChannelFollower ===
 
-// Module 13367 (NewChannelFollower)
+// Module 13381 (NewChannelFollower)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import openChannelPickerDefault from "openChannelPicker" /* 13370 */;
-import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 13371 */;
+import util from "util" /* 1125 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import openChannelPickerDefault from "openChannelPicker" /* 13384 */;
+import ChannelFollowerActionCreatorsDefault from "ChannelFollowerActionCreators" /* 13385 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildChannelStore from "GuildChannelStore" /* 4901 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import SortedGuildStore from "SortedGuildStore" /* 6701 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildChannelStore from "GuildChannelStore" /* 4902 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import SortedGuildStore from "SortedGuildStore" /* 6702 */;
 
 const require = globalThis.__r;
 
@@ -28,13 +28,13 @@ function canFollowIntoChannel(channel) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-fn(4827).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
-let closure_9 = fn(4901).GUILD_SELECTABLE_CHANNELS_KEY;
-const Constants = fn(1087);
+fn(4828).GUILD_FOLLOW_DESTINATION_CHANNEL_TYPES;
+let closure_9 = fn(4902).GUILD_SELECTABLE_CHANNELS_KEY;
+const Constants = fn(1084);
 ({ AbortCodes: map1, Permissions: closure_14 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flex: 1, flexDirection: "column", alignItems: "stretch", paddingHorizontal: 16, paddingVertical: 24 }, header: { flex: 1, flexDirection: "row", justifyContent: "center", alignItems: "center", height: 96 }, headerBackground: null, headerGuildIcon: null, headerChannelContainer: null, headerChannel: null, headerChannelIcon: null, ctaHeader: null, ctaSubhead: null, channelIcon: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -89,9 +89,9 @@ export default function NewChannelFollower(targetChannelId) {
   });
   const tmp12 = require("useChannelName")(sourceChannel);
   if (tmp5Result.isThemeDark(tmp9)) {
-    let tmp8Result = require("module_13368");
+    let tmp8Result = require("module_13382");
   } else {
-    tmp8Result = require("module_13369");
+    tmp8Result = require("module_13383");
   }
   const obj4 = { handleDisabled: true, startExpanded: true, scrollable: true, ref: bottomSheetRef, children: null };
   const obj5 = { style: tmp.header, children: null };

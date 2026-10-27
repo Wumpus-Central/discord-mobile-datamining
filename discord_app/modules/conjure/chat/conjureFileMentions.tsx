@@ -1,7 +1,7 @@
-// === Module 12174: conjureFileMentions ===
+// === Module 12194: conjureFileMentions ===
 
-// Module 12174 (conjureFileMentions)
-import _modDef1951 from "module_1951" /* 1951 */;
+// Module 12194 (conjureFileMentions)
+import _modDef1948 from "module_1948" /* 1948 */;
 import noop from "module_19" /* 19 */;
 
 let c2 = "<file:(\\d{16}-[a-z0-9]{6})>";
@@ -64,7 +64,7 @@ export const createConjureFileMentionRule = function createConjureFileMentionRul
   closure_0 = arg0;
   regExp = new RegExp("^" + c2);
   return {
-    order: _modDef1951.defaultRules.autolink.order - 0.5,
+    order: _modDef1948.defaultRules.autolink.order - 0.5,
     requiredFirstCharacters: ["<"],
     match(arg0) {
       return regExp.exec(arg0);

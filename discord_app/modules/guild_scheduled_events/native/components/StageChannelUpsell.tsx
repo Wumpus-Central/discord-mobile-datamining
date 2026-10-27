@@ -2,30 +2,30 @@
 
 // Module 8947 (StageChannelUpsell)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import components_Button_Button from "components/Button/Button" /* 5244 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
-import Pressables from "Pressables" /* 6908 */;
-import _modDef8115 from "module_8115" /* 8115 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import components_Button_Button from "components/Button/Button" /* 5245 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
+import Pressables from "Pressables" /* 6910 */;
+import _modDef8113 from "module_8113" /* 8113 */;
 import _modDef8949 from "module_8949" /* 8949 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const createChannelRecord = fn(4827).createChannelRecord;
+const createChannelRecord = fn(4828).createChannelRecord;
 let closure_6 = fn(8948).useStageChannelUpsellCardStore;
 let closure_7 = fn(8884).CREATE_GUILD_EVENT_MODAL_KEY;
-const ChannelTypes = fn(1087).ChannelTypes;
+const ChannelTypes = fn(1084).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flexDirection: "column", alignItems: "center", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, padding: 16, margin: 16, borderRadius: nativeDefault.radii.sm }, image: { marginBottom: 16 }, closeContainer: { position: "absolute", top: 14, right: 14 }, header: { lineHeight: 20, marginBottom: 4 }, description: { textAlign: "center", marginBottom: 4 }, button: { marginTop: 12, alignSelf: "stretch" } };
 let closure_12 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -40,7 +40,7 @@ export default function StageChannelUpsell(arg0) {
   if (!tmp2[0]) {
     let obj = { style: tmp.container, children: null };
     let obj2 = { onPress: tmp3, accessibilityRole: "button", style: tmp.closeContainer, children: null };
-    let obj3 = { source: _modDef8115 };
+    let obj3 = { source: _modDef8113 };
     obj2.children = closure_9(native.Icon, obj3);
     const items = [closure_9(Pressables.PressableOpacity, obj2), , , , , ];
     const obj4 = { source: _modDef8949, style: tmp.image };
@@ -57,7 +57,7 @@ export default function StageChannelUpsell(arg0) {
     const intl3 = util.intl;
     const obj8 = {
       suggestionsHook(children, arg1) {
-          return closure_1_9(guildId(5234).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
+          return closure_1_9(guildId(5235).Text, { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children }, arg1);
         }
     };
     obj7.children = intl3.format(util.t.Vh7rP7, obj8);

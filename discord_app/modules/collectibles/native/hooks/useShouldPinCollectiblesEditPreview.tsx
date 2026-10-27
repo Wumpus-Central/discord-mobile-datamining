@@ -1,9 +1,9 @@
-// === Module 14493: useShouldPinCollectiblesEditPreview ===
+// === Module 14529: useShouldPinCollectiblesEditPreview ===
 
-// Module 14493 (useShouldPinCollectiblesEditPreview)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import NavigatorConstants from "NavigatorConstants" /* 5268 */;
+// Module 14529 (useShouldPinCollectiblesEditPreview)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import NavigatorConstants from "NavigatorConstants" /* 5269 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

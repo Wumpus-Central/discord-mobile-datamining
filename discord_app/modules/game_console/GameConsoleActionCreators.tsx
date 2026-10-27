@@ -1,15 +1,15 @@
-// === Module 11653: GameConsoleActionCreators ===
+// === Module 11655: GameConsoleActionCreators ===
 
-// Module 11653 (GameConsoleActionCreators)
+// Module 11655 (GameConsoleActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import AudioSettingsUtils from "AudioSettingsUtils" /* 5857 */;
-import ConsoleHandoffType from "ConsoleHandoffType" /* 11654 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import AudioSettingsUtils from "AudioSettingsUtils" /* 5858 */;
+import ConsoleHandoffType from "ConsoleHandoffType" /* 11656 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
-import SessionsStore from "SessionsStore" /* 5716 */;
-import GameConsoleStore from "GameConsoleStore" /* 5715 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
+import SessionsStore from "SessionsStore" /* 5717 */;
+import GameConsoleStore from "GameConsoleStore" /* 5716 */;
 
 require = fn;
 function disconnectRemote() {
@@ -116,7 +116,7 @@ let closure_12 = async function _getConnectNonce() {
             CREATE_NEW_CALL = ConsoleHandoffType.ConsoleHandoffType.CREATE_NEW_CALL;
             tmp21 = require;
           }
-          const HTTP = tmp21(1297).HTTP;
+          const HTTP = tmp21(1294).HTTP;
           const request = { url: constants.CONNECT_REQUEST_CREATE, body: null, rejectWithError: false };
           const obj5 = { analytics_properties: null };
           const obj6 = { handoff_type: CREATE_NEW_CALL };
@@ -327,7 +327,7 @@ let closure_16 = async function _cancelCommand() {
     }
   })();
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8, PlatformTypes: closure_9 } = Constants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/game_console/GameConsoleActionCreators.tsx");

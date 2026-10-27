@@ -1,15 +1,15 @@
-// === Module 4914: MessageRecord ===
+// === Module 4915: MessageRecord ===
 
-// Module 4914 (MessageRecord)
-import FlagUtils from "FlagUtils" /* 1405 */;
-import ReactionUtils from "ReactionUtils" /* 4915 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5225 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5602 */;
-import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5603 */;
-import Record from "Record" /* 1407 */;
+// Module 4915 (MessageRecord)
+import FlagUtils from "FlagUtils" /* 1402 */;
+import ReactionUtils from "ReactionUtils" /* 4916 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5226 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5603 */;
+import ApplicationIntegrationType from "ApplicationIntegrationType" /* 5604 */;
+import Record from "Record" /* 1404 */;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MessageFlags: c3, MessageStates: closure_4, MessageTypes: hasOwnProperty } = Constants);
 class MinimalMessageRecord extends tmp2 {
   constructor(arg0) {
@@ -141,7 +141,6 @@ class MessageRecord extends MinimalMessageRecord {
     }
     tmp2.giftInfo = giftInfo;
     tmp2.giftingPrompt = global.giftingPrompt || null;
-    tmp2.boostingPrompt = global.boostingPrompt || null;
     tmp2.messageSnapshots = global.messageSnapshots || [];
     tmp2.isUnsupported = global.isUnsupported || false;
     changelog_id = global.changelog_id;

@@ -1,6 +1,6 @@
-// === Module 7039: PasswordResetMethods ===
+// === Module 7041: PasswordResetMethods ===
 
-// Module 7039 (PasswordResetMethods)
+// Module 7041 (PasswordResetMethods)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/PasswordResetMethods.tsx");

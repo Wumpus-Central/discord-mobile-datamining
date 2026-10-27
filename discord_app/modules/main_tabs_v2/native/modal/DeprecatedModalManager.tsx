@@ -1,15 +1,15 @@
-// === Module 18979: DeprecatedModalManager ===
+// === Module 19017: DeprecatedModalManager ===
 
-// Module 18979 (DeprecatedModalManager)
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5150 */;
-import RootNavigationRef from "RootNavigationRef" /* 5151 */;
-import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 6674 */;
-import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 18906 */;
+// Module 19017 (DeprecatedModalManager)
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5151 */;
+import RootNavigationRef from "RootNavigationRef" /* 5152 */;
+import getDeprecatedModalDataDefault from "getDeprecatedModalData" /* 6675 */;
+import isFullScreenVerificationModalRequiredDefault from "isFullScreenVerificationModalRequired" /* 18944 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 9006 */;
 import CreateInviteModalStore from "CreateInviteModalStore" /* 9051 */;
-import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 18980 */;
-import UserRequiredActionStore from "UserRequiredActionStore" /* 4817 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+import NotificationSettingsModalStore from "NotificationSettingsModalStore" /* 19018 */;
+import UserRequiredActionStore from "UserRequiredActionStore" /* 4818 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 
 require = fn;
 function handlePushedModal(modal) {
@@ -58,7 +58,7 @@ function createPushModalHandler() {
     pushFirstOpenModal(closure_0);
   };
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 const UserRequiredActions = Constants.UserRequiredActions;
 const APP = Constants.AppContext.APP;
 const EMAIL_VERIFICATION_MODAL_OPEN = "EMAIL_VERIFICATION_MODAL_OPEN";

@@ -1,11 +1,11 @@
-// === Module 7453: useMuteStates ===
+// === Module 7454: useMuteStates ===
 
-// Module 7453 (useMuteStates)
-import ImpersonateStore from "ImpersonateStore" /* 4876 */;
+// Module 7454 (useMuteStates)
+import ImpersonateStore from "ImpersonateStore" /* 4877 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import VoiceStateStore from "VoiceStateStore" /* 5630 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import VoiceStateStore from "VoiceStateStore" /* 5631 */;
 
 const require = globalThis.__r;
 
@@ -63,7 +63,7 @@ function getMuteStates(voiceStateStore) {
   obj.mute = flag;
   return obj;
 }
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/video_calls/useMuteStates.tsx");

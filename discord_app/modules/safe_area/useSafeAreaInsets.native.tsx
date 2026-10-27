@@ -1,9 +1,9 @@
-// === Module 1633: useSafeAreaInsets ===
+// === Module 1630: useSafeAreaInsets ===
 
-// Module 1633 (useSafeAreaInsets)
+// Module 1630 (useSafeAreaInsets)
 import c from "c" /* 576 */;
-import AppEntryKeyContext from "AppEntryKeyContext" /* 1502 */;
-import SafeAreaStoreDefault from "SafeAreaStore" /* 1634 */;
+import AppEntryKeyContext from "AppEntryKeyContext" /* 1499 */;
+import SafeAreaStoreDefault from "SafeAreaStore" /* 1631 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

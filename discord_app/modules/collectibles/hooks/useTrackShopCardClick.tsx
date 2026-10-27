@@ -1,14 +1,14 @@
-// === Module 9420: useTrackShopCardClick ===
+// === Module 9419: useTrackShopCardClick ===
 
-// Module 9420 (useTrackShopCardClick)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7661 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7662 */;
+// Module 9419 (useTrackShopCardClick)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7662 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7663 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const useSelectedVariantIndex = fn(9421).useSelectedVariantIndex;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const useSelectedVariantIndex = fn(9420).useSelectedVariantIndex;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useTrackShopCardClick.tsx");

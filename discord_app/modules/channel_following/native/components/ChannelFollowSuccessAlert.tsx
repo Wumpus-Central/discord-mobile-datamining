@@ -1,11 +1,11 @@
-// === Module 13372: ChannelFollowSuccessAlert ===
+// === Module 13386: ChannelFollowSuccessAlert ===
 
-// Module 13372 (ChannelFollowSuccessAlert)
+// Module 13386 (ChannelFollowSuccessAlert)
 import _modDef12 from "module_12" /* 12 */;
-import util from "util" /* 1128 */;
-import useThemeDefault from "useTheme" /* 5205 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import common_AlertDefault from "common/Alert" /* 5978 */;
+import util from "util" /* 1125 */;
+import useThemeDefault from "useTheme" /* 5206 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import common_AlertDefault from "common/Alert" /* 5979 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,8 +13,8 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let items = [fn(13373), fn(13374), fn(13375)];
-let items1 = [fn(13376), fn(13377), fn(13378)];
+let items = [fn(13387), fn(13388), fn(13389)];
+let items1 = [fn(13390), fn(13391), fn(13392)];
 let items2 = [
   () => {
     const intl = util.intl;
@@ -57,7 +57,7 @@ let items2 = [
     return intl.string(util.t.jgC65t);
   }
 ];
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_8 = createStyles.createStyles({ text: { marginTop: 16, lineHeight: 20, textAlign: "center" }, header: { textAlign: "center" }, image: { alignSelf: "center", marginTop: -72, marginBottom: 16, width: "100%", resizeMode: "contain" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -102,8 +102,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
   const tmpResult = require("areHookInputsEqual");
   const stableMemo1 = require("areHookInputsEqual").useStableMemo(tmp11, tmp12);
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1128).intl;
-    const stringResult = intl.string(tmp(1128).t["+IrDzN"]);
+    const intl = tmp(1125).intl;
+    const stringResult = intl.string(tmp(1125).t["+IrDzN"]);
     cResult[5] = stringResult;
     let tmp14 = stringResult;
   } else {
@@ -127,8 +127,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
       }
       const _Symbol = Symbol;
       if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl2 = tmp(1128).intl;
-        const stringResult1 = intl2.string(tmp(1128).t["2QbSea"]);
+        const intl2 = tmp(1125).intl;
+        const stringResult1 = intl2.string(tmp(1125).t["2QbSea"]);
         cResult[14] = stringResult1;
         let tmp23 = stringResult1;
       } else {
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
       }
       if (cResult[15] !== tmp4.text) {
         const obj3 = { style: tmp4.text, variant: "text-md/medium", color: "text-muted", children: tmp23 };
-        const tmp27 = closure_3(tmp(5234).Text, obj3);
+        const tmp27 = closure_3(tmp(5235).Text, obj3);
         cResult[15] = tmp4.text;
         cResult[16] = tmp27;
         let tmp25 = tmp27;
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
       const tmp5Result = common_AlertDefault;
     }
     const obj5 = { style: tmp4.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: tmp18 };
-    const tmp22 = closure_3(tmp(5234).Text, obj5);
+    const tmp22 = closure_3(tmp(5235).Text, obj5);
     cResult[11] = tmp4.header;
     cResult[12] = tmp18;
     cResult[13] = tmp22;
@@ -194,14 +194,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelF
   const obj2 = {};
   const tmp5Result2 = require("areHookInputsEqual");
   const merged = Object.assign(arg0);
-  const intl = tmp5(1128).intl;
+  const intl = tmp5(1125).intl;
   obj2.confirmText = intl.string(require("util").t["+IrDzN"]);
   items1 = [closure_3(FastImageDefault, { source: stableMemo, style: tmp.image }), , ];
   const obj3 = { source: stableMemo, style: tmp.image };
   const tmp2Result = common_AlertDefault;
   items1[1] = closure_3(require("Text/Text").Text, { style: tmp.header, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: stableMemo1() });
   const obj5 = { style: tmp.text, variant: "text-md/medium", color: "text-muted", children: null };
-  const intl2 = tmp5(1128).intl;
+  const intl2 = tmp5(1125).intl;
   obj5.children = intl2.string(require("util").t["2QbSea"]);
   items1[2] = closure_3(require("Text/Text").Text, obj5);
   obj2.children = items1;

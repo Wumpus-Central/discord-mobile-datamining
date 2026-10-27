@@ -1,6 +1,6 @@
-// === Module 17129: useDesignSystemSettingsState ===
+// === Module 17170: useDesignSystemSettingsState ===
 
-// Module 17129 (useDesignSystemSettingsState)
+// Module 17170 (useDesignSystemSettingsState)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 

@@ -1,17 +1,17 @@
-// === Module 12048: AppLauncherChoicesOption ===
+// === Module 12049: AppLauncherChoicesOption ===
 
-// Module 12048 (AppLauncherChoicesOption)
+// Module 12049 (AppLauncherChoicesOption)
 import nativeDefault from "native" /* 587 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
-let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.lg, alignItems: "center", padding: 12 } };
+const createStyles = fn(4972);
+let obj2 = { container: { backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, alignItems: "center", padding: 12 } };
 let closure_6 = createStyles.createStyles(obj2);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/native/options/choices/AppLauncherChoicesOption.tsx");
@@ -21,7 +21,7 @@ export default function AppLauncherChoicesOption(option) {
   ({ initialValue: importDefault, onSelect } = option);
   const onOpenChoicesSheet = option.onOpenChoicesSheet;
   const onDismissChoicesSheet = option.onDismissChoicesSheet;
-  ({ style, autoFocus, hasError } = option);
+  ({ autoFocus, hasError } = option);
   const tmp3 = onOpenChoicesSheet(onDismissChoicesSheet.useState(() => {
     if (null != type) {
       if ("text" === type.type) {
@@ -62,13 +62,11 @@ export default function AppLauncherChoicesOption(option) {
       onSelect(choice);
     };
     obj3.onDismiss = onDismissChoicesSheet;
-    obj2.openLazy(asyncRequireImpl(12049, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj3);
+    obj2.openLazy(asyncRequireImpl(12050, dependencyMap.paths), "AppLauncherChoicesActionSheet", obj3);
   }, items);
   const tmp = closure_6();
   const animationDelayedAutoFocus = option(onSelect[9]).useAnimationDelayedAutoFocus(autoFocus, callback);
-  let obj2 = { start: true, end: true, style: null, hasError, label: null, subLabel: null, trailing: null, onPress: null };
-  const items1 = [tmp.container, style];
-  obj2.style = items1;
+  let obj2 = { start: true, end: true, style: tmp.container, hasError, label: null, subLabel: null, trailing: null, onPress: null };
   let str = "text-sm/medium";
   if (null == first) {
     str = "text-md/medium";
@@ -87,7 +85,7 @@ export default function AppLauncherChoicesOption(option) {
     tmp10Result = tmp10(tmp7(tmp8[11]).Text, obj4);
   }
   obj2.subLabel = tmp10Result;
-  obj2.trailing = first(option(onSelect[10]).FormArrow, {});
+  obj2.trailing = first(option(onSelect[12]).TableRowArrow, {});
   obj2.onPress = callback;
   return first(option(onSelect[10]).FormRow, obj2);
 };

@@ -1,7 +1,7 @@
-// === Module 5713: hasRichActivity ===
+// === Module 5714: hasRichActivity ===
 
-// Module 5713 (hasRichActivity)
-import Constants from "Constants" /* 1087 */;
+// Module 5714 (hasRichActivity)
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const ActivityTypes = Constants.ActivityTypes;

@@ -1,14 +1,14 @@
-// === Module 7709: UserProfilePersonalWidget ===
+// === Module 7710: UserProfilePersonalWidget ===
 
-// Module 7709 (UserProfilePersonalWidget)
-import _modDef1357 from "module_1357" /* 1357 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import PremiumTypeUtils from "PremiumTypeUtils" /* 1991 */;
-import dismissible_content from "dismissible_content" /* 4807 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5001 */;
-import WidgetType from "WidgetType" /* 7704 */;
-import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 7710 */;
-import UserStore from "UserStore" /* 1392 */;
+// Module 7710 (UserProfilePersonalWidget)
+import _modDef1354 from "module_1354" /* 1354 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
+import dismissible_content from "dismissible_content" /* 4808 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5002 */;
+import WidgetType from "WidgetType" /* 7705 */;
+import PersonalWidgetSectionType from "PersonalWidgetSectionType" /* 7711 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function createDefaultFieldsSection() {
@@ -140,7 +140,7 @@ function serializeSection(type) {
     return type;
   }
 }
-const PremiumTypes = fn(1394).PremiumTypes;
+const PremiumTypes = fn(1391).PremiumTypes;
 let closure_5 = 0;
 let UserProfilePersonalWidget;
 class UserProfilePersonalWidget {
@@ -239,7 +239,7 @@ prototype["isEqual"] = function isEqual(header) {
             if (tmp13) {
               image2 = image2.image;
               image = image.image;
-              tmp13 = _modDef1357(image2, image);
+              tmp13 = _modDef1354(image2, image);
             }
             sum = sum + 1;
             num2 = sum;
@@ -259,7 +259,7 @@ prototype["isEqual"] = function isEqual(header) {
                 tmp8 = tmp6.description === tmp7.description;
               }
               if (tmp8) {
-                tmp8 = _modDef1357(tmp6.image, tmp7.image);
+                tmp8 = _modDef1354(tmp6.image, tmp7.image);
               }
               let flag2 = false;
               if (!tmp8) {

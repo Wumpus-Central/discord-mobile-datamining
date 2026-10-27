@@ -1,15 +1,15 @@
 // === Module 9052: InstantInviteUtils ===
 
 // Module 9052 (InstantInviteUtils)
-import util from "util" /* 1128 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6708 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import ReadStateStore from "ReadStateStore" /* 6771 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7322 */;
+import util from "util" /* 1125 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6709 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import ReadStateStore from "ReadStateStore" /* 6772 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7324 */;
 
 const require = globalThis.__r;
 
@@ -91,8 +91,8 @@ function addDmUsers(arg0) {
     continue;
   }
 }
-const ChannelTypes = fn(1087).ChannelTypes;
-const InviteTargetTypes = fn(7809).InviteTargetTypes;
+const ChannelTypes = fn(1084).ChannelTypes;
+const InviteTargetTypes = fn(7810).InviteTargetTypes;
 const RowTypes = { GROUP_DM: "GROUP_DM", DM: "DM", FRIEND: "FRIEND", CHANNEL: "CHANNEL" };
 const minutes = "minutes";
 const hours = "hours";
@@ -288,7 +288,7 @@ export const generateRowsForQuery = function generateRowsForQuery(arg0) {
       importDefault = undefined;
       ({ rows: c0, counts: c1 } = obj10);
       if (obj10.inviteTargetType === tmp40.EMBEDDED_APPLICATION) {
-        const obj12 = { query: tmp44, limit: 3, guildId: "__initData" };
+        const obj12 = { query: tmp44, limit: 3, guildId: "__packager_asset" };
         let item = AutocompleteUtilsDefault.queryChannels(obj12).forEach((record) => {
           obj = { type: obj.CHANNEL, item: record.record, isSuggested: false, score: record.score };
           _undefined.push(obj);

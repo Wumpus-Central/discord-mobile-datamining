@@ -1,15 +1,15 @@
-// === Module 8441: VoiceSessionUtils ===
+// === Module 8440: VoiceSessionUtils ===
 
-// Module 8441 (VoiceSessionUtils)
+// Module 8440 (VoiceSessionUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import useMessageAuthor from "useMessageAuthor" /* 6366 */;
-import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8337 */;
-import maybeSortByProbability from "maybeSortByProbability" /* 8442 */;
+import useMessageAuthor from "useMessageAuthor" /* 6367 */;
+import getHumanizedCallDurationDefault from "getHumanizedCallDuration" /* 8336 */;
+import maybeSortByProbability from "maybeSortByProbability" /* 8441 */;
 import noop from "module_19" /* 19 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7732 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7733 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -183,11 +183,11 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     return obj;
   });
   if (null == tmp2) {
-    const intl = tmp3(1128).intl;
+    const intl = tmp3(1125).intl;
     const obj2 = { username: messageAuthor.nick, usernameOnClick: tmp3(12).identity };
-    let formatToPlainStringResult = intl.formatToPlainString(tmp3(1128).t.HzBfIN, obj2);
+    let formatToPlainStringResult = intl.formatToPlainString(tmp3(1125).t.HzBfIN, obj2);
   } else {
-    const intl2 = tmp3(1128).intl;
+    const intl2 = tmp3(1125).intl;
     const obj3 = { userCount: mapped.length + 1, username: messageAuthor.nick, usernameOnClick: tmp3(12).identity, username2: null, username2OnClick: null, username3: null, username3OnClick: null, otherCount: null, duration: null };
     const first = mapped[0];
     let nick;
@@ -204,7 +204,7 @@ export const getVoiceSessionMessageContent = function getVoiceSessionMessageCont
     obj3.username3OnClick = tmp3(12).identity;
     obj3.otherCount = mapped.length - 1;
     obj3.duration = tmp2;
-    formatToPlainStringResult = intl2.formatToPlainString(tmp3(1128).t.atbXuX, obj3);
+    formatToPlainStringResult = intl2.formatToPlainString(tmp3(1125).t.atbXuX, obj3);
   }
   return formatToPlainStringResult;
 };

@@ -1,6 +1,6 @@
-// === Module 15115: ? ===
+// === Module 15151: ? ===
 
-// Module 15115
+// Module 15151
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/QrSuccessSpotIllustration-3x.png.js");

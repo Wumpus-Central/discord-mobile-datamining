@@ -1,6 +1,6 @@
-// === Module 12297: conjureCardOverrides ===
+// === Module 12303: conjureCardOverrides ===
 
-// Module 12297 (conjureCardOverrides)
+// Module 12303 (conjureCardOverrides)
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/chat/conjureCardOverrides.tsx");

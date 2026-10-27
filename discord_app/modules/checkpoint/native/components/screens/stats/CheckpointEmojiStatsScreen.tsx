@@ -1,22 +1,22 @@
-// === Module 12998: CheckpointEmojiStatsScreen ===
+// === Module 13011: CheckpointEmojiStatsScreen ===
 
-// Module 12998 (CheckpointEmojiStatsScreen)
+// Module 13011 (CheckpointEmojiStatsScreen)
 import nativeDefault from "native" /* 587 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
-import CheckpointStore from "CheckpointStore" /* 12956 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import CheckpointStore from "CheckpointStore" /* 12968 */;
 
 const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6015);
+const CheckpointConstants = fn(6016);
 ({ CHECKPOINT_PRIMARY: closure_8, CHECKPOINT_DARK_CYAN } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 let closure_11 = { name: "\u{1F622}", animated: false };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 }, emojiCubeContainer: { flexGrow: 1, height: "50%", justifyContent: "center", alignItems: "center" }, copy: { flexShrink: 1 }, title: null, titleText: null, titleSpacing: null, number: null, emojis: null, emojiChip: null, emoji: null, customEmoji: null, textEmoji: null, rankText: null };
 let obj3 = { width: "100%", flexGrow: 1, gap: nativeDefault.space.PX_40, paddingBottom: nativeDefault.space.PX_64 };
 obj2.title = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4 };
@@ -31,13 +31,13 @@ let obj7 = { flexDirection: "row", flexWrap: "wrap", justifyContent: "space-betw
 obj2.emojiChip = { gap: nativeDefault.space.PX_8, paddingLeft: nativeDefault.space.PX_4, paddingRight: nativeDefault.space.PX_8, borderWidth: 1, borderColor: CHECKPOINT_DARK_CYAN, backgroundColor: nativeDefault.colors.BLACK };
 obj2.emoji = { width: 20, height: 20 };
 obj2.customEmoji = { width: 20, height: 20 };
-let PlatformUtils = fn(1384);
+let PlatformUtils = fn(1381);
 let num = 16;
 if (PlatformUtils.isIOS()) {
   num = 20;
 }
 let obj10 = { fontSize: num, lineHeight: null, textAlign: "center", color: null };
-PlatformUtils = fn(1384);
+PlatformUtils = fn(1381);
 let num2;
 if (PlatformUtils.isIOS()) {
   num2 = 24;
@@ -108,25 +108,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     tmp13 = cResult[4];
     tmp14 = cResult[5];
   }
-  const tmpResult4 = require("initialize");
+  const tmpResult5 = require("initialize");
   const stateFromStores2 = require("initialize").useStateFromStores(tmp13, tmp14);
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     const items3 = [CheckpointStore];
-    class F {
-      constructor() {
-        obj = closure_0(closure_2[13]);
-        return obj.hasCheckpointEmojis(closure_1_7.stats);
-      }
-    }
+    const fn4 = function w() {
+      return closure_0(first[13]).hasCheckpointEmojis(CheckpointStore.stats);
+    };
     cResult[6] = items3;
-    cResult[7] = F;
-    let tmp18 = F;
+    cResult[7] = fn4;
+    let tmp18 = fn4;
     let tmp17 = items3;
   } else {
     tmp17 = cResult[6];
     tmp18 = cResult[7];
   }
-  const tmpResult5 = require("initialize");
+  const tmpResult6 = require("initialize");
   const stateFromStores3 = require("initialize").useStateFromStores(tmp17, tmp18);
   let num9;
   if (stateFromStores1 != null) {
@@ -150,22 +147,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }
   if (cResult[8] === emojis) {
     if (cResult[9] === stateFromStores2) {
-      class F {
-        constructor() {
-          obj = closure_0(closure_2[13]);
-          return obj.hasCheckpointEmojis(closure_1_7.stats);
-        }
+      if (cResult[10] === tmp22) {
+        let arr5 = cResult[11];
       }
-      emoji = tmp28[0];
-      closure_3 = tmp28[1];
-      const tmp31 = stateFromStores(tmp2[14]);
-      closure_4 = stateFromStores(tmp2[14])(stateFromStores(tmp2[15]));
+      [emoji] = noop.useState(tmp23 ? closure_11 : arr5[0]);
+      _slicedToArray = tmp29;
+      const tmp31Result = stateFromStores(tmp2[14])(stateFromStores(tmp2[15]));
+      noop = tmp31Result;
       let intl = tmp(tmp2[16]).intl;
       const string = intl.string;
       if (tmp23) {
-        string(tmp30(tmp2[17]).vnG9Sx);
+        let stringResult = string(tmp30(tmp2[17]).vnG9Sx);
       } else {
-        string(tmp30(tmp2[18]).ZTDCIv);
+        stringResult = string(tmp30(tmp2[18]).ZTDCIv);
       }
       if (tmp23) {
         let EmojiSlightlySmilingFaceIcon = tmp(tmp2[19]).EmojiFrowningFaceIcon;
@@ -173,42 +167,206 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
         EmojiSlightlySmilingFaceIcon = tmp(tmp2[20]).EmojiSlightlySmilingFaceIcon;
       }
       if (cResult[12] !== emoji) {
-        { emoji: null }.emoji = emoji;
-        class F {
-          constructor() {
-            obj = closure_0(closure_2[13]);
-            return obj.hasCheckpointEmojis(closure_1_7.stats);
-          }
-        }
+        let obj2 = { emoji };
+        const tmp35 = closure_9(tmp30(tmp2[21]), obj2);
         cResult[12] = emoji;
-        cResult[13] = tmp36;
-        let tmp34 = tmp36;
-        let obj2 = { emoji: null };
+        cResult[13] = tmp35;
+        let tmp33 = tmp35;
       } else {
-        tmp34 = cResult[13];
+        tmp33 = cResult[13];
       }
       if (cResult[14] === tmp4.emojiCubeContainer) {
+        if (cResult[15] === tmp33) {
+          let tmp36 = cResult[16];
+        }
         let titleSpacing;
         if (tmp23) {
           titleSpacing = tmp4.titleSpacing;
         }
-        class F {
-          constructor() {
-            obj = closure_0(closure_2[13]);
-            return obj.hasCheckpointEmojis(closure_1_7.stats);
+        if (cResult[17] === tmp4.title) {
+          if (cResult[18] === titleSpacing) {
+            let tmp41 = cResult[19];
           }
+          if (cResult[20] !== EmojiSlightlySmilingFaceIcon) {
+            let obj3 = { size: "xs", color };
+            const tmp45 = closure_9(EmojiSlightlySmilingFaceIcon, obj3);
+            cResult[20] = EmojiSlightlySmilingFaceIcon;
+            cResult[21] = tmp45;
+            let tmp42 = tmp45;
+          } else {
+            tmp42 = cResult[21];
+          }
+          if (cResult[22] === stateFromStores2) {
+            if (cResult[23] === tmp22) {
+              let tmp46 = cResult[24];
+            }
+            const tmp30Result = tmp30(tmp2[23]);
+            const intl2 = tmp(tmp2[16]).intl;
+            if (tmp22) {
+              let obj4 = { numEmojis: tmp(tmp2[13]).formatCheckpointCompactNumber(stateFromStores2.numEmojisSent) };
+              let formatToPlainStringResult = intl2.formatToPlainString(tmp30(tmp2[18])["660/Rr"], obj4);
+              const tmpResult8 = tmp(tmp2[13]);
+            } else if (tmp23) {
+              formatToPlainStringResult = intl2.string(tmp30(tmp2[17]).BHbwK1);
+            } else {
+              let obj5 = { numEmojis: rounded };
+              formatToPlainStringResult = intl2.format(tmp30(tmp2[18]).NFptic, obj5);
+            }
+            if (cResult[25] === tmp30Result) {
+              if (cResult[26] === formatToPlainStringResult) {
+                let tmp51 = cResult[27];
+              }
+              if (cResult[28] === emoji) {
+                if (cResult[29] === arr5) {
+                  if (cResult[30] === tmp31Result) {
+                    if (cResult[31] === stateFromStores) {
+                      if (cResult[32] === tmp29) {
+                        if (cResult[33] === tmp23) {
+                          if (cResult[34] === tmp4.customEmoji) {
+                            if (cResult[35] === tmp4.emoji) {
+                              if (cResult[36] === tmp4.emojiChip) {
+                                if (cResult[37] === tmp4.emojis) {
+                                  if (cResult[38] === tmp4.rankText) {
+                                    if (cResult[39] === tmp4.textEmoji) {
+                                      let tmp54 = cResult[40];
+                                    }
+                                    const obj6 = { style: tmp4.container, children: null };
+                                    const items4 = [tmp36, ];
+                                    const obj7 = { style: tmp4.copy, children: null };
+                                    const obj8 = { style: tmp41, children: null };
+                                    const items5 = [tmp42, ];
+                                    const obj9 = { variant: "heading-md/extrabold", style: tmp4.titleText, children: null };
+                                    const tmp30Result3 = tmp30(tmp2[28]);
+                                    obj9.children = stringResult.toLocaleUpperCase();
+                                    items5[1] = closure_9(tmp30(tmp2[23]), obj9);
+                                    obj8.children = items5;
+                                    const items6 = [closure_10(View, obj8), tmp46, , , ];
+                                    let tmp58Result = stateFromStores3;
+                                    if (stateFromStores3) {
+                                      const obj10 = { accessible: true, accessibilityLabel: null, style: null, children: null };
+                                      const _HermesInternal = HermesInternal;
+                                      obj10.accessibilityLabel = "" + rounded + " " + stringResult.toLocaleLowerCase();
+                                      obj10.style = tmp4.number;
+                                      const obj11 = { end: rounded };
+                                      obj10.children = closure_9(tmp30(tmp2[29]), obj11);
+                                      tmp58Result = closure_9(View, obj10);
+                                    }
+                                    const obj12 = { children: null };
+                                    items6[2] = tmp58Result;
+                                    items6[3] = tmp51;
+                                    items6[4] = tmp54;
+                                    obj7.children = items6;
+                                    items4[1] = closure_10(View, obj7);
+                                    obj6.children = items4;
+                                    obj12.children = closure_10(View, obj6);
+                                    return closure_9(tmp30Result3, obj12);
+                                  }
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              let tmp55 = !tmp23;
+              if (!tmp23) {
+                const obj13 = {
+                  style: tmp4.emojis,
+                  children: arr5.map((emojiName, index) => {
+                                  closure_0 = emojiName;
+                                  let emojiURL;
+                                  if (null != emojiName.id) {
+                                    const obj2 = { id: emojiName.id, animated: null, size: 48 };
+                                    let tmp5 = !stateFromStores;
+                                    if (!stateFromStores) {
+                                      tmp5 = true === emojiName.animated;
+                                    }
+                                    obj2.animated = tmp5;
+                                    emojiURL = stateFromStores(first[24]).getEmojiURL(obj2);
+                                    const obj = stateFromStores(first[24]);
+                                  }
+                                  const tmp6 = stateFromStores(first[25])(first, emojiName);
+                                  const obj3 = { size: "sm", style: closure_0.emojiChip, shadowColor: null, accessibilityRole: "button", accessibilityLabel: null, accessibilityState: null, onPress: null, children: null };
+                                  let str = "transparent";
+                                  if (!tmp6) {
+                                    str = color;
+                                  }
+                                  obj3.shadowColor = str;
+                                  const intl = closure_0(first[16]).intl;
+                                  obj3.accessibilityLabel = intl.formatToPlainString(stateFromStores(first[18])["S5+pRg"], { emojiName: emojiName.name, rank: index + 1 });
+                                  obj3.accessibilityState = { selected: tmp6 };
+                                  obj3.onPress = function onPress() {
+                                    closure_4();
+                                    closure_3(closure_0);
+                                  };
+                                  const obj5 = { style: closure_0.emoji, fastImageStyle: closure_0.customEmoji, textEmojiStyle: closure_0.textEmoji, name: null, src: null };
+                                  let str2 = "";
+                                  const obj4 = { emojiName: emojiName.name, rank: index + 1 };
+                                  const tmp8 = stateFromStores(first[26]);
+                                  if (null == emojiName.id) {
+                                    str2 = emojiName.name;
+                                  }
+                                  obj5.name = str2;
+                                  obj5.src = emojiURL;
+                                  const items = [closure_1_9(stateFromStores(first[27]), obj5), closure_1_9(stateFromStores(first[23]), { variant: "experimental/mono-md/bold", style: closure_0.rankText, children: index + 1 })];
+                                  obj3.children = items;
+                                  let name = emojiName.id;
+                                  if (name == null) {
+                                    name = emojiName.name;
+                                  }
+                                  return closure_1_10(tmp8, obj3, name);
+                                })
+                };
+                tmp55 = closure_9(View, obj13);
+              }
+              cResult[28] = emoji;
+              cResult[29] = arr5;
+              cResult[30] = tmp31Result;
+              cResult[31] = stateFromStores;
+              cResult[32] = tmp29;
+              cResult[33] = tmp23;
+              cResult[34] = tmp4.customEmoji;
+              cResult[35] = tmp4.emoji;
+              cResult[36] = tmp4.emojiChip;
+              cResult[37] = tmp4.emojis;
+              cResult[38] = tmp4.rankText;
+              cResult[39] = tmp4.textEmoji;
+              cResult[40] = tmp55;
+              tmp54 = tmp55;
+            }
+            const obj14 = { variant: "heading-lg/medium", children: formatToPlainStringResult };
+            const tmp53 = closure_9(tmp30Result, obj14);
+            cResult[25] = tmp30Result;
+            cResult[26] = formatToPlainStringResult;
+            cResult[27] = tmp53;
+            tmp51 = tmp53;
+          }
+          let tmp47 = tmp22;
+          if (tmp22) {
+            const obj15 = { value: stateFromStores2.numEmojisSent };
+            tmp47 = closure_9(tmp30(tmp2[22]), obj15);
+          }
+          cResult[22] = stateFromStores2;
+          cResult[23] = tmp22;
+          cResult[24] = tmp47;
+          tmp46 = tmp47;
         }
-        const items4 = [tmp4.title, titleSpacing];
+        const items7 = [tmp4.title, titleSpacing];
         cResult[17] = tmp4.title;
         cResult[18] = titleSpacing;
-        cResult[19] = items4;
+        cResult[19] = items7;
+        tmp41 = items7;
       }
-      let obj3 = { style: tmp4.emojiCubeContainer, children: tmp34 };
-      const tmp40 = closure_9(View, obj3);
+      const obj16 = { style: tmp4.emojiCubeContainer, children: tmp33 };
+      const tmp39 = closure_9(View, obj16);
       cResult[14] = tmp4.emojiCubeContainer;
-      cResult[15] = tmp34;
-      cResult[16] = tmp40;
-      const tmp31Result = stateFromStores(tmp2[14])(stateFromStores(tmp2[15]));
+      cResult[15] = tmp33;
+      cResult[16] = tmp39;
+      tmp36 = tmp39;
+      const tmp31 = stateFromStores(tmp2[14]);
     }
   }
   if (tmp22) {
@@ -227,7 +385,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   cResult[9] = stateFromStores2;
   cResult[10] = tmp22;
   cResult[11] = emojis1;
-  const tmpResult6 = require("initialize");
+  arr5 = emojis1;
+  const tmpResult7 = require("initialize");
 }) : (function CheckpointEmojiStatsScreen() {
   const tmp = closure_12();
   _require = tmp;
@@ -282,7 +441,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }
   [emoji, _slicedToArray] = noop.useState(tmp9 ? closure_11 : emojis[0]);
   let obj4 = require("initialize");
-  noop = require("useCheckpointSound")(require("module_12964"));
+  noop = require("useCheckpointSound")(require("module_12976"));
   let intl = tmp2(tmp3[16]).intl;
   const string = intl.string;
   if (tmp9) {
@@ -335,11 +494,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   const tmp12Result3 = require("CheckpointText");
   const intl2 = tmp2(tmp3[16]).intl;
   if (tmp8) {
-    const obj14 = { numEmojis: null };
-    const _Intl = Intl;
-    const numberFormat = new Intl.NumberFormat(tmp2(tmp3[16]).intl.currentLocale, { notation: "compact", compactDisplay: "long" });
-    obj14.numEmojis = numberFormat.format(stateFromStores1.numEmojisSent);
+    const obj14 = { numEmojis: tmp2(tmp3[13]).formatCheckpointCompactNumber(stateFromStores1.numEmojisSent) };
     let formatToPlainStringResult = intl2.formatToPlainString(tmp12(tmp3[18])["660/Rr"], obj14);
+    const tmp2Result = tmp2(tmp3[13]);
   } else if (tmp9) {
     formatToPlainStringResult = intl2.string(tmp12(tmp3[17]).BHbwK1);
   } else {

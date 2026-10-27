@@ -1,7 +1,7 @@
-// === Module 12246: useConjurePublishPanel ===
+// === Module 12161: useConjurePublishPanel ===
 
-// Module 12246 (useConjurePublishPanel)
-import _modDef3830 from "module_3830" /* 3830 */;
+// Module 12161 (useConjurePublishPanel)
+import _modDef3831 from "module_3831" /* 3831 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -9,22 +9,21 @@ import noop from "module_19" /* 19 */;
 const require = globalThis.__r;
 
 const require = fn;
-const isProjectOwner = fn(6773).isProjectOwner;
-let items = [fn(6774).ConjureSupportedSurface.BOT, _modDef3830.UnoAgo];
+const isProjectOwner = fn(6774).isProjectOwner;
+let items = [fn(6775).ConjureSupportedSurface.BOT, _modDef3831.UnoAgo];
 let items1 = [items, , , ];
-let items2 = [fn(6774).ConjureSupportedSurface.ACTIVITY, _modDef3830["I88/iG"]];
+let items2 = [fn(6775).ConjureSupportedSurface.ACTIVITY, _modDef3831["I88/iG"]];
 items1[1] = items2;
-const items3 = [fn(6774).ConjureSupportedSurface.PROFILE_WIDGET, _modDef3830.gXY1x1];
+const items3 = [fn(6775).ConjureSupportedSurface.PROFILE_WIDGET, _modDef3831.gXY1x1];
 items1[2] = items3;
-const items4 = [fn(6774).ConjureSupportedSurface.AUTOMOD, _modDef3830.Q9ruoM];
+const items4 = [fn(6775).ConjureSupportedSurface.AUTOMOD, _modDef3831.Q9ruoM];
 items1[3] = items4;
-let obj2 = { initial: _modDef3830.NUZBwo, notPublished: _modDef3830.Gdz7pg, published: _modDef3830["6E9W4F"] };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishPanel.tsx");
 
 export default function useConjurePublishPanel(id, guildId) {
   _require = id;
-  obj2 = async function _save() {
+  closure_8 = async function _save() {
     if (c4 === 2) {
       c4 = 3;
       throw new TypeError("Generator functions may not be called on executing generators");
@@ -50,7 +49,7 @@ export default function useConjurePublishPanel(id, guildId) {
             return obj4;
           } else {
             if (!saving) {
-              if (null == result1) {
+              if (null == items1) {
                 asyncGeneratorStep(true);
                 c3 = 1;
                 let tmp17 = _slicedToArray;
@@ -67,7 +66,7 @@ export default function useConjurePublishPanel(id, guildId) {
                   obj5.name = name;
                   c1 = 2;
                   c4 = 1;
-                  const obj6 = { value: tmp3(tmp28[12]).updateProjectSettings(user.id, obj5), done: false };
+                  const obj6 = { value: tmp3(tmp28[11]).updateProjectSettings(user.id, obj5), done: false };
                   return obj6;
                 }
               }
@@ -109,23 +108,27 @@ export default function useConjurePublishPanel(id, guildId) {
   let items2 = require("useConjurePreviewDevicePermissions")(id.id);
   const tmp5 = _slicedToArray(items.useState(id.name), 2);
   [saving, closure_3] = items.useState(false);
-  const tmp3 = require("useConjureLiveParts")(id.id, guildId.guildId);
-  const result = require("conjurePublishPopoutMode").conjurePublishPopoutMode(guildId.status);
-  let tmp11 = tmp10;
-  if ("initial" === result) {
-    tmp11 = trimmed(id);
+  let tmp8 = null == guildId.status;
+  if (!tmp8) {
+    tmp8 = !require("ConjurePublishTypes").isConjureLive(guildId.status.publishState);
+    let obj = require("ConjurePublishTypes");
   }
-  _slicedToArray = tmp11;
-  items = tmp10 ? id.preview_supported_surfaces : id.supported_surfaces;
+  let tmp10 = tmp8;
+  if (tmp8) {
+    tmp10 = trimmed(id);
+  }
+  _slicedToArray = tmp10;
+  items = tmp8 ? id.preview_supported_surfaces : id.supported_surfaces;
   if (items == null) {
     items = [];
   }
   trimmed = str.trim();
-  let result1 = null;
-  if (tmp11) {
-    result1 = tmp8(tmp2[10]).conjureProjectNameError(trimmed);
-    const tmp8Result = tmp8(tmp2[10]);
+  let result = null;
+  if (tmp10) {
+    result = require("conjureProjectNameError").conjureProjectNameError(trimmed);
+    const obj2 = require("conjureProjectNameError");
   }
+  items1 = result;
   const status = guildId.status;
   let previewAppChannels;
   if (status != null) {
@@ -134,94 +137,64 @@ export default function useConjurePublishPanel(id, guildId) {
   if (previewAppChannels == null) {
     previewAppChannels = [];
   }
-  const status2 = guildId.status;
-  let publishedAt;
-  if (status2 != null) {
-    publishedAt = status2.publishedAt;
-  }
-  let relative = null;
-  if (null != publishedAt) {
-    relative = tmp8(tmp2[11]).formatAuthoredAt(publishedAt).relative;
-    const tmp8Result2 = tmp8(tmp2[11]);
-  }
-  obj2 = { mode: result, initial: tmp10, editable: tmp11, identity: tmp4, name: str, setName: tmp5[1], nameError: result1, displayName: null, description: null, initialChannelNames: null, channels: null, components: null, devicePermissions: null, sharing: null, statusText: null, lastPublishedText: null, ctaText: null, ctaVariant: null, saving: null, save: null };
-  if ("initial" === result) {
+  let obj3 = { initial: tmp8, editable: tmp10, identity: tmp4, name: tmp5[0], setName: tmp5[1], nameError: result, displayName: null, description: null, initialChannelNames: null, channels: null, components: null, devicePermissions: null, sharing: null, saving: null, save: null };
+  if (tmp8) {
     liveName = id.name;
   }
-  obj2.displayName = liveName;
-  if ("initial" === result) {
+  obj3.displayName = liveName;
+  if (tmp8) {
     liveDescription = tmp4.description;
   }
-  obj2.description = liveDescription;
-  let tmp17 = previewAppChannels;
+  obj3.description = liveDescription;
+  let tmp15 = previewAppChannels;
   if (0 === previewAppChannels.length) {
-    tmp17 = previewAppChannels;
-    if (items.includes(tmp8(tmp2[4]).ConjureSupportedSurface.APP_CHANNEL)) {
-      let intl = tmp8(tmp2[13]).intl;
+    tmp15 = previewAppChannels;
+    if (items.includes(require("ConjureProjectTypes").ConjureSupportedSurface.APP_CHANNEL)) {
+      let intl = tmp16(tmp2[12]).intl;
       items1 = [intl.string(tmp(tmp2[5]).xI4N6Q)];
-      tmp17 = items1;
+      tmp15 = items1;
     }
+    tmp16 = _require;
   }
-  obj2.initialChannelNames = tmp17;
-  obj2.channels = channels;
-  const found = result1.filter((item) => {
+  obj3.initialChannelNames = tmp15;
+  obj3.channels = channels;
+  const found = items1.filter((item) => {
     [tmp] = item;
     return items.includes(tmp);
   });
-  obj2.components = found.map((item) => {
+  obj3.components = found.map((item) => {
     [tmp, tmp2] = item;
     const obj = { surface: tmp, label: null };
-    const intl = id(first[13]).intl;
+    const intl = id(first[12]).intl;
     obj.label = intl.string(tmp2);
     return obj;
   });
-  if ("initial" !== result) {
+  if (!tmp8) {
     items2 = [];
   }
-  obj2.devicePermissions = items2;
+  obj3.devicePermissions = items2;
   if (null != guild) {
-    let obj3 = { guild, caption: null };
+    let obj4 = { guild, caption: null };
     let formatToPlainStringResult = null;
     if (null != memberCount) {
-      const intl3 = tmp8(tmp2[13]).intl;
-      let obj4 = { count: memberCount };
-      formatToPlainStringResult = intl3.formatToPlainString(tmp(tmp2[5]).ZpZxK9, obj4);
+      const intl3 = require("util").intl;
+      let obj5 = { count: memberCount };
+      formatToPlainStringResult = intl3.formatToPlainString(tmp(tmp2[5]).ZpZxK9, obj5);
     }
-    obj3.caption = formatToPlainStringResult;
-    let tmp18 = obj3;
+    obj4.caption = formatToPlainStringResult;
+    let tmp17 = obj4;
   } else {
-    tmp18 = null;
+    tmp17 = null;
     if ("user" === id.install_scope) {
-      let obj5 = { guild: null, caption: null };
-      const intl2 = tmp8(tmp2[13]).intl;
-      obj5.caption = intl2.string(tmp(tmp2[5]).RUhWLH);
-      tmp18 = obj5;
+      let obj6 = { guild: null, caption: null };
+      const intl2 = require("util").intl;
+      obj6.caption = intl2.string(tmp(tmp2[5]).RUhWLH);
+      tmp17 = obj6;
     }
   }
-  obj2.sharing = tmp18;
-  const intl4 = tmp8(tmp2[13]).intl;
-  obj2.statusText = intl4.string(obj2[result]);
-  let formatToPlainStringResult1 = null;
-  if (null != relative) {
-    const intl5 = tmp8(tmp2[13]).intl;
-    let obj6 = { time: relative };
-    formatToPlainStringResult1 = intl5.formatToPlainString(tmp(tmp2[5])["/6YRCf"], obj6);
-  }
-  obj2.lastPublishedText = formatToPlainStringResult1;
-  if ("initial" === result) {
-    let label = guildId.label;
-  } else {
-    const intl6 = tmp8(tmp2[13]).intl;
-    label = intl6.string(tmp(tmp2[5]).KHg4Dk);
-  }
-  obj2.ctaText = label;
-  let str3 = "primary";
-  if ("published" === result) {
-    str3 = "secondary";
-  }
-  obj2.ctaVariant = str3;
-  obj2.saving = saving;
-  obj2.save = function save() {
+  obj3.sharing = tmp17;
+  obj3.saving = saving;
+  obj3.save = function save() {
     const self = this;
     const apply = closure_8.apply;
     if (typeof apply === "unknown") {
@@ -231,7 +204,7 @@ export default function useConjurePublishPanel(id, guildId) {
     }
     return applyArgumentsResult;
   };
-  return obj2;
+  return obj3;
 };
 export const CONJURE_PUBLISH_COMPONENTS = items1;
-export const CONJURE_PUBLISH_PERMISSION_LABELS = { screen_capture: _modDef3830["8/7kE7"], connect_user_to_voice: _modDef3830.uvDWXa };
+export const CONJURE_PUBLISH_PERMISSION_LABELS = { screen_capture: _modDef3831["8/7kE7"], connect_user_to_voice: _modDef3831.uvDWXa };

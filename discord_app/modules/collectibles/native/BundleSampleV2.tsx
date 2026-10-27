@@ -1,22 +1,22 @@
-// === Module 9390: BundleSampleV2 ===
+// === Module 9389: BundleSampleV2 ===
 
-// Module 9390 (BundleSampleV2)
+// Module 9389 (BundleSampleV2)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import utils from "utils" /* 1992 */;
-import CollectiblesItemType from "CollectiblesItemType" /* 1995 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9392 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9403 */;
-import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9410 */;
+import native from "native" /* 1199 */;
+import utils from "utils" /* 1989 */;
+import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import ProfileEffectSampleV2Default from "ProfileEffectSampleV2" /* 9391 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9402 */;
+import NameplateDummyUserPreview from "NameplateDummyUserPreview" /* 9409 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ PixelRatio: c3, StyleSheet, View: closure_4 } = get_ActivityIndicator);
-const BUNDLE_PREVIEW_CONFIG = fn(9391).BUNDLE_PREVIEW_CONFIG;
+const BUNDLE_PREVIEW_CONFIG = fn(9390).BUNDLE_PREVIEW_CONFIG;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -238,7 +238,7 @@ obj2.fgClip = obj6;
 const merged4 = Object.assign(StyleSheet.absoluteFillObject);
 obj2.fgImage = {};
 const styles = StyleSheet.create(obj2);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_10 = createStyles.createStyles((arg0) => {
   const obj = { bundle: null, pfx: null, avatar: null, avatarWithNameplate: null, nameplate: null };
   const size = { width: tmp.bundleWidth, height: tmp.bundleHeight, borderRadius: nativeDefault.radii.xs };

@@ -1,9 +1,9 @@
-// === Module 11454: useCurrentEmbeddedApplication ===
+// === Module 11457: useCurrentEmbeddedApplication ===
 
-// Module 11454 (useCurrentEmbeddedApplication)
+// Module 11457 (useCurrentEmbeddedApplication)
 import c from "c" /* 576 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7257 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11455 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7259 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11458 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;

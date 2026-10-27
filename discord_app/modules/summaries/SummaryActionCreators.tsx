@@ -1,16 +1,16 @@
-// === Module 10070: SummaryActionCreators ===
+// === Module 10072: SummaryActionCreators ===
 
-// Module 10070 (SummaryActionCreators)
+// Module 10072 (SummaryActionCreators)
 import useStateFromStores from "useStateFromStores" /* 573 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1104 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
+import DurationsDefault from "Durations" /* 1101 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import SummaryStore from "SummaryStore" /* 10009 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6497 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import SummaryStore from "SummaryStore" /* 10011 */;
 
 require = fn;
 function fetchSummary() {
@@ -510,7 +510,7 @@ let closure_20 = async function _deleteSummary(arg0) {
     }
   }
 };
-const Routes = fn(1087).Routes;
+const Routes = fn(1084).Routes;
 let closure_9 = 30 * DurationsDefault.Millis.SECOND;
 const dependencyMap = {};
 let closure_11 = {};

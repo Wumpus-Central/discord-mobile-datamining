@@ -1,24 +1,24 @@
-// === Module 6649: GuildLimitedAccessInfoAlert ===
+// === Module 6650: GuildLimitedAccessInfoAlert ===
 
-// Module 6649 (GuildLimitedAccessInfoAlert)
+// Module 6650 (GuildLimitedAccessInfoAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import common_AlertDefault from "common/Alert" /* 5978 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import common_AlertDefault from "common/Alert" /* 5979 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import TextStyles from "TextStyles" /* 6651 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import TextStyles from "TextStyles" /* 6652 */;
 
 require = fn;
-const helpdeskArticle = fn(6650).GUILD_LIMITED_ACCESS_HC_LINK;
+const helpdeskArticle = fn(6651).GUILD_LIMITED_ACCESS_HC_LINK;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { header: null, text: null };
 let obj3 = {};
-const merged = Object.assign(TextStyles(fn(1087).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
+const merged = Object.assign(TextStyles(fn(1084).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));
 obj3.textAlign = "center";
 obj3.marginVertical = 12;
 obj2.header = obj3;

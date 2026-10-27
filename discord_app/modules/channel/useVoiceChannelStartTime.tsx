@@ -1,16 +1,16 @@
-// === Module 17663: useVoiceChannelStartTime ===
+// === Module 17704: useVoiceChannelStartTime ===
 
-// Module 17663 (useVoiceChannelStartTime)
-import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11216 */;
+// Module 17704 (useVoiceChannelStartTime)
+import ChannelInfoActionCreators from "ChannelInfoActionCreators" /* 11219 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6703 */;
-import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10003 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6497 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6704 */;
+import VoiceChannelStartTimeStore from "VoiceChannelStartTimeStore" /* 10005 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ChannelTypes = fn(1087).ChannelTypes;
+const ChannelTypes = fn(1084).ChannelTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/channel/useVoiceChannelStartTime.tsx");

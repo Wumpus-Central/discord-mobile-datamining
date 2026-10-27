@@ -1,6 +1,6 @@
-// === Module 6370: GuildIDContext ===
+// === Module 6371: GuildIDContext ===
 
-// Module 6370 (GuildIDContext)
+// Module 6371 (GuildIDContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext(undefined);

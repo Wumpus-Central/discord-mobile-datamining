@@ -1,13 +1,13 @@
-// === Module 18510: useCanInviteMembers ===
+// === Module 18544: useCanInviteMembers ===
 
-// Module 18510 (useCanInviteMembers)
-import ChannelStore from "ChannelStore" /* 4823 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+// Module 18544 (useCanInviteMembers)
+import ChannelStore from "ChannelStore" /* 4824 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useCanInviteMembers.tsx");

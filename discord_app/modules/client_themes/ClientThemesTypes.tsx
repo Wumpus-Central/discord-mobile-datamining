@@ -1,10 +1,10 @@
-// === Module 1256: ClientThemesTypes ===
+// === Module 1253: ClientThemesTypes ===
 
-// Module 1256 (ClientThemesTypes)
-import ThemeConstants from "ThemeConstants" /* 1210 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import SentryUtilsDefault from "SentryUtils" /* 1257 */;
-import design_shared from "design/shared" /* 4979 */;
+// Module 1253 (ClientThemesTypes)
+import ThemeConstants from "ThemeConstants" /* 1207 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import design_shared from "design/shared" /* 4980 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = ThemeConstants.PROTO_THEME_MAP_WEB_REFRESH;

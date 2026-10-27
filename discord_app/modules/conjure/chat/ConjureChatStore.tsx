@@ -1,16 +1,16 @@
-// === Module 10699: ConjureChatStore ===
+// === Module 10702: ConjureChatStore ===
 
-// Module 10699 (ConjureChatStore)
+// Module 10702 (ConjureChatStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1128 */;
-import _modDef3830 from "module_3830" /* 3830 */;
-import conjureChatTurns from "conjureChatTurns" /* 10700 */;
-import conjureStepTimeline from "conjureStepTimeline" /* 10701 */;
-import conjureChatHistory from "conjureChatHistory" /* 10702 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 10703 */;
+import util from "util" /* 1125 */;
+import _modDef3831 from "module_3831" /* 3831 */;
+import conjureChatTurns from "conjureChatTurns" /* 10703 */;
+import conjureStepTimeline from "conjureStepTimeline" /* 10704 */;
+import conjureChatHistory from "conjureChatHistory" /* 10705 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 10706 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
 
 require = fn;
 function patchTurn(projectId, turnId, fn) {
@@ -187,7 +187,7 @@ function applyAgentReactions(arr) {
       for (const item10022 of steps) {
         if ("reaction" === item10022.kind) {
           if (null != item10022.message_id) {
-            let obj2 = map(10703);
+            let obj2 = map(10706);
             let result = obj2.agentReactionFromStep(item10022);
             if (null != result) {
               let result1 = map.set(item10022.message_id, tmp10);
@@ -792,7 +792,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
       return false;
     } else {
       const obj3 = { ts: timestamp, id };
-      const newMessageResult = id(10702).newMessage("assistant", content, obj3);
+      const newMessageResult = id(10705).newMessage("assistant", content, obj3);
       newMessageResult.kind = "publish_notice";
       newMessageResult.publishNotice = publishNotice;
       newMessageResult.finished = true;
@@ -810,7 +810,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         if (!tmpResult.turnSettled(value[findLastIndexResult])) {
           turn_id = value[findLastIndexResult];
         }
-        tmpResult = id(10700);
+        tmpResult = id(10703);
       }
       if (null != turn_id) {
         if (0 !== turn_id.steps.length) {
@@ -837,9 +837,9 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
             obj6 = {};
           }
           arraySpreadResult4 = arraySpreadResult4 + 1;
-          items[arraySpreadResult4] = id(10702).newMessage("assistant", "", obj6);
+          items[arraySpreadResult4] = id(10705).newMessage("assistant", "", obj6);
           items = map.set(projectId, items);
-          const tmpResult2 = id(10702);
+          const tmpResult2 = id(10705);
         } else {
           const items1 = [, ];
           const arraySpreadResult6 = HermesBuiltin.arraySpread(value.slice(findLastIndexResult + 1), HermesBuiltin.arraySpread(value.slice(0, findLastIndexResult), 0));
@@ -853,7 +853,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
         items2[HermesBuiltin.arraySpread(value, 0)] = newMessageResult;
         const result1 = map.set(projectId, items2);
       }
-      const obj2 = id(10702);
+      const obj2 = id(10705);
     }
   },
   CONJURE_CHAT_PROJECT_EVENT: function handleChatProjectEvent(arg0) {
@@ -949,8 +949,8 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
     if (!tmp2) {
       let tmp5 = null != value;
       if (tmp5) {
-        tmp5 = -1 !== step(10700).resolveTurnIndex(value, undefined);
-        let obj2 = step(10700);
+        tmp5 = -1 !== step(10703).resolveTurnIndex(value, undefined);
+        let obj2 = step(10703);
       }
       tmp2 = tmp5;
     }
@@ -1191,7 +1191,7 @@ const conjureChatStore = new ConjureChatStore(DispatcherDefault, {
                 const items = [];
                 const obj2 = { type: "step", kind: "terminal_error", message: null };
                 const intl = util.intl;
-                obj2.message = intl.string(_modDef3830.lmiuFX);
+                obj2.message = intl.string(_modDef3831.lmiuFX);
                 items[HermesBuiltin.arraySpread(disposition.steps, 0)] = obj2;
                 obj.steps = items;
                 tmp7 = obj;

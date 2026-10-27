@@ -1,13 +1,13 @@
-// === Module 18889: NativeOnDemandResourceManager ===
+// === Module 18927: NativeOnDemandResourceManager ===
 
-// Module 18889 (NativeOnDemandResourceManager)
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
-import NativeOnDemandResourceModuleDefault from "NativeOnDemandResourceModule" /* 18890 */;
-import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import AppStateStore from "AppStateStore" /* 2001 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+// Module 18927 (NativeOnDemandResourceManager)
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5852 */;
+import NativeOnDemandResourceModuleDefault from "NativeOnDemandResourceModule" /* 18928 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 
-const AppStates = fn(1087).AppStates;
+const AppStates = fn(1084).AppStates;
 const prototype = function NativeOnDemandResourceManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   importDefault = applyArgumentsResult;

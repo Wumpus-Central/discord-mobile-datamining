@@ -1,15 +1,15 @@
-// === Module 2023: GameRecord ===
+// === Module 2020: GameRecord ===
 
-// Module 2023 (GameRecord)
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import AvatarUtils from "AvatarUtils" /* 1417 */;
-import Server from "Server" /* 2000 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2032 */;
-import Record from "Record" /* 1407 */;
-import ApplicationRecord from "ApplicationRecord" /* 2024 */;
+// Module 2020 (GameRecord)
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import Server from "Server" /* 1997 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2029 */;
+import Record from "Record" /* 1404 */;
+import ApplicationRecord from "ApplicationRecord" /* 2021 */;
 
 require = fn;
-const createExecutable = fn(2024).createExecutable;
+const createExecutable = fn(2021).createExecutable;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/games/GameRecord.tsx");
 class GameRecord extends tmp2 {

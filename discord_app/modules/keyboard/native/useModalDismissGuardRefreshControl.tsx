@@ -1,9 +1,9 @@
-// === Module 9924: useModalDismissGuardRefreshControl ===
+// === Module 9926: useModalDismissGuardRefreshControl ===
 
-// Module 9924 (useModalDismissGuardRefreshControl)
+// Module 9926 (useModalDismissGuardRefreshControl)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import PortalKeyboardModalContext from "PortalKeyboardModalContext" /* 9925 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import PortalKeyboardModalContext from "PortalKeyboardModalContext" /* 9927 */;
 import noop_mod from "module_19" /* 19 */;
 
 require = fn;
@@ -37,7 +37,7 @@ export const useModalDismissGuardRefreshControl = ReactCompilerGating.isReactCom
   }
   return tmp5;
 }) : (function useModalDismissGuardRefreshControl() {
-  isPortalKeyboardInModal = isPortalKeyboardInModal(9925).useIsPortalKeyboardInModal();
+  isPortalKeyboardInModal = isPortalKeyboardInModal(9927).useIsPortalKeyboardInModal();
   const items = [isPortalKeyboardInModal];
   return noop.useMemo(() => {
     let tmp;

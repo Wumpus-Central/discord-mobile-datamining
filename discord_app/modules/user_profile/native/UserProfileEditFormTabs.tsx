@@ -1,22 +1,22 @@
-// === Module 15955: UserProfileEditFormTabs ===
+// === Module 15993: UserProfileEditFormTabs ===
 
-// Module 15955 (UserProfileEditFormTabs)
+// Module 15993 (UserProfileEditFormTabs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import ChatInputUtils from "ChatInputUtils" /* 5159 */;
+import util from "util" /* 1125 */;
+import ChatInputUtils from "ChatInputUtils" /* 5160 */;
 import UserProfileSharedStylesDefault from "UserProfileSharedStyles" /* 8732 */;
-import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14379 */;
-import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15954 */;
+import UserProfileWidgetsBoardDefault from "UserProfileWidgetsBoard" /* 14415 */;
+import UserProfileEditFormMainPageContextDefault from "UserProfileEditFormMainPageContext" /* 15992 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7304).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7306).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { container: { marginTop: nativeDefault.space.PX_16, marginHorizontal: -PROFILE_SIDE_PADDING }, page: { paddingHorizontal: PROFILE_SIDE_PADDING }, boardPage: null };
 let obj3 = { marginTop: nativeDefault.space.PX_16, marginHorizontal: -PROFILE_SIDE_PADDING };
 obj.boardPage = { paddingTop: nativeDefault.space.PX_16 };
@@ -97,8 +97,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return;
       }
     }
-    const intl = isBoardTabOnScreen(1128).intl;
-    tmp12[1] = intl.string(isBoardTabOnScreen(1128).t.LXw470);
+    const intl = isBoardTabOnScreen(1125).intl;
+    tmp12[1] = intl.string(isBoardTabOnScreen(1125).t.LXw470);
     tmp12[2] = closure_6(closure_9, {});
     cResult[2] = tmp12;
   } else {
@@ -120,7 +120,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return;
       }
     }
-    const stringResult = obj2.string(isBoardTabOnScreen(1128).t.laViwx);
+    const stringResult = obj2.string(isBoardTabOnScreen(1125).t.laViwx);
     cResult[3] = stringResult;
   } else {
     class H {

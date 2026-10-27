@@ -1,15 +1,16 @@
-// === Module 14376: ConjureCustomWidgetAddOption ===
+// === Module 14412: ConjureCustomWidgetAddOption ===
 
-// Module 14376 (ConjureCustomWidgetAddOption)
+// Module 14412 (ConjureCustomWidgetAddOption)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import _modDef3830 from "module_3830" /* 3830 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5210 */;
+import util from "util" /* 1125 */;
+import _modDef3831 from "module_3831" /* 3831 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5211 */;
 import RowButton from "RowButton" /* 8953 */;
-import MagicWandIcon from "MagicWandIcon" /* 12252 */;
-import ConjureCustomWidget from "ConjureCustomWidget" /* 14377 */;
-import ConjureCustomWidgetSheet from "ConjureCustomWidgetSheet" /* 14378 */;
+import ConjureMobileExperiment from "ConjureMobileExperiment" /* 9567 */;
+import MagicWandIcon from "MagicWandIcon" /* 12174 */;
+import ConjureCustomWidget from "ConjureCustomWidget" /* 14413 */;
+import ConjureCustomWidgetSheet from "ConjureCustomWidgetSheet" /* 14414 */;
 import noop from "module_19" /* 19 */;
 
 const ConjureCustomWidgetSheetDefault = ConjureCustomWidgetSheet;
@@ -18,7 +19,7 @@ require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
 const ConjureCustomWidgetAddOption = "ConjureCustomWidgetAddOption";
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -30,6 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   const cResult = c.c(4);
   let container = closure_7();
   const canConjureCustomWidget = ConjureCustomWidget.useCanConjureCustomWidget(ConjureCustomWidgetAddOption);
+  const isConjureMobileEnabled = ConjureMobileExperiment.useIsConjureMobileEnabled(canConjureCustomWidget, ConjureCustomWidgetAddOption);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
       const obj = ActionSheetActionCreators;
@@ -40,49 +42,50 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   } else {
     first = cResult[0];
   }
-  if (!canConjureCustomWidget) {
+  if (!isConjureMobileEnabled) {
     return null;
   } else {
     const _Symbol = Symbol;
     if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { icon: null, label: null, subLabel: null, onPress: null };
-      const obj4 = { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" };
-      obj3.icon = jsx(RowButton.RowButton.Icon, { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" });
+      const obj4 = { icon: null, label: null, subLabel: null, onPress: null };
+      const obj5 = { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" };
+      obj4.icon = jsx(RowButton.RowButton.Icon, { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" });
       const intl = util.intl;
-      obj3.label = intl.string(_modDef3830["5WHmVU"]);
+      obj4.label = intl.string(_modDef3831["5WHmVU"]);
       const intl2 = util.intl;
-      obj3.subLabel = intl2.string(_modDef3830.yI85oV);
-      obj3.onPress = first;
-      const tmp9 = jsx(RowButton.RowButton, { icon: null, label: null, subLabel: null, onPress: null });
-      cResult[1] = tmp9;
-      let tmp6 = tmp9;
+      obj4.subLabel = intl2.string(_modDef3831.yI85oV);
+      obj4.onPress = first;
+      const tmp10 = jsx(RowButton.RowButton, { icon: null, label: null, subLabel: null, onPress: null });
+      cResult[1] = tmp10;
+      let tmp7 = tmp10;
     } else {
-      tmp6 = cResult[1];
+      tmp7 = cResult[1];
     }
     if (cResult[2] !== container.container) {
-      const obj5 = { style: container.container, children: tmp6 };
-      const tmp13 = <View style={container.container}>{tmp6}</View>;
+      const obj6 = { style: container.container, children: tmp7 };
+      const tmp14 = <View style={container.container}>{tmp7}</View>;
       container = container.container;
       cResult[2] = container;
-      cResult[3] = tmp13;
+      cResult[3] = tmp14;
     }
   }
 }) : (function ConjureCustomWidgetAddOption() {
   const tmp = closure_7();
   const canConjureCustomWidget = ConjureCustomWidget.useCanConjureCustomWidget(ConjureCustomWidgetAddOption);
-  let tmp6 = null;
-  if (canConjureCustomWidget) {
-    const obj2 = { style: tmp.container, children: null };
-    const obj3 = { icon: null, label: null, subLabel: null, onPress: null };
-    const obj4 = { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" };
-    obj3.icon = jsx(RowButton.RowButton.Icon, { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" });
+  const isConjureMobileEnabled = ConjureMobileExperiment.useIsConjureMobileEnabled(canConjureCustomWidget, ConjureCustomWidgetAddOption);
+  let tmp7 = null;
+  if (isConjureMobileEnabled) {
+    const obj3 = { style: tmp.container, children: null };
+    const obj4 = { icon: null, label: null, subLabel: null, onPress: null };
+    const obj5 = { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" };
+    obj4.icon = jsx(RowButton.RowButton.Icon, { IconComponent: MagicWandIcon.MagicWandIcon, variant: "secondary" });
     const intl = util.intl;
-    obj3.label = intl.string(_modDef3830["5WHmVU"]);
+    obj4.label = intl.string(_modDef3831["5WHmVU"]);
     const intl2 = util.intl;
-    obj3.subLabel = intl2.string(_modDef3830.yI85oV);
-    obj3.onPress = tmp5;
-    obj2.children = jsx(RowButton.RowButton, { icon: null, label: null, subLabel: null, onPress: null });
-    tmp6 = <View style={tmp.container}>{null}</View>;
+    obj4.subLabel = intl2.string(_modDef3831.yI85oV);
+    obj4.onPress = tmp6;
+    obj3.children = jsx(RowButton.RowButton, { icon: null, label: null, subLabel: null, onPress: null });
+    tmp7 = <View style={tmp.container}>{null}</View>;
   }
-  return tmp6;
+  return tmp7;
 });

@@ -1,22 +1,22 @@
-// === Module 18554: useSpeakerTooltips ===
+// === Module 18588: useSpeakerTooltips ===
 
-// Module 18554 (useSpeakerTooltips)
+// Module 18588 (useSpeakerTooltips)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import dismissible_content from "dismissible_content" /* 4807 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import useCoachmark from "useCoachmark" /* 9840 */;
-import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 18557 */;
+import util from "util" /* 1125 */;
+import dismissible_content from "dismissible_content" /* 4808 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import useCoachmark from "useCoachmark" /* 9842 */;
+import VoicePanelConsoleFacepile from "VoicePanelConsoleFacepile" /* 18591 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const ConsoleVoiceUpsellStore = fn(18552);
+const ConsoleVoiceUpsellStore = fn(18586);
 ({ setVoiceUpsellDismissed: hasOwnProperty, useConsoleVoiceUpsellStore: metroRequire } = ConsoleVoiceUpsellStore);
-let VoicePanelControlsModes = fn(10899).VoicePanelControlsModes;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+let VoicePanelControlsModes = fn(10902).VoicePanelControlsModes;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsx = fn(21).jsx;
 let __initData = { code: "function useSpeakerTooltipsTsx1(){const{controlsSpecs}=this.__closure;return controlsSpecs.get().mode;}" };
 const __initData2 = { code: "function useSpeakerTooltipsTsx2(currentControlsMode,previous){const{runOnJS,setIsShowingControls,VoicePanelControlsModes}=this.__closure;if(currentControlsMode===previous)return;runOnJS(setIsShowingControls)(currentControlsMode===VoicePanelControlsModes.FLOATING_DEFAULT);}" };

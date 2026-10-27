@@ -1,16 +1,16 @@
-// === Module 13855: useFavoritesGuildChannelFilter ===
+// === Module 13869: useFavoritesGuildChannelFilter ===
 
-// Module 13855 (useFavoritesGuildChannelFilter)
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import FavoritesUtils from "FavoritesUtils" /* 4848 */;
+// Module 13869 (useFavoritesGuildChannelFilter)
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import FavoritesUtils from "FavoritesUtils" /* 4849 */;
 import sortByMatchScore from "sortByMatchScore" /* 9067 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import FavoriteStore from "FavoriteStore" /* 4826 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import FavoriteStore from "FavoriteStore" /* 4827 */;
 
 require = fn;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/hooks/useFavoritesGuildChannelFilter.tsx");

@@ -1,17 +1,17 @@
 // === Module 8654: GuildTagUtils ===
 
 // Module 8654 (GuildTagUtils)
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4909 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserStore from "UserStore" /* 1392 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4910 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildTagConstants = fn(8274);
+const GuildTagConstants = fn(8272);
 ({ GuildTagBadgeMediaProxySizes, GuildTagBadgeMediaProxySizesMobile: hasOwnProperty, GuildTagBadgeSize: metroRequire } = GuildTagConstants);
-const GuildFeatures = fn(1087).GuildFeatures;
+const GuildFeatures = fn(1084).GuildFeatures;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useUserPrimaryGuild(arg0) {

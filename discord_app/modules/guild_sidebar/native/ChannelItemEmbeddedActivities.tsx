@@ -1,10 +1,10 @@
-// === Module 17662: ChannelItemEmbeddedActivities ===
+// === Module 17703: ChannelItemEmbeddedActivities ===
 
-// Module 17662 (ChannelItemEmbeddedActivities)
+// Module 17703 (ChannelItemEmbeddedActivities)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import GameIcon from "GameIcon" /* 7261 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import GameIcon from "GameIcon" /* 7263 */;
 import noop from "module_19" /* 19 */;
 
 const GameIconDefault = GameIcon;
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { overflow: { lineHeight: 16, textAlign: "center", textAlignVertical: "center", padding: 4 }, overflowContainer: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.xs, display: "flex", alignItems: "center", justifyContent: "center" }, container: { display: "flex", flexDirection: "row" }, modeMuted: { opacity: 0.3 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

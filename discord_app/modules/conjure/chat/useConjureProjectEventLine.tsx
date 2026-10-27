@@ -1,10 +1,10 @@
-// === Module 12356: useConjureProjectEventLine ===
+// === Module 12362: useConjureProjectEventLine ===
 
-// Module 12356 (useConjureProjectEventLine)
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12339 */;
+// Module 12362 (useConjureProjectEventLine)
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12345 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserStore from "UserStore" /* 1392 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 

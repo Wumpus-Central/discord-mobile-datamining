@@ -1,11 +1,11 @@
-// === Module 9453: VirtualCurrencyActionCreators ===
+// === Module 9452: VirtualCurrencyActionCreators ===
 
-// Module 9453 (VirtualCurrencyActionCreators)
+// Module 9452 (VirtualCurrencyActionCreators)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SKUStore from "SKUStore" /* 6824 */;
+import SKUStore from "SKUStore" /* 6826 */;
 
 require = fn;
 function fetchVirtualCurrencyBalance() {
@@ -335,7 +335,7 @@ let closure_10 = async function _redeemVirtualCurrencyForSKU(arg0) {
     }
   }
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 let closure_6 = new LoggerDefault("VirtualCurrencyActionCreators");
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/virtual_currency/VirtualCurrencyActionCreators.tsx");

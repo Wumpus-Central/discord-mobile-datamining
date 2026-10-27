@@ -1,15 +1,15 @@
-// === Module 18857: IOSUserIdentifiersManager ===
+// === Module 18895: IOSUserIdentifiersManager ===
 
-// Module 18857 (IOSUserIdentifiersManager)
-import SentryUtilsDefault from "SentryUtils" /* 1257 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
+// Module 18895 (IOSUserIdentifiersManager)
+import SentryUtilsDefault from "SentryUtils" /* 1254 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1392 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+import UserStore from "UserStore" /* 1389 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 
 let require = fn;
 const NativeModules = fn(17).NativeModules;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 let closure_7 = { APP_TRANSACTION_UNAVAILABLE: "native_unavailable", APP_TRANSACTION_CANCELLED: "native_cancelled", APP_TRANSACTION_NETWORK_ERROR: "native_network", APP_TRANSACTION_ERROR: "native_error" };
 class IOSUserIdentifiersManager extends tmp2 {
   constructor() {

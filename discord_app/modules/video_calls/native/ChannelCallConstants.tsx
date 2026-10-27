@@ -1,7 +1,7 @@
-// === Module 10884: ChannelCallConstants ===
+// === Module 10887: ChannelCallConstants ===
 
-// Module 10884 (ChannelCallConstants)
-import Constants from "Constants" /* 1087 */;
+// Module 10887 (ChannelCallConstants)
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const items = [, , , ];

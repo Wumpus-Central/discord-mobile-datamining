@@ -1,9 +1,9 @@
-// === Module 15879: useDisplayNameStylesPendingName ===
+// === Module 15917: useDisplayNameStylesPendingName ===
 
-// Module 15879 (useDisplayNameStylesPendingName)
-import UserUtilsDefault from "UserUtils" /* 5025 */;
+// Module 15917 (useDisplayNameStylesPendingName)
+import UserUtilsDefault from "UserUtils" /* 5026 */;
 import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8649 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
 
 const require = globalThis.__r;
 

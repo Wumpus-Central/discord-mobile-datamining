@@ -1,18 +1,18 @@
-// === Module 13251: SearchTabsLayoutStore ===
+// === Module 13265: SearchTabsLayoutStore ===
 
-// Module 13251 (SearchTabsLayoutStore)
+// Module 13265 (SearchTabsLayoutStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SmartSearchUtils from "SmartSearchUtils" /* 13228 */;
-import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13229 */;
-import SmartSearchTypes from "SmartSearchTypes" /* 13230 */;
-import SearchUtils from "SearchUtils" /* 13232 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import SearchMessageStore from "SearchMessageStore" /* 6792 */;
-import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13252 */;
-import SearchMemberTabStore from "SearchMemberTabStore" /* 13253 */;
-import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13254 */;
-import SearchQueryStore from "SearchQueryStore" /* 13239 */;
+import SmartSearchUtils from "SmartSearchUtils" /* 13242 */;
+import SmartSearchResultsStoreDefault from "SmartSearchResultsStore" /* 13243 */;
+import SmartSearchTypes from "SmartSearchTypes" /* 13244 */;
+import SearchUtils from "SearchUtils" /* 13246 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import SearchMessageStore from "SearchMessageStore" /* 6793 */;
+import SearchGuildChannelTabStore from "SearchGuildChannelTabStore" /* 13266 */;
+import SearchMemberTabStore from "SearchMemberTabStore" /* 13267 */;
+import SearchPeopleTabStore from "SearchPeopleTabStore" /* 13268 */;
+import SearchQueryStore from "SearchQueryStore" /* 13253 */;
 
 require = fn;
 function handleSearchQuery(searchContext) {
@@ -194,7 +194,7 @@ function computeLayoutForAll() {
   return flag;
 }
 SmartSearchResultsStoreDefault;
-const SearchConstants = fn(9714);
+const SearchConstants = fn(9716);
 ({ SearchTabs: c10, SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: closure_11, SEARCH_TYPE_TO_SEARCH_RESULT_TABS: closure_12 } = SearchConstants);
 let closure_13 = [];
 const map = new Map();

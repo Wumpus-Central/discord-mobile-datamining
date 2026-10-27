@@ -1,15 +1,15 @@
-// === Module 8147: clipPayloadUtils ===
+// === Module 8145: clipPayloadUtils ===
 
-// Module 8147 (clipPayloadUtils)
+// Module 8145 (clipPayloadUtils)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ClipsConstants = fn(8148);
+const ClipsConstants = fn(8146);
 ({ CLIPS_MAX_PARTICIPANTS: closure_4, CLIPS_MAX_TIMELINE_EVENTS: hasOwnProperty, ClipSignalTypes: metroRequire, GameEventType: closure_7, CLIP_RUNTIME: closure_8 } = ClipsConstants);
-const AnalyticEvents = fn(1087).AnalyticEvents;
-const SpeakingFlags = fn(5718).SpeakingFlags;
+const AnalyticEvents = fn(1084).AnalyticEvents;
+const SpeakingFlags = fn(5719).SpeakingFlags;
 const ServerClipGameEventType = { UNKNOWN: 0, [0]: "UNKNOWN", KILL: 1, [1]: "KILL", MULTIKILL: 2, [2]: "MULTIKILL", DEATH: 3, [3]: "DEATH" };
 let obj2 = { UNKNOWN: 0, [0]: "UNKNOWN", LAUGHTER: 1, [1]: "LAUGHTER", SHOUTING: 2, [2]: "SHOUTING" };
 const size = fn(2);

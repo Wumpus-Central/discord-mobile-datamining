@@ -1,7 +1,7 @@
-// === Module 9845: TooltipConstants ===
+// === Module 9847: TooltipConstants ===
 
-// Module 9845 (TooltipConstants)
-import spring from "spring" /* 5247 */;
+// Module 9847 (TooltipConstants)
+import spring from "spring" /* 5248 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

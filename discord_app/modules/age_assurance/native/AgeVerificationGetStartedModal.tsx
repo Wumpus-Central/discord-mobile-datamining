@@ -1,13 +1,13 @@
-// === Module 8088: AgeVerificationGetStartedModal ===
+// === Module 8086: AgeVerificationGetStartedModal ===
 
-// Module 8088 (AgeVerificationGetStartedModal)
+// Module 8086 (AgeVerificationGetStartedModal)
 import nativeDefault from "native" /* 587 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6657 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
-import GoogleWalletVerificationScreenDefault from "GoogleWalletVerificationScreen" /* 8076 */;
-import AgeVerificationIntroScreenDefault from "AgeVerificationIntroScreen" /* 8089 */;
-import AgeVerificationRetryScreenDefault from "AgeVerificationRetryScreen" /* 8094 */;
-import AgeVerificationEmbeddedIntroScreenDefault from "AgeVerificationEmbeddedIntroScreen" /* 8095 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6658 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
+import GoogleWalletVerificationScreenDefault from "GoogleWalletVerificationScreen" /* 8074 */;
+import AgeVerificationIntroScreenDefault from "AgeVerificationIntroScreen" /* 8087 */;
+import AgeVerificationRetryScreenDefault from "AgeVerificationRetryScreen" /* 8092 */;
+import AgeVerificationEmbeddedIntroScreenDefault from "AgeVerificationEmbeddedIntroScreen" /* 8093 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -81,7 +81,7 @@ function getScreens(headerStyle, modalSessionId, entryPoint, classificationId, a
   return obj;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { headerStyle: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, shadowColor: "transparent" } };
 let closure_5 = createStyles.createStyles(obj2);
 let obj4 = { INTRO: "INTRO", RETRY: "RETRY", EXPRESSIVE_INTRO: "EXPRESSIVE_INTRO", GOOGLE_WALLET_VERIFICATION: "GOOGLE_WALLET_VERIFICATION" };

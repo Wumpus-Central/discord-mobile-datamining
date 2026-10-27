@@ -1,10 +1,10 @@
-// === Module 17309: ParentalControlsUseDataForQuests3PSetting ===
+// === Module 17350: ParentalControlsUseDataForQuests3PSetting ===
 
-// Module 17309 (ParentalControlsUseDataForQuests3PSetting)
-import util from "util" /* 1128 */;
-import useSelectedTeen from "useSelectedTeen" /* 8127 */;
-import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16110 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7645 */;
+// Module 17350 (ParentalControlsUseDataForQuests3PSetting)
+import util from "util" /* 1125 */;
+import useSelectedTeen from "useSelectedTeen" /* 8125 */;
+import ParentalControlledUserSettings from "ParentalControlledUserSettings" /* 16148 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7646 */;
 
 require = fn;
 fn(558);
@@ -18,7 +18,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToS
   const ParentalControlledQuests3PDataOptedOut = ParentalControlledUserSettings.ParentalControlledQuests3PDataOptedOut;
   return !ParentalControlledQuests3PDataOptedOut.useControlledSetting(selectedTeenId);
 });
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDataToSupportQuests3PSettingIsDisabled() {
   const selectedTeenId = useSelectedTeen.useSelectedTeenId();
   const ParentalControlledDropsOptedOut = ParentalControlledUserSettings.ParentalControlledDropsOptedOut;
@@ -33,7 +33,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.CyLYKZ);
   },
-  parent: fn(8332).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8331).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: tmp2,
   onValueChange: function onDataToSupportQuests3PSettingValueChange(arg0) {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();

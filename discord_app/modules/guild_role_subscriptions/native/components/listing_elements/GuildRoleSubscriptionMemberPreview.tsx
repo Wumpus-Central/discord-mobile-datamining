@@ -1,26 +1,26 @@
-// === Module 16595: GuildRoleSubscriptionMemberPreview ===
+// === Module 16637: GuildRoleSubscriptionMemberPreview ===
 
-// Module 16595 (GuildRoleSubscriptionMemberPreview)
+// Module 16637 (GuildRoleSubscriptionMemberPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import utils_ColorUtilsAll from "utils/ColorUtils" /* 1105 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5989 */;
-import RoleIconUtils from "RoleIconUtils" /* 7283 */;
-import RoleIconDefault from "RoleIcon" /* 7301 */;
+import utils_ColorUtilsAll from "utils/ColorUtils" /* 1102 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5990 */;
+import RoleIconUtils from "RoleIconUtils" /* 7285 */;
+import RoleIconDefault from "RoleIcon" /* 7303 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flexDirection: "row", padding: 16, borderRadius: nativeDefault.radii.xs, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, avatar: { width: 40, height: 40, borderRadius: 20 }, content: { marginStart: 16 }, contextRow: { flexDirection: "row", alignItems: "center" } };
 let closure_9 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

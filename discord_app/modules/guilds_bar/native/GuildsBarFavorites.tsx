@@ -1,25 +1,25 @@
-// === Module 17760: GuildsBarFavorites ===
+// === Module 17801: GuildsBarFavorites ===
 
-// Module 17760 (GuildsBarFavorites)
+// Module 17801 (GuildsBarFavorites)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import StarIcon from "StarIcon" /* 9949 */;
-import FavoritesHooks from "FavoritesHooks" /* 10846 */;
-import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 17563 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17743 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 17746 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17758 */;
-import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 17761 */;
-import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 17762 */;
+import util from "util" /* 1125 */;
+import StarIcon from "StarIcon" /* 9951 */;
+import FavoritesHooks from "FavoritesHooks" /* 10849 */;
+import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 17604 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17784 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 17787 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17799 */;
+import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 17802 */;
+import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 17803 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 4826 */;
+import FavoriteStore from "FavoriteStore" /* 4827 */;
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
 require = fn;
-const FAVORITES = fn(1087).FAVORITES;
+const FAVORITES = fn(1084).FAVORITES;
 const jsx = fn(21).jsx;
 let c7 = "more-options";
 const ReactCompilerGating = fn(558);
@@ -148,10 +148,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ badge: badge2, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge }));
   const memo = noop.useMemo(() => ({
     onPress() {
-      closure_1_1(17758)(closure_1_5);
+      closure_1_1(17799)(closure_1_5);
     },
     onLongPress() {
-      closure_1_1(17563)();
+      closure_1_1(17604)();
     }
   }), []);
   const memo1 = noop.useMemo(() => {
@@ -169,7 +169,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     return obj;
   }, []);
   ({ accessibilityActions, onAccessibilityAction } = memo1);
-  const obj4 = { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: null, externalChildren: null, expandedChildren: null, children: null };
+  const obj4 = { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: 0, externalChildren: null, expandedChildren: null, children: null };
   const tmp5 = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge });
   let intl = util.intl;
   obj4.label = intl.string(util.t.wMWyci);
@@ -177,5 +177,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj4.expandedChildren = jsx(HomeDrawerFavoritesRow.HomeDrawerFavoritesRowExpandedChildren, {});
   const colors = nativeDefault.colors;
   obj4.children = jsx(StarIcon.StarIcon, { color: isFavoritesGuildSelected ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: null, externalChildren: null, expandedChildren: null, children: null });
+  return jsx(GuildsBarAnimatedItemWrapperDefault, { selected: isFavoritesGuildSelected, circle: false, unread, styles: guildsBarAnimatedWrapperStyles, cutouts, overState: "l", config: memo, accessibilityActions, onAccessibilityAction, label: 0, externalChildren: null, expandedChildren: null, children: null });
 }));

@@ -1,19 +1,19 @@
-// === Module 16649: SettingsAppearanceChannelRowItem ===
+// === Module 16691: SettingsAppearanceChannelRowItem ===
 
-// Module 16649 (SettingsAppearanceChannelRowItem)
+// Module 16691 (SettingsAppearanceChannelRowItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native2 from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import GroupDMAvatar from "GroupDMAvatar" /* 10688 */;
+import native2 from "native" /* 1199 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import GroupDMAvatar from "GroupDMAvatar" /* 10691 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const StatusTypes = fn(1087).StatusTypes;
+const StatusTypes = fn(1084).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { channelItemContainer: { flexDirection: "row", gap: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.sm, paddingVertical: nativeDefault.space.PX_8, paddingRight: nativeDefault.space.PX_16, paddingLeft: nativeDefault.space.PX_8 }, channelItemLeft: { alignItems: "center", justifyContent: "center" }, channelItemUnreadIndicator: null, channelItemAvatar: null, channelItemContent: null, channelItemTop: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND, height: 8, width: 8, borderRadius: nativeDefault.radii.round, margin: nativeDefault.space.PX_8 };
 obj2.channelItemUnreadIndicator = size;
@@ -23,14 +23,14 @@ obj2.channelItemContent = { flexDirection: "column", flex: 1, justifyContent: "c
 let obj4 = { marginRight: nativeDefault.space.PX_8, justifyContent: "center", alignItems: "center" };
 obj2.channelItemTop = { flexDirection: "row", gap: nativeDefault.space.PX_4, justifyContent: "space-between", alignItems: "center" };
 let closure_6 = createStyles.createStyles(obj2);
-let obj6 = { direction: fn(1202).CutoutDirection.BOTTOM_RIGHT, radius: null, imageType: null, inset: -4 };
-const native = fn(1202);
-let num = native.getStatusSize(fn(1202).AvatarSizes.LARGE_48);
+let obj6 = { direction: fn(1199).CutoutDirection.BOTTOM_RIGHT, radius: null, imageType: null, inset: -4 };
+const native = fn(1199);
+let num = native.getStatusSize(fn(1199).AvatarSizes.LARGE_48);
 if (num == null) {
   num = 0;
 }
 obj6.radius = num / 2 + 4;
-obj6.imageType = fn(1202).CutoutType.CIRCULAR;
+obj6.imageType = fn(1199).CutoutType.CIRCULAR;
 const ReactCompilerGating = fn(558);
 let obj5 = { flexDirection: "row", gap: nativeDefault.space.PX_4, justifyContent: "space-between", alignItems: "center" };
 size = fn(2);
@@ -243,7 +243,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelR
   items1[1] = React4(View, obj3);
   obj6 = { style: tmp2.channelItemContent, children: null };
   const obj7 = { style: tmp2.channelItemTop, children: null };
-  const items3 = [React4(tmp6(5234).Text, { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title }), React4(tmp6(5234).Text, { animated: true, style: animatedStyles.textMuted, variant: "text-xs/medium", children: timestamp })];
+  const items3 = [React4(tmp6(5235).Text, { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title }), React4(tmp6(5235).Text, { animated: true, style: animatedStyles.textMuted, variant: "text-xs/medium", children: timestamp })];
   obj7.children = items3;
   const items4 = [hasOwnProperty(View, obj7), ];
   if (null == preview) {
@@ -256,7 +256,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelR
     animatedStyles = { animated: true, style: null, variant: "redesign/message-preview/medium", lineClamp: 1, children: null };
     animatedStyles.style = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
     animatedStyles.children = preview;
-    React4(tmp6(5234).Text, animatedStyles);
+    React4(tmp6(5235).Text, animatedStyles);
     const tmp12 = flag ? animatedStyles.textNormal : animatedStyles.textMuted;
   }
   const obj8 = { animated: true, style: flag ? animatedStyles.textNormal : animatedStyles.textMuted, variant: "redesign/channel-title/semibold", children: title };

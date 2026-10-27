@@ -1,6 +1,6 @@
-// === Module 19131: GuildSettingsRolesActionCreators ===
+// === Module 19169: GuildSettingsRolesActionCreators ===
 
-// Module 19131 (GuildSettingsRolesActionCreators)
+// Module 19169 (GuildSettingsRolesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -639,7 +639,7 @@ let closure_7 = async function _saveRoleSettings(arg0) {
   iter.next();
   return iter;
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ComponentActions: closure_4, DEFAULT_ROLE_COLOR: hasOwnProperty } = Constants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/roles/GuildSettingsRolesActionCreators.tsx");

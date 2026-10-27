@@ -1,14 +1,14 @@
-// === Module 9574: BrandSafetyContext ===
+// === Module 9576: BrandSafetyContext ===
 
-// Module 9574 (BrandSafetyContext)
-import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 9575 */;
-import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9572 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
-import UserStore from "UserStore" /* 1392 */;
+// Module 9576 (BrandSafetyContext)
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import ContentImpressionTrackerConstants from "ContentImpressionTrackerConstants" /* 9577 */;
+import SidebarVisibilityMethodStore from "SidebarVisibilityMethodStore" /* 9574 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
+import UserStore from "UserStore" /* 1389 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -17,10 +17,10 @@ const require = globalThis.__r;
 let closure_10 = ContentImpressionTrackerConstants.MAX_BRAND_SAFETY_CONTEXT_ARRAY_LEN;
 let result = size.fileFinishedImporting("modules/quests/lib/analytics/BrandSafetyContext.tsx");
 
-export const getBrandSafetyContext = function getBrandSafetyContext(questContent) {
-  const result = require("QuestDataUtils").isBillableQuestContent(questContent);
+export const getBrandSafetyContext = function getBrandSafetyContext(surfaceId) {
+  const result = require("QuestDataUtils").isBillableQuestContent(surfaceId);
   let obj = require("QuestDataUtils");
-  const adContext = require("QuestDataUtils").getAdContext(questContent);
+  const adContext = require("QuestDataUtils").getAdContext(surfaceId);
   const tmp4 = closure_4();
   const tmp5 = closure_3();
   let prop;

@@ -1,24 +1,24 @@
-// === Module 14445: WishlistViewerCoachmark ===
+// === Module 14481: WishlistViewerCoachmark ===
 
-// Module 14445 (WishlistViewerCoachmark)
+// Module 14481 (WishlistViewerCoachmark)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import _modDef14446 from "module_14446" /* 14446 */;
+import util from "util" /* 1125 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import _modDef14482 from "module_14482" /* 14482 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_7 = createStyles.createStyles({ imageContainer: { alignItems: "center", justifyContent: "center" }, image: { width: 160, height: 106 } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function CoachmarkImage() {
   const cResult = c.c(6);
   const tmp3 = closure_7();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { uri: _modDef14446 };
+    const obj2 = { uri: _modDef14482 };
     cResult[0] = obj2;
     let first = obj2;
   } else {
@@ -49,7 +49,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Coachma
   const tmp = closure_7();
   const obj = { style: tmp.imageContainer, children: null };
   const obj2 = { source: null, style: null };
-  const obj3 = { uri: _modDef14446 };
+  const obj3 = { uri: _modDef14482 };
   obj2.source = obj3;
   obj2.style = tmp.image;
   obj.children = jsx(FastImageDefault, { source: null, style: null });
@@ -74,10 +74,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Wishlist
     tmp4 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = markAsDismissed(1128).intl;
-    const stringResult = intl.string(markAsDismissed(1128).t["+b6iUl"]);
-    const intl2 = markAsDismissed(1128).intl;
-    const stringResult1 = intl2.string(markAsDismissed(1128).t.Howsng);
+    const intl = markAsDismissed(1125).intl;
+    const stringResult = intl.string(markAsDismissed(1125).t["+b6iUl"]);
+    const intl2 = markAsDismissed(1125).intl;
+    const stringResult1 = intl2.string(markAsDismissed(1125).t.Howsng);
     cResult[2] = stringResult;
     cResult[3] = stringResult1;
     let tmp6 = stringResult1;
@@ -100,8 +100,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Wishlist
     const fn3 = function _() {
       return <closure_1_8 />;
     };
-    const intl3 = markAsDismissed(1128).intl;
-    const stringResult2 = intl3.string(markAsDismissed(1128).t.TxBQzD);
+    const intl3 = markAsDismissed(1125).intl;
+    const stringResult2 = intl3.string(markAsDismissed(1125).t.TxBQzD);
     cResult[6] = fn3;
     cResult[7] = stringResult2;
     let tmp11 = stringResult2;
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Wishlist
       if (cResult[10] === tmp9) {
         let tmp13 = cResult[11];
       }
-      const coachmark = markAsDismissed(9840).useCoachmark(onViewWishlist.anchorRef, tmp13);
+      const coachmark = markAsDismissed(9842).useCoachmark(onViewWishlist.anchorRef, tmp13);
       return null;
     }
   }

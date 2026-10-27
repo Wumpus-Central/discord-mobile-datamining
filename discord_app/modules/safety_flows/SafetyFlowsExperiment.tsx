@@ -1,8 +1,8 @@
-// === Module 18908: SafetyFlowsExperiment ===
+// === Module 18946: SafetyFlowsExperiment ===
 
-// Module 18908 (SafetyFlowsExperiment)
+// Module 18946 (SafetyFlowsExperiment)
 import c from "c" /* 576 */;
-import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1456 */;
+import apex_ApexExperimentDefault from "apex/ApexExperiment" /* 1453 */;
 
 require = fn;
 let tmp2 = apex_ApexExperimentDefault({ name: "2026-04-safety-flows", kind: "user", defaultConfig: { enabled: false }, variations: { 0: { enabled: false }, 1: { enabled: true } } });

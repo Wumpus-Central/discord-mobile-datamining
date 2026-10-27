@@ -1,11 +1,11 @@
-// === Module 16867: ServerTrendingNotificationSetting ===
+// === Module 16909: ServerTrendingNotificationSetting ===
 
-// Module 16867 (ServerTrendingNotificationSetting)
-import util from "util" /* 1128 */;
-import UserSettings from "UserSettings" /* 4799 */;
-import SettingsConstants from "SettingsConstants" /* 8332 */;
-import ServerTrendingNotificationUtils from "ServerTrendingNotificationUtils" /* 16868 */;
-import SettingBuilders from "SettingBuilders" /* 11209 */;
+// Module 16909 (ServerTrendingNotificationSetting)
+import util from "util" /* 1125 */;
+import UserSettings from "UserSettings" /* 4800 */;
+import SettingsConstants from "SettingsConstants" /* 8331 */;
+import ServerTrendingNotificationUtils from "ServerTrendingNotificationUtils" /* 16910 */;
+import SettingBuilders from "SettingBuilders" /* 11212 */;
 import size from "module_2" /* 2 */;
 
 const toggle = SettingBuilders.createToggle({

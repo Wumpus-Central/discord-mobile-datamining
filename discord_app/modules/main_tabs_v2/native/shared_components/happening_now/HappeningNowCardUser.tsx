@@ -1,19 +1,19 @@
-// === Module 17516: HappeningNowCardUser ===
+// === Module 17557: HappeningNowCardUser ===
 
-// Module 17516 (HappeningNowCardUser)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
+// Module 17557 (HappeningNowCardUser)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
-import UserStore from "UserStore" /* 1392 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(16653).HappeningNowCardTrackingType;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+let closure_7 = fn(16695).HappeningNowCardTrackingType;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
-const LARGE = fn(1202).AvatarSizes.LARGE;
-const createStyles = fn(4971);
+const LARGE = fn(1199).AvatarSizes.LARGE;
+const createStyles = fn(4972);
 let closure_11 = createStyles.createStyles({ content: { flex: 1, display: "flex", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/shared_components/happening_now/HappeningNowCardUser.tsx");

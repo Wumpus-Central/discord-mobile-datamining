@@ -1,10 +1,10 @@
-// === Module 10780: fetchDeveloperApplications ===
+// === Module 10783: fetchDeveloperApplications ===
 
-// Module 10780 (fetchDeveloperApplications)
+// Module 10783 (fetchDeveloperApplications)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationRecord from "ApplicationRecord" /* 2024 */;
+import ApplicationRecord from "ApplicationRecord" /* 2021 */;
 
 require = fn;
 let closure_6 = async function _fetchDeveloperApplications() {
@@ -33,7 +33,7 @@ let closure_6 = async function _fetchDeveloperApplications() {
   }
   return value;
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/fetchDeveloperApplications.tsx");
 

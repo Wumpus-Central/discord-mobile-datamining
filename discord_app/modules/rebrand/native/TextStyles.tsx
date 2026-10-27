@@ -1,7 +1,7 @@
-// === Module 6651: TextStyles ===
+// === Module 6652: TextStyles ===
 
-// Module 6651 (TextStyles)
-import Constants from "Constants" /* 1087 */;
+// Module 6652 (TextStyles)
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const Fonts = Constants.Fonts;

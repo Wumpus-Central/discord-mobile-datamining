@@ -1,13 +1,13 @@
-// === Module 18704: useTextChannelPressEvents ===
+// === Module 18740: useTextChannelPressEvents ===
 
-// Module 18704 (useTextChannelPressEvents)
-import transitionToChannel from "transitionToChannel" /* 5707 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10691 */;
-import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 11000 */;
-import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 17541 */;
+// Module 18740 (useTextChannelPressEvents)
+import transitionToChannel from "transitionToChannel" /* 5708 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7413 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10694 */;
+import showLongPressForumPostActionSheetDefault from "showLongPressForumPostActionSheet" /* 11003 */;
+import showThreadLongPressActionSheetDefault from "showThreadLongPressActionSheet" /* 17582 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 const require = globalThis.__r;
 

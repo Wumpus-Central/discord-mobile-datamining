@@ -1,10 +1,10 @@
 // === Module 8943: PermissionsConstants ===
 
 // Module 8943 (PermissionsConstants)
-import Constants from "Constants" /* 1087 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 4831 */;
+import Constants from "Constants" /* 1084 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 4832 */;
 import "BigFlagUtils";
-import BigFlagUtils from "BigFlagUtils" /* 1099 */;
+import BigFlagUtils from "BigFlagUtils" /* 1096 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;

@@ -1,6 +1,6 @@
-// === Module 1204: BadgeConstants ===
+// === Module 1201: BadgeConstants ===
 
-// Module 1204 (BadgeConstants)
+// Module 1201 (BadgeConstants)
 import nativeDefault from "native" /* 587 */;
 
 const PX_16 = nativeDefault.space.PX_16;

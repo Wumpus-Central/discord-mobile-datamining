@@ -1,25 +1,25 @@
-// === Module 19319: GuildRoleSubscriptionTierConfirmationModal ===
+// === Module 19357: GuildRoleSubscriptionTierConfirmationModal ===
 
-// Module 19319 (GuildRoleSubscriptionTierConfirmationModal)
+// Module 19357 (GuildRoleSubscriptionTierConfirmationModal)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import FastImageDefault from "FastImage" /* 5669 */;
+import util from "util" /* 1125 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import FastImageDefault from "FastImage" /* 5670 */;
 import FormHeaderDefault from "FormHeader" /* 9044 */;
-import FormStylesDefault from "FormStyles" /* 15145 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19290 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 19305 */;
-import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 19320 */;
+import FormStylesDefault from "FormStyles" /* 15181 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19328 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 19343 */;
+import GuildRoleSubscriptionListingPreview from "GuildRoleSubscriptionListingPreview" /* 19358 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 19288 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 19326 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, Fragment: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { description: { paddingHorizontal: 16 }, coverPhotoContainer: { marginHorizontal: 16 }, coverPhoto: null };
 let size = { height: 114, width: "100%", borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj2.coverPhoto = size;

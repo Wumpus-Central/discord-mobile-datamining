@@ -3,19 +3,19 @@
 // Module 9038 (StageSparkle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5669 */;
+import FastImageDefault from "FastImage" /* 5670 */;
 import _modDef9039 from "module_9039" /* 9039 */;
 import _modDef9040 from "module_9040" /* 9040 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const native = ThemeContextProvider(5037);
+const native = ThemeContextProvider(5038);
 require = fn;
 let closure_3 = ["theme"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { width: 88, height: 88, alignItems: "center", justifyContent: "center" }, iconContainer: null, iconStyle: null, sparkles: null };
 let size = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: 28, height: 56, width: 56, alignItems: "center", justifyContent: "center" };
 obj2.iconContainer = size;
@@ -118,7 +118,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function StageSp
   obj2.children = tmp6Result;
   const items1 = [timestampProducer(View, obj2), ];
   const obj5 = { style: tmp3.sparkles, source: tmp10(9040) };
-  items1[1] = timestampProducer(tmp10(5669), obj5);
+  items1[1] = timestampProducer(tmp10(5670), obj5);
   obj.children = items1;
   return React5(View, obj);
 });

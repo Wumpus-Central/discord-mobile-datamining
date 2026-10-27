@@ -1,9 +1,9 @@
-// === Module 12477: ConjureRatingFeedbackSheet ===
+// === Module 12485: ConjureRatingFeedbackSheet ===
 
-// Module 12477 (ConjureRatingFeedbackSheet)
+// Module 12485 (ConjureRatingFeedbackSheet)
 import nativeDefault from "native" /* 587 */;
-import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1896 */;
-import _modDef3830 from "module_3830" /* 3830 */;
+import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
+import _modDef3831 from "module_3831" /* 3831 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { content: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -27,11 +27,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   const bottomSheetRef1 = bottomSheetClose(8659).useBottomSheetRef();
   ({ bottomSheetRef, bottomSheetClose } = bottomSheetRef1);
   const obj2 = bottomSheetClose(8659);
-  const conjureRatingFeedback = bottomSheetClose(12476).useConjureRatingFeedback(rating.rating);
+  const conjureRatingFeedback = bottomSheetClose(12484).useConjureRatingFeedback(rating.rating);
   ({ text, setText, send } = conjureRatingFeedback);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = bottomSheetClose(1128).intl;
-    const stringResult = intl.string(send(3830).IqkF07);
+    const intl = bottomSheetClose(1125).intl;
+    const stringResult = intl.string(send(3831).IqkF07);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
     const _Symbol = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const obj4 = { title: first };
-      const tmp13 = closure_4(bottomSheetClose(7248).BottomSheetTitleHeader, obj4);
+      const tmp13 = closure_4(bottomSheetClose(7250).BottomSheetTitleHeader, obj4);
       cResult[4] = tmp13;
       let tmp11 = tmp13;
     } else {
@@ -52,8 +52,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
     }
     const _Symbol2 = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl2 = bottomSheetClose(1128).intl;
-      const stringResult1 = intl2.string(send(3830).HMGKAV);
+      const intl2 = bottomSheetClose(1125).intl;
+      const stringResult1 = intl2.string(send(3831).HMGKAV);
       cResult[5] = stringResult1;
       let tmp14 = stringResult1;
     } else {
@@ -65,8 +65,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
       }
       const _Symbol3 = Symbol;
       if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl3 = bottomSheetClose(1128).intl;
-        const stringResult2 = intl3.string(send(3830)["sr+mUC"]);
+        const intl3 = bottomSheetClose(1125).intl;
+        const stringResult2 = intl3.string(send(3831)["sr+mUC"]);
         cResult[9] = stringResult2;
         let tmp20 = stringResult2;
       } else {
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
               return tmp31;
             }
             const obj5 = { ref: bottomSheetRef, startExpanded: true, keyboardShouldPersistTaps: "handled", header: tmp11, children: tmp27 };
-            const tmp33 = closure_4(bottomSheetClose(7298).ActionSheet, obj5);
+            const tmp33 = closure_4(bottomSheetClose(7300).ActionSheet, obj5);
             cResult[17] = bottomSheetRef;
             cResult[18] = tmp27;
             cResult[19] = tmp33;
@@ -106,14 +106,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
         tmp27 = tmp30;
       }
       const obj7 = { variant: "primary", text: tmp20, disabled: !conjureRatingFeedback.canSend, onPress: tmp10 };
-      const tmp26 = closure_4(bottomSheetClose(5244).Button, obj7);
+      const tmp26 = closure_4(bottomSheetClose(5245).Button, obj7);
       cResult[10] = tmp10;
       cResult[11] = !conjureRatingFeedback.canSend;
       cResult[12] = tmp26;
       tmp24 = tmp26;
     }
-    const obj8 = { accessibilityLabel: first, placeholder: tmp14, maxLength: bottomSheetClose(12476).CONJURE_RATING_FEEDBACK_MAX_LENGTH, value: text, onChange: setText };
-    const tmp19 = closure_4(bottomSheetClose(7180).TextArea, obj8);
+    const obj8 = { accessibilityLabel: first, placeholder: tmp14, maxLength: bottomSheetClose(12484).CONJURE_RATING_FEEDBACK_MAX_LENGTH, value: text, onChange: setText };
+    const tmp19 = closure_4(bottomSheetClose(7182).TextArea, obj8);
     cResult[6] = setText;
     cResult[7] = text;
     cResult[8] = tmp19;
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   cResult[2] = send;
   cResult[3] = handleSend;
   tmp10 = handleSend;
-  const obj3 = bottomSheetClose(12476);
+  const obj3 = bottomSheetClose(12484);
 }) : (function ConjureRatingFeedbackSheet(rating) {
   _require = undefined;
   importDefault = undefined;
@@ -139,19 +139,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureR
   const conjureRatingFeedback = require("conjurePublishRatings").useConjureRatingFeedback(rating.rating);
   ({ send: c1, text, setText, canSend } = conjureRatingFeedback);
   const intl = require("util").intl;
-  const stringResult = intl.string(_modDef3830.IqkF07);
+  const stringResult = intl.string(_modDef3831.IqkF07);
   const obj3 = { ref: bottomSheetRef, startExpanded: true, keyboardShouldPersistTaps: "handled", header: closure_4(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title: stringResult }), children: null };
   const obj4 = { style: tmp.content, children: null };
   const obj5 = { accessibilityLabel: stringResult, placeholder: null, maxLength: null, value: null, onChange: null };
   const intl2 = require("util").intl;
-  obj5.placeholder = intl2.string(_modDef3830.HMGKAV);
+  obj5.placeholder = intl2.string(_modDef3831.HMGKAV);
   obj5.maxLength = require("conjurePublishRatings").CONJURE_RATING_FEEDBACK_MAX_LENGTH;
   obj5.value = text;
   obj5.onChange = setText;
   const items = [closure_4(require("TextArea").TextArea, obj5), ];
   const obj6 = { variant: "primary", text: null, disabled: null, onPress: null };
   const intl3 = require("util").intl;
-  obj6.text = intl3.string(_modDef3830["sr+mUC"]);
+  obj6.text = intl3.string(_modDef3831["sr+mUC"]);
   obj6.disabled = !canSend;
   obj6.onPress = function handleSend() {
     _undefined2();

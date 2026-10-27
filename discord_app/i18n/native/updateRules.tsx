@@ -1,15 +1,15 @@
-// === Module 18716: updateRules ===
+// === Module 18752: updateRules ===
 
-// Module 18716 (updateRules)
+// Module 18752 (updateRules)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import _modDef1951 from "module_1951" /* 1951 */;
-import LinkingDefault from "Linking" /* 5660 */;
+import native from "native" /* 1199 */;
+import _modDef1948 from "module_1948" /* 1948 */;
+import LinkingDefault from "Linking" /* 5661 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let paragraph = { strong: { fontFamily: fn(1087).Fonts.PRIMARY_SEMIBOLD }, italic: { fontStyle: "italic" }, underline: { textDecorationLine: "underline" } };
+let paragraph = { strong: { fontFamily: fn(1084).Fonts.PRIMARY_SEMIBOLD }, italic: { fontStyle: "italic" }, underline: { textDecorationLine: "underline" } };
 const ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function I18nLink(node) {
   const cResult = node(576).c(9);
@@ -17,9 +17,9 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function I18nLink(nod
   ({ output, state } = node);
   let obj = node(576);
   const tmp = node;
-  const token = node(5252).useToken(nativeDefault.colors.TEXT_LINK);
+  const token = node(5253).useToken(nativeDefault.colors.TEXT_LINK);
   let str = "none";
-  if (noop.useContext(node(4985).AccessibilityPreferencesContext).alwaysShowLinkDecorations) {
+  if (noop.useContext(node(4986).AccessibilityPreferencesContext).alwaysShowLinkDecorations) {
     str = "underline";
   }
   if (cResult[0] === token) {
@@ -42,7 +42,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function I18nLink(nod
             let tmp10 = cResult[8];
           }
           const obj4 = { accessible: true, accessibilityRole: "link", onPress: tmp9, style: tmp5, children: tmp10 };
-          return jsx(tmp(1202).LegacyText, { accessible: true, accessibilityRole: "link", onPress: tmp9, style: tmp5, children: tmp10 });
+          return jsx(tmp(1199).LegacyText, { accessible: true, accessibilityRole: "link", onPress: tmp9, style: tmp5, children: tmp10 });
         }
       }
       const outputResult = output(node.content, state);
@@ -55,7 +55,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function I18nLink(nod
       if (cResult[3] !== node.target) {
         const fn = function f() {
           const obj = LinkingDefault;
-          return obj.openURL(_modDef1951.sanitizeUrl(node.target));
+          return obj.openURL(_modDef1948.sanitizeUrl(node.target));
         };
         cResult[3] = node.target;
         cResult[4] = fn;
@@ -71,7 +71,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function I18nLink(nod
   cResult[1] = str;
   cResult[2] = obj5;
   tmp5 = obj5;
-  const obj2 = node(5252);
+  const obj2 = node(5253);
 }) : (function I18nLink(node) {
   node = node.node;
   let token;
@@ -100,7 +100,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function I18nLink(nod
   if (null == obj.onClick) {
     obj.onClick = () => {
       const obj = LinkingDefault;
-      return obj.openURL(_modDef1951.sanitizeUrl(node.target));
+      return obj.openURL(_modDef1948.sanitizeUrl(node.target));
     };
   }
   const obj2 = node(token[6]);

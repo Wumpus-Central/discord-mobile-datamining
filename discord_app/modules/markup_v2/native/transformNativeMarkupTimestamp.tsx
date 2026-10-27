@@ -1,7 +1,7 @@
 // === Module 8498: transformNativeMarkupTimestamp ===
 
 // Module 8498 (transformNativeMarkupTimestamp)
-import MarkupTypes from "MarkupTypes" /* 5980 */;
+import MarkupTypes from "MarkupTypes" /* 5981 */;
 import TimestampUtils from "TimestampUtils" /* 8499 */;
 import size from "module_2" /* 2 */;
 

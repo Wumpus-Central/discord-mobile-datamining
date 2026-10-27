@@ -1,7 +1,7 @@
-// === Module 17952: ThumbhashUtils ===
+// === Module 17986: ThumbhashUtils ===
 
-// Module 17952 (ThumbhashUtils)
-import thumbHashToRGBA2 from "thumbHashToRGBA" /* 16537 */;
+// Module 17986 (ThumbhashUtils)
+import thumbHashToRGBA2 from "thumbHashToRGBA" /* 16576 */;
 import size from "module_2" /* 2 */;
 
 function thumbHashToRGBA(arg0) {

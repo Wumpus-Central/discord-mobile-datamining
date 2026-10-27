@@ -1,7 +1,7 @@
-// === Module 15307: AGC2MobileExperiment ===
+// === Module 15343: AGC2MobileExperiment ===
 
-// Module 15307 (AGC2MobileExperiment)
-import ApexExperiment from "ApexExperiment" /* 1455 */;
+// Module 15343 (AGC2MobileExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-09-agc2-mobile", defaultConfig: { agc2Enabled: false, noiseCancellationDuringProcessing: false, vadKrispActivationThreshold: 0.5 }, variations: null };

@@ -1,6 +1,6 @@
-// === Module 1104: Durations ===
+// === Module 1101: Durations ===
 
-// Module 1104 (Durations)
+// Module 1101 (Durations)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("utils/Durations.tsx");

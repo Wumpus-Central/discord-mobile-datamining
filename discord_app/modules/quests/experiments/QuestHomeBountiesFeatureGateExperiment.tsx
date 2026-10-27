@@ -1,7 +1,7 @@
-// === Module 14134: QuestHomeBountiesFeatureGateExperiment ===
+// === Module 14148: QuestHomeBountiesFeatureGateExperiment ===
 
-// Module 14134 (QuestHomeBountiesFeatureGateExperiment)
-import ApexExperiment from "ApexExperiment" /* 1455 */;
+// Module 14148 (QuestHomeBountiesFeatureGateExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { name: "2026-09-quest-home-bounties-feature-gate", kind: "user", defaultConfig: { enabled: false }, variations: null };

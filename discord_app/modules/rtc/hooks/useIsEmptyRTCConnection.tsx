@@ -4,8 +4,8 @@
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
-import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7814 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
+import StreamRTCConnectionStore from "StreamRTCConnectionStore" /* 7815 */;
 
 require = fn;
 fn(558);

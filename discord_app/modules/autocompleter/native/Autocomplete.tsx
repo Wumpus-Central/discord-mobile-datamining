@@ -1,43 +1,43 @@
-// === Module 13284: Autocomplete ===
+// === Module 13298: Autocomplete ===
 
-// Module 13284 (Autocomplete)
+// Module 13298 (Autocomplete)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2032 */;
-import StringUtils from "StringUtils" /* 2033 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import useChannelName from "useChannelName" /* 5604 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import TableRow from "TableRow" /* 6903 */;
-import Pressables from "Pressables" /* 6908 */;
-import TableRowTrailingText from "TableRowTrailingText" /* 6914 */;
-import UnknownGameIcon from "UnknownGameIcon" /* 8074 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import getGameMediaRefURLDefault from "getGameMediaRefURL" /* 2029 */;
+import StringUtils from "StringUtils" /* 2030 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import useChannelName from "useChannelName" /* 5605 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import TableRow from "TableRow" /* 6905 */;
+import Pressables from "Pressables" /* 6910 */;
+import TableRowTrailingText from "TableRowTrailingText" /* 6916 */;
+import UnknownGameIcon from "UnknownGameIcon" /* 8072 */;
 import TimestampUtils from "TimestampUtils" /* 8499 */;
 import utils_ChannelUtils from "utils/ChannelUtils" /* 8502 */;
 import _modDef8607 from "module_8607" /* 8607 */;
 import Form from "Form" /* 8951 */;
-import StickersHooks from "StickersHooks" /* 10154 */;
-import StickerDefault from "Sticker" /* 10170 */;
-import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 13285 */;
-import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 13286 */;
-import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 13287 */;
+import StickersHooks from "StickersHooks" /* 10156 */;
+import StickerDefault from "Sticker" /* 10172 */;
+import ChannelAutocompleteEmojiUpsellDefault from "ChannelAutocompleteEmojiUpsell" /* 13299 */;
+import GameSearchRowExperimentDefault from "GameSearchRowExperiment" /* 13300 */;
+import GamePlatformBadgeRowDefault from "GamePlatformBadgeRow" /* 13301 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes: closure_8, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
-let obj2 = { row: { height: fn(10113).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, gameIconBackground: null, labelRow: null };
-let obj3 = { height: fn(10113).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
+const createStyles = fn(4972);
+let obj2 = { row: { height: fn(10115).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH }, leading: null, trailing: null, username: null, emoji: null, emojiImage: null, emojiText: null, stickerContainer: null, commandChoiceLoadingContainer: null, commandChoiceLoadingItem: null, autocompleteIcon: null, gameIcon: null, gameIconBackground: null, labelRow: null };
+let obj3 = { height: fn(10115).AUTOCOMPLETE_ROW_HEIGHT, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH };
 obj2.leading = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 let obj4 = { fontSize: 16, color: nativeDefault.colors.INTERACTIVE_TEXT_ACTIVE, fontFamily: Fonts.PRIMARY_SEMIBOLD };
 obj2.trailing = { fontSize: 14, color: nativeDefault.colors.TEXT_MUTED };
@@ -168,8 +168,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function User(user) {
             tmp20 = items1;
           }
         }
-        const obj6 = { status, user, size: tmp(1202).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
-        const tmp19 = closure_9(tmp(1202).Avatar, obj6);
+        const obj6 = { status, user, size: tmp(1199).AvatarSizes.SMALL, guildId, autoStatusCutout: true };
+        const tmp19 = closure_9(tmp(1199).Avatar, obj6);
         cResult[10] = guildId;
         cResult[11] = status;
         cResult[12] = user;
@@ -182,8 +182,8 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function User(user) {
       name = stateFromStores;
     }
     if (name == null) {
-      name = guildId(5025).getName(user);
-      const obj3 = guildId(5025);
+      name = guildId(5026).getName(user);
+      const obj3 = guildId(5026);
     }
     cResult[4] = stateFromStores;
     cResult[5] = nick;
@@ -222,12 +222,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function User(user) {
     nick = stateFromStores;
   }
   if (nick == null) {
-    nick = guildId(5025).getName(user);
-    const obj3 = guildId(5025);
+    nick = guildId(5026).getName(user);
+    const obj3 = guildId(5026);
   }
   obj2.label = closure_9(closure_12, { text: nick });
   const obj = user(504);
-  obj2.leading = closure_9(user(1202).Avatar, { status, user, size: user(1202).AvatarSizes.SMALL, guildId, autoStatusCutout: true });
+  obj2.leading = closure_9(user(1199).Avatar, { status, user, size: user(1199).AvatarSizes.SMALL, guildId, autoStatusCutout: true });
   const obj5 = { user, usernameStyle: null, discriminatorStyle: tmp.trailing };
   const items1 = [, ];
   ({ trailing: arr2[0], username: arr2[1] } = tmp);

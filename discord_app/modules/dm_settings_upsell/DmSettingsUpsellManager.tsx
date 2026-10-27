@@ -1,10 +1,10 @@
-// === Module 18786: DmSettingsUpsellManager ===
+// === Module 18822: DmSettingsUpsellManager ===
 
-// Module 18786 (DmSettingsUpsellManager)
-import Constants from "Constants" /* 1087 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import DmSettingsUpsellActionCreatorsDefault from "DmSettingsUpsellActionCreators" /* 18787 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+// Module 18822 (DmSettingsUpsellManager)
+import Constants from "Constants" /* 1084 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import DmSettingsUpsellActionCreatorsDefault from "DmSettingsUpsellActionCreators" /* 18823 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 import size from "module_2" /* 2 */;
 
 const Endpoints = Constants.Endpoints;

@@ -1,8 +1,8 @@
-// === Module 12197: ConjureLinkedAppBuildSheet ===
+// === Module 12215: ConjureLinkedAppBuildSheet ===
 
-// Module 12197 (ConjureLinkedAppBuildSheet)
+// Module 12215 (ConjureLinkedAppBuildSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -10,7 +10,7 @@ const require = globalThis.__r;
 const require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = { content: { paddingBottom: nativeDefault.space.PX_16 + arg0 } };
   return obj;
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureL
   ({ sheetKey: require, onPick: importDefault, onRemove } = arg0);
   ({ title, value } = arg0);
   const intl = require("util").intl;
-  const stringResult = intl.string(require("module_3830").Odrcmq);
+  const stringResult = intl.string(require("module_3831").Odrcmq);
   let obj = { header: closure_3(require("BottomSheetTitleHeader").BottomSheetTitleHeader, { title }), children: null };
   let obj2 = { spacing: require("native").space.PX_16, style: closure_5(require("useSafeAreaInsets")().bottom).content, children: null };
   const obj3 = {
@@ -166,7 +166,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureL
     const obj4 = { hasIcons: false, children: null };
     const obj5 = { variant: "danger", label: null, onPress: null };
     const intl2 = require("util").intl;
-    obj5.label = intl2.string(require("module_3830").bN1S9T);
+    obj5.label = intl2.string(require("module_3831").bN1S9T);
     obj5.onPress = function onPress() {
       ActionSheetActionCreatorsDefault.hideActionSheet(require);
       onRemove();

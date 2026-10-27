@@ -3,20 +3,20 @@
 // Module 9027 (GuildEventCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ButtonGroup from "ButtonGroup" /* 6696 */;
+import ButtonGroup from "ButtonGroup" /* 6697 */;
 import GuildEventCardComponents from "GuildEventCardComponents" /* 8902 */;
 import noop from "module_19" /* 19 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(6784).isGuildScheduledEventActive;
-fn(4829).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
+let closure_5 = fn(6785).isGuildScheduledEventActive;
+fn(4830).AGE_VERIFICATION_STAGE_CHANNEL_TYPES;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { actionContainer: { paddingTop: nativeDefault.space.PX_16, paddingBottom: 0 } };
 const styles = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);

@@ -1,20 +1,20 @@
-// === Module 16098: IgnoredUsersList ===
+// === Module 16136: IgnoredUsersList ===
 
-// Module 16098 (IgnoredUsersList)
+// Module 16136 (IgnoredUsersList)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import TableRowGroup from "TableRowGroup" /* 6987 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7221 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7253 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
-import Blocked from "Blocked" /* 16091 */;
-import IgnoredUserRowDefault from "IgnoredUserRow" /* 16099 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import TableRowGroup from "TableRowGroup" /* 6989 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7223 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7255 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7280 */;
+import Blocked from "Blocked" /* 16129 */;
+import IgnoredUserRowDefault from "IgnoredUserRow" /* 16137 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -22,7 +22,7 @@ require = fn;
 const ScrollView = fn(17).ScrollView;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { list: { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 }, sectionLabelStyle: null };
 let obj3 = { marginTop: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.sectionLabelStyle = { marginTop: nativeDefault.space.PX_12, marginBottom: nativeDefault.space.PX_8 };

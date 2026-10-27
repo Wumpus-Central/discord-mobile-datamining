@@ -1,16 +1,16 @@
-// === Module 17273: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
+// === Module 17314: SettingsPrivacyAndSafetyGuildSelectActionSheet ===
 
-// Module 17273 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
+// Module 17314 (SettingsPrivacyAndSafetyGuildSelectActionSheet)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4837 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6022 */;
-import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6708 */;
-import SelectComponentActionSheetDefault from "SelectComponentActionSheet" /* 12190 */;
+import util from "util" /* 1125 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4838 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6023 */;
+import AutocompleteUtilsDefault from "AutocompleteUtils" /* 6709 */;
+import SelectComponentActionSheetDefault from "SelectComponentActionSheet" /* 12208 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import SortedGuildStore from "SortedGuildStore" /* 6701 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import SortedGuildStore from "SortedGuildStore" /* 6702 */;
 
 const require = globalThis.__r;
 
@@ -47,10 +47,10 @@ function queryGuilds(query) {
   }
   return reduced;
 }
-const UserSettingsSafetySelectedGuildStore = fn(17272);
+const UserSettingsSafetySelectedGuildStore = fn(17313);
 ({ GUILD_SELECT_ALL_SERVERS_OPTION_ID: closure_7, setSelectedGuildId: closure_8, useUserSafetySettingsSelectedGuildStore: closure_9 } = UserSettingsSafetySelectedGuildStore);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { iconContainer: { marginRight: nativeDefault.space.PX_12 } };
 let closure_11 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -80,7 +80,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
   if (selectedGuildId !== value) {
     if (null != stateFromStores) {
       if (cResult[4] !== stateFromStores) {
-        const obj2 = { type: tmp(6022).SelectOptionType.GUILD, guild: stateFromStores, label: null, value: null };
+        const obj2 = { type: tmp(6023).SelectOptionType.GUILD, guild: stateFromStores, label: null, value: null };
         ({ name: obj3.label, id: obj3.value } = stateFromStores);
         cResult[4] = stateFromStores;
         cResult[5] = obj2;
@@ -92,17 +92,17 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
     }
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj4 = { type: tmp(6022).SelectOptionType.GUILD, guild: null, label: null, value: null };
+    const obj4 = { type: tmp(6023).SelectOptionType.GUILD, guild: null, label: null, value: null };
     const obj5 = { id: value, name: null };
-    const intl = tmp(1128).intl;
-    obj5.name = intl.string(tmp(1128).t["32u1Dx"]);
-    obj4.guild = tmp(4837).dangerouslyConstructGuildRecordFromUntypedObject(obj5);
-    const intl2 = tmp(1128).intl;
-    stringResult = intl2.string(tmp(1128).t["32u1Dx"]);
+    const intl = tmp(1125).intl;
+    obj5.name = intl.string(tmp(1125).t["32u1Dx"]);
+    obj4.guild = tmp(4838).dangerouslyConstructGuildRecordFromUntypedObject(obj5);
+    const intl2 = tmp(1125).intl;
+    stringResult = intl2.string(tmp(1125).t["32u1Dx"]);
     obj4.label = stringResult;
     obj4.value = value;
     cResult[3] = obj4;
-    const tmpResult2 = tmp(4837);
+    const tmpResult2 = tmp(4838);
   }
   const tmpResult = selectedGuildId(504);
 }) : (function useSelectedSearchableGuildOption() {
@@ -111,22 +111,22 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSel
   const stateFromStores = selectedGuildId(504).useStateFromStores(items, () => GuildStore.getGuild(selectedGuildId));
   if (selectedGuildId !== value) {
     if (null != stateFromStores) {
-      let obj3 = { type: tmp(6022).SelectOptionType.GUILD, guild: stateFromStores, label: null, value: null };
+      let obj3 = { type: tmp(6023).SelectOptionType.GUILD, guild: stateFromStores, label: null, value: null };
       ({ name: obj2.label, id: obj2.value } = stateFromStores);
     }
     return obj3;
   }
-  const obj4 = { type: selectedGuildId(6022).SelectOptionType.GUILD, guild: null, label: null, value: null };
+  const obj4 = { type: selectedGuildId(6023).SelectOptionType.GUILD, guild: null, label: null, value: null };
   const obj = selectedGuildId(504);
   const obj5 = { id: value, name: null };
-  const intl = tmp(1128).intl;
-  obj5.name = intl.string(selectedGuildId(1128).t["32u1Dx"]);
-  obj4.guild = selectedGuildId(4837).dangerouslyConstructGuildRecordFromUntypedObject(obj5);
-  const intl2 = tmp(1128).intl;
-  obj4.label = intl2.string(selectedGuildId(1128).t["32u1Dx"]);
+  const intl = tmp(1125).intl;
+  obj5.name = intl.string(selectedGuildId(1125).t["32u1Dx"]);
+  obj4.guild = selectedGuildId(4838).dangerouslyConstructGuildRecordFromUntypedObject(obj5);
+  const intl2 = tmp(1125).intl;
+  obj4.label = intl2.string(selectedGuildId(1125).t["32u1Dx"]);
   obj4.value = value;
   obj3 = obj4;
-  const tmpResult = selectedGuildId(4837);
+  const tmpResult = selectedGuildId(4838);
 });
 ReactCompilerGating = fn(558);
 let obj3 = { marginRight: nativeDefault.space.PX_12 };
@@ -141,8 +141,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
   iter = closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const obj2 = { maxValues: 1, minValues: 1, placeholder: null };
-    const intl = tmp(1128).intl;
-    obj2.placeholder = intl.string(tmp(1128).t["ZImm/x"]);
+    const intl = tmp(1125).intl;
+    obj2.placeholder = intl.string(tmp(1125).t["ZImm/x"]);
     cResult[0] = obj2;
     let first1 = obj2;
   } else {
@@ -167,7 +167,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     function submitSelection() {
-      return closure_1(5210).hideActionSheet();
+      return closure_1(5211).hideActionSheet();
     }
     cResult[4] = submitSelection;
     let tmp11 = submitSelection;
@@ -207,11 +207,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
     function renderIcon(value) {
       if (value.value === closure_1_7) {
-        let tmp6 = jsx(iter(15981).GuildSelectDefaultIcon, {});
+        let tmp6 = jsx(iter(16019).GuildSelectDefaultIcon, {});
       } else {
-        const obj = { guild: value.guild, size: iter(6883).GuildIconSizes.SMALL_32 };
-        tmp6 = jsx(closure_1(6883), { guild: value.guild, size: iter(6883).GuildIconSizes.SMALL_32 });
-        const tmp4 = closure_1(6883);
+        const obj = { guild: value.guild, size: iter(6885).GuildIconSizes.SMALL_32 };
+        tmp6 = jsx(closure_1(6885), { guild: value.guild, size: iter(6885).GuildIconSizes.SMALL_32 });
+        const tmp4 = closure_1(6885);
       }
       return tmp6;
     }
@@ -223,11 +223,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
   if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
     function renderHeaderIcon(value) {
       if (value.value === closure_1_7) {
-        let tmp6 = jsx(iter(15981).GuildSelectDefaultIcon, { size: "xs" });
+        let tmp6 = jsx(iter(16019).GuildSelectDefaultIcon, { size: "xs" });
       } else {
-        const obj = { guild: value.guild, size: iter(6883).GuildIconSizes.XSMALL };
-        tmp6 = jsx(closure_1(6883), { guild: value.guild, size: iter(6883).GuildIconSizes.XSMALL });
-        const tmp4 = closure_1(6883);
+        const obj = { guild: value.guild, size: iter(6885).GuildIconSizes.XSMALL };
+        tmp6 = jsx(closure_1(6885), { guild: value.guild, size: iter(6885).GuildIconSizes.XSMALL });
+        const tmp4 = closure_1(6885);
       }
       return tmp6;
     }

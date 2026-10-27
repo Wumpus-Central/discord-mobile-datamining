@@ -1,20 +1,20 @@
-// === Module 18359: RestrictedMessageRequestPreview ===
+// === Module 18393: RestrictedMessageRequestPreview ===
 
-// Module 18359 (RestrictedMessageRequestPreview)
+// Module 18393 (RestrictedMessageRequestPreview)
 import nativeDefault from "native" /* 587 */;
-import useIsEmptyMessageRequestChat from "useIsEmptyMessageRequestChat" /* 13531 */;
+import useIsEmptyMessageRequestChat from "useIsEmptyMessageRequestChat" /* 13545 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import MessageStore from "MessageStore" /* 6010 */;
-import UserStore from "UserStore" /* 1392 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import MessageStore from "MessageStore" /* 6011 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, hidden: { opacity: 0 }, scrollContent: null, scrollContentEmpty: null, emptyChat: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollContent = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };
@@ -32,7 +32,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Restrict
   const cResult = channelId(576).c(55);
   channelId = channelId.channelId;
   closure_12();
-  const bottom = ref(1633)().bottom;
+  const bottom = ref(1630)().bottom;
   let obj = channelId(576);
   const obj2 = noop;
   dependencyMap = noop.useRef(false);
@@ -359,24 +359,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Restrict
         }
       };
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      const items9 = [closure_10(tmp2(18360), obj6), , ];
+      const items9 = [closure_10(tmp2(18394), obj6), , ];
       const obj7 = { channelId };
-      items9[1] = closure_10(tmp2(18362), obj7);
+      items9[1] = closure_10(tmp2(18396), obj7);
       let tmp19Result = null;
       if (isEmpty) {
         const obj8 = { style: tmp.emptyChat };
-        tmp19Result = closure_10(tmp2(13557), obj8);
+        tmp19Result = closure_10(tmp2(13571), obj8);
       }
       items9[2] = tmp19Result;
       obj5.children = items9;
       const items10 = [closure_11(c5, obj5), ];
       const obj9 = { style: null, children: null };
       const items11 = [tmp.footer, ];
-      const obj10 = { paddingBottom: tmp2(587).space.PX_8 + ref(1633)().bottom };
+      const obj10 = { paddingBottom: tmp2(587).space.PX_8 + ref(1630)().bottom };
       items11[1] = obj10;
       obj9.style = items11;
       const obj11 = { channel: stateFromStores };
-      obj9.children = closure_10(tmp2(13350), obj11);
+      obj9.children = closure_10(tmp2(13364), obj11);
       items10[1] = closure_10(isEmpty, obj9);
       obj4.children = items10;
       tmp14Result = closure_11(tmp15, obj4);

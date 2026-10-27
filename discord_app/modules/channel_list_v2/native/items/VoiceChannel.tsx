@@ -1,21 +1,21 @@
-// === Module 17664: VoiceChannel ===
+// === Module 17705: VoiceChannel ===
 
-// Module 17664 (VoiceChannel)
+// Module 17705 (VoiceChannel)
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import ChannelUtils from "ChannelUtils" /* 5994 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import ChannelUtils from "ChannelUtils" /* 5995 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9018 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10691 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11930 */;
-import VoiceUsersDefault from "VoiceUsers" /* 17545 */;
-import VoiceUserSummaryDefault from "VoiceUserSummary" /* 17554 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10694 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11931 */;
+import VoiceUsersDefault from "VoiceUsers" /* 17586 */;
+import VoiceUserSummaryDefault from "VoiceUserSummary" /* 17595 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7636 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import ReadStateStore from "ReadStateStore" /* 6771 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5717 */;
+import CollapsedVoiceChannelStore from "CollapsedVoiceChannelStore" /* 7637 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import ReadStateStore from "ReadStateStore" /* 6772 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5718 */;
 
 require = fn;
 function handleVoiceChannelPress() {
@@ -51,10 +51,10 @@ let closure_18 = async function _handleVoiceChannelPress(arg0) {
   })();
 };
 const View = fn(17).View;
-const NO_VOICE_STATES = fn(5717).NO_VOICE_STATES;
-const RedesignChannelListConstants = fn(11953);
+const NO_VOICE_STATES = fn(5718).NO_VOICE_STATES;
+const RedesignChannelListConstants = fn(11954);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_12, CHANNEL_MARGIN_VERTICAL } = RedesignChannelListConstants);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: map1, Permissions: closure_14 } = Constants);
 const jsx = fn(21).jsx;
 let obj = { channelInfo: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, maxHeight: 1 }, voiceStates: { marginLeft: 36, marginTop: -4, marginBottom: 2 }, voiceStatesCollapsed: { marginLeft: 16 }, container: null };

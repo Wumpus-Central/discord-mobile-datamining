@@ -1,12 +1,12 @@
-// === Module 16778: LanguageSetting ===
+// === Module 16820: LanguageSetting ===
 
-// Module 16778 (LanguageSetting)
-import util from "util" /* 1128 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
+// Module 16820 (LanguageSetting)
+import util from "util" /* 1125 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLanguageSettingTrailing() {
   const cResult = stateFromStores(576).c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -24,17 +24,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLanguag
   const obj = stateFromStores(576);
   stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
   if (cResult[2] !== stateFromStores) {
-    const availableLocales = tmp(1128).getAvailableLocales();
+    const availableLocales = tmp(1125).getAvailableLocales();
     const found = availableLocales.find((value) => value.value === stateFromStores);
     let stringResult = null;
     if (null != found) {
-      const intl = tmp(1128).intl;
+      const intl = tmp(1125).intl;
       stringResult = intl.string(found.localizedName);
     }
     cResult[2] = stateFromStores;
     cResult[3] = stringResult;
     let tmp8 = stringResult;
-    const tmpResult2 = tmp(1128);
+    const tmpResult2 = tmp(1125);
   } else {
     tmp8 = cResult[3];
   }
@@ -48,7 +48,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useLanguag
   const found = availableLocales.find((value) => value.value === closure_0);
   let stringResult = null;
   if (null != found) {
-    const intl = tmp(1128).intl;
+    const intl = tmp(1125).intl;
     stringResult = intl.string(found.localizedName);
   }
   return stringResult;
@@ -59,7 +59,7 @@ const route = SettingBuilders.createRoute({
     return intl.string(util.t.IHMsPn);
   },
   parent: null,
-  IconComponent: fn(9514).LanguageIcon,
+  IconComponent: fn(9513).LanguageIcon,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled() ? (function useLanguageSettingTrailing() {
     const cResult = stateFromStores(576).c(4);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -77,17 +77,17 @@ const route = SettingBuilders.createRoute({
     const obj = stateFromStores(576);
     stateFromStores = stateFromStores(504).useStateFromStores(tmp4, tmp5);
     if (cResult[2] !== stateFromStores) {
-      const availableLocales = tmp(1128).getAvailableLocales();
+      const availableLocales = tmp(1125).getAvailableLocales();
       const found = availableLocales.find((value) => value.value === stateFromStores);
       let stringResult = null;
       if (null != found) {
-        const intl = tmp(1128).intl;
+        const intl = tmp(1125).intl;
         stringResult = intl.string(found.localizedName);
       }
       cResult[2] = stateFromStores;
       cResult[3] = stringResult;
       let tmp8 = stringResult;
-      const tmpResult2 = tmp(1128);
+      const tmpResult2 = tmp(1125);
     } else {
       tmp8 = cResult[3];
     }
@@ -101,13 +101,13 @@ const route = SettingBuilders.createRoute({
     const found = availableLocales.find((value) => value.value === closure_0);
     let stringResult = null;
     if (null != found) {
-      const intl = tmp(1128).intl;
+      const intl = tmp(1125).intl;
       stringResult = intl.string(found.localizedName);
     }
     return stringResult;
   }),
   screen: {
-    route: fn(1087).UserSettingsSections.LANGUAGE,
+    route: fn(1084).UserSettingsSections.LANGUAGE,
     getComponent() {
       return require("UserSettingsLocale").default;
     }

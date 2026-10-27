@@ -1,14 +1,14 @@
-// === Module 16501: useVideoQuestClickCtaAndMaybeCloseModal ===
+// === Module 16540: useVideoQuestClickCtaAndMaybeCloseModal ===
 
-// Module 16501 (useVideoQuestClickCtaAndMaybeCloseModal)
-import parseURLDefault from "parseURL" /* 5696 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7801 */;
-import QuestCopyUtils from "QuestCopyUtils" /* 9594 */;
-import QuestPlatformUtils from "QuestPlatformUtils" /* 9607 */;
+// Module 16540 (useVideoQuestClickCtaAndMaybeCloseModal)
+import parseURLDefault from "parseURL" /* 5697 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7802 */;
+import QuestCopyUtils from "QuestCopyUtils" /* 9596 */;
+import QuestPlatformUtils from "QuestPlatformUtils" /* 9610 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const LinkingTypes = fn(1087).LinkingTypes;
+const LinkingTypes = fn(1084).LinkingTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/useVideoQuestClickCtaAndMaybeCloseModal.tsx");

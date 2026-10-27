@@ -1,10 +1,10 @@
 // === Module 8646: avatar_decorations/AvatarDecorationUtils ===
 
 // Module 8646 (avatar_decorations/AvatarDecorationUtils)
-import native from "native" /* 1202 */;
-import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1418 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import native from "native" /* 1199 */;
+import AvatarDecorationConstants from "AvatarDecorationConstants" /* 1415 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = AvatarDecorationConstants.DECORATION_TO_AVATAR_RATIO;

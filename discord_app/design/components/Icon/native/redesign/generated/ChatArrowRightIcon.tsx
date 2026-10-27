@@ -1,10 +1,10 @@
-// === Module 12506: ChatArrowRightIcon ===
+// === Module 12514: ChatArrowRightIcon ===
 
-// Module 12506 (ChatArrowRightIcon)
+// Module 12514 (ChatArrowRightIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5668 */;
-import _mod12507 from "module_12507" /* 12507 */;
+import BaseIconImage from "BaseIconImage" /* 5669 */;
+import _mod12515 from "module_12515" /* 12515 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ChatArrowRightIcon = ReactCompilerGating.isReactCompilerEnabled() ?
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12507;
+    const tmpResult = _mod12515;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ChatArrowRightIcon = ReactCompilerGating.isReactCompilerEnabled() ?
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12507, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12515, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,8 +1,8 @@
-// === Module 17192: CollectiblesShopOpenTriggerPoint ===
+// === Module 17233: CollectiblesShopOpenTriggerPoint ===
 
-// Module 17192 (CollectiblesShopOpenTriggerPoint)
-import ExperimentConstants from "ExperimentConstants" /* 5191 */;
-import Helpers from "Helpers" /* 10564 */;
+// Module 17233 (CollectiblesShopOpenTriggerPoint)
+import ExperimentConstants from "ExperimentConstants" /* 5192 */;
+import Helpers from "Helpers" /* 10567 */;
 import size from "module_2" /* 2 */;
 
 const commonTriggerPointConfiguration = new Helpers.CommonTriggerPointConfiguration([], ExperimentConstants.CommonTriggerPoints.COLLECTIBLES_SHOP_OPEN, { location: "collectibles shop open" });

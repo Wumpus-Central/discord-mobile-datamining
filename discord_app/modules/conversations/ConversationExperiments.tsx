@@ -1,37 +1,31 @@
-// === Module 9734: ConversationExperiments ===
+// === Module 9736: ConversationExperiments ===
 
-// Module 9734 (ConversationExperiments)
+// Module 9736 (ConversationExperiments)
 import c from "c" /* 576 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import GuildStore from "GuildStore" /* 4846 */;
 
 require = fn;
-const GuildFeatures = fn(1087).GuildFeatures;
-let ApexExperiment = fn(1455);
+const GuildFeatures = fn(1084).GuildFeatures;
+let ApexExperiment = fn(1452);
 let obj2 = { kind: "user", name: "2026-03-conversation-highlighting-utility", defaultConfig: { enabled: false }, variations: null };
 let obj3 = { 1: null, 2: { enabled: false } };
 obj3[2] = { enabled: true };
 obj2.variations = obj3;
 const apexExperiment = ApexExperiment.createApexExperiment(obj2);
-ApexExperiment = fn(1455);
+ApexExperiment = fn(1452);
 const obj5 = { kind: "guild", name: "2026-06-topical-navigation-guild", defaultConfig: { enabled: false }, variations: null };
 const obj6 = { 1: null };
 obj6[1] = { enabled: true };
 obj5.variations = obj6;
 const apexExperiment1 = ApexExperiment.createApexExperiment(obj5);
-ApexExperiment = fn(1455);
-const obj8 = { kind: "user", name: "2026-09-conversation-topic-header", defaultConfig: { enabled: false }, variations: null };
+ApexExperiment = fn(1452);
+const obj8 = { kind: "user", name: "2026-04-topical-navigation-staff-control", defaultConfig: { enabled: false }, variations: null };
 const obj9 = { 1: null };
 obj9[1] = { enabled: true };
 obj8.variations = obj9;
 const apexExperiment2 = ApexExperiment.createApexExperiment(obj8);
-ApexExperiment = fn(1455);
-const obj11 = { kind: "user", name: "2026-04-topical-navigation-staff-control", defaultConfig: { enabled: false }, variations: null };
-const obj12 = { 1: null };
-obj12[1] = { enabled: true };
-obj11.variations = obj12;
-const apexExperiment3 = ApexExperiment.createApexExperiment(obj11);
 let ReactCompilerGating = fn(558);
-let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildHasFeature(arg0, arg1) {
+let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildHasFeature(arg0, arg1) {
   _require = arg0;
   dependencyMap = arg1;
   const cResult = require("c").c(5);
@@ -97,7 +91,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuil
   }, items1);
 });
 ReactCompilerGating = fn(558);
-let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsConversationDebugUXEnabled(arg0, location) {
+let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsConversationDebugUXEnabled(arg0, location) {
   const cResult = c.c(2);
   if (cResult[0] !== location) {
     const obj2 = { location };
@@ -107,83 +101,11 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsConvers
   } else {
     tmp2 = cResult[1];
   }
-  return closure_8(arg0, GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING) && apexExperiment.useConfig(tmp2).enabled;
+  return closure_7(arg0, GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING) && apexExperiment.useConfig(tmp2).enabled;
 }) : (function useIsConversationDebugUXEnabled(arg0, location) {
-  return closure_8(arg0, GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING) && apexExperiment.useConfig({ location }).enabled;
+  return closure_7(arg0, GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING) && apexExperiment.useConfig({ location }).enabled;
 });
-let closure_9 = tmp6;
-ReactCompilerGating = fn(558);
-let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsTopicalNavEnabled(arg0, location) {
-  const cResult = c.c(5);
-  if (cResult[0] !== location) {
-    const obj2 = { location };
-    cResult[0] = location;
-    cResult[1] = obj2;
-    let tmp3 = obj2;
-  } else {
-    tmp3 = cResult[1];
-  }
-  let str = arg0;
-  if (arg0 == null) {
-    str = "";
-  }
-  if (cResult[2] === location) {
-    if (cResult[3] === str) {
-      let tmp4 = cResult[4];
-    }
-    let enabled = closure_8(arg0, GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING);
-    let tmp9 = null != arg0;
-    if (tmp9) {
-      let tmp10 = tmp2;
-      if (!tmp10) {
-        let enabled1 = apexExperiment3.useConfig(tmp3).enabled;
-        if (enabled1) {
-          if (enabled) {
-            enabled = !tmp8;
-          }
-          if (enabled) {
-            enabled = apexExperiment1.useConfig(tmp4).enabled;
-          }
-          enabled1 = enabled;
-        }
-        tmp10 = enabled1;
-      }
-      tmp9 = tmp10;
-    }
-    return tmp9;
-  }
-  const obj3 = { guildId: str, location };
-  cResult[2] = location;
-  cResult[3] = str;
-  cResult[4] = obj3;
-  tmp4 = obj3;
-  tmp2 = closure_9(arg0, location);
-}) : (function useIsTopicalNavEnabled(arg0, location) {
-  if (arg0 == null) {
-    const str = "";
-  }
-  let enabled = closure_8(arg0, GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING);
-  let tmp4 = null != arg0;
-  if (tmp4) {
-    let tmp5 = tmp;
-    if (!tmp5) {
-      let enabled1 = apexExperiment3.useConfig(obj).enabled;
-      if (enabled1) {
-        if (enabled) {
-          enabled = !tmp3;
-        }
-        if (enabled) {
-          enabled = apexExperiment1.useConfig(obj2).enabled;
-        }
-        enabled1 = enabled;
-      }
-      tmp5 = enabled1;
-    }
-    tmp4 = tmp5;
-  }
-  return tmp4;
-});
-let closure_10 = tmp7;
+let closure_8 = tmp5;
 ReactCompilerGating = fn(558);
 function isConversationDebugUXEnabled(guildId, location) {
   let tmp2 = null != guildId;
@@ -211,8 +133,7 @@ const result = size.fileFinishedImporting("modules/conversations/ConversationExp
 
 export const ConversationHighlightingExperiment = apexExperiment;
 export const TopicalNavGuildExperiment = apexExperiment1;
-export const ConversationTopicHeaderExperiment = apexExperiment2;
-export const TopicalNavUserGateExperiment = apexExperiment3;
+export const TopicalNavUserGateExperiment = apexExperiment2;
 export { isConversationDebugUXEnabled };
 export const isTopicalNavEnabled = function isTopicalNavEnabled(guildId, fetch_channel_conversations) {
   if (null == guildId) {
@@ -240,7 +161,7 @@ export const isTopicalNavEnabled = function isTopicalNavEnabled(guildId, fetch_c
       return true;
     } else {
       const obj2 = { location: fetch_channel_conversations };
-      if (apexExperiment3.getConfig(obj2).enabled) {
+      if (apexExperiment2.getConfig(obj2).enabled) {
         const guild1 = GuildStore.getGuild(guildId);
         let enabled2 = null != guild1;
         if (enabled2) {
@@ -262,27 +183,74 @@ export const isTopicalNavEnabled = function isTopicalNavEnabled(guildId, fetch_c
     }
   }
 };
-export const useIsConversationDebugUXEnabled = tmp6;
-export const useIsTopicalNavEnabled = tmp7;
-export const useIsConversationTopicHeaderEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsConversationTopicHeaderEnabled(arg0, location) {
-  const cResult = c.c(2);
-  let enabled = closure_10(arg0, location);
+export const useIsConversationDebugUXEnabled = tmp5;
+export const useIsTopicalNavEnabled = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsTopicalNavEnabled(arg0, location) {
+  const cResult = c.c(5);
   if (cResult[0] !== location) {
     const obj2 = { location };
     cResult[0] = location;
     cResult[1] = obj2;
-    let tmp2 = obj2;
+    let tmp3 = obj2;
   } else {
-    tmp2 = cResult[1];
+    tmp3 = cResult[1];
   }
-  if (enabled) {
-    enabled = apexExperiment2.useConfig(tmp2).enabled;
+  let str = arg0;
+  if (arg0 == null) {
+    str = "";
   }
-  return enabled;
-}) : (function useIsConversationTopicHeaderEnabled(arg0, location) {
-  let enabled = closure_10(arg0, location);
-  if (enabled) {
-    enabled = apexExperiment2.useConfig(obj).enabled;
+  if (cResult[2] === location) {
+    if (cResult[3] === str) {
+      let tmp4 = cResult[4];
+    }
+    let enabled = closure_7(arg0, GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING);
+    let tmp9 = null != arg0;
+    if (tmp9) {
+      let tmp10 = tmp2;
+      if (!tmp10) {
+        let enabled1 = apexExperiment2.useConfig(tmp3).enabled;
+        if (enabled1) {
+          if (enabled) {
+            enabled = !tmp8;
+          }
+          if (enabled) {
+            enabled = apexExperiment1.useConfig(tmp4).enabled;
+          }
+          enabled1 = enabled;
+        }
+        tmp10 = enabled1;
+      }
+      tmp9 = tmp10;
+    }
+    return tmp9;
   }
-  return enabled;
+  const obj3 = { guildId: str, location };
+  cResult[2] = location;
+  cResult[3] = str;
+  cResult[4] = obj3;
+  tmp4 = obj3;
+  tmp2 = closure_8(arg0, location);
+}) : (function useIsTopicalNavEnabled(arg0, location) {
+  if (arg0 == null) {
+    const str = "";
+  }
+  let enabled = closure_7(arg0, GuildFeatures.CONVERSATIONS_EXTRACTION_PROCESSING);
+  let tmp4 = null != arg0;
+  if (tmp4) {
+    let tmp5 = tmp;
+    if (!tmp5) {
+      let enabled1 = apexExperiment2.useConfig(obj).enabled;
+      if (enabled1) {
+        if (enabled) {
+          enabled = !tmp3;
+        }
+        if (enabled) {
+          enabled = apexExperiment1.useConfig(obj2).enabled;
+        }
+        enabled1 = enabled;
+      }
+      tmp5 = enabled1;
+    }
+    tmp4 = tmp5;
+  }
+  return tmp4;
 });

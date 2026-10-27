@@ -1,6 +1,6 @@
-// === Module 17194: useHasExpiredShopBlocks ===
+// === Module 17235: useHasExpiredShopBlocks ===
 
-// Module 17194 (useHasExpiredShopBlocks)
+// Module 17235 (useHasExpiredShopBlocks)
 import _slicedToArray from "module_32" /* 32 */;
 
 const require = globalThis.__r;
@@ -8,7 +8,7 @@ const require = globalThis.__r;
 const require = fn;
 const noop = fn(19);
 ({ useEffect: c3, useState: closure_4 } = noop);
-const MAX_TIMEOUT_MS = fn(1087).MAX_TIMEOUT_MS;
+const MAX_TIMEOUT_MS = fn(1084).MAX_TIMEOUT_MS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/hooks/useHasExpiredShopBlocks.tsx");

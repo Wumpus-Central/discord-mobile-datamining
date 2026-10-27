@@ -2,11 +2,11 @@
 
 // Module 9231 (guild_profile/GuildProfileUtils)
 import c from "c" /* 576 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import tinycolorDefault from "tinycolor" /* 7660 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import tinycolorDefault from "tinycolor" /* 7661 */;
 import useAvatarColor from "useAvatarColor" /* 8614 */;
 import _slicedToArray from "module_32" /* 32 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 
 const useAvatarColorDefault = useAvatarColor;
 

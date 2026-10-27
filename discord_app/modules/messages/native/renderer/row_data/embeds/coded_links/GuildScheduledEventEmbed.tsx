@@ -1,14 +1,14 @@
-// === Module 14538: GuildScheduledEventEmbed ===
+// === Module 14574: GuildScheduledEventEmbed ===
 
-// Module 14538 (GuildScheduledEventEmbed)
+// Module 14574 (GuildScheduledEventEmbed)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4837 */;
-import useChannelName from "useChannelName" /* 5604 */;
-import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8137 */;
-import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8275 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8277 */;
-import _modDef8280 from "module_8280" /* 8280 */;
+import util from "util" /* 1125 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4838 */;
+import useChannelName from "useChannelName" /* 5605 */;
+import RowGeneratorStyleSheet from "RowGeneratorStyleSheet" /* 8135 */;
+import getEmbedThemeColorsDefault from "getEmbedThemeColors" /* 8273 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8275 */;
+import _modDef8278 from "module_8278" /* 8278 */;
 import GuildScheduledEventManagerDefault from "GuildScheduledEventManager" /* 8887 */;
 import GuildScheduledEventsActionCreatorsDefault from "GuildScheduledEventsActionCreators" /* 8888 */;
 import ScheduleUtils from "ScheduleUtils" /* 8890 */;
@@ -18,16 +18,16 @@ import useCanInviteForGuildEvent from "useCanInviteForGuildEvent" /* 8903 */;
 import GuildEventUtils from "GuildEventUtils" /* 9016 */;
 import icons_ShareDefault from "icons/Share" /* 9093 */;
 import GuildScheduledEventHeaderUtils from "GuildScheduledEventHeaderUtils" /* 9143 */;
-import _modDef14539 from "module_14539" /* 14539 */;
-import _modDef14540 from "module_14540" /* 14540 */;
+import _modDef14575 from "module_14575" /* 14575 */;
+import _modDef14576 from "module_14576" /* 14576 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6784 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
-import MarkupUtils from "MarkupUtils" /* 5705 */;
+import GuildScheduledEventStore_mod from "GuildScheduledEventStore" /* 6785 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
+import MarkupUtils from "MarkupUtils" /* 5706 */;
 
 require = fn;
 function createGuildScheduledEventEmbed(type) {
@@ -63,7 +63,7 @@ function createGuildScheduledEventEmbed(type) {
   const stringResult = intl.string(util.t.DlcqlU);
   const obj5 = { titleColor: colors.titleColor, borderColor: colors.borderColor, backgroundColor: colors.backgroundColor, thumbnailCornerRadius: 15, embedCanBeTapped: null != guild };
   const tmp7Result = GuildScheduledEventHeaderUtils;
-  const assetUriForEmbed1 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8280);
+  const assetUriForEmbed1 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8278);
   const tmp7Result12 = renderer_EmbedUtils;
   const assetUriForEmbed2 = renderer_EmbedUtils.getAssetUriForEmbed(icons_ShareDefault);
   if (null != guild) {
@@ -79,7 +79,7 @@ function createGuildScheduledEventEmbed(type) {
       const acceptLabelActiveBackgroundColor2 = colors.acceptLabelActiveBackgroundColor;
     } else if (result1) {
       acceptLabelActiveBackgroundColor = colors.backgroundColor;
-      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14539);
+      let assetUriForEmbed3 = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14575);
       acceptLabelGreenColor = colors.acceptLabelDisabledTextColor;
       let tmp21 = assetUriForEmbed2;
       let stringResult2 = stringResult;
@@ -153,7 +153,7 @@ function createGuildScheduledEventEmbed(type) {
   }
   obj8.badgeCount = toLocaleStringResult;
   const tmpResult4 = GuildScheduledEventManagerDefault;
-  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14540);
+  obj8.badgeIcon = renderer_EmbedUtils.getAssetUriForEmbed(_modDef14576);
   let assetUriForEmbed4;
   if (null != eventLocationIconSource) {
     assetUriForEmbed4 = renderer_EmbedUtils.getAssetUriForEmbed(eventLocationIconSource);
@@ -202,13 +202,13 @@ function createGuildScheduledEventEmbed(type) {
   return obj8;
 }
 const processColor = fn(17).processColor;
-let GuildScheduledEventStore = fn(6784);
+let GuildScheduledEventStore = fn(6785);
 ({ isGuildEventEnded: metroRequire, isGuildScheduledEventActive: closure_7 } = GuildScheduledEventStore);
 let GuildScheduledEventStore = GuildScheduledEventStore_mod;
-const getGuildIconSource = fn(4841).getGuildIconSource;
-const CodedLinkExtendedType = fn(10004).CodedLinkExtendedType;
-const constants = fn(4829).GuildScheduledEventEntityTypes;
-const InviteTypes = fn(7809).InviteTypes;
+const getGuildIconSource = fn(4842).getGuildIconSource;
+const CodedLinkExtendedType = fn(10006).CodedLinkExtendedType;
+const constants = fn(4830).GuildScheduledEventEntityTypes;
+const InviteTypes = fn(7810).InviteTypes;
 let closure_17 = MarkupUtils.astParserFor(MarkupUtils.guildEventLocationRules);
 const map = new Map();
 const size = fn(2);

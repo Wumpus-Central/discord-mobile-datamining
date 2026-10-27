@@ -1,8 +1,8 @@
-// === Module 4928: DeviceUtils ===
+// === Module 4929: DeviceUtils ===
 
-// Module 4928 (DeviceUtils)
+// Module 4929 (DeviceUtils)
 import Storage3 from "Storage" /* 510 */;
-import NativeDeviceModule from "NativeDeviceModule" /* 1364 */;
+import NativeDeviceModule from "NativeDeviceModule" /* 1361 */;
 
 require = fn;
 const constants = NativeDeviceModule.getConstants();
@@ -17,6 +17,9 @@ export const isIpadOS = function isIpadOS() {
     tmp = "iPhone19,4" === closure_3.deviceProduct;
   }
   return tmp;
+};
+export const isDuo = function isDuo() {
+  return "iPhone19,4" === closure_3.deviceProduct;
 };
 export const isGestureNavigationEnabled = function isGestureNavigationEnabled() {
   return closure_3.isGestureNavigationEnabled;

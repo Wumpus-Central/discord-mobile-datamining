@@ -1,15 +1,15 @@
-// === Module 14133: useRefocusOrLaunchActivity ===
+// === Module 14147: useRefocusOrLaunchActivity ===
 
-// Module 14133 (useRefocusOrLaunchActivity)
+// Module 14147 (useRefocusOrLaunchActivity)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import FramesStore from "FramesStore" /* 6775 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
+import FramesStore from "FramesStore" /* 6776 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const FrameLayoutModes = fn(6776).FrameLayoutModes;
+const FrameLayoutModes = fn(6777).FrameLayoutModes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/activities/utils/useRefocusOrLaunchActivity.tsx");

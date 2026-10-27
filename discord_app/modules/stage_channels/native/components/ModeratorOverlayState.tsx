@@ -1,9 +1,9 @@
-// === Module 11517: ModeratorOverlayState ===
+// === Module 11519: ModeratorOverlayState ===
 
-// Module 11517 (ModeratorOverlayState)
+// Module 11519 (ModeratorOverlayState)
 import c from "c" /* 576 */;
-import _mod4886 from "module_4886" /* 4886 */;
-import identity from "module_1269" /* 1269 */;
+import _mod4887 from "module_4887" /* 4887 */;
+import identity from "module_1266" /* 1266 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -15,7 +15,7 @@ let closure_2 = identity.createWithEqualityFn((arg0, arg1) => {
     dismissOverlay(arg0) {
       const overlayDismissedChannelIds = dependencyMap().overlayDismissedChannelIds;
       overlayDismissedChannelIds.add(arg0);
-      overlayDismissedChannelIds(1274).batchUpdates(() => overlayDismissedChannelIds({ overlayDismissedChannelIds }));
+      overlayDismissedChannelIds(1271).batchUpdates(() => overlayDismissedChannelIds({ overlayDismissedChannelIds }));
     }
   };
   return obj;
@@ -34,7 +34,7 @@ export const useModeratorOverlayChannelState = ReactCompilerGating.isReactCompil
   } else {
     first = cResult[0];
   }
-  const obj2 = closure_2(first, _mod4886.shallow);
+  const obj2 = closure_2(first, _mod4887.shallow);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function o(dismissOverlay) {
       return dismissOverlay.dismissOverlay;
@@ -44,7 +44,7 @@ export const useModeratorOverlayChannelState = ReactCompilerGating.isReactCompil
   } else {
     tmp6 = cResult[1];
   }
-  const tmp5Result = closure_2(tmp6, _mod4886.shallow);
+  const tmp5Result = closure_2(tmp6, _mod4887.shallow);
   closure_1 = tmp5Result;
   if (cResult[2] === arg0) {
     if (cResult[5] === arg0) {
@@ -77,7 +77,7 @@ export const useModeratorOverlayChannelState = ReactCompilerGating.isReactCompil
   cResult[4] = hasItem;
 }) : (function useModeratorOverlayChannelState(arg0) {
   closure_0 = arg0;
-  closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod4886.shallow);
-  const items = [!closure_2((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _mod4886.shallow).has(arg0), () => closure_1(closure_0)];
+  closure_1 = closure_2((dismissOverlay) => dismissOverlay.dismissOverlay, _mod4887.shallow);
+  const items = [!closure_2((overlayDismissedChannelIds) => overlayDismissedChannelIds.overlayDismissedChannelIds, _mod4887.shallow).has(arg0), () => closure_1(closure_0)];
   return items;
 });

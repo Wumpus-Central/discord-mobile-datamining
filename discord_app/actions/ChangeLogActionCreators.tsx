@@ -1,17 +1,17 @@
-// === Module 8467: ChangeLogActionCreators ===
+// === Module 8466: ChangeLogActionCreators ===
 
-// Module 8467 (ChangeLogActionCreators)
+// Module 8466 (ChangeLogActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import UserSettings from "UserSettings" /* 4799 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import UserSettings from "UserSettings" /* 4800 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 7412 */;
+import ChangelogStore from "ChangelogStore" /* 7414 */;
 
 require = fn;
 function cacheBustParam() {
   return "x=" + Math.floor(new Date().getMinutes() / 5);
 }
-const ChangelogPlatforms = fn(4873).ChangelogPlatforms;
+const ChangelogPlatforms = fn(4874).ChangelogPlatforms;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ChangeLogActionCreators.tsx");
 
@@ -61,7 +61,7 @@ export default {
         const _HermesInternal = HermesInternal;
         str = "?" + cacheBustParam();
       }
-      const HTTP = closure_0(1297).HTTP;
+      const HTTP = closure_0(1294).HTTP;
       const _HermesInternal2 = HermesInternal;
       yield HTTP.get({ url: "https://cdn.discordapp.com/changelogs/" + MOBILE + "/" + closure_0 + "/" + tmp3 + ".json" + str, rejectWithError: true });
       if (1 === tmp7) {

@@ -1,7 +1,7 @@
-// === Module 9719: getAdaptiveMessageLimit ===
+// === Module 9721: getAdaptiveMessageLimit ===
 
-// Module 9719 (getAdaptiveMessageLimit)
-import Constants from "Constants" /* 1087 */;
+// Module 9721 (getAdaptiveMessageLimit)
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 const MAX_MESSAGES_PER_CHANNEL = Constants.MAX_MESSAGES_PER_CHANNEL;

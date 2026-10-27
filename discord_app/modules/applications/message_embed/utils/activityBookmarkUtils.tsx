@@ -1,7 +1,7 @@
-// === Module 7765: activityBookmarkUtils ===
+// === Module 7766: activityBookmarkUtils ===
 
-// Module 7765 (activityBookmarkUtils)
-import URLUtilsDefault from "URLUtils" /* 1386 */;
+// Module 7766 (activityBookmarkUtils)
+import URLUtilsDefault from "URLUtils" /* 1383 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/applications/message_embed/utils/activityBookmarkUtils.tsx");

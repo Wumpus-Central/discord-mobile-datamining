@@ -1,9 +1,9 @@
-// === Module 18847: LabelLayoutComponent ===
+// === Module 18885: LabelLayoutComponent ===
 
-// Module 18847 (LabelLayoutComponent)
+// Module 18885 (LabelLayoutComponent)
 import c from "c" /* 576 */;
-import Server from "Server" /* 2000 */;
-import Input from "Input" /* 7009 */;
+import Server from "Server" /* 1997 */;
+import Input from "Input" /* 7011 */;
 import ComponentStateContext from "ComponentStateContext" /* 8595 */;
 import noop from "module_19" /* 19 */;
 

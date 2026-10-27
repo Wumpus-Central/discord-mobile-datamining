@@ -1,27 +1,27 @@
-// === Module 18603: VoicePanelPIP ===
+// === Module 18639: VoicePanelPIP ===
 
-// Module 18603 (VoicePanelPIP)
+// Module 18639 (VoicePanelPIP)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4892 */;
-import native from "native" /* 5037 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import spring from "spring" /* 5247 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5297 */;
-import ExternalPipDefault from "ExternalPip" /* 5824 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10767 */;
-import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10900 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10905 */;
-import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 10909 */;
-import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 11394 */;
-import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18455 */;
-import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 18500 */;
-import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 18501 */;
-import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 18604 */;
+import util from "util" /* 1125 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4893 */;
+import native from "native" /* 5038 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import spring from "spring" /* 5248 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5298 */;
+import ExternalPipDefault from "ExternalPip" /* 5825 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10770 */;
+import VoicePanelStateContextDefault from "VoicePanelStateContext" /* 10903 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10908 */;
+import VoicePanelPIPHandoff from "VoicePanelPIPHandoff" /* 10912 */;
+import EmbeddedActivitiesActionCreatorsAll from "EmbeddedActivitiesActionCreators" /* 11397 */;
+import VoicePanelPIPUtils from "VoicePanelPIPUtils" /* 18489 */;
+import utils_triggerIOSHapticDefault from "utils/triggerIOSHaptic" /* 18534 */;
+import VoicePanelPIPStateContext from "VoicePanelPIPStateContext" /* 18535 */;
+import VoicePanelPIPScaleCache from "VoicePanelPIPScaleCache" /* 18640 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
-import FramesStore from "FramesStore" /* 6775 */;
-import VoicePanelStore from "VoicePanelStore" /* 6804 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
+import FramesStore from "FramesStore" /* 6776 */;
+import VoicePanelStore from "VoicePanelStore" /* 6805 */;
 
 require = fn;
 function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
@@ -29,15 +29,15 @@ function renderPIPWrapper(arg0, arg1, transitionState, transitionCleanUp) {
 }
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(10901);
+const VoicePanelConstants = fn(10904);
 ({ DRAWER_SPRING_PHYSICS: closure_9, VoicePanelModes: c10, SECONDARY_PIP_TOP_MARGIN } = VoicePanelConstants);
-const VoicePanelControlsModes = fn(10899).VoicePanelControlsModes;
-const VoicePanelPIPModes = fn(18456).VoicePanelPIPModes;
-const ActivityPanelModes = fn(5609).ActivityPanelModes;
-const isLaunched = fn(6776).isLaunched;
+const VoicePanelControlsModes = fn(10902).VoicePanelControlsModes;
+const VoicePanelPIPModes = fn(18490).VoicePanelPIPModes;
+const ActivityPanelModes = fn(5610).ActivityPanelModes;
+const isLaunched = fn(6777).isLaunched;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { container: { position: "absolute", zIndex: 10 }, pipContentWrapper: { backgroundColor: "black" }, inAppElevationShadow: {}, pipMask: null, multiPipContainer: null, pushToTalkContainer: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);

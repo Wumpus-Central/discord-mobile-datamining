@@ -1,20 +1,20 @@
-// === Module 18782: ConjureTurnNotificationManager ===
+// === Module 18818: ConjureTurnNotificationManager ===
 
-// Module 18782 (ConjureTurnNotificationManager)
-import UserSettings from "UserSettings" /* 4799 */;
-import ConjureUtils from "ConjureUtils" /* 7345 */;
-import conjureProjectMute from "conjureProjectMute" /* 10723 */;
-import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10742 */;
-import SoundUtils from "SoundUtils" /* 11526 */;
-import conjureMentions from "conjureMentions" /* 12340 */;
-import FamilyCenterStore from "FamilyCenterStore" /* 7645 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import NotificationSettingsStore from "NotificationSettingsStore" /* 13747 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6498 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6773 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+// Module 18818 (ConjureTurnNotificationManager)
+import UserSettings from "UserSettings" /* 4800 */;
+import ConjureUtils from "ConjureUtils" /* 7347 */;
+import conjureProjectMute from "conjureProjectMute" /* 10726 */;
+import ConjurePlatformUtilsDefault from "ConjurePlatformUtils" /* 10745 */;
+import SoundUtils from "SoundUtils" /* 11528 */;
+import conjureMentions from "conjureMentions" /* 12346 */;
+import FamilyCenterStore from "FamilyCenterStore" /* 7646 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import NotificationSettingsStore from "NotificationSettingsStore" /* 13761 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6499 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 
 require = fn;
 function handleConjureTurnSettled(projectId) {
@@ -96,9 +96,9 @@ function notifyTurn(projectId, guildId, title, body, nonce) {
     obj3 = conjureProjectMute;
   }
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Routes: c10, StatusTypes: closure_11 } = Constants);
-const StaticChannelRoute = fn(4830).StaticChannelRoute;
+const StaticChannelRoute = fn(4831).StaticChannelRoute;
 const prototype = function ConjureTurnNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = { CONJURE_TURN_SETTLED: handleConjureTurnSettled, CONJURE_TURN_NOTIFICATION: handleConjureTurnNotification, LOGOUT: handleLogout };

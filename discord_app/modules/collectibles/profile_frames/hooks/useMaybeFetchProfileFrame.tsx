@@ -1,7 +1,7 @@
 // === Module 8692: useMaybeFetchProfileFrame ===
 
 // Module 8692 (useMaybeFetchProfileFrame)
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7649 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7650 */;
 import useFramePreviewOverrideFrameDefault from "useFramePreviewOverrideFrame" /* 8693 */;
 import useProfileFrameDefault from "useProfileFrame" /* 8703 */;
 import noop from "module_19" /* 19 */;

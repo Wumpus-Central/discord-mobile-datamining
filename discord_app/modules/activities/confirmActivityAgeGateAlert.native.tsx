@@ -1,20 +1,20 @@
-// === Module 11412: confirmActivityAgeGateAlert ===
+// === Module 11415: confirmActivityAgeGateAlert ===
 
-// Module 11412 (confirmActivityAgeGateAlert)
+// Module 11415 (confirmActivityAgeGateAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
-import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 11413 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5909 */;
+import ActivityAnnouncementDefault from "ActivityAnnouncement" /* 11416 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertBodyText: { fontSize: 16, lineHeight: 24, color: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, textAlign: "center" } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

@@ -1,23 +1,23 @@
-// === Module 17787: GuildsBarDirectMessage ===
+// === Module 17828: GuildsBarDirectMessage ===
 
-// Module 17787 (GuildsBarDirectMessage)
+// Module 17828 (GuildsBarDirectMessage)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import transitionToChannel from "transitionToChannel" /* 5707 */;
+import util from "util" /* 1125 */;
+import transitionToChannel from "transitionToChannel" /* 5708 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9018 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10691 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10694 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6497 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6814 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import CallStore from "CallStore" /* 6498 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6816 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const ChannelTypes = fn(1087).ChannelTypes;
+const ChannelTypes = fn(1084).ChannelTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { dm: null };
 let size = { width: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE, height: nativeDefault.modules.mobile.GUILD_BAR_ITEM_SIZE };
 obj.dm = size;
@@ -382,7 +382,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (channel != null) {
     isMultiUserDMResult = channel.isMultiUserDM();
   }
-  const obj4 = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: true, children: null };
+  const obj4 = { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: null, children: null };
   let tmp11Result = null;
   if (null != channel) {
     const obj5 = { channel };
@@ -405,5 +405,5 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   obj4.children = tmp11Result2;
-  return jsx(stateFromStores(channel[13]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: true, children: null });
+  return jsx(stateFromStores(channel[13]), { selected: false, circle: !isMultiUserDMResult, unread: true, styles: guildsBarAnimatedWrapperStyles, label: stateFromStoresObject.label, overState: "Boolean", config: memo1, cutouts, externalChildren: badge, expandedChildren: null, children: null });
 }));

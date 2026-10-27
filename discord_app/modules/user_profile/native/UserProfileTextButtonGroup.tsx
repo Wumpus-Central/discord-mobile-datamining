@@ -1,16 +1,16 @@
-// === Module 14278: UserProfileTextButtonGroup ===
+// === Module 14306: UserProfileTextButtonGroup ===
 
-// Module 14278 (UserProfileTextButtonGroup)
+// Module 14306 (UserProfileTextButtonGroup)
 import c from "c" /* 576 */;
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PROFILE_SIDE_PADDING = fn(7304).PROFILE_SIDE_PADDING;
+const PROFILE_SIDE_PADDING = fn(7306).PROFILE_SIDE_PADDING;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_7 = createStyles.createStyles({ container: { flexDirection: "row", flexWrap: "wrap", gap: 12 }, buttonArea: { flexGrow: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

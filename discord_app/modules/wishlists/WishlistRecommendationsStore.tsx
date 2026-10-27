@@ -1,9 +1,9 @@
-// === Module 10551: WishlistRecommendationsStore ===
+// === Module 10554: WishlistRecommendationsStore ===
 
-// Module 10551 (WishlistRecommendationsStore)
+// Module 10554 (WishlistRecommendationsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
 
 function handleUserSettingsStoreUpdate() {
   if (locale === LocaleStore.locale) {

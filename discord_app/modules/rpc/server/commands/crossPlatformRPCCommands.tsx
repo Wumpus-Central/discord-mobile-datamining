@@ -1,33 +1,34 @@
-// === Module 15717: crossPlatformRPCCommands ===
+// === Module 15753: crossPlatformRPCCommands ===
 
-// Module 15717 (crossPlatformRPCCommands)
-import applicationDefault from "application" /* 15718 */;
-import certifiedDevicesDefault from "certifiedDevices" /* 15722 */;
-import channelsDefault from "channels" /* 15724 */;
-import commands_configDefault from "commands/config" /* 15730 */;
-import contextDefault from "context" /* 15731 */;
-import guildsDefault from "guilds" /* 15732 */;
-import imagesDefault from "images" /* 15733 */;
-import invitesDefault from "invites" /* 15734 */;
-import linksDefault from "links" /* 15736 */;
-import logsDefault from "logs" /* 15745 */;
-import networkingDefault from "networking" /* 15746 */;
-import providersDefault from "providers" /* 15747 */;
-import relationshipsDefault from "relationships" /* 15748 */;
-import setActivityDefault from "setActivity" /* 15749 */;
-import setOrientationLockStateDefault from "setOrientationLockState" /* 15750 */;
-import merged15Default from "merged15" /* 15751 */;
-import subscriptionsDefault from "subscriptions" /* 15758 */;
-import usersDefault from "users" /* 15760 */;
-import userSettingsDefault from "userSettings" /* 15761 */;
-import platformBehaviorsDefault from "platformBehaviors" /* 15762 */;
-import soundboardDefault from "soundboard" /* 15763 */;
-import commands_conjureDevicePermissionsDefault from "commands/conjureDevicePermissions" /* 15764 */;
-import conjureLivePreviewDefault from "conjureLivePreview" /* 15765 */;
-import conjureVoiceDefault from "conjureVoice" /* 15766 */;
-import activitiesDefault from "activities" /* 15767 */;
-import questsDefault from "quests" /* 15768 */;
-import voiceChannelChatDefault from "voiceChannelChat" /* 15769 */;
+// Module 15753 (crossPlatformRPCCommands)
+import applicationDefault from "application" /* 15754 */;
+import certifiedDevicesDefault from "certifiedDevices" /* 15758 */;
+import channelsDefault from "channels" /* 15760 */;
+import commands_configDefault from "commands/config" /* 15766 */;
+import contextDefault from "context" /* 15767 */;
+import guildsDefault from "guilds" /* 15768 */;
+import imagesDefault from "images" /* 15769 */;
+import invitesDefault from "invites" /* 15770 */;
+import linksDefault from "links" /* 15772 */;
+import logsDefault from "logs" /* 15781 */;
+import networkingDefault from "networking" /* 15782 */;
+import providersDefault from "providers" /* 15783 */;
+import relationshipsDefault from "relationships" /* 15784 */;
+import setActivityDefault from "setActivity" /* 15785 */;
+import setOrientationLockStateDefault from "setOrientationLockState" /* 15786 */;
+import merged15Default from "merged15" /* 15787 */;
+import subscriptionsDefault from "subscriptions" /* 15794 */;
+import commands_userProfileDefault from "commands/userProfile" /* 15796 */;
+import usersDefault from "users" /* 15798 */;
+import userSettingsDefault from "userSettings" /* 15799 */;
+import platformBehaviorsDefault from "platformBehaviors" /* 15800 */;
+import soundboardDefault from "soundboard" /* 15801 */;
+import commands_conjureDevicePermissionsDefault from "commands/conjureDevicePermissions" /* 15802 */;
+import conjureLivePreviewDefault from "conjureLivePreview" /* 15803 */;
+import conjureVoiceDefault from "conjureVoice" /* 15804 */;
+import activitiesDefault from "activities" /* 15805 */;
+import questsDefault from "quests" /* 15806 */;
+import voiceChannelChatDefault from "voiceChannelChat" /* 15807 */;
 
 const application = Object.assign(applicationDefault);
 const certifiedDevices = Object.assign(certifiedDevicesDefault);
@@ -46,6 +47,7 @@ const setActivity = Object.assign(setActivityDefault);
 const setOrientationLockState = Object.assign(setOrientationLockStateDefault);
 const merged15 = Object.assign(merged15Default);
 const subscriptions = Object.assign(subscriptionsDefault);
+const userProfile = Object.assign(commands_userProfileDefault);
 const users = Object.assign(usersDefault);
 const userSettings = Object.assign(userSettingsDefault);
 const platformBehaviors = Object.assign(platformBehaviorsDefault);

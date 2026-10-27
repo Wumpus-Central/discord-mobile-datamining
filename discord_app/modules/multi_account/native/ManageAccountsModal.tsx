@@ -1,38 +1,38 @@
-// === Module 17822: ManageAccountsModal ===
+// === Module 17863: ManageAccountsModal ===
 
-// Module 17822 (ManageAccountsModal)
+// Module 17863 (ManageAccountsModal)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import timing from "timing" /* 5206 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
-import HeaderShared from "HeaderShared" /* 9699 */;
-import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10031 */;
-import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 13320 */;
+import util from "util" /* 1125 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import timing from "timing" /* 5207 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5910 */;
+import HeaderShared from "HeaderShared" /* 9701 */;
+import getNavigationModalPresentationDefault from "getNavigationModalPresentation" /* 10033 */;
+import MultiAccountActionCreatorsAll from "MultiAccountActionCreators" /* 13334 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import StreamerModeStore from "StreamerModeStore" /* 5026 */;
-import UserStore from "UserStore" /* 1392 */;
+import StreamerModeStore from "StreamerModeStore" /* 5027 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
 let closure_4 = ["children"];
 const View = fn(17).View;
-const MultiAccountTokenStatus = fn(13316).MultiAccountTokenStatus;
-let Constants = fn(13317);
+const MultiAccountTokenStatus = fn(13330).MultiAccountTokenStatus;
+let Constants = fn(13331);
 ({ MANAGE_EDIT_TRANSITION_DURATION: closure_14, MAX_ACCOUNTS: closure_15, MultiAccountSwitchLocation: closure_16 } = Constants);
-const ManageAccountsScreens = fn(17823).ManageAccountsScreens;
-Constants = fn(1087);
+const ManageAccountsScreens = fn(17864).ManageAccountsScreens;
+Constants = fn(1084);
 ({ AnalyticEvents: closure_18, AuthStates: closure_19 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-const NativeStackNavigator = fn(9743);
+const NativeStackNavigator = fn(9745);
 let closure_22 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingTop: 16 }, sortableListView: null, addAccountLabel: null, trailingIconContainer: null, trailingIcon: null };
 let obj4 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1, paddingTop: 16 };
 obj.sortableListView = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -82,7 +82,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
   if (id === user.id) {
     const _Symbol3 = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp30 = closure_20(tmp(1202).Spacer, { size: 21 });
+      const tmp30 = closure_20(tmp(1199).Spacer, { size: 21 });
       cResult[4] = tmp30;
       let tmp28 = tmp30;
     } else {
@@ -101,8 +101,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
           }
           const _Symbol = Symbol;
           if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
-            let intl = tmp(1128).intl;
-            const stringResult = intl.string(tmp(1128).t.lSLMaU);
+            let intl = tmp(1125).intl;
+            const stringResult = intl.string(tmp(1125).t.lSLMaU);
             cResult[12] = stringResult;
             let tmp19 = stringResult;
           } else {
@@ -111,7 +111,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
           const _Symbol2 = Symbol;
           if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
             let obj2 = { color: username(587).colors.ICON_FEEDBACK_CRITICAL };
-            const tmp24 = closure_20(tmp(16671).CircleMinusIcon, obj2);
+            const tmp24 = closure_20(tmp(16713).CircleMinusIcon, obj2);
             cResult[13] = tmp24;
             let tmp21 = tmp24;
           } else {
@@ -119,7 +119,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
           }
           if (cResult[14] !== tmp17) {
             let obj3 = { accessibilityRole: "button", accessibilityLabel: tmp19, onPress: tmp17, children: tmp21 };
-            const tmp27 = closure_20(tmp(6908).PressableOpacity, obj3);
+            const tmp27 = closure_20(tmp(6910).PressableOpacity, obj3);
             cResult[14] = tmp17;
             cResult[15] = tmp27;
             let tmp25 = tmp27;
@@ -154,19 +154,19 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
                   return obj3;
                 } else {
                   const obj4 = { title: null, body: null, confirmText: null, confirmColor: null, cancelText: null, isDismissable: true };
-                  const intl = tmp2(1128).intl;
-                  obj4.title = intl.string(tmp2(1128).t.n0Fbg6);
-                  const intl2 = tmp2(1128).intl;
+                  const intl = tmp2(1125).intl;
+                  obj4.title = intl.string(tmp2(1125).t.n0Fbg6);
+                  const intl2 = tmp2(1125).intl;
                   const obj5 = { username };
-                  obj4.body = intl2.formatToPlainString(tmp2(1128).t.phEQmS, obj5);
-                  const intl3 = tmp2(1128).intl;
-                  obj4.confirmText = intl3.string(tmp2(1128).t.N86XcP);
-                  obj4.confirmColor = tmp2(1202).ButtonColors.RED;
-                  const intl4 = tmp2(1128).intl;
-                  obj4.cancelText = intl4.string(tmp2(1128).t["ETE/oC"]);
+                  obj4.body = intl2.formatToPlainString(tmp2(1125).t.phEQmS, obj5);
+                  const intl3 = tmp2(1125).intl;
+                  obj4.confirmText = intl3.string(tmp2(1125).t.N86XcP);
+                  obj4.confirmColor = tmp2(1199).ButtonColors.RED;
+                  const intl4 = tmp2(1125).intl;
+                  obj4.cancelText = intl4.string(tmp2(1125).t["ETE/oC"]);
                   username = 1;
                   c2 = 1;
-                  const obj7 = { value: username(5909).confirm(obj4), done: false };
+                  const obj7 = { value: username(5910).confirm(obj4), done: false };
                   return obj7;
                 }
               } else if (arg0 === 1) {
@@ -252,19 +252,19 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
             return obj3;
           } else {
             const obj4 = { title: null, body: null, confirmText: null, confirmColor: null, cancelText: null, isDismissable: true };
-            const intl = tmp2(1128).intl;
-            obj4.title = intl.string(tmp2(1128).t.n0Fbg6);
-            const intl2 = tmp2(1128).intl;
+            const intl = tmp2(1125).intl;
+            obj4.title = intl.string(tmp2(1125).t.n0Fbg6);
+            const intl2 = tmp2(1125).intl;
             const obj5 = { username };
-            obj4.body = intl2.formatToPlainString(tmp2(1128).t.phEQmS, obj5);
-            const intl3 = tmp2(1128).intl;
-            obj4.confirmText = intl3.string(tmp2(1128).t.N86XcP);
-            obj4.confirmColor = tmp2(1202).ButtonColors.RED;
-            const intl4 = tmp2(1128).intl;
-            obj4.cancelText = intl4.string(tmp2(1128).t["ETE/oC"]);
+            obj4.body = intl2.formatToPlainString(tmp2(1125).t.phEQmS, obj5);
+            const intl3 = tmp2(1125).intl;
+            obj4.confirmText = intl3.string(tmp2(1125).t.N86XcP);
+            obj4.confirmColor = tmp2(1199).ButtonColors.RED;
+            const intl4 = tmp2(1125).intl;
+            obj4.cancelText = intl4.string(tmp2(1125).t["ETE/oC"]);
             v1 = 1;
             v3 = 1;
-            const obj7 = { value: v1(5909).confirm(obj4), done: false };
+            const obj7 = { value: v1(5910).confirm(obj4), done: false };
             return obj7;
           }
         } else if (arg0 === 1) {
@@ -276,8 +276,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
           return obj8;
         } else {
           if (value) {
-            v3(13320).removeAccount(closure_128_0.id);
-            const obj = v3(13320);
+            v3(13334).removeAccount(closure_128_0.id);
+            const obj = v3(13334);
           }
           v3 = 3;
           return { value: "IconComponent", done: null };
@@ -298,7 +298,7 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
     id = stateFromStores1.id;
   }
   if (id === user.id) {
-    return closure_20(tmp(1202).Spacer, { size: 21 });
+    return closure_20(tmp(1199).Spacer, { size: 21 });
   } else {
     const username = user.username;
     importDefault = username;
@@ -310,8 +310,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
       importDefault = username + "#" + user.discriminator;
     }
     let obj3 = { accessibilityRole: "button", accessibilityLabel: null, onPress: null, children: null };
-    let intl = tmp(1128).intl;
-    obj3.accessibilityLabel = intl.string(tmp(1128).t.lSLMaU);
+    let intl = tmp(1125).intl;
+    obj3.accessibilityLabel = intl.string(tmp(1125).t.lSLMaU);
     obj3.onPress = function handlePressRemove() {
       const self = this;
       const apply = closure_2.apply;
@@ -323,8 +323,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled() ? (function Remove
       return applyArgumentsResult;
     };
     let obj4 = { color: nativeDefault.colors.ICON_FEEDBACK_CRITICAL };
-    obj3.children = closure_20(tmp(16671).CircleMinusIcon, obj4);
-    return closure_20(tmp(6908).PressableOpacity, obj3);
+    obj3.children = closure_20(tmp(16713).CircleMinusIcon, obj4);
+    return closure_20(tmp(6910).PressableOpacity, obj3);
   }
   let obj2 = user(504);
 });
@@ -681,7 +681,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     MANAGE_ACCOUNTS = ManageAccountsScreens.MANAGE_ACCOUNTS;
   }
   let obj = accessibilityNativeStackOptions(576);
-  accessibilityNativeStackOptions = accessibilityNativeStackOptions(7095).useAccessibilityNativeStackOptions();
+  accessibilityNativeStackOptions = accessibilityNativeStackOptions(7097).useAccessibilityNativeStackOptions();
   [isEditing, closure_2] = noop.useState(false);
   if (cResult[0] === accessibilityNativeStackOptions) {
     if (cResult[1] === isEditing) {
@@ -723,17 +723,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         name: ManageAccountsScreens.ACCOUNT_DISABLED_OR_DELETION_SCHEDULED,
         options() {
               const obj = { title: null };
-              const intl = accessibilityNativeStackOptions(1128).intl;
-              obj.title = intl.string(accessibilityNativeStackOptions(1128).t.WbFpq4);
+              const intl = accessibilityNativeStackOptions(1125).intl;
+              obj.title = intl.string(accessibilityNativeStackOptions(1125).t.WbFpq4);
               return obj;
             },
         children() {
-              return closure_1_20(first(17393), {
+              return closure_1_20(first(17434), {
                 handleLogin(login, password, undelete) {
-                  isEditing(6668).login({ login, password, undelete });
+                  isEditing(6669).login({ login, password, undelete });
                 },
                 onReset() {
-                  isEditing(6668).loginReset(true);
+                  isEditing(6669).loginReset(true);
                 }
               });
             }
@@ -752,7 +752,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return { headerShown: false };
             },
         children() {
-              return closure_1_20(first(7034), { isMultiAccount: true });
+              return closure_1_20(first(7036), { isMultiAccount: true });
             }
       };
       const tmp24 = closure_20(closure_22.Screen, obj4);
@@ -769,7 +769,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               return { headerShown: false };
             },
         children() {
-              return closure_1_20(first(17392), { isMultiAccount: true });
+              return closure_1_20(first(17433), { isMultiAccount: true });
             }
       };
       const tmp29 = closure_20(closure_22.Screen, obj5);
@@ -818,7 +818,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[1] = isEditing;
   cResult[2] = fn;
   tmp8 = fn;
-  const tmpResult = accessibilityNativeStackOptions(7095);
+  const tmpResult = accessibilityNativeStackOptions(7097);
 }) : (function ManageAccountsModal(initialRouteName) {
   let MANAGE_ACCOUNTS = initialRouteName.initialRouteName;
   if (MANAGE_ACCOUNTS === undefined) {
@@ -880,17 +880,17 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       name: ManageAccountsScreens.ACCOUNT_DISABLED_OR_DELETION_SCHEDULED,
       options() {
         const obj = { title: null };
-        const intl = closure_0(1128).intl;
-        obj.title = intl.string(closure_0(1128).t.WbFpq4);
+        const intl = closure_0(1125).intl;
+        obj.title = intl.string(closure_0(1125).t.WbFpq4);
         return obj;
       },
       children() {
-        return closure_1_20(isEditing(17393), {
+        return closure_1_20(isEditing(17434), {
           handleLogin(login, password, undelete) {
-            isEditing(6668).login({ login, password, undelete });
+            isEditing(6669).login({ login, password, undelete });
           },
           onReset() {
-            isEditing(6668).loginReset(true);
+            isEditing(6669).loginReset(true);
           }
         });
       }
@@ -901,7 +901,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return { headerShown: false };
       },
       children() {
-        return closure_1_20(isEditing(7034), { isMultiAccount: true });
+        return closure_1_20(isEditing(7036), { isMultiAccount: true });
       }
     }),
     closure_20(closure_22.Screen, {
@@ -910,7 +910,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         return { headerShown: false };
       },
       children() {
-        return closure_1_20(isEditing(17392), { isMultiAccount: true });
+        return closure_1_20(isEditing(17433), { isMultiAccount: true });
       }
     })
   ];

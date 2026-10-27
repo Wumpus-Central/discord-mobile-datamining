@@ -1,23 +1,23 @@
-// === Module 18418: ShopIllocon ===
+// === Module 18452: ShopIllocon ===
 
-// Module 18418 (ShopIllocon)
+// Module 18452 (ShopIllocon)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef18419 from "module_18419" /* 18419 */;
-import _modDef18420 from "module_18420" /* 18420 */;
-import _modDef18421 from "module_18421" /* 18421 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import assetHelpers from "assetHelpers" /* 6997 */;
+import _modDef18453 from "module_18453" /* 18453 */;
+import _modDef18454 from "module_18454" /* 18454 */;
+import _modDef18455 from "module_18455" /* 18455 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef18419 }, 3: null };
-const obj2 = { uri: _modDef18419 };
-obj[2] = { uri: _modDef18420 };
-const obj3 = { uri: _modDef18420 };
-obj[3] = { uri: _modDef18421 };
+let obj = { 1: null, 2: { uri: _modDef18453 }, 3: null };
+const obj2 = { uri: _modDef18453 };
+obj[2] = { uri: _modDef18454 };
+const obj3 = { uri: _modDef18454 };
+obj[3] = { uri: _modDef18455 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef18421 };
+const obj4 = { uri: _modDef18455 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ShopIllocon.native.tsx");
 
@@ -76,7 +76,7 @@ export const ShopIllocon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     return assetHelpers.getAssetSizeStyle(size);
   }, items);
   obj = { fadeDuration: 0, source: null, style: null, accessible: null, accessibilityLabel: null, resizeMode: null };
-  obj.source = num(6995).getAssetSource(obj);
+  obj.source = num(6997).getAssetSource(obj);
   obj.style = memo;
   obj.accessible = accessible;
   obj.accessibilityLabel = accessibilityLabel;

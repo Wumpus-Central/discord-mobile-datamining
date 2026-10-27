@@ -1,11 +1,11 @@
-// === Module 15765: conjureLivePreview ===
+// === Module 15803: conjureLivePreview ===
 
-// Module 15765 (conjureLivePreview)
-import Constants2 from "Constants" /* 1087 */;
-import conjureLiveRelaunch from "conjureLiveRelaunch" /* 10790 */;
-import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 15709 */;
-import Constants from "Constants" /* 6378 */;
-import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 15725 */;
+// Module 15803 (conjureLivePreview)
+import Constants2 from "Constants" /* 1084 */;
+import conjureLiveRelaunch from "conjureLiveRelaunch" /* 10793 */;
+import validateConjureAppFrameDefault from "validateConjureAppFrame" /* 15745 */;
+import Constants from "Constants" /* 6379 */;
+import CONTEXT_MENU_ICON_NAMES from "CONTEXT_MENU_ICON_NAMES" /* 15761 */;
 import size from "module_2" /* 2 */;
 
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);

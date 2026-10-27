@@ -1,20 +1,20 @@
 // === Module 8680: UserProfileAnalyticsUtils ===
 
 // Module 8680 (UserProfileAnalyticsUtils)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import AvatarUtils from "AvatarUtils" /* 1417 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5711 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import AvatarUtils from "AvatarUtils" /* 1414 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5712 */;
 import useDisplayProfile from "useDisplayProfile" /* 8675 */;
 import UserProfilePerformanceAnalyticsExperiment from "UserProfilePerformanceAnalyticsExperiment" /* 8687 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8681 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7203 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7732 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6642 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
-import UserProfileStore from "UserProfileStore" /* 7703 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7205 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7733 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6643 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
+import UserProfileStore from "UserProfileStore" /* 7704 */;
 
 require = fn;
 function getProfileProperties(guildMemberProfile) {
@@ -259,11 +259,11 @@ function trackUserProfileAction(dependencyMap) {
   obj2.widget_type = widgetType;
   obj.track(constants3.USER_PROFILE_ACTION, obj2);
 }
-const FetchState = fn(7203).FetchState;
+const FetchState = fn(7205).FetchState;
 const constants = fn(8672).TrackUserProfileProperties;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ActivityTypes: closure_14, AnalyticEvents: closure_15 } = Constants);
-const StatusTypes = fn(1098).StatusTypes;
+const StatusTypes = fn(1095).StatusTypes;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_profile/UserProfileAnalyticsUtils.tsx");
 

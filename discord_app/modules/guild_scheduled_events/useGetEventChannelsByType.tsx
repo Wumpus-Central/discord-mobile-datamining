@@ -2,9 +2,9 @@
 
 // Module 8942 (useGetEventChannelsByType)
 import useManageResourcePermissions from "useManageResourcePermissions" /* 8944 */;
-import StageInstanceStore from "StageInstanceStore" /* 4828 */;
-import GuildChannelStore from "GuildChannelStore" /* 4901 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import StageInstanceStore from "StageInstanceStore" /* 4829 */;
+import GuildChannelStore from "GuildChannelStore" /* 4902 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = globalThis.__r;
 
@@ -51,7 +51,7 @@ function getEventChannelsByType(id, channelTypeFromEntity) {
     return items1;
   }
 }
-const GUILD_VOCAL_CHANNELS_KEY = fn(4901).GUILD_VOCAL_CHANNELS_KEY;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4902).GUILD_VOCAL_CHANNELS_KEY;
 const PermissionsConstants = fn(8943);
 ({ CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: metroRequire, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_7 } = PermissionsConstants);
 fn(558);

@@ -1,21 +1,21 @@
-// === Module 19188: ChannelSetupScreen ===
+// === Module 19226: ChannelSetupScreen ===
 
-// Module 19188 (ChannelSetupScreen)
-import util from "util" /* 1128 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+// Module 19226 (ChannelSetupScreen)
+import util from "util" /* 1125 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
 import noop from "module_19" /* 19 */;
 import GuildSettingsStore from "GuildSettingsStore" /* 9006 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildChannelStore from "GuildChannelStore" /* 4901 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildChannelStore from "GuildChannelStore" /* 4902 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_8 = fn(4901).GUILD_SELECTABLE_CHANNELS_KEY;
-const CREATE_NEW_CHANNEL_VALUE = fn(8406).CREATE_NEW_CHANNEL_VALUE;
-const ChannelTypes = fn(1087).ChannelTypes;
+let closure_8 = fn(4902).GUILD_SELECTABLE_CHANNELS_KEY;
+const CREATE_NEW_CHANNEL_VALUE = fn(8405).CREATE_NEW_CHANNEL_VALUE;
+const ChannelTypes = fn(1084).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
 const size = fn(2);
@@ -95,7 +95,7 @@ export default function ChannelSetupScreen() {
       rulesChannel(9005).updateGuild({ rulesChannelId });
       const obj = rulesChannel(9005);
       const obj2 = { rulesChannelId };
-      rulesChannel(5210).hideActionSheet();
+      rulesChannel(5211).hideActionSheet();
     };
     let id;
     if (rulesChannel != null) {
@@ -117,7 +117,7 @@ export default function ChannelSetupScreen() {
       rulesChannel(9005).updateGuild({ publicUpdatesChannelId });
       const obj = rulesChannel(9005);
       const obj2 = { publicUpdatesChannelId };
-      rulesChannel(5210).hideActionSheet();
+      rulesChannel(5211).hideActionSheet();
     };
     let id;
     if (publicUpdatesChannel != null) {

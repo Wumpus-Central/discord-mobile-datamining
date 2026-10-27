@@ -1,11 +1,11 @@
-// === Module 19393: GlobalDiscoveryServersUtils ===
+// === Module 19430: GlobalDiscoveryServersUtils ===
 
-// Module 19393 (GlobalDiscoveryServersUtils)
-import util from "util" /* 1128 */;
-import v1 from "v1" /* 1281 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
+// Module 19430 (GlobalDiscoveryServersUtils)
+import util from "util" /* 1125 */;
+import v1 from "v1" /* 1278 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
 
 require = fn;
 let closure_13 = async function _navigateToGuild() {
@@ -22,7 +22,7 @@ let closure_13 = async function _navigateToGuild() {
 };
 const GlobalDiscoveryServersConstants = fn(9007);
 ({ GlobalDiscoveryServerTab: metroRequire, FEATURED_GUILDS_CACHE_DURATION: closure_7, CategoryId: closure_8, DISCOVERY_ALL_CATEGORIES_ID: closure_9, getLanguageOptions: c10, HUBS_CATEGORY_ID: closure_11 } = GlobalDiscoveryServersConstants);
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/global_discovery_servers/GlobalDiscoveryServersUtils.tsx");
 
@@ -164,8 +164,9 @@ export const fromDiscoverableGuildServer = function fromDiscoverableGuildServer(
   return obj;
 };
 export const fromDiscoverableGuildSearchResult = function fromDiscoverableGuildSearchResult(id) {
-  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "toCharArray$esjava$1", discoverySplash: null, emojis: [] };
+  const obj = { id: id.id, name: id.name, description: id.description, splash: id.splash, banner: id.banner, icon: id.icon, features: new Set(id.features), presenceCount: null, memberCount: null, premiumSubscriptionCount: "r", preferredLocale: "toCharArray$esjava$1", discoverySplash: true, emojis: true };
   ({ approximate_presence_count: obj.presenceCount, approximate_member_count: obj.memberCount, discovery_splash: obj.discoverySplash } = id);
+  obj.emojis = [];
   return obj;
 };
 export const getLanguageCodeFallback = function getLanguageCodeFallback() {

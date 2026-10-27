@@ -1,41 +1,41 @@
-// === Module 18379: PictureInPictureGlobal ===
+// === Module 18413: PictureInPictureGlobal ===
 
-// Module 18379 (PictureInPictureGlobal)
+// Module 18413 (PictureInPictureGlobal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native2 from "native" /* 1202 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import timing from "timing" /* 5206 */;
-import NavigatorConstants from "NavigatorConstants" /* 5268 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6780 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7867 */;
-import transitionToActivityDefault from "transitionToActivity" /* 11365 */;
-import PictureInPictureDefault from "PictureInPicture" /* 11374 */;
-import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11376 */;
-import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 18380 */;
+import native2 from "native" /* 1199 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import timing from "timing" /* 5207 */;
+import NavigatorConstants from "NavigatorConstants" /* 5269 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6781 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7868 */;
+import transitionToActivityDefault from "transitionToActivity" /* 11368 */;
+import PictureInPictureDefault from "PictureInPicture" /* 11377 */;
+import usePipVideoOrStreamDefault from "usePipVideoOrStream" /* 11379 */;
+import getPIPBottomOffsetForPIPMode from "getPIPBottomOffsetForPIPMode" /* 18414 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6772 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6773 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2014 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 const require = globalThis.__r;
 
-const usePipDimensionsDefault = tmp5(11378);
+const usePipDimensionsDefault = tmp5(11381);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet: metroRequire, TouchableOpacity: closure_7 } = get_ActivityIndicator);
-let closure_10 = fn(9782).useBestActiveChatInputContainerHeight;
-const PictureInPicturePositions = fn(1087).PictureInPicturePositions;
-const ParticipantTypes = fn(5632).ParticipantTypes;
+let closure_10 = fn(9784).useBestActiveChatInputContainerHeight;
+const PictureInPicturePositions = fn(1084).PictureInPicturePositions;
+const ParticipantTypes = fn(5633).ParticipantTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 let c17 = 12;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { container: { flex: 1, marginLeft: 12, marginRight: 12 }, elevationShadow: null, pip: null, background: null };
-const native = fn(1202);
-obj.elevationShadow = native.generateBoxShadowStyle(fn(1202).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
+const native = fn(1199);
+obj.elevationShadow = native.generateBoxShadowStyle(fn(1199).EIGHT_DP_ELEVATION_SHADOW_PARAMS);
 obj.pip = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 let obj3 = { borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.background = { backgroundColor: nativeDefault.colors.BLACK, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
@@ -360,7 +360,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       }
     }
     const tmpResult8 = tmp(504);
-    const shouldForcePipOrientation = tmp(11375).useShouldForcePipOrientation(tmp31);
+    const shouldForcePipOrientation = tmp(11378).useShouldForcePipOrientation(tmp31);
     tmp(8691);
     if (cResult[20] === channel.id) {
       class M {
@@ -409,7 +409,7 @@ let closure_19 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[21] = shouldForcePipOrientation;
     cResult[22] = obj2;
     tmp35 = obj2;
-    const tmpResult9 = tmp(11375);
+    const tmpResult9 = tmp(11378);
   }
   let tmp19 = stateFromStores1;
   if (null != tmp6) {

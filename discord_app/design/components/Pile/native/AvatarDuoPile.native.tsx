@@ -1,12 +1,12 @@
-// === Module 15295: AvatarDuoPile ===
+// === Module 15331: AvatarDuoPile ===
 
-// Module 15295 (AvatarDuoPile)
+// Module 15331 (AvatarDuoPile)
 import _mod12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
-import ClipView from "ClipView" /* 9406 */;
-import ListUtils from "ListUtils" /* 12503 */;
-import Pile2 from "Pile" /* 12944 */;
-import CutoutableAvatarImage from "CutoutableAvatarImage" /* 14314 */;
+import ClipView from "ClipView" /* 9405 */;
+import ListUtils from "ListUtils" /* 12511 */;
+import Pile2 from "Pile" /* 12956 */;
+import CutoutableAvatarImage from "CutoutableAvatarImage" /* 14350 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

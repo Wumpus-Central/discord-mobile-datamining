@@ -1,12 +1,12 @@
-// === Module 1394: PremiumConstants ===
+// === Module 1391: PremiumConstants ===
 
-// Module 1394 (PremiumConstants)
-import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1090 */;
-import util from "util" /* 1128 */;
-import EmojiConstants from "EmojiConstants" /* 1395 */;
-import BadgeRarity from "BadgeRarity" /* 1396 */;
-import gift_intent_type from "gift_intent_type" /* 1397 */;
-import Constants from "Constants" /* 1087 */;
+// Module 1391 (PremiumConstants)
+import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1087 */;
+import util from "util" /* 1125 */;
+import EmojiConstants from "EmojiConstants" /* 1392 */;
+import BadgeRarity from "BadgeRarity" /* 1393 */;
+import gift_intent_type from "gift_intent_type" /* 1394 */;
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 ({ BoostedGuildTiers, MAX_ATTACHMENT_SIZE, GuildFeatures, MAX_STAGE_VIDEO_USER_LIMIT_TIER01, BITRATE_MAX, MAX_STAGE_VIDEO_USER_LIMIT_TIER2, MAX_STAGE_VIDEO_USER_LIMIT_TIER3 } = Constants);

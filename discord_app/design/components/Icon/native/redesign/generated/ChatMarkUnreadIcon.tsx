@@ -1,10 +1,10 @@
-// === Module 10871: ChatMarkUnreadIcon ===
+// === Module 10874: ChatMarkUnreadIcon ===
 
-// Module 10871 (ChatMarkUnreadIcon)
+// Module 10874 (ChatMarkUnreadIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5668 */;
-import _mod10872 from "module_10872" /* 10872 */;
+import BaseIconImage from "BaseIconImage" /* 5669 */;
+import _mod10875 from "module_10875" /* 10875 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ChatMarkUnreadIcon = ReactCompilerGating.isReactCompilerEnabled() ?
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod10872;
+    const tmpResult = _mod10875;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ChatMarkUnreadIcon = ReactCompilerGating.isReactCompilerEnabled() ?
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod10872, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod10875, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,10 +1,10 @@
-// === Module 1089: CollectiblesShopConstants ===
+// === Module 1086: CollectiblesShopConstants ===
 
-// Module 1089 (CollectiblesShopConstants)
-import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1090 */;
-import CollectibleSearchItemType from "CollectibleSearchItemType" /* 1091 */;
-import CollectibleSearchSortType from "CollectibleSearchSortType" /* 1092 */;
-import CollectibleSearchSortDirection from "CollectibleSearchSortDirection" /* 1093 */;
+// Module 1086 (CollectiblesShopConstants)
+import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1087 */;
+import CollectibleSearchItemType from "CollectibleSearchItemType" /* 1088 */;
+import CollectibleSearchSortType from "CollectibleSearchSortType" /* 1089 */;
+import CollectibleSearchSortDirection from "CollectibleSearchSortDirection" /* 1090 */;
 import size from "module_2" /* 2 */;
 
 const CollectibleShopTab = { HOME: "home", CATALOG: "catalog", ORBS: "orbs", AVATAR_DECORATIONS: "avatar-decorations", PROFILE_EFFECTS: "profile-effects", NAMEPLATES: "nameplates", PROFILE_FRAMES: "profile-frames", BUNDLES: "bundles", COLLABS: "collabs", OFFER_ELIGIBLE: "offer-eligible", PROMOTION: "promotion", COLLECTION_INDEX: "collection-index", GAME_SHOPS: "game-shops", GAME_SERVERS: "game-servers" };

@@ -1,11 +1,11 @@
-// === Module 10007: isNewMessageGroup ===
+// === Module 10009: isNewMessageGroup ===
 
-// Module 10007 (isNewMessageGroup)
+// Module 10009 (isNewMessageGroup)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import DurationsDefault from "Durations" /* 1104 */;
-import DateUtils from "DateUtils" /* 4796 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6816 */;
-import Constants from "Constants" /* 1087 */;
+import DurationsDefault from "Durations" /* 1101 */;
+import DateUtils from "DateUtils" /* 4797 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6818 */;
+import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 
 function isNewMessageGroup(isForumPost, content, hasFlag) {

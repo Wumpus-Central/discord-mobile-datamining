@@ -1,19 +1,19 @@
 // === Module 8971: CreateChannelActionCreators ===
 
 // Module 8971 (CreateChannelActionCreators)
-import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1275 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
-import TypeUtils from "TypeUtils" /* 4835 */;
-import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6676 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7210 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7215 */;
-import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7424 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
+import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
+import TypeUtils from "TypeUtils" /* 4836 */;
+import TrackedHTTPUtilsDefault from "TrackedHTTPUtils" /* 6677 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7212 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7217 */;
+import GuildTemplateTooltipActionCreatorsDefault from "GuildTemplateTooltipActionCreators" /* 7426 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ BITRATE_DEFAULT: closure_4, ChannelTypes: hasOwnProperty, Endpoints: metroRequire } = Constants);
-let closure_7 = fn(1097).ChannelNotificationSettingsFlags;
+let closure_7 = fn(1094).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/CreateChannelActionCreators.tsx");
 
@@ -78,9 +78,9 @@ export default {
     }
     let obj = permissionOverwrites(584);
     const request = { url: closure_6.GUILD_CHANNELS(guildId), body: obj2, oldFormErrors: true, trackedActionData: null, rejectWithError: null };
-    const tmpResult = permissionOverwrites(6676);
+    const tmpResult = permissionOverwrites(6677);
     request.trackedActionData = {
-      event: guildId(1275).NetworkActionNames.CHANNEL_CREATE,
+      event: guildId(1272).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         const obj2 = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
         let id;
@@ -103,7 +103,7 @@ export default {
       }
     };
     let obj3 = {
-      event: guildId(1275).NetworkActionNames.CHANNEL_CREATE,
+      event: guildId(1272).NetworkActionNames.CHANNEL_CREATE,
       properties(body) {
         const obj2 = { is_private: permissionOverwrites.length > 0, channel_id: null, channel_type: null };
         let id;
@@ -125,8 +125,8 @@ export default {
         return TypeUtils.exact(obj2);
       }
     };
-    request.rejectWithError = guildId(1297).rejectWithMigratedError();
-    const obj6 = guildId(1297);
+    request.rejectWithError = guildId(1294).rejectWithMigratedError();
+    const obj6 = guildId(1294);
     return tmpResult.post(request).then((body) => {
       if (UserGuildSettingsStore.isOptInEnabled(guildId)) {
         const obj2 = { guildId, channelId: body.body.id, settings: null, label: null };

@@ -1,11 +1,11 @@
-// === Module 13268: GuildInvitesDisabledUtils ===
+// === Module 13282: GuildInvitesDisabledUtils ===
 
-// Module 13268 (GuildInvitesDisabledUtils)
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11239 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+// Module 13282 (GuildInvitesDisabledUtils)
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11242 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 const require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ GuildFeatures: closure_4, Permissions: hasOwnProperty } = Constants);
 let ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useInvitesDisabledPermission(arg0) {

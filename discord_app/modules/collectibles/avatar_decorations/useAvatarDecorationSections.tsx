@@ -1,12 +1,12 @@
-// === Module 14488: useAvatarDecorationSections ===
+// === Module 14524: useAvatarDecorationSections ===
 
-// Module 14488 (useAvatarDecorationSections)
-import util from "util" /* 1128 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7662 */;
-import useRecommendedCollectiblesSectionsDefault from "useRecommendedCollectiblesSections" /* 14489 */;
+// Module 14524 (useAvatarDecorationSections)
+import util from "util" /* 1125 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7663 */;
+import useRecommendedCollectiblesSectionsDefault from "useRecommendedCollectiblesSections" /* 14525 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7650 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7665 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7651 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7666 */;
 
 require = fn;
 const useMemo = fn(19).useMemo;
@@ -58,8 +58,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvata
       if (cResult[6] === stateFromStores) {
         const _Symbol = Symbol;
         if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-          const intl = tmp(1128).intl;
-          const stringResult = intl.string(tmp(1128).t.VqmVqE);
+          const intl = tmp(1125).intl;
+          const stringResult = intl.string(tmp(1125).t.VqmVqE);
           cResult[13] = stringResult;
           let tmp26 = stringResult;
         } else {
@@ -71,8 +71,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvata
           }
           const _Symbol2 = Symbol;
           if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl2 = tmp(1128).intl;
-            const stringResult1 = intl2.string(tmp(1128).t.TiLCgw);
+            const intl2 = tmp(1125).intl;
+            const stringResult1 = intl2.string(tmp(1125).t.TiLCgw);
             cResult[17] = stringResult1;
             let tmp29 = stringResult1;
           } else {
@@ -88,8 +88,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvata
           }
           const _Symbol3 = Symbol;
           if (cResult[20] === Symbol.for("react.memo_cache_sentinel")) {
-            const intl3 = tmp(1128).intl;
-            const stringResult2 = intl3.string(tmp(1128).t["1vbbee"]);
+            const intl3 = tmp(1125).intl;
+            const stringResult2 = intl3.string(tmp(1125).t["1vbbee"]);
             cResult[20] = stringResult2;
             let tmp33 = stringResult2;
           } else {
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvata
     }
   }
   const tmp11 = _slicedToArray(stateFromStores(573).useStateFromStoresArray(tmp8, tmp9), 2);
-  let avatarDecorations = stateFromStores(7662).getAvatarDecorations(stateFromStores, tmp12);
+  let avatarDecorations = stateFromStores(7663).getAvatarDecorations(stateFromStores, tmp12);
   if (cResult[10] === tmp13) {
     if (cResult[11] === stateFromStores) {
       let tmp17 = cResult[12];
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvata
   cResult[11] = stateFromStores;
   cResult[12] = M;
   tmp17 = M;
-  const tmpResult4 = stateFromStores(7662);
+  const tmpResult4 = stateFromStores(7663);
 }) : (function useAvatarDecorationSections() {
   let obj = stateFromStores(573);
   let items = [CollectiblesPurchaseStore];
@@ -223,7 +223,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useAvata
   dependencyMap = tmp4;
   const items2 = [first, tmp2[1], stateFromStores];
   obj2 = stateFromStores(573);
-  return first(14489)(useMemo(() => {
+  return first(14525)(useMemo(() => {
     let obj = CollectiblesUtils;
     const avatarDecorations = obj.getAvatarDecorations(stateFromStores, first);
     const reduced = avatarDecorations.reduce((premium_purchase, skuId) => {

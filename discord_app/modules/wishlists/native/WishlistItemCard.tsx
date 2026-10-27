@@ -1,16 +1,16 @@
-// === Module 13901: WishlistItemCard ===
+// === Module 13915: WishlistItemCard ===
 
-// Module 13901 (WishlistItemCard)
+// Module 13915 (WishlistItemCard)
 import c from "c" /* 576 */;
-import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 13902 */;
-import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 13904 */;
-import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 13905 */;
+import CollectiblesWishlistItemCardDefault from "CollectiblesWishlistItemCard" /* 13916 */;
+import PremiumWishlistItemCardDefault from "PremiumWishlistItemCard" /* 13918 */;
+import SocialLayerStorefrontWishlistItemCardDefault from "SocialLayerStorefrontWishlistItemCard" /* 13919 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let closure_3 = ["sku", "isOwned", "source", "wishlistOwnerId"];
-const SKUProductLines = fn(1087).SKUProductLines;
+const SKUProductLines = fn(1084).SKUProductLines;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

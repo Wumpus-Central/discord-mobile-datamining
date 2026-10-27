@@ -1,7 +1,7 @@
-// === Module 11131: useLegacyNoDateText ===
+// === Module 11134: useLegacyNoDateText ===
 
-// Module 11131 (useLegacyNoDateText)
-import util from "util" /* 1128 */;
+// Module 11134 (useLegacyNoDateText)
+import util from "util" /* 1125 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ function chooseRandomLegacyNoDateText() {
   const intl = util.intl;
   return intl.string(items[rounded]);
 }
-const items = [fn(1128).t["6zFA/T"], fn(1128).t.wzZHKl, fn(1128).t["+ED/nf"]];
+const items = [fn(1125).t["6zFA/T"], fn(1125).t.wzZHKl, fn(1125).t["+ED/nf"]];
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/badges/useLegacyNoDateText.tsx");

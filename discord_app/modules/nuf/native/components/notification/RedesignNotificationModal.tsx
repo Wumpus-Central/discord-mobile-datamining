@@ -1,22 +1,22 @@
-// === Module 17417: RedesignNotificationModal ===
+// === Module 17456: RedesignNotificationModal ===
 
-// Module 17417 (RedesignNotificationModal)
+// Module 17456 (RedesignNotificationModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13314 */;
-import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13315 */;
-import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 13593 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import NotificationPermissionUtil from "NotificationPermissionUtil" /* 13328 */;
+import PushNotificationActionCreators from "PushNotificationActionCreators" /* 13329 */;
+import NewUserPermissionsOnboardingDefault from "NewUserPermissionsOnboarding" /* 13607 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const PermissionStateType = fn(13312).PermissionStateType;
-const NotificationPermissionConstants = fn(13313);
+const PermissionStateType = fn(13326).PermissionStateType;
+const NotificationPermissionConstants = fn(13327);
 ({ EventActionLocation: metroRequire, EventActionType: closure_7 } = NotificationPermissionConstants);
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, marginTop: nativeDefault.space.PX_48 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -92,7 +92,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignNo
         return;
       }
     }
-    const tmp8 = jsx(tmp(17418).BellSpotIllustration, { width: 245, accessible: false });
+    const tmp8 = jsx(tmp(17457).BellSpotIllustration, { width: 245, accessible: false });
     cResult[4] = tmp8;
     const tmp7 = tmp8;
   } else {
@@ -130,9 +130,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignNo
         return;
       }
     }
-    const stringResult = obj2.string(tmp(1128).t["3nx0b5"]);
-    const intl = tmp(1128).intl;
-    const stringResult1 = intl.string(tmp(1128).t.Gf7U1T);
+    const stringResult = obj2.string(tmp(1125).t["3nx0b5"]);
+    const intl = tmp(1125).intl;
+    const stringResult1 = intl.string(tmp(1125).t.Gf7U1T);
     cResult[5] = stringResult;
     cResult[6] = stringResult1;
     let tmp10 = stringResult1;
@@ -227,11 +227,11 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function RedesignNo
   }, items1);
   let obj2 = { onAllow: callback, onDontAllow: callback1, header: null, headerInsideCard: true, title: null, subtitle: null };
   const tmp = closure_10();
-  obj2.header = jsx(onComplete(17418).BellSpotIllustration, { width: 245, accessible: false });
-  const intl = onComplete(1128).intl;
-  obj2.title = intl.string(onComplete(1128).t["3nx0b5"]);
-  const intl2 = onComplete(1128).intl;
-  obj2.subtitle = intl2.string(onComplete(1128).t.Gf7U1T);
+  obj2.header = jsx(onComplete(17457).BellSpotIllustration, { width: 245, accessible: false });
+  const intl = onComplete(1125).intl;
+  obj2.title = intl.string(onComplete(1125).t["3nx0b5"]);
+  const intl2 = onComplete(1125).intl;
+  obj2.subtitle = intl2.string(onComplete(1125).t.Gf7U1T);
   obj.children = jsx(NewUserPermissionsOnboardingDefault, { onAllow: callback, onDontAllow: callback1, header: null, headerInsideCard: true, title: null, subtitle: null });
   return <View style={closure_10().container}>{null}</View>;
 });

@@ -1,12 +1,12 @@
-// === Module 12088: AppLauncherRoleOption ===
+// === Module 12089: AppLauncherRoleOption ===
 
-// Module 12088 (AppLauncherRoleOption)
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 12084 */;
+// Module 12089 (AppLauncherRoleOption)
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import AppLauncherRoleListActionSheet from "AppLauncherRoleListActionSheet" /* 12085 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
 
 const require = globalThis.__r;
 
@@ -23,7 +23,7 @@ export default function AppLauncherRoleOption(option) {
   first = undefined;
   closure_8 = undefined;
   const guild_id = channel.guild_id;
-  ({ style, autoFocus, hasError } = option);
+  ({ autoFocus, hasError } = option);
   [first, closure_8] = channel.useState(() => {
     let roleId = null;
     if (null != importDefault) {
@@ -54,7 +54,7 @@ export default function AppLauncherRoleOption(option) {
       onRolePress({ role: null });
     }
   }, items1);
-  const obj2 = { style, option, hasError, selected: null != stateFromStores, selectedItemName: null, onPress: null, leading: null, autoFocus: null };
+  const obj2 = { option, hasError, selected: null != stateFromStores, selectedItemName: null, onPress: null, leading: null, autoFocus: null };
   let name;
   let obj = option(onRolePress[4]);
   const tmp3 = option;
@@ -68,7 +68,7 @@ export default function AppLauncherRoleOption(option) {
       tmp();
     }
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(12084, dependencyMap.paths), AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY, {
+    obj.openLazy(asyncRequireImpl(12085, dependencyMap.paths), AppLauncherRoleListActionSheet.APP_LAUNCHER_ROLE_LIST_ACTION_SHEET_KEY, {
       option,
       channel,
       onRolePress(role) {

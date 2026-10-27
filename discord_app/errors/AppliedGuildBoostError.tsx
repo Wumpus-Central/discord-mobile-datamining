@@ -1,10 +1,10 @@
-// === Module 6380: AppliedGuildBoostError ===
+// === Module 6381: AppliedGuildBoostError ===
 
-// Module 6380 (AppliedGuildBoostError)
-import DurationsDefault from "Durations" /* 1104 */;
-import util from "util" /* 1128 */;
-import DateUtils from "DateUtils" /* 4796 */;
-import V6OrEarlierAPIError from "errors/V6OrEarlierAPIError" /* 4795 */;
+// Module 6381 (AppliedGuildBoostError)
+import DurationsDefault from "Durations" /* 1101 */;
+import util from "util" /* 1125 */;
+import DateUtils from "DateUtils" /* 4797 */;
+import V6OrEarlierAPIError from "errors/V6OrEarlierAPIError" /* 4796 */;
 
 require = fn;
 class AppliedGuildBoostError extends tmp2 {

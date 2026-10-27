@@ -1,20 +1,20 @@
-// === Module 7275: ConnectionsUtils ===
+// === Module 7277: ConnectionsUtils ===
 
-// Module 7275 (ConnectionsUtils)
+// Module 7277 (ConnectionsUtils)
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
-import util from "util" /* 1128 */;
-import URLUtilsDefault from "URLUtils" /* 1386 */;
-import getConnectionsRolesDefault from "getConnectionsRoles" /* 7277 */;
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import util from "util" /* 1125 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
+import getConnectionsRolesDefault from "getConnectionsRoles" /* 7279 */;
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4846 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(7276);
+const Constants = fn(7278);
 ({ MetadataFields: hasOwnProperty, OperatorTypes: metroRequire } = Constants);
-const PlatformTypes = fn(1087).PlatformTypes;
+const PlatformTypes = fn(1084).PlatformTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/connections/ConnectionsUtils.tsx");
 
@@ -51,7 +51,7 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
     }
     let H97H4S = require("util").t.H97H4S;
     if (tmp14) {
-      H97H4S = tmp11(1128).t["N95b+f"];
+      H97H4S = tmp11(1125).t["N95b+f"];
     }
     tmp11 = _require;
   } else if (constants2.NOT_EQUAL === operator) {
@@ -100,8 +100,8 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
           const intl26 = require("util").intl;
           const obj4 = {
             platformQuantityHook() {
-                      const intl = closure_0(1128).intl;
-                      return intl.string(closure_0(1128).t["+/5TCx"]);
+                      const intl = closure_0(1125).intl;
+                      return intl.string(closure_0(1125).t["+/5TCx"]);
                     }
           };
           formatResult = intl26.format(H97H4S, obj4);
@@ -109,8 +109,8 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
           const intl25 = require("util").intl;
           const obj5 = {
             platformQuantityHook() {
-                      const intl = closure_0(1128).intl;
-                      return intl.string(closure_0(1128).t["9rPbEs"]);
+                      const intl = closure_0(1125).intl;
+                      return intl.string(closure_0(1125).t["9rPbEs"]);
                     }
           };
           formatResult = intl25.format(H97H4S, obj5);
@@ -224,8 +224,8 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
           const intl14 = require("util").intl;
           const obj16 = {
             platformQuantityHook() {
-                      const intl = closure_0(1128).intl;
-                      return intl.string(closure_0(1128).t.xRygZL);
+                      const intl = closure_0(1125).intl;
+                      return intl.string(closure_0(1125).t.xRygZL);
                     }
           };
           formatResult = intl14.format(H97H4S, obj16);
@@ -264,8 +264,8 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
           const intl10 = require("util").intl;
           const obj20 = {
             platformQuantityHook() {
-                      const intl = closure_0(1128).intl;
-                      return intl.string(closure_0(1128).t.slSQuB);
+                      const intl = closure_0(1125).intl;
+                      return intl.string(closure_0(1125).t.slSQuB);
                     }
           };
           formatResult = intl10.format(H97H4S, obj20);
@@ -286,8 +286,8 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
           const intl8 = require("util").intl;
           const obj22 = {
             platformQuantityHook() {
-                      const intl = closure_0(1128).intl;
-                      return intl.string(closure_0(1128).t.TEEYwa);
+                      const intl = closure_0(1125).intl;
+                      return intl.string(closure_0(1125).t.TEEYwa);
                     }
           };
           formatResult = intl8.format(H97H4S, obj22);
@@ -326,8 +326,8 @@ export const getConnectionsCheckText = function getConnectionsCheckText(value) {
           const intl4 = require("util").intl;
           const obj26 = {
             platformQuantityHook() {
-                      const intl = closure_0(1128).intl;
-                      return intl.string(closure_0(1128).t.uv7ety);
+                      const intl = closure_0(1125).intl;
+                      return intl.string(closure_0(1125).t.uv7ety);
                     }
           };
           formatResult = intl4.format(H97H4S, obj26);

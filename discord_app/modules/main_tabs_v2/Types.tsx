@@ -1,6 +1,6 @@
-// === Module 5158: Types ===
+// === Module 5159: Types ===
 
-// Module 5158 (Types)
+// Module 5159 (Types)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/Types.tsx");

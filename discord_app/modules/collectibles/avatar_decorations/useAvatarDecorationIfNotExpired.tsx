@@ -1,15 +1,15 @@
 // === Module 8748: useAvatarDecorationIfNotExpired ===
 
 // Module 8748 (useAvatarDecorationIfNotExpired)
-import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1987 */;
-import Timers from "Timers" /* 4818 */;
+import AvatarDecorationUtils from "AvatarDecorationUtils" /* 1984 */;
+import Timers from "Timers" /* 4819 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const MAX_TIMEOUT_MS = fn(1087).MAX_TIMEOUT_MS;
+const MAX_TIMEOUT_MS = fn(1084).MAX_TIMEOUT_MS;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/avatar_decorations/useAvatarDecorationIfNotExpired.tsx");

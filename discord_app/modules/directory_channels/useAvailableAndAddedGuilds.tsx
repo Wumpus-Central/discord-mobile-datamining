@@ -1,18 +1,18 @@
-// === Module 13205: useAvailableAndAddedGuilds ===
+// === Module 13219: useAvailableAndAddedGuilds ===
 
-// Module 13205 (useAvailableAndAddedGuilds)
+// Module 13219 (useAvailableAndAddedGuilds)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import SortedGuildStore from "SortedGuildStore" /* 6701 */;
-import GuildDirectoryStore from "GuildDirectoryStore" /* 13199 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import SortedGuildStore from "SortedGuildStore" /* 6702 */;
+import GuildDirectoryStore from "GuildDirectoryStore" /* 13213 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/directory_channels/useAvailableAndAddedGuilds.tsx");

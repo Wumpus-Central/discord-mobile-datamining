@@ -1,23 +1,23 @@
-// === Module 17901: MailboxSpotIllustration ===
+// === Module 17935: MailboxSpotIllustration ===
 
-// Module 17901 (MailboxSpotIllustration)
+// Module 17935 (MailboxSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import assetHelpers from "assetHelpers" /* 6995 */;
-import _modDef17902 from "module_17902" /* 17902 */;
-import _modDef17903 from "module_17903" /* 17903 */;
-import _modDef17904 from "module_17904" /* 17904 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import assetHelpers from "assetHelpers" /* 6997 */;
+import _modDef17936 from "module_17936" /* 17936 */;
+import _modDef17937 from "module_17937" /* 17937 */;
+import _modDef17938 from "module_17938" /* 17938 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef17902 }, 3: null };
-let obj2 = { uri: _modDef17902 };
-obj[2] = { uri: _modDef17903 };
-const obj3 = { uri: _modDef17903 };
-obj[3] = { uri: _modDef17904 };
+let obj = { 1: null, 2: { uri: _modDef17936 }, 3: null };
+let obj2 = { uri: _modDef17936 };
+obj[2] = { uri: _modDef17937 };
+const obj3 = { uri: _modDef17937 };
+obj[3] = { uri: _modDef17938 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef17904 };
+const obj4 = { uri: _modDef17938 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/MailboxSpotIllustration.native.tsx");
 

@@ -1,9 +1,9 @@
-// === Module 16839: AndroidNotificationSettingsStore ===
+// === Module 16881: AndroidNotificationSettingsStore ===
 
-// Module 16839 (AndroidNotificationSettingsStore)
+// Module 16881 (AndroidNotificationSettingsStore)
 import c from "c" /* 576 */;
-import _mod4886 from "module_4886" /* 4886 */;
-import PushNotificationDefault from "PushNotification" /* 10753 */;
+import _mod4887 from "module_4887" /* 4887 */;
+import PushNotificationDefault from "PushNotification" /* 10756 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = globalThis.__r;
@@ -127,8 +127,8 @@ let closure_5 = async function _initializeAndroidNotificationSettingsStore() {
     }
   }
 };
-const identity = fn(1269);
-let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "test", isSoundsEnabled: "y", isNotifyEveryTime: "IconComponent" }));
+const identity = fn(1266);
+let closure_4 = identity.createWithEqualityFn(() => ({ isLightsEnabled: "Array", isVibrationsEnabled: "Symbol", isSoundsEnabled: "y", isNotifyEveryTime: "IconComponent" }));
 fn(558);
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroidNotificationLightsEnabled() {
@@ -142,9 +142,9 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroid
   } else {
     first = cResult[0];
   }
-  return closure_4(first, _mod4886.shallow);
+  return closure_4(first, _mod4887.shallow);
 }) : (function useAndroidNotificationLightsEnabled() {
-  return closure_4((isLightsEnabled) => isLightsEnabled.isLightsEnabled, _mod4886.shallow);
+  return closure_4((isLightsEnabled) => isLightsEnabled.isLightsEnabled, _mod4887.shallow);
 });
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroidNotificationVibrationsEnabled() {
@@ -158,9 +158,9 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroid
   } else {
     first = cResult[0];
   }
-  return closure_4(first, _mod4886.shallow);
+  return closure_4(first, _mod4887.shallow);
 }) : (function useAndroidNotificationVibrationsEnabled() {
-  return closure_4((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, _mod4886.shallow);
+  return closure_4((isVibrationsEnabled) => isVibrationsEnabled.isVibrationsEnabled, _mod4887.shallow);
 });
 ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroidNotificationSoundsEnabled() {
@@ -174,9 +174,9 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAndroid
   } else {
     first = cResult[0];
   }
-  return closure_4(first, _mod4886.shallow);
+  return closure_4(first, _mod4887.shallow);
 }) : (function useAndroidNotificationSoundsEnabled() {
-  return closure_4((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, _mod4886.shallow);
+  return closure_4((isSoundsEnabled) => isSoundsEnabled.isSoundsEnabled, _mod4887.shallow);
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/notifications/native/stores/AndroidNotificationSettingsStore.tsx");
@@ -223,9 +223,9 @@ export const useAndroidMessageNotificationsEnabled = ReactCompilerGating.isReact
   } else {
     first = cResult[0];
   }
-  return closure_4(first, _mod4886.shallow);
+  return closure_4(first, _mod4887.shallow);
 }) : (function useAndroidMessageNotificationsEnabled() {
-  return closure_4((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, _mod4886.shallow);
+  return closure_4((isNotifyEveryTime) => isNotifyEveryTime.isNotifyEveryTime, _mod4887.shallow);
 });
 export const setAndroidMessageNotificationsEnabled = function setAndroidMessageNotificationsEnabled(isNotifyEveryTime) {
   _require = isNotifyEveryTime;

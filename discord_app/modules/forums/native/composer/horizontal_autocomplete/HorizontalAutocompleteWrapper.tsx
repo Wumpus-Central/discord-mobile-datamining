@@ -1,7 +1,7 @@
-// === Module 10194: HorizontalAutocompleteWrapper ===
+// === Module 10196: HorizontalAutocompleteWrapper ===
 
-// Module 10194 (HorizontalAutocompleteWrapper)
-import timing from "timing" /* 5206 */;
+// Module 10196 (HorizontalAutocompleteWrapper)
+import timing from "timing" /* 5207 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -23,7 +23,7 @@ function getItemKey(type) {
     return type.type;
   }
 }
-fn(1087).AutoCompleteResultTypes;
+fn(1084).AutoCompleteResultTypes;
 let jsx = fn(21).jsx;
 const __initData = { code: "function HorizontalAutocompleteWrapperTsx1(){const{withTiming,toValue}=this.__closure;return{opacity:withTiming(toValue)};}" };
 const __initData2 = { code: "function HorizontalAutocompleteWrapperTsx2(){const{withTiming,toValue}=this.__closure;return{opacity:withTiming(toValue)};}" };

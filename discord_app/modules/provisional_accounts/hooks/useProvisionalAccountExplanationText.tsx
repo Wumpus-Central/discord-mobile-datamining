@@ -1,14 +1,14 @@
-// === Module 13555: useProvisionalAccountExplanationText ===
+// === Module 13569: useProvisionalAccountExplanationText ===
 
-// Module 13555 (useProvisionalAccountExplanationText)
+// Module 13569 (useProvisionalAccountExplanationText)
 import c from "c" /* 576 */;
-import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 13556 */;
+import useProvisionalAccountApplicationDefault from "useProvisionalAccountApplication" /* 13570 */;
 import noop from "module_19" /* 19 */;
 
-const util = rSUACb(1128);
-const HelpdeskUtilsDefault = tmp2(2067);
+const util = rSUACb(1125);
+const HelpdeskUtilsDefault = tmp2(2064);
 require = fn;
-const HelpdeskArticles = fn(1087).HelpdeskArticles;
+const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/provisional_accounts/hooks/useProvisionalAccountExplanationText.tsx");

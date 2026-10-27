@@ -1,8 +1,8 @@
-// === Module 7790: Reward ===
+// === Module 7791: Reward ===
 
-// Module 7790 (Reward)
-import QuestTypes from "QuestTypes" /* 6713 */;
-import QuestRewardTypes from "QuestRewardTypes" /* 7781 */;
+// Module 7791 (Reward)
+import QuestTypes from "QuestTypes" /* 6714 */;
+import QuestRewardTypes from "QuestRewardTypes" /* 7782 */;
 import size from "module_2" /* 2 */;
 
 function _rewardRedemptionInstructionsFromServer(redemption_instructions_by_platform) {

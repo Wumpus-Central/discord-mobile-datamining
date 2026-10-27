@@ -1,7 +1,7 @@
-// === Module 9709: useIsUsingClientTheme ===
+// === Module 9711: useIsUsingClientTheme ===
 
-// Module 9709 (useIsUsingClientTheme)
-import useActiveTheme from "useActiveTheme" /* 9710 */;
+// Module 9711 (useIsUsingClientTheme)
+import useActiveTheme from "useActiveTheme" /* 9712 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

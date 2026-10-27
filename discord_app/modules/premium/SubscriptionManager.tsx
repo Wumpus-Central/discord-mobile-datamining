@@ -1,15 +1,15 @@
-// === Module 18966: SubscriptionManager ===
+// === Module 19004: SubscriptionManager ===
 
-// Module 18966 (SubscriptionManager)
+// Module 19004 (SubscriptionManager)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserStore from "UserStore" /* 1392 */;
-import BillingInfoStore from "BillingInfoStore" /* 2054 */;
-import SubscriptionStore from "SubscriptionStore" /* 2058 */;
-import EntitlementStore from "EntitlementStore" /* 7506 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+import UserStore from "UserStore" /* 1389 */;
+import BillingInfoStore from "BillingInfoStore" /* 2051 */;
+import SubscriptionStore from "SubscriptionStore" /* 2055 */;
+import EntitlementStore from "EntitlementStore" /* 7507 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 
 let require = fn;
-const PremiumConstants = fn(1394);
+const PremiumConstants = fn(1391);
 ({ PREMIUM_SUBSCRIPTION_APPLICATION: closure_7, PremiumTypes: closure_8 } = PremiumConstants);
 const prototype = function SubscriptionManager() {
   let applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -57,7 +57,7 @@ const prototype = function SubscriptionManager() {
               if (!isSubscriptionFetching) {
                 c2 = 1;
                 currentUser = 1;
-                const obj6 = { value: tmp2(6463).fetchSubscriptions(), done: false };
+                const obj6 = { value: tmp2(6464).fetchSubscriptions(), done: false };
                 return obj6;
               }
             }
@@ -94,7 +94,7 @@ const prototype = function SubscriptionManager() {
         if (!hasItem) {
           c2 = 2;
           currentUser = 1;
-          const obj8 = { value: tmp2(7508).fetchUserEntitlementsForApplication(closure_1_7), done: false };
+          const obj8 = { value: tmp2(7509).fetchUserEntitlementsForApplication(closure_1_7), done: false };
           return obj8;
         }
       } catch (tmp22) {
@@ -213,7 +213,7 @@ const prototype = function SubscriptionManager() {
             applyArgumentsResult = tmp4;
             dependencyMap = 1;
             c2 = 1;
-            const obj6 = { value: applyArgumentsResult(6463).fetchIpCountryCode(), done: false };
+            const obj6 = { value: applyArgumentsResult(6464).fetchIpCountryCode(), done: false };
             return obj6;
           }
         } else {
@@ -228,7 +228,7 @@ const prototype = function SubscriptionManager() {
             } else if (null != ipCountryCode.ipCountryCode) {
               dependencyMap = 2;
               c2 = 1;
-              const obj8 = { value: applyArgumentsResult(6463).fetchPaymentSources(), done: false };
+              const obj8 = { value: applyArgumentsResult(6464).fetchPaymentSources(), done: false };
               return obj8;
             }
           } else if (arg0 === 1) {

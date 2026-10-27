@@ -1,11 +1,11 @@
-// === Module 7512: GuildBoostPurchasingUtils ===
+// === Module 7513: GuildBoostPurchasingUtils ===
 
-// Module 7512 (GuildBoostPurchasingUtils)
-import util from "util" /* 1128 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5909 */;
+// Module 7513 (GuildBoostPurchasingUtils)
+import util from "util" /* 1125 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5910 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import SubscriptionStore from "SubscriptionStore" /* 2058 */;
+import SubscriptionStore from "SubscriptionStore" /* 2055 */;
 
 require = fn;
 function alertUnableToManageSub(body, source) {
@@ -158,10 +158,10 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
                     let num3 = 0;
                     const sum = interval.numPremiumGuild + num2;
                     if (null != closure_1_6) {
-                      const numPremiumGuildSubscriptions = closure_0(2053).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
-                      const obj = closure_0(2053);
-                      num3 = numPremiumGuildSubscriptions + c1(2053).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
-                      const obj2 = c1(2053);
+                      const numPremiumGuildSubscriptions = closure_0(2050).getNumPremiumGuildSubscriptions(closure_1_6.additionalPlans);
+                      const obj = closure_0(2050);
+                      num3 = numPremiumGuildSubscriptions + c1(2050).getNumIncludedPremiumGuildSubscriptionSlots(closure_1_6.planId);
+                      const obj2 = c1(2050);
                     }
                     tmp = sum > num3;
                   }
@@ -187,9 +187,9 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
     }
   }
 };
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, AnalyticsSections: metroRequire, SubscriptionStatusTypes: closure_7 } = Constants);
-const PremiumConstants = fn(1394);
+const PremiumConstants = fn(1391);
 ({ NUM_FREE_GUILD_BOOSTS_WITH_PREMIUM: closure_8, PremiumTypes: closure_9, SubscriptionIntervalTypes: c10 } = PremiumConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_boosting/native/GuildBoostPurchasingUtils.tsx");

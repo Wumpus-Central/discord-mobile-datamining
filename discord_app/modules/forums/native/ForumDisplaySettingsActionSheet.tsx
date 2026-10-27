@@ -1,13 +1,13 @@
-// === Module 13713: ForumDisplaySettingsActionSheet ===
+// === Module 13727: ForumDisplaySettingsActionSheet ===
 
-// Module 13713 (ForumDisplaySettingsActionSheet)
-import Tracking from "Tracking" /* 8289 */;
+// Module 13727 (ForumDisplaySettingsActionSheet)
+import Tracking from "Tracking" /* 8287 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 require = fn;
-const ForumChannelStore = fn(13100);
+const ForumChannelStore = fn(13114);
 ({ useForumChannelStoreApi: metroRequire, useForumChannelStore: closure_7 } = ForumChannelStore);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);

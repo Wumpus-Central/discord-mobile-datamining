@@ -1,23 +1,23 @@
-// === Module 18822: GameConsoleManager ===
+// === Module 18860: GameConsoleManager ===
 
-// Module 18822 (GameConsoleManager)
+// Module 18860 (GameConsoleManager)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef38 from "module_38" /* 38 */;
-import util from "util" /* 1128 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import Timers from "Timers" /* 4818 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5851 */;
-import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11653 */;
-import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11657 */;
-import _modDef18823 from "module_18823" /* 18823 */;
+import util from "util" /* 1125 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import Timers from "Timers" /* 4819 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5852 */;
+import GameConsoleActionCreators from "GameConsoleActionCreators" /* 11655 */;
+import GameConsoleAlertUtilsDefault from "GameConsoleAlertUtils" /* 11659 */;
+import _modDef18861 from "module_18861" /* 18861 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import MediaEngineStore from "MediaEngineStore" /* 2014 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
-import SessionsStore from "SessionsStore" /* 5716 */;
-import VoiceStateStore from "VoiceStateStore" /* 5630 */;
-import GameConsoleStore from "GameConsoleStore" /* 5715 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+import MediaEngineStore from "MediaEngineStore" /* 2011 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
+import SessionsStore from "SessionsStore" /* 5717 */;
+import VoiceStateStore from "VoiceStateStore" /* 5631 */;
+import GameConsoleStore from "GameConsoleStore" /* 5716 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 
 require = fn;
 function syncLocalState() {
@@ -92,9 +92,9 @@ let closure_15 = async function _syncLocalState(arg0) {
     }
   })();
 };
-const GameConsoleConstants = fn(9626);
+const GameConsoleConstants = fn(9628);
 ({ GAME_CONSOLE_SESSIONS: c10, USER_ACTION_REQUIRED_ERROR_CODES: closure_11 } = GameConsoleConstants);
-const MediaEngineContextTypes = fn(5718).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5719).MediaEngineContextTypes;
 let closure_13 = new LoggerDefault("GameConsoleManager");
 const prototype = function GameConsoleManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
@@ -225,14 +225,14 @@ const prototype = function GameConsoleManager() {
   applyArgumentsResult.handleWaitForRemoteSession = function handleWaitForRemoteSession() {
     const awaitRemoteTimeout = applyArgumentsResult.awaitRemoteTimeout;
     awaitRemoteTimeout.start(60000, () => {
-      closure_1_0(11653).disconnectRemote();
-      const obj = closure_1_0(11653);
+      closure_1_0(11655).disconnectRemote();
+      const obj = closure_1_0(11655);
       const obj3 = { title: null, body: null };
-      const intl = closure_1_0(1128).intl;
-      obj3.title = intl.string(closure_1_0(1128).t.wGMxr3);
-      const intl2 = closure_1_0(1128).intl;
-      obj3.body = intl2.string(closure_1_0(1128).t.i5k8b5);
-      closure_1_1(5908).show(obj3);
+      const intl = closure_1_0(1125).intl;
+      obj3.title = intl.string(closure_1_0(1125).t.wGMxr3);
+      const intl2 = closure_1_0(1125).intl;
+      obj3.body = intl2.string(closure_1_0(1125).t.i5k8b5);
+      closure_1_1(5909).show(obj3);
     });
   };
   applyArgumentsResult.handleConsoleCommandUpdate = function handleConsoleCommandUpdate(arg0) {
@@ -259,7 +259,7 @@ const prototype = function GameConsoleManager() {
             obj.name = intl2.string(util.t["UQMV/E"]);
             device = obj;
           }
-          const tmp8Result = _modDef18823(device, result, error);
+          const tmp8Result = _modDef18861(device, result, error);
           if (null != tmp8Result) {
             const obj2 = { title: null, body: null, errorCodeMessage: null, reconnectPlatformType: null };
             ({ title: obj3.title, body: obj3.body, errorCodeMessage: obj3.errorCodeMessage } = tmp8Result);

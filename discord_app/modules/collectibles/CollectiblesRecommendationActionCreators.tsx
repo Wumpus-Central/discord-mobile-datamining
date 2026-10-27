@@ -1,8 +1,8 @@
-// === Module 15968: CollectiblesRecommendationActionCreators ===
+// === Module 16006: CollectiblesRecommendationActionCreators ===
 
-// Module 15968 (CollectiblesRecommendationActionCreators)
+// Module 16006 (CollectiblesRecommendationActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import HTTPUtils from "HTTPUtils" /* 1297 */;
+import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -42,7 +42,7 @@ let closure_5 = async function _maybeFetchCollectiblesRecommendations() {
   }
   return value;
 };
-let closure_4 = fn(1087).COLLECTIBLES_APPLICATION_ID;
+let closure_4 = fn(1084).COLLECTIBLES_APPLICATION_ID;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/CollectiblesRecommendationActionCreators.tsx");
 

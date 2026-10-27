@@ -1,7 +1,7 @@
-// === Module 15122: ActivateDeviceModal ===
+// === Module 15158: ActivateDeviceModal ===
 
-// Module 15122 (ActivateDeviceModal)
-import _modDef8115 from "module_8115" /* 8115 */;
+// Module 15158 (ActivateDeviceModal)
+import _modDef8113 from "module_8113" /* 8113 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -25,16 +25,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activate
           return null;
         },
       headerLeft() {
-          const obj = { source: _modDef8115, onPress: onClose, accessibilityLabel: null };
-          const intl = userCode(1128).intl;
-          obj.accessibilityLabel = intl.string(userCode(1128).t.cpT0Cq);
-          return jsx(userCode(7485).HeaderActionButton, { source: _modDef8115, onPress: onClose, accessibilityLabel: null });
+          const obj = { source: _modDef8113, onPress: onClose, accessibilityLabel: null };
+          const intl = userCode(1125).intl;
+          obj.accessibilityLabel = intl.string(userCode(1125).t.cpT0Cq);
+          return jsx(userCode(7486).HeaderActionButton, { source: _modDef8113, onPress: onClose, accessibilityLabel: null });
         },
       headerRight() {
           return null;
         },
       render() {
-          return jsx(userCode(15123).ActivateDevice, { onClose, prefilledUserCode });
+          return jsx(userCode(15159).ActivateDevice, { onClose, prefilledUserCode });
         }
     };
     obj2[constants.ACTIVATE_DEVICE] = obj3;
@@ -45,8 +45,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activate
     tmp4 = cResult[1];
   }
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1128).intl;
-    const stringResult = intl.string(tmp(1128).t["13/7kX"]);
+    const intl = tmp(1125).intl;
+    const stringResult = intl.string(tmp(1125).t["13/7kX"]);
     cResult[2] = stringResult;
     let tmp6 = stringResult;
   } else {
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activate
   }
   if (cResult[3] !== tmp4) {
     const obj4 = { screens: tmp4, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: tmp6 };
-    const tmp11 = jsx(tmp(7095).Navigator, { screens: tmp4, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: tmp6 });
+    const tmp11 = jsx(tmp(7097).Navigator, { screens: tmp4, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: tmp6 });
     cResult[3] = tmp4;
     cResult[4] = tmp11;
     let tmp8 = tmp11;
@@ -77,22 +77,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activate
           return null;
         },
         headerLeft() {
-          const obj = { source: _modDef8115, onPress: onClose, accessibilityLabel: null };
-          const intl = userCode(1128).intl;
-          obj.accessibilityLabel = intl.string(userCode(1128).t.cpT0Cq);
-          return jsx(userCode(7485).HeaderActionButton, { source: _modDef8115, onPress: onClose, accessibilityLabel: null });
+          const obj = { source: _modDef8113, onPress: onClose, accessibilityLabel: null };
+          const intl = userCode(1125).intl;
+          obj.accessibilityLabel = intl.string(userCode(1125).t.cpT0Cq);
+          return jsx(userCode(7486).HeaderActionButton, { source: _modDef8113, onPress: onClose, accessibilityLabel: null });
         },
         headerRight() {
           return null;
         },
         render() {
-          return jsx(userCode(15123).ActivateDevice, { onClose, prefilledUserCode });
+          return jsx(userCode(15159).ActivateDevice, { onClose, prefilledUserCode });
         }
       }
     };
   }, items);
   let obj = { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null };
-  let intl = userCode(1128).intl;
-  obj.headerBackTitle = intl.string(userCode(1128).t["13/7kX"]);
-  return jsx(userCode(7095).Navigator, { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null });
+  let intl = userCode(1125).intl;
+  obj.headerBackTitle = intl.string(userCode(1125).t["13/7kX"]);
+  return jsx(userCode(7097).Navigator, { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null });
 });

@@ -1,25 +1,25 @@
-// === Module 13395: GuildProgressHooks ===
+// === Module 13409: GuildProgressHooks ===
 
-// Module 13395 (GuildProgressHooks)
+// Module 13409 (GuildProgressHooks)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import canViewInviteModal from "canViewInviteModal" /* 8904 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4901 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5194 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import LayerStore from "LayerStore" /* 13396 */;
-import MessageStore from "MessageStore" /* 6010 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4902 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5195 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import LayerStore from "LayerStore" /* 13410 */;
+import MessageStore from "MessageStore" /* 6011 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
 
 require = fn;
-let GuildChannelStore = fn(4901);
+let GuildChannelStore = fn(4902);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: metroRequire, GUILD_VOCAL_CHANNELS_KEY: closure_7 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ Permissions: closure_14, MessageTypes: closure_15 } = Constants);
 fn(558);
 let ReactCompilerGating = fn(558);

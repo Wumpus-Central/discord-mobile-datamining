@@ -7,7 +7,7 @@ import ScheduleUtils from "ScheduleUtils" /* 8890 */;
 import usePrevValueDefault from "usePrevValue" /* 9030 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6784 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6785 */;
 
 const require = globalThis.__r;
 
@@ -75,8 +75,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                           tmp5 = closure_2;
                           mapped = closure_5.map((getTime) => {
                             const time = getTime.getTime();
-                            const rounded = Math.floor(time / closure_1_1(1104).Millis.SECOND);
-                            return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1104).Millis.SECOND);
+                            const rounded = Math.floor(time / closure_1_1(1101).Millis.SECOND);
+                            return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1101).Millis.SECOND);
                           });
                           obj = closure_1(closure_2[11]);
                           tmp6 = closure_0;
@@ -109,8 +109,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                       tmp5 = closure_2;
                       mapped = closure_5.map((getTime) => {
                         const time = getTime.getTime();
-                        const rounded = Math.floor(time / closure_1_1(1104).Millis.SECOND);
-                        return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1104).Millis.SECOND);
+                        const rounded = Math.floor(time / closure_1_1(1101).Millis.SECOND);
+                        return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1101).Millis.SECOND);
                       });
                       obj = closure_1(closure_2[11]);
                       tmp6 = closure_0;
@@ -134,8 +134,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
                   tmp5 = closure_2;
                   mapped = closure_5.map((getTime) => {
                     const time = getTime.getTime();
-                    const rounded = Math.floor(time / closure_1_1(1104).Millis.SECOND);
-                    return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1104).Millis.SECOND);
+                    const rounded = Math.floor(time / closure_1_1(1101).Millis.SECOND);
+                    return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1101).Millis.SECOND);
                   });
                   obj = closure_1(closure_2[11]);
                   tmp6 = closure_0;
@@ -192,8 +192,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           tmp5 = closure_2;
           mapped = closure_5.map((getTime) => {
             const time = getTime.getTime();
-            const rounded = Math.floor(time / closure_1_1(1104).Millis.SECOND);
-            return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1104).Millis.SECOND);
+            const rounded = Math.floor(time / closure_1_1(1101).Millis.SECOND);
+            return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1101).Millis.SECOND);
           });
           obj = closure_1(closure_2[11]);
           tmp6 = closure_0;
@@ -251,8 +251,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       if (null != closure_1) {
         const mapped = first.map((getTime) => {
           const time = getTime.getTime();
-          const rounded = Math.floor(time / closure_1_1(1104).Millis.SECOND);
-          return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1104).Millis.SECOND);
+          const rounded = Math.floor(time / closure_1_1(1101).Millis.SECOND);
+          return closure_1_1(11).fromTimestamp(rounded * closure_1_1(1101).Millis.SECOND);
         });
         const guildEventUserCounts = GuildScheduledEventManagerDefault.getGuildEventUserCounts(tmp, closure_0, mapped);
       }

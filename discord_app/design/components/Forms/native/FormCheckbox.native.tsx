@@ -1,19 +1,19 @@
-// === Module 6901: FormCheckbox ===
+// === Module 6903: FormCheckbox ===
 
-// Module 6901 (FormCheckbox)
+// Module 6903 (FormCheckbox)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4985 */;
-import IconDefault from "Icon" /* 5246 */;
-import spring from "spring" /* 5247 */;
-import springPresets from "springPresets" /* 5248 */;
-import _modDef6902 from "module_6902" /* 6902 */;
+import AccessibilityPreferencesContext from "AccessibilityPreferencesContext" /* 4986 */;
+import IconDefault from "Icon" /* 5247 */;
+import spring from "spring" /* 5248 */;
+import springPresets from "springPresets" /* 5249 */;
+import _modDef6904 from "module_6904" /* 6904 */;
 import noop from "module_19" /* 19 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { checkbox: null, unselected: null, selected: null, checkmark: null };
 let size = { width: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, height: nativeDefault.modules.mobile.CONTROL_CHECKBOX_SIZE_DEFAULT, flexGrow: 0, flexShrink: 0, alignItems: "center", justifyContent: "center", borderRadius: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_RADIUS, borderWidth: nativeDefault.modules.mobile.CONTROL_CHECKBOX_BORDER_WIDTH, borderColor: nativeDefault.colors.CHECKBOX_BORDER_DEFAULT };
 obj2.checkbox = size;
@@ -168,10 +168,10 @@ export const FormCheckbox = ReactCompilerGating.isReactCompilerEnabled() ? (func
       cResult[8] = tmp15;
       tmp12 = tmp15;
     }
-    const obj3 = { source: _modDef6902, size: IconDefault.Sizes.SMALL_20, style: null };
+    const obj3 = { source: _modDef6904, size: IconDefault.Sizes.SMALL_20, style: null };
     const items = [tmp3.checkmark, tmp5];
     obj3.style = items;
-    const tmp11 = <Icon source={_modDef6902} size={IconDefault.Sizes.SMALL_20} style={null} />;
+    const tmp11 = <Icon source={_modDef6904} size={IconDefault.Sizes.SMALL_20} style={null} />;
     cResult[3] = tmp5;
     cResult[4] = tmp3.checkmark;
     cResult[5] = tmp11;
@@ -189,9 +189,9 @@ export const FormCheckbox = ReactCompilerGating.isReactCompilerEnabled() ? (func
   const obj = { style: null, children: null };
   const items = [tmp.checkbox, tmp2];
   obj.style = items;
-  const obj2 = { source: _modDef6902, size: IconDefault.Sizes.SMALL_20, style: null };
+  const obj2 = { source: _modDef6904, size: IconDefault.Sizes.SMALL_20, style: null };
   const items1 = [tmp.checkmark, closure_12(noop.useContext(AccessibilityPreferencesContext.AccessibilityPreferencesContext).reducedMotion.enabled, checked)];
   obj2.style = items1;
-  obj.children = <Icon source={_modDef6902} size={IconDefault.Sizes.SMALL_20} style={null} />;
+  obj.children = <Icon source={_modDef6904} size={IconDefault.Sizes.SMALL_20} style={null} />;
   return jsx(ReanimatedRexport.View, { style: null, children: null });
 });

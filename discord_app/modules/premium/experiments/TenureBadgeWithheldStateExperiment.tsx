@@ -1,7 +1,7 @@
-// === Module 11113: TenureBadgeWithheldStateExperiment ===
+// === Module 11116: TenureBadgeWithheldStateExperiment ===
 
-// Module 11113 (TenureBadgeWithheldStateExperiment)
-import ApexExperiment from "ApexExperiment" /* 1455 */;
+// Module 11116 (TenureBadgeWithheldStateExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const apexExperiment = ApexExperiment.createApexExperiment({ kind: "user", name: "2026-08-nitro-tenure-badge-withheld-state", defaultConfig: { showWithheldBadge: false }, variations: { 0: { showWithheldBadge: false }, 1: { showWithheldBadge: true } } });

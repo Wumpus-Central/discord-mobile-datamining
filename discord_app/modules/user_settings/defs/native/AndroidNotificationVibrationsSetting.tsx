@@ -1,15 +1,15 @@
-// === Module 16853: AndroidNotificationVibrationsSetting ===
+// === Module 16895: AndroidNotificationVibrationsSetting ===
 
-// Module 16853 (AndroidNotificationVibrationsSetting)
+// Module 16895 (AndroidNotificationVibrationsSetting)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import SettingsConstants from "SettingsConstants" /* 8332 */;
-import SettingsNotificationUtils from "SettingsNotificationUtils" /* 16841 */;
-import MobileNotifSettings from "MobileNotifSettings" /* 16845 */;
-import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 16839 */;
+import util from "util" /* 1125 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import SettingsConstants from "SettingsConstants" /* 8331 */;
+import SettingsNotificationUtils from "SettingsNotificationUtils" /* 16883 */;
+import MobileNotifSettings from "MobileNotifSettings" /* 16887 */;
+import AndroidNotificationSettingsStore from "AndroidNotificationSettingsStore" /* 16881 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders_mod from "SettingBuilders" /* 11209 */;
+import SettingBuilders_mod from "SettingBuilders" /* 11212 */;
 import size from "module_2" /* 2 */;
 
 ({ useAndroidNotificationVibrationsEnabled: c2, setAndroidNotificationVibrationsEnabled } = AndroidNotificationSettingsStore);

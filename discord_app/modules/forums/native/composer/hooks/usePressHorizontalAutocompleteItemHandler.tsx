@@ -1,12 +1,12 @@
-// === Module 10111: usePressHorizontalAutocompleteItemHandler ===
+// === Module 10113: usePressHorizontalAutocompleteItemHandler ===
 
-// Module 10111 (usePressHorizontalAutocompleteItemHandler)
-import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10112 */;
+// Module 10113 (usePressHorizontalAutocompleteItemHandler)
+import autocompleter_AutocompleteUtils from "autocompleter/AutocompleteUtils" /* 10114 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 let items = [, , , ];
-({ USER: arr[0], ROLE: arr[1], CHANNEL: arr[2], EMOJI: arr[3] } = fn(1087).AutoCompleteResultTypes);
+({ USER: arr[0], ROLE: arr[1], CHANNEL: arr[2], EMOJI: arr[3] } = fn(1084).AutoCompleteResultTypes);
 const set = new Set(items);
 const ReactCompilerGating = fn(558);
 const size = fn(2);

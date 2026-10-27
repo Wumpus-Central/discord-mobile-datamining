@@ -1,22 +1,22 @@
-// === Module 9649: AppLauncherUtils ===
+// === Module 9651: AppLauncherUtils ===
 
-// Module 9649 (AppLauncherUtils)
-import util from "util" /* 1128 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import Server from "Server" /* 2000 */;
-import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2031 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5626 */;
-import getPlatformDefault from "getPlatform" /* 5633 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6811 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7630 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11170 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11406 */;
+// Module 9651 (AppLauncherUtils)
+import util from "util" /* 1125 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import Server from "Server" /* 1997 */;
+import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2028 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5627 */;
+import getPlatformDefault from "getPlatform" /* 5634 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6813 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7631 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11173 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11409 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9650 */;
-import ApplicationRecord from "ApplicationRecord" /* 2024 */;
-import AppLauncherStore from "AppLauncherStore" /* 11969 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9652 */;
+import ApplicationRecord from "ApplicationRecord" /* 2021 */;
+import AppLauncherStore from "AppLauncherStore" /* 11970 */;
 
 const require = globalThis.__r;
 
@@ -66,9 +66,9 @@ function getShelfBadgeTypeIfActive(application) {
   NONE = Server.EmbeddedActivityLabelTypes.NONE;
 }
 let closure_3 = ["fakeAppIconURL"];
-const ApplicationFlags = fn(1087).ApplicationFlags;
-const BuiltInSectionId = fn(5983).BuiltInSectionId;
-const MessageSendLocation = fn(4976).MessageSendLocation;
+const ApplicationFlags = fn(1084).ApplicationFlags;
+const BuiltInSectionId = fn(5984).BuiltInSectionId;
+const MessageSendLocation = fn(4977).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 

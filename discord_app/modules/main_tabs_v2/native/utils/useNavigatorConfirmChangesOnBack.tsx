@@ -1,12 +1,12 @@
-// === Module 10027: useNavigatorConfirmChangesOnBack ===
+// === Module 10029: useNavigatorConfirmChangesOnBack ===
 
-// Module 10027 (useNavigatorConfirmChangesOnBack)
-import useNavigatorBackHandlerDefault from "useNavigatorBackHandler" /* 10029 */;
+// Module 10029 (useNavigatorConfirmChangesOnBack)
+import useNavigatorBackHandlerDefault from "useNavigatorBackHandler" /* 10031 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const Keyboard = fn(17).Keyboard;
-const NOOP = fn(1087).NOOP;
+const NOOP = fn(1084).NOOP;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/utils/useNavigatorConfirmChangesOnBack.tsx");

@@ -1,17 +1,17 @@
-// === Module 5177: GuildThemeResolver ===
+// === Module 5178: GuildThemeResolver ===
 
-// Module 5177 (GuildThemeResolver)
+// Module 5178 (GuildThemeResolver)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import GuildThemePresets from "GuildThemePresets" /* 5147 */;
-import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5186 */;
-import Client from "Client" /* 5201 */;
+import GuildThemePresets from "GuildThemePresets" /* 5148 */;
+import ServerThemeUserExperiment from "ServerThemeUserExperiment" /* 5187 */;
+import Client from "Client" /* 5202 */;
 import noop from "module_19" /* 19 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5002 */;
-import GuildThemePreviewStore from "GuildThemePreviewStore" /* 5178 */;
-import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 5180 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
+import GuildThemePreviewStore from "GuildThemePreviewStore" /* 5179 */;
+import GuildThemeRuntimeStore from "GuildThemeRuntimeStore" /* 5181 */;
 
 require = fn;
 function resolveSavedActiveGuildTheme(stateFromStores) {
@@ -56,7 +56,7 @@ function resolveSavedActiveGuildTheme(stateFromStores) {
   }
   return tmp2;
 }
-const GuildFeatures = fn(1087).GuildFeatures;
+const GuildFeatures = fn(1084).GuildFeatures;
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSavedActiveGuildThemeForGuildId(arg0, arg1) {
   _require = arg0;

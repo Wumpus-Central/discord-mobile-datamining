@@ -1,26 +1,26 @@
-// === Module 11928: useActivityShelfItem ===
+// === Module 11929: useActivityShelfItem ===
 
-// Module 11928 (useActivityShelfItem)
+// Module 11929 (useActivityShelfItem)
 import c from "c" /* 576 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import Server from "Server" /* 2000 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4892 */;
-import getPlatformDefault from "getPlatform" /* 5633 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6811 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7253 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7257 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10771 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11454 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11455 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11508 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11929 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11930 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import Server from "Server" /* 1997 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4893 */;
+import getPlatformDefault from "getPlatform" /* 5634 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6813 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7255 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7259 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10774 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11457 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11458 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11510 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11930 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11931 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
 
 require = fn;
-const STAFF_RELEASE_PHASES = fn(2026).STAFF_RELEASE_PHASES;
-const ApplicationFlags = fn(1087).ApplicationFlags;
+const STAFF_RELEASE_PHASES = fn(2023).STAFF_RELEASE_PHASES;
+const ApplicationFlags = fn(1084).ApplicationFlags;
 const ActivityAction = { START: 0, [0]: "START", JOIN: 1, [1]: "JOIN", LEAVE: 2, [2]: "LEAVE" };
 fn(558);
 let ReactCompilerGating = fn(558);

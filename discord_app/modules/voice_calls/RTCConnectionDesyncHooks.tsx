@@ -1,14 +1,14 @@
-// === Module 17665: RTCConnectionDesyncHooks ===
+// === Module 17706: RTCConnectionDesyncHooks ===
 
-// Module 17665 (RTCConnectionDesyncHooks)
+// Module 17706 (RTCConnectionDesyncHooks)
 import _mod12 from "module_12" /* 12 */;
-import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 17666 */;
+import VoiceConnectFeedbackExperimentDefault from "VoiceConnectFeedbackExperiment" /* 17707 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 15066 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
-import VoiceStateStore from "VoiceStateStore" /* 5630 */;
+import RTCConnectionDesyncStore from "RTCConnectionDesyncStore" /* 15102 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
+import VoiceStateStore from "VoiceStateStore" /* 5631 */;
 
 const require = globalThis.__r;
 
@@ -36,7 +36,7 @@ function syncChannelVoiceStates(stateFromStores, arg1) {
   }
   return arg1;
 }
-const RTCConnectionStates = fn(1087).RTCConnectionStates;
+const RTCConnectionStates = fn(1084).RTCConnectionStates;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useDesyncedChannelParticipants(arg0) {

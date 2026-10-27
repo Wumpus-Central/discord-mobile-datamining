@@ -1,11 +1,11 @@
-// === Module 10791: UserApplicationIdentityActionCreators ===
+// === Module 10794: UserApplicationIdentityActionCreators ===
 
-// Module 10791 (UserApplicationIdentityActionCreators)
+// Module 10794 (UserApplicationIdentityActionCreators)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 10792 */;
+import UserApplicationIdentityStore from "UserApplicationIdentityStore" /* 10795 */;
 
 const require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 const Endpoints = Constants.Endpoints;
 let obj = {
   fetchUserApplicationIdentitiesWithProfiles(id, arg1) {

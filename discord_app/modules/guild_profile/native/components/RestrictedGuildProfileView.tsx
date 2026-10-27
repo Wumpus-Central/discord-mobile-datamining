@@ -3,12 +3,12 @@
 // Module 9228 (RestrictedGuildProfileView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import useThemeDefault from "useTheme" /* 5205 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import useToken from "useToken" /* 5252 */;
-import LinearGradientDefault from "LinearGradient" /* 5258 */;
-import GuildIcon from "GuildIcon" /* 6883 */;
+import util from "util" /* 1125 */;
+import useThemeDefault from "useTheme" /* 5206 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import useToken from "useToken" /* 5253 */;
+import LinearGradientDefault from "LinearGradient" /* 5259 */;
+import GuildIcon from "GuildIcon" /* 6885 */;
 import GuildProfileView from "GuildProfileView" /* 9229 */;
 import noop from "module_19" /* 19 */;
 

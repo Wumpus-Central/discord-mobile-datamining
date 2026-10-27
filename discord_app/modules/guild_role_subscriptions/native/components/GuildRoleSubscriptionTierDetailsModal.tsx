@@ -1,28 +1,28 @@
-// === Module 19324: GuildRoleSubscriptionTierDetailsModal ===
+// === Module 19362: GuildRoleSubscriptionTierDetailsModal ===
 
-// Module 19324 (GuildRoleSubscriptionTierDetailsModal)
+// Module 19362 (GuildRoleSubscriptionTierDetailsModal)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import TextInput from "TextInput" /* 7008 */;
-import TextArea from "TextArea" /* 7180 */;
+import util from "util" /* 1125 */;
+import TextInput from "TextInput" /* 7010 */;
+import TextArea from "TextArea" /* 7182 */;
 import FormHeaderDefault from "FormHeader" /* 9044 */;
-import FormStylesDefault from "FormStyles" /* 15145 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16569 */;
-import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16584 */;
-import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19284 */;
-import FormImagePicker from "FormImagePicker" /* 19289 */;
-import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19290 */;
-import EditStateContextProvider from "EditStateContextProvider" /* 19305 */;
-import FormPriceTierDefault from "FormPriceTier" /* 19325 */;
+import FormStylesDefault from "FormStyles" /* 15181 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16611 */;
+import GuildRoleSubscriptionListingEditStateUtilsAll from "GuildRoleSubscriptionListingEditStateUtils" /* 16626 */;
+import RoleSubscriptionSettingsDisabledContext from "RoleSubscriptionSettingsDisabledContext" /* 19322 */;
+import FormImagePicker from "FormImagePicker" /* 19327 */;
+import GuildRoleSubscriptionTierEditStepDefault from "GuildRoleSubscriptionTierEditStep" /* 19328 */;
+import EditStateContextProvider from "EditStateContextProvider" /* 19343 */;
+import FormPriceTierDefault from "FormPriceTier" /* 19363 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const FormImagePickerDefault = FormImagePicker;
 
 require = fn;
-const GuildRoleSubscriptionsConstants = fn(16562);
+const GuildRoleSubscriptionsConstants = fn(16604);
 ({ GuildRoleSubscriptionsTierScenes: hasOwnProperty, MAX_SUBSCRIPTION_TIER_DESCRIPTION_LENGTH: metroRequire, MAX_SUBSCRIPTION_TIER_NAME_LENGTH: closure_7 } = GuildRoleSubscriptionsConstants);
-const UPLOAD_MEDIUM_SIZE = fn(1087).UPLOAD_MEDIUM_SIZE;
+const UPLOAD_MEDIUM_SIZE = fn(1084).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -59,8 +59,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
   const tmpResult = GuildRoleSubscriptionsHooks;
   const roleSubscriptionSettingsDisabled = RoleSubscriptionSettingsDisabledContext.useRoleSubscriptionSettingsDisabled();
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = tmp(1128).intl;
-    const stringResult = intl.string(tmp(1128).t["6XpbbR"]);
+    const intl = tmp(1125).intl;
+    const stringResult = intl.string(tmp(1125).t["6XpbbR"]);
     cResult[2] = stringResult;
     let tmp17 = stringResult;
   } else {
@@ -73,8 +73,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Conten
     cResult[4] = tmp21;
   }
   if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl2 = tmp(1128).intl;
-    const stringResult1 = intl2.string(tmp(1128).t.pNZfgG);
+    const intl2 = tmp(1125).intl;
+    const stringResult1 = intl2.string(tmp(1125).t.pNZfgG);
     cResult[5] = stringResult1;
     let tmp22 = stringResult1;
   } else {

@@ -1,7 +1,7 @@
-// === Module 15702: AndroidCallWifiLockExperiment ===
+// === Module 15738: AndroidCallWifiLockExperiment ===
 
-// Module 15702 (AndroidCallWifiLockExperiment)
-import ApexExperiment from "ApexExperiment" /* 1455 */;
+// Module 15738 (AndroidCallWifiLockExperiment)
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 
 const obj = { kind: "user", name: "2026-10-android-call-wifi-lock", defaultConfig: { acquireWifiLock: false }, variations: null };

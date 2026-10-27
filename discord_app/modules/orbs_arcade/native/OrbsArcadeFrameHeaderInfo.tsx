@@ -1,20 +1,20 @@
-// === Module 18376: OrbsArcadeFrameHeaderInfo ===
+// === Module 18410: OrbsArcadeFrameHeaderInfo ===
 
-// Module 18376 (OrbsArcadeFrameHeaderInfo)
+// Module 18410 (OrbsArcadeFrameHeaderInfo)
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
-import ApplicationStore from "ApplicationStore" /* 2045 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16395 */;
+import ApplicationStore from "ApplicationStore" /* 2042 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16434 */;
 
 const require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 }, namePill: null, nameText: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_8, flexShrink: 1 };
-obj2.namePill = { flexShrink: 1, minHeight: fn(5250).SMALL_BUTTON_HEIGHT, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
-let obj4 = { flexShrink: 1, minHeight: fn(5250).SMALL_BUTTON_HEIGHT, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+obj2.namePill = { flexShrink: 1, minHeight: fn(5251).SMALL_BUTTON_HEIGHT, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
+let obj4 = { flexShrink: 1, minHeight: fn(5251).SMALL_BUTTON_HEIGHT, justifyContent: "center", paddingHorizontal: nativeDefault.space.PX_12, paddingVertical: nativeDefault.space.PX_4, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT };
 obj2.nameText = { color: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_TEXT_DEFAULT };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   const obj = applicationId(576);
   const stateFromStores = applicationId(504).useStateFromStores(first, tmp8, tmp9);
   const tmpResult = applicationId(504);
-  const balance = applicationId(9451).useFetchVirtualCurrencyBalance().balance;
+  const balance = applicationId(9450).useFetchVirtualCurrencyBalance().balance;
   if (cResult[4] === stateFromStores) {
     if (cResult[5] === tmp4.namePill) {
       if (cResult[6] === tmp4.nameText) {
@@ -72,7 +72,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       }
       if (cResult[8] !== balance) {
         const obj2 = { balance };
-        const tmp17 = closure_5(tmp(13950).BalanceWidgetPill, obj2);
+        const tmp17 = closure_5(tmp(13964).BalanceWidgetPill, obj2);
         cResult[8] = balance;
         cResult[9] = tmp17;
         let tmp15 = tmp17;
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
     if ("" !== stateFromStores) {
       const obj4 = { style: tmp4.namePill, children: null };
       const obj5 = { variant: "text-sm/semibold", color: "none", lineClamp: 1, maxFontSizeMultiplier: 1, style: tmp4.nameText, children: stateFromStores };
-      obj4.children = closure_5(tmp(5234).Text, obj5);
+      obj4.children = closure_5(tmp(5235).Text, obj5);
       tmp12 = closure_5(View, obj4);
     }
   }
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   cResult[6] = tmp4.nameText;
   cResult[7] = tmp12;
   tmp11 = tmp12;
-  const tmpResult2 = applicationId(9451);
+  const tmpResult2 = applicationId(9450);
 }) : (function OrbsArcadeFrameHeaderInfo(applicationId) {
   applicationId = applicationId.applicationId;
   const tmp = closure_7();
@@ -144,11 +144,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
     if ("" !== stateFromStores) {
       const obj4 = { style: tmp.namePill, children: null };
       const obj5 = { variant: "text-sm/semibold", color: "none", lineClamp: 1, maxFontSizeMultiplier: 1, style: tmp.nameText, children: stateFromStores };
-      obj4.children = closure_5(tmp2(5234).Text, obj5);
+      obj4.children = closure_5(tmp2(5235).Text, obj5);
       tmp7 = closure_5(View, obj4);
     }
   }
-  const items2 = [tmp7, closure_5(applicationId(13950).BalanceWidgetPill, { balance: applicationId(9451).useFetchVirtualCurrencyBalance().balance })];
+  const items2 = [tmp7, closure_5(applicationId(13964).BalanceWidgetPill, { balance: applicationId(9450).useFetchVirtualCurrencyBalance().balance })];
   obj3.children = items2;
   return closure_6(View, obj3);
 });

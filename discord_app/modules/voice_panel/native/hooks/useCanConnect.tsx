@@ -1,16 +1,16 @@
-// === Module 18558: useCanConnect ===
+// === Module 18592: useCanConnect ===
 
-// Module 18558 (useCanConnect)
-import ChannelUtils from "ChannelUtils" /* 5994 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import VoiceStateStore from "VoiceStateStore" /* 5630 */;
+// Module 18592 (useCanConnect)
+import ChannelUtils from "ChannelUtils" /* 5995 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import VoiceStateStore from "VoiceStateStore" /* 5631 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/voice_panel/native/hooks/useCanConnect.tsx");

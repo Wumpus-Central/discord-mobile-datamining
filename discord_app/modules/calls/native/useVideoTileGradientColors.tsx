@@ -2,7 +2,7 @@
 
 // Module 8744 (useVideoTileGradientColors)
 import c from "c" /* 576 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
 import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8720 */;
 import noop from "module_19" /* 19 */;
 
@@ -49,7 +49,7 @@ function computeVideoTileGradientStops(modalV2BackgroundColor, modalV2Background
   }
   return null;
 }
-const ThemeTypes = fn(1087).ThemeTypes;
+const ThemeTypes = fn(1084).ThemeTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/calls/native/useVideoTileGradientColors.tsx");

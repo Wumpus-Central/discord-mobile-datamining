@@ -1,12 +1,12 @@
-// === Module 8319: enhanced_role_colors/EnhancedRoleColorUtils ===
+// === Module 8318: enhanced_role_colors/EnhancedRoleColorUtils ===
 
-// Module 8319 (enhanced_role_colors/EnhancedRoleColorUtils)
+// Module 8318 (enhanced_role_colors/EnhancedRoleColorUtils)
 import _modDef683 from "module_683" /* 683 */;
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5988 */;
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import useHasEnhancedRoleColors from "useHasEnhancedRoleColors" /* 5989 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ThemeStore from "ThemeStore" /* 1207 */;
+import ThemeStore from "ThemeStore" /* 1204 */;
 
 const useHasEnhancedRoleColorsDefault = useHasEnhancedRoleColors;
 
@@ -55,7 +55,7 @@ function processColorStrings(colorStrings) {
   }
 }
 const processColor = fn(17).processColor;
-const ThemeTypes = fn(1098).ThemeTypes;
+const ThemeTypes = fn(1095).ThemeTypes;
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 const size = fn(2);

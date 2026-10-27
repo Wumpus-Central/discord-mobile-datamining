@@ -1,8 +1,8 @@
-// === Module 19173: EnableCommunityModalActionCreators ===
+// === Module 19211: EnableCommunityModalActionCreators ===
 
-// Module 19173 (EnableCommunityModalActionCreators)
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
+// Module 19211 (EnableCommunityModalActionCreators)
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
 import size from "module_2" /* 2 */;
 
 const ENABLED_COMMUNITY_MODAL_KEY = "ENABLED_COMMUNITY_MODAL_KEY";
@@ -10,7 +10,7 @@ const result = size.fileFinishedImporting("modules/public_guilds/native/EnableCo
 
 export default {
   open() {
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19174, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(19212, dependencyMap.paths), undefined, ENABLED_COMMUNITY_MODAL_KEY);
   },
   close() {
     ModalActionCreatorsDefault.popWithKey(ENABLED_COMMUNITY_MODAL_KEY);

@@ -1,26 +1,26 @@
-// === Module 10449: PremiumGiftPlanSelect ===
+// === Module 10451: PremiumGiftPlanSelect ===
 
-// Module 10449 (PremiumGiftPlanSelect)
+// Module 10451 (PremiumGiftPlanSelect)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
-import native from "native" /* 1202 */;
-import timing from "timing" /* 5206 */;
-import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10506 */;
+import native from "native" /* 1199 */;
+import timing from "timing" /* 5207 */;
+import PremiumGiftFeaturesCardDefault from "PremiumGiftFeaturesCard" /* 10509 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8681 */;
-import PromotionsStore from "PromotionsStore" /* 9520 */;
+import PromotionsStore from "PromotionsStore" /* 9519 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, Pressable: metroRequire, View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-let VerticalGradient = fn(1087).VerticalGradient;
+let VerticalGradient = fn(1084).VerticalGradient;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
 let items = [, ];
-({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1394).PremiumTypes);
+({ TIER_2: arr[0], TIER_0: arr[1] } = fn(1391).PremiumTypes);
 let c16 = 16;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_17 = createStyles.createStyles((width, arg1, arg2) => {
   const obj = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, headerBackground: null, headerBackgroundColor: null, headerImageContainer: null, headerImage: null, headerOverlay: null, avatar: null, title: null, description: null, carousel: null, dmGiftingContent: null, loadingContainer: null, closeButtonContainer: null, closeButton: null, closeButtonIcon: null, badgeBanner: null };
   const size = { position: "absolute", width, height: 0.1 * arg1, top: arg1 / 1.75 - 0.1 * arg1 };

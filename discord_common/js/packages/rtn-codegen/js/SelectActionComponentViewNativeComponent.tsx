@@ -1,6 +1,6 @@
-// === Module 17087: SelectActionComponentViewNativeComponent ===
+// === Module 17128: SelectActionComponentViewNativeComponent ===
 
-// Module 17087 (SelectActionComponentViewNativeComponent)
+// Module 17128 (SelectActionComponentViewNativeComponent)
 import weakSet from "weakSet" /* 106 */;
 import module_65 from "module_65" /* 65 */;
 import size from "module_2" /* 2 */;

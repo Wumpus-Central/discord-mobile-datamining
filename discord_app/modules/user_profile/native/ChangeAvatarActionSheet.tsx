@@ -1,27 +1,27 @@
-// === Module 15937: ChangeAvatarActionSheet ===
+// === Module 15975: ChangeAvatarActionSheet ===
 
-// Module 15937 (ChangeAvatarActionSheet)
+// Module 15975 (ChangeAvatarActionSheet)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import PremiumUtilsDefault from "PremiumUtils" /* 2053 */;
-import TableRow from "TableRow" /* 6903 */;
-import TableRowGroup from "TableRowGroup" /* 6987 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
-import ActionSheet from "ActionSheet" /* 7298 */;
+import util from "util" /* 1125 */;
+import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
+import TableRow from "TableRow" /* 6905 */;
+import TableRowGroup from "TableRowGroup" /* 6989 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7250 */;
+import ActionSheet from "ActionSheet" /* 7300 */;
 import Form from "Form" /* 8951 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9425 */;
-import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 15841 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9424 */;
+import UserProfileUpsellButtonDefault from "UserProfileUpsellButton" /* 15879 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const AnalyticsObjects = fn(1087).AnalyticsObjects;
+const AnalyticsObjects = fn(1084).AnalyticsObjects;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { nitroWheel: { marginLeft: nativeDefault.space.PX_8 }, sublabel: null, label: null, remove: null, upsellButton: null, upsellTitleContainer: null, titleWrapper: null, titleContainer: null };
 let obj3 = { marginLeft: nativeDefault.space.PX_8 };
 obj2.sublabel = { color: nativeDefault.colors.TEXT_DEFAULT };

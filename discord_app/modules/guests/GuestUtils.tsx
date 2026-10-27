@@ -1,8 +1,8 @@
-// === Module 10006: GuestUtils ===
+// === Module 10008: GuestUtils ===
 
-// Module 10006 (GuestUtils)
-import FlagUtils from "FlagUtils" /* 1405 */;
-import GuildMemberConstants from "GuildMemberConstants" /* 4889 */;
+// Module 10008 (GuestUtils)
+import FlagUtils from "FlagUtils" /* 1402 */;
+import GuildMemberConstants from "GuildMemberConstants" /* 4890 */;
 import GuildInviteFlags from "GuildInviteFlags" /* 8880 */;
 import size from "module_2" /* 2 */;
 

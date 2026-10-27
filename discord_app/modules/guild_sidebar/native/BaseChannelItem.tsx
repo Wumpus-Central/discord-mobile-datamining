@@ -1,26 +1,26 @@
-// === Module 13276: BaseChannelItem ===
+// === Module 13290: BaseChannelItem ===
 
-// Module 13276 (BaseChannelItem)
+// Module 13290 (BaseChannelItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
+import native from "native" /* 1199 */;
 import native2 from "native" /* 8913 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 13277 */;
-import TouchableBackgroundDefault from "TouchableBackground" /* 13278 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 13291 */;
+import TouchableBackgroundDefault from "TouchableBackground" /* 13292 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
-const utils_PlatformUtils = Text(1385);
-const Text_Text = Text(5234);
+const utils_PlatformUtils = Text(1382);
+const Text_Text = Text(5235);
 require = fn;
 let closure_3 = ["icon", "name", "mode", "hideIcon", "disableHighlightOnPress", "channelInfo", "children", "unread"];
 const View = fn(17).View;
-const RedesignChannelListConstants = fn(11953);
+const RedesignChannelListConstants = fn(11954);
 ({ CHANNEL_SUBTITLE_TEXT_VARIANT: closure_7, CHANNEL_TITLE_LINE_HEIGHT: closure_8 } = RedesignChannelListConstants);
-const UnreadSetting = fn(6705).UnreadSetting;
+const UnreadSetting = fn(6706).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { rowPaddingNoIcon: { paddingHorizontal: 6 }, rowSelected: null, unreadIndicator: null, channelIcon: null, redesignedChannelIcon: null, channelIconNormal: null, channelIconUnread: null, channelIconMuted: null, channel: null, channelNameContainer: null, channelName: null };
   obj2 = { borderRadius: nativeDefault.modules.mobile.CHANNEL_ITEM_RADIUS, backgroundColor: nativeDefault.colors.MOBILE_CHANNEL_ITEM_BACKGROUND_SELECTED };
@@ -575,7 +575,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChan
     items1[3] = channelInfo;
     obj.children = items1;
     if (flag) {
-      let AnimatedPressableHighlight = hideIcon(13278);
+      let AnimatedPressableHighlight = hideIcon(13292);
     } else {
       AnimatedPressableHighlight = mode(8913).AnimatedPressableHighlight;
     }
@@ -592,8 +592,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseChan
       ALL_MESSAGES = UnreadSetting.ALL_MESSAGES;
     }
     obj3.resolvedUnreadSetting = ALL_MESSAGES;
-    closure_10(hideIcon(13277), obj3);
-    const tmp9 = hideIcon(13277);
+    closure_10(hideIcon(13291), obj3);
+    const tmp9 = hideIcon(13291);
   }
 });
 export const ChannelModes = obj2;

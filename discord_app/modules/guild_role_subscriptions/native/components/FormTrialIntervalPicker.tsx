@@ -1,10 +1,10 @@
-// === Module 19302: FormTrialIntervalPicker ===
+// === Module 19340: FormTrialIntervalPicker ===
 
-// Module 19302 (FormTrialIntervalPicker)
-import util from "util" /* 1128 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import FormDropdownDefault from "FormDropdown" /* 15144 */;
+// Module 19340 (FormTrialIntervalPicker)
+import util from "util" /* 1125 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import FormDropdownDefault from "FormDropdown" /* 15180 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -19,11 +19,11 @@ export default function FormTrialIntervalPicker(disabled) {
   const interval = disabled.interval;
   ({ onChange: importDefault, trialIntervalOptions: dependencyMap } = disabled);
   if (null == interval) {
-    let intl = interval(1128).intl;
-    let stringResult = intl.string(interval(1128).t.WZG1BU);
+    let intl = interval(1125).intl;
+    let stringResult = intl.string(interval(1125).t.WZG1BU);
   } else {
-    stringResult = interval(16588).formatPlanIntervalDuration(interval);
-    let obj = interval(16588);
+    stringResult = interval(16630).formatPlanIntervalDuration(interval);
+    let obj = interval(16630);
   }
   return jsx(FormDropdownDefault, {
     label: stringResult,

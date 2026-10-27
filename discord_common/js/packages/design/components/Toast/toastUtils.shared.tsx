@@ -1,11 +1,11 @@
-// === Module 5665: ? ===
+// === Module 5666: ? ===
 
-// Module 5665
-import module_4982 from "module_4982" /* 4982 */;
+// Module 5666
+import module_4983 from "module_4983" /* 4983 */;
 import size from "module_2" /* 2 */;
 
 let c2 = 1;
-const useToastStore = module_4982.create(() => {
+const useToastStore = module_4983.create(() => {
   const obj = { currentToastMap: new Map(), queuedToastsMap: null };
   const map = new Map();
   obj.queuedToastsMap = new Map();
@@ -58,7 +58,7 @@ export const popToast = function popToast(arg0) {
   if (arg0 === undefined) {
     str = "app";
   }
-  str(1274).batchUpdates(() => {
+  str(1271).batchUpdates(() => {
     obj.setState((queuedToastsMap) => {
       queuedToastsMap = queuedToastsMap.queuedToastsMap;
       let items = queuedToastsMap.get(str);

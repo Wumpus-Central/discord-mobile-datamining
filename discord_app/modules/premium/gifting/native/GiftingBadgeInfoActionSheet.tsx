@@ -1,15 +1,15 @@
-// === Module 10501: GiftingBadgeInfoActionSheet ===
+// === Module 10504: GiftingBadgeInfoActionSheet ===
 
-// Module 10501 (GiftingBadgeInfoActionSheet)
+// Module 10504 (GiftingBadgeInfoActionSheet)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import _modDef2632 from "module_2632" /* 2632 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10502 */;
-import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10505 */;
+import util from "util" /* 1125 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import _modDef2631 from "module_2631" /* 2631 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import GiftingBadgesUtils from "GiftingBadgesUtils" /* 10505 */;
+import GiftingBadgeIconDefault from "GiftingBadgeIcon" /* 10508 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8681 */;
 
 const require = globalThis.__r;
@@ -17,10 +17,10 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 let closure_7 = fn(8681).getSingleRequirementThreshold;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 }, headerContainer: null, title: null, description: null, tierCards: null, tierCard: null, iconWrapper: null };
 let obj3 = { alignItems: "center", paddingTop: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_16 };
 obj2.headerContainer = { paddingHorizontal: nativeDefault.space.PX_8 };
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
     tmp15 = cResult[5];
   }
   const effect = noop.useEffect(B, tmp15);
-  const sum = stateFromStores1(1633)().bottom + tmp5(587).space.PX_16;
+  const sum = stateFromStores1(1630)().bottom + tmp5(587).space.PX_16;
   if (cResult[6] !== sum) {
     class B {
       constructor() {
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
           return;
         }
       }
-      const stringResult = obj4.string(tmp5(2632)["0MB2C6"]);
+      const stringResult = obj4.string(tmp5(2631)["0MB2C6"]);
       cResult[11] = stringResult;
       const tmp20 = stringResult;
     } else {
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
         }
       }
       const obj2 = { style: title, variant: "heading-xl/semibold", color: "text-strong", accessibilityRole: "header", children: tmp20 };
-      const tmp23 = closure_9(tmp(5234).Text, obj2);
+      const tmp23 = closure_9(tmp(5235).Text, obj2);
       cResult[12] = tmp4.title;
       cResult[13] = tmp23;
     } else {
@@ -177,7 +177,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
           return;
         }
       }
-      const stringResult1 = obj6.string(tmp5(2632).k9sNVH);
+      const stringResult1 = obj6.string(tmp5(2631).k9sNVH);
       cResult[14] = stringResult1;
       const tmp24 = stringResult1;
     } else {
@@ -198,7 +198,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
         }
       }
       let obj3 = { style: tmp4.description, variant: "text-md/medium", color: "text-default", children: tmp24 };
-      const tmp27 = closure_9(tmp(5234).Text, obj3);
+      const tmp27 = closure_9(tmp(5235).Text, obj3);
       cResult[15] = tmp4.description;
       cResult[16] = tmp27;
     } else {
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
   const items1 = [AccessibilityStore];
   importDefault = require("initialize").useStateFromStores(items1, () => useReducedMotion.useReducedMotion);
   const effect = noop.useEffect(() => {
-    closure_1(1267).track(constants.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED);
+    closure_1(1264).track(constants.GIFTING_BADGE_INFO_ACTION_SHEET_OPENED);
   }, []);
   let obj3 = { style: null, children: null };
   const items2 = [tmp.container, ];
@@ -252,11 +252,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
   const obj5 = { style: tmp.headerContainer, children: null };
   let obj6 = { style: tmp.title, variant: "heading-xl/semibold", color: "text-strong", accessibilityRole: "header", children: null };
   let intl = require("util").intl;
-  obj6.children = intl.string(_modDef2632["0MB2C6"]);
+  obj6.children = intl.string(_modDef2631["0MB2C6"]);
   const items3 = [closure_9(require("Text/Text").Text, obj6), ];
   let obj7 = { style: tmp.description, variant: "text-md/medium", color: "text-default", children: null };
   const intl2 = require("util").intl;
-  obj7.children = intl2.string(_modDef2632.k9sNVH);
+  obj7.children = intl2.string(_modDef2631.k9sNVH);
   items3[1] = closure_9(require("Text/Text").Text, obj7);
   obj5.children = items3;
   const items4 = [closure_10(View, obj5), ];
@@ -296,7 +296,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GiftingB
           const obj6 = { variant: "text-md/normal", color: "text-subtle", children: null };
           const intl = util.intl;
           const obj7 = { count: tmp3 };
-          obj6.children = intl.formatToPlainString(_modDef2632.qvx9E4, obj7);
+          obj6.children = intl.formatToPlainString(_modDef2631.qvx9E4, obj7);
           tmp12Result = React6(Text_Text.Text, obj6);
         }
         items[2] = tmp12Result;

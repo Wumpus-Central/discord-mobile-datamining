@@ -1,24 +1,24 @@
-// === Module 17458: MessagesItemChannelBase ===
+// === Module 17499: MessagesItemChannelBase ===
 
-// Module 17458 (MessagesItemChannelBase)
+// Module 17499 (MessagesItemChannelBase)
 import nativeDefault from "native" /* 587 */;
-import transitionToChannel from "transitionToChannel" /* 5707 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7411 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10691 */;
+import transitionToChannel from "transitionToChannel" /* 5708 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7413 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10694 */;
 import noop from "module_19" /* 19 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
-import ReadStateStore from "ReadStateStore" /* 6771 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4874 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
-import UserStore from "UserStore" /* 1392 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
+import ReadStateStore from "ReadStateStore" /* 6772 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-const ActivityTypes = fn(1087).ActivityTypes;
+const ActivityTypes = fn(1084).ActivityTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_14 = createStyles.createStyles(() => {
   const obj = { pressable: { marginBottom: 1, borderRadius: nativeDefault.radii.md, marginHorizontal: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", flex: 1 }, nameplate: null, rowActive: null, selectedBorder: null, rowSelected: null };
   const obj2 = { marginBottom: 1, borderRadius: nativeDefault.radii.md, marginHorizontal: nativeDefault.space.PX_8, paddingHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_4, flexDirection: "row", alignItems: "center", flex: 1 };
@@ -165,7 +165,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "Reflect" };
+            obj4 = { status: "toCharArray$esjava$1", activities: "Symbol" };
           }
           return obj4;
         }
@@ -187,7 +187,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "Reflect" };
+            obj4 = { status: "toCharArray$esjava$1", activities: "Symbol" };
           }
           return obj4;
         }
@@ -211,7 +211,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "Reflect" };
+            obj4 = { status: "toCharArray$esjava$1", activities: "Symbol" };
           }
           return obj4;
         }
@@ -234,7 +234,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "Reflect" };
+            obj4 = { status: "toCharArray$esjava$1", activities: "Symbol" };
           }
           return obj4;
         }
@@ -255,7 +255,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "Reflect" };
+            obj4 = { status: "toCharArray$esjava$1", activities: "Symbol" };
           }
           return obj4;
         }
@@ -277,7 +277,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "Reflect" };
+            obj4 = { status: "toCharArray$esjava$1", activities: "Symbol" };
           }
           return obj4;
         }
@@ -287,7 +287,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const stateFromStoresObject1 = tmp(504).useStateFromStoresObject(tmp15, tmp17);
     ({ mentionCount, hasUnreadMessages } = stateFromStoresObject1);
     const tmpResult9 = tmp(504);
-    ({ isIncomingCall, isOngoingCall } = setIsPressed(17459)(channel.id));
+    ({ isIncomingCall, isOngoingCall } = setIsPressed(17500)(channel.id));
     const _Symbol3 = Symbol;
     if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
       class B {
@@ -304,7 +304,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "Reflect" };
+            obj4 = { status: "toCharArray$esjava$1", activities: "Symbol" };
           }
           return obj4;
         }
@@ -327,7 +327,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             obj1.activities = activities;
             obj4 = obj1;
           } else {
-            obj4 = { status: "Array", activities: "Reflect" };
+            obj4 = { status: "toCharArray$esjava$1", activities: "Symbol" };
           }
           return obj4;
         }
@@ -350,7 +350,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
     }
-    const tmp20 = setIsPressed(17459)(channel.id);
+    const tmp20 = setIsPressed(17500)(channel.id);
     const stateFromStoresObject2 = tmp(504).useStateFromStoresObject(tmp21, G);
     ({ resolvedUnreadSetting, muted, favorite } = stateFromStoresObject2);
     const _Symbol4 = Symbol;
@@ -676,7 +676,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[26] = channel.id;
     cResult[27] = setIsPressed;
     cResult[28] = re;
-    tmpResult14 = tmp(1384);
+    tmpResult14 = tmp(1381);
   }
   const items6 = [tmp8.pressable, undefined];
   cResult[5] = tmp8.pressable;
@@ -721,7 +721,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       const obj2 = { status: PresenceStore.getStatus(channel.getRecipientId()), activities };
       let obj3 = obj2;
     } else {
-      obj3 = { status: "Array", activities: "Reflect" };
+      obj3 = { status: "toCharArray$esjava$1", activities: "Symbol" };
     }
     return obj3;
   });

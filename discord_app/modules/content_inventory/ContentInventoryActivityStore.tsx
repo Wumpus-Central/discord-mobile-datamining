@@ -1,13 +1,13 @@
-// === Module 14283: ContentInventoryActivityStore ===
+// === Module 14313: ContentInventoryActivityStore ===
 
-// Module 14283 (ContentInventoryActivityStore)
+// Module 14313 (ContentInventoryActivityStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import utils from "utils" /* 8617 */;
 import matchUtils from "matchUtils" /* 8825 */;
 import ContentInventoryTypes from "ContentInventoryTypes" /* 8829 */;
-import PresenceStore from "PresenceStore" /* 5712 */;
+import PresenceStore from "PresenceStore" /* 5713 */;
 import ContentInventoryStore from "ContentInventoryStore" /* 8824 */;
 
 require = fn;
@@ -108,7 +108,7 @@ function handlePresenceUpdates() {
   }
   set = new Set();
 }
-const ActivityTypes = fn(1087).ActivityTypes;
+const ActivityTypes = fn(1084).ActivityTypes;
 let items = [fn(8613).ContentInventoryEntryType.LISTENED_SESSION];
 let set = new Set(items);
 const map = new Map();

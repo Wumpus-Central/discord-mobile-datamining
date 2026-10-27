@@ -1,12 +1,12 @@
-// === Module 15951: useDesaturatedUserColorValue ===
+// === Module 15989: useDesaturatedUserColorValue ===
 
-// Module 15951 (useDesaturatedUserColorValue)
+// Module 15989 (useDesaturatedUserColorValue)
 import _mod19 from "module_19" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import utils_ColorUtils from "utils/ColorUtils" /* 1105 */;
-import tinycolorDefault from "tinycolor" /* 7660 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import utils_ColorUtils from "utils/ColorUtils" /* 1102 */;
+import tinycolorDefault from "tinycolor" /* 7661 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

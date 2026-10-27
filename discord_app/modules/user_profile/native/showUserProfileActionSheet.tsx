@@ -2,11 +2,11 @@
 
 // Module 8668 (showUserProfileActionSheet)
 import LoggerDefault from "Logger" /* 3 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import UserSettings from "UserSettings" /* 4799 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import UserSettings from "UserSettings" /* 4800 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
 
 require = fn;
 function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
@@ -19,43 +19,45 @@ function showUserProfileActionSheet(ignoreBlockedSpeedBump, arg1) {
       const tmp8 = asyncRequireImpl(8671, dependencyMap.paths);
       const obj = ActionSheetActionCreatorsDefault;
       const _HermesInternal = HermesInternal;
-      const combined = "UserProfileIgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
+      const combined = "" + UserProfile + "IgnoredSpeedBump" + ignoreBlockedSpeedBump.userId;
       const obj2 = {};
       const merged = Object.assign(ignoreBlockedSpeedBump);
-      let str3 = "ignore";
+      let str4 = "ignore";
       if (isBlockedResult) {
-        str3 = "block";
+        str4 = "block";
       }
-      obj2.speedBumpType = str3;
+      obj2.speedBumpType = str4;
       obj2.openedAt = timestamp;
-      obj.openLazy(tmp8, combined, obj2, str);
+      return obj.openLazy(tmp8, combined, obj2, str);
     }
     isIgnoredResult = RelationshipStore.isIgnored(ignoreBlockedSpeedBump.userId);
   }
   const tmp20 = asyncRequireImpl(8690, dependencyMap.paths);
-  const combined1 = "UserProfile" + ignoreBlockedSpeedBump.userId;
+  const combined1 = "" + UserProfile + ignoreBlockedSpeedBump.userId;
   const obj4 = {};
   const merged1 = Object.assign(ignoreBlockedSpeedBump);
   obj4.openedAt = timestamp;
   if (str == null) {
     str = "replaceAll";
   }
-  ActionSheetActionCreatorsDefault.openLazy(tmp20, combined1, obj4, str);
+  return ActionSheetActionCreatorsDefault.openLazy(tmp20, combined1, obj4, str);
 }
-fn(6859).addPostConnectionCallback;
-let closure_6 = new LoggerDefault("showUserProfileActionSheet");
+fn(6861).addPostConnectionCallback;
+const UserProfile = "UserProfile";
+let closure_7 = new LoggerDefault("showUserProfileActionSheet");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/native/showUserProfileActionSheet.tsx");
 
 export default showUserProfileActionSheet;
+export const USER_PROFILE_ACTION_SHEET_KEY_PREFIX = "UserProfile";
 export const getUserProfileActionSheetKey = function getUserProfileActionSheetKey(userId) {
-  return "UserProfile" + userId;
+  return "" + UserProfile + userId;
 };
 export const getUserProfileBlockedSpeedBumpActionSheetKey = function getUserProfileBlockedSpeedBumpActionSheetKey(arg0) {
-  return "UserProfileBlockedSpeedBump" + arg0;
+  return "" + UserProfile + "BlockedSpeedBump" + arg0;
 };
 export const getUserProfileIgnoredSpeedBumpActionSheetKey = function getUserProfileIgnoredSpeedBumpActionSheetKey(arg0) {
-  return "UserProfileIgnoredSpeedBump" + arg0;
+  return "" + UserProfile + "IgnoredSpeedBump" + arg0;
 };
 export const showUserProfileActionSheetPostConnection = function showUserProfileActionSheetPostConnection(arg0) {
   closure_0 = arg0;

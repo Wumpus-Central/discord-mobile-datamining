@@ -2,8 +2,8 @@
 
 // Module 8662 (useCollectiblesData)
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7650 */;
-import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7665 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7651 */;
+import CollectiblesPurchaseStore from "CollectiblesPurchaseStore" /* 7666 */;
 
 const require = globalThis.__r;
 

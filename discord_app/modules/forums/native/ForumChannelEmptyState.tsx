@@ -1,21 +1,21 @@
-// === Module 13716: ForumChannelEmptyState ===
+// === Module 13730: ForumChannelEmptyState ===
 
-// Module 13716 (ForumChannelEmptyState)
+// Module 13730 (ForumChannelEmptyState)
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import shared from "shared" /* 4978 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import _modDef13717 from "module_13717" /* 13717 */;
-import _modDef13718 from "module_13718" /* 13718 */;
+import util from "util" /* 1125 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import shared from "shared" /* 4979 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import _modDef13731 from "module_13731" /* 13731 */;
+import _modDef13732 from "module_13732" /* 13732 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_6 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" }, image: { width: 120, height: 80 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -44,9 +44,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp9 = cResult[4];
     }
     if (tmpResult2.isThemeLight(tmpResult.useThemeContext().theme)) {
-      let tmp5Result = _modDef13717;
+      let tmp5Result = _modDef13731;
     } else {
-      tmp5Result = _modDef13718;
+      tmp5Result = _modDef13732;
     }
     if (cResult[5] === tmp4.image) {
       if (cResult[6] === tmp5Result) {
@@ -158,9 +158,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = shared;
   const tmp9 = FastImageDefault;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef13717;
+    let tmp4Result = _modDef13731;
   } else {
-    tmp4Result = _modDef13718;
+    tmp4Result = _modDef13732;
   }
   const items1 = [React4(tmp9, { source: tmp4Result, style: tmp.image }), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

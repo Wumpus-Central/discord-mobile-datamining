@@ -1,11 +1,11 @@
 // === Module 8944: useManageResourcePermissions ===
 
 // Module 8944 (useManageResourcePermissions)
-import BigFlagUtilsAll from "BigFlagUtils" /* 1099 */;
+import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import UserStore from "UserStore" /* 1392 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -62,7 +62,7 @@ function canManageResource(arg0, stateFromStores, canResult1, c0) {
 }
 const PermissionsConstants = fn(8943);
 ({ CREATE_GUILD_EVENT_CORE_PERMISSIONS: closure_7, CREATE_GUILD_EVENT_STAGE_CHANNEL_PERMISSIONS: closure_8, CREATE_GUILD_EVENT_VOICE_CHANNEL_PERMISSIONS: closure_9 } = PermissionsConstants);
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 let closure_11 = {
   canCreateExpressions: false,
   canCreateGuildEvent: false,
@@ -116,14 +116,14 @@ export const useManageResourcePermissions = ReactCompilerGating.isReactCompilerE
       } else if (isGuildStageVoice.isGuildVoice()) {
         tmp5 = closure_9;
       }
-      items2 = [first(1099).combine(tmp5, Permissions.CREATE_EVENTS), ];
-      const obj3 = first(1099);
-      items2[1] = first(1099).combine(tmp5, Permissions.MANAGE_EVENTS);
-      const obj4 = first(1099);
+      items2 = [first(1096).combine(tmp5, Permissions.CREATE_EVENTS), ];
+      const obj3 = first(1096);
+      items2[1] = first(1096).combine(tmp5, Permissions.MANAGE_EVENTS);
+      const obj4 = first(1096);
     }
     cResult[0] = isGuildStageVoice;
     cResult[1] = items2;
-    tmpResult = tmp(4837);
+    tmpResult = tmp(4838);
   } else {
     const tmp12 = first1(cResult[1], 2);
     first = tmp12[0];

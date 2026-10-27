@@ -1,13 +1,13 @@
-// === Module 14188: GuildVerificationUtils ===
+// === Module 14215: GuildVerificationUtils ===
 
-// Module 14188 (GuildVerificationUtils)
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5005 */;
-import transitionToMemberVerification from "transitionToMemberVerification" /* 6834 */;
-import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6871 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5003 */;
+// Module 14215 (GuildVerificationUtils)
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5006 */;
+import transitionToMemberVerification from "transitionToMemberVerification" /* 6836 */;
+import MemberVerificationModalActionCreators from "MemberVerificationModalActionCreators" /* 6873 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5004 */;
 
 require = fn;
-const GuildFeatures = fn(1087).GuildFeatures;
+const GuildFeatures = fn(1084).GuildFeatures;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/guild_verification/GuildVerificationUtils.tsx");
 

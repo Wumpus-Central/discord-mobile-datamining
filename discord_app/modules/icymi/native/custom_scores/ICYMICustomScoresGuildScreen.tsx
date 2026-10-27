@@ -1,21 +1,21 @@
-// === Module 17915: ICYMICustomScoresGuildScreen ===
+// === Module 17949: ICYMICustomScoresGuildScreen ===
 
-// Module 17915 (ICYMICustomScoresGuildScreen)
+// Module 17949 (ICYMICustomScoresGuildScreen)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import ChannelListState from "ChannelListState" /* 7637 */;
+import util from "util" /* 1125 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import ChannelListState from "ChannelListState" /* 7638 */;
 import ICYMIUtils from "ICYMIUtils" /* 8840 */;
-import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11080 */;
-import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 17917 */;
+import ChevronSmallDownIcon from "ChevronSmallDownIcon" /* 11083 */;
+import ICYMIContentSettingControl from "ICYMIContentSettingControl" /* 17951 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelListStore from "ChannelListStore" /* 7635 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
+import ChannelListStore from "ChannelListStore" /* 7636 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
 import ICYMIStore from "ICYMIStore" /* 8823 */;
 
 require = fn;
@@ -108,7 +108,7 @@ function keyExtractor(kind, arg1) {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12 }, guildHeader: null, categoryHeader: null, channelNameContainer: null, channelMutedIcon: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, paddingHorizontal: nativeDefault.space.PX_12 };
 obj2.guildHeader = { marginBottom: nativeDefault.space.PX_32 };
@@ -247,7 +247,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
             return closure_6.getGuild(guildId);
           }
         }
-        const bottom = guildId(1633)().bottom;
+        const bottom = guildId(1630)().bottom;
         if (cResult[20] === stateFromStores) {
           class R {
             constructor() {
@@ -375,7 +375,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
             }
           }
           let tmp50 = navigation;
-          if (first1 !== navigation(7637).SECTION_INDEX_GUILD_ACTIONS) {
+          if (first1 !== navigation(7638).SECTION_INDEX_GUILD_ACTIONS) {
             class R {
               constructor() {
                 return closure_6.getGuild(guildId);
@@ -410,8 +410,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
                       return closure_6.getGuild(guildId);
                     }
                   }
-                  let intl2 = tmp50(1128).intl;
-                  let stringResult = intl2.string(tmp50(1128).t.GSfOoo);
+                  let intl2 = tmp50(1125).intl;
+                  let stringResult = intl2.string(tmp50(1125).t.GSfOoo);
                   class W {
                     constructor(arg0) {
                       item = navigation.item;
@@ -507,8 +507,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
                       }
                     }
                   }
-                  let intl = tmp50(1128).intl;
-                  stringResult = intl.string(tmp50(1128).t.gKcrqM);
+                  let intl = tmp50(1125).intl;
+                  stringResult = intl.string(tmp50(1125).t.gKcrqM);
                 }
               }
             }
@@ -695,11 +695,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ICYMICus
     }
   }, items5);
   let obj4 = { contentInset: null, showsVerticalScrollIndicator: false, renderItem: null, data: null, keyExtractor: null };
-  const rect = { bottom: guildId(1633)().bottom, top: guildId(587).space.PX_12 };
+  const rect = { bottom: guildId(1630)().bottom, top: guildId(587).space.PX_12 };
   obj4.contentInset = rect;
   obj4.renderItem = callback;
   obj4.data = memo;
   obj4.keyExtractor = keyExtractor;
-  obj3.children = closure_11(navigation(7220).AnimatedFlashList, obj4);
+  obj3.children = closure_11(navigation(7222).AnimatedFlashList, obj4);
   return closure_11(guildChannels, obj3);
 });

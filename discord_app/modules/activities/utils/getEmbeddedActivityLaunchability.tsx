@@ -1,13 +1,13 @@
-// === Module 11416: getEmbeddedActivityLaunchability ===
+// === Module 11419: getEmbeddedActivityLaunchability ===
 
-// Module 11416 (getEmbeddedActivityLaunchability)
-import util from "util" /* 1128 */;
-import AgeGateUtils from "AgeGateUtils" /* 6662 */;
-import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11387 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import VoiceStateStore from "VoiceStateStore" /* 5630 */;
+// Module 11419 (getEmbeddedActivityLaunchability)
+import util from "util" /* 1125 */;
+import AgeGateUtils from "AgeGateUtils" /* 6663 */;
+import useIsActivitiesEnabledForCurrentPlatform from "useIsActivitiesEnabledForCurrentPlatform" /* 11390 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import VoiceStateStore from "VoiceStateStore" /* 5631 */;
 
 const require = globalThis.__r;
 
@@ -61,8 +61,8 @@ function getEmbeddedActivityLaunchability(arg0) {
     return obj.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL;
   }
 }
-let closure_6 = fn(2026).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
-const Permissions = fn(1087).Permissions;
+let closure_6 = fn(2023).SUPPORTED_ACTIVITIES_CHANNEL_TYPES;
+const Permissions = fn(1084).Permissions;
 const EmbeddedActivityLaunchability = { CAN_LAUNCH: 0, [0]: "CAN_LAUNCH", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 1, [1]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", NO_CHANNEL_CONNECT_PERMISSION: 2, [2]: "NO_CHANNEL_CONNECT_PERMISSION", NO_CHANNEL: 3, [3]: "NO_CHANNEL", NO_GUILD: 4, [4]: "NO_GUILD", IS_AFK_CHANNEL: 5, [5]: "IS_AFK_CHANNEL", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL: 7, [7]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_CHANNEL", CHANNEL_CONTENT_GATED: 8, [8]: "CHANNEL_CONTENT_GATED" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

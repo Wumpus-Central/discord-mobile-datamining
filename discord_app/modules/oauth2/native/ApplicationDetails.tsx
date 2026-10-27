@@ -1,30 +1,30 @@
-// === Module 14066: ApplicationDetails ===
+// === Module 14080: ApplicationDetails ===
 
-// Module 14066 (ApplicationDetails)
+// Module 14080 (ApplicationDetails)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import LinkIcon from "LinkIcon" /* 5678 */;
-import ClockIcon2 from "ClockIcon" /* 5691 */;
+import util from "util" /* 1125 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import LinkIcon from "LinkIcon" /* 5679 */;
+import ClockIcon2 from "ClockIcon" /* 5692 */;
 import LockIcon from "LockIcon" /* 8566 */;
 import OAuth2Scopes from "OAuth2Scopes" /* 8827 */;
-import GlobeEarthIcon from "GlobeEarthIcon" /* 9492 */;
-import scopes from "scopes" /* 9631 */;
-import disclosures from "disclosures" /* 9633 */;
-import Utils from "Utils" /* 9635 */;
-import ShieldIcon from "ShieldIcon" /* 10954 */;
-import RobotIcon from "RobotIcon" /* 12240 */;
-import HammerIcon from "HammerIcon" /* 12532 */;
-import EmbedIcon from "EmbedIcon" /* 14067 */;
+import GlobeEarthIcon from "GlobeEarthIcon" /* 9491 */;
+import scopes from "scopes" /* 9633 */;
+import disclosures from "disclosures" /* 9635 */;
+import Utils from "Utils" /* 9637 */;
+import ShieldIcon from "ShieldIcon" /* 10957 */;
+import RobotIcon from "RobotIcon" /* 12155 */;
+import HammerIcon from "HammerIcon" /* 12540 */;
+import EmbedIcon from "EmbedIcon" /* 14081 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { applicationDetails: { flexDirection: "column", gap: 16 }, entry: { flexDirection: "row", alignItems: "center", gap: 8 }, entryText: { flex: 1 }, entryIcon: null };
 let size = { width: 16, height: 16, tintColor: nativeDefault.colors.TEXT_MUTED };
 obj2.entryIcon = size;

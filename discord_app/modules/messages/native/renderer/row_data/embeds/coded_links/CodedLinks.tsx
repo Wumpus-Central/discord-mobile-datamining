@@ -1,26 +1,26 @@
-// === Module 14531: CodedLinks ===
+// === Module 14567: CodedLinks ===
 
-// Module 14531 (CodedLinks)
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import CodedLink from "CodedLink" /* 5703 */;
-import ApplicationCodedLink from "ApplicationCodedLink" /* 7763 */;
-import createSocialLayerStorefrontProductDetailsEmbed from "createSocialLayerStorefrontProductDetailsEmbed" /* 11228 */;
-import storefrontCodedLink from "storefrontCodedLink" /* 11230 */;
-import ExperimentEmbed from "ExperimentEmbed" /* 12755 */;
-import createAppMessageEmbed from "createAppMessageEmbed" /* 13041 */;
-import createActivityMessageEmbed from "createActivityMessageEmbed" /* 14532 */;
-import InviteEmbed from "InviteEmbed" /* 14533 */;
-import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 14538 */;
-import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 14541 */;
-import GuildTemplateEmbed from "GuildTemplateEmbed" /* 14544 */;
-import BuildOverrideEmbed from "BuildOverrideEmbed" /* 14546 */;
-import VoiceChannelLinkEmbed from "VoiceChannelLinkEmbed" /* 14548 */;
-import QuestEmbed from "QuestEmbed" /* 14549 */;
-import GameOrganizationInviteEmbed from "GameOrganizationInviteEmbed" /* 14551 */;
+// Module 14567 (CodedLinks)
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import CodedLink from "CodedLink" /* 5704 */;
+import ApplicationCodedLink from "ApplicationCodedLink" /* 7764 */;
+import createSocialLayerStorefrontProductDetailsEmbed from "createSocialLayerStorefrontProductDetailsEmbed" /* 11231 */;
+import storefrontCodedLink from "storefrontCodedLink" /* 11233 */;
+import ExperimentEmbed from "ExperimentEmbed" /* 12764 */;
+import createAppMessageEmbed from "createAppMessageEmbed" /* 13055 */;
+import createActivityMessageEmbed from "createActivityMessageEmbed" /* 14568 */;
+import InviteEmbed from "InviteEmbed" /* 14569 */;
+import GuildScheduledEventEmbed from "GuildScheduledEventEmbed" /* 14574 */;
+import EmbeddedActivityInviteEmbed from "EmbeddedActivityInviteEmbed" /* 14577 */;
+import GuildTemplateEmbed from "GuildTemplateEmbed" /* 14580 */;
+import BuildOverrideEmbed from "BuildOverrideEmbed" /* 14582 */;
+import VoiceChannelLinkEmbed from "VoiceChannelLinkEmbed" /* 14584 */;
+import QuestEmbed from "QuestEmbed" /* 14585 */;
+import GameOrganizationInviteEmbed from "GameOrganizationInviteEmbed" /* 14587 */;
 import _slicedToArray from "module_32" /* 32 */;
-import LurkingStore from "LurkingStore" /* 4904 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserStore from "UserStore" /* 1392 */;
+import LurkingStore from "LurkingStore" /* 4905 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const size = fn(2);
@@ -44,7 +44,7 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
               if (null == applicationCodedLinkData) {
                 return null;
               } else {
-                const obj2 = { appId: applicationCodedLinkData.applicationId, channel: tmp29, message, theme };
+                const obj2 = { appId: applicationCodedLinkData.applicationId, channel: tmp31, message, theme };
                 const appLinkGateResult = createAppMessageEmbed.getAppLinkGateResult(obj2);
                 if ("unavailable" === appLinkGateResult.state) {
                   return null;
@@ -95,11 +95,11 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
             isStaffResult = isStaffPersonalResult;
           }
           if (!isStaffResult) {
-            let tmp21 = null != GuildStore.getGuild("943265993613008967");
-            if (tmp21) {
-              tmp21 = !LurkingStore.isLurking("943265993613008967");
+            let tmp23 = null != GuildStore.getGuild("943265993613008967");
+            if (tmp23) {
+              tmp23 = !LurkingStore.isLurking("943265993613008967");
             }
-            isStaffResult = tmp21;
+            isStaffResult = tmp23;
           }
           let buildOverrideEmbed = null;
           if (isStaffResult) {
@@ -137,7 +137,11 @@ export const createCodedLinkEmbeds = function createCodedLinkEmbeds(message, mes
                             if (CodedLink.CodedLinkType.GAME_ORGANIZATION_INVITE === type) {
                               let gameOrganizationInviteEmbed = null;
                               if (tmpResult34.getLinkedGameOrgInvitesEnabled("mobile_coded_link_embed")) {
-                                gameOrganizationInviteEmbed = GameOrganizationInviteEmbed.createGameOrganizationInviteEmbed(code, theme);
+                                let id;
+                                if (currentUser != null) {
+                                  id = currentUser.id;
+                                }
+                                gameOrganizationInviteEmbed = GameOrganizationInviteEmbed.createGameOrganizationInviteEmbed(code, theme, id);
                                 const tmpResult35 = GameOrganizationInviteEmbed;
                               }
                               return gameOrganizationInviteEmbed;

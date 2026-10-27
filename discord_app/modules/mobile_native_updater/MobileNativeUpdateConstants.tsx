@@ -1,8 +1,8 @@
-// === Module 5697: MobileNativeUpdateConstants ===
+// === Module 5698: MobileNativeUpdateConstants ===
 
-// Module 5697 (MobileNativeUpdateConstants)
-import URLUtilsDefault from "URLUtils" /* 1386 */;
-import hooks from "module_2049" /* 2049 */;
+// Module 5698 (MobileNativeUpdateConstants)
+import URLUtilsDefault from "URLUtils" /* 1383 */;
+import hooks from "module_2046" /* 2046 */;
 
 let tmp3 = null;
 if (undefined !== process.env.INTERNAL_UPDATE_URL) {
@@ -15,13 +15,13 @@ if (undefined !== process.env.INTERNAL_UPDATE_URL) {
       const importDefaultResult1 = URLUtilsDefault;
     } else {
       toURLSafeResult = null;
-      const obj3 = fn(1384);
+      const obj3 = fn(1381);
     }
     tmp3 = toURLSafeResult;
-    obj2 = fn(1384);
+    obj2 = fn(1381);
   }
 }
-let ClientInfoUtils = fn(1383);
+let ClientInfoUtils = fn(1380);
 ClientInfoUtils = ClientInfoUtils.getConstants();
 let Build;
 if (ClientInfoUtils != null) {
@@ -41,7 +41,7 @@ if (!Number.isNaN(parsed)) {
     }
   }
 }
-ClientInfoUtils = fn(1383);
+ClientInfoUtils = fn(1380);
 ClientInfoUtils = ClientInfoUtils.getConstants();
 let Version;
 if (ClientInfoUtils != null) {

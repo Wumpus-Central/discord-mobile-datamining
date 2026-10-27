@@ -1,12 +1,12 @@
-// === Module 15834: UserSettingsEditUserProfile ===
+// === Module 15872: UserSettingsEditUserProfile ===
 
-// Module 15834 (UserSettingsEditUserProfile)
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7253 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7278 */;
+// Module 15872 (UserSettingsEditUserProfile)
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7255 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7280 */;
 import maybeFetchUserProfileDefault from "maybeFetchUserProfile" /* 8676 */;
-import UserProfileEditFormDefault from "UserProfileEditForm" /* 15835 */;
+import UserProfileEditFormDefault from "UserProfileEditForm" /* 15873 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -127,7 +127,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           }
         }
       }
-      AnalyticsLocationProvider = AnalyticsLocationProvider(7253).AnalyticsLocationProvider;
+      AnalyticsLocationProvider = AnalyticsLocationProvider(7255).AnalyticsLocationProvider;
       const obj2 = { value: analyticsLocations, children: tmp12 };
       tmp = <AnalyticsLocationProvider value={analyticsLocations}>{tmp12}</AnalyticsLocationProvider>;
       cResult[8] = analyticsLocations;
@@ -159,7 +159,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     const obj3 = { currentUser: stateFromStores };
     const merged = Object.assign(arg0);
     obj2.children = jsx(UserProfileEditFormDefault, { currentUser: stateFromStores });
-    tmp7 = jsx(tmp4(7253).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null });
+    tmp7 = jsx(tmp4(7255).AnalyticsLocationProvider, { value: tmp3(AnalyticsLocationDefault.USER_SETTINGS_USER_PROFILE).analyticsLocations, children: null });
     const tmpResult = UserProfileEditFormDefault;
   }
   return tmp7;

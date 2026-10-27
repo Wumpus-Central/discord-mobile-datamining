@@ -1,8 +1,8 @@
-// === Module 9489: useGameProfileLinks ===
+// === Module 9488: useGameProfileLinks ===
 
-// Module 9489 (useGameProfileLinks)
-import GlobalUtils from "GlobalUtils" /* 1388 */;
-import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9322 */;
+// Module 9488 (useGameProfileLinks)
+import GlobalUtils from "GlobalUtils" /* 1385 */;
+import GameProfileMobileStoreLinkUtils from "GameProfileMobileStoreLinkUtils" /* 9323 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -52,10 +52,10 @@ export const useGameProfileLinks = ReactCompilerGating.isReactCompilerEnabled() 
     websites = websites.websites;
     const found = websites.filter(I);
     const _Object = Object;
-    const values = Object.values(tmp(9322).MOBILE_STORES);
+    const values = Object.values(tmp(9323).MOBILE_STORES);
     const mapped = values.map((item) => GameProfileMobileStoreLinkUtils.getMobileStoreLink(closure_0, item));
     const _Symbol2 = Symbol;
-    const found1 = mapped.filter(tmp(1388).isNotNullish);
+    const found1 = mapped.filter(tmp(1385).isNotNullish);
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       class I {
         constructor(arg0) {
@@ -119,7 +119,7 @@ export const useGameProfileLinks = ReactCompilerGating.isReactCompilerEnabled() 
       const GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES = websites(9273).GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES;
       let hasItem = GAME_PROFILE_VISIBLE_WEBSITE_CATEGORIES.includes(category);
       if (hasItem) {
-        const MOBILE_STORE_WEBSITE_CATEGORIES = websites(9322).MOBILE_STORE_WEBSITE_CATEGORIES;
+        const MOBILE_STORE_WEBSITE_CATEGORIES = websites(9323).MOBILE_STORE_WEBSITE_CATEGORIES;
         hasItem = !MOBILE_STORE_WEBSITE_CATEGORIES.has(category);
       }
       return hasItem;

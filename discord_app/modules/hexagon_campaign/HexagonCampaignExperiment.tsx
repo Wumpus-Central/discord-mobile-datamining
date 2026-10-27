@@ -1,9 +1,9 @@
-// === Module 5000: HexagonCampaignExperiment ===
+// === Module 5001: HexagonCampaignExperiment ===
 
-// Module 5000 (HexagonCampaignExperiment)
+// Module 5001 (HexagonCampaignExperiment)
 import c from "c" /* 576 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4998 */;
-import ApexExperiment from "ApexExperiment" /* 1455 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4999 */;
+import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import "ReactCompilerGating";
 import size from "module_2" /* 2 */;

@@ -1,22 +1,22 @@
-// === Module 5992: MarkupChannelMentionRule ===
+// === Module 5993: MarkupChannelMentionRule ===
 
-// Module 5992 (MarkupChannelMentionRule)
-import util from "util" /* 1128 */;
-import AvatarUtilsDefault from "AvatarUtils" /* 1417 */;
-import _modDef1951 from "module_1951" /* 1951 */;
-import StringUtils from "StringUtils" /* 2033 */;
-import useChannelName from "useChannelName" /* 5604 */;
-import LinkUtils from "LinkUtils" /* 5606 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5991 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5993 */;
-import ChannelUtils from "ChannelUtils" /* 5994 */;
-import markup_ChannelUtils from "markup/ChannelUtils" /* 6002 */;
-import GatedChannelStore from "GatedChannelStore" /* 4875 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+// Module 5993 (MarkupChannelMentionRule)
+import util from "util" /* 1125 */;
+import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
+import _modDef1948 from "module_1948" /* 1948 */;
+import StringUtils from "StringUtils" /* 2030 */;
+import useChannelName from "useChannelName" /* 5605 */;
+import LinkUtils from "LinkUtils" /* 5607 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 5992 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5994 */;
+import ChannelUtils from "ChannelUtils" /* 5995 */;
+import markup_ChannelUtils from "markup/ChannelUtils" /* 6003 */;
+import GatedChannelStore from "GatedChannelStore" /* 4876 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function getChannel(id, arr) {
@@ -125,7 +125,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, url) {
           obj4.content = items3;
           let obj11 = obj4;
         } else if (null != url) {
-          const obj9 = { type: "link", content: null, target: null, title: "ix" };
+          const obj9 = { type: "link", content: null, target: null, title: "unicodeVersion" };
           const obj10 = { type: "text", content: url };
           const items4 = [obj10];
           obj9.content = items4;
@@ -257,7 +257,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, url) {
     return obj57;
   }
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ChannelTypes: closure_9, ME: c10 } = Constants);
 let obj = {
   channelMention: {
@@ -326,7 +326,7 @@ let obj2 = {
   }
 };
 obj.channelOrMessageUrl = {
-  order: _modDef1951.defaultRules.url.order - 0.5,
+  order: _modDef1948.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
@@ -351,7 +351,7 @@ obj.channelOrMessageUrl = {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     LinkUtils;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "ix" };
+      const obj = { type: "link", content: null, target: null, title: "unicodeVersion" };
       const obj2 = { type: "text", content: tmp };
       const items = [obj2];
       obj.content = items;
@@ -386,7 +386,7 @@ obj.channelOrMessageUrl = {
   }
 };
 let obj3 = {
-  order: _modDef1951.defaultRules.url.order - 0.5,
+  order: _modDef1948.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE = LinkUtils.CHANNEL_OR_MESSAGES_URL_WITH_QUERY_RE;
@@ -411,7 +411,7 @@ let obj3 = {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     LinkUtils;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "ix" };
+      const obj = { type: "link", content: null, target: null, title: "unicodeVersion" };
       const obj2 = { type: "text", content: tmp };
       const items = [obj2];
       obj.content = items;
@@ -446,7 +446,7 @@ let obj3 = {
   }
 };
 obj.mediaPostLink = {
-  order: _modDef1951.defaultRules.url.order - 0.5,
+  order: _modDef1948.defaultRules.url.order - 0.5,
   requiredFirstCharacters: ["h"],
   match(arg0) {
     const MEDIA_POST_URL_RE = LinkUtils.MEDIA_POST_URL_RE;
@@ -485,7 +485,7 @@ obj.mediaPostLink = {
         }
       }
     }
-    const obj = { type: "link", content: null, target: tmp, title: "ix" };
+    const obj = { type: "link", content: null, target: tmp, title: "unicodeVersion" };
     const items = [{ type: "text", content: tmp }];
     obj.content = items;
     return obj;

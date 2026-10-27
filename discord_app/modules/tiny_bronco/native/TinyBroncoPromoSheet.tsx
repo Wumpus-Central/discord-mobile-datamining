@@ -1,24 +1,24 @@
-// === Module 16010: TinyBroncoPromoSheet ===
+// === Module 16048: TinyBroncoPromoSheet ===
 
-// Module 16010 (TinyBroncoPromoSheet)
+// Module 16048 (TinyBroncoPromoSheet)
 import nativeDefault from "native" /* 587 */;
-import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2067 */;
-import _modDef3122 from "module_3122" /* 3122 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6657 */;
-import openUserSettings from "openUserSettings" /* 7490 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7883 */;
-import openTinyBroncoPromoSheet from "openTinyBroncoPromoSheet" /* 16009 */;
+import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
+import _modDef3123 from "module_3123" /* 3123 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6658 */;
+import openUserSettings from "openUserSettings" /* 7491 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7884 */;
+import openTinyBroncoPromoSheet from "openTinyBroncoPromoSheet" /* 16047 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const TINY_BRONCO_BLOG_URL = fn(6665).TINY_BRONCO_BLOG_URL;
-const Constants = fn(1087);
+const TINY_BRONCO_BLOG_URL = fn(6666).TINY_BRONCO_BLOG_URL;
+const Constants = fn(1084);
 ({ HelpdeskArticles: hasOwnProperty, UserSettingsSections: metroRequire } = Constants);
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { illustration: null, actions: null };
 let size = { width: 198, height: 132, marginTop: nativeDefault.space.PX_16 };
 obj2.illustration = size;
@@ -33,9 +33,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TinyBron
   closure_10();
   let obj = dismissOnce(576);
   const tmp = dismissOnce;
-  const isVerifiedTeen = dismissOnce(6654).useIsVerifiedTeen();
-  let obj2 = dismissOnce(6654);
-  dismissOnce = dismissOnce(16011).useDismissOnce(markAsDismissed.markAsDismissed);
+  const isVerifiedTeen = dismissOnce(6655).useIsVerifiedTeen();
+  let obj2 = dismissOnce(6655);
+  dismissOnce = dismissOnce(16049).useDismissOnce(markAsDismissed.markAsDismissed);
   if (cResult[0] !== dismissOnce) {
     const fn = function o() {
       dismissOnce(ContentDismissActionType.USER_DISMISS);
@@ -185,8 +185,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TinyBron
     }
   }
   const obj4 = { text: null, onPress: null };
-  const intl = tmp(1128).intl;
-  const obj3 = dismissOnce(16011);
+  const intl = tmp(1125).intl;
+  const obj3 = dismissOnce(16049);
   if (isVerifiedTeen) {
     class M {
       constructor() {
@@ -221,13 +221,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TinyBron
   cResult[12] = M;
   cResult[13] = isVerifiedTeen;
   cResult[14] = tmp15;
-  tmp14 = _modDef3122;
+  tmp14 = _modDef3123;
 }) : (function TinyBroncoPromoSheet(markAsDismissed) {
   let dismissOnce;
   const tmp = closure_10();
-  const isVerifiedTeen = dismissOnce(6654).useIsVerifiedTeen();
-  let obj = dismissOnce(6654);
-  dismissOnce = dismissOnce(16011).useDismissOnce(markAsDismissed.markAsDismissed);
+  const isVerifiedTeen = dismissOnce(6655).useIsVerifiedTeen();
+  let obj = dismissOnce(6655);
+  dismissOnce = dismissOnce(16049).useDismissOnce(markAsDismissed.markAsDismissed);
   const items = [dismissOnce];
   const items1 = [dismissOnce];
   const callback = noop.useCallback(() => {
@@ -261,9 +261,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TinyBron
     ActionSheetActionCreatorsDefault.hideActionSheet(openTinyBroncoPromoSheet.TINY_BRONCO_PROMO_SHEET_KEY);
     openUserSettings.openUserSettings({ screen: constants2.AGE_GROUP });
   }, items4);
-  const intl = dismissOnce(1128).intl;
+  const intl = dismissOnce(1125).intl;
   const string = intl.string;
-  const tmp13 = _modDef3122;
+  const tmp13 = _modDef3123;
   if (isVerifiedTeen) {
     obj3.text = string(tmp13["+7NlgO"]);
     obj3.onPress = callback3;
@@ -277,15 +277,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TinyBron
   }
   const obj4 = { illustration: null, title: null, description: null, onDismiss: null, actions: null };
   const obj5 = { source: null, style: null, resizeMode: "contain" };
-  let obj2 = dismissOnce(16011);
-  obj5.source = tmp14(16012);
+  let obj2 = dismissOnce(16049);
+  obj5.source = tmp14(16050);
   obj5.style = tmp.illustration;
-  obj4.illustration = closure_8(tmp14(5669), obj5);
-  const intl2 = tmp2(1128).intl;
-  obj4.title = intl2.string(tmp14(3122).GdTVPF);
-  const intl3 = tmp2(1128).intl;
+  obj4.illustration = closure_8(tmp14(5670), obj5);
+  const intl2 = tmp2(1125).intl;
+  obj4.title = intl2.string(tmp14(3123).GdTVPF);
+  const intl3 = tmp2(1125).intl;
   const format = intl3.format;
-  const tmp14Result2 = tmp14(3122);
+  const tmp14Result2 = tmp14(3123);
   if (isVerifiedTeen) {
     const obj6 = { handleOnConfirmAgeHook: callback2 };
     let formatResult = format(tmp14Result2["Ga2z/E"], obj6);
@@ -296,13 +296,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TinyBron
   obj4.description = formatResult;
   obj4.onDismiss = callback;
   const obj8 = { size: "lg", style: tmp.actions, children: null };
-  const items5 = [closure_8(dismissOnce(5244).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress }), ];
+  const items5 = [closure_8(dismissOnce(5245).Button, { size: "lg", text: tmp15.text, onPress: tmp15.onPress }), ];
   const obj10 = { size: "lg", variant: "secondary", text: null, onPress: null };
-  const intl4 = tmp2(1128).intl;
-  obj10.text = intl4.string(dismissOnce(1128).t["NX+WJN"]);
+  const intl4 = tmp2(1125).intl;
+  obj10.text = intl4.string(dismissOnce(1125).t["NX+WJN"]);
   obj10.onPress = callback1;
-  items5[1] = closure_8(dismissOnce(5244).Button, obj10);
+  items5[1] = closure_8(dismissOnce(5245).Button, obj10);
   obj8.children = items5;
-  obj4.actions = closure_9(dismissOnce(6696).ButtonGroup, obj8);
-  return closure_8(dismissOnce(10856).PromoSheet, obj4);
+  obj4.actions = closure_9(dismissOnce(6697).ButtonGroup, obj8);
+  return closure_8(dismissOnce(10859).PromoSheet, obj4);
 });

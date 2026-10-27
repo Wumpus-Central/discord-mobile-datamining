@@ -1,12 +1,12 @@
-// === Module 9800: useStoreFrontPrice ===
+// === Module 9802: useStoreFrontPrice ===
 
-// Module 9800 (useStoreFrontPrice)
+// Module 9802 (useStoreFrontPrice)
 import c from "c" /* 576 */;
-import PremiumUtils from "PremiumUtils" /* 2053 */;
+import PremiumUtils from "PremiumUtils" /* 2050 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const constants = fn(1087).PriceSetAssignmentPurchaseTypes;
+const constants = fn(1084).PriceSetAssignmentPurchaseTypes;
 const PriceStates = { PRICE_AVAILABLE: "PRICE_AVAILABLE", SUBSCRIPTION_PLAN_UNAVAILABLE: "SUBSCRIPTION_PLAN_UNAVAILABLE", STOREFRONT_UNAVAILABLE: "STOREFRONT_UNAVAILABLE", MISMATCHING_COUNTRIES: "MISMATCHING_COUNTRIES", COUNTRY_PRICE_UNAVAILABLE: "COUNTRY_PRICE_UNAVAILABLE" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

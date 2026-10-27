@@ -1,24 +1,24 @@
-// === Module 17669: DMChannel ===
+// === Module 17710: DMChannel ===
 
-// Module 17669 (DMChannel)
+// Module 17710 (DMChannel)
 import nativeDefault from "native" /* 587 */;
-import transitionToChannel from "transitionToChannel" /* 5707 */;
+import transitionToChannel from "transitionToChannel" /* 5708 */;
 import getChannelA11yLabelDefault from "getChannelA11yLabel" /* 9018 */;
-import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10691 */;
-import useCallA11yStateDefault from "useCallA11yState" /* 17459 */;
-import ChannelItemDefault from "ChannelItem" /* 17555 */;
+import openChannelLongPressActionSheet from "openChannelLongPressActionSheet" /* 10694 */;
+import useCallA11yStateDefault from "useCallA11yState" /* 17500 */;
+import ChannelItemDefault from "ChannelItem" /* 17596 */;
 import noop from "module_19" /* 19 */;
-import ReadStateStore from "ReadStateStore" /* 6771 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
+import ReadStateStore from "ReadStateStore" /* 6772 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
 
 require = fn;
-const UnreadSetting = fn(6705).UnreadSetting;
+const UnreadSetting = fn(6706).UnreadSetting;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
-let obj = { container: { marginVertical: fn(11953).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
+const createStyles = fn(4972);
+let obj = { container: { marginVertical: fn(11954).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md } };
 let closure_8 = createStyles.createStyles(obj);
 const ReactCompilerGating = fn(558);
-let obj3 = { marginVertical: fn(11953).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
+let obj3 = { marginVertical: fn(11954).CHANNEL_MARGIN_VERTICAL, marginHorizontal: 8, borderRadius: nativeDefault.radii.md };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/channel_list_v2/native/items/DMChannel.tsx");
 

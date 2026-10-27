@@ -1,10 +1,10 @@
-// === Module 15292: createAccessibleNativeStackNavigator ===
+// === Module 15328: createAccessibleNativeStackNavigator ===
 
-// Module 15292 (createAccessibleNativeStackNavigator)
+// Module 15328 (createAccessibleNativeStackNavigator)
 import c from "c" /* 576 */;
-import Link from "Link" /* 1506 */;
-import Navigator from "Navigator" /* 7095 */;
-import NativeStackNavigator from "NativeStackNavigator" /* 9743 */;
+import Link from "Link" /* 1503 */;
+import Navigator from "Navigator" /* 7097 */;
+import NativeStackNavigator from "NativeStackNavigator" /* 9745 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,15 +1,15 @@
-// === Module 15772: audioSession ===
+// === Module 15810: audioSession ===
 
-// Module 15772 (audioSession)
+// Module 15810 (audioSession)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
-let Constants = fn(6378);
+let Constants = fn(6379);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_EMBEDDED_APP_SCOPE, RPC_SCOPE_CONFIG } = Constants);
-Constants = fn(1087);
+Constants = fn(1084);
 ({ RPCCommands, RPCErrors: closure_4 } = Constants);
 let obj = {};
-const CONTEXT_MENU_ICON_NAMES = fn(15725);
+const CONTEXT_MENU_ICON_NAMES = fn(15761);
 let obj3 = {
   scope: null,
   handler(socket) {

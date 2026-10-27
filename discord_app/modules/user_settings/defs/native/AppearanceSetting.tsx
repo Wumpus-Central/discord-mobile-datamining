@@ -1,17 +1,17 @@
-// === Module 16618: AppearanceSetting ===
+// === Module 16660: AppearanceSetting ===
 
-// Module 16618 (AppearanceSetting)
+// Module 16660 (AppearanceSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import util from "util" /* 1128 */;
-import ClientThemesUtils from "ClientThemesUtils" /* 1254 */;
-import _modDef2768 from "module_2768" /* 2768 */;
-import useThemeDefault from "useTheme" /* 5205 */;
-import useActiveTheme from "useActiveTheme" /* 9710 */;
-import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4995 */;
+import util from "util" /* 1125 */;
+import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
+import _modDef2769 from "module_2769" /* 2769 */;
+import useThemeDefault from "useTheme" /* 5206 */;
+import useActiveTheme from "useActiveTheme" /* 9712 */;
+import ClientThemesBackgroundStore from "ClientThemesBackgroundStore" /* 4996 */;
 
 require = fn;
-const ActiveThemeType = fn(1210).ActiveThemeType;
+const ActiveThemeType = fn(1207).ActiveThemeType;
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppearanceSettingTrailing() {
   const cResult = c.c(9);
@@ -44,7 +44,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppeara
     const _Symbol2 = Symbol;
     if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
       const intl2 = util.intl;
-      const stringResult = intl2.string(_modDef2768.KSBBpC);
+      const stringResult = intl2.string(_modDef2769.KSBBpC);
       cResult[4] = stringResult;
       let tmp19 = stringResult;
     } else {
@@ -95,7 +95,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppeara
   const activeThemeType = useActiveTheme.useActiveThemeType();
   if (ActiveThemeType.CUSTOM === activeThemeType) {
     const intl2 = util.intl;
-    return intl2.string(_modDef2768.KSBBpC);
+    return intl2.string(_modDef2769.KSBBpC);
   } else if (ActiveThemeType.CLIENT === activeThemeType) {
     let name;
     if (stateFromStores != null) {
@@ -115,17 +115,17 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAppeara
     return ActiveThemeType.DEFAULT === activeThemeType ? themeName : undefined;
   }
 });
-const SettingBuilders = fn(11209);
+const SettingBuilders = fn(11212);
 const route = SettingBuilders.createRoute({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["iHH+ky"]);
   },
   parent: null,
-  IconComponent: fn(16619).PaintPaletteIcon,
+  IconComponent: fn(16661).PaintPaletteIcon,
   useTrailing: tmp2,
   screen: {
-    route: fn(1087).UserSettingsSections.APPEARANCE,
+    route: fn(1084).UserSettingsSections.APPEARANCE,
     getComponent() {
       return require("SettingsAppearanceScreen").default;
     }

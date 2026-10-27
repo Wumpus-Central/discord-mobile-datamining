@@ -3,7 +3,7 @@
 // Module 9167 (HeadphonesDenyIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5668 */;
+import BaseIconImage from "BaseIconImage" /* 5669 */;
 import _mod9168 from "module_9168" /* 9168 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;

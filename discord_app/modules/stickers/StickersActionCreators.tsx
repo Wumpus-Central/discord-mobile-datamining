@@ -1,16 +1,16 @@
-// === Module 10155: StickersActionCreators ===
+// === Module 10157: StickersActionCreators ===
 
-// Module 10155 (StickersActionCreators)
+// Module 10157 (StickersActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import util from "util" /* 1128 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5908 */;
-import InlineUploaderDefault from "InlineUploader" /* 7079 */;
+import util from "util" /* 1125 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5909 */;
+import InlineUploaderDefault from "InlineUploader" /* 7081 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6496 */;
-import LocaleStore from "LocaleStore" /* 2068 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6703 */;
-import UserStore from "UserStore" /* 1392 */;
-import StickersStore from "StickersStore" /* 6766 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6497 */;
+import LocaleStore from "LocaleStore" /* 2065 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6704 */;
+import UserStore from "UserStore" /* 1389 */;
+import StickersStore from "StickersStore" /* 6767 */;
 
 const require = globalThis.__r;
 
@@ -360,8 +360,8 @@ let closure_18 = async function _updateGuildSticker(arg0, arg1) {
     return value.body;
   })();
 };
-const Endpoints = fn(1087).Endpoints;
-const UserSettingsConstants = fn(1097);
+const Endpoints = fn(1084).Endpoints;
+const UserSettingsConstants = fn(1094);
 ({ MAX_FAVORITES: c10, UserSettingsDelay: closure_11 } = UserSettingsConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/stickers/StickersActionCreators.tsx");

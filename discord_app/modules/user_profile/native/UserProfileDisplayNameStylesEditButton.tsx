@@ -1,27 +1,27 @@
-// === Module 15864: UserProfileDisplayNameStylesEditButton ===
+// === Module 15902: UserProfileDisplayNameStylesEditButton ===
 
-// Module 15864 (UserProfileDisplayNameStylesEditButton)
+// Module 15902 (UserProfileDisplayNameStylesEditButton)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10661 */;
-import _modDef14497 from "module_14497" /* 14497 */;
-import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 15869 */;
-import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 15870 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10664 */;
+import _modDef14533 from "module_14533" /* 14533 */;
+import getDisplayNameStylesFontNameDefault from "getDisplayNameStylesFontName" /* 15907 */;
+import DisplayNameStylesColorSwatchDefault from "DisplayNameStylesColorSwatch" /* 15908 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
 const noop = fn(19);
 ({ useCallback: closure_4, useMemo: hasOwnProperty } = noop);
 const View = fn(17).View;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, UserSettingsSections: closure_8 } = Constants);
-const ContentDismissActionType = fn(4820).ContentDismissActionType;
-const HexagonCampaignConstants = fn(4996);
+const ContentDismissActionType = fn(4821).ContentDismissActionType;
+const HexagonCampaignConstants = fn(4997);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: c10, HexagonCampaignPerk: closure_11, HexagonCampaignPerkAvailability: closure_12 } = HexagonCampaignConstants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { ggContainer: null, noneIcon: null };
 let size = { height: 48, width: 48, borderRadius: nativeDefault.radii.xs, backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED, alignItems: "center", justifyContent: "center", paddingBottom: 4 };
 obj2.ggContainer = size;
@@ -715,8 +715,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                 }
                 const fn = function $() {
                   if (null == closure_6) {
-                    const obj2 = { source: _modDef14497, style: closure_3.noneIcon };
-                    let tmp10 = jsx(native.Icon, { source: _modDef14497, style: closure_3.noneIcon });
+                    const obj2 = { source: _modDef14533, style: closure_3.noneIcon };
+                    let tmp10 = jsx(native.Icon, { source: _modDef14533, style: closure_3.noneIcon });
                   } else {
                     const obj = { style: closure_3.ggContainer, children: null };
                     const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };
@@ -843,8 +843,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   }, items2);
   const tmp21 = nativeStackNavigation(() => {
     if (null == closure_6) {
-      const obj2 = { source: _modDef14497, style: closure_3.noneIcon };
-      let tmp10 = jsx(native.Icon, { source: _modDef14497, style: closure_3.noneIcon });
+      const obj2 = { source: _modDef14533, style: closure_3.noneIcon };
+      let tmp10 = jsx(native.Icon, { source: _modDef14533, style: closure_3.noneIcon });
     } else {
       const obj = { style: closure_3.ggContainer, children: null };
       const obj3 = { userId: user.id, guildId, userName: "Gg", pendingDisplayNameStyles: tmp, ignoreDisabledStylesSetting: true, variant: "heading-xl/semibold" };

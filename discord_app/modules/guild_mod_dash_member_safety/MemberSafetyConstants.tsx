@@ -1,8 +1,8 @@
-// === Module 4907: MemberSafetyConstants ===
+// === Module 4908: MemberSafetyConstants ===
 
-// Module 4907 (MemberSafetyConstants)
-import Constants from "Constants" /* 1087 */;
-import BigFlagUtils from "BigFlagUtils" /* 1099 */;
+// Module 4908 (MemberSafetyConstants)
+import Constants from "Constants" /* 1084 */;
+import BigFlagUtils from "BigFlagUtils" /* 1096 */;
 import size from "module_2" /* 2 */;
 
 const Permissions = Constants.Permissions;

@@ -1,11 +1,11 @@
-// === Module 4826: FavoriteStore ===
+// === Module 4827: FavoriteStore ===
 
-// Module 4826 (FavoriteStore)
+// Module 4827 (FavoriteStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import preloaded_user_settings from "preloaded_user_settings" /* 1211 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
+import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 
 require = fn;
 function initializeFromUserSettings() {
@@ -89,9 +89,9 @@ function initializeFromUserSettings() {
   }
   return flag3;
 }
-const createChannelRecord = fn(4827).createChannelRecord;
-let closure_4 = fn(4836).FAVORITES_UNCATEGORIZED_PARENT_ID;
-const Constants = fn(1087);
+const createChannelRecord = fn(4828).createChannelRecord;
+let closure_4 = fn(4837).FAVORITES_UNCATEGORIZED_PARENT_ID;
+const Constants = fn(1084);
 ({ ChannelTypes: hasOwnProperty, FAVORITES: metroRequire } = Constants);
 let value2 = false;
 const Store = initializeDefault.Store;

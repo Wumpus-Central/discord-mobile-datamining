@@ -1,15 +1,15 @@
-// === Module 13770: usePreviewableMedia ===
+// === Module 13784: usePreviewableMedia ===
 
-// Module 13770 (usePreviewableMedia)
+// Module 13784 (usePreviewableMedia)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 5252 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5602 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 5999 */;
-import inlineStyles from "inlineStyles" /* 7962 */;
+import useToken from "useToken" /* 5253 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5603 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6000 */;
+import inlineStyles from "inlineStyles" /* 7960 */;
 import CirclePlayIcon from "CirclePlayIcon" /* 9312 */;
-import FileIcon from "FileIcon" /* 12062 */;
-import WaveformIcon from "WaveformIcon" /* 13771 */;
+import FileIcon from "FileIcon" /* 12063 */;
+import WaveformIcon from "WaveformIcon" /* 13785 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -144,12 +144,12 @@ function getBasePreviewableMedia(arg0) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MessageEmbedTypes: hasOwnProperty, MessageFlags: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const PreviewableMediaTypes = { IMAGE: "image", VIDEO: "video", AUDIO: "audio", FILE: "file", STICKER: "sticker", GIF: "gif", VOICE_MESSAGE: "voice_message" };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj3 = { voiceMessageIconOverlay: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

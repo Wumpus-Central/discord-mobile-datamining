@@ -1,20 +1,20 @@
-// === Module 2670: ? ===
+// === Module 2671: ? ===
 
-// Module 2670
-import AssetJsonUtils from "AssetJsonUtils" /* 1132 */;
-import _mod2671 from "module_2671" /* 2671 */;
-import module_1167_mod from "module_1167" /* 1167 */;
+// Module 2671
+import AssetJsonUtils from "AssetJsonUtils" /* 1129 */;
+import _mod2672 from "module_2672" /* 2672 */;
+import module_1164_mod from "module_1164" /* 1164 */;
 import size from "module_2" /* 2 */;
 
-let module_1167 = module_1167_mod;
-const loader = module_1167.createLoader({
+let module_1164 = module_1164_mod;
+const loader = module_1164.createLoader({
   () => {
-    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2671);
+    const jsonAsset = AssetJsonUtils.loadJsonAsset(_mod2672);
     return jsonAsset.then((result) => ({ default: result }));
   }
 }, "en-US");
-let module_1167 = module_1167_mod;
-const messagesProxy = module_1167.makeMessagesProxy(loader);
+let module_1164 = module_1164_mod;
+const messagesProxy = module_1164.makeMessagesProxy(loader);
 const result = size.fileFinishedImporting("modules/report_to_mod/ReportToMod.messages.js");
 
 export default messagesProxy;

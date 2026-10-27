@@ -1,10 +1,10 @@
 // === Module 8583: transformNativeMarkupLink ===
 
 // Module 8583 (transformNativeMarkupLink)
-import MarkupTypes from "MarkupTypes" /* 5980 */;
-import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5986 */;
-import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5992 */;
-import MarkupAttachmentLinkRule from "MarkupAttachmentLinkRule" /* 6003 */;
+import MarkupTypes from "MarkupTypes" /* 5981 */;
+import UnicodeSanitizationUtils from "UnicodeSanitizationUtils" /* 5987 */;
+import MarkupChannelMentionRule from "MarkupChannelMentionRule" /* 5993 */;
+import MarkupAttachmentLinkRule from "MarkupAttachmentLinkRule" /* 6004 */;
 import transformNativeMarkupMention from "transformNativeMarkupMention" /* 8500 */;
 import ChannelLinkUrls from "ChannelLinkUrls" /* 8584 */;
 import size from "module_2" /* 2 */;

@@ -6,12 +6,12 @@ import nativeDefault from "native" /* 587 */;
 import BotTagDefault from "BotTag" /* 9134 */;
 import noop from "module_19" /* 19 */;
 
-const Text_Text = Text(5234);
+const Text_Text = Text(5235);
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flexGrow: 1, alignItems: "center", flexDirection: "row" }, botTag: { marginLeft: nativeDefault.space.PX_4 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

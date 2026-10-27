@@ -1,29 +1,29 @@
-// === Module 8343: SystemMessageUtils ===
+// === Module 8342: SystemMessageUtils ===
 
-// Module 8343 (SystemMessageUtils)
+// Module 8342 (SystemMessageUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import util from "util" /* 1128 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4891 */;
-import useChannelName from "useChannelName" /* 5604 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5989 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6012 */;
-import useMessageAuthor from "useMessageAuthor" /* 6366 */;
-import MarkupParser from "MarkupParser" /* 8344 */;
-import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8348 */;
-import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8349 */;
-import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8351 */;
-import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8352 */;
-import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8353 */;
-import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 8354 */;
-import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 8355 */;
-import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 8356 */;
+import util from "util" /* 1125 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4892 */;
+import useChannelName from "useChannelName" /* 5605 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 5990 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6013 */;
+import useMessageAuthor from "useMessageAuthor" /* 6367 */;
+import MarkupParser from "MarkupParser" /* 8343 */;
+import AutomodNotificationEmbedTypeKeys from "AutomodNotificationEmbedTypeKeys" /* 8347 */;
+import GuildRoleSubscriptionSystemMessageUtils from "GuildRoleSubscriptionSystemMessageUtils" /* 8348 */;
+import GuildProductSystemMessageUtils from "GuildProductSystemMessageUtils" /* 8350 */;
+import ApplicationSubscriptionSystemMessageUtils from "ApplicationSubscriptionSystemMessageUtils" /* 8351 */;
+import PrivateChannelIntegrationSystemMessageUtils from "PrivateChannelIntegrationSystemMessageUtils" /* 8352 */;
+import PopularMusicSystemMessageTypes from "PopularMusicSystemMessageTypes" /* 8353 */;
+import PopularMusicSystemMessageCopy from "PopularMusicSystemMessageCopy" /* 8354 */;
+import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 8355 */;
 import _slicedToArray from "module_32" /* 32 */;
-import MessageRecord from "MessageRecord" /* 4914 */;
+import MessageRecord from "MessageRecord" /* 4915 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserStore from "UserStore" /* 1392 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
@@ -33,7 +33,7 @@ function getSystemMessageUserJoinMobile(id) {
   const obj = SnowflakeUtilsDefault;
   return items[obj.extractTimestamp(obj, id) % items.length];
 }
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ MessageEmbedTypes: c10, MessageTypes: closure_11, NOOP: closure_12 } = Constants);
 let closure_13 = { "234395307759108106": "https://groovy.bot/commands", "365975655608745985": "https://www.pokecord.com/getting-started", "512412940897484800": "http://jameslantz.net/smilebot" };
 const size = fn(2);

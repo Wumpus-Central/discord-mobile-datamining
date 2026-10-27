@@ -1,17 +1,17 @@
-// === Module 19159: GuildTemplateSettingsUtils ===
+// === Module 19197: GuildTemplateSettingsUtils ===
 
-// Module 19159 (GuildTemplateSettingsUtils)
+// Module 19197 (GuildTemplateSettingsUtils)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import PermissionStore from "PermissionStore" /* 4903 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7567 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import PermissionStore from "PermissionStore" /* 4904 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7568 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1087).Permissions;
+const Permissions = fn(1084).Permissions;
 fn(558);
 const ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCanViewAllChannels(arg0) {
@@ -75,11 +75,11 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled() ? (
         closure_0 = asyncGeneratorStep(async (arg0) => {
           closure_129_0 = closure_0;
           tmp3(null);
-          await closure_2_1(7425).loadTemplatesForGuild(closure_0);
+          await closure_2_1(7427).loadTemplatesForGuild(closure_0);
           if (1 === tmp7) {
             c4 = 0;
             closure_129_1 = closure_3;
-            const aPIError = new closure_0(6374).APIError(closure_129_1);
+            const aPIError = new closure_0(6375).APIError(closure_129_1);
             tmp3(aPIError);
             closure_1(closure_129_0);
             c6 = 3;
@@ -180,11 +180,11 @@ export const useGuildTemplate = ReactCompilerGating.isReactCompilerEnabled() ? (
     closure_0 = async function _fetchGuildTemplate2(arg0) {
       closure_129_0 = closure_0;
       tmp3(null);
-      await closure_2_1(7425).loadTemplatesForGuild(closure_0);
+      await closure_2_1(7427).loadTemplatesForGuild(closure_0);
       if (1 === tmp7) {
         c4 = 0;
         closure_129_1 = closure_3;
-        const aPIError = new closure_2_0(6374).APIError(closure_129_1);
+        const aPIError = new closure_2_0(6375).APIError(closure_129_1);
         tmp3(aPIError);
         closure_1(closure_129_0);
         c6 = 3;

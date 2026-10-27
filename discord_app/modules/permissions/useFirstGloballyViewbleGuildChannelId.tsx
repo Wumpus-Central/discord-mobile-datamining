@@ -1,13 +1,13 @@
-// === Module 17489: useFirstGloballyViewbleGuildChannelId ===
+// === Module 17530: useFirstGloballyViewbleGuildChannelId ===
 
-// Module 17489 (useFirstGloballyViewbleGuildChannelId)
-import PermissionUtilsAll from "PermissionUtils" /* 4908 */;
-import GuildChannelStore from "GuildChannelStore" /* 4901 */;
+// Module 17530 (useFirstGloballyViewbleGuildChannelId)
+import PermissionUtilsAll from "PermissionUtils" /* 4909 */;
+import GuildChannelStore from "GuildChannelStore" /* 4902 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/permissions/useFirstGloballyViewbleGuildChannelId.tsx");

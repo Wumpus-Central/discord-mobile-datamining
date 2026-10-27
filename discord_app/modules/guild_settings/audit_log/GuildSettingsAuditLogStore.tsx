@@ -1,20 +1,20 @@
-// === Module 19049: GuildSettingsAuditLogStore ===
+// === Module 19087: GuildSettingsAuditLogStore ===
 
-// Module 19049 (GuildSettingsAuditLogStore)
+// Module 19087 (GuildSettingsAuditLogStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import AuditLogRecord from "AuditLogRecord" /* 19050 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import BigFlagUtils from "BigFlagUtils" /* 1099 */;
+import AuditLogRecord from "AuditLogRecord" /* 19088 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import BigFlagUtils from "BigFlagUtils" /* 1096 */;
 
 const require = globalThis.__r;
 
-const AuditLogChange = fn(19050).AuditLogChange;
-let closure_4 = fn(4827).isGuildSelectableChannelType;
-const hasAnyPermission = fn(4878).hasAnyPermission;
-const Constants = fn(1087);
+const AuditLogChange = fn(19088).AuditLogChange;
+let closure_4 = fn(4828).isGuildSelectableChannelType;
+const hasAnyPermission = fn(4879).hasAnyPermission;
+const Constants = fn(1084);
 const AuditLogActions = Constants.AuditLogActions;
 ({ AuditLogActionTypes: c10, AuditLogTargetTypes: closure_11, AuditLogChangeKeys: closure_12, AUDIT_LOG_PAGE_LIMIT: map1, GuildSettingsSections: closure_14, Permissions } = Constants);
 let closure_15 = BigFlagUtils.combine(Permissions.KICK_MEMBERS, Permissions.BAN_MEMBERS, Permissions.ADMINISTRATOR, Permissions.MANAGE_CHANNELS, Permissions.MANAGE_GUILD, Permissions.MANAGE_MESSAGES, Permissions.MANAGE_NICKNAMES, Permissions.MANAGE_ROLES, Permissions.MANAGE_WEBHOOKS, Permissions.MANAGE_GUILD_EXPRESSIONS, Permissions.MOVE_MEMBERS, Permissions.MUTE_MEMBERS, Permissions.DEAFEN_MEMBERS);

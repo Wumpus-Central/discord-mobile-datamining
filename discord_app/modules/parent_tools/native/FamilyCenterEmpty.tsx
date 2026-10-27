@@ -1,14 +1,14 @@
-// === Module 16211: FamilyCenterEmpty ===
+// === Module 16249: FamilyCenterEmpty ===
 
-// Module 16211 (FamilyCenterEmpty)
+// Module 16249 (FamilyCenterEmpty)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5234 */;
+import Text_Text from "Text/Text" /* 5235 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_4 = createStyles.createStyles({ empty: { display: "flex", alignItems: "center", justifyContent: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

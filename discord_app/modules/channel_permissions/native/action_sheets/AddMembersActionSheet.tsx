@@ -2,20 +2,20 @@
 
 // Module 8988 (AddMembersActionSheet)
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4908 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4980 */;
-import RegexUtilsDefault from "RegexUtils" /* 5608 */;
-import GuildUtilsDefault from "GuildUtils" /* 6829 */;
+import util from "util" /* 1125 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4909 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4981 */;
+import RegexUtilsDefault from "RegexUtils" /* 5609 */;
+import GuildUtilsDefault from "GuildUtils" /* 6831 */;
 import ChannelPermissionsUtilsAll from "ChannelPermissionsUtils" /* 8972 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4883 */;
-import GuildRoleStore from "GuildRoleStore" /* 4877 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserStore from "UserStore" /* 1392 */;
+import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildRoleStore from "GuildRoleStore" /* 4878 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 function _toPropertyKey(obj) {
@@ -347,12 +347,12 @@ class AddMembersBody {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, ScrollView: closure_9 } = get_ActivityIndicator);
-const ChannelPermissionsConstants = fn(7875);
+const ChannelPermissionsConstants = fn(7876);
 ({ RowType: closure_14, MEMBER_REQUEST_COUNT: closure_15 } = ChannelPermissionsConstants);
-const Permissions = fn(1098).Permissions;
+const Permissions = fn(1095).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_17, Fragment: closure_18, jsxs: closure_19 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flex: 1 }, inputContainer: { alignItems: "stretch", paddingHorizontal: nativeDefault.space.PX_16, paddingVertical: nativeDefault.space.PX_12 }, tagRoleColor: { height: 12, width: 12, borderRadius: 6 }, tagAvatar: null, emptyState: null, emptyStateText: null, sectionRowWrapper: null, adminWarning: null };
 let size = { width: 16, height: 16, borderRadius: nativeDefault.radii.sm };
 obj2.tagAvatar = size;
@@ -385,12 +385,12 @@ export default function AddMembersActionSheet(channel) {
       if (tmp) {
         if (row.rowType === constants.ROLE) {
           closure_2 = closure_2 + 1;
-          closure_1_0.push(channel(5994).permissionOverwriteForRole(row.id, closure_0.type));
-          const obj = channel(5994);
+          closure_1_0.push(channel(5995).permissionOverwriteForRole(row.id, closure_0.type));
+          const obj = channel(5995);
         } else if (row.rowType === tmp2.MEMBER) {
           closure_1 = closure_1 + 1;
-          closure_1_0.push(channel(5994).permissionOverwriteForUser(row.id, closure_0.type));
-          const obj2 = channel(5994);
+          closure_1_0.push(channel(5995).permissionOverwriteForUser(row.id, closure_0.type));
+          const obj2 = channel(5995);
         }
       }
     });
@@ -402,11 +402,11 @@ export default function AddMembersActionSheet(channel) {
       c5 = 3;
       throw value;
     } else if (arg0 !== 2) {
-      const result = channel(5662).memberOrRoleAddedToast(closure_128_2, closure_128_1);
-      channel(5662);
-      tmp3(5210).hideActionSheet();
+      const result = channel(5663).memberOrRoleAddedToast(closure_128_2, closure_128_1);
+      channel(5663);
+      tmp3(5211).hideActionSheet();
       dependencyMap = 0;
-      tmp3(5210);
+      tmp3(5211);
     }
     return value;
   };
@@ -421,7 +421,7 @@ export default function AddMembersActionSheet(channel) {
     }
     return GuildStore.getGuild(guildId);
   });
-  let str = pendingAdditions(5604)(channel, true);
+  let str = pendingAdditions(5605)(channel, true);
   if (str == null) {
     str = "";
   }
@@ -431,14 +431,14 @@ export default function AddMembersActionSheet(channel) {
     let _Object = Object;
     const tmp10 = 0 === Object.keys(pendingAdditions).length;
     let obj2 = { title: null, subtitle: null, trailing: null };
-    const intl3 = tmp4(1128).intl;
-    obj2.title = intl3.string(tmp4(1128).t.dMJ3Y6);
+    const intl3 = tmp4(1125).intl;
+    obj2.title = intl3.string(tmp4(1125).t.dMJ3Y6);
     obj2.subtitle = str;
     if (channel.canSkip) {
       if (tmp10) {
         const obj3 = { size: "sm", text: null, onPress: null, variant: "secondary" };
-        const intl2 = tmp4(1128).intl;
-        obj3.text = intl2.string(tmp4(1128).t["5Wxrcd"]);
+        const intl2 = tmp4(1125).intl;
+        obj3.text = intl2.string(tmp4(1125).t["5Wxrcd"]);
         obj3.onPress = function onPress() {
           first(dependencyMap[34]).hideActionSheet();
         };
@@ -446,16 +446,16 @@ export default function AddMembersActionSheet(channel) {
       }
       const obj4 = { scrollable: true, header: null, startExpanded: true, children: null };
       obj2.trailing = closure_17(tmp12, obj7);
-      obj4.header = closure_17(tmp4(7248).BottomSheetTitleHeader, obj2);
+      obj4.header = closure_17(tmp4(7250).BottomSheetTitleHeader, obj2);
       const obj5 = { style: tmp.container, children: null };
       const obj6 = { channel, guild: stateFromStores, permission: channel.accessPermissions, pendingAdditions, setPendingAdditions: tmp2[1], inActionSheet: true };
       obj5.children = closure_17(AddMembersBody, obj6);
       obj4.children = closure_17(closure_8, obj5);
-      return closure_17(tmp4(5265).BottomSheet, obj4);
+      return closure_17(tmp4(5266).BottomSheet, obj4);
     }
     obj7 = { size: "sm", text: null, onPress: null, variant: null, disabled: null };
-    const intl = tmp4(1128).intl;
-    obj7.text = intl.string(tmp4(1128).t.OYkgVk);
+    const intl = tmp4(1125).intl;
+    obj7.text = intl.string(tmp4(1125).t.OYkgVk);
     obj7.onPress = function handleAddPressed() {
       const self = this;
       const apply = closure_2.apply;

@@ -1,16 +1,16 @@
-// === Module 6807: conjureDMAppChannel ===
+// === Module 6808: conjureDMAppChannel ===
 
-// Module 6807 (conjureDMAppChannel)
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6808 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6811 */;
-import ApplicationStore from "ApplicationStore" /* 2045 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import UserStore from "UserStore" /* 1392 */;
+// Module 6808 (conjureDMAppChannel)
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6809 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6813 */;
+import ApplicationStore from "ApplicationStore" /* 2042 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ ApplicationFlags: hasOwnProperty, ChannelTypes: metroRequire } = Constants);
 const DMAppChannel = "DMAppChannel";
 const ReactCompilerGating = fn(558);
@@ -84,7 +84,7 @@ export const useDMAppChannelApplicationId = ReactCompilerGating.isReactCompilerE
       if (tmpResult6.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
         id = data.id;
       }
-      tmpResult6 = tmp(6811);
+      tmpResult6 = tmp(6813);
     }
     cResult[6] = data;
     cResult[7] = id;
@@ -134,7 +134,7 @@ export const useDMAppChannelApplicationId = ReactCompilerGating.isReactCompilerE
     if (tmpResult.hasApplicationFlag(data, constants.DM_OPENS_ACTIVITY)) {
       id = data.id;
     }
-    tmpResult = tmp(6811);
+    tmpResult = tmp(6813);
   }
   return id;
 });

@@ -1,10 +1,10 @@
-// === Module 14338: useNote ===
+// === Module 14374: useNote ===
 
-// Module 14338 (useNote)
+// Module 14374 (useNote)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import NoteStore from "NoteStore" /* 14339 */;
+import NoteStore from "NoteStore" /* 14375 */;
 
 const require = globalThis.__r;
 
@@ -102,7 +102,7 @@ let closure_8 = async function _fetchNote() {
     }
   })();
 };
-const Endpoints = fn(1087).Endpoints;
+const Endpoints = fn(1084).Endpoints;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/user_profile/hooks/useNote.tsx");

@@ -1,32 +1,32 @@
-// === Module 17767: HomeDrawerGuildVoiceState ===
+// === Module 17808: HomeDrawerGuildVoiceState ===
 
-// Module 17767 (HomeDrawerGuildVoiceState)
+// Module 17808 (HomeDrawerGuildVoiceState)
 import _modDef12 from "module_12" /* 12 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import LinearGradientDefault from "LinearGradient" /* 5258 */;
-import FastImageDefault from "FastImage" /* 5669 */;
-import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11716 */;
-import AvatarPile from "AvatarPile" /* 14313 */;
-import BlockedUserUtils from "BlockedUserUtils" /* 15024 */;
+import util from "util" /* 1125 */;
+import native from "native" /* 1199 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import LinearGradientDefault from "LinearGradient" /* 5259 */;
+import FastImageDefault from "FastImage" /* 5670 */;
+import useFetchStreamPreviewDefault from "useFetchStreamPreview" /* 11718 */;
+import AvatarPile from "AvatarPile" /* 14349 */;
+import BlockedUserUtils from "BlockedUserUtils" /* 15060 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4901 */;
-import RelationshipStore from "RelationshipStore" /* 4913 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5717 */;
+import GuildChannelStore from "GuildChannelStore" /* 4902 */;
+import RelationshipStore from "RelationshipStore" /* 4914 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5718 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GUILD_VOCAL_CHANNELS_KEY = fn(4901).GUILD_VOCAL_CHANNELS_KEY;
-const ChannelTypes = fn(1087).ChannelTypes;
+const GUILD_VOCAL_CHANNELS_KEY = fn(4902).GUILD_VOCAL_CHANNELS_KEY;
+const ChannelTypes = fn(1084).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-let createStyles = fn(4971);
+let createStyles = fn(4972);
 let obj2 = { voiceContainer: { paddingRight: 8, height: 40, gap: 4, justifyContent: "center" }, streamPreviewShadow: null, streamPreview: null, streamPreviewDarkGradient: null, streamPreviewGradient: null, streamPreviewBorder: null };
 const merged = Object.assign(nativeDefault.shadows.SHADOW_MEDIUM);
 obj2.streamPreviewShadow = { borderRadius: nativeDefault.radii.sm };
@@ -89,8 +89,8 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceU
             }
           }
           const obj3 = { style: tmp5, children: null };
-          const obj4 = { size: guildId(1202).AvatarSizes.XSMALL, names: tmp6, totalCount: tmp10, children: cResult[8] };
-          obj3.children = closure_11(guildId(14313).AvatarPile, obj4);
+          const obj4 = { size: guildId(1199).AvatarSizes.XSMALL, names: tmp6, totalCount: tmp10, children: cResult[8] };
+          obj3.children = closure_11(guildId(14349).AvatarPile, obj4);
           const tmp18 = closure_11(View, obj3);
           cResult[11] = tmp6;
           cResult[12] = cResult[8];
@@ -131,7 +131,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function VoiceU
   }
   return tmp;
 });
-createStyles = fn(4971);
+createStyles = fn(4972);
 let obj4 = { tag: null, tagText: null };
 const rect1 = { paddingHorizontal: 4, paddingVertical: 1, borderBottomRightRadius: nativeDefault.radii.xs, overflow: "hidden", justifyContent: "center", alignItems: "center", backgroundColor: nativeDefault.unsafe_rawColors.RED_400, position: "absolute", top: 0, left: 0 };
 obj4.tag = rect1;

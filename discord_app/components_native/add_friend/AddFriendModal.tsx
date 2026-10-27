@@ -1,31 +1,31 @@
-// === Module 15096: AddFriendModal ===
+// === Module 15132: AddFriendModal ===
 
-// Module 15096 (AddFriendModal)
+// Module 15132 (AddFriendModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6672 */;
-import NavigatorHeader from "NavigatorHeader" /* 6924 */;
-import Navigator from "Navigator" /* 7095 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13585 */;
+import util from "util" /* 1125 */;
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
+import NavigatorHeader from "NavigatorHeader" /* 6926 */;
+import Navigator from "Navigator" /* 7097 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13599 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserStore from "UserStore" /* 1392 */;
-import TextStyles from "TextStyles" /* 6651 */;
+import UserStore from "UserStore" /* 1389 */;
+import TextStyles from "TextStyles" /* 6652 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AnalyticEvents: closure_8, Fonts } = Constants);
-const ContactPermissions = fn(13583).ContactPermissions;
+const ContactPermissions = fn(13597).ContactPermissions;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { headerText: null, subheaderText: null, input: null, otherOptionsContainer: null, rowContainer: null };
 let obj3 = {};
 let merged = Object.assign(TextStyles(Fonts.DISPLAY_EXTRABOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));

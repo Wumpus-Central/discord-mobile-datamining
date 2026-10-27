@@ -1,24 +1,24 @@
 // === Module 8780: MediaModal ===
 
 // Module 8780 (MediaModal)
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import asyncRequireImpl from "asyncRequireImpl" /* 2002 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5210 */;
-import HapticUtils from "HapticUtils" /* 5212 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5213 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
+import HapticUtils from "HapticUtils" /* 5213 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5214 */;
 import MediaSourceUtil from "MediaSourceUtil" /* 8757 */;
 import MediaModalPortal from "MediaModalPortal" /* 8760 */;
 import MediaModalTiktok from "MediaModalTiktok" /* 8787 */;
 import MediaModalWebVideoFile from "MediaModalWebVideoFile" /* 8789 */;
 import common_Video from "common/Video" /* 8790 */;
-import MediaModalOverlayDefault from "MediaModalOverlay" /* 14208 */;
-import MediaModalYoutubeDefault from "MediaModalYoutube" /* 14226 */;
-import MediaModalWebEmbedDefault from "MediaModalWebEmbed" /* 14228 */;
-import MediaModalVideoDefault from "MediaModalVideo" /* 14233 */;
-import MediaModalImageDefault from "MediaModalImage" /* 14237 */;
+import MediaModalOverlayDefault from "MediaModalOverlay" /* 14235 */;
+import MediaModalYoutubeDefault from "MediaModalYoutube" /* 14253 */;
+import MediaModalWebEmbedDefault from "MediaModalWebEmbed" /* 14255 */;
+import MediaModalVideoDefault from "MediaModalVideo" /* 14260 */;
+import MediaModalImageDefault from "MediaModalImage" /* 14264 */;
 import noop from "module_19" /* 19 */;
 import AppFreezeStore from "AppFreezeStore" /* 8781 */;
-import AppStateStore from "AppStateStore" /* 2001 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
 
 const MediaModalPortalDefault = MediaModalPortal;
 const MediaModalTiktokDefault = MediaModalTiktok;
@@ -28,7 +28,7 @@ const useVideoControls = obj(8754);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Modal: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const AppStates = fn(1087).AppStates;
+const AppStates = fn(1084).AppStates;
 const jsx = fn(21).jsx;
 let size = fn(2);
 let result = size.fileFinishedImporting("modules/media_viewer/native/components/MediaModal.tsx");

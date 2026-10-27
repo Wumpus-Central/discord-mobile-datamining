@@ -1,11 +1,11 @@
-// === Module 17528: ChannelListPanelBackdrop ===
+// === Module 17569: ChannelListPanelBackdrop ===
 
-// Module 17528 (ChannelListPanelBackdrop)
+// Module 17569 (ChannelListPanelBackdrop)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1633 */;
-import QuestHooks from "QuestHooks" /* 16437 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17449 */;
+import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
+import QuestHooks from "QuestHooks" /* 16476 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17490 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,10 +13,10 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet } = get_ActivityIndicator);
-const DM_WIDTH = fn(1087).DM_WIDTH;
+const DM_WIDTH = fn(1084).DM_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { container: { flex: 1, position: "relative", overflow: "hidden" }, panelTint: null, listWrapper: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -120,7 +120,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelL
                 tmp19 = tmp22;
               }
             }
-            let tmp12Result = 17529;
+            let tmp12Result = 17570;
             if (isHomeDrawerEnabled) {
               let ScreenAlignedThemedGradientSliding = tmp(tmp12Result).ScreenAlignedThemedGradientSliding;
             } else {

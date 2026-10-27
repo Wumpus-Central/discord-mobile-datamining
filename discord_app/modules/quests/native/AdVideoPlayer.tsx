@@ -1,25 +1,25 @@
-// === Module 16325: AdVideoPlayer ===
+// === Module 16364: AdVideoPlayer ===
 
-// Module 16325 (AdVideoPlayer)
+// Module 16364 (AdVideoPlayer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1123 */;
-import PlatformUtils from "PlatformUtils" /* 1384 */;
-import timing from "timing" /* 5206 */;
-import timingPresets from "timingPresets" /* 5209 */;
-import spring from "spring" /* 5247 */;
-import springPresets from "springPresets" /* 5248 */;
+import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
+import PlatformUtils from "PlatformUtils" /* 1381 */;
+import timing from "timing" /* 5207 */;
+import timingPresets from "timingPresets" /* 5210 */;
+import spring from "spring" /* 5248 */;
+import springPresets from "springPresets" /* 5249 */;
 import media_playback_VideoDefault from "media_playback/Video" /* 8791 */;
-import AdsVideoTypes from "AdsVideoTypes" /* 16306 */;
+import AdsVideoTypes from "AdsVideoTypes" /* 16344 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppStateStore from "AppStateStore" /* 2001 */;
+import AppStateStore from "AppStateStore" /* 1998 */;
 import n from "module_683" /* 683 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet, Pressable: metroRequire, ActivityIndicator: closure_7 } = get_ActivityIndicator);
-const Constants = fn(1087);
+const Constants = fn(1084);
 ({ AppStates: closure_9, ComponentActions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
@@ -49,7 +49,7 @@ function canSeekForward(arg0, arg1, arg2, arg3) {
 canSeekForward.__closure = { hasVideoEnded };
 canSeekForward.__workletHash = 14098132092693;
 canSeekForward.__initData = { code: "function canSeekForward_AdVideoPlayerTsx2(currentTime,maxTimestamp,videoDuration,allowUnrestrictedSeeking){const{hasVideoEnded}=this.__closure;return!hasVideoEnded(currentTime,videoDuration)&&(allowUnrestrictedSeeking||currentTime<=maxTimestamp-1);}" };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj = { container: null, loadingContainer: null, bufferingSpinner: null, bufferingSpinnerCentered: null, video: null, videoContainer: null, controls: null, controlsTopBottom: null, controlsMiddle: null, controlsTop: null, controlsBottom: null, progressContainer: null, progress: null, icon: null, controlButton: null };
 let merged = Object.assign(StyleSheet.absoluteFillObject);
 obj.container = {};

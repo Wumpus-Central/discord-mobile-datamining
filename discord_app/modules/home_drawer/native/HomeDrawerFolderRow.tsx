@@ -1,22 +1,22 @@
-// === Module 17754: HomeDrawerFolderRow ===
+// === Module 17795: HomeDrawerFolderRow ===
 
-// Module 17754 (HomeDrawerFolderRow)
-import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import BellSlashIcon2 from "BellSlashIcon" /* 10875 */;
+// Module 17795 (HomeDrawerFolderRow)
+import util from "util" /* 1125 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import BellSlashIcon2 from "BellSlashIcon" /* 10878 */;
 import noop from "module_19" /* 19 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6814 */;
-import GuildStore from "GuildStore" /* 4845 */;
-import SortedGuildStore from "SortedGuildStore" /* 6701 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6704 */;
-import VoiceStateStore from "VoiceStateStore" /* 5630 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6816 */;
+import GuildStore from "GuildStore" /* 4846 */;
+import SortedGuildStore from "SortedGuildStore" /* 6702 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
+import VoiceStateStore from "VoiceStateStore" /* 5631 */;
 
 require = fn;
 const View = fn(17).View;
-const NOOP = fn(1087).NOOP;
+const NOOP = fn(1084).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let closure_13 = createStyles.createStyles({ title: { flexDirection: "row", alignItems: "center", gap: 4 }, titleText: { flexShrink: 1 } });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Wrapper(folder) {
@@ -830,7 +830,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDraw
   } else {
     tmp8 = cResult[3];
   }
-  const MobileHomeDrawerExperiment = tmp(5156).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = tmp(5157).MobileHomeDrawerExperiment;
   let tmp10 = null;
   if (null != stateFromStores) {
     tmp10 = null;
@@ -858,7 +858,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HomeDraw
     }
     return guildFolderById;
   });
-  const MobileHomeDrawerExperiment = folderId(5156).MobileHomeDrawerExperiment;
+  const MobileHomeDrawerExperiment = folderId(5157).MobileHomeDrawerExperiment;
   let tmp3 = null;
   if (null != stateFromStores) {
     tmp3 = null;

@@ -1,8 +1,8 @@
-// === Module 15738: internalDeepLinks ===
+// === Module 15774: internalDeepLinks ===
 
-// Module 15738 (internalDeepLinks)
-import URLUtilsDefault from "URLUtils" /* 1386 */;
-import openURL from "openURL" /* 5656 */;
+// Module 15774 (internalDeepLinks)
+import URLUtilsDefault from "URLUtils" /* 1383 */;
+import openURL from "openURL" /* 5657 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
@@ -11,8 +11,8 @@ const set1 = new Set(["", "-"]);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rpc/helpers/internalDeepLinks.tsx");
 
-export const resolveInternalDeepLink = function resolveInternalDeepLink(url) {
-  const toURLSafeResult = URLUtilsDefault.toURLSafe(url);
+export const resolveInternalDeepLink = function resolveInternalDeepLink(src) {
+  const toURLSafeResult = URLUtilsDefault.toURLSafe(src);
   if (null == toURLSafeResult) {
     return null;
   } else {

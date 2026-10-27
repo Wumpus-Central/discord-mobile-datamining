@@ -2,10 +2,10 @@
 
 // Module 9249 (useResolveGameForProfile)
 import c from "c" /* 576 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7257 */;
-import useGame from "useGame" /* 7406 */;
-import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7820 */;
-import RobloxSubgameTypes from "RobloxSubgameTypes" /* 7821 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7259 */;
+import useGame from "useGame" /* 7408 */;
+import RobloxSubgameUtils from "RobloxSubgameUtils" /* 7821 */;
+import RobloxSubgameTypes from "RobloxSubgameTypes" /* 7822 */;
 import useResolveGameDefault from "useResolveGame" /* 9250 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

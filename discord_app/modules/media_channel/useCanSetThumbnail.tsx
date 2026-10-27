@@ -1,7 +1,7 @@
-// === Module 13969: useCanSetThumbnail ===
+// === Module 13983: useCanSetThumbnail ===
 
-// Module 13969 (useCanSetThumbnail)
-import ChannelStore from "ChannelStore" /* 4823 */;
+// Module 13983 (useCanSetThumbnail)
+import ChannelStore from "ChannelStore" /* 4824 */;
 
 const require = globalThis.__r;
 

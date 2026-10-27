@@ -1,14 +1,14 @@
-// === Module 18664: trackActivityThermalStateNoticeShown ===
+// === Module 18700: trackActivityThermalStateNoticeShown ===
 
-// Module 18664 (trackActivityThermalStateNoticeShown)
-import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1267 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4892 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5714 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4822 */;
+// Module 18700 (trackActivityThermalStateNoticeShown)
+import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4893 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
 
 require = fn;
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/trackActivityThermalStateNoticeShown.tsx");
 

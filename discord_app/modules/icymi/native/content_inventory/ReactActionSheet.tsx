@@ -1,25 +1,25 @@
-// === Module 17961: ReactActionSheet ===
+// === Module 17995: ReactActionSheet ===
 
-// Module 17961 (ReactActionSheet)
+// Module 17995 (ReactActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import MessageReactionsTypes from "MessageReactionsTypes" /* 5225 */;
+import util from "util" /* 1125 */;
+import MessageReactionsTypes from "MessageReactionsTypes" /* 5226 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8841 */;
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9825 */;
-import ICYMIContext from "ICYMIContext" /* 17909 */;
-import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13138 */;
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9827 */;
+import ICYMIContext from "ICYMIContext" /* 17943 */;
+import _objectDestructuringEmpty from "_objectDestructuringEmpty" /* 13152 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5266).ACTION_SHEET_MAX_WIDTH;
-const EmojiIntention = fn(1395).EmojiIntention;
+const ACTION_SHEET_MAX_WIDTH = fn(5267).ACTION_SHEET_MAX_WIDTH;
+const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { header: { width: "100%", display: "flex", alignItems: "center", padding: 8 }, container: { gap: 12 }, preview: { borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG }, base: { position: "relative" }, contentContainer: null, inputRow: null, input: null, emojis: null, submitting: null, emoji: null, defaultEmoji: null, emojiImage: null, emojiText: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, overflow: "hidden", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_STRONG };
 obj2.contentContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
@@ -1049,10 +1049,10 @@ export const getStatusReplyContent = function getStatusReplyContent(reply) {
   }
   if (null != attachments) {
     if (attachments.length > 0) {
-      const intl2 = tmp5(1128).intl;
+      const intl2 = tmp5(1125).intl;
       const obj3 = { attachmentsCount: attachments.length };
       const _HermesInternal2 = HermesInternal;
-      items.push("> -# *" + intl2.formatToPlainString(tmp5(1128).t["JiNPo+"], obj3) + "*");
+      items.push("> -# *" + intl2.formatToPlainString(tmp5(1125).t["JiNPo+"], obj3) + "*");
     }
   }
   items.push(reply.reply);

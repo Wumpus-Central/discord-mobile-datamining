@@ -1,9 +1,9 @@
-// === Module 7768: appMessageEmbedTrackingConfig ===
+// === Module 7769: appMessageEmbedTrackingConfig ===
 
-// Module 7768 (appMessageEmbedTrackingConfig)
+// Module 7769 (appMessageEmbedTrackingConfig)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
-const LinkType = fn(7762).LinkType;
+const LinkType = fn(7763).LinkType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/applications/message_embed/web/appMessageEmbedTrackingConfig.tsx");
 
@@ -15,7 +15,7 @@ export const trackingConfigWithDefaults = function trackingConfigWithDefaults(id
   if (str == null) {
     str = "0";
   }
-  const obj = { id: str, linkType: null, referrerId: null, activityCustomId: null, onView: null, onLinkCopied: null, guildId: null, channelId: null, messageId: null, isDeadEnd: null, appEmbedState: null };
+  const obj = { id: str, linkType: null, referrerId: null, activityCustomId: null, onView: null, onLinkCopied: null, guildId: null, channelId: null, messageId: null, isDeadEnd: null, appEmbedState: null, analyticsLocations: null };
   let linkType;
   if (id != null) {
     linkType = id.linkType;
@@ -75,5 +75,10 @@ export const trackingConfigWithDefaults = function trackingConfigWithDefaults(id
     appEmbedState = id.appEmbedState;
   }
   obj.appEmbedState = appEmbedState;
+  let analyticsLocations;
+  if (id != null) {
+    analyticsLocations = id.analyticsLocations;
+  }
+  obj.analyticsLocations = analyticsLocations;
   return obj;
 };

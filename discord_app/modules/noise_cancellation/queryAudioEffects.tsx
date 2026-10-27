@@ -1,9 +1,9 @@
-// === Module 15373: queryAudioEffects ===
+// === Module 15409: queryAudioEffects ===
 
-// Module 15373 (queryAudioEffects)
-import utils_PlatformUtils from "utils/PlatformUtils" /* 1385 */;
-import DiscordNativeDefault from "DiscordNative" /* 4785 */;
-import _modDef15317 from "module_15317" /* 15317 */;
+// Module 15409 (queryAudioEffects)
+import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
+import DiscordNativeDefault from "DiscordNative" /* 4786 */;
+import _modDef15353 from "module_15353" /* 15353 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -57,7 +57,7 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
                 const obj7 = { value: Promise.reject(error), done: true };
                 return obj7;
               }
-              obj5 = _modDef15317;
+              obj5 = _modDef15353;
             } else {
               const _Error = Error;
               const error1 = new Error("Audio effects querying not supported on non-Windows platforms");
@@ -107,7 +107,7 @@ let closure_6 = async function _queryAudioEffects(arg0, arg1, arg2) {
     }
   })();
 };
-const AnalyticEvents = fn(1087).AnalyticEvents;
+const AnalyticEvents = fn(1084).AnalyticEvents;
 const logger = new fn(4).Logger("AudioEffects");
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/noise_cancellation/queryAudioEffects.tsx");

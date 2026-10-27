@@ -1,19 +1,19 @@
-// === Module 18938: GiftIntentReconcilingManager ===
+// === Module 18976: GiftIntentReconcilingManager ===
 
-// Module 18938 (GiftIntentReconcilingManager)
+// Module 18976 (GiftIntentReconcilingManager)
 import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import DurationsDefault from "Durations" /* 1104 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7566 */;
-import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10497 */;
-import EphemeralMessageStore from "EphemeralMessageStore" /* 6011 */;
-import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1246 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8448 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7214 */;
+import DurationsDefault from "Durations" /* 1101 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7567 */;
+import PremiumGiftingIntentActionCreators from "PremiumGiftingIntentActionCreators" /* 10500 */;
+import EphemeralMessageStore from "EphemeralMessageStore" /* 6012 */;
+import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import PremiumGiftingIntentStore from "PremiumGiftingIntentStore" /* 8447 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
 
 require = fn;
-const MessageTypes = fn(1087).MessageTypes;
+const MessageTypes = fn(1084).MessageTypes;
 let closure_8 = 10 * DurationsDefault.Millis.SECOND;
 let closure_9 = 5 * DurationsDefault.Millis.MINUTE;
 class GiftIntentReconcilingManager extends tmp2 {

@@ -4,7 +4,7 @@
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import URLUtilsDefault from "URLUtils" /* 1386 */;
+import URLUtilsDefault from "URLUtils" /* 1383 */;
 import SpotifyConstants from "SpotifyConstants" /* 8828 */;
 import MaskedLinkStoreMethodsAdditional from "MaskedLinkStoreMethodsAdditional" /* 8863 */;
 import size from "module_2" /* 2 */;

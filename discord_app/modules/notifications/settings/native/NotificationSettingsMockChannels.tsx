@@ -1,21 +1,21 @@
-// === Module 19354: NotificationSettingsMockChannels ===
+// === Module 19392: NotificationSettingsMockChannels ===
 
-// Module 19354 (NotificationSettingsMockChannels)
+// Module 19392 (NotificationSettingsMockChannels)
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 1202 */;
-import Text_Text from "Text/Text" /* 5234 */;
+import native from "native" /* 1199 */;
+import Text_Text from "Text/Text" /* 5235 */;
 import TextIcon from "TextIcon" /* 8551 */;
-import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 13277 */;
+import StaticChannelIndicatorDefault from "StaticChannelIndicator" /* 13291 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const UnreadSetting = fn(6705).UnreadSetting;
+const UnreadSetting = fn(6706).UnreadSetting;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { card: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, overflow: "hidden", borderRadius: 10, paddingVertical: 8 }, channel: { display: "flex", flexDirection: "row", alignItems: "center", paddingVertical: 4, justifyContent: "space-between", paddingRight: 12 }, channelName: { display: "flex", flexDirection: "row", alignItems: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -29,16 +29,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Notifica
   _require = tmp4;
   if (cResult[0] !== unreadSetting.unreadSetting) {
     let obj2 = { badged: true, unread: true, resolvedUnreadSetting: UnreadSetting.ALL_MESSAGES, name: null };
-    const intl = tmp(1128).intl;
-    obj2.name = intl.string(tmp(1128).t.EjLobP);
+    const intl = tmp(1125).intl;
+    obj2.name = intl.string(tmp(1125).t.EjLobP);
     let items = [obj2, , ];
     const obj3 = { badged: false, unread: true, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS, name: null };
-    const intl2 = tmp(1128).intl;
-    obj3.name = intl2.string(tmp(1128).t.Wgpwpp);
+    const intl2 = tmp(1125).intl;
+    obj3.name = intl2.string(tmp(1125).t.Wgpwpp);
     items[1] = obj3;
     let obj4 = { badged: false, unread: false, resolvedUnreadSetting: UnreadSetting.ONLY_MENTIONS, name: null };
-    const intl3 = tmp(1128).intl;
-    obj4.name = intl3.string(tmp(1128).t.g9VImh);
+    const intl3 = tmp(1125).intl;
+    obj4.name = intl3.string(tmp(1125).t.g9VImh);
     items[2] = obj4;
     if (unreadSetting.unreadSetting === UnreadSetting.ALL_MESSAGES) {
       items[1].resolvedUnreadSetting = UnreadSetting.ALL_MESSAGES;

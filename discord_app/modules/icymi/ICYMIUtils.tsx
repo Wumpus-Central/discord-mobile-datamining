@@ -1,8 +1,8 @@
 // === Module 8840: ICYMIUtils ===
 
 // Module 8840 (ICYMIUtils)
-import util from "util" /* 1128 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6012 */;
+import util from "util" /* 1125 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6013 */;
 import ContentInventoryEntryType from "ContentInventoryEntryType" /* 8613 */;
 import ICYMITypes from "ICYMITypes" /* 8836 */;
 import ICYMIActionCreatorsDefault from "ICYMIActionCreators" /* 8841 */;
@@ -10,9 +10,9 @@ import generateHydrationId from "generateHydrationId" /* 8846 */;
 import ContentInventoryAuthorType from "ContentInventoryAuthorType" /* 8847 */;
 import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8848 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6784 */;
-import ChannelStore from "ChannelStore" /* 4823 */;
-import GuildStore from "GuildStore" /* 4845 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6785 */;
+import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildStore from "GuildStore" /* 4846 */;
 import ICYMIUnreadStateStore from "ICYMIUnreadStateStore" /* 8837 */;
 
 require = fn;
@@ -116,8 +116,8 @@ let closure_12 = async function _hydrateItems(arg0) {
     }
   }
 };
-const ThreadChannelRecord = fn(4827).ThreadChannelRecord;
-const Constants = fn(1087);
+const ThreadChannelRecord = fn(4828).ThreadChannelRecord;
+const Constants = fn(1084);
 ({ ChannelTypes: closure_9, GuildNSFWContentLevel: c10 } = Constants);
 const ICYMICustomScore = { UNKNOWN: 0, [0]: "UNKNOWN", DEFAULT: 1, [1]: "DEFAULT", MORE: 2, [2]: "MORE", LESS: 3, [3]: "LESS", MUTED: 4, [4]: "MUTED" };
 const size = fn(2);

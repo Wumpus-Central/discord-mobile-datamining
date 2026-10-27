@@ -1,15 +1,15 @@
-// === Module 9545: billing_settings_banner ===
+// === Module 9544: billing_settings_banner ===
 
-// Module 9545 (billing_settings_banner)
-import _mod1212 from "module_1212" /* 1212 */;
-import localized_string from "localized_string" /* 9525 */;
-import help_article from "help_article" /* 9526 */;
-import cta_button from "cta_button" /* 9527 */;
-import theme_aware_asset from "theme_aware_asset" /* 9535 */;
+// Module 9544 (billing_settings_banner)
+import _mod1209 from "module_1209" /* 1209 */;
+import localized_string from "localized_string" /* 9524 */;
+import help_article from "help_article" /* 9525 */;
+import cta_button from "cta_button" /* 9526 */;
+import theme_aware_asset from "theme_aware_asset" /* 9534 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = fn;
-const MessageType = fn(1212).MessageType;
+const MessageType = fn(1209).MessageType;
 class BillingSettingsBanner$Type extends MessageType {
   constructor() {
     items = [, , , , , , ];
@@ -63,10 +63,10 @@ const prototype = BillingSettingsBanner$Type.prototype;
 prototype["create"] = function create(partialSettings) {
   const obj = { header: "", body: "" };
   const _Object = Object;
-  _Object.defineProperty(obj, _mod1212.MESSAGE_TYPE, { enumerable: false, value: this });
+  _Object.defineProperty(obj, _mod1209.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
-    const result = _mod1212.reflectionMergePartial(this, obj, partialSettings);
-    const tmpResult = _mod1212;
+    const result = _mod1209.reflectionMergePartial(this, obj, partialSettings);
+    const tmpResult = _mod1209;
   }
   return obj;
 };
@@ -117,7 +117,7 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
           let skipResult = pos.skip(tmp6);
           if (false !== onRead) {
             if (true === onRead) {
-              onRead = _mod1212.UnknownFieldHandler.onRead;
+              onRead = _mod1209.UnknownFieldHandler.onRead;
             }
             let onReadResult = onRead(self.typeName, obj, tmp5, tmp6, skipResult);
           }
@@ -129,47 +129,47 @@ prototype["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readUnk
 };
 prototype["internalBinaryWrite"] = function internalBinaryWrite(header, tag, writeUnknownFields) {
   if ("" !== header.header) {
-    tag.tag(1, _mod1212.WireType.LengthDelimited).string(header.header);
-    const tagResult = tag.tag(1, _mod1212.WireType.LengthDelimited);
+    tag.tag(1, _mod1209.WireType.LengthDelimited).string(header.header);
+    const tagResult = tag.tag(1, _mod1209.WireType.LengthDelimited);
   }
   if ("" !== header.body) {
-    tag.tag(2, _mod1212.WireType.LengthDelimited).string(header.body);
-    const tagResult1 = tag.tag(2, _mod1212.WireType.LengthDelimited);
+    tag.tag(2, _mod1209.WireType.LengthDelimited).string(header.body);
+    const tagResult1 = tag.tag(2, _mod1209.WireType.LengthDelimited);
   }
   if (header.asset) {
     const ThemeAwareAsset = theme_aware_asset.ThemeAwareAsset;
-    const tagResult2 = tag.tag(3, _mod1212.WireType.LengthDelimited);
-    const joined = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1212.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1212.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult2 = tag.tag(3, _mod1209.WireType.LengthDelimited);
+    const joined = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1209.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult = ThemeAwareAsset.internalBinaryWrite(header.asset, tag.tag(3, _mod1209.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.button) {
     const CTAButton = cta_button.CTAButton;
-    const tagResult3 = tag.tag(4, _mod1212.WireType.LengthDelimited);
-    const joined1 = CTAButton.internalBinaryWrite(header.button, tag.tag(4, _mod1212.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(header.button, tag.tag(4, _mod1212.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult3 = tag.tag(4, _mod1209.WireType.LengthDelimited);
+    const joined1 = CTAButton.internalBinaryWrite(header.button, tag.tag(4, _mod1209.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult1 = CTAButton.internalBinaryWrite(header.button, tag.tag(4, _mod1209.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.headerLocalized) {
     const LocalizedString = localized_string.LocalizedString;
-    const tagResult4 = tag.tag(5, _mod1212.WireType.LengthDelimited);
-    const joined2 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(5, _mod1212.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult2 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(5, _mod1212.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult4 = tag.tag(5, _mod1209.WireType.LengthDelimited);
+    const joined2 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(5, _mod1209.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult2 = LocalizedString.internalBinaryWrite(header.headerLocalized, tag.tag(5, _mod1209.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.bodyLocalized) {
     const LocalizedString2 = localized_string.LocalizedString;
-    const tagResult5 = tag.tag(6, _mod1212.WireType.LengthDelimited);
-    const joined3 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(6, _mod1212.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult3 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(6, _mod1212.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult5 = tag.tag(6, _mod1209.WireType.LengthDelimited);
+    const joined3 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(6, _mod1209.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult3 = LocalizedString2.internalBinaryWrite(header.bodyLocalized, tag.tag(6, _mod1209.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   if (header.helpArticle) {
     const HelpArticle = help_article.HelpArticle;
-    const tagResult6 = tag.tag(7, _mod1212.WireType.LengthDelimited);
-    const joined4 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(7, _mod1212.WireType.LengthDelimited).fork(), writeUnknownFields).join();
-    const internalBinaryWriteResult4 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(7, _mod1212.WireType.LengthDelimited).fork(), writeUnknownFields);
+    const tagResult6 = tag.tag(7, _mod1209.WireType.LengthDelimited);
+    const joined4 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(7, _mod1209.WireType.LengthDelimited).fork(), writeUnknownFields).join();
+    const internalBinaryWriteResult4 = HelpArticle.internalBinaryWrite(header.helpArticle, tag.tag(7, _mod1209.WireType.LengthDelimited).fork(), writeUnknownFields);
   }
   let onWrite = writeUnknownFields.writeUnknownFields;
   if (false !== onWrite) {
     if (1 == onWrite) {
-      onWrite = _mod1212.UnknownFieldHandler.onWrite;
+      onWrite = _mod1209.UnknownFieldHandler.onWrite;
     }
     const self = this;
     onWrite(this.typeName, header, tag);

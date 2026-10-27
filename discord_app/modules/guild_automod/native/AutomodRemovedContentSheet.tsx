@@ -1,23 +1,23 @@
-// === Module 18757: AutomodRemovedContentSheet ===
+// === Module 18793: AutomodRemovedContentSheet ===
 
-// Module 18757 (AutomodRemovedContentSheet)
+// Module 18793 (AutomodRemovedContentSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import util from "util" /* 1128 */;
-import Text_Text from "Text/Text" /* 5234 */;
-import MessageRecordUtils from "MessageRecordUtils" /* 6012 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7248 */;
-import ActionSheet from "ActionSheet" /* 7298 */;
-import RowGeneratorDefault from "RowGenerator" /* 8133 */;
-import ChatItemDefault from "ChatItem" /* 9772 */;
+import util from "util" /* 1125 */;
+import Text_Text from "Text/Text" /* 5235 */;
+import MessageRecordUtils from "MessageRecordUtils" /* 6013 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7250 */;
+import ActionSheet from "ActionSheet" /* 7300 */;
+import RowGeneratorDefault from "RowGenerator" /* 8131 */;
+import ChatItemDefault from "ChatItem" /* 9774 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const MessageFlags = fn(1087).MessageFlags;
+const MessageFlags = fn(1084).MessageFlags;
 const jsx = fn(21).jsx;
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { content: null, blockedMessage: null };
 const tmp2 = new RowGeneratorDefault();
 obj2.content = { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 };
@@ -152,8 +152,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AutomodR
       ephemeralIndication = message.ephemeralIndication;
     }
     if (null != ephemeralIndication) {
-      const intl = message(1128).intl;
-      message.message.ephemeralIndication.content = intl.string(message(1128).t.Nb1EQx);
+      const intl = message(1125).intl;
+      message.message.ephemeralIndication.content = intl.string(message(1125).t.Nb1EQx);
     }
   }, []);
   const memo = noop.useMemo(() => {
@@ -170,18 +170,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AutomodR
     }
     return messageRecord;
   }, items);
-  let intl = message(1128).intl;
+  let intl = message(1125).intl;
   if (null != thread) {
-    let StrErG = tmp5(1128).t["8czF24"];
+    let StrErG = tmp5(1125).t["8czF24"];
   } else {
-    StrErG = tmp5(1128).t.StrErG;
+    StrErG = tmp5(1125).t.StrErG;
   }
   let obj = { title: intl.string(StrErG), subtitle: null };
   let name;
   if (thread != null) {
     name = thread.name;
   }
-  let obj2 = { header: jsx(message(7248).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null };
+  let obj2 = { header: jsx(message(7250).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null };
   obj.subtitle = name;
   const obj3 = { style: tmp.content, children: null };
   if (null != memo) {
@@ -191,9 +191,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AutomodR
     let tmp4Result = <View style={tmp.blockedMessage}>{null}</View>;
   } else {
     const obj6 = { variant: "text-md/normal", color: "text-default", children: action.notice };
-    tmp4Result = jsx(tmp5(5234).Text, { variant: "text-md/normal", color: "text-default", children: action.notice });
+    tmp4Result = jsx(tmp5(5235).Text, { variant: "text-md/normal", color: "text-default", children: action.notice });
   }
   obj3.children = tmp4Result;
   obj2.children = <View style={tmp.content}>{null}</View>;
-  return jsx(message(7298).ActionSheet, { header: jsx(message(7248).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null });
+  return jsx(message(7300).ActionSheet, { header: jsx(message(7250).BottomSheetTitleHeader, { title: intl.string(StrErG), subtitle: null }), children: null });
 });

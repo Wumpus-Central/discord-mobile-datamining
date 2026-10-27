@@ -1,14 +1,14 @@
-// === Module 13990: useEmojisForReactionRow ===
+// === Module 14004: useEmojisForReactionRow ===
 
-// Module 13990 (useEmojisForReactionRow)
-import useWindowDimensionsDefault from "useWindowDimensions" /* 1499 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4921 */;
+// Module 14004 (useEmojisForReactionRow)
+import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4922 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EmojiIntention = fn(1395).EmojiIntention;
+const EmojiIntention = fn(1392).EmojiIntention;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/reactions/native/useEmojisForReactionRow.tsx");

@@ -1,15 +1,15 @@
-// === Module 18029: StandaloneMembersView ===
+// === Module 18063: StandaloneMembersView ===
 
-// Module 18029 (StandaloneMembersView)
+// Module 18063 (StandaloneMembersView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
-import useActiveTheme from "useActiveTheme" /* 9710 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10625 */;
-import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 12785 */;
-import KickConfirmDefault from "KickConfirm" /* 12799 */;
-import BanConfirmDefault from "BanConfirm" /* 12803 */;
-import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 18030 */;
+import useActiveTheme from "useActiveTheme" /* 9712 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10628 */;
+import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 12794 */;
+import KickConfirmDefault from "KickConfirm" /* 12808 */;
+import BanConfirmDefault from "BanConfirm" /* 12812 */;
+import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 18064 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const constants = { MAIN: "MAIN", MEMBER_EDIT: "MEMBER_EDIT", MEMBER_KICK: "MEMBER_KICK", MEMBER_BAN: "MEMBER_BAN" };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { navigatorContainer: { overflow: "hidden" }, navigatorBackground: null, sceneBackground: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Standalo
   closure_10();
   let obj = guildId(576);
   const tmp = guildId;
-  const navigation = guildId(1505).useNavigation();
+  const navigation = guildId(1502).useNavigation();
   if (cResult[0] !== guildId) {
     const fn = function o() {
       GuildSettingsActionCreatorsDefault.init(guildId);
@@ -117,7 +117,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Standalo
     tmp7 = cResult[2];
   }
   const effect = noop.useEffect(tmp6, tmp7);
-  const sum = 16 + navigation(1633)().bottom;
+  const sum = 16 + navigation(1630)().bottom;
   if (cResult[3] !== sum) {
     const obj3 = { contentContainerStyle: null };
     const obj4 = { paddingBottom: sum };
@@ -130,20 +130,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Standalo
   }
   dependencyMap = tmp10;
   if (cResult[5] !== navigation) {
-    const headerCloseButton = tmp(6924).getHeaderCloseButton(() => navigation.goBack());
+    const headerCloseButton = tmp(6926).getHeaderCloseButton(() => navigation.goBack());
     cResult[5] = navigation;
     cResult[6] = headerCloseButton;
     let tmp11 = headerCloseButton;
-    const tmpResult = tmp(6924);
+    const tmpResult = tmp(6926);
   } else {
     tmp11 = cResult[6];
   }
   if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function k() {
       const obj = { title: null };
-      const intl = guildId(1128).intl;
-      obj.title = intl.string(guildId(1128).t["9Oq93m"]);
-      return closure_1_6(guildId(6924).NavigatorHeader, obj);
+      const intl = guildId(1125).intl;
+      obj.title = intl.string(guildId(1125).t["9Oq93m"]);
+      return closure_1_6(guildId(6926).NavigatorHeader, obj);
     };
     cResult[7] = fn2;
     let tmp13 = fn2;
@@ -274,7 +274,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Standalo
   cResult[9] = tmp11;
   cResult[10] = obj9;
   tmp14 = obj9;
-  const obj2 = guildId(1505);
+  const obj2 = guildId(1502);
 }) : (function StandaloneMembersView(guildId) {
   guildId = guildId.guildId;
   let obj2;

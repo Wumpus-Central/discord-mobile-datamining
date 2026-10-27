@@ -1,20 +1,20 @@
-// === Module 13743: ActivitiesPrivateChannelCallTooltip ===
+// === Module 13757: ActivitiesPrivateChannelCallTooltip ===
 
-// Module 13743 (ActivitiesPrivateChannelCallTooltip)
-import ReanimatedRexport from "ReanimatedRexport" /* 5052 */;
-import timing from "timing" /* 5206 */;
+// Module 13757 (ActivitiesPrivateChannelCallTooltip)
+import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
+import timing from "timing" /* 5207 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4972 */;
+import AccessibilityStore from "AccessibilityStore" /* 4973 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const helpdeskUrl = fn(2026).EMBEDDED_ACTIVITIES_BLOG_POST_URL;
+const helpdeskUrl = fn(2023).EMBEDDED_ACTIVITIES_BLOG_POST_URL;
 const jsx = fn(21).jsx;
 let c7 = 40;
 const TIMING_CONFIG = { duration: 500 };
-const createStyles = fn(4971);
+const createStyles = fn(4972);
 let obj2 = { arrow: null, tooltip: { padding: 16 }, tooltipContainer: { position: "absolute", width: 280, zIndex: 2, right: -48, top: -8 }, tooltipText: { textAlign: "center", fontSize: 14 }, closeButtonWrapper: { marginTop: 14 } };
 let obj3 = { marginLeft: 200, top: 9, position: "relative", borderTopWidth: 0, borderRightWidth: 0, borderBottomWidth: 16, borderLeftWidth: 16, transform: null };
 let items = [{ rotateZ: "225deg" }];
@@ -67,8 +67,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
       return obj;
     }
   }
-  const tmpResult2 = num3(5052);
-  F.__closure = { withRepeat: num3(5052).withRepeat, withSequence: num3(5052).withSequence, withTiming: num3(5206).withTiming, OFFSET, translateBounceOffset: num3, TIMING_CONFIG };
+  const tmpResult2 = num3(5053);
+  F.__closure = { withRepeat: num3(5053).withRepeat, withSequence: num3(5053).withSequence, withTiming: num3(5207).withTiming, OFFSET, translateBounceOffset: num3, TIMING_CONFIG };
   F.__workletHash = 4621705591670;
   F.__initData = __initData;
   const animatedStyle = tmpResult2.useAnimatedStyle(F);
@@ -79,11 +79,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
     const _Symbol = Symbol;
     ({ tooltip, tooltipText, arrow } = tmp4);
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl = tmp(1128).intl;
+      const intl = tmp(1125).intl;
       let obj3 = { helpdeskUrl };
-      const formatResult = intl.format(tmp(1128).t.xAW71b, obj3);
-      const intl2 = tmp(1128).intl;
-      const stringResult = intl2.string(tmp(1128).t.HOPqzR);
+      const formatResult = intl.format(tmp(1125).t.xAW71b, obj3);
+      const intl2 = tmp(1125).intl;
+      const stringResult = intl2.string(tmp(1125).t.HOPqzR);
       cResult[5] = formatResult;
       cResult[6] = stringResult;
       let tmp11 = stringResult;
@@ -94,8 +94,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
     }
     const _Symbol2 = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const intl3 = tmp(1128).intl;
-      const stringResult1 = intl3.string(tmp(1128).t["NX+WJN"]);
+      const intl3 = tmp(1125).intl;
+      const stringResult1 = intl3.string(tmp(1125).t["NX+WJN"]);
       cResult[7] = stringResult1;
       let tmp15 = stringResult1;
     } else {
@@ -103,7 +103,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
     }
     if (cResult[8] !== onClosePress) {
       let obj4 = { text: tmp15, onPress: onClosePress, variant: "secondary", size: "sm", grow: true };
-      const tmp19 = jsx(tmp(5244).Button, { text: tmp15, onPress: onClosePress, variant: "secondary", size: "sm", grow: true });
+      const tmp19 = jsx(tmp(5245).Button, { text: tmp15, onPress: onClosePress, variant: "secondary", size: "sm", grow: true });
       cResult[8] = onClosePress;
       cResult[9] = tmp19;
       let tmp17 = tmp19;
@@ -137,7 +137,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
       cResult[14] = tmp4.tooltip;
       cResult[15] = tmp4.tooltipText;
       cResult[16] = tmp20;
-      cResult[17] = jsx(tmp(1202).Tooltip, { containerStyle: tooltip, labelStyle: tooltipText, arrowStyle: arrow, label: tmp10, title: tmp11, children: tmp20 });
+      cResult[17] = jsx(tmp(1199).Tooltip, { containerStyle: tooltip, labelStyle: tooltipText, arrowStyle: arrow, label: tmp10, title: tmp11, children: tmp20 });
       class F {
         constructor() {
           obj = { transform: null };
@@ -156,7 +156,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
           return obj;
         }
       }
-      const tmp26 = jsx(tmp(1202).Tooltip, { containerStyle: tooltip, labelStyle: tooltipText, arrowStyle: arrow, label: tmp10, title: tmp11, children: tmp20 });
+      const tmp26 = jsx(tmp(1199).Tooltip, { containerStyle: tooltip, labelStyle: tooltipText, arrowStyle: arrow, label: tmp10, title: tmp11, children: tmp20 });
     }
     const obj7 = { style: tmp4.closeButtonWrapper, children: tmp17 };
     const tmp23 = <View style={tmp4.closeButtonWrapper}>{tmp17}</View>;
@@ -188,7 +188,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
   cResult[3] = tmp4.tooltipContainer;
   cResult[4] = items1;
   tmp9 = items1;
-  let obj2 = { withRepeat: num3(5052).withRepeat, withSequence: num3(5052).withSequence, withTiming: num3(5206).withTiming, OFFSET, translateBounceOffset: num3, TIMING_CONFIG };
+  let obj2 = { withRepeat: num3(5053).withRepeat, withSequence: num3(5053).withSequence, withTiming: num3(5207).withTiming, OFFSET, translateBounceOffset: num3, TIMING_CONFIG };
 }) : (function ActivitiesPrivateChannelCallTooltip(onClosePress) {
   const tmp = closure_9();
   let items = [AccessibilityStore];
@@ -209,8 +209,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
     obj.transform = items;
     return obj;
   };
-  const tmp2Result = num(5052);
-  fn.__closure = { withRepeat: num(5052).withRepeat, withSequence: num(5052).withSequence, withTiming: num(5206).withTiming, OFFSET, translateBounceOffset: num, TIMING_CONFIG };
+  const tmp2Result = num(5053);
+  fn.__closure = { withRepeat: num(5053).withRepeat, withSequence: num(5053).withSequence, withTiming: num(5207).withTiming, OFFSET, translateBounceOffset: num, TIMING_CONFIG };
   fn.__workletHash = 10615395921877;
   fn.__initData = __initData2;
   const animatedStyle = tmp2Result.useAnimatedStyle(fn);
@@ -218,17 +218,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Activiti
   const items1 = [tmp.tooltipContainer, animatedStyle];
   obj3.style = items1;
   let obj4 = { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: tmp.arrow, label: null, title: null, children: null };
-  const intl = tmp2(1128).intl;
-  obj4.label = intl.format(num(1128).t.xAW71b, { helpdeskUrl });
-  const intl2 = tmp2(1128).intl;
-  obj4.title = intl2.string(num(1128).t.HOPqzR);
+  const intl = tmp2(1125).intl;
+  obj4.label = intl.format(num(1125).t.xAW71b, { helpdeskUrl });
+  const intl2 = tmp2(1125).intl;
+  obj4.title = intl2.string(num(1125).t.HOPqzR);
   let obj6 = { style: tmp.closeButtonWrapper, children: null };
   const obj7 = { text: null, onPress: null, variant: "secondary", size: "sm", grow: true };
-  const intl3 = tmp2(1128).intl;
-  obj7.text = intl3.string(num(1128).t["NX+WJN"]);
+  const intl3 = tmp2(1125).intl;
+  obj7.text = intl3.string(num(1125).t["NX+WJN"]);
   obj7.onPress = onClosePress.onClosePress;
-  obj6.children = jsx(num(5244).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
+  obj6.children = jsx(num(5245).Button, { text: null, onPress: null, variant: "secondary", size: "sm", grow: true });
   obj4.children = <View style={tmp.closeButtonWrapper}>{null}</View>;
-  obj3.children = jsx(num(1202).Tooltip, { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: tmp.arrow, label: null, title: null, children: null });
+  obj3.children = jsx(num(1199).Tooltip, { containerStyle: tmp.tooltip, labelStyle: tmp.tooltipText, arrowStyle: tmp.arrow, label: null, title: null, children: null });
   return jsx(ReanimatedRexportDefault.View, { style: null, children: null });
 });
