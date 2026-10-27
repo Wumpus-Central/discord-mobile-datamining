@@ -1,34 +1,41 @@
 // === Module 10340: ? ===
 
 // Module 10340
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _mod10233 from "module_10233" /* 10233 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10253 */;
+import _mod10255 from "module_10255" /* 10255 */;
+import _mod10324 from "module_10324" /* 10324 */;
+import _mod10326 from "module_10326" /* 10326 */;
+import _mod10327 from "module_10327" /* 10327 */;
+import _mod10328 from "module_10328" /* 10328 */;
+import _mod10329 from "module_10329" /* 10329 */;
+import _mod10341 from "module_10341" /* 10341 */;
+import _mod10342 from "module_10342" /* 10342 */;
+import _mod10343 from "module_10343" /* 10343 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
+const require = globalThis.__r;
+
+function createConfiguration() {
+  const obj = { parsers: null, refiners: null };
+  const items = [new _isNativeReflectConstruct.default(), , , , ];
+  const _default = new _isNativeReflectConstruct.default();
+  items[1] = new _isNativeReflectConstruct.default();
+  const _default1 = new _isNativeReflectConstruct.default();
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  const _default3 = new _isNativeReflectConstruct.default();
+  items[4] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default4 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default(), ];
+  const _default5 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  const result = includeCommonConfiguration.includeCommonConfiguration(obj);
+  const refiners = result.refiners;
+  result.refiners = refiners.filter((item) => !(item instanceof regExp.default));
+  return result;
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
 let fn = this;
 if (this) {
   fn = this.__importDefault;
@@ -44,34 +51,84 @@ if (!fn) {
     return tmp;
   };
 }
-class ZHHansMergeDateRangeRefiner {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, ZHHansMergeDateRangeRefiner);
-    tmp2 = c2;
-    obj = c2(ZHHansMergeDateRangeRefiner);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    return tmp3(self, constructResult);
-  }
+function createCasualConfiguration() {
+  const tmp = createConfiguration();
+  const parsers = tmp.parsers;
+  parsers.unshift(new _isNativeReflectConstruct.default());
+  return tmp;
 }
-_classCallCheck = ZHHansMergeDateRangeRefiner;
-_inherits(ZHHansMergeDateRangeRefiner, fn(_mod10233).default);
-const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*(至|到|-|~|～|－|ー)\s*$/i;
+const regExp = fn(_mod10255);
+fn(_mod10341);
+fn(_mod10324);
+fn(_mod10326);
+fn(_mod10327);
+fn(_mod10328);
+fn(_mod10329);
+fn(_mod10342);
+const _isNativeReflectConstruct = fn(_mod10343);
+const configuration = createConfiguration();
+let parsers = configuration.parsers;
+parsers.unshift(new _isNativeReflectConstruct.default());
+const chrono = new require("module_10213").Chrono(configuration);
+const configuration1 = createConfiguration();
+const parsers1 = configuration1.parsers;
+let _default = new _isNativeReflectConstruct.default();
+let obj = {
+  enumerable: true,
+  get() {
+    return require("module_10213").Chrono;
   }
 };
-const items = [entry];
+const obj2 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingResult;
+  }
+};
+const obj3 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingComponents;
+  }
+};
+const obj4 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ReferenceWithTimezone;
+  }
+};
+const obj5 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Meridiem;
+  }
+};
+const obj6 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Weekday;
+  }
+};
+parsers1.unshift(new _isNativeReflectConstruct.default());
+const chrono1 = new require("module_10213").Chrono(configuration1);
+const chrono2 = new require("module_10213").Chrono(createConfiguration());
 
-export default _createClass(ZHHansMergeDateRangeRefiner, items);
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+};
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+};
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("module_10213").Chrono;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const hans = chrono;
+export const casual = chrono1;
+export const strict = chrono2;

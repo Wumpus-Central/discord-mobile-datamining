@@ -1,28 +1,138 @@
 // === Module 10296: ? ===
 
 // Module 10296
+import _mod10246 from "module_10246" /* 10246 */;
+import includeCommonConfiguration from "includeCommonConfiguration" /* 10253 */;
+import _mod10297 from "module_10297" /* 10297 */;
+import _mod10299 from "module_10299" /* 10299 */;
+import _mod10300 from "module_10300" /* 10300 */;
+import _mod10301 from "module_10301" /* 10301 */;
+import _mod10302 from "module_10302" /* 10302 */;
+import _mod10303 from "module_10303" /* 10303 */;
+import _mod10304 from "module_10304" /* 10304 */;
 
-export const parseYear = function parseYear(match) {
-  if (match.match(/^[0-9]{1,4}$/)) {
-    const _parseInt3 = parseInt;
-    const parsed = parseInt(match);
-    let sum = parsed;
-    if (parsed < 100) {
-      let num3 = 2000;
-      if (parsed > 50) {
-        num3 = 1900;
-      }
-      sum = parsed + num3;
+const require = globalThis.__r;
+
+function createConfiguration() {
+  if (flag === undefined) {
+    flag = true;
+  }
+  let flag2 = arg1;
+  if (arg1 === undefined) {
+    flag2 = true;
+  }
+  const obj = { parsers: null, refiners: null };
+  const items = [new regExp.default(flag2), , , ];
+  const _default = new regExp.default(flag2);
+  items[1] = new _isNativeReflectConstruct.default();
+  const _default1 = new _isNativeReflectConstruct.default();
+  items[2] = new _isNativeReflectConstruct.default();
+  const _default2 = new _isNativeReflectConstruct.default();
+  items[3] = new _isNativeReflectConstruct.default();
+  obj.parsers = items;
+  const _default3 = new _isNativeReflectConstruct.default();
+  const items1 = [new _isNativeReflectConstruct.default(), ];
+  const _default4 = new _isNativeReflectConstruct.default();
+  items1[1] = new _isNativeReflectConstruct.default();
+  obj.refiners = items1;
+  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
+}
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
     }
-    return sum;
-  } else if (match.match(/a\.?\s*c\.?/i)) {
-    const _parseInt2 = parseInt;
-    return -parseInt(match.replace(/a\.?\s*c\.?/i, ""));
-  } else {
-    const _parseInt = parseInt;
-    return parseInt(match);
+    return tmp;
+  };
+}
+function createCasualConfiguration() {
+  let flag = arg0;
+  if (arg0 === undefined) {
+    flag = true;
+  }
+  const tmp = createConfiguration(false, flag);
+  const parsers = tmp.parsers;
+  parsers.push(new _isNativeReflectConstruct.default());
+  const parsers1 = tmp.parsers;
+  const _default = new _isNativeReflectConstruct.default();
+  parsers1.push(new _isNativeReflectConstruct.default());
+  return tmp;
+}
+const regExp = fn(_mod10246);
+fn(_mod10297);
+fn(_mod10299);
+fn(_mod10300);
+fn(_mod10301);
+fn(_mod10302);
+fn(_mod10303);
+const _isNativeReflectConstruct = fn(_mod10304);
+const configuration = createConfiguration(false, true);
+let parsers = configuration.parsers;
+parsers.push(new _isNativeReflectConstruct.default());
+let parsers1 = configuration.parsers;
+let _default = new _isNativeReflectConstruct.default();
+let obj = {
+  enumerable: true,
+  get() {
+    return require("module_10213").Chrono;
   }
 };
-export const WEEKDAY_DICTIONARY = { domingo: 0, dom: 0, segunda: 1, "segunda-feira": 1, seg: 1, "terça": 2, "terça-feira": 2, ter: 2, quarta: 3, "quarta-feira": 3, qua: 3, quinta: 4, "quinta-feira": 4, qui: 4, sexta: 5, "sexta-feira": 5, sex: 5, "sábado": 6, sabado: 6, sab: 6 };
-export const MONTH_DICTIONARY = { janeiro: 1, jan: 1, "jan.": 1, fevereiro: 2, fev: 2, "fev.": 2, "março": 3, mar: 3, "mar.": 3, abril: 4, abr: 4, "abr.": 4, maio: 5, mai: 5, "mai.": 5, junho: 6, jun: 6, "jun.": 6, julho: 7, jul: 7, "jul.": 7, agosto: 8, ago: 8, "ago.": 8, setembro: 9, set: 9, "set.": 9, outubro: 10, out: 10, "out.": 10, novembro: 11, nov: 11, "nov.": 11, dezembro: 12, dez: 12, "dez.": 12 };
-export const YEAR_PATTERN = "[0-9]{1,4}(?![^\\s]\\d)(?:\\s*[a|d]\\.?\\s*c\\.?|\\s*a\\.?\\s*d\\.?)?";
+const obj2 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingResult;
+  }
+};
+const obj3 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ParsingComponents;
+  }
+};
+const obj4 = {
+  enumerable: true,
+  get() {
+    return require("ReferenceWithTimezone").ReferenceWithTimezone;
+  }
+};
+const obj5 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Meridiem;
+  }
+};
+const obj6 = {
+  enumerable: true,
+  get() {
+    return require("Meridiem").Weekday;
+  }
+};
+parsers1.push(new _isNativeReflectConstruct.default());
+const chrono = new require("module_10213").Chrono(configuration);
+const chrono1 = new require("module_10213").Chrono(createConfiguration(true));
+
+export const parse = function parse(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parse(arg0, arg1, arg2);
+};
+export const parseDate = function parseDate(arg0, arg1, arg2) {
+  const casual = exports.casual;
+  return casual.parseDate(arg0, arg1, arg2);
+};
+export { createCasualConfiguration };
+export { createConfiguration };
+export const Chrono = require("module_10213").Chrono;
+export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
+export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
+export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
+export const Meridiem = require("Meridiem").Meridiem;
+export const Weekday = require("Meridiem").Weekday;
+export const casual = chrono;
+export const strict = chrono1;

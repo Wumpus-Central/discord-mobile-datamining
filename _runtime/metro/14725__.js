@@ -1,7 +1,7 @@
 // === Module 14725: ? ===
 
 // Module 14725
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300, height: 175, scales: [2, 3], hash: "cb2a2e3b1b856419d08252c8139a8321", name: "entrace_sounds", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/illustrations", width: 180, height: 108, scales: [2, 3], hash: "2ef493c972c2da0faa0f370d1feb763b", name: "img_what_you_lose_profile_tier1_dark", type: "png" });

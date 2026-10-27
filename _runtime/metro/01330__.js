@@ -2,4 +2,4 @@
 
 // Module 1330
 
-export default URIError;
+export default Math.floor;

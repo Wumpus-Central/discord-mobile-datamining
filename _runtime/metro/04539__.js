@@ -1,27 +1,29 @@
 // === Module 4539: ? ===
 
 // Module 4539
-import differenceInCalendarWeeks_mod from "differenceInCalendarWeeks" /* 4443 */;
-import lastDayOfMonth_mod from "lastDayOfMonth" /* 4540 */;
-import startOfMonth_mod from "startOfMonth" /* 4470 */;
-import requiredArgs_mod from "requiredArgs" /* 4255 */;
+import _mod4260 from "module_4260" /* 4260 */;
+import module_4517_mod from "module_4517" /* 4517 */;
+import module_4518_mod from "module_4518" /* 4518 */;
+import startOfMonth_mod from "startOfMonth" /* 4471 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
+import module_4259_mod from "module_4259" /* 4259 */;
 
-let differenceInCalendarWeeks = differenceInCalendarWeeks_mod;
-if (!differenceInCalendarWeeks) {
-  const obj = { default: differenceInCalendarWeeks };
+let module_4517 = module_4517_mod;
+if (!module_4517) {
+  const obj = { default: module_4517 };
   let tmp3 = obj;
 } else {
-  tmp3 = differenceInCalendarWeeks;
+  tmp3 = module_4517;
 }
-differenceInCalendarWeeks = tmp3;
-let lastDayOfMonth = lastDayOfMonth_mod;
-if (!lastDayOfMonth) {
-  const obj2 = { default: lastDayOfMonth };
+module_4517 = tmp3;
+let module_4518 = module_4518_mod;
+if (!module_4518) {
+  const obj2 = { default: module_4518 };
   let tmp5 = obj2;
 } else {
-  tmp5 = lastDayOfMonth;
+  tmp5 = module_4518;
 }
-lastDayOfMonth = tmp5;
+module_4518 = tmp5;
 let startOfMonth = startOfMonth_mod;
 if (!startOfMonth) {
   const obj3 = { default: startOfMonth };
@@ -38,9 +40,83 @@ if (!requiredArgs) {
   tmp9 = requiredArgs;
 }
 requiredArgs = tmp9;
+let module_4259 = module_4259_mod;
+if (!module_4259) {
+  const obj5 = { default: module_4259 };
+  let tmp11 = obj5;
+} else {
+  tmp11 = module_4259;
+}
+module_4259 = tmp11;
 
-export default function getWeeksInMonth(arg0, arg1) {
+export default function getWeekOfMonth(arg0, weekStartsOn) {
   requiredArgs.default(1, arguments);
-  return differenceInCalendarWeeks.default(lastDayOfMonth.default(arg0), startOfMonth.default(arg0), arg1) + 1;
+  const defaultOptions = _mod4260.getDefaultOptions();
+  weekStartsOn = undefined;
+  if (null != weekStartsOn) {
+    weekStartsOn = weekStartsOn.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    let weekStartsOn1;
+    if (null != weekStartsOn) {
+      locale = weekStartsOn.locale;
+      if (null !== locale) {
+        if (undefined !== locale) {
+          const options = locale.options;
+          if (null !== options) {
+            if (undefined !== options) {
+              weekStartsOn1 = options.weekStartsOn;
+            }
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn1;
+  }
+  if (null === weekStartsOn) {
+    weekStartsOn = defaultOptions.weekStartsOn;
+  }
+  if (null === weekStartsOn) {
+    const locale2 = defaultOptions.locale;
+    let weekStartsOn2;
+    if (null !== locale2) {
+      if (undefined !== locale2) {
+        const options2 = locale2.options;
+        if (null !== options2) {
+          if (undefined !== options2) {
+            weekStartsOn2 = options2.weekStartsOn;
+          }
+        }
+      }
+    }
+    weekStartsOn = weekStartsOn2;
+  }
+  let num = 0;
+  if (null !== weekStartsOn) {
+    num = 0;
+    if (undefined !== weekStartsOn) {
+      num = weekStartsOn;
+    }
+  }
+  const defaultResult1 = module_4259.default(num);
+  if (defaultResult1 >= 0) {
+    if (defaultResult1 <= 6) {
+      const defaultResult2 = module_4517.default(arg0);
+      const _isNaN = isNaN;
+      if (isNaN(defaultResult2)) {
+        return NaN;
+      } else {
+        const diff = defaultResult1 - module_4518.default(startOfMonth.default(arg0));
+        let sum = diff;
+        if (diff <= 0) {
+          sum = diff + 7;
+        }
+        const _Math = Math;
+        return Math.ceil((defaultResult2 - sum) / 7) + 1;
+      }
+    }
+  }
+  const rangeError = new RangeError("weekStartsOn must be between 0 and 6 inclusively");
+  throw rangeError;
 };
 export default exports.default;

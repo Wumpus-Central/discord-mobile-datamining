@@ -1,15 +1,15 @@
 // === Module 10230: ? ===
 
 // Module 10230
-import _mod10214 from "module_10214" /* 10214 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10222 */;
+import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10231 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENTimeUnitAgoFormatParser = require;
+const ENTimeExpressionParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,48 +29,113 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(" + _mod10214.TIME_UNITS_PATTERN + ")\\s{0,5}(?:ago|before|earlier)(?=\\W|$)", "i");
-const regExp1 = new RegExp("(" + _mod10214.TIME_UNITS_NO_ABBR_PATTERN + ")\\s{0,5}(?:ago|before|earlier)(?=\\W|$)", "i");
-class ENTimeUnitAgoFormatParser {
+class ENTimeExpressionParser {
   constructor(arg0) {
     self = this;
-    tmp = c2(this, ENTimeUnitAgoFormatParser);
+    tmp = c2(this, ENTimeExpressionParser);
+    items = [];
+    items[0] = global;
     tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitAgoFormatParser);
+    obj = closure_4(ENTimeExpressionParser);
     tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    if (metroRequire()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      constructResult = obj.apply(self, items);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(ENTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
 const entry = {
-  key: "innerPattern",
-  value: function innerPattern() {
-    return this.strictMode ? regExp1 : regExp;
+  key: "followingPhase",
+  value: function followingPhase() {
+    return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|to|until|through|till|\\?)\\s*";
   }
 };
-const items = [
+let items = [
   entry,
   {
-    key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = ENTimeUnitAgoFormatParser(10214).parseDuration(arg1[1]);
-      let relativeFromReference = null;
-      if (parseDurationResult) {
-        const ParsingComponents = ENTimeUnitAgoFormatParser(10218).ParsingComponents;
-        relativeFromReference = ParsingComponents.createRelativeFromReference(reference.reference, ENTimeUnitAgoFormatParser(10217).reverseDuration(parseDurationResult));
+    key: "primaryPrefix",
+    value: function primaryPrefix() {
+      return "(?:(?:at|from)\\s*)??";
+    }
+  },
+  {
+    key: "primarySuffix",
+    value: function primarySuffix() {
+      return "(?:\\s*(?:o\\W*clock|at\\s*night|in\\s*the\\s*(?:morning|afternoon)))?(?!/)(?=\\W|$)";
+    }
+  },
+  {
+    key: "extractPrimaryTimeComponents",
+    value: function extractPrimaryTimeComponents(arg0, arg1) {
+      const self = this;
+      const tmp = hasOwnProperty(_getPrototypeOf(ENTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
+      dependencyMap = tmp;
+      let fn = tmp;
+      if (typeof tmp === "function") {
+        fn = (items) => fn.apply(self, items);
       }
-      return relativeFromReference;
+      const items = [arg0, arg1];
+      const fnResult = fn(items);
+      if (fnResult) {
+        const first = arg1[0];
+        if (first.endsWith("night")) {
+          value = fnResult.get("hour");
+          if (value >= 6) {
+            if (value < 12) {
+              fnResult.assign("hour", fnResult.get("hour") + 12);
+              fnResult.assign("meridiem", ENTimeExpressionParser(10222).Meridiem.PM);
+            }
+          }
+          if (value < 6) {
+            fnResult.assign("meridiem", ENTimeExpressionParser(10222).Meridiem.AM);
+          }
+        }
+        const first1 = arg1[0];
+        if (first1.endsWith("afternoon")) {
+          fnResult.assign("meridiem", ENTimeExpressionParser(10222).Meridiem.PM);
+          value2 = fnResult.get("hour");
+          let tmp14 = value2 >= 0;
+          if (tmp14) {
+            tmp14 = value2 <= 6;
+          }
+          if (tmp14) {
+            fnResult.assign("hour", fnResult.get("hour") + 12);
+          }
+        }
+        const first2 = arg1[0];
+        if (first2.endsWith("morning")) {
+          fnResult.assign("meridiem", ENTimeExpressionParser(10222).Meridiem.AM);
+          if (fnResult.get("hour") < 12) {
+            fnResult.assign("hour", fnResult.get("hour"));
+          }
+        }
+        return fnResult.addTag("parser/ENTimeExpressionParser");
+      } else {
+        return fnResult;
+      }
+    }
+  },
+  {
+    key: "extractFollowingTimeComponents",
+    value: function extractFollowingTimeComponents(arg0, arg1, arg2) {
+      const self = this;
+      let fn = hasOwnProperty(_getPrototypeOf(ENTimeExpressionParser.prototype), "extractFollowingTimeComponents", this);
+      if (typeof fn === "function") {
+        fn = (items) => fn.apply(self, items);
+      }
+      const items = [arg0, arg1, arg2];
+      const fnResult = fn(items);
+      if (fnResult) {
+        fnResult.addTag("parser/ENTimeExpressionParser");
+      }
+      return fnResult;
     }
   }
 ];
 
-export default _createClass(ENTimeUnitAgoFormatParser, items);
+export default _createClass(ENTimeExpressionParser, items);

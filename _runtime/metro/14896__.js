@@ -1,7 +1,7 @@
 // === Module 14896: ? ===
 
 // Module 14896
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/simple", width: 32, height: 32, scales: [2, 3], hash: "b352e1ffa0afe53b75c17fb675b513d6", name: "tier_1_32px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/plan_selection", width: 80, height: 80, scales: [1], hash: "5f9cf938bde196c596c6b50aa389dd8b", name: "img_wumpus_nitro_classic", type: "png" });

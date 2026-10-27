@@ -1,80 +1,89 @@
 // === Module 10252: ? ===
 
 // Module 10252
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import Filter from "Filter" /* 10236 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const ExtractTimezoneAbbrRefiner = require;
-const regExp = new RegExp("^\\s*,?\\s*\\(?([A-Z]{2,4})\\)?(?=\\W|$)", "i");
-class ExtractTimezoneAbbrRefiner {
-  constructor(arg0) {
-    tmp = c2(this, ExtractTimezoneAbbrRefiner);
-    this.timezoneOverrides = global;
-    return;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
-const entry = {
-  key: "refine",
-  value: function refine(option, arr) {
-    let self = this;
-    let timezones = option.option.timezones;
-    if (null === timezones) {
-      timezones = {};
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class ENUnlikelyFormatFilter {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, ENUnlikelyFormatFilter);
+    tmp2 = c2;
+    obj = c2(ENUnlikelyFormatFilter);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, undefined);
     }
-    const item = arr.forEach((item) => {
-      const match = regExp.exec(option.text.substring(item.index + item.text.length));
-      if (match) {
-        const formatted = match[1].toUpperCase();
-        const start = item.start;
-        let refDate = start.date();
-        if (null === refDate) {
-          refDate = item.refDate;
-        }
-        if (null === refDate) {
-          const _Date = Date;
-          refDate = new Date();
-        }
-        const _Object = Object;
-        const _Object2 = Object;
-        const merged = Object.assign(Object.assign({}, self.timezoneOverrides), timezones);
-        const toTimezoneOffsetResult = ExtractTimezoneAbbrRefiner(10219).toTimezoneOffset(formatted, refDate, merged);
-        self = toTimezoneOffsetResult;
-        if (null != toTimezoneOffsetResult) {
-          option.debug(() => {
-            console.log("Extracting timezone: '" + formatted + "' into: " + toTimezoneOffsetResult + " for: " + item.start);
+    return tmp3(self, constructResult);
+  }
+}
+_classCallCheck = ENUnlikelyFormatFilter;
+_inherits(ENUnlikelyFormatFilter, Filter.Filter);
+const entry = {
+  key: "isValid",
+  value: function isValid(text, text2) {
+    closure_0 = text2;
+    const str2 = text2.text.trim();
+    if (str2 === str3.trim()) {
+      return true;
+    } else {
+      if ("may" === str2.toLowerCase()) {
+        const str5 = text.text.substring(0, text2.index);
+        if (!str6.match(/\b(in)$/i)) {
+          text.debug(() => {
+            console.log("Removing unlikely result: " + closure_0);
           });
-          const start6 = item.start;
-          value = start6.get("timezoneOffset");
-          if (null !== value) {
-            if (toTimezoneOffsetResult != value) {
-              const start2 = item.start;
-            }
-          }
-          const start3 = item.start;
-          if (!tmp14) {
-            item.text = item.text + match[0];
-            const start4 = item.start;
-            if (!start4.isCertain("timezoneOffset")) {
-              const start5 = item.start;
-              start5.assign("timezoneOffset", toTimezoneOffsetResult);
-            }
-            let isCertainResult = null == item.end;
-            if (!isCertainResult) {
-              const end = item.end;
-              isCertainResult = end.isCertain("timezoneOffset");
-            }
-            if (!isCertainResult) {
-              const end2 = item.end;
-              end2.assign("timezoneOffset", toTimezoneOffsetResult);
-            }
-          }
-          tmp14 = start3.isOnlyDate() && formatted != match[1];
+          return false;
         }
+        str6 = text.text.substring(0, text2.index).trim();
       }
-    });
-    return arr;
+      const formatted = str2.toLowerCase();
+      const endsWithResult = formatted.endsWith("the second");
+      let flag2 = !endsWithResult;
+      if (endsWithResult) {
+        flag2 = false;
+        if (str9.trim().length > 0) {
+          text.debug(() => {
+            console.log("Removing unlikely result: " + closure_0);
+          });
+          flag2 = false;
+        }
+        str9 = text.text.substring(text2.index + text2.text.length);
+      }
+      return flag2;
+    }
+    str3 = text.text;
   }
 };
 const items = [entry];
 
-export default _createClass(ExtractTimezoneAbbrRefiner, items);
+export default _createClass(ENUnlikelyFormatFilter, items);

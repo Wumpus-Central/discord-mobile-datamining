@@ -5,7 +5,7 @@ import colorPropType from "colorPropType" /* 8802 */;
 import _mod8804 from "module_8804" /* 8804 */;
 import _mod8818 from "module_8818" /* 8818 */;
 import flattenStyle from "module_8807" /* 8807 */;
-import emptyFunction_mod from "module_5010" /* 5010 */;
+import emptyFunction_mod from "module_5011" /* 5011 */;
 
 const obj = { ellipsizeMode: null, numberOfLines: null, textBreakStrategy: null, onLayout: null, onPress: null, onLongPress: null, pressRetentionOffset: null, selectable: null, selectionColor: null, suppressHighlighting: null, style: null, testID: null, nativeID: null, allowFontScaling: null, maxFontSizeMultiplier: null, accessible: null, adjustsFontSizeToFit: null, minimumFontScale: null, disabled: null, dataDetectorType: null };
 const module_8818 = flattenStyle(_mod8818);

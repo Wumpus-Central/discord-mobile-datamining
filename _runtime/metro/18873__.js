@@ -1,25 +1,7 @@
 // === Module 18873: ? ===
 
 // Module 18873
+import registerAsset from "module_1131" /* 1131 */;
 
-export default (promise, arg1) => {
-  let fn = arg1;
-  if (!arg1) {
-    fn = () => {
 
-    };
-  }
-  return promise.then((result) => {
-    closure_0 = result;
-    return new Promise((fn) => {
-      fn(closure_0());
-    }).then(() => closure_0);
-  }, (arg0) => {
-    closure_0 = arg0;
-    return new Promise((fn) => {
-      fn(closure_0());
-    }).then(() => {
-      throw closure_0;
-    });
-  });
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/holidays/assets", scales: [1], hash: "f93451de8485614c5fc27f96cc9d2019", name: "halloween_loading_dark", type: "webm" });

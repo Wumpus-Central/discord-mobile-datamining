@@ -1,7 +1,7 @@
 // === Module 17015: ? ===
 
 // Module 17015
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "ec3c8a78a62dc6597350cc012dd1f3ca", name: "zh-CN.messages.ec3c8a78a62dc6597350cc012dd1f3ca.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "88d061a76594f03187e4bf612ecd1256", name: "RecordPlayerIcon", type: "png" });

@@ -2,7 +2,7 @@
 
 // Module 8811 (merged1)
 import colorPropType from "colorPropType" /* 8802 */;
-import emptyFunction from "module_5010" /* 5010 */;
+import emptyFunction from "module_5011" /* 5011 */;
 
 const obj = { shadowColor: colorPropType, shadowOffset: null, shadowOpacity: null, shadowRadius: null };
 const size = { width: emptyFunction.number, height: emptyFunction.number };

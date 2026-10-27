@@ -2,88 +2,26 @@
 
 // Module 1074
 import _mod17 from "module_17" /* 17 */;
-import RN_GLOBAL_OBJ2 from "RN_GLOBAL_OBJ" /* 692 */;
-import TurboModuleRegistry from "TurboModuleRegistry" /* 874 */;
-import _mod879 from "module_879" /* 879 */;
+import _getClientIntegration from "_getClientIntegration" /* 1007 */;
 
-const Alert = _mod17.Alert;
+const Appearance = _mod17.Appearance;
+const LightTheme = { accentBackground: "rgba(88, 74, 192, 1)", accentForeground: "#ffffff", foreground: "#2b2233", background: "#ffffff", border: "rgba(41, 35, 47, 0.13)", feedbackIcon: "rgba(54, 45, 89, 1)", sentryLogo: "rgba(54, 45, 89, 1)" };
+const obj2 = { accentBackground: "rgba(88, 74, 192, 1)", accentForeground: "#ffffff", foreground: "#ebe6ef", background: "#29232f", border: "rgba(235, 230, 239, 0.15)", feedbackIcon: "#ffffff", sentryLogo: "#ffffff" };
 
-export const isModalSupported = function isModalSupported() {
-  const ReactNativeVersion = TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion;
-  let version;
-  if (null !== ReactNativeVersion) {
-    if (undefined !== ReactNativeVersion) {
-      version = ReactNativeVersion.version;
-    }
+export const getTheme = function getTheme() {
+  const obj = _getClientIntegration;
+  let colorScheme = obj.getColorScheme();
+  if ("system" === colorScheme) {
+    colorScheme = Appearance.getColorScheme();
   }
-  if (!version) {
-    version = {};
+  const merged = Object.assign({}, obj);
+  let merged1 = Object.assign(merged, _getClientIntegration.getFeedbackLightTheme());
+  const merged2 = Object.assign({}, obj2);
+  const tmpResult = _getClientIntegration;
+  if ("dark" === colorScheme) {
+    merged1 = Object.assign(merged2, tmpResult2.getFeedbackDarkTheme());
   }
-  ({ minor, major } = version);
-  let isFabricEnabledResult = _mod879.isFabricEnabled();
-  if (isFabricEnabledResult) {
-    isFabricEnabledResult = 0 === major;
-  }
-  if (isFabricEnabledResult) {
-    isFabricEnabledResult = minor;
-  }
-  if (isFabricEnabledResult) {
-    isFabricEnabledResult = minor < 71;
-  }
-  return !isFabricEnabledResult;
+  return merged1;
 };
-export const isNativeDriverSupportedForColorAnimations = function isNativeDriverSupportedForColorAnimations() {
-  const ReactNativeVersion = TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion;
-  let version;
-  if (null !== ReactNativeVersion) {
-    if (undefined !== ReactNativeVersion) {
-      version = ReactNativeVersion.version;
-    }
-  }
-  if (!version) {
-    version = {};
-  }
-  ({ major, minor } = version);
-  let flag = major;
-  if (major) {
-    flag = major > 0;
-  }
-  if (!flag) {
-    let tmp = minor;
-    if (minor) {
-      tmp = minor >= 69;
-    }
-    flag = tmp;
-  }
-  if (!flag) {
-    flag = false;
-  }
-  return flag;
-};
-export const isValidEmail = (trimmed1) => /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(trimmed1);
-export const base64ToUint8Array = (placeholder) => {
-  if (typeof atob === "function") {
-    if (obj.isWeb()) {
-      const _atob = atob;
-      const _Uint8Array = Uint8Array;
-      const items = [];
-      HermesBuiltin.arraySpread(atob(placeholder), 0);
-      const uint8Array = new Uint8Array(items.map((item) => item.charCodeAt(0)));
-      return uint8Array;
-    }
-    obj = _mod879;
-  }
-  const error = new Error("atob is not available in this environment.");
-  throw error;
-};
-export const feedbackAlertDialog = (errorTitle, captureScreenshotError) => {
-  if (obj.isWeb()) {
-    if (undefined !== RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ.alert) {
-      const RN_GLOBAL_OBJ = RN_GLOBAL_OBJ2.RN_GLOBAL_OBJ;
-      const _HermesInternal = HermesInternal;
-      RN_GLOBAL_OBJ.alert("" + errorTitle + "\n" + captureScreenshotError);
-    }
-  }
-  Alert.alert(errorTitle, captureScreenshotError);
-  obj = _mod879;
-};
+export { LightTheme };
+export const DarkTheme = obj2;

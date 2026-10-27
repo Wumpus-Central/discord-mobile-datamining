@@ -1,193 +1,186 @@
 // === Module 10211: ? ===
 
 // Module 10211
-import ENDefaultConfiguration2 from "ENDefaultConfiguration" /* 10212 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import Chrono from "Chrono" /* 10212 */;
+import _mod10260 from "module_10260" /* 10260 */;
+import _mod10272 from "module_10272" /* 10272 */;
+import _mod10285 from "module_10285" /* 10285 */;
+import _mod10296 from "module_10296" /* 10296 */;
+import _mod10305 from "module_10305" /* 10305 */;
+import _mod10323 from "module_10323" /* 10323 */;
+import _mod10344 from "module_10344" /* 10344 */;
+import _mod10359 from "module_10359" /* 10359 */;
+import _mod10369 from "module_10369" /* 10369 */;
+import _mod10384 from "module_10384" /* 10384 */;
+import _mod10403 from "module_10403" /* 10403 */;
 
-let ParsingContext = require;
-let fn = this;
+const require = globalThis.__r;
+
+const self = this;
+let self2 = this;
 if (this) {
-  fn = this.__importDefault;
+  self2 = self.__createBinding;
 }
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
-    } else {
-      tmp = __esModule;
-    }
-    return tmp;
-  };
-}
-const ENDefaultConfiguration = fn(ENDefaultConfiguration2);
-class Chrono {
-  constructor(arg0) {
-    self = this;
-    casualConfiguration = global;
-    tmp2 = c2(this, ParsingContext);
-    _default = new closure_3.default();
-    this.defaultConfig = _default;
-    if (!global) {
-      defaultConfig = self.defaultConfig;
-      casualConfiguration = defaultConfig.createCasualConfiguration();
-    }
-    items = [...casualConfiguration.parsers];
-    self.parsers = items;
-    self.refiners = [...casualConfiguration.refiners];
-    return;
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
   }
-}
-ParsingContext = Chrono;
-const entry = {
-  key: "clone",
-  value: function clone() {
-    const obj = { parsers: null, refiners: [...this.refiners] };
-    const items = [...this.parsers];
-    obj.parsers = items;
-    const obj2 = Object.create(ParsingContext.prototype);
-    _classCallCheck(obj2, ParsingContext);
-    obj2.defaultConfig = new ENDefaultConfiguration.default();
-    obj2.parsers = [...obj.parsers];
-    obj2.refiners = [...obj.refiners];
-    return obj2;
-  }
-};
-let items = [
-  entry,
-  {
-    key: "parseDate",
-    value: function parseDate(arg0, arg1, arg2) {
-      const parsed = this.parse(arg0, arg1, arg2);
-      let dateResult = null;
-      if (parsed.length > 0) {
-        const start = parsed[0].start;
-        dateResult = start.date();
-      }
-      return dateResult;
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
     }
-  },
-  {
-    key: "parse",
-    value: function parse(arg0, arg1, arg2) {
-      closure_0 = new _moduleResult(arg0, arg1, arg2);
-      dependencyMap = [];
-      const parsers = this.parsers;
-      const item = parsers.forEach((item) => {
-        closure_1 = closure_1.concat(ParsingContext.executeParser(closure_0, item));
-      });
-      const sorted = dependencyMap.sort((index, index2) => index.index - index2.index);
-      const refiners = this.refiners;
-      const item1 = refiners.forEach((refine) => {
-        closure_1 = refine.refine(closure_0, closure_1);
-      });
-      return dependencyMap;
-    }
-  }
-];
-const entry1 = {
-  key: "executeParser",
-  value: function executeParser(debug, pattern) {
-    let index = pattern;
-    const items = [];
-    const patternResult = pattern.pattern(debug);
-    ({ text, text: text2 } = debug);
-    let match = patternResult.exec(text2);
-    if (match) {
-      match.index = match.index + text.length - text2.length;
-      const extractResult = pattern.extract(debug, match);
-      while (!extractResult) {
-        let substr = text.substring(match.index + 1);
-        let match1 = patternResult.exec(substr);
-        match = match1;
-        text2 = substr;
-      }
-      let parsingResult = extractResult;
-      if (extractResult instanceof ParsingContext(10218).ParsingResult) {
-        index = parsingResult.index;
-        const text1 = parsingResult.text;
-        debug.debug(() => console.log("" + ParsingContext.constructor.name + " extracted (at index=" + index + ") '" + text1 + "'"));
-        items.push(parsingResult);
-        const substr1 = text.substring(index + text1.length);
-        const match2 = patternResult.exec(substr1);
-      } else if (!(extractResult instanceof ParsingContext(10218).ParsingComponents)) {
-        parsingResult = debug.createParsingResult(match.index, match[0], extractResult);
-      }
-      const tmp9Result = tmp9(index, substr1);
-      tmp9Result.start = extractResult;
-      parsingResult = tmp9Result;
-    }
-    return items;
-  }
-};
-const items1 = [entry1];
-class ParsingContext {
-  constructor(arg0, arg1, arg2) {
-    self = this;
-    obj = importDefault;
-    tmp = c2(this, ParsingContext);
-    this.text = global;
-    if (null == importDefault) {
-      obj = {};
-    }
-    self.option = obj;
-    ReferenceWithTimezone = closure_0(closure_1[3]).ReferenceWithTimezone;
-    self.reference = ReferenceWithTimezone.fromInput(require, self.option.timezones);
-    self.refDate = self.reference.instant;
-    return;
-  }
-}
-const entry2 = {
-  key: "createParsingComponents",
-  value: function createParsingComponents(date) {
-    let parsingComponents = date;
-    if (!(date instanceof ParsingContext(10218).ParsingComponents)) {
-      const self = this;
-      parsingComponents = new ParsingContext(10218).ParsingComponents(this.reference, date);
-    }
-    return parsingComponents;
-  }
-};
-const items2 = [
-  entry2,
-  {
-    key: "createParsingResult",
-    value: function createParsingResult(sum, match, extractResult, date) {
-      const self = this;
-      let substr = match;
-      if (typeof match !== "string") {
-        substr = self.text.substring(sum, match);
-      }
-      let parsingComponents = null;
-      if (extractResult) {
-        parsingComponents = self.createParsingComponents(extractResult);
-      }
-      let parsingComponents1 = null;
-      if (date) {
-        parsingComponents1 = self.createParsingComponents(date);
-      }
-      return new ParsingContext(10218).ParsingResult(self.reference, sum, substr, parsingComponents, parsingComponents1);
-    }
-  },
-  {
-    key: "debug",
-    value: function debug(arg0) {
-      const self = this;
-      if (this.option.debug) {
-        const _Function = Function;
-        const option = self.option;
-        const debug = option.debug;
-        if (self.option.debug instanceof Function) {
-          debug(arg0);
-        } else {
-          debug.debug(arg0);
+    if (!fn) {
+      fn = function t(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
         }
-      }
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
     }
+    const _Object3 = Object;
+    exports.en = undefined;
+    exports.Chrono = undefined;
+    exports.ParsingContext = undefined;
+    exports.ParsingResult = undefined;
+    exports.ParsingComponents = undefined;
+    exports.ReferenceWithTimezone = undefined;
+    exports.Meridiem = undefined;
+    exports.Weekday = undefined;
+    exports.de = undefined;
+    exports.fr = undefined;
+    exports.ja = undefined;
+    exports.pt = undefined;
+    exports.nl = undefined;
+    exports.zh = undefined;
+    exports.ru = undefined;
+    exports.es = undefined;
+    exports.uk = undefined;
+    exports.it = undefined;
+    exports.sv = undefined;
+    exports.strict = undefined;
+    exports.casual = undefined;
+    exports.parse = function parse(arg0, arg1, arg2) {
+      const casual = exports.casual;
+      return casual.parse(arg0, arg1, arg2);
+    };
+    exports.parseDate = function parseDate(arg0, arg1, arg2) {
+      const casual = exports.casual;
+      return casual.parseDate(arg0, arg1, arg2);
+    };
+    const fnResult = fn(Chrono);
+    exports.en = fnResult;
+    const _Object4 = Object;
+    let obj = {
+      enumerable: true,
+      get() {
+            return require("module_10213").Chrono;
+          }
+    };
+    Object.defineProperty(exports, "Chrono", obj);
+    const _Object5 = Object;
+    const obj2 = {
+      enumerable: true,
+      get() {
+            return require("module_10213").ParsingContext;
+          }
+    };
+    Object.defineProperty(exports, "ParsingContext", obj2);
+    const _Object6 = Object;
+    const obj3 = {
+      enumerable: true,
+      get() {
+            return require("ReferenceWithTimezone").ParsingResult;
+          }
+    };
+    Object.defineProperty(exports, "ParsingResult", obj3);
+    const _Object7 = Object;
+    const obj4 = {
+      enumerable: true,
+      get() {
+            return require("ReferenceWithTimezone").ParsingComponents;
+          }
+    };
+    Object.defineProperty(exports, "ParsingComponents", obj4);
+    const _Object8 = Object;
+    const obj5 = {
+      enumerable: true,
+      get() {
+            return require("ReferenceWithTimezone").ReferenceWithTimezone;
+          }
+    };
+    Object.defineProperty(exports, "ReferenceWithTimezone", obj5);
+    const _Object9 = Object;
+    const obj6 = {
+      enumerable: true,
+      get() {
+            return require("Meridiem").Meridiem;
+          }
+    };
+    Object.defineProperty(exports, "Meridiem", obj6);
+    const _Object10 = Object;
+    const obj7 = {
+      enumerable: true,
+      get() {
+            return require("Meridiem").Weekday;
+          }
+    };
+    Object.defineProperty(exports, "Weekday", obj7);
+    exports.de = fn(_mod10260);
+    exports.fr = fn(_mod10272);
+    exports.ja = fn(_mod10285);
+    exports.pt = fn(_mod10296);
+    exports.nl = fn(_mod10305);
+    exports.zh = fn(_mod10323);
+    exports.ru = fn(_mod10344);
+    exports.es = fn(_mod10359);
+    exports.uk = fn(_mod10369);
+    exports.it = fn(_mod10384);
+    exports.sv = fn(_mod10403);
+    ({ strict: exports.strict, casual: exports.casual } = fnResult);
+  } else {
+    const _Object2 = Object;
   }
-];
-const _moduleResult = _createClass(ParsingContext, items2);
-
-export const Chrono = _createClass(Chrono, items, items1);
-export const ParsingContext = _moduleResult;
+} else {
+  let _Object = Object;
+}

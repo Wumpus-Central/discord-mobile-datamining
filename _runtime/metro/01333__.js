@@ -2,4 +2,4 @@
 
 // Module 1333
 
-export default Math.floor;
+export default Math.pow;

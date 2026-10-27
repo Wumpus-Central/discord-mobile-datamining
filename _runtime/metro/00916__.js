@@ -1,8 +1,20 @@
 // === Module 916: ? ===
 
 // Module 916
-import _mod693 from "module_693" /* 693 */;
+import _mod917 from "module_917" /* 917 */;
 
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+require = arg1;
+const dependencyMap = arg6;
+Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const WINDOW = _mod693.GLOBAL_OBJ;
+export const getActivationStart = () => {
+  const navigationEntry = _mod917.getNavigationEntry();
+  let num;
+  if (navigationEntry != null) {
+    num = navigationEntry.activationStart;
+  }
+  if (num == null) {
+    num = 0;
+  }
+  return num;
+};

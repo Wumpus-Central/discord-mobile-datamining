@@ -1,7 +1,7 @@
 // === Module 10483: ? ===
 
 // Module 10483
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 279, height: 48, scales: [2, 3], hash: "e03e83c5ddeddb7941bbe7457ccf1a98", name: "img_nitro_tier_2_activated_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/activated", width: 279, height: 48, scales: [2, 3], hash: "03a20a682965583c41d600bd770a621d", name: "img_nitro_tier_1_activated_dark", type: "png" });

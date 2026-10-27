@@ -1,7 +1,7 @@
 // === Module 14653: ? ===
 
 // Module 14653
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/virtual_currency/images/native", width: 576, height: 324, scales: [1], hash: "83d6f52e41f68a6a0f493020b6be93e9", name: "hero-orbs", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 230, height: 110, scales: [2, 3], hash: "13bbd5c08cf3fa23ae993ffb532d6b29", name: "empty_voice_channel", type: "png" });

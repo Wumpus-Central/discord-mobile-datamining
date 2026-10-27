@@ -1,7 +1,7 @@
 // === Module 9964: ? ===
 
 // Module 9964
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "aa86e9bedf9e29074b68adcd3222cf32", name: "NatureIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "137c8d60debe14e8345280ef0c17818d", name: "LightbulbIcon", type: "png" });

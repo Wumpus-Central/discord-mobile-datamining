@@ -1,9 +1,5 @@
 // === Module 15618: ? ===
 
 // Module 15618
-import _mod15619 from "module_15619" /* 15619 */;
-import _mod15626 from "module_15626" /* 15626 */;
 
-
-export const URL = _mod15619;
-export const URLSearchParams = _mod15626;
+export default (arg0, value) => ({ enumerable: !(1 & arg0), configurable: !(2 & arg0), writable: !(4 & arg0), value });

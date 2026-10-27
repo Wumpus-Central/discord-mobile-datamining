@@ -1,21 +1,12 @@
 // === Module 1636: ? ===
 
 // Module 1636
-const require = globalThis.__r;
+import weakSet from "weakSet" /* 106 */;
+import module_65 from "module_65" /* 65 */;
 
-for (const key10013 in require("module_1637")) {
-  arg5[key10013] = require("module_1637")[key10013];
-  continue;
-}
-for (const key10017 in require("SafeAreaView")) {
-  arg5[key10017] = require("SafeAreaView")[key10017];
-  continue;
-}
-for (const key10021 in require("initialWindowMetrics")) {
-  arg5[key10021] = require("initialWindowMetrics")[key10021];
-  continue;
-}
-for (const key10025 in require("module_1644")) {
-  arg5[key10025] = require("module_1644")[key10025];
-  continue;
-}
+const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNCSafeAreaProvider", directEventTypes: { topInsetsChange: { registrationName: "onInsetsChange" } }, validAttributes: null };
+const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onInsetsChange: true }));
+__INTERNAL_VIEW_CONFIG.validAttributes = {};
+
+export default module_65.get("RNCSafeAreaProvider", () => obj);
+export { __INTERNAL_VIEW_CONFIG };

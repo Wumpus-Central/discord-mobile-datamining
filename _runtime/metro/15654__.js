@@ -2,9 +2,8 @@
 
 // Module 15654
 import _mod15655 from "module_15655" /* 15655 */;
-import get_ActivityIndicator from "module_17" /* 17 */;
+import _mod15662 from "module_15662" /* 15662 */;
 
 
-export default function getReactNativeVersion() {
-  return _mod15655.getReactNativeVersionWithModules(get_ActivityIndicator.Platform.constants);
-};
+export const URL = _mod15655;
+export const URLSearchParams = _mod15662;

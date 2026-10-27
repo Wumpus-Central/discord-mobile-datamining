@@ -5,10 +5,10 @@ import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
-import noop from "module_19" /* 19 */;
 
-const RNSentryOnDrawReporterNoop = fn;
+const ReactNativeProfiler = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,62 +28,87 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-get_ActivityIndicator = fn(17);
-({ UIManager, View: metroRequire } = get_ActivityIndicator);
-const RNSentryOnDrawReporter = "RNSentryOnDrawReporter";
-const tmp6 = UIManager.hasViewManagerConfig && UIManager.hasViewManagerConfig("RNSentryOnDrawReporter");
-let closure_10 = tmp6;
-class RNSentryOnDrawReporterNoop {
-  constructor() {
+let closure_7 = {
+  appStartReported: false,
+  onRunApplicationHook() {
+    closure_7.appStartReported = false;
+  }
+};
+class ReactNativeProfiler {
+  constructor(arg0) {
     self = this;
-    tmp = c2(this, RNSentryOnDrawReporterNoop);
-    tmp2 = closure_4;
-    obj = closure_4(RNSentryOnDrawReporterNoop);
-    tmp3 = closure_3;
-    if (closure_7()) {
-      tmp7 = globalThis;
+    tmp = c2(this, ReactNativeProfiler);
+    obj = closure_0(closure_1[6]);
+    obj2 = closure_0(closure_1[7]);
+    result = obj._setRootComponentCreationTimestampMs(1000 * obj2.timestampInSeconds());
+    items = [];
+    items[0] = global;
+    tmp3 = closure_4;
+    obj3 = closure_4(ReactNativeProfiler);
+    tmp4 = closure_3;
+    if (metroRequire()) {
+      tmp6 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj3, items, tmp3(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj3.apply(self, items);
     }
-    return tmp3(self, constructResult);
+    tmp4Result = tmp4(self, constructResult);
+    tmp4Result.name = "ReactNativeProfiler";
+    return tmp4Result;
   }
 }
-_inherits(RNSentryOnDrawReporterNoop, noop.Component);
+_inherits(ReactNativeProfiler, fn(1009).Profiler);
 const entry = {
-  key: "render",
-  value: function render() {
-    return <timestampProducer {......Object.assign({}, this.props)} />;
-  }
-};
-const items = [entry];
-let closure_11 = _createClass(RNSentryOnDrawReporterNoop, items);
-
-export const nativeComponentExists = tmp6;
-export const getRNSentryOnDrawReporter = () => {
-  if (result) {
-    return result;
-  } else {
-    if (!obj.isExpoGo()) {
-      if (closure_10) {
-        const ReactNative = RNSentryOnDrawReporterNoop(874).ReactNativeLibraries.ReactNative;
-        let prop;
-        if (null !== ReactNative) {
-          if (undefined !== ReactNative) {
-            prop = ReactNative.requireNativeComponent;
-          }
-        }
-        if (prop) {
-          const ReactNative2 = RNSentryOnDrawReporterNoop(874).ReactNativeLibraries.ReactNative;
-          result = ReactNative2.requireNativeComponent(RNSentryOnDrawReporter);
-        }
-      }
+  key: "componentDidMount",
+  value: function componentDidMount() {
+    const self = this;
+    let fn = hasOwnProperty(_getPrototypeOf(ReactNativeProfiler.prototype), "componentDidMount", this);
+    if (typeof fn === "function") {
+      fn = (arg0) => fn.apply(self, arg0);
     }
-    result = closure_11;
-    obj = RNSentryOnDrawReporterNoop(879);
+    !fn([]);
+    if (!closure_7.appStartReported) {
+      self._reportAppStart();
+      tmp2.appStartReported = true;
+    }
   }
 };
+let items = [
+  entry,
+  {
+    key: "_reportAppStart",
+    value: function _reportAppStart() {
+      let _captureAppStart = ReactNativeProfiler;
+      const client = ReactNativeProfiler(1009).getClient();
+      if (client) {
+        const addIntegration = client.addIntegration;
+        if (!tmp4) {
+          const self = this;
+          const call = addIntegration.call;
+          const integration = _captureAppStart(1067).createIntegration(this.name);
+          if (typeof call === "unknown") {
+            addIntegration(integration);
+          } else {
+            call(client, integration);
+          }
+          const _captureAppStartResult = _captureAppStart(1067);
+        }
+        const appRegistryIntegration = _captureAppStart(1027).getAppRegistryIntegration(client);
+        if (!appRegistryIntegration) {
+          const debug = _captureAppStart(693).debug;
+          debug.warn("AppRegistryIntegration.onRunApplication not found or invalid.");
+          _captureAppStart = _captureAppStart(1026)._captureAppStart;
+          _captureAppStart({ isManual: false });
+          const _captureAppStartResult2 = _captureAppStart(1026);
+        }
+        appRegistryIntegration.onRunApplication(closure_7.onRunApplicationHook);
+        const _captureAppStartResult1 = _captureAppStart(1027);
+        tmp4 = null === addIntegration || undefined === addIntegration;
+      }
+      const obj = ReactNativeProfiler(1009);
+    }
+  }
+];
+
+export const ReactNativeProfiler = _createClass(ReactNativeProfiler, items);

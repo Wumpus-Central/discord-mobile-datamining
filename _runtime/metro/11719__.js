@@ -1,7 +1,7 @@
 // === Module 11719: ? ===
 
 // Module 11719
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [2, 3], hash: "4550be26e4ce88ab0a8f2d917df660a6", name: "ic_xbox_24px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 18, height: 18, scales: [2, 3], hash: "ade8732f10573e5215aa029a138cb853", name: "watch", type: "png" });

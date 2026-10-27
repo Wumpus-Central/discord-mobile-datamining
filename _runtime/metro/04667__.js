@@ -1,35 +1,60 @@
 // === Module 4667: ? ===
 
 // Module 4667
-import module_4258_mod from "module_4258" /* 4258 */;
-import _typeof_mod from "module_4254" /* 4254 */;
-import module_4519_mod from "module_4519" /* 4519 */;
-import requiredArgs_mod from "requiredArgs" /* 4255 */;
+import _typeof_mod from "module_4255" /* 4255 */;
+import module_4668_mod from "module_4668" /* 4668 */;
+import module_4259_mod from "module_4259" /* 4259 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let module_4258 = module_4258_mod;
-if (!module_4258) {
-  const obj = { default: module_4258 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4258;
+function _typeof(arg0) {
+  if (typeof Symbol === "function") {
+    let _Symbol = Symbol;
+    if (typeof Symbol.iterator === "symbol") {
+      _typeof = function _typeof(arg0) {
+        return typeof arg0;
+      };
+    }
+    return _typeof(arg0);
+  }
+  _typeof = function _typeof(arg0) {
+    if (arg0) {
+      const _Symbol = Symbol;
+      if (typeof Symbol === "function") {
+        const _Symbol3 = Symbol;
+        if (arg0.constructor === Symbol) {
+          const _Symbol2 = Symbol;
+          let str = "symbol";
+        }
+        return str;
+      }
+    }
+    str = typeof arg0;
+  };
 }
-module_4258 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
-  const obj2 = { default: _typeof };
+  const obj = { default: _typeof };
+  let tmp3 = obj;
+} else {
+  tmp3 = _typeof;
+}
+_typeof = tmp3;
+let module_4668 = module_4668_mod;
+if (!module_4668) {
+  const obj2 = { default: module_4668 };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_4668;
 }
-_typeof = tmp5;
-let module_4519 = module_4519_mod;
-if (!module_4519) {
-  const obj3 = { default: module_4519 };
+module_4668 = tmp5;
+let module_4259 = module_4259_mod;
+if (!module_4259) {
+  const obj3 = { default: module_4259 };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4519;
+  tmp7 = module_4259;
 }
-module_4519 = tmp7;
+module_4259 = tmp7;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj4 = { default: requiredArgs };
@@ -39,15 +64,44 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp9;
 
-export default function setMonth(arg0, arg1) {
+export default function set(arg0, year) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const defaultResult2 = module_4258.default(arg1);
-  const fullYear = defaultResult1.getFullYear();
-  const date1 = new Date(0);
-  date1.setFullYear(fullYear, defaultResult2, 15);
-  date1.setHours(0, 0, 0, 0);
-  defaultResult1.setMonth(defaultResult2, Math.min(defaultResult1.getDate(), module_4519.default(date1)));
-  return defaultResult1;
+  if ("object" === _typeof(year)) {
+    if (null !== year) {
+      const defaultResult1 = _typeof.default(arg0);
+      const _isNaN = isNaN;
+      if (isNaN(defaultResult1.getTime())) {
+        const _Date = Date;
+        const date = new Date(NaN);
+        return date;
+      } else {
+        if (null != year.year) {
+          defaultResult1.setFullYear(year.year);
+        }
+        let defaultResult2 = defaultResult1;
+        if (null != year.month) {
+          defaultResult2 = module_4668.default(defaultResult1, year.month);
+        }
+        if (null != year.date) {
+          defaultResult2.setDate(module_4259.default(year.date));
+        }
+        if (null != year.hours) {
+          defaultResult2.setHours(module_4259.default(year.hours));
+        }
+        if (null != year.minutes) {
+          defaultResult2.setMinutes(module_4259.default(year.minutes));
+        }
+        if (null != year.seconds) {
+          defaultResult2.setSeconds(module_4259.default(year.seconds));
+        }
+        if (null != year.milliseconds) {
+          defaultResult2.setMilliseconds(module_4259.default(year.milliseconds));
+        }
+        return defaultResult2;
+      }
+    }
+  }
+  const rangeError = new RangeError("values parameter must be an object");
+  throw rangeError;
 };
 export default exports.default;

@@ -1,9 +1,7 @@
 // === Module 12580: ? ===
 
 // Module 12580
-let __SENTRY_DEBUG__ = typeof globalThis.__SENTRY_DEBUG__ === "undefined";
-if (typeof globalThis.__SENTRY_DEBUG__ !== "undefined") {
-  __SENTRY_DEBUG__ = globalThis.__SENTRY_DEBUG__;
-}
+import registerAsset from "module_1131" /* 1131 */;
 
-export const DEBUG_BUILD = __SENTRY_DEBUG__;
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d6f5a76861191f4dd121da59ef71950f", name: "ArrowSmallUpIcon", type: "png" });

@@ -1,7 +1,7 @@
 // === Module 6514: ? ===
 
 // Module 6514
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "f2fc96c4a753dd0c5dd02646aa2a518c", name: "img_account_sync_battlenet_white", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 24, height: 24, scales: [1], hash: "579bfc60bdd93580f90ccebe4dc03bbf", name: "img_account_sync_battlenet_light_and_dark", type: "svg" });

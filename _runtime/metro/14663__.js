@@ -1,7 +1,7 @@
 // === Module 14663: ? ===
 
 // Module 14663
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/backgrounds", width: 411, height: 134, scales: [2, 3], hash: "1e7b4b86ff7b632a5724a01e406c1753", name: "img_subheader_error_mobile", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 24, height: 24, scales: [2, 3], hash: "cc65a5f47aada2d48ca57f930a5ac833", name: "camera", type: "png" });

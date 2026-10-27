@@ -1,10 +1,11 @@
 // === Module 1179: ? ===
 
 // Module 1179
-import _mod1171 from "module_1171" /* 1171 */;
+import _mod19 from "module_19" /* 19 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import _mod1168 from "module_1168" /* 1168 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c2 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
@@ -27,105 +28,55 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-function formatToAst(content, arg1) {
-  if (typeof content === "string") {
-    const obj = { type: AstBuilder.Text, content };
-    const items = [obj];
-    let bindFormatValuesResult = items;
-  } else {
+function formatReact(str, arg1, arg2) {
+  let bindFormatValuesResult = str;
+  if (typeof str !== "string") {
     const self = this;
-    bindFormatValuesResult = this.bindFormatValues(_moduleResult, content, arg1);
+    bindFormatValuesResult = this.bindFormatValues(arg2, str, arg1);
   }
   return bindFormatValuesResult;
 }
-let obj = {};
-const AstBuilder = obj;
-obj.Text = "text";
-obj.Strong = "strong";
-obj.Emphasis = "em";
-obj.Strikethrough = "s";
-obj.Code = "inlineCode";
-obj.Link = "link";
-obj.Paragraph = "paragraph";
-const dependencyMap = {
-  $b(content) {
-    return { type: AstBuilder.Strong, content };
-  },
-  $i(content) {
-    return { type: AstBuilder.Emphasis, content };
-  },
-  $del(content) {
-    return { type: AstBuilder.Strikethrough, content };
-  },
-  $code(content) {
-    return { type: AstBuilder.Code, content };
-  },
-  $link(content, arg1, arg2) {
-    [tmp] = arg2;
-    return { type: AstBuilder.Link, target: tmp, content };
-  },
-  $p(content) {
-    return { type: AstBuilder.Paragraph, content };
+_possibleConstructorReturn;
+const createElement = _mod19.createElement;
+let obj = { format: formatReact, builder: null };
+function _class() {
+  const self = this;
+  c2(this, _class);
+  const obj = hasOwnProperty(_class);
+  if (closure_7()) {
+    const _Reflect = Reflect;
+    let constructResult = Reflect.construct(obj, arguments, hasOwnProperty(self).constructor);
+  } else {
+    constructResult = obj(...arguments);
   }
-};
-class AstBuilder {
-  constructor() {
-    self = this;
-    tmp = closure_1(this, AstBuilder);
-    tmp2 = closure_3;
-    obj = closure_3(AstBuilder);
-    tmp3 = c2;
-    if (closure_4()) {
-      tmp7 = globalThis;
-      _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
-    } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.result = [];
-    return tmp3Result;
-  }
+  const tmp3Result = closure_4(self, constructResult);
+  tmp3Result._nodeKey = 0;
+  tmp3Result.result = [];
+  return tmp3Result;
 }
-_inherits(AstBuilder, _mod1171.FormatBuilder);
-const entry = {
+_inherits(_class, _mod1168.FormatBuilder);
+let entry = {
   key: "pushRichTextTag",
-  value: function pushRichTextTag(formatting, arg1, arg2) {
-    if (formatting in dependencyMap) {
-      const self = this;
-      const tmp4 = dependencyMap[formatting](arg1, "", arg2);
-      const _Array = Array;
-      const result = this.result;
-      const push = result.push;
-      if (Array.isArray(tmp4)) {
-        const items = [];
-        HermesBuiltin.arraySpread(tmp4, 0);
-        HermesBuiltin.apply(items, result);
-      } else {
-        push(tmp4);
-      }
-    } else {
-      const _HermesInternal = HermesInternal;
-      throw "" + formatting + " is not a known rich text formatting tag";
-    }
+  value: function pushRichTextTag(arg0, arg1, arg2) {
+    const result = this.result;
+    this._nodeKey = +this._nodeKey + 1;
+    result.push(_class[arg0](arg1, "" + this.context.keyPrefix + ".tag-" + +this._nodeKey, arg2));
   }
 };
 let items = [
   entry,
   {
     key: "pushLiteralText",
-    value: function pushLiteralText(content) {
-      if (null != this.result[this.result.length - 1]) {
-        if (tmp.type === AstBuilder.Text) {
-          tmp.content = tmp.content + content;
-        }
+    value: function pushLiteralText(arg0) {
+      const self = this;
+      if (typeof this.result[this.result.length - 1] === "string") {
+        const result = self.result;
+        const diff = self.result.length - 1;
+        result[diff] = result[diff] + arg0;
+      } else {
+        const result1 = self.result;
+        result1.push(arg0);
       }
-      const result = this.result;
-      result.push({ type: AstBuilder.Text, content });
-      const obj = { type: AstBuilder.Text, content };
     }
   },
   {
@@ -142,9 +93,87 @@ let items = [
     }
   }
 ];
-const _moduleResult = _createClass(AstBuilder, items);
-const metroRequire = _moduleResult;
+obj.builder = _createClass(_class, items);
 
-export { formatToAst };
-export const RichTextNodeType = obj;
-export const astFormatter = { format: formatToAst, builder: _moduleResult };
+export { formatReact };
+export const makeReactFormatter = function makeReactFormatter(arg0) {
+  let obj = { format: formatReact, builder: null };
+  _class = function _class() {
+    const self = this;
+    c2(this, _class);
+    const obj = hasOwnProperty(_class);
+    if (closure_7()) {
+      const _Reflect = Reflect;
+      let constructResult = Reflect.construct(obj, arguments, hasOwnProperty(self).constructor);
+    } else {
+      constructResult = obj(...arguments);
+    }
+    const tmp3Result = closure_4(self, constructResult);
+    tmp3Result._nodeKey = 0;
+    tmp3Result.result = [];
+    return tmp3Result;
+  };
+  _inherits(_class, _class(1168).FormatBuilder);
+  const entry = {
+    key: "pushRichTextTag",
+    value: function pushRichTextTag(arg0, arg1, arg2) {
+      const result = this.result;
+      this._nodeKey = +this._nodeKey + 1;
+      result.push(_class[arg0](arg1, "" + this.context.keyPrefix + ".tag-" + +this._nodeKey, arg2));
+    }
+  };
+  const items = [
+    entry,
+    {
+      key: "pushLiteralText",
+      value: function pushLiteralText(arg0) {
+        const self = this;
+        if (typeof this.result[this.result.length - 1] === "string") {
+          const result = self.result;
+          const diff = self.result.length - 1;
+          result[diff] = result[diff] + arg0;
+        } else {
+          const result1 = self.result;
+          result1.push(arg0);
+        }
+      }
+    },
+    {
+      key: "pushObject",
+      value: function pushObject(arg0) {
+        const result = this.result;
+        result.push(arg0);
+      }
+    },
+    {
+      key: "finish",
+      value: function finish() {
+        return this.result;
+      }
+    }
+  ];
+  obj.builder = _createClass(_class, items);
+  return obj;
+};
+export const DEFAULT_REACT_RICH_TEXT_ELEMENTS = {
+  $b(element, key) {
+    return <strong key={key}>{element}</strong>;
+  },
+  $i(element, key) {
+    return <em key={key}>{element}</em>;
+  },
+  $del(element, key) {
+    return <del key={key}>{element}</del>;
+  },
+  $code(element, key) {
+    return <code key={key}>{element}</code>;
+  },
+  $link(element, key, arg2) {
+    [tmp] = arg2;
+    return <a href={tmp} key={key}>{element}</a>;
+  },
+  $p(element, key) {
+    return <p key={key}>{element}</p>;
+  }
+};
+export const reactFormatter = obj;

@@ -1,8 +1,8 @@
 // === Module 4580: ? ===
 
 // Module 4580
-import _mod4560 from "module_4560" /* 4560 */;
-import module_4578_mod from "module_4578" /* 4578 */;
+import _mod4561 from "module_4561" /* 4561 */;
+import module_4579_mod from "module_4579" /* 4579 */;
 
 let _createSuperInternal = require;
 function _typeof(arg0) {
@@ -30,15 +30,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(StandAloneLocalDayParser, Parser) {
+function _setPrototypeOf(LocalDayParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(StandAloneLocalDayParser, Parser) {
-      StandAloneLocalDayParser.__proto__ = Parser;
-      return StandAloneLocalDayParser;
+    _setPrototypeOf = function _setPrototypeOf(LocalDayParser, Parser) {
+      LocalDayParser.__proto__ = Parser;
+      return LocalDayParser;
     };
   }
-  return _setPrototypeOf(StandAloneLocalDayParser, Parser);
+  return _setPrototypeOf(LocalDayParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -56,17 +56,17 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-let module_4578 = module_4578_mod;
-if (!module_4578) {
-  let obj = { default: module_4578 };
+let module_4579 = module_4579_mod;
+if (!module_4579) {
+  let obj = { default: module_4579 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4578;
+  tmp3 = module_4579;
 }
-module_4578 = tmp3;
-const Parser = _mod4560.Parser;
+module_4579 = tmp3;
+const Parser = _mod4561.Parser;
 _createSuperInternal = undefined;
-class StandAloneLocalDayParser {
+class LocalDayParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -116,7 +116,7 @@ class StandAloneLocalDayParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "E", "i", "e", "t", "T"];
+          items1 = ["y", "R", "u", "q", "Q", "M", "L", "I", "d", "D", "E", "i", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -140,7 +140,7 @@ class StandAloneLocalDayParser {
     }
   }
 }
-let dependencyMap = StandAloneLocalDayParser;
+let dependencyMap = LocalDayParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -152,9 +152,9 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-StandAloneLocalDayParser.prototype = Object.create(prototype, { constructor: { value: StandAloneLocalDayParser, writable: true, configurable: true } });
+LocalDayParser.prototype = Object.create(prototype, { constructor: { value: LocalDayParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(StandAloneLocalDayParser, Parser);
+  _setPrototypeOf(LocalDayParser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -220,22 +220,22 @@ const entry = {
     function valueCallback(arg0) {
       return (arg0 + weekStartsOn.weekStartsOn + 6) % 7 + 7 * Math.floor((arg0 - 1) / 7);
     }
-    if ("c" !== arg1) {
-      if ("cc" !== arg1) {
-        if ("co" === arg1) {
-          return _createSuperInternal(4562).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "day" }), valueCallback);
-        } else if ("ccc" === arg1) {
-          return ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
-        } else if ("ccccc" === arg1) {
-          return ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
-        } else if ("cccccc" === arg1) {
-          return ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
+    if ("e" !== arg1) {
+      if ("ee" !== arg1) {
+        if ("eo" === arg1) {
+          return _createSuperInternal(4563).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "day" }), valueCallback);
+        } else if ("eee" === arg1) {
+          return ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+        } else if ("eeeee" === arg1) {
+          return ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
+        } else if ("eeeeee" === arg1) {
+          return ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
         } else {
-          return ordinalNumber.day(arg0, { width: "wide", context: "standalone" }) || ordinalNumber.day(arg0, { width: "abbreviated", context: "standalone" }) || ordinalNumber.day(arg0, { width: "short", context: "standalone" }) || ordinalNumber.day(arg0, { width: "narrow", context: "standalone" });
+          return ordinalNumber.day(arg0, { width: "wide", context: "formatting" }) || ordinalNumber.day(arg0, { width: "abbreviated", context: "formatting" }) || ordinalNumber.day(arg0, { width: "short", context: "formatting" }) || ordinalNumber.day(arg0, { width: "narrow", context: "formatting" });
         }
       }
     }
-    return _createSuperInternal(4562).mapValue(_createSuperInternal(4562).parseNDigits(arg1.length, arg0), valueCallback);
+    return _createSuperInternal(4563).mapValue(_createSuperInternal(4563).parseNDigits(arg1.length, arg0), valueCallback);
   }
 };
 let items = [
@@ -253,7 +253,7 @@ let items = [
   {
     key: "set",
     value: function set(arg0, arg1, arg2, arg3) {
-      const defaultResult = module_4578.default(arg0, arg2, arg3);
+      const defaultResult = module_4579.default(arg0, arg2, arg3);
       defaultResult.setUTCHours(0, 0, 0, 0);
       return defaultResult;
     }
@@ -277,4 +277,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { StandAloneLocalDayParser };
+export { LocalDayParser };

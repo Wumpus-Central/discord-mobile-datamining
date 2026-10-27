@@ -1,72 +1,60 @@
 // === Module 1813: ? ===
 
 // Module 1813
-import _mod1803 from "module_1803" /* 1803 */;
-import _mod1805 from "module_1805" /* 1805 */;
+import runOnRuntime from "runOnRuntime" /* 1699 */;
+import noop from "module_19" /* 19 */;
 
-require = arg1;
-const dependencyMap = arg6;
-const __initData = { code: "function pnpm_useAnimatedScrollHandlerTs1(event){const{scrollHandlers,context}=this.__closure;const{onScroll:onScroll,onBeginDrag:onBeginDrag,onEndDrag:onEndDrag,onMomentumBegin:onMomentumBegin,onMomentumEnd:onMomentumEnd}=scrollHandlers;if(onScroll&&event.eventName.endsWith('onScroll')){onScroll(event,context);}else if(onBeginDrag&&event.eventName.endsWith('onScrollBeginDrag')){onBeginDrag(event,context);}else if(onEndDrag&&event.eventName.endsWith('onScrollEndDrag')){onEndDrag(event,context);}else if(onMomentumBegin&&event.eventName.endsWith('onMomentumScrollBegin')){onMomentumBegin(event,context);}else if(onMomentumEnd&&event.eventName.endsWith('onMomentumScrollEnd')){onMomentumEnd(event,context);}}" };
+const require = globalThis.__r;
 
-export const useAnimatedScrollHandler = function useAnimatedScrollHandler(fn, items) {
-  let tmp = fn;
-  if (typeof fn === "function") {
-    let obj2 = { onScroll: fn };
-    tmp = obj2;
+({ useEffect: c2, useRef: c3 } = noop);
+let closure_4 = { code: "function pnpm_useDerivedValueTs1(){const{sharedValue,updater}=this.__closure;sharedValue.value=updater();}" };
+
+export const useDerivedValue = function useDerivedValue(fn, items) {
+  _require = fn;
+  const tmp = closure_3(null);
+  let __closure = fn.__closure;
+  if (__closure == null) {
+    __closure = {};
   }
-  obj2 = tmp;
-  const handler = _mod1803.useHandler(tmp, items);
-  const context = handler.context;
-  items = ["onScroll"];
-  if (undefined !== tmp.onBeginDrag) {
-    items.push("onScrollBeginDrag");
+  let values = Object.values(__closure);
+  let arr2 = values;
+  let tmp4 = require("module_1658").shouldBeUseWeb() && !values.length;
+  arr2 = items;
+  if (tmp4) {
+    let length;
+    if (arr2 != null) {
+      length = arr2.length;
+    }
+    tmp4 = length;
   }
-  if (undefined !== tmp.onEndDrag) {
-    items.push("onScrollEndDrag");
+  if (tmp4) {
+    values = arr2;
   }
-  if (undefined !== tmp.onMomentumBegin) {
-    items.push("onMomentumScrollBegin");
+  if (undefined === arr2) {
+    items = [];
+    items[HermesBuiltin.arraySpread(values, 0)] = fn.__workletHash;
+    arr2 = items;
+  } else {
+    arr2.push(fn.__workletHash);
   }
-  if (undefined !== tmp.onMomentumEnd) {
-    items.push("onMomentumScrollEnd");
+  if (null === tmp.current) {
+    const tmp2Result = tmp2(tmp3[2]);
+    tmp.current = tmp2Result.makeMutable(tmp2(tmp3[3]).initialUpdaterRun(fn));
+    const tmp2Result2 = tmp2(tmp3[3]);
   }
-  fn = function l(eventName) {
-    ({ onScroll, onBeginDrag, onEndDrag, onMomentumBegin, onMomentumEnd } = obj2);
-    if (onScroll) {
-      eventName = eventName.eventName;
-      if (eventName.endsWith("onScroll")) {
-        onScroll(eventName, context);
-      }
-    }
-    if (onBeginDrag) {
-      const eventName2 = eventName.eventName;
-      if (eventName2.endsWith("onScrollBeginDrag")) {
-        onBeginDrag(eventName, context);
-      }
-    }
-    if (onEndDrag) {
-      const eventName3 = eventName.eventName;
-      if (eventName3.endsWith("onScrollEndDrag")) {
-        onEndDrag(eventName, context);
-      }
-    }
-    if (onMomentumBegin) {
-      const eventName4 = eventName.eventName;
-      if (eventName4.endsWith("onMomentumScrollBegin")) {
-        onMomentumBegin(eventName, context);
-      }
-    }
-    let endsWithResult = onMomentumEnd;
-    if (onMomentumEnd) {
-      const eventName5 = eventName.eventName;
-      endsWithResult = eventName5.endsWith("onMomentumScrollEnd");
-    }
-    if (endsWithResult) {
-      onMomentumEnd(eventName, context);
-    }
-  };
-  fn.__closure = { scrollHandlers: tmp, context };
-  fn.__workletHash = 480432859268;
-  fn.__initData = __initData;
-  return _mod1805.useEvent(fn, items, handler.doDependenciesDiffer);
+  const current = tmp.current;
+  current(() => {
+    const fn = function t() {
+      current.value = closure_0();
+    };
+    fn.__closure = { sharedValue: current, updater };
+    fn.__workletHash = 1316501239615;
+    fn.__initData = __initData;
+    const items = [current];
+    updater = updater(arr2[2]).startMapper(fn, arr2, items);
+    return () => {
+      runOnRuntime.stopMapper(closure_0);
+    };
+  }, arr2);
+  return current;
 };

@@ -1,15 +1,13 @@
 // === Module 10391: ? ===
 
 // Module 10391
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10222 */;
-import _mod10384 from "module_10384" /* 10384 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10224 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,44 +27,49 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(" + _mod10384.TIME_UNITS_PATTERN + ")\\s{0,5}(?:fa|prima|precedente)(?=(?:\\W|$))", "i");
-const regExp1 = new RegExp("(" + _mod10384.TIME_UNITS_PATTERN + ")\\s{0,5}fa(?=(?:\\W|$))", "i");
-class ENTimeUnitAgoFormatParser {
-  constructor(arg0) {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+const regExp = new RegExp("([0-9]|0[1-9]|1[012])/([0-9]{4})", "i");
+class ENSlashMonthFormatParser {
+  constructor() {
     self = this;
-    tmp = c2(this, ENTimeUnitAgoFormatParser);
-    tmp2 = closure_4;
-    obj = closure_4(ENTimeUnitAgoFormatParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp5 = globalThis;
+    tmp = closure_0(this, ENSlashMonthFormatParser);
+    tmp2 = c2;
+    obj = c2(ENSlashMonthFormatParser);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(ENTimeUnitAgoFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_classCallCheck = ENSlashMonthFormatParser;
+_inherits(ENSlashMonthFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return this.strictMode ? regExp1 : regExp;
+    return regExp;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(reference, arg1) {
-      const parseDurationResult = ENTimeUnitAgoFormatParser(10384).parseDuration(arg1[1]);
-      const ParsingComponents = ENTimeUnitAgoFormatParser(10218).ParsingComponents;
-      return ParsingComponents.createRelativeFromReference(reference.reference, ENTimeUnitAgoFormatParser(10217).reverseDuration(ENTimeUnitAgoFormatParser(10384).parseDuration(arg1[1])));
+    value: function innerExtract(createParsingComponents, arg1) {
+      const parsed = parseInt(arg1[2]);
+      const parsed1 = parseInt(arg1[1]);
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      const implyResult = parsingComponents.imply("day", 1);
+      return parsingComponents.imply("day", 1).assign("month", parsed1).assign("year", parsed);
     }
   }
 ];
 
-export default _createClass(ENTimeUnitAgoFormatParser, items);
+export default _createClass(ENSlashMonthFormatParser, items);

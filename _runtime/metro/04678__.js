@@ -1,18 +1,19 @@
 // === Module 4678: ? ===
 
 // Module 4678
-import module_4258_mod from "module_4258" /* 4258 */;
-import _typeof_mod from "module_4254" /* 4254 */;
-import requiredArgs_mod from "requiredArgs" /* 4255 */;
+import module_4259_mod from "module_4259" /* 4259 */;
+import _typeof_mod from "module_4255" /* 4255 */;
+import module_4668_mod from "module_4668" /* 4668 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let module_4258 = module_4258_mod;
-if (!module_4258) {
-  const obj = { default: module_4258 };
+let module_4259 = module_4259_mod;
+if (!module_4259) {
+  const obj = { default: module_4259 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4258;
+  tmp3 = module_4259;
 }
-module_4258 = tmp3;
+module_4259 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -21,19 +22,27 @@ if (!_typeof) {
   tmp5 = _typeof;
 }
 _typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+let module_4668 = module_4668_mod;
+if (!module_4668) {
+  const obj3 = { default: module_4668 };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_4668;
 }
-requiredArgs = tmp7;
+module_4668 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function setSeconds(module_4258, arg1) {
+export default function setQuarter(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_4258);
-  defaultResult1.setSeconds(module_4258.default(arg1));
-  return defaultResult1;
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = module_4259.default(arg1) - (Math.floor(defaultResult1.getMonth() / 3) + 1);
+  return module_4668.default(defaultResult1, defaultResult1.getMonth() + 3 * diff);
 };
 export default exports.default;

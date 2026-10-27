@@ -1,7 +1,7 @@
 // === Module 18354: ? ===
 
 // Module 18354
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 414.5, height: 200, scales: [2, 3], hash: "ad997b689c0c3a8b01184b1daa84d93c", name: "pending_light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/forum_channels", width: 343, height: 180, scales: [1], hash: "4344770a7977c211fcddc04a38055e0c", name: "channel_settings_grid_view_example_post", type: "png" });

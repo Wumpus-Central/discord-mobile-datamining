@@ -1,7 +1,7 @@
 // === Module 2470: ? ===
 
 // Module 2470
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9ndWlsZF9zcGFjZQ==", scales: [1], hash: "1ad60e06e48507ff37a73afaaada368f", name: "zh-TW.messages.1ad60e06e48507ff37a73afaaada368f.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/guild_space", scales: [1], hash: "776d7d8663ddfe894942e766915942ab", name: "GuildSpace.compiled.messages", type: "jsona" });

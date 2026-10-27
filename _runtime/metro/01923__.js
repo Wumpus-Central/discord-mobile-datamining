@@ -2,19 +2,21 @@
 
 // Module 1923
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "fi",
+  locale: "hu",
   pluralRuleFunction(arg0, arg1) {
-    let str2 = "other";
-    if (!arg1) {
-      let str3 = "other";
+    if (arg1) {
       if (1 == arg0) {
-        str3 = "other";
-        if (!str.split(".")[1]) {
-          str3 = "one";
-        }
+        let str2 = "one";
+      } else {
+        str2 = "other";
       }
-      str2 = str3;
+      let str = str2;
+    } else {
+      str = "other";
+      if (1 == arg0) {
+        str = "one";
+      }
     }
-    return str2;
+    return str;
   }
 });

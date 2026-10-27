@@ -1,18 +1,18 @@
 // === Module 4676: ? ===
 
 // Module 4676
-import module_4258_mod from "module_4258" /* 4258 */;
-import _typeof_mod from "module_4254" /* 4254 */;
-import requiredArgs_mod from "requiredArgs" /* 4255 */;
+import module_4259_mod from "module_4259" /* 4259 */;
+import _typeof_mod from "module_4255" /* 4255 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let module_4258 = module_4258_mod;
-if (!module_4258) {
-  const obj = { default: module_4258 };
+let module_4259 = module_4259_mod;
+if (!module_4259) {
+  const obj = { default: module_4259 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4258;
+  tmp3 = module_4259;
 }
-module_4258 = tmp3;
+module_4259 = tmp3;
 let _typeof = _typeof_mod;
 if (!_typeof) {
   const obj2 = { default: _typeof };
@@ -30,10 +30,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function setMinutes(module_4258, arg1) {
+export default function setMilliseconds(module_4259, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(module_4258);
-  defaultResult1.setMinutes(module_4258.default(arg1));
+  const defaultResult1 = _typeof.default(module_4259);
+  defaultResult1.setMilliseconds(module_4259.default(arg1));
   return defaultResult1;
 };
 export default exports.default;

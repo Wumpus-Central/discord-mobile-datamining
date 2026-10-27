@@ -113,17 +113,18 @@ noop.all = (arg0) => {
   return new require("module_177")((fn, arg1) => {
     closure_0 = fn;
     closure_1 = arg1;
-    function res(arg0, _y) {
+    function res(arg0, _z) {
+      let _y;
       closure_0 = arg0;
-      if (_y) {
-        if (typeof _y === "object") {
-          if (_y instanceof closure_0(dependencyMap[0])) {
-            if (_y.then === tmp(dependencyMap[0]).prototype.then) {
-              let tmp13 = _y;
-              let promise2 = _y;
-              if (3 === _y._y) {
+      if (_z) {
+        if (typeof _z === "object") {
+          if (_z instanceof closure_0(dependencyMap[0])) {
+            if (_z.then === tmp(dependencyMap[0]).prototype.then) {
+              let tmp13 = _z;
+              let promise2 = _z;
+              if (3 === _z._y) {
                 do {
-                  let _z = tmp13._z;
+                  _z = tmp13._z;
                   tmp13 = _z;
                   promise2 = _z;
                   _y = _z._y;
@@ -142,9 +143,9 @@ noop.all = (arg0) => {
               return tmp18;
             }
           }
-          const then = _y.then;
+          const then = _z.then;
           if (typeof then === "function") {
-            const tmpResult1 = new tmp(dependencyMap[0])(then.bind(_y));
+            const tmpResult1 = new tmp(dependencyMap[0])(then.bind(_z));
             tmpResult1.then((result) => {
               res(closure_0, result);
             }, closure_1);
@@ -152,7 +153,7 @@ noop.all = (arg0) => {
           }
         }
       }
-      closure_0[arg0] = _y;
+      closure_0[arg0] = _z;
       const diff = length - 1;
       if (0 == diff) {
         closure_0(tmp3);

@@ -1,8 +1,9 @@
 // === Module 4586: ? ===
 
 // Module 4586
-import _mod4560 from "module_4560" /* 4560 */;
+import _mod4561 from "module_4561" /* 4561 */;
 
+let closure_1 = dependencyMap;
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
     let _Symbol = Symbol;
@@ -28,15 +29,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(Hour1to12Parser, Parser) {
+function _setPrototypeOf(DayPeriodParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(Hour1to12Parser, Parser) {
-      Hour1to12Parser.__proto__ = Parser;
-      return Hour1to12Parser;
+    _setPrototypeOf = function _setPrototypeOf(DayPeriodParser, Parser) {
+      DayPeriodParser.__proto__ = Parser;
+      return DayPeriodParser;
     };
   }
-  return _setPrototypeOf(Hour1to12Parser, Parser);
+  return _setPrototypeOf(DayPeriodParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,9 +55,9 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-const Parser = _mod4560.Parser;
+const Parser = _mod4561.Parser;
 let _createSuperInternal;
-class Hour1to12Parser {
+class DayPeriodParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -92,10 +93,10 @@ class Hour1to12Parser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 70, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 80, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 70;
-          applyResult.priority = 70;
+          num3 = 80;
+          applyResult.priority = 80;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -106,7 +107,7 @@ class Hour1to12Parser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["H", "K", "k", "t", "T"];
+          items1 = ["a", "b", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -130,7 +131,7 @@ class Hour1to12Parser {
     }
   }
 }
-let dependencyMap = Hour1to12Parser;
+closure_1 = DayPeriodParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -142,12 +143,12 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-Hour1to12Parser.prototype = Object.create(prototype, { constructor: { value: Hour1to12Parser, writable: true, configurable: true } });
+DayPeriodParser.prototype = Object.create(prototype, { constructor: { value: DayPeriodParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(Hour1to12Parser, Parser);
+  _setPrototypeOf(DayPeriodParser, Parser);
 }
 let num = 0;
-dependencyMap = (function _isNativeReflectConstruct() {
+closure_1 = (function _isNativeReflectConstruct() {
   if (typeof Reflect !== "undefined") {
     const _Reflect3 = Reflect;
     if (Reflect.construct) {
@@ -205,44 +206,28 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1, ordinalNumber) {
-    if ("h" === arg1) {
-      return _createSuperInternal(4562).parseNumericPattern(_createSuperInternal(4563).numericPatterns.hour12h, arg0);
-    } else if ("ho" === arg1) {
-      return ordinalNumber.ordinalNumber(arg0, { unit: "hour" });
-    } else {
-      return _createSuperInternal(4562).parseNDigits(arg1.length, arg0);
+  value: function parse(arg0, arg1, dayPeriod) {
+    if ("B" !== arg1) {
+      if ("BB" !== arg1) {
+        if ("BBB" !== arg1) {
+          if ("BBBBB" === arg1) {
+            return dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
+          } else {
+            return dayPeriod.dayPeriod(arg0, { width: "wide", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "abbreviated", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
+          }
+        }
+      }
     }
+    return dayPeriod.dayPeriod(arg0, { width: "abbreviated", context: "formatting" }) || dayPeriod.dayPeriod(arg0, { width: "narrow", context: "formatting" });
   }
 };
 let items = [
   entry,
   {
-    key: "validate",
-    value: function validate(arg0, arg1) {
-      let tmp = arg1 >= 1;
-      if (tmp) {
-        tmp = arg1 <= 12;
-      }
-      return tmp;
-    }
-  },
-  {
     key: "set",
-    value: function set(getUTCHours, arg1, arg2) {
-      const tmp = getUTCHours.getUTCHours() >= 12;
-      if (tmp) {
-        if (arg2 < 12) {
-          getUTCHours.setUTCHours(arg2 + 12, 0, 0, 0);
-        }
-        return getUTCHours;
-      }
-      if (!tmp) {
-        if (12 === arg2) {
-          getUTCHours.setUTCHours(0, 0, 0, 0);
-        }
-      }
-      getUTCHours.setUTCHours(arg2, 0, 0, 0);
+    value: function set(setUTCHours, arg1, arg2) {
+      setUTCHours.setUTCHours(_createSuperInternal(closure_1[0]).dayPeriodEnumToHours(arg2), 0, 0, 0);
+      return setUTCHours;
     }
   }
 ];
@@ -264,4 +249,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { Hour1to12Parser };
+export { DayPeriodParser };

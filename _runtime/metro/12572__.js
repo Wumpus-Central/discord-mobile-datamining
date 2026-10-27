@@ -1,7 +1,7 @@
 // === Module 12572: ? ===
 
 // Module 12572
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d6f5a76861191f4dd121da59ef71950f", name: "ArrowSmallUpIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "01cd25a11a733a16463d72c98cca83b7", name: "CloudIcon", type: "png" });

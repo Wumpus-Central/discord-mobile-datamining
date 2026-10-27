@@ -2,17 +2,17 @@
 
 // Module 5088
 import c from "c" /* 576 */;
-import _mod5084 from "module_5084" /* 5084 */;
+import _mod5085 from "module_5085" /* 5085 */;
 import _slicedToArray from "module_32" /* 32 */;
 
 require = arg1;
-function getEnumProperty(enumProperty, arg1) {
-  return enumProperty.enumProperty(arg1);
+function getBooleanProperty(booleanProperty, arg1) {
+  return booleanProperty.booleanProperty(arg1);
 }
 
-export const useRiveEnum = function useRiveEnum(arg0, arg1) {
+export const useRiveBoolean = function useRiveBoolean(arg0, arg1) {
   const cResult = c.c(4);
-  [tmp3, tmp4, tmp5] = _mod5084.useRiveProperty(arg1, arg0, getEnumProperty);
+  [tmp3, tmp4, tmp5] = _mod5085.useRiveProperty(arg1, arg0, getBooleanProperty);
   if (cResult[0] === tmp5) {
     if (cResult[1] === tmp4) {
       if (cResult[2] === tmp3) {

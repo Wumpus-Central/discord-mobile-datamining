@@ -1,16 +1,16 @@
 // === Module 10243: ? ===
 
 // Module 10243
-import _mod10214 from "module_10214" /* 10214 */;
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10215 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10222 */;
+import _mod10216 from "module_10216" /* 10216 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10217 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10224 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENRelativeDateFormatParser = require;
+const ENWeekdayParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +30,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(this|last|past|next|after\\s*this)\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod10214.TIME_UNIT_DICTIONARY) + ")(?=\\s*)(?=\\W|$)", "i");
-class ENRelativeDateFormatParser {
+const regExp = new RegExp("(?:(?:\\,|\\(|\\\uFF08)\\s*)?(?:on\\s*?)?(?:(this|last|past|next)\\s*)?(" + repeatedTimeunitPattern.matchAnyPattern(_mod10216.WEEKDAY_DICTIONARY) + "|weekend|weekday)(?:\\s*(?:\\,|\\)|\\\uFF09))?(?:\\s*(this|last|past|next)\\s*week)?(?=\\W|$)", "i");
+class ENWeekdayParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENRelativeDateFormatParser);
+    tmp = c2(this, ENWeekdayParser);
     tmp2 = closure_4;
-    obj = closure_4(ENRelativeDateFormatParser);
+    obj = closure_4(ENWeekdayParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,7 +51,7 @@ class ENRelativeDateFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ENWeekdayParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
@@ -62,49 +62,53 @@ const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const str3 = arg1[2].toLowerCase();
-      const tmp3 = ENRelativeDateFormatParser(10214).TIME_UNIT_DICTIONARY[str3];
-      if ("next" != formatted) {
-        if (!formatted.startsWith("after")) {
-          if ("last" != formatted) {
-            if ("past" != formatted) {
-              const parsingComponents = createParsingComponents.createParsingComponents();
-              const _Date = Date;
-              const instant = createParsingComponents.reference.instant;
-              const date = new Date(instant.getTime());
-              if (str3.match(/week/i)) {
-                date.setDate(date.getDate() - date.getDay());
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.imply("month", date.getMonth() + 1);
-                parsingComponents.imply("year", date.getFullYear());
-                const date1 = date.getDate();
-              } else if (str3.match(/month/i)) {
-                date.setDate(1);
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.assign("year", date.getFullYear());
-                parsingComponents.assign("month", date.getMonth() + 1);
-              } else if (str3.match(/year/i)) {
-                date.setDate(1);
-                date.setMonth(0);
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.imply("month", date.getMonth() + 1);
-                parsingComponents.assign("year", date.getFullYear());
-              }
-              return parsingComponents;
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1] || arg1[3] || "".toLowerCase();
+      let str2 = "last";
+      if ("last" != formatted) {
+        str2 = "last";
+        if ("past" != formatted) {
+          str2 = "next";
+          if ("next" != formatted) {
+            str2 = null;
+            if ("this" == formatted) {
+              str2 = "this";
             }
           }
-          const obj4 = {};
-          obj4[tmp3] = -1;
-          const ParsingComponents = ENRelativeDateFormatParser(10218).ParsingComponents;
-          return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj4);
         }
       }
-      const ParsingComponents2 = ENRelativeDateFormatParser(10218).ParsingComponents;
-      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp3]: 1 });
+      const formatted1 = arg1[2].toLowerCase();
+      if (undefined !== ENWeekdayParser(10216).WEEKDAY_DICTIONARY[formatted1]) {
+        let sum = ENWeekdayParser(10216).WEEKDAY_DICTIONARY[formatted1];
+      } else if ("weekend" == formatted1) {
+        if ("last" == str2) {
+          let SATURDAY = ENWeekdayParser(10222).Weekday.SUNDAY;
+        } else {
+          SATURDAY = ENWeekdayParser(10222).Weekday.SATURDAY;
+        }
+        sum = SATURDAY;
+      } else if ("weekday" != formatted1) {
+        return null;
+      } else {
+        reference = reference.reference;
+        const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+        const day = dateWithAdjustedTimezone.getDay();
+        if (day != ENWeekdayParser(10222).Weekday.SUNDAY) {
+          if (day != ENWeekdayParser(10222).Weekday.SATURDAY) {
+            const diff = day - 1;
+            sum = ("last" == str2 ? diff - 1 : diff + 1) % 5 + 1;
+          }
+        }
+        if ("last" == str2) {
+          let MONDAY = ENWeekdayParser(10222).Weekday.FRIDAY;
+        } else {
+          MONDAY = ENWeekdayParser(10222).Weekday.MONDAY;
+        }
+        sum = MONDAY;
+      }
+      return ENWeekdayParser(10244).createParsingComponentsAtWeekday(reference.reference, sum, str2);
     }
   }
 ];
 
-export default _createClass(ENRelativeDateFormatParser, items);
+export default _createClass(ENWeekdayParser, items);

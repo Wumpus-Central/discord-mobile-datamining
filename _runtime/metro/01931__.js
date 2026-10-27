@@ -2,7 +2,33 @@
 
 // Module 1931
 globalThis.IntlMessageFormat.__addLocaleData({
-  locale: "nl",
+  locale: "pt",
+  pluralRuleFunction(arg0, arg1) {
+    String(arg0);
+    let str = "other";
+    if (!arg1) {
+      let str2 = "other";
+      if (tmp2) {
+        str2 = "other";
+        if (arg0 >= 0) {
+          str2 = "other";
+          if (arg0 <= 2) {
+            str2 = "other";
+            if (2 != arg0) {
+              str2 = "one";
+            }
+          }
+        }
+      }
+      str = str2;
+    }
+    return str;
+  }
+});
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-AO", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({
+  locale: "pt-PT",
+  parentLocale: "pt",
   pluralRuleFunction(arg0, arg1) {
     let str2 = "other";
     if (!arg1) {
@@ -18,9 +44,9 @@ globalThis.IntlMessageFormat.__addLocaleData({
     return str2;
   }
 });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-AW", parentLocale: "nl" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-BE", parentLocale: "nl" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-BQ", parentLocale: "nl" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-CW", parentLocale: "nl" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-SR", parentLocale: "nl" });
-globalThis.IntlMessageFormat.__addLocaleData({ locale: "nl-SX", parentLocale: "nl" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-CV", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-GW", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-MO", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-MZ", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-ST", parentLocale: "pt-PT" });
+globalThis.IntlMessageFormat.__addLocaleData({ locale: "pt-TL", parentLocale: "pt-PT" });

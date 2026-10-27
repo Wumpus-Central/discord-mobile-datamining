@@ -1,7 +1,7 @@
 // === Module 11306: ? ===
 
 // Module 11306
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 275, height: 150, scales: [1, 2, 3], hash: "bbcef4a2b8c5f48f13fd62c2f6250775", name: "img_group_dm_illustration", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "2ec8d4d40c93ceea32933ae4e505df6e", name: "ChatPlusIcon", type: "png" });

@@ -1,77 +1,73 @@
 // === Module 15360: ? ===
 
 // Module 15360
-import _mod15333 from "module_15333" /* 15333 */;
-import _slicedToArray from "module_32" /* 32 */;
+const re0 = /^[0-9]+$/;
 
-const require = globalThis.__r;
-
-
-export default (arr, arg1, arg2) => {
-  let tmp = arg1;
-  _require = arg2;
-  const items = [];
-  let tmp2 = null;
-  let tmp3 = null;
-  const sorted = arr.sort((arg0, arg1) => _mod15333(arg0, arg1, closure_0));
-  for (const item10017 of sorted) {
-    if (require("module_15350")(item10017, tmp, arg2)) {
-      tmp3 = item10017;
-      if (!tmp2) {
-        tmp2 = item10017;
-      }
-    } else {
-      if (tmp3) {
-        let items1 = [tmp2, ];
-        items1[1] = tmp3;
-        arr = items.push(items1);
-      }
-      tmp3 = null;
-      tmp2 = null;
+export default {
+  compareIdentifiers(major, major2) {
+    const isMatch = re0.test(major);
+    const isMatch1 = re0.test(major2);
+    let tmp3 = isMatch;
+    if (isMatch) {
+      tmp3 = isMatch1;
     }
-    continue;
-  }
-  if (tmp2) {
-    const items2 = [tmp2, null];
-    items.push(items2);
-  }
-  const items3 = [];
-  while (tmp15 !== undefined) {
-    [first, tmp21] = tmp16;
-    let tmp20 = first;
-    let tmp22 = tmp21;
-    if (first === tmp21) {
-      let arr3 = items3.push(tmp20);
-    } else {
-      if (!tmp22) {
-        if (tmp20 === sorted[0]) {
-          let arr4 = items3.push("*");
-        }
-      }
-      if (tmp22) {
-        if (tmp20 === sorted[0]) {
-          let _HermesInternal3 = HermesInternal;
-          let arr5 = items3.push("<=" + tmp22);
+    let tmp4 = major2;
+    let tmp5 = major;
+    if (tmp3) {
+      tmp5 = +major;
+      tmp4 = +major2;
+    }
+    let num = 0;
+    if (tmp5 !== tmp4) {
+      if (!isMatch) {
+        if (!isMatch1) {
+          let num4 = 1;
+          if (tmp5 < tmp4) {
+            num4 = -1;
+          }
+          let num3 = num4;
         } else {
-          let _HermesInternal2 = HermesInternal;
-          let arr6 = items3.push("" + tmp20 + " - " + tmp22);
+          num3 = 1;
         }
+        let num2 = num3;
       } else {
-        let _HermesInternal = HermesInternal;
-        let arr13 = items3.push(">=" + tmp20);
+        num2 = -1;
       }
+      num = num2;
     }
-    continue;
+    return num;
+  },
+  rcompareIdentifiers(arg0, arg1) {
+    const isMatch = re0.test(arg1);
+    const isMatch1 = re0.test(arg0);
+    let tmp3 = isMatch;
+    if (isMatch) {
+      tmp3 = isMatch1;
+    }
+    let tmp4 = arg0;
+    let tmp5 = arg1;
+    if (tmp3) {
+      tmp5 = +arg1;
+      tmp4 = +arg0;
+    }
+    let num = 0;
+    if (tmp5 !== tmp4) {
+      if (!isMatch) {
+        if (!isMatch1) {
+          let num4 = 1;
+          if (tmp5 < tmp4) {
+            num4 = -1;
+          }
+          let num3 = num4;
+        } else {
+          num3 = 1;
+        }
+        let num2 = num3;
+      } else {
+        num2 = -1;
+      }
+      num = num2;
+    }
+    return num;
   }
-  const joined = items3.join(" || ");
-  if (typeof tmp.raw === "string") {
-    let raw = tmp.raw;
-  } else {
-    const _String = String;
-    raw = String(tmp);
-  }
-  if (joined.length < raw.length) {
-    tmp = joined;
-  }
-  return tmp;
 };

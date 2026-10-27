@@ -1,37 +1,18 @@
 // === Module 1837: ? ===
 
 // Module 1837
-import _mod1662 from "module_1662" /* 1662 */;
-import module_1661 from "module_1661" /* 1661 */;
+import configureProps from "configureProps" /* 1754 */;
 
-function setGestureStateNative(arg0, arg1) {
-  if (globalThis._WORKLET) {
-    global._setGestureState(arg0, arg1);
-  } else {
-    const logger = _mod1662.logger;
-    logger.warn("You can not use setGestureState in non-worklet function.");
-  }
-}
-setGestureStateNative.__closure = { logger: _mod1662.logger };
-setGestureStateNative.__workletHash = 13301434022691;
-setGestureStateNative.__initData = { code: "function setGestureStateNative_Pnpm_setGestureStateTs1(handlerTag,newState){const{logger}=this.__closure;if(!_WORKLET){logger.warn('You can not use setGestureState in non-worklet function.');return;}global._setGestureState(handlerTag,newState);}" };
-if (!module_1661.shouldBeUseWeb()) {
-  exports.setGestureState = setGestureStateNative;
-} else {
-  const _module1 = module_1661;
-  if (_module1.isJest()) {
-    function setGestureStateJest() {
-      const logger = _mod1662.logger;
-      logger.warn("setGestureState() cannot be used with Jest.");
-    }
-  } else {
-    const _module2 = module_1661;
-    setGestureStateJest = _module2.isChromeDebugger() ? (function setGestureStateChromeDebugger() {
-      const logger = _mod1662.logger;
-      logger.warn("setGestureState() cannot be used with Chrome Debugger.");
-    }) : (function setGestureStateDefault() {
-      const logger = _mod1662.logger;
-      logger.warn("setGestureState() is not supported on this configuration.");
+require = arg1;
+const dependencyMap = arg6;
+
+export const createAnimatedPropAdapter = function createAnimatedPropAdapter(arg0, arr) {
+  const obj = {};
+  if (arr != null) {
+    const item = arr.forEach((item) => {
+      obj[item] = true;
     });
   }
-}
+  const result = configureProps.addWhitelistedNativeProps(obj);
+  return arg0;
+};

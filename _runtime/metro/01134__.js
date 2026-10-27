@@ -1,8 +1,7 @@
 // === Module 1134: ? ===
 
 // Module 1134
-import _mod84 from "module_84" /* 84 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export const registerAsset = _mod84.registerAsset;
-export const getAssetByID = _mod84.getAssetByID;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/aW50bA==", scales: [1], hash: "66e11a66f87250e3de67fd277627128b", name: "de.messages.66e11a66f87250e3de67fd277627128b.compiled.messages", type: "jsona" });

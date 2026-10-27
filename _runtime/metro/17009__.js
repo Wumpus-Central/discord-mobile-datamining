@@ -1,7 +1,7 @@
 // === Module 17009: ? ===
 
 // Module 17009
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs", scales: [1], hash: "b3f43505f18e3302ea6ed767bf1d70ec", name: "ru.messages.b3f43505f18e3302ea6ed767bf1d70ec.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "9e0f7ca920e7d55418409ccf322d663c", name: "BurgerIcon", type: "png" });

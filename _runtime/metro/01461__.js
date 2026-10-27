@@ -1,251 +1,379 @@
 // === Module 1461: ? ===
 
 // Module 1461
-class PseudoMap {
-  constructor(arg0) {
-    self = this;
-    if (this instanceof PseudoMap) {
-      tmp7 = global;
-      clearResult = self.clear();
-      if (global) {
-        if (!(global instanceof tmp)) {
-          tmp9 = globalThis;
-          _Map = Map;
-          if (typeof Map === "function") {
-            _Map2 = Map;
-          }
-          _Array = Array;
-          if (Array.isArray(global)) {
-            item = global.forEach(function(item) {
-              const result = this.set(item[0], item[1]);
-            }, self);
-          } else {
-            _TypeError2 = TypeError;
-            tmp10 = new.target;
-            str2 = "invalid argument";
-            tmp11 = new.target;
-            typeError = new TypeError("invalid argument");
-            tmp13 = typeError;
-            throw typeError;
-          }
-        }
-        item1 = global.forEach(function(item, index) {
-          const result = this.set(index, item);
-        }, self);
-      }
-      return;
-    } else {
-      tmp2 = globalThis;
-      _TypeError = TypeError;
-      tmp3 = new.target;
-      str = "Constructor PseudoMap requires 'new'";
-      tmp4 = new.target;
-      typeError1 = new TypeError("Constructor PseudoMap requires 'new'");
-      tmp6 = typeError1;
-      throw typeError1;
+import _mod1462 from "module_1462" /* 1462 */;
+import _mod1464 from "module_1464" /* 1464 */;
+import _mod1467 from "module_1467" /* 1467 */;
+import _mod1468 from "module_1468" /* 1468 */;
+
+function checkBoxedPrimitive(obj, fn) {
+  if (typeof obj !== "object") {
+    return false;
+  } else {
+    try {
+      fn(obj);
+      return true;
+    } catch (err) {
+      return false;
     }
-  }
-  forEach(arg0, arg1) {
-    self = this;
-    closure_0 = global;
-    tmp = require;
-    self = require;
-    if (!require) {
-      tmp = self;
-    }
-    self = tmp;
-    keys = Object.keys(self._data);
-    item = keys.forEach(function(item) {
-      if ("size" !== item) {
-        self = this;
-        const call = closure_0.call;
-        value = this._data[item].value;
-        if (typeof call === "unknown") {
-          closure_0(value, key);
-        } else {
-          call(tmp2, value, key);
-        }
-        tmp2 = self;
-      }
-    }, self);
-    return;
-  }
-  has(arg0) {
-    _data = this._data;
-    text = `_${global}`;
-    tmp2 = hasOwnProperty;
-    call = hasOwnProperty.call;
-    tmp3 = text;
-    num = 0;
-    tmp4 = undefined;
-    if (typeof call === "unknown" ? tmp2(`_${global}`) : call(_data, `_${global}`)) {
-      while (true) {
-        key = _data[tmp3].key;
-        tmp5 = key === global;
-        tmp6 = tmp3;
-        tmp7 = num;
-        if (!tmp5) {
-          tmp8 = key != key && global != global;
-          tmp5 = tmp8;
-        }
-        if (tmp5) {
-          break;
-        } else {
-          sum = text + num;
-          tmp10 = hasOwnProperty;
-          call2 = hasOwnProperty.call;
-          num = num + 1;
-          tmp3 = sum;
-        }
-      }
-      tmp4 = _data[tmp3];
-    }
-    return tmp4;
-  }
-  get(arg0) {
-    _data = this._data;
-    text = `_${global}`;
-    tmp2 = hasOwnProperty;
-    call = hasOwnProperty.call;
-    tmp3 = text;
-    num = 0;
-    tmp4 = undefined;
-    if (typeof call === "unknown" ? tmp2(`_${global}`) : call(_data, `_${global}`)) {
-      while (true) {
-        key = _data[tmp3].key;
-        tmp5 = key === global;
-        tmp6 = tmp3;
-        tmp7 = num;
-        if (!tmp5) {
-          tmp8 = key != key && global != global;
-          tmp5 = tmp8;
-        }
-        if (tmp5) {
-          break;
-        } else {
-          sum = text + num;
-          tmp10 = hasOwnProperty;
-          call2 = hasOwnProperty.call;
-          num = num + 1;
-          tmp3 = sum;
-        }
-      }
-      tmp4 = _data[tmp3];
-    }
-    value = tmp4;
-    if (tmp4) {
-      value = tmp4.value;
-    }
-    return value;
-  }
-  set(arg0, arg1) {
-    _data = this._data;
-    text = `_${global}`;
-    tmp2 = hasOwnProperty;
-    call = hasOwnProperty.call;
-    tmp3 = text;
-    num = 0;
-    tmp4 = text;
-    if (!(typeof call === "unknown" ? tmp2(`_${global}`) : call(_data, `_${global}`))) {
-      _data.size = _data.size + 1;
-      tmp11 = Entry;
-      obj1 = Object.create(Entry.prototype);
-      obj = {};
-      obj.key = global;
-      obj.value = require;
-      obj._index = tmp4;
-      _data[tmp4] = obj;
-    } else {
-      while (true) {
-        key = _data[tmp3].key;
-        tmp5 = key === global;
-        tmp6 = tmp3;
-        tmp7 = num;
-        if (!tmp5) {
-          tmp8 = key != key && global != global;
-          tmp5 = tmp8;
-        }
-        if (tmp5) {
-          break;
-        } else {
-          sum = text + num;
-          tmp10 = hasOwnProperty;
-          call2 = hasOwnProperty.call;
-          num = num + 1;
-          tmp3 = sum;
-          tmp4 = sum;
-        }
-      }
-      _data[tmp3].value = require;
-    }
-    return;
-  }
-  delete(arg0) {
-    self = this;
-    _data = this._data;
-    text = `_${global}`;
-    tmp4 = hasOwnProperty;
-    call = hasOwnProperty.call;
-    tmp5 = text;
-    num = 0;
-    tmp6 = undefined;
-    if (typeof call === "unknown" ? tmp4(`_${global}`) : call(_data, `_${global}`)) {
-      while (true) {
-        key = _data[tmp5].key;
-        tmp7 = key === global;
-        tmp8 = tmp5;
-        tmp9 = num;
-        if (!tmp7) {
-          tmp10 = key != key && global != global;
-          tmp7 = tmp10;
-        }
-        if (tmp7) {
-          break;
-        } else {
-          sum = text + num;
-          tmp12 = hasOwnProperty;
-          call2 = hasOwnProperty.call;
-          num = num + 1;
-          tmp5 = sum;
-        }
-      }
-      tmp6 = _data[tmp5];
-    }
-    if (tmp6) {
-      _data2 = self._data;
-      _index = tmp6._index;
-      delete tmp2[tmp];
-      _data3 = self._data;
-      _data3.size = _data3.size - 1;
-    }
-    return;
-  }
-  clear() {
-    obj = Object.create(null);
-    obj.size = 0;
-    definePropertyResult = Object.defineProperty(this, "_data", { value: obj, enumerable: false, configurable: true, writable: false });
-    return;
   }
 }
-function Entry(arg0, arg1, arg2) {
-
+function isMapToString(arg0) {
+  return "[object Map]" === bindResult(arg0);
 }
-Object.defineProperty(PseudoMap.prototype, "size", {
-  get() {
-    return this._data.size;
-  },
-  set(arg0) {
-
-  },
-  enumerable: true,
-  configurable: true
+function isSetToString(arg0) {
+  return "[object Set]" === bindResult(arg0);
+}
+function isWeakMapToString(arg0) {
+  return "[object WeakMap]" === bindResult(arg0);
+}
+function isArrayBufferToString(arg0) {
+  return "[object ArrayBuffer]" === bindResult(arg0);
+}
+function isDataViewToString(arg0) {
+  return "[object DataView]" === bindResult(arg0);
+}
+function isSharedArrayBufferToString(arg0) {
+  return "[object SharedArrayBuffer]" === bindResult(arg0);
+}
+let closure_3 = typeof BigInt !== "undefined";
+let closure_4 = typeof Symbol !== "undefined";
+const call = toString.call;
+const bindResult = call.bind(toString);
+const hasOwnProperty = bindResult;
+const call2 = valueOf.call;
+let closure_6 = call2.bind(valueOf);
+const call3 = valueOf2.call;
+let closure_7 = call3.bind(valueOf2);
+const call4 = valueOf3.call;
+let closure_8 = call4.bind(valueOf3);
+if (typeof BigInt !== "undefined") {
+  const _BigInt = BigInt;
+  const call5 = valueOf4.call;
+  let closure_9 = call5.bind(valueOf4);
+}
+if (typeof Symbol !== "undefined") {
+  const _Symbol = Symbol;
+  const call6 = valueOf5.call;
+  let closure_10 = call6.bind(valueOf5);
+}
+let tmp2 = typeof Map !== "undefined";
+if (typeof Map !== "undefined") {
+  let _Map = Map;
+  const map = new Map();
+  tmp2 = "[object Map]" === bindResult(map);
+}
+isMapToString.working = tmp2;
+let tmp3 = typeof Set !== "undefined";
+if (typeof Set !== "undefined") {
+  let _Set = Set;
+  const set = new Set();
+  tmp3 = "[object Set]" === bindResult(set);
+}
+isSetToString.working = tmp3;
+let tmp4 = typeof WeakMap !== "undefined";
+if (typeof WeakMap !== "undefined") {
+  let _WeakMap = WeakMap;
+  const weakMap = new WeakMap();
+  tmp4 = "[object WeakMap]" === bindResult(weakMap);
+}
+isWeakMapToString.working = tmp4;
+let tmp5 = typeof WeakSet !== "undefined";
+if (typeof WeakSet !== "undefined") {
+  const _WeakSet = WeakSet;
+  const weakSet = new WeakSet();
+  tmp5 = "[object WeakSet]" === bindResult(weakSet);
+}
+function isWeakSetToString(arg0) {
+  return "[object WeakSet]" === bindResult(arg0);
+}.working = tmp5;
+let tmp6 = typeof ArrayBuffer !== "undefined";
+if (typeof ArrayBuffer !== "undefined") {
+  let _ArrayBuffer2 = ArrayBuffer;
+  const arrayBuffer = new ArrayBuffer();
+  tmp6 = "[object ArrayBuffer]" === bindResult(arrayBuffer);
+}
+isArrayBufferToString.working = tmp6;
+let tmp7 = typeof ArrayBuffer !== "undefined";
+if (typeof ArrayBuffer !== "undefined") {
+  let _DataView2 = DataView;
+  tmp7 = typeof DataView !== "undefined";
+}
+if (tmp7) {
+  let _DataView = DataView;
+  let _ArrayBuffer = ArrayBuffer;
+  const arrayBuffer2 = new ArrayBuffer(1);
+  const dataView = new DataView(arrayBuffer2, 0, 1);
+  tmp7 = "[object DataView]" === bindResult(dataView);
+}
+isDataViewToString.working = tmp7;
+let _SharedArrayBuffer;
+if (typeof SharedArrayBuffer !== "undefined") {
+  _SharedArrayBuffer = SharedArrayBuffer;
+}
+const items = ["isProxy", "isExternal", "isModuleNamespaceObject"];
+const item = items.forEach((item) => {
+  closure_0 = item;
+  Object.defineProperty(exports, item, {
+    enumerable: false,
+    value() {
+      const error = new Error(closure_0 + " is not supported in userland");
+      throw error;
+    }
+  });
 });
-const fn = () => {
-  const error = new Error("iterators are not implemented in this version");
-  throw error;
-};
-PseudoMap.prototype.entries = fn;
-PseudoMap.prototype.keys = fn;
-PseudoMap.prototype.values = fn;
 
-export default PseudoMap;
+export const isArgumentsObject = _mod1462;
+export const isGeneratorFunction = _mod1464;
+export const isTypedArray = _mod1467;
+export const isPromise = function isPromise(obj) {
+  let tmp = typeof Promise !== "undefined";
+  if (typeof Promise !== "undefined") {
+    tmp = obj instanceof Promise;
+  }
+  if (!tmp) {
+    tmp = null !== obj && typeof obj === "object" && typeof obj.then === "function" && typeof obj.catch === "function";
+    const tmp3 = null !== obj && typeof obj === "object" && typeof obj.then === "function" && typeof obj.catch === "function";
+  }
+  return tmp;
+};
+export const isArrayBufferView = function isArrayBufferView(arg0) {
+  if (typeof ArrayBuffer !== "undefined") {
+    const _ArrayBuffer2 = ArrayBuffer;
+    if (ArrayBuffer.isView) {
+      const _ArrayBuffer = ArrayBuffer;
+      let isViewResult = ArrayBuffer.isView(arg0);
+    }
+    return isViewResult;
+  }
+  isViewResult = _mod1467(arg0);
+  if (!isViewResult) {
+    const _DataView = DataView;
+    if (typeof DataView === "undefined") {
+      isViewResult = typeof DataView !== "undefined";
+    } else if (isDataViewToString.working) {
+      let tmp2 = "[object DataView]" === bindResult(arg0);
+    } else {
+      const _DataView2 = DataView;
+      tmp2 = arg0 instanceof DataView;
+    }
+  }
+};
+export const isUint8Array = function isUint8Array(arg0) {
+  return "Uint8Array" === _mod1468(arg0);
+};
+export const isUint8ClampedArray = function isUint8ClampedArray(arg0) {
+  return "Uint8ClampedArray" === _mod1468(arg0);
+};
+export const isUint16Array = function isUint16Array(arg0) {
+  return "Uint16Array" === _mod1468(arg0);
+};
+export const isUint32Array = function isUint32Array(arg0) {
+  return "Uint32Array" === _mod1468(arg0);
+};
+export const isInt8Array = function isInt8Array(arg0) {
+  return "Int8Array" === _mod1468(arg0);
+};
+export const isInt16Array = function isInt16Array(arg0) {
+  return "Int16Array" === _mod1468(arg0);
+};
+export const isInt32Array = function isInt32Array(arg0) {
+  return "Int32Array" === _mod1468(arg0);
+};
+export const isFloat32Array = function isFloat32Array(arg0) {
+  return "Float32Array" === _mod1468(arg0);
+};
+export const isFloat64Array = function isFloat64Array(arg0) {
+  return "Float64Array" === _mod1468(arg0);
+};
+export const isBigInt64Array = function isBigInt64Array(arg0) {
+  return "BigInt64Array" === _mod1468(arg0);
+};
+export const isBigUint64Array = function isBigUint64Array(arg0) {
+  return "BigUint64Array" === _mod1468(arg0);
+};
+export const isMap = function isMap(arg0) {
+  if (typeof Map === "undefined") {
+    return typeof Map !== "undefined";
+  } else {
+    let tmp3 = arg0;
+    if (isMapToString.working) {
+      tmp3 = bindResult(tmp3);
+      let tmp = "[object Map]" === tmp3;
+    } else {
+      const _Map = Map;
+      tmp = tmp3 instanceof Map;
+    }
+  }
+};
+export const isSet = function isSet(arg0) {
+  if (typeof Set === "undefined") {
+    return typeof Set !== "undefined";
+  } else {
+    let tmp3 = arg0;
+    if (isSetToString.working) {
+      tmp3 = bindResult(tmp3);
+      let tmp = "[object Set]" === tmp3;
+    } else {
+      const _Set = Set;
+      tmp = tmp3 instanceof Set;
+    }
+  }
+};
+export const isWeakMap = function isWeakMap(arg0) {
+  if (typeof WeakMap === "undefined") {
+    return typeof WeakMap !== "undefined";
+  } else {
+    let tmp3 = arg0;
+    if (isWeakMapToString.working) {
+      tmp3 = bindResult(tmp3);
+      let tmp = "[object WeakMap]" === tmp3;
+    } else {
+      const _WeakMap = WeakMap;
+      tmp = tmp3 instanceof WeakMap;
+    }
+  }
+};
+export const isWeakSet = function isWeakSet(arg0) {
+  return "[object WeakSet]" === bindResult(arg0);
+};
+export const isArrayBuffer = function isArrayBuffer(arg0) {
+  if (typeof ArrayBuffer === "undefined") {
+    return typeof ArrayBuffer !== "undefined";
+  } else {
+    let tmp3 = arg0;
+    if (isArrayBufferToString.working) {
+      tmp3 = bindResult(tmp3);
+      let tmp = "[object ArrayBuffer]" === tmp3;
+    } else {
+      const _ArrayBuffer = ArrayBuffer;
+      tmp = tmp3 instanceof ArrayBuffer;
+    }
+  }
+};
+export const isDataView = function isDataView(arg0) {
+  if (typeof DataView === "undefined") {
+    return typeof DataView !== "undefined";
+  } else {
+    let tmp3 = arg0;
+    if (isDataViewToString.working) {
+      tmp3 = bindResult(tmp3);
+      let tmp = "[object DataView]" === tmp3;
+    } else {
+      const _DataView = DataView;
+      tmp = tmp3 instanceof DataView;
+    }
+  }
+};
+export const isSharedArrayBuffer = function isSharedArrayBuffer(arg0) {
+  if (undefined === _SharedArrayBuffer) {
+    return tmp2;
+  } else {
+    if (undefined === isSharedArrayBufferToString.working) {
+      const tmp6 = new _SharedArrayBuffer();
+      isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === bindResult(tmp6);
+    }
+    let tmp9 = arg0;
+    if (isSharedArrayBufferToString.working) {
+      tmp9 = bindResult(tmp9);
+      let tmp10 = "[object SharedArrayBuffer]" === tmp9;
+    } else {
+      tmp10 = tmp9 instanceof _SharedArrayBuffer;
+    }
+  }
+};
+export const isAsyncFunction = function isAsyncFunction(arg0) {
+  return "[object AsyncFunction]" === bindResult(arg0);
+};
+export const isMapIterator = function isMapIterator(arg0) {
+  return "[object Map Iterator]" === bindResult(arg0);
+};
+export const isSetIterator = function isSetIterator(arg0) {
+  return "[object Set Iterator]" === bindResult(arg0);
+};
+export const isGeneratorObject = function isGeneratorObject(arg0) {
+  return "[object Generator]" === bindResult(arg0);
+};
+export const isWebAssemblyCompiledModule = function isWebAssemblyCompiledModule(arg0) {
+  return "[object WebAssembly.Module]" === bindResult(arg0);
+};
+export const isNumberObject = function isNumberObject(arg0) {
+  return checkBoxedPrimitive(arg0, closure_6);
+};
+export const isStringObject = function isStringObject(arg0) {
+  return checkBoxedPrimitive(arg0, closure_7);
+};
+export const isBooleanObject = function isBooleanObject(arg0) {
+  return checkBoxedPrimitive(arg0, closure_8);
+};
+export const isBigIntObject = function isBigIntObject(arg0) {
+  let tmp = closure_3;
+  if (closure_3) {
+    tmp = checkBoxedPrimitive(arg0, closure_9);
+  }
+  return tmp;
+};
+export const isSymbolObject = function isSymbolObject(arg0) {
+  let tmp = closure_4;
+  if (closure_4) {
+    tmp = checkBoxedPrimitive(arg0, closure_10);
+  }
+  return tmp;
+};
+export const isBoxedPrimitive = function isBoxedPrimitive(arg0) {
+  let tmpResult = checkBoxedPrimitive(arg0, closure_6);
+  if (!tmpResult) {
+    tmpResult = checkBoxedPrimitive(arg0, closure_7);
+  }
+  if (!tmpResult) {
+    tmpResult = checkBoxedPrimitive(arg0, closure_8);
+  }
+  if (!tmpResult) {
+    let tmpResult3 = closure_3;
+    if (closure_3) {
+      tmpResult3 = checkBoxedPrimitive(arg0, closure_9);
+    }
+    tmpResult = tmpResult3;
+  }
+  if (!tmpResult) {
+    let tmpResult4 = closure_4;
+    if (closure_4) {
+      tmpResult4 = checkBoxedPrimitive(arg0, closure_10);
+    }
+    tmpResult = tmpResult4;
+  }
+  return tmpResult;
+};
+export const isAnyArrayBuffer = function isAnyArrayBuffer(arg0) {
+  let tmp = typeof Uint8Array !== "undefined";
+  if (typeof Uint8Array !== "undefined") {
+    let tmp15 = arg0;
+    const _ArrayBuffer2 = ArrayBuffer;
+    let tmp17 = typeof ArrayBuffer !== "undefined";
+    if (typeof ArrayBuffer === "undefined") {
+      if (!tmp17) {
+        if (undefined === _SharedArrayBuffer) {
+          tmp17 = tmp6;
+        } else {
+          if (undefined === isSharedArrayBufferToString.working) {
+            const tmp52 = new _SharedArrayBuffer();
+            isSharedArrayBufferToString.working = "[object SharedArrayBuffer]" === bindResult(tmp52);
+          }
+          if (isSharedArrayBufferToString.working) {
+            tmp15 = bindResult(tmp15);
+            let tmp13 = "[object SharedArrayBuffer]" === tmp15;
+          } else {
+            tmp13 = tmp15 instanceof _SharedArrayBuffer;
+          }
+        }
+      }
+      tmp = tmp17;
+    } else if (isArrayBufferToString.working) {
+      let tmp2 = "[object ArrayBuffer]" === bindResult(tmp15);
+    } else {
+      const _ArrayBuffer = ArrayBuffer;
+      tmp2 = tmp15 instanceof ArrayBuffer;
+    }
+  }
+  return tmp;
+};

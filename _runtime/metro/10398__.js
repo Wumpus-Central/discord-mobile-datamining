@@ -1,16 +1,14 @@
 // === Module 10398: ? ===
 
 // Module 10398
-import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10215 */;
-import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10222 */;
-import _mod10384 from "module_10384" /* 10384 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10224 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ITRelativeDateFormatParser = require;
+const ITCasualTimeParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,13 +28,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-const regExp = new RegExp("(questo|ultimo|scorso|prossimo|dopo\\s*questo|questa|ultima|scorsa|prossima\\s*questa)\\s*(" + repeatedTimeunitPattern.matchAnyPattern(_mod10384.TIME_UNIT_DICTIONARY) + ")(?=\\s*)(?=\\W|$)", "i");
-class ITRelativeDateFormatParser {
+const re6 = /(?:questo|questa)?\s{0,3}(mattina|pomeriggio|sera|notte|mezzanotte|mezzogiorno)(?=\W|$)/i;
+class ITCasualTimeParser {
   constructor() {
     self = this;
-    tmp = c2(this, ITRelativeDateFormatParser);
+    tmp = c2(this, ITCasualTimeParser);
     tmp2 = closure_4;
-    obj = closure_4(ITRelativeDateFormatParser);
+    obj = closure_4(ITCasualTimeParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -51,60 +49,51 @@ class ITRelativeDateFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ITRelativeDateFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+_inherits(ITCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
   key: "innerPattern",
   value: function innerPattern() {
-    return regExp;
+    return re6;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingComponents, arg1) {
+    value: function innerExtract(refDate, arg1) {
+      refDate = refDate.refDate;
+      const parsingComponents = refDate.createParsingComponents();
       const formatted = arg1[1].toLowerCase();
-      const str3 = arg1[2].toLowerCase();
-      const tmp3 = ITRelativeDateFormatParser(10384).TIME_UNIT_DICTIONARY[str3];
-      if ("prossimo" != formatted) {
-        if (!formatted.startsWith("dopo")) {
-          if ("prima" != formatted) {
-            if ("precedente" != formatted) {
-              const parsingComponents = createParsingComponents.createParsingComponents();
+      if ("pomeriggio" === formatted) {
+        parsingComponents.imply("meridiem", ITCasualTimeParser(10211).Meridiem.PM);
+        parsingComponents.imply("hour", 15);
+      } else {
+        if ("sera" !== formatted) {
+          if ("notte" !== formatted) {
+            if ("mezzanotte" === formatted) {
               const _Date = Date;
-              const instant = createParsingComponents.reference.instant;
-              const date = new Date(instant.getTime());
-              if (str3.match(/settimana/i)) {
-                date.setDate(date.getDate() - date.getDay());
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.imply("month", date.getMonth() + 1);
-                parsingComponents.imply("year", date.getFullYear());
-                const date1 = date.getDate();
-              } else if (str3.match(/mese/i)) {
-                date.setDate(1);
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.assign("year", date.getFullYear());
-                parsingComponents.assign("month", date.getMonth() + 1);
-              } else if (str3.match(/anno/i)) {
-                date.setDate(1);
-                date.setMonth(0);
-                parsingComponents.imply("day", date.getDate());
-                parsingComponents.imply("month", date.getMonth() + 1);
-                parsingComponents.assign("year", date.getFullYear());
-              }
-              return parsingComponents;
+              const date = new Date(refDate.getTime());
+              date.setDate(date.getDate() + 1);
+              ITCasualTimeParser(10223).assignSimilarDate(parsingComponents, date);
+              ITCasualTimeParser(10223).implySimilarTime(parsingComponents, date);
+              parsingComponents.imply("hour", 0);
+              parsingComponents.imply("minute", 0);
+              parsingComponents.imply("second", 0);
+            } else if ("mattina" === formatted) {
+              parsingComponents.imply("meridiem", ITCasualTimeParser(10211).Meridiem.AM);
+              parsingComponents.imply("hour", 6);
+            } else if ("mezzogiorno" === formatted) {
+              parsingComponents.imply("meridiem", ITCasualTimeParser(10211).Meridiem.AM);
+              parsingComponents.imply("hour", 12);
             }
           }
-          const obj4 = {};
-          obj4[tmp3] = -1;
-          const ParsingComponents = ITRelativeDateFormatParser(10218).ParsingComponents;
-          return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj4);
         }
+        parsingComponents.imply("meridiem", ITCasualTimeParser(10211).Meridiem.PM);
+        parsingComponents.imply("hour", 20);
       }
-      const ParsingComponents2 = ITRelativeDateFormatParser(10218).ParsingComponents;
-      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [tmp3]: 1 });
+      return parsingComponents;
     }
   }
 ];
 
-export default _createClass(ITRelativeDateFormatParser, items);
+export default _createClass(ITCasualTimeParser, items);

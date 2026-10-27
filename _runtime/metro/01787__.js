@@ -7,7 +7,7 @@ import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-let CurvedTransition = fn;
+const JumpingTransition = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,16 +27,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let closure_6 = { code: "function pnpm_CurvedTransitionTs1(values){const{delayFunction,delay,withTiming,duration,easing,callback}=this.__closure;return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,withTiming(values.targetOriginX,{duration:duration,easing:easing.easingX})),originY:delayFunction(delay,withTiming(values.targetOriginY,{duration:duration,easing:easing.easingY})),width:delayFunction(delay,withTiming(values.targetWidth,{duration:duration,easing:easing.easingWidth})),height:delayFunction(delay,withTiming(values.targetHeight,{duration:duration,easing:easing.easingHeight}))},callback:callback};}" };
-class CurvedTransition {
+let closure_6 = { code: "function pnpm_JumpingTransitionTs1(values){const{delayFunction,delay,withTiming,config,withSequence,halfDuration,Easing,callback}=this.__closure;const d=Math.max(Math.abs(values.targetOriginX-values.currentOriginX),Math.abs(values.targetOriginY-values.currentOriginY));return{initialValues:{originX:values.currentOriginX,originY:values.currentOriginY,width:values.currentWidth,height:values.currentHeight},animations:{originX:delayFunction(delay,withTiming(values.targetOriginX,config)),originY:delayFunction(delay,withSequence(withTiming(Math.min(values.targetOriginY,values.currentOriginY)-d,{duration:halfDuration,easing:Easing.out(Easing.exp)}),withTiming(values.targetOriginY,{...config,duration:halfDuration,easing:Easing.bounce}))),width:delayFunction(delay,withTiming(values.targetWidth,config)),height:delayFunction(delay,withTiming(values.targetHeight,config))},callback:callback};}" };
+class JumpingTransition {
   constructor() {
     self = this;
     items = [...arguments];
     closure_0 = undefined;
-    tmp = c2(this, CurvedTransition);
+    tmp = c2(this, JumpingTransition);
     items1 = [...items];
     tmp2 = closure_4;
-    obj = closure_4(CurvedTransition);
+    obj = closure_4(JumpingTransition);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp5 = globalThis;
@@ -47,14 +47,6 @@ class CurvedTransition {
     }
     tmp3Result = tmp3(self, constructResult);
     closure_0 = tmp3Result;
-    Easing = closure_0(closure_1[5]).Easing;
-    tmp3Result.easingXV = Easing.in(closure_0(closure_1[5]).Easing.ease);
-    Easing2 = closure_0(closure_1[5]).Easing;
-    tmp3Result.easingYV = Easing2.out(closure_0(closure_1[5]).Easing.ease);
-    Easing3 = closure_0(closure_1[5]).Easing;
-    tmp3Result.easingWidthV = Easing3.in(closure_0(closure_1[5]).Easing.exp);
-    Easing4 = closure_0(closure_1[5]).Easing;
-    tmp3Result.easingHeightV = Easing4.out(closure_0(closure_1[5]).Easing.exp);
     tmp3Result.build = () => {
       delayFunction = delayFunction.getDelayFunction();
       const callbackV = delayFunction.callbackV;
@@ -63,101 +55,53 @@ class CurvedTransition {
       if (num == null) {
         num = 300;
       }
-      const easing = { easingX: tmp.easingXV, easingY: tmp.easingYV, easingWidth: tmp.easingWidthV, easingHeight: tmp.easingHeightV };
+      const result = num / 2;
+      closure_3 = result;
+      const config = { duration: num };
       const fn = function n(originX) {
+        const absolute = Math.abs(originX.targetOriginX - originX.currentOriginX);
         const obj = { initialValues: { originX: originX.currentOriginX, originY: originX.currentOriginY, width: originX.currentWidth, height: originX.currentHeight }, animations: null, callback: null };
-        const size = { originX: delayFunction(delay, delayFunction(1730).withTiming(originX.targetOriginX, { duration: num, easing: obj.easingX })), originY: null, width: null, height: null };
-        const obj2 = { duration: num, easing: obj.easingX };
-        const obj3 = delayFunction(1730);
-        size.originY = delayFunction(delay, delayFunction(1730).withTiming(originX.targetOriginY, { duration: num, easing: obj.easingY }));
-        const obj4 = { duration: num, easing: obj.easingY };
-        const obj5 = delayFunction(1730);
-        size.width = delayFunction(delay, delayFunction(1730).withTiming(originX.targetWidth, { duration: num, easing: obj.easingWidth }));
-        const obj6 = { duration: num, easing: obj.easingWidth };
-        const obj7 = delayFunction(1730);
-        size.height = delayFunction(delay, delayFunction(1730).withTiming(originX.targetHeight, { duration: num, easing: obj.easingHeight }));
+        const size = { originX: null, originY: null, width: null, height: null };
+        const bound = Math.max(absolute, Math.abs(originX.targetOriginY - originX.currentOriginY));
+        size.originX = delayFunction(delay, delayFunction(1727).withTiming(originX.targetOriginX, obj));
+        const obj3 = delayFunction(1727);
+        const obj4 = delayFunction(1727);
+        const obj2 = { duration: result, easing: null };
+        const diff = Math.min(originX.targetOriginY, originX.currentOriginY) - bound;
+        const Easing = delayFunction(1707).Easing;
+        obj2.easing = Easing.out(delayFunction(1707).Easing.exp);
+        const obj5 = delayFunction(1727);
+        const withTimingResult = delayFunction(1727).withTiming(diff, obj2);
+        const obj6 = {};
+        const merged = Object.assign(obj);
+        obj6.duration = result;
+        obj6.easing = delayFunction(1707).Easing.bounce;
+        size.originY = delayFunction(delay, obj4.withSequence(withTimingResult, delayFunction(1727).withTiming(originX.targetOriginY, obj6)));
+        const obj7 = delayFunction(1727);
+        size.width = delayFunction(delay, delayFunction(1727).withTiming(originX.targetWidth, obj));
+        const obj9 = delayFunction(1727);
+        size.height = delayFunction(delay, delayFunction(1727).withTiming(originX.targetHeight, obj));
         obj.animations = size;
         obj.callback = callbackV;
         return obj;
       };
-      fn.__closure = { delayFunction, delay, withTiming: CurvedTransition(1730).withTiming, duration: num, easing, callback: callbackV };
-      fn.__workletHash = 8113645568730;
+      fn.__closure = { delayFunction, delay, withTiming: JumpingTransition(1727).withTiming, config, withSequence: JumpingTransition(1727).withSequence, halfDuration: result, Easing: JumpingTransition(1707).Easing, callback: callbackV };
+      fn.__workletHash = 11549153259849;
       fn.__initData = __initData;
       return fn;
     };
     return tmp3Result;
   }
 }
-_inherits(CurvedTransition, fn(1728).BaseAnimationBuilder);
+_inherits(JumpingTransition, fn(1725).BaseAnimationBuilder);
 const entry = {
-  key: "easingX",
-  value: function easingX(easingXV) {
-    this.easingXV = easingXV;
-    return this;
-  }
-};
-let items = [
-  entry,
-  {
-    key: "easingY",
-    value: function easingY(easingYV) {
-      this.easingYV = easingYV;
-      return this;
-    }
-  },
-  {
-    key: "easingWidth",
-    value: function easingWidth(easingWidthV) {
-      this.easingWidthV = easingWidthV;
-      return this;
-    }
-  },
-  {
-    key: "easingHeight",
-    value: function easingHeight(easingHeightV) {
-      this.easingHeightV = easingHeightV;
-      return this;
-    }
-  }
-];
-const entry1 = {
   key: "createInstance",
   value: function createInstance() {
-    return CurvedTransition();
+    return JumpingTransition();
   }
 };
-let items1 = [
-  entry1,
-  {
-    key: "easingX",
-    value: function easingX(arg0) {
-      const instance = this.createInstance();
-      return instance.easingX(arg0);
-    }
-  },
-  {
-    key: "easingY",
-    value: function easingY(arg0) {
-      const instance = this.createInstance();
-      return instance.easingY(arg0);
-    }
-  },
-  {
-    key: "easingWidth",
-    value: function easingWidth(arg0) {
-      const instance = this.createInstance();
-      return instance.easingWidth(arg0);
-    }
-  },
-  {
-    key: "easingHeight",
-    value: function easingHeight(arg0) {
-      const instance = this.createInstance();
-      return instance.easingHeight(arg0);
-    }
-  }
-];
-const importDefaultResultResult = _createClass(CurvedTransition, items, items1);
-importDefaultResultResult.presetName = "CurvedTransition";
+let items = [entry];
+const importDefaultResultResult = _createClass(JumpingTransition, null, items);
+importDefaultResultResult.presetName = "JumpingTransition";
 
-export const CurvedTransition = importDefaultResultResult;
+export const JumpingTransition = importDefaultResultResult;

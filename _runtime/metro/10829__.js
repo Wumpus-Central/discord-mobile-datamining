@@ -1,7 +1,7 @@
 // === Module 10829: ? ===
 
 // Module 10829
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 24, height: 24, scales: [2, 3], hash: "ff0787bdfe8164338278d2c417e963a2", name: "share-android", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1cda1329ef5dd669ec53160c74e5d945", name: "ArrowSmallRightIcon", type: "png" });

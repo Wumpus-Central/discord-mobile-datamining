@@ -1,52 +1,45 @@
 // === Module 1772: ? ===
 
 // Module 1772
-import module_1661 from "module_1661" /* 1661 */;
+const require = globalThis.__r;
 
-let closure_0 = require;
-let closure_1 = dependencyMap;
-if (module_1661.shouldBeUseWeb()) {
-  let fn = function t() {
-
-  };
-} else {
-  closure_0 = [];
-  closure_1 = [];
-  let obj = {
-    update(arg0, arg1) {
-        if (arg1) {
-          closure_1.push(arg0);
-        } else {
-          closure_0.push(arg0);
-        }
-        if (closure_0.length + closure_1.length === 1) {
-          const self = this;
-          if (obj.isFabric()) {
-            self.flush();
-          } else {
-            const _setImmediate = setImmediate;
-            setImmediate(self.flush);
-          }
-          obj = closure_0(closure_1[0]);
-        }
-      },
-    flush() {
-        const result = closure_0(closure_1[1]).configureLayoutAnimationBatch(closure_0.concat(closure_1));
-        closure_0.length = 0;
-        closure_1.length = 0;
-      }
-  };
-  fn = function t(viewTag, type, arg2, sharedTransitionTag, arg4) {
-    obj = { viewTag, type, config: null, sharedTransitionTag: null };
-    let shareableCloneRecursive;
-    if (arg2) {
-      shareableCloneRecursive = closure_0(closure_1[1]).makeShareableCloneRecursive(arg2);
-      const obj2 = closure_0(closure_1[1]);
-    }
-    obj.config = shareableCloneRecursive;
-    obj.sharedTransitionTag = sharedTransitionTag;
-    return obj.update(obj, arg4);
-  };
+for (const key10013 in require("module_1773")) {
+  arg5[key10013] = require("module_1773")[key10013];
+  continue;
 }
-
-export const updateLayoutAnimations = fn;
+for (const key10017 in require("module_1774")) {
+  arg5[key10017] = require("module_1774")[key10017];
+  continue;
+}
+for (const key10021 in require("module_1775")) {
+  arg5[key10021] = require("module_1775")[key10021];
+  continue;
+}
+for (const key10025 in require("module_1776")) {
+  arg5[key10025] = require("module_1776")[key10025];
+  continue;
+}
+for (const key10029 in require("module_1777")) {
+  arg5[key10029] = require("module_1777")[key10029];
+  continue;
+}
+for (const key10033 in require("module_1778")) {
+  arg5[key10033] = require("module_1778")[key10033];
+  continue;
+}
+for (const key10037 in require("module_1779")) {
+  arg5[key10037] = require("module_1779")[key10037];
+  continue;
+}
+for (const key10041 in require("module_1780")) {
+  arg5[key10041] = require("module_1780")[key10041];
+  continue;
+}
+for (const key10045 in require("module_1781")) {
+  arg5[key10045] = require("module_1781")[key10045];
+  continue;
+}
+for (const key10049 in require("module_1782")) {
+  arg5[key10049] = require("module_1782")[key10049];
+  continue;
+}

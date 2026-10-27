@@ -1,7 +1,7 @@
 // === Module 2598: ? ===
 
 // Module 2598
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9wcmVtaXVtL3Bvd2VydXBz", scales: [1], hash: "b6889908d4ad391ebe0bbf4d13956031", name: "zh-TW.messages.b6889908d4ad391ebe0bbf4d13956031.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/powerups", scales: [1], hash: "ddd86817da2beab12455866b3868a66e", name: "GuildPowerups.compiled.messages", type: "jsona" });

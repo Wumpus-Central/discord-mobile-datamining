@@ -1,7 +1,7 @@
 // === Module 16981: ? ===
 
 // Module 16981
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "4aac4b9e524273cde97c71cf7da9357a", name: "DoubleCheckmarkIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "16aad056858b421d37d14aba161c7c8a", name: "StaffBadgeIcon", type: "png" });

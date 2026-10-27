@@ -1,17 +1,17 @@
 // === Module 4612: ? ===
 
 // Module 4612
-import module_4604_mod from "module_4604" /* 4604 */;
-import requiredArgs_mod from "requiredArgs" /* 4255 */;
+import module_4602_mod from "module_4602" /* 4602 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let module_4604 = module_4604_mod;
-if (!module_4604) {
-  const obj = { default: module_4604 };
+let module_4602 = module_4602_mod;
+if (!module_4602) {
+  const obj = { default: module_4602 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4604;
+  tmp3 = module_4602;
 }
-module_4604 = tmp3;
+module_4602 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisMinute(arg0) {
+export default function isThisISOWeek(arg0) {
   requiredArgs.default(1, arguments);
-  return module_4604.default(Date.now(), arg0);
+  return module_4602.default(arg0, Date.now());
 };
 export default exports.default;

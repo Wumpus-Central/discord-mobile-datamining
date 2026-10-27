@@ -1,15 +1,14 @@
 // === Module 1015: ? ===
 
 // Module 1015
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import _slicedToArray from "module_32" /* 32 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-let Profiler = require;
+let ErrorBoundary = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,19 +28,20 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-_possibleConstructorReturn;
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const unknown = "unknown";
-class Profiler {
+let state = { componentStack: null, error: null, eventId: null };
+class ErrorBoundary {
   constructor(arg0) {
     self = this;
-    tmp = closure_3(this, Profiler);
+    closure_0 = global;
+    tmp = c2(this, ErrorBoundary);
     items = [];
     items[0] = global;
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Profiler);
-    tmp3 = closure_4;
-    if (metroRequire()) {
+    tmp2 = closure_4;
+    obj = closure_4(ErrorBoundary);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
       tmp5 = globalThis;
       _Reflect = Reflect;
       constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
@@ -49,74 +49,87 @@ class Profiler {
       constructResult = obj.apply(self, items);
     }
     tmp3Result = tmp3(self, constructResult);
-    ({ name, disabled } = tmp3Result.props);
-    if (undefined !== disabled) {
-      if (disabled) {
-        tmp3Result1 = tmp3(tmp3Result);
-      }
-      return tmp3Result1;
+    closure_1 = tmp3Result;
+    tmp3Result.state = closure_8;
+    tmp3Result._openFallbackReportDialog = true;
+    obj2 = closure_0(closure_1[6]);
+    client = obj2.getClient();
+    showDialog = client;
+    if (client) {
+      showDialog = global.showDialog;
     }
-    obj2 = closure_0(closure_1[7]);
-    obj1 = { name: "<" + name + ">", onlyIfParent: true, op: closure_0(closure_1[8]).REACT_MOUNT_OP, attributes: { [closure_2_0(closure_2_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": name } };
-    tmp3Result._mountSpan = obj2.startInactiveSpan(obj1);
-    tmp3Result1 = tmp3Result;
-    return;
+    if (showDialog) {
+      flag = false;
+      tmp3Result._openFallbackReportDialog = false;
+      str = "afterSendEvent";
+      tmp3Result._cleanupHook = client.on("afterSendEvent", (type) => {
+        type = type.type;
+        let _lastEventId = !type;
+        if (!type) {
+          _lastEventId = closure_1._lastEventId;
+        }
+        if (_lastEventId) {
+          _lastEventId = type.event_id === closure_1._lastEventId;
+        }
+        if (_lastEventId) {
+          const obj2 = {};
+          const merged = Object.assign(showDialog.dialogOptions);
+          obj2.eventId = closure_1._lastEventId;
+          ErrorBoundary(898).showReportDialog(obj2);
+          const obj = ErrorBoundary(898);
+        }
+      });
+    }
+    return tmp3Result;
   }
 }
-_inherits(Profiler, noop.Component);
+_inherits(ErrorBoundary, noop.Component);
 const entry = {
-  key: "componentDidMount",
-  value: function componentDidMount() {
-    if (this._mountSpan) {
-      const _mountSpan = this._mountSpan;
-      _mountSpan.end();
-    }
+  key: "componentDidCatch",
+  value: function componentDidCatch(error, componentStack) {
+    const self = this;
+    dependencyMap = error;
+    closure_2 = componentStack;
+    componentStack = componentStack.componentStack;
+    ({ beforeCapture: _getPrototypeOf, onError: _isNativeReflectConstruct, showDialog: noop, dialogOptions: ErrorBoundary } = this.props);
+    ErrorBoundary(898).withScope((arg0) => {
+      if (_getPrototypeOf) {
+        tmp(arg0, error, componentStack);
+      }
+      if (null != self.props.handled) {
+        let handled = self.props.handled;
+      } else {
+        handled = self.props.fallback;
+      }
+      const result = ErrorBoundary(1011).captureReactException(error, closure_2, { mechanism: { handled, type: "auto.function.react.error_boundary" } });
+      if (_isNativeReflectConstruct) {
+        tmp10(error, componentStack, result);
+      }
+      if (noop) {
+        self._lastEventId = result;
+        if (self._openFallbackReportDialog) {
+          const obj4 = {};
+          const merged = Object.assign(closure_1_0);
+          obj4.eventId = result;
+          ErrorBoundary(898).showReportDialog(obj4);
+          const tmp6Result = ErrorBoundary(898);
+        }
+      }
+      self.setState({ error, componentStack, eventId: result });
+      const obj2 = ErrorBoundary(1011);
+      const obj3 = { mechanism: { handled, type: "auto.function.react.error_boundary" } };
+      const obj5 = { error, componentStack, eventId: result };
+    });
   }
 };
 let items = [
   entry,
   {
-    key: "shouldComponentUpdate",
-    value: function shouldComponentUpdate(updateProps) {
-      const self = this;
-      updateProps = updateProps.updateProps;
-      let flag = updateProps.includeUpdates;
-      if (flag === undefined) {
-        flag = true;
-      }
-      let found;
-      Profiler = undefined;
-      if (flag) {
-        if (self._mountSpan) {
-          if (updateProps !== self.props.updateProps) {
-            const _Object = Object;
-            const keys = Object.keys(updateProps);
-            found = keys.filter((item) => updateProps[item] !== self.props.updateProps[item]);
-            if (found.length > 0) {
-              Profiler = Profiler(updateProps[9]).timestampInSeconds();
-              let obj = Profiler(updateProps[9]);
-              self._updateSpan = Profiler(updateProps[9]).withActiveSpan(self._mountSpan, () => {
-                const obj2 = { name: "<" + self.props.name + ">", onlyIfParent: true, op: Profiler(1016).REACT_UPDATE_OP, startTime, attributes: null };
-                const obj = Profiler(901);
-                obj2.attributes = { [closure_2_0(closure_2_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": self.props.name, "ui.react.changed_props": found };
-                return obj.startInactiveSpan(obj2);
-              });
-              let obj2 = Profiler(updateProps[9]);
-            }
-          }
-        }
-      }
-      return true;
-    }
-  },
-  {
-    key: "componentDidUpdate",
-    value: function componentDidUpdate() {
-      const self = this;
-      if (this._updateSpan) {
-        const _updateSpan = self._updateSpan;
-        _updateSpan.end();
-        self._updateSpan = undefined;
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      const onMount = this.props.onMount;
+      if (onMount) {
+        onMount();
       }
     }
   },
@@ -124,122 +137,83 @@ let items = [
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       const self = this;
-      Profiler = Profiler(693).timestampInSeconds();
-      ({ name: dependencyMap, includeRender } = this.props);
-      if (self._mountSpan) {
-        if (tmp3) {
-          const timestamp = tmp(693).spanToJSON(self._mountSpan).timestamp;
-          const tmpResult = tmp(693);
-          tmp(693).withActiveSpan(self._mountSpan, () => {
-            const obj2 = { onlyIfParent: true, name: "<" + dependencyMap + ">", op: Profiler(1016).REACT_RENDER_OP, startTime: timestamp, attributes: null };
-            const obj = Profiler(901);
-            obj2.attributes = { [closure_2_0(closure_2_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": dependencyMap };
-            const startInactiveSpanResult = obj.startInactiveSpan(obj2);
-            if (startInactiveSpanResult) {
-              startInactiveSpanResult.end(closure_0);
-            }
-            const obj3 = { [closure_2_0(closure_2_1[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN]: "auto.ui.react.profiler", "ui.component_name": dependencyMap };
-          });
-          const tmpResult2 = tmp(693);
+      const onUnmount = this.props.onUnmount;
+      if (onUnmount) {
+        if (self.state === closure_8) {
+          onUnmount(null, null, null);
+        } else {
+          onUnmount(tmp, tmp2, tmp3);
         }
       }
-      let obj = Profiler(693);
-      tmp3 = undefined === includeRender || includeRender;
+      if (self._cleanupHook) {
+        self._cleanupHook();
+        self._cleanupHook = undefined;
+      }
+    }
+  },
+  {
+    key: "resetErrorBoundary",
+    value: function resetErrorBoundary() {
+      const self = this;
+      const onReset = this.props.onReset;
+      if (onReset) {
+        onReset(tmp, tmp2, tmp3);
+      }
+      self.setState(closure_8);
     }
   },
   {
     key: "render",
     value: function render() {
-      return this.props.children;
+      const self = this;
+      ({ fallback, children } = this.props);
+      state = this.state;
+      if (null === state.componentStack) {
+        let childrenResult = children;
+        if (typeof children === "function") {
+          childrenResult = children();
+        }
+        return childrenResult;
+      } else {
+        let element = fallback;
+        if (typeof fallback === "function") {
+          const obj = { error: null, componentStack: null, resetError: null, eventId: null };
+          ({ error: obj.error, componentStack: obj.componentStack } = state);
+          obj.resetError = function resetError() {
+            return self.resetErrorBoundary();
+          };
+          obj.eventId = state.eventId;
+          element = <fallback error={null} componentStack={null} resetError={null} eventId={null} />;
+        }
+        if (!noop.isValidElement(element)) {
+          if (fallback) {
+            fallback = ErrorBoundary(1016).DEBUG_BUILD;
+          }
+          element = null;
+          if (fallback) {
+            const debug = ErrorBoundary(693).debug;
+            debug.warn("fallback did not produce a valid ReactElement");
+            element = null;
+          }
+        }
+        return element;
+      }
     }
   }
 ];
-const _moduleResult = _createClass(Profiler, items);
-let merged = Object.assign(_moduleResult, { defaultProps: { disabled: false, includeRender: true, includeUpdates: true } });
+const _moduleResult = _createClass(ErrorBoundary, items);
 
-export const Profiler = _moduleResult;
+export const ErrorBoundary = _moduleResult;
 export const UNKNOWN_COMPONENT = "unknown";
-export const useProfiler = function useProfiler(arg0) {
-  closure_0 = arg0;
-  if (arg1 === undefined) {
-    let obj = { disabled: false, hasRenderSpan: true };
-  }
-  name = undefined;
-  name = name(noop.useState(() => {
-    let disabled;
-    if (obj != null) {
-      disabled = obj.disabled;
-    }
-    if (!disabled) {
-      obj = Profiler(901);
-      const obj2 = { name: null, onlyIfParent: true, op: null, attributes: null };
-      const _HermesInternal = HermesInternal;
-      obj2.name = "<" + closure_0 + ">";
-      obj2.op = Profiler(1016).REACT_MOUNT_OP;
-      const obj3 = {};
-      obj3[Profiler(693).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.react.profiler";
-      obj3["ui.component_name"] = closure_0;
-      obj2.attributes = obj3;
-      return obj.startInactiveSpan(obj2);
-    }
-  }), 1)[0];
-  const effect = noop.useEffect(() => {
-    if (closure_2) {
-      closure_2.end();
-    }
-    return () => {
-      if (closure_1_2) {
-        if (hasRenderSpan.hasRenderSpan) {
-          obj = closure_0(obj[9]);
-          const obj2 = closure_0(obj[9]);
-          const timestampInSecondsResult = closure_0(obj[9]).timestampInSeconds();
-          const obj4 = { name: null, onlyIfParent: true, op: null, startTime: null, attributes: null };
-          const _HermesInternal = HermesInternal;
-          obj4.name = "<" + closure_1_0 + ">";
-          obj4.op = closure_0(obj[8]).REACT_RENDER_OP;
-          obj4.startTime = obj.spanToJSON(tmp).timestamp;
-          const obj5 = {};
-          obj5[closure_0(obj[9]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN] = "auto.ui.react.profiler";
-          obj5["ui.component_name"] = closure_1_0;
-          obj4.attributes = obj5;
-          const startInactiveSpanResult = closure_0(obj[7]).startInactiveSpan(obj4);
-          if (startInactiveSpanResult) {
-            startInactiveSpanResult.end(timestampInSecondsResult);
-          }
-          const obj3 = closure_0(obj[7]);
-        }
-      }
-    };
-  }, []);
-};
-export const withProfiler = function withProfiler(displayName, name) {
-  Profiler = displayName;
-  dependencyMap = name;
-  name = undefined;
-  if (name != null) {
-    name = name.name;
-  }
-  if (!name) {
-    name = displayName.displayName;
-  }
-  if (!name) {
-    name = displayName.name;
-  }
-  if (!name) {
-    name = unknown;
-  }
-  class Wrapped {
-    constructor(arg0) {
-      obj = {};
-      merged = Object.assign(closure_1);
-      obj.name = closure_2;
-      obj.updateProps = displayName;
-      obj1 = {};
-      merged1 = Object.assign(displayName);
-      return closure_7.createElement(closure_9, obj, closure_7.createElement(closure_0, obj1));
-    }
-  }
-  Wrapped.displayName = "profiler(" + name + ")";
-  Profiler(1017).hoistNonReactStatics(Wrapped, displayName);
-  return Wrapped;
+export const withErrorBoundary = function withErrorBoundary(displayName, arg1) {
+  ErrorBoundary = displayName;
+  dependencyMap = arg1;
+  const memoResult = noop.memo((arg0) => {
+    const merged = Object.assign(closure_1);
+    const merged1 = Object.assign(arg0);
+    return <_moduleResult><closure_0 /></_moduleResult>;
+  });
+  memoResult.displayName = "errorBoundary(" + displayName.displayName || displayName.name || unknown + ")";
+  ErrorBoundary(1014).hoistNonReactStatics(memoResult, displayName);
+  return memoResult;
 };

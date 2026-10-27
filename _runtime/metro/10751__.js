@@ -1,7 +1,7 @@
 // === Module 10751: ? ===
 
 // Module 10751
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d6a8eeb03988caf260d6fea57b710519", name: "ArrowSmallLeftIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/oauth2", width: 158, height: 130, scales: [2, 3], hash: "dc953fc221fa07a0f6638b7e2877ae0b", name: "success-header", type: "png" });

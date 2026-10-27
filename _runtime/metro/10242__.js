@@ -1,117 +1,162 @@
 // === Module 10242: ? ===
 
 // Module 10242
-import ReferenceWithTimezone from "ReferenceWithTimezone" /* 10218 */;
-import Meridiem from "Meridiem" /* 10220 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10224 */;
+import now from "now" /* 10241 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-require = arg1;
-const dependencyMap = arg6;
-function getDaysToWeekday(dateWithAdjustedTimezone, sum, next) {
-  const day = dateWithAdjustedTimezone.getDay();
-  if ("this" === next) {
-    const diff = sum - dateWithAdjustedTimezone.getDay();
-    sum = diff;
-    if (diff < 0) {
-      sum = diff + 7;
-    }
-    return sum;
-  } else if ("last" === next) {
-    const diff1 = sum - dateWithAdjustedTimezone.getDay();
-    let diff2 = diff1;
-    if (diff1 >= 0) {
-      diff2 = diff1 - 7;
-    }
-    return diff2;
-  } else if ("next" === next) {
-    if (day == Meridiem.Weekday.SUNDAY) {
-      let num12 = 7;
-      if (sum != Meridiem.Weekday.SUNDAY) {
-        num12 = sum;
-      }
-      let sum3 = num12;
-    } else if (day == Meridiem.Weekday.SATURDAY) {
-      let num9 = 7;
-      if (sum != Meridiem.Weekday.SATURDAY) {
-        let num10 = 8;
-        if (sum != Meridiem.Weekday.SUNDAY) {
-          num10 = 1 + sum;
-        }
-        num9 = num10;
-      }
-      sum3 = num9;
+let self = this;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      if (sum < day) {
-        if (sum != Meridiem.Weekday.SUNDAY) {
-          const diff3 = sum - dateWithAdjustedTimezone.getDay();
-          let sum1 = diff3;
-          if (diff3 < 0) {
-            sum1 = diff3 + 7;
-          }
-          sum3 = sum1;
-        }
-      }
-      const diff4 = sum - dateWithAdjustedTimezone.getDay();
-      let sum2 = diff4;
-      if (diff4 < 0) {
-        sum2 = diff4 + 7;
-      }
-      sum3 = sum2 + 7;
+      callResult = call(constructResult);
     }
-    return sum3;
-  } else {
-    const diff5 = sum - dateWithAdjustedTimezone.getDay();
-    let diff6 = diff5;
-    if (diff5 >= 0) {
-      diff6 = diff5 - 7;
-    }
-    const diff7 = sum - dateWithAdjustedTimezone.getDay();
-    let sum4 = diff7;
-    if (diff7 < 0) {
-      sum4 = diff7 + 7;
-    }
-    if (sum4 < -diff6) {
-      diff6 = sum4;
-    }
-    return diff6;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
-
-export const createParsingComponentsAtWeekday = function createParsingComponentsAtWeekday(reference, sum, next) {
-  const parsingComponents = new ReferenceWithTimezone.ParsingComponents(reference);
-  const addDurationAsImpliedResult = parsingComponents.addDurationAsImplied({ day: getDaysToWeekday(reference.getDateWithAdjustedTimezone(), sum, next) });
-  addDurationAsImpliedResult.assign("weekday", sum);
-  return addDurationAsImpliedResult;
-};
-export { getDaysToWeekday };
-export const getDaysToWeekdayClosest = function getDaysToWeekdayClosest(getDay, arg1) {
-  const diff = arg1 - getDay.getDay();
-  let diff1 = diff;
-  if (diff >= 0) {
-    diff1 = diff - 7;
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+let self2 = this;
+if (this) {
+  self2 = self.__createBinding;
+}
+if (self2) {
+  let __setModuleDefault = self;
+  if (self) {
+    __setModuleDefault = self.__setModuleDefault;
   }
-  const diff2 = arg1 - getDay.getDay();
-  let sum = diff2;
-  if (diff2 < 0) {
-    sum = diff2 + 7;
+  if (__setModuleDefault) {
+    let fn = self;
+    if (self) {
+      fn = self.__importStar;
+    }
+    if (!fn) {
+      fn = function c(arg0) {
+        fn = Object.getOwnPropertyNames;
+        if (!fn) {
+          fn = (obj) => {
+            const items = [];
+            for (const key10005 in arg0) {
+              let _Object = Object;
+              hasOwnProperty = Object.prototype.hasOwnProperty;
+              let call = hasOwnProperty.call;
+              if (typeof call === "unknown") {
+                let hasOwnPropertyResult = hasOwnProperty(key10005);
+              } else {
+                hasOwnPropertyResult = call(arg0, key10005);
+              }
+              if (!hasOwnPropertyResult) {
+                continue;
+              } else {
+                items[items.length] = key10005;
+                continue;
+              }
+              continue;
+            }
+            return items;
+          };
+        }
+        return fn(arg0);
+      };
+      fn = (__esModule) => {
+        if (__esModule) {
+          if (__esModule.__esModule) {
+            return __esModule;
+          }
+        }
+        const obj = {};
+        if (null != __esModule) {
+          const arr = fn(__esModule);
+          for (let num = 0; num < arr.length; num = num + 1) {
+            if ("default" !== arr[num]) {
+              let tmp4 = self2(obj, __esModule, arr[num]);
+            }
+          }
+        }
+        __setModuleDefault(obj, __esModule);
+        return obj;
+      };
+    }
+    const _Object3 = Object;
+    let closure_7 = fn(now);
+    const re8 = /(?:this)?\s{0,3}(morning|afternoon|evening|night|midnight|midday|noon)(?=\W|$)/i;
+    class ENCasualTimeParser {
+      constructor() {
+        self = this;
+        tmp = closure_0(this, ENCasualTimeParser);
+        tmp2 = c2;
+        obj = c2(ENCasualTimeParser);
+        tmp3 = closure_1;
+        if (closure_3()) {
+          tmp7 = globalThis;
+          _Reflect = Reflect;
+          tmp8 = arguments;
+          constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+        } else {
+          tmp4 = arguments;
+          tmp5 = arguments;
+          constructResult = obj(...arguments);
+        }
+        return tmp3(self, constructResult);
+      }
+    }
+    _classCallCheck = ENCasualTimeParser;
+    _inherits(ENCasualTimeParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
+    const entry = {
+      key: "innerPattern",
+      value: function innerPattern() {
+            return re8;
+          }
+    };
+    let items = [entry, ];
+    const entry1 = {
+      key: "innerExtract",
+      value: function innerExtract(reference, arg1) {
+            const formatted = arg1[1].toLowerCase();
+            if ("afternoon" === formatted) {
+              let afternoonResult = closure_7.afternoon(reference.reference);
+            } else {
+              if ("evening" !== formatted) {
+                if ("night" !== formatted) {
+                  if ("midnight" === formatted) {
+                    afternoonResult = closure_7.midnight(reference.reference);
+                  } else if ("morning" === formatted) {
+                    afternoonResult = closure_7.morning(reference.reference);
+                  } else if ("noon" === formatted) {
+                    afternoonResult = closure_7.noon(reference.reference);
+                  } else {
+                    afternoonResult = null;
+                  }
+                }
+              }
+              afternoonResult = closure_7.evening(reference.reference);
+            }
+            if (afternoonResult) {
+              afternoonResult.addTag("parser/ENCasualTimeParser");
+            }
+            return afternoonResult;
+          }
+    };
+    items[1] = entry1;
+    exports.default = _createClass(ENCasualTimeParser, items);
+  } else {
+    const _Object2 = Object;
   }
-  if (sum < -diff1) {
-    diff1 = sum;
-  }
-  return diff1;
-};
-export const getDaysForwardToWeekday = function getDaysForwardToWeekday(getDay, arg1) {
-  const diff = arg1 - getDay.getDay();
-  let sum = diff;
-  if (diff < 0) {
-    sum = diff + 7;
-  }
-  return sum;
-};
-export const getBackwardDaysToWeekday = function getBackwardDaysToWeekday(getDay, arg1) {
-  const diff = arg1 - getDay.getDay();
-  let diff1 = diff;
-  if (diff >= 0) {
-    diff1 = diff - 7;
-  }
-  return diff1;
-};
+} else {
+  let _Object = Object;
+}

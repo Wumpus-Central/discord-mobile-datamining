@@ -1,7 +1,7 @@
 // === Module 6593: ? ===
 
 // Module 6593
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "65690d7389997bdd64f7d1687ed64321", name: "img_account_sync_paypal_light_and_dark", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 255, height: 255, scales: [1], hash: "267a8dd66b567343016eb7bda7db7c01", name: "img_account_sync_paypal_white", type: "png" });

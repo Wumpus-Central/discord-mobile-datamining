@@ -3,17 +3,17 @@
 // Module 686
 import _mod693 from "module_693" /* 693 */;
 import NativeModules from "NativeModules" /* 878 */;
-import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 901 */;
-import SDK_PACKAGE_NAME from "SDK_PACKAGE_NAME" /* 990 */;
-import init from "init" /* 1012 */;
-import _mod1053 from "module_1053" /* 1053 */;
-import _mod1057 from "module_1057" /* 1057 */;
-import reactNativeTracingIntegration from "reactNativeTracingIntegration" /* 1064 */;
+import feedbackAsyncIntegration from "feedbackAsyncIntegration" /* 898 */;
+import SDK_PACKAGE_NAME from "SDK_PACKAGE_NAME" /* 987 */;
+import init from "init" /* 1009 */;
+import _mod1050 from "module_1050" /* 1050 */;
+import _mod1054 from "module_1054" /* 1054 */;
+import reactNativeTracingIntegration from "reactNativeTracingIntegration" /* 1061 */;
+import _mod1069 from "module_1069" /* 1069 */;
 import _mod1072 from "module_1072" /* 1072 */;
 import _mod1075 from "module_1075" /* 1075 */;
-import _mod1078 from "module_1078" /* 1078 */;
-import _mod1083 from "module_1083" /* 1083 */;
-import warn from "warn" /* 1085 */;
+import _mod1080 from "module_1080" /* 1080 */;
+import warn from "warn" /* 1082 */;
 
 const require = globalThis.__r;
 
@@ -64,16 +64,16 @@ export const featureFlagsIntegration = feedbackAsyncIntegration.featureFlagsInte
 export const metrics = feedbackAsyncIntegration.metrics;
 export const SDK_NAME = SDK_PACKAGE_NAME.SDK_NAME;
 export const SDK_VERSION = SDK_PACKAGE_NAME.SDK_VERSION;
-export const ReactNativeClient = _mod1053.ReactNativeClient;
-export const init = _mod1057.init;
-export const wrap = _mod1057.wrap;
-export const nativeCrash = _mod1057.nativeCrash;
-export const flush = _mod1057.flush;
-export const close = _mod1057.close;
-export const withScope = _mod1057.withScope;
-export const crashedLastRun = _mod1057.crashedLastRun;
-export const TouchEventBoundary = _mod1072.TouchEventBoundary;
-export const withTouchEventBoundary = _mod1072.withTouchEventBoundary;
+export const ReactNativeClient = _mod1050.ReactNativeClient;
+export const init = _mod1054.init;
+export const wrap = _mod1054.wrap;
+export const nativeCrash = _mod1054.nativeCrash;
+export const flush = _mod1054.flush;
+export const close = _mod1054.close;
+export const withScope = _mod1054.withScope;
+export const crashedLastRun = _mod1054.crashedLastRun;
+export const TouchEventBoundary = _mod1069.TouchEventBoundary;
+export const withTouchEventBoundary = _mod1069.withTouchEventBoundary;
 export const reactNativeTracingIntegration = reactNativeTracingIntegration.reactNativeTracingIntegration;
 export const getCurrentReactNativeTracingIntegration = reactNativeTracingIntegration.getCurrentReactNativeTracingIntegration;
 export const getReactNativeTracingIntegration = reactNativeTracingIntegration.getReactNativeTracingIntegration;
@@ -92,9 +92,9 @@ export const createTimeToInitialDisplay = reactNativeTracingIntegration.createTi
 export const wrapExpoRouter = reactNativeTracingIntegration.wrapExpoRouter;
 export const Mask = warn.Mask;
 export const Unmask = warn.Unmask;
-export const FeedbackButton = _mod1078.FeedbackButton;
-export const FeedbackWidget = _mod1083.FeedbackWidget;
-export const showFeedbackWidget = _mod1075.showFeedbackWidget;
-export const showFeedbackButton = _mod1075.showFeedbackButton;
-export const hideFeedbackButton = _mod1075.hideFeedbackButton;
+export const FeedbackButton = _mod1075.FeedbackButton;
+export const FeedbackWidget = _mod1080.FeedbackWidget;
+export const showFeedbackWidget = _mod1072.showFeedbackWidget;
+export const showFeedbackButton = _mod1072.showFeedbackButton;
+export const hideFeedbackButton = _mod1072.hideFeedbackButton;
 export const getDataFromUri = NativeModules.getDataFromUri;

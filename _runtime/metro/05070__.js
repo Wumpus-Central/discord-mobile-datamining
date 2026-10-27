@@ -2,4 +2,11 @@
 
 // Module 5070
 
-export default { uiViewClassName: "RiveView", supportsRawText: false, bubblingEventTypes: {}, directEventTypes: {}, validAttributes: { artboardName: true, stateMachineName: true, autoPlay: true, file: true, alignment: true, fit: true, layoutScaleFactor: true, dataBind: true, onError: true, hybridRef: true } };
+export const callback = function callback(f) {
+  let tmp = f;
+  if (typeof f === "function") {
+    const obj = { f };
+    tmp = obj;
+  }
+  return tmp;
+};

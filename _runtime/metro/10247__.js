@@ -1,14 +1,15 @@
 // === Module 10247: ? ===
 
 // Module 10247
-import Filter from "Filter" /* 10234 */;
+import _mod10216 from "module_10216" /* 10216 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10224 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENMergeRelativeFollowByDateRefiner = require;
+const ENTimeUnitCasualRelativeFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,79 +29,59 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ENMergeRelativeFollowByDateRefiner {
+const regExp = new RegExp("(this|last|past|next|after|\\+|-)\\s*(" + _mod10216.TIME_UNITS_PATTERN + ")(?=\\W|$)", "i");
+const regExp1 = new RegExp("(this|last|past|next|after|\\+|-)\\s*(" + _mod10216.TIME_UNITS_NO_ABBR_PATTERN + ")(?=\\W|$)", "i");
+class ENTimeUnitCasualRelativeFormatParser {
   constructor() {
+    flag = global;
+    if (global === undefined) {
+      flag = true;
+    }
     self = this;
-    tmp = c2(this, ENMergeRelativeFollowByDateRefiner);
+    tmp = c2(this, ENTimeUnitCasualRelativeFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMergeRelativeFollowByDateRefiner);
+    obj = closure_4(ENTimeUnitCasualRelativeFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
-      tmp7 = globalThis;
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, undefined);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    tmp3Result.allowAbbreviations = flag;
+    return tmp3Result;
   }
 }
-_inherits(ENMergeRelativeFollowByDateRefiner, Filter.MergingRefiner);
+_inherits(ENTimeUnitCasualRelativeFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*$/i;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return this.allowAbbreviations ? regExp : regExp1;
   }
 };
 const items = [
   entry,
   {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, text, start) {
-      let match = str.match(this.patternBetween());
-      if (match) {
-        const tmp4 = null != text.text.match(/\s+(before|from)$/i);
-        let tmp5 = !tmp4;
-        if (!tmp4) {
-          tmp5 = null == text.text.match(/\s+(after|since)$/i);
-        }
-        let tmp6 = !tmp5;
-        if (!tmp5) {
-          start = start.start;
-          value = start.get("day");
-          if (value) {
-            const start2 = start.start;
-            value = start2.get("month");
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const parseDurationResult = ENTimeUnitCasualRelativeFormatParser(10216).parseDuration(arg1[2]);
+      if (parseDurationResult) {
+        if ("last" !== formatted) {
+          if ("past" !== formatted) {
+            let reverseDurationResult = parseDurationResult;
           }
-          if (value) {
-            const start3 = start.start;
-            value = start3.get("year");
-          }
-          tmp6 = value;
+          const ParsingComponents = ENTimeUnitCasualRelativeFormatParser(10220).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
         }
-        match = tmp6;
+        reverseDurationResult = ENTimeUnitCasualRelativeFormatParser(10219).reverseDuration(parseDurationResult);
+      } else {
+        return null;
       }
-      return match;
-    }
-  },
-  {
-    key: "mergeResults",
-    value: function mergeResults(arg0, text, start) {
-      const parseDurationResult = ENMergeRelativeFollowByDateRefiner(10214).parseDuration(text.text);
-      let reverseDurationResult = parseDurationResult;
-      if (null != str.match(/\s+(before|from)$/i)) {
-        reverseDurationResult = ENMergeRelativeFollowByDateRefiner(10217).reverseDuration(parseDurationResult);
-      }
-      const ParsingComponents = ENMergeRelativeFollowByDateRefiner(10218).ParsingComponents;
-      const ReferenceWithTimezone = ENMergeRelativeFollowByDateRefiner(10218).ReferenceWithTimezone;
-      start = start.start;
-      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
-      return new ENMergeRelativeFollowByDateRefiner(10218).ParsingResult(start.reference, text.index, "" + text.text + arg0 + start.text, relativeFromReference);
     }
   }
 ];
 
-export default _createClass(ENMergeRelativeFollowByDateRefiner, items);
+export default _createClass(ENTimeUnitCasualRelativeFormatParser, items);

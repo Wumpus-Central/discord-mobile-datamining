@@ -1,9 +1,15 @@
 // === Module 15612: ? ===
 
 // Module 15612
-import _mod17 from "module_17" /* 17 */;
-import setupURLPolyfill_mod from "setupURLPolyfill" /* 15613 */;
+import _mod15607 from "module_15607" /* 15607 */;
+import _mod15613 from "module_15613" /* 15613 */;
 
-const Platform = _mod17.Platform;
-let setupURLPolyfill = setupURLPolyfill_mod;
-setupURLPolyfill = setupURLPolyfill.setupURLPolyfill();
+
+export default (arg0) => {
+  if (_mod15607(arg0)) {
+    return arg0;
+  } else {
+    const tmp6 = new TypeError(_mod15613(arg0) + " is not a function");
+    throw tmp6;
+  }
+};

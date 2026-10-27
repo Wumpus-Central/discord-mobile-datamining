@@ -11,8 +11,8 @@ import _createClass from "_createClass" /* 42 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
-import emptyFunction_mod from "module_5010" /* 5010 */;
-import "module_5010";
+import emptyFunction_mod from "module_5011" /* 5011 */;
+import "module_5011";
 
 const Video = importDefault;
 function _isNativeReflectConstruct() {

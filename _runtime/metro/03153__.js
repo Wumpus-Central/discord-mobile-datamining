@@ -1,7 +1,7 @@
 // === Module 3153: ? ===
 
 // Module 3153
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/tiny_bronco", scales: [1], hash: "85ba830fae837ab85e6c8206c1f0235a", name: "TinyBronco.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==", scales: [1], hash: "32cf6a5430c68ac5a155801362d02776", name: "zh-TW.messages.32cf6a5430c68ac5a155801362d02776.compiled.messages", type: "jsona" });

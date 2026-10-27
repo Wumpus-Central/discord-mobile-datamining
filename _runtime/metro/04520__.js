@@ -1,9 +1,8 @@
 // === Module 4520: ? ===
 
 // Module 4520
-import _typeof_mod from "module_4254" /* 4254 */;
-import module_4521_mod from "module_4521" /* 4521 */;
-import requiredArgs_mod from "requiredArgs" /* 4255 */;
+import _typeof_mod from "module_4255" /* 4255 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -13,35 +12,23 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let module_4521 = module_4521_mod;
-if (!module_4521) {
-  const obj2 = { default: module_4521 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4521;
-}
-module_4521 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function getDaysInYear(arg0) {
+export default function getDaysInMonth(arg0) {
   requiredArgs.default(1, arguments);
   const defaultResult1 = _typeof.default(arg0);
-  if ("Invalid Date" === String(date)) {
-    return NaN;
-  } else {
-    let num = 365;
-    if (module_4521.default(defaultResult1)) {
-      num = 366;
-    }
-    return num;
-  }
-  date = new Date(defaultResult1);
+  const fullYear = defaultResult1.getFullYear();
+  const month = defaultResult1.getMonth();
+  const date = new Date(0);
+  date.setFullYear(fullYear, month + 1, 0);
+  date.setHours(0, 0, 0, 0);
+  return date.getDate();
 };
 export default exports.default;

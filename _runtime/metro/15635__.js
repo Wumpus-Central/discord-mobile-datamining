@@ -1,109 +1,73 @@
 // === Module 15635: ? ===
 
 // Module 15635
-import _createClassDefault from "_createClass" /* 42 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _mod15584 from "module_15584" /* 15584 */;
+import text from "text" /* 15593 */;
+import _mod15616 from "module_15616" /* 15616 */;
+import _mod15633 from "module_15633" /* 15633 */;
+import _mod15636 from "module_15636" /* 15636 */;
 
-function monadic(call, get, fn, map) {
-  let tmp2 = map;
-  if (!tmp) {
-    tmp2 = fn(map);
-  }
-  value = get.get(tmp2);
-  if (undefined !== value) {
-    return value;
-  } else {
-    const self = this;
-    let result = call;
-    call = call.call;
-    const tmp6 = typeof call === "unknown" ? result(map) : call(self, map);
-    result = get.set(tmp2, tmp6);
-  }
-}
-function variadic(apply, get, fn) {
-  const call = slice.call;
-  if (typeof call === "unknown") {
-    let substr = slice(3);
-  } else {
-    substr = call(arguments, 3);
-  }
-  const tmp3 = fn(substr);
-  value = get.get(tmp3);
-  if (undefined === value) {
-    const self = this;
-    const applyResult = apply.apply(this, substr);
-    const result = get.set(tmp3, applyResult);
-    value = applyResult;
-  }
-  return value;
-}
-function strategyDefault(c165, cache) {
-  cache = cache.cache;
-  return 1 === length.length ? monadic : variadic.bind(this, length, cache.create(), cache.serializer);
-}
-let _classCallCheck = _classCallCheck_mod;
-function serializerDefault() {
-  return JSON.stringify(arguments);
-}
-class ObjectWithoutPrototypeCache {
-  constructor() {
-    tmp = closure_0(this, ObjectWithoutPrototypeCache);
-    this.cache = Object.create(null);
-    return;
-  }
-}
-_classCallCheck = ObjectWithoutPrototypeCache;
-const entry = {
-  key: "get",
-  value: function get(arg0) {
-    return this.cache[arg0];
-  }
-};
-const items = [
-  entry,
-  {
-    key: "set",
-    value: function set(arg0, arg1) {
-      this.cache[arg0] = arg1;
-    }
-  }
-];
-let closure_5 = _createClassDefault(ObjectWithoutPrototypeCache, items);
-let closure_6 = {
-  create() {
-    return new closure_5();
-  }
-};
-
-export const memoize = function memoize(arg0, cache) {
-  if (cache) {
-    if (cache.cache) {
-      cache = cache.cache;
-    }
-    if (cache) {
-      if (cache.serializer) {
-        let serializer = cache.serializer;
-      }
-      if (cache) {
-        if (cache.strategy) {
-          let strategy = cache.strategy;
+const enumerable = "enumerable";
+const configurable = "configurable";
+const writable = "writable";
+if (_mod15584) {
+  if (_mod15636) {
+    defineProperty = function defineProperty(fn, arg1, value) {
+      _mod15633(fn);
+      const tmp2 = text(arg1);
+      _mod15633(value);
+      let tmp4 = value;
+      if (typeof fn === "function") {
+        tmp4 = value;
+        if ("prototype" === tmp2) {
+          tmp4 = value;
+          if ("value" in value) {
+            tmp4 = value;
+            if (writable in value) {
+              tmp4 = value;
+              if (!value[writable]) {
+                const tmp7 = getOwnPropertyDescriptor(fn, tmp2);
+                let tmp8 = tmp7;
+                if (tmp7) {
+                  tmp8 = tmp7[writable];
+                }
+                tmp4 = value;
+                if (tmp8) {
+                  fn[tmp2] = value.value;
+                  const obj = { configurable: configurable in value ? value[configurable] : tmp7[configurable], enumerable: enumerable in value ? value[enumerable] : tmp7[enumerable], writable: false };
+                }
+              }
+            }
+          }
         }
-        const obj = { cache, serializer };
-        return strategy(arg0, obj);
       }
-      strategy = strategyDefault;
+      return defineProperty(fn, tmp2, tmp4);
+    };
+  }
+  let defineProperty2 = defineProperty;
+} else {
+  defineProperty2 = function defineProperty(arg0, arg1, value) {
+    _mod15633(arg0);
+    const tmp2 = text(arg1);
+    _mod15633(value);
+    if (!_mod15616) {
+      if (!("get" in value)) {
+        if (!("set" in value)) {
+          if ("value" in value) {
+            arg0[tmp2] = value.value;
+          }
+          return arg0;
+        }
+      }
+      const tmp8 = new TypeError("Accessors not supported");
+      throw tmp8;
+    } else {
+      try {
+        return defineProperty(arg0, tmp2, value);
+      } catch (err) {
+      }
     }
-    serializer = serializerDefault;
-  }
-  cache = closure_6;
-};
-export const strategies = {
-  variadic: function strategyVariadic(c165, cache) {
-    cache = cache.cache;
-    return variadic.bind(this, c165, cache.create(), cache.serializer);
-  },
-  monadic: function strategyMonadic(c165, cache) {
-    cache = cache.cache;
-    return monadic.bind(this, c165, cache.create(), cache.serializer);
-  }
-};
+  };
+}
+
+export const f = defineProperty2;

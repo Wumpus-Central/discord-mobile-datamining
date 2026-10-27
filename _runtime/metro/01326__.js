@@ -2,4 +2,4 @@
 
 // Module 1326
 
-export default EvalError;
+export default SyntaxError;

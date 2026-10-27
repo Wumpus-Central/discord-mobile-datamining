@@ -1,21 +1,20 @@
 // === Module 1478: ? ===
 
 // Module 1478
-const require = globalThis.__r;
 
-function hasPropertyDescriptors() {
-  return require("flag");
-}
-hasPropertyDescriptors.hasArrayLengthDefineBug = function hasArrayLengthDefineBug() {
-  if (require("flag")) {
-    try {
-      return 1 !== require("flag")([], "length", { value: 1 }).length;
-    } catch (err) {
-      return true;
-    }
-  } else {
-    return null;
+export default function isBuffer(copy) {
+  let tmp = copy;
+  if (copy) {
+    tmp = typeof copy === "object";
   }
+  if (tmp) {
+    tmp = typeof copy.copy === "function";
+  }
+  if (tmp) {
+    tmp = typeof copy.fill === "function";
+  }
+  if (tmp) {
+    tmp = typeof copy.readUInt8 === "function";
+  }
+  return tmp;
 };
-
-export default hasPropertyDescriptors;

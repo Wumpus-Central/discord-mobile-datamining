@@ -1,7 +1,7 @@
 // === Module 9115: QRCodeSvg ===
 
 // Module 9115 (QRCodeSvg)
-import inlineStyles from "inlineStyles" /* 7962 */;
+import inlineStyles from "inlineStyles" /* 7960 */;
 import emptyFunction from "module_9112" /* 9112 */;
 import noop_mod from "module_19" /* 19 */;
 

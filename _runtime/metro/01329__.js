@@ -2,4 +2,4 @@
 
 // Module 1329
 
-export default SyntaxError;
+export default Math.abs;

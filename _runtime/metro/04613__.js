@@ -2,7 +2,7 @@
 
 // Module 4613
 import module_4605_mod from "module_4605" /* 4605 */;
-import requiredArgs_mod from "requiredArgs" /* 4255 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
 let module_4605 = module_4605_mod;
 if (!module_4605) {
@@ -21,7 +21,7 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisMonth(arg0) {
+export default function isThisMinute(arg0) {
   requiredArgs.default(1, arguments);
   return module_4605.default(Date.now(), arg0);
 };

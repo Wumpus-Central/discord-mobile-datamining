@@ -1,109 +1,58 @@
 // === Module 10255: ? ===
 
 // Module 10255
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import Filter from "Filter" /* 10234 */;
 import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _inherits from "_inherits" /* 98 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
-  }
-}
 let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class UnlikelyFormatFilter {
-  constructor(arg0) {
-    self = this;
-    tmp = closure_0(this, UnlikelyFormatFilter);
-    tmp2 = c2;
-    obj = c2(UnlikelyFormatFilter);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+const regExp = new RegExp("^\\s*(?:\\(?(?:GMT|UTC)\\s?)?([+-])(\\d{1,2})(?::?(\\d{2}))?\\)?", "i");
+class ExtractTimezoneOffsetRefiner {
+  constructor() {
+    tmp = closure_0(this, ExtractTimezoneOffsetRefiner);
+    return;
   }
 }
-_classCallCheck = UnlikelyFormatFilter;
-_inherits(UnlikelyFormatFilter, Filter.Filter);
+_classCallCheck = ExtractTimezoneOffsetRefiner;
 const entry = {
-  key: "isValid",
-  value: function isValid(debug, text) {
-    if (str2.match(/^\d*(\.\d*)?$/)) {
-      debug.debug(() => {
-        console.log("Removing unlikely result '" + text.text + "'");
-      });
-      let flag = false;
-    } else {
-      const start = text.start;
-      if (start.isValidDate()) {
-        if (text.end) {
-          const end = text.end;
-          if (!end.isValidDate()) {
-            debug.debug(() => {
-              console.log("Removing invalid result: " + text + " (" + text.end + ")");
-            });
-            let flag2 = false;
+  key: "refine",
+  value: function refine(arg0, arr) {
+    let text = arg0;
+    const item = arr.forEach((start) => {
+      text = start;
+      start = start.start;
+      if (!start.isCertain("timezoneOffset")) {
+        const match = regExp.exec(text.text.substring(start.index + start.text.length));
+        if (match) {
+          obj.debug(() => {
+            console.log("Extracting timezone: '" + match[0] + "' into : " + closure_0);
+          });
+          const _parseInt = parseInt;
+          let str2 = match[3];
+          const result = 60 * parseInt(match[2]);
+          if (!str2) {
+            str2 = "0";
+          }
+          const sum = result + parseInt(str2);
+          if (sum <= 840) {
+            let tmp7 = sum;
+            if ("-" === match[1]) {
+              tmp7 = -sum;
+            }
+            if (null != start.end) {
+              const end = start.end;
+              end.assign("timezoneOffset", tmp7);
+            }
+            const start2 = start.start;
+            start2.assign("timezoneOffset", tmp7);
+            start.text = start.text + match[0];
           }
         }
-        const self = this;
-        const strictMode = this.strictMode;
-        let isStrictModeValidResult = !strictMode;
-        if (strictMode) {
-          isStrictModeValidResult = self.isStrictModeValid(debug, text);
-        }
-        flag2 = isStrictModeValidResult;
-      } else {
-        debug.debug(() => {
-          console.log("Removing invalid result: " + text + " (" + text.start + ")");
-        });
-        flag = false;
+        obj = text;
       }
-    }
-    return flag;
+    });
+    return arr;
   }
 };
-const items = [
-  entry,
-  {
-    key: "isStrictModeValid",
-    value: function isStrictModeValid(debug, start) {
-      start = start.start;
-      const result = start.isOnlyWeekdayComponent();
-      let flag = !result;
-      if (result) {
-        debug.debug(() => {
-          console.log("(Strict) Removing weekday only component: " + start + " (" + start.end + ")");
-        });
-        flag = false;
-      }
-      return flag;
-    }
-  }
-];
+const items = [entry];
 
-export default _createClass(UnlikelyFormatFilter, items);
+export default _createClass(ExtractTimezoneOffsetRefiner, items);

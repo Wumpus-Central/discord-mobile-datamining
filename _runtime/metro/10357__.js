@@ -1,142 +1,107 @@
 // === Module 10357: ? ===
 
 // Module 10357
-import _mod10244 from "module_10244" /* 10244 */;
-import includeCommonConfiguration from "includeCommonConfiguration" /* 10251 */;
-import _mod10358 from "module_10358" /* 10358 */;
-import _mod10360 from "module_10360" /* 10360 */;
-import _mod10361 from "module_10361" /* 10361 */;
-import _mod10362 from "module_10362" /* 10362 */;
-import _mod10363 from "module_10363" /* 10363 */;
-import _mod10364 from "module_10364" /* 10364 */;
-import _mod10365 from "module_10365" /* 10365 */;
-import _mod10366 from "module_10366" /* 10366 */;
+import _mod10348 from "module_10348" /* 10348 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const require = globalThis.__r;
-
-function createConfiguration() {
-  if (flag === undefined) {
-    flag = true;
-  }
-  let flag2 = arg1;
-  if (arg1 === undefined) {
-    flag2 = true;
-  }
-  const obj = { parsers: null, refiners: null };
-  const items = [new regExp.default(flag2), , , , ];
-  const _default = new regExp.default(flag2);
-  items[1] = new _isNativeReflectConstruct.default();
-  const _default1 = new _isNativeReflectConstruct.default();
-  items[2] = new _isNativeReflectConstruct.default();
-  const _default2 = new _isNativeReflectConstruct.default();
-  items[3] = new _isNativeReflectConstruct.default();
-  const _default3 = new _isNativeReflectConstruct.default();
-  items[4] = new _isNativeReflectConstruct.default();
-  obj.parsers = items;
-  const _default4 = new _isNativeReflectConstruct.default();
-  const items1 = [new _isNativeReflectConstruct.default(), ];
-  const _default5 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
-}
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
+const RURelativeDateFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      tmp = __esModule;
+      callResult = call(constructResult);
     }
-    return tmp;
-  };
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
 }
-function createCasualConfiguration() {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = true;
+class RURelativeDateFormatParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, RURelativeDateFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(RURelativeDateFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
   }
-  const tmp = createConfiguration(false, flag);
-  const parsers = tmp.parsers;
-  parsers.push(new _isNativeReflectConstruct.default());
-  const parsers1 = tmp.parsers;
-  const _default = new _isNativeReflectConstruct.default();
-  parsers1.push(new _isNativeReflectConstruct.default());
-  return tmp;
 }
-const regExp = fn(_mod10244);
-fn(_mod10358);
-fn(_mod10360);
-fn(_mod10361);
-fn(_mod10362);
-fn(_mod10363);
-fn(_mod10364);
-fn(_mod10365);
-const _isNativeReflectConstruct = fn(_mod10366);
-const configuration = createConfiguration(false, true);
-let parsers = configuration.parsers;
-parsers.push(new _isNativeReflectConstruct.default());
-let parsers1 = configuration.parsers;
-let _default = new _isNativeReflectConstruct.default();
-let obj = {
-  enumerable: true,
-  get() {
-    return require("module_10211").Chrono;
+_inherits(RURelativeDateFormatParser, _mod10348.AbstractParserWithLeftRightBoundaryChecking);
+const entry = {
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(\u0432 \u043F\u0440\u043E\u0448\u043B\u043E\u043C|\u043D\u0430 \u043F\u0440\u043E\u0448\u043B\u043E\u0439|\u043D\u0430 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439|\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u043C|\u043D\u0430 \u044D\u0442\u043E\u0439|\u0432 \u044D\u0442\u043E\u043C)\\s*(" + RURelativeDateFormatParser(10217).matchAnyPattern(RURelativeDateFormatParser(10346).TIME_UNIT_DICTIONARY) + ")";
   }
 };
-const obj2 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingResult;
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const formatted1 = arg1[2].toLowerCase();
+      const str3 = RURelativeDateFormatParser(10346).TIME_UNIT_DICTIONARY[formatted1];
+      if ("\u043D\u0430 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0439" != formatted) {
+        if ("\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u043C" != formatted) {
+          if ("\u0432 \u043F\u0440\u043E\u0448\u043B\u043E\u043C" != formatted) {
+            if ("\u043D\u0430 \u043F\u0440\u043E\u0448\u043B\u043E\u0439" != formatted) {
+              const parsingComponents = createParsingComponents.createParsingComponents();
+              const _Date = Date;
+              const instant = createParsingComponents.reference.instant;
+              const date = new Date(instant.getTime());
+              if (str3.match(/week/i)) {
+                date.setDate(date.getDate() - date.getDay());
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.imply("month", date.getMonth() + 1);
+                parsingComponents.imply("year", date.getFullYear());
+                const date1 = date.getDate();
+              } else if (str3.match(/month/i)) {
+                date.setDate(1);
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.assign("year", date.getFullYear());
+                parsingComponents.assign("month", date.getMonth() + 1);
+              } else if (str3.match(/year/i)) {
+                date.setDate(1);
+                date.setMonth(0);
+                parsingComponents.imply("day", date.getDate());
+                parsingComponents.imply("month", date.getMonth() + 1);
+                parsingComponents.assign("year", date.getFullYear());
+              }
+              return parsingComponents;
+            }
+          }
+          const obj = {};
+          obj[str3] = -1;
+          const ParsingComponents = RURelativeDateFormatParser(10220).ParsingComponents;
+          return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
+        }
+      }
+      const ParsingComponents2 = RURelativeDateFormatParser(10220).ParsingComponents;
+      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [str3]: 1 });
+    }
   }
-};
-const obj3 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ParsingComponents;
-  }
-};
-const obj4 = {
-  enumerable: true,
-  get() {
-    return require("ReferenceWithTimezone").ReferenceWithTimezone;
-  }
-};
-const obj5 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Meridiem;
-  }
-};
-const obj6 = {
-  enumerable: true,
-  get() {
-    return require("Meridiem").Weekday;
-  }
-};
-parsers1.push(new _isNativeReflectConstruct.default());
-const chrono = new require("module_10211").Chrono(configuration);
-const chrono1 = new require("module_10211").Chrono(createConfiguration(true));
+];
 
-export const parse = function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
-};
-export const parseDate = function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
-};
-export { createCasualConfiguration };
-export { createConfiguration };
-export const Chrono = require("module_10211").Chrono;
-export const ParsingResult = require("ReferenceWithTimezone").ParsingResult;
-export const ParsingComponents = require("ReferenceWithTimezone").ParsingComponents;
-export const ReferenceWithTimezone = require("ReferenceWithTimezone").ReferenceWithTimezone;
-export const Meridiem = require("Meridiem").Meridiem;
-export const Weekday = require("Meridiem").Weekday;
-export const casual = chrono;
-export const strict = chrono1;
+export default _createClass(RURelativeDateFormatParser, items);

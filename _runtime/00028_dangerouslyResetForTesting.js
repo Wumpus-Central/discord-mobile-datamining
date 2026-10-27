@@ -14,11 +14,11 @@ if (!tmp4) {
 let closure_5 = tmp4;
 
 export function createJavaScriptFlagGetter(animatedShouldDebounceQueueFlush, arg1) {
-  const f84493 = () => {
-    set.add(f84493);
+  const f84674 = () => {
+    set.add(f84674);
     let tmp5Result;
     if (global != null) {
-      if (global[f84493] != null) {
+      if (global[f84674] != null) {
         tmp5Result = tmp5();
       }
     }
@@ -27,7 +27,7 @@ export function createJavaScriptFlagGetter(animatedShouldDebounceQueueFlush, arg
   closure_1 = arg1;
   return () => {
     if (null == closure_2) {
-      let tmp2 = f84494();
+      let tmp2 = f84675();
       if (tmp2 == null) {
         tmp2 = closure_1;
       }
@@ -37,24 +37,24 @@ export function createJavaScriptFlagGetter(animatedShouldDebounceQueueFlush, arg
   };
 }
 export function createNativeFlagGetter(cdpInteractionMetricsEnabled, arg1) {
-  const f84494 = () => {
+  const f84675 = () => {
     let hasItem = NativeReactNativeFeatureFlagsCxxDefault;
     if (!hasItem) {
-      hasItem = set1.has(f84494);
+      hasItem = set1.has(f84675);
     }
     if (!hasItem) {
       hasItem = !closure_5;
     }
     if (!hasItem) {
-      set1.add(f84494);
+      set1.add(f84675);
       const _console = console;
       const _HermesInternal = HermesInternal;
-      console.error("Could not access feature flag '" + f84494 + "' because native module method was not available");
+      console.error("Could not access feature flag '" + f84675 + "' because native module method was not available");
     }
     const tmp2Result = NativeReactNativeFeatureFlagsCxxDefault;
     let tmp13Result;
     if (tmp2Result != null) {
-      if (tmp2Result[f84494] != null) {
+      if (tmp2Result[f84675] != null) {
         tmp13Result = tmp13();
       }
     }
@@ -63,7 +63,7 @@ export function createNativeFlagGetter(cdpInteractionMetricsEnabled, arg1) {
   closure_1 = arg1;
   return () => {
     if (null == closure_2) {
-      let tmp2 = f84494();
+      let tmp2 = f84675();
       if (tmp2 == null) {
         tmp2 = closure_1;
       }

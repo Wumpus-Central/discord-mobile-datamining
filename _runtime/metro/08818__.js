@@ -3,8 +3,8 @@
 // Module 8818
 import colorPropType from "colorPropType" /* 8802 */;
 import _mod8809 from "module_8809" /* 8809 */;
-import emptyFunction_mod from "module_5010" /* 5010 */;
-import "module_5010";
+import emptyFunction_mod from "module_5011" /* 5011 */;
+import "module_5011";
 
 const obj = {};
 const module_8809 = Object.assign(_mod8809);

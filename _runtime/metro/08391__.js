@@ -1,7 +1,7 @@
 // === Module 8391: ? ===
 
 // Module 8391
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/auto_moderation", width: 12, height: 12, scales: [2, 3], hash: "78a34aca822219efd275dbb2e470061d", name: "ic_closed_lock", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/auto_moderation", width: 16, height: 16, scales: [2, 3], hash: "9fc7a06bd709251a424bf9095d4f7ecf", name: "ic_auto_moderation_shield", type: "png" });

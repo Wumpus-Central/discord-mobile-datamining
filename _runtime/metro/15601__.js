@@ -1,12 +1,48 @@
 // === Module 15601: ? ===
 
 // Module 15601
-import _mod15548 from "module_15548" /* 15548 */;
-import _mod15582 from "module_15582" /* 15582 */;
-import _mod15599 from "module_15599" /* 15599 */;
+import _mod15581 from "module_15581" /* 15581 */;
+import _mod15602 from "module_15602" /* 15602 */;
 
+let tmp = _mod15581.process && _mod15581.process.versions;
+if (!tmp) {
+  tmp = _mod15581.Deno && _mod15581.Deno.version;
+  const tmp2 = _mod15581.Deno && _mod15581.Deno.version;
+}
+let str = tmp;
+if (tmp) {
+  str = tmp.v8;
+}
+let tmp3;
+if (str) {
+  const parts = str.split(".");
+  if (parts[0] <= 0) {
+    let num3 = +parts[0] + parts[1];
+  } else {
+    num3 = 1;
+  }
+  tmp3 = num3;
+  let tmp4 = parts;
+}
+let _module = !tmp3;
+if (!tmp3) {
+  _module = _mod15602;
+}
+if (_module) {
+  const match = _mod15602.match(/Edge\/(\d+)/);
+  let tmp8 = !match;
+  if (match) {
+    tmp8 = match[1] >= 74;
+  }
+  _module = tmp8;
+  tmp4 = match;
+}
+if (_module) {
+  _module = _mod15602.match(/Chrome\/(\d+)/);
+  tmp4 = _module;
+}
+if (_module) {
+  tmp3 = +tmp4[1];
+}
 
-export default _mod15548 ? ((arg0, arg1, arg2) => _mod15599.f(arg0, arg1, _mod15582(1, arg2))) : ((arg0, arg1, arg2) => {
-  arg0[arg1] = arg2;
-  return arg0;
-});
+export default tmp3;

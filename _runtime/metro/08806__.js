@@ -5,7 +5,7 @@ import _mod8804 from "module_8804" /* 8804 */;
 import _mod8809 from "module_8809" /* 8809 */;
 import _mod8813 from "module_8813" /* 8813 */;
 import flattenStyle from "module_8807" /* 8807 */;
-import emptyFunction_mod from "module_5010" /* 5010 */;
+import emptyFunction_mod from "module_5011" /* 5011 */;
 
 const obj = { accessible: null, accessibilityLabel: null, accessibilityHint: null, accessibilityActions: null, accessibilityIgnoresInvertColors: null, accessibilityRole: null, accessibilityState: null, accessibilityValue: null, accessibilityLiveRegion: null, importantForAccessibility: null, accessibilityViewIsModal: null, accessibilityElementsHidden: null, onAccessibilityAction: null, onAccessibilityTap: null, onMagicTap: null, testID: null, nativeID: null, onResponderGrant: null, onResponderMove: null, onResponderReject: null, onResponderRelease: null, onResponderTerminate: null, onResponderTerminationRequest: null, onStartShouldSetResponder: null, onStartShouldSetResponderCapture: null, onMoveShouldSetResponder: null, onMoveShouldSetResponderCapture: null, hitSlop: null, onLayout: null, pointerEvents: null, style: null, removeClippedSubviews: null, renderToHardwareTextureAndroid: null, shouldRasterizeIOS: null, collapsable: null, needsOffscreenAlphaCompositing: null };
 const module_8809 = flattenStyle(_mod8809);

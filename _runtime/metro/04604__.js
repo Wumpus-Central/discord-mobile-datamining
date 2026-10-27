@@ -1,17 +1,17 @@
 // === Module 4604: ? ===
 
 // Module 4604
-import startOfMinute_mod from "startOfMinute" /* 4463 */;
-import requiredArgs_mod from "requiredArgs" /* 4255 */;
+import startOfISOWeekYear_mod from "startOfISOWeekYear" /* 4416 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let startOfMinute = startOfMinute_mod;
-if (!startOfMinute) {
-  const obj = { default: startOfMinute };
+let startOfISOWeekYear = startOfISOWeekYear_mod;
+if (!startOfISOWeekYear) {
+  const obj = { default: startOfISOWeekYear };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfMinute;
+  tmp3 = startOfISOWeekYear;
 }
-startOfMinute = tmp3;
+startOfISOWeekYear = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,10 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameMinute(arg0, arg1) {
+export default function isSameISOWeekYear(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfMinute.default(arg0);
+  const defaultResult1 = startOfISOWeekYear.default(arg0);
   const time = defaultResult1.getTime();
-  return time === startOfMinute.default(arg1).getTime();
+  return time === startOfISOWeekYear.default(arg1).getTime();
 };
 export default exports.default;

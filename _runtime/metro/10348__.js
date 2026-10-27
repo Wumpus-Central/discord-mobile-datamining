@@ -1,15 +1,14 @@
 // === Module 10348: ? ===
 
 // Module 10348
-import AbstractTimeExpressionParser from "AbstractTimeExpressionParser" /* 10229 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10224 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
 import _inherits from "_inherits" /* 98 */;
 
-const RUTimeExpressionParser = require;
+let AbstractParserWithLeftRightBoundaryChecking = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,107 +28,81 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class RUTimeExpressionParser {
-  constructor(arg0) {
+class AbstractParserWithLeftBoundaryChecking {
+  constructor() {
     self = this;
-    tmp = c2(this, RUTimeExpressionParser);
-    items = [];
-    items[0] = global;
+    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
     tmp2 = closure_4;
-    obj = closure_4(RUTimeExpressionParser);
+    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
     tmp3 = closure_3;
-    if (metroRequire()) {
-      tmp5 = globalThis;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUTimeExpressionParser, AbstractTimeExpressionParser.AbstractTimeExpressionParser);
+AbstractParserWithLeftRightBoundaryChecking = AbstractParserWithLeftBoundaryChecking;
+_inherits(AbstractParserWithLeftBoundaryChecking, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternFlags",
-  value: function patternFlags() {
-    return RUTimeExpressionParser(10344).REGEX_PARTS.flags;
+  key: "patternLeftBoundary",
+  value: function patternLeftBoundary() {
+    return AbstractParserWithLeftRightBoundaryChecking(10346).REGEX_PARTS.leftBoundary;
   }
 };
-let items = [
+const items = [
   entry,
   {
-    key: "primaryPatternLeftBoundary",
-    value: function primaryPatternLeftBoundary() {
-      return "(^|\\s|T|(?:[^\\p{L}\\p{N}_]))";
+    key: "innerPattern",
+    value: function innerPattern(arg0) {
+      const regExp = new RegExp(this.innerPatternString(arg0), AbstractParserWithLeftRightBoundaryChecking(10346).REGEX_PARTS.flags);
+      return regExp;
     }
   },
   {
-    key: "followingPhase",
-    value: function followingPhase() {
-      return "\\s*(?:\\-|\\\u2013|\\~|\\\u301C|\u0434\u043E|\u0438|\u043F\u043E|\\?)\\s*";
-    }
-  },
-  {
-    key: "primaryPrefix",
-    value: function primaryPrefix() {
-      return "(?:(?:\u0432|\u0441)\\s*)??";
-    }
-  },
-  {
-    key: "primarySuffix",
-    value: function primarySuffix() {
-      return "(?:\\s*(?:\u0443\u0442\u0440\u0430|\u0432\u0435\u0447\u0435\u0440\u0430|\u043F\u043E\u0441\u043B\u0435 \u043F\u043E\u043B\u0443\u0434\u043D\u044F))?(?!\\/)" + RUTimeExpressionParser(10344).REGEX_PARTS.rightBoundary;
-    }
-  },
-  {
-    key: "extractPrimaryTimeComponents",
-    value: function extractPrimaryTimeComponents(arg0, arg1) {
-      const self = this;
-      const tmp = hasOwnProperty(_getPrototypeOf(RUTimeExpressionParser.prototype), "extractPrimaryTimeComponents", this);
-      dependencyMap = tmp;
-      let fn = tmp;
-      if (typeof tmp === "function") {
-        fn = (items) => closure_1.apply(self, items);
-      }
-      const items = [arg0, arg1];
-      const fnResult = fn(items);
-      if (fnResult) {
-        const first = arg1[0];
-        if (first.endsWith("\u0432\u0435\u0447\u0435\u0440\u0430")) {
-          value = fnResult.get("hour");
-          if (value >= 6) {
-            if (value < 12) {
-              fnResult.assign("hour", fnResult.get("hour") + 12);
-              fnResult.assign("meridiem", RUTimeExpressionParser(10220).Meridiem.PM);
-            }
-          }
-          if (value < 6) {
-            fnResult.assign("meridiem", RUTimeExpressionParser(10220).Meridiem.AM);
-          }
-        }
-        const first1 = arg1[0];
-        if (first1.endsWith("\u043F\u043E\u0441\u043B\u0435 \u043F\u043E\u043B\u0443\u0434\u043D\u044F")) {
-          fnResult.assign("meridiem", RUTimeExpressionParser(10220).Meridiem.PM);
-          value2 = fnResult.get("hour");
-          let tmp14 = value2 >= 0;
-          if (tmp14) {
-            tmp14 = value2 <= 6;
-          }
-          if (tmp14) {
-            fnResult.assign("hour", fnResult.get("hour") + 12);
-          }
-        }
-        const first2 = arg1[0];
-        if (first2.endsWith("\u0443\u0442\u0440\u0430")) {
-          fnResult.assign("meridiem", RUTimeExpressionParser(10220).Meridiem.AM);
-          if (fnResult.get("hour") < 12) {
-            fnResult.assign("hour", fnResult.get("hour"));
-          }
-        }
-      }
-      return fnResult;
+    key: "innerPatternHasChange",
+    value: function innerPatternHasChange(arg0, arg1) {
+      return false;
     }
   }
 ];
+const _moduleResult = _createClass(AbstractParserWithLeftBoundaryChecking, items);
+class AbstractParserWithLeftRightBoundaryChecking {
+  constructor() {
+    self = this;
+    tmp = c2(this, AbstractParserWithLeftRightBoundaryChecking);
+    tmp2 = closure_4;
+    obj = closure_4(AbstractParserWithLeftRightBoundaryChecking);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(AbstractParserWithLeftRightBoundaryChecking, _moduleResult);
+const entry1 = {
+  key: "innerPattern",
+  value: function innerPattern(arg0) {
+    const combined = "" + this.innerPatternString(arg0) + AbstractParserWithLeftRightBoundaryChecking(10346).REGEX_PARTS.rightBoundary;
+    const regExp = new RegExp(combined, AbstractParserWithLeftRightBoundaryChecking(10346).REGEX_PARTS.flags);
+    return regExp;
+  }
+};
+const items1 = [entry1];
 
-export default _createClass(RUTimeExpressionParser, items);
+export const AbstractParserWithLeftBoundaryChecking = _moduleResult;
+export const AbstractParserWithLeftRightBoundaryChecking = _createClass(AbstractParserWithLeftRightBoundaryChecking, items1);

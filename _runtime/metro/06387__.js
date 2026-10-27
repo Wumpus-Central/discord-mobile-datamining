@@ -1,31 +1,15 @@
 // === Module 6387: ? ===
 
 // Module 6387
-import _mod1307 from "module_1307" /* 1307 */;
-import requirePromise from "requirePromise" /* 6385 */;
-import PromiseResolve from "PromiseResolve" /* 6461 */;
-import callBind_mod from "callBind" /* 1476 */;
+import requirePromise from "requirePromise" /* 6386 */;
+import _mod6388 from "module_6388" /* 6388 */;
 
-requirePromise();
-let callBind = callBind_mod;
-let closure_2 = callBind(_mod1307("%Promise.all%"));
-let callBind = callBind_mod;
-let closure_3 = callBind(_mod1307("%Promise.reject%"));
 
-export default function allSettled(arg0) {
-  const self = this;
-  if ("Object" !== self(6388)(this)) {
-    const _TypeError = TypeError;
-    const typeError = new TypeError("`this` value must be an object");
-    throw typeError;
+export default function getPolyfill() {
+  requirePromise();
+  if (typeof Promise.allSettled === "function") {
   } else {
-    return closure_2(this, tmp(6394)(tmp(6391)(arg0), (arg0) => {
-      try {
-        return promise.then((value) => ({ status: "fulfilled", value }), (reason) => ({ status: "rejected", reason }));
-      } catch (tmp3) {
-        return closure_3(tmp, tmp3);
-      }
-      promise = PromiseResolve(self, arg0);
-    }));
+    allSettled = _mod6388;
   }
+  return allSettled;
 };

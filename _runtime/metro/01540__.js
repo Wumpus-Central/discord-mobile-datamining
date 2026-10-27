@@ -3,28 +3,48 @@
 // Module 1540
 import noop from "module_19" /* 19 */;
 
-const jsx = fn(21).jsx;
-const context = noop.createContext(undefined);
+const require = arg1;
 
-export const SingleNavigatorContext = context;
-export const EnsureSingleNavigator = function EnsureSingleNavigator(children) {
-  closure_0 = noop.useRef(undefined);
-  return <context.Provider value={noop.useMemo(() => ({
-    register(current) {
-      current = ref.current;
-      if (undefined !== current) {
-        if (current !== current) {
-          const _Error = Error;
-          const error = new Error("Another navigator is already registered for this container. You likely have multiple navigators under a single \"NavigationContainer\" or \"Screen\". Make sure each navigator is under a separate \"Screen\" container. See https://reactnavigation.org/docs/nesting-navigators for a guide on nesting.");
-          throw error;
-        }
-      }
-      ref.current = current;
-    },
-    unregister(arg0) {
-      if (arg0 === ref.current) {
-        tmp.current = undefined;
-      }
+export const createNavigatorFactory = function createNavigatorFactory(NativeStackNavigator) {
+  let Navigator = NativeStackNavigator;
+  let str = NativeStackNavigator.displayName;
+  if (str == null) {
+    str = NativeStackNavigator.name;
+  }
+  if (str == null) {
+    str = "Navigator";
+  }
+  return function createNavigator(config) {
+    Navigator = config;
+    if (null != config) {
+      const obj3 = { Navigator, Screen: Navigator(str[2]).Screen, Group: Navigator(str[3]).Group, config };
+      Navigator = Navigator(str[1]).createComponentForStaticNavigation(obj3, Navigator);
+      const obj4 = {
+        config,
+        with(IMAGE_ONLY_ANSWERS) {
+            config = IMAGE_ONLY_ANSWERS;
+            class WithComponent {
+              constructor() {
+                obj = { Navigator: closure_1 };
+                return closure_2.createElement(closure_0, obj);
+              }
+            }
+            WithComponent.displayName = "" + Navigator + "With";
+            return {
+              config,
+              getComponent() {
+                return WithComponent;
+              }
+            };
+          },
+        getComponent() {
+            return closure_1;
+          }
+      };
+      return obj4;
+    } else {
+      const obj = { Navigator, Screen: Navigator(str[2]).Screen, Group: Navigator(str[3]).Group };
+      return obj;
     }
-  }), [])}>{children.children}</context.Provider>;
+  };
 };

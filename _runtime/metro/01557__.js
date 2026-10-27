@@ -1,45 +1,75 @@
 // === Module 1557: ? ===
 
 // Module 1557
-import _mod1558 from "module_1558" /* 1558 */;
-import _slicedToArray from "module_32" /* 32 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop from "module_19" /* 19 */;
-
-require = arg1;
-let closure_2 = ["state"];
-const SymbolResult = Symbol("CHILD_STATE");
-const hasOwnProperty = SymbolResult;
-
-export const CHILD_STATE = SymbolResult;
-export const useRouteCache = function useRouteCache(routes) {
-  noop.useMemo(() => {
-    const obj = { current: new Map() };
-    return obj;
-  }, []);
-  const reduced = routes.reduce((set, key) => {
-    const current = ref.current;
-    value = current.get(key.key);
-    const state = key.state;
-    const tmp2 = _objectWithoutProperties(key, closure_2);
-    let tmp3 = tmp2;
-    if (value) {
-      tmp3 = tmp2;
-      if (obj.isRecordEqual(value, tmp2)) {
-        tmp3 = value;
+function getStateFromRouteParams(params) {
+  if (null != params) {
+    if (typeof params === "object") {
+      if ("state" in params) {
+        if (params.state) {
+          if (typeof params.state === "object") {
+            if ("routes" in params.state) {
+              const _Array = Array;
+              if (Array.isArray(params.state.routes)) {
+                const routes = params.state.routes;
+                if (routes.every((name) => {
+                  let tmp = typeof name === "object";
+                  if (typeof name === "object") {
+                    tmp = null != name;
+                  }
+                  if (tmp) {
+                    tmp = "name" in name;
+                  }
+                  if (tmp) {
+                    tmp = typeof name.name === "string";
+                  }
+                  return tmp;
+                })) {
+                  let state = params.state;
+                }
+                return state;
+              }
+            }
+          }
+        }
       }
-      obj = _mod1558;
+      if ("screen" in params) {
+        if (params.screen) {
+          if (typeof params.screen === "string") {
+            const obj2 = { name: params.screen, params: null, path: null, state: null };
+            params = undefined;
+            if ("params" in params) {
+              if (typeof params.params === "object") {
+                if (null != params.params) {
+                  params = params.params;
+                }
+              }
+            }
+            obj2.params = params;
+            let path;
+            if ("path" in params) {
+              if (typeof params.path === "string") {
+                path = params.path;
+              }
+            }
+            obj2.path = path;
+            let tmp4;
+            if ("params" in params) {
+              if (typeof params.params === "object") {
+                if (null != params.params) {
+                  tmp4 = getStateFromRouteParams(params.params);
+                }
+              }
+            }
+            const obj = { routes: null };
+            obj2.state = tmp4;
+            const items = [obj2];
+            obj.routes = items;
+            state = obj;
+          }
+        }
+      }
     }
-    if (tmp3[SymbolResult] !== state) {
-      const _Object = Object;
-      const obj2 = { enumerable: false, configurable: true, value: state };
-      Object.defineProperty(tmp3, tmp6, obj2);
-    }
-    const result = set.set(key.key, tmp3);
-    return set;
-  }, new Map());
-  const insertionEffect = noop.useInsertionEffect(() => {
-    closure_0.current = reduced;
-  });
-  return Array.from(reduced.values());
-};
+  }
+}
+
+export { getStateFromRouteParams };

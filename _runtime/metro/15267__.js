@@ -1,7 +1,7 @@
 // === Module 15267: ? ===
 
 // Module 15267
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties", scales: [1], hash: "5f77547974eb8f3f02aedbb78b4b73bc", name: "NitroGem12", type: "lottie" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/nitro_icons", width: 16, height: 16, scales: [2, 3], hash: "e31ee2ef368806b54cff2e8c81e8cd97", name: "img_nitro_icon_filled", type: "png" });

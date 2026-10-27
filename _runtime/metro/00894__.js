@@ -1,25 +1,25 @@
 // === Module 894: ? ===
 
 // Module 894
+import _mod176 from "finally" /* 176 */;
 import RN_GLOBAL_OBJ from "RN_GLOBAL_OBJ" /* 692 */;
 import _mod693 from "module_693" /* 693 */;
 import TurboModuleRegistry from "TurboModuleRegistry" /* 874 */;
 import done from "done" /* 895 */;
-import _mod897 from "module_897" /* 897 */;
 
 const require = globalThis.__r;
 
 require = arg1;
 const dependencyMap = arg6;
 function getPromisePolyfill() {
-  return require("module_898");
+  return require("module_178");
 }
 
 export const polyfillPromise = function polyfillPromise() {
   if (TurboModuleRegistry.ReactNativeLibraries.Utilities) {
-    closure_0 = require("module_898");
+    closure_0 = require("module_178");
     done;
-    _mod897;
+    _mod176;
     const Utilities = TurboModuleRegistry.ReactNativeLibraries.Utilities;
     Utilities.polyfillGlobal("Promise", () => closure_0);
   } else {
@@ -45,7 +45,7 @@ export const checkPromiseAndWarn = function checkPromiseAndWarn() {
       const debug2 = _mod693.debug;
       debug2.log("Unhandled promise rejections will be caught by Sentry.");
     }
-    tmp6 = require("module_898");
+    tmp6 = require("module_178");
   } catch (err) {
     const debug4 = _mod693.debug;
     debug4.warn("Unhandled promise rejections will not be caught by Sentry. See https://docs.sentry.io/platforms/react-native/troubleshooting/ for more details.");

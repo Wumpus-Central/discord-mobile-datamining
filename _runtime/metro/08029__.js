@@ -1,15 +1,16 @@
 // === Module 8029: ? ===
 
 // Module 8029
-import _modDef7986 from "module_7986" /* 7986 */;
+import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
+import _modDef7974 from "module_7974" /* 7974 */;
+import _modDef8030 from "module_8030" /* 8030 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Filter = importDefault;
+const ForeignObject = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -29,15 +30,16 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Filter {
+class ForeignObject {
   constructor() {
     self = this;
-    tmp = c2(this, Filter);
-    tmp2 = closure_4;
-    obj = closure_4(Filter);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, ForeignObject);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(ForeignObject);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -50,30 +52,29 @@ class Filter {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Filter, _modDef7986);
+_inherits(ForeignObject, _modDef7974);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
     const props = this.props;
-    const size = { name: props.id, x: props.x, y: props.y, width: props.width, height: props.height, filterUnits: props.filterUnits, primitiveUnits: props.primitiveUnits };
+    const size = { x: props.x, y: props.y, width: props.width, height: props.height };
     const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged = Object.assign(size);
-    obj.children = this.props.children;
-    return jsx(Filter(8030), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const merged = Object.assign(ForeignObject(7975).withoutXY(this, props));
+    const merged1 = Object.assign(size);
+    obj.children = props.children;
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Filter, items);
-importDefaultResultResult.displayName = "Filter";
-importDefaultResultResult.defaultProps = { x: "-10%", y: "-10%", width: "120%", height: "120%", filterUnits: "objectBoundingBox", primitiveUnits: "userSpaceOnUse" };
+const importDefaultResultResult = _createClass(ForeignObject, items);
+importDefaultResultResult.displayName = "ForeignObject";
+importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
 
 export default importDefaultResultResult;

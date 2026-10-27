@@ -1,11 +1,13 @@
 // === Module 5403: ? ===
 
 // Module 5403
-import _mod5404 from "module_5404" /* 5404 */;
-import _mod5406 from "module_5406" /* 5406 */;
-import _mod5407 from "module_5407" /* 5407 */;
+const require = globalThis.__r;
 
-
-export const useCompetingGestures = _mod5404.useCompetingGestures;
-export const useExclusiveGestures = _mod5406.useExclusiveGestures;
-export const useSimultaneousGestures = _mod5407.useSimultaneousGestures;
+for (const key10013 in require("module_5404")) {
+  arg5[key10013] = require("module_5404")[key10013];
+  continue;
+}
+for (const key10017 in require("transformLongPressProps")) {
+  arg5[key10017] = require("transformLongPressProps")[key10017];
+  continue;
+}

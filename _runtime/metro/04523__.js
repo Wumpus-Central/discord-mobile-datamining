@@ -1,19 +1,28 @@
 // === Module 4523: ? ===
 
 // Module 4523
-import _mod4259 from "module_4259" /* 4259 */;
-import assign_mod from "assign" /* 4504 */;
+import _typeof_mod from "module_4255" /* 4255 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let assign = assign_mod;
-if (!assign) {
-  const obj = { default: assign };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = assign;
+  tmp3 = _typeof;
 }
-assign = tmp3;
+_typeof = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
 
-export default function getDefaultOptions() {
-  return assign.default({}, _mod4259.getDefaultOptions());
+export default function getDecade(arg0) {
+  requiredArgs.default(1, arguments);
+  return 10 * Math.floor(_typeof.default(arg0).getFullYear() / 10);
 };
 export default exports.default;

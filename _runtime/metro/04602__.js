@@ -1,17 +1,17 @@
 // === Module 4602: ? ===
 
 // Module 4602
-import startOfWeek_mod from "startOfWeek" /* 4413 */;
-import requiredArgs_mod from "requiredArgs" /* 4255 */;
+import module_4603_mod from "module_4603" /* 4603 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let startOfWeek = startOfWeek_mod;
-if (!startOfWeek) {
-  const obj = { default: startOfWeek };
+let module_4603 = module_4603_mod;
+if (!module_4603) {
+  const obj = { default: module_4603 };
   let tmp3 = obj;
 } else {
-  tmp3 = startOfWeek;
+  tmp3 = module_4603;
 }
-startOfWeek = tmp3;
+module_4603 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,10 +21,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isSameWeek(arg0, arg1, arg2) {
+export default function isSameISOWeek(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  const defaultResult1 = startOfWeek.default(arg0, arg2);
-  const time = defaultResult1.getTime();
-  return time === startOfWeek.default(arg1, arg2).getTime();
+  return module_4603.default(arg0, arg1, { weekStartsOn: 1 });
 };
 export default exports.default;

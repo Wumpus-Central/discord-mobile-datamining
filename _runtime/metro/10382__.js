@@ -1,149 +1,115 @@
 // === Module 10382: ? ===
 
 // Module 10382
-import _mod10211 from "module_10211" /* 10211 */;
-import _mod10244 from "module_10244" /* 10244 */;
-import includeCommonConfiguration from "includeCommonConfiguration" /* 10251 */;
-import _mod10383 from "module_10383" /* 10383 */;
-import _mod10385 from "module_10385" /* 10385 */;
-import _mod10386 from "module_10386" /* 10386 */;
-import _mod10387 from "module_10387" /* 10387 */;
-import _mod10388 from "module_10388" /* 10388 */;
-import _mod10389 from "module_10389" /* 10389 */;
-import _mod10390 from "module_10390" /* 10390 */;
-import _mod10391 from "module_10391" /* 10391 */;
-import _mod10392 from "module_10392" /* 10392 */;
-import _mod10393 from "module_10393" /* 10393 */;
-import _mod10394 from "module_10394" /* 10394 */;
-import _mod10395 from "module_10395" /* 10395 */;
-import _mod10396 from "module_10396" /* 10396 */;
-import _mod10397 from "module_10397" /* 10397 */;
-import _mod10398 from "module_10398" /* 10398 */;
-import _mod10399 from "module_10399" /* 10399 */;
-import _mod10400 from "module_10400" /* 10400 */;
+import _mod10373 from "module_10373" /* 10373 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-function createConfiguration() {
-  if (flag === undefined) {
-    flag = true;
-  }
-  let flag2 = arg1;
-  if (arg1 === undefined) {
-    flag2 = false;
-  }
-  const obj = { parsers: null, refiners: null };
-  const items = [new regExp.default(flag2), , , , , , , , , ];
-  const _default = new regExp.default(flag2);
-  items[1] = new _isNativeReflectConstruct.default();
-  const _default1 = new _isNativeReflectConstruct.default();
-  items[2] = new _isNativeReflectConstruct.default();
-  const _default2 = new _isNativeReflectConstruct.default();
-  items[3] = new _isNativeReflectConstruct.default();
-  const _default3 = new _isNativeReflectConstruct.default();
-  items[4] = new _isNativeReflectConstruct.default();
-  const _default4 = new _isNativeReflectConstruct.default();
-  items[5] = new _isNativeReflectConstruct.default();
-  const _default5 = new _isNativeReflectConstruct.default();
-  items[6] = new _isNativeReflectConstruct.default();
-  const _default6 = new _isNativeReflectConstruct.default();
-  items[7] = new _isNativeReflectConstruct.default(flag);
-  const _default7 = new _isNativeReflectConstruct.default(flag);
-  items[8] = new _isNativeReflectConstruct.default(flag);
-  const _default8 = new _isNativeReflectConstruct.default(flag);
-  items[9] = new _isNativeReflectConstruct.default(flag);
-  obj.parsers = items;
-  const _default9 = new _isNativeReflectConstruct.default(flag);
-  const items1 = [new _isNativeReflectConstruct.default(), , ];
-  const _default10 = new _isNativeReflectConstruct.default();
-  items1[1] = new _isNativeReflectConstruct.default();
-  const _default11 = new _isNativeReflectConstruct.default();
-  items1[2] = new _isNativeReflectConstruct.default();
-  obj.refiners = items1;
-  return includeCommonConfiguration.includeCommonConfiguration(obj, flag);
-}
-let fn = this;
-if (this) {
-  fn = this.__importDefault;
-}
-if (!fn) {
-  fn = (__esModule) => {
-    if (!__esModule) {
-      const obj = { default: __esModule };
-      let tmp = obj;
+const UKRelativeDateFormatParser = require;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      tmp = __esModule;
+      callResult = call(constructResult);
     }
-    return tmp;
-  };
-}
-function createCasualConfiguration() {
-  let flag = arg0;
-  if (arg0 === undefined) {
-    flag = false;
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  const tmp = createConfiguration(false, flag);
-  const parsers = tmp.parsers;
-  parsers.unshift(new _isNativeReflectConstruct.default());
-  const parsers1 = tmp.parsers;
-  const _default = new _isNativeReflectConstruct.default();
-  parsers1.unshift(new _isNativeReflectConstruct.default());
-  const parsers2 = tmp.parsers;
-  const _default1 = new _isNativeReflectConstruct.default();
-  parsers2.unshift(new _isNativeReflectConstruct.default());
-  const parsers3 = tmp.parsers;
-  const _default2 = new _isNativeReflectConstruct.default();
-  parsers3.unshift(new _isNativeReflectConstruct.default());
-  const parsers4 = tmp.parsers;
-  const _default3 = new _isNativeReflectConstruct.default();
-  parsers4.unshift(new _isNativeReflectConstruct.default());
-  return tmp;
 }
-fn(_mod10383);
-fn(_mod10385);
-fn(_mod10386);
-fn(_mod10387);
-fn(_mod10388);
-fn(_mod10389);
-fn(_mod10390);
-fn(_mod10391);
-fn(_mod10392);
-fn(_mod10393);
-fn(_mod10394);
-fn(_mod10395);
-fn(_mod10396);
-fn(_mod10397);
-fn(_mod10398);
-const regExp = fn(_mod10244);
-fn(_mod10399);
-const _isNativeReflectConstruct = fn(_mod10400);
-const configuration = createConfiguration(false, false);
-let parsers = configuration.parsers;
-parsers.unshift(new _isNativeReflectConstruct.default());
-let parsers1 = configuration.parsers;
-let _default = new _isNativeReflectConstruct.default();
-parsers1.unshift(new _isNativeReflectConstruct.default());
-let parsers2 = configuration.parsers;
-let _default1 = new _isNativeReflectConstruct.default();
-parsers2.unshift(new _isNativeReflectConstruct.default());
-let parsers3 = configuration.parsers;
-let _default2 = new _isNativeReflectConstruct.default();
-parsers3.unshift(new _isNativeReflectConstruct.default());
-let parsers4 = configuration.parsers;
-let _default3 = new _isNativeReflectConstruct.default();
-parsers4.unshift(new _isNativeReflectConstruct.default());
-const chrono = new _mod10211.Chrono(configuration);
-const chrono1 = new _mod10211.Chrono(createConfiguration(true, false));
-const chrono2 = new _mod10211.Chrono(createConfiguration(false, true));
+class UKRelativeDateFormatParser {
+  constructor() {
+    self = this;
+    tmp = c2(this, UKRelativeDateFormatParser);
+    tmp2 = closure_4;
+    obj = closure_4(UKRelativeDateFormatParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(UKRelativeDateFormatParser, _mod10373.AbstractParserWithLeftRightBoundaryChecking);
+const entry = {
+  key: "innerPatternString",
+  value: function innerPatternString(arg0) {
+    return "(\u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043D\u0430 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443|\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E|\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E|\u043D\u0430 \u0446\u044C\u043E\u043C\u0443|\u0432 \u0446\u044C\u043E\u043C\u0443|\u0443 \u0446\u044C\u043E\u043C\u0443|\u0446\u044C\u043E\u0433\u043E)\\s*(" + UKRelativeDateFormatParser(10217).matchAnyPattern(UKRelativeDateFormatParser(10371).TIME_UNIT_DICTIONARY) + ")(?=\\s*)";
+  }
+};
+const items = [
+  entry,
+  {
+    key: "innerExtract",
+    value: function innerExtract(createParsingComponents, arg1) {
+      const formatted = arg1[1].toLowerCase();
+      const formatted1 = arg1[2].toLowerCase();
+      const str3 = UKRelativeDateFormatParser(10371).TIME_UNIT_DICTIONARY[formatted1];
+      if ("\u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
+        if ("\u0432 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
+          if ("\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u043C\u0443" != formatted) {
+            if ("\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u043E\u0433\u043E" != formatted) {
+              if ("\u043D\u0430 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
+                if ("\u0432 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
+                  if ("\u0443 \u043C\u0438\u043D\u0443\u043B\u043E\u043C\u0443" != formatted) {
+                    if ("\u043C\u0438\u043D\u0443\u043B\u043E\u0433\u043E" != formatted) {
+                      const parsingComponents = createParsingComponents.createParsingComponents();
+                      const _Date = Date;
+                      const instant = createParsingComponents.reference.instant;
+                      const date = new Date(instant.getTime());
+                      if (str3.match(/week/i)) {
+                        date.setDate(date.getDate() - date.getDay());
+                        parsingComponents.imply("day", date.getDate());
+                        parsingComponents.imply("month", date.getMonth() + 1);
+                        parsingComponents.imply("year", date.getFullYear());
+                        const date1 = date.getDate();
+                      } else if (str3.match(/month/i)) {
+                        date.setDate(1);
+                        parsingComponents.imply("day", date.getDate());
+                        parsingComponents.assign("year", date.getFullYear());
+                        parsingComponents.assign("month", date.getMonth() + 1);
+                      } else if (str3.match(/year/i)) {
+                        date.setDate(1);
+                        date.setMonth(0);
+                        parsingComponents.imply("day", date.getDate());
+                        parsingComponents.imply("month", date.getMonth() + 1);
+                        parsingComponents.assign("year", date.getFullYear());
+                      }
+                      return parsingComponents;
+                    }
+                  }
+                }
+              }
+              const obj = {};
+              obj[str3] = -1;
+              const ParsingComponents = UKRelativeDateFormatParser(10220).ParsingComponents;
+              return ParsingComponents.createRelativeFromReference(createParsingComponents.reference, obj);
+            }
+          }
+        }
+      }
+      const ParsingComponents2 = UKRelativeDateFormatParser(10220).ParsingComponents;
+      return ParsingComponents2.createRelativeFromReference(createParsingComponents.reference, { [str3]: 1 });
+    }
+  }
+];
 
-export const parse = function parse(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parse(arg0, arg1, arg2);
-};
-export const parseDate = function parseDate(arg0, arg1, arg2) {
-  const casual = exports.casual;
-  return casual.parseDate(arg0, arg1, arg2);
-};
-export { createCasualConfiguration };
-export { createConfiguration };
-export const casual = chrono;
-export const strict = chrono1;
-export const GB = chrono2;
+export default _createClass(UKRelativeDateFormatParser, items);

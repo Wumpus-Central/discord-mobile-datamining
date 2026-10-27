@@ -1,44 +1,73 @@
 // === Module 4274: ? ===
 
 // Module 4274
-import module_4275 from "module_4275" /* 4275 */;
-import module_4276 from "module_4276" /* 4276 */;
-import module_4277 from "module_4277" /* 4277 */;
-import date_mod from "module_4278" /* 4278 */;
-import date_mod from "module_4279" /* 4279 */;
+import module_2075 from "module_2075" /* 2075 */;
+import module_2076 from "module_2076" /* 2076 */;
 
-if (!module_4275) {
-  const obj = { default: module_4275 };
-  let tmp3 = obj;
+if (!module_2075) {
+  const obj2 = { default: module_2075 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4275;
+  obj = module_2075;
 }
-if (!module_4276) {
-  const obj2 = { default: module_4276 };
-  let tmp5 = obj2;
+if (!module_2076) {
+  const obj4 = { default: module_2076 };
+  let obj3 = obj4;
 } else {
-  tmp5 = module_4276;
+  obj3 = module_2076;
 }
-if (!module_4277) {
-  const obj3 = { default: module_4277 };
-  let tmp7 = obj3;
-} else {
-  tmp7 = module_4277;
-}
-let date = date_mod;
-if (!date) {
-  const obj4 = { default: date };
-  let tmp9 = obj4;
-} else {
-  tmp9 = date;
-}
-let date = date_mod;
-if (!date) {
-  const obj5 = { default: date };
-  let tmp11 = obj5;
-} else {
-  tmp11 = date;
-}
+const date = {
+  ordinalNumber: obj3.default({
+    matchPattern: /^(\d+)(\.)?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
+    }
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
+};
+const obj6 = { matchPatterns: { narrow: /^(fKr|fvt|eKr|vt)/i, abbreviated: /^(f\.Kr\.?|f\.v\.t\.?|e\.Kr\.?|v\.t\.)/i, wide: /^(f.Kr.|før vesterlandsk tidsregning|e.Kr.|vesterlandsk tidsregning)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null };
+const items = [/^f/i, /^(v|e)/i];
+obj7.any = items;
+obj6.parsePatterns = obj7;
+date.era = obj.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^[1234]. kvt\./i, wide: /^[1234]\.? kvartal/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
+  }
+};
+const obj9 = { any: null };
+const items1 = [/1/i, /2/i, /3/i, /4/i];
+obj9.any = items1;
+obj8.parsePatterns = obj9;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^[jfmasond]/i, abbreviated: /^(jan.|feb.|mar.|apr.|maj|jun.|jul.|aug.|sep.|okt.|nov.|dec.)/i, wide: /^(januar|februar|marts|april|maj|juni|juli|august|september|oktober|november|december)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { narrow: null, any: null };
+const items2 = [/^j/i, /^f/i, /^m/i, /^a/i, /^m/i, /^j/i, /^j/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj11.narrow = items2;
+const items3 = [/^ja/i, /^f/i, /^mar/i, /^ap/i, /^maj/i, /^jun/i, /^jul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj11.any = items3;
+obj10.parsePatterns = obj11;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^[smtofl]/i, short: /^(søn.|man.|tir.|ons.|tor.|fre.|lør.)/i, abbreviated: /^(søn|man|tir|ons|tor|fre|lør)/i, wide: /^(søndag|mandag|tirsdag|onsdag|torsdag|fredag|lørdag)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { narrow: null, any: null };
+const items4 = [/^s/i, /^m/i, /^t/i, /^o/i, /^t/i, /^f/i, /^l/i];
+obj13.narrow = items4;
+const items5 = [/^s/i, /^m/i, /^ti/i, /^o/i, /^to/i, /^f/i, /^l/i];
+obj13.any = items5;
+obj12.parsePatterns = obj13;
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { narrow: /^(a|p|midnat|middag|(om) (morgenen|eftermiddagen|aftenen|natten))/i, any: /^([ap]\.?\s?m\.?|midnat|middag|(om) (morgenen|eftermiddagen|aftenen|natten))/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^a/i, pm: /^p/i, midnight: /midnat/i, noon: /middag/i, morning: /morgen/i, afternoon: /eftermiddag/i, evening: /aften/i, night: /nat/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
 
-export default { code: "de", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
+export default date;
 export default exports.default;

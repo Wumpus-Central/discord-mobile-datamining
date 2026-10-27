@@ -1,9 +1,8 @@
 // === Module 4555: ? ===
 
 // Module 4555
-import _typeof_mod from "module_4556" /* 4556 */;
-import module_4436_mod from "module_4436" /* 4436 */;
-import requiredArgs_mod from "requiredArgs" /* 4255 */;
+import _typeof_mod from "module_4255" /* 4255 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -13,25 +12,18 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let module_4436 = module_4436_mod;
-if (!module_4436) {
-  const obj2 = { default: module_4436 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4436;
-}
-module_4436 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp7 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp7;
+requiredArgs = tmp5;
 
-export default function isMatch(arg0, arg1, arg2) {
-  requiredArgs.default(2, arguments);
-  return module_4436.default(_typeof.default(arg0, arg1, new Date(), arg2));
+export default function isFuture(arg0) {
+  requiredArgs.default(1, arguments);
+  const time = _typeof.default(arg0).getTime();
+  return time > Date.now();
 };
 export default exports.default;

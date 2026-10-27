@@ -1,17 +1,17 @@
 // === Module 4610: ? ===
 
 // Module 4610
-import module_4599_mod from "module_4599" /* 4599 */;
-import requiredArgs_mod from "requiredArgs" /* 4255 */;
+import _typeof_mod from "module_4255" /* 4255 */;
+import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let module_4599 = module_4599_mod;
-if (!module_4599) {
-  const obj = { default: module_4599 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4599;
+  tmp3 = _typeof;
 }
-module_4599 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -21,8 +21,10 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isThisHour(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4599.default(Date.now(), arg0);
+export default function isSameYear(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const fullYear = defaultResult1.getFullYear();
+  return fullYear === _typeof.default(arg1).getFullYear();
 };
 export default exports.default;

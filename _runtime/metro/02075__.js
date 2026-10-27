@@ -1,42 +1,80 @@
 // === Module 2075: ? ===
 
 // Module 2075
-import module_2076 from "module_2076" /* 2076 */;
 
-if (!module_2076) {
-  const obj2 = { default: module_2076 };
-  let obj = obj2;
-} else {
-  obj = module_2076;
-}
-const date = {
-  ordinalNumber(arg0, arg1) {
-    const NumberResult = Number(arg0);
-    const result = NumberResult % 100;
-    if (20 < result) {
-      const result1 = result % 10;
-      if (1 === result1) {
-        return NumberResult + "st";
-      } else if (2 === result1) {
-        return NumberResult + "nd";
-      } else if (3 === result1) {
-        return NumberResult + "rd";
+export default function buildMatchFn(arg0) {
+  closure_0 = arg0;
+  return (str) => {
+    if (arguments.length > 1) {
+      if (undefined !== arguments[1]) {
+        let obj = arguments[1];
+      }
+      const width = obj.width;
+      let tmp2 = width;
+      if (width) {
+        tmp2 = closure_0.matchPatterns[width];
+      }
+      if (!tmp2) {
+        tmp2 = closure_0.matchPatterns[closure_0.defaultMatchWidth];
+      }
+      const match = str.match(tmp2);
+      if (match) {
+        const first = match[0];
+        let arr2 = width;
+        if (width) {
+          arr2 = closure_0.parsePatterns[width];
+        }
+        if (!arr2) {
+          arr2 = closure_0.parsePatterns[closure_0.defaultParseWidth];
+        }
+        const _Array = Array;
+        if (Array.isArray(arr2)) {
+          let num = 0;
+          let tmp15;
+          if (0 < arr2.length) {
+            tmp15 = num;
+            while (!obj3.test(first)) {
+              let sum = num + 1;
+              num = sum;
+              if (sum >= arr2.length) {
+                break;
+              }
+            }
+            obj3 = arr2[num];
+          }
+          let tmp12 = tmp15;
+        } else {
+          const keys = Object.keys();
+          if (keys !== undefined) {
+            while (keys[tmp] !== undefined) {
+              if (!arr2.hasOwnProperty(tmp14)) {
+                continue;
+              } else {
+                let obj2 = arr2[tmp14];
+                tmp12 = tmp14;
+                if (obj2.test(first)) {
+                  break;
+                }
+              }
+              continue;
+            }
+          }
+        }
+        let valueCallbackResult = tmp12;
+        if (closure_0.valueCallback) {
+          valueCallbackResult = closure_0.valueCallback(tmp12);
+        }
+        let valueCallbackResult2 = valueCallbackResult;
+        if (obj.valueCallback) {
+          valueCallbackResult2 = obj.valueCallback(valueCallbackResult);
+        }
+        const obj5 = { value: valueCallbackResult2, rest: str.slice(first.length) };
+        return obj5;
+      } else {
+        return null;
       }
     }
-    return NumberResult + "th";
-  },
-  era: obj.default({ values: { narrow: ["B", "A"], abbreviated: ["BC", "AD"], wide: ["Before Christ", "Anno Domini"] }, defaultWidth: "wide" }),
-  quarter: obj.default({
-    values: { narrow: ["1", "2", "3", "4"], abbreviated: ["Q1", "Q2", "Q3", "Q4"], wide: ["1st quarter", "2nd quarter", "3rd quarter", "4th quarter"] },
-    defaultWidth: "wide",
-    argumentCallback(arg0) {
-      return arg0 - 1;
-    }
-  }),
-  month: obj.default({ values: { narrow: ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"], abbreviated: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], wide: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"] }, defaultWidth: "wide" }),
-  day: obj.default({ values: { narrow: ["S", "M", "T", "W", "T", "F", "S"], short: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"], abbreviated: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"], wide: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"] }, defaultWidth: "wide" }),
-  dayPeriod: obj.default({ values: { narrow: { am: "a", pm: "p", midnight: "mi", noon: "n", morning: "morning", afternoon: "afternoon", evening: "evening", night: "night" }, abbreviated: { am: "AM", pm: "PM", midnight: "midnight", noon: "noon", morning: "morning", afternoon: "afternoon", evening: "evening", night: "night" }, wide: { am: "a.m.", pm: "p.m.", midnight: "midnight", noon: "noon", morning: "morning", afternoon: "afternoon", evening: "evening", night: "night" } }, defaultWidth: "wide", formattingValues: { narrow: { am: "a", pm: "p", midnight: "mi", noon: "n", morning: "in the morning", afternoon: "in the afternoon", evening: "in the evening", night: "at night" }, abbreviated: { am: "AM", pm: "PM", midnight: "midnight", noon: "noon", morning: "in the morning", afternoon: "in the afternoon", evening: "in the evening", night: "at night" }, wide: { am: "a.m.", pm: "p.m.", midnight: "midnight", noon: "noon", morning: "in the morning", afternoon: "in the afternoon", evening: "in the evening", night: "at night" } }, defaultFormattingWidth: "wide" })
+    obj = {};
+  };
 };
-
-export default date;
 export default exports.default;

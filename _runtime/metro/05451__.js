@@ -1,29 +1,7 @@
 // === Module 5451: ? ===
 
 // Module 5451
-import cancelAnimation from "cancelAnimation" /* 1658 */;
-import value2 from "value2" /* 5270 */;
-import _mod5274 from "module_5274" /* 5274 */;
-import BottomSheetContext from "BottomSheetContext" /* 5280 */;
-import noop from "module_19" /* 19 */;
+import _modDef5452 from "module_5452" /* 5452 */;
 
-require = fn;
-const useMemo = fn(19).useMemo;
-const jsx = fn(21).jsx;
 
-export default function _default(children) {
-  let useGestureEventsHandlersDefault = children.gestureEventsHandlersHook;
-  if (useGestureEventsHandlersDefault === undefined) {
-    useGestureEventsHandlersDefault = _mod5274.useGestureEventsHandlersDefault;
-  }
-  const sharedValue = cancelAnimation.useSharedValue(value2.GESTURE_SOURCE.UNDETERMINED);
-  const bottomSheetInternal = _mod5274.useBottomSheetInternal();
-  ({ animatedHandleGestureState, animatedContentGestureState } = bottomSheetInternal);
-  ({ handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize } = useGestureEventsHandlersDefault());
-  const gestureEventsHandlersDefault = useGestureEventsHandlersDefault();
-  const gestureHandler = _mod5274.useGestureHandler(value2.GESTURE_SOURCE.CONTENT, animatedContentGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
-  const gestureHandler1 = _mod5274.useGestureHandler(value2.GESTURE_SOURCE.HANDLE, animatedHandleGestureState, sharedValue, handleOnStart, handleOnChange, handleOnEnd, handleOnFinalize);
-  const items = [gestureHandler, gestureHandler1, sharedValue];
-  value = useMemo(() => ({ contentPanGestureHandler: gestureHandler, handlePanGestureHandler: gestureHandler1, animatedGestureSource: sharedValue }), items);
-  return jsx(BottomSheetContext.BottomSheetGestureHandlersContext.Provider, { value, children: children.children });
-};
+export default _modDef5452;

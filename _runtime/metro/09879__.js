@@ -1,7 +1,7 @@
 // === Module 9879: ? ===
 
 // Module 9879
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/SunsetIcon", width: 60, height: 60, scales: [2, 3], hash: "9f9f6665c181624b81b98f40c0532d57", name: "SunsetIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/custom_app_icons/PirateIcon", width: 60, height: 60, scales: [2, 3], hash: "02ec404298afd1c009d52e4ac428845a", name: "PirateIcon", type: "png" });

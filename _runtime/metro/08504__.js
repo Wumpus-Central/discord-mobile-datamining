@@ -1,7 +1,7 @@
 // === Module 8504: ? ===
 
 // Module 8504
-import registerAsset from "module_1134" /* 1134 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
 export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "f5152f59510615cd9a196a52f24801ee", name: "ThreadIcon", type: "png" });
