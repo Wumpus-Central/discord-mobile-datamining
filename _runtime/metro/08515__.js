@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "55dfae0c7ba72f2b92f72dd1258be0b7",
-  name: "VoiceWarningIcon",
+  hash: "98f362bfbfa9b6f14fb4a7feec2a0587",
+  name: "FacebookNeutralIcon",
   type: "png",
 });

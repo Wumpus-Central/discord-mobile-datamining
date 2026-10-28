@@ -1,105 +1,82 @@
 // _runtime/metro/08225__.js
-import _mod8212 from "08212__.js";
-import _modDef8215 from "08215__.js";
+import _mod8218 from "08218__.js";
+import _mod8219 from "08219__.js";
 
 require = arg1;
-importDefault = arg2;
 const dependencyMap = arg6;
 
-export default {
-  isWebpFile(dataView) {
-    let tmp = dataView;
-    if (tmp) {
-      tmp = _mod8212.getStringFromDataView(dataView, 0, 4) === "RIFF";
-    }
-    if (tmp) {
-      tmp = _mod8212.getStringFromDataView(dataView, 8, 4) === "WEBP";
-    }
-    return tmp;
-  },
-  findOffsets(byteLength) {
-    let flag = false;
-    let num = 12;
-    let hasAppMarkers = false;
-    let vp8xChunkOffset;
-    let iccChunks;
-    let xmpChunks;
-    let tiffHeaderOffset;
-    if (20 < byteLength.byteLength) {
-      while (true) {
-        let obj = _mod8212;
-        let stringFromDataView = obj.getStringFromDataView(byteLength, num, 4);
-        let uint32 = byteLength.getUint32(num + 4, true);
-        let flag3 = flag;
-        if (_modDef8215.USE_EXIF) {
-          if ("EXIF" === stringFromDataView) {
-            let tmp9Result = _mod8212;
-            let sum = num + 8;
-            let sum1 = sum;
-            if (tmp9Result.getStringFromDataView(byteLength, sum, 6) === "Exif\0\0") {
-              sum1 = sum + 6;
-            }
-            let tmp22 = sum1;
-            flag3 = true;
-            let sum4 = tmp;
-            let tmp20 = tmp2;
-            let tmp21 = tmp3;
-            let sum2 = uint32;
-            if (uint32 % 2 !== 0) {
-              sum2 = uint32 + 1;
-            }
-            let sum3 = num + (8 + sum2);
-            flag = flag3;
-            num = sum3;
-            tmp = sum4;
-            tmp2 = tmp20;
-            tmp3 = tmp21;
-            let tmp4 = tmp22;
-            hasAppMarkers = flag3;
-            vp8xChunkOffset = sum4;
-            iccChunks = tmp20;
-            xmpChunks = tmp21;
-            tiffHeaderOffset = tmp22;
-            if (sum3 + 8 >= byteLength.byteLength) {
-              break;
-            }
-          }
-        }
-        if (_modDef8215.USE_XMP) {
-          if ("XMP " === stringFromDataView) {
-            let obj2 = { dataOffset: num + 8, length: uint32 };
-            let items = [obj2];
-            flag3 = true;
-            sum4 = tmp;
-            tmp20 = tmp2;
-            tmp21 = items;
-            tmp22 = tmp4;
-          }
-        }
-        if (_modDef8215.USE_ICC) {
-          if ("ICCP" === stringFromDataView) {
-            let obj3 = { offset: num + 8, length: uint32, chunkNumber: 1, chunksTotal: 1 };
-            let items1 = [obj3];
-            flag3 = true;
-            sum4 = tmp;
-            tmp20 = items1;
-            tmp21 = tmp3;
-            tmp22 = tmp4;
-          }
-        }
-        sum4 = tmp;
-        tmp20 = tmp2;
-        tmp21 = tmp3;
-        tmp22 = tmp4;
-        if ("VP8X" === stringFromDataView) {
-          sum4 = num + 8;
-          flag3 = true;
-          tmp20 = tmp2;
-          tmp21 = tmp3;
-          tmp22 = tmp4;
-        }
-      }
-    }
-    return { hasAppMarkers, tiffHeaderOffset, xmpChunks, iccChunks, vp8xChunkOffset };
-  },
+export const isBLEND = function isBLEND(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "blend");
+};
+export const isELF = function isELF(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "elf");
+};
+export const isEXE = function isEXE(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "exe");
+};
+export const isMACHO = function isMACHO(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "macho");
+};
+export const isINDD = function isINDD(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "indd");
+};
+export const isORC = function isORC(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "orc");
+};
+export const isPARQUET = function isPARQUET(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "parquet");
+};
+export const isPDF = function isPDF(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pdf");
+};
+export const isPS = function isPS(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ps");
+};
+export const isRTF = function isRTF(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "rtf");
+};
+export const isSQLITE = function isSQLITE(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "sqlite");
+};
+export const isSTL = function isSTL(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "stl");
+};
+export const isTTF = function isTTF(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ttf");
+};
+export const isDOC = function isDOC(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "doc");
+};
+export const isPCAP = function isPCAP(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pcap");
 };

@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/hub/native/images",
-  width: 48,
-  height: 48,
-  scales: [1, 2, 3],
-  hash: "3c685966e643346896f1eed744338b14",
-  name: "study",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "027cfc6a5bd867529dfeaf25fa2ca1f4",
+  name: "HeadphonesIcon",
   type: "png",
 });

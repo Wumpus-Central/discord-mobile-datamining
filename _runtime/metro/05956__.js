@@ -1,196 +1,53 @@
 // _runtime/metro/05956__.js
-import _modDef5934 from "05934__.js";
-import _modDef5953 from "05953__.js";
-import styleDefault from "../05958_style.js";
+import RNSLog2 from "../05957_RNSLog.js";
+import _mod5961 from "05961__.js";
+import _modDef5962 from "05962__.js";
 import _objectWithoutProperties from "00109__objectWithoutProperties.js";
 import noop from "00019__.js";
 
-const require = fn;
-get_ActivityIndicator = fn(17);
-({ Platform, StyleSheet } = get_ActivityIndicator);
-const jsxProd = fn(21);
-({ jsx: closure_4, Fragment: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const styles = StyleSheet.create({
-  container: { flex: 1 },
-  absoluteWithNoBottom: { position: "absolute", top: 0, start: 0, end: 0 },
-});
+require = fn;
+let closure_3 = ["android", "ios"];
+let closure_4 = ["children", "direction", "nativeContainerStyle", "onTabSelected", "navStateRequest"];
+const StyleSheet = fn(17).StyleSheet;
+const jsx = fn(21).jsx;
+const fillParent = StyleSheet.create({ fillParent: { flex: 1, width: "100%", height: "100%" } });
 
-export default noop.forwardRef(function ScreenStackItem(arg0, arg1) {
-  ({ children, headerConfig, stackPresentation, sheetAllowedDetents, screenId } = arg0);
-  ({ scrollEdgeEffects, unstable_sheetFooter } = arg0);
-  ({ activityState, shouldFreeze, contentStyle, style, onHeaderHeightChange } = arg0);
-  const merged = Object.assign(
-    arg0,
-    Object.assign({
-      children: 0,
-      headerConfig: 0,
-      activityState: 0,
-      shouldFreeze: 0,
-      stackPresentation: 0,
-      sheetAllowedDetents: 0,
-      contentStyle: 0,
-      style: 0,
-      screenId: 0,
-      onHeaderHeightChange: 0,
-      scrollEdgeEffects: 0,
-      unstable_sheetFooter: 0,
-    }),
-  );
-  importDefault = undefined;
-  dependencyMap = undefined;
-  let flag5;
-  closure_4 = undefined;
-  let hidden;
-  if (headerConfig != null) {
-    hidden = headerConfig.hidden;
-  }
-  let flag;
-  if (headerConfig != null) {
-    flag = headerConfig.disableTopInsetApplication;
-  }
-  if (flag == null) {
-    flag = false;
-  }
-  let flag2;
-  if (headerConfig != null) {
-    flag2 = headerConfig.disableLeftInsetApplication;
-  }
-  if (flag2 == null) {
-    flag2 = false;
-  }
-  let flag3;
-  if (headerConfig != null) {
-    flag3 = headerConfig.disableRightInsetApplication;
-  }
-  if (flag3 == null) {
-    flag3 = false;
-  }
-  let flag4;
-  if (headerConfig != null) {
-    flag4 = headerConfig.disableBottomInsetApplication;
-  }
-  if (flag4 == null) {
-    flag4 = false;
-  }
-  importDefault = flag5.useRef(null);
-  dependencyMap = flag5.useContext(screenId(5954).RNSScreensRefContext);
-  const imperativeHandle = flag5.useImperativeHandle(arg1, () => ref.current);
-  if (stackPresentation == null) {
-    stackPresentation = "push";
-  }
-  flag5 = undefined;
-  if (headerConfig != null) {
-    flag5 = headerConfig.hidden;
-  }
-  if (flag5 == null) {
-    flag5 = false;
-  }
-  closure_4 = obj2.useRef(flag5);
-  const items = [flag5, stackPresentation];
-  const effect = obj2.useEffect(() => {
-    _modDef5953(
-      false,
-      "Dynamically changing header's visibility in modals will result in remounting the screen and losing all local state.",
-    );
-    closure_4.current = flag5;
-  }, items);
-  let isIOS26OrHigher = undefined === scrollEdgeEffects;
-  if (!isIOS26OrHigher) {
-    const _Object = Object;
-    const values = Object.values(scrollEdgeEffects);
-    isIOS26OrHigher = values.some((item) => "hidden" !== item);
-  }
-  let blurEffect;
-  if (headerConfig != null) {
-    blurEffect = headerConfig.blurEffect;
-  }
-  let tmp10 = undefined !== blurEffect;
-  if (tmp10) {
-    tmp10 = "none" !== headerConfig.blurEffect;
-  }
-  let obj = screenId(5944);
-  const tmp3 = !hidden;
-  if (isIOS26OrHigher) {
-    isIOS26OrHigher = tmp10;
-  }
-  if (isIOS26OrHigher) {
-    isIOS26OrHigher = screenId(5957).isIOS26OrHigher;
-  }
-  _modDef5953(
-    isIOS26OrHigher,
-    "[RNScreens] Using both `blurEffect` and `scrollEdgeEffects` simultaneously may cause overlapping effects.",
-  );
-  if ("formSheet" !== stackPresentation) {
-    let container = closure_7.container;
-  } else if ("fitToContents" === sheetAllowedDetents) {
-    container = closure_7.absoluteWithNoBottom;
-  } else {
-    container = closure_7.container;
-  }
-  const obj3 = { value: obj.useEdgeInsetApplication(tmp3, flag, flag2, flag3, flag4).nextContextValue, children: null };
-  const obj4 = { contentStyle, style: container, stackPresentation, children: null };
-  let tmp19Result = children;
-  if (screenId(5957).isIOS26OrHigher) {
-    const obj5 = { edges: {}, children };
-    tmp19Result = tmp19(screenId(5961).SafeAreaView, obj5);
-  }
-  obj4.children = tmp19Result;
-  obj3.children = closure_4(styleDefault, obj4);
-  const items1 = [closure_4(screenId(5944).EdgeInsetApplicationContext.Provider, obj3), ,];
-  const merged1 = Object.assign(headerConfig);
-  items1[1] = closure_4(screenId(5943).ScreenStackHeaderConfig, {});
-  let tmp19Result2 = "formSheet" === stackPresentation && unstable_sheetFooter;
-  if (tmp19Result2) {
-    const obj7 = { children: unstable_sheetFooter() };
-    tmp19Result2 = tmp19(screenId(5963).FooterComponent, obj7);
-  }
-  items1[2] = tmp19Result2;
-  const obj6 = {};
-  const tmp11Result = styleDefault;
-  const obj8 = {
-    ref(current) {
-      closure_1.current = current;
-      if (null !== closure_2) {
-        if (null === current) {
-          delete tmp2[tmp];
-        } else {
-          const obj = { current };
-          tmp5[screenId] = obj;
-        }
-      } else {
-        const _console = console;
-        console.warn(
-          "Looks like RNSScreensRefContext is missing. Make sure the ScreenStack component is wrapped in it",
-        );
-      }
-    },
-    enabled: true,
-    isNativeStack: true,
-    activityState,
-    shouldFreeze,
-    screenId,
-    stackPresentation,
-    hasLargeHeader: null,
-    sheetAllowedDetents: null,
+export default function TabsHost(arg0) {
+  const RNSLog = RNSLog2.RNSLog;
+  RNSLog.log("TabsHost render");
+  ({ android, ios } = arg0);
+  const tmp2 = _objectWithoutProperties(arg0, closure_3);
+  const nativeContainerStyle = tmp2.nativeContainerStyle;
+  ({ children, direction, onTabSelected, navStateRequest } = tmp2);
+  const ref = noop.useRef(null);
+  const tmp3 = _objectWithoutProperties(tmp2, closure_4);
+  const obj2 = {
     style: null,
-    scrollEdgeEffects: null,
-    onHeaderHeightChange: null,
+    navStateRequest,
+    onTabSelected: _mod5961.useTabsHost({ componentNodeRef: ref, onTabSelected }).onTabSelected,
+    nativeContainerBackgroundColor: null,
+    ref: null,
   };
-  let flag6;
-  const tmp17Result = closure_6(closure_5, { children: items1 });
-  if (headerConfig != null) {
-    flag6 = headerConfig.largeTitle;
+  const items = [fillParent.fillParent, { direction }];
+  obj2.style = items;
+  let backgroundColor;
+  if (nativeContainerStyle != null) {
+    backgroundColor = nativeContainerStyle.backgroundColor;
   }
-  if (flag6 == null) {
-    flag6 = false;
+  obj2.nativeContainerBackgroundColor = backgroundColor;
+  obj2.ref = ref;
+  const merged = Object.assign(tmp3);
+  let prop;
+  if (android != null) {
+    prop = android.tabBarRespectsIMEInsets;
   }
-  obj8.hasLargeHeader = flag6;
-  obj8.sheetAllowedDetents = sheetAllowedDetents;
-  const items2 = [style, undefined];
-  obj8.style = items2;
-  obj8.scrollEdgeEffects = scrollEdgeEffects;
-  obj8.onHeaderHeightChange = onHeaderHeightChange;
-  const merged2 = Object.assign(merged);
-  obj8.children = tmp17Result;
-  return closure_4(_modDef5934, obj8);
-});
+  obj2.tabBarRespectsIMEInsets = prop;
+  obj2.children = children;
+  return jsx(_modDef5962, {
+    style: null,
+    navStateRequest,
+    onTabSelected: _mod5961.useTabsHost({ componentNodeRef: ref, onTabSelected }).onTabSelected,
+    nativeContainerBackgroundColor: null,
+    ref: null,
+  });
+}

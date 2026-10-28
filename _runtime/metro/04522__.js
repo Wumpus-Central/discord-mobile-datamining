@@ -1,6 +1,6 @@
 // _runtime/metro/04522__.js
-import _typeof_mod from "04255__.js";
-import requiredArgs_mod from "../04256_requiredArgs.js";
+import _typeof_mod from "04287__.js";
+import requiredArgs_mod from "../04288_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -18,20 +18,14 @@ if (!requiredArgs) {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
+let c2 = 86400000;
 
-export default function isLeapYear(arg0) {
+export default function getUTCDayOfYear(arg0) {
   requiredArgs.default(1, arguments);
-  const fullYear = _typeof.default(arg0).getFullYear();
-  const result = fullYear % 400;
-  let tmp4 = result === 0;
-  if (result !== 0) {
-    const result1 = fullYear % 4;
-    let tmp6 = result1 === 0;
-    if (result1 === 0) {
-      tmp6 = fullYear % 100 !== 0;
-    }
-    tmp4 = tmp6;
-  }
-  return tmp4;
+  const defaultResult1 = _typeof.default(arg0);
+  const time = defaultResult1.getTime();
+  defaultResult1.setUTCMonth(0, 1);
+  defaultResult1.setUTCHours(0, 0, 0, 0);
+  return Math.floor((time - defaultResult1.getTime()) / c2) + 1;
 };
 export default exports.default;

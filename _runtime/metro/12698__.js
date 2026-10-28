@@ -1,31 +1,32 @@
 // _runtime/metro/12698__.js
+import _mod12636 from "12636__.js";
+import _mod12663 from "12663__.js";
+import _mod12664 from "12664__.js";
 
-export const flatten = function flatten(arr) {
-  const items = [];
-  const item = arr.forEach((arr) => {
-    if (Array.isArray(arr)) {
-      let item = arr.forEach((arr) => {
-        if (Array.isArray(arr)) {
-          let item = arr.forEach((arr) => {
-            if (Array.isArray(arr)) {
-              let item = arr.forEach((arr) => {
-                if (Array.isArray(arr)) {
-                  let item = arr.forEach(() => { ... });
-                } else {
-                  arr = closure_1_0.push(arr);
-                }
-              });
-            } else {
-              arr = closure_1_0.push(arr);
-            }
-          });
-        } else {
-          arr = closure_1_0.push(arr);
-        }
-      });
+require = arg1;
+const dependencyMap = arg6;
+
+export const initAndBind = function initAndBind(arg0, debug) {
+  if (true === debug.debug) {
+    const obj = _mod12636;
+    if (_mod12664.DEBUG_BUILD) {
+      const logger = obj.logger;
+      logger.enable();
     } else {
-      arr = closure_1_0.push(arr);
+      obj.consoleSandbox(() => {
+        console.warn("[Sentry] Cannot initialize SDK with `debug` option using a non-debug bundle.");
+      });
     }
-  });
-  return items;
+  }
+  const currentScope = _mod12663.getCurrentScope();
+  currentScope.update(debug.initialScope);
+  const obj4 = new arg0(debug);
+  const currentScope1 = _mod12663.getCurrentScope();
+  currentScope1.setClient(obj4);
+  obj4.init();
+  return obj4;
+};
+export const setCurrentClient = function setCurrentClient(arg0) {
+  const currentScope = _mod12663.getCurrentScope();
+  currentScope.setClient(arg0);
 };

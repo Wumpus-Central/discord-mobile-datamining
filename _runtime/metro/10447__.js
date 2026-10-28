@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/media_keyboard/native/images",
-  width: 200,
-  height: 80,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "e341a934511095337dabafab8c60034b",
-  name: "empty_photos",
+  hash: "0f6346bda6a1fe957f683601cddba824",
+  name: "IdIcon",
   type: "png",
 });

@@ -1,46 +1,39 @@
 // _runtime/metro/06442__.js
-import _mod1305 from "01305__.js";
-import _mod1337 from "01337__.js";
+import _Symbol from "../01308__Symbol.js";
+import callBoundIntrinsic from "../01338_callBoundIntrinsic.js";
+import regexTester from "../01465_regexTester.js";
 
-let closure_2 = Object.assign({
-  "[[Configurable]]": true,
-  "[[Enumerable]]": true,
-  "[[Get]]": true,
-  "[[Set]]": true,
-  "[[Value]]": true,
-  "[[Writable]]": true,
-});
-
-export default function isPropertyDescriptor(obj) {
-  if (obj) {
-    if (typeof obj === "object") {
-      for (const key10001 in arg0) {
-        if (!_mod1337(arg0, key10001)) {
-          continue;
-        } else if (closure_2[key10001]) {
-          continue;
-        } else {
-          let flag = false;
-          return false;
-        }
-        continue;
-      }
-      let tmp4 = _mod1337(obj, "[[Value]]");
-      if (!tmp4) {
-        tmp4 = _mod1337(obj, "[[Writable]]");
-      }
-      let tmp5 = _mod1337(obj, "[[Get]]");
-      if (!tmp5) {
-        tmp5 = _mod1337(obj, "[[Set]]");
-      }
-      if (tmp4) {
-        if (tmp5) {
-          const tmp8 = new _mod1305("Property Descriptors may not be both accessor and data descriptors");
-          throw tmp8;
-        }
-      }
+let closure_0 = callBoundIntrinsic("Object.prototype.toString");
+if (_Symbol()) {
+  let closure_1 = callBoundIntrinsic("Symbol.prototype.toString");
+  let closure_2 = regexTester(/^Symbol\(.*\)$/);
+  module.exports = function isSymbol(obj) {
+    if (typeof obj === "symbol") {
       return true;
+    } else {
+      if (obj) {
+        if (typeof obj === "object") {
+          if ("[object Symbol]" === closure_0(obj)) {
+            try {
+              return (function isRealSymbolObject(arg0) {
+                const valueOfResult = arg0.valueOf();
+                let tmp2 = typeof valueOfResult === "symbol";
+                if (typeof valueOfResult === "symbol") {
+                  tmp2 = closure_1_2(closure_1_1(arg0));
+                }
+                return tmp2;
+              })(obj);
+            } catch (err) {
+              return false;
+            }
+          }
+        }
+      }
+      return false;
     }
-  }
-  return false;
+  };
+} else {
+  module.exports = function isSymbol(arg0) {
+    return false;
+  };
 }

@@ -1,9 +1,13 @@
 // _runtime/metro/12619__.js
-import errorCallback from "../12585_errorCallback.js";
+import registerAsset from "01131__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const addTracingExtensions = function addTracingExtensions() {
-  const result = errorCallback.registerSpanErrorInstrumentation();
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "01cd25a11a733a16463d72c98cca83b7",
+  name: "CloudIcon",
+  type: "png",
+});

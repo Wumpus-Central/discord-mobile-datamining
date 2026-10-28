@@ -1,28 +1,17 @@
 // _runtime/metro/12665__.js
-import eventFromMessage from "../12649_eventFromMessage.js";
-import _mod12666 from "12666__.js";
-import setupIntegration from "12645__.js";
+import _mod12642 from "12642__.js";
 
-export const linkedErrorsIntegration = setupIntegration.defineIntegration(() => {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+require = arg1;
+const dependencyMap = arg6;
+const _sentryScope = "_sentryScope";
+const _sentryIsolationScope = "_sentryIsolationScope";
+
+export const getCapturedScopesOnSpan = function getCapturedScopesOnSpan(scope) {
+  return { scope: scope[_sentryScope], isolationScope: scope[_sentryIsolationScope] };
+};
+export const setCapturedScopesOnSpan = function setCapturedScopesOnSpan(sentrySpan, scope, isolationScope) {
+  if (sentrySpan) {
+    const result = _mod12642.addNonEnumerableProperty(sentrySpan, _sentryIsolationScope, isolationScope);
+    const result1 = _mod12642.addNonEnumerableProperty(sentrySpan, _sentryScope, scope);
   }
-  closure_0 = obj.limit || 5;
-  closure_1 = obj.key || "cause";
-  return {
-    name: "LinkedErrors",
-    preprocessEvent(exception, originalException, getOptions) {
-      const options = getOptions.getOptions();
-      const result = _mod12666.applyAggregateErrorsToEvent(
-        eventFromMessage.exceptionFromError,
-        options.stackParser,
-        options.maxValueLength,
-        closure_1,
-        closure_0,
-        exception,
-        originalException,
-      );
-    },
-  };
-});
+};

@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/modules/contact_sync/native/images",
+  width: 156.5,
+  height: 118,
   scales: [2, 3],
-  hash: "ce5302624e28acc38af07d238a4e16fe",
-  name: "BellZIcon",
+  hash: "273d7cc721dbd2991c78c1e8d926e220",
+  name: "empty-suggestions-header",
   type: "png",
 });

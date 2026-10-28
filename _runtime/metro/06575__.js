@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [1],
-  hash: "a7079fa45817ad0281dfe779b5383d9a",
-  name: "img_account_sync_playstation_light",
+  hash: "5f8b57af5ab5fdfa6cf52708c91c3adb",
+  name: "img_account_sync_reddit_white",
   type: "svg",
 });

@@ -1,6 +1,10 @@
 // _runtime/metro/05328__.js
-import _mod17 from "00017__.js";
+const global = arg0;
 
-const TurboModuleRegistry = _mod17.TurboModuleRegistry;
-
-export default TurboModuleRegistry.getEnforcing("RNGestureHandlerModule");
+export const isFabricInstalled = function isFabricInstalled() {
+  let prop;
+  if (global != null) {
+    prop = global.nativeFabricUIManager;
+  }
+  return null != prop;
+};

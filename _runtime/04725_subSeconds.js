@@ -1,0 +1,35 @@
+// _runtime/04725_subSeconds.js
+import module_4291_mod from "metro/04291__.js";
+import module_4454_mod from "metro/04454__.js";
+import requiredArgs_mod from "04288_requiredArgs.js";
+
+let module_4291 = module_4291_mod;
+if (!module_4291) {
+  const obj = { default: module_4291 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4291;
+}
+module_4291 = tmp3;
+let module_4454 = module_4454_mod;
+if (!module_4454) {
+  const obj2 = { default: module_4454 };
+  let tmp5 = obj2;
+} else {
+  tmp5 = module_4454;
+}
+module_4454 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
+
+export default function subSeconds(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4454.default(arg0, -module_4291.default(arg1));
+};
+export default exports.default;

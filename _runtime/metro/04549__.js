@@ -1,6 +1,6 @@
 // _runtime/metro/04549__.js
-import _typeof_mod from "04255__.js";
-import requiredArgs_mod from "../04256_requiredArgs.js";
+import _typeof_mod from "04287__.js";
+import requiredArgs_mod from "../04288_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -19,10 +19,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp5;
 
-export default function isAfter(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = defaultResult1.getTime();
-  return time > _typeof.default(arg1).getTime();
+export default function getDate(arg0) {
+  requiredArgs.default(1, arguments);
+  return _typeof.default(arg0).getDate();
 };
 export default exports.default;

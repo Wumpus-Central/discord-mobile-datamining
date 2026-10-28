@@ -1,26 +1,12 @@
 // _runtime/metro/04533__.js
-import _typeof_mod from "04255__.js";
-import requiredArgs_mod from "../04256_requiredArgs.js";
+import code from "02067__.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+if (!code) {
+  const obj = { default: code };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = code;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function getSeconds(arg0) {
-  requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getSeconds();
-};
+export default tmp3.default;
 export default exports.default;

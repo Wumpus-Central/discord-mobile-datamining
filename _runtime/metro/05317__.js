@@ -1,4 +1,8 @@
 // _runtime/metro/05317__.js
-import noop from "00019__.js";
+import _mod19 from "00019__.js";
 
-export default noop.createContext(false);
+const createContext = _mod19.createContext;
+const context = createContext(null);
+
+export const BottomSheetGestureHandlersContext = context;
+export const BottomSheetDraggableContext = createContext(null);

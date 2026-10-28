@@ -1,186 +1,50 @@
 // _runtime/metro/05483__.js
-import cancelAnimation from "../01655_cancelAnimation.js";
-import value2 from "../05271_value2.js";
-import _mod5275 from "05275__.js";
-import _mod5282 from "05282__.js";
-import _mod5484 from "05484__.js";
-import ScrollableContainer from "../05485_ScrollableContainer.js";
-import _objectWithoutProperties from "00109__objectWithoutProperties.js";
-import noop_mod from "00019__.js";
+import noop from "00019__.js";
 
-require = fn;
-let closure_2 = [
-  "focusHook",
-  "scrollEventsHandlersHook",
-  "enableFooterMarginAdjustment",
-  "overScrollMode",
-  "keyboardDismissMode",
-  "showsVerticalScrollIndicator",
-  "contentContainerStyle",
-  "refreshing",
-  "onRefresh",
-  "progressViewOffset",
-  "refreshControl",
-  "preserveScrollMomentum",
-  "onScroll",
-  "onScrollBeginDrag",
-  "onScrollEndDrag",
-  "lockableScrollableContentOffsetY",
-  "onContentSizeChange",
-];
-let noop = fn(19);
-({ forwardRef: closure_4, useContext: hasOwnProperty, useImperativeHandle: metroRequire, useMemo: closure_7 } = noop);
-let noop = noop_mod;
-const jsx = fn(21).jsx;
-let closure_9 = {
-  code: "function pnpm_createBottomSheetScrollableComponentTsx1(){const{preserveScrollMomentum,SCROLLABLE_DECELERATION_RATE_MAPPER,animatedScrollableState,showsVerticalScrollIndicator,SCROLLABLE_STATE}=this.__closure;return{...(preserveScrollMomentum?{}:{decelerationRate:SCROLLABLE_DECELERATION_RATE_MAPPER[animatedScrollableState.value]}),showsVerticalScrollIndicator:showsVerticalScrollIndicator?animatedScrollableState.value===SCROLLABLE_STATE.UNLOCKED:showsVerticalScrollIndicator};}",
-};
+const require = globalThis.__r;
 
-export const createBottomSheetScrollableComponent = function createBottomSheetScrollableComponent(
-  SCROLLVIEW,
-  animatedComponent,
-) {
-  const ScrollableComponent = animatedComponent;
-  return closure_4((overScrollMode, arg1) => {
-    ({ focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment } = overScrollMode);
-    overScrollMode = overScrollMode.overScrollMode;
-    let str = "never";
-    if (undefined !== overScrollMode) {
-      str = overScrollMode;
-    }
-    const keyboardDismissMode = overScrollMode.keyboardDismissMode;
-    let str2 = "interactive";
-    if (undefined !== keyboardDismissMode) {
-      str2 = keyboardDismissMode;
-    }
-    const showsVerticalScrollIndicator = overScrollMode.showsVerticalScrollIndicator;
-    SCROLLVIEW = tmp2;
-    ({ onRefresh, preserveScrollMomentum } = overScrollMode);
-    ({ onScroll, onContentSizeChange: closure_2 } = overScrollMode);
-    ({
-      contentContainerStyle,
-      refreshing,
-      progressViewOffset,
-      refreshControl,
-      onScrollBeginDrag,
-      onScrollEndDrag,
-      lockableScrollableContentOffsetY,
-    } = overScrollMode);
-    const tmp6 = hasOwnProperty(_mod5282.BottomSheetDraggableContext);
-    closure_3 = tmp6;
-    const tmp = undefined !== enableFooterMarginAdjustment && enableFooterMarginAdjustment;
-    const tmp3 = _objectWithoutProperties(overScrollMode, closure_2);
-    const scrollHandler1 = _mod5275.useScrollHandler(
-      scrollEventsHandlersHook,
-      onScroll,
-      onScrollBeginDrag,
-      onScrollEndDrag,
-      lockableScrollableContentOffsetY,
-    );
-    const scrollableRef = scrollHandler1.scrollableRef;
-    ({ scrollableContentOffsetY, scrollHandler } = scrollHandler1);
-    const bottomSheetInternal = _mod5275.useBottomSheetInternal();
-    const animatedScrollableState = bottomSheetInternal.animatedScrollableState;
-    const setContentSize = _mod5484.useBottomSheetContentSizeSetter().setContentSize;
-    if (!tmp6) {
-      if (bottomSheetInternal.enableContentPanningGesture) {
-        throw "'Scrollable' cannot be used out of the BottomSheet!";
+({ useEffect: c2, useRef: c3 } = noop);
+
+export const useReactiveSharedValue = (INITIAL_CONTAINER_HEIGHT) => {
+  const tmp = closure_3(null);
+  const tmp2 = closure_3(null);
+  _require = tmp2;
+  let tmp3 = INITIAL_CONTAINER_HEIGHT;
+  if (INITIAL_CONTAINER_HEIGHT) {
+    tmp3 = typeof INITIAL_CONTAINER_HEIGHT === "object";
+  }
+  if (tmp3) {
+    tmp3 = "value" in INITIAL_CONTAINER_HEIGHT;
+  }
+  if (!tmp3) {
+    if (null === tmp2.current) {
+      tmp.current = INITIAL_CONTAINER_HEIGHT;
+      if (typeof INITIAL_CONTAINER_HEIGHT === "object") {
+        const obj2 = {};
+        const merged = Object.assign(INITIAL_CONTAINER_HEIGHT);
+        let mutable = require("cancelAnimation").makeMutable(obj2);
+        let obj = require("cancelAnimation");
+      } else {
+        mutable = require("cancelAnimation").makeMutable(INITIAL_CONTAINER_HEIGHT);
+        const obj3 = require("cancelAnimation");
       }
+      tmp2.current = mutable;
+    } else if (tmp.current !== INITIAL_CONTAINER_HEIGHT) {
+      tmp2.current.value = INITIAL_CONTAINER_HEIGHT;
     }
-    class J {
-      constructor() {
-        if (preserveScrollMomentum) {
-          obj = {};
-        } else {
-          obj = { decelerationRate: null };
-          tmp = closure_0;
-          tmp2 = closure_1;
-          tmp3 = animatedScrollableState;
-          obj.decelerationRate = closure_0(closure_1[7]).SCROLLABLE_DECELERATION_RATE_MAPPER[
-            animatedScrollableState.value
-          ];
-        }
-        obj1 = {};
-        merged = Object.assign(obj);
-        tmp5 = closure_0;
-        if (closure_0) {
-          tmp6 = animatedScrollableState;
-          tmp7 = closure_0;
-          tmp8 = closure_1;
-          tmp5 = animatedScrollableState.value === closure_0(closure_1[7]).SCROLLABLE_STATE.UNLOCKED;
-        }
-        obj1.showsVerticalScrollIndicator = tmp5;
-        return obj1;
+  }
+  closure_2(
+    () => () => {
+      if (ref.current) {
+        ref(dependencyMap[1]).cancelAnimation(tmp.current);
+        const obj = ref(dependencyMap[1]);
       }
-    }
-    const tmp4Result = cancelAnimation;
-    J.__closure = {
-      preserveScrollMomentum,
-      SCROLLABLE_DECELERATION_RATE_MAPPER: value2.SCROLLABLE_DECELERATION_RATE_MAPPER,
-      animatedScrollableState,
-      showsVerticalScrollIndicator: undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator,
-      SCROLLABLE_STATE: value2.SCROLLABLE_STATE,
-    };
-    J.__workletHash = 1780437272380;
-    J.__initData = __initData;
-    const items = [
-      animatedScrollableState,
-      undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator,
-      preserveScrollMomentum,
-    ];
-    const items1 = [tmp6];
-    const animatedProps = tmp4Result.useAnimatedProps(J, items);
-    const obj4 = {
-      preserveScrollMomentum,
-      SCROLLABLE_DECELERATION_RATE_MAPPER: value2.SCROLLABLE_DECELERATION_RATE_MAPPER,
-      animatedScrollableState,
-      showsVerticalScrollIndicator: undefined === showsVerticalScrollIndicator || showsVerticalScrollIndicator,
-      SCROLLABLE_STATE: value2.SCROLLABLE_STATE,
-    };
-    const tmp10 = React5(() => {
-      let result1;
-      if (closure_3) {
-        const Gesture = closure_0(preserveScrollMomentum[8]).Gesture;
-        const result = Gesture.Native().simultaneousWithExternalGesture(tmp);
-        result1 = result.shouldCancelWhenOutside(false);
-        const NativeResult = Gesture.Native();
-      }
-      return result1;
-    }, items1);
-    const tmp4Result4 = _mod5275;
-    const stableCallback = _mod5275.useStableCallback((arg0, arg1) => {
-      setContentSize(arg1);
-      if (closure_1_2) {
-        tmp2(arg0, arg1);
-      }
-    });
-    const bottomSheetContentContainerStyle = _mod5275.useBottomSheetContentContainerStyle(tmp, contentContainerStyle);
-    timestampProducer(arg1, () => scrollableRef.current);
-    const tmp4Result5 = _mod5275;
-    const scrollableSetter = _mod5275.useScrollableSetter(
-      scrollableRef,
-      SCROLLVIEW,
-      scrollableContentOffsetY,
-      undefined !== onRefresh,
-      focusHook,
-    );
-    let merged = Object.assign(tmp3);
-    return jsx(ScrollableContainer.ScrollableContainer, {
-      ref: scrollableRef,
-      nativeGesture: tmp10,
-      animatedProps,
-      overScrollMode: str,
-      keyboardDismissMode: str2,
-      refreshing,
-      scrollEventThrottle: 16,
-      progressViewOffset,
-      contentContainerStyle: bottomSheetContentContainerStyle,
-      onRefresh,
-      onScroll: scrollHandler,
-      onContentSizeChange: stableCallback,
-      setContentSize,
-      ScrollableComponent,
-      refreshControl,
-    });
-  });
+    },
+    [],
+  );
+  let current = tmp2.current;
+  if (current == null) {
+    current = INITIAL_CONTAINER_HEIGHT;
+  }
+  return current;
 };

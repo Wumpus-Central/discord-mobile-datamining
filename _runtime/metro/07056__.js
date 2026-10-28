@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "69dddc8653cca8ffd8b6435928647a3f",
-  name: "MobilePhoneIcon",
+  hash: "737159bf8222c1bab03c6bbf25897f2f",
+  name: "CircleXIcon-primary",
   type: "png",
 });

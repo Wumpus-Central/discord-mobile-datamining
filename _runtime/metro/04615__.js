@@ -1,15 +1,16 @@
 // _runtime/metro/04615__.js
-import module_4607_mod from "04607__.js";
-import requiredArgs_mod from "../04256_requiredArgs.js";
+import _typeof_mod from "04287__.js";
+import requiredArgs_mod from "../04288_requiredArgs.js";
+import module_4291_mod from "04291__.js";
 
-let module_4607 = module_4607_mod;
-if (!module_4607) {
-  const obj = { default: module_4607 };
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4607;
+  tmp3 = _typeof;
 }
-module_4607 = tmp3;
+_typeof = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj2 = { default: requiredArgs };
@@ -18,9 +19,30 @@ if (!requiredArgs) {
   tmp5 = requiredArgs;
 }
 requiredArgs = tmp5;
+let module_4291 = module_4291_mod;
+if (!module_4291) {
+  const obj3 = { default: module_4291 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4291;
+}
+module_4291 = tmp7;
 
-export default function isThisQuarter(arg0) {
-  requiredArgs.default(1, arguments);
-  return module_4607.default(Date.now(), arg0);
+export default function setUTCISODay(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = module_4291.default(arg1);
+  let diff = defaultResult1;
+  if (defaultResult1 % 7 === 0) {
+    diff = defaultResult1 - 7;
+  }
+  const defaultResult2 = _typeof.default(arg0);
+  let num = 0;
+  const uTCDay = defaultResult2.getUTCDay();
+  if ((diff % 7 + 7) % 7 < 1) {
+    num = 7;
+  }
+  const diff1 = num + diff - uTCDay;
+  defaultResult2.setUTCDate(defaultResult2.getUTCDate() + diff1);
+  return defaultResult2;
 };
 export default exports.default;

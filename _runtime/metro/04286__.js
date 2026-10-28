@@ -1,71 +1,82 @@
 // _runtime/metro/04286__.js
-import 02075__ from "02075__.js";
-import 02076__ from "02076__.js";
+import _typeof_mod from "04287__.js";
+import module_4289_mod from "04289__.js";
 
-if (!module_2075) {
-  const obj2 = { default: module_2075 };
-  let obj = obj2;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj = { default: _typeof };
+  let tmp3 = obj;
 } else {
-  obj = module_2075;
+  tmp3 = _typeof;
 }
-if (!module_2076) {
-  const obj4 = { default: module_2076 };
-  let obj3 = obj4;
+_typeof = tmp3;
+let module_4289 = module_4289_mod;
+if (!module_4289) {
+  const obj2 = { default: module_4289 };
+  let tmp5 = obj2;
 } else {
-  obj3 = module_2076;
+  tmp5 = module_4289;
 }
-const date = {
-  ordinalNumber: obj3.default({
-    matchPattern: /^(\d+)(ος|η|ο)?/i,
-    parsePattern: /\d+/i,
-    valueCallback(match) {
-      return parseInt(match, 10);
+module_4289 = tmp5;
+const dependencyMap = ["\u043D\u0435\u0434\u0435\u043B\u044F", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u044F\u0434\u0430", "\u0447\u0435\u0442\u0432\u044A\u0440\u0442\u044A\u043A", "\u043F\u0435\u0442\u044A\u043A", "\u0441\u044A\u0431\u043E\u0442\u0430"];
+let closure_3 = {
+  lastWeek: function lastWeekFormatToken(arg0, arg1, arg2) {
+    const defaultResult = _typeof.default(arg0);
+    const uTCDay = defaultResult.getUTCDay();
+    let text = dependencyMap[uTCDay];
+    if (module_4289.default(defaultResult, arg1, arg2)) {
+      if (2 === uTCDay) {
+        text = `'във ${tmp2}`;
+        let text1 = `'във ${tmp2} в' p`;
+      } else {
+        text1 = `${"'\u0432 " + `'във ${tmp2}`} в' p`;
+      }
+    } else {
+      if (0 !== uTCDay) {
+        if (3 !== uTCDay) {
+          if (6 !== uTCDay) {
+            let text2 = `${"'\u043C\u0438\u043D\u0430\u043B\u0438\u044F " + tmp2} в' p`;
+          }
+          return text2;
+        }
+      }
+      text2 = `${"'\u043C\u0438\u043D\u0430\u043B\u0430\u0442\u0430 " + tmp2} в' p`;
     }
-  }),
-  era: null,
-  quarter: null,
-  month: null,
-  day: null,
-  dayPeriod: null
+  },
+  yesterday: "'\u0432\u0447\u0435\u0440\u0430 \u0432' p",
+  today: "'\u0434\u043D\u0435\u0441 \u0432' p",
+  tomorrow: "'\u0443\u0442\u0440\u0435 \u0432' p",
+  nextWeek: function nextWeekFormatToken(arg0, arg1, arg2) {
+    const defaultResult = _typeof.default(arg0);
+    const uTCDay = defaultResult.getUTCDay();
+    let text = dependencyMap[uTCDay];
+    if (module_4289.default(defaultResult, arg1, arg2)) {
+      if (2 === uTCDay) {
+        text = `'във ${tmp2}`;
+        let text1 = `'във ${tmp2} в' p`;
+      } else {
+        text1 = `${"'\u0432 " + `'във ${tmp2}`} в' p`;
+      }
+    } else {
+      if (0 !== uTCDay) {
+        if (3 !== uTCDay) {
+          if (6 !== uTCDay) {
+            let text2 = `${"'\u0441\u043B\u0435\u0434\u0432\u0430\u0449\u0438\u044F " + tmp2} в' p`;
+          }
+          return text2;
+        }
+      }
+      text2 = `${"'\u0441\u043B\u0435\u0434\u0432\u0430\u0449\u0430\u0442\u0430 " + tmp2} в' p`;
+    }
+  },
+  other: "P"
 };
-const obj6 = { matchPatterns: { narrow: /^(πΧ|μΧ)/i, abbreviated: /^(π\.?\s?χ\.?|π\.?\s?κ\.?\s?χ\.?|μ\.?\s?χ\.?|κ\.?\s?χ\.?)/i, wide: /^(προ Χριστο(ύ|υ)|πριν απ(ό|ο) την Κοιν(ή|η) Χρονολογ(ί|ι)α|μετ(ά|α) Χριστ(ό|ο)ν|Κοιν(ή|η) Χρονολογ(ί|ι)α)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj7 = { any: null };
-const items = [/^π/i, /^(μ|κ)/i];
-obj7.any = items;
-obj6.parsePatterns = obj7;
-date.era = obj.default(obj6);
-const obj8 = {
-  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^τ[1234]/i, wide: /^[1234]ο? τρ(ί|ι)μηνο/i },
-  defaultMatchWidth: "wide",
-  parsePatterns: null,
-  defaultParseWidth: "any",
-  valueCallback(arg0) {
-    return arg0 + 1;
-  }
-};
-const obj9 = { any: null };
-const items1 = [/1/i, /2/i, /3/i, /4/i];
-obj9.any = items1;
-obj8.parsePatterns = obj9;
-date.quarter = obj.default(obj8);
-const obj10 = { matchPatterns: { narrow: /^[ιφμαμιιασονδ]/i, abbreviated: /^(ιαν|φεβ|μ[άα]ρ|απρ|μ[άα][ιΐ]|ιο[ύυ]ν|ιο[ύυ]λ|α[ύυ]γ|σεπ|οκτ|νο[έε]|δεκ)/i, wide: /^(μ[άα][ιΐ]|α[ύυ]γο[υύ]στ)(ος|ου)|(ιανου[άα]ρ|φεβρου[άα]ρ|μ[άα]ρτ|απρ[ίι]λ|ιο[ύυ]ν|ιο[ύυ]λ|σεπτ[έε]μβρ|οκτ[ώω]βρ|νο[έε]μβρ|δεκ[έε]μβρ)(ιος|ίου)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj11 = { narrow: null, any: null };
-const items2 = [/^ι/i, /^φ/i, /^μ/i, /^α/i, /^μ/i, /^ι/i, /^ι/i, /^α/i, /^σ/i, /^ο/i, /^ν/i, /^δ/i];
-obj11.narrow = items2;
-const items3 = [/^ια/i, /^φ/i, /^μ[άα]ρ/i, /^απ/i, /^μ[άα][ιΐ]/i, /^ιο[ύυ]ν/i, /^ιο[ύυ]λ/i, /^α[ύυ]/i, /^σ/i, /^ο/i, /^ν/i, /^δ/i];
-obj11.any = items3;
-obj10.parsePatterns = obj11;
-date.month = obj.default(obj10);
-const obj12 = { matchPatterns: { narrow: /^[κδτπσ]/i, short: /^(κυ|δε|τρ|τε|π[εέ]|π[αά]|σ[αά])/i, abbreviated: /^(κυρ|δευ|τρι|τετ|πεμ|παρ|σαβ)/i, wide: /^(κυριακ(ή|η)|δευτ(έ|ε)ρα|τρ(ί|ι)τη|τετ(ά|α)ρτη|π(έ|ε)μπτη|παρασκευ(ή|η)|σ(ά|α)ββατο)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
-const obj13 = { narrow: null, any: null };
-const items4 = [/^κ/i, /^δ/i, /^τ/i, /^τ/i, /^π/i, /^π/i, /^σ/i];
-obj13.narrow = items4;
-const items5 = [/^κ/i, /^δ/i, /^τρ/i, /^τε/i, /^π[εέ]/i, /^π[αά]/i, /^σ/i];
-obj13.any = items5;
-obj12.parsePatterns = obj13;
-date.day = obj.default(obj12);
-const obj14 = { matchPatterns: { narrow: /^(πμ|μμ|μεσ(ά|α)νυχτα|μεσημ(έ|ε)ρι|πρω(ί|ι)|απ(ό|ο)γευμα|βρ(ά|α)δυ|ν(ύ|υ)χτα)/i, any: /^([πμ]\.?\s?μ\.?|μεσ(ά|α)νυχτα|μεσημ(έ|ε)ρι|πρω(ί|ι)|απ(ό|ο)γευμα|βρ(ά|α)δυ|ν(ύ|υ)χτα)/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^πμ|π\.\s?μ\./i, pm: /^μμ|μ\.\s?μ\./i, midnight: /^μεσάν/i, noon: /^μεσημ(έ|ε)/i, morning: /πρω(ί|ι)/i, afternoon: /απ(ό|ο)γευμα/i, evening: /βρ(ά|α)δυ/i, night: /ν(ύ|υ)χτα/i } }, defaultParseWidth: "any" };
-date.dayPeriod = obj.default(obj14);
 
-export default date;
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  let tmpResult = tmp;
+  if (typeof closure_3[arg0] === "function") {
+    tmpResult = tmp(arg1, arg2, arg3);
+  }
+  return tmpResult;
+};
 export default exports.default;

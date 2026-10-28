@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  httpServerLocation: "/assets/images/native/chat_sidebar",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "9f983315273ecf4164927351f28f2400",
-  name: "ic_premium_overview_24px",
+  hash: "c0d7195f1a47742034be311c1f70ceed",
+  name: "ic_settings",
   type: "png",
 });

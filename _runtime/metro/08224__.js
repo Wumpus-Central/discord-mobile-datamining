@@ -1,26 +1,82 @@
 // _runtime/metro/08224__.js
-import findOffsets from "../08221_findOffsets.js";
+import _mod8218 from "08218__.js";
+import _mod8219 from "08219__.js";
 
 require = arg1;
 const dependencyMap = arg6;
 
-export default {
-  isAvifFile(getUint32) {
-    if (getUint32) {
-      try {
-        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
-        if (parseBoxResult) {
-          parseBoxResult = "avif" === parseBoxResult.majorBrand;
-        }
-        return parseBoxResult;
-      } catch (err) {
-        return false;
-      }
-    } else {
-      return false;
-    }
-  },
-  findAvifOffsets(byteLength) {
-    return findOffsets.findOffsets(byteLength);
-  },
+export const isAVIF = function isAVIF(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "avif") && _mod8218.isAvifStringIncluded(fileChunk);
+};
+export const isBMP = function isBMP(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "bmp");
+};
+export const isBPG = function isBPG(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "bpg");
+};
+export const isCR2 = function isCR2(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "cr2");
+};
+export const isEXR = function isEXR(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "exr");
+};
+export const isGIF = function isGIF(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "gif");
+};
+export const isHEIC = function isHEIC(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "avif") && _mod8218.isHeicSignatureIncluded(fileChunk);
+};
+export const isICO = function isICO(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ico");
+};
+export const isJPEG = function isJPEG(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "jpeg");
+};
+export const isPBM = function isPBM(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pbm");
+};
+export const isPGM = function isPGM(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "pgm");
+};
+export const isPNG = function isPNG(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "png");
+};
+export const isPPM = function isPPM(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "ppm");
+};
+export const isPSD = function isPSD(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "psd");
+};
+export const isWEBP = function isWEBP(fileChunk) {
+  fileChunk = _mod8218.getFileChunk(fileChunk);
+  const FileTypes = _mod8219.FileTypes;
+  return FileTypes.checkByFileType(fileChunk, "webp");
 };

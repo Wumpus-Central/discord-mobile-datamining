@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e3c5c9128e3b6990fd3bdb33f2f889a0",
-  name: "ic_gear",
+  hash: "b83c9486cfaf14d2dd0ad9edbe75c34d",
+  name: "WebhookPlusIcon",
   type: "png",
 });

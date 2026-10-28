@@ -1,26 +1,12 @@
 // _runtime/metro/04407__.js
-import _typeof_mod from "04255__.js";
-import requiredArgs_mod from "../04256_requiredArgs.js";
+import 02070__ from "02070__.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+if (!module_2070) {
+  const obj2 = { default: module_2070 };
+  let obj = obj2;
 } else {
-  tmp3 = _typeof;
+  obj = module_2070;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function isSunday(arg0) {
-  requiredArgs.default(1, arguments);
-  return 0 === _typeof.default(arg0).getDay();
-};
+export default { date: obj.default({ formats: { full: "EEEE, d MMMM y '\u0433.'", long: "d MMMM y '\u0433.'", medium: "d MMM y '\u0433.'", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { any: "{{date}}, {{time}}" }, defaultWidth: "any" }) };
 export default exports.default;

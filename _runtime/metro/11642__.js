@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "ac381080e803b7da0a8a3822cdf80aee",
-  name: "BlurBackgroundIcon",
+  hash: "623eff85d27fd4ffd7a4c28c327682e8",
+  name: "SpeedometerIcon",
   type: "png",
 });

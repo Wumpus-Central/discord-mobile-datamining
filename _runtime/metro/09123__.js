@@ -4,10 +4,10 @@ import registerAsset from "01131__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 60,
-  height: 60,
+  width: 160.5,
+  height: 140,
   scales: [2, 3],
-  hash: "19a79c674ca352a1b9c59552160bbdc6",
-  name: "telegram",
+  hash: "ad61eda1bea496e5c4dfb770ef28c56b",
+  name: "server-invite-envelope",
   type: "png",
 });

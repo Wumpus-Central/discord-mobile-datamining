@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "88d061a76594f03187e4bf612ecd1256",
-  name: "RecordPlayerIcon",
+  hash: "82e1774e7b1dafde5756234a2c6c5214",
+  name: "EmojiSalutingFaceIcon",
   type: "png",
 });

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "84a1e2a3b13ea7ae45e68f1bb8755810",
-  name: "TreehouseIcon",
+  hash: "3158b67912ec8e847a3b53eb9bab7b63",
+  name: "EmojiCryingFaceIcon",
   type: "png",
 });

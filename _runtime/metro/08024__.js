@@ -1,11 +1,14 @@
 // _runtime/metro/08024__.js
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8018 from "08018__.js";
+import _modDef8025 from "08025__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const FeSpotLight = fn;
+const ClipPath = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,14 +27,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeSpotLight {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class ClipPath {
   constructor() {
     self = this;
-    tmp = c2(this, FeSpotLight);
-    tmp2 = closure_4;
-    obj = closure_4(FeSpotLight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_3(this, ClipPath);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(ClipPath);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -44,17 +49,19 @@ class FeSpotLight {
     return tmp3(self, constructResult);
   }
 }
-_inherits(FeSpotLight, fn(19).Component);
+_inherits(ClipPath, _modDef8018);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeSpotLight(7976).warnUnimplementedFilter();
-    return null;
+    const props = this.props;
+    const obj = { ref: this.refMethod };
+    const merged = Object.assign(ClipPath(8009).extract(this, props));
+    obj.children = props.children;
+    return <tmp ref={this.refMethod} />;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(FeSpotLight, items);
-importDefaultResultResult.displayName = "FeSpotLight";
-importDefaultResultResult.defaultProps = {};
+const importDefaultResultResult = _createClass(ClipPath, items);
+importDefaultResultResult.displayName = "ClipPath";
 
 export default importDefaultResultResult;

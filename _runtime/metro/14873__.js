@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/perks",
-  width: 20,
-  height: 20,
+  httpServerLocation: "/assets/modules/nuf_channels/native/images",
+  width: 275.5,
+  height: 78,
   scales: [2, 3],
-  hash: "fb3286cfe401333b68936fe15653c8b9",
-  name: "role",
+  hash: "b55be157bc31f9c933d8fe113de3e547",
+  name: "voice_channels",
   type: "png",
 });

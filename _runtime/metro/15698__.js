@@ -1,32 +1,11 @@
 // _runtime/metro/15698__.js
-let closure_0 = { url: "http://localhost:8081" };
+import registerAsset from "01131__.js";
 
-export default () => {
-  if (arg0 === undefined) {
-    let obj = {};
-  }
-  return () => {
-    url = Object.assign({}, url, obj);
-    obj = {
-      onCommand(type) {
-        if ("editor.open" === type.type) {
-          const payload = type.payload;
-          let num = payload.lineNumber;
-          const _HermesInternal = HermesInternal;
-          obj = { file: payload.file, lineNumber: null };
-          const combined = "" + url.url + "/open-stack-frame";
-          if (!num) {
-            num = 1;
-          }
-          obj.lineNumber = num;
-          const _fetch = fetch;
-          const request = { method: "POST", body: null };
-          const _JSON = JSON;
-          request.body = JSON.stringify(obj);
-          const response = fetch(combined, request);
-        }
-      },
-    };
-    return obj;
-  };
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/intl/messages",
+  scales: [1],
+  hash: "b076f35cb059256a96b9ed5a60c93c6b",
+  name: "international.compiled.messages",
+  type: "jsona",
+});

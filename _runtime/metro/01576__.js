@@ -1185,12 +1185,12 @@ export const useNavigationBuilder = function useNavigationBuilder(StackRouter, U
                 const obj = { state: rehydratedState, descriptors, navigation: navigationHelpers, children };
                 tmpResult = tmp(obj);
               }
-              obj2 = { value: "Array", children: false };
+              obj2 = { value: "Array", children: 0 };
               obj3 = { value: navigationHelpers, children: null };
               obj4 = { state: rehydratedState, getState: navigationHelpers.getState, children: jsx(context12.FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: jsx(transformPreventedRoutes.PreventRemoveProvider, { children: tmpResult }) }) };
               obj3.children = jsx(NavigationStateListenerProvider.NavigationStateListenerProvider, { state: rehydratedState, getState: navigationHelpers.getState, children: jsx(context12.FocusedRouteKeyContext.Provider, { value: rehydratedState.routes[rehydratedState.index].key, children: jsx(transformPreventedRoutes.PreventRemoveProvider, { children: tmpResult }) }) });
               obj2.children = jsx(NavigationHelpersContext.NavigationHelpersContext.Provider, { value: navigationHelpers, children: null });
-              return jsx(NavigationMetaContext.NavigationMetaContext.Provider, { value: "Array", children: false });
+              return jsx(NavigationMetaContext.NavigationMetaContext.Provider, { value: "Array", children: 0 });
             })
       };
       return obj20;

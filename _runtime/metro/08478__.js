@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "98f362bfbfa9b6f14fb4a7feec2a0587",
-  name: "FacebookNeutralIcon",
+  hash: "6547bb7b75af42cdcf6f655476c57657",
+  name: "UserCheckIcon",
   type: "png",
 });

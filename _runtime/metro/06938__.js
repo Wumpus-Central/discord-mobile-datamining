@@ -3,12 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation:
-    "/assets/../node_modules/.pnpm/@react-navigation+elements@2.9.34_2hzotq2fhhtzqjz6caubttu6v4/node_modules/@react-navigation/elements/lib/module/assets",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
   height: 24,
-  scales: [1, 2, 3, 4],
-  hash: "940453dc5cbfaa96cf907b3aa7791ece",
-  name: "search-icon",
+  scales: [2, 3],
+  hash: "5967259ca8cb17c5090eb349838b5289",
+  name: "CheckmarkSmallBoldIcon",
   type: "png",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "ebf39623cd7d642af1c5756d58046968",
-  name: "SignPostIcon",
+  httpServerLocation: "/assets/images/native/premium/plan_selection",
+  width: 80,
+  height: 80,
+  scales: [1],
+  hash: "5f9cf938bde196c596c6b50aa389dd8b",
+  name: "img_wumpus_nitro_classic",
   type: "png",
 });

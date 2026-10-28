@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/referral_program/native/images",
-  width: 180,
-  height: 180,
-  scales: [1],
-  hash: "7d7d766e7ebb30cec66584e69b89634d",
-  name: "Glow",
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "dcfca3dda846f0acd5adc9867fb467b3",
+  name: "ic_group_dm",
   type: "png",
 });

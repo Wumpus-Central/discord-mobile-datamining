@@ -1,12 +1,20 @@
 // _runtime/metro/15589__.js
-import _mod15585 from "15585__.js";
+import _mod15581 from "15581__.js";
 
-export default !_mod15585(() => {
-  const fn = () => {};
-  const bindResult = fn.bind();
-  let hasOwnPropertyResult = typeof bindResult !== "function";
-  if (typeof bindResult === "function") {
-    hasOwnPropertyResult = bindResult.hasOwnProperty("prototype");
+export default (version, pre, major2, major2, major22) => {
+  let tmp = major22;
+  let tmp2 = major2;
+  if (typeof major2 === "string") {
+    tmp = major2;
+    tmp2 = major2;
   }
-  return hasOwnPropertyResult;
-});
+  try {
+    if (version instanceof _mod15581) {
+      version = version.version;
+    }
+    const tmp72 = new _mod15581(version, tmp3);
+    return tmp72.inc(pre, tmp2, tmp).version;
+  } catch (err) {
+    return null;
+  }
+};

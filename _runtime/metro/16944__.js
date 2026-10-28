@@ -1,11 +1,13 @@
 // _runtime/metro/16944__.js
-import _mod16949 from "16949__.js";
-import 08770__ from "08770__.js";
+import registerAsset from "01131__.js";
 
-const require = globalThis.__r;
-
-
-export const getYoutubeMeta = require("16945__.js").getYoutubeMeta;
-export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
-export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
-export default module_8770(_mod16949).default;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "0071b2f7df228b871ee979869dc2eb38",
+  name: "CircleMinusIcon-primary",
+  type: "png",
+});

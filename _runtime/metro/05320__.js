@@ -1,7 +1,15 @@
 // _runtime/metro/05320__.js
-let closure_0 = 1;
+import _mod19 from "00019__.js";
+import BottomSheetContext from "../05316_BottomSheetContext.js";
 
-export const getNextHandlerTag = function getNextHandlerTag() {
-  closure_0 = tmp + 1;
-  return +closure_0;
+const useContext = _mod19.useContext;
+
+export const useBottomSheetModalInternal = function useBottomSheetModalInternal(arg0) {
+  const tmp = useContext(BottomSheetContext.BottomSheetModalInternalContext);
+  if (true !== arg0) {
+    if (null === tmp) {
+      throw "'BottomSheetModalInternalContext' cannot be null!";
+    }
+  }
+  return tmp;
 };

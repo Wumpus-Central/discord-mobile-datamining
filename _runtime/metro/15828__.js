@@ -1,13 +1,11 @@
 // _runtime/metro/15828__.js
-import registerAsset from "01131__.js";
+import _mod15807 from "15807__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 24,
-  height: 24,
-  scales: [2, 3],
-  hash: "c9224fd30c3d577cc141b2b883b31e09",
-  name: "ic_call_status_red_24px",
-  type: "png",
-});
+const tmp = _mod15807.navigator && _mod15807.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
+}
+
+export default str;

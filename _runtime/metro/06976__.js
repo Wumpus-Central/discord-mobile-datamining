@@ -1,16 +1,16 @@
 // _runtime/metro/06976__.js
-import HeaderHeightContext from "../06975_HeaderHeightContext.js";
+import Link from "../01503_Link.js";
 import noop from "00019__.js";
 
-require = arg1;
+require = fn;
+const Animated = fn(17).Animated;
+const jsx = fn(21).jsx;
 
-export const useHeaderHeight = function useHeaderHeight() {
-  const context = noop.useContext(HeaderHeightContext.HeaderHeightContext);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find the header height. Are you inside a screen in a navigator with a header?");
-    throw error;
-  } else {
-    return context;
-  }
+export const Background = function Background(style) {
+  const merged = Object.assign(style, Object.assign({ style: 0 }));
+  const obj2 = {};
+  const merged1 = Object.assign(merged);
+  const items = [{ flex: 1, backgroundColor: Link.useTheme().colors.background }, style.style];
+  obj2.style = items;
+  return <Animated.View />;
 };

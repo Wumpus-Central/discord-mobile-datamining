@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/../discord_common/js/shared/images/flags",
-  width: 70,
-  height: 47,
-  scales: [1],
-  hash: "2ac1239c26c4ae1d27817a9d7b85dc53",
-  name: "sv-SE",
+  httpServerLocation: "/assets/modules/guild_role_subscriptions/native/images",
+  width: 87,
+  height: 87,
+  scales: [2, 3],
+  hash: "d299e9311da17e9393089ebfa8d667b1",
+  name: "resubscribed_alert_header",
   type: "png",
 });

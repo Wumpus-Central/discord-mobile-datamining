@@ -3,9 +3,9 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/private_channels/clean_up_inactive_gdms",
+  httpServerLocation: "/assets/modules/game_invite_channels",
   scales: [1],
-  hash: "130e925e8a424a9b43d870d884dca58e",
-  name: "CleanUpInactiveGDMs.compiled.messages",
+  hash: "1f9ab1ee6385662cdd6891a4feb70a40",
+  name: "GameInviteChannels.compiled.messages",
   type: "jsona",
 });

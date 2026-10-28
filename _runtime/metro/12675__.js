@@ -1,36 +1,72 @@
 // _runtime/metro/12675__.js
-import _mod12587 from "12587__.js";
-import _mod12589 from "12589__.js";
-import _mod12590 from "12590__.js";
+import _mod12636 from "12636__.js";
+import _mod12663 from "12663__.js";
+import _mod12664 from "12664__.js";
+import _mod12668 from "12668__.js";
+import _mod12676 from "12676__.js";
 
 require = arg1;
 const dependencyMap = arg6;
-function instrumentConsole() {
-  if ("console" in _mod12590.GLOBAL_OBJ) {
-    const CONSOLE_LEVELS = _mod12589.CONSOLE_LEVELS;
-    const item = CONSOLE_LEVELS.forEach((item) => {
-      closure_0 = item;
-      if (item in closure_0(12590).GLOBAL_OBJ.console) {
-        tmp(12595).fill(tmp(12590).GLOBAL_OBJ.console, item, (arg0) => {
-          _mod12589.originalConsoleMethods[level] = arg0;
-          return () => {
-            const items = [...arguments];
-            level(12587).triggerHandlers("console", { args: items, level });
-            const obj3 = level(12589).originalConsoleMethods[level];
-            if (obj3) {
-              obj3.apply(level(12590).GLOBAL_OBJ.console, items);
-            }
-            const obj = { args: items, level };
-            const obj2 = level(12587);
-          };
-        });
-        const tmpResult = tmp(12595);
-      }
-    });
-  }
-}
 
-export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(errorCallback) {
-  _mod12587.addHandler("console", errorCallback);
-  _mod12587.maybeInstrument("console", instrumentConsole);
+export const sampleSpan = function sampleSpan(tracesSampler, normalizedRequest) {
+  if (obj.hasTracingEnabled(tracesSampler)) {
+    const isolationScope = _mod12663.getIsolationScope();
+    const obj2 = {};
+    const merged = Object.assign(normalizedRequest);
+    obj2.normalizedRequest =
+      normalizedRequest.normalizedRequest || isolationScope.getScopeData().sdkProcessingMetadata.normalizedRequest;
+    if (typeof tracesSampler.tracesSampler === "function") {
+      let num = tracesSampler.tracesSampler(obj2);
+    } else if (undefined !== obj2.parentSampled) {
+      num = obj2.parentSampled;
+    } else {
+      num = 1;
+      if (undefined !== tracesSampler.tracesSampleRate) {
+        num = tracesSampler.tracesSampleRate;
+      }
+    }
+    const tmpResult = _mod12663;
+    const parseSampleRateResult = _mod12676.parseSampleRate(num);
+    if (undefined === parseSampleRateResult) {
+      if (_mod12664.DEBUG_BUILD) {
+        const logger3 = _mod12636.logger;
+        logger3.warn("[Tracing] Discarding transaction because of invalid sample rate.");
+      }
+      const items = [false];
+      let items3 = items;
+    } else if (parseSampleRateResult) {
+      const _Math = Math;
+      if (Math.random() < parseSampleRateResult) {
+        const items1 = [true, parseSampleRateResult];
+        let items2 = items1;
+      } else {
+        if (_mod12664.DEBUG_BUILD) {
+          const logger2 = _mod12636.logger;
+          const _Number = Number;
+          const _HermesInternal = HermesInternal;
+          logger2.log(
+            "[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " +
+              Number(num) +
+              ")",
+          );
+        }
+        items2 = [false, parseSampleRateResult];
+      }
+    } else {
+      if (_mod12664.DEBUG_BUILD) {
+        const logger = _mod12636.logger;
+        let str = "a negative sampling decision was inherited or tracesSampleRate is set to 0";
+        if (typeof tracesSampler.tracesSampler === "function") {
+          str = "tracesSampler returned 0 or false";
+        }
+        logger.log(`[Tracing] Discarding transaction because ${str}`);
+      }
+      items3 = [false, parseSampleRateResult];
+    }
+    return items3;
+  } else {
+    const items4 = [false];
+    return items4;
+  }
+  obj = _mod12668;
 };

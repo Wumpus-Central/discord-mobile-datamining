@@ -1,7 +1,23 @@
 // _runtime/metro/05415__.js
-import 00065__ from "00065__.js";
+import ComposedGestureName from "../05392_ComposedGestureName.js";
+import DEFAULT_PROPS_TRANSFORMER from "../05401_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod5416 from "05416__.js";
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNGestureHandlerRootView", validAttributes: { moduleId: true, unstable_forceActive: true } };
+require = arg1;
+const dependencyMap = arg6;
+const items = [
+  ["maxDistance", "maxDist"],
+  ["maxDuration", "maxDurationMs"],
+  ["maxDelay", "maxDelayMs"],
+];
+const map = new Map(items);
+let closure_3 = {};
 
-export default module_65.get("RNGestureHandlerRootView", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export const useTapGesture = function useTapGesture() {
+  let tmp = cResult;
+  if (cResult === undefined) {
+    tmp = closure_3;
+  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
+  return _mod5416.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
+};

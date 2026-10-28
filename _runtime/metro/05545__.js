@@ -1,54 +1,39 @@
 // _runtime/metro/05545__.js
-import _slicedToArray from "05500__.js";
+import _mod5546 from "05546__.js";
 
-const noop = fn(19);
-({ useCallback: c2, useEffect: c3, useState: closure_4 } = noop);
-
-export const useUnmountAwareTimeout = function useUnmountAwareTimeout() {
-  const first = _slicedToArray(
-    closure_4(() => new Set()),
-    1,
-  )[0];
-  const items = [first];
-  closure_3(
-    () => () => {
-      const item = set.forEach((item) => closure_1_0.clearTimeout(item));
-      set.clear();
-    },
-    items,
-  );
-  const obj = { setTimeout: null };
-  const items1 = [first];
-  obj.setTimeout = closure_2((arg0, arg1) => {
-    const timerId = first.setTimeout(() => {
-      first.delete(timerId);
-      closure_0();
-    }, arg1);
-    arg0.add(timerId);
-  }, items1);
-  return obj;
-};
-export const useUnmountAwareAnimationFrame = function useUnmountAwareAnimationFrame() {
-  const first = _slicedToArray(
-    closure_4(() => new Set()),
-    1,
-  )[0];
-  const items = [first];
-  closure_3(
-    () => () => {
-      const item = set.forEach((item) => cancelAnimationFrame(item));
-      set.clear();
-    },
-    items,
-  );
-  const obj = { requestAnimationFrame: null };
-  const items1 = [first];
-  obj.requestAnimationFrame = closure_2((arg0) => {
-    const animationFrame = first.requestAnimationFrame((arg0) => {
-      first.delete(animationFrame);
-      closure_0(arg0);
-    });
-    arg0.add(animationFrame);
-  }, items1);
-  return obj;
-};
+export default function _createClass(arg0, arg1, arg2) {
+  if (arg1) {
+    for (let num = 0; num < arg1.length; num = num + 1) {
+      let tmp3 = arg1[num];
+      let flag2 = tmp3.enumerable;
+      if (!flag2) {
+        flag2 = false;
+      }
+      tmp3.enumerable = flag2;
+      tmp3.configurable = true;
+      if ("value" in tmp3) {
+        tmp3.writable = true;
+      }
+      let _Object = Object;
+      let definePropertyResult = Object.defineProperty(tmp, _mod5546(tmp3.key), tmp3);
+    }
+  }
+  if (arg2) {
+    for (let num3 = 0; num3 < arg2.length; num3 = num3 + 1) {
+      let tmp9 = arg2[num3];
+      let flag4 = tmp9.enumerable;
+      if (!flag4) {
+        flag4 = false;
+      }
+      tmp9.enumerable = flag4;
+      tmp9.configurable = true;
+      if ("value" in tmp9) {
+        tmp9.writable = true;
+      }
+      let _Object2 = Object;
+      let definePropertyResult1 = Object.defineProperty(arg0, _mod5546(tmp9.key), tmp9);
+    }
+  }
+  Object.defineProperty(arg0, "prototype", { writable: false });
+  return arg0;
+}

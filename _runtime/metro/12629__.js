@@ -1,43 +1,13 @@
 // _runtime/metro/12629__.js
-import _mod12589 from "12589__.js";
-import _mod12617 from "12617__.js";
+import registerAsset from "01131__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const parseSampleRate = function parseSampleRate(flag) {
-  if (typeof flag === "boolean") {
-    const _Number = Number;
-    return Number(flag);
-  } else {
-    let parsed = flag;
-    if (typeof flag === "string") {
-      const _parseFloat = parseFloat;
-      parsed = parseFloat(flag);
-    }
-    if (typeof parsed === "number") {
-      const _isNaN = isNaN;
-      if (!isNaN(parsed)) {
-        if (parsed >= 0) {
-          if (parsed <= 1) {
-            return parsed;
-          }
-        }
-      }
-    }
-    if (_mod12617.DEBUG_BUILD) {
-      const logger = _mod12589.logger;
-      const _JSON = JSON;
-      const json = JSON.stringify(flag);
-      const _JSON2 = JSON;
-      const _HermesInternal = HermesInternal;
-      logger.warn(
-        "[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " +
-          json +
-          " of type " +
-          JSON.stringify(typeof flag) +
-          ".",
-      );
-    }
-  }
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "3b7bd4c82e3e8c361f5983d530550253",
+  name: "ArrowSmallDownIcon",
+  type: "png",
+});

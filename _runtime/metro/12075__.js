@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
   width: 24,
-  height: 32,
-  scales: [1, 2, 3],
-  hash: "5740634dc33de72534d208b361b37df5",
-  name: "ic_file_small_sketch",
+  height: 24,
+  scales: [2, 3],
+  hash: "242a17e76bd7bf11bfa37a179ab55a99",
+  name: "ArrowsUpDownIcon",
   type: "png",
 });

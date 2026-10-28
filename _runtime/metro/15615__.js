@@ -1,36 +1,31 @@
 // _runtime/metro/15615__.js
-import _mod15606 from "15606__.js";
-import _mod15607 from "15607__.js";
-import _mod15614 from "15614__.js";
+import _mod15581 from "15581__.js";
 
-export default (arg0, arg1) => {
-  if ("string" === arg1) {
-    const toString = arg0.toString;
-    if (_mod15607(toString)) {
-      const tmp4 = _mod15614(toString, arg0);
-      if (!tmpResult(tmp4)) {
-        return tmp4;
+const require = globalThis.__r;
+
+export default (arr, arg1, arg2) => {
+  _require = arg2;
+  dependencyMap = null;
+  closure_2 = null;
+  let regex = null;
+  try {
+    let tmp9 = new require("15610__.js")(arg1, arg2);
+    regex = tmp9;
+    const item = arr.forEach((item) => {
+      if (regex.test(item)) {
+        let tmp = closure_1;
+        if (closure_1) {
+          tmp = 1 !== closure_2.compare(item);
+        }
+        if (!tmp) {
+          closure_1 = item;
+          const tmp9 = new _mod15581(closure_1, closure_0);
+          closure_2 = tmp9;
+        }
       }
-      tmpResult = _mod15606;
-    }
+    });
+    return dependencyMap;
+  } catch (err) {
+    return tmp;
   }
-  const valueOf = arg0.valueOf;
-  if (_mod15607(valueOf)) {
-    const tmp8 = _mod15614(valueOf, arg0);
-    if (!tmp5Result(tmp8)) {
-      return tmp8;
-    }
-    tmp5Result = _mod15606;
-  }
-  if ("string" !== arg1) {
-    const toString2 = arg0.toString;
-    if (_mod15607(toString2)) {
-      const tmp10 = _mod15614(toString2, arg0);
-      if (!tmp5Result2(tmp10)) {
-        return tmp10;
-      }
-      tmp5Result2 = _mod15606;
-    }
-  }
-  throw new TypeError("Can't convert object to primitive value");
 };

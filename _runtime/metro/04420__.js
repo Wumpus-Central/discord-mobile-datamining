@@ -1,36 +1,7 @@
 // _runtime/metro/04420__.js
-import module_4259_mod from "04259__.js";
-import module_4410_mod from "04410__.js";
-import requiredArgs_mod from "../04256_requiredArgs.js";
+let closure_0 = { lastWeek: "eeee'\u0E17\u0E35\u0E48\u0E41\u0E25\u0E49\u0E27\u0E40\u0E27\u0E25\u0E32' p", yesterday: "'\u0E40\u0E21\u0E37\u0E48\u0E2D\u0E27\u0E32\u0E19\u0E19\u0E35\u0E49\u0E40\u0E27\u0E25\u0E32' p", today: "'\u0E27\u0E31\u0E19\u0E19\u0E35\u0E49\u0E40\u0E27\u0E25\u0E32' p", tomorrow: "'\u0E1E\u0E23\u0E38\u0E48\u0E07\u0E19\u0E35\u0E49\u0E40\u0E27\u0E25\u0E32' p", nextWeek: "eeee '\u0E40\u0E27\u0E25\u0E32' p", other: "P" };
 
-let module_4259 = module_4259_mod;
-if (!module_4259) {
-  const obj = { default: module_4259 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4259;
-}
-module_4259 = tmp3;
-let module_4410 = module_4410_mod;
-if (!module_4410) {
-  const obj2 = { default: module_4410 };
-  let tmp5 = obj2;
-} else {
-  tmp5 = module_4410;
-}
-module_4410 = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-let c3 = 60000;
-
-export default function addMinutes(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4410.default(interval, module_4259.default(arg1) * c3);
+export default function formatRelative(arg0, arg1, arg2, arg3) {
+  return closure_0[arg0];
 };
 export default exports.default;

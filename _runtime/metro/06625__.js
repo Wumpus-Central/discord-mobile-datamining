@@ -4,10 +4,10 @@ import registerAsset from "01131__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 256,
-  height: 256,
+  width: 267,
+  height: 267,
   scales: [1],
-  hash: "18bf95267062a719213a10081e62b607",
-  name: "img_amazon_music",
-  type: "png",
+  hash: "898dc79e0285b8e9855531eeca36bf84",
+  name: "img_roblox_white",
+  type: "svg",
 });

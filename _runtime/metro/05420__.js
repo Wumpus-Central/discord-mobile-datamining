@@ -1,207 +1,111 @@
 // _runtime/metro/05420__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import _classCallCheck_mod from "00041__classCallCheck.js";
-import _createClass from "00042__createClass.js";
-import _getPrototypeOf from "../00095__getPrototypeOf.js";
-import _get from "00096__get.js";
-import _inherits from "../00098__inherits.js";
+import _mod5376 from "05376__.js";
+import eventHandler from "../05419_eventHandler.js";
+import noop from "00019__.js";
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {}
-}
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-function changeEventCalculator(translationX, translationX2) {
-  if (undefined === translationX2) {
-    ({ translationX: obj2.changeX, translationY: obj2.changeY } = translationX);
-    let obj = { changeX: null, changeY: null };
-    const obj3 = { changeX: null, changeY: null };
-  } else {
-    obj = {
-      changeX: translationX.translationX - translationX2.translationX,
-      changeY: translationX.translationY - translationX2.translationY,
-    };
-  }
-  const merged = Object.assign(translationX);
-  const merged1 = Object.assign(obj);
-  return {};
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 1947784830943;
-changeEventCalculator.__initData = {
-  code: "function changeEventCalculator_Pnpm_panGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={changeX:current.translationX,changeY:current.translationY};}else{changePayload={changeX:current.translationX-previous.translationX,changeY:current.translationY-previous.translationY};}return{...current,...changePayload};}",
-};
-class PanGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, PanGesture);
-    tmp2 = c2;
-    obj = c2(PanGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.config = {};
-    tmp3Result.handlerName = "PanGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = PanGesture;
-_inherits(PanGesture, fn(5319).ContinousBaseGesture);
-const entry = {
-  key: "activeOffsetY",
-  value: function activeOffsetY(items) {
-    const self = this;
-    if (Array.isArray(items)) {
-      [self.config.activeOffsetYStart, self.config.activeOffsetYEnd] = items;
-    } else if (items < 0) {
-      self.config.activeOffsetYStart = items;
-    } else {
-      self.config.activeOffsetYEnd = items;
-    }
-    return self;
-  },
-};
-let items = [
-  entry,
-  {
-    key: "activeOffsetX",
-    value: function activeOffsetX(items) {
-      const self = this;
-      if (Array.isArray(items)) {
-        [self.config.activeOffsetXStart, self.config.activeOffsetXEnd] = items;
-      } else if (items < 0) {
-        self.config.activeOffsetXStart = items;
-      } else {
-        self.config.activeOffsetXEnd = items;
-      }
-      return self;
-    },
-  },
-  {
-    key: "failOffsetY",
-    value: function failOffsetY(items) {
-      const self = this;
-      if (Array.isArray(items)) {
-        [self.config.failOffsetYStart, self.config.failOffsetYEnd] = items;
-      } else if (items < 0) {
-        self.config.failOffsetYStart = items;
-      } else {
-        self.config.failOffsetYEnd = items;
-      }
-      return self;
-    },
-  },
-  {
-    key: "failOffsetX",
-    value: function failOffsetX(items1) {
-      const self = this;
-      if (Array.isArray(items1)) {
-        [self.config.failOffsetXStart, self.config.failOffsetXEnd] = items1;
-      } else if (items1 < 0) {
-        self.config.failOffsetXStart = items1;
-      } else {
-        self.config.failOffsetXEnd = items1;
-      }
-      return self;
-    },
-  },
-  {
-    key: "minPointers",
-    value: function minPointers(minPointers) {
-      this.config.minPointers = minPointers;
-      return this;
-    },
-  },
-  {
-    key: "maxPointers",
-    value: function maxPointers(maxPointers) {
-      this.config.maxPointers = maxPointers;
-      return this;
-    },
-  },
-  {
-    key: "minDistance",
-    value: function minDistance(minDist) {
-      this.config.minDist = minDist;
-      return this;
-    },
-  },
-  {
-    key: "minVelocity",
-    value: function minVelocity(minVelocity) {
-      this.config.minVelocity = minVelocity;
-      return this;
-    },
-  },
-  {
-    key: "minVelocityX",
-    value: function minVelocityX(minVelocityX) {
-      this.config.minVelocityX = minVelocityX;
-      return this;
-    },
-  },
-  {
-    key: "minVelocityY",
-    value: function minVelocityY(minVelocityY) {
-      this.config.minVelocityY = minVelocityY;
-      return this;
-    },
-  },
-  {
-    key: "averageTouches",
-    value: function averageTouches(avgTouches) {
-      this.config.avgTouches = avgTouches;
-      return this;
-    },
-  },
-  {
-    key: "enableTrackpadTwoFingerGesture",
-    value: function enableTrackpadTwoFingerGesture(enableTrackpadTwoFingerGesture) {
-      this.config.enableTrackpadTwoFingerGesture = enableTrackpadTwoFingerGesture;
-      return this;
-    },
-  },
-  {
-    key: "activateAfterLongPress",
-    value: function activateAfterLongPress(activateAfterLongPress) {
-      this.config.activateAfterLongPress = activateAfterLongPress;
-      return this;
-    },
-  },
-  {
-    key: "onChange",
-    value: function onChange(arg0) {
-      this.handlers.changeEventCalculator = hasOwnProperty;
-      const self = this;
-      let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-      if (typeof fn === "function") {
-        fn = (items) => fn.apply(self, items);
-      }
-      const items = [arg0];
-      return fn(items);
-    },
-  },
+const require = globalThis.__r;
+
+({ useEffect: c2, useMemo: c3, useRef: closure_4 } = noop);
+let closure_5 = [
+  "onGestureHandlerReanimatedEvent",
+  "onGestureHandlerReanimatedStateChange",
+  "onGestureHandlerReanimatedTouchEvent",
 ];
+const onUpdate = function n() {};
+onUpdate.__closure = {};
+onUpdate.__workletHash = 763644533783;
+onUpdate.__initData = { code: "function pnpm_useReanimatedEventHandlerTs1(){}" };
+let Reanimated = _mod5376.Reanimated;
+let mutable;
+if (Reanimated != null) {
+  mutable = Reanimated.makeMutable({});
+}
+function deleteHandlerEventEntry(arg0) {
+  delete tmp2[tmp];
+}
+deleteHandlerEventEntry.__closure = { lastUpdateEventMap: mutable };
+deleteHandlerEventEntry.__workletHash = 8348834805583;
+deleteHandlerEventEntry.__initData = {
+  code: "function deleteHandlerEventEntry_Pnpm_useReanimatedEventHandlerTs2(handlerTag){const{lastUpdateEventMap}=this.__closure;delete lastUpdateEventMap.value[handlerTag];}",
+};
+const __initData = {
+  code: "function pnpm_useReanimatedEventHandlerTs3(event){const{lastUpdateEventMap,eventHandler,handlerTag,workletizedHandlers,changeEventCalculator,fillInDefaultValues}=this.__closure;let context=lastUpdateEventMap.value[event.handlerTag];if(context===undefined){context={lastUpdateEvent:undefined};lastUpdateEventMap.value[event.handlerTag]=context;}eventHandler(handlerTag,event,workletizedHandlers,changeEventCalculator,context,false,fillInDefaultValues);}",
+};
 
-export const PanGesture = _createClass(PanGesture, items);
+export const useReanimatedEventHandler = function useReanimatedEventHandler(
+  handlerTag,
+  memoizedGestureCallbacks,
+  handler,
+  changeEventCalculator,
+  fillInDefaultValues,
+) {
+  _require = handlerTag;
+  dependencyMap = memoizedGestureCallbacks;
+  closure_2 = changeEventCalculator;
+  closure_3 = fillInDefaultValues;
+  const items = [memoizedGestureCallbacks];
+  let tmp = closure_3(() => {
+    const Reanimated = _mod5376.Reanimated;
+    let isWorkletFunctionResult;
+    if (Reanimated != null) {
+      isWorkletFunctionResult = Reanimated.isWorkletFunction(memoizedGestureCallbacks.onUpdate);
+    }
+    if (isWorkletFunctionResult) {
+      let obj = memoizedGestureCallbacks;
+    } else {
+      obj = {};
+      const merged = Object.assign(memoizedGestureCallbacks);
+      obj.onUpdate = onUpdate;
+    }
+    return obj;
+  }, items);
+  closure_4 = tmp;
+  const fn = function h(handlerTag) {
+    let tmp = mutable.value[handlerTag.handlerTag];
+    if (undefined === tmp) {
+      const obj = { lastUpdateEvent: "paths" };
+      iter.value[handlerTag.handlerTag] = obj;
+      tmp = obj;
+    }
+    eventHandler.eventHandler(closure_0, handlerTag, closure_4, closure_2, tmp, false, closure_3);
+  };
+  fn.__closure = {
+    lastUpdateEventMap: mutable,
+    eventHandler: require("eventHandler").eventHandler,
+    handlerTag,
+    workletizedHandlers: tmp,
+    changeEventCalculator,
+    fillInDefaultValues,
+  };
+  fn.__workletHash = 3272953373395;
+  fn.__initData = __initData;
+  const tmp2 = closure_4(handlerTag);
+  closure_5 = tmp2;
+  const items1 = [handlerTag];
+  closure_2(() => {
+    closure_5.current = current;
+    return () => {
+      const Reanimated = closure_0(closure_1[1]).Reanimated;
+      if (Reanimated != null) {
+        const runOnUI = Reanimated.runOnUI;
+        if (runOnUI != null) {
+          runOnUI(deleteHandlerEventEntry)(current);
+        }
+      }
+    };
+  }, items1);
+  let Reanimated = require("05376__.js").Reanimated;
+  let event;
+  if (Reanimated != null) {
+    let tmp5 = tmp2.current !== handlerTag;
+    if (!tmp5) {
+      let doDependenciesDiffer;
+      if (handler != null) {
+        doDependenciesDiffer = handler.doDependenciesDiffer;
+      }
+      tmp5 = doDependenciesDiffer;
+    }
+    event = Reanimated.useEvent(fn, closure_5, tmp5);
+  }
+  return event;
+};

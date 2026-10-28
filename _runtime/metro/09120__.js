@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/icons",
-  width: 24,
-  height: 24,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 254,
+  height: 154,
   scales: [2, 3],
-  hash: "31fe21f79423d8afd3dcadd61d04938b",
-  name: "ic_mail",
+  hash: "82ae7189682c36bee3dc3a129ab02a11",
+  name: "img_app_crash_darker",
   type: "png",
 });

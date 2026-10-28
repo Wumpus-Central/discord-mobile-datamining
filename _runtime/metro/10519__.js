@@ -1,27 +1,13 @@
 // _runtime/metro/10519__.js
-import _mod10520 from "10520__.js";
-import _mod10523 from "10523__.js";
-import _mod10527 from "10527__.js";
-import _mod10528 from "10528__.js";
-import CarouselLayout from "../10529_CarouselLayout.js";
-import noop from "00019__.js";
+import registerAsset from "01131__.js";
 
-require = fn;
-const jsx = fn(21).jsx;
-
-export default noop.forwardRef((defaultIndex, ref) => {
-  const initProps = _mod10520.useInitProps(defaultIndex);
-  const commonVariables = _mod10523.useCommonVariables(initProps);
-  const obj4 = {};
-  const merged = Object.assign(initProps);
-  obj4.dataLength = initProps.dataLength;
-  const propsErrorBoundary = _mod10527.usePropsErrorBoundary(obj4);
-  const obj5 = {
-    value: { props: initProps, common: commonVariables },
-    children: jsx(CarouselLayout.CarouselLayout, { ref }),
-  };
-  return jsx(_mod10528.GlobalStateProvider, {
-    value: { props: initProps, common: commonVariables },
-    children: jsx(CarouselLayout.CarouselLayout, { ref }),
-  });
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/premium/activated",
+  width: 302,
+  height: 42,
+  scales: [2, 3],
+  hash: "180afb9edd1653ca63d752893222f1c8",
+  name: "img_plan_activated",
+  type: "png",
 });

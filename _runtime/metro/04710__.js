@@ -1,33 +1,46 @@
 // _runtime/metro/04710__.js
-import module_4257_mod from "04257__.js";
+import module_4291_mod from "04291__.js";
+import _typeof_mod from "04287__.js";
+import module_4700_mod from "04700__.js";
+import requiredArgs_mod from "../04288_requiredArgs.js";
 
-let module_4257 = module_4257_mod;
-if (!module_4257) {
-  const obj = { default: module_4257 };
+let module_4291 = module_4291_mod;
+if (!module_4291) {
+  const obj = { default: module_4291 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4257;
+  tmp3 = module_4291;
 }
-function checkWeek(getTime, getTime2, arg2) {
-  let str = "eeee p";
-  if (!module_4257.default(getTime, getTime2, arg2)) {
-    const time = getTime.getTime();
-    let str2 = "'\u4E0A\u4E2A'eeee p";
-    if (time > getTime2.getTime()) {
-      str2 = "'\u4E0B\u4E2A'eeee p";
-    }
-    str = str2;
-  }
-  return str;
+module_4291 = tmp3;
+let _typeof = _typeof_mod;
+if (!_typeof) {
+  const obj2 = { default: _typeof };
+  let tmp5 = obj2;
+} else {
+  tmp5 = _typeof;
 }
-module_4257 = tmp3;
-let closure_1 = { lastWeek: checkWeek, yesterday: "'\u6628\u5929' p", today: "'\u4ECA\u5929' p", tomorrow: "'\u660E\u5929' p", nextWeek: checkWeek, other: "PP p" };
+_typeof = tmp5;
+let module_4700 = module_4700_mod;
+if (!module_4700) {
+  const obj3 = { default: module_4700 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4700;
+}
+module_4700 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_1[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
-  }
-  return tmpResult;
+export default function setQuarter(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  const defaultResult1 = _typeof.default(arg0);
+  const diff = module_4291.default(arg1) - (Math.floor(defaultResult1.getMonth() / 3) + 1);
+  return module_4700.default(defaultResult1, defaultResult1.getMonth() + 3 * diff);
 };
 export default exports.default;

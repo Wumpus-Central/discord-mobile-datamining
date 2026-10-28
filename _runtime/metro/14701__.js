@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/backgrounds",
-  width: 411,
-  height: 134,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "9bb60b01d276e09f678fc61b96446517",
-  name: "img_boost_subheader_error_mobile",
+  hash: "3d5f9f8f212b24a0f18f5afb706f5f80",
+  name: "UserClockIcon",
   type: "png",
 });

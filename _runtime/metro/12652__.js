@@ -1,145 +1,68 @@
 // _runtime/metro/12652__.js
-import _mod12589 from "12589__.js";
-import _mod12613 from "12613__.js";
-import _mod12617 from "12617__.js";
-import _mod12633 from "12633__.js";
-import _mod12646 from "12646__.js";
-import _mod12654 from "12654__.js";
+import _mod12642 from "12642__.js";
+import _slicedToArray from "00032__.js";
 
-const require = globalThis.__r;
+const _sentryMetrics = "_sentryMetrics";
 
-require = arg1;
-let dependencyMap = arg6;
-
-export const DEFAULT_TRANSPORT_BUFFER_SIZE = 64;
-export const createTransport = function createTransport(bufferSize, arg1) {
-  _require = bufferSize;
-  dependencyMap = arg1;
-  let promiseBuffer = arg2;
-  if (arg2 === undefined) {
-    let num = bufferSize.bufferSize;
-    if (!num) {
-      num = 64;
-    }
-    promiseBuffer = require("12653__.js").makePromiseBuffer(num);
-    let obj = require("12653__.js");
-  }
-  closure_3 = {};
-  return {
-    send(arg0) {
-      const items = [];
-      bufferSize(dependencyMap[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        const result = _mod12633.envelopeItemTypeToDataCategory(arg1);
-        if (obj2.isRateLimited(closure_3, result)) {
-          if ("event" === arg1) {
-            const _Array = Array;
-            let tmp6;
-            if (Array.isArray(arg0)) {
-              tmp6 = arg0[1];
-            }
-            const tmp4 = tmp6;
-          }
-          items.recordDroppedEvent("ratelimit_backoff", result, tmp4);
-        } else {
-          items.push(arg0);
-        }
-        obj2 = _mod12654;
-      });
-      if (0 === items.length) {
-        return bufferSize(tmp2[3]).resolvedSyncPromise({});
-      } else {
-        dependencyMap = bufferSize(tmp2[1]).createEnvelope(arg0[0], items);
-        function recordEnvelopeLoss(arg0) {}
-        const tmpResult2 = bufferSize(tmp2[1]);
-        return recordEnvelopeLoss
-          .add(() => {
-            const obj = { body: _mod12633.serializeEnvelope(dependencyMap) };
-            return dependencyMap(obj).then(
-              (statusCode) => {
-                let DEBUG_BUILD = undefined !== statusCode.statusCode;
-                if (DEBUG_BUILD) {
-                  let tmp = statusCode.statusCode < 200;
-                  if (!tmp) {
-                    tmp = statusCode.statusCode >= 300;
-                  }
-                  DEBUG_BUILD = tmp;
-                }
-                if (DEBUG_BUILD) {
-                  DEBUG_BUILD = items(12617).DEBUG_BUILD;
-                }
-                if (DEBUG_BUILD) {
-                  const logger = items(12589).logger;
-                  const _HermesInternal = HermesInternal;
-                  logger.warn("Sentry responded with status code " + statusCode.statusCode + " to sent event.");
-                }
-                closure_3 = items(12654).updateRateLimits(closure_3, statusCode);
-                return statusCode;
-              },
-              (arg0) => {
-                if (typeof recordEnvelopeLoss === "function") {
-                  const network_error = "network_error";
-                  closure_0(12633).forEachEnvelopeItem(dependencyMap, (arg0, arg1) => {
-                    if ("event" === arg1) {
-                      const _Array = Array;
-                      let tmp4;
-                      if (Array.isArray(arg0)) {
-                        tmp4 = arg0[1];
-                      }
-                      const tmp = tmp4;
-                    }
-                    closure_2_0.recordDroppedEvent(
-                      network_error,
-                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
-                      tmp,
-                    );
-                  });
-                  throw arg0;
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              },
-            );
-          })
-          .then(
-            (result) => result,
-            (arg0) => {
-              if (arg0 instanceof _mod12646.SentryError) {
-                if (_mod12617.DEBUG_BUILD) {
-                  const logger = _mod12589.logger;
-                  logger.error("Skipped sending event because buffer is full.");
-                }
-                if (typeof recordEnvelopeLoss === "function") {
-                  const queue_overflow = "queue_overflow";
-                  _mod12633.forEachEnvelopeItem(closure_1, (arg0, arg1) => {
-                    if ("event" === arg1) {
-                      const _Array = Array;
-                      let tmp4;
-                      if (Array.isArray(arg0)) {
-                        tmp4 = arg0[1];
-                      }
-                      const tmp = tmp4;
-                    }
-                    closure_2_0.recordDroppedEvent(
-                      network_error,
-                      items(closure_1[1]).envelopeItemTypeToDataCategory(arg1),
-                      tmp,
-                    );
-                  });
-                  const tmpResult = _mod12633;
-                  return _mod12613.resolvedSyncPromise({});
-                } else {
-                  throw new TypeError("Trying to call a non-function");
-                }
-              } else {
-                throw arg0;
-              }
-            },
-          );
+export const getMetricSummaryJsonForSpan = function getMetricSummaryJsonForSpan(self) {
+  if (self[_sentryMetrics]) {
+    const obj = {};
+    const tmp3 = tmp[Symbol.iterator]();
+    while (tmp3 !== undefined) {
+      let tmp8 = _slicedToArray(_slicedToArray(tmp5, 2)[1], 2);
+      [tmp9, tmp11] = tmp8;
+      let arr = obj[tmp9];
+      if (!arr) {
+        let items = [];
+        obj[tmp10] = items;
+        arr = items;
       }
-      let obj = bufferSize(dependencyMap[1]);
-    },
-    flush(arg0) {
-      return promiseBuffer.drain(arg0);
-    },
-  };
+      let obj2 = _mod12642;
+      let arr2 = arr.push(obj2.dropUndefinedKeys(tmp11));
+      continue;
+    }
+    return obj;
+  }
+};
+export const updateMetricSummaryOnSpan = function updateMetricSummaryOnSpan(
+  activeSpan,
+  metricType,
+  sanitizeMetricKeyResult,
+  min,
+  sanitizeUnitResult,
+  tags,
+  bucketKey,
+) {
+  let obj = activeSpan[_sentryMetrics];
+  if (!obj) {
+    const _Map = Map;
+    const map = new Map();
+    activeSpan[tmp] = map;
+    obj = map;
+  }
+  const combined = "" + metricType + ":" + sanitizeMetricKeyResult + "@" + sanitizeUnitResult;
+  value = obj.get(bucketKey);
+  if (value) {
+    const range = _slicedToArray(value, 2)[1];
+    const items = [combined];
+    const range1 = { min: null, max: null, count: null, sum: null, tags: null };
+    const _Math = Math;
+    range1.min = Math.min(range.min, min);
+    const _Math2 = Math;
+    range1.max = Math.max(range.max, min);
+    const sum = range.count + 1;
+    range.count = sum;
+    range1.count = sum;
+    const sum1 = range.sum + min;
+    range.sum = sum1;
+    range1.sum = sum1;
+    range1.tags = range.tags;
+    items[1] = range1;
+    const result = obj.set(bucketKey, items);
+  } else {
+    const items1 = [combined];
+    const range2 = { min, max: min, count: 1, sum: min, tags };
+    items1[1] = range2;
+    const result1 = obj.set(bucketKey, items1);
+  }
 };

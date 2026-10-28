@@ -1,6 +1,13 @@
 // _runtime/metro/08815__.js
-import emptyFunction from "05011__.js";
+import registerAsset from "01131__.js";
 
-const point = { x: emptyFunction.number, y: emptyFunction.number };
-
-export default emptyFunction.shape(point);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/media_viewer/native/images",
+  width: 16,
+  height: 16,
+  scales: [2, 3],
+  hash: "4d6296c901620eb3ce6d9e0093bbc96e",
+  name: "scrubber",
+  type: "png",
+});

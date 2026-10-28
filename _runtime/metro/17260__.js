@@ -1,15 +1,11 @@
 // _runtime/metro/17260__.js
-import _mod648 from "00648__.js";
-import _mod665 from "00665__.js";
-import noop_mod from "17261__.js";
+import registerAsset from "01131__.js";
 
-if (_mod648) {
-  const _module = _mod665;
-  const items = [, -0];
-  const tmp5 = new _mod648(items);
-  if (1 / _module(tmp5)[1] === Infinity) {
-    let noop = (arg0) => new _mod648(arg0);
-  }
-  module.exports = noop;
-}
-let noop = noop_mod;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9pbnRs",
+  scales: [1],
+  hash: "3adffc9213a038d780795feb55d27139",
+  name: "cs.messages.3adffc9213a038d780795feb55d27139.compiled.messages",
+  type: "jsona",
+});

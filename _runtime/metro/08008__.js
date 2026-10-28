@@ -1,11 +1,16 @@
 // _runtime/metro/08008__.js
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import appendTransformPropsDefault from "../08002_appendTransformProps.js";
+import extractPropsDefault from "../08009_extractProps.js";
+import _modDef8017 from "08017__.js";
+import _modDef8018 from "08018__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
+import noop from "00019__.js";
 
-const FeDistantLight = fn;
+const G = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -24,37 +29,84 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-class FeDistantLight {
+_possibleConstructorReturnDefault;
+const jsx = fn(21).jsx;
+class G {
   constructor() {
     self = this;
-    tmp = c2(this, FeDistantLight);
-    tmp2 = closure_4;
-    obj = closure_4(FeDistantLight);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
-      tmp7 = globalThis;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = closure_3(this, G);
+    items1 = [...items];
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(G);
+    tmp3 = closure_4;
+    if (closure_7()) {
+      tmp5 = globalThis;
       _Reflect = Reflect;
-      tmp8 = arguments;
-      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
     } else {
-      tmp4 = arguments;
-      tmp5 = arguments;
-      constructResult = obj(...arguments);
+      constructResult = obj.apply(self, items1);
     }
-    return tmp3(self, constructResult);
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.setNativeProps = (matrix) => {
+      matrix = matrix.matrix;
+      let tmp = !matrix;
+      if (!matrix) {
+        tmp = appendTransformPropsDefault(matrix);
+      }
+      if (tmp) {
+        matrix.matrix = tmp;
+      }
+      root = root.root;
+      if (root != null) {
+        root.setNativeProps(matrix);
+      }
+    };
+    return tmp3Result;
   }
 }
-_inherits(FeDistantLight, fn(19).Component);
+_inherits(G, _modDef8018);
 const entry = {
   key: "render",
   value: function render() {
-    const result = FeDistantLight(7976).warnUnimplementedFilter();
-    return null;
+    const self = this;
+    const props = this.props;
+    const propsAndStylesResult = G(8009).propsAndStyles(props);
+    const tmp5 = extractPropsDefault(propsAndStylesResult, this);
+    const obj = G(8009);
+    const extractFontResult = G(8016).extractFont(propsAndStylesResult);
+    if (typeof hasProps === "function") {
+      const keys = Object.keys();
+      if (keys !== undefined) {
+        let flag = true;
+        if (flag) {
+          tmp5.font = extractFontResult;
+        }
+        const obj3 = {
+          ref(arg0) {
+            return self.refMethod(arg0);
+          },
+        };
+        const merged = Object.assign(tmp5);
+        obj3.children = props.children;
+        return jsx(_modDef8017, {
+          ref(arg0) {
+            return self.refMethod(arg0);
+          },
+        });
+      }
+      flag = false;
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+    const obj2 = G(8016);
   },
 };
-const items = [entry];
-const importDefaultResultResult = _createClass(FeDistantLight, items);
-importDefaultResultResult.displayName = "FeDistantLight";
-importDefaultResultResult.defaultProps = {};
+let items = [entry];
+const importDefaultResultResult = _createClass(G, items);
+importDefaultResultResult.displayName = "G";
+function hasProps(arg0) {}
 
 export default importDefaultResultResult;

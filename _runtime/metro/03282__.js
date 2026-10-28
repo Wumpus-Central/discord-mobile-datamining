@@ -3,9 +3,9 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/premium_group",
+  httpServerLocation: "/assets/modules/application_widget",
   scales: [1],
-  hash: "a827ca98424181d0e78ce7a2bceb4125",
-  name: "PremiumGroup.compiled.messages",
+  hash: "062641250687eb2699a25dd8f44d77ae",
+  name: "ApplicationWidget.compiled.messages",
   type: "jsona",
 });

@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/illustrations",
-  width: 106,
-  height: 80,
+  httpServerLocation: "/assets/modules/media_keyboard/native/images",
+  width: 200,
+  height: 72,
   scales: [2, 3],
-  hash: "f9a535d371ee710b8f1909e45896c667",
-  name: "img_wumpus_nitro_rev",
+  hash: "86035f94bc8c78da758eed4788f623cf",
+  name: "empty_castle",
   type: "png",
 });

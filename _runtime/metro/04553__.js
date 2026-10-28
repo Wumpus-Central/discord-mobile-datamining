@@ -1,6 +1,7 @@
 // _runtime/metro/04553__.js
-import _typeof_mod from "04255__.js";
-import requiredArgs_mod from "../04256_requiredArgs.js";
+import _typeof_mod from "04287__.js";
+import module_4554_mod from "04554__.js";
+import requiredArgs_mod from "../04288_requiredArgs.js";
 
 let _typeof = _typeof_mod;
 if (!_typeof) {
@@ -10,17 +11,35 @@ if (!_typeof) {
   tmp3 = _typeof;
 }
 _typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
+let module_4554 = module_4554_mod;
+if (!module_4554) {
+  const obj2 = { default: module_4554 };
   let tmp5 = obj2;
 } else {
-  tmp5 = requiredArgs;
+  tmp5 = module_4554;
 }
-requiredArgs = tmp5;
+module_4554 = tmp5;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
+} else {
+  tmp7 = requiredArgs;
+}
+requiredArgs = tmp7;
 
-export default function isFirstDayOfMonth(arg0) {
+export default function getDaysInYear(arg0) {
   requiredArgs.default(1, arguments);
-  return 1 === _typeof.default(arg0).getDate();
+  const defaultResult1 = _typeof.default(arg0);
+  if ("Invalid Date" === String(date)) {
+    return NaN;
+  } else {
+    let num = 365;
+    if (module_4554.default(defaultResult1)) {
+      num = 366;
+    }
+    return num;
+  }
+  date = new Date(defaultResult1);
 };
 export default exports.default;

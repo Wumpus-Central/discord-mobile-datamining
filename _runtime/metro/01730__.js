@@ -90,7 +90,7 @@ fn = function n(userConfig, fn) {
       callback,
       velocity: null,
       initialVelocity: 0,
-      current: "end",
+      current: "duration",
       lastTimestamp: null,
       startTimestamp: "USER_PROFILE_SETTINGS_SET_GUILD",
       reduceMotion: null,

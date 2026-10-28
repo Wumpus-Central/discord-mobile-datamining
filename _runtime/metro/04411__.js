@@ -1,44 +1,42 @@
 // _runtime/metro/04411__.js
-import module_4259_mod from "04259__.js";
-import module_4412_mod from "04412__.js";
-import module_4415_mod from "04415__.js";
-import requiredArgs_mod from "../04256_requiredArgs.js";
+import 04412__ from "04412__.js";
+import 04413__ from "04413__.js";
+import 04414__ from "04414__.js";
+import date_mod from "04415__.js";
+import date_mod from "04416__.js";
 
-let module_4259 = module_4259_mod;
-if (!module_4259) {
-  const obj = { default: module_4259 };
+if (!module_4412) {
+  const obj = { default: module_4412 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4259;
+  tmp3 = module_4412;
 }
-module_4259 = tmp3;
-let module_4412 = module_4412_mod;
-if (!module_4412) {
-  const obj2 = { default: module_4412 };
+if (!module_4413) {
+  const obj2 = { default: module_4413 };
   let tmp5 = obj2;
 } else {
-  tmp5 = module_4412;
+  tmp5 = module_4413;
 }
-module_4412 = tmp5;
-let module_4415 = module_4415_mod;
-if (!module_4415) {
-  const obj3 = { default: module_4415 };
+if (!module_4414) {
+  const obj3 = { default: module_4414 };
   let tmp7 = obj3;
 } else {
-  tmp7 = module_4415;
+  tmp7 = module_4414;
 }
-module_4415 = tmp7;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
+let date = date_mod;
+if (!date) {
+  const obj4 = { default: date };
   let tmp9 = obj4;
 } else {
-  tmp9 = requiredArgs;
+  tmp9 = date;
 }
-requiredArgs = tmp9;
+let date = date_mod;
+if (!date) {
+  const obj5 = { default: date };
+  let tmp11 = obj5;
+} else {
+  tmp11 = date;
+}
 
-export default function addISOWeekYears(arg0, arg1) {
-  requiredArgs.default(2, arguments);
-  return module_4415.default(arg0, module_4412.default(arg0) + module_4259.default(arg1));
-};
+export default { code: "sv", formatDistance: tmp3.default, formatLong: tmp5.default, formatRelative: tmp7.default, localize: tmp9.default, match: tmp11.default, options: { weekStartsOn: 1, firstWeekContainsDate: 4 } };
 export default exports.default;

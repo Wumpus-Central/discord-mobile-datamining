@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/native/images",
-  width: 375,
-  height: 460,
-  scales: [1],
-  hash: "c8d53ba30e41e7296c825f2501df590c",
-  name: "premium_gift_plan_selection_header",
+  httpServerLocation: "/assets/modules/hub/native/images",
+  width: 119,
+  height: 83,
+  scales: [2, 3],
+  hash: "0b100afac52015c470ea1ec3ef8acf50",
+  name: "redesign_email_header",
   type: "png",
 });

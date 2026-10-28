@@ -1,11 +1,36 @@
 // _runtime/metro/05578__.js
-import _mod17 from "00017__.js";
+function asyncGeneratorStep(arg0, fn, fn2, arg3, arg4, arg5, arg6) {
+  try {
+    const iter = arg0[arg5](arg6);
+    value = iter.value;
+    if (iter.done) {
+      fn(value);
+    } else {
+      const resolved = Promise.resolve(value);
+      resolved.then(arg3, arg4);
+    }
+  } catch (tmp13) {
+    fn2(tmp13);
+  }
+}
 
-const StyleSheet = _mod17.StyleSheet;
-const obj = { backdrop: null };
-const obj2 = {};
-const merged = Object.assign(StyleSheet.absoluteFillObject);
-obj2.backgroundColor = "black";
-obj.backdrop = obj2;
-
-export const styles = StyleSheet.create(obj);
+export default function _asyncToGenerator(arg0) {
+  closure_0 = arg0;
+  return function () {
+    const self = this;
+    closure_1 = arguments;
+    return new Promise((arg0, arg1) => {
+      _self = arg0;
+      closure_1 = arg1;
+      function _next(arg0) {
+        self(applyResult, closure_0, closure_1, _next, _throw, "next", arg0);
+      }
+      function _throw(arg0) {
+        self(applyResult, closure_0, closure_1, _next, _throw, "throw", arg0);
+      }
+      const applyResult = _self.apply(self, closure_1);
+      closure_2 = applyResult;
+      asyncGeneratorStep(applyResult, arg0, arg1, _next, _throw, "next", undefined);
+    });
+  };
+}
