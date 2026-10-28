@@ -1,33 +1,71 @@
 // === Module 12663: ? ===
 
 // Module 12663
-import setupIntegration from "module_12645" /* 12645 */;
+import _mod12637 from "module_12637" /* 12637 */;
+import _mod12642 from "module_12642" /* 12642 */;
+import _mod12654 from "module_12654" /* 12654 */;
+import _mod12655 from "module_12655" /* 12655 */;
+import ScopeClass from "ScopeClass" /* 12657 */;
 
-const weakMap = new WeakMap();
+require = arg1;
+const dependencyMap = arg6;
 
-export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
-  name: "FunctionToString",
-  setupOnce() {
-    toString = Function.prototype.toString;
-    try {
-      const _Function = Function;
-      Function.prototype.toString = function() {
-        const items = [...arguments];
-        const originalFunction = closure_1_0(12595).getOriginalFunction(this);
-        const obj = closure_1_0(12595);
-        let self = this;
-        if (set.has(obj2.getClient())) {
-          self = this;
-          if (undefined !== originalFunction) {
-            self = originalFunction;
-          }
-        }
-        return toString.apply(self, items);
-      };
-    } catch (err) {
+export const getClient = function getClient() {
+  const mainCarrier = _mod12654.getMainCarrier();
+  const asyncContextStrategy = _mod12655.getAsyncContextStrategy(mainCarrier);
+  const currentScope = asyncContextStrategy.getCurrentScope();
+  return currentScope.getClient();
+};
+export const getCurrentScope = function getCurrentScope() {
+  const mainCarrier = _mod12654.getMainCarrier();
+  const asyncContextStrategy = _mod12655.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getCurrentScope();
+};
+export const getGlobalScope = function getGlobalScope() {
+  return _mod12637.getGlobalSingleton("globalScope", () => {
+    const scope = new ScopeClass.Scope();
+    return scope;
+  });
+};
+export const getIsolationScope = function getIsolationScope() {
+  const mainCarrier = _mod12654.getMainCarrier();
+  const asyncContextStrategy = _mod12655.getAsyncContextStrategy(mainCarrier);
+  return asyncContextStrategy.getIsolationScope();
+};
+export const getTraceContextFromScope = function getTraceContextFromScope(getPropagationContext) {
+  const propagationContext = getPropagationContext.getPropagationContext();
+  ({ traceId, spanId, parentSpanId } = propagationContext);
+  return _mod12642.dropUndefinedKeys({ trace_id, span_id, parent_span_id });
+};
+export const withIsolationScope = function withIsolationScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod12654.getMainCarrier();
+  const asyncContextStrategy = _mod12655.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let result = asyncContextStrategy.withSetIsolationScope(tmp2, tmp3);
+    } else {
+      result = asyncContextStrategy.withIsolationScope(tmp3);
     }
-  },
-  setup(arg0) {
-    const result = weakMap.set(arg0, true);
+    return result;
+  } else {
+    return asyncContextStrategy.withIsolationScope(items[0]);
   }
-}));
+};
+export const withScope = function withScope() {
+  const items = [...arguments];
+  const mainCarrier = _mod12654.getMainCarrier();
+  const asyncContextStrategy = _mod12655.getAsyncContextStrategy(mainCarrier);
+  if (2 === items.length) {
+    [tmp2, tmp3] = items;
+    if (tmp2) {
+      let withSetScopeResult = asyncContextStrategy.withSetScope(tmp2, tmp3);
+    } else {
+      withSetScopeResult = asyncContextStrategy.withScope(tmp3);
+    }
+    return withSetScopeResult;
+  } else {
+    return asyncContextStrategy.withScope(items[0]);
+  }
+};

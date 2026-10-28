@@ -1,57 +1,75 @@
 // === Module 4404: ? ===
 
 // Module 4404
-import module_4259_mod from "module_4259" /* 4259 */;
-import _typeof_mod from "module_4255" /* 4255 */;
-import requiredArgs_mod from "requiredArgs" /* 4256 */;
+import module_2075 from "module_2075" /* 2075 */;
+import module_2076 from "module_2076" /* 2076 */;
 
-let module_4259 = module_4259_mod;
-if (!module_4259) {
-  const obj = { default: module_4259 };
-  let tmp3 = obj;
+if (!module_2075) {
+  const obj2 = { default: module_2075 };
+  let obj = obj2;
 } else {
-  tmp3 = module_4259;
+  obj = module_2075;
 }
-module_4259 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
-  let tmp5 = obj2;
+if (!module_2076) {
+  const obj4 = { default: module_2076 };
+  let obj3 = obj4;
 } else {
-  tmp5 = _typeof;
+  obj3 = module_2076;
 }
-_typeof = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
-  let tmp7 = obj3;
-} else {
-  tmp7 = requiredArgs;
-}
-requiredArgs = tmp7;
-
-export default function addMonths(interval, arg1) {
-  requiredArgs.default(2, arguments);
-  const defaultResult1 = _typeof.default(interval);
-  const defaultResult2 = module_4259.default(arg1);
-  if (isNaN(defaultResult2)) {
-    const _Date2 = Date;
-    const date = new Date(NaN);
-    return date;
-  } else if (defaultResult2) {
-    const date1 = defaultResult1.getDate();
-    const _Date = Date;
-    const date2 = new Date(defaultResult1.getTime());
-    date2.setMonth(defaultResult1.getMonth() + defaultResult2 + 1, 0);
-    let tmp8 = date2;
-    if (date1 < date2.getDate()) {
-      const fullYear = date2.getFullYear();
-      defaultResult1.setFullYear(fullYear, date2.getMonth(), date1);
-      tmp8 = defaultResult1;
+const date = {
+  ordinalNumber: obj3.default({
+    matchPattern: /^(\d+)?/i,
+    parsePattern: /\d+/i,
+    valueCallback(match) {
+      return parseInt(match, 10);
     }
-    return tmp8;
-  } else {
-    return defaultResult1;
+  }),
+  era: null,
+  quarter: null,
+  month: null,
+  day: null,
+  dayPeriod: null
+};
+const obj6 = { matchPatterns: { narrow: /^(Î|D)/i, abbreviated: /^(Î\.?\s?d\.?\s?C\.?|Î\.?\s?e\.?\s?n\.?|D\.?\s?C\.?|e\.?\s?n\.?)/i, wide: /^(Înainte de Cristos|Înaintea erei noastre|După Cristos|Era noastră)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj7 = { any: null, wide: null };
+const items = [/^ÎC/i, /^DC/i];
+obj7.any = items;
+const items1 = [/^(Înainte de Cristos|Înaintea erei noastre)/i, /^(După Cristos|Era noastră)/i];
+obj7.wide = items1;
+obj6.parsePatterns = obj7;
+date.era = obj.default(obj6);
+const obj8 = {
+  matchPatterns: { narrow: /^[1234]/i, abbreviated: /^T[1234]/i, wide: /^trimestrul [1234]/i },
+  defaultMatchWidth: "wide",
+  parsePatterns: null,
+  defaultParseWidth: "any",
+  valueCallback(arg0) {
+    return arg0 + 1;
   }
 };
+const obj9 = { any: null };
+const items2 = [/1/i, /2/i, /3/i, /4/i];
+obj9.any = items2;
+obj8.parsePatterns = obj9;
+date.quarter = obj.default(obj8);
+const obj10 = { matchPatterns: { narrow: /^[ifmaasond]/i, abbreviated: /^(ian|feb|mar|apr|mai|iun|iul|aug|sep|oct|noi|dec)/i, wide: /^(ianuarie|februarie|martie|aprilie|mai|iunie|iulie|august|septembrie|octombrie|noiembrie|decembrie)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj11 = { narrow: null, any: null };
+const items3 = [/^i/i, /^f/i, /^m/i, /^a/i, /^m/i, /^i/i, /^i/i, /^a/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj11.narrow = items3;
+const items4 = [/^ia/i, /^f/i, /^mar/i, /^ap/i, /^mai/i, /^iun/i, /^iul/i, /^au/i, /^s/i, /^o/i, /^n/i, /^d/i];
+obj11.any = items4;
+obj10.parsePatterns = obj11;
+date.month = obj.default(obj10);
+const obj12 = { matchPatterns: { narrow: /^[dlmjvs]/i, short: /^(d|l|ma|mi|j|v|s)/i, abbreviated: /^(dum|lun|mar|mie|jo|vi|sâ)/i, wide: /^(duminica|luni|marţi|miercuri|joi|vineri|sâmbătă)/i }, defaultMatchWidth: "wide", parsePatterns: null, defaultParseWidth: "any" };
+const obj13 = { narrow: null, any: null };
+const items5 = [/^d/i, /^l/i, /^m/i, /^m/i, /^j/i, /^v/i, /^s/i];
+obj13.narrow = items5;
+const items6 = [/^d/i, /^l/i, /^ma/i, /^mi/i, /^j/i, /^v/i, /^s/i];
+obj13.any = items6;
+obj12.parsePatterns = obj13;
+date.day = obj.default(obj12);
+const obj14 = { matchPatterns: { narrow: /^(a|p|mn|a|(dimineaţa|după-amiaza|seara|noaptea))/i, any: /^([ap]\.?\s?m\.?|miezul nopții|amiaza|(dimineaţa|după-amiaza|seara|noaptea))/i }, defaultMatchWidth: "any", parsePatterns: { any: { am: /^a/i, pm: /^p/i, midnight: /^mn/i, noon: /amiaza/i, morning: /dimineaţa/i, afternoon: /după-amiaza/i, evening: /seara/i, night: /noaptea/i } }, defaultParseWidth: "any" };
+date.dayPeriod = obj.default(obj14);
+
+export default date;
 export default exports.default;

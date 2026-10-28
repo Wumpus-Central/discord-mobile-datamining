@@ -1,81 +1,26 @@
 // === Module 4376: ? ===
 
 // Module 4376
-import module_4257_mod from "module_4257" /* 4257 */;
+let closure_0 = { lessThanXSeconds: { one: "minder dan een seconde", other: "minder dan {{count}} seconden" }, xSeconds: { one: "1 seconde", other: "{{count}} seconden" }, halfAMinute: "een halve minuut", lessThanXMinutes: { one: "minder dan een minuut", other: "minder dan {{count}} minuten" }, xMinutes: { one: "een minuut", other: "{{count}} minuten" }, aboutXHours: { one: "ongeveer 1 uur", other: "ongeveer {{count}} uur" }, xHours: { one: "1 uur", other: "{{count}} uur" }, xDays: { one: "1 dag", other: "{{count}} dagen" }, aboutXWeeks: { one: "ongeveer 1 week", other: "ongeveer {{count}} weken" }, xWeeks: { one: "1 week", other: "{{count}} weken" }, aboutXMonths: { one: "ongeveer 1 maand", other: "ongeveer {{count}} maanden" }, xMonths: { one: "1 maand", other: "{{count}} maanden" }, aboutXYears: { one: "ongeveer 1 jaar", other: "ongeveer {{count}} jaar" }, xYears: { one: "1 jaar", other: "{{count}} jaar" }, overXYears: { one: "meer dan 1 jaar", other: "meer dan {{count}} jaar" }, almostXYears: { one: "bijna 1 jaar", other: "bijna {{count}} jaar" } };
 
-let module_4257 = module_4257_mod;
-if (!module_4257) {
-  const obj = { default: module_4257 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4257;
-}
-module_4257 = tmp3;
-const dependencyMap = ["\u0432\u043E\u0441\u043A\u0440\u0435\u0441\u0435\u043D\u044C\u0435", "\u043F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A", "\u0432\u0442\u043E\u0440\u043D\u0438\u043A", "\u0441\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440\u0433", "\u043F\u044F\u0442\u043D\u0438\u0446\u0443", "\u0441\u0443\u0431\u0431\u043E\u0442\u0443"];
-let closure_2 = {
-  lastWeek(getUTCDay, arg1, arg2) {
-    const uTCDay = getUTCDay.getUTCDay();
-    let text = dependencyMap[uTCDay];
-    if (module_4257.default(getUTCDay, arg1, arg2)) {
-      if (2 === uTCDay) {
-        text = `'во ${tmp2}`;
-        let text1 = `'во ${tmp2} в' p`;
-      } else {
-        text1 = `${"'\u0432 " + `'во ${tmp2}`} в' p`;
-      }
-    } else {
-      if (0 === uTCDay) {
-        let text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u043E\u0435 " + tmp2} в' p`;
-      } else {
-        if (1 !== uTCDay) {
-          if (2 !== uTCDay) {
-            if (4 !== uTCDay) {
-              text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u0443\u044E " + tmp2} в' p`;
-            }
-          }
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} geleden`;
         }
-        text2 = `${"'\u0432 \u043F\u0440\u043E\u0448\u043B\u044B\u0439 " + tmp2} в' p`;
+        text = `over ${tmp}`;
       }
-      return text2;
     }
-  },
-  yesterday: "'\u0432\u0447\u0435\u0440\u0430 \u0432' p",
-  today: "'\u0441\u0435\u0433\u043E\u0434\u043D\u044F \u0432' p",
-  tomorrow: "'\u0437\u0430\u0432\u0442\u0440\u0430 \u0432' p",
-  nextWeek(getUTCDay, arg1, arg2) {
-    const uTCDay = getUTCDay.getUTCDay();
-    let text = dependencyMap[uTCDay];
-    if (module_4257.default(getUTCDay, arg1, arg2)) {
-      if (2 === uTCDay) {
-        text = `'во ${tmp2}`;
-        let text1 = `'во ${tmp2} в' p`;
-      } else {
-        text1 = `${"'\u0432 " + `'во ${tmp2}`} в' p`;
-      }
-    } else {
-      if (0 === uTCDay) {
-        let text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u0435 " + tmp2} в' p`;
-      } else {
-        if (1 !== uTCDay) {
-          if (2 !== uTCDay) {
-            if (4 !== uTCDay) {
-              text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0443\u044E " + tmp2} в' p`;
-            }
-          }
-        }
-        text2 = `${"'\u0432 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0438\u0439 " + tmp2} в' p`;
-      }
-      return text2;
-    }
-  },
-  other: "P"
-};
-
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_2[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
   }
-  return tmpResult;
 };
 export default exports.default;

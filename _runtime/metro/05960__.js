@@ -1,11 +1,39 @@
 // === Module 5960: ? ===
 
 // Module 5960
-import _mod17 from "module_17" /* 17 */;
-import module_65 from "module_65" /* 65 */;
+import _mod5958 from "module_5958" /* 5958 */;
+import noop from "module_19" /* 19 */;
 
-const codegenNativeComponent = _mod17.codegenNativeComponent;
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSScreenContentWrapper", validAttributes: {} };
+const require = globalThis.__r;
 
-export default module_65.get("RNSScreenContentWrapper", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+require = fn;
+const findNodeHandle = fn(17).findNodeHandle;
+
+export const useRenderDebugInfo = function useRenderDebugInfo(arg0) {
+  _require = arg0;
+  const ref = ref1.useRef(null);
+  ref1 = ref1.useRef(-1);
+  closure_3 = ref1.useEffectEvent((arg0) => {
+    const RNSLog = _mod5958.RNSLog;
+    RNSLog.log("" + closure_0 + " [" + ref1.current + "] " + arg0);
+  });
+  const effect = ref1.useEffect(() => {
+    if (null != ref.current) {
+      let num = findNodeHandle(tmp.current);
+      if (num == null) {
+        num = -1;
+      }
+      ref1.current = num;
+      if (-1 === ref1.current) {
+        closure_3("failed to find node handle");
+      }
+    }
+    closure_3("mounted");
+    return () => {
+      closure_1_3("unmounted");
+    };
+  }, []);
+  let RNSLog = require("module_5958").RNSLog;
+  RNSLog.log("" + arg0 + " [" + ref1.current + "] " + "rendered");
+  return ref;
+};

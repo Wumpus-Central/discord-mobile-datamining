@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/colored", width: 24, height: 24, scales: [2, 3], hash: "e7624f04ed4a80ca86e10402e935320b", name: "tier_1_32px", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/chat_sidebar", width: 24, height: 24, scales: [2, 3], hash: "f15a8eea867ca31909b0a1cf49c6c7d8", name: "ic_notif", type: "png" });

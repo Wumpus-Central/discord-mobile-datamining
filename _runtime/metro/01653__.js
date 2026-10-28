@@ -246,7 +246,7 @@ export const KeyboardProvider = (enabled) => {
     }
   }, items1);
   const obj13 = { value: tmp9, children: null };
-  const obj14 = { ref: tmp3, enabled, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "nl-CW", onKeyboardMoveInteractive: "nl", onKeyboardMoveEnd: 50, onFocusedInputLayoutChangedReanimated: null, children: null };
+  const obj14 = { ref: tmp3, enabled, navigationBarTranslucent: null, statusBarTranslucent: null, preserveEdgeToEdge: null, style: null, onKeyboardMoveReanimated: null, onKeyboardMoveStart: "Boolean", onKeyboardMove: "BG_GRADIENT_NEON_NIGHTS_2", onKeyboardMoveInteractive: 50, onKeyboardMoveEnd: -11.699, onFocusedInputLayoutChangedReanimated: 0, children: "USER_GUILD_SETTINGS_GUILD_UPDATE" };
   let tmp18 = updateSharedValues;
   let tmp19 = updateSharedValues;
   if (!updateSharedValues) {

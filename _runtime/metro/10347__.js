@@ -1,14 +1,13 @@
 // === Module 10347: ? ===
 
 // Module 10347
-import _mod10348 from "module_10348" /* 10348 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10256 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
-import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const RUMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,14 +27,17 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class RUMonthNameLittleEndianParser {
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+const regExp = new RegExp("([0-9]|0[1-9]|1[012])/([0-9]{4})", "i");
+class NLSlashMonthFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, RUMonthNameLittleEndianParser);
-    tmp2 = closure_4;
-    obj = closure_4(RUMonthNameLittleEndianParser);
-    tmp3 = closure_3;
-    if (hasOwnProperty()) {
+    tmp = closure_0(this, NLSlashMonthFormatParser);
+    tmp2 = c2;
+    obj = c2(NLSlashMonthFormatParser);
+    tmp3 = closure_1;
+    if (closure_3()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -48,47 +50,26 @@ class RUMonthNameLittleEndianParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(RUMonthNameLittleEndianParser, _mod10348.AbstractParserWithLeftRightBoundaryChecking);
+_classCallCheck = NLSlashMonthFormatParser;
+_inherits(NLSlashMonthFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "innerPatternString",
-  value: function innerPatternString(arg0) {
-    return "(?:\u0441)?\\s*(" + RUMonthNameLittleEndianParser(10346).ORDINAL_NUMBER_PATTERN + ")(?:\\s{0,3}(?:\u043F\u043E|-|\u2013|\u0434\u043E)?\\s{0,3}(" + RUMonthNameLittleEndianParser(10346).ORDINAL_NUMBER_PATTERN + "))?(?:-|\\/|\\s{0,3}(?:of)?\\s{0,3})(" + RUMonthNameLittleEndianParser(10217).matchAnyPattern(RUMonthNameLittleEndianParser(10346).MONTH_DICTIONARY) + ")(?:(?:-|\\/|,?\\s{0,3})(" + RUMonthNameLittleEndianParser(10346).YEAR_PATTERN + "(?![^\\s]\\d)))?";
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
 const items = [
   entry,
   {
     key: "innerExtract",
-    value: function innerExtract(createParsingResult, index) {
-      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
-      const tmp4 = RUMonthNameLittleEndianParser(10346).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
-      const result = RUMonthNameLittleEndianParser(10346).parseOrdinalNumberPattern(index[1]);
-      if (result > 31) {
-        index.index = index.index + index[1].length;
-        return null;
-      } else {
-        const start4 = parsingResult.start;
-        start4.assign("month", tmp4);
-        const start5 = parsingResult.start;
-        start5.assign("day", result);
-        if (index[4]) {
-          const start2 = parsingResult.start;
-          start2.assign("year", RUMonthNameLittleEndianParser(10346).parseYear(index[4]));
-        } else {
-          const start = parsingResult.start;
-          start.imply("year", RUMonthNameLittleEndianParser(10218).findYearClosestToRef(createParsingResult.refDate, result, tmp4));
-        }
-        if (index[2]) {
-          const start3 = parsingResult.start;
-          const result1 = RUMonthNameLittleEndianParser(10346).parseOrdinalNumberPattern(index[2]);
-          parsingResult.end = start3.clone();
-          const end = parsingResult.end;
-          end.assign("day", result1);
-        }
-        return parsingResult;
-      }
+    value: function innerExtract(createParsingComponents, arg1) {
+      const parsed = parseInt(arg1[2]);
+      const parsed1 = parseInt(arg1[1]);
+      const parsingComponents = createParsingComponents.createParsingComponents();
+      const implyResult = parsingComponents.imply("day", 1);
+      return parsingComponents.imply("day", 1).assign("month", parsed1).assign("year", parsed);
     }
   }
 ];
 
-export default _createClass(RUMonthNameLittleEndianParser, items);
+export default _createClass(NLSlashMonthFormatParser, items);

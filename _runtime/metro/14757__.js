@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/premium/native/images/perks", width: 300, height: 175, scales: [2, 3], hash: "f171afff980c8e21add7808b4b6646ed", name: "member_pricing", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/collectibles/native/images", width: 20.5, height: 20, scales: [2, 3], hash: "1852cc5a5de0318feebc04948ebfbffa", name: "img_collectibles_shop", type: "png" });

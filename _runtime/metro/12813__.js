@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 184, height: 152, scales: [2, 3], hash: "55e19295e229a1848ac31993707c2b78", name: "img_ban", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 50, height: 50, scales: [2, 3], hash: "1f317b3826e833bdfd8eb425b9e3f548", name: "img_poop_light", type: "png" });

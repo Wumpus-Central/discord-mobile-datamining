@@ -1,14 +1,29 @@
 // === Module 4291: ? ===
 
 // Module 4291
-import module_2070 from "module_2070" /* 2070 */;
 
-if (!module_2070) {
-  const obj2 = { default: module_2070 };
-  let obj = obj2;
-} else {
-  obj = module_2070;
-}
-
-export default { date: obj.default({ formats: { full: "EEEE, d 'de' MMMM 'de' y", long: "d 'de' MMMM 'de' y", medium: "d MMM y", short: "dd/MM/y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "HH:mm:ss zzzz", long: "HH:mm:ss z", medium: "HH:mm:ss", short: "HH:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'a las' {{time}}", long: "{{date}} 'a las' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
+export default function toInteger(arg0) {
+  if (null !== arg0) {
+    if (true !== arg0) {
+      if (false !== arg0) {
+        const _Number = Number;
+        const NumberResult = Number(arg0);
+        const _isNaN = isNaN;
+        if (isNaN(NumberResult)) {
+          return NumberResult;
+        } else {
+          if (NumberResult < 0) {
+            const _Math2 = Math;
+            let rounded = Math.ceil(NumberResult);
+          } else {
+            const _Math = Math;
+            rounded = Math.floor(NumberResult);
+          }
+          return rounded;
+        }
+      }
+    }
+  }
+  return NaN;
+};
 export default exports.default;

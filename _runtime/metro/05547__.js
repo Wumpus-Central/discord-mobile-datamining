@@ -1,68 +1,32 @@
 // === Module 5547: ? ===
 
 // Module 5547
-import _mod5545 from "module_5545" /* 5545 */;
-import _slicedToArray from "module_5500" /* 5500 */;
+import _mod5548 from "module_5548" /* 5548 */;
 
-require = fn;
-const noop = fn(19);
-({ useEffect: c3, useMemo: closure_4, useRef: hasOwnProperty, useState: metroRequire } = noop);
-function useOnLoad(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  closure_2 = hasOwnProperty(false);
-  React3(() => {
-    isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-    if (isFirstLayoutComplete) {
-      isFirstLayoutComplete = !ref.current;
-    }
-    if (isFirstLayoutComplete) {
-      ref.current = true;
-      f95445();
-    }
-  });
-}
 
-export const useOnListLoad = (recyclerViewManager, onLoad) => {
-  let isFirstLayoutComplete = recyclerViewManager;
-  let f95445 = onLoad;
-  hasOwnProperty(Date.now());
-  [tmp3, closure_3] = timestampProducer(false);
-  const dataLength = recyclerViewManager.getDataLength();
-  const tmp2 = _slicedToArray(timestampProducer(false), 2);
-  const requestAnimationFrame = _mod5545.useUnmountAwareAnimationFrame().requestAnimationFrame;
-  const items = [dataLength];
-  React4(() => {
-    closure_2.current = Date.now();
-  }, items);
-  if (typeof useOnLoad === "function") {
-    isFirstLayoutComplete = recyclerViewManager;
-    f95445 = () => {
-      const elapsedTimeInMs = Date.now() - ref.current;
-      requestAnimationFrame(() => {
-        elapsedTimeInMs.isFirstPaintOnUiComplete = true;
-        if (f95445 != null) {
-          const obj = { elapsedTimeInMs };
-          tmp(obj);
+export default function toPrimitive(arg0, arg1) {
+  if ("object" == obj.default(arg0)) {
+    if (arg0) {
+      let str = arg1;
+      const _Symbol = Symbol;
+      if (undefined !== arg0[Symbol.toPrimitive]) {
+        const call = tmp4.call;
+        if (!str) {
+          str = "default";
         }
-        closure_2_3(true);
-      });
-    };
-    hasOwnProperty(false);
-    React3(() => {
-      isFirstLayoutComplete = isFirstLayoutComplete.getIsFirstLayoutComplete();
-      if (isFirstLayoutComplete) {
-        isFirstLayoutComplete = !ref.current;
+        const tmp5 = typeof call === "unknown" ? tmp4(str) : call(arg0, str);
+        if ("object" != tmpResult.default(tmp5)) {
+          return tmp5;
+        } else {
+          const _TypeError = TypeError;
+          const typeError = new TypeError("@@toPrimitive must return a primitive value.");
+          throw typeError;
+        }
+        tmpResult = _mod5548;
+      } else {
+        return "string" === str ? String : Number(arg0);
       }
-      if (isFirstLayoutComplete) {
-        ref.current = true;
-        f95445();
-      }
-    });
-    const obj2 = { isLoaded: tmp3 };
-    return obj2;
-  } else {
-    throw new TypeError("Trying to call a non-function");
+    }
   }
+  return arg0;
 };
-export { useOnLoad };

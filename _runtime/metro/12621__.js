@@ -1,36 +1,7 @@
 // === Module 12621: ? ===
 
 // Module 12621
-import _mod12616 from "module_12616" /* 12616 */;
+import registerAsset from "module_1131" /* 1131 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const hasTracingEnabled = function hasTracingEnabled(tracesSampler) {
-  if (typeof globalThis.__SENTRY_TRACING__ === "boolean") {
-    if (!globalThis.__SENTRY_TRACING__) {
-      return false;
-    }
-  }
-  let tmp = tracesSampler;
-  const client = _mod12616.getClient();
-  if (!tracesSampler) {
-    let options = client;
-    if (client) {
-      options = client.getOptions();
-    }
-    tmp = options;
-  }
-  let tmp3 = tmp;
-  if (tmp3) {
-    let enableTracing = tmp.enableTracing;
-    if (!enableTracing) {
-      enableTracing = "tracesSampleRate" in tmp;
-    }
-    if (!enableTracing) {
-      enableTracing = "tracesSampler" in tmp;
-    }
-    tmp3 = enableTracing;
-  }
-  return tmp3;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "e605304dde4d78202fb1f94d6df2847d", name: "ListNumberedIcon", type: "png" });

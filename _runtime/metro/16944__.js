@@ -1,13 +1,7 @@
 // === Module 16944: ? ===
 
 // Module 16944
-import _mod16949 from "module_16949" /* 16949 */;
-import module_8770 from "module_8770" /* 8770 */;
-
-const require = globalThis.__r;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export const getYoutubeMeta = require("module_16945").getYoutubeMeta;
-export const PLAYER_STATES = require("PLAY_MODE").PLAYER_STATES_NAMES;
-export const PLAYER_ERRORS = require("PLAY_MODE").PLAYER_ERROR_NAMES;
-export default module_8770(_mod16949).default;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "0071b2f7df228b871ee979869dc2eb38", name: "CircleMinusIcon-primary", type: "png" });

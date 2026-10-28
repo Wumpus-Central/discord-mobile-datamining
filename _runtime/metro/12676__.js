@@ -1,17 +1,39 @@
 // === Module 12676: ? ===
 
 // Module 12676
+import _mod12636 from "module_12636" /* 12636 */;
+import _mod12664 from "module_12664" /* 12664 */;
 
-export const severityLevelFromString = function severityLevelFromString(level) {
-  let str = "warning";
-  if ("warn" !== level) {
-    const items = ["fatal", "error", "warning", "log", "info", "debug"];
-    let str2 = "log";
-    if (items.includes(level)) {
-      str2 = level;
+require = arg1;
+const dependencyMap = arg6;
+
+export const parseSampleRate = function parseSampleRate(flag) {
+  if (typeof flag === "boolean") {
+    const _Number = Number;
+    return Number(flag);
+  } else {
+    let parsed = flag;
+    if (typeof flag === "string") {
+      const _parseFloat = parseFloat;
+      parsed = parseFloat(flag);
     }
-    str = str2;
+    if (typeof parsed === "number") {
+      const _isNaN = isNaN;
+      if (!isNaN(parsed)) {
+        if (parsed >= 0) {
+          if (parsed <= 1) {
+            return parsed;
+          }
+        }
+      }
+    }
+    if (_mod12664.DEBUG_BUILD) {
+      const logger = _mod12636.logger;
+      const _JSON = JSON;
+      const json = JSON.stringify(flag);
+      const _JSON2 = JSON;
+      const _HermesInternal = HermesInternal;
+      logger.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + json + " of type " + JSON.stringify(typeof flag) + ".");
+    }
   }
-  return str;
 };
-export const validSeverityLevels = ["fatal", "error", "warning", "log", "info", "debug"];

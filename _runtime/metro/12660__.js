@@ -1,71 +1,207 @@
 // === Module 12660: ? ===
 
 // Module 12660
-import errorCallback from "errorCallback" /* 12585 */;
-import _mod12589 from "module_12589" /* 12589 */;
-import spanTimeInputToSeconds from "spanTimeInputToSeconds" /* 12594 */;
-import _mod12601 from "module_12601" /* 12601 */;
-import BAGGAGE_HEADER_NAME from "BAGGAGE_HEADER_NAME" /* 12602 */;
-import _mod12607 from "module_12607" /* 12607 */;
-import _mod12608 from "module_12608" /* 12608 */;
-import _mod12616 from "module_12616" /* 12616 */;
-import _mod12625 from "module_12625" /* 12625 */;
-import "module_12588";
-import __SENTRY_DEBUG__ from "module_12617" /* 12617 */;
-import dateTimestampInSeconds from "module_12603" /* 12603 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-errorCallback;
-
-export const getTraceData = function getTraceData(arg0) {
-  let obj = arg0;
-  if (arg0 === undefined) {
-    obj = {};
+const SyncPromise = require;
+const obj = { PENDING: 0 };
+obj[0] = "PENDING";
+obj.RESOLVED = 1;
+obj[1] = "RESOLVED";
+obj.REJECTED = 2;
+obj[2] = "REJECTED";
+class SyncPromise {
+  constructor(arg0) {
+    self = this;
+    tmp = SyncPromise;
+    tmp2 = closure_3(this, SyncPromise);
+    __init = SyncPromise.prototype.__init;
+    call = __init.call;
+    if (typeof call === "unknown") {
+      __initResult = __init();
+    } else {
+      callResult = call(self);
+    }
+    __init2 = tmp.prototype.__init2;
+    call2 = __init2.call;
+    if (typeof call2 === "unknown") {
+      __init2Result = __init2();
+    } else {
+      call2Result = call2(self);
+    }
+    __init3 = tmp.prototype.__init3;
+    call3 = __init3.call;
+    if (typeof call3 === "unknown") {
+      __init3Result = __init3();
+    } else {
+      call3Result = call3(self);
+    }
+    __init4 = tmp.prototype.__init4;
+    call4 = __init4.call;
+    if (typeof call4 === "unknown") {
+      __init4 = __init4();
+    } else {
+      call4Result = call4(self);
+    }
+    self._state = c2.PENDING;
+    self._handlers = [];
+    return;
   }
-  const client = _mod12616.getClient();
-  if (obj3.isEnabled()) {
-    if (client) {
-      const mainCarrier = _mod12607.getMainCarrier();
-      const tmpResult = _mod12607;
-      const asyncContextStrategy = _mod12608.getAsyncContextStrategy(mainCarrier);
-      if (asyncContextStrategy.getTraceData) {
-        return asyncContextStrategy.getTraceData(obj);
-      } else {
-        const currentScope = _mod12616.getCurrentScope();
-        let span = obj.span;
-        if (!span) {
-          span = spanTimeInputToSeconds.getActiveSpan();
-          const tmpResult10 = spanTimeInputToSeconds;
+}
+const entry = {
+  key: "then",
+  value: function then(arg0, arg1) {
+    const self = this;
+    closure_1 = arg0;
+    closure_0 = arg1;
+    SyncPromise((arg0, arg1) => {
+      closure_0 = arg0;
+      closure_1 = arg1;
+      const _handlers = self._handlers;
+      const items = [
+        false,
+        (arg0) => {
+          if (closure_1) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
+            }
+          } else {
+            closure_0(arg0);
+          }
+        },
+        (arg0) => {
+          if (closure_0) {
+            try {
+              closure_0(tmp(arg0));
+            } catch (tmp6) {
+              closure_1(tmp6);
+            }
+          } else {
+            closure_1(arg0);
+          }
         }
-        if (span) {
-          let spanToTraceHeaderResult = spanTimeInputToSeconds.spanToTraceHeader(span);
-          const tmpResult11 = spanTimeInputToSeconds;
-        } else {
-          const propagationContext = currentScope.getPropagationContext();
-          ({ traceId, sampled, spanId } = propagationContext);
-          spanToTraceHeaderResult = _mod12601.generateSentryTraceHeader(traceId, spanId, sampled);
-          const tmpResult12 = _mod12601;
+      ];
+      _handlers.push(items);
+      self._executeHandlers();
+    });
+    return Object.create(SyncPromise.prototype);
+  }
+};
+let items = [
+  entry,
+  {
+    key: "catch",
+    value: function _catch(arg0) {
+      return this.then((result) => result, arg0);
+    }
+  },
+  {
+    key: "finally",
+    value: function _finally(arg0) {
+      const self = this;
+      closure_0 = arg0;
+      SyncPromise((arg0, arg1) => {
+        closure_0 = arg0;
+        _self = arg1;
+        return _self.then((result) => {
+          c3 = false;
+          closure_2 = result;
+          if (closure_0) {
+            tmp();
+          }
+        }, (arg0) => {
+          c3 = true;
+          closure_2 = arg0;
+          if (closure_0) {
+            tmp();
+          }
+        }).then(() => {
+          if (c3) {
+            closure_1(closure_2);
+          } else {
+            closure_0(closure_2);
+          }
+        });
+      });
+      return Object.create(SyncPromise.prototype);
+    }
+  },
+  {
+    key: "__init",
+    value: function __init() {
+      const self = this;
+      this._resolve = (arg0) => {
+        self._setResult(obj.RESOLVED, arg0);
+      };
+    }
+  },
+  {
+    key: "__init2",
+    value: function __init2() {
+      const self = this;
+      this._reject = (arg0) => {
+        self._setResult(obj.REJECTED, arg0);
+      };
+    }
+  },
+  {
+    key: "__init3",
+    value: function __init3() {
+      const self = this;
+      this._setResult = (_state, _value) => {
+        if (self._state === self.PENDING) {
+          if (obj2.isThenable(_value)) {
+            _value.then(self._resolve, self._reject);
+          } else {
+            self._state = _state;
+            self._value = _value;
+            self._executeHandlers();
+          }
+          obj2 = SyncPromise(12643);
         }
-        const tmpResult13 = _mod12625;
-        if (span) {
-          let dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromSpan(span);
-        } else {
-          dynamicSamplingContextFromSpan = tmpResult13.getDynamicSamplingContextFromScope(client, currentScope);
+      };
+    }
+  },
+  {
+    key: "__init4",
+    value: function __init4() {
+      const self = this;
+      this._executeHandlers = () => {
+        if (self._state !== obj.PENDING) {
+          const _handlers = self._handlers;
+          const substr = _handlers.slice();
+          self._handlers = [];
+          const item = substr.forEach((item) => {
+            if (!item[0]) {
+              if (_state._state === constants.RESOLVED) {
+                item[1](_state._value);
+              }
+              if (_state._state === constants.REJECTED) {
+                item[2](_state._value);
+              }
+              item[0] = true;
+            }
+          });
         }
-        const tmpResult9 = _mod12616;
-        const result = BAGGAGE_HEADER_NAME.dynamicSamplingContextToSentryBaggageHeader(dynamicSamplingContextFromSpan);
-        const TRACEPARENT_REGEXP = _mod12601.TRACEPARENT_REGEXP;
-        if (TRACEPARENT_REGEXP.test(spanToTraceHeaderResult)) {
-          const obj4 = { "sentry-trace": spanToTraceHeaderResult, baggage: result };
-          let obj5 = obj4;
-        } else {
-          const logger = _mod12589.logger;
-          logger.warn("Invalid sentry-trace data. Cannot generate trace data");
-          obj5 = {};
-        }
-        return obj5;
-      }
-      const tmpResult8 = _mod12608;
+      };
     }
   }
-  return {};
+];
+const _moduleResult = _createClass(SyncPromise, items);
+
+export const SyncPromise = _moduleResult;
+export const rejectedSyncPromise = function rejectedSyncPromise(arg0) {
+  closure_0 = arg0;
+  return new _moduleResult((arg0, fn) => {
+    fn(closure_0);
+  });
+};
+export const resolvedSyncPromise = function resolvedSyncPromise(item) {
+  closure_0 = item;
+  return new _moduleResult((fn) => {
+    fn(closure_0);
+  });
 };

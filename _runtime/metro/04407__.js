@@ -1,28 +1,14 @@
 // === Module 4407: ? ===
 
 // Module 4407
-import _typeof_mod from "module_4255" /* 4255 */;
-import requiredArgs_mod from "requiredArgs" /* 4256 */;
+import module_2070 from "module_2070" /* 2070 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
+if (!module_2070) {
+  const obj2 = { default: module_2070 };
+  let obj = obj2;
 } else {
-  tmp3 = _typeof;
+  obj = module_2070;
 }
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
 
-export default function isSunday(arg0) {
-  requiredArgs.default(1, arguments);
-  return 0 === _typeof.default(arg0).getDay();
-};
+export default { date: obj.default({ formats: { full: "EEEE, d MMMM y '\u0433.'", long: "d MMMM y '\u0433.'", medium: "d MMM y '\u0433.'", short: "dd.MM.y" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { any: "{{date}}, {{time}}" }, defaultWidth: "any" }) };
 export default exports.default;

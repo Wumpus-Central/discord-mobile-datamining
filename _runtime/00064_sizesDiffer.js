@@ -1,7 +1,7 @@
 // === Module 64: sizesDiffer ===
 
 // Module 64 (sizesDiffer)
-let closure_0 = { width: "toCharArray$esjava$1", height: "Symbol" };
+let closure_0 = { width: "useCallback", height: "PX_16" };
 
 export default function sizesDiffer(arg0, arg1) {
   let size = arg0;

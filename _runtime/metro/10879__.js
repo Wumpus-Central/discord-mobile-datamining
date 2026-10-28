@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "fce86bae946901aed4dd9d012c5d05d2", name: "BellSlashIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/empties", width: 256, height: 128, scales: [2, 3], hash: "fe7e2c7efcbe72663147a76476794c5c", name: "img_invite_empty_dark", type: "png" });

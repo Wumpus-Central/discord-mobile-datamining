@@ -1,11 +1,24 @@
 // === Module 15584: ? ===
 
 // Module 15584
-import _mod15585 from "module_15585" /* 15585 */;
-
-
-export default !_mod15585(() => 7 !== Object.defineProperty({}, 1, {
-  get() {
-    return 7;
+if (typeof process === "object") {
+  const _process3 = process;
+  if (process.env) {
+    const _process = process;
+    if (process.env.NODE_DEBUG) {
+      const _process2 = process;
+      if (obj.test(process.env.NODE_DEBUG)) {
+        let fn = () => {
+          const items = ["SEMVER"];
+          HermesBuiltin.arraySpread(HermesBuiltin.copyRestArgs(), 1);
+          return console.error.apply(items);
+        };
+      }
+      module.exports = fn;
+      obj = /\bsemver\b/i;
+    }
   }
-})[1]);
+}
+fn = () => {
+
+};

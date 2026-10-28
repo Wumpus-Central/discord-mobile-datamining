@@ -1,7 +1,7 @@
 // === Module 15831: ? ===
 
 // Module 15831
-import registerAsset from "module_1131" /* 1131 */;
+import _mod15817 from "module_15817" /* 15817 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 24, height: 24, scales: [2, 3], hash: "72603ac548e054665a7efcd4a8c834e5", name: "disconnect", type: "png" });
+export default (arg0) => Object(_mod15817(arg0));

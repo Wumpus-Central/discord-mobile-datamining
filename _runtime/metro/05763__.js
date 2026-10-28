@@ -1,16 +1,19 @@
 // === Module 5763: ? ===
 
 // Module 5763
-import _mod545 from "module_545" /* 545 */;
-import object from "object" /* 5764 */;
-import _mod5765 from "module_5765" /* 5765 */;
+import _mod5764 from "module_5764" /* 5764 */;
 
 
-export default function initCloneObject(arg0) {
-  if (typeof arg0.constructor === "function") {
-    if (!_mod545(arg0)) {
-      object(_mod5765(arg0));
+export default function toInteger(arg0) {
+  const tmp = _mod5764(arg0);
+  const result = tmp % 1;
+  let num = 0;
+  if (tmp == tmp) {
+    let diff = tmp;
+    if (result) {
+      diff = tmp - result;
     }
-    return {};
+    num = diff;
   }
+  return num;
 };

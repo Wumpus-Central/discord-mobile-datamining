@@ -1,17 +1,7 @@
 // === Module 13933: ? ===
 
 // Module 13933
-const require = globalThis.__r;
+import registerAsset from "module_1131" /* 1131 */;
 
-for (const key10013 in require("enhancedFetch")) {
-  arg5[key10013] = require("enhancedFetch")[key10013];
-  continue;
-}
-for (const key10017 in require("fillProductsWithAdditionalData")) {
-  arg5[key10017] = require("fillProductsWithAdditionalData")[key10017];
-  continue;
-}
-for (const key10021 in require("RNIapIos")) {
-  arg5[key10021] = require("RNIapIos")[key10021];
-  continue;
-}
+
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/empty_channel", width: 32, height: 32, scales: [2, 3], hash: "9a47d778a0b93e08af7ca2a5a0e14da1", name: "add_friend_32px", type: "png" });

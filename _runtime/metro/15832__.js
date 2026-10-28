@@ -1,7 +1,14 @@
 // === Module 15832: ? ===
 
 // Module 15832
-import registerAsset from "module_1131" /* 1131 */;
+import _mod15833 from "module_15833" /* 15833 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/video_calls/native/images", width: 24, height: 24, scales: [2, 3], hash: "4d2adea177cc0cf5fd8e4a93e093db12", name: "mic", type: "png" });
+export default (obj) => {
+  if (typeof obj === "object") {
+    let tmp2 = null !== obj;
+  } else {
+    tmp2 = _mod15833(obj);
+  }
+  return tmp2;
+};

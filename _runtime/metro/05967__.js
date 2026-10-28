@@ -1,17 +1,29 @@
 // === Module 5967: ? ===
 
 // Module 5967
-import _modDef5942 from "module_5942" /* 5942 */;
-import noop from "module_19" /* 19 */;
+import _mod17 from "module_17" /* 17 */;
 
+const Image = _mod17.Image;
 
-export default function useTransitionProgress() {
-  const context = noop.useContext(_modDef5942);
-  if (undefined === context) {
-    const _Error = Error;
-    const error = new Error("Couldn't find values for transition progress. Are you inside a screen in Native Stack?");
-    throw error;
+export const parseAndroidIconToNativeProps = function parseAndroidIconToNativeProps(icon) {
+  if (icon) {
+    if ("imageSource" === icon.type) {
+      const assetSource = Image.resolveAssetSource(icon.imageSource);
+      if (!assetSource) {
+        const _console = console;
+        console.error("[RNScreens] Failed to resolve an asset.");
+      }
+      const obj2 = { imageIconResource: assetSource };
+      return obj2;
+    } else if ("drawableResource" === icon.type) {
+      const obj = { drawableIconResourceName: icon.name };
+      return obj;
+    } else {
+      const _Error = Error;
+      const error = new Error("[RNScreens] Incorrect icon format for Android. You must provide `imageSource` or `drawableResource`.");
+      throw error;
+    }
   } else {
-    return context;
+    return {};
   }
 };

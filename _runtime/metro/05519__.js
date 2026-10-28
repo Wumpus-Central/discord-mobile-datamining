@@ -1,15 +1,21 @@
 // === Module 5519: ? ===
 
 // Module 5519
-import noop from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
+import _mod5310 from "module_5310" /* 5310 */;
 
-const useContext = noop.useContext;
-const context = noop.createContext(undefined);
+_mod19.useCallback;
 
-export const RecyclerViewContextProvider = context.Provider;
-export const useRecyclerViewContext = function useRecyclerViewContext() {
-  return useContext(context);
-};
-export const useFlashListContext = function useFlashListContext() {
-  return useContext(context);
+export const useBottomSheetContentSizeSetter = function useBottomSheetContentSizeSetter() {
+  const bottomSheetInternal = _mod5310.useBottomSheetInternal();
+  const enableDynamicSizing = bottomSheetInternal.enableDynamicSizing;
+  const animatedContentHeight = bottomSheetInternal.animatedContentHeight;
+  const obj2 = { setContentSize: null };
+  const items = [enableDynamicSizing, animatedContentHeight];
+  obj2.setContentSize = useCallback((arg0) => {
+    if (enableDynamicSizing) {
+      const result = animatedContentHeight.set(arg0);
+    }
+  }, items);
+  return obj2;
 };

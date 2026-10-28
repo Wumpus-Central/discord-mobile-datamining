@@ -1,18 +1,7 @@
 // === Module 15603: ? ===
 
 // Module 15603
-import _mod15588 from "module_15588" /* 15588 */;
+import _mod15595 from "module_15595" /* 15595 */;
 
-let c0 = 0;
-let closure_1 = Math.random();
-let closure_2 = _mod15588(1.toString);
 
-export default (arg0) => {
-  let str = "";
-  if (undefined !== arg0) {
-    str = arg0;
-  }
-  const sum = c0 + 1;
-  c0 = sum;
-  return `Symbol(${str}` + ")_" + closure_2(sum + closure_1, 36);
-};
+export default (arg0, arg1, arg2) => 0 === _mod15595(arg0, arg1, arg2);

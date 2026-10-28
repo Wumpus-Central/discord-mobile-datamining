@@ -1,73 +1,34 @@
 // === Module 12697: ? ===
 
 // Module 12697
-import _mod12616 from "module_12616" /* 12616 */;
-import _flush from "_flush" /* 12637 */;
-import _mod12662 from "module_12662" /* 12662 */;
+import _mod12642 from "module_12642" /* 12642 */;
+import _mod12680 from "module_12680" /* 12680 */;
+import _mod12683 from "module_12683" /* 12683 */;
 
 require = arg1;
 const dependencyMap = arg6;
-function getCurrentHubShim() {
-  return {
-    bindClient(arg0) {
-      const currentScope = _mod12616.getCurrentScope();
-      currentScope.setClient(arg0);
-    },
-    withScope: _mod12616.withScope,
-    getClient() {
-      return _mod12616.getClient();
-    },
-    getScope: _mod12616.getCurrentScope,
-    getIsolationScope: _mod12616.getIsolationScope,
-    captureException(arg0, arg1) {
-      const currentScope = _mod12616.getCurrentScope();
-      return currentScope.captureException(arg0, arg1);
-    },
-    captureMessage(arg0, arg1, arg2) {
-      const currentScope = _mod12616.getCurrentScope();
-      return currentScope.captureMessage(arg0, arg1, arg2);
-    },
-    captureEvent: _flush.captureEvent,
-    addBreadcrumb: _mod12662.addBreadcrumb,
-    setUser: _flush.setUser,
-    setTags: _flush.setTags,
-    setTag: _flush.setTag,
-    setExtra: _flush.setExtra,
-    setExtras: _flush.setExtras,
-    setContext: _flush.setContext,
-    getIntegration(id) {
-      const client = _mod12616.getClient();
-      let integrationByName = client;
-      if (client) {
-        integrationByName = client.getIntegrationByName(id.id);
-      }
-      if (!integrationByName) {
-        integrationByName = null;
-      }
-      return integrationByName;
-    },
-    startSession: _flush.startSession,
-    endSession: _flush.endSession,
-    captureSession(arg0) {
-      if (arg0) {
-        return _flush.endSession();
-      } else {
-        const currentScope = _mod12616.getCurrentScope();
-        const tmpResult3 = _mod12616;
-        const client = _mod12616.getClient();
-        const session = currentScope.getSession();
-        let tmp4 = client;
-        if (client) {
-          tmp4 = session;
-        }
-        if (tmp4) {
-          client.captureSession(session);
-        }
-        const tmpResult4 = _mod12616;
-      }
-    }
-  };
-}
 
-export const getCurrentHub = getCurrentHubShim;
-export { getCurrentHubShim };
+export const createCheckInEnvelope = function createCheckInEnvelope(arg0, contexts, sdk, arg3, url) {
+  const obj = { sent_at: new Date().toISOString() };
+  if (sdk) {
+    sdk = sdk.sdk;
+  }
+  if (sdk) {
+    const obj2 = { name: sdk.sdk.name, version: sdk.sdk.version };
+    obj.sdk = obj2;
+  }
+  let tmp = arg3;
+  if (arg3) {
+    tmp = url;
+  }
+  if (tmp) {
+    obj.dsn = _mod12683.dsnToString(url);
+  }
+  if (contexts) {
+    obj.trace = _mod12642.dropUndefinedKeys(contexts);
+  }
+  const items = [{ type: "check_in" }, arg0];
+  const date = new Date();
+  const items1 = [items];
+  return _mod12680.createEnvelope(obj, items1);
+};

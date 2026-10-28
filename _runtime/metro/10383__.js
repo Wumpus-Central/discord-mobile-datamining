@@ -1,14 +1,14 @@
 // === Module 10383: ? ===
 
 // Module 10383
-import _mod10373 from "module_10373" /* 10373 */;
+import _mod10380 from "module_10380" /* 10380 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const UKTimeUnitCasualRelativeFormatParser = require;
+const RUTimeUnitAgoFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +28,12 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class UKTimeUnitCasualRelativeFormatParser {
+class RUTimeUnitAgoFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, UKTimeUnitCasualRelativeFormatParser);
+    tmp = c2(this, RUTimeUnitAgoFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(UKTimeUnitCasualRelativeFormatParser);
+    obj = closure_4(RUTimeUnitAgoFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,11 +48,11 @@ class UKTimeUnitCasualRelativeFormatParser {
     return tmp3(self, constructResult);
   }
 }
-_inherits(UKTimeUnitCasualRelativeFormatParser, _mod10373.AbstractParserWithLeftRightBoundaryChecking);
+_inherits(RUTimeUnitAgoFormatParser, _mod10380.AbstractParserWithLeftBoundaryChecking);
 const entry = {
   key: "innerPatternString",
   value: function innerPatternString(arg0) {
-    return "(\u0446\u0456|\u043E\u0441\u0442\u0430\u043D\u043D\u0456|\u043C\u0438\u043D\u0443\u043B\u0456|\u043C\u0430\u0439\u0431\u0443\u0442\u043D\u0456|\u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0456|\u043F\u0456\u0441\u043B\u044F|\u0447\u0435\u0440\u0435\u0437|\\+|-)\\s*(" + UKTimeUnitCasualRelativeFormatParser(10371).TIME_UNITS_PATTERN + ")";
+    return "(" + RUTimeUnitAgoFormatParser(10378).TIME_UNITS_PATTERN + ")\\s{0,5}\u043D\u0430\u0437\u0430\u0434(?=(?:\\W|$))";
   }
 };
 const items = [
@@ -60,18 +60,11 @@ const items = [
   {
     key: "innerExtract",
     value: function innerExtract(reference, arg1) {
-      const formatted = arg1[1].toLowerCase();
-      const parseDurationResult = UKTimeUnitCasualRelativeFormatParser(10371).parseDuration(arg1[3]);
-      if ("\u043E\u0441\u0442\u0430\u043D\u043D\u0456" !== formatted) {
-        if ("\u043C\u0438\u043D\u0443\u043B\u0456" !== formatted) {
-          let reverseDurationResult = parseDurationResult;
-        }
-        const ParsingComponents = UKTimeUnitCasualRelativeFormatParser(10220).ParsingComponents;
-        return ParsingComponents.createRelativeFromReference(reference.reference, reverseDurationResult);
-      }
-      reverseDurationResult = UKTimeUnitCasualRelativeFormatParser(10219).reverseDuration(parseDurationResult);
+      const parseDurationResult = RUTimeUnitAgoFormatParser(10378).parseDuration(arg1[1]);
+      const ParsingComponents = RUTimeUnitAgoFormatParser(10252).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, RUTimeUnitAgoFormatParser(10251).reverseDuration(RUTimeUnitAgoFormatParser(10378).parseDuration(arg1[1])));
     }
   }
 ];
 
-export default _createClass(UKTimeUnitCasualRelativeFormatParser, items);
+export default _createClass(RUTimeUnitAgoFormatParser, items);

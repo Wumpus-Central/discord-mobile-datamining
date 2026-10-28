@@ -1,28 +1,24 @@
 // === Module 4530: ? ===
 
 // Module 4530
-import _typeof_mod from "module_4255" /* 4255 */;
-import requiredArgs_mod from "requiredArgs" /* 4256 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
-  let tmp3 = obj;
-} else {
-  tmp3 = _typeof;
-}
-_typeof = tmp3;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj2 = { default: requiredArgs };
-  let tmp5 = obj2;
-} else {
-  tmp5 = requiredArgs;
-}
-requiredArgs = tmp5;
-
-export default function getMinutes(arg0) {
-  requiredArgs.default(1, arguments);
-  return _typeof.default(arg0).getMinutes();
+export default function addLeadingZeros(arg0, arg1) {
+  let length;
+  let str = "";
+  if (arg0 < 0) {
+    str = "-";
+  }
+  const str1 = Math.abs(arg0).toString();
+  let tmp = str1;
+  let tmp2 = str1;
+  if (str1.length < arg1) {
+    do {
+      let text = `0${tmp}`;
+      tmp = text;
+      tmp2 = text;
+      length = `0${tmp}`.length;
+    } while (length < arg1);
+  }
+  return str + tmp2;
 };
 export default exports.default;

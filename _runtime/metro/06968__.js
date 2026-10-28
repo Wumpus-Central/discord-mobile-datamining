@@ -1,7 +1,7 @@
 // === Module 6968: ? ===
 
 // Module 6968
-import _modDef6969 from "module_6969" /* 6969 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default _modDef6969;
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "1998c882c99c2bfa1f4c01d3c0fdc31d", name: "XSmallIcon", type: "png" });

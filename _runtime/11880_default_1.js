@@ -1,0 +1,26 @@
+// === Module 11880: default_1 ===
+
+// Module 11880 (default_1)
+import _mod11881 from "module_11881" /* 11881 */;
+
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+const mergeDefs = fn(_mod11881);
+
+export default function default_1() {
+  return mergeDefs.default();
+};
+export default exports.default;

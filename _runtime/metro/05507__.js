@@ -1,33 +1,12 @@
 // === Module 5507: ? ===
 
 // Module 5507
+import _mod17 from "module_17" /* 17 */;
+import value2 from "value2" /* 5306 */;
 
-export default function _objectWithoutPropertiesLoose(obj, arr) {
-  if (null == obj) {
-    return {};
-  } else {
-    obj = {};
-    for (const key10007 in arg0) {
-      hasOwnProperty = {}.hasOwnProperty;
-      let call = hasOwnProperty.call;
-      if (typeof call === "unknown") {
-        let hasOwnPropertyResult = hasOwnProperty(key10007);
-      } else {
-        hasOwnPropertyResult = call(arg0, key10007);
-      }
-      if (!hasOwnPropertyResult) {
-        continue;
-      } else {
-        if (-1 !== arg1.indexOf(key10007)) {
-          continue;
-        } else {
-          obj[key10007] = arg0[key10007];
-          continue;
-        }
-        continue;
-      }
-      continue;
-    }
-    return obj;
-  }
-};
+const StyleSheet = _mod17.StyleSheet;
+const obj = { container: { padding: 10, cursor: "grab" }, indicator: null };
+const size = { alignSelf: "center", width: 7.5 * value2.WINDOW_WIDTH / 100, height: 4, borderRadius: 4, backgroundColor: "rgba(0, 0, 0, 0.75)" };
+obj.indicator = size;
+
+export const styles = StyleSheet.create(obj);

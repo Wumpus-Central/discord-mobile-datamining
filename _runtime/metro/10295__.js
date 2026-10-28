@@ -1,38 +1,96 @@
 // === Module 10295: ? ===
 
 // Module 10295
-import alphaNum from "alphaNum" /* 10287 */;
-import _classCallCheck from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10249 */;
+import findMostLikelyADYear from "findMostLikelyADYear" /* 10250 */;
 
-const JPWeekdayWithParenthesesParser = require;
-const keys = Object.keys(alphaNum.WEEKDAY_OFFSET);
-const regExp = new RegExp("(?:\\(|\\\uFF08)(?<weekday>" + keys.join("|") + ")(?:\\)|\\\uFF09)", "i");
-class JPWeekdayWithParenthesesParser {
-  constructor() {
-    tmp = c2(this, JPWeekdayWithParenthesesParser);
-    return;
-  }
-}
-const entry = {
-  key: "pattern",
-  value: function pattern() {
-    return regExp;
-  }
-};
-const items = [
-  entry,
-  {
-    key: "extract",
-    value: function extract(reference, arg1) {
-      const tmp3 = JPWeekdayWithParenthesesParser(10287).WEEKDAY_OFFSET[arg1.groups.weekday];
-      let parsingComponentsAtWeekday = null;
-      if (undefined !== tmp3) {
-        parsingComponentsAtWeekday = JPWeekdayWithParenthesesParser(10244).createParsingComponentsAtWeekday(reference.reference, tmp3);
+function parseNumberPattern(str) {
+  str = str.toLowerCase();
+  if (undefined !== exports.INTEGER_WORD_DICTIONARY[str]) {
+    let num6 = exports.INTEGER_WORD_DICTIONARY[str];
+  } else {
+    num6 = 1;
+    if ("ein" !== str) {
+      num6 = 1;
+      if ("einer" !== str) {
+        num6 = 1;
+        if ("einem" !== str) {
+          num6 = 1;
+          if ("einen" !== str) {
+            num6 = 1;
+            if ("eine" !== str) {
+              let num5 = 2;
+              if (!str.match(/wenigen/)) {
+                let num2 = 0.5;
+                if (!str.match(/halb/)) {
+                  num2 = 0.5;
+                  if (!str.match(/halben/)) {
+                    let num3 = 3;
+                    if (!str.match(/einigen/)) {
+                      let num4 = 7;
+                      if (!str.match(/mehreren/)) {
+                        const _parseFloat = parseFloat;
+                        num4 = parseFloat(str);
+                      }
+                      num3 = num4;
+                    }
+                    num2 = num3;
+                  }
+                }
+                num5 = num2;
+              }
+              num6 = num5;
+            }
+          }
+        }
       }
-      return parsingComponentsAtWeekday;
     }
   }
-];
+  return num6;
+}
+const combined = "(" + exports.NUMBER_PATTERN + ")\\s{0,5}(" + repeatedTimeunitPattern.matchAnyPattern(exports.TIME_UNIT_DICTIONARY) + ")\\s{0,5}";
+const regExp = new RegExp(combined, "i");
 
-export default _createClass(JPWeekdayWithParenthesesParser, items);
+export { parseNumberPattern };
+export const parseYear = function parseYear(match) {
+  if (obj.test(match)) {
+    const _parseInt3 = parseInt;
+    return -parseInt(match.replace(/[^0-9]+/gi, ""));
+  } else {
+    if (obj2.test(match)) {
+      const _parseInt2 = parseInt;
+      return parseInt(match.replace(/[^0-9]+/gi, ""));
+    } else {
+      const _parseInt = parseInt;
+      if (obj3.test(match)) {
+        return _parseInt(match.replace(/[^0-9]+/gi, ""));
+      } else {
+        return findMostLikelyADYear.findMostLikelyADYear(_parseInt(match));
+      }
+      obj3 = /z/i;
+    }
+    obj2 = /n/i;
+  }
+  obj = /v/i;
+};
+export const parseDuration = function parseDuration(arg0) {
+  let str = arg0;
+  const obj = {};
+  let match = regExp.exec(arg0);
+  while (match) {
+    let str2 = match[2];
+    let tmp3 = parseNumberPattern(match[1]);
+    obj[exports.TIME_UNIT_DICTIONARY[str2.toLowerCase(str2)]] = tmp3;
+    let substr = str.substring(match[0].length);
+    match = regExp.exec(substr);
+    str = substr;
+  }
+  return obj;
+};
+export const WEEKDAY_DICTIONARY = { sonntag: 0, so: 0, montag: 1, mo: 1, dienstag: 2, di: 2, mittwoch: 3, mi: 3, donnerstag: 4, do: 4, freitag: 5, fr: 5, samstag: 6, sa: 6 };
+export const MONTH_DICTIONARY = { januar: 1, "jänner": 1, janner: 1, jan: 1, "jan.": 1, februar: 2, feber: 2, feb: 2, "feb.": 2, "märz": 3, maerz: 3, "mär": 3, "mär.": 3, mrz: 3, "mrz.": 3, april: 4, apr: 4, "apr.": 4, mai: 5, juni: 6, jun: 6, "jun.": 6, juli: 7, jul: 7, "jul.": 7, august: 8, aug: 8, "aug.": 8, september: 9, sep: 9, "sep.": 9, sept: 9, "sept.": 9, oktober: 10, okt: 10, "okt.": 10, november: 11, nov: 11, "nov.": 11, dezember: 12, dez: 12, "dez.": 12 };
+export const INTEGER_WORD_DICTIONARY = { eins: 1, eine: 1, einem: 1, einen: 1, einer: 1, zwei: 2, drei: 3, vier: 4, "fünf": 5, fuenf: 5, sechs: 6, sieben: 7, acht: 8, neun: 9, zehn: 10, elf: 11, "zwölf": 12, zwoelf: 12 };
+export const TIME_UNIT_DICTIONARY = { sek: "second", sekunde: "second", sekunden: "second", min: "minute", minute: "minute", minuten: "minute", h: "hour", std: "hour", stunde: "hour", stunden: "hour", tag: "day", tage: "day", tagen: "day", woche: "week", wochen: "week", monat: "month", monate: "month", monaten: "month", monats: "month", quartal: "quarter", quartals: "quarter", quartale: "quarter", quartalen: "quarter", a: "year", j: "year", jr: "year", jahr: "year", jahre: "year", jahren: "year", jahres: "year" };
+export const NUMBER_PATTERN = "(?:" + repeatedTimeunitPattern.matchAnyPattern(exports.INTEGER_WORD_DICTIONARY) + "|[0-9]+|[0-9]+\\.[0-9]+|halb?|halbe?|einigen?|wenigen?|mehreren?)";
+export const YEAR_PATTERN = "(?:[0-9]{1,4}(?:\\s*[vn]\\.?\\s*(?:C(?:hr)?|(?:u\\.?|d\\.?(?:\\s*g\\.?)?)?\\s*Z)\\.?|\\s*(?:u\\.?|d\\.?(?:\\s*g\\.)?)\\s*Z\\.?)?)";
+export const TIME_UNITS_PATTERN = repeatedTimeunitPattern.repeatedTimeunitPattern("", combined);

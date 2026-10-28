@@ -1,26 +1,44 @@
 // === Module 12709: ? ===
 
 // Module 12709
-import _mod12590 from "module_12590" /* 12590 */;
+import _mod12636 from "module_12636" /* 12636 */;
+import _mod12650 from "module_12650" /* 12650 */;
+import _mod12663 from "module_12663" /* 12663 */;
 
 require = arg1;
 const dependencyMap = arg6;
 
-export const vercelWaitUntil = function vercelWaitUntil(arg0) {
-  const obj = _mod12590.GLOBAL_OBJ[Symbol.for(Symbol, "@vercel/request-context")];
-  if (obj) {
-    if (obj.get) {
-      if (obj.get()) {
-        let obj1 = obj.get();
+export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
+  closure_0 = arg1;
+  const client = _mod12663.getClient();
+  const isolationScope = _mod12663.getIsolationScope();
+  if (client) {
+    const options = client.getOptions();
+    let beforeBreadcrumb = options.beforeBreadcrumb;
+    let tmp5 = null;
+    if (undefined !== beforeBreadcrumb) {
+      tmp5 = beforeBreadcrumb;
+    }
+    beforeBreadcrumb = tmp5;
+    const maxBreadcrumbs = options.maxBreadcrumbs;
+    let num = 100;
+    if (undefined !== maxBreadcrumbs) {
+      num = maxBreadcrumbs;
+    }
+    if (num > 0) {
+      let obj2 = { timestamp: _mod12650.dateTimestampInSeconds() };
+      const merged = Object.assign(arg0);
+      if (tmp5) {
+        obj2 = _mod12636.consoleSandbox(() => beforeBreadcrumb(obj2, closure_0));
+        const tmpResult2 = _mod12636;
       }
-      let waitUntil = obj1;
-      if (obj1) {
-        waitUntil = obj1.waitUntil;
+      if (null !== obj2) {
+        if (client.emit) {
+          client.emit("beforeAddBreadcrumb", obj2, arg1);
+        }
+        isolationScope.addBreadcrumb(obj2, num);
       }
-      if (waitUntil) {
-        obj1.waitUntil(arg0);
-      }
+      const tmpResult = _mod12650;
     }
   }
-  obj1 = {};
 };

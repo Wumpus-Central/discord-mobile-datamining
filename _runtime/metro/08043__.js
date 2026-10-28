@@ -1,14 +1,82 @@
 // === Module 8043: ? ===
 
 // Module 8043
-import _mod26 from "module_26" /* 26 */;
-import weakSet from "weakSet" /* 106 */;
-import module_65 from "module_65" /* 65 */;
+import _modDef8033 from "module_8033" /* 8033 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
+import noop from "module_19" /* 19 */;
 
-const __INTERNAL_VIEW_CONFIG = { uiViewClassName: "RNSVGMask", directEventTypes: { topSvgLayout: { registrationName: "onSvgLayout" } }, validAttributes: null };
-const size = { name: true, opacity: true, matrix: true, mask: true, markerStart: true, markerMid: true, markerEnd: true, clipPath: true, clipRule: true, responsible: true, display: true, pointerEvents: true, color: _mod26.colorAttribute, fill: true, fillOpacity: true, fillRule: true, stroke: true, strokeOpacity: true, strokeWidth: true, strokeLinecap: true, strokeLinejoin: true, strokeDasharray: true, strokeDashoffset: true, strokeMiterlimit: true, vectorEffect: true, propList: true, filter: true, fontSize: true, fontWeight: true, font: true, x: true, y: true, height: true, width: true, maskUnits: true, maskContentUnits: true, maskType: true };
-const merged = Object.assign(weakSet.ConditionallyIgnoredEventHandlers({ onSvgLayout: true }));
-__INTERNAL_VIEW_CONFIG.validAttributes = size;
+const FeDropShadow = importDefault;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
+  }
+}
+const jsxProd = fn(21);
+({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
+class FeDropShadow {
+  constructor() {
+    self = this;
+    tmp = c2(this, FeDropShadow);
+    tmp2 = closure_4;
+    obj = closure_4(FeDropShadow);
+    tmp3 = closure_3;
+    if (closure_8()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_inherits(FeDropShadow, _modDef8033);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    const _in = props.in;
+    let str = "SourceGraphic";
+    if (undefined !== _in) {
+      str = _in;
+    }
+    const obj = { children: null };
+    ({ dx, dy, result } = props);
+    const items = [timestampProducer(FeDropShadow(8044), { in: str, stdDeviation: props.stdDeviation }), timestampProducer(FeDropShadow(8046), { dx, dy, result: "offsetblur" }), timestampProducer(FeDropShadow(8048), { floodColor: self.props.floodColor, floodOpacity: self.props.floodOpacity }), timestampProducer(FeDropShadow(8037), { in2: "offsetblur", operator: "in" }), ];
+    const obj3 = { result, children: null };
+    const items1 = [timestampProducer(FeDropShadow(8052), {}), timestampProducer(FeDropShadow(8052), { in: str })];
+    obj3.children = items1;
+    items[4] = React5(FeDropShadow(8050), obj3);
+    obj.children = items;
+    return React5(noop.Fragment, obj);
+  }
+};
+let items = [entry];
+const importDefaultResultResult = _createClass(FeDropShadow, items);
+importDefaultResultResult.displayName = "FeDropShadow";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
-export default module_65.get("RNSVGMask", () => obj);
-export { __INTERNAL_VIEW_CONFIG };
+export default importDefaultResultResult;

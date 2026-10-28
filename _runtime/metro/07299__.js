@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "8ed6e9444f1466c0eafe89d2eb1484b1", name: "XSmallBoldIcon", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 80, height: 80, scales: [2, 3], hash: "900d6a1aeefc6f4c571ad9d81203dc5c", name: "img_nitro_classic_icon_80px", type: "png" });

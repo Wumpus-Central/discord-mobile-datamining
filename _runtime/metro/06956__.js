@@ -1,11 +1,7 @@
 // === Module 6956: ? ===
 
 // Module 6956
-import get_ActivityIndicator from "module_17" /* 17 */;
+import registerAsset from "module_1131" /* 1131 */;
 
-({ PixelRatio, Platform } = get_ActivityIndicator);
 
-export const getDefaultHeaderHeight = function getDefaultHeaderHeight(layout, modal, headerStatusBarHeight) {
-  ({ width, height } = layout);
-  return 64 + headerStatusBarHeight;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "5a0d5d16e378eea1c4baa447014a7b8d", name: "CheckmarkLargeIcon", type: "png" });

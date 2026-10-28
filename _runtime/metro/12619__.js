@@ -1,11 +1,7 @@
 // === Module 12619: ? ===
 
 // Module 12619
-import errorCallback from "errorCallback" /* 12585 */;
+import registerAsset from "module_1131" /* 1131 */;
 
-require = arg1;
-const dependencyMap = arg6;
 
-export const addTracingExtensions = function addTracingExtensions() {
-  const result = errorCallback.registerSpanErrorInstrumentation();
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "01cd25a11a733a16463d72c98cca83b7", name: "CloudIcon", type: "png" });

@@ -1,0 +1,37 @@
+// === Module 4483: subISOWeekYears ===
+
+// Module 4483 (subISOWeekYears)
+import module_4443_mod from "module_4443" /* 4443 */;
+import requiredArgs_mod from "requiredArgs" /* 4288 */;
+import module_4291_mod from "module_4291" /* 4291 */;
+
+let module_4443 = module_4443_mod;
+if (!module_4443) {
+  const obj = { default: module_4443 };
+  let tmp3 = obj;
+} else {
+  tmp3 = module_4443;
+}
+module_4443 = tmp3;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
+} else {
+  tmp5 = requiredArgs;
+}
+requiredArgs = tmp5;
+let module_4291 = module_4291_mod;
+if (!module_4291) {
+  const obj3 = { default: module_4291 };
+  let tmp7 = obj3;
+} else {
+  tmp7 = module_4291;
+}
+module_4291 = tmp7;
+
+export default function subISOWeekYears(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4443.default(arg0, -module_4291.default(arg1));
+};
+export default exports.default;

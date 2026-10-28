@@ -1,40 +1,29 @@
 // === Module 5494: ? ===
 
 // Module 5494
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _mod17 from "module_17" /* 17 */;
+import jsxProd from "jsxProd" /* 21 */;
+import _mod5495 from "module_5495" /* 5495 */;
 import noop_mod from "module_19" /* 19 */;
 
-let closure_2 = ["focusHook", "scrollEventsHandlersHook", "enableFooterMarginAdjustment"];
-let noop = fn(19);
-const forwardRef = noop.forwardRef;
-({ useMemo: metroRequire, memo } = noop);
 let noop = noop_mod;
-const jsx = fn(21).jsx;
-try {
-  const FlashList = fn(5495);
-  const memoResult = memo(forwardRef((focusHook, ref) => {
-    focusHook = focusHook.focusHook;
-    const scrollEventsHandlersHook = focusHook.scrollEventsHandlersHook;
-    const enableFooterMarginAdjustment = focusHook.enableFooterMarginAdjustment;
-    closure_6(() => {
-      if (!FlashList) {
-        throw "You need to install FlashList first, `yarn install @shopify/flash-list`";
-      }
-    }, []);
-    const items = [focusHook, scrollEventsHandlersHook, enableFooterMarginAdjustment];
-    const tmp = _objectWithoutProperties(focusHook, enableFooterMarginAdjustment);
-    let merged = Object.assign(tmp);
-    return <FlashList.FlashList ref={ref} renderScrollComponent={closure_6(() => forwardRef((arg0, ref) => {
-      const merged = Object.assign(arg0, Object.assign({ data: 0 }));
-      const obj = { ref };
-      const merged1 = Object.assign(merged);
-      obj.focusHook = focusHook;
-      obj.scrollEventsHandlersHook = scrollEventsHandlersHook;
-      obj.enableFooterMarginAdjustment = enableFooterMarginAdjustment;
-      return jsx(focusHook(scrollEventsHandlersHook[4]), { ref });
-    }), items)} />;
-  }));
-  exports.default = memoResult;
-  exports.BottomSheetFlashList = memoResult;
-} catch (err) {
-}
+const useMemo = noop.useMemo;
+let noop = noop_mod;
+const StyleSheet = _mod17.StyleSheet;
+const jsx = jsxProd.jsx;
+const memoResult = noop.memo((arg0) => {
+  ({ backgroundComponent, backgroundStyle } = arg0);
+  let items = [backgroundStyle];
+  ({ animatedIndex, animatedPosition } = arg0);
+  const style = useMemo(() => {
+    const items = [_mod5495.styles.container, backgroundStyle];
+    return StyleSheet.flatten(items);
+  }, items);
+  if (backgroundComponent == null) {
+    backgroundComponent = backgroundStyle(5496).BottomSheetBackground;
+  }
+  return <backgroundComponent pointerEvents="none" animatedIndex={animatedIndex} animatedPosition={animatedPosition} style={style} />;
+});
+memoResult.displayName = "BottomSheetBackgroundContainer";
+
+export const BottomSheetBackgroundContainer = memoResult;

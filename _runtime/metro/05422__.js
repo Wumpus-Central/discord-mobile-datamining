@@ -1,82 +1,27 @@
 // === Module 5422: ? ===
 
 // Module 5422
-import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
-import _createClass from "_createClass" /* 42 */;
-import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
-import _get from "_get" /* 96 */;
-import _inherits from "_inherits" /* 98 */;
+import ComposedGestureName from "ComposedGestureName" /* 5392 */;
+import DEFAULT_PROPS_TRANSFORMER from "DEFAULT_PROPS_TRANSFORMER" /* 5401 */;
+import _mod5416 from "module_5416" /* 5416 */;
 
-function _isNativeReflectConstruct() {
-  try {
-    const _Boolean = Boolean;
-    const call = valueOf.call;
-    const _Reflect = Reflect;
-    const _Boolean2 = Boolean;
-    if (typeof call === "unknown") {
-      let callResult = valueOf();
-    } else {
-      callResult = call(constructResult);
-    }
-    closure_0 = !callResult;
-    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
-      return closure_0;
-    };
-    return _isNativeReflectConstruct();
-  } catch (err) {
+require = arg1;
+const dependencyMap = arg6;
+function transformLongPressProps(shouldCancelWhenOutside) {
+  if (undefined === shouldCancelWhenOutside.shouldCancelWhenOutside) {
+    shouldCancelWhenOutside.shouldCancelWhenOutside = true;
   }
+  return shouldCancelWhenOutside;
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturnDefault;
-function changeEventCalculator(rotation, rotation2) {
-  if (undefined === rotation2) {
-    const obj2 = { rotationChange: rotation.rotation };
-    let obj = obj2;
-  } else {
-    obj = { rotationChange: rotation.rotation - rotation2.rotation };
+const items = [["minDuration", "minDurationMs"], ["maxDistance", "maxDist"]];
+const map = new Map(items);
+let closure_4 = {};
+
+export const useLongPressGesture = function useLongPressGesture() {
+  let tmp = cResult;
+  if (cResult === undefined) {
+    tmp = closure_4;
   }
-  const merged = Object.assign(rotation);
-  const merged1 = Object.assign(obj);
-  return {};
-}
-changeEventCalculator.__closure = {};
-changeEventCalculator.__workletHash = 11988645380499;
-changeEventCalculator.__initData = { code: "function changeEventCalculator_Pnpm_rotationGestureTs1(current,previous){let changePayload;if(previous===undefined){changePayload={rotationChange:current.rotation};}else{changePayload={rotationChange:current.rotation-previous.rotation};}return{...current,...changePayload};}" };
-class RotationGesture {
-  constructor() {
-    self = this;
-    tmp = closure_0(this, RotationGesture);
-    tmp2 = c2;
-    obj = c2(RotationGesture);
-    tmp3 = closure_1;
-    if (closure_4()) {
-      tmp5 = globalThis;
-      _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
-    } else {
-      constructResult = obj.apply(self, undefined);
-    }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.handlerName = "RotationGestureHandler";
-    return tmp3Result;
-  }
-}
-_classCallCheck = RotationGesture;
-_inherits(RotationGesture, fn(5319).ContinousBaseGesture);
-const entry = {
-  key: "onChange",
-  value: function onChange(arg0) {
-    this.handlers.changeEventCalculator = hasOwnProperty;
-    const self = this;
-    let fn = _get(_getPrototypeOf(_classCallCheck.prototype), "onChange", this);
-    if (typeof fn === "function") {
-      fn = (items) => fn.apply(self, items);
-    }
-    const items = [arg0];
-    return fn(items);
-  }
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map, transformLongPressProps);
+  return _mod5416.useGesture(ComposedGestureName.SingleGestureName.LongPress, clonedAndRemappedConfig);
 };
-let items = [entry];
-
-export const RotationGesture = _createClass(RotationGesture, items);

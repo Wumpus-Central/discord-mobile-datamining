@@ -1,16 +1,14 @@
 // === Module 5443: ? ===
 
 // Module 5443
-import _mod19 from "module_19" /* 19 */;
-import _mod5282 from "module_5282" /* 5282 */;
+import ComposedGestureName from "ComposedGestureName" /* 5392 */;
+import _mod5441 from "module_5441" /* 5441 */;
 
-const useContext = _mod19.useContext;
+require = arg1;
+const dependencyMap = arg6;
 
-export const useBottomSheetGestureHandlers = () => {
-  const tmp = useContext(_mod5282.BottomSheetGestureHandlersContext);
-  if (null === tmp) {
-    throw "'useBottomSheetGestureHandlers' cannot be used out of the BottomSheet!";
-  } else {
-    return tmp;
-  }
+export const useSimultaneousGestures = function useSimultaneousGestures() {
+  const items = [...arguments];
+  const items1 = [ComposedGestureName.ComposedGestureName.Simultaneous, ...items];
+  return _mod5441.useComposedGesture.apply(items1);
 };

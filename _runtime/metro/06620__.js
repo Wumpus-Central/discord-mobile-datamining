@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 500, height: 500, scales: [1], hash: "537a5a5a0fd47a14c531a6a53114ce50", name: "img_account_sync_crunchyroll_white", type: "svg" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/platforms", width: 256, height: 256, scales: [1], hash: "5de31cd2c9db12c0dfd39e4c1dd0eb1f", name: "img_roblox_light", type: "png" });

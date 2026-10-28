@@ -1,153 +1,216 @@
 // === Module 7998: ? ===
 
 // Module 7998
-import extractOpacityDefault from "extractOpacity" /* 7966 */;
-import extractBrushDefault from "extractBrush" /* 7978 */;
+import extractOpacityDefault from "extractOpacity" /* 8000 */;
+import extractResponderDefault from "extractResponder" /* 8001 */;
+import _modDef8006 from "module_8006" /* 8006 */;
+import reducedDefault from "reduced" /* 8007 */;
+import _modDef8008 from "module_8008" /* 8008 */;
+import _modDef8018 from "module_8018" /* 8018 */;
+import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
+import metroRequire from "_possibleConstructorReturn" /* 93 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const re3 = /\s+/;
-const action = { type: 0, payload: fn(17).processColor("black") };
-
-export default function extractFeFlood(arg0) {
-  ({ floodColor, floodOpacity } = arg0);
-  if (null == floodColor) {
-    let tmp = action;
-  } else {
-    tmp = extractBrushDefault(floodColor);
-  }
-  const obj = { floodColor: tmp };
-  if (null != floodOpacity) {
-    obj.floodOpacity = extractOpacityDefault(floodOpacity);
-  }
-  return obj;
-};
-export const extractFilter = (props) => {
-  const size = { x: props.x, y: props.y, width: props.width, height: props.height, result: props.result };
-  return size;
-};
-export const extractIn = (props) => {
-  if (props.in) {
-    const obj2 = { in1: props.in };
-    let obj = obj2;
-  } else {
-    obj = {};
-  }
-  return obj;
-};
-export const extractFeBlend = (props) => {
-  const obj = {};
-  if (props.in2) {
-    obj.in2 = props.in2;
-  }
-  if (props.mode) {
-    obj.mode = props.mode;
-  }
-  return obj;
-};
-export const extractFeColorMatrix = (props) => {
-  const obj = {};
-  if (undefined !== props.values) {
-    const _Array = Array;
-    const values = props.values;
-    if (Array.isArray(props.values)) {
-      obj.values = values.map((item) => {
-        let parsed = item;
-        if (typeof item !== "number") {
-          const _parseFloat = parseFloat;
-          parsed = parseFloat(item);
-        }
-        return parsed;
-      });
-    } else if (typeof values === "number") {
-      const items = [props.values];
-      obj.values = items;
-    } else if (typeof props.values === "string") {
-      const parts = props.values.split(re3);
-      let _parseFloat = parseFloat;
-      const mapped = parts.map(parseFloat);
-      obj.values = mapped.filter((item) => !isNaN(item));
+const Svg = fn;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
     } else {
-      const _console = console;
-      console.warn("Invalid value for FeColorMatrix `values` prop");
+      callResult = call(constructResult);
     }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
-  if (props.type) {
-    obj.type = props.type;
-  }
-  return obj;
-};
-export const extractFeComposite = (props) => {
-  const obj = { in1: props.in || "", in2: props.in2 || "", operator1: props.operator || "over" };
-  const items = ["k1", "k2", "k3", "k4"];
-  const item = items.forEach((item) => {
-    if (undefined !== props[item]) {
-      const _Number = Number;
-      obj[item] = Number(tmp[item]) || 0;
-      const tmp4 = Number(tmp[item]) || 0;
+}
+let closure_3 = ["style", "opacity", "viewBox", "children", "onLayout", "preserveAspectRatio"];
+get_ActivityIndicator = fn(17);
+({ findNodeHandle: closure_8, Platform, StyleSheet } = get_ActivityIndicator);
+const jsx = fn(21).jsx;
+const svg = StyleSheet.create({ svg: { backgroundColor: "transparent", borderWidth: 0 } }).svg;
+class Svg {
+  constructor() {
+    self = this;
+    items = [...arguments];
+    closure_0 = undefined;
+    tmp = hasOwnProperty(this, Svg);
+    items1 = [...items];
+    tmp2 = closure_7;
+    obj = closure_7(Svg);
+    tmp3 = metroRequire;
+    if (closure_11()) {
+      tmp5 = globalThis;
+      _Reflect = Reflect;
+      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+    } else {
+      constructResult = obj.apply(self, items1);
     }
-  });
-  return obj;
-};
-export const extractFeGaussianBlur = (props) => {
-  const obj = {};
-  if (Array.isArray(props.stdDeviation)) {
-    const _Number5 = Number;
-    obj.stdDeviationX = Number(props.stdDeviation[0]) || 0;
-    const _Number6 = Number;
-    const tmp7 = Number(props.stdDeviation[0]) || 0;
-    obj.stdDeviationY = Number(props.stdDeviation[1]) || 0;
-    const tmp8 = Number(props.stdDeviation[1]) || 0;
-  } else {
-    if (typeof props.stdDeviation === "string") {
-      if (str2.match(re3)) {
-        const parts = props.stdDeviation.split(re3);
-        const _Number3 = Number;
-        obj.stdDeviationX = Number(parts[0]) || 0;
-        const _Number4 = Number;
-        const tmp5 = Number(parts[0]) || 0;
-        obj.stdDeviationY = Number(parts[1]) || 0;
-        const tmp6 = Number(parts[1]) || 0;
+    tmp3Result = tmp3(self, constructResult);
+    closure_0 = tmp3Result;
+    tmp3Result.measureInWindow = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measureInWindow(arg0);
       }
-      str2 = props.stdDeviation;
-    }
-    const stdDeviation = props.stdDeviation;
-    let tmp = typeof stdDeviation === "number";
-    if (typeof stdDeviation !== "number") {
-      const stdDeviation2 = props.stdDeviation;
-      let tmp10 = typeof stdDeviation2 === "string";
-      if (typeof stdDeviation2 === "string") {
-        tmp10 = !props.stdDeviation.match(re3);
+    };
+    tmp3Result.measure = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measure(arg0);
       }
-      tmp = tmp10;
-    }
-    if (tmp) {
-      const _Number = Number;
-      obj.stdDeviationX = Number(props.stdDeviation) || 0;
-      const _Number2 = Number;
-      const tmp2 = Number(props.stdDeviation) || 0;
-      obj.stdDeviationY = Number(props.stdDeviation) || 0;
-      const tmp3 = Number(props.stdDeviation) || 0;
-    }
+    };
+    tmp3Result.measureLayout = (arg0, arg1, arg2) => {
+      const root = closure_0.root;
+      if (root) {
+        root.measureLayout(arg0, arg1, arg2);
+      }
+    };
+    tmp3Result.setNativeProps = (arg0) => {
+      const root = closure_0.root;
+      if (root) {
+        root.setNativeProps(arg0);
+      }
+    };
+    tmp3Result.toDataURL = (arg0, arg1) => {
+      if (arg0) {
+        const tmp4 = closure_2_8(closure_0.root);
+        Svg(7999).default.toDataURL(tmp4, arg1, arg0);
+        const _default = Svg(7999).default;
+      }
+    };
+    return tmp3Result;
   }
-  if (props.edgeMode) {
-    obj.edgeMode = props.edgeMode;
+}
+_inherits(Svg, _modDef8018);
+const entry = {
+  key: "render",
+  value: function render() {
+    const self = this;
+    const props = this.props;
+    ({ style, opacity } = props);
+    ({ viewBox, children, onLayout, preserveAspectRatio } = props);
+    const tmp = _objectWithoutProperties(props, closure_3);
+    let applyResult = style;
+    if (Array.isArray(style)) {
+      const _Object = Object;
+      const items = [{}];
+      HermesBuiltin.arraySpread(style, 1);
+      const _Object2 = Object;
+      applyResult = HermesBuiltin.apply(items, Object);
+    }
+    const obj = {};
+    const merged = Object.assign(applyResult);
+    const merged1 = Object.assign(tmp);
+    ({ width, height, focusable } = obj);
+    let tmp10 = undefined === width;
+    ({ transform, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, position } = obj);
+    if (tmp10) {
+      tmp10 = undefined === height;
+    }
+    if (tmp10) {
+      tmp10 = "absolute" !== position;
+    }
+    if (tmp10) {
+      height = "100%";
+      width = "100%";
+    }
+    let BooleanResult = Boolean(focusable);
+    if (BooleanResult) {
+      BooleanResult = "false" !== focusable;
+    }
+    tmp.focusable = BooleanResult;
+    let items1 = [svg];
+    if (style) {
+      items1.push(style);
+    }
+    let num2 = NaN;
+    if (null != opacity) {
+      num2 = extractOpacityDefault(opacity);
+    }
+    const obj2 = {};
+    let flag = false;
+    if (!isNaN(num2)) {
+      obj2.opacity = num2;
+      flag = true;
+    }
+    let flag2 = flag;
+    if (width) {
+      flag2 = flag;
+      if (height) {
+        const _parseInt = parseInt;
+        let parsed = parseInt(width, 10);
+        const _parseInt2 = parseInt;
+        let parsed1 = parseInt(height, 10);
+        const _isNaN = isNaN;
+        let isNaNResult = isNaN(parsed);
+        if (!isNaNResult) {
+          isNaNResult = "%" === width[width.length - 1];
+        }
+        const _isNaN2 = isNaN;
+        let isNaNResult1 = isNaN(parsed1);
+        if (!isNaNResult1) {
+          isNaNResult1 = "%" === height[height.length - 1];
+        }
+        if (isNaNResult) {
+          parsed = width;
+        }
+        obj2.width = parsed;
+        if (isNaNResult1) {
+          parsed1 = height;
+        }
+        obj2.height = parsed1;
+        obj2.flex = 0;
+        flag2 = true;
+      }
+    }
+    if (flag2) {
+      items1.push(obj2);
+    }
+    if (items1.length <= 1) {
+      items1 = svg;
+    }
+    tmp.style = items1;
+    if (null != width) {
+      tmp.bbWidth = width;
+    }
+    if (null != height) {
+      tmp.bbHeight = height;
+    }
+    extractResponderDefault(tmp, tmp, this);
+    const merged2 = Object.assign({}, StyleSheet.flatten(style));
+    if (transform) {
+      if (merged2.transform) {
+        tmp.transform = merged2.transform;
+        merged2.transform = undefined;
+      }
+      tmp.transform = Svg(8002).extractTransformSvgView(tmp);
+      const obj3 = Svg(8002);
+    }
+    const obj4 = {};
+    const merged3 = Object.assign(tmp);
+    obj4.ref = function ref(arg0) {
+      return self.refMethod(arg0);
+    };
+    const merged4 = Object.assign(reducedDefault({ viewBox, preserveAspectRatio }));
+    obj4.children = jsx(_modDef8008, { children, style: merged2, font, fill, fillOpacity, fillRule, stroke, strokeWidth, strokeOpacity, strokeDasharray, strokeDashoffset, strokeLinecap, strokeLinejoin, strokeMiterlimit, onLayout });
+    return jsx(_modDef8006, {});
   }
-  return obj;
 };
-export const extractFeMerge = (props, parent) => {
-  if (props.children) {
-    const Children = noop.Children;
-    let mapped = Children.map(props.children, (onlyResult) => noop.cloneElement(onlyResult, { parent }));
-  } else {
-    mapped = [];
-  }
-  const nodes = [];
-  for (let num = 0; num < length; num = num + 1) {
-    let str = mapped[num].props.in;
-    if (!str) {
-      str = "";
-    }
-    let arr = nodes.push(str);
-  }
-  return { nodes };
-};
+let items = [entry];
+const importDefaultResultResult = _createClass(Svg, items);
+importDefaultResultResult.displayName = "Svg";
+importDefaultResultResult.defaultProps = { preserveAspectRatio: "xMidYMid meet" };
+
+export default importDefaultResultResult;

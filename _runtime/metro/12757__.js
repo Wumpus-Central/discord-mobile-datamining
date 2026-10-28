@@ -1,7 +1,8 @@
 // === Module 12757: ? ===
 
 // Module 12757
-import registerAsset from "module_1131" /* 1131 */;
 
-
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons", width: 24, height: 24, scales: [1, 2, 3], hash: "599bfed8ff498926fcd56f01832a54ca", name: "camera_upload", type: "png" });
+export const escapeStringForRegex = function escapeStringForRegex(str) {
+  str = str.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
+  return str.replace(/-/g, "\\x2d");
+};

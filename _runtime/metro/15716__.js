@@ -1,71 +1,172 @@
 // === Module 15716: ? ===
 
 // Module 15716
-import get_ActivityIndicator from "module_17" /* 17 */;
+import e from "e" /* 1171 */;
+import monadic from "monadic" /* 15717 */;
 
-function getDevMenu() {
-
-}
-
-export default () => () => ({
-  onCommand(type) {
-    if ("devtools.open" === type.type) {
-      if ("devtools.open" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj = {
-            reload() {
-                    console.warn("DevMenu." + "reload" + "() not available in this environment");
-                  },
-            show() {
-                    console.warn("DevMenu." + "show" + "() not available in this environment");
-                  },
-            getConstants() {
-                    return {};
-                  },
-            debugRemotely() {
-                    console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-                  },
-            setHotLoadingEnabled() {
-                    console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-                  },
-            setProfilingEnabled() {
-                    console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-                  }
-          };
-          const OS = Platform.Platform.OS;
-          obj.show();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-      if ("devtools.reload" === type.type) {
-        if (typeof closure_1_1 === "function") {
-          const obj2 = {
-            reload() {
-                    console.warn("DevMenu." + "reload" + "() not available in this environment");
-                  },
-            show() {
-                    console.warn("DevMenu." + "show" + "() not available in this environment");
-                  },
-            getConstants() {
-                    return {};
-                  },
-            debugRemotely() {
-                    console.warn("DevMenu." + "debugRemotely" + "() not available in this environment");
-                  },
-            setHotLoadingEnabled() {
-                    console.warn("DevMenu." + "setHotLoadingEnabled" + "() not available in this environment");
-                  },
-            setProfilingEnabled() {
-                    console.warn("DevMenu." + "setProfilingEnabled" + "() not available in this environment");
-                  }
-          };
-          const OS2 = Platform.Platform.OS;
-          obj2.reload();
-        } else {
-          throw new TypeError("Trying to call a non-function");
-        }
-      }
-    }
+function getMultiInternalSlots(get, arg1) {
+  let length;
+  const items = [];
+  let num = 2;
+  if (2 < arguments.length) {
+    do {
+      items[num - 2] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
   }
-});
+  value = get.get(arg1);
+  require = value;
+  if (value) {
+    const _Object = Object;
+    return items.reduce((acc, item) => {
+      acc[item] = value[item];
+      return acc;
+    }, Object.create(null));
+  } else {
+    const _TypeError = TypeError;
+    const concat = "".concat;
+    const typeError = new TypeError("".concat(arg1, " InternalSlot has not been initialized"));
+    throw typeError;
+  }
+}
+let obj = { strategy: monadic.strategies.variadic };
+const obj2 = { strategy: monadic.strategies.variadic };
+const obj3 = { strategy: monadic.strategies.variadic };
+const obj4 = { strategy: monadic.strategies.variadic };
+
+export const repeat = function repeat(str, arg1) {
+  let length;
+  if (typeof str.repeat === "function") {
+    return str.repeat(arg1);
+  } else {
+    const _Array = Array;
+    const arr = new Array(arg1);
+    let num = 0;
+    if (0 < arr.length) {
+      do {
+        arr[num] = str;
+        num = num + 1;
+        length = arr.length;
+      } while (num < length);
+    }
+    return arr.join("");
+  }
+};
+export const setInternalSlot = function setInternalSlot(get, arg1, arg2, arg3) {
+  if (!get.get(arg1)) {
+    const _Object = Object;
+    const result = get.set(arg1, Object.create(null));
+  }
+  get.get(arg1)[arg2] = arg3;
+};
+export const setMultiInternalSlots = function setMultiInternalSlots(get, arg1, arg2) {
+  const keys = Object.keys(arg2);
+  for (let num = 0; num < keys.length; num = num + 1) {
+    let tmp = keys[num];
+    if (!get.get(arg1)) {
+      let _Object = Object;
+      let result = get.set(arg1, Object.create(null));
+    }
+    get.get(arg1)[tmp] = arg2[tmp];
+  }
+};
+export const getInternalSlot = function getInternalSlot(arg0, arg1, arg2) {
+  return getMultiInternalSlots(arg0, arg1, arg2)[arg2];
+};
+export { getMultiInternalSlots };
+export const isLiteralPart = function isLiteralPart(type) {
+  return "literal" === type.type;
+};
+export const defineProperty = function defineProperty(arg0, arg1, value) {
+  Object.defineProperty(arg0, arg1, { configurable: true, enumerable: false, writable: true, value: value.value });
+};
+export const createDataProperty = function createDataProperty(arg0, direction, firstDay) {
+  Object.defineProperty(arg0, direction, { configurable: true, enumerable: true, writable: true, value: firstDay });
+};
+export const invariant = function invariant(arg0, arg1, arg2) {
+  let _Error = arg2;
+  if (undefined === arg2) {
+    _Error = Error;
+  }
+  if (!arg0) {
+    const _Error1 = new _Error(arg1);
+    throw _Error1;
+  }
+};
+export const UNICODE_EXTENSION_SEQUENCE_REGEX = /-u(?:-[0-9a-z]{2,8})+/gi;
+export const createMemoizedNumberFormat = monadic.memoize(() => {
+  let length;
+  const items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = NumberFormat.bind;
+  const items1 = [undefined];
+  return new bind.apply(NumberFormat, e.__spreadArray(items1, items, false))();
+}, { strategy: monadic.strategies.variadic });
+export const createMemoizedDateTimeFormat = monadic.memoize(() => {
+  let length;
+  const items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = DateTimeFormat.bind;
+  const items1 = [undefined];
+  return new bind.apply(DateTimeFormat, e.__spreadArray(items1, items, false))();
+}, { strategy: monadic.strategies.variadic });
+export const createMemoizedPluralRules = monadic.memoize(() => {
+  let length;
+  const items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = PluralRules.bind;
+  const items1 = [undefined];
+  return new bind.apply(PluralRules, e.__spreadArray(items1, items, false))();
+}, { strategy: monadic.strategies.variadic });
+export const createMemoizedLocale = monadic.memoize(() => {
+  let length;
+  const items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = Locale.bind;
+  const items1 = [undefined];
+  return new bind.apply(Locale, e.__spreadArray(items1, items, false))();
+}, { strategy: monadic.strategies.variadic });
+export const createMemoizedListFormat = monadic.memoize(() => {
+  let length;
+  const items = [];
+  let num = 0;
+  if (0 < arguments.length) {
+    do {
+      items[num] = arguments[num];
+      num = num + 1;
+      length = arguments.length;
+    } while (num < length);
+  }
+  const bind = ListFormat.bind;
+  const items1 = [undefined];
+  return new bind.apply(ListFormat, e.__spreadArray(items1, items, false))();
+}, { strategy: monadic.strategies.variadic });

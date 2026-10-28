@@ -1,30 +1,52 @@
 // === Module 6449: ? ===
 
 // Module 6449
+import _mod1475 from "module_1475" /* 1475 */;
+import defineDataProperty from "defineDataProperty" /* 1476 */;
+import keys2 from "keys2" /* 6450 */;
 
-export default function fromPropertyDescriptor(__Value__) {
-  if (undefined === __Value__) {
-    return __Value__;
+let tmp = typeof Symbol === "function";
+if (typeof Symbol === "function") {
+  const _Symbol = Symbol;
+  tmp = typeof Symbol("foo") === "symbol";
+}
+let closure_2 = tmp;
+const tmp2 = _mod1475();
+let closure_5 = tmp2;
+function defineProperty(arg0, arg1, arg2, arg3) {
+
+}
+function defineProperties(prototype, ownPropertyDescriptors) {
+  const arr = keys2(ownPropertyDescriptors);
+  if (!closure_2) {
+    let num = 0;
+    if (0 < arr.length) {
+      while (typeof defineProperty === "function") {
+        if (!(tmp7 in prototype)) {
+          let tmp14 = defineDataProperty;
+          if (closure_5) {
+            let flag2 = true;
+            let tmp14Result = tmp14(prototype, tmp7, tmp8, true);
+          } else {
+            let tmp14Result2 = tmp14(prototype, tmp7, tmp8);
+          }
+        } else if (true !== tmp9) {
+          if (typeof tmp9 === "function") {
+            let call2 = toString.call;
+          }
+        }
+        num = num + 1;
+      }
+      throw new TypeError("Trying to call a non-function");
+    }
   } else {
-    const obj = {};
-    if ("[[Value]]" in __Value__) {
-      obj.value = __Value__["[[Value]]"];
-    }
-    if ("[[Writable]]" in __Value__) {
-      obj.writable = __Value__["[[Writable]]"];
-    }
-    if ("[[Get]]" in __Value__) {
-      obj.get = __Value__["[[Get]]"];
-    }
-    if ("[[Set]]" in __Value__) {
-      obj.set = __Value__["[[Set]]"];
-    }
-    if ("[[Enumerable]]" in __Value__) {
-      obj.enumerable = __Value__["[[Enumerable]]"];
-    }
-    if ("[[Configurable]]" in __Value__) {
-      obj.configurable = __Value__["[[Configurable]]"];
-    }
-    return obj;
+    const call = concat.call;
+    const _Object = Object;
+    const ownPropertySymbols = Object.getOwnPropertySymbols(ownPropertyDescriptors);
+    typeof call === "unknown" ? concat(ownPropertySymbols) : call(arr, ownPropertySymbols);
   }
-};
+  const tmp = arguments.length > 2 ? arguments[2] : {};
+}
+defineProperties.supportsDescriptors = tmp2;
+
+export default defineProperties;

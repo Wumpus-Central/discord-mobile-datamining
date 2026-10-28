@@ -2,7 +2,7 @@
 
 // Module 8044
 import _possibleConstructorReturnDefault from "_possibleConstructorReturn" /* 93 */;
-import _modDef7984 from "module_7984" /* 7984 */;
+import _modDef8033 from "module_8033" /* 8033 */;
 import _modDef8045 from "module_8045" /* 8045 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
@@ -10,7 +10,7 @@ import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 import noop from "module_19" /* 19 */;
 
-const Path = fn;
+const FeGaussianBlur = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -32,12 +32,12 @@ function _isNativeReflectConstruct() {
 }
 _possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Path {
+class FeGaussianBlur {
   constructor() {
     self = this;
-    tmp = closure_3(this, Path);
+    tmp = closure_3(this, FeGaussianBlur);
     tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Path);
+    obj = hasOwnProperty(FeGaussianBlur);
     tmp3 = closure_4;
     if (closure_7()) {
       tmp7 = globalThis;
@@ -52,31 +52,33 @@ class Path {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Path, _modDef7984);
+_inherits(FeGaussianBlur, _modDef8033);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    const obj = {};
-    const merged = Object.assign(Path(7975).extract(this, props));
-    obj.d = props.d;
-    const obj2 = Path(7975);
-    const obj3 = {
+    const obj = {
       ref(arg0) {
         return self.refMethod(arg0);
       }
     };
-    const merged1 = Object.assign(obj);
-    return jsx(_modDef8045, {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      }
-    });
+    const merged = Object.assign(FeGaussianBlur(8032).extractFilter(this.props));
+    const obj2 = FeGaussianBlur(8032);
+    const merged1 = Object.assign(FeGaussianBlur(8032).extractIn(this.props));
+    const obj3 = FeGaussianBlur(8032);
+    const merged2 = Object.assign(FeGaussianBlur(8032).extractFeGaussianBlur(this.props));
+    return <tmp ref={function ref(arg0) {
+      return self.refMethod(arg0);
+    }} />;
   }
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Path, items);
-importDefaultResultResult.displayName = "Path";
+const importDefaultResultResult = _createClass(FeGaussianBlur, items);
+importDefaultResultResult.displayName = "FeGaussianBlur";
+let obj = {};
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+obj.stdDeviation = 0;
+obj.edgeMode = "none";
+importDefaultResultResult.defaultProps = obj;
 
 export default importDefaultResultResult;

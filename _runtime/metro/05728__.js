@@ -1,19 +1,7 @@
 // === Module 5728: ? ===
 
 // Module 5728
-import _mod5729 from "module_5729" /* 5729 */;
+import registerAsset from "module_1131" /* 1131 */;
 
 
-export default function toInteger(arg0) {
-  const tmp = _mod5729(arg0);
-  const result = tmp % 1;
-  let num = 0;
-  if (tmp == tmp) {
-    let diff = tmp;
-    if (result) {
-      diff = tmp - result;
-    }
-    num = diff;
-  }
-  return num;
-};
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "d43523873b246ea97ff723dd8970498f", name: "ClockIcon", type: "png" });

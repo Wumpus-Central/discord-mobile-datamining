@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/safety_hub/images", width: 350, height: 350, scales: [1], hash: "401f8c2bcc4aaf9b9964b431f7df8a68", name: "video_dark", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 184, height: 152, scales: [2, 3], hash: "e53950ae8b4e55a0d929557716fe168b", name: "img_kick_member", type: "png" });

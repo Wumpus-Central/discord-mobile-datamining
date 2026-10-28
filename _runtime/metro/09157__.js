@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/icons/voice_calls", width: 24, height: 24, scales: [1, 2], hash: "acab5012253c87ed34de4d06c393d7c0", name: "voice_bar_phone", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/instant_invite/native/images", width: 60, height: 60, scales: [2, 3], hash: "a07985aa2246ccd4facb50f3c745ccda", name: "twitter", type: "png" });

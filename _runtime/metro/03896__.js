@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/connected_devices", scales: [1], hash: "538c986241e9009cc8cd084ca9631487", name: "DeviceDetected.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/custom_typing_indicator/intl", scales: [1], hash: "672e676a157080143ff3e4323d55de8e", name: "CustomTypingIndicator.compiled.messages", type: "jsona" });

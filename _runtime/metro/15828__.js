@@ -1,7 +1,13 @@
 // === Module 15828: ? ===
 
 // Module 15828
-import registerAsset from "module_1131" /* 1131 */;
+import _mod15807 from "module_15807" /* 15807 */;
 
+const tmp = _mod15807.navigator && _mod15807.navigator.userAgent;
+let str = "";
+if (tmp) {
+  const _String = String;
+  str = String(tmp);
+}
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native", width: 24, height: 24, scales: [2, 3], hash: "c9224fd30c3d577cc141b2b883b31e09", name: "ic_call_status_red_24px", type: "png" });
+export default str;

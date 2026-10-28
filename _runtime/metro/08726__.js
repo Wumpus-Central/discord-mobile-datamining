@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 160, height: 160, scales: [2, 3], hash: "abf5b4249ea38c96687799aa130b2321", name: "img_no_results_darker", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images", width: 24, height: 24, scales: [2, 3], hash: "be0ebbe0444cf9ea073becdc22f65ec9", name: "DenyIcon", type: "png" });

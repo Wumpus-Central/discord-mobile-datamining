@@ -1,59 +1,13 @@
 // === Module 5090: ? ===
 
 // Module 5090
-import c from "c" /* 576 */;
-import _mod5085 from "module_5085" /* 5085 */;
-import _slicedToArray from "module_32" /* 32 */;
+const require = globalThis.__r;
 
-const RiveColor2 = tmp(5080);
-require = fn;
-fn(19).useCallback;
-const f33631 = (colorProperty, arg1) => colorProperty.colorProperty(arg1);
+const obj = { name: "react-native-nitro-modules", version: "0.37.1", description: "Fast, type-safe native modules for React Native with statically compiled JSI bindings.", main: "lib/commonjs/index", module: "lib/module/index", types: "lib/typescript/index.d.ts", "react-native": "src/index", source: "src/index", files: ["src", "!src/__tests__", "react-native.config.js", "lib", "android/build.gradle", "android/gradle.properties", "android/fix-prefab.gradle", "android/CMakeLists.txt", "android/src/", "ios/", "cpp/", "app.plugin.js", "*.podspec", "nitro_pod_utils.rb", "README.md"], keywords: ["react-native", "nitro", "ios", "android", "visionOS", "tvOS", "macOS", "cpp", "framework", "react", "swift", "native", "modules", "fast", "jsi", "turbo", "scaffold", "template", "views"], repository: { type: "git", url: "git+https://github.com/mrousavy/nitro.git" }, author: "Marc Rousavy <me@mrousavy.com> (https://github.com/mrousavy)", license: "MIT", bugs: { url: "https://github.com/mrousavy/nitro/issues" }, homepage: "https://nitro.margelo.com", publishConfig: { registry: "https://registry.npmjs.org/" }, scripts: { "write-native-version": "version=$(node -p \"require('./package.json').version\") && sed -i '' \"s/#define NITRO_VERSION \\\".*\\\"/#define NITRO_VERSION \\\"$version\\\"/\" ./cpp/utils/NitroDefines.hpp", postversion: "bun run write-native-version", build: "rm -rf lib && bun typecheck && bob build", typecheck: "tsc --noEmit", lint: "eslint \"**/*.{js,ts,tsx}\" --fix", "lint-ci": "eslint \"**/*.{js,ts,tsx}\" -f @jamesacarr/github-actions --max-warnings 0", test: "jest", clean: "rm -rf android/build node_modules/**/android/build lib", release: "release-it" }, devDependencies: { "@types/jest": "*", "@types/react": "^19.2.15", jest: "*", "@react-native/jest-preset": "0.85.3", react: "19.2.3", "react-native": "0.85.3", "react-native-builder-bob": "^0.41.0", "react-native-worklets": "^0.9.1" }, peerDependencies: { react: "*", "react-native": "*" }, codegenConfig: { name: "NitroModulesSpec", type: "modules", jsSrcsDir: "./src", android: { javaPackageName: "com.margelo.nitro" } }, jest: { preset: "@react-native/jest-preset", modulePathIgnorePatterns: ["<rootDir>/example/node_modules", "<rootDir>/lib/"] }, "release-it": { npm: { publish: true }, git: false, github: { release: false }, hooks: { "before:init": "bun typecheck && bun lint", "after:bump": "bun run build" } }, "react-native-builder-bob": null };
+const obj2 = { source: "src", output: "lib", targets: null };
+const items = ["typescript", { project: "tsconfig.build.json", tsc: "../../node_modules/typescript/bin/tsc" }];
+const items1 = ["commonjs", "module", items];
+obj2.targets = items1;
+obj["react-native-builder-bob"] = obj2;
 
-export const useRiveColor = function useRiveColor(arg0, arg1) {
-  const cResult = c.c(8);
-  const tmp4 = _slicedToArray(_mod5085.useRiveProperty(arg1, arg0, f33631), 3);
-  [tmp5, tmp6] = tmp4;
-  require = tmp6;
-  if (cResult[0] !== tmp5) {
-    let fromIntResult;
-    if (undefined !== tmp5) {
-      let RiveColor = RiveColor2.RiveColor;
-      fromIntResult = RiveColor.fromInt(tmp5);
-    }
-    cResult[0] = tmp5;
-    cResult[1] = fromIntResult;
-    let tmp8 = fromIntResult;
-  } else {
-    tmp8 = cResult[1];
-  }
-  if (cResult[2] !== tmp6) {
-    const fn = function p(str) {
-      let fromHexStringResult = str;
-      if (typeof str === "string") {
-        const RiveColor = RiveColor2.RiveColor;
-        fromHexStringResult = RiveColor.fromHexString(str);
-      }
-      tmp6(fromHexStringResult.toInt());
-    };
-    cResult[2] = tmp6;
-    cResult[3] = fn;
-    let tmp10 = fn;
-  } else {
-    tmp10 = cResult[3];
-  }
-  if (cResult[4] === tmp4[2]) {
-    if (cResult[5] === tmp10) {
-      if (cResult[6] === tmp8) {
-        let tmp11 = cResult[7];
-      }
-      return tmp11;
-    }
-  }
-  const obj3 = { value: tmp8, setValue: tmp10, error: tmp4[2] };
-  cResult[4] = tmp4[2];
-  cResult[5] = tmp10;
-  cResult[6] = tmp8;
-  cResult[7] = obj3;
-  tmp11 = obj3;
-};
+export default obj;

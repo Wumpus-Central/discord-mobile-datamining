@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/premium/logos", width: 449.5, height: 245, scales: [2, 3], hash: "c5de68623f46517bfe4474ddbdb02f66", name: "img_logo_nitro_tier_0", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/media_keyboard/native/images", width: 173.5, height: 80, scales: [2, 3], hash: "bef971c8357e3a1bbe631b70aec03333", name: "empty_permission", type: "png" });

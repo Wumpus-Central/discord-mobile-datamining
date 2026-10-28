@@ -1,53 +1,94 @@
 // === Module 10291: ? ===
 
 // Module 10291
-import _classCallCheck from "_classCallCheck" /* 41 */;
+import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
+import Filter from "Filter" /* 10268 */;
+import _classCallCheck_mod from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
+import _inherits from "_inherits" /* 98 */;
 
-const JPSlashDateFormatParser = require;
-const regExp = new RegExp("([0-9\uFF10-\uFF19]{4}[\\/|\\\uFF0F])?([0-1\uFF10-\uFF11]{0,1}[0-9\uFF10-\uFF19]{1})(?:[\\/|\\\uFF0F]([0-3\uFF10-\uFF13]{0,1}[0-9\uFF10-\uFF19]{1}))", "i");
-class JPSlashDateFormatParser {
-  constructor() {
-    tmp = c2(this, JPSlashDateFormatParser);
-    return;
+function _isNativeReflectConstruct() {
+  try {
+    const _Boolean = Boolean;
+    const call = valueOf.call;
+    const _Reflect = Reflect;
+    const _Boolean2 = Boolean;
+    if (typeof call === "unknown") {
+      let callResult = valueOf();
+    } else {
+      callResult = call(constructResult);
+    }
+    closure_0 = !callResult;
+    _isNativeReflectConstruct = function _isNativeReflectConstruct() {
+      return closure_0;
+    };
+    return _isNativeReflectConstruct();
+  } catch (err) {
   }
 }
+let _classCallCheck = _classCallCheck_mod;
+_possibleConstructorReturn;
+class MergeWeekdayComponentRefiner {
+  constructor() {
+    self = this;
+    tmp = closure_0(this, MergeWeekdayComponentRefiner);
+    tmp2 = c2;
+    obj = c2(MergeWeekdayComponentRefiner);
+    tmp3 = closure_1;
+    if (closure_3()) {
+      tmp7 = globalThis;
+      _Reflect = Reflect;
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
+    } else {
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
+    }
+    return tmp3(self, constructResult);
+  }
+}
+_classCallCheck = MergeWeekdayComponentRefiner;
+_inherits(MergeWeekdayComponentRefiner, Filter.MergingRefiner);
 const entry = {
-  key: "pattern",
-  value: function pattern() {
-    return regExp;
+  key: "mergeResults",
+  value: function mergeResults(arg0, index, clone) {
+    const cloneResult = clone.clone();
+    cloneResult.index = index.index;
+    cloneResult.text = index.text + arg0 + cloneResult.text;
+    const start = cloneResult.start;
+    const start2 = index.start;
+    start.assign("weekday", start2.get("weekday"));
+    if (cloneResult.end) {
+      const end = cloneResult.end;
+      const start3 = index.start;
+      end.assign("weekday", start3.get("weekday"));
+    }
+    return cloneResult;
   }
 };
 const items = [
   entry,
   {
-    key: "extract",
-    value: function extract(createParsingComponents, arg1) {
-      const parsingComponents = createParsingComponents.createParsingComponents();
-      const parsed = parseInt(JPSlashDateFormatParser(10287).toHankaku(arg1[2]));
-      const parsed1 = parseInt(JPSlashDateFormatParser(10287).toHankaku(arg1[3]));
-      if (parsed >= 1) {
-        if (parsed <= 12) {
-          if (parsed1 >= 1) {
-            if (parsed1 <= 31) {
-              parsingComponents.assign("day", parsed1);
-              parsingComponents.assign("month", parsed);
-              if (arg1[1]) {
-                const _parseInt = parseInt;
-                const parsed2 = parseInt(JPSlashDateFormatParser(10287).toHankaku(arg1[1]));
-                parsingComponents.assign("year", JPSlashDateFormatParser(10218).findMostLikelyADYear(parsed2));
-              } else {
-                parsingComponents.imply("year", JPSlashDateFormatParser(10218).findYearClosestToRef(createParsingComponents.reference.instant, parsed1, parsed));
-              }
-              return parsingComponents;
-            }
-          }
-          return null;
-        }
+    key: "shouldMergeResults",
+    value: function shouldMergeResults(str, start, start2) {
+      start = start.start;
+      let result = start.isOnlyWeekdayComponent();
+      if (result) {
+        start2 = start.start;
+        result = !start2.isCertain("hour");
       }
-      return null;
+      if (result) {
+        const start3 = start2.start;
+        result = start3.isCertain("day");
+      }
+      if (result) {
+        result = null != str.match(/^,?\s*$/);
+      }
+      return result;
     }
   }
 ];
 
-export default _createClass(JPSlashDateFormatParser, items);
+export default _createClass(MergeWeekdayComponentRefiner, items);

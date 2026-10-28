@@ -1,68 +1,26 @@
 // === Module 4400: ? ===
 
 // Module 4400
-import _mod4401 from "module_4401" /* 4401 */;
-import module_4257_mod from "module_4257" /* 4257 */;
+let closure_0 = { lessThanXSeconds: { one: "mai pu\u021Bin de o secund\u0103", other: "mai pu\u021Bin de {{count}} secunde" }, xSeconds: { one: "1 secund\u0103", other: "{{count}} secunde" }, halfAMinute: "jum\u0103tate de minut", lessThanXMinutes: { one: "mai pu\u021Bin de un minut", other: "mai pu\u021Bin de {{count}} minute" }, xMinutes: { one: "1 minut", other: "{{count}} minute" }, aboutXHours: { one: "circa 1 or\u0103", other: "circa {{count}} ore" }, xHours: { one: "1 or\u0103", other: "{{count}} ore" }, xDays: { one: "1 zi", other: "{{count}} zile" }, aboutXWeeks: { one: "circa o s\u0103pt\u0103m\u00E2n\u0103", other: "circa {{count}} s\u0103pt\u0103m\u00E2ni" }, xWeeks: { one: "1 s\u0103pt\u0103m\u00E2n\u0103", other: "{{count}} s\u0103pt\u0103m\u00E2ni" }, aboutXMonths: { one: "circa 1 lun\u0103", other: "circa {{count}} luni" }, xMonths: { one: "1 lun\u0103", other: "{{count}} luni" }, aboutXYears: { one: "circa 1 an", other: "circa {{count}} ani" }, xYears: { one: "1 an", other: "{{count}} ani" }, overXYears: { one: "peste 1 an", other: "peste {{count}} ani" }, almostXYears: { one: "aproape 1 an", other: "aproape {{count}} ani" } };
 
-let module_4257 = module_4257_mod;
-if (!module_4257) {
-  const obj = { default: module_4257 };
-  let tmp3 = obj;
-} else {
-  tmp3 = module_4257;
-}
-module_4257 = tmp3;
-const dependencyMap = ["\u043D\u0435\u0434\u0456\u043B\u044E", "\u043F\u043E\u043D\u0435\u0434\u0456\u043B\u043E\u043A", "\u0432\u0456\u0432\u0442\u043E\u0440\u043E\u043A", "\u0441\u0435\u0440\u0435\u0434\u0443", "\u0447\u0435\u0442\u0432\u0435\u0440", "\u043F\u2019\u044F\u0442\u043D\u0438\u0446\u044E", "\u0441\u0443\u0431\u043E\u0442\u0443"];
-let closure_4 = {
-  lastWeek: function lastWeekFormat(arg0, arg1, arg2) {
-    const toDateResult = _mod4401.toDate(arg0);
-    const uTCDay = toDateResult.getUTCDay();
-    if (module_4257.default(toDateResult, arg1, arg2)) {
-      let text = `${"'\u0443 " + tmp2} о' p`;
-    } else {
-      if (0 !== uTCDay) {
-        if (3 !== uTCDay) {
-          if (5 !== uTCDay) {
-            if (6 !== uTCDay) {
-              text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0438\u0439 " + tmp2} о' p`;
-            }
-          }
+export default function formatDistance(arg0, arg1, addSuffix) {
+  if (typeof closure_0[arg0] === "string") {
+    let tmp6 = tmp;
+    if (null != addSuffix) {
+      tmp6 = tmp;
+      if (addSuffix.addSuffix) {
+        if (!addSuffix.comparison) {
+          let text = `${tmp} în urmă`;
         }
+        text = `în ${tmp}`;
       }
-      text = `${"'\u0443 \u043C\u0438\u043D\u0443\u043B\u0443 " + tmp2} о' p`;
     }
-    return text;
-  },
-  yesterday: "'\u0432\u0447\u043E\u0440\u0430 \u043E' p",
-  today: "'\u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456 \u043E' p",
-  tomorrow: "'\u0437\u0430\u0432\u0442\u0440\u0430 \u043E' p",
-  nextWeek: function nextWeekFormat(arg0, arg1, arg2) {
-    const toDateResult = _mod4401.toDate(arg0);
-    const uTCDay = toDateResult.getUTCDay();
-    if (module_4257.default(toDateResult, arg1, arg2)) {
-      let text = `${"'\u0443 " + tmp2} о' p`;
-    } else {
-      if (0 !== uTCDay) {
-        if (3 !== uTCDay) {
-          if (5 !== uTCDay) {
-            if (6 !== uTCDay) {
-              text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439 " + tmp2} о' p`;
-            }
-          }
-        }
-      }
-      text = `${"'\u0443 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0443 " + tmp2} о' p`;
-    }
-    return text;
-  },
-  other: "P"
-};
-
-export default function formatRelative(arg0, arg1, arg2, arg3) {
-  let tmpResult = tmp;
-  if (typeof closure_4[arg0] === "function") {
-    tmpResult = tmp(arg1, arg2, arg3);
+    return tmp6;
+  } else if (1 === arg1) {
+    let one = tmp.one;
+  } else {
+    const _String = String;
+    one = tmp.other.replace("{{count}}", String(arg1));
   }
-  return tmpResult;
 };
 export default exports.default;

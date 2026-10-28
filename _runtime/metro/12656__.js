@@ -1,200 +1,234 @@
 // === Module 12656: ? ===
 
 // Module 12656
-import _mod12633 from "module_12633" /* 12633 */;
-import _mod12636 from "module_12636" /* 12636 */;
-import _mod12643 from "module_12643" /* 12643 */;
-import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
+import _createClass from "_createClass" /* 42 */;
 
-function eventFromEnvelope(arg0, arg1) {
-  closure_0 = arg1;
-  _mod12633.forEachEnvelopeItem(arg0, (arg0, arg1) => {
-    if (items.includes(arg1)) {
-      const _Array = Array;
-      let tmp3;
-      if (Array.isArray(arg0)) {
-        tmp3 = arg0[1];
-      }
-      closure_1 = tmp3;
-    }
-    return closure_1;
-  });
-  return dependencyMap;
+let AsyncContextStack = require;
+function withScope(arg0) {
+  const mainCarrier = AsyncContextStack(12654).getMainCarrier();
+  const obj = AsyncContextStack(12654);
+  const sentryCarrier = AsyncContextStack(12654).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = AsyncContextStack(12662).getDefaultCurrentScope();
+    const tmpResult = AsyncContextStack(12662);
+    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(12662).getDefaultIsolationScope());
+    const tmpResult2 = AsyncContextStack(12662);
+  }
+  sentryCarrier.stack = stack;
+  return stack.withScope(arg0);
 }
-
-export { eventFromEnvelope };
-export function makeMultiplexedTransport(arg0, arg1) {
-  closure_0 = arg0;
+function withSetScope(scope, arg1) {
   closure_1 = arg1;
-  return (arg0) => {
-    let tunnel = arg0;
-    function getTransport(arg0, arg1) {
-      let combined = arg0;
-      if (arg1) {
-        const _HermesInternal = HermesInternal;
-        combined = "" + arg0 + ":" + arg1;
-      }
-      value = map.get(combined);
-      if (value) {
-        const items = [arg0, value];
-        return items;
-      } else {
-        const dsnFromStringResult = _mod12636.dsnFromString(arg0);
-        if (dsnFromStringResult) {
-          let merged = tunnel;
-          const envelopeEndpointWithUrlEncodedAuth = _mod12643.getEnvelopeEndpointWithUrlEncodedAuth(dsnFromStringResult, tunnel.tunnel);
-          let tmp9 = tunnel;
-          let obj3 = {};
-          if (arg1) {
-            merged = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            const tmp9Result = tmp9(obj3);
-            closure_1 = tmp9Result;
-            const obj4 = {};
-            const merged1 = Object.assign(tmp9Result);
-            tmp9 = asyncGeneratorStep;
-            tunnel = asyncGeneratorStep(async (release) => {
-              c1 = 0;
-              return (async (arg0) => {
-                if (c1 === 2) {
-                  c1 = 3;
-                  throw new TypeError("Generator functions may not be called on executing generators");
-                } else if (tmp3 === 3) {
-                  if (arg0 === 1) {
-                    throw value;
-                  } else if (arg0 === 2) {
-                    const obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    return { value: "IconComponent", done: null };
-                  }
-                } else {
-                  try {
-                    c1 = 2;
-                    if (arg0 === 1) {
-                      c1 = 3;
-                      throw value;
-                    } else if (arg0 === 2) {
-                      c1 = 3;
-                      const obj3 = { value, done: true };
-                      return obj3;
-                    } else {
-                      const tmp6 = getTransport(release, ["event", "transaction", "profile", "replay_event"]);
-                      if (tmp6) {
-                        tmp6.release = release;
-                      }
-                      c1 = 3;
-                      const obj = { value: closure_1.send(release), done: true };
-                      return obj;
-                    }
-                  } catch (tmp9) {
-                    c1 = tmp;
-                    throw tmp9;
-                  }
-                }
-              })();
-            });
-            obj4.send = function send(arg0) {
-              const self = this;
-              const apply = closure_0.apply;
-              if (typeof apply === "unknown") {
-                let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-              } else {
-                applyArgumentsResult = apply(self, arguments);
-              }
-              return applyArgumentsResult;
-            };
-            let tmp9Result2 = obj4;
-          } else {
-            const merged2 = Object.assign(merged);
-            obj3.url = envelopeEndpointWithUrlEncodedAuth;
-            tmp9Result2 = tmp9(obj3);
-          }
-          obj3 = map.set(combined, tmp9Result2);
-          const tmp4Result = _mod12643;
-        }
-      }
+  const mainCarrier = AsyncContextStack(12654).getMainCarrier();
+  const obj = AsyncContextStack(12654);
+  const sentryCarrier = AsyncContextStack(12654).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = AsyncContextStack(12662).getDefaultCurrentScope();
+    const tmpResult = AsyncContextStack(12662);
+    stack = new _moduleResult(defaultCurrentScope, AsyncContextStack(12662).getDefaultIsolationScope());
+    const tmpResult2 = AsyncContextStack(12662);
+  }
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    stack.getStackTop().scope = scope;
+    return closure_1(scope);
+  });
+}
+function withIsolationScope(arg0) {
+  AsyncContextStack = arg0;
+  const mainCarrier = AsyncContextStack(12654).getMainCarrier();
+  const obj = AsyncContextStack(12654);
+  const sentryCarrier = AsyncContextStack(12654).getSentryCarrier(mainCarrier);
+  let stack = sentryCarrier.stack;
+  if (!stack) {
+    const defaultCurrentScope = tmp(12662).getDefaultCurrentScope();
+    const tmpResult = tmp(12662);
+    stack = new closure_3(defaultCurrentScope, tmp(12662).getDefaultIsolationScope());
+    const tmpResult2 = tmp(12662);
+  }
+  sentryCarrier.stack = stack;
+  return stack.withScope(() => {
+    const mainCarrier = AsyncContextStack(12654).getMainCarrier();
+    const obj = AsyncContextStack(12654);
+    const sentryCarrier = AsyncContextStack(12654).getSentryCarrier(mainCarrier);
+    let stack = sentryCarrier.stack;
+    if (!stack) {
+      const defaultCurrentScope = AsyncContextStack(12662).getDefaultCurrentScope();
+      const tmp2Result = AsyncContextStack(12662);
+      stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(12662).getDefaultIsolationScope());
+      const tmp2Result2 = AsyncContextStack(12662);
     }
-    closure_4 = async function _send() {
-      c2 = 0;
-      c1 = 0;
-      return (async (arg0) => {
-        const mapped = v3({
-          envelope,
-          getEvent(arg0) {
-            let items = arg0;
-            if (!arg0) {
-              items = ["event"];
-            }
-            dependencyMap(12633).forEachEnvelopeItem(dependencyMap, () => { ... });
-            return dependencyMap2;
-          }
-        }).map((dsn) => {
-          if (typeof dsn === "string") {
-            let tmp2 = closure_1_3(dsn, undefined);
-          } else {
-            tmp2 = closure_1_3(dsn.dsn, dsn.release);
-          }
-          return tmp2;
+    sentryCarrier.stack = stack;
+    return closure_0(stack.getIsolationScope());
+  });
+}
+class AsyncContextStack {
+  constructor(arg0, arg1) {
+    self = this;
+    scope = global;
+    tmp2 = c2(this, AsyncContextStack);
+    if (!global) {
+      tmp3 = closure_0;
+      tmp4 = closure_1;
+      tmp5 = new.target;
+      tmp6 = new.target;
+      scope = new closure_0(closure_1[2]).Scope();
+    }
+    scope1 = require;
+    if (!require) {
+      tmp8 = closure_0;
+      tmp9 = closure_1;
+      tmp10 = new.target;
+      tmp11 = new.target;
+      scope1 = new closure_0(closure_1[2]).Scope();
+    }
+    items = [];
+    items[0] = { scope };
+    self._stack = items;
+    self._isolationScope = scope1;
+    return;
+  }
+}
+const entry = {
+  key: "withScope",
+  value: function withScope(fn) {
+    const self = this;
+    try {
+      const promise = fn(tmp);
+      if (obj2.isThenable(promise)) {
+        let nextPromise = promise.then((result) => {
+          self._popScope();
+          return result;
+        }, (arg0) => {
+          self._popScope();
+          throw arg0;
         });
-        const found = mapped.filter((item) => item);
-        let arr3 = found;
-        if (!found.length) {
-          let items = ["", closure_2_1];
-          const items1 = [items];
-          arr3 = items1;
-        }
-        await Promise.all(arr3.map((item) => {
-          [tmp, obj] = item;
-          const first = 5;
-          if (tmp) {
-            const obj3 = {};
-            const merged = Object.assign(first);
-            obj3.dsn = tmp;
-            let tmp4 = obj3;
-          } else {
-            tmp4 = first;
-          }
-          return obj.send(dependencyMap(12633).createEnvelope(tmp4, 12633));
-        }));
-        return value[0];
-      })();
-    };
-    closure_5 = async function _flush() {
-      closure_2 = tmp2;
-      closure_130_0 = closure_0;
-      closure_1 = 0;
-      const items = [];
-      const arraySpreadResult = HermesBuiltin.arraySpread(map.values(), closure_1);
-      closure_1 = arraySpreadResult;
-      items[arraySpreadResult] = closure_2_1;
-      closure_1 = closure_1 + 1;
-      await Promise.all(items.map((flush) => flush.flush(closure_1_0)));
-      return value.every((item) => item);
-    };
-    closure_1 = tunnel(arg0);
-    const map = new Map();
-    return {
-      send(arg0) {
-        const self = this;
-        const apply = closure_4.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
-      },
-      flush(arg0) {
-        const self = this;
-        const apply = closure_5.apply;
-        if (typeof apply === "unknown") {
-          let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-        } else {
-          applyArgumentsResult = apply(self, arguments);
-        }
-        return applyArgumentsResult;
+      } else {
+        self._popScope();
+        nextPromise = promise;
       }
-    };
+      return nextPromise;
+    } catch (tmp9) {
+      obj._popScope();
+      throw tmp9;
+    }
+  }
+};
+let items = [
+  entry,
+  {
+    key: "getClient",
+    value: function getClient() {
+      return this.getStackTop().client;
+    }
+  },
+  {
+    key: "getScope",
+    value: function getScope() {
+      return this.getStackTop().scope;
+    }
+  },
+  {
+    key: "getIsolationScope",
+    value: function getIsolationScope() {
+      return this._isolationScope;
+    }
+  },
+  {
+    key: "getStackTop",
+    value: function getStackTop() {
+      return this._stack[this._stack.length - 1];
+    }
+  },
+  {
+    key: "_pushScope",
+    value: function _pushScope() {
+      const scope = this.getScope();
+      const cloneResult = scope.clone();
+      const _stack = this._stack;
+      _stack.push({ client: this.getClient(), scope: cloneResult });
+      return cloneResult;
+    }
+  },
+  {
+    key: "_popScope",
+    value: function _popScope() {
+      let arr = this._stack.length > 1;
+      if (arr) {
+        const _stack = this._stack;
+        arr = _stack.pop();
+      }
+      return arr;
+    }
+  }
+];
+const _moduleResult = _createClass(AsyncContextStack, items);
+let c3 = _moduleResult;
+
+export const AsyncContextStack = _moduleResult;
+export function getStackAsyncContextStrategy() {
+  return {
+    withIsolationScope,
+    withScope,
+    withSetScope,
+    withSetIsolationScope(arg0, arg1) {
+      closure_0 = arg1;
+      let mainCarrier = closure_0(12654).getMainCarrier();
+      let obj = closure_0(12654);
+      let sentryCarrier = closure_0(12654).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        let defaultCurrentScope = tmp(12662).getDefaultCurrentScope();
+        const tmpResult = tmp(12662);
+        stack = new closure_3(defaultCurrentScope, tmp(12662).getDefaultIsolationScope());
+        const tmpResult2 = tmp(12662);
+      }
+      sentryCarrier.stack = stack;
+      return stack.withScope(() => {
+        const mainCarrier = AsyncContextStack(12654).getMainCarrier();
+        const obj = AsyncContextStack(12654);
+        const sentryCarrier = AsyncContextStack(12654).getSentryCarrier(mainCarrier);
+        let stack = sentryCarrier.stack;
+        if (!stack) {
+          const defaultCurrentScope = AsyncContextStack(12662).getDefaultCurrentScope();
+          const tmp2Result = AsyncContextStack(12662);
+          stack = new closure_2_3(defaultCurrentScope, AsyncContextStack(12662).getDefaultIsolationScope());
+          const tmp2Result2 = AsyncContextStack(12662);
+        }
+        sentryCarrier.stack = stack;
+        return closure_0(stack.getIsolationScope());
+      });
+    },
+    getCurrentScope() {
+      const mainCarrier = AsyncContextStack(12654).getMainCarrier();
+      const obj = AsyncContextStack(12654);
+      const sentryCarrier = AsyncContextStack(12654).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        const defaultCurrentScope = AsyncContextStack(12662).getDefaultCurrentScope();
+        const tmpResult = AsyncContextStack(12662);
+        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(12662).getDefaultIsolationScope());
+        const tmpResult2 = AsyncContextStack(12662);
+      }
+      sentryCarrier.stack = stack;
+      return stack.getScope();
+    },
+    getIsolationScope() {
+      const mainCarrier = AsyncContextStack(12654).getMainCarrier();
+      const obj = AsyncContextStack(12654);
+      const sentryCarrier = AsyncContextStack(12654).getSentryCarrier(mainCarrier);
+      let stack = sentryCarrier.stack;
+      if (!stack) {
+        const defaultCurrentScope = AsyncContextStack(12662).getDefaultCurrentScope();
+        const tmpResult = AsyncContextStack(12662);
+        stack = new closure_1_3(defaultCurrentScope, AsyncContextStack(12662).getDefaultIsolationScope());
+        const tmpResult2 = AsyncContextStack(12662);
+      }
+      sentryCarrier.stack = stack;
+      return stack.getIsolationScope();
+    }
   };
 }

@@ -1,49 +1,37 @@
 // === Module 4454: ? ===
 
 // Module 4454
-import _typeof_mod from "module_4255" /* 4255 */;
-import endOfDay_mod from "endOfDay" /* 4455 */;
-import endOfMonth_mod from "endOfMonth" /* 4456 */;
-import requiredArgs_mod from "requiredArgs" /* 4256 */;
+import module_4291_mod from "module_4291" /* 4291 */;
+import module_4442_mod from "module_4442" /* 4442 */;
+import requiredArgs_mod from "requiredArgs" /* 4288 */;
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4291 = module_4291_mod;
+if (!module_4291) {
+  const obj = { default: module_4291 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4291;
 }
-_typeof = tmp3;
-let endOfDay = endOfDay_mod;
-if (!endOfDay) {
-  const obj2 = { default: endOfDay };
+module_4291 = tmp3;
+let module_4442 = module_4442_mod;
+if (!module_4442) {
+  const obj2 = { default: module_4442 };
   let tmp5 = obj2;
 } else {
-  tmp5 = endOfDay;
+  tmp5 = module_4442;
 }
-endOfDay = tmp5;
-let endOfMonth = endOfMonth_mod;
-if (!endOfMonth) {
-  const obj3 = { default: endOfMonth };
-  let tmp7 = obj3;
-} else {
-  tmp7 = endOfMonth;
-}
-endOfMonth = tmp7;
+module_4442 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj3 = { default: requiredArgs };
+  let tmp7 = obj3;
 } else {
-  tmp9 = requiredArgs;
+  tmp7 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp7;
 
-export default function isLastDayOfMonth(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const time = endOfDay.default(defaultResult1).getTime();
-  const defaultResult2 = endOfDay.default(defaultResult1);
-  return time === endOfMonth.default(defaultResult1).getTime();
+export default function addSeconds(interval, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4442.default(interval, 1000 * module_4291.default(arg1));
 };
 export default exports.default;

@@ -1,334 +1,218 @@
 // === Module 5475: ? ===
 
 // Module 5475
-import normalizeSnapPoint from "normalizeSnapPoint" /* 5287 */;
-import id from "id" /* 5477 */;
-import _slicedToArray from "module_32" /* 32 */;
-import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import noop_mod from "module_19" /* 19 */;
+import cancelAnimation from "cancelAnimation" /* 1655 */;
+import value22 from "value2" /* 5306 */;
+import _mod5476 from "module_5476" /* 5476 */;
+import _mod5477 from "module_5477" /* 5477 */;
+import get_ActivityIndicator from "module_17" /* 17 */;
 
-require = fn;
-let closure_3 = ["name", "stackBehavior", "enableDismissOnClose", "onDismiss", "onAnimate", "index", "snapPoints", "enablePanDownToClose", "animateOnMount", "containerComponent", "onChange", "children"];
-let noop = fn(19);
-({ useCallback: metroRequire, useImperativeHandle: closure_7, useMemo: closure_8, useRef: closure_9, useState: c10, createElement: closure_11, forwardRef, memo } = noop);
-let noop = noop_mod;
-const jsx = fn(21).jsx;
-let closure_14 = { mount: false, data: "Array" };
-const memoResult = memo(forwardRef(function BottomSheetModalComponent(name, arg1) {
-  _require = arg1;
-  name = name.name;
-  let DEFAULT_STACK_BEHAVIOR = name.stackBehavior;
-  if (undefined === DEFAULT_STACK_BEHAVIOR) {
-    DEFAULT_STACK_BEHAVIOR = require("DEFAULT_STACK_BEHAVIOR").DEFAULT_STACK_BEHAVIOR;
-  }
-  let DEFAULT_ENABLE_DISMISS_ON_CLOSE = name.enableDismissOnClose;
-  if (undefined === DEFAULT_ENABLE_DISMISS_ON_CLOSE) {
-    DEFAULT_ENABLE_DISMISS_ON_CLOSE = require("DEFAULT_STACK_BEHAVIOR").DEFAULT_ENABLE_DISMISS_ON_CLOSE;
-  }
-  const onDismiss = name.onDismiss;
-  const onAnimate = name.onAnimate;
-  const index = name.index;
-  let num = 0;
-  if (undefined !== index) {
-    num = index;
-  }
-  let enablePanDownToClose = name.enablePanDownToClose;
-  let tmp5 = undefined === enablePanDownToClose;
-  if (!tmp5) {
-    tmp5 = enablePanDownToClose;
-  }
-  enablePanDownToClose = tmp5;
-  const animateOnMount = name.animateOnMount;
-  let Fragment = name.containerComponent;
-  if (undefined === Fragment) {
-    Fragment = willUnmountSheet.Fragment;
-  }
-  const onChange = name.onChange;
-  const children = name.children;
-  const tmp8 = onAnimate(name, DEFAULT_ENABLE_DISMISS_ON_CLOSE);
-  const tmp9 = onDismiss(mountSheet(closure_14), 2);
-  const first = tmp9[0];
-  const mount = first.mount;
-  closure_9 = tmp9[1];
-  const bottomSheetModalInternal = require("module_5275").useBottomSheetModalInternal();
-  ({ hostName, mountSheet } = bottomSheetModalInternal);
-  const unmountSheet = bottomSheetModalInternal.unmountSheet;
-  willUnmountSheet = bottomSheetModalInternal.willUnmountSheet;
-  ({ containerHeight, containerOffset } = bottomSheetModalInternal);
-  let obj = require("module_5275");
-  const tmp11 = _require;
-  const removePortal = require("Portal").usePortal(hostName).removePortal;
-  const tmp15 = closure_9(null);
-  closure_14 = tmp15;
-  let num2 = -1;
-  if (!(undefined === animateOnMount || animateOnMount)) {
-    num2 = num;
-  }
-  closure_9(num2);
-  closure_9(null);
-  closure_9(-1);
-  closure_18 = tmp14(false);
-  closure_9(false);
-  const tmp14Result = closure_9(false);
-  tmp14Result.current = mount;
-  let items = [name];
-  const tmp17 = onChange(() => {
-    let combined = name;
-    if (!name) {
-      const _HermesInternal = HermesInternal;
-      combined = "bottom-sheet-modal-" + id.id();
-    }
-    return combined;
-  }, items);
-  closure_21 = tmp17;
-  function resetVariables() {
-    normalizeSnapPoint.print({ component: memoResult.name, method: resetVariables.name });
-    closure_15.current = -1;
-    closure_17.current = -1;
-    closure_18.current = false;
-    closure_20.current = false;
-    closure_19.current = false;
-  }
-  const tmp18 = num(resetVariables, []);
-  closure_22 = tmp18;
-  let items1 = [tmp17, tmp18, unmountSheet, removePortal, onDismiss];
-  const tmp19 = num(function unmount() {
-    closure_22();
-    unmountSheet(closure_21);
-    removePortal(closure_21);
-    if (ref5.current) {
-      closure_9(closure_14);
-    }
-    if (onDismiss) {
-      onDismiss();
-    }
-  }, items1);
-  closure_23 = tmp19;
-  let snapToIndex = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        snapToIndex = current.snapToIndex;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let snapToPosition = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        snapToPosition = current.snapToPosition;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let setToIndex = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        setToIndex = current.setToIndex;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let setToPosition = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        setToPosition = current.setToPosition;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let expand = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        expand = current.expand;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let collapse = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        collapse = current.collapse;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let close = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        close = current.close;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  let forceClose = num(() => {
-    const items = [...arguments];
-    if (!closure_18.current) {
-      const current = closure_14.current;
-      if (current != null) {
-        forceClose = current.forceClose;
-        const items1 = [];
-        HermesBuiltin.arraySpread(items, 0);
-        HermesBuiltin.apply(items1, current);
-      }
-    }
-  }, []);
-  const items2 = [tmp17, DEFAULT_STACK_BEHAVIOR, mountSheet];
-  const present = num(function handlePresent(data) {
-    const animationFrame = requestAnimationFrame(() => {
-      closure_9({ mount: true, data });
-      mountSheet(closure_21, data, DEFAULT_STACK_BEHAVIOR);
-    });
-  }, items2);
-  const items3 = [willUnmountSheet, tmp19, tmp17, tmp5];
-  const dismiss = num(function handleDismiss(arg0) {
-    let tmp3 = -1 !== ref.current;
-    if (!tmp3) {
-      tmp3 = false !== closure_18.current;
-    }
-    if (!tmp3) {
-      tmp3 = tmp;
+const Platform = get_ActivityIndicator.Platform;
+let obj = { initialPosition: 0, initialKeyboardState: value22.KEYBOARD_STATE.UNDETERMINED, isScrollablePositionLocked: false };
+const dismiss = get_ActivityIndicator.Keyboard.dismiss;
+const fn = function t(arg0) {
+  closure_0 = arg0;
+  const keys = Object.keys(arg0);
+  const mapped = keys.map((item) => {
+    closure_0[item] = undefined;
+  });
+};
+fn.__closure = {};
+fn.__workletHash = 16627033127293;
+fn.__initData = { code: "function pnpm_useGestureEventsHandlersDefaultTsx1(context){Object.keys(context).map(function(key){context[key]=undefined;});}" };
+let closure_6 = { code: "function handleOnStart_Pnpm_useGestureEventsHandlersDefaultTsx2(__,_){const{stopAnimation,animatedKeyboardState,enableBlurKeyboardOnGesture,KEYBOARD_STATE,runOnJS,dismissKeyboard,context,animatedPosition,animatedScrollableContentOffsetY}=this.__closure;stopAnimation();let initialKeyboardState=animatedKeyboardState.value;if(enableBlurKeyboardOnGesture&&initialKeyboardState===KEYBOARD_STATE.SHOWN){initialKeyboardState=KEYBOARD_STATE.HIDDEN;runOnJS(dismissKeyboard)();}context.value={...context.value,initialPosition:animatedPosition.value,initialKeyboardState:animatedKeyboardState.value};if(animatedScrollableContentOffsetY.value>0){context.value={...context.value,isScrollablePositionLocked:true};}}" };
+let closure_7 = { code: "function handleOnChange_Pnpm_useGestureEventsHandlersDefaultTsx3(source,{translationY:translationY}){const{animatedHighestSnapPoint,isInTemporaryPosition,context,KEYBOARD_STATE,enablePanDownToClose,animatedContainerHeight,animatedSnapPoints,GESTURE_SOURCE,isScrollableRefreshable,animatedPosition,animatedScrollableContentOffsetY,clamp,enableOverDrag,animatedScrollableType,SCROLLABLE_TYPE,overDragResistanceFactor}=this.__closure;let highestSnapPoint=animatedHighestSnapPoint.value;if(isInTemporaryPosition.value&&context.value.initialKeyboardState===KEYBOARD_STATE.SHOWN){highestSnapPoint=context.value.initialPosition;}if(isInTemporaryPosition.value&&context.value.initialPosition<highestSnapPoint){highestSnapPoint=context.value.initialPosition;}const lowestSnapPoint=enablePanDownToClose?animatedContainerHeight.value:animatedSnapPoints.value[0];if(source===GESTURE_SOURCE.CONTENT&&isScrollableRefreshable.value&&animatedPosition.value===highestSnapPoint){return;}const negativeScrollableContentOffset=context.value.initialPosition===highestSnapPoint&&source===GESTURE_SOURCE.CONTENT||!context.value.isScrollablePositionLocked?animatedScrollableContentOffsetY.value*-1:0;const draggedPosition=context.value.initialPosition+translationY;const accumulatedDraggedPosition=draggedPosition+negativeScrollableContentOffset;const clampedPosition=clamp(accumulatedDraggedPosition,highestSnapPoint,lowestSnapPoint);if(context.value.isScrollablePositionLocked&&source===GESTURE_SOURCE.CONTENT&&animatedPosition.value===highestSnapPoint){context.value={...context.value,isScrollablePositionLocked:false};}if(enableOverDrag){if((source===GESTURE_SOURCE.HANDLE||animatedScrollableType.value===SCROLLABLE_TYPE.VIEW)&&draggedPosition<highestSnapPoint){const resistedPosition=highestSnapPoint-Math.sqrt(1+(highestSnapPoint-draggedPosition))*overDragResistanceFactor;animatedPosition.value=resistedPosition;return;}if(source===GESTURE_SOURCE.HANDLE&&draggedPosition>lowestSnapPoint){const resistedPosition=lowestSnapPoint+Math.sqrt(1+(draggedPosition-lowestSnapPoint))*overDragResistanceFactor;animatedPosition.value=resistedPosition;return;}if(source===GESTURE_SOURCE.CONTENT&&draggedPosition+negativeScrollableContentOffset>lowestSnapPoint){const resistedPosition=lowestSnapPoint+Math.sqrt(1+(draggedPosition+negativeScrollableContentOffset-lowestSnapPoint))*overDragResistanceFactor;animatedPosition.value=resistedPosition;return;}}animatedPosition.value=clampedPosition;}" };
+let closure_8 = { code: "function handleOnEnd_Pnpm_useGestureEventsHandlersDefaultTsx4(source,{translationY:translationY,absoluteY:absoluteY,velocityY:velocityY}){const{animatedHighestSnapPoint,animatedPosition,GESTURE_SOURCE,isScrollableRefreshable,isInTemporaryPosition,context,animateToPosition,ANIMATION_SOURCE,animatedScrollableType,SCROLLABLE_TYPE,KEYBOARD_STATE,Platform,WINDOW_HEIGHT,animatedKeyboardHeight,runOnJS,dismissKeyboard,animatedSnapPoints,enablePanDownToClose,animatedClosedPosition,snapPoint,animatedScrollableContentOffsetY}=this.__closure;const highestSnapPoint=animatedHighestSnapPoint.value;const isSheetAtHighestSnapPoint=animatedPosition.value===highestSnapPoint;if(source===GESTURE_SOURCE.CONTENT&&isScrollableRefreshable.value&&isSheetAtHighestSnapPoint){return;}if(isInTemporaryPosition.value&&context.value.initialPosition>=animatedPosition.value){if(context.value.initialPosition>animatedPosition.value){animateToPosition(context.value.initialPosition,ANIMATION_SOURCE.GESTURE,velocityY/2);}return;}const isScrollable=animatedScrollableType.value!==SCROLLABLE_TYPE.UNDETERMINED&&animatedScrollableType.value!==SCROLLABLE_TYPE.VIEW;if(context.value.initialKeyboardState===KEYBOARD_STATE.SHOWN&&animatedPosition.value>context.value.initialPosition){if(!(Platform.OS==='ios'&&isScrollable&&absoluteY>WINDOW_HEIGHT-animatedKeyboardHeight.value)){runOnJS(dismissKeyboard)();}}if(isInTemporaryPosition.value){isInTemporaryPosition.value=false;}const snapPoints=animatedSnapPoints.value.slice();if(enablePanDownToClose){snapPoints.unshift(animatedClosedPosition.value);}const destinationPoint=snapPoint(translationY+context.value.initialPosition,velocityY,snapPoints);if(destinationPoint===animatedPosition.value){return;}const wasGestureHandledByScrollView=source===GESTURE_SOURCE.CONTENT&&animatedScrollableContentOffsetY.value>0;if(wasGestureHandledByScrollView&&isSheetAtHighestSnapPoint){return;}animateToPosition(destinationPoint,ANIMATION_SOURCE.GESTURE,velocityY/2);}" };
+let closure_9 = { code: "function handleOnFinalize_Pnpm_useGestureEventsHandlersDefaultTsx5(){const{resetContext,context}=this.__closure;resetContext(context);}" };
+
+export const useGestureEventsHandlersDefault = () => {
+  const bottomSheetInternal = animatedPosition(animatedSnapPoints[2]).useBottomSheetInternal();
+  animatedPosition = bottomSheetInternal.animatedPosition;
+  animatedSnapPoints = bottomSheetInternal.animatedSnapPoints;
+  const animatedKeyboardState = bottomSheetInternal.animatedKeyboardState;
+  ({ animatedKeyboardHeight, animatedContainerHeight } = bottomSheetInternal);
+  const animatedScrollableType = bottomSheetInternal.animatedScrollableType;
+  const animatedHighestSnapPoint = bottomSheetInternal.animatedHighestSnapPoint;
+  const animatedClosedPosition = bottomSheetInternal.animatedClosedPosition;
+  const animatedScrollableContentOffsetY = bottomSheetInternal.animatedScrollableContentOffsetY;
+  const enableOverDrag = bottomSheetInternal.enableOverDrag;
+  const enablePanDownToClose = bottomSheetInternal.enablePanDownToClose;
+  const overDragResistanceFactor = bottomSheetInternal.overDragResistanceFactor;
+  const isInTemporaryPosition = bottomSheetInternal.isInTemporaryPosition;
+  const isScrollableRefreshable = bottomSheetInternal.isScrollableRefreshable;
+  const enableBlurKeyboardOnGesture = bottomSheetInternal.enableBlurKeyboardOnGesture;
+  const animateToPosition = bottomSheetInternal.animateToPosition;
+  const stopAnimation = bottomSheetInternal.stopAnimation;
+  obj = animatedPosition(animatedSnapPoints[2]);
+  let merged = Object.assign(animatedContainerHeight);
+  const sharedValue = animatedPosition(animatedSnapPoints[3]).useSharedValue({});
+  const obj4 = { handleOnStart: null, handleOnChange: null, handleOnEnd: null, handleOnFinalize: null };
+  let obj2 = animatedPosition(animatedSnapPoints[3]);
+  let obj3 = {};
+  function handleOnStart(value, arg1) {
+    stopAnimation();
+    let tmp3 = enableBlurKeyboardOnGesture;
+    if (enableBlurKeyboardOnGesture) {
+      tmp3 = tmp2 === value22.KEYBOARD_STATE.SHOWN;
     }
     if (tmp3) {
-      if (tmp) {
-        willUnmountSheet(closure_21);
-        closure_19.current = true;
-        const current = closure_14.current;
-        if (current != null) {
-          current.forceClose(arg0);
-        }
-      } else if (closure_18.current) {
-        closure_23();
-      }
+      const HIDDEN = value22.KEYBOARD_STATE.HIDDEN;
+      cancelAnimation.runOnJS(dismiss)();
     }
-  }, items3);
-  const items4 = [num];
-  const minimize = num(function handleMinimize() {
-    if (!closure_18.current) {
-      tmp.current = true;
-      if (-1 === ref.current) {
-        closure_17.current = num;
-      } else {
-        closure_17.current = tmp2.current;
-      }
-      const current = closure_14.current;
-      if (current != null) {
-        current.close();
-      }
+    const obj2 = {};
+    const merged = Object.assign(sharedValue.value);
+    obj2.initialPosition = animatedPosition.value;
+    obj2.initialKeyboardState = animatedKeyboardState.value;
+    sharedValue.value = obj2;
+    if (animatedScrollableContentOffsetY.value > 0) {
+      const obj3 = {};
+      const merged1 = Object.assign(sharedValue.value);
+      obj3.isScrollablePositionLocked = true;
+      sharedValue.value = obj3;
     }
-  }, items4);
-  const restore = num(function handleRestore() {
-    let current = closure_18.current;
-    if (current) {
-      current = !ref4.current;
-    }
-    if (current) {
-      closure_18.current = false;
-      const current2 = closure_14.current;
-      if (current2 != null) {
-        current2.snapToIndex(ref3.current);
-      }
-    }
-  }, []);
-  const items5 = [tmp17, tmp19, willUnmountSheet];
-  const obj2 = require("Portal");
-  const tmp21 = num(function handlePortalRender(fn) {
-    if (ref5.current) {
-      fn();
-    }
-  }, []);
-  const items6 = [onChange];
-  const items7 = [onAnimate];
-  const tmp20 = num(function handlePortalOnUnmount() {
-    let tmp = -1 === ref.current;
-    if (tmp) {
-      tmp = false === closure_18.current;
-    }
-    if (!tmp) {
-      closure_20.current = false;
-      closure_19.current = true;
-      if (closure_18.current) {
-        closure_23();
-      } else {
-        willUnmountSheet(closure_21);
-        const current = closure_14.current;
-        if (current != null) {
-          current.close();
-        }
-      }
-    }
-  }, items5);
-  const items8 = [DEFAULT_ENABLE_DISMISS_ON_CLOSE, tmp19];
-  const tmp22 = num(function handleBottomSheetOnChange(current, arg1, arg2) {
-    closure_15.current = current;
-    closure_16.current = null;
-    if (onChange) {
-      tmp(current, arg1, arg2);
-    }
-  }, items6);
-  const tmp23 = num((arg0, current, arg2, arg3, arg4) => {
-    closure_16.current = current;
-    if (onAnimate) {
-      tmp(arg0, current, arg2, arg3, arg4);
-    }
-  }, items7);
-  enablePanDownToClose(arg1, () => ({ snapToIndex, snapToPosition, setToIndex, setToPosition, expand, collapse, close, forceClose, dismiss, present, minimize, restore }));
-  let tmp27Result2 = null;
-  if (mount) {
-    const obj3 = { name: tmp17, hostName, handleOnMount: tmp21, handleOnUpdate: tmp21, handleOnUnmount: tmp20, children: null };
-    const obj4 = {};
-    const merged = Object.assign(tmp8);
-    obj4.ref = tmp15;
-    obj4.key = tmp17;
-    obj4.index = num;
-    obj4.snapPoints = name.snapPoints;
-    obj4.enablePanDownToClose = tmp5;
-    obj4.animateOnMount = tmp6;
-    obj4.containerHeight = containerHeight;
-    obj4.containerOffset = containerOffset;
-    obj4.onChange = tmp22;
-    obj4.onClose = tmp24;
-    obj4.onAnimate = tmp23;
-    obj4.$modal = true;
-    let tmp27Result = children;
-    if (typeof children === "function") {
-      const obj5 = { data: first.data };
-      tmp27Result = tmp27(children, obj5);
-    }
-    const obj6 = { children: unmountSheet(name(tmp12[9]), obj4, tmp27Result) };
-    obj3.children = removePortal(Fragment, obj6, tmp17);
-    tmp27Result2 = tmp27(tmp11(tmp12[6]).Portal, obj3, tmp17);
-    const tmp30 = name(tmp12[9]);
   }
-  return tmp27Result2;
-}));
-memoResult.displayName = "BottomSheetModal";
-
-export default memoResult;
+  const obj5 = animatedPosition(animatedSnapPoints[3]);
+  handleOnStart.__closure = { stopAnimation, animatedKeyboardState, enableBlurKeyboardOnGesture, KEYBOARD_STATE: animatedPosition(animatedSnapPoints[1]).KEYBOARD_STATE, runOnJS: animatedPosition(animatedSnapPoints[3]).runOnJS, dismissKeyboard: animatedScrollableType, context: sharedValue, animatedPosition, animatedScrollableContentOffsetY };
+  handleOnStart.__workletHash = 9400766587341;
+  handleOnStart.__initData = animatedClosedPosition;
+  const items = [stopAnimation, enableBlurKeyboardOnGesture, animatedPosition, animatedKeyboardState, animatedScrollableContentOffsetY];
+  obj4.handleOnStart = obj5.useWorkletCallback(handleOnStart, items);
+  const obj6 = { stopAnimation, animatedKeyboardState, enableBlurKeyboardOnGesture, KEYBOARD_STATE: animatedPosition(animatedSnapPoints[1]).KEYBOARD_STATE, runOnJS: animatedPosition(animatedSnapPoints[3]).runOnJS, dismissKeyboard: animatedScrollableType, context: sharedValue, animatedPosition, animatedScrollableContentOffsetY };
+  function handleOnChange(arg0, translationY) {
+    let initialPosition = animatedHighestSnapPoint.value;
+    value = isInTemporaryPosition.value;
+    if (value) {
+      value = sharedValue.value.initialKeyboardState === value22.KEYBOARD_STATE.SHOWN;
+    }
+    if (value) {
+      initialPosition = sharedValue.value.initialPosition;
+    }
+    value2 = isInTemporaryPosition.value;
+    if (value2) {
+      value2 = sharedValue.value.initialPosition < initialPosition;
+    }
+    if (value2) {
+      initialPosition = sharedValue.value.initialPosition;
+    }
+    if (enablePanDownToClose) {
+      value3 = animatedContainerHeight.value;
+    } else {
+      value3 = animatedSnapPoints.value[0];
+    }
+    if (sharedValue.value.initialPosition !== initialPosition) {
+      let num = 0;
+      const sum = sharedValue.value.initialPosition + translationY.translationY;
+      const sum1 = sum + num;
+      let isScrollablePositionLocked = sharedValue.value.isScrollablePositionLocked;
+      if (isScrollablePositionLocked) {
+        isScrollablePositionLocked = arg0 === value22.GESTURE_SOURCE.CONTENT;
+      }
+      if (isScrollablePositionLocked) {
+        isScrollablePositionLocked = animatedPosition.value === initialPosition;
+      }
+      if (isScrollablePositionLocked) {
+        const obj2 = {};
+        const merged = Object.assign(sharedValue.value);
+        obj2.isScrollablePositionLocked = false;
+        sharedValue.value = obj2;
+      }
+      if (enableOverDrag) {
+        if (arg0 === value22.GESTURE_SOURCE.HANDLE) {
+          if (sum < initialPosition) {
+            const _Math3 = Math;
+            animatedPosition.value = initialPosition - Math.sqrt(initialPosition - sum + 1) * overDragResistanceFactor;
+          }
+        }
+        if (arg0 === value22.GESTURE_SOURCE.HANDLE) {
+          if (sum > value3) {
+            const _Math2 = Math;
+            animatedPosition.value = value3 + Math.sqrt(sum - value3 + 1) * overDragResistanceFactor;
+          }
+        }
+        if (arg0 === value22.GESTURE_SOURCE.CONTENT) {
+          if (sum + num > value3) {
+            const _Math = Math;
+            animatedPosition.value = value3 + Math.sqrt(sum + num - value3 + 1) * overDragResistanceFactor;
+          }
+        }
+      }
+      animatedPosition.value = _mod5476.clamp(sum1, initialPosition, value3);
+      const clampResult = _mod5476.clamp(sum1, initialPosition, value3);
+    }
+    num = -1 * animatedScrollableContentOffsetY.value;
+  }
+  const obj7 = animatedPosition(animatedSnapPoints[3]);
+  handleOnChange.__closure = { animatedHighestSnapPoint, isInTemporaryPosition, context: sharedValue, KEYBOARD_STATE: animatedPosition(animatedSnapPoints[1]).KEYBOARD_STATE, enablePanDownToClose, animatedContainerHeight, animatedSnapPoints, GESTURE_SOURCE: animatedPosition(animatedSnapPoints[1]).GESTURE_SOURCE, isScrollableRefreshable, animatedPosition, animatedScrollableContentOffsetY, clamp: animatedPosition(animatedSnapPoints[4]).clamp, enableOverDrag, animatedScrollableType, SCROLLABLE_TYPE: animatedPosition(animatedSnapPoints[1]).SCROLLABLE_TYPE, overDragResistanceFactor };
+  handleOnChange.__workletHash = 6221237616078;
+  handleOnChange.__initData = animatedScrollableContentOffsetY;
+  const items1 = [enableOverDrag, enablePanDownToClose, overDragResistanceFactor, isInTemporaryPosition, isScrollableRefreshable, animatedHighestSnapPoint, animatedContainerHeight, animatedSnapPoints, animatedPosition, animatedScrollableType, animatedScrollableContentOffsetY];
+  obj4.handleOnChange = obj7.useWorkletCallback(handleOnChange, items1);
+  const obj8 = { animatedHighestSnapPoint, isInTemporaryPosition, context: sharedValue, KEYBOARD_STATE: animatedPosition(animatedSnapPoints[1]).KEYBOARD_STATE, enablePanDownToClose, animatedContainerHeight, animatedSnapPoints, GESTURE_SOURCE: animatedPosition(animatedSnapPoints[1]).GESTURE_SOURCE, isScrollableRefreshable, animatedPosition, animatedScrollableContentOffsetY, clamp: animatedPosition(animatedSnapPoints[4]).clamp, enableOverDrag, animatedScrollableType, SCROLLABLE_TYPE: animatedPosition(animatedSnapPoints[1]).SCROLLABLE_TYPE, overDragResistanceFactor };
+  function handleOnEnd(arg0, translationY) {
+    ({ absoluteY, velocityY } = translationY);
+    if (isInTemporaryPosition.value) {
+      if (sharedValue.value.initialPosition >= animatedPosition.value) {
+        if (sharedValue.value.initialPosition > animatedPosition.value) {
+          animateToPosition(sharedValue.value.initialPosition, value22.ANIMATION_SOURCE.GESTURE, velocityY / 2);
+        }
+      }
+    }
+    if (animatedScrollableType.value !== value22.SCROLLABLE_TYPE.UNDETERMINED) {
+      value = animatedScrollableType.value;
+      const VIEW = value22.SCROLLABLE_TYPE.VIEW;
+    }
+    if (tmp5) {
+      cancelAnimation.runOnJS(dismiss)();
+      const tmp2Result = cancelAnimation;
+    }
+    if (isInTemporaryPosition.value) {
+      isInTemporaryPosition.value = false;
+    }
+    value2 = animatedSnapPoints.value;
+    const substr = value2.slice();
+    if (enablePanDownToClose) {
+      substr.unshift(animatedClosedPosition.value);
+    }
+    const tmp = animatedPosition.value === animatedHighestSnapPoint.value;
+    tmp5 = sharedValue.value.initialKeyboardState === value22.KEYBOARD_STATE.SHOWN && animatedPosition.value > sharedValue.value.initialPosition;
+    const snapPointResult = _mod5477.snapPoint(translationY.translationY + sharedValue.value.initialPosition, velocityY, substr);
+    if (snapPointResult !== animatedPosition.value) {
+      let tmp12 = arg0 === value22.GESTURE_SOURCE.CONTENT;
+      if (tmp12) {
+        tmp12 = animatedScrollableContentOffsetY.value > 0;
+      }
+      if (tmp12) {
+        tmp12 = tmp;
+      }
+      if (!tmp12) {
+        animateToPosition(snapPointResult, value22.ANIMATION_SOURCE.GESTURE, velocityY / 2);
+      }
+    }
+    const tmp2Result2 = _mod5477;
+  }
+  const obj9 = animatedPosition(animatedSnapPoints[3]);
+  handleOnEnd.__closure = { animatedHighestSnapPoint, animatedPosition, GESTURE_SOURCE: animatedPosition(animatedSnapPoints[1]).GESTURE_SOURCE, isScrollableRefreshable, isInTemporaryPosition, context: sharedValue, animateToPosition, ANIMATION_SOURCE: animatedPosition(animatedSnapPoints[1]).ANIMATION_SOURCE, animatedScrollableType, SCROLLABLE_TYPE: animatedPosition(animatedSnapPoints[1]).SCROLLABLE_TYPE, KEYBOARD_STATE: animatedPosition(animatedSnapPoints[1]).KEYBOARD_STATE, Platform: animatedKeyboardState, WINDOW_HEIGHT: animatedPosition(animatedSnapPoints[1]).WINDOW_HEIGHT, animatedKeyboardHeight, runOnJS: animatedPosition(animatedSnapPoints[3]).runOnJS, dismissKeyboard: animatedScrollableType, animatedSnapPoints, enablePanDownToClose, animatedClosedPosition, snapPoint: animatedPosition(animatedSnapPoints[5]).snapPoint, animatedScrollableContentOffsetY };
+  handleOnEnd.__workletHash = 8667894097210;
+  handleOnEnd.__initData = enableOverDrag;
+  const items2 = [enablePanDownToClose, isInTemporaryPosition, isScrollableRefreshable, animatedClosedPosition, animatedHighestSnapPoint, animatedKeyboardHeight, animatedPosition, animatedScrollableType, animatedSnapPoints, animatedScrollableContentOffsetY, animateToPosition];
+  obj4.handleOnEnd = obj9.useWorkletCallback(handleOnEnd, items2);
+  const obj10 = { animatedHighestSnapPoint, animatedPosition, GESTURE_SOURCE: animatedPosition(animatedSnapPoints[1]).GESTURE_SOURCE, isScrollableRefreshable, isInTemporaryPosition, context: sharedValue, animateToPosition, ANIMATION_SOURCE: animatedPosition(animatedSnapPoints[1]).ANIMATION_SOURCE, animatedScrollableType, SCROLLABLE_TYPE: animatedPosition(animatedSnapPoints[1]).SCROLLABLE_TYPE, KEYBOARD_STATE: animatedPosition(animatedSnapPoints[1]).KEYBOARD_STATE, Platform: animatedKeyboardState, WINDOW_HEIGHT: animatedPosition(animatedSnapPoints[1]).WINDOW_HEIGHT, animatedKeyboardHeight, runOnJS: animatedPosition(animatedSnapPoints[3]).runOnJS, dismissKeyboard: animatedScrollableType, animatedSnapPoints, enablePanDownToClose, animatedClosedPosition, snapPoint: animatedPosition(animatedSnapPoints[5]).snapPoint, animatedScrollableContentOffsetY };
+  function handleOnFinalize() {
+    if (typeof fn === "function") {
+      closure_0 = sharedValue;
+      const _Object = Object;
+      const keys = Object.keys(sharedValue);
+      const mapped = keys.map((item) => {
+        closure_0[item] = undefined;
+      });
+    } else {
+      throw new TypeError("Trying to call a non-function");
+    }
+  }
+  handleOnFinalize.__closure = { resetContext: animatedHighestSnapPoint, context: sharedValue };
+  handleOnFinalize.__workletHash = 8824211868683;
+  handleOnFinalize.__initData = enablePanDownToClose;
+  const items3 = [sharedValue];
+  obj4.handleOnFinalize = animatedPosition(animatedSnapPoints[3]).useWorkletCallback(handleOnFinalize, items3);
+  return obj4;
+};

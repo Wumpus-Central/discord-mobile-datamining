@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/application_streaming", width: 272, height: 93, scales: [2, 3], hash: "c73d40dd66a153a872cf68d5a6b8779e", name: "img_stream_full", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images", width: 256, height: 130, scales: [2, 3], hash: "5bbcc6438e9b5eafb60d2e7f478ed717", name: "img_invite_empty_darker", type: "png" });

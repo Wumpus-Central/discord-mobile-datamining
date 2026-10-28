@@ -1,14 +1,15 @@
 // === Module 10402: ? ===
 
 // Module 10402
-import Filter from "Filter" /* 10236 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10256 */;
+import _mod10403 from "module_10403" /* 10403 */;
 import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
 import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
-const ENMergeRelativeDateRefiner = require;
+const UKTimeUnitWithinFormatParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -28,12 +29,13 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-class ENMergeRelativeDateRefiner {
+let closure_6 = "(?:(?:\u043F\u0440\u0438\u0431\u043B\u0438\u0437\u043D\u043E|\u043E\u0440\u0456\u0454\u043D\u0442\u043E\u0432\u043D\u043E)\\s*(?:~\\s*)?)?(" + _mod10403.TIME_UNITS_PATTERN + ")" + _mod10403.REGEX_PARTS.rightBoundary;
+class UKTimeUnitWithinFormatParser {
   constructor() {
     self = this;
-    tmp = c2(this, ENMergeRelativeDateRefiner);
+    tmp = c2(this, UKTimeUnitWithinFormatParser);
     tmp2 = closure_4;
-    obj = closure_4(ENMergeRelativeDateRefiner);
+    obj = closure_4(UKTimeUnitWithinFormatParser);
     tmp3 = closure_3;
     if (hasOwnProperty()) {
       tmp7 = globalThis;
@@ -48,59 +50,36 @@ class ENMergeRelativeDateRefiner {
     return tmp3(self, constructResult);
   }
 }
-_inherits(ENMergeRelativeDateRefiner, Filter.MergingRefiner);
+_inherits(UKTimeUnitWithinFormatParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "patternBetween",
-  value: function patternBetween() {
-    return /^\s*$/i;
+  key: "patternLeftBoundary",
+  value: function patternLeftBoundary() {
+    return UKTimeUnitWithinFormatParser(10403).REGEX_PARTS.leftBoundary;
   }
 };
 const items = [
   entry,
   {
-    key: "shouldMergeResults",
-    value: function shouldMergeResults(str, text, start) {
-      let match = str.match(this.patternBetween());
-      if (match) {
-        const tmp4 = null != text.text.match(/\s+(prima|dal)$/i);
-        let tmp5 = !tmp4;
-        if (!tmp4) {
-          tmp5 = null == text.text.match(/\s+(dopo|dal|fino)$/i);
-        }
-        let tmp6 = !tmp5;
-        if (!tmp5) {
-          start = start.start;
-          value = start.get("day");
-          if (value) {
-            const start2 = start.start;
-            value = start2.get("month");
-          }
-          if (value) {
-            const start3 = start.start;
-            value = start3.get("year");
-          }
-          tmp6 = value;
-        }
-        match = tmp6;
+    key: "innerPattern",
+    value: function innerPattern(option) {
+      const _RegExp = RegExp;
+      if (option.option.forwardDate) {
+        let _RegExp1 = new _RegExp(closure_6, "i");
+      } else {
+        const _HermesInternal = HermesInternal;
+        const combined = "(?:\u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C|\u043D\u0430 \u043F\u0440\u043E\u0442\u044F\u0437\u0456|\u043F\u0440\u043E\u0442\u044F\u0433\u043E\u043C|\u0443\u043F\u0440\u043E\u0434\u043E\u0432\u0436|\u0432\u043F\u0440\u043E\u0434\u043E\u0432\u0436)\\s*" + closure_6;
+        _RegExp1 = new _RegExp(combined, UKTimeUnitWithinFormatParser(10403).REGEX_PARTS.flags);
       }
-      return match;
+      return _RegExp1;
     }
   },
   {
-    key: "mergeResults",
-    value: function mergeResults(arg0, text, start) {
-      const parseDurationResult = ENMergeRelativeDateRefiner(10386).parseDuration(text.text);
-      let reverseDurationResult = parseDurationResult;
-      if (null != str.match(/\s+(prima|dal)$/i)) {
-        reverseDurationResult = ENMergeRelativeDateRefiner(10219).reverseDuration(parseDurationResult);
-      }
-      const ParsingComponents = ENMergeRelativeDateRefiner(10220).ParsingComponents;
-      const ReferenceWithTimezone = ENMergeRelativeDateRefiner(10220).ReferenceWithTimezone;
-      start = start.start;
-      const relativeFromReference = ParsingComponents.createRelativeFromReference(ReferenceWithTimezone.fromDate(start.date()), reverseDurationResult);
-      return new ENMergeRelativeDateRefiner(10220).ParsingResult(start.reference, text.index, "" + text.text + arg0 + start.text, relativeFromReference);
+    key: "innerExtract",
+    value: function innerExtract(reference, arg1) {
+      const ParsingComponents = UKTimeUnitWithinFormatParser(10252).ParsingComponents;
+      return ParsingComponents.createRelativeFromReference(reference.reference, UKTimeUnitWithinFormatParser(10403).parseDuration(arg1[1]));
     }
   }
 ];
 
-export default _createClass(ENMergeRelativeDateRefiner, items);
+export default _createClass(UKTimeUnitWithinFormatParser, items);

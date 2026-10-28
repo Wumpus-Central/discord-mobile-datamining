@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/billing/native/images", width: 223, height: 126, scales: [2, 3], hash: "06b6cfc90c8de0a27298c16b4f578563", name: "blocked-purchases-light", type: "png" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/images/native/chat_sidebar", width: 24, height: 24, scales: [2, 3], hash: "735f759c8548e858d5ddb5e988a22d5f", name: "ic_notif_off", type: "png" });

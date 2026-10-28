@@ -1,7 +1,7 @@
 // === Module 78: pointsDiffer ===
 
 // Module 78 (pointsDiffer)
-let closure_0 = { x: "toCharArray$esjava$1", y: "Symbol" };
+let closure_0 = { x: "useCallback", y: "PX_16" };
 
 export default function pointsDiffer(arg0, arg1) {
   let point = arg0;

@@ -1,13 +1,16 @@
 // === Module 10257: ? ===
 
 // Module 10257
-import _possibleConstructorReturn from "_possibleConstructorReturn" /* 93 */;
-import Filter from "Filter" /* 10236 */;
-import _classCallCheck_mod from "_classCallCheck" /* 41 */;
+import _mod10248 from "module_10248" /* 10248 */;
+import repeatedTimeunitPattern from "repeatedTimeunitPattern" /* 10249 */;
+import AbstractParserWithWordBoundaryChecking from "AbstractParserWithWordBoundaryChecking" /* 10256 */;
+import _classCallCheck from "_classCallCheck" /* 41 */;
 import _createClass from "_createClass" /* 42 */;
+import c3 from "_possibleConstructorReturn" /* 93 */;
 import _getPrototypeOf from "_getPrototypeOf" /* 95 */;
 import _inherits from "_inherits" /* 98 */;
 
+const ENMonthNameLittleEndianParser = require;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -27,83 +30,68 @@ function _isNativeReflectConstruct() {
   } catch (err) {
   }
 }
-let _classCallCheck = _classCallCheck_mod;
-_possibleConstructorReturn;
-class UnlikelyFormatFilter {
-  constructor(arg0) {
+const regExp = new RegExp("(?:on\\s{0,3})?(" + _mod10248.ORDINAL_NUMBER_PATTERN + ")(?:\\s{0,3}(?:to|\\-|\\\u2013|until|through|till)?\\s{0,3}(" + _mod10248.ORDINAL_NUMBER_PATTERN + "))?(?:-|/|\\s{0,3}(?:of)?\\s{0,3})(" + repeatedTimeunitPattern.matchAnyPattern(_mod10248.MONTH_DICTIONARY) + ")(?:(?:-|/|,?\\s{0,3})(" + _mod10248.YEAR_PATTERN + "(?!\\w)))?(?=\\W|$)", "i");
+class ENMonthNameLittleEndianParser {
+  constructor() {
     self = this;
-    tmp = closure_0(this, UnlikelyFormatFilter);
-    tmp2 = c2;
-    obj = c2(UnlikelyFormatFilter);
-    tmp3 = closure_1;
-    if (closure_3()) {
-      tmp5 = globalThis;
+    tmp = c2(this, ENMonthNameLittleEndianParser);
+    tmp2 = closure_4;
+    obj = closure_4(ENMonthNameLittleEndianParser);
+    tmp3 = closure_3;
+    if (hasOwnProperty()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, [], tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, undefined);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    tmp3Result.strictMode = global;
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_classCallCheck = UnlikelyFormatFilter;
-_inherits(UnlikelyFormatFilter, Filter.Filter);
+_inherits(ENMonthNameLittleEndianParser, AbstractParserWithWordBoundaryChecking.AbstractParserWithWordBoundaryChecking);
 const entry = {
-  key: "isValid",
-  value: function isValid(debug, text) {
-    if (str2.match(/^\d*(\.\d*)?$/)) {
-      debug.debug(() => {
-        console.log("Removing unlikely result '" + text.text + "'");
-      });
-      let flag = false;
-    } else {
-      const start = text.start;
-      if (start.isValidDate()) {
-        if (text.end) {
-          const end = text.end;
-          if (!end.isValidDate()) {
-            debug.debug(() => {
-              console.log("Removing invalid result: " + text + " (" + text.end + ")");
-            });
-            let flag2 = false;
-          }
-        }
-        const self = this;
-        const strictMode = this.strictMode;
-        let isStrictModeValidResult = !strictMode;
-        if (strictMode) {
-          isStrictModeValidResult = self.isStrictModeValid(debug, text);
-        }
-        flag2 = isStrictModeValidResult;
-      } else {
-        debug.debug(() => {
-          console.log("Removing invalid result: " + text + " (" + text.start + ")");
-        });
-        flag = false;
-      }
-    }
-    return flag;
+  key: "innerPattern",
+  value: function innerPattern() {
+    return regExp;
   }
 };
 const items = [
   entry,
   {
-    key: "isStrictModeValid",
-    value: function isStrictModeValid(debug, start) {
-      start = start.start;
-      const result = start.isOnlyWeekdayComponent();
-      let flag = !result;
-      if (result) {
-        debug.debug(() => {
-          console.log("(Strict) Removing weekday only component: " + start + " (" + start.end + ")");
-        });
-        flag = false;
+    key: "innerExtract",
+    value: function innerExtract(createParsingResult, index) {
+      const parsingResult = createParsingResult.createParsingResult(index.index, index[0]);
+      const tmp4 = ENMonthNameLittleEndianParser(10248).MONTH_DICTIONARY[index[3].toLowerCase(index[3])];
+      const result = ENMonthNameLittleEndianParser(10248).parseOrdinalNumberPattern(index[1]);
+      if (result > 31) {
+        index.index = index.index + index[1].length;
+        return null;
+      } else {
+        const start4 = parsingResult.start;
+        start4.assign("month", tmp4);
+        const start5 = parsingResult.start;
+        start5.assign("day", result);
+        if (index[4]) {
+          const start2 = parsingResult.start;
+          start2.assign("year", ENMonthNameLittleEndianParser(10248).parseYear(index[4]));
+        } else {
+          const start = parsingResult.start;
+          start.imply("year", ENMonthNameLittleEndianParser(10250).findYearClosestToRef(createParsingResult.refDate, result, tmp4));
+        }
+        if (index[2]) {
+          const start3 = parsingResult.start;
+          const result1 = ENMonthNameLittleEndianParser(10248).parseOrdinalNumberPattern(index[2]);
+          parsingResult.end = start3.clone();
+          const end = parsingResult.end;
+          end.assign("day", result1);
+        }
+        return parsingResult;
       }
-      return flag;
     }
   }
 ];
 
-export default _createClass(UnlikelyFormatFilter, items);
+export default _createClass(ENMonthNameLittleEndianParser, items);

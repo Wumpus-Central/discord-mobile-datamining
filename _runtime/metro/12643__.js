@@ -1,126 +1,142 @@
 // === Module 12643: ? ===
 
 // Module 12643
-import _mod12636 from "module_12636" /* 12636 */;
-
-require = arg1;
-const dependencyMap = arg6;
-
-export const getEnvelopeEndpointWithUrlEncodedAuth = function getEnvelopeEndpointWithUrlEncodedAuth(protocol, tunnel, name) {
-  let combined1 = tunnel;
-  if (!tunnel) {
-    let str2 = "";
-    if (protocol.protocol) {
-      const _HermesInternal = HermesInternal;
-      str2 = "" + protocol.protocol + ":";
-    }
-    let str4 = "";
-    if (protocol.port) {
-      const _HermesInternal2 = HermesInternal;
-      str4 = ":" + protocol.port;
-    }
-    const host = protocol.host;
-    let str6 = "";
-    if (protocol.path) {
-      const _HermesInternal3 = HermesInternal;
-      str6 = "/" + protocol.path;
-    }
-    const _HermesInternal4 = HermesInternal;
-    const _HermesInternal5 = HermesInternal;
-    const obj = { sentry_version: "7" };
-    const combined = "" + "" + str2 + "//" + host + str4 + str6 + "/api/" + protocol.projectId + "/envelope/";
-    if (protocol.publicKey) {
-      obj.sentry_key = protocol.publicKey;
-    }
-    if (name) {
-      const _HermesInternal6 = HermesInternal;
-      obj.sentry_client = "" + name.name + "/" + name.version;
-    }
-    const _URLSearchParams = URLSearchParams;
-    const str13 = new URLSearchParams(obj);
-    const _HermesInternal7 = HermesInternal;
-    combined1 = "" + combined + "?" + str13.toString();
+function isInstanceOf(arg0, arg1) {
+  try {
+    return arg0 instanceof arg1;
+  } catch (err) {
+    return false;
   }
-  return combined1;
+}
+
+export const isDOMError = function isDOMError(arg0) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "DOMError" + "]";
 };
-export const getReportDialogEndpoint = function getReportDialogEndpoint(protocol, user) {
-  const url = _mod12636.makeDsn(protocol);
-  if (url) {
-    let str = "";
-    if (url.protocol) {
-      const _HermesInternal = HermesInternal;
-      str = "" + url.protocol + ":";
-    }
-    let str3 = "";
-    if (url.port) {
-      const _HermesInternal2 = HermesInternal;
-      str3 = ":" + url.port;
-    }
-    const host = url.host;
-    let str5 = "";
-    if (url.path) {
-      const _HermesInternal3 = HermesInternal;
-      str5 = "/" + url.path;
-    }
-    const _HermesInternal4 = HermesInternal;
-    const _HermesInternal5 = HermesInternal;
-    const combined = "" + "" + str + "//" + host + str3 + str5 + "/api/" + "embed/error-page/";
-    const _HermesInternal6 = HermesInternal;
-    let combined1 = "dsn=" + _mod12636.dsnToString(url);
-    let tmp16 = combined1;
-    const keys = Object.keys();
-    if (keys !== undefined) {
-      tmp16 = combined1;
-      while (keys[tmp] !== undefined) {
-        if ("dsn" === tmp19) {
-          continue;
-        } else {
-          combined1 = tmp18;
-          if ("onClose" === tmp19) {
-            continue;
-          } else {
-            if ("user" === tmp19) {
-              user = user.user;
-              combined1 = tmp18;
-              if (!user) {
-                continue;
-              } else {
-                let sum = tmp18;
-                if (user.name) {
-                  let _encodeURIComponent3 = encodeURIComponent;
-                  let _HermesInternal8 = HermesInternal;
-                  sum = tmp18 + "&name=" + encodeURIComponent(user.name);
-                }
-                combined1 = sum;
-                if (!user.email) {
-                  continue;
-                } else {
-                  let _encodeURIComponent4 = encodeURIComponent;
-                  let _HermesInternal9 = HermesInternal;
-                  combined1 = sum + "&email=" + encodeURIComponent(user.email);
-                  continue;
-                }
-                continue;
-              }
-              continue;
-            } else {
-              let _encodeURIComponent = encodeURIComponent;
-              let _encodeURIComponent2 = encodeURIComponent;
-              let encodeURIComponentResult = encodeURIComponent(tmp19);
-              let _HermesInternal7 = HermesInternal;
-              combined1 = tmp18 + "&" + encodeURIComponentResult + "=" + encodeURIComponent(user[tmp19]);
-              continue;
-            }
-            continue;
-          }
-          continue;
+export const isDOMException = function isDOMException(arg0) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "DOMException" + "]";
+};
+export const isElement = function isElement(arg0) {
+  let tmp = typeof globalThis.Element !== "undefined";
+  if (typeof globalThis.Element !== "undefined") {
+    tmp = isInstanceOf(arg0, globalThis.Element);
+  }
+  return tmp;
+};
+export const isError = function isError(originalException) {
+  const call = toString.call;
+  const tmp2 = typeof call === "unknown" ? toString() : call(originalException);
+  if ("[object Error]" !== tmp2) {
+    if ("[object Exception]" !== tmp2) {
+      if ("[object DOMException]" !== tmp2) {
+        if ("[object WebAssembly.Exception]" !== tmp2) {
+          const _Error = Error;
+          return isInstanceOf(originalException, Error);
         }
-        continue;
       }
     }
-    const _HermesInternal10 = HermesInternal;
-    return "" + combined + "?" + tmp16;
-  } else {
-    return "";
   }
+  return true;
+};
+export const isErrorEvent = function isErrorEvent(name) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(name)) === "[object " + "ErrorEvent" + "]";
+};
+export const isEvent = function isEvent(type) {
+  let tmp = typeof Event !== "undefined";
+  if (typeof Event !== "undefined") {
+    const _Event = Event;
+    tmp = isInstanceOf(type, Event);
+  }
+  return tmp;
+};
+export { isInstanceOf };
+export const isParameterizedString = function isParameterizedString(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
+  }
+  if (tmp) {
+    tmp = "__sentry_template_string__" in obj;
+  }
+  if (tmp) {
+    tmp = "__sentry_template_values__" in obj;
+  }
+  return tmp;
+};
+export const isPlainObject = function isPlainObject(user) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(user)) === "[object " + "Object" + "]";
+};
+export const isPrimitive = function isPrimitive(obj) {
+  let tmp = null === obj;
+  if (!tmp) {
+    let tmp2 = typeof obj === "object";
+    if (typeof obj === "object") {
+      tmp2 = null !== obj;
+    }
+    if (tmp2) {
+      tmp2 = "__sentry_template_string__" in obj;
+    }
+    if (tmp2) {
+      tmp2 = "__sentry_template_values__" in obj;
+    }
+    tmp = tmp2;
+  }
+  if (!tmp) {
+    let tmp3 = typeof obj !== "object";
+    if (typeof obj !== "object") {
+      tmp3 = typeof obj !== "function";
+    }
+    tmp = tmp3;
+  }
+  return tmp;
+};
+export const isRegExp = function isRegExp(test) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(test)) === "[object " + "RegExp" + "]";
+};
+export const isString = function isString(body) {
+  const call = toString.call;
+  return (typeof call === "unknown" ? toString() : call(body)) === "[object " + "String" + "]";
+};
+export const isSyntheticEvent = function isSyntheticEvent(arg0) {
+  const call = toString.call;
+  let tmp3 = (typeof call === "unknown" ? toString() : call(arg0)) === "[object " + "Object" + "]";
+  if (tmp3) {
+    tmp3 = "nativeEvent" in arg0;
+  }
+  if (tmp3) {
+    tmp3 = "preventDefault" in arg0;
+  }
+  if (tmp3) {
+    tmp3 = "stopPropagation" in arg0;
+  }
+  return tmp3;
+};
+export const isThenable = function isThenable(arg0) {
+  let then = arg0;
+  if (arg0) {
+    then = arg0.then;
+  }
+  if (then) {
+    then = typeof arg0.then === "function";
+  }
+  return Boolean(then);
+};
+export const isVueViewModel = function isVueViewModel(__isVue) {
+  let tmp = typeof __isVue !== "object";
+  if (typeof __isVue === "object") {
+    tmp = null === __isVue;
+  }
+  if (!tmp) {
+    __isVue = __isVue.__isVue;
+    let tmp2 = !__isVue;
+    if (!__isVue) {
+      tmp2 = !__isVue._isVue;
+    }
+    tmp = tmp2;
+  }
+  return !tmp;
 };

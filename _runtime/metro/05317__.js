@@ -1,7 +1,10 @@
 // === Module 5317: ? ===
 
 // Module 5317
-import noop from "module_19" /* 19 */;
+import _mod19 from "module_19" /* 19 */;
 
+const createContext = _mod19.createContext;
+const context = createContext(null);
 
-export default noop.createContext(false);
+export const BottomSheetGestureHandlersContext = context;
+export const BottomSheetDraggableContext = createContext(null);

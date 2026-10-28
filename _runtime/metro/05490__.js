@@ -1,11 +1,13 @@
 // === Module 5490: ? ===
 
 // Module 5490
-import cancelAnimation from "cancelAnimation" /* 1655 */;
+import _mod17 from "module_17" /* 17 */;
 
-const animatedComponent = cancelAnimation.createAnimatedComponent(fn(17).SectionList);
-const module_5483 = fn(5483);
-const memoResult = fn(19).memo(module_5483.createBottomSheetScrollableComponent(fn(5271).SCROLLABLE_TYPE.SECTIONLIST, animatedComponent));
-memoResult.displayName = "BottomSheetSectionList";
+const StyleSheet = _mod17.StyleSheet;
+const obj = { container: null };
+const obj2 = {};
+const merged = Object.assign(StyleSheet.absoluteFillObject);
+obj2.pointerEvents = "box-none";
+obj.container = obj2;
 
-export default memoResult;
+export const styles = StyleSheet.create(obj);

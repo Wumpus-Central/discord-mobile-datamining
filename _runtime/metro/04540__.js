@@ -1,46 +1,28 @@
 // === Module 4540: ? ===
 
 // Module 4540
-import differenceInCalendarWeeks_mod from "differenceInCalendarWeeks" /* 4444 */;
-import lastDayOfMonth_mod from "lastDayOfMonth" /* 4541 */;
-import startOfMonth_mod from "startOfMonth" /* 4471 */;
-import requiredArgs_mod from "requiredArgs" /* 4256 */;
+import module_4538_mod from "module_4538" /* 4538 */;
+import requiredArgs_mod from "requiredArgs" /* 4288 */;
 
-let differenceInCalendarWeeks = differenceInCalendarWeeks_mod;
-if (!differenceInCalendarWeeks) {
-  const obj = { default: differenceInCalendarWeeks };
+let module_4538 = module_4538_mod;
+if (!module_4538) {
+  const obj = { default: module_4538 };
   let tmp3 = obj;
 } else {
-  tmp3 = differenceInCalendarWeeks;
+  tmp3 = module_4538;
 }
-differenceInCalendarWeeks = tmp3;
-let lastDayOfMonth = lastDayOfMonth_mod;
-if (!lastDayOfMonth) {
-  const obj2 = { default: lastDayOfMonth };
-  let tmp5 = obj2;
-} else {
-  tmp5 = lastDayOfMonth;
-}
-lastDayOfMonth = tmp5;
-let startOfMonth = startOfMonth_mod;
-if (!startOfMonth) {
-  const obj3 = { default: startOfMonth };
-  let tmp7 = obj3;
-} else {
-  tmp7 = startOfMonth;
-}
-startOfMonth = tmp7;
+module_4538 = tmp3;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
-  const obj4 = { default: requiredArgs };
-  let tmp9 = obj4;
+  const obj2 = { default: requiredArgs };
+  let tmp5 = obj2;
 } else {
-  tmp9 = requiredArgs;
+  tmp5 = requiredArgs;
 }
-requiredArgs = tmp9;
+requiredArgs = tmp5;
 
-export default function getWeeksInMonth(arg0, arg1) {
+export default function formatDistanceToNowStrict(arg0, arg1) {
   requiredArgs.default(1, arguments);
-  return differenceInCalendarWeeks.default(lastDayOfMonth.default(arg0), startOfMonth.default(arg0), arg1) + 1;
+  return module_4538.default(arg0, Date.now(), arg1);
 };
 export default exports.default;

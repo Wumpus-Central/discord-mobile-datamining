@@ -1,130 +1,140 @@
 // === Module 12645: ? ===
 
 // Module 12645
-import _mod12589 from "module_12589" /* 12589 */;
-import _mod12616 from "module_12616" /* 12616 */;
-import _mod12617 from "module_12617" /* 12617 */;
-import _slicedToArray from "module_32" /* 32 */;
+import _mod12643 from "module_12643" /* 12643 */;
 
-function setupIntegration(on, name, arg2) {
-  closure_0 = on;
-  if (arg2[name.name]) {
-    if (_mod12617.DEBUG_BUILD) {
-      const logger2 = _mod12589.logger;
-      const _HermesInternal2 = HermesInternal;
-      logger2.log("Integration skipped because it was already installed: " + name.name);
-    }
-  } else {
-    arg2[name.name] = name;
-    if (tmp) {
-      name.setupOnce();
-      items.push(name.name);
-    }
-    if (tmp4) {
-      name.setup(on);
-    }
-    if (typeof name.preprocessEvent === "function") {
-      const preprocessEvent = name.preprocessEvent;
-      closure_1 = preprocessEvent.bind(name);
-      on.on("preprocessEvent", (arg0, arg1) => closure_1(arg0, arg1, closure_0));
-    }
-    if (typeof name.processEvent === "function") {
-      const processEvent = name.processEvent;
-      closure_2 = processEvent.bind(name);
-      const _Object = Object;
-      const obj = { id: name.name };
-      on.addEventProcessor(Object.assign((arg0, arg1) => closure_2(arg0, arg1, closure_0), obj));
-    }
-    if (_mod12617.DEBUG_BUILD) {
-      const logger = _mod12589.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("Integration installed: " + name.name);
-    }
-    tmp = -1 === items.indexOf(name.name) && typeof name.setupOnce === "function";
-    tmp4 = name.setup && typeof name.setup === "function";
-  }
-}
-let items = [];
+require = arg1;
+const dependencyMap = arg6;
 
-export const addIntegration = function addIntegration(name) {
-  const client = _mod12616.getClient();
-  if (client) {
-    client.addIntegration(name);
-  } else if (_mod12617.DEBUG_BUILD) {
-    const logger = _mod12589.logger;
-    const _HermesInternal = HermesInternal;
-    logger.warn("Cannot add integration \"" + name.name + "\" because no SDK Client is available.");
+export const isMatchingPattern = function isMatchingPattern(arr, test) {
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
   }
-};
-export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
-  const iter = arg1[Symbol.iterator]();
-  const nextResult = iter.next();
-  while (iter !== undefined) {
-    let obj = nextResult;
-    if (nextResult) {
-      let afterAllSetup = obj.afterAllSetup;
-    }
-    if (nextResult) {
-      let afterAllSetupResult = obj.afterAllSetup(arg0);
-    }
-    continue;
-  }
-};
-export function defineIntegration(arg0) {
-  return arg0;
-}
-export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
-  const arr = defaultIntegrations.defaultIntegrations || [];
-  const integrations = defaultIntegrations.integrations;
-  const item = arr.forEach((item) => {
-    item.isDefaultInstance = true;
-  });
-  if (Array.isArray(integrations)) {
-    items = [];
-    HermesBuiltin.arraySpread(integrations, HermesBuiltin.arraySpread(arr, 0));
-    let arr2 = items;
+  const isStringResult = _mod12643.isString(arr);
+  if (!isStringResult) {
+    return isStringResult;
   } else {
-    arr2 = arr;
-    if (typeof integrations === "function") {
-      const integrationsResult = integrations(arr);
-      const _Array = Array;
-      let tmp2 = integrationsResult;
-      if (!Array.isArray(integrationsResult)) {
-        const items1 = [integrationsResult];
-        tmp2 = items1;
+    if (tmpResult.isRegExp(test)) {
+      let isMatch = test.test(arr);
+    } else {
+      isMatch = _mod12643.isString(test);
+      if (isMatch) {
+        if (flag) {
+          let hasItem = arr === test;
+        } else {
+          hasItem = arr.includes(test);
+        }
       }
-      arr2 = tmp2;
+      const tmpResult2 = _mod12643;
     }
+    tmpResult = _mod12643;
   }
-  const item1 = arr2.forEach((name) => {
-    name = name.name;
-    let isDefaultInstance = tmp2;
-    if (obj[name]) {
-      isDefaultInstance = !tmp2.isDefaultInstance;
-    }
-    if (isDefaultInstance) {
-      isDefaultInstance = name.isDefaultInstance;
-    }
-    if (!isDefaultInstance) {
-      obj[name] = name;
-    }
-  });
-  const values = Object.values({});
-  const findIndexResult = values.findIndex((name) => "Debug" === name.name);
-  if (findIndexResult > -1) {
-    values.push(_slicedToArray(values.splice(findIndexResult, 1), 1)[0]);
-  }
-  return values;
 };
-export const installedIntegrations = items;
-export { setupIntegration };
-export const setupIntegrations = function setupIntegrations(arg0, arr) {
-  closure_0 = arg0;
-  const obj = {};
-  const item = arr.forEach((item) => {
-    if (item) {
-      setupIntegration(closure_0, item, obj);
+export const safeJoin = function safeJoin(arg0, arg1) {
+  if (Array.isArray(arg0)) {
+    const items = [];
+    let num = 0;
+    if (0 < arg0.length) {
+      try {
+        const push = items.push;
+        if (obj.isVueViewModel(tmp2)) {
+          push("[VueViewModel]");
+        } else {
+          const _String = String;
+          push(String(tmp2));
+        }
+        num = num + 1;
+        obj = _mod12643;
+      } catch (err) {
+        arr.push(tmp);
+      }
+    }
+    return items.join(arg1);
+  } else {
+    return "";
+  }
+};
+export const snipLine = function snipLine(arr, lineno) {
+  if (arr.length <= 150) {
+    return arr;
+  } else {
+    let tmp = lineno;
+    if (lineno > length) {
+      tmp = length;
+    }
+    const _Math = Math;
+    let num3 = Math.max(tmp - 60, 0);
+    if (num3 < 5) {
+      num3 = 0;
+    }
+    const _Math2 = Math;
+    let bound = Math.min(num3 + 140, length);
+    if (bound > length - 5) {
+      bound = length;
+    }
+    if (bound === length) {
+      const _Math3 = Math;
+      num3 = Math.max(bound - 140, 0);
+    }
+    const substr = arr.slice(num3, bound);
+    let combined = substr;
+    if (num3 > 0) {
+      const _HermesInternal = HermesInternal;
+      combined = "'{snip} " + substr;
+    }
+    let text = combined;
+    if (bound < length) {
+      text = `${tmp6} {snip}`;
+    }
+    return text;
+  }
+};
+export const stringMatchesSomePattern = function stringMatchesSomePattern(transaction) {
+  if (items === undefined) {
+    items = [];
+  }
+  let flag = arg2;
+  if (arg2 === undefined) {
+    flag = false;
+  }
+  return items.some((test) => {
+    const isStringResult = _mod12643.isString(transaction);
+    if (!isStringResult) {
+      return isStringResult;
+    } else {
+      if (tmpResult.isRegExp(test)) {
+        let isMatch = test.test(transaction);
+      } else {
+        isMatch = _mod12643.isString(test);
+        if (isMatch) {
+          if (flag) {
+            let hasItem = transaction === test;
+          } else {
+            hasItem = transaction.includes(test);
+          }
+        }
+        const tmpResult2 = _mod12643;
+      }
+      tmpResult = _mod12643;
     }
   });
-  return obj;
+};
+export const truncate = function truncate(str) {
+  let num = maxValueLength;
+  if (maxValueLength === undefined) {
+    num = 0;
+  }
+  let combined = str;
+  if (typeof str === "string") {
+    combined = str;
+    if (0 !== num) {
+      combined = str;
+      if (str.length > num) {
+        const _HermesInternal = HermesInternal;
+        combined = "" + str.slice(0, num) + "...";
+      }
+    }
+  }
+  return combined;
 };

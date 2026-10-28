@@ -1,21 +1,32 @@
 // === Module 5567: ? ===
 
 // Module 5567
-import _mod19 from "module_19" /* 19 */;
-import _mod5519 from "module_5519" /* 5519 */;
+import _mod5565 from "module_5565" /* 5565 */;
 
-_mod19.useCallback;
 
-export const useMappingHelper = () => {
-  const recyclerViewContext = _mod5519.useRecyclerViewContext();
-  const obj2 = { getMappingKey: null };
-  const items = [recyclerViewContext];
-  obj2.getMappingKey = useCallback((arg0, arg1) => {
-    let tmp = arg0;
-    if (recyclerViewContext) {
-      tmp = arg1;
+export default function _superPropBase(arg0, key10009) {
+  hasOwnProperty = {}.hasOwnProperty;
+  const call = hasOwnProperty.call;
+  let tmp = arg0;
+  if (!(typeof call === "unknown" ? hasOwnProperty(key10009) : call(arg0, key10009))) {
+    let tmp4 = _mod5565(arg0);
+    tmp = tmp4;
+    if (null !== tmp4) {
+      while (true) {
+        let hasOwnProperty2 = {}.hasOwnProperty;
+        let call2 = hasOwnProperty2.call;
+        tmp = tmp4;
+        if (typeof call2 === "unknown" ? hasOwnProperty2(key10009) : call2(tmp4, key10009)) {
+          break;
+        } else {
+          tmp4 = _mod5565(tmp4);
+          tmp = tmp4;
+          if (null === tmp4) {
+            break;
+          }
+        }
+      }
     }
-    return tmp;
-  }, items);
-  return obj2;
+  }
+  return tmp;
 };

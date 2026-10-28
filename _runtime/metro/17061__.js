@@ -4,4 +4,4 @@
 import registerAsset from "module_1131" /* 1131 */;
 
 
-export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/modules/intl/messages", scales: [1], hash: "10b2c11f96663a832c7bc6992f4ab3f5", name: "SecondTest.compiled.messages", type: "jsona" });
+export default registerAsset.registerAsset({ __packager_asset: true, httpServerLocation: "/assets/../discord_common/js/shared/images/flags", width: 70, height: 47, scales: [1], hash: "02e75e392ab5d5a8ed5ab4f8fcae9c77", name: "fi", type: "png" });

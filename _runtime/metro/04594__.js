@@ -1,7 +1,7 @@
 // === Module 4594: ? ===
 
 // Module 4594
-import _mod4561 from "module_4561" /* 4561 */;
+import _mod4593 from "module_4593" /* 4593 */;
 
 function _typeof(arg0) {
   if (typeof Symbol === "function") {
@@ -28,15 +28,15 @@ function _typeof(arg0) {
     str = typeof arg0;
   };
 }
-function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
+function _setPrototypeOf(YearParser, Parser) {
   _setPrototypeOf = Object.setPrototypeOf;
   if (!_setPrototypeOf) {
-    _setPrototypeOf = function _setPrototypeOf(ISOTimezoneWithZParser, Parser) {
-      ISOTimezoneWithZParser.__proto__ = Parser;
-      return ISOTimezoneWithZParser;
+    _setPrototypeOf = function _setPrototypeOf(YearParser, Parser) {
+      YearParser.__proto__ = Parser;
+      return YearParser;
     };
   }
-  return _setPrototypeOf(ISOTimezoneWithZParser, Parser);
+  return _setPrototypeOf(YearParser, Parser);
 }
 function _getPrototypeOf(arg0) {
   if (Object.setPrototypeOf) {
@@ -54,9 +54,9 @@ function _getPrototypeOf(arg0) {
   }
   return _getPrototypeOf(arg0);
 }
-const Parser = _mod4561.Parser;
+const Parser = _mod4593.Parser;
 let _createSuperInternal;
-class ISOTimezoneWithZParser {
+class YearParser {
   constructor() {
     if (this instanceof closure_1) {
       length = arguments.length;
@@ -92,10 +92,10 @@ class ISOTimezoneWithZParser {
         str2 = "priority";
         if ("priority" in applyResult) {
           _Object = Object;
-          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 10, enumerable: true, configurable: true, writable: true });
+          definePropertyResult = Object.defineProperty(applyResult, "priority", { value: 130, enumerable: true, configurable: true, writable: true });
         } else {
-          num3 = 10;
-          applyResult.priority = 10;
+          num3 = 130;
+          applyResult.priority = 130;
         }
         if (tmp13) {
           _ReferenceError = ReferenceError;
@@ -106,7 +106,7 @@ class ISOTimezoneWithZParser {
           tmp19 = referenceError1;
           throw referenceError1;
         } else {
-          items1 = ["t", "T", "x"];
+          items1 = ["Y", "R", "u", "w", "I", "i", "e", "c", "t", "T"];
           str3 = "incompatibleTokens";
           if ("incompatibleTokens" in applyResult) {
             _Object2 = Object;
@@ -130,7 +130,7 @@ class ISOTimezoneWithZParser {
     }
   }
 }
-let dependencyMap = ISOTimezoneWithZParser;
+let dependencyMap = YearParser;
 if (typeof Parser !== "function") {
   if (null !== Parser) {
     let _TypeError = TypeError;
@@ -142,9 +142,9 @@ let prototype = Parser;
 if (Parser) {
   prototype = Parser.prototype;
 }
-ISOTimezoneWithZParser.prototype = Object.create(prototype, { constructor: { value: ISOTimezoneWithZParser, writable: true, configurable: true } });
+YearParser.prototype = Object.create(prototype, { constructor: { value: YearParser, writable: true, configurable: true } });
 if (Parser) {
-  _setPrototypeOf(ISOTimezoneWithZParser, Parser);
+  _setPrototypeOf(YearParser, Parser);
 }
 let num = 0;
 dependencyMap = (function _isNativeReflectConstruct() {
@@ -205,31 +205,50 @@ _createSuperInternal = function _createSuperInternal() {
 };
 const entry = {
   key: "parse",
-  value: function parse(arg0, arg1) {
-    if ("X" === arg1) {
-      return _createSuperInternal(4563).parseTimezonePattern(_createSuperInternal(4564).timezonePatterns.basicOptionalMinutes, arg0);
-    } else if ("XX" === arg1) {
-      return _createSuperInternal(4563).parseTimezonePattern(_createSuperInternal(4564).timezonePatterns.basic, arg0);
-    } else if ("XXXX" === arg1) {
-      return _createSuperInternal(4563).parseTimezonePattern(_createSuperInternal(4564).timezonePatterns.basicOptionalSeconds, arg0);
-    } else if ("XXXXX" === arg1) {
-      return _createSuperInternal(4563).parseTimezonePattern(_createSuperInternal(4564).timezonePatterns.extendedOptionalSeconds, arg0);
+  value: function parse(arg0, arg1, ordinalNumber) {
+    closure_0 = arg1;
+    function valueCallback(year) {
+      return { year, isTwoDigitYear: "yy" === closure_0 };
+    }
+    if ("y" === arg1) {
+      return _createSuperInternal(4595).mapValue(_createSuperInternal(4595).parseNDigits(4, arg0), valueCallback);
+    } else if ("yo" === arg1) {
+      return _createSuperInternal(4595).mapValue(ordinalNumber.ordinalNumber(arg0, { unit: "year" }), valueCallback);
     } else {
-      return _createSuperInternal(4563).parseTimezonePattern(_createSuperInternal(4564).timezonePatterns.extended, arg0);
+      return _createSuperInternal(4595).mapValue(_createSuperInternal(4595).parseNDigits(arg1.length, arg0), valueCallback);
     }
   }
 };
 let items = [
   entry,
   {
-    key: "set",
-    value: function set(getTime, timestampIsSet, arg2) {
-      let date = getTime;
-      if (!timestampIsSet.timestampIsSet) {
-        const _Date = Date;
-        date = new Date(getTime.getTime() - arg2);
+    key: "validate",
+    value: function validate(arg0, isTwoDigitYear) {
+      isTwoDigitYear = isTwoDigitYear.isTwoDigitYear;
+      if (!isTwoDigitYear) {
+        isTwoDigitYear = isTwoDigitYear.year > 0;
       }
-      return date;
+      return isTwoDigitYear;
+    }
+  },
+  {
+    key: "set",
+    value: function set(setUTCFullYear, era, isTwoDigitYear) {
+      if (isTwoDigitYear.isTwoDigitYear) {
+        setUTCFullYear.setUTCFullYear(_createSuperInternal(4595).normalizeTwoDigitYear(isTwoDigitYear.year, tmp), 0, 1);
+        setUTCFullYear.setUTCHours(0, 0, 0, 0);
+        return setUTCFullYear;
+      } else {
+        if ("era" in era) {
+          if (1 !== era.era) {
+            let year = 1 - isTwoDigitYear.year;
+          }
+          setUTCFullYear.setUTCFullYear(year, 0, 1);
+          setUTCFullYear.setUTCHours(0, 0, 0, 0);
+          return setUTCFullYear;
+        }
+        year = isTwoDigitYear.year;
+      }
     }
   }
 ];
@@ -251,4 +270,4 @@ if (0 < items.length) {
   } while (num < items.length);
 }
 
-export { ISOTimezoneWithZParser };
+export { YearParser };

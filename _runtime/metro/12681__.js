@@ -1,309 +1,220 @@
 // === Module 12681: ? ===
 
 // Module 12681
-function resolve() {
-  let tmp17;
-  const items = [...arguments];
-  let diff = items.length - 1;
-  let flag = false;
-  let str = "";
-  let flag2 = false;
-  let str2 = "";
-  if (-1 <= diff) {
-    while (true) {
-      let tmp3 = flag;
-      let str3 = "/";
-      if (0 <= diff) {
-        str3 = items[diff];
-      }
-      let combined = str;
-      if (str3) {
-        let _HermesInternal = HermesInternal;
-        combined = "" + str3 + "/" + str;
-        tmp3 = "/" === str3.charAt(0);
-      }
-      let diff1 = diff - 1;
-      flag2 = tmp3;
-      str2 = combined;
-      if (-1 > diff1) {
-        break;
-      } else {
-        diff = diff1;
-        flag = tmp3;
-        str = combined;
-        str2 = combined;
-        flag2 = tmp3;
-        if (tmp3) {
-          break;
-        }
-      }
-    }
-  }
-  let str4 = "";
-  if (flag2) {
-    str4 = "/";
-  }
-  const parts = str2.split("/");
-  const found = parts.filter((item) => item);
-  let diff2 = found.length - 1;
-  let num = 0;
-  let num2 = 0;
-  if (0 <= diff2) {
-    do {
-      let tmp8 = found[diff2];
-      if ("." === tmp8) {
-        let spliceResult = found.splice(diff2, 1);
-        let sum = num;
-      } else if (".." === tmp8) {
-        let spliceResult1 = found.splice(diff2, 1);
-        sum = num + 1;
-      } else {
-        sum = num;
-        if (num) {
-          let spliceResult2 = found.splice(diff2, 1);
-          sum = num - 1;
-        }
-      }
-      diff2 = diff2 - 1;
-      num = sum;
-      num2 = sum;
-    } while (0 <= diff2);
-  }
-  if (!flag2) {
-    let diff3 = num2 - 1;
-    if (num2) {
-      do {
-        let arr = found.unshift("..");
-        tmp17 = diff3;
-        diff3 = diff3 - 1;
-      } while (tmp17);
-    }
-  }
-  return str4 + found.join("/") || ".";
-}
-function normalizePath(str) {
-  let tmp14;
-  const substr = str.slice(-1);
-  const parts = str.split("/");
-  const found = parts.filter((item) => item);
-  let diff = found.length - 1;
-  let num = 0;
-  let num2 = 0;
-  if (0 <= diff) {
-    do {
-      let tmp4 = found[diff];
-      if ("." === tmp4) {
-        let spliceResult = found.splice(diff, 1);
-        let sum = num;
-      } else if (".." === tmp4) {
-        let spliceResult1 = found.splice(diff, 1);
-        sum = num + 1;
-      } else {
-        sum = num;
-        if (num) {
-          let spliceResult2 = found.splice(diff, 1);
-          sum = num - 1;
-        }
-      }
-      diff = diff - 1;
-      num = sum;
-      num2 = sum;
-    } while (0 <= diff);
-  }
-  const tmp11 = "/" === str.charAt(0);
-  if (!tmp11) {
-    let diff1 = num2 - 1;
-    if (num2) {
-      do {
-        let arr = found.unshift("..");
-        tmp14 = diff1;
-        diff1 = diff1 - 1;
-      } while (tmp14);
-    }
-  }
-  str = found.join("/");
-  let tmp15 = str;
-  if (!str) {
-    tmp15 = tmp11;
-  }
-  if (!tmp15) {
-    str = ".";
-  }
-  let tmp16 = str;
-  if (str) {
-    tmp16 = "/" === substr;
-  }
-  let text = str;
-  if (tmp16) {
-    text = `${str}/`;
-  }
-  let str2 = "";
-  if (tmp11) {
-    str2 = "/";
-  }
-  return str2 + text;
-}
-const re0 = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
+import stackParserFromStackParserOptions from "stackParserFromStackParserOptions" /* 12639 */;
+import _mod12642 from "module_12642" /* 12642 */;
+import _mod12643 from "module_12643" /* 12643 */;
+import memoBuilder from "memoBuilder" /* 12682 */;
+import _slicedToArray from "module_32" /* 32 */;
 
-export const basename = function basename(arr, arg1) {
-  let combined = arr;
-  if (arr.length > 1024) {
+function normalize(arg0) {
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 100;
+  }
+  let num2 = arg2;
+  if (arg2 === undefined) {
+    num2 = Infinity;
+  }
+  try {
+    return visit("", arg0, num, num2);
+  } catch (tmp5) {
+    const obj = { ERROR: null };
     const _HermesInternal = HermesInternal;
-    combined = "<truncated>" + arr.slice(-1024);
+    obj.ERROR = "**non-serializable** (" + tmp5 + ")";
+    return obj;
   }
-  const match = re0.exec(combined);
-  if (match) {
-    let substr = match.slice(1);
-  } else {
-    substr = [];
+}
+function visit(arg0, __sentry_skip_normalization__) {
+  let num = arg2;
+  if (arg2 === undefined) {
+    num = Infinity;
   }
-  let tmp3 = arg1;
-  if (arg1) {
-    tmp3 = arr3.slice(-1 * arg1.length) === arg1;
+  let num2 = arg3;
+  if (arg3 === undefined) {
+    num2 = Infinity;
   }
-  let substr1 = arr3;
-  if (tmp3) {
-    substr1 = arr3.slice(0, arr3.length - arg1.length);
+  let memoBuilderResult = arg4;
+  if (arg4 === undefined) {
+    memoBuilderResult = memoBuilder.memoBuilder();
   }
-  return substr1;
-};
-export const dirname = function dirname(arr) {
-  let combined = arr;
-  if (arr.length > 1024) {
+  _slicedToArray(memoBuilderResult, 2);
+  if (null != __sentry_skip_normalization__) {
+    const items = ["boolean", "string"];
+    if (!items.includes(typeof __sentry_skip_normalization__)) {
+      if (typeof __sentry_skip_normalization__ === "number") {
+        let _Number = Number;
+      }
+      let str = (function stringifyValue(arg0, _events) {
+        try {
+          if ("domain" === arg0) {
+            if (_events) {
+              if (typeof _events === "object") {
+                if (_events._events) {
+                  return "[Domain]";
+                }
+              }
+            }
+          }
+          if ("domainEmitter" === arg0) {
+            return "[DomainEmitter]";
+          } else {
+            if (undefined !== global) {
+              if (_events === global) {
+                return "[Global]";
+              }
+            }
+            const _window = window;
+            if (typeof window !== "undefined") {
+              const _window2 = window;
+              if (_events === window) {
+                return "[Window]";
+              }
+            }
+            const _document = document;
+            if (typeof document !== "undefined") {
+              const _document2 = document;
+              if (_events === document) {
+                return "[Document]";
+              }
+            }
+            if (obj.isVueViewModel(_events)) {
+              return "[VueViewModel]";
+            } else {
+              if (tmp4Result.isSyntheticEvent(_events)) {
+                return "[SyntheticEvent]";
+              } else {
+                if (typeof _events === "number") {
+                  const _Number = Number;
+                  if (!Number.isFinite(_events)) {
+                    const _HermesInternal = HermesInternal;
+                    return "[" + _events + "]";
+                  }
+                }
+                if (typeof _events === "function") {
+                  const _HermesInternal4 = HermesInternal;
+                  return "[Function: " + stackParserFromStackParserOptions.getFunctionName(_events) + "]";
+                } else if (typeof _events === "symbol") {
+                  const _String2 = String;
+                  const _HermesInternal3 = HermesInternal;
+                  return "[" + String(_events) + "]";
+                } else if (typeof _events === "bigint") {
+                  const _String = String;
+                  const _HermesInternal2 = HermesInternal;
+                  return "[BigInt: " + String(_events) + "]";
+                } else {
+                  const tmp9 = (function getConstructorName(_events) {
+                    const prototypeOf = Object.getPrototypeOf(_events);
+                    let str = "null prototype";
+                    if (prototypeOf) {
+                      str = prototypeOf.constructor.name;
+                    }
+                    return str;
+                  })(_events);
+                  const _HermesInternal6 = HermesInternal;
+                  if (obj4.test(tmp9)) {
+                    let combined = concat(tmp10, "]");
+                  } else {
+                    combined = concat(tmp10, "]");
+                  }
+                  return combined;
+                }
+              }
+              tmp4Result = _mod12643;
+            }
+            obj = _mod12643;
+          }
+        } catch (tmp7) {
+          const _HermesInternal5 = HermesInternal;
+          return "**non-serializable** (" + tmp7 + ")";
+        }
+      })(arg0, __sentry_skip_normalization__);
+      if (str.startsWith("[object ")) {
+        if (__sentry_skip_normalization__.__sentry_skip_normalization__) {
+          return __sentry_skip_normalization__;
+        } else {
+          if (typeof __sentry_skip_normalization__.__sentry_override_normalization_depth__ === "number") {
+            num = __sentry_skip_normalization__.__sentry_override_normalization_depth__;
+          }
+          if (0 === num) {
+            return str.replace("object ", "");
+          } else if (tmp6(__sentry_skip_normalization__)) {
+            return "[Circular ~]";
+          } else {
+            if (__sentry_skip_normalization__) {
+              if (typeof __sentry_skip_normalization__.toJSON === "function") {
+                try {
+                  return visit("", __sentry_skip_normalization__.toJSON(), num - 1, num2, tmp8);
+                } catch (err) {
+                }
+              }
+            }
+            const _Array = Array;
+            const tmp14 = Array.isArray(__sentry_skip_normalization__) ? [] : {};
+            const convertToPlainObjectResult = _mod12642.convertToPlainObject(__sentry_skip_normalization__);
+            const keys = Object.keys();
+            if (keys !== undefined) {
+              while (keys[tmp] !== undefined) {
+                let _Object = Object;
+                hasOwnProperty = Object.prototype.hasOwnProperty;
+                let call = hasOwnProperty.call;
+                let tmp28 = tmp21;
+                if (!(typeof call === "unknown" ? hasOwnProperty(tmp21) : call(convertToPlainObjectResult, tmp21))) {
+                  continue;
+                } else {
+                  if (tmp20 >= num2) {
+                    let str4 = "[MaxProperties ~]";
+                    tmp14[tmp21] = "[MaxProperties ~]";
+                    break;
+                  } else {
+                    tmp14[tmp21] = visit(tmp28, convertToPlainObjectResult[tmp21], num - 1, num2, tmp8);
+                    let num6 = tmp20 + 1;
+                    continue;
+                  }
+                  break;
+                }
+                break;
+              }
+            }
+            tmp7(__sentry_skip_normalization__);
+            return tmp14;
+          }
+        }
+      } else {
+        return str;
+      }
+    }
+  }
+  return __sentry_skip_normalization__;
+}
+function normalizeToSize(arg0) {
+  let num = arg1;
+  if (arg1 === undefined) {
+    num = 3;
+  }
+  let num2 = arg2;
+  if (arg2 === undefined) {
+    num2 = 102400;
+  }
+  let tmp = normalize(arg0, num);
+  if (~-str.split(/%..|./).length > num2) {
+    tmp = normalizeToSize(arg0, num - 1, num2);
+  }
+  return tmp;
+}
+
+export { normalize };
+export { normalizeToSize };
+export const normalizeUrlToBase = function normalizeUrlToBase(arg0, str) {
+  const replaced = str.replace(/\\/g, "/");
+  try {
+    const _decodeURI = decodeURI;
+    str = decodeURI(arg0);
+    const str2 = str.replace(/\\/g, "/");
+    const _RegExp = RegExp;
     const _HermesInternal = HermesInternal;
-    combined = "<truncated>" + arr.slice(-1024);
+    const regExp = new RegExp("(file://)?/*" + tmp2 + "/*", "ig");
+    return str.replace(/\\/g, "/").replace(/webpack:\/?/g, "").replace(regExp, "app:///");
+  } catch (err) {
   }
-  const match = re0.exec(combined);
-  if (match) {
-    let substr = match.slice(1);
-  } else {
-    substr = [];
-  }
-  if (substr[0] || "") {
-    let substr1 = arr3;
-    if (arr3) {
-      substr1 = arr3.slice(0, arr3.length - 1);
-    }
-    let str2 = tmp3 + substr1;
-  } else {
-    str2 = ".";
-  }
-  return str2;
 };
-export const isAbsolute = function isAbsolute(str) {
-  return "/" === str.charAt(0);
-};
-export const join = function join() {
-  const items = [...arguments];
-  return normalizePath(items.join("/"));
-};
-export { normalizePath };
-export const relative = function relative(root, replaced) {
-  let length;
-  const arr = resolve(root);
-  const str = resolve(root).slice(1);
-  const arr2 = resolve(replaced);
-  const parts = str.split("/");
-  let num = 0;
-  if (0 < parts.length) {
-    let num2 = 0;
-    num = 0;
-    if ("" === parts[0]) {
-      const sum = num2 + 1;
-      num = sum;
-      while (sum < parts.length) {
-        num2 = sum;
-        num = sum;
-        if ("" !== parts[sum]) {
-          break;
-        }
-      }
-    }
-  }
-  const diff = parts.length - 1;
-  let tmp3 = diff;
-  if (0 <= diff) {
-    let tmp4 = diff;
-    tmp3 = diff;
-    if ("" === parts[diff]) {
-      const diff1 = tmp4 - 1;
-      tmp3 = diff1;
-      while (0 <= diff1) {
-        tmp4 = diff1;
-        tmp3 = diff1;
-        if ("" !== parts[diff1]) {
-          break;
-        }
-      }
-    }
-  }
-  if (tmp3 < num) {
-    let items = [];
-  } else {
-    items = parts.slice(num, tmp3 - num + 1);
-  }
-  const parts1 = resolve(replaced).slice(1).split("/");
-  let num3 = 0;
-  if (0 < parts1.length) {
-    let num4 = 0;
-    num3 = 0;
-    if ("" === parts1[0]) {
-      const sum1 = num4 + 1;
-      num3 = sum1;
-      while (sum1 < parts1.length) {
-        num4 = sum1;
-        num3 = sum1;
-        if ("" !== parts1[sum1]) {
-          break;
-        }
-      }
-    }
-  }
-  const diff2 = parts1.length - 1;
-  let tmp8 = diff2;
-  if (0 <= diff2) {
-    let tmp9 = diff2;
-    tmp8 = diff2;
-    if ("" === parts1[diff2]) {
-      const diff3 = tmp9 - 1;
-      tmp8 = diff3;
-      while (0 <= diff3) {
-        tmp9 = diff3;
-        tmp8 = diff3;
-        if ("" !== parts1[diff3]) {
-          break;
-        }
-      }
-    }
-  }
-  if (tmp8 < num3) {
-    let items1 = [];
-  } else {
-    items1 = parts1.slice(num3, tmp8 - num3 + 1);
-  }
-  const bound = Math.min(items.length, items1.length);
-  let num5 = 0;
-  let tmp12 = bound;
-  if (0 < bound) {
-    tmp12 = num5;
-    while (items[num5] === items1[num5]) {
-      num5 = num5 + 1;
-      tmp12 = bound;
-      if (num5 >= bound) {
-        break;
-      }
-    }
-  }
-  const items2 = [];
-  let sum2 = tmp12;
-  if (tmp12 < items.length) {
-    do {
-      let arr3 = items2.push("..");
-      sum2 = sum2 + 1;
-      length = items.length;
-    } while (sum2 < length);
-  }
-  const combined = items2.concat(items1.slice(tmp12));
-  return combined.join("/");
-};
-export { resolve };

@@ -1,7 +1,7 @@
 // === Module 22: ? ===
 
 // Module 22
-function jsxProd(BaseIconImage, size, key) {
+function jsxProd(View, size, key) {
   let text = null;
   if (undefined !== key) {
     text = `${key}`;
@@ -27,7 +27,7 @@ function jsxProd(BaseIconImage, size, key) {
       }
     }
   }
-  const element = { $$typeof: _typeof, type: BaseIconImage, key: text, ref: null, props: null };
+  const element = { $$typeof: _typeof, type: View, key: text, ref: null, props: null };
   let tmp7 = null;
   if (undefined !== tmp3.ref) {
     tmp7 = ref;
