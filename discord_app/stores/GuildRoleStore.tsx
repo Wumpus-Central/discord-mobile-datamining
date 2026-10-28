@@ -1,14 +1,14 @@
-// === Module 4878: GuildRoleStore ===
+// === Module 4910: GuildRoleStore ===
 
-// Module 4878 (GuildRoleStore)
+// Module 4910 (GuildRoleStore)
 import libdiscoreExperiments from "libdiscoreExperiments" /* 559 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import PlainRecord from "PlainRecord" /* 4839 */;
-import GuildRecord from "GuildRecord" /* 4842 */;
-import LibdiscoreStore2 from "LibdiscoreStore" /* 4847 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4879 */;
-import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 4880 */;
-import GuildRoleUtilsAll from "GuildRoleUtils" /* 4882 */;
+import PlainRecord from "PlainRecord" /* 4871 */;
+import GuildRecord from "GuildRecord" /* 4874 */;
+import LibdiscoreStore2 from "LibdiscoreStore" /* 4879 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 4911 */;
+import GuildRoleRecordUtilsAll from "GuildRoleRecordUtils" /* 4912 */;
+import GuildRoleUtilsAll from "GuildRoleUtils" /* 4914 */;
 import size from "module_2" /* 2 */;
 
 function createGuildRoleRecordFromRust(permissions) {

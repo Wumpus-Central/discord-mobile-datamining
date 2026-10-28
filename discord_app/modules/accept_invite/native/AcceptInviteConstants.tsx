@@ -1,6 +1,6 @@
-// === Module 7745: AcceptInviteConstants ===
+// === Module 7779: AcceptInviteConstants ===
 
-// Module 7745 (AcceptInviteConstants)
+// Module 7779 (AcceptInviteConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/accept_invite/native/AcceptInviteConstants.tsx");

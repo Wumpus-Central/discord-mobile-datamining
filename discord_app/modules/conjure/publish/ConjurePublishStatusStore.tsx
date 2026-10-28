@@ -1,10 +1,10 @@
-// === Module 10717: ConjurePublishStatusStore ===
+// === Module 10749: ConjurePublishStatusStore ===
 
-// Module 10717 (ConjurePublishStatusStore)
+// Module 10749 (ConjurePublishStatusStore)
 import initializeDefault from "initialize" /* 504 */;
 import discord_common_shallowEqual from "discord_common/shallowEqual" /* 568 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 require = fn;
 const map = new Map();
@@ -21,8 +21,8 @@ const prototype = ConjurePublishStatusStore.prototype;
 prototype["initialize"] = function initialize() {
   this.waitFor(ConjureProjectStore);
 };
-prototype["getPublishStatus"] = function getPublishStatus(projectId) {
-  value = map.get(projectId);
+prototype["getPublishStatus"] = function getPublishStatus(id) {
+  value = map.get(id);
   if (value == null) {
     value = null;
   }
@@ -38,8 +38,8 @@ prototype["getPublishApprovalUrl"] = function getPublishApprovalUrl(projectId) {
   }
   return value;
 };
-prototype["getPublishProgress"] = function getPublishProgress(arg0) {
-  value = map2.get(arg0);
+prototype["getPublishProgress"] = function getPublishProgress(projectId) {
+  value = map2.get(projectId);
   if (value == null) {
     value = null;
   }
@@ -52,8 +52,8 @@ prototype["getPublishFailure"] = function getPublishFailure(arg0) {
   }
   return value;
 };
-prototype["isAppChannelPending"] = function isAppChannelPending(projectId) {
-  return set1.has(projectId);
+prototype["isAppChannelPending"] = function isAppChannelPending(id) {
+  return set1.has(id);
 };
 let closure_10 = [];
 const conjurePublishStatusStore = new ConjurePublishStatusStore(DispatcherDefault, {

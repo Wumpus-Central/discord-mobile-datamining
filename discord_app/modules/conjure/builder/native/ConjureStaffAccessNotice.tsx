@@ -1,9 +1,9 @@
-// === Module 12546: ConjureStaffAccessNotice ===
+// === Module 12593: ConjureStaffAccessNotice ===
 
-// Module 12546 (ConjureStaffAccessNotice)
+// Module 12593 (ConjureStaffAccessNotice)
 import router_utils from "router_utils" /* 1111 */;
-import _modDef3831 from "module_3831" /* 3831 */;
-import LinkingDefault from "Linking" /* 5661 */;
+import _modDef3863 from "module_3863" /* 3863 */;
+import LinkingDefault from "Linking" /* 5696 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -18,7 +18,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   let tmp = dependencyMap;
   const cResult = conjureStaffAccessTarget(576).c(6);
   let obj = conjureStaffAccessTarget(576);
-  conjureStaffAccessTarget = conjureStaffAccessTarget(12547).useConjureStaffAccessTarget();
+  conjureStaffAccessTarget = conjureStaffAccessTarget(12594).useConjureStaffAccessTarget();
   if (cResult[0] !== conjureStaffAccessTarget) {
     const fn = function n() {
       if (null != conjureStaffAccessTarget) {
@@ -40,8 +40,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   } else {
     if (cResult[2] !== tmp4) {
       const intl = InlineNotice(1125).intl;
-      const obj3 = { channel: InlineNotice(12547).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
-      const formatResult = intl.format(_modDef3831["6anmu1"], obj3);
+      const obj3 = { channel: InlineNotice(12594).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
+      const formatResult = intl.format(_modDef3863["6anmu1"], obj3);
       cResult[2] = tmp4;
       cResult[3] = formatResult;
       let tmp5 = formatResult;
@@ -49,24 +49,24 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       tmp5 = cResult[3];
     }
     if (cResult[4] !== tmp5) {
-      InlineNotice = InlineNotice(7954).InlineNotice;
+      InlineNotice = InlineNotice(7988).InlineNotice;
       const obj4 = { type: "info", role: "none", message: tmp5 };
       tmp = <InlineNotice type="info" role="none" message={tmp5} />;
       cResult[4] = tmp5;
       cResult[5] = tmp;
     }
   }
-  let obj2 = conjureStaffAccessTarget(12547);
+  let obj2 = conjureStaffAccessTarget(12594);
 }) : (function ConjureStaffAccessNotice() {
-  conjureStaffAccessTarget = conjureStaffAccessTarget(12547).useConjureStaffAccessTarget();
+  conjureStaffAccessTarget = conjureStaffAccessTarget(12594).useConjureStaffAccessTarget();
   [][0] = conjureStaffAccessTarget;
   let tmp5 = null;
   if (null != conjureStaffAccessTarget) {
     let obj2 = { type: "info", role: "none", message: null };
     const intl = tmp(1125).intl;
-    const obj3 = { channel: tmp(12547).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
-    obj2.message = intl.format(_modDef3831["6anmu1"], obj3);
-    tmp5 = jsx(tmp(7954).InlineNotice, { type: "info", role: "none", message: null });
+    const obj3 = { channel: tmp(12594).CONJURE_STAFF_ACCESS_CHANNEL_NAME, onNavigate: tmp4 };
+    obj2.message = intl.format(_modDef3863["6anmu1"], obj3);
+    tmp5 = jsx(tmp(7988).InlineNotice, { type: "info", role: "none", message: null });
   }
   return tmp5;
 });

@@ -1,26 +1,26 @@
-// === Module 10834: InstantInviteCode ===
+// === Module 10869: InstantInviteCode ===
 
-// Module 10834 (InstantInviteCode)
+// Module 10869 (InstantInviteCode)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import useChannelName from "useChannelName" /* 5605 */;
-import ClockIcon from "ClockIcon" /* 5692 */;
-import Stack_Stack from "Stack/Stack" /* 5978 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8502 */;
-import TextIcon2 from "TextIcon" /* 8551 */;
-import CountDownDefault from "CountDown" /* 10038 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import useChannelName from "useChannelName" /* 5640 */;
+import ClockIcon from "ClockIcon" /* 5727 */;
+import Stack_Stack from "Stack/Stack" /* 6013 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8539 */;
+import TextIcon2 from "TextIcon" /* 8588 */;
+import CountDownDefault from "CountDown" /* 10070 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4914 */;
+import RelationshipStore from "RelationshipStore" /* 4946 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(4828).createChannelRecordFromInvite;
+let closure_5 = fn(4860).createChannelRecordFromInvite;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { flex: { flex: 1 }, channel: { flex: 0 }, time: { color: nativeDefault.colors.TEXT_FEEDBACK_POSITIVE } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -222,12 +222,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function InstantI
   const obj = { style: closure_10().flex, children: null };
   const memo = noop.useMemo(() => closure_5(invite.channel), items);
   const obj2 = { children: null };
-  const items1 = [closure_8(invite(5235).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }), ];
+  const items1 = [closure_8(invite(5270).Text, { variant: "text-lg/bold", tabularNumbers: true, children: invite.code }), ];
   const obj3 = { variant: "text-lg/bold", tabularNumbers: true, children: invite.code };
   const tmp = closure_10();
   items1[1] = closure_8(closure_11, { channel: memo, expiresAt: invite.getExpiresAt() });
   obj2.children = items1;
-  obj.children = closure_9(invite(5978).Stack, obj2);
+  obj.children = closure_9(invite(6013).Stack, obj2);
   return closure_8(View, obj);
 });
 export const InstantInviteDetails = tmp3;

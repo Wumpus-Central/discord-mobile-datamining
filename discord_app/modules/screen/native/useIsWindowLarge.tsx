@@ -1,7 +1,7 @@
-// === Module 7040: useIsWindowLarge ===
+// === Module 7074: useIsWindowLarge ===
 
-// Module 7040 (useIsWindowLarge)
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5155 */;
+// Module 7074 (useIsWindowLarge)
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5190 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

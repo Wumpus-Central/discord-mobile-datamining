@@ -1,10 +1,10 @@
-// === Module 12134: CalendarPlusIcon ===
+// === Module 12172: CalendarPlusIcon ===
 
-// Module 12134 (CalendarPlusIcon)
+// Module 12172 (CalendarPlusIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5669 */;
-import _mod12135 from "module_12135" /* 12135 */;
+import BaseIconImage from "BaseIconImage" /* 5704 */;
+import _mod12173 from "module_12173" /* 12173 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const CalendarPlusIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12135;
+    const tmpResult = _mod12173;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const CalendarPlusIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12135, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12173, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,13 +1,13 @@
-// === Module 16924: AppIconsSetting ===
+// === Module 17153: AppIconsSetting ===
 
-// Module 16924 (AppIconsSetting)
+// Module 17153 (AppIconsSetting)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
-import dismissible_content from "dismissible_content" /* 4808 */;
-import AppIconUtils from "AppIconUtils" /* 14803 */;
-import SettingsItemAppIconDefault from "SettingsItemAppIcon" /* 16925 */;
-import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 16052 */;
-import SettingBuilders from "SettingBuilders" /* 11212 */;
+import dismissible_content from "dismissible_content" /* 4840 */;
+import AppIconUtils from "AppIconUtils" /* 15026 */;
+import SettingsItemAppIconDefault from "SettingsItemAppIcon" /* 17154 */;
+import DismissibleBadgeUtils from "DismissibleBadgeUtils" /* 16280 */;
+import SettingBuilders from "SettingBuilders" /* 11248 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

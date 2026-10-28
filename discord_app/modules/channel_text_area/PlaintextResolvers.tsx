@@ -1,21 +1,21 @@
-// === Module 10204: PlaintextResolvers ===
+// === Module 10236: PlaintextResolvers ===
 
-// Module 10204 (PlaintextResolvers)
+// Module 10236 (PlaintextResolvers)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
-import UnicodeEmojisDefault from "UnicodeEmojis" /* 4918 */;
-import EmojiUtilsDefault from "EmojiUtils" /* 4922 */;
-import useChannelName from "useChannelName" /* 5605 */;
-import SlateUtils from "SlateUtils" /* 7760 */;
+import UnicodeEmojisDefault from "UnicodeEmojis" /* 4950 */;
+import EmojiUtilsDefault from "EmojiUtils" /* 4954 */;
+import useChannelName from "useChannelName" /* 5640 */;
+import SlateUtils from "SlateUtils" /* 7794 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmojiStore from "EmojiStore" /* 6726 */;
-import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6771 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import GuildChannelStore from "GuildChannelStore" /* 4902 */;
-import GuildMemberStore from "GuildMemberStore" /* 4884 */;
-import GuildRoleStore from "GuildRoleStore" /* 4878 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
-import RelationshipStore from "RelationshipStore" /* 4914 */;
+import EmojiStore from "EmojiStore" /* 6760 */;
+import ActiveJoinedThreadsStore from "ActiveJoinedThreadsStore" /* 6805 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import GuildChannelStore from "GuildChannelStore" /* 4934 */;
+import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import GuildRoleStore from "GuildRoleStore" /* 4910 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
+import RelationshipStore from "RelationshipStore" /* 4946 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -187,7 +187,7 @@ function matchesUser(arg0, arg1, username) {
   }
   return tmp;
 }
-let closure_8 = fn(4902).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_8 = fn(4934).GUILD_SELECTABLE_CHANNELS_KEY;
 const Permissions = fn(1084).Permissions;
 const EmojiIntention = fn(1392).EmojiIntention;
 const size = fn(2);

@@ -1,10 +1,10 @@
-// === Module 15939: useFetchNameplate ===
+// === Module 16165: useFetchNameplate ===
 
-// Module 15939 (useFetchNameplate)
+// Module 16165 (useFetchNameplate)
 import c from "c" /* 576 */;
 import utils from "utils" /* 1989 */;
 import CollectiblesItemType from "CollectiblesItemType" /* 1992 */;
-import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11055 */;
+import useFetchCollectiblesProduct from "useFetchCollectiblesProduct" /* 11090 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

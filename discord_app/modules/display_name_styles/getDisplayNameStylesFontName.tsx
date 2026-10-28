@@ -1,8 +1,8 @@
-// === Module 15907: getDisplayNameStylesFontName ===
+// === Module 16133: getDisplayNameStylesFontName ===
 
-// Module 15907 (getDisplayNameStylesFontName)
+// Module 16133 (getDisplayNameStylesFontName)
 import _modDef2929 from "module_2929" /* 2929 */;
-import _modDef4248 from "module_4248" /* 4248 */;
+import _modDef4280 from "module_4280" /* 4280 */;
 
 const DISPLAY_NAME_STYLES_FONT_NAMES = {};
 DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.DEFAULT] = _modDef2929.ZEL6mz;
@@ -17,7 +17,7 @@ DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.PLAYPEN_SANS] = _modDef2
 DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.ORBITRON] = _modDef2929.pwbAIk;
 DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.NEW_ROCKER] = _modDef2929["Llo/Ia"];
 DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.KALAM] = _modDef2929.t9Les4;
-DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.HEXAGON] = _modDef4248.ALTlzk;
+DISPLAY_NAME_STYLES_FONT_NAMES[fn(1409).DisplayNameFont.HEXAGON] = _modDef4280.ALTlzk;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/display_name_styles/getDisplayNameStylesFontName.tsx");
 

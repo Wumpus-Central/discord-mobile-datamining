@@ -1,24 +1,24 @@
-// === Module 9356: CollectiblesShopCardV2 ===
+// === Module 9388: CollectiblesShopCardV2 ===
 
-// Module 9356 (CollectiblesShopCardV2)
+// Module 9388 (CollectiblesShopCardV2)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5664 */;
-import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7662 */;
-import CollectiblesUtils from "CollectiblesUtils" /* 7663 */;
-import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8665 */;
-import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9359 */;
-import CollectiblesBadges from "CollectiblesBadges" /* 9422 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9424 */;
-import DiceIcon from "DiceIcon" /* 9425 */;
-import LimitedTimeBadgeDefault from "LimitedTimeBadge" /* 9427 */;
-import OrbsIcon from "OrbsIcon" /* 9428 */;
-import WishlistButton from "WishlistButton" /* 9430 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
+import CollectiblesProductUtils from "CollectiblesProductUtils" /* 7696 */;
+import CollectiblesUtils from "CollectiblesUtils" /* 7697 */;
+import openProductDetailsActionSheet from "openProductDetailsActionSheet" /* 8702 */;
+import CollectiblesAnalyticsContext from "CollectiblesAnalyticsContext" /* 9391 */;
+import CollectiblesBadges from "CollectiblesBadges" /* 9454 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9456 */;
+import DiceIcon from "DiceIcon" /* 9457 */;
+import LimitedTimeBadgeDefault from "LimitedTimeBadge" /* 9459 */;
+import OrbsIcon from "OrbsIcon" /* 9460 */;
+import WishlistButton from "WishlistButton" /* 9462 */;
 import noop from "module_19" /* 19 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
-import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7651 */;
+import CollectiblesCategoryStore from "CollectiblesCategoryStore" /* 7685 */;
 
 const require = globalThis.__r;
 
@@ -34,7 +34,7 @@ if (PixelRatio.getFontScale() >= 1.78) {
   num = 302;
 }
 let c11 = 150;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { card: null, topRowOverlay: null, badge: null, badgePill: null, badgeOverrideText: null, badgePillDarkMode: null, badgePillLightMode: null, wishlistButton: null };
 let size = { position: "relative", height: num, width: 150, display: "flex", borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, borderRadius: nativeDefault.radii.sm, overflow: "hidden" };
 obj.card = size;

@@ -1,9 +1,9 @@
-// === Module 14544: VoiceChannelBadgeExperiment ===
+// === Module 14767: VoiceChannelBadgeExperiment ===
 
-// Module 14544 (VoiceChannelBadgeExperiment)
+// Module 14767 (VoiceChannelBadgeExperiment)
 import c from "c" /* 576 */;
-import ExperimentConstants from "ExperimentConstants" /* 5192 */;
-import createExperiment from "module_5189" /* 5189 */;
+import ExperimentConstants from "ExperimentConstants" /* 5227 */;
+import createExperiment from "module_5224" /* 5224 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

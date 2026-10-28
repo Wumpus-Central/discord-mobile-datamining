@@ -1,13 +1,13 @@
-// === Module 17494: useMessagesSpecs ===
+// === Module 17729: useMessagesSpecs ===
 
-// Module 17494 (useMessagesSpecs)
+// Module 17729 (useMessagesSpecs)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useFontScale from "useFontScale" /* 5254 */;
-import MessagesHeader from "MessagesHeader" /* 17495 */;
-import MessagesItemChannel from "MessagesItemChannel" /* 17498 */;
-import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 17509 */;
+import useFontScale from "useFontScale" /* 5289 */;
+import MessagesHeader from "MessagesHeader" /* 17730 */;
+import MessagesItemChannel from "MessagesItemChannel" /* 17733 */;
+import MessagesItemSuggestedFriend from "MessagesItemSuggestedFriend" /* 17744 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useMessa
   cResult[12] = obj4;
   tmp17 = obj4;
 }) : (function useMessagesSpecs() {
-  fontScale = fontScale(5254).useFontScale();
+  fontScale = fontScale(5289).useFontScale();
   top = top(1630)().top;
   const items = [fontScale, top];
   return noop.useMemo(() => {

@@ -1,10 +1,10 @@
-// === Module 6881: usePreviewDisabledGuild ===
+// === Module 6915: usePreviewDisabledGuild ===
 
-// Module 6881 (usePreviewDisabledGuild)
-import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 6851 */;
+// Module 6915 (usePreviewDisabledGuild)
+import MemberVerificationActionCreatorsDefault from "MemberVerificationActionCreators" /* 6885 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6877 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import MemberVerificationFormStore from "MemberVerificationFormStore" /* 6911 */;
 
 const require = globalThis.__r;
 
@@ -86,8 +86,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePrevi
   if (stateFromStores == null) {
     let result = null;
     if (null != stateFromStores1) {
-      result = tmp(4838).fromVerificationGateGuild(stateFromStores1);
-      const tmpResult4 = tmp(4838);
+      result = tmp(4870).fromVerificationGateGuild(stateFromStores1);
+      const tmpResult4 = tmp(4870);
     }
     tmp16 = result;
   }
@@ -120,8 +120,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePrevi
   if (stateFromStores == null) {
     let result = null;
     if (null != stateFromStores1) {
-      result = tmp(4838).fromVerificationGateGuild(stateFromStores1);
-      const tmpResult = tmp(4838);
+      result = tmp(4870).fromVerificationGateGuild(stateFromStores1);
+      const tmpResult = tmp(4870);
     }
     stateFromStores = result;
   }

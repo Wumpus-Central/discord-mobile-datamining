@@ -1,6 +1,6 @@
-// === Module 15257: GuildPopoutActionCreators ===
+// === Module 15482: GuildPopoutActionCreators ===
 
-// Module 15257 (GuildPopoutActionCreators)
+// Module 15482 (GuildPopoutActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;

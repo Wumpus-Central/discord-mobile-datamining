@@ -1,13 +1,13 @@
-// === Module 19372: SelectEmojiRolesActionSheet ===
+// === Module 19635: SelectEmojiRolesActionSheet ===
 
-// Module 19372 (SelectEmojiRolesActionSheet)
+// Module 19635 (SelectEmojiRolesActionSheet)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import Pressables from "Pressables" /* 6910 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7250 */;
-import ActionSheet from "ActionSheet" /* 7300 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16611 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import Pressables from "Pressables" /* 6944 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7284 */;
+import ActionSheet from "ActionSheet" /* 7334 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16840 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const itemSize = fn(1203).FORM_ROW_VERTICAL_PADDING + 22;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { list: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, label: { flex: 1, flexDirection: "row", alignItems: "center" }, roleName: { flexShrink: 1 }, archivedBadge: null, archivedBadgeText: null, divider: null, saveButtonDisabled: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.archivedBadge = { borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.unsafe_rawColors.RED_400, marginLeft: 8, paddingHorizontal: 4, height: 16 };
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
     tmp12 = cResult[2];
   }
   let obj = onSave(576);
-  const subscriptionListingsForGuild = onSave(16611).useSubscriptionListingsForGuild(onSave.guildId, tmp12);
+  const subscriptionListingsForGuild = onSave(16840).useSubscriptionListingsForGuild(onSave.guildId, tmp12);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     function toggleRole(arg0) {
       closure_0 = arg0;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
                 } else {
                   if (cResult[17] !== cResult[16]) {
                     let obj3 = { variant: "text-md/semibold", color: "text-brand", children: tmp16 };
-                    const tmp22 = closure_6(tmp(5235).Text, obj3);
+                    const tmp22 = closure_6(tmp(5270).Text, obj3);
                     cResult[17] = tmp16;
                     cResult[18] = tmp22;
                     let tmp20 = tmp22;
@@ -155,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
                         }
                         if (cResult[26] !== tmp24) {
                           let obj4 = { title: tmp27, subtitle: tmp28, trailing: tmp24 };
-                          const tmp33 = closure_6(tmp(7250).BottomSheetTitleHeader, obj4);
+                          const tmp33 = closure_6(tmp(7284).BottomSheetTitleHeader, obj4);
                           cResult[26] = tmp24;
                           cResult[27] = tmp33;
                           let tmp31 = tmp33;
@@ -184,7 +184,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
                               }
                             }
                             let obj5 = { scrollable: true, header: tmp31, startExpanded: true, onDismiss: onCancel, children: tmp35 };
-                            const tmp42 = closure_6(tmp(7300).ActionSheet, obj5);
+                            const tmp42 = closure_6(tmp(7334).ActionSheet, obj5);
                             cResult[34] = tmp31;
                             cResult[35] = onCancel;
                             cResult[36] = tmp35;
@@ -193,7 +193,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
                           }
                         }
                         const obj6 = { inActionSheet: true, style: tmp4.list, itemSize, sections: tmp34, renderItem: tmp15 };
-                        const tmp39 = closure_6(emoji(7169), obj6);
+                        const tmp39 = closure_6(emoji(7203), obj6);
                         cResult[30] = tmp15;
                         cResult[31] = tmp4.list;
                         cResult[32] = tmp34;
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
                     }
                   }
                   let obj7 = { onPress: tmp14, disabled: !tmp11, accessibilityRole: "button", style: saveButtonDisabled, children: tmp20 };
-                  const tmp26 = closure_6(tmp(6910).PressableOpacity, obj7);
+                  const tmp26 = closure_6(tmp(6944).PressableOpacity, obj7);
                   cResult[19] = tmp14;
                   cResult[20] = !tmp11;
                   cResult[21] = saveButtonDisabled;
@@ -266,7 +266,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
   cResult[5] = first;
   cResult[6] = handleSave;
   tmp14 = handleSave;
-  const tmpResult = onSave(16611);
+  const tmpResult = onSave(16840);
 }) : (function SelectEmojiRolesActionSheet(arg0) {
   ({ onSave: require, emoji } = arg0);
   let first;
@@ -366,6 +366,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectEm
   };
   let items = [subscriptionListingsForGuild.length];
   obj5.sections = items;
-  obj4.children = closure_6(emoji(7169), obj5);
+  obj4.children = closure_6(emoji(7203), obj5);
   return closure_6(ActionSheet.ActionSheet, obj4);
 });

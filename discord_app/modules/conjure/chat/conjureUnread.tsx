@@ -1,13 +1,13 @@
-// === Module 10725: conjureUnread ===
+// === Module 10759: conjureUnread ===
 
-// Module 10725 (conjureUnread)
+// Module 10759 (conjureUnread)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import conjureProjectMute from "conjureProjectMute" /* 10726 */;
+import conjureProjectMute from "conjureProjectMute" /* 10760 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import ReadStateStore from "ReadStateStore" /* 6772 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
+import ReadStateStore from "ReadStateStore" /* 6806 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 const require = globalThis.__r;
 
@@ -48,7 +48,7 @@ function isProjectInGuild(project, arg1) {
     return tmp2;
   }
 }
-const ReadStateTypes = fn(6706).ReadStateTypes;
+const ReadStateTypes = fn(6740).ReadStateTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureProjectBadge(arg0) {
@@ -263,9 +263,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureUnread.tsx");
 
 export { ackConjureProject };
-export const isConjureProjectUnread = function isConjureProjectUnread(item) {
-  const mentionCount = ReadStateStore.getMentionCount(item, ReadStateTypes.CONJURING_PROJECT);
-  const ackMessageIdResult = ReadStateStore.ackMessageId(item, ReadStateTypes.CONJURING_PROJECT);
+export const isConjureProjectUnread = function isConjureProjectUnread(id) {
+  const mentionCount = ReadStateStore.getMentionCount(id, ReadStateTypes.CONJURING_PROJECT);
+  const ackMessageIdResult = ReadStateStore.ackMessageId(id, ReadStateTypes.CONJURING_PROJECT);
   let tmp3 = mentionCount > 0;
   if (!tmp3) {
     let tmp5 = null != ackMessageIdResult;

@@ -1,10 +1,10 @@
-// === Module 14184: QuestsIcon ===
+// === Module 14408: QuestsIcon ===
 
-// Module 14184 (QuestsIcon)
+// Module 14408 (QuestsIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5669 */;
-import _mod14185 from "module_14185" /* 14185 */;
+import BaseIconImage from "BaseIconImage" /* 5704 */;
+import _mod14409 from "module_14409" /* 14409 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const QuestsIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14185;
+    const tmpResult = _mod14409;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const QuestsIcon = ReactCompilerGating.isReactCompilerEnabled() ? (functi
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14185, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14409, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -1,7 +1,7 @@
-// === Module 6854: GuildProfileTypes ===
+// === Module 6888: GuildProfileTypes ===
 
-// Module 6854 (GuildProfileTypes)
-import GuildProfileVisibility from "GuildProfileVisibility" /* 6855 */;
+// Module 6888 (GuildProfileTypes)
+import GuildProfileVisibility from "GuildProfileVisibility" /* 6889 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guild_profile/GuildProfileTypes.tsx");

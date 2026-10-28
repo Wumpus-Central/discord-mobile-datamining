@@ -1,6 +1,6 @@
-// === Module 18303: SecondsSliderUtils ===
+// === Module 18544: SecondsSliderUtils ===
 
-// Module 18303 (SecondsSliderUtils)
+// Module 18544 (SecondsSliderUtils)
 import util from "util" /* 1125 */;
 import _modDef2046 from "module_2046" /* 2046 */;
 import size from "module_2" /* 2 */;

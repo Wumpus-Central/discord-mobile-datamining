@@ -1,8 +1,8 @@
-// === Module 18777: ManagerRegistry ===
+// === Module 19028: ManagerRegistry ===
 
-// Module 18777 (ManagerRegistry)
+// Module 19028 (ManagerRegistry)
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import ManagerRegistryShared from "ManagerRegistryShared" /* 19500 */;
+import ManagerRegistryShared from "ManagerRegistryShared" /* 19764 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -183,6 +183,7 @@ const obj = {
   LocalMessageCacheStatsManager: null,
   RestrictedHoursManager: null,
   SentryExperimentFeatureFlagManager: null,
+  PlayableProgressManager: null,
   QuestProgressManager: null,
   AccountLinkManagerNative: null
 };
@@ -1039,6 +1040,13 @@ obj.SentryExperimentFeatureFlagManager = {
   },
   hasStoreChangeListeners: true,
   loadRightBeforeConnectionOpen: true
+};
+obj.PlayableProgressManager = {
+  actions: [],
+  inlineRequire() {
+    return require("PlayableProgressManager").default;
+  },
+  hasStoreChangeListeners: true
 };
 obj.QuestProgressManager = {
   actions: ["QUESTS_SEND_HEARTBEAT_SUCCESS", "QUESTS_SEND_HEARTBEAT_FAILURE", "QUESTS_ENROLL_SUCCESS", "RUNNING_GAMES_CHANGE", "RUNNING_NON_GAMES_CHANGE", "LOCAL_ACTIVITY_UPDATE", "RPC_APP_DISCONNECTED", "QUESTS_FETCH_CURRENT_QUESTS_SUCCESS", "STREAM_START", "STREAM_CREATE", "STREAM_CLOSE", "PASSIVE_UPDATE_V2", "VOICE_STATE_UPDATES", "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", "FRAME_LAUNCH", "FRAME_STOP", "EMBEDDED_ACTIVITY_UPDATE_V2", "QUESTS_PREVIEW_UPDATE_SUCCESS", "QUEST_APPLICATION_START_TIMER", "GAME_FETCH_SUCCESS", "APPLICATIONS_FETCH_SUCCESS"],

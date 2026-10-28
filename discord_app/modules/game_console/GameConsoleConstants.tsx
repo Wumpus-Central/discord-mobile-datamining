@@ -1,8 +1,8 @@
-// === Module 9628: GameConsoleConstants ===
+// === Module 9660: GameConsoleConstants ===
 
-// Module 9628 (GameConsoleConstants)
+// Module 9660 (GameConsoleConstants)
 import Constants from "Constants" /* 1084 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8827 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8864 */;
 import size from "module_2" /* 2 */;
 
 const items = [OAuth2Scopes.OAuth2Scopes.VOICE, OAuth2Scopes.OAuth2Scopes.DM_CHANNELS_READ, OAuth2Scopes.OAuth2Scopes.GUILDS, OAuth2Scopes.OAuth2Scopes.GUILDS_MEMBERS_READ, OAuth2Scopes.OAuth2Scopes.IDENTIFY, OAuth2Scopes.OAuth2Scopes.CONNECTIONS, OAuth2Scopes.OAuth2Scopes.ACTIVITIES_READ];

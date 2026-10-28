@@ -1,10 +1,10 @@
-// === Module 12748: usePendingFolderGuildIds ===
+// === Module 12795: usePendingFolderGuildIds ===
 
-// Module 12748 (usePendingFolderGuildIds)
+// Module 12795 (usePendingFolderGuildIds)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5004 */;
-import GuildStore from "GuildStore" /* 4846 */;
+import UserGuildJoinRequestStore from "UserGuildJoinRequestStore" /* 5036 */;
+import GuildStore from "GuildStore" /* 4878 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

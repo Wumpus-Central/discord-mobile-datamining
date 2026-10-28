@@ -1,10 +1,10 @@
-// === Module 16287: PuzzlePieceIcon ===
+// === Module 16515: PuzzlePieceIcon ===
 
-// Module 16287 (PuzzlePieceIcon)
+// Module 16515 (PuzzlePieceIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5669 */;
-import _mod16288 from "module_16288" /* 16288 */;
+import BaseIconImage from "BaseIconImage" /* 5704 */;
+import _mod16516 from "module_16516" /* 16516 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const PuzzlePieceIcon = ReactCompilerGating.isReactCompilerEnabled() ? (f
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16288;
+    const tmpResult = _mod16516;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const PuzzlePieceIcon = ReactCompilerGating.isReactCompilerEnabled() ? (f
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16288, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16516, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

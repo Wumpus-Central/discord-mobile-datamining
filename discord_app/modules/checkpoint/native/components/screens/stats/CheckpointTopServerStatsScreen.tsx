@@ -1,30 +1,30 @@
-// === Module 13008: CheckpointTopServerStatsScreen ===
+// === Module 13225: CheckpointTopServerStatsScreen ===
 
-// Module 13008 (CheckpointTopServerStatsScreen)
+// Module 13225 (CheckpointTopServerStatsScreen)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3089 from "module_3089" /* 3089 */;
-import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13000 */;
-import CheckpointStore from "CheckpointStore" /* 12968 */;
-import CheckpointConstants from "CheckpointConstants" /* 6016 */;
+import CheckpointEmphasisDefault from "CheckpointEmphasis" /* 13217 */;
+import CheckpointStore from "CheckpointStore" /* 13015 */;
+import CheckpointConstants from "CheckpointConstants" /* 6050 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4972 */;
+import createStyles from "createStyles" /* 5004 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size_mod from "module_2" /* 2 */;
 
 const initialize = intl(504);
 const util = intl(1125);
-const Text_Text = intl(5235);
-const GuildIcon = intl(6885);
-const GuildIconDefault = sIDTV1(6885);
-const ServerIcon = intl(9648);
-const CheckpointStatsUtils = intl(12971);
-const CheckpointTextDefault = sIDTV1(12986);
-const CheckpointScreenDefault = sIDTV1(12988);
-const CheckpointCountUpStatNumberDefault = sIDTV1(12997);
-const CheckpointGuildStatsDefault = sIDTV1(13006);
-const CheckpointRankTagDefault = sIDTV1(13007);
+const Text_Text = intl(5270);
+const GuildIcon = intl(6919);
+const GuildIconDefault = sIDTV1(6919);
+const ServerIcon = intl(9680);
+const CheckpointStatsUtils = intl(13018);
+const CheckpointTextDefault = sIDTV1(13204);
+const CheckpointScreenDefault = sIDTV1(13206);
+const CheckpointCountUpStatNumberDefault = sIDTV1(13214);
+const CheckpointGuildStatsDefault = sIDTV1(13223);
+const CheckpointRankTagDefault = sIDTV1(13224);
 const View = _mod17.View;
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);

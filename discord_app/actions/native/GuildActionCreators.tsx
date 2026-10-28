@@ -1,6 +1,6 @@
-// === Module 19161: actions/GuildActionCreators ===
+// === Module 19424: actions/GuildActionCreators ===
 
-// Module 19161 (actions/GuildActionCreators)
+// Module 19424 (actions/GuildActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1084 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;

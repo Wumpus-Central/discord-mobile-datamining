@@ -1,6 +1,6 @@
-// === Module 12959: SoundmojiRenderingExperiment ===
+// === Module 13006: SoundmojiRenderingExperiment ===
 
-// Module 12959 (SoundmojiRenderingExperiment)
+// Module 13006 (SoundmojiRenderingExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

@@ -1,10 +1,10 @@
-// === Module 12752: AcceptGuildTemplateActionCreators ===
+// === Module 12799: AcceptGuildTemplateActionCreators ===
 
-// Module 12752 (AcceptGuildTemplateActionCreators)
+// Module 12799 (AcceptGuildTemplateActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import transitionToGuild from "transitionToGuild" /* 7450 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6497 */;
-import GuildStore from "GuildStore" /* 4846 */;
+import transitionToGuild from "transitionToGuild" /* 7485 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6531 */;
+import GuildStore from "GuildStore" /* 4878 */;
 
 require = fn;
 const Endpoints = fn(1084).Endpoints;

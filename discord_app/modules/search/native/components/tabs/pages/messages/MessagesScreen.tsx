@@ -1,13 +1,13 @@
-// === Module 18214: MessagesScreen ===
+// === Module 18453: MessagesScreen ===
 
-// Module 18214 (MessagesScreen)
-import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18176 */;
-import BaseMessagesScreen from "BaseMessagesScreen" /* 18200 */;
+// Module 18453 (MessagesScreen)
+import MessageSearchResultParserDefault from "MessageSearchResultParser" /* 18416 */;
+import BaseMessagesScreen from "BaseMessagesScreen" /* 18439 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 13253 */;
+import SearchQueryStore from "SearchQueryStore" /* 13470 */;
 
 require = fn;
-const SearchConstants = fn(9716);
+const SearchConstants = fn(9748);
 ({ SEARCH_FILTERS_BY_TAB: hasOwnProperty, SearchFilter: metroRequire, SEARCH_PINNED_MESSAGES_LINE_CLAMP: closure_7, SEARCH_MESSAGES_DEFAULT_LINE_CLAMP: closure_8, MESSAGE_PLACEHOLDER_ITEM_SIZE: closure_9, SearchListItemTypes: c10 } = SearchConstants);
 const jsx = fn(21).jsx;
 const size = fn(2);
@@ -93,12 +93,13 @@ export default noop.memo(function MessagesScreen(isFocused) {
   }, items4);
   const tmpResult3 = searchContext(stateFromStores[10]);
   const contentContainerStyles = searchContext(stateFromStores[12]).useContentContainerStyles();
-  const obj7 = { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, isFirstPageLoading: null, isNextPageLoading: null, keywordResultCount: null, smartSearchStatus: null };
+  const obj7 = { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, viewabilityConfigCallbackPairs: null, isFirstPageLoading: null, isNextPageLoading: null, keywordResultCount: null, smartSearchStatus: null };
   const tmpResult4 = searchContext(stateFromStores[12]);
   obj7.ItemSeparatorComponent = searchContext(stateFromStores[13]).MessageVerticalSeparator;
+  obj7.viewabilityConfigCallbackPairs = searchContext(stateFromStores[14]).smartSearchViewabilityConfig;
   obj7.isFirstPageLoading = isFirstPageLoading;
   obj7.isNextPageLoading = searchMessagesLoadingState.isNextPageLoading;
   obj7.keywordResultCount = length;
   obj7.smartSearchStatus = smartSearchMessages.status;
-  return jsx(searchMessages(stateFromStores[7]), { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, isFirstPageLoading: null, isNextPageLoading: null, keywordResultCount: null, smartSearchStatus: null });
+  return jsx(searchMessages(stateFromStores[7]), { data: memo1, searchContext, tab, isFocused: isFocused.isFocused, contentContainerStyle: contentContainerStyles.messagesContentContainer, ItemSeparatorComponent: null, viewabilityConfigCallbackPairs: null, isFirstPageLoading: null, isNextPageLoading: null, keywordResultCount: null, smartSearchStatus: null });
 });

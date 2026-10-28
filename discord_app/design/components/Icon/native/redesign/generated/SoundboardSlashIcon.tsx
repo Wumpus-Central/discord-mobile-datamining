@@ -1,10 +1,10 @@
-// === Module 14366: SoundboardSlashIcon ===
+// === Module 14589: SoundboardSlashIcon ===
 
-// Module 14366 (SoundboardSlashIcon)
+// Module 14589 (SoundboardSlashIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5669 */;
-import _mod14367 from "module_14367" /* 14367 */;
+import BaseIconImage from "BaseIconImage" /* 5704 */;
+import _mod14590 from "module_14590" /* 14590 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const SoundboardSlashIcon = ReactCompilerGating.isReactCompilerEnabled() 
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod14367;
+    const tmpResult = _mod14590;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const SoundboardSlashIcon = ReactCompilerGating.isReactCompilerEnabled() 
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod14367, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod14590, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

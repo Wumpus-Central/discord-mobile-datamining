@@ -1,23 +1,23 @@
-// === Module 19290: AvatarMoatmonsturrExample ===
+// === Module 19553: AvatarMoatmonsturrExample ===
 
-// Module 19290 (AvatarMoatmonsturrExample)
+// Module 19553 (AvatarMoatmonsturrExample)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import assetHelpers from "assetHelpers" /* 6997 */;
-import _modDef19291 from "module_19291" /* 19291 */;
-import _modDef19292 from "module_19292" /* 19292 */;
-import _modDef19293 from "module_19293" /* 19293 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import assetHelpers from "assetHelpers" /* 7031 */;
+import _modDef19554 from "module_19554" /* 19554 */;
+import _modDef19555 from "module_19555" /* 19555 */;
+import _modDef19556 from "module_19556" /* 19556 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef19291 }, 3: null };
-let obj2 = { uri: _modDef19291 };
-obj[2] = { uri: _modDef19292 };
-const obj3 = { uri: _modDef19292 };
-obj[3] = { uri: _modDef19293 };
+let obj = { 1: null, 2: { uri: _modDef19554 }, 3: null };
+let obj2 = { uri: _modDef19554 };
+obj[2] = { uri: _modDef19555 };
+const obj3 = { uri: _modDef19555 };
+obj[3] = { uri: _modDef19556 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef19293 };
+const obj4 = { uri: _modDef19556 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/AvatarMoatmonsturrExample.native.tsx");
 

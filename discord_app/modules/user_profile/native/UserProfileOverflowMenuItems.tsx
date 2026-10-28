@@ -1,21 +1,21 @@
-// === Module 14295: UserProfileOverflowMenuItems ===
+// === Module 14518: UserProfileOverflowMenuItems ===
 
-// Module 14295 (UserProfileOverflowMenuItems)
+// Module 14518 (UserProfileOverflowMenuItems)
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
-import ToastUtils from "ToastUtils" /* 5663 */;
-import ClipboardUtils from "ClipboardUtils" /* 7287 */;
-import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7293 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7416 */;
-import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7424 */;
-import ReportModals from "ReportModals" /* 8106 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13560 */;
-import BotReportChooser from "BotReportChooser" /* 14296 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import ToastUtils from "ToastUtils" /* 5698 */;
+import ClipboardUtils from "ClipboardUtils" /* 7321 */;
+import Sheet_showSimpleActionSheet from "Sheet/showSimpleActionSheet" /* 7327 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7451 */;
+import SafetyToastsActionCreatorsDefault from "SafetyToastsActionCreators" /* 7459 */;
+import ReportModals from "ReportModals" /* 8140 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13778 */;
+import BotReportChooser from "BotReportChooser" /* 14519 */;
 import Constants from "Constants" /* 1084 */;
-import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 10963 */;
+import RestrictionConfirmationConstants from "RestrictionConfirmationConstants" /* 10998 */;
 import size from "module_2" /* 2 */;
 
 ({ AnalyticEvents: c3, AVATAR_MAX_SIZE: closure_4, NOOP: hasOwnProperty } = Constants);
@@ -43,7 +43,7 @@ export const getIgnoreMenuItem = function getIgnoreMenuItem(arg0, isBlocked) {
       obj.label = string(t.ytCpKs);
       obj.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp = asyncRequireImpl(10965, dependencyMap.paths);
+        const tmp = asyncRequireImpl(11000, dependencyMap.paths);
         obj.openLazy(tmp, React5, {
           userId: user.id,
           channelId,
@@ -81,7 +81,7 @@ export const getBlockMenuItem = function getBlockMenuItem(arg0, isBlocked) {
     obj.label = intl.string(util.t.l4Emac);
     obj.action = function action() {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp = asyncRequireImpl(10964, dependencyMap.paths);
+      const tmp = asyncRequireImpl(10999, dependencyMap.paths);
       obj.openLazy(tmp, timestampProducer, {
         userId: user.id,
         channelId,
@@ -111,7 +111,7 @@ export const getReportMenuItem = function getReportMenuItem(user, isInIarUserRep
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(14296, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(14519, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {
@@ -156,8 +156,8 @@ export const getDeveloperCopyMenuItem = function getDeveloperCopyMenuItem(arg0, 
         dependencyMap({ action: "COPY_USERNAME", analyticsLocations });
         const obj = { action: "COPY_USERNAME", analyticsLocations };
         const obj2 = ClipboardUtils;
-        obj2.copy(analyticsLocations(5026).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
-        const obj3 = analyticsLocations(5026);
+        obj2.copy(analyticsLocations(5058).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
+        const obj3 = analyticsLocations(5058);
         const result = ToastUtils.presentUsernameCopied();
       };
       items.push(obj);

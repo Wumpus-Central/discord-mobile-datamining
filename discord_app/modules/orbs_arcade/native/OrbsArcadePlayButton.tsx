@@ -1,9 +1,9 @@
-// === Module 16457: OrbsArcadePlayButton ===
+// === Module 16686: OrbsArcadePlayButton ===
 
-// Module 16457 (OrbsArcadePlayButton)
-import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 16459 */;
+// Module 16686 (OrbsArcadePlayButton)
+import launchOrbsArcadeGameDefault from "launchOrbsArcadeGame" /* 16688 */;
 import noop from "module_19" /* 19 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16434 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16662 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
@@ -15,9 +15,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   const cResult = game(576).c(23);
   game = game.game;
   const size = game.size;
-  analyticsLocations = analyticsLocations(7255)().analyticsLocations;
+  analyticsLocations = analyticsLocations(7289)().analyticsLocations;
   const obj = game(576);
-  ({ text, isPaidPlay } = analyticsLocations(16458)(game));
+  ({ text, isPaidPlay } = analyticsLocations(16687)(game));
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [OrbsArcadeStore];
     cResult[0] = items;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const tmp5 = analyticsLocations(16458)(game);
+  const tmp5 = analyticsLocations(16687)(game);
   const stateFromStores = game(504).useStateFromStores(first, tmp8, tmp9);
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
     const items2 = [OrbsArcadeStore];
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
           }
         }
         const obj2 = { game, size };
-        const tmp26 = jsx(tmp4(16454), { game, size });
+        const tmp26 = jsx(tmp4(16683), { game, size });
         cResult[11] = game;
         cResult[12] = size;
         cResult[13] = tmp26;
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
           }
         }
         const obj3 = { size: "sm", color: tmp4(587).colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-        const tmp19 = jsx(tmp(9428).OrbsIcon, { size: "sm", color: tmp4(587).colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+        const tmp19 = jsx(tmp(9460).OrbsIcon, { size: "sm", color: tmp4(587).colors.CONTROL_PRIMARY_TEXT_DEFAULT });
       }
       cResult[14] = isPaidPlay;
       cResult[15] = tmp19;
@@ -126,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       }
     }
     const obj5 = { grow: true, size, variant: "primary", text, icon: tmp18, disabled: null == game.applicationId, loading: stateFromStores1, onPress: A };
-    const tmp23 = jsx(tmp(5245).Button, { grow: true, size, variant: "primary", text, icon: tmp18, disabled: null == game.applicationId, loading: stateFromStores1, onPress: A });
+    const tmp23 = jsx(tmp(5280).Button, { grow: true, size, variant: "primary", text, icon: tmp18, disabled: null == game.applicationId, loading: stateFromStores1, onPress: A });
     cResult[16] = A;
     cResult[17] = stateFromStores1;
     cResult[18] = size;
@@ -148,9 +148,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   game = game.game;
   const size = game.size;
   let analyticsLocations;
-  analyticsLocations = analyticsLocations(7255)().analyticsLocations;
-  ({ text, isPaidPlay } = analyticsLocations(16458)(game));
-  const tmp3 = analyticsLocations(16458)(game);
+  analyticsLocations = analyticsLocations(7289)().analyticsLocations;
+  ({ text, isPaidPlay } = analyticsLocations(16687)(game));
+  const tmp3 = analyticsLocations(16687)(game);
   const items = [OrbsArcadeStore];
   const items1 = [game.id];
   const stateFromStores = game(504).useStateFromStores(items, () => OrbsArcadeStore.getGameStateForGame(game.id), items1);
@@ -163,7 +163,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   if (null != stateFromStores) {
     if (tmp4Result.mustClaimOrbsArcadeRewardsToPlay(stateFromStores)) {
       const obj3 = { game, size };
-      let tmp8Result2 = jsx(tmp(16454), { game, size });
+      let tmp8Result2 = jsx(tmp(16683), { game, size });
     }
     return tmp8Result2;
   }
@@ -171,12 +171,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   let tmp8Result;
   if (isPaidPlay) {
     const obj5 = { size: "sm", color: tmp(587).colors.CONTROL_PRIMARY_TEXT_DEFAULT };
-    tmp8Result = jsx(tmp4(9428).OrbsIcon, { size: "sm", color: tmp(587).colors.CONTROL_PRIMARY_TEXT_DEFAULT });
+    tmp8Result = jsx(tmp4(9460).OrbsIcon, { size: "sm", color: tmp(587).colors.CONTROL_PRIMARY_TEXT_DEFAULT });
   }
   obj4.icon = tmp8Result;
   obj4.disabled = null == game.applicationId;
   obj4.loading = stateFromStores1;
   obj4.onPress = callback;
-  tmp8Result2 = jsx(tmp4(5245).Button, { grow: true, size, variant: "primary", text, icon: null, disabled: null, loading: null, onPress: null });
+  tmp8Result2 = jsx(tmp4(5280).Button, { grow: true, size, variant: "primary", text, icon: null, disabled: null, loading: null, onPress: null });
   const obj2 = game(504);
 });

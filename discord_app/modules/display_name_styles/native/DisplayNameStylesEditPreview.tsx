@@ -1,29 +1,29 @@
-// === Module 16424: DisplayNameStylesEditPreview ===
+// === Module 16652: DisplayNameStylesEditPreview ===
 
-// Module 16424 (DisplayNameStylesEditPreview)
+// Module 16652 (DisplayNameStylesEditPreview)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
 import _modDef2929 from "module_2929" /* 2929 */;
-import DateUtils from "DateUtils" /* 4797 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import useAvatarDecoration from "useAvatarDecoration" /* 6783 */;
-import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8648 */;
-import RecentAvatarUtils from "RecentAvatarUtils" /* 8658 */;
-import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8738 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10664 */;
-import types from "types" /* 10665 */;
+import DateUtils from "DateUtils" /* 4829 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import useAvatarDecoration from "useAvatarDecoration" /* 6817 */;
+import usePendingAvatarSettingsDefault from "usePendingAvatarSettings" /* 8685 */;
+import RecentAvatarUtils from "RecentAvatarUtils" /* 8695 */;
+import profile_customization_ProfileCustomizationUtils from "profile_customization/ProfileCustomizationUtils" /* 8775 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10696 */;
+import types from "types" /* 10697 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8649 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8686 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-let createStyles = fn(4972);
+let createStyles = fn(5004);
 let obj2 = { previewSection: { marginBottom: nativeDefault.space.PX_24, alignItems: "center", alignSelf: "center", width: "100%", maxWidth: 360 }, previewSectionTilted: { marginBottom: 0 }, profilePreviewTilted: null, chatPreviewWrapper: null, chatPreviewWrapperTilted: null, nameplatePreviewWrapper: null, chatContainer: null, chatContent: null, chatHeader: null, chatUsername: null, chatTimestamp: null, chatMessageText: null };
 let obj4 = { transform: null };
 let items = [{ rotate: "-2.63deg" }];
@@ -44,7 +44,7 @@ obj2.chatUsername = { flexShrink: 1, minWidth: 0 };
 obj2.chatTimestamp = { marginTop: -8, flexShrink: 0 };
 obj2.chatMessageText = {};
 let closure_9 = createStyles.createStyles(obj2);
-createStyles = fn(4972);
+createStyles = fn(5004);
 let closure_10 = createStyles.createStyles((scale) => {
   const obj = { appIconTilted: null };
   const rect = { position: "absolute", top: 64, right: 0, borderRadius: nativeDefault.radii.xl, borderCurve: "continuous", borderWidth: 0, transform: null };
@@ -293,7 +293,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   const tmp9 = closure_9();
   const tmp10 = closure_10(num);
   const obj = user(576);
-  const guildMemberAndUserPendingNameplate = user(8655).useGuildMemberAndUserPendingNameplate(user, guildId);
+  const guildMemberAndUserPendingNameplate = user(8692).useGuildMemberAndUserPendingNameplate(user, guildId);
   ({ userNameplate, guildNameplate, pendingNameplate } = guildMemberAndUserPendingNameplate);
   if (cResult[0] !== guildNameplate) {
     const nameplateData = tmp(1989).getNameplateData(guildNameplate);
@@ -416,7 +416,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
                                                             let tmp46 = null != appIconId;
                                                             if (tmp46) {
                                                               const obj3 = { id: appIconId, size: 102, style: tmp10.appIconTilted };
-                                                              tmp46 = closure_7(guildId(16423), obj3);
+                                                              tmp46 = closure_7(guildId(16651), obj3);
                                                             }
                                                             cResult[49] = appIconId;
                                                             cResult[50] = tmp10;
@@ -448,7 +448,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
                                             obj5.pendingAvatarSrc = stateFromStores;
                                             obj5.pendingDisplayNameStyles = tmp18;
                                             obj5.pendingGlobalName = displayName;
-                                            obj4.children = closure_7(tmp(11178).NameplatePreview, obj5);
+                                            obj4.children = closure_7(tmp(11213).NameplatePreview, obj5);
                                             tmp39Result = closure_7(View, obj4);
                                           }
                                           cResult[38] = stateFromStores;
@@ -500,7 +500,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
               }
             }
             const obj8 = { user, displayName, guildId, displayNameStylesOverride: tmp18, isPremiumTryItOut: tmp4, compact: true, hideFrame: true, hideBadges: tmp6, hidePronouns: tmp7, hideGuildTag: tmp8, maxWidth: 320, style: profilePreviewTilted, accessibilityLabel: tmp21 };
-            const tmp27 = closure_7(guildId(11060), obj8);
+            const tmp27 = closure_7(guildId(11095), obj8);
             cResult[15] = displayName;
             cResult[16] = tmp18;
             cResult[17] = guildId;
@@ -548,7 +548,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DisplayN
   cResult[5] = user.id;
   cResult[6] = X;
   tmp16 = X;
-  const tmpResult = user(8655);
+  const tmpResult = user(8692);
 }) : (function DisplayNameStylesEditPreview(user) {
   user = user.user;
   ({ displayName, guildId } = user);

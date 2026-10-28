@@ -1,14 +1,14 @@
-// === Module 9632: Authorize ===
+// === Module 9664: Authorize ===
 
-// Module 9632 (Authorize)
+// Module 9664 (Authorize)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4909 */;
-import QueryStringUtils from "QueryStringUtils" /* 5703 */;
-import keysSorter from "keysSorter" /* 6723 */;
-import OAuth2Scopes from "OAuth2Scopes" /* 8827 */;
-import scopes from "scopes" /* 9633 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4941 */;
+import QueryStringUtils from "QueryStringUtils" /* 5738 */;
+import keysSorter from "keysSorter" /* 6757 */;
+import OAuth2Scopes from "OAuth2Scopes" /* 8864 */;
+import scopes from "scopes" /* 9665 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
 
 require = fn;
 const Constants = fn(1084);

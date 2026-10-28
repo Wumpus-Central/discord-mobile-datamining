@@ -1,32 +1,31 @@
-// === Module 18133: SearchList ===
+// === Module 18373: SearchList ===
 
-// Module 18133 (SearchList)
+// Module 18373 (SearchList)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import _mod7222 from "module_7222" /* 7222 */;
-import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 18119 */;
-import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 18121 */;
-import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 18130 */;
-import DMRowDefault from "DMRow" /* 18134 */;
-import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 18135 */;
-import SearchHistoryRowDefault from "SearchHistoryRow" /* 18136 */;
-import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 18137 */;
-import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 18150 */;
-import MediaGridItemDefault from "MediaGridItem" /* 18151 */;
-import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 18153 */;
-import MediaGridDefault from "MediaGrid" /* 18155 */;
-import MessageRowDefault from "MessageRow" /* 18156 */;
-import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 18160 */;
-import LinkGridItemDefault from "LinkGridItem" /* 18161 */;
-import FileGridItemDefault from "FileGridItem" /* 18164 */;
-import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 18165 */;
-import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 18166 */;
-import GenericTextRowDefault from "GenericTextRow" /* 18167 */;
-import SearchListSectionDefault from "SearchListSection" /* 18168 */;
-import SmartSearchRowDefault from "SmartSearchRow" /* 18169 */;
-import SuggestedSearchSkeletonDefault from "SuggestedSearchSkeleton" /* 18186 */;
-import smartSearchViewabilityConfig from "smartSearchViewabilityConfig" /* 18187 */;
+import _mod7256 from "module_7256" /* 7256 */;
+import SuggestedSearchRowDefault from "SuggestedSearchRow" /* 18359 */;
+import pages_ErrorScreenDefault from "pages/ErrorScreen" /* 18361 */;
+import MediaGridPlaceholderDefault from "MediaGridPlaceholder" /* 18370 */;
+import DMRowDefault from "DMRow" /* 18374 */;
+import rows_GroupDMRowDefault from "rows/GroupDMRow" /* 18375 */;
+import SearchHistoryRowDefault from "SearchHistoryRow" /* 18376 */;
+import GuildVoiceOrStageChannelRowDefault from "GuildVoiceOrStageChannelRow" /* 18377 */;
+import GuildTextChannelRowDefault from "GuildTextChannelRow" /* 18390 */;
+import MediaGridItemDefault from "MediaGridItem" /* 18391 */;
+import FileOrLinkGridPlaceholderDefault from "FileOrLinkGridPlaceholder" /* 18393 */;
+import MediaGridDefault from "MediaGrid" /* 18395 */;
+import MessageRowDefault from "MessageRow" /* 18396 */;
+import FormRowPlaceholderDefault from "FormRowPlaceholder" /* 18400 */;
+import LinkGridItemDefault from "LinkGridItem" /* 18401 */;
+import FileGridItemDefault from "FileGridItem" /* 18404 */;
+import GuildChannelMemberRowDefault from "GuildChannelMemberRow" /* 18405 */;
+import MemberRowPlaceholderDefault from "MemberRowPlaceholder" /* 18406 */;
+import GenericTextRowDefault from "GenericTextRow" /* 18407 */;
+import SearchListSectionDefault from "SearchListSection" /* 18408 */;
+import SmartSearchRowDefault from "SmartSearchRow" /* 18409 */;
+import SuggestedSearchSkeletonDefault from "SuggestedSearchSkeleton" /* 18426 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -204,19 +203,19 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(9716);
+const SearchConstants = fn(9748);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/search/native/components/list/SearchList.tsx");
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function SearchList(arg0) {
-  const cResult = c.c(25);
-  ({ contentContainerStyle, data, onEndReached, ItemSeparatorComponent, ListHeaderComponent, ListFooterComponent, numColumns, scrollToTopKey } = arg0);
+  const cResult = c.c(26);
+  ({ contentContainerStyle, data, onEndReached, ItemSeparatorComponent, ListHeaderComponent, ListFooterComponent, numColumns, viewabilityConfigCallbackPairs, scrollToTopKey } = arg0);
   noop.useRef(null);
   const ref = noop.useRef(scrollToTopKey);
   if (cResult[0] !== scrollToTopKey) {
@@ -302,25 +301,27 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 if (cResult[17] === tmp17) {
                   if (cResult[18] === tmp20) {
                     if (cResult[19] === num4) {
-                      let tmp22 = cResult[20];
-                    }
-                    if (cResult[21] === tmp8.container) {
-                      if (cResult[22] === tmp11) {
-                        if (cResult[23] === tmp22) {
-                          let tmp28 = cResult[24];
-                        }
-                        return tmp28;
+                      if (cResult[20] === viewabilityConfigCallbackPairs) {
+                        let tmp22 = cResult[21];
                       }
+                      if (cResult[22] === tmp8.container) {
+                        if (cResult[23] === tmp11) {
+                          if (cResult[24] === tmp22) {
+                            let tmp28 = cResult[25];
+                          }
+                          return tmp28;
+                        }
+                      }
+                      const obj7 = { style: tmp8.container, children: null };
+                      const items1 = [tmp11, tmp22];
+                      obj7.children = items1;
+                      const tmp31 = React6(React4, obj7);
+                      cResult[22] = tmp8.container;
+                      cResult[23] = tmp11;
+                      cResult[24] = tmp22;
+                      cResult[25] = tmp31;
+                      tmp28 = tmp31;
                     }
-                    const obj7 = { style: tmp8.container, children: null };
-                    const items1 = [tmp11, tmp22];
-                    obj7.children = items1;
-                    const tmp31 = React6(React4, obj7);
-                    cResult[21] = tmp8.container;
-                    cResult[22] = tmp11;
-                    cResult[23] = tmp22;
-                    cResult[24] = tmp31;
-                    tmp28 = tmp31;
                   }
                 }
               }
@@ -329,8 +330,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
     }
-    const obj8 = { ref, overrideProps: tmp17, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "handled", data, renderItem, onEndReachedThreshold: num4, onEndReached, scrollsToTop: true, maintainVisibleContentPosition: tmp18, contentContainerStyle: tmp20, keyExtractor, getItemType, ListHeaderComponent, ListFooterComponent, ItemSeparatorComponent, numColumns, viewabilityConfigCallbackPairs: smartSearchViewabilityConfig.smartSearchViewabilityConfig };
-    const tmp27 = closure_1_8(_mod7222.AnimatedFlashList, obj8);
+    const obj8 = { ref, overrideProps: tmp17, keyboardDismissMode: "on-drag", keyboardShouldPersistTaps: "handled", data, renderItem, onEndReachedThreshold: num4, onEndReached, scrollsToTop: true, maintainVisibleContentPosition: tmp18, contentContainerStyle: tmp20, keyExtractor, getItemType, ListHeaderComponent, ListFooterComponent, ItemSeparatorComponent, numColumns, viewabilityConfigCallbackPairs };
+    const tmp27 = closure_1_8(_mod7256.AnimatedFlashList, obj8);
     cResult[11] = ItemSeparatorComponent;
     cResult[12] = ListFooterComponent;
     cResult[13] = ListHeaderComponent;
@@ -340,7 +341,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[17] = tmp17;
     cResult[18] = tmp20;
     cResult[19] = num4;
-    cResult[20] = tmp27;
+    cResult[20] = viewabilityConfigCallbackPairs;
+    cResult[21] = tmp27;
     tmp22 = tmp27;
   }
   const obj9 = { paddingBottom: sum };
@@ -351,7 +353,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   tmp20 = obj9;
 }) : (function SearchList(arg0) {
   ({ contentContainerStyle, data, ListHeaderComponent, ListFooterComponent, numColumns, scrollToTopKey } = arg0);
-  ({ onEndReached, ItemSeparatorComponent } = arg0);
+  ({ onEndReached, ItemSeparatorComponent, viewabilityConfigCallbackPairs } = arg0);
   noop.useRef(null);
   const ref = noop.useRef(scrollToTopKey);
   const items = [scrollToTopKey];
@@ -408,8 +410,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj4.ListFooterComponent = ListFooterComponent;
   obj4.ItemSeparatorComponent = ItemSeparatorComponent;
   obj4.numColumns = numColumns;
-  obj4.viewabilityConfigCallbackPairs = smartSearchViewabilityConfig.smartSearchViewabilityConfig;
-  items1[1] = closure_1_8(_mod7222.AnimatedFlashList, obj4);
+  obj4.viewabilityConfigCallbackPairs = viewabilityConfigCallbackPairs;
+  items1[1] = closure_1_8(_mod7256.AnimatedFlashList, obj4);
   obj.children = items1;
   return React6(React4, obj);
 }));

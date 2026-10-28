@@ -1,6 +1,6 @@
-// === Module 17844: GuildsBarTypes ===
+// === Module 18081: GuildsBarTypes ===
 
-// Module 17844 (GuildsBarTypes)
+// Module 18081 (GuildsBarTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/guilds_bar/GuildsBarTypes.tsx");

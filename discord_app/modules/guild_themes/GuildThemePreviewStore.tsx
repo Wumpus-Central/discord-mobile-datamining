@@ -1,10 +1,10 @@
-// === Module 5179: GuildThemePreviewStore ===
+// === Module 5214: GuildThemePreviewStore ===
 
-// Module 5179 (GuildThemePreviewStore)
+// Module 5214 (GuildThemePreviewStore)
 import _mod12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import guildThemeSerialization from "guildThemeSerialization" /* 4845 */;
+import guildThemeSerialization from "guildThemeSerialization" /* 4877 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 require = fn;
@@ -21,9 +21,9 @@ function handleEnd() {
   }
   return flag;
 }
-const GuildThemePreviewConstants = fn(5180);
+const GuildThemePreviewConstants = fn(5215);
 ({ GuildThemePreviewOrigin, GuildThemePreviewOwner } = GuildThemePreviewConstants);
-const timeout = new fn(4819).Timeout();
+const timeout = new fn(4851).Timeout();
 let closure_5 = { guildId: null, draft: null, original: null, draftEnabled: false, originalEnabled: false, origin: null, owner: null, isSaving: false, isAwaitingGuildUpdate: false, saveError: null };
 const Store = initializeDefault.Store;
 class GuildThemePreviewStore extends Store {
@@ -130,7 +130,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
     if (null == closure_5.guildId) {
       return false;
     } else {
-      const obj2 = { presetId: tmp, customUserThemeSettings: "y" };
+      const obj2 = { presetId: tmp, customUserThemeSettings: "Array" };
       const isEqualResult = _mod12.isEqual(closure_5.draft, obj2);
       let flag = !isEqualResult;
       if (isEqualResult) {
@@ -155,7 +155,7 @@ const guildThemePreviewStore = new GuildThemePreviewStore(DispatcherDefault, {
     if (null == closure_5.guildId) {
       return false;
     } else {
-      const obj2 = { presetId: "Array", customUserThemeSettings: false };
+      const obj2 = { presetId: "Array", customUserThemeSettings: 0 };
       const obj3 = { colors: null, gradientColorStops: null, gradientAngle: null, baseMix: null };
       const items = [];
       HermesBuiltin.arraySpread(colors, 0);

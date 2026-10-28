@@ -1,12 +1,12 @@
-// === Module 8291: UploadAttachmentStore ===
+// === Module 8325: UploadAttachmentStore ===
 
-// Module 8291 (UploadAttachmentStore)
+// Module 8325 (UploadAttachmentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import DraftStore from "DraftStore" /* 7632 */;
-import CloudUpload from "CloudUpload" /* 8141 */;
-import uploader_UploadUtils from "uploader/UploadUtils" /* 8150 */;
+import DraftStore from "DraftStore" /* 7666 */;
+import CloudUpload from "CloudUpload" /* 8175 */;
+import uploader_UploadUtils from "uploader/UploadUtils" /* 8184 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 

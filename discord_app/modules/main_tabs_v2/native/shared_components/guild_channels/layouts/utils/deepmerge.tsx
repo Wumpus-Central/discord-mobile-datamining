@@ -1,6 +1,6 @@
-// === Module 11957: deepmerge ===
+// === Module 11995: deepmerge ===
 
-// Module 11957 (deepmerge)
+// Module 11995 (deepmerge)
 import size from "module_2" /* 2 */;
 
 function merge() {

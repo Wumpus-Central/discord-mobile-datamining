@@ -2060,8 +2060,8 @@ const frozen2 = Object.freeze({
     return "/guilds/" + arg0 + "/rooms/" + arg1 + "/objects/" + arg2;
   },
   CONJURE_PROJECTS: "/conjure/projects",
-  CONJURE_PROJECT(projectId) {
-    return "/conjure/projects/" + projectId;
+  CONJURE_PROJECT(arg0) {
+    return "/conjure/projects/" + arg0;
   },
   CONJURE_PROJECT_UNPUBLISH(arg0) {
     return "/conjure/projects/" + arg0 + "/unpublish";
@@ -4127,8 +4127,8 @@ const obj2 = {
     return "/guilds/" + arg0 + "/rooms/" + arg1 + "/objects/" + arg2;
   },
   CONJURE_PROJECTS: "/conjure/projects",
-  CONJURE_PROJECT(projectId) {
-    return "/conjure/projects/" + projectId;
+  CONJURE_PROJECT(arg0) {
+    return "/conjure/projects/" + arg0;
   },
   CONJURE_PROJECT_UNPUBLISH(arg0) {
     return "/conjure/projects/" + arg0 + "/unpublish";

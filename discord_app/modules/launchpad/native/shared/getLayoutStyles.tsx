@@ -1,10 +1,10 @@
-// === Module 18145: getLayoutStyles ===
+// === Module 18385: getLayoutStyles ===
 
-// Module 18145 (getLayoutStyles)
+// Module 18385 (getLayoutStyles)
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1199 */;
-import GuildIcon from "GuildIcon" /* 6885 */;
-import GameIcon from "GameIcon" /* 7263 */;
+import GuildIcon from "GuildIcon" /* 6919 */;
+import GameIcon from "GameIcon" /* 7297 */;
 import size from "module_2" /* 2 */;
 
 const obj = { layout: { margin: { marginLeft: 8, marginRight: 8, marginVertical: 0 } }, container: { borderRadius: nativeDefault.radii.md, padding: { paddingVertical: 4, paddingLeft: 8, paddingRight: 8 } }, voiceUsers: { height: 36, margin: { marginLeft: 60 } }, voiceOrStageSummaryRow: null, channelName: null, messagePreview: null, timestamp: null, inviteRow: null, icon: null, unreadBadge: null, mentionBadge: null, category: null, typing: null, activeThreadCount: null, joinVoiceButton: null, threadSpine: null, happeningNow: null, separator: null, searchButton: null };

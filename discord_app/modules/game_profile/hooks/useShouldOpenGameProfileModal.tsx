@@ -1,11 +1,11 @@
-// === Module 9247: useShouldOpenGameProfileModal ===
+// === Module 9280: useShouldOpenGameProfileModal ===
 
-// Module 9247 (useShouldOpenGameProfileModal)
+// Module 9280 (useShouldOpenGameProfileModal)
 import _modDef38 from "module_38" /* 38 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import FlagUtilsAll from "FlagUtils" /* 1402 */;
-import utils from "utils" /* 5613 */;
-import GameFlags from "GameFlags" /* 9248 */;
+import utils from "utils" /* 5648 */;
+import GameFlags from "GameFlags" /* 9281 */;
 import noop from "module_19" /* 19 */;
 import GameStore from "GameStore" /* 2019 */;
 
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useShoul
     if (cResult[1] === gameId) {
       let tmp5 = cResult[2];
     }
-    const tmp7 = require("useResolveGameForProfile")(tmp5);
+    const tmp7 = require("useResolveGame")(tmp5);
     ({ gameId: gameId2, gameRecord } = tmp7);
     isLoading = tmp7.isLoading;
     if (cResult[3] !== gameRecord) {

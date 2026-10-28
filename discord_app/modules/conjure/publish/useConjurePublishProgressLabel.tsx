@@ -1,15 +1,15 @@
-// === Module 11770: useConjurePublishProgressLabel ===
+// === Module 11806: useConjurePublishProgressLabel ===
 
-// Module 11770 (useConjurePublishProgressLabel)
-import _modDef3831 from "module_3831" /* 3831 */;
+// Module 11806 (useConjurePublishProgressLabel)
+import _modDef3863 from "module_3863" /* 3863 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10717 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10749 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let obj = { preparing: _modDef3831.GQeas1, approval: _modDef3831["TkHHD+"], setup: _modDef3831["F+AxgM"], build: _modDef3831.oQeMIy, deploy: _modDef3831.LqZvZ2, discord: _modDef3831.LFcGAT, activating: _modDef3831.ff1Fq1 };
+let obj = { preparing: _modDef3863.GQeas1, approval: _modDef3863["TkHHD+"], setup: _modDef3863["F+AxgM"], build: _modDef3863.oQeMIy, deploy: _modDef3863.LqZvZ2, discord: _modDef3863.LFcGAT, activating: _modDef3863.ff1Fq1 };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishProgressLabel.tsx");
@@ -133,17 +133,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     const obj2 = { action: null, detail: null };
     const intl2 = formatElapsed(1125).intl;
     obj2.action = intl2.string(obj[stageStartedAt.stage]);
-    formatElapsed = formatElapsed(11771).formatElapsed;
+    formatElapsed = formatElapsed(11807).formatElapsed;
     formatElapsedResult2 = formatElapsed(stage - stageStartedAt.stageStartedAt);
     obj2.detail = formatElapsedResult2;
-    const formatToPlainStringResult = intl.formatToPlainString(stageStartedAt(3831)["ndkR+x"], obj2);
+    const formatToPlainStringResult = intl.formatToPlainString(stageStartedAt(3863)["ndkR+x"], obj2);
     cResult[7] = stage;
     stage = stageStartedAt.stage;
     cResult[8] = stage;
     stageStartedAt = stageStartedAt.stageStartedAt;
     cResult[9] = stageStartedAt;
     cResult[10] = formatToPlainStringResult;
-    const formatElapsedResult1 = formatElapsed(11771);
+    const formatElapsedResult1 = formatElapsed(11807);
   }
   const tmp7 = _slicedToArray(noop.useState(tmp6), 2);
 }) : (function useConjurePublishProgressLabel(arg0) {
@@ -175,9 +175,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     const obj2 = { action: null, detail: null };
     const intl2 = tmp(1125).intl;
     obj2.action = intl2.string(obj[stateFromStores.stage]);
-    obj2.detail = tmp(11771).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
-    formatToPlainStringResult = intl.formatToPlainString(stateFromStores(3831)["ndkR+x"], obj2);
-    const tmpResult = tmp(11771);
+    obj2.detail = tmp(11807).formatElapsed(tmp4[0] - stateFromStores.stageStartedAt);
+    formatToPlainStringResult = intl.formatToPlainString(stateFromStores(3863)["ndkR+x"], obj2);
+    const tmpResult = tmp(11807);
   }
   return formatToPlainStringResult;
 });

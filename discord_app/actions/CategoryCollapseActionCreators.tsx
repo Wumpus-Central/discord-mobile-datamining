@@ -1,6 +1,6 @@
-// === Module 11255: CategoryCollapseActionCreators ===
+// === Module 11292: CategoryCollapseActionCreators ===
 
-// Module 11255 (CategoryCollapseActionCreators)
+// Module 11292 (CategoryCollapseActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

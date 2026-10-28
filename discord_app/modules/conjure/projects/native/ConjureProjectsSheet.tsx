@@ -1,32 +1,32 @@
-// === Module 14179: ConjureProjectsSheet ===
+// === Module 14403: ConjureProjectsSheet ===
 
-// Module 14179 (ConjureProjectsSheet)
+// Module 14403 (ConjureProjectsSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import _modDef3831 from "module_3831" /* 3831 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import components_Button_Button from "components/Button/Button" /* 5245 */;
-import useMountEffectDefault from "useMountEffect" /* 5264 */;
-import BottomSheetModal from "BottomSheetModal" /* 5270 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6882 */;
-import TableRow from "TableRow" /* 6905 */;
-import TableRowGroup from "TableRowGroup" /* 6989 */;
-import Search_SearchBar from "Search/SearchBar" /* 7147 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7250 */;
-import ActionSheet from "ActionSheet" /* 7300 */;
-import IconButton from "IconButton" /* 7957 */;
-import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 9565 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10723 */;
-import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10821 */;
-import _modDef10866 from "module_10866" /* 10866 */;
-import ConjureProjectIcon from "ConjureProjectIcon" /* 12172 */;
-import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin" /* 14180 */;
-import useConjureOwnProjectListStateDefault from "useConjureOwnProjectListState" /* 14183 */;
+import _modDef3863 from "module_3863" /* 3863 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import components_Button_Button from "components/Button/Button" /* 5280 */;
+import useMountEffectDefault from "useMountEffect" /* 5299 */;
+import BottomSheetModal from "BottomSheetModal" /* 5305 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6916 */;
+import TableRow from "TableRow" /* 6939 */;
+import TableRowGroup from "TableRowGroup" /* 7023 */;
+import Search_SearchBar from "Search/SearchBar" /* 7181 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7284 */;
+import ActionSheet from "ActionSheet" /* 7334 */;
+import IconButton from "IconButton" /* 7991 */;
+import useConjureEntryPointPlacementDefault from "useConjureEntryPointPlacement" /* 9597 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10757 */;
+import openConjureHomeScreenDefault from "openConjureHomeScreen" /* 10856 */;
+import _modDef10901 from "module_10901" /* 10901 */;
+import ConjureProjectIcon from "ConjureProjectIcon" /* 12210 */;
+import confirmConjureYouBarPinDefault from "confirmConjureYouBarPin" /* 14404 */;
+import useConjureOwnProjectListStateDefault from "useConjureOwnProjectListState" /* 14407 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10717 */;
+import ConjurePublishStatusStore from "ConjurePublishStatusStore" /* 10749 */;
 
 const ConjureProjectIconDefault = ConjureProjectIcon;
 
@@ -37,7 +37,7 @@ function confirmPin() {
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { scrollContent: { gap: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 + arg0 }, state: null, trailingIndicator: null, unreadDot: null };
   const obj2 = { gap: nativeDefault.space.PX_24, paddingBottom: nativeDefault.space.PX_16 + arg0 };
@@ -54,7 +54,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   project = project.project;
   const tmp4 = closure_9(0);
   const obj = project(576);
-  const conjureHomeProjectState = project(14171).useConjureHomeProjectState(project.id);
+  const conjureHomeProjectState = project(14394).useConjureHomeProjectState(project.id);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConjurePublishStatusStore];
     cResult[0] = items;
@@ -84,7 +84,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     tmp8 = cResult[2];
     tmp9 = cResult[3];
   }
-  const obj2 = project(14171);
+  const obj2 = project(14394);
   const stateFromStores = project(504).useStateFromStores(first, tmp8, tmp9);
   if (cResult[4] === stateFromStores) {
     if (cResult[5] === conjureHomeProjectState) {
@@ -97,7 +97,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
             let stringResult = null;
             if ("unread" === conjureHomeProjectState) {
               const intl4 = tmp(1125).intl;
-              stringResult = intl4.string(_modDef3831["N+3Pzk"]);
+              stringResult = intl4.string(_modDef3863["N+3Pzk"]);
             }
             cResult[12] = conjureHomeProjectState;
             cResult[13] = stringResult;
@@ -149,7 +149,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                     }
                   }
                   const obj4 = { label: project.name, subLabel: tmp30, accessibilityLabel: joined, icon: tmp31, trailing: tmp35, disabled: tmp13, onPress: tmp40 };
-                  const tmp43 = closure_7(tmp(6905).TableRow, obj4);
+                  const tmp43 = closure_7(tmp(6939).TableRow, obj4);
                   cResult[26] = joined;
                   cResult[27] = tmp13;
                   cResult[28] = project.name;
@@ -176,7 +176,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                 const obj6 = { style: tmp4.unreadDot };
                 let tmp36Result = closure_7(View, obj6);
               } else {
-                tmp36Result = closure_7(tmp(6882).ActivityIndicator, { size: "small" });
+                tmp36Result = closure_7(tmp(6916).ActivityIndicator, { size: "small" });
               }
               obj5.children = tmp36Result;
               closure_7(View, obj5);
@@ -198,24 +198,24 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         }
       }
     }
-    const result = tmp(14171).conjureProjectLastActivityTime(project);
+    const result = tmp(14394).conjureProjectLastActivityTime(project);
     if ("deleting" === conjureHomeProjectState) {
       const intl3 = tmp(1125).intl;
-      let stringResult1 = intl3.string(_modDef3831.Yh5pAc);
+      let stringResult1 = intl3.string(_modDef3863.Yh5pAc);
     } else if ("in_progress" === conjureHomeProjectState) {
       const intl2 = tmp(1125).intl;
-      stringResult1 = intl2.string(_modDef3831["Y8pS+n"]);
+      stringResult1 = intl2.string(_modDef3863["Y8pS+n"]);
     } else {
       let relativeTimestamp = null;
       if (null != result) {
-        relativeTimestamp = tmp(6790).getRelativeTimestamp(result, false);
-        const tmpResult5 = tmp(6790);
+        relativeTimestamp = tmp(6824).getRelativeTimestamp(result, false);
+        const tmpResult5 = tmp(6824);
       }
       const items3 = [relativeTimestamp, ];
       let stringResult2 = null;
       if (tmp11) {
         const intl = tmp(1125).intl;
-        stringResult2 = intl.string(_modDef3831.CSAaT0);
+        stringResult2 = intl.string(_modDef3863.CSAaT0);
       }
       items3[1] = stringResult2;
       const found1 = items3.filter((item) => null != item);
@@ -226,20 +226,20 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     cResult[9] = conjureHomeProjectState;
     cResult[10] = "deleting" === conjureHomeProjectState;
     cResult[11] = stringResult1;
-    const tmpResult4 = tmp(14171);
+    const tmpResult4 = tmp(14394);
   }
   const tmpResult = project(504);
-  const result1 = project(14171).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
+  const result1 = project(14394).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
   cResult[4] = stateFromStores;
   cResult[5] = conjureHomeProjectState;
   cResult[6] = result1;
   tmp11 = result1;
-  const tmpResult6 = project(14171);
+  const tmpResult6 = project(14394);
 }) : (function ProjectRow(project) {
   project = project.project;
   let unreadDot = closure_9(0);
-  const conjureHomeProjectState = project(14171).useConjureHomeProjectState(project.id);
-  const obj = project(14171);
+  const conjureHomeProjectState = project(14394).useConjureHomeProjectState(project.id);
+  const obj = project(14394);
   const items = [ConjurePublishStatusStore];
   const items1 = [project.id];
   const stateFromStores = project(504).useStateFromStores(items, () => {
@@ -254,26 +254,26 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     return publishState;
   }, items1);
   const obj2 = project(504);
-  const result = project(14171).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
-  const obj3 = project(14171);
-  const result1 = project(14171).conjureProjectLastActivityTime(project);
+  const result = project(14394).conjureHomeProjectShowsDraft(conjureHomeProjectState, stateFromStores);
+  const obj3 = project(14394);
+  const result1 = project(14394).conjureProjectLastActivityTime(project);
   if ("deleting" === conjureHomeProjectState) {
     const intl3 = tmp(1125).intl;
-    let stringResult = intl3.string(_modDef3831.Yh5pAc);
+    let stringResult = intl3.string(_modDef3863.Yh5pAc);
   } else if ("in_progress" === conjureHomeProjectState) {
     const intl2 = tmp(1125).intl;
-    stringResult = intl2.string(_modDef3831["Y8pS+n"]);
+    stringResult = intl2.string(_modDef3863["Y8pS+n"]);
   } else {
     let relativeTimestamp = null;
     if (null != result1) {
-      relativeTimestamp = tmp(6790).getRelativeTimestamp(result1, false);
-      const tmpResult = tmp(6790);
+      relativeTimestamp = tmp(6824).getRelativeTimestamp(result1, false);
+      const tmpResult = tmp(6824);
     }
     const items2 = [relativeTimestamp, ];
     let stringResult1 = null;
     if (result) {
       const intl = tmp(1125).intl;
-      stringResult1 = intl.string(_modDef3831.CSAaT0);
+      stringResult1 = intl.string(_modDef3863.CSAaT0);
     }
     items2[1] = stringResult1;
     const found = items2.filter((item) => null != item);
@@ -283,7 +283,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   let stringResult2 = null;
   if ("unread" === conjureHomeProjectState) {
     const intl4 = tmp(1125).intl;
-    stringResult2 = intl4.string(_modDef3831["N+3Pzk"]);
+    stringResult2 = intl4.string(_modDef3863["N+3Pzk"]);
   }
   items3[2] = stringResult2;
   const found1 = items3.filter((item) => {
@@ -310,7 +310,7 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         obj5.onPress = function onPress() {
           return openConjureHomeScreenDefault(project.id);
         };
-        return closure_7(tmp(6905).TableRow, obj5);
+        return closure_7(tmp(6939).TableRow, obj5);
       }
     }
   }
@@ -321,11 +321,11 @@ let closure_10 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     obj7.style = unreadDot;
     let tmp18Result = closure_7(View, obj7);
   } else {
-    tmp18Result = closure_7(tmp(6882).ActivityIndicator, { size: "small" });
+    tmp18Result = closure_7(tmp(6916).ActivityIndicator, { size: "small" });
   }
   obj6.children = tmp18Result;
   closure_7(View, obj6);
-  const obj4 = project(14171);
+  const obj4 = project(14394);
 }));
 ReactCompilerGating = fn(558);
 let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function ProjectList(query) {
@@ -368,7 +368,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
       const obj3 = { variant: "text-sm/normal", color: "text-subtle", children: null };
       const intl4 = util.intl;
-      obj3.children = intl4.string(_modDef3831.X37fkR);
+      obj3.children = intl4.string(_modDef3863.X37fkR);
       const tmp36 = React5(Text_Text.Text, obj3);
       cResult[5] = tmp36;
       let tmp34 = tmp36;
@@ -387,7 +387,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
       const obj5 = { variant: "text-sm/normal", color: "text-muted", children: null };
       const intl2 = util.intl;
-      obj5.children = intl2.string(_modDef3831.DJAPMO);
+      obj5.children = intl2.string(_modDef3863.DJAPMO);
       const tmp24 = React5(Text_Text.Text, obj5);
       cResult[8] = tmp24;
       let tmp22 = tmp24;
@@ -398,7 +398,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
       const obj6 = { variant: "secondary", size: "sm", text: null, onPress: null };
       const intl3 = util.intl;
-      obj6.text = intl3.string(_modDef3831["WFJ/vb"]);
+      obj6.text = intl3.string(_modDef3863["WFJ/vb"]);
       obj6.onPress = function onPress() {
         return ConjureActionCreators.listProjects();
       };
@@ -436,7 +436,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
       const obj9 = { variant: "text-sm/normal", color: "text-subtle", children: null };
       const intl = util.intl;
-      obj9.children = intl.string(_modDef3831["9/5sLV"]);
+      obj9.children = intl.string(_modDef3863["9/5sLV"]);
       const tmp7 = React5(Text_Text.Text, obj9);
       cResult[15] = tmp7;
       let tmp5 = tmp7;
@@ -466,18 +466,18 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     const obj3 = { style: tmp.state, children: null };
     const obj4 = { variant: "text-sm/normal", color: "text-subtle", children: null };
     const intl4 = util.intl;
-    obj4.children = intl4.string(_modDef3831.X37fkR);
+    obj4.children = intl4.string(_modDef3863.X37fkR);
     obj3.children = React5(Text_Text.Text, obj4);
     tmp8 = React5(View, obj3);
   } else if ("error" === tmp4.kind) {
     const obj5 = { style: tmp.state, children: null };
     const obj6 = { variant: "text-sm/normal", color: "text-muted", children: null };
     const intl2 = util.intl;
-    obj6.children = intl2.string(_modDef3831.DJAPMO);
+    obj6.children = intl2.string(_modDef3863.DJAPMO);
     const items = [React5(Text_Text.Text, obj6), ];
     const obj7 = { variant: "secondary", size: "sm", text: null, onPress: null };
     const intl3 = util.intl;
-    obj7.text = intl3.string(_modDef3831["WFJ/vb"]);
+    obj7.text = intl3.string(_modDef3863["WFJ/vb"]);
     obj7.onPress = function onPress() {
       return ConjureActionCreators.listProjects();
     };
@@ -491,7 +491,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     const obj = { style: tmp.state, children: null };
     const obj9 = { variant: "text-sm/normal", color: "text-subtle", children: null };
     const intl = util.intl;
-    obj9.children = intl.string(_modDef3831["9/5sLV"]);
+    obj9.children = intl.string(_modDef3863["9/5sLV"]);
     obj.children = React5(Text_Text.Text, obj9);
     tmp8 = React5(View, obj);
   }
@@ -523,7 +523,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   useMountEffectDefault(first);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3831.uk6jhJ);
+    const stringResult = intl.string(_modDef3863.uk6jhJ);
     cResult[1] = stringResult;
     let tmp13 = stringResult;
   } else {
@@ -532,9 +532,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   if (cResult[2] !== ("you_screen" === placement)) {
     let tmp17;
     if (tmp15) {
-      const obj2 = { icon: _modDef10866, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
+      const obj2 = { icon: _modDef10901, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
       const intl2 = util.intl;
-      obj2.accessibilityLabel = intl2.string(_modDef3831.qCBh6V);
+      obj2.accessibilityLabel = intl2.string(_modDef3863.qCBh6V);
       obj2.onPress = confirmPin;
       tmp17 = React5(IconButton.IconButton, obj2);
     }
@@ -564,9 +564,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
     const obj5 = { size: "md", onChange: tmp8, placeholder: null, accessibilityLabel: null };
     const intl3 = util.intl;
-    obj5.placeholder = intl3.string(_modDef3831["2y8sUh"]);
+    obj5.placeholder = intl3.string(_modDef3863["2y8sUh"]);
     const intl4 = util.intl;
-    obj5.accessibilityLabel = intl4.string(_modDef3831.u0kEN9);
+    obj5.accessibilityLabel = intl4.string(_modDef3863.u0kEN9);
     const tmp26 = React5(Search_SearchBar.SearchBar, obj5);
     cResult[8] = tmp26;
     let tmp24 = tmp26;
@@ -575,9 +575,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   }
   if (cResult[9] === Symbol.for("react.memo_cache_sentinel")) {
     const intl5 = util.intl;
-    const stringResult1 = intl5.string(_modDef3831.bnVYYC);
+    const stringResult1 = intl5.string(_modDef3863.bnVYYC);
     const intl6 = util.intl;
-    const stringResult2 = intl6.string(_modDef3831.gnzLwZ);
+    const stringResult2 = intl6.string(_modDef3863.gnzLwZ);
     const tmp33 = React5(ConjureProjectIcon.ConjureNewProjectIcon, { size: "list" });
     cResult[9] = stringResult1;
     cResult[10] = stringResult2;
@@ -660,12 +660,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   });
   const obj = { title: null, trailing: null };
   const intl = util.intl;
-  obj.title = intl.string(_modDef3831.uk6jhJ);
+  obj.title = intl.string(_modDef3863.uk6jhJ);
   let tmp10Result;
   if ("you_screen" === placement) {
-    const obj2 = { icon: _modDef10866, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
+    const obj2 = { icon: _modDef10901, variant: "tertiary", size: "sm", accessibilityLabel: null, onPress: null };
     const intl2 = util.intl;
-    obj2.accessibilityLabel = intl2.string(_modDef3831.qCBh6V);
+    obj2.accessibilityLabel = intl2.string(_modDef3863.qCBh6V);
     obj2.onPress = confirmPin;
     tmp10Result = React5(IconButton.IconButton, obj2);
   }
@@ -674,16 +674,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureP
   const obj4 = { contentContainerStyle: tmp3.scrollContent, scrollIndicatorInsets: { bottom }, keyboardShouldPersistTaps: "handled", children: null };
   const obj5 = { size: "md", onChange: tmp6, placeholder: null, accessibilityLabel: null };
   const intl3 = util.intl;
-  obj5.placeholder = intl3.string(_modDef3831["2y8sUh"]);
+  obj5.placeholder = intl3.string(_modDef3863["2y8sUh"]);
   const intl4 = util.intl;
-  obj5.accessibilityLabel = intl4.string(_modDef3831.u0kEN9);
+  obj5.accessibilityLabel = intl4.string(_modDef3863.u0kEN9);
   const items = [React5(Search_SearchBar.SearchBar, obj5), , ];
   const obj6 = { hasIcons: true, children: null };
   const obj7 = { label: null, subLabel: null, icon: null, arrow: true, onPress: null };
   const intl5 = util.intl;
-  obj7.label = intl5.string(_modDef3831.bnVYYC);
+  obj7.label = intl5.string(_modDef3863.bnVYYC);
   const intl6 = util.intl;
-  obj7.subLabel = intl6.string(_modDef3831.gnzLwZ);
+  obj7.subLabel = intl6.string(_modDef3863.gnzLwZ);
   obj7.icon = React5(ConjureProjectIcon.ConjureNewProjectIcon, { size: "list" });
   obj7.onPress = function onPress() {
     return openConjureHomeScreenDefault();

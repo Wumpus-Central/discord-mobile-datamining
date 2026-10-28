@@ -1,6 +1,6 @@
-// === Module 11752: ConjureGlobalScreenContext ===
+// === Module 11788: ConjureGlobalScreenContext ===
 
-// Module 11752 (ConjureGlobalScreenContext)
+// Module 11788 (ConjureGlobalScreenContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext(null);

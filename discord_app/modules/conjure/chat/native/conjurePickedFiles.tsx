@@ -1,11 +1,11 @@
-// === Module 12471: conjurePickedFiles ===
+// === Module 12517: conjurePickedFiles ===
 
-// Module 12471 (conjurePickedFiles)
-import UploadDefault from "Upload" /* 8142 */;
-import UploadPlatform from "UploadPlatform" /* 8143 */;
-import utils_UploadUtils from "utils/UploadUtils" /* 8152 */;
-import ImagePickerDefault from "ImagePicker" /* 8153 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12299 */;
+// Module 12517 (conjurePickedFiles)
+import UploadDefault from "Upload" /* 8176 */;
+import UploadPlatform from "UploadPlatform" /* 8177 */;
+import utils_UploadUtils from "utils/UploadUtils" /* 8186 */;
+import ImagePickerDefault from "ImagePicker" /* 8187 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12344 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

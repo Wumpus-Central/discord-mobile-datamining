@@ -1,16 +1,16 @@
-// === Module 5822: BrowserUtils ===
+// === Module 5857: BrowserUtils ===
 
-// Module 5822 (BrowserUtils)
-import _modDef5823 from "module_5823" /* 5823 */;
+// Module 5857 (BrowserUtils)
+import _modDef5858 from "module_5858" /* 5858 */;
 
-let str = _modDef5823.name;
+let str = _modDef5858.name;
 if (str == null) {
   str = "unknown";
 }
 const str2 = str.toLowerCase();
 let num = -1;
 if ("chrome" === str2.toLowerCase()) {
-  let str3 = _modDef5823.version;
+  let str3 = _modDef5858.version;
   if (str3 == null) {
     str3 = "";
   }
@@ -18,7 +18,7 @@ if ("chrome" === str2.toLowerCase()) {
 }
 let parsed = num;
 if ("electron" === str2.toLowerCase()) {
-  let str4 = _modDef5823.version;
+  let str4 = _modDef5858.version;
   if (str4 == null) {
     str4 = "";
   }
@@ -26,7 +26,7 @@ if ("electron" === str2.toLowerCase()) {
 }
 let parsed1 = num;
 if ("firefox" === str2.toLowerCase()) {
-  let str5 = _modDef5823.version;
+  let str5 = _modDef5858.version;
   if (str5 == null) {
     str5 = "";
   }
@@ -34,14 +34,14 @@ if ("firefox" === str2.toLowerCase()) {
 }
 let parsed2 = num;
 if ("edge" === str2.toLowerCase()) {
-  let str6 = _modDef5823.version;
+  let str6 = _modDef5858.version;
   if (str6 == null) {
     str6 = "";
   }
   parsed2 = parseInt(str6, 10);
 }
 if ("safari" === str2.toLowerCase()) {
-  let str7 = _modDef5823.version;
+  let str7 = _modDef5858.version;
   if (str7 == null) {
     str7 = "";
   }

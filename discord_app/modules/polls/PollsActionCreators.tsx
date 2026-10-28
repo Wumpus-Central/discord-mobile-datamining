@@ -1,19 +1,19 @@
-// === Module 12116: PollsActionCreators ===
+// === Module 12154: PollsActionCreators ===
 
-// Module 12116 (PollsActionCreators)
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5712 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5909 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6832 */;
-import JoinGuildRefusedError from "JoinGuildRefusedError" /* 7321 */;
-import PollInteractionUtilsAll from "PollInteractionUtils" /* 12117 */;
+// Module 12154 (PollsActionCreators)
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5747 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5944 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6866 */;
+import JoinGuildRefusedError from "JoinGuildRefusedError" /* 7355 */;
+import PollInteractionUtilsAll from "PollInteractionUtils" /* 12155 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LurkingStore from "LurkingStore" /* 4905 */;
-import ReferencedMessageStore from "ReferencedMessageStore" /* 7697 */;
+import LurkingStore from "LurkingStore" /* 4937 */;
+import ReferencedMessageStore from "ReferencedMessageStore" /* 7731 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6637 */;
-import MessageStore from "MessageStore" /* 6011 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8291 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6671 */;
+import MessageStore from "MessageStore" /* 6045 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8325 */;
 
 require = fn;
 function getPollVoteEventProperties(answers, set) {
@@ -172,7 +172,7 @@ let closure_23 = async function _optimisticallySetAnswers(arg0) {
           let obj3 = { id, name: id };
           obj2.emoji = obj3;
           obj2.userId = userId;
-          obj2.reactionType = channelId(5226).ReactionTypes.VOTE;
+          obj2.reactionType = channelId(5261).ReactionTypes.VOTE;
           dispatchResult = obj.dispatch(obj2);
           continue;
         }
@@ -707,7 +707,7 @@ let closure_28 = async function _createPoll(arg0) {
               tmp2 = items;
             }
             const obj2 = { attachment_ids: tmp2 };
-            if (closure_1_5 === guildId(12122).PollLayoutTypes.DEFAULT) {
+            if (closure_1_5 === guildId(12160).PollLayoutTypes.DEFAULT) {
               let trimmed;
               if (text.text != null) {
                 trimmed = str2.trim();
@@ -743,7 +743,7 @@ let closure_28 = async function _createPoll(arg0) {
             attachmentsToUpload: uploads,
             scheduledTimestamp: closure_129_7,
             onAttachmentUploadError(file, code, reason) {
-                      const obj = guildId(9669);
+                      const obj = guildId(9701);
                       const result = obj.handleUploadMessageAttachmentsErrors({ file, guildId: guildId.getGuildId(), analyticsLocations: [], code, reason });
                     }
           };
@@ -831,8 +831,8 @@ let closure_29 = async function _endPollEarly(arg0) {
   ({ channelId: closure_129_0, messageId: closure_129_1 } = closure_0);
   return "Reflect";
 };
-const DraftType = fn(7632).DraftType;
-const PollsInteractionStore = fn(11037);
+const DraftType = fn(7666).DraftType;
+const PollsInteractionStore = fn(11072);
 ({ getPollState: map1, updatePollState: closure_14 } = PollsInteractionStore);
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_15, JoinGuildSources: closure_16 } = Constants);

@@ -1,6 +1,6 @@
-// === Module 18652: getConsoleColor ===
+// === Module 18903: getConsoleColor ===
 
-// Module 18652 (getConsoleColor)
+// Module 18903 (getConsoleColor)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;

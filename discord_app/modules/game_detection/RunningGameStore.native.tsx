@@ -3,8 +3,8 @@
 // Module 2018 (RunningGameStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11204 */;
-import OverlayTypes from "OverlayTypes" /* 15333 */;
+import SocialSdkGameResolver from "SocialSdkGameResolver" /* 11240 */;
+import OverlayTypes from "OverlayTypes" /* 15559 */;
 import GameStore from "GameStore" /* 2019 */;
 import DetectableGameStore from "DetectableGameStore" /* 2036 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2040 */;

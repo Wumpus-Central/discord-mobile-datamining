@@ -1,15 +1,15 @@
-// === Module 11798: UserProfileApplicationWidgetTopHeroLayout ===
+// === Module 11836: UserProfileApplicationWidgetTopHeroLayout ===
 
-// Module 11798 (UserProfileApplicationWidgetTopHeroLayout)
+// Module 11836 (UserProfileApplicationWidgetTopHeroLayout)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import LinearGradientDefault from "LinearGradient" /* 5259 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import _modDef6968 from "module_6968" /* 6968 */;
-import UserProfileSharedStyles from "UserProfileSharedStyles" /* 8732 */;
-import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11799 */;
-import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 11885 */;
-import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 11886 */;
+import LinearGradientDefault from "LinearGradient" /* 5294 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import _modDef7002 from "module_7002" /* 7002 */;
+import UserProfileSharedStyles from "UserProfileSharedStyles" /* 8769 */;
+import resolvedValuesFromUserApplicationIdentityProfile from "resolvedValuesFromUserApplicationIdentityProfile" /* 11837 */;
+import UserProfileApplicationWidgetFieldUtils from "UserProfileApplicationWidgetFieldUtils" /* 11923 */;
+import UserProfileApplicationWidgetSkeletons from "UserProfileApplicationWidgetSkeletons" /* 11924 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,11 +18,11 @@ const require = globalThis.__r;
 require = fn;
 const View = fn(17).View;
 const HorizontalGradient = fn(1084).HorizontalGradient;
-const CARD_PADDING = fn(7306).CARD_PADDING;
+const CARD_PADDING = fn(7340).CARD_PADDING;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const colors = ["transparent", "black"];
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { root: { position: "relative" }, contentRow: { flexDirection: "row", gap: nativeDefault.space.PX_12, minHeight: 140 }, heroText: null, heroImageColumn: null, heroImageSkeleton: null, heroImagePositioner: null, heroImageMask: null, heroImageFadeGradient: null, heroImageMaskRemainder: null };
 let obj3 = { flexDirection: "row", gap: nativeDefault.space.PX_12, minHeight: 140 };
 obj2.heroText = { flex: 1, minWidth: 120, gap: nativeDefault.space.PX_4, justifyContent: "center" };
@@ -199,7 +199,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                                           obj13.source = obj14;
                                           obj13.style = { width: "100%", height: "100%" };
                                           obj9.children = React5(FastImageDefault, obj13);
-                                          tmp48Result = React5(_modDef6968, obj9);
+                                          tmp48Result = React5(_modDef7002, obj9);
                                         }
                                         obj7.children = tmp48Result;
                                         tmp48Result2 = React5(View, obj7);
@@ -371,7 +371,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       obj17.source = obj18;
       obj17.style = { width: "100%", height: "100%" };
       obj12.children = React5(FastImageDefault, obj17);
-      tmp15Result3 = React5(_modDef6968, obj12);
+      tmp15Result3 = React5(_modDef7002, obj12);
     }
     obj10.children = tmp15Result3;
     tmp15Result4 = React5(View, obj10);

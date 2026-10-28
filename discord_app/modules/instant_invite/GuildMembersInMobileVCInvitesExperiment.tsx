@@ -1,6 +1,6 @@
-// === Module 9081: GuildMembersInMobileVCInvitesExperiment ===
+// === Module 9114: GuildMembersInMobileVCInvitesExperiment ===
 
-// Module 9081 (GuildMembersInMobileVCInvitesExperiment)
+// Module 9114 (GuildMembersInMobileVCInvitesExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

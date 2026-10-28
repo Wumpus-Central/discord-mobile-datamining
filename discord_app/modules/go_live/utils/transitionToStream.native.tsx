@@ -1,10 +1,10 @@
-// === Module 7867: transitionToStream ===
+// === Module 7901: transitionToStream ===
 
-// Module 7867 (transitionToStream)
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7868 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
+// Module 7901 (transitionToStream)
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7902 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
 
 require = fn;
 const size = fn(2);

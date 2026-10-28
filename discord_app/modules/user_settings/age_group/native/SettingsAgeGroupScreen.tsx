@@ -1,26 +1,26 @@
-// === Module 16053: SettingsAgeGroupScreen ===
+// === Module 16281: SettingsAgeGroupScreen ===
 
-// Module 16053 (SettingsAgeGroupScreen)
+// Module 16281 (SettingsAgeGroupScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
 import _modDef3091 from "module_3091" /* 3091 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7884 */;
-import SettingBuilders from "SettingBuilders" /* 11212 */;
-import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 16012 */;
-import SettingLayoutDefault from "SettingLayout" /* 16016 */;
-import TinyBroncoAgeGroupHeader2 from "TinyBroncoAgeGroupHeader" /* 16054 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7918 */;
+import SettingBuilders from "SettingBuilders" /* 11248 */;
+import TinyBroncoSettingsPredicate from "TinyBroncoSettingsPredicate" /* 16240 */;
+import SettingLayoutDefault from "SettingLayout" /* 16244 */;
+import TinyBroncoAgeGroupHeader2 from "TinyBroncoAgeGroupHeader" /* 16282 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const MobileUserSettings = fn(8331).MobileUserSettings;
+const MobileUserSettings = fn(8365).MobileUserSettings;
 const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { headerContainer: { gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_16 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -128,7 +128,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Settings
     return tmp9;
   }
 }) : (function SettingsAgeGroupScreen() {
-  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(16012).useIsTinyBroncoSettingsEnabled();
+  isTinyBroncoSettingsEnabled = isTinyBroncoSettingsEnabled(16240).useIsTinyBroncoSettingsEnabled();
   let items = [isTinyBroncoSettingsEnabled];
   const node = noop.useMemo(() => {
     const obj2 = { sections: null, ListHeaderComponent: null };

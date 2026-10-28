@@ -1,13 +1,13 @@
-// === Module 13857: MessageRequestNotification ===
+// === Module 14075: MessageRequestNotification ===
 
-// Module 13857 (MessageRequestNotification)
+// Module 14075 (MessageRequestNotification)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import RootNavigationRef from "RootNavigationRef" /* 5152 */;
-import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 13774 */;
-import MessagePreviewText from "MessagePreviewText" /* 13781 */;
-import Notification from "Notification" /* 13792 */;
+import RootNavigationRef from "RootNavigationRef" /* 5187 */;
+import InAppNotificationActionCreatorsDefault from "InAppNotificationActionCreators" /* 13992 */;
+import MessagePreviewText from "MessagePreviewText" /* 13999 */;
+import Notification from "Notification" /* 14010 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -47,8 +47,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
       tmp8 = cResult[5];
     }
     if (cResult[6] !== author) {
-      const obj3 = { user: author, size: native.AvatarSizes.NORMAL, guildId: "Array" };
-      const tmp11 = jsx(native.Avatar, { user: author, size: native.AvatarSizes.NORMAL, guildId: "Array" });
+      const obj3 = { user: author, size: native.AvatarSizes.NORMAL, guildId: "r" };
+      const tmp11 = jsx(native.Avatar, { user: author, size: native.AvatarSizes.NORMAL, guildId: "r" });
       cResult[6] = author;
       cResult[7] = tmp11;
       let tmp9 = tmp11;
@@ -101,19 +101,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function MessageR
     return obj;
   }, items);
   const callback = noop.useCallback(() => {
-    numMutualGuilds(13774).clearNotification();
-    const obj = numMutualGuilds(13774);
-    const rootNavigationRef = author(5152).getRootNavigationRef();
+    numMutualGuilds(13992).clearNotification();
+    const obj = numMutualGuilds(13992);
+    const rootNavigationRef = author(5187).getRootNavigationRef();
     if (rootNavigationRef != null) {
       rootNavigationRef.navigate("message-requests");
     }
   }, []);
-  let obj = { icon: jsx(author(1199).Avatar, { user: author, size: author(1199).AvatarSizes.NORMAL, guildId: "Array" }), header: memo, children: null, onPress: null, notification: null };
+  let obj = { icon: jsx(author(1199).Avatar, { user: author, size: author(1199).AvatarSizes.NORMAL, guildId: "r" }), header: memo, children: null, onPress: null, notification: null };
   const obj3 = { text: null };
   let intl = author(1125).intl;
   obj3.text = intl.string(author(1125).t["Bx4/Lf"]);
-  obj.children = jsx(author(13781).SystemMessageText, { text: null });
+  obj.children = jsx(author(13999).SystemMessageText, { text: null });
   obj.onPress = callback;
   obj.notification = notification;
-  return jsx(author(13792).NotificationPressable, { icon: jsx(author(1199).Avatar, { user: author, size: author(1199).AvatarSizes.NORMAL, guildId: "Array" }), header: memo, children: null, onPress: null, notification: null });
+  return jsx(author(14010).NotificationPressable, { icon: jsx(author(1199).Avatar, { user: author, size: author(1199).AvatarSizes.NORMAL, guildId: "r" }), header: memo, children: null, onPress: null, notification: null });
 });

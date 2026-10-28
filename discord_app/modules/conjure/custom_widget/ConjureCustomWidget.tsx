@@ -1,8 +1,8 @@
-// === Module 14413: ConjureCustomWidget ===
+// === Module 14636: ConjureCustomWidget ===
 
-// Module 14413 (ConjureCustomWidget)
-import ConjureUtils from "ConjureUtils" /* 7347 */;
-import GuildStore from "GuildStore" /* 4846 */;
+// Module 14636 (ConjureCustomWidget)
+import ConjureUtils from "ConjureUtils" /* 7382 */;
+import GuildStore from "GuildStore" /* 4878 */;
 
 const require = globalThis.__r;
 

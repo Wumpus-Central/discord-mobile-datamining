@@ -1,6 +1,6 @@
-// === Module 11272: ConnectionsRoleActionCreators ===
+// === Module 11309: ConnectionsRoleActionCreators ===
 
-// Module 11272 (ConnectionsRoleActionCreators)
+// Module 11309 (ConnectionsRoleActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

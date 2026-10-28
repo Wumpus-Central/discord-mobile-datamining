@@ -1,10 +1,10 @@
-// === Module 11769: conjurePublishAction ===
+// === Module 11805: conjurePublishAction ===
 
-// Module 11769 (conjurePublishAction)
+// Module 11805 (conjurePublishAction)
 import util from "util" /* 1125 */;
-import _modDef3831 from "module_3831" /* 3831 */;
-import ConjurePublishTypes from "ConjurePublishTypes" /* 10808 */;
-import conjurePreviewModes from "conjurePreviewModes" /* 11760 */;
+import _modDef3863 from "module_3863" /* 3863 */;
+import ConjurePublishTypes from "ConjurePublishTypes" /* 10842 */;
+import conjurePreviewModes from "conjurePreviewModes" /* 11796 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/publish/conjurePublishAction.tsx");
@@ -48,7 +48,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
           str4 = "";
         }
         const obj5 = { server: str4 };
-        formatResult = intl.format(_modDef3831.N4NkyR, obj5);
+        formatResult = intl.format(_modDef3863.N4NkyR, obj5);
       }
     }
     const obj7 = { installScope: input.installScope, previewReady: null, integrationInstalled: null, botPermissionsChanged: null };
@@ -90,7 +90,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
               str8 = "";
             }
             const obj9 = { server: str8 };
-            formatResult1 = intl2.format(_modDef3831.eHYXFg, obj9);
+            formatResult1 = intl2.format(_modDef3863.eHYXFg, obj9);
           }
         }
       }
@@ -115,7 +115,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
         const obj10 = {};
         const merged2 = Object.assign(obj8);
         const intl4 = util.intl;
-        obj10.label = intl4.string(_modDef3831["tUeY/h"]);
+        obj10.label = intl4.string(_modDef3863["tUeY/h"]);
         obj10.action = "review_permissions";
         let obj11 = obj10;
       }
@@ -124,7 +124,7 @@ export const resolveConjurePublishAction = function resolveConjurePublishAction(
     obj11 = {};
     const merged3 = Object.assign(obj8);
     const intl3 = util.intl;
-    obj11.label = intl3.string(_modDef3831["120EFN"]);
+    obj11.label = intl3.string(_modDef3863["120EFN"]);
     obj11.action = "publish";
   } else if ("activity" === status2.surface) {
     let tmp11 = null == appChannelName;

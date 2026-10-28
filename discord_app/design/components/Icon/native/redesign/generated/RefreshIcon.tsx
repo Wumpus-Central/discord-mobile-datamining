@@ -1,10 +1,10 @@
-// === Module 12275: RefreshIcon ===
+// === Module 12302: RefreshIcon ===
 
-// Module 12275 (RefreshIcon)
+// Module 12302 (RefreshIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5669 */;
-import _mod12276 from "module_12276" /* 12276 */;
+import BaseIconImage from "BaseIconImage" /* 5704 */;
+import _mod12303 from "module_12303" /* 12303 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const RefreshIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12276;
+    const tmpResult = _mod12303;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const RefreshIcon = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12276, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12303, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

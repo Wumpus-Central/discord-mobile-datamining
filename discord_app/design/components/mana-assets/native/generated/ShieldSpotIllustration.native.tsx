@@ -1,23 +1,23 @@
-// === Module 7903: ShieldSpotIllustration ===
+// === Module 7937: ShieldSpotIllustration ===
 
-// Module 7903 (ShieldSpotIllustration)
+// Module 7937 (ShieldSpotIllustration)
 import c from "c" /* 576 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import assetHelpers from "assetHelpers" /* 6997 */;
-import _modDef7904 from "module_7904" /* 7904 */;
-import _modDef7905 from "module_7905" /* 7905 */;
-import _modDef7906 from "module_7906" /* 7906 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import assetHelpers from "assetHelpers" /* 7031 */;
+import _modDef7938 from "module_7938" /* 7938 */;
+import _modDef7939 from "module_7939" /* 7939 */;
+import _modDef7940 from "module_7940" /* 7940 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsx = fn(21).jsx;
-let obj = { 1: null, 2: { uri: _modDef7904 }, 3: null };
-let obj2 = { uri: _modDef7904 };
-obj[2] = { uri: _modDef7905 };
-const obj3 = { uri: _modDef7905 };
-obj[3] = { uri: _modDef7906 };
+let obj = { 1: null, 2: { uri: _modDef7938 }, 3: null };
+let obj2 = { uri: _modDef7938 };
+obj[2] = { uri: _modDef7939 };
+const obj3 = { uri: _modDef7939 };
+obj[3] = { uri: _modDef7940 };
 const ReactCompilerGating = fn(558);
-const obj4 = { uri: _modDef7906 };
+const obj4 = { uri: _modDef7940 };
 let size = fn(2);
 const result = size.fileFinishedImporting("design/components/mana-assets/native/generated/ShieldSpotIllustration.native.tsx");
 

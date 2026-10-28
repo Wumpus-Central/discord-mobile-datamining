@@ -1,6 +1,6 @@
-// === Module 7798: QuestUtmStore ===
+// === Module 7832: QuestUtmStore ===
 
-// Module 7798 (QuestUtmStore)
+// Module 7832 (QuestUtmStore)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 
@@ -9,8 +9,8 @@ let obj = module_570.create((arg0) => {
   obj = {
     utmSourceCurrent: "r",
     utmMediumCurrent: "__packager_asset",
-    utmCampaignCurrent: "count",
-    utmContentCurrent: "op",
+    utmCampaignCurrent: "np",
+    utmContentCurrent: "key",
     setUtmCurrentContext(utmSourceCurrent) {
       return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });
     },

@@ -1,6 +1,6 @@
-// === Module 5226: MessageReactionsTypes ===
+// === Module 5261: MessageReactionsTypes ===
 
-// Module 5226 (MessageReactionsTypes)
+// Module 5261 (MessageReactionsTypes)
 import size from "module_2" /* 2 */;
 
 const obj = { NORMAL: 0, [0]: "NORMAL", BURST: 1, [1]: "BURST", VOTE: 2, [2]: "VOTE" };

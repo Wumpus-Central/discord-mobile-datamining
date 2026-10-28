@@ -1,13 +1,13 @@
-// === Module 13126: MessageAttachmentUtils ===
+// === Module 13343: MessageAttachmentUtils ===
 
-// Module 13126 (MessageAttachmentUtils)
+// Module 13343 (MessageAttachmentUtils)
 import util from "util" /* 1125 */;
-import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7391 */;
-import ObscureMediaModels from "ObscureMediaModels" /* 7396 */;
-import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7397 */;
-import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 8763 */;
-import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8848 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
+import ObscuredMediaUtils from "ObscuredMediaUtils" /* 7426 */;
+import ObscureMediaModels from "ObscureMediaModels" /* 7431 */;
+import ExplicitMediaRedactionModels from "ExplicitMediaRedactionModels" /* 7432 */;
+import computeGlobalSpoilerDisplayDefault from "computeGlobalSpoilerDisplay" /* 8800 */;
+import ForumPostMediaUtils from "ForumPostMediaUtils" /* 8882 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
 
 require = fn;
 function getForumPostShouldObscure(media, arg1, enabledHarmTypesBitmaskForChannelType) {
@@ -168,7 +168,7 @@ export const useShouldObscure = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const obj = channel(576);
   const stateFromStores = channel(573).useStateFromStores(first, tmp6);
-  const RenderSpoilers = tmp(4800).RenderSpoilers;
+  const RenderSpoilers = tmp(4832).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   if (cResult[3] === stateFromStores) {
     if (cResult[4] === media) {
@@ -177,7 +177,7 @@ export const useShouldObscure = ReactCompilerGating.isReactCompilerEnabled() ? (
       }
     }
   }
-  channel(7391);
+  channel(7426);
   if (cResult[7] === stateFromStores) {
     if (cResult[8] === setting) {
       let tmp11 = cResult[9];
@@ -204,10 +204,10 @@ export const useShouldObscure = ReactCompilerGating.isReactCompilerEnabled() ? (
     }
     return canResult;
   });
-  const RenderSpoilers = channel(4800).RenderSpoilers;
+  const RenderSpoilers = channel(4832).RenderSpoilers;
   const setting = RenderSpoilers.useSetting();
   const obj = channel(573);
-  const enabledHarmTypesBitmaskForChannelType = channel(7391).getEnabledHarmTypesBitmaskForChannelType(channel(7397).ContentHarmTypeChannel.GUILD);
+  const enabledHarmTypesBitmaskForChannelType = channel(7426).getEnabledHarmTypesBitmaskForChannelType(channel(7432).ContentHarmTypeChannel.GUILD);
   return getForumPostShouldObscure(channel.media, !computeGlobalSpoilerDisplayDefault(setting, stateFromStores), enabledHarmTypesBitmaskForChannelType);
 });
 export const getObscuredAlt = function getObscuredAlt(arg0) {

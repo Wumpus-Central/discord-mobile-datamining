@@ -1,18 +1,18 @@
-// === Module 16051: DismissiblePremiumNewBadge ===
+// === Module 16279: DismissiblePremiumNewBadge ===
 
-// Module 16051 (DismissiblePremiumNewBadge)
+// Module 16279 (DismissiblePremiumNewBadge)
 import nativeDefault from "native" /* 587 */;
 import ConstantsIOS from "ConstantsIOS" /* 1104 */;
 import native from "native" /* 1199 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import LinearGradientDefault from "LinearGradient" /* 5259 */;
-import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10410 */;
+import LinearGradientDefault from "LinearGradient" /* 5294 */;
+import SelectedDismissibleContentDefault from "SelectedDismissibleContent" /* 10442 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const Gradients = fn(7545).Gradients;
+const Gradients = fn(7579).Gradients;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { newTag: { backgroundColor: "transparent" }, newTagContainer: { borderRadius: nativeDefault.radii.sm, marginLeft: nativeDefault.space.PX_4 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

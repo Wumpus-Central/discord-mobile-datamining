@@ -1,6 +1,6 @@
-// === Module 10819: conjureLinkEmbeds ===
+// === Module 10854: conjureLinkEmbeds ===
 
-// Module 10819 (conjureLinkEmbeds)
+// Module 10854 (conjureLinkEmbeds)
 import URLUtilsDefault from "URLUtils" /* 1383 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;

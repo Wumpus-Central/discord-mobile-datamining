@@ -1,22 +1,22 @@
-// === Module 16017: SettingListRenderer ===
+// === Module 16245: SettingListRenderer ===
 
-// Module 16017 (SettingListRenderer)
+// Module 16245 (SettingListRenderer)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import KeyboardManagerUtils from "KeyboardManagerUtils" /* 1893 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import TableRowGroup from "TableRowGroup" /* 6989 */;
-import _mod7222 from "module_7222" /* 7222 */;
-import SettingRenderer from "SettingRenderer" /* 16019 */;
-import SettingRendererUtils from "SettingRendererUtils" /* 16020 */;
-import useAutoScrollToSetting from "useAutoScrollToSetting" /* 16025 */;
-import useSettingSearchResults from "useSettingSearchResults" /* 16026 */;
-import SettingsSearchEmptyStateDefault from "SettingsSearchEmptyState" /* 16029 */;
-import SettingSearchBarDefault from "SettingSearchBar" /* 16030 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import TableRowGroup from "TableRowGroup" /* 7023 */;
+import _mod7256 from "module_7256" /* 7256 */;
+import SettingRenderer from "SettingRenderer" /* 16247 */;
+import SettingRendererUtils from "SettingRendererUtils" /* 16248 */;
+import useAutoScrollToSetting from "useAutoScrollToSetting" /* 16253 */;
+import useSettingSearchResults from "useSettingSearchResults" /* 16254 */;
+import SettingsSearchEmptyStateDefault from "SettingsSearchEmptyState" /* 16257 */;
+import SettingSearchBarDefault from "SettingSearchBar" /* 16258 */;
 import noop from "module_19" /* 19 */;
-import UserSettingSearchStore from "UserSettingSearchStore" /* 16018 */;
-import SettingBlocklistStore from "SettingBlocklistStore" /* 15868 */;
+import UserSettingSearchStore from "UserSettingSearchStore" /* 16246 */;
+import SettingBlocklistStore from "SettingBlocklistStore" /* 16094 */;
 
 const require = globalThis.__r;
 
@@ -76,9 +76,9 @@ function keyExtractor(type, arg1) {
   return "" + type.type + "-" + label;
 }
 const View = fn(17).View;
-const ListItemType = fn(11213).ListItemType;
+const ListItemType = fn(11249).ListItemType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { container: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND, flexGrow: 1 }, contentContainer: { paddingHorizontal: 16 }, searchResultsHeader: { paddingBottom: 24 }, spacer: { paddingTop: 24 }, subLabel: { marginTop: 8 } };
 let closure_9 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -212,7 +212,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
         }
       }
       const obj4 = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: tmp14, scrollIndicatorInsets: tmp18, keyExtractor, renderItem, data: tmp7, getItemType };
-      const tmp24 = jsx(_mod7222.FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: tmp14, scrollIndicatorInsets: tmp18, keyExtractor, renderItem, data: tmp7, getItemType });
+      const tmp24 = jsx(_mod7256.FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: tmp14, scrollIndicatorInsets: tmp18, keyExtractor, renderItem, data: tmp7, getItemType });
       cResult[7] = tmp7;
       cResult[8] = node.ListHeaderComponent;
       cResult[9] = tmp14;
@@ -241,7 +241,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   const items = [field, node];
   const memo = noop.useMemo(() => SettingRendererUtils.toSettingListItems(node, field), items);
   const ref = noop.useRef(null);
-  node(16025).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
+  node(16253).useAutoScrollToSearchResultSetting(ref, memo, node.scrollTarget);
   const obj2 = { style: tmp.container, children: null };
   const obj3 = { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null };
   const obj4 = {};
@@ -253,7 +253,7 @@ const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fun
   obj3.renderItem = renderItem;
   obj3.data = memo;
   obj3.getItemType = getItemType;
-  obj2.children = jsx(node(7222).FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null });
+  obj2.children = jsx(node(7256).FlashList, { ref, ListHeaderComponent: node.ListHeaderComponent, contentContainerStyle: null, scrollIndicatorInsets: null, keyExtractor: null, renderItem: null, data: null, getItemType: null });
   return <View style={tmp.container}>{null}</View>;
 }));
 const size = fn(2);
@@ -319,7 +319,7 @@ export const SearchableSettingsList = noop.memo(ReactCompilerGating.isReactCompi
                     }
                   }
                   const obj4 = { keyboardShouldPersistTaps: "always", contentContainerStyle: tmp20, ListHeaderComponentStyle: tmp13, ListHeaderComponent: SettingSearchBarDefault, ListEmptyComponent: tmp16, onScroll: KeyboardManagerUtils.dismissGlobalKeyboard, scrollIndicatorInsets: tmp23, keyExtractor, renderItem, data: arr, getItemType };
-                  const tmp29 = jsx(_mod7222.FlashList, { keyboardShouldPersistTaps: "always", contentContainerStyle: tmp20, ListHeaderComponentStyle: tmp13, ListHeaderComponent: SettingSearchBarDefault, ListEmptyComponent: tmp16, onScroll: KeyboardManagerUtils.dismissGlobalKeyboard, scrollIndicatorInsets: tmp23, keyExtractor, renderItem, data: arr, getItemType });
+                  const tmp29 = jsx(_mod7256.FlashList, { keyboardShouldPersistTaps: "always", contentContainerStyle: tmp20, ListHeaderComponentStyle: tmp13, ListHeaderComponent: SettingSearchBarDefault, ListEmptyComponent: tmp16, onScroll: KeyboardManagerUtils.dismissGlobalKeyboard, scrollIndicatorInsets: tmp23, keyExtractor, renderItem, data: arr, getItemType });
                   cResult[19] = tmp16;
                   cResult[20] = tmp13;
                   cResult[21] = arr;

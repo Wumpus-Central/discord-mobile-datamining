@@ -1,9 +1,9 @@
-// === Module 8591: NativeChatCapabilities ===
+// === Module 8628: NativeChatCapabilities ===
 
-// Module 8591 (NativeChatCapabilities)
+// Module 8628 (NativeChatCapabilities)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import NativeChatModuleDefault from "NativeChatModule" /* 8592 */;
+import NativeChatModuleDefault from "NativeChatModule" /* 8629 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

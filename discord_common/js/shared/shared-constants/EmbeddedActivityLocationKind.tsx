@@ -1,6 +1,6 @@
-// === Module 11405: EmbeddedActivityLocationKind ===
+// === Module 11442: EmbeddedActivityLocationKind ===
 
-// Module 11405 (EmbeddedActivityLocationKind)
+// Module 11442 (EmbeddedActivityLocationKind)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/EmbeddedActivityLocationKind.tsx");

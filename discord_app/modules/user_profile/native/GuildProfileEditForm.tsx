@@ -1,29 +1,29 @@
-// === Module 16002: GuildProfileEditForm ===
+// === Module 16230: GuildProfileEditForm ===
 
-// Module 16002 (GuildProfileEditForm)
+// Module 16230 (GuildProfileEditForm)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7255 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7280 */;
-import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8653 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8655 */;
-import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9674 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9794 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9795 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15889 */;
-import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 15892 */;
-import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 15898 */;
-import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 15923 */;
-import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 15979 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7289 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7314 */;
+import UserProfileSettingsActionCreators from "UserProfileSettingsActionCreators" /* 8690 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8692 */;
+import PremiumUpsellUtilsDefault from "PremiumUpsellUtils" /* 9706 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9826 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9827 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16115 */;
+import UserProfileEditFormSharedStylesDefault from "UserProfileEditFormSharedStyles" /* 16118 */;
+import UserProfilePremiumTryItOutMobileRefreshExperiment from "UserProfilePremiumTryItOutMobileRefreshExperiment" /* 16124 */;
+import UserProfileUpsellCardDefault from "UserProfileUpsellCard" /* 16149 */;
+import UserProfileFloatingUpsellDefault from "UserProfileFloatingUpsell" /* 16205 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4884 */;
-import UserProfileStore from "UserProfileStore" /* 7704 */;
+import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import UserProfileStore from "UserProfileStore" /* 7738 */;
 
 const require = globalThis.__r;
 
@@ -45,7 +45,7 @@ function EditGuildProfileBanner(user) {
     if (c4) {
       let obj = { user, analyticsLocations, showRemoveBanner: null, removeText: null, onBannerChange: null, onGifBannerSelect: null };
       const tmpResult = ActionSheetActionCreatorsDefault;
-      const tmp13 = asyncRequireImpl(15877, dependencyMap.paths);
+      const tmp13 = asyncRequireImpl(16103, dependencyMap.paths);
       banner = undefined;
       if (banner != null) {
         banner = banner.banner;
@@ -81,7 +81,7 @@ function EditGuildProfileBanner(user) {
   obj3.editButtonAccessibilityLabel = intl.string(user(1125).t["95hPAe"]);
   obj3.editDisabled = disabled;
   obj2.children = closure_17(UserProfileEditBannerButtonDefault, obj3);
-  return closure_17(user(7255).AnalyticsLocationProvider, obj2);
+  return closure_17(user(7289).AnalyticsLocationProvider, obj2);
 }
 let closure_3 = ["nick", "bio", "guild_tag"];
 let closure_4 = ["nick", "bio", "guild_tag"];

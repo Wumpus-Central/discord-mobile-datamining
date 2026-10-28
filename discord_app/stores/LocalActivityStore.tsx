@@ -1,25 +1,25 @@
-// === Module 11198: LocalActivityStore ===
+// === Module 11233: LocalActivityStore ===
 
-// Module 11198 (LocalActivityStore)
+// Module 11233 (LocalActivityStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1354 from "module_1354" /* 1354 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
-import ActivityFlagUtils from "ActivityFlagUtils" /* 11206 */;
+import ActivityFlagUtils from "ActivityFlagUtils" /* 11242 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
 import ApplicationStore from "ApplicationStore" /* 2042 */;
 import RunningGameStore from "RunningGameStore" /* 2018 */;
-import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 11199 */;
-import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 11200 */;
-import SpotifyStore from "SpotifyStore" /* 6500 */;
+import SocialSdkApplicationStore from "SocialSdkApplicationStore" /* 11234 */;
+import FirstPartyRichPresenceStore from "FirstPartyRichPresenceStore" /* 11235 */;
+import SpotifyStore from "SpotifyStore" /* 6534 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6643 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6677 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
 import DetectableGameStore from "DetectableGameStore" /* 2036 */;
-import ExternalStreamingStore from "ExternalStreamingStore" /* 11203 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
-import SessionsStore from "SessionsStore" /* 5717 */;
+import ExternalStreamingStore from "ExternalStreamingStore" /* 11239 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import SessionsStore from "SessionsStore" /* 5752 */;
 
 require = fn;
 function updateActivities() {

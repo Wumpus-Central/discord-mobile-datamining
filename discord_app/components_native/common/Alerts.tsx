@@ -1,22 +1,22 @@
-// === Module 18419: Alerts ===
+// === Module 18660: Alerts ===
 
-// Module 18419 (Alerts)
+// Module 18660 (Alerts)
 import discord_common_shallowEqualDefault from "discord_common/shallowEqual" /* 568 */;
 import nativeDefault from "native" /* 587 */;
-import native from "native" /* 5038 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
-import timing from "timing" /* 5207 */;
-import spring from "spring" /* 5248 */;
-import springPresets from "springPresets" /* 5249 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5910 */;
-import OverlayViewDefault from "OverlayView" /* 5916 */;
-import ModalRegistryDefault from "ModalRegistry" /* 18420 */;
+import native from "native" /* 5070 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import timing from "timing" /* 5242 */;
+import spring from "spring" /* 5283 */;
+import springPresets from "springPresets" /* 5284 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
+import OverlayViewDefault from "OverlayView" /* 5951 */;
+import ModalRegistryDefault from "ModalRegistry" /* 18661 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
-import PermissionSpeakStore from "PermissionSpeakStore" /* 15098 */;
-import PermissionVADStore from "PermissionVADStore" /* 15681 */;
-import SurveyStore from "SurveyStore" /* 7858 */;
-import AlertStore from "AlertStore" /* 10024 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
+import PermissionSpeakStore from "PermissionSpeakStore" /* 15321 */;
+import PermissionVADStore from "PermissionVADStore" /* 15907 */;
+import SurveyStore from "SurveyStore" /* 7892 */;
+import AlertStore from "AlertStore" /* 10056 */;
 
 const require = globalThis.__r;
 
@@ -73,7 +73,7 @@ let items3 = [SurveyStore];
 obj3.stores = items3;
 items1[2] = obj3;
 const stores = new ModalRegistryDefault(items1);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj4 = { alertWrapper: null, alertContentWrapper: null };
 let obj6 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -730,7 +730,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function AlertW
 function renderAlertItem(arg0, item, transitionState, cleanUp) {
   return __initData(closure_22, { item, transitionState, cleanUp }, arg0);
 }
-let closure_26 = Object.freeze({ renderAlert: "Array", renderKey: "unicodeVersion", props: "children" });
+let closure_26 = Object.freeze({ renderAlert: "Array", renderKey: "ix", props: "withSpring" });
 ReactCompilerGating = fn(558);
 const tmp7 = new ModalRegistryDefault(items1);
 const size = fn(2);
@@ -766,7 +766,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             return <openModal.component />;
           };
         } else {
-          return { renderAlert: "Array", renderKey: "unicodeVersion", props: "children" };
+          return { renderAlert: "Array", renderKey: "ix", props: "withSpring" };
         }
       }
     };
@@ -821,7 +821,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           obj3.renderItem = renderAlertItem;
           obj3.getItemKey = getAlertItemKey;
           obj3.wrapChildren = wrapAlerts;
-          const tmp22 = closure_12(tmp(5038).TransitionGroup, obj3);
+          const tmp22 = closure_12(tmp(5070).TransitionGroup, obj3);
           cResult[10] = tmp17;
           cResult[11] = tmp22;
           let tmp18 = tmp22;
@@ -876,7 +876,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return <openModal.component />;
         };
       } else {
-        return { renderAlert: "Array", renderKey: "unicodeVersion", props: "children" };
+        return { renderAlert: "Array", renderKey: "ix", props: "withSpring" };
       }
     }
   });

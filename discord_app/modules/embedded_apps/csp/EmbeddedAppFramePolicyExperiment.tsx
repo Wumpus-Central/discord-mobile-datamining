@@ -1,6 +1,6 @@
-// === Module 10777: EmbeddedAppFramePolicyExperiment ===
+// === Module 10811: EmbeddedAppFramePolicyExperiment ===
 
-// Module 10777 (EmbeddedAppFramePolicyExperiment)
+// Module 10811 (EmbeddedAppFramePolicyExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

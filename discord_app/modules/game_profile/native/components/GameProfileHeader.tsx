@@ -1,30 +1,30 @@
-// === Module 9302: GameProfileHeader ===
+// === Module 9334: GameProfileHeader ===
 
-// Module 9302 (GameProfileHeader)
+// Module 9334 (GameProfileHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import LinearGradientDefault from "LinearGradient" /* 5259 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import SKUUtils from "SKUUtils" /* 9303 */;
-import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 9304 */;
-import GameCoverArtDefault from "GameCoverArt" /* 9305 */;
-import GameProfileRankPillDefault from "GameProfileRankPill" /* 9307 */;
-import _modDef9309 from "module_9309" /* 9309 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import LinearGradientDefault from "LinearGradient" /* 5294 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import SKUUtils from "SKUUtils" /* 9335 */;
+import useGameProfileHeroBackgroundURLDefault from "useGameProfileHeroBackgroundURL" /* 9336 */;
+import GameCoverArtDefault from "GameCoverArt" /* 9337 */;
+import GameProfileRankPillDefault from "GameProfileRankPill" /* 9339 */;
+import _modDef9341 from "module_9341" /* 9341 */;
 import noop from "module_19" /* 19 */;
 
 const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const GameProfileConstants = fn(9300);
+const GameProfileConstants = fn(9332);
 ({ DISCORD_APP_GAME_ID: hasOwnProperty, MOBILE_GAME_PROFILE_MAX_WIDTH } = GameProfileConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let c8 = 114;
 let c9 = "rgba(0,0,0,0.3)";
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, artHero: null, artHeroImage: null, artHeroGradient: null, headerContent: null, shadowContainer: null, coverContainer: null, iconContainer: null, titleContainer: null, titleRow: null, title: null, wavingWumpus: null, textShadow: null };
 const rect = { width: "100%", position: "absolute", top: 0, bottom: -nativeDefault.space.PX_80, left: 0, right: 0 };
 obj2.artHero = rect;
@@ -272,7 +272,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
   const items8 = [timestampProducer(Text_Text.Text, obj13), ];
   let tmp12Result3 = game.id === hasOwnProperty;
   if (tmp12Result3) {
-    const obj14 = { source: _modDef9309, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
+    const obj14 = { source: _modDef9341, style: tmp.wavingWumpus, accessible: false, importantForAccessibility: "no" };
     tmp12Result3 = timestampProducer(FastImageDefault, obj14);
     const tmp6Result = FastImageDefault;
   }

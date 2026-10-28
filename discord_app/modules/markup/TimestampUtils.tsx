@@ -1,9 +1,9 @@
-// === Module 8499: TimestampUtils ===
+// === Module 8536: TimestampUtils ===
 
-// Module 8499 (TimestampUtils)
+// Module 8536 (TimestampUtils)
 import DurationsDefault from "Durations" /* 1101 */;
 import _modDef2046 from "module_2046" /* 2046 */;
-import DateUtils from "DateUtils" /* 4797 */;
+import DateUtils from "DateUtils" /* 4829 */;
 import size from "module_2" /* 2 */;
 
 const TIMESTAMP_FORMATS = {

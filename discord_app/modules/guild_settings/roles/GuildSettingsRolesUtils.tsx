@@ -1,20 +1,20 @@
-// === Module 19159: GuildSettingsRolesUtils ===
+// === Module 19422: GuildSettingsRolesUtils ===
 
-// Module 19159 (GuildSettingsRolesUtils)
+// Module 19422 (GuildSettingsRolesUtils)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import UserUtilsDefault from "UserUtils" /* 5026 */;
-import fuzzysearchDefault from "fuzzysearch" /* 6829 */;
-import GuildUtilsDefault from "GuildUtils" /* 6831 */;
-import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7228 */;
+import UserUtilsDefault from "UserUtils" /* 5058 */;
+import fuzzysearchDefault from "fuzzysearch" /* 6863 */;
+import GuildUtilsDefault from "GuildUtils" /* 6865 */;
+import GuildRoleMemberActionCreators from "GuildRoleMemberActionCreators" /* 7262 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import GuildMemberStore from "GuildMemberStore" /* 4916 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(19150).GuildSettingsRoleEditSections;
+const constants = fn(19413).GuildSettingsRoleEditSections;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildMembers(arg0, arg1) {

@@ -1,6 +1,6 @@
-// === Module 5212: ActionSheetStore ===
+// === Module 5247: ActionSheetStore ===
 
-// Module 5212 (ActionSheetStore)
+// Module 5247 (ActionSheetStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

@@ -1,9 +1,9 @@
-// === Module 7410: subscribeGuildMembers ===
+// === Module 7445: subscribeGuildMembers ===
 
-// Module 7410 (subscribeGuildMembers)
+// Module 7445 (subscribeGuildMembers)
 import _modDef12 from "module_12" /* 12 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6690 */;
+import GuildMemberRequesterStore from "GuildMemberRequesterStore" /* 6724 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -36,8 +36,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscribe
         reason(1254).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1254);
       }
-      closure_0(7379).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7379);
+      closure_0(7414).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7414);
     });
     return () => {
       const item = reason(12).forEach(closure_1_0, (userIds, guildId) => closure_1_0(closure_1_2[7]).unsubscribeMembers(guildId, userIds));
@@ -69,8 +69,8 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscribe
         reason(1254).captureMessage("SubscribeGuildMembers called with more than 50 userIds.", obj2);
         const obj = reason(1254);
       }
-      closure_0(7379).subscribeMembers(guildId, userIds);
-      const obj4 = closure_0(7379);
+      closure_0(7414).subscribeMembers(guildId, userIds);
+      const obj4 = closure_0(7414);
     });
     return () => {
       const item = reason(12).forEach(closure_1_0, (userIds, guildId) => closure_1_0(closure_1_2[7]).unsubscribeMembers(guildId, userIds));

@@ -1,41 +1,41 @@
-// === Module 18632: VoicePanelPreJoinContent ===
+// === Module 18880: VoicePanelPreJoinContent ===
 
-// Module 18632 (VoicePanelPreJoinContent)
+// Module 18880 (VoicePanelPreJoinContent)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import native from "native" /* 5038 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import spring from "spring" /* 5248 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5990 */;
-import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6635 */;
-import StreamKeyUtils from "StreamKeyUtils" /* 6646 */;
-import NativeViewDefault from "NativeView" /* 6888 */;
-import CircleErrorIcon from "CircleErrorIcon" /* 7014 */;
-import StreamActionCreators from "StreamActionCreators" /* 7830 */;
-import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7879 */;
-import FormComponents from "FormComponents" /* 9164 */;
-import useTrackImpressionDefault from "useTrackImpression" /* 9360 */;
-import roundToNearestPixelDefault from "roundToNearestPixel" /* 11965 */;
+import native from "native" /* 5070 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import spring from "spring" /* 5283 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6025 */;
+import SelectedChannelActionCreatorsDefault from "SelectedChannelActionCreators" /* 6669 */;
+import StreamKeyUtils from "StreamKeyUtils" /* 6680 */;
+import NativeViewDefault from "NativeView" /* 6922 */;
+import CircleErrorIcon from "CircleErrorIcon" /* 7048 */;
+import StreamActionCreators from "StreamActionCreators" /* 7864 */;
+import StageChannelModalActionCreators from "StageChannelModalActionCreators" /* 7913 */;
+import FormComponents from "FormComponents" /* 9197 */;
+import useTrackImpressionDefault from "useTrackImpression" /* 9392 */;
+import roundToNearestPixelDefault from "roundToNearestPixel" /* 12003 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
-import GameConsoleStore from "GameConsoleStore" /* 5716 */;
-import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 15080 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6643 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
+import GameConsoleStore from "GameConsoleStore" /* 5751 */;
+import VoiceChannelBlockedUserStore from "VoiceChannelBlockedUserStore" /* 15303 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6677 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
 import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
-import SessionsStore from "SessionsStore" /* 5717 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
+import SessionsStore from "SessionsStore" /* 5752 */;
 import UserStore from "UserStore" /* 1389 */;
-import VoiceStateStore from "VoiceStateStore" /* 5631 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5718 */;
+import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5753 */;
 
 require = fn;
 function renderItem(arg0, arg1, transitionState, transitionCleanUp) {
@@ -44,17 +44,17 @@ function renderItem(arg0, arg1, transitionState, transitionCleanUp) {
 }
 let closure_3 = ["transitionState", "transitionCleanUp"];
 const StyleSheet = fn(17).StyleSheet;
-const MODE_CHANGE_PHYSICS = fn(10904).MODE_CHANGE_PHYSICS;
-const EDGE_GUTTER = fn(10907).EDGE_GUTTER;
+const MODE_CHANGE_PHYSICS = fn(10939).MODE_CHANGE_PHYSICS;
+const EDGE_GUTTER = fn(10942).EDGE_GUTTER;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_22, AnalyticsSections: closure_23, Permissions: closure_24 } = Constants);
-const constants4 = fn(15084).VoiceChannelWarningSurfaces;
-const Features = fn(5719).Features;
+const constants4 = fn(15307).VoiceChannelWarningSurfaces;
+const Features = fn(5754).Features;
 const jsxProd = fn(21);
 ({ jsx: closure_27, jsxs: closure_28, Fragment: closure_29 } = jsxProd);
-const createStyles = fn(4972);
-let obj = { contentWrapper: { paddingTop: EDGE_GUTTER + fn(10910).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 }, channelInfoWrapper: { paddingHorizontal: 16 }, subheading: { textAlign: "center", paddingTop: 16, paddingBottom: 16 }, previewImageWrapper: null, previewImage: null, activityInfoWrapper: null, activityInfoHeader: null, joinButtonWrapper: null, optInChannelsContainer: null, blockedMemberWarning: null, consolePreJoinPadding: null };
-let obj3 = { paddingTop: EDGE_GUTTER + fn(10910).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 };
+const createStyles = fn(5004);
+let obj = { contentWrapper: { paddingTop: EDGE_GUTTER + fn(10945).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 }, channelInfoWrapper: { paddingHorizontal: 16 }, subheading: { textAlign: "center", paddingTop: 16, paddingBottom: 16 }, previewImageWrapper: null, previewImage: null, activityInfoWrapper: null, activityInfoHeader: null, joinButtonWrapper: null, optInChannelsContainer: null, blockedMemberWarning: null, consolePreJoinPadding: null };
+let obj3 = { paddingTop: EDGE_GUTTER + fn(10945).BASE_VOICE_PANEL_HEADER_HEIGHT + EDGE_GUTTER, gap: 24, paddingBottom: 16 };
 obj.previewImageWrapper = { position: "relative", width: "100%", aspectRatio: 1.7777777777777777, borderRadius: nativeDefault.radii.lg, overflow: "hidden", justifyContent: "center", backgroundColor: nativeDefault.colors.BLACK };
 let obj5 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -474,12 +474,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                   if (null != inputApplication) {
                                     const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                                     v3 = num3;
-                                    const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                                    const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                                     return obj7;
                                   }
                                 } else {
-                                  const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-                                  const obj2 = analyticsLocations(6635);
+                                  const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+                                  const obj2 = analyticsLocations(6669);
                                 }
                               } else {
                                 num3 = 1;
@@ -558,12 +558,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                     if (null != inputApplication) {
                                       const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                                       v3 = num3;
-                                      const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                                      const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                                       return obj7;
                                     }
                                   } else {
-                                    const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-                                    const obj2 = analyticsLocations(6635);
+                                    const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+                                    const obj2 = analyticsLocations(6669);
                                   }
                                 } else {
                                   num3 = 1;
@@ -644,12 +644,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                       if (null != inputApplication) {
                                         const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                                         v3 = num3;
-                                        const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                                        const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                                         return obj7;
                                       }
                                     } else {
-                                      const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-                                      const obj2 = analyticsLocations(6635);
+                                      const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+                                      const obj2 = analyticsLocations(6669);
                                     }
                                   } else {
                                     num3 = 1;
@@ -725,12 +725,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                       if (null != inputApplication) {
                                         const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                                         v3 = num3;
-                                        const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                                        const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                                         return obj7;
                                       }
                                     } else {
-                                      const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-                                      const obj2 = analyticsLocations(6635);
+                                      const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+                                      const obj2 = analyticsLocations(6669);
                                     }
                                   } else {
                                     num3 = 1;
@@ -803,12 +803,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                       if (null != inputApplication) {
                                         const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                                         v3 = num3;
-                                        const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                                        const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                                         return obj7;
                                       }
                                     } else {
-                                      const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-                                      const obj2 = analyticsLocations(6635);
+                                      const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+                                      const obj2 = analyticsLocations(6669);
                                     }
                                   } else {
                                     num3 = 1;
@@ -905,12 +905,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                                 if (null != inputApplication) {
                                                   const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                                                   v3 = num3;
-                                                  const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                                                  const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                                                   return obj7;
                                                 }
                                               } else {
-                                                const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-                                                const obj2 = analyticsLocations(6635);
+                                                const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+                                                const obj2 = analyticsLocations(6669);
                                               }
                                             } else {
                                               num3 = 1;
@@ -989,12 +989,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                           if (null != inputApplication) {
                                             const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                                             v3 = num3;
-                                            const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                                            const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                                             return obj7;
                                           }
                                         } else {
-                                          const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-                                          const obj2 = analyticsLocations(6635);
+                                          const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+                                          const obj2 = analyticsLocations(6669);
                                         }
                                       } else {
                                         num3 = 1;
@@ -1073,12 +1073,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                         if (null != inputApplication) {
                                           const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                                           v3 = num3;
-                                          const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                                          const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                                           return obj7;
                                         }
                                       } else {
-                                        const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-                                        const obj2 = analyticsLocations(6635);
+                                        const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+                                        const obj2 = analyticsLocations(6669);
                                       }
                                     } else {
                                       num3 = 1;
@@ -1151,12 +1151,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                     if (null != inputApplication) {
                                       const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                                       v3 = num3;
-                                      const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                                      const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                                       return obj7;
                                     }
                                   } else {
-                                    const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-                                    const obj2 = analyticsLocations(6635);
+                                    const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+                                    const obj2 = analyticsLocations(6669);
                                   }
                                 } else {
                                   num3 = 1;
@@ -1234,12 +1234,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                   if (null != inputApplication) {
                                     const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                                     v3 = num3;
-                                    const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                                    const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                                     return obj7;
                                   }
                                 } else {
-                                  const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-                                  const obj2 = analyticsLocations(6635);
+                                  const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+                                  const obj2 = analyticsLocations(6669);
                                 }
                               } else {
                                 num3 = 1;
@@ -1313,12 +1313,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                                 if (null != inputApplication) {
                                   const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                                   v3 = num3;
-                                  const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                                  const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                                   return obj7;
                                 }
                               } else {
-                                const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-                                const obj2 = analyticsLocations(6635);
+                                const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+                                const obj2 = analyticsLocations(6669);
                               }
                             } else {
                               num3 = 1;
@@ -1393,12 +1393,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                             if (null != inputApplication) {
                               const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                               v3 = num3;
-                              const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                              const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                               return obj7;
                             }
                           } else {
-                            const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-                            const obj2 = analyticsLocations(6635);
+                            const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+                            const obj2 = analyticsLocations(6669);
                           }
                         } else {
                           num3 = 1;
@@ -1475,12 +1475,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
                   if (null != inputApplication) {
                     const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                     v3 = num3;
-                    const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                    const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                     return obj7;
                   }
                 } else {
-                  const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-                  const obj2 = analyticsLocations(6635);
+                  const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+                  const obj2 = analyticsLocations(6669);
                 }
               } else {
                 num3 = 1;
@@ -1601,12 +1601,12 @@ let closure_37 = ReactCompilerGating.isReactCompilerEnabled() ? (function Activi
               if (null != inputApplication) {
                 const obj6 = { channelId, applicationId: inputApplication.id, launchId: v3.launchId, inputApplication, analyticsLocations: num3 };
                 v3 = num3;
-                const obj7 = { value: v3(11462).maybeJoinEmbeddedActivity(obj6), done: false };
+                const obj7 = { value: v3(11500).maybeJoinEmbeddedActivity(obj6), done: false };
                 return obj7;
               }
             } else {
-              const voiceChannel = analyticsLocations(6635).selectVoiceChannel(channelId);
-              const obj2 = analyticsLocations(6635);
+              const voiceChannel = analyticsLocations(6669).selectVoiceChannel(channelId);
+              const obj2 = analyticsLocations(6669);
             }
           } else {
             num3 = 1;
@@ -2817,10 +2817,10 @@ let result = size.fileFinishedImporting("modules/voice_panel/native/prejoin/Voic
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function VoicePanelPreJoinWrapper() {
   const cResult = channelId(576).c(8);
-  const context = noop.useContext(guildId(10903));
+  const context = noop.useContext(guildId(10938));
   channelId = context.channelId;
   guildId = context.guildId;
-  const tmp5 = guildId(18520)(channelId);
+  const tmp5 = guildId(18768)(channelId);
   dependencyMap = tmp5;
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [SortedVoiceStateStore, VoiceChannelBlockedUserStore, EmbeddedActivitiesStore, MediaEngineStore, ApplicationStreamingStore];
@@ -2836,10 +2836,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         let tmp13 = cResult[5];
       }
       const tmpResult = tmp(504);
-      const stateFromStores = tmpResult.useStateFromStores(first, tmp12, tmp13, tmp(18635).areVoicePanelPreJoinContentPropsEqual);
+      const stateFromStores = tmpResult.useStateFromStores(first, tmp12, tmp13, tmp(18883).areVoicePanelPreJoinContentPropsEqual);
       if (cResult[6] !== stateFromStores) {
         const obj2 = { item: stateFromStores, renderItem };
-        const tmp22 = closure_27(tmp(5038).TransitionItem, obj2);
+        const tmp22 = closure_27(tmp(5070).TransitionItem, obj2);
         cResult[6] = stateFromStores;
         cResult[7] = tmp22;
         let tmp19 = tmp22;
@@ -2896,10 +2896,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   tmp12 = fn;
   let obj = channelId(576);
 }) : (function VoicePanelPreJoinWrapper() {
-  const context = noop.useContext(guildId(10903));
+  const context = noop.useContext(guildId(10938));
   const channelId = context.channelId;
   guildId = context.guildId;
-  const tmp2 = guildId(18520)(channelId);
+  const tmp2 = guildId(18768)(channelId);
   dependencyMap = tmp2;
   let items = [SortedVoiceStateStore, VoiceChannelBlockedUserStore, EmbeddedActivitiesStore, MediaEngineStore, ApplicationStreamingStore];
   let items1 = [tmp2, channelId, guildId];
@@ -2939,6 +2939,6 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       };
       return obj;
     }
-  }, items1, channelId(18635).areVoicePanelPreJoinContentPropsEqual);
-  return closure_27(channelId(5038).TransitionItem, { item: stateFromStores, renderItem });
+  }, items1, channelId(18883).areVoicePanelPreJoinContentPropsEqual);
+  return closure_27(channelId(5070).TransitionItem, { item: stateFromStores, renderItem });
 }));

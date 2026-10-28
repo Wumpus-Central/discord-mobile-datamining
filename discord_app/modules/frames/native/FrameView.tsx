@@ -1,18 +1,18 @@
-// === Module 18475: FrameView ===
+// === Module 18716: FrameView ===
 
-// Module 18475 (FrameView)
+// Module 18716 (FrameView)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1125 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5910 */;
-import leaveFrame from "leaveFrame" /* 10769 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 11782 */;
-import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 18476 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
+import leaveFrame from "leaveFrame" /* 10803 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 11820 */;
+import frames_getDefaultOrientationLockState from "frames/getDefaultOrientationLockState" /* 18717 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 require = fn;
-const FrameLayoutModes = fn(6777).FrameLayoutModes;
+const FrameLayoutModes = fn(6811).FrameLayoutModes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

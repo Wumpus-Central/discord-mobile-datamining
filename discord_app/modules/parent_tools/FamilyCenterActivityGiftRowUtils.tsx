@@ -1,10 +1,10 @@
-// === Module 16234: FamilyCenterActivityGiftRowUtils ===
+// === Module 16462: FamilyCenterActivityGiftRowUtils ===
 
-// Module 16234 (FamilyCenterActivityGiftRowUtils)
+// Module 16462 (FamilyCenterActivityGiftRowUtils)
 import util from "util" /* 1125 */;
 import _modDef2535 from "module_2535" /* 2535 */;
-import _mod4401 from "module_4401" /* 4401 */;
-import PriceUtils from "PriceUtils" /* 7341 */;
+import _mod4433 from "module_4433" /* 4433 */;
+import PriceUtils from "PriceUtils" /* 7376 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/parent_tools/FamilyCenterActivityGiftRowUtils.tsx");
@@ -14,7 +14,7 @@ export const getGiftRowDisplayInfo = function getGiftRowDisplayInfo(giftInfo) {
 };
 export const formatGiftDate = function formatGiftDate(claimedAt) {
   const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
-  return dateTimeFormat.format(_mod4401.parseISO(claimedAt));
+  return dateTimeFormat.format(_mod4433.parseISO(claimedAt));
 };
 export const getGiftSubtext = function getGiftSubtext(claimed) {
   ({ price, gifterName, offeredAt, claimedAt } = claimed);
@@ -39,16 +39,16 @@ export const getGiftSubtext = function getGiftSubtext(claimed) {
       const obj3 = { date: null };
       const _Intl2 = Intl;
       const dateTimeFormat = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
-      obj3.date = dateTimeFormat.format(_mod4401.parseISO(claimedAt));
+      obj3.date = dateTimeFormat.format(_mod4433.parseISO(claimedAt));
       let formatToPlainStringResult1 = formatToPlainString(tmp11.kDyllq, obj3);
-      const tmp8Result = _mod4401;
+      const tmp8Result = _mod4433;
     } else {
       const obj4 = { date: null };
       const _Intl = Intl;
       const dateTimeFormat1 = new Intl.DateTimeFormat(util.intl.currentLocale, { month: "short", day: "numeric" });
-      obj4.date = dateTimeFormat1.format(_mod4401.parseISO(offeredAt));
+      obj4.date = dateTimeFormat1.format(_mod4433.parseISO(offeredAt));
       formatToPlainStringResult1 = formatToPlainString(tmp11.gAG45y, obj4);
-      const tmp8Result2 = _mod4401;
+      const tmp8Result2 = _mod4433;
     }
     items[1] = formatToPlainStringResult1;
     const _Boolean = Boolean;

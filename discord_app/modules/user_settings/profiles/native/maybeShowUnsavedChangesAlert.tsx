@@ -1,8 +1,8 @@
-// === Module 11075: maybeShowUnsavedChangesAlert ===
+// === Module 11110: maybeShowUnsavedChangesAlert ===
 
-// Module 11075 (maybeShowUnsavedChangesAlert)
+// Module 11110 (maybeShowUnsavedChangesAlert)
 import util from "util" /* 1125 */;
-import AlertModal from "AlertModal" /* 5915 */;
+import AlertModal from "AlertModal" /* 5950 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -133,16 +133,16 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
   onReset = onReset.onReset;
   const onContinue = onReset.onContinue;
   if (onReset.hasUnsavedChanges) {
-    onReset(5160).dismissKeyboard();
-    const obj = onReset(5160);
+    onReset(5195).dismissKeyboard();
+    const obj = onReset(5195);
     if (obj2.getIsUserProfileMobileSavePromptEnabled(tmp)) {
-      tmp7(5211).hideActionSheet();
-      const tmp7Result = tmp7(5211);
-      tmp7(5910).close();
-      const tmp4Result = tmp4(5911);
+      tmp7(5246).hideActionSheet();
+      const tmp7Result = tmp7(5246);
+      tmp7(5945).close();
+      const tmp4Result = tmp4(5946);
       const obj3 = { onReset, onContinue, onSave: tmp2 };
       tmp4Result.openAlert(c9, closure_6(UnsavedChangesSavePromptAlert, obj3), undefined, { dismissable: true });
-      const tmp7Result3 = tmp7(5910);
+      const tmp7Result3 = tmp7(5945);
     } else {
       const obj4 = { title: null, body: null, confirmText: null, cancelText: null, onConfirm: null, onCancel: null, isDismissable: false };
       const intl = tmp4(1125).intl;
@@ -160,10 +160,10 @@ export default function maybeShowUnsavedChangesAlert(onReset) {
       obj4.onCancel = function onCancel() {
         onContinue(dependencyMap[10]).close();
       };
-      tmp7(5910).show(obj4);
-      const tmp7Result4 = tmp7(5910);
+      tmp7(5945).show(obj4);
+      const tmp7Result4 = tmp7(5945);
     }
-    obj2 = onReset(11076);
+    obj2 = onReset(11111);
   } else {
     onContinue();
   }

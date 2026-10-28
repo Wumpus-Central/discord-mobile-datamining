@@ -1,6 +1,6 @@
-// === Module 18484: ExternalPipAutoEnterExperiment ===
+// === Module 18725: ExternalPipAutoEnterExperiment ===
 
-// Module 18484 (ExternalPipAutoEnterExperiment)
+// Module 18725 (ExternalPipAutoEnterExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

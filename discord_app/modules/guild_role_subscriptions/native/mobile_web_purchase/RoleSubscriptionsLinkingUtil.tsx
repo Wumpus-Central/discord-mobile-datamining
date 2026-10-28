@@ -1,6 +1,6 @@
-// === Module 7430: RoleSubscriptionsLinkingUtil ===
+// === Module 7465: RoleSubscriptionsLinkingUtil ===
 
-// Module 7430 (RoleSubscriptionsLinkingUtil)
+// Module 7465 (RoleSubscriptionsLinkingUtil)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -285,7 +285,7 @@ let closure_12 = async function _performDeveloperPortalRedirectWithTokenHandoff(
 };
 const Constants = fn(1084);
 ({ RelativeMarketingURLs: closure_4, Routes: hasOwnProperty } = Constants);
-const StaticChannelRoute = fn(4831).StaticChannelRoute;
+const StaticChannelRoute = fn(4863).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/mobile_web_purchase/RoleSubscriptionsLinkingUtil.tsx");
 

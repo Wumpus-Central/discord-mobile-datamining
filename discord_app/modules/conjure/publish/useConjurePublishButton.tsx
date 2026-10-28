@@ -1,10 +1,10 @@
-// === Module 12151: useConjurePublishButton ===
+// === Module 12189: useConjurePublishButton ===
 
-// Module 12151 (useConjurePublishButton)
+// Module 12189 (useConjurePublishButton)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import _modDef3831 from "module_3831" /* 3831 */;
-import useConjurePublishActionDefault from "useConjurePublishAction" /* 11767 */;
+import _modDef3863 from "module_3863" /* 3863 */;
+import useConjurePublishActionDefault from "useConjurePublishAction" /* 11803 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -14,7 +14,7 @@ function publishButtonText(upToDate, arg1) {
     return arg1;
   } else if (null == upToDate) {
     const intl2 = util.intl;
-    let label = intl2.string(_modDef3831["120EFN"]);
+    let label = intl2.string(_modDef3863["120EFN"]);
   } else {
     let tmp = null != upToDate && upToDate.upToDate;
     if (tmp) {
@@ -26,7 +26,7 @@ function publishButtonText(upToDate, arg1) {
     if (tmp) {
       if (!upToDate.publishing) {
         const intl = util.intl;
-        label = intl.string(_modDef3831.kAfbEN);
+        label = intl.string(_modDef3863.kAfbEN);
       }
     }
     label = upToDate.label;
@@ -37,7 +37,7 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePublishButton.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePublishButton(arg0, guildId, busy, arg3) {
-  const cResult = c.c(23);
+  const cResult = c.c(29);
   [r10015, require] = noop.useState(null);
   noop.useRef(null);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -187,7 +187,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (true !== publishing) {
     tmp11 = tmp2;
   }
-  const obj2 = { publishOptions: memo1, publish: tmp7, publishing: true === publishing, confirmation: tmp11, variant: null, text: null };
+  const obj2 = { publishOptions: memo1, publish: tmp7, publishing: true === publishing, confirmation: tmp11, variant: null, text: null, label: null, indicator: null };
   let tmp12 = null != tmp7 && tmp7.upToDate;
   if (tmp12) {
     tmp12 = "publish" === tmp7.action;
@@ -201,5 +201,26 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   }
   obj2.variant = str2;
   obj2.text = publishButtonText(tmp7, tmp11);
+  obj2.label = publishButtonText(tmp7, null);
+  let tmp13 = null;
+  if (null != tmp7) {
+    let str3 = "publishing";
+    if (!tmp7.publishing) {
+      let tmp14 = null != tmp7 && tmp7.upToDate;
+      if (tmp14) {
+        tmp14 = "publish" === tmp7.action;
+      }
+      if (tmp14) {
+        tmp14 = !tmp7.awaitingApproval;
+      }
+      let tmp15 = "unpublished";
+      if (tmp14) {
+        tmp15 = null;
+      }
+      str3 = tmp15;
+    }
+    tmp13 = str3;
+  }
+  obj2.indicator = tmp13;
   return obj2;
 });

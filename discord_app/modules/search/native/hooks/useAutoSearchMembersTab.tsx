@@ -1,15 +1,15 @@
-// === Module 18221: useAutoSearchMembersTab ===
+// === Module 18461: useAutoSearchMembersTab ===
 
-// Module 18221 (useAutoSearchMembersTab)
+// Module 18461 (useAutoSearchMembersTab)
 import _mod12 from "module_12" /* 12 */;
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13239 */;
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13456 */;
 import noop from "module_19" /* 19 */;
-import SearchQueryStore from "SearchQueryStore" /* 13253 */;
+import SearchQueryStore from "SearchQueryStore" /* 13470 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_5 = fn(13255).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
+let closure_5 = fn(13472).SEARCH_TEXT_INPUT_DEBOUNCE_TIME;
 const SearchTypes = fn(1084).SearchTypes;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -28,7 +28,7 @@ export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnable
     if (cResult[4] !== arg0) {
       const fn2 = function h() {
         return () => {
-          const result = closure_1(13264).cleanupGuildMemberTab(closure_1_0);
+          const result = closure_1(13481).cleanupGuildMemberTab(closure_1_0);
         };
       };
       const items = [arg0];
@@ -47,7 +47,7 @@ export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnable
     if (!closure_1) {
       const debounceResult = _mod12.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-          const guildIdFromSearchContext = searchContext(13246).getGuildIdFromSearchContext(searchContext);
+          const guildIdFromSearchContext = searchContext(13463).getGuildIdFromSearchContext(searchContext);
           if (null != guildIdFromSearchContext) {
             const channelIds = autocompleteVisible.getChannelIds(searchContext);
             let tmp8 = null;
@@ -65,10 +65,10 @@ export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnable
               tmp12 = tmp8;
             }
             obj4.threadId = tmp12;
-            closure_1(13264).searchGuildMemberTab(obj4);
-            const obj3 = closure_1(13264);
+            closure_1(13481).searchGuildMemberTab(obj4);
+            const obj3 = closure_1(13481);
           }
-          const obj2 = searchContext(13246);
+          const obj2 = searchContext(13463);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(searchContext, debounceResult);
@@ -90,7 +90,7 @@ export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnable
     if (!closure_1) {
       const debounceResult = _mod12.debounce((searchQueryString) => {
         if (!autocompleteVisible.isAutocompleteVisible(searchContext)) {
-          const guildIdFromSearchContext = searchContext(13246).getGuildIdFromSearchContext(searchContext);
+          const guildIdFromSearchContext = searchContext(13463).getGuildIdFromSearchContext(searchContext);
           if (null != guildIdFromSearchContext) {
             const channelIds = autocompleteVisible.getChannelIds(searchContext);
             let tmp8 = null;
@@ -108,10 +108,10 @@ export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnable
               tmp12 = tmp8;
             }
             obj4.threadId = tmp12;
-            closure_1(13264).searchGuildMemberTab(obj4);
-            const obj3 = closure_1(13264);
+            closure_1(13481).searchGuildMemberTab(obj4);
+            const obj3 = closure_1(13481);
           }
-          const obj2 = searchContext(13246);
+          const obj2 = searchContext(13463);
         }
       }, closure_5);
       return SearchPlatformUtilsDefault.subscribeTextInputValue(searchContext, debounceResult);
@@ -119,6 +119,6 @@ export const useAutoSearchMembersTab = ReactCompilerGating.isReactCompilerEnable
   }, items);
   const items1 = [arg0];
   const effect1 = noop.useEffect(() => () => {
-    const result = closure_1(13264).cleanupGuildMemberTab(closure_1_0);
+    const result = closure_1(13481).cleanupGuildMemberTab(closure_1_0);
   }, items1);
 });

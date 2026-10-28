@@ -1,10 +1,10 @@
-// === Module 10700: ConjureRemix ===
+// === Module 10732: ConjureRemix ===
 
-// Module 10700 (ConjureRemix)
-import _modDef3831 from "module_3831" /* 3831 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10723 */;
-import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10728 */;
-import conjureRemixConnection from "conjureRemixConnection" /* 10811 */;
+// Module 10732 (ConjureRemix)
+import _modDef3863 from "module_3863" /* 3863 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10757 */;
+import ConjureWorkerTickets from "ConjureWorkerTickets" /* 10762 */;
+import conjureRemixConnection from "conjureRemixConnection" /* 10845 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import Dispatcher from "Dispatcher" /* 584 */;
 
@@ -43,7 +43,7 @@ function prepareConjureRemix(prepareConjureRemixResult, currentGuildId, arg2) {
           v3 = 3;
         } else if ("rejected" !== closure_129_2) {
           if (closure_129_0 !== closure_130_0) {
-            const result = currentGuildId(10723).updateProjectSettings(closure_129_1.id, { guild_id: closure_129_0, preview_guild_id: closure_129_0 });
+            const result = currentGuildId(10757).updateProjectSettings(closure_129_1.id, { guild_id: closure_129_0, preview_guild_id: closure_129_0 });
             c3 = 4;
             v3 = 1;
             return { value: result.then(() => true, () => false), done: false };
@@ -53,11 +53,11 @@ function prepareConjureRemix(prepareConjureRemixResult, currentGuildId, arg2) {
           tmp33();
         }
         v3(closure_129_1.id);
-        currentGuildId(10723);
+        currentGuildId(10757);
         c3 = 3;
         v3 = 1;
         return {
-          value: currentGuildId(10723).deleteProject(closure_129_1.id).catch(() => {
+          value: currentGuildId(10757).deleteProject(closure_129_1.id).catch(() => {
 
               }),
           done: false
@@ -81,16 +81,16 @@ function prepareConjureRemix(prepareConjureRemixResult, currentGuildId, arg2) {
         if (closure_130_4 != null) {
           tmp10();
         }
-        currentGuildId(10728).forgetEarlyTicket(closure_129_1.id);
+        currentGuildId(10762).forgetEarlyTicket(closure_129_1.id);
         v3(closure_129_1.id);
         closure_1_5(closure_129_1.id);
-        currentGuildId(10728);
+        currentGuildId(10762);
       }
     }
     return value;
   };
   const intl = require("util").intl;
-  dependencyMap = intl.string(_modDef3831.Cn8H0Y);
+  dependencyMap = intl.string(_modDef3863.Cn8H0Y);
   const mintRemixTicketResult = require("ConjureWorkerTickets").mintRemixTicket(prepareConjureRemixResult.id);
   asyncGeneratorStep = mintRemixTicketResult;
   mintRemixTicketResult.catch(() => {
@@ -169,7 +169,7 @@ function prepareConjureRemix(prepareConjureRemixResult, currentGuildId, arg2) {
     }
   };
 }
-const ConjureConnectionStore = fn(10701);
+const ConjureConnectionStore = fn(10733);
 ({ closeConnection: closure_4, ensureConnection: hasOwnProperty } = ConjureConnectionStore);
 let c6 = " (Remix)";
 const map = new Map();

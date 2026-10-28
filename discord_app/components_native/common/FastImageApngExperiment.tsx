@@ -1,6 +1,6 @@
-// === Module 5671: FastImageApngExperiment ===
+// === Module 5706: FastImageApngExperiment ===
 
-// Module 5671 (FastImageApngExperiment)
+// Module 5706 (FastImageApngExperiment)
 import initializeDefault from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1898 */;

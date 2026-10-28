@@ -1,12 +1,12 @@
-// === Module 11428: useVideoStreamError ===
+// === Module 11465: useVideoStreamError ===
 
-// Module 11428 (useVideoStreamError)
-import AVError from "AVError" /* 5898 */;
+// Module 11465 (useVideoStreamError)
+import AVError from "AVError" /* 5933 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import AVErrorStore from "AVErrorStore" /* 11429 */;
+import AVErrorStore from "AVErrorStore" /* 11466 */;
 
 require = fn;
-const MediaEngineContextTypes = fn(5719).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5754).MediaEngineContextTypes;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useVideoStreamErrorContext(arg0, arg1) {
   _require = arg0;

@@ -1,11 +1,11 @@
-// === Module 16167: ModerationUtils ===
+// === Module 16395: ModerationUtils ===
 
-// Module 16167 (ModerationUtils)
+// Module 16395 (ModerationUtils)
 import shims from "shims" /* 586 */;
 import util from "util" /* 1125 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import DMSafetyConstants from "DMSafetyConstants" /* 4802 */;
-import HighlightedSettingsTypes from "HighlightedSettingsTypes" /* 16168 */;
+import DMSafetyConstants from "DMSafetyConstants" /* 4834 */;
+import HighlightedSettingsTypes from "HighlightedSettingsTypes" /* 16396 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 

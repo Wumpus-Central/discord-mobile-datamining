@@ -1,19 +1,19 @@
-// === Module 6835: QuarantineModeInfoAlert ===
+// === Module 6869: QuarantineModeInfoAlert ===
 
-// Module 6835 (QuarantineModeInfoAlert)
+// Module 6869 (QuarantineModeInfoAlert)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import common_AlertDefault from "common/Alert" /* 5979 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import common_AlertDefault from "common/Alert" /* 6014 */;
 import noop from "module_19" /* 19 */;
-import TextStyles from "TextStyles" /* 6652 */;
+import TextStyles from "TextStyles" /* 6686 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { header: null, text: null };
 let obj3 = {};
 const merged = Object.assign(TextStyles(fn(1084).Fonts.PRIMARY_BOLD, nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY, 24));

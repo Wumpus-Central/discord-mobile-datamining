@@ -1,8 +1,8 @@
-// === Module 12082: AppLauncherSelectOptionFormRow ===
+// === Module 12120: AppLauncherSelectOptionFormRow ===
 
-// Module 12082 (AppLauncherSelectOptionFormRow)
+// Module 12120 (AppLauncherSelectOptionFormRow)
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5235 */;
+import Text_Text from "Text/Text" /* 5270 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ const require = globalThis.__r;
 require = fn;
 let closure_2 = ["option", "selected", "selectedItemName", "unselectedSubLabel", "autoFocus"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { formRow: { flexDirection: "row", backgroundColor: nativeDefault.colors.TABLEROW_BACKGROUND_DEFAULT, borderRadius: nativeDefault.radii.lg, alignItems: "center", flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
           if (cResult[13] === tmp9) {
             const _Symbol = Symbol;
             if (cResult[15] === Symbol.for("react.memo_cache_sentinel")) {
-              const tmp22 = jsx(tmp(6914).TableRowArrow, {});
+              const tmp22 = jsx(tmp(6948).TableRowArrow, {});
               cResult[15] = tmp22;
               let tmp20 = tmp22;
             } else {
@@ -86,7 +86,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
             }
             const obj2 = { start: true, end: true, style: tmp13.formRow, label: tmp15, subLabel: cResult[14], trailing: tmp20 };
             const merged = Object.assign(tmp6);
-            const tmp28 = jsx(tmp(8951).FormRow, { start: true, end: true, style: tmp13.formRow, label: tmp15, subLabel: cResult[14], trailing: tmp20 });
+            const tmp28 = jsx(tmp(8985).FormRow, { start: true, end: true, style: tmp13.formRow, label: tmp15, subLabel: cResult[14], trailing: tmp20 });
             cResult[16] = tmp6;
             cResult[17] = tmp13.formRow;
             cResult[18] = tmp15;

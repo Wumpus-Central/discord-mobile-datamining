@@ -1,6 +1,6 @@
-// === Module 14744: MobileNitroManageSubscriptionsSettingsExperiment ===
+// === Module 14967: MobileNitroManageSubscriptionsSettingsExperiment ===
 
-// Module 14744 (MobileNitroManageSubscriptionsSettingsExperiment)
+// Module 14967 (MobileNitroManageSubscriptionsSettingsExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

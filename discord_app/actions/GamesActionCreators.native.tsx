@@ -1,9 +1,9 @@
-// === Module 11364: GamesActionCreators ===
+// === Module 11401: GamesActionCreators ===
 
-// Module 11364 (GamesActionCreators)
+// Module 11401 (GamesActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import LinkingDefault from "Linking" /* 5661 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11365 */;
+import LinkingDefault from "Linking" /* 5696 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11402 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 const require = fn;
@@ -42,8 +42,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         const join_url = body.body.join_url;
         const secret = body.body.secret;
         if (null != join_url) {
-          applicationId(5661).openURL(join_url, constants.SAFARI);
-          const obj3 = applicationId(5661);
+          applicationId(5696).openURL(join_url, constants.SAFARI);
+          const obj3 = applicationId(5696);
           const obj2 = { type: "ACTIVITY_JOIN", applicationId, parentApplicationId, secret, intent: constants2.PLAY, embedded: null };
           let flag3 = closure_1_0.embedded;
           if (flag3 == null) {
@@ -61,8 +61,8 @@ let closure_9 = async function _joinViaDeeplink(arg0) {
         } else {
           const _HermesInternal = HermesInternal;
           const combined = "" + closure_1_4.replace(/\/+$/, "") + constants.GAME_INVITE_FRAGMENT + secret;
-          applicationId(5661).openURL(combined, constants.SAFARI);
-          const obj6 = applicationId(5661);
+          applicationId(5696).openURL(combined, constants.SAFARI);
+          const obj6 = applicationId(5696);
           const obj8 = { type: "ACTIVITY_JOIN", applicationId, parentApplicationId, secret, intent: constants2.PLAY, embedded: null };
           let flag = closure_1_0.embedded;
           if (flag == null) {

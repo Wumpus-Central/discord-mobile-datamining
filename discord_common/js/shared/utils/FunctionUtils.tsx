@@ -1,9 +1,27 @@
-// === Module 10792: utils/FunctionUtils ===
+// === Module 5132: utils/FunctionUtils ===
 
-// Module 10792 (utils/FunctionUtils)
+// Module 5132 (utils/FunctionUtils)
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
+let closure_2 = async function _ignoreErrors() {
+  c2 = 0;
+  c1 = 0;
+  c3 = 0;
+  return (async (arg0) => {
+    await value;
+    if (1 === tmp6) {
+      c3 = 0;
+      c1 = 3;
+    } else if (arg0 === 1) {
+      c1 = 3;
+      throw value;
+    } else if (arg0 !== 2) {
+      c3 = 0;
+    }
+    return value;
+  })();
+};
 const size = fn(2);
 let result = size.fileFinishedImporting("../discord_common/js/shared/utils/FunctionUtils.tsx");
 class PromiseDeduper {
@@ -34,7 +52,7 @@ prototype["one"] = function one(play, fn, arg2) {
     flag = false;
   }
   let cleanupPromise;
-  value = self[self].get(play);
+  value = self.#r.get(play);
   if (!flag) {
     if (null != value) {
       return value;
@@ -46,7 +64,7 @@ prototype["one"] = function one(play, fn, arg2) {
     }
     obj = self.#r;
   });
-  const result = self[self].set(play, cleanupPromise);
+  const result = self.#r.set(play, cleanupPromise);
   return cleanupPromise;
 };
 prototype["many"] = function many(items, fn) {
@@ -58,7 +76,6 @@ prototype["many"] = function many(items, fn) {
   if (flag === undefined) {
     flag = false;
   }
-  let promise;
   let self = this;
   items = [...new Set(items)];
   const items1 = [];
@@ -67,7 +84,7 @@ prototype["many"] = function many(items, fn) {
   const nextResult = iter.next();
   while (iter !== undefined) {
     let tmp3 = nextResult;
-    let obj3 = this[promise];
+    let obj3 = this.#r;
     value = obj3.get(nextResult);
     if (!flag) {
       if (null != value) {
@@ -124,7 +141,7 @@ prototype["many"] = function many(items, fn) {
     })()));
   } else {
     try {
-      promise = fn(items1);
+      fn(items1);
       function _loop(arg0) {
         _self = arg0;
         const cleanupPromise = promise.then((has) => {
@@ -143,14 +160,15 @@ prototype["many"] = function many(items, fn) {
           }
           obj = self.#r;
         });
-        const result = _self[promise].set(arg0, cleanupPromise);
+        const result = _self[closure_1_3].set(arg0, cleanupPromise);
         const result1 = cleanupPromise.set(arg0, cleanupPromise);
       }
       items1[Symbol.iterator]();
     } catch (tmp13) {
-      promise = Promise.reject(tmp13);
+      Promise.reject(tmp13);
     }
   }
+  const set = new Set(items);
 };
 
 export const areArraysShallowlyEqual = function areArraysShallowlyEqual(arg0, arg1) {
@@ -231,6 +249,16 @@ export function promiseThrottle(arg0) {
     return closure_3;
   };
 }
+export const ignoreErrors = function ignoreErrors() {
+  const self = this;
+  const apply = closure_2.apply;
+  if (typeof apply === "unknown") {
+    let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+  } else {
+    applyArgumentsResult = apply(self, arguments);
+  }
+  return applyArgumentsResult;
+};
 export { PromiseDeduper };
 export const clearObject = function clearObject(obj) {
   for (const key10003 in arg0) {

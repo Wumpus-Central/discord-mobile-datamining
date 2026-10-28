@@ -1,6 +1,6 @@
-// === Module 9470: useProductDisableState ===
+// === Module 9502: useProductDisableState ===
 
-// Module 9470 (useProductDisableState)
+// Module 9502 (useProductDisableState)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import FractionalPremiumSKUs from "FractionalPremiumSKUs" /* 1087 */;

@@ -1,17 +1,17 @@
-// === Module 17637: BoostProgressBarCoachmark ===
+// === Module 17872: BoostProgressBarCoachmark ===
 
-// Module 17637 (BoostProgressBarCoachmark)
+// Module 17872 (BoostProgressBarCoachmark)
 import util from "util" /* 1125 */;
 import _modDef2567 from "module_2567" /* 2567 */;
-import BoostThisServerRive from "BoostThisServerRive" /* 5102 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
+import BoostThisServerRive from "BoostThisServerRive" /* 5135 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9039 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4821).ContentDismissActionType;
+const ContentDismissActionType = fn(4853).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_7 = createStyles.createStyles({ riveContainer: { width: 120, height: 80, alignSelf: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostPro
         if (cResult[12] === tmp13) {
           let tmp16 = cResult[13];
         }
-        const coachmark = tmp(9842).useCoachmark(guild.targetRef, tmp16);
+        const coachmark = tmp(9874).useCoachmark(guild.targetRef, tmp16);
         return null;
       }
     }
@@ -125,6 +125,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BoostPro
     obj.onButtonPress = callback1;
     return obj;
   }, items2);
-  const coachmark = guild(9842).useCoachmark(guild.targetRef, memo);
+  const coachmark = guild(9874).useCoachmark(guild.targetRef, memo);
   return null;
 });

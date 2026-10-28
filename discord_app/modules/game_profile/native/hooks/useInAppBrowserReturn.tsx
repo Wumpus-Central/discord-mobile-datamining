@@ -1,10 +1,10 @@
-// === Module 9271: useInAppBrowserReturn ===
+// === Module 9303: useInAppBrowserReturn ===
 
-// Module 9271 (useInAppBrowserReturn)
-import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9245 */;
-import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9251 */;
+// Module 9303 (useInAppBrowserReturn)
+import GameProfileAnalyticUtils from "GameProfileAnalyticUtils" /* 9278 */;
+import GameProfileActionCreatorsDefault from "GameProfileActionCreators" /* 9283 */;
 import noop from "module_19" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 9253 */;
+import GameProfileStore from "GameProfileStore" /* 9285 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

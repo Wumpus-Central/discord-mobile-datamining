@@ -1,22 +1,22 @@
-// === Module 11997: NoPermsState ===
+// === Module 12035: NoPermsState ===
 
-// Module 11997 (NoPermsState)
+// Module 12035 (NoPermsState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import shared from "shared" /* 4979 */;
-import useThemeDefault from "useTheme" /* 5206 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11173 */;
-import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11923 */;
+import shared from "shared" /* 5011 */;
+import useThemeDefault from "useTheme" /* 5241 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11208 */;
+import AppLauncherNativeUtils from "AppLauncherNativeUtils" /* 11961 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { paddingVertical: 16, paddingHorizontal: 24, gap: 12, backgroundColor: nativeDefault.colors.BACKGROUND_APP_LAUNCHER_CARD_DEFAULT, borderRadius: nativeDefault.radii.lg, alignItems: "center", justifyContent: "flex-start", display: "flex", flexDirection: "row" }, textContainer: { flexShrink: 1 }, image: { width: 64, height: 64 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -27,7 +27,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmptyState() {
   const cResult = c.c(10);
   const tmp4 = closure_6();
-  const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11998 : 11999);
+  const tmp5Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12036 : 12037);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   if (cResult[0] === tmp5Result) {
     if (cResult[1] === tmp4.image) {
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EmptySta
   const tmpResult = AppLauncherNativeUtils;
 }) : (function EmptyState() {
   const tmp = closure_6();
-  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 11998 : 11999);
+  const tmp4Result = importDefault(shared.isThemeLight(useThemeDefault()) ? 12036 : 12037);
   const logAppLauncherEmptyStateView = AppLauncherNativeUtils.useLogAppLauncherEmptyStateView(AppLauncherTypes.AppLauncherEmptyStateType.HOME_NO_PERMISSIONS);
   const obj2 = { style: tmp.container, children: null };
   const items = [React4(FastImageDefault, { style: tmp.image, resizeMode: "contain", source: tmp4Result }), ];

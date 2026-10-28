@@ -1,19 +1,19 @@
-// === Module 10989: SafetyToolsSafetyTipsActionSheet ===
+// === Module 11024: SafetyToolsSafetyTipsActionSheet ===
 
-// Module 10989 (SafetyToolsSafetyTipsActionSheet)
+// Module 11024 (SafetyToolsSafetyTipsActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import SafetyTipsSectionDefault from "SafetyTipsSection" /* 10951 */;
-import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 10980 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import SafetyTipsSectionDefault from "SafetyTipsSection" /* 10986 */;
+import SafetyToolsActionSheetWrapperDefault from "SafetyToolsActionSheetWrapper" /* 11015 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_4 = fn(10930).getInappropriateConversationsSafetyTips;
+let closure_4 = fn(10965).getInappropriateConversationsSafetyTips;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { safetyTipsContainer: { marginHorizontal: nativeDefault.space.PX_16 } };
 let closure_6 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

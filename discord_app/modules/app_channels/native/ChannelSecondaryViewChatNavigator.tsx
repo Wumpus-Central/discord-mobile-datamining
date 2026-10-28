@@ -1,15 +1,15 @@
-// === Module 18361: ChannelSecondaryViewChatNavigator ===
+// === Module 18602: ChannelSecondaryViewChatNavigator ===
 
-// Module 18361 (ChannelSecondaryViewChatNavigator)
+// Module 18602 (ChannelSecondaryViewChatNavigator)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import HeaderShared from "HeaderShared" /* 9701 */;
-import ChannelActionsDefault from "ChannelActions" /* 9713 */;
-import ChatViewDefault from "ChatView" /* 10895 */;
-import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 11905 */;
-import ChannelContainer from "ChannelContainer" /* 13758 */;
-import ChannelHeaderDefault from "ChannelHeader" /* 14029 */;
+import HeaderShared from "HeaderShared" /* 9733 */;
+import ChannelActionsDefault from "ChannelActions" /* 9745 */;
+import ChatViewDefault from "ChatView" /* 10930 */;
+import PortalKeyboardRenderer from "PortalKeyboardRenderer" /* 11943 */;
+import ChannelContainer from "ChannelContainer" /* 13976 */;
+import ChannelHeaderDefault from "ChannelHeader" /* 14252 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -24,9 +24,9 @@ function renderChannelSecondaryViewChatHeader(arg0) {
 }
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const NativeStackNavigator = fn(9745);
+const NativeStackNavigator = fn(9777);
 let closure_6 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj3 = { actions: { marginRight: nativeDefault.space.PX_16 } };
 let closure_7 = createStyles.createStyles(obj3);
 let ReactCompilerGating = fn(558);
@@ -190,8 +190,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
   const params = navigation.route.params;
   const tmp = closure_7();
   dependencyMap = tmp;
-  const tmp2 = params(5147)();
-  const accessibilityNativeStackOptions = navigation(7097).useAccessibilityNativeStackOptions();
+  const tmp2 = params(5182)();
+  const accessibilityNativeStackOptions = navigation(7131).useAccessibilityNativeStackOptions();
   const channelId = params.channelId;
   const items = [channelId, tmp, navigation, accessibilityNativeStackOptions];
   const memo = accessibilityNativeStackOptions.useMemo(() => {
@@ -219,5 +219,5 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelS
     })
   };
   obj2.children = channelId(closure_6.Navigator, obj3);
-  return channelId(navigation(5038).ThemeContextProvider, obj2);
+  return channelId(navigation(5070).ThemeContextProvider, obj2);
 });

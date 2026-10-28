@@ -1,8 +1,8 @@
-// === Module 13063: sharedClientThemeViewed ===
+// === Module 13280: sharedClientThemeViewed ===
 
-// Module 13063 (sharedClientThemeViewed)
+// Module 13280 (sharedClientThemeViewed)
 import discord_common_AnalyticsUtils from "discord_common/AnalyticsUtils" /* 1272 */;
-import useTrackImpression from "useTrackImpression" /* 9360 */;
+import useTrackImpression from "useTrackImpression" /* 9392 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/client_themes/native/chat/sharedClientThemeViewed.tsx");

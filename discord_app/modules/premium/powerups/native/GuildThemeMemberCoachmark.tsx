@@ -1,21 +1,21 @@
-// === Module 17638: GuildThemeMemberCoachmark ===
+// === Module 17873: GuildThemeMemberCoachmark ===
 
-// Module 17638 (GuildThemeMemberCoachmark)
+// Module 17873 (GuildThemeMemberCoachmark)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import _modDef2567 from "module_2567" /* 2567 */;
-import Powerups from "Powerups" /* 5186 */;
-import BoostingActionCreators from "BoostingActionCreators" /* 6698 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13461 */;
+import Powerups from "Powerups" /* 5221 */;
+import BoostingActionCreators from "BoostingActionCreators" /* 6732 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13680 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5182 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5217 */;
 
 require = fn;
-let closure_6 = fn(5183).GUILD_THEME_POWERUP_BOOST_PRICE;
-const ContentDismissActionType = fn(4821).ContentDismissActionType;
+let closure_6 = fn(5218).GUILD_THEME_POWERUP_BOOST_PRICE;
+const ContentDismissActionType = fn(4853).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { coachmarkImage: null };
 let size = { height: 120, width: 260 - 2 * nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md };
 obj2.coachmarkImage = size;
@@ -124,7 +124,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
       }
     }
     AccessibilityStore = tmp13;
-    const diff = closure_6 - markAsDismissed(8370)(guildId).available;
+    const diff = closure_6 - markAsDismissed(8404)(guildId).available;
     GuildPowerupsStore = diff;
     if (cResult[9] !== markAsDismissed) {
       class D {
@@ -170,7 +170,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
     cResult[14] = U;
   }
   const tmpResult3 = guildId(504);
-  let guildPowerupBannerImage = guildId(13458).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+  let guildPowerupBannerImage = guildId(13677).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
     class D {
       constructor() {
@@ -178,13 +178,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
         return;
       }
     }
-    guildPowerupBannerImage = markAsDismissed(17639);
+    guildPowerupBannerImage = markAsDismissed(17874);
   }
   cResult[6] = stateFromStores;
   cResult[7] = stateFromStores1;
   cResult[8] = guildPowerupBannerImage;
   tmp13 = guildPowerupBannerImage;
-  const tmpResult4 = guildId(13458);
+  const tmpResult4 = guildId(13677);
 }) : (function GuildThemeMemberCoachmark(guildId) {
   guildId = guildId.guildId;
   const markAsDismissed = guildId.markAsDismissed;
@@ -209,11 +209,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
   const items2 = [guildPowerupBannerImage];
   const stateFromStores1 = guildId(504).useStateFromStores(items2, () => guildPowerupBannerImage.useReducedMotion);
   const obj2 = guildId(504);
-  guildPowerupBannerImage = guildId(13458).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
+  guildPowerupBannerImage = guildId(13677).getGuildPowerupBannerImage(stateFromStores, stateFromStores1, true);
   if (guildPowerupBannerImage == null) {
-    guildPowerupBannerImage = markAsDismissed(17639);
+    guildPowerupBannerImage = markAsDismissed(17874);
   }
-  const diff = onDismiss - markAsDismissed(8370)(guildId).available;
+  const diff = onDismiss - markAsDismissed(8404)(guildId).available;
   c5 = diff;
   const items3 = [markAsDismissed];
   onDismiss = stateFromStores1.useCallback(() => {
@@ -242,7 +242,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildThe
     obj.onButtonPress = callback1;
     return obj;
   }, items5);
-  const obj3 = guildId(13458);
-  const coachmark = tmp2(9842).useCoachmark(guildId.targetRef, memo);
+  const obj3 = guildId(13677);
+  const coachmark = tmp2(9874).useCoachmark(guildId.targetRef, memo);
   return null;
 });

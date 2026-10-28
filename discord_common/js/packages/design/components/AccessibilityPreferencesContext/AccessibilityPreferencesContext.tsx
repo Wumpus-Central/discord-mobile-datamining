@@ -1,6 +1,6 @@
-// === Module 4986: AccessibilityPreferencesContext ===
+// === Module 5018: AccessibilityPreferencesContext ===
 
-// Module 4986 (AccessibilityPreferencesContext)
+// Module 5018 (AccessibilityPreferencesContext)
 import noop from "module_19" /* 19 */;
 
 const context = noop.createContext({ reducedMotion: { enabled: false, rawValue: "no-preference" }, prefersCrossfades: false, forcedColors: { enabled: false, rawValue: "none" }, alwaysShowLinkDecorations: false, highContrastModeEnabled: false, keyboardModeEnabled: true, switchIconsEnabled: false, minToastDurationMs: 0 });

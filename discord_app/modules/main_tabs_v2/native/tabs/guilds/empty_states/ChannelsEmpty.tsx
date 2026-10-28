@@ -1,24 +1,24 @@
-// === Module 17725: ChannelsEmpty ===
+// === Module 17962: ChannelsEmpty ===
 
-// Module 17725 (ChannelsEmpty)
+// Module 17962 (ChannelsEmpty)
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 8975 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
-import _modDef17726 from "module_17726" /* 17726 */;
-import _modDef17727 from "module_17727" /* 17727 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import CreateChannelModalActionCreatorsDefault from "CreateChannelModalActionCreators" /* 9009 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9039 */;
+import _modDef17963 from "module_17963" /* 17963 */;
+import _modDef17964 from "module_17964" /* 17964 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
 
 const require = fn;
 const View = fn(17).View;
 const Permissions = fn(1084).Permissions;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { wrapper: { flex: 1, paddingTop: 12 }, content: { flex: 1, justifyContent: "center", alignItems: "center", paddingHorizontal: 48 }, headerText: null, text: null, buttonWrapper: null, buttonPill: null, personalizeButtonWrapper: null };
 let obj3 = {};
-const merged = Object.assign(fn(5235).TextStyleSheet["heading-md/bold"]);
+const merged = Object.assign(fn(5270).TextStyleSheet["heading-md/bold"]);
 obj3.fontSize = 18;
 obj3.marginTop = 16;
 obj3.marginBottom = 8;
@@ -82,7 +82,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     tmp11 = cResult[7];
   }
   const tmpResult = guild(573);
-  const youBarTotalHeight = guild(16485).useYouBarTotalHeight(16);
+  const youBarTotalHeight = guild(16714).useYouBarTotalHeight(16);
   if (cResult[8] !== youBarTotalHeight) {
     const obj2 = { paddingBottom: youBarTotalHeight };
     cResult[8] = youBarTotalHeight;
@@ -102,7 +102,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         const _Symbol = Symbol;
         if (cResult[17] === Symbol.for("react.memo_cache_sentinel")) {
-          const obj3 = { source: _modDef17727 };
+          const obj3 = { source: _modDef17964 };
           const tmp24 = closure_7(FastImageDefault, obj3);
           cResult[17] = tmp24;
           let tmp20 = tmp24;
@@ -124,7 +124,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           if (cResult[22] !== tmp25) {
             const obj4 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: tmp25, children: tmp26 };
-            const tmp30 = closure_7(tmp(5235).Text, obj4);
+            const tmp30 = closure_7(tmp(5270).Text, obj4);
             cResult[22] = tmp25;
             cResult[23] = tmp30;
             let tmp28 = tmp30;
@@ -142,7 +142,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           }
           if (cResult[25] !== tmp4.text) {
             const obj5 = { color: "text-default", variant: "text-md/medium", style: tmp4.text, children: tmp31 };
-            const tmp35 = closure_7(tmp(5235).Text, obj5);
+            const tmp35 = closure_7(tmp(5270).Text, obj5);
             cResult[25] = tmp4.text;
             cResult[26] = tmp35;
             let tmp33 = tmp35;
@@ -201,7 +201,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             const intl4 = tmp(1125).intl;
             obj9.text = intl4.string(tmp(1125).t["63PyJQ"]);
             obj9.onPress = tmp11;
-            obj8.children = closure_7(tmp(5246).BaseTextButton, obj9);
+            obj8.children = closure_7(tmp(5281).BaseTextButton, obj9);
             tmp37 = closure_7(View, obj8);
           }
           cResult[27] = canCreateChannel;
@@ -223,12 +223,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (canCustomizeGuild) {
       const obj10 = { style: tmp4.personalizeButtonWrapper, children: null };
       const obj11 = { icon: null, label: null, onPress: null };
-      const obj12 = { source: _modDef17726, disableColor: true };
+      const obj12 = { source: _modDef17963, disableColor: true };
       obj11.icon = closure_7(tmp(1199).Icon, obj12);
       const intl = tmp(1125).intl;
       obj11.label = intl.string(tmp(1125).t["Yhi9/N"]);
       obj11.onPress = tmp10;
-      obj10.children = closure_7(tmp(8953).RowButton, obj11);
+      obj10.children = closure_7(tmp(8987).RowButton, obj11);
       tmp16 = closure_7(View, obj10);
     }
     cResult[13] = canCustomizeGuild;
@@ -242,7 +242,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[11] = tmp13;
   cResult[12] = items5;
   tmp14 = items5;
-  const tmpResult2 = guild(16485);
+  const tmpResult2 = guild(16714);
 }) : (function ChannelsEmpty(guild) {
   guild = guild.guild;
   const tmp = closure_9();
@@ -261,25 +261,25 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = guild(573);
   const obj3 = { style: null, children: null };
   const items4 = [tmp.wrapper, ];
-  const obj2 = guild(16485);
-  items4[1] = { paddingBottom: guild(16485).useYouBarTotalHeight(16) };
+  const obj2 = guild(16714);
+  items4[1] = { paddingBottom: guild(16714).useYouBarTotalHeight(16) };
   obj3.style = items4;
   if (canCustomizeGuild) {
     const obj5 = { style: tmp.personalizeButtonWrapper, children: null };
     const obj6 = { icon: null, label: null, onPress: null };
-    const obj7 = { source: _modDef17726, disableColor: true };
+    const obj7 = { source: _modDef17963, disableColor: true };
     obj6.icon = closure_7(tmp2(1199).Icon, obj7);
     const intl = tmp2(1125).intl;
     obj6.label = intl.string(tmp2(1125).t["Yhi9/N"]);
     obj6.onPress = callback;
-    obj5.children = closure_7(tmp2(8953).RowButton, obj6);
+    obj5.children = closure_7(tmp2(8987).RowButton, obj6);
     canCustomizeGuild = closure_7(View, obj5);
   }
   const items5 = [canCustomizeGuild, ];
   const obj8 = { style: tmp.content, children: null };
   const obj9 = { source: null };
-  const obj4 = { paddingBottom: guild(16485).useYouBarTotalHeight(16) };
-  obj9.source = _modDef17727;
+  const obj4 = { paddingBottom: guild(16714).useYouBarTotalHeight(16) };
+  obj9.source = _modDef17964;
   const items6 = [closure_7(FastImageDefault, obj9), , , ];
   const obj10 = { color: "mobile-text-heading-primary", variant: "heading-md/bold", style: null, children: null };
   const items7 = [, ];
@@ -287,18 +287,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   obj10.style = items7;
   const intl2 = tmp2(1125).intl;
   obj10.children = intl2.string(guild(1125).t.o4s29v);
-  items6[1] = closure_7(guild(5235).Text, obj10);
+  items6[1] = closure_7(guild(5270).Text, obj10);
   const obj11 = { color: "text-default", variant: "text-md/medium", style: tmp.text, children: null };
   const intl3 = tmp2(1125).intl;
   obj11.children = intl3.string(guild(1125).t.iypvFu);
-  items6[2] = closure_7(guild(5235).Text, obj11);
+  items6[2] = closure_7(guild(5270).Text, obj11);
   if (canCreateChannel) {
     const obj12 = { style: tmp.buttonWrapper, children: null };
     const obj13 = { shrink: true, size: "md", pillStyle: tmp.buttonPill, text: null, onPress: null };
     const intl4 = tmp2(1125).intl;
     obj13.text = intl4.string(tmp2(1125).t["63PyJQ"]);
     obj13.onPress = callback1;
-    obj12.children = closure_7(tmp2(5246).BaseTextButton, obj13);
+    obj12.children = closure_7(tmp2(5281).BaseTextButton, obj13);
     canCreateChannel = closure_7(View, obj12);
   }
   items6[3] = canCreateChannel;

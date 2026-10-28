@@ -1,6 +1,6 @@
-// === Module 13172: ChatInputAccessibilityDivider ===
+// === Module 13389: ChatInputAccessibilityDivider ===
 
-// Module 13172 (ChatInputAccessibilityDivider)
+// Module 13389 (ChatInputAccessibilityDivider)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;

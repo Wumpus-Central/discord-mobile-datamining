@@ -1,10 +1,10 @@
-// === Module 15193: useMessageRequestPrivacyOption ===
+// === Module 15418: useMessageRequestPrivacyOption ===
 
-// Module 15193 (useMessageRequestPrivacyOption)
+// Module 15418 (useMessageRequestPrivacyOption)
 import c from "c" /* 576 */;
-import UserSettings from "UserSettings" /* 4800 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7093 */;
-import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 13369 */;
+import UserSettings from "UserSettings" /* 4832 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7127 */;
+import useIsStricterMessageRequestsDefault from "useIsStricterMessageRequests" /* 13588 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -14,10 +14,10 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
   const cResult = id(576).c(14);
   guild = guild.guild;
   id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(4800).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(4832).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   if (cResult[0] === id) {
-    const RestrictedGuildIds = tmp(4800).RestrictedGuildIds;
+    const RestrictedGuildIds = tmp(4832).RestrictedGuildIds;
     const setting1 = RestrictedGuildIds.useSetting();
     if (cResult[3] === guild.id) {
       if (cResult[4] === setting1) {
@@ -153,7 +153,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
         }
       }
       const obj2 = { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 };
-      const tmp17 = jsx(tmp(7296).ActionSheetSwitchRow, { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 });
+      const tmp17 = jsx(tmp(7330).ActionSheetSwitchRow, { label: tmp10, subLabel: tmp11, value: !tmp6, onValueChange: S, disabled: tmp6 });
       cResult[10] = S;
       cResult[11] = tmp6;
       cResult[12] = !tmp6;
@@ -173,10 +173,10 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
 }) : (function MessageRequestRestrictedGuildPrivacyOption(guild) {
   guild = guild.guild;
   const id = guild.id;
-  let MessageRequestRestrictedGuildIds = id(4800).MessageRequestRestrictedGuildIds;
+  let MessageRequestRestrictedGuildIds = id(4832).MessageRequestRestrictedGuildIds;
   const setting = MessageRequestRestrictedGuildIds.useSetting();
   const hasItem = setting.includes(id);
-  const RestrictedGuildIds = id(4800).RestrictedGuildIds;
+  const RestrictedGuildIds = id(4832).RestrictedGuildIds;
   const setting1 = RestrictedGuildIds.useSetting();
   const hasItem1 = setting1.includes(guild.id);
   const items = [id];
@@ -202,7 +202,7 @@ let closure_5 = ReactCompilerGating.isReactCompilerEnabled() ? (function Message
   obj.value = tmp5;
   obj.onValueChange = callback;
   obj.disabled = hasItem1;
-  return jsx(id(7296).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
+  return jsx(id(7330).ActionSheetSwitchRow, { label: null, subLabel: null, value: null, onValueChange: null, disabled: null });
 });
 ReactCompilerGating = fn(558);
 const size = fn(2);

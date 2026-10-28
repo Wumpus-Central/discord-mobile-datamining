@@ -1,7 +1,7 @@
-// === Module 7274: useStartProviderConnection ===
+// === Module 7308: useStartProviderConnection ===
 
-// Module 7274 (useStartProviderConnection)
-import LinkingDefault from "Linking" /* 5661 */;
+// Module 7308 (useStartProviderConnection)
+import LinkingDefault from "Linking" /* 5696 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,14 +1,14 @@
-// === Module 13482: useDeactivateWarningText ===
+// === Module 13701: useDeactivateWarningText ===
 
-// Module 13482 (useDeactivateWarningText)
+// Module 13701 (useDeactivateWarningText)
 import util from "util" /* 1125 */;
 import _modDef2567 from "module_2567" /* 2567 */;
-import Powerups from "Powerups" /* 5186 */;
-import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 7226 */;
+import Powerups from "Powerups" /* 5221 */;
+import useGuildRoleMemberCountsDefault from "useGuildRoleMemberCounts" /* 7260 */;
 import noop from "module_19" /* 19 */;
-import GuildMemberCountStore from "GuildMemberCountStore" /* 5195 */;
-import GuildRoleStore from "GuildRoleStore" /* 4878 */;
-import GuildStore from "GuildStore" /* 4846 */;
+import GuildMemberCountStore from "GuildMemberCountStore" /* 5230 */;
+import GuildRoleStore from "GuildRoleStore" /* 4910 */;
+import GuildStore from "GuildStore" /* 4878 */;
 
 const require = globalThis.__r;
 

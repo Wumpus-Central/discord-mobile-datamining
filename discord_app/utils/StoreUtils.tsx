@@ -1,16 +1,16 @@
-// === Module 6384: StoreUtils ===
+// === Module 6418: StoreUtils ===
 
-// Module 6384 (StoreUtils)
+// Module 6418 (StoreUtils)
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import ImageLoaderUtils from "ImageLoaderUtils" /* 1449 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6464 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6498 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import BillingInfoStore from "BillingInfoStore" /* 2051 */;
 import PaymentSourceStore from "PaymentSourceStore" /* 2052 */;
 import SubscriptionStore from "SubscriptionStore" /* 2055 */;
-import allSettled_mod from "allSettled" /* 6385 */;
+import allSettled_mod from "allSettled" /* 6419 */;
 
 require = fn;
 let closure_10 = async function _waitForSubscriptionsToBeFetched() {
@@ -243,14 +243,14 @@ const Constants = fn(1084);
 ({ Endpoints: closure_7, OperatingSystems: closure_8 } = Constants);
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
-const isMobile = fn(5903).isMobile;
+const isMobile = fn(5938).isMobile;
 let tmp4 = !isMobile;
 if (!isMobile) {
-  tmp4 = !fn(5903).isTablet;
+  tmp4 = !fn(5938).isTablet;
 }
 if (tmp4) {
-  tmp4 = -1 !== fn(5822).getChromeVersion();
-  let obj2 = fn(5822);
+  tmp4 = -1 !== fn(5857).getChromeVersion();
+  let obj2 = fn(5857);
 }
 let closure_9 = tmp4;
 const size = fn(2);

@@ -1,8 +1,8 @@
-// === Module 13496: useGuildPowerupTier3OverrideConfig ===
+// === Module 13715: useGuildPowerupTier3OverrideConfig ===
 
-// Module 13496 (useGuildPowerupTier3OverrideConfig)
+// Module 13715 (useGuildPowerupTier3OverrideConfig)
 import _modDef2567 from "module_2567" /* 2567 */;
-import GuildStore from "GuildStore" /* 4846 */;
+import GuildStore from "GuildStore" /* 4878 */;
 
 const require = globalThis.__r;
 

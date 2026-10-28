@@ -1,18 +1,18 @@
-// === Module 13253: SearchQueryStore ===
+// === Module 13470: SearchQueryStore ===
 
-// Module 13253 (SearchQueryStore)
+// Module 13470 (SearchQueryStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import SearchUtils from "SearchUtils" /* 13246 */;
-import SearchQueryTagManagerDefault from "SearchQueryTagManager" /* 13254 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import RelationshipStore from "RelationshipStore" /* 4914 */;
+import SearchUtils from "SearchUtils" /* 13463 */;
+import SearchQueryTagManagerDefault from "SearchQueryTagManager" /* 13471 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import RelationshipStore from "RelationshipStore" /* 4946 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const SearchConstants = fn(9716);
+const SearchConstants = fn(9748);
 ({ EMPTY_SEARCH_QUERY_STRING: metroRequire, SearchQueryTagTypes: closure_7 } = SearchConstants);
-const SearchFilterAddLocations = fn(9715).SearchFilterAddLocations;
+const SearchFilterAddLocations = fn(9747).SearchFilterAddLocations;
 const Constants = fn(1084);
 ({ SearchTokenTypes: closure_9, SearchTypes: c10 } = Constants);
 const prototype = function SearchQueryStateManager(type) {
@@ -173,8 +173,8 @@ const prototype = function SearchQueryStateManager(type) {
   } else {
     let channelName;
     if (null != channel) {
-      channelName = obj(5605).computeChannelName(channel, UserStore, RelationshipStore);
-      const obj2 = obj(5605);
+      channelName = obj(5640).computeChannelName(channel, UserStore, RelationshipStore);
+      const obj2 = obj(5640);
     }
     if (null == channelName) {
       let items1 = [];
@@ -183,11 +183,11 @@ const prototype = function SearchQueryStateManager(type) {
       const intl = obj(1125).intl;
       const stringResult = intl.string(obj(1125).t.WNpFHa);
       let _HermesInternal = HermesInternal;
-      obj3.text = "" + stringResult + ": " + obj(13246).quoteChannelName(channelName);
+      obj3.text = "" + stringResult + ": " + obj(13463).quoteChannelName(channelName);
       obj3.channelId = type.channelId;
       obj3.location = SearchFilterAddLocations.CLIENT_AUTO_ADD;
       items1 = [obj3];
-      const obj4 = obj(13246);
+      const obj4 = obj(13463);
     }
     items = items1;
   }

@@ -1,9 +1,9 @@
-// === Module 7513: GuildBoostPurchasingUtils ===
+// === Module 7548: GuildBoostPurchasingUtils ===
 
-// Module 7513 (GuildBoostPurchasingUtils)
+// Module 7548 (GuildBoostPurchasingUtils)
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5910 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SubscriptionStore from "SubscriptionStore" /* 2055 */;
 
@@ -38,8 +38,8 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
           throw value;
         } else if (arg0 === 2) {
           c6 = 3;
-          const obj7 = { value, done: true };
-          return obj7;
+          const obj6 = { value, done: true };
+          return obj6;
         } else {
           closure_3 = tmp2;
           dependencyMap = tmp6;
@@ -66,8 +66,8 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
             throw value;
           } else if (arg0 === 2) {
             c6 = 3;
-            const obj8 = { value, done: true };
-            return obj8;
+            const obj7 = { value, done: true };
+            return obj7;
           } else if (closure_131_4.hasFetchedSubscriptions()) {
             premiumTypeSubscription = closure_131_4.getPremiumTypeSubscription();
             let renewalMutations;
@@ -88,10 +88,10 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
                   if (null != premiumTypeSubscription) {
                     c4 = 1;
                     productIdFromSubscription = closure_131_0(closure_131_2[9]).getProductIdFromSubscription(premiumTypeSubscription, true);
-                    const tmp91 = closure_131_0(closure_131_2[10]).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
+                    const tmp85 = closure_131_0(closure_131_2[10]).AppStorePremiumProductIdsToPremiumBundledItems[productIdFromSubscription];
                     let interval;
-                    if (tmp91 != null) {
-                      interval = tmp91.interval;
+                    if (tmp85 != null) {
+                      interval = tmp85.interval;
                     }
                     c1 = interval;
                     if (interval == null) {
@@ -99,7 +99,7 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
                     }
                     closure_130_8 = c1;
                     c4 = 0;
-                    const obj11 = closure_131_0(closure_131_2[9]);
+                    const obj10 = closure_131_0(closure_131_2[9]);
                   }
                 }
                 const obj4 = closure_131_0(closure_131_2[8]);
@@ -115,8 +115,8 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
           } else {
             c5 = 2;
             c6 = 1;
-            const obj9 = { value: closure_131_0(closure_131_2[7]).fetchSubscriptions(), done: false };
-            return obj9;
+            const obj8 = { value: closure_131_0(closure_131_2[7]).fetchSubscriptions(), done: false };
+            return obj8;
           }
         } else if (2 === tmp6) {
           if (arg0 === 1) {
@@ -131,13 +131,8 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
           c4 = 0;
           closure_130_8 = null;
         }
-        let mobileBoostingEnabled = closure_131_0(closure_131_2[11]).getMobileBoostingEnabled("GuildBoostPurchasing");
-        if (mobileBoostingEnabled) {
-          mobileBoostingEnabled = closure_130_8 === closure_131_10.YEAR;
-        }
-        closure_130_10 = mobileBoostingEnabled;
-        const obj5 = closure_131_0(closure_131_2[11]);
-        const obj10 = {
+        closure_130_10 = closure_130_8 === closure_131_10.YEAR;
+        const obj9 = {
           showCurrentPlan: false,
           isBoostPurchaseFlow: true,
           allowYearlyBundles: closure_130_10,
@@ -174,13 +169,13 @@ let closure_12 = async function _launchGuildBoostFlowOrAlert(arg0) {
           onPaymentSuccess: closure_130_4,
           onPaymentDismiss: closure_130_5
         };
-        const result = closure_131_0(closure_131_2[12]).launchPremiumPlanSelect(obj10);
-        const obj6 = closure_131_0(closure_131_2[12]);
+        const result = closure_131_0(closure_131_2[11]).launchPremiumPlanSelect(obj9);
+        const obj5 = closure_131_0(closure_131_2[11]);
       }
-    } catch (tmp72) {
+    } catch (tmp66) {
       if (tmp3 === c4) {
         c6 = tmp;
-        throw tmp72;
+        throw tmp66;
       } else {
         c5 = tmp;
       }

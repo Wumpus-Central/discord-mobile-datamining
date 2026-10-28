@@ -1,6 +1,6 @@
-// === Module 6091: ? ===
+// === Module 6125: ? ===
 
-// Module 6091
+// Module 6125
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/shoes/kitty_paws.png.js");

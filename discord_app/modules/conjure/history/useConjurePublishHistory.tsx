@@ -1,10 +1,10 @@
-// === Module 12246: useConjurePublishHistory ===
+// === Module 12285: useConjurePublishHistory ===
 
-// Module 12246 (useConjurePublishHistory)
+// Module 12285 (useConjurePublishHistory)
 import util from "util" /* 1125 */;
 import _modDef2046 from "module_2046" /* 2046 */;
-import _modDef3831 from "module_3831" /* 3831 */;
-import conjurePublishHistoryRequests from "conjurePublishHistoryRequests" /* 12247 */;
+import _modDef3863 from "module_3863" /* 3863 */;
+import conjurePublishHistoryRequests from "conjurePublishHistoryRequests" /* 12286 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -50,7 +50,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePu
     if (cResult[5] === arg0) {
       let tmp14 = cResult[6];
     }
-    historyLoad = tmp(12242).useHistoryLoad(tmp14);
+    historyLoad = tmp(12281).useHistoryLoad(tmp14);
     nextCursor = null;
     if ("loaded" === historyLoad.state.status) {
       nextCursor = historyLoad.state.data.nextCursor;
@@ -167,7 +167,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePu
     cResult[16] = C;
     cResult[17] = tmp23;
     cResult[18] = obj2;
-    const tmpResult = tmp(12242);
+    const tmpResult = tmp(12281);
   }
   const fn = function p() {
     return conjurePublishHistoryRequests.fetchPublishHistory(closure_0, closure_2);
@@ -230,7 +230,7 @@ let result = size.fileFinishedImporting("modules/conjure/history/useConjurePubli
 export const publishHistoryTitle = function publishHistoryTitle(publishedAt) {
   const intl = util.intl;
   const obj = { date: _modDef2046(publishedAt).format("LLL") };
-  return intl.formatToPlainString(_modDef3831["/spQzC"], obj);
+  return intl.formatToPlainString(_modDef3863["/spQzC"], obj);
 };
 export const useConjurePublishHistory = tmp2;
 export const useConjurePublishHistoryNotes = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjurePublishHistoryNotes(arg0, arg1, get) {

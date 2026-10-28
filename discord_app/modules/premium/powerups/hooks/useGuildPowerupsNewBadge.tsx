@@ -1,18 +1,18 @@
-// === Module 13448: useGuildPowerupsNewBadge ===
+// === Module 13667: useGuildPowerupsNewBadge ===
 
-// Module 13448 (useGuildPowerupsNewBadge)
-import DismissibleContentUtils from "DismissibleContentUtils" /* 4809 */;
-import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 13443 */;
+// Module 13667 (useGuildPowerupsNewBadge)
+import DismissibleContentUtils from "DismissibleContentUtils" /* 4841 */;
+import useGuildPowerupNewPerkMarketingVersionDefault from "useGuildPowerupNewPerkMarketingVersion" /* 13662 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5182 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5217 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const constants = fn(5183).GuildPowerupNewPerkMarketingVersion;
-const ContentDismissActionType = fn(4821).ContentDismissActionType;
-let closure_8 = fn(4808).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
+const constants = fn(5218).GuildPowerupNewPerkMarketingVersion;
+const ContentDismissActionType = fn(4853).ContentDismissActionType;
+let closure_8 = fn(4840).DismissibleContent.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function useBadgeableMarketingVersion(arg0) {
   _require = arg0;

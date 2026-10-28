@@ -1,12 +1,12 @@
-// === Module 12742: OutcomeStep ===
+// === Module 12789: OutcomeStep ===
 
-// Module 12742 (OutcomeStep)
+// Module 12789 (OutcomeStep)
 import util from "util" /* 1125 */;
 import _modDef2403 from "module_2403" /* 2403 */;
-import transitionToGuild from "transitionToGuild" /* 7450 */;
+import transitionToGuild from "transitionToGuild" /* 7485 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4846 */;
+import GuildStore from "GuildStore" /* 4878 */;
 
 require = fn;
 function getOutcomeContent(joinStatus, failureReason, guildJoinStatus, noun, onGoToServer) {
@@ -97,12 +97,12 @@ function getOutcomeContent(joinStatus, failureReason, guildJoinStatus, noun, onG
     return obj19;
   }
 }
-const GameOrganizationInviteConstants = fn(11033);
+const GameOrganizationInviteConstants = fn(11068);
 ({ GameOrganizationInviteAcceptFailureReason: metroRequire, GameOrganizationInviteAcceptStatus: closure_7, GameOrganizationLinkedGuildJoinStatus: closure_8 } = GameOrganizationInviteConstants);
-const onClose = fn(12734).closeGameOrganizationJoinModal;
+const onClose = fn(12781).closeGameOrganizationJoinModal;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_12 = createStyles.createStyles({ text: { textAlign: "center" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -112,7 +112,7 @@ export const OutcomeStep = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const cResult = guildId(576).c(39);
   ({ joinStatus, failureReason, guildJoinStatus } = code);
   closure_12();
-  const tmp6 = stateFromStores(12736)(code.code);
+  const tmp6 = stateFromStores(12783)(code.code);
   guildId = undefined;
   if (tmp6 != null) {
     guildId = tmp6.guildId;
@@ -247,7 +247,7 @@ export const OutcomeStep = ReactCompilerGating.isReactCompilerEnabled() ? (funct
           }
           const obj2 = { noun: null, orgName: null, accountName: "[Account/Username]" };
           const obj4 = { displayNoun: undefined, lowercase: true };
-          obj2.noun = tmp5(12737)(obj4);
+          obj2.noun = tmp5(12784)(obj4);
           if (tmp6 != null) {
             class C {
               constructor() {
@@ -350,7 +350,7 @@ export const OutcomeStep = ReactCompilerGating.isReactCompilerEnabled() ? (funct
           cResult[20] = tmp14;
           cResult[21] = joinStatus;
           cResult[22] = tmp21Result;
-          const tmp5Result = tmp5(12737);
+          const tmp5Result = tmp5(12784);
         }
         const fn2 = function y() {
           let tmp2 = null != guildId;
@@ -446,7 +446,7 @@ export const OutcomeStep = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   dependencyMap = undefined;
   let flag;
   const tmp = closure_12();
-  const tmp4 = stateFromStores(12736)(code.code);
+  const tmp4 = stateFromStores(12783)(code.code);
   let guildId;
   if (tmp4 != null) {
     guildId = tmp4.guildId;
@@ -505,7 +505,7 @@ export const OutcomeStep = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   if (displayNoun == null) {
     displayNoun = null;
   }
-  const obj3 = { noun: stateFromStores(12737)({ displayNoun, lowercase: true }), orgName: null, accountName: "[Account/Username]" };
+  const obj3 = { noun: stateFromStores(12784)({ displayNoun, lowercase: true }), orgName: null, accountName: "[Account/Username]" };
   let str;
   if (tmp4 != null) {
     str = tmp4.organization.name;
@@ -524,20 +524,20 @@ export const OutcomeStep = ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const tmp14Result = getOutcomeContent(joinStatus, failureReason, guildJoinStatus, obj3, obj4);
   ({ subtitle, cta } = tmp14Result);
   const obj5 = { spacing: stateFromStores(587).space.PX_8, children: null };
-  const items3 = [closure_10(guildId(5235).Text, { variant: "heading-xl/semibold", style: tmp.text, accessibilityRole: "header", children: tmp14Result.title }), ];
+  const items3 = [closure_10(guildId(5270).Text, { variant: "heading-xl/semibold", style: tmp.text, accessibilityRole: "header", children: tmp14Result.title }), ];
   let tmp20Result = null != subtitle;
   if (tmp20Result) {
     const obj7 = { variant: "text-md/normal", color: "text-muted", style: tmp.text, children: subtitle };
-    tmp20Result = closure_10(tmp6(5235).Text, obj7);
+    tmp20Result = closure_10(tmp6(5270).Text, obj7);
   }
   const obj8 = { children: null };
   const obj6 = { variant: "heading-xl/semibold", style: tmp.text, accessibilityRole: "header", children: tmp14Result.title };
-  const tmp2Result = stateFromStores(12737);
+  const tmp2Result = stateFromStores(12784);
   items3[1] = tmp20Result;
   obj5.children = items3;
-  const items4 = [closure_10(guildId(7902).ModalContent, { children: closure_11(guildId(5978).Stack, obj5) }), ];
-  const obj10 = { children: closure_10(guildId(5245).Button, { text: cta.text, size: "lg", onPress: cta.onPress, disabled: tmp9 }) };
-  items4[1] = closure_10(guildId(12739).ModalFooter, obj10);
+  const items4 = [closure_10(guildId(7936).ModalContent, { children: closure_11(guildId(6013).Stack, obj5) }), ];
+  const obj10 = { children: closure_10(guildId(5280).Button, { text: cta.text, size: "lg", onPress: cta.onPress, disabled: tmp9 }) };
+  items4[1] = closure_10(guildId(12786).ModalFooter, obj10);
   obj8.children = items4;
-  return closure_11(guildId(7901).ModalScreen, obj8);
+  return closure_11(guildId(7935).ModalScreen, obj8);
 });

@@ -1,20 +1,20 @@
-// === Module 7211: OptInChannelsActionCreators ===
+// === Module 7245: OptInChannelsActionCreators ===
 
-// Module 7211 (OptInChannelsActionCreators)
+// Module 7245 (OptInChannelsActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
-import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4805 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5712 */;
-import ImpersonateActionCreators from "ImpersonateActionCreators" /* 6856 */;
-import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7212 */;
-import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7214 */;
-import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7217 */;
+import UserSettingsProtoActionCreators from "UserSettingsProtoActionCreators" /* 4837 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5747 */;
+import ImpersonateActionCreators from "ImpersonateActionCreators" /* 6890 */;
+import NotificationSettingsUtils from "NotificationSettingsUtils" /* 7246 */;
+import UserGuildSettingsManagerDefault from "UserGuildSettingsManager" /* 7248 */;
+import NotificationSettingsModalActionCreatorsDefault from "NotificationSettingsModalActionCreators" /* 7251 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ImpersonateStore from "ImpersonateStore" /* 4877 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
+import ImpersonateStore from "ImpersonateStore" /* 4909 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6739 */;
 
 const require = globalThis.__r;
 
@@ -253,8 +253,8 @@ export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2) {
     if (ImpersonateStore.isFullServerPreview(id)) {
       const result = require("ImpersonateActionCreators").updateImpersonatedChannels(id, arr, []);
       if (flag) {
-        const result1 = tmp22(6856).updateImpersonatedData(id, { optInEnabled: true });
-        const tmp22Result = tmp22(6856);
+        const result1 = tmp22(6890).updateImpersonatedData(id, { optInEnabled: true });
+        const tmp22Result = tmp22(6890);
       }
       const obj12 = require("ImpersonateActionCreators");
       tmp22 = _require;
@@ -270,8 +270,8 @@ export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2) {
         const obj6 = require("FlagUtils");
         const setFlagResult = require("FlagUtils").setFlag(UserGuildSettingsStore.getGuildFlags(id), constants2.OPT_IN_CHANNELS_ON, true);
         const obj4 = { flags: setFlagResult, channel_overrides };
-        const result2 = channel_overrides(7217).updateGuildAndChannelNotificationSettings(id, obj4, require("NotificationSettingsUtils").NotificationLabels.OptedIn);
-        const obj7 = channel_overrides(7217);
+        const result2 = channel_overrides(7251).updateGuildAndChannelNotificationSettings(id, obj4, require("NotificationSettingsUtils").NotificationLabels.OptedIn);
+        const obj7 = channel_overrides(7251);
         const obj8 = {};
         const obj9 = channel_overrides(1264);
         const merged = Object.assign(require("AppAnalyticsUtils").collectGuildAnalyticsMetadata(id));
@@ -280,8 +280,8 @@ export const bulkOptInChannels = function bulkOptInChannels(id, arr, arg2) {
         obj9.track(AnalyticEvents.CHANNEL_LIST_UPDATED, obj8);
         const obj11 = require("AppAnalyticsUtils");
       } else {
-        const result3 = channel_overrides(7217).updateChannelOverrideSettingsBulk(id, channel_overrides, require("NotificationSettingsUtils").NotificationLabels.OptedIn);
-        const obj2 = channel_overrides(7217);
+        const result3 = channel_overrides(7251).updateChannelOverrideSettingsBulk(id, channel_overrides, require("NotificationSettingsUtils").NotificationLabels.OptedIn);
+        const obj2 = channel_overrides(7251);
         const obj10 = {};
         const obj3 = channel_overrides(1264);
         const merged1 = Object.assign(require("AppAnalyticsUtils").collectGuildAnalyticsMetadata(id));
@@ -307,8 +307,8 @@ export const bulkOptOutChannels = function bulkOptOutChannels(id, arr, location)
         obj.flags = FlagUtils.setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
         obj[item] = obj;
       });
-      const result1 = obj(7217).updateChannelOverrideSettingsBulk(id, obj, require("NotificationSettingsUtils").NotificationLabels.OptedOut);
-      const obj2 = obj(7217);
+      const result1 = obj(7251).updateChannelOverrideSettingsBulk(id, obj, require("NotificationSettingsUtils").NotificationLabels.OptedOut);
+      const obj2 = obj(7251);
       const obj4 = {};
       const obj3 = obj(1264);
       const merged = Object.assign(require("AppAnalyticsUtils").collectGuildAnalyticsMetadata(id));
@@ -451,8 +451,8 @@ export const clearGuildNotice = function clearGuildNotice(guildId) {
         obj.flags = FlagUtils.setFlag(channelIdFlags, constants.OPT_IN_ENABLED, false);
         obj[item] = obj;
       });
-      const result1 = obj(7217).updateChannelOverrideSettingsBulk(guildId, obj, require("NotificationSettingsUtils").NotificationLabels.OptedOut);
-      const obj2 = obj(7217);
+      const result1 = obj(7251).updateChannelOverrideSettingsBulk(guildId, obj, require("NotificationSettingsUtils").NotificationLabels.OptedOut);
+      const obj2 = obj(7251);
       const obj4 = {};
       const obj3 = obj(1264);
       const merged = Object.assign(require("AppAnalyticsUtils").collectGuildAnalyticsMetadata(guildId));

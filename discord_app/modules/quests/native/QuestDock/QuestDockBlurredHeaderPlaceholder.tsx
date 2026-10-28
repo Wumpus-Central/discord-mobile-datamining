@@ -1,17 +1,17 @@
-// === Module 16575: QuestDockBlurredHeaderPlaceholder ===
+// === Module 16804: QuestDockBlurredHeaderPlaceholder ===
 
-// Module 16575 (QuestDockBlurredHeaderPlaceholder)
-import thumbHashToRGBA from "thumbHashToRGBA" /* 16576 */;
+// Module 16804 (QuestDockBlurredHeaderPlaceholder)
+import thumbHashToRGBA from "thumbHashToRGBA" /* 16805 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const StyleSheet = fn(17).StyleSheet;
-const QuestDockMode = fn(6711).QuestDockMode;
-const QuestDockConstants = fn(16480);
+const QuestDockMode = fn(6745).QuestDockMode;
+const QuestDockConstants = fn(16709);
 ({ QUEST_DOCK_LANDSCAPE_MEDIA_EXPANDED_HEIGHT, QUEST_DOCK_UNENROLLED_HEADER_INSET_EXPANDED } = QuestDockConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { imageContainer: null, overlay: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -34,7 +34,7 @@ const result = size.fileFinishedImporting("modules/quests/native/QuestDock/Quest
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function QuestDockBlurredHeaderPlaceholder(arg0) {
   const cResult = questDockWrapperSpecs(576).c(22);
   ({ layoutAnimation, layoutAnimatedStyle, opacityAnimatedStyle, placeholder } = arg0);
-  const context = noop.useContext(questDockWrapperSpecs(16481).QuestDockGestureContext);
+  const context = noop.useContext(questDockWrapperSpecs(16710).QuestDockGestureContext);
   const activeQuestDockMode = context.activeQuestDockMode;
   if (cResult[0] !== placeholder) {
     let thumbHashToDataURLResult = globalThis;
@@ -49,10 +49,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       tmp6 = cResult[2];
     }
     const _Uint8Array = thumbHashToDataURLResult.Uint8Array;
-    thumbHashToDataURLResult = tmp(16576).thumbHashToDataURL(_Uint8Array.from(thumbHashToDataURLResult.atob(placeholder), tmp6));
+    thumbHashToDataURLResult = tmp(16805).thumbHashToDataURL(_Uint8Array.from(thumbHashToDataURLResult.atob(placeholder), tmp6));
     cResult[0] = placeholder;
     cResult[1] = thumbHashToDataURLResult;
-    const tmpResult = tmp(16576);
+    const tmpResult = tmp(16805);
   } else {
     if (cResult[3] !== cResult[1]) {
       const obj2 = { uri: tmp5 };
@@ -88,7 +88,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     O.__closure = obj3;
     O.__workletHash = 11176778421725;
     O.__initData = __initData;
-    const animatedStyle = tmp(5053).useAnimatedStyle(O);
+    const animatedStyle = tmp(5085).useAnimatedStyle(O);
     if (cResult[5] === animatedStyle) {
       if (cResult[6] === layoutAnimatedStyle) {
         if (cResult[7] === opacityAnimatedStyle) {
@@ -108,7 +108,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 return obj;
               }
             }
-            const tmp20 = closure_7(activeQuestDockMode(5670), obj4);
+            const tmp20 = closure_7(activeQuestDockMode(5705), obj4);
             cResult[10] = tmp8;
             cResult[11] = tmp20;
             let tmp16 = tmp20;
@@ -166,7 +166,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               tmp29[0] = tmp10.overlay;
               tmp29[1] = opacityAnimatedStyle;
               obj6.style = tmp29;
-              const tmp30 = closure_7(activeQuestDockMode(7170), obj6);
+              const tmp30 = closure_7(activeQuestDockMode(7204), obj6);
               cResult[16] = opacityAnimatedStyle;
               cResult[17] = tmp10.overlay;
               cResult[18] = tmp30;
@@ -187,7 +187,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           tmp24[0] = tmp15;
           tmp24[1] = layoutAnimation;
           tmp24[2] = tmp16;
-          const tmp25 = closure_7(activeQuestDockMode(7170), tmp24);
+          const tmp25 = closure_7(activeQuestDockMode(7204), tmp24);
           cResult[12] = layoutAnimation;
           cResult[13] = tmp15;
           cResult[14] = tmp16;
@@ -203,7 +203,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[8] = tmp10.imageContainer;
     cResult[9] = items;
     tmp15 = items;
-    const tmpResult2 = tmp(5053);
+    const tmpResult2 = tmp(5085);
   }
   const obj = questDockWrapperSpecs(576);
 }) : (function QuestDockBlurredHeaderPlaceholder(arg0) {

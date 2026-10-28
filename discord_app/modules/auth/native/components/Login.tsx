@@ -1,16 +1,16 @@
-// === Module 7036: Login ===
+// === Module 7070: Login ===
 
-// Module 7036 (Login)
+// Module 7070 (Login)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5910 */;
-import Pressables from "Pressables" /* 6910 */;
-import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7038 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
+import Pressables from "Pressables" /* 6944 */;
+import NativeDeviceSettingsModuleDefault from "NativeDeviceSettingsModule" /* 7072 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import PhoneStore from "PhoneStore" /* 7037 */;
+import PhoneStore from "PhoneStore" /* 7071 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 
 const require = globalThis.__r;
@@ -38,7 +38,7 @@ const View = fn(17).View;
 const AuthStates = fn(1084).AuthStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_12 = createStyles.createStyles((arg0) => {
   const obj = { password: { marginTop: 24 }, button: { width: "100%", marginTop: 16 }, hint: { marginTop: 4 }, link: { alignSelf: "flex-start", paddingVertical: 4 }, separator: { paddingHorizontal: 16, paddingVertical: 4 }, content: null };
   let num = 0;

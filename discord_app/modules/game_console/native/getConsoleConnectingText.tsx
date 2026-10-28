@@ -1,6 +1,6 @@
-// === Module 18651: getConsoleConnectingText ===
+// === Module 18902: getConsoleConnectingText ===
 
-// Module 18651 (getConsoleConnectingText)
+// Module 18902 (getConsoleConnectingText)
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;

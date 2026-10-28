@@ -1,54 +1,54 @@
-// === Module 10630: UserRow ===
+// === Module 10662: UserRow ===
 
-// Module 10630 (UserRow)
+// Module 10662 (UserRow)
 import initialize from "initialize" /* 504 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
 import utils_StringUtils from "utils/StringUtils" /* 2031 */;
-import UserUtils from "UserUtils" /* 5026 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import components_Button_Button from "components/Button/Button" /* 5245 */;
-import ToastUtils from "ToastUtils" /* 5663 */;
-import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6921 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7413 */;
-import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7416 */;
-import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7737 */;
-import ChatIcon from "ChatIcon" /* 8542 */;
-import PhoneCallIcon from "PhoneCallIcon" /* 9722 */;
-import BoostGemIcon from "BoostGemIcon" /* 9810 */;
-import PeopleUtilsDefault from "PeopleUtils" /* 10632 */;
-import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10633 */;
-import ActivityStatusDefault from "ActivityStatus" /* 10637 */;
-import ActionButtonDefault from "ActionButton" /* 10659 */;
-import XLargeIcon from "XLargeIcon" /* 10660 */;
-import CrownIcon from "CrownIcon" /* 10662 */;
+import UserUtils from "UserUtils" /* 5058 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import components_Button_Button from "components/Button/Button" /* 5280 */;
+import ToastUtils from "ToastUtils" /* 5698 */;
+import CheckmarkLargeIcon from "CheckmarkLargeIcon" /* 6955 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7448 */;
+import RelationshipActionCreatorsDefault from "RelationshipActionCreators" /* 7451 */;
+import FriendSuggestionActionCreatorsDefault from "FriendSuggestionActionCreators" /* 7771 */;
+import ChatIcon from "ChatIcon" /* 8579 */;
+import PhoneCallIcon from "PhoneCallIcon" /* 9754 */;
+import BoostGemIcon from "BoostGemIcon" /* 9842 */;
+import PeopleUtilsDefault from "PeopleUtils" /* 10664 */;
+import GameRelationshipActionCreatorsDefault from "GameRelationshipActionCreators" /* 10665 */;
+import ActivityStatusDefault from "ActivityStatus" /* 10669 */;
+import ActionButtonDefault from "ActionButton" /* 10691 */;
+import XLargeIcon from "XLargeIcon" /* 10692 */;
+import CrownIcon from "CrownIcon" /* 10694 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
 import ApplicationStore from "ApplicationStore" /* 2042 */;
-import FriendSuggestionStore from "FriendSuggestionStore" /* 7736 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import PresenceStore from "PresenceStore" /* 5713 */;
-import RelationshipStore from "RelationshipStore" /* 4914 */;
+import FriendSuggestionStore from "FriendSuggestionStore" /* 7770 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import PresenceStore from "PresenceStore" /* 5748 */;
+import RelationshipStore from "RelationshipStore" /* 4946 */;
 
 const UserUtilsDefault = UserUtils;
 
 require = fn;
 const View = fn(17).View;
-const UserRowModes = fn(10619).UserRowModes;
+const UserRowModes = fn(10651).UserRowModes;
 const Constants = fn(1084);
 ({ RelationshipTypes: closure_12, StatusTypes: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15, Fragment: closure_16 } = jsxProd);
 const PlatformUtils = fn(1382);
 if (PlatformUtils.isIOS()) {
-  let obj = { lineHeight: "rejectWithError" };
+  let obj = { lineHeight: "paths" };
 }
 let closure_18 = { CALL: "call", MESSAGE: "message", ACCEPT: "accept", DECLINE: "decline", CANCEL: "cancel", ACCEPT_SUGGESTION: "accept-suggestion", IGNORE_SUGGESTION: "ignore-suggestion", TOGGLE: "toggle" };
-let createStyles = fn(4972);
+let createStyles = fn(5004);
 let closure_19 = createStyles.createStyles({ avatar: { flexShrink: 0, flexGrow: 0 }, actions: { flexDirection: "row" }, action: { marginLeft: 12, alignSelf: "center" }, buttonWrapper: { marginLeft: 8 }, labelContainer: { flexDirection: "row", alignItems: "center" }, roleDot: { marginRight: 4, paddingTop: 0 }, usernameLabelContainer: { display: "flex", flexDirection: "row", alignItems: "center", gap: 4 }, usernameLabel: { display: "flex", flexShrink: 1 } });
-createStyles = fn(4972);
+createStyles = fn(5004);
 let obj3 = { activityText: { color: nativeDefault.colors.TEXT_SUBTLE }, gameContainer: null, gameIcon: null };
 let obj6 = { color: nativeDefault.colors.TEXT_SUBTLE };
 obj3.gameContainer = { flexDirection: "row", gap: 4, cornerRadius: nativeDefault.radii.xs };
@@ -105,17 +105,17 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRo
   }
   if (!isGameRelationship.isGameRelationship) {
     if (cResult[19] !== user) {
-      const userTag = applicationId(5026).getUserTag(user);
+      const userTag = applicationId(5058).getUserTag(user);
       cResult[19] = user;
       cResult[20] = userTag;
       let tmp12 = userTag;
-      const tmpResult2 = applicationId(5026);
+      const tmpResult2 = applicationId(5058);
     } else {
       tmp12 = cResult[20];
     }
     if (cResult[21] !== tmp12) {
       const obj3 = { lineClamp: 1, variant: "text-xs/medium", color: "text-muted", children: tmp12 };
-      const tmp16 = closure_14(applicationId(5235).Text, obj3);
+      const tmp16 = closure_14(applicationId(5270).Text, obj3);
       cResult[21] = tmp12;
       cResult[22] = tmp16;
     }
@@ -147,7 +147,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserRo
         }
         if (cResult[13] !== stateFromStores.name) {
           const obj5 = { lineClamp: 1, variant: "text-xs/medium", color: "text-subtle", children: stateFromStores.name };
-          const tmp24 = closure_14(applicationId(5235).Text, obj5);
+          const tmp24 = closure_14(applicationId(5270).Text, obj5);
           cResult[13] = stateFromStores.name;
           cResult[14] = tmp24;
           let tmp22 = tmp24;
@@ -321,7 +321,7 @@ export default noop.memo(function UserRow(type) {
   const memo = flag2.useMemo(() => {
     const items = [];
     if (NONE !== UserRowModes.ACTIONS) {
-      let obj2 = { accessibilityActions: items, actions: "y" };
+      let obj2 = { accessibilityActions: items, actions: "Array" };
       return obj2;
     } else {
       if (constants.PENDING_INCOMING === type) {
@@ -370,11 +370,11 @@ export default noop.memo(function UserRow(type) {
             location: isMobileOnline,
             onConfirm() {
               if (null != closure_0) {
-                const result = type(5663).presentGameFriendRequestAcceptedToast();
-                const obj2 = type(5663);
+                const result = type(5698).presentGameFriendRequestAcceptedToast();
+                const obj2 = type(5698);
               } else {
-                const result1 = type(5663).presentFriendRequestAcceptedToast();
-                obj = type(5663);
+                const result1 = type(5698).presentFriendRequestAcceptedToast();
+                obj = type(5698);
               }
             }
           });
@@ -464,14 +464,14 @@ export default noop.memo(function UserRow(type) {
             channel = channel.getChannel(result);
             if (null != channel) {
               user(38)(channel.isPrivate(), "must be a DM");
-              const obj2 = user(10631)(channel, false);
+              const obj2 = user(10663)(channel, false);
               if (!obj2.inCall) {
                 obj2.onPress();
               }
               const tmp3 = user(38);
               obj = { recipientIds: current.id };
-              user(7413).openPrivateChannel(obj);
-              const tmpResult = user(7413);
+              user(7448).openPrivateChannel(obj);
+              const tmpResult = user(7448);
             }
           });
         };
@@ -514,14 +514,14 @@ export default noop.memo(function UserRow(type) {
         channel = channel.getChannel(result);
         if (null != channel) {
           user(38)(channel.isPrivate(), "must be a DM");
-          const obj2 = user(10631)(channel, false);
+          const obj2 = user(10663)(channel, false);
           if (!obj2.inCall) {
             obj2.onPress();
           }
           const tmp3 = user(38);
           obj = { recipientIds: current.id };
-          user(7413).openPrivateChannel(obj);
-          const tmpResult = user(7413);
+          user(7448).openPrivateChannel(obj);
+          const tmpResult = user(7448);
         }
       });
       const ensurePrivateChannelResult = ChannelActionCreatorsDefault.ensurePrivateChannel(user.id);
@@ -539,11 +539,11 @@ export default noop.memo(function UserRow(type) {
         location: Friends_v2,
         onConfirm() {
             if (null != closure_0) {
-              const result = type(5663).presentGameFriendRequestAcceptedToast();
-              const obj2 = type(5663);
+              const result = type(5698).presentGameFriendRequestAcceptedToast();
+              const obj2 = type(5698);
             } else {
-              const result1 = type(5663).presentFriendRequestAcceptedToast();
-              obj = type(5663);
+              const result1 = type(5698).presentFriendRequestAcceptedToast();
+              obj = type(5698);
             }
           }
       };
@@ -575,8 +575,8 @@ export default noop.memo(function UserRow(type) {
   }, items7);
   const callback2 = flag2.useCallback(() => {
     if (null == onLongPress) {
-      asyncRequireImpl(8668, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
-      const promise = asyncRequireImpl(8668, dependencyMap.paths);
+      asyncRequireImpl(8705, dependencyMap.paths).then((result) => result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }));
+      const promise = asyncRequireImpl(8705, dependencyMap.paths);
     } else {
       tmp(user);
     }

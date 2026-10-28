@@ -1,17 +1,17 @@
-// === Module 17309: DataAndPrivacyScreen ===
+// === Module 17542: DataAndPrivacyScreen ===
 
-// Module 17309 (DataAndPrivacyScreen)
+// Module 17542 (DataAndPrivacyScreen)
 import util from "util" /* 1125 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import SecureFramesUtils from "SecureFramesUtils" /* 9196 */;
-import SettingBuilders from "SettingBuilders" /* 11212 */;
-import SettingLayoutDefault from "SettingLayout" /* 16016 */;
-import SettingsScreenNoticesDefault from "SettingsScreenNotices" /* 16143 */;
+import SecureFramesUtils from "SecureFramesUtils" /* 9229 */;
+import SettingBuilders from "SettingBuilders" /* 11248 */;
+import SettingLayoutDefault from "SettingLayout" /* 16244 */;
+import SettingsScreenNoticesDefault from "SettingsScreenNotices" /* 16371 */;
 import noop from "module_19" /* 19 */;
-import ConsentStore from "ConsentStore" /* 6671 */;
+import ConsentStore from "ConsentStore" /* 6705 */;
 
 require = fn;
-const MobileUserSettings = fn(8331).MobileUserSettings;
+const MobileUserSettings = fn(8365).MobileUserSettings;
 const Constants = fn(1084);
 ({ HelpdeskArticles: metroRequire, UserSettingsSections: closure_7 } = Constants);
 const jsxProd = fn(21);
@@ -203,11 +203,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DataAndP
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const fn = function n() {
       if (!fetchedConsents.fetchedConsents) {
-        const consents = stackNavigation(16185).fetchConsents();
-        const obj = stackNavigation(16185);
+        const consents = stackNavigation(16413).fetchConsents();
+        const obj = stackNavigation(16413);
       }
-      const harvestStatus = stackNavigation(16188).fetchHarvestStatus();
-      const obj2 = stackNavigation(16188);
+      const harvestStatus = stackNavigation(16416).fetchHarvestStatus();
+      const obj2 = stackNavigation(16416);
     };
     const items = [];
     cResult[0] = fn;
@@ -224,7 +224,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DataAndP
     }
     const _Symbol = Symbol;
     if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj3 = { screen: tmp(16143).SettingsScreen.DATA_AND_PRIVACY };
+      const obj3 = { screen: tmp(16371).SettingsScreen.DATA_AND_PRIVACY };
       const tmp18 = closure_8(SettingsScreenNoticesDefault, obj3);
       cResult[5] = tmp18;
       let tmp14 = tmp18;
@@ -257,12 +257,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DataAndP
   obj7.settings = items3;
   const intl2 = tmp(1125).intl;
   const obj8 = { helpArticle: null };
-  const tmpResult = stackNavigation(11212);
-  obj8.helpArticle = stackNavigation(9196).getSecureFramesHelpdeskArticle();
+  const tmpResult = stackNavigation(11248);
+  obj8.helpArticle = stackNavigation(9229).getSecureFramesHelpdeskArticle();
   obj7.subLabel = intl2.format(stackNavigation(1125).t["/6sFWa"], obj8);
   const items4 = [obj7];
   const obj9 = { label: null, settings: null, subLabel: null };
-  const tmpResult2 = stackNavigation(9196);
+  const tmpResult2 = stackNavigation(9229);
   const intl3 = tmp(1125).intl;
   obj9.label = intl3.string(stackNavigation(1125).t["+uHbqE"]);
   const items5 = [, ];
@@ -294,11 +294,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DataAndP
   importDefault = tmp2;
   const effect = noop.useEffect(() => {
     if (!fetchedConsents.fetchedConsents) {
-      const consents = stackNavigation(16185).fetchConsents();
-      const obj = stackNavigation(16185);
+      const consents = stackNavigation(16413).fetchConsents();
+      const obj = stackNavigation(16413);
     }
-    const harvestStatus = stackNavigation(16188).fetchHarvestStatus();
-    const obj2 = stackNavigation(16188);
+    const harvestStatus = stackNavigation(16416).fetchHarvestStatus();
+    const obj2 = stackNavigation(16416);
   }, []);
   let items = [stackNavigation, tmp2];
   let obj2 = { children: null };
@@ -337,7 +337,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DataAndP
   }, items);
   let obj3 = { screen: null };
   let obj = stackNavigation(1502);
-  obj3.screen = stackNavigation(16143).SettingsScreen.DATA_AND_PRIVACY;
+  obj3.screen = stackNavigation(16371).SettingsScreen.DATA_AND_PRIVACY;
   let items1 = [closure_8(SettingsScreenNoticesDefault, obj3), closure_8(SettingLayoutDefault, { node: memo })];
   obj2.children = items1;
   return closure_10(closure_9, obj2);

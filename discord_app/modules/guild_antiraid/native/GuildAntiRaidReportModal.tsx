@@ -1,13 +1,13 @@
-// === Module 15252: GuildAntiRaidReportModal ===
+// === Module 15477: GuildAntiRaidReportModal ===
 
-// Module 15252 (GuildAntiRaidReportModal)
+// Module 15477 (GuildAntiRaidReportModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import components_Button_Button from "components/Button/Button" /* 5245 */;
-import NavigatorHeader from "NavigatorHeader" /* 6926 */;
-import TableRowGroup from "TableRowGroup" /* 6989 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import components_Button_Button from "components/Button/Button" /* 5280 */;
+import NavigatorHeader from "NavigatorHeader" /* 6960 */;
+import TableRowGroup from "TableRowGroup" /* 7023 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -16,12 +16,12 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-const GuildReportRaidModalConstants = fn(15253);
+const GuildReportRaidModalConstants = fn(15478);
 ({ getReportRaidHelpArticleURL: closure_7, getReportRaidTypeLabel: closure_8, REPORT_RAID_OPTIONS: closure_9 } = GuildReportRaidModalConstants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const REPORT_RAID = "REPORT_RAID";
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { flex: 1, paddingHorizontal: 16, paddingVertical: 0, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flexDirection: "column", height: "100%", paddingTop: 8 }, headerSubtitle: { textAlign: "center", marginTop: 8 }, formBody: { marginTop: 24 }, formRow: { paddingVertical: 2 }, submitButtonContainer: null };
 const rect = { position: "absolute", bottom: 0, left: 0, right: 0, paddingHorizontal: 16, paddingVertical: 16, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.submitButtonContainer = rect;
@@ -66,7 +66,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
   }
   if (cResult[4] !== tmp4.headerSubtitle) {
     const obj3 = { style: headerSubtitle, variant: "text-sm/medium", color: "text-default", children: tmp7 };
-    const tmp11 = closure_10(tmp(5235).Text, obj3);
+    const tmp11 = closure_10(tmp(5270).Text, obj3);
     cResult[4] = tmp4.headerSubtitle;
     cResult[5] = tmp11;
     let tmp9 = tmp11;
@@ -80,7 +80,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
       }
       if (cResult[10] !== tmp13) {
         const obj4 = { hasIcons: false, children: tmp13 };
-        const tmp17 = closure_10(tmp(6989).TableRowGroup, obj4);
+        const tmp17 = closure_10(tmp(7023).TableRowGroup, obj4);
         cResult[10] = tmp13;
         cResult[11] = tmp17;
         let tmp15 = tmp17;
@@ -115,7 +115,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function Report
           }
           if (cResult[21] !== onSubmit) {
             const obj6 = { size: "md", text: tmp25, onPress: onSubmit };
-            const tmp29 = closure_10(tmp(5245).Button, obj6);
+            const tmp29 = closure_10(tmp(5280).Button, obj6);
             cResult[21] = onSubmit;
             cResult[22] = tmp29;
             let tmp27 = tmp29;
@@ -441,9 +441,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildAnt
             dependencyMap = 3;
           } else {
             tmp21.current = true;
-            const result = tmp2(12787).trackReportRaidViewed(guildId, first);
-            const obj2 = tmp2(12787);
-            tmp2(12787).handleReportRaid(guildId);
+            const result = tmp2(12834).trackReportRaidViewed(guildId, first);
+            const obj2 = tmp2(12834);
+            tmp2(12834).handleReportRaid(guildId);
             const intl = tmp2(1125).intl;
             c1 = 1;
             dependencyMap = 1;

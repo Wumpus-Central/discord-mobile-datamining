@@ -1,8 +1,8 @@
-// === Module 15270: subscriptionSettingsDeepLink ===
+// === Module 15495: subscriptionSettingsDeepLink ===
 
-// Module 15270 (subscriptionSettingsDeepLink)
+// Module 15495 (subscriptionSettingsDeepLink)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import openUserSettings from "openUserSettings" /* 7491 */;
+import openUserSettings from "openUserSettings" /* 7526 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import SubscriptionStore from "SubscriptionStore" /* 2055 */;
 
@@ -91,7 +91,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
       if (closure_129_0) {
         if (closure_129_1) {
           (function showSubscriptionPicker() {
-            closure_0 = closure_0(5211).default;
+            closure_0 = closure_0(5246).default;
             const obj = { key, hasIcons: false, header: null, options: null };
             const obj2 = { title: null, onClose: null };
             const intl = closure_0(1125).intl;
@@ -111,7 +111,7 @@ let closure_12 = async function _openSubscriptionSettingsFromDeepLink() {
             obj4.onPress = onPress2;
             items[1] = obj4;
             obj.options = items;
-            const result = closure_0(15271).showSimpleActionSheet(obj);
+            const result = closure_0(15496).showSimpleActionSheet(obj);
           })();
         }
         c5 = 3;

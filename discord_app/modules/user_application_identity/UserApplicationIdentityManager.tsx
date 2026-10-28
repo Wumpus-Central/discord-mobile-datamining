@@ -1,8 +1,8 @@
-// === Module 19492: UserApplicationIdentityManager ===
+// === Module 19754: UserApplicationIdentityManager ===
 
-// Module 19492 (UserApplicationIdentityManager)
-import UserApplicationIdentityActionCreators from "UserApplicationIdentityActionCreators" /* 10794 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
+// Module 19754 (UserApplicationIdentityManager)
+import UserApplicationIdentityActionCreators from "UserApplicationIdentityActionCreators" /* 10827 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
 
 require = fn;
 function handleUserApplicationIdentityGatewayEvent(user_id) {

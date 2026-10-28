@@ -1,36 +1,36 @@
-// === Module 13889: SocialLayerStorefrontPoductPurchaseSuccessModal ===
+// === Module 14108: SocialLayerStorefrontPoductPurchaseSuccessModal ===
 
-// Module 13889 (SocialLayerStorefrontPoductPurchaseSuccessModal)
+// Module 14108 (SocialLayerStorefrontPoductPurchaseSuccessModal)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import _modDef3701 from "module_3701" /* 3701 */;
-import UserUtilsDefault from "UserUtils" /* 5026 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
-import timing from "timing" /* 5207 */;
-import HapticUtils from "HapticUtils" /* 5213 */;
-import spring from "spring" /* 5248 */;
-import XSmallIcon from "XSmallIcon" /* 6933 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7280 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7332 */;
-import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10558 */;
+import _modDef3733 from "module_3733" /* 3733 */;
+import UserUtilsDefault from "UserUtils" /* 5058 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import timing from "timing" /* 5242 */;
+import HapticUtils from "HapticUtils" /* 5248 */;
+import spring from "spring" /* 5283 */;
+import XSmallIcon from "XSmallIcon" /* 6967 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7314 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7367 */;
+import SocialLayerStorefrontNativeActionCreators from "SocialLayerStorefrontNativeActionCreators" /* 10590 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _toArray from "_toArray" /* 729 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
-import SKUStore from "SKUStore" /* 6826 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
+import SKUStore from "SKUStore" /* 6860 */;
 
 const require = globalThis.__r;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let numDays = fn(7335).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+let numDays = fn(7370).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(4972);
+let createStyles = fn(5004);
 let obj2 = { root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK }, backdropImage: { position: "absolute", inset: 0, opacity: 0.45 }, backdropGradient: { position: "absolute", inset: 0 }, curtain: null, main: null, header: null, closeButtonIcon: null, scroll: null, body: null, bodyLandscape: null, preview: null, previewLandscape: null, messages: null, messagesLandscape: null, contentColumnLandscape: null, title: null, description: null, textLandscape: null, footer: null, footerLandscape: null, cta: null, ctaLandscape: null, finePrint: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BLACK };
 obj2.curtain = { position: "absolute", inset: 0, backgroundColor: nativeDefault.colors.BLACK };
@@ -65,7 +65,7 @@ obj2.ctaLandscape = { marginHorizontal: nativeDefault.space.PX_16 };
 const obj14 = { marginHorizontal: nativeDefault.space.PX_16 };
 obj2.finePrint = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 let closure_16 = createStyles.createStyles(obj2);
-createStyles = fn(4972);
+createStyles = fn(5004);
 let obj17 = { linkAccountIcon: null };
 let obj15 = { textAlign: "center", marginHorizontal: nativeDefault.space.PX_24, marginBottom: nativeDefault.space.PX_12 };
 obj17.linkAccountIcon = { marginRight: nativeDefault.space.PX_4 };
@@ -1083,7 +1083,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function SocialLayerS
           str = "";
         }
         const obj = { applicationName: str };
-        formatToPlainStringResult = formatToPlainString(_modDef3701.eNNnIG, obj);
+        formatToPlainStringResult = formatToPlainString(_modDef3733.eNNnIG, obj);
       }
     }
     return formatToPlainStringResult;

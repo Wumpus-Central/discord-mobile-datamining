@@ -1,12 +1,12 @@
-// === Module 13036: CheckpointRecapCard ===
+// === Module 13253: CheckpointRecapCard ===
 
-// Module 13036 (CheckpointRecapCard)
+// Module 13253 (CheckpointRecapCard)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import CheckpointCharacterAccessibilityUtils from "CheckpointCharacterAccessibilityUtils" /* 6363 */;
-import CheckpointCardColors from "CheckpointCardColors" /* 8624 */;
-import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 12996 */;
-import CheckpointCardFrameDefault from "CheckpointCardFrame" /* 13037 */;
+import CheckpointCharacterAccessibilityUtils from "CheckpointCharacterAccessibilityUtils" /* 6397 */;
+import CheckpointCardColors from "CheckpointCardColors" /* 8661 */;
+import CheckpointStatNumberDefault from "CheckpointStatNumber" /* 13213 */;
+import CheckpointCardFrameDefault from "CheckpointCardFrame" /* 13254 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,9 +15,9 @@ const jsx = fn(21).jsx;
 let c6 = 268;
 const rect = { size: 240, top: nativeDefault.space.PX_16, left: -20 };
 let c8 = 2026;
-const CheckpointStatNumber = fn(12996);
+const CheckpointStatNumber = fn(13213);
 const checkpointStatNumberWidth = CheckpointStatNumber.getCheckpointStatNumberWidth(2026, 64);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { year: null };
 const rect1 = { position: "absolute", left: 178 - checkpointStatNumberWidth / 2, top: 22.5, transform: null };
 let items = [{ rotate: "90deg" }];
@@ -135,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   }, items);
   const obj2 = { character, canvasWidth: 200, canvasHeight, scale: num, clydeSize: 28, characterLayout: rect, children: null };
   const obj3 = { style: tmp.year, children: null };
-  let obj = character(8624);
+  let obj = character(8661);
   obj3.children = jsx(CheckpointStatNumberDefault, { value, color: obj.getCardColors(character).primaryBackgroundColor, size: 64 });
   obj2.children = <View style={tmp.year}>{null}</View>;
   const tmp8 = <tmp6 character={character} canvasWidth={200} canvasHeight={canvasHeight} scale={num} clydeSize={28} characterLayout={rect}>{null}</tmp6>;

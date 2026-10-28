@@ -1,35 +1,35 @@
-// === Module 17641: useGuildPowerupsCoachmark ===
+// === Module 17876: useGuildPowerupsCoachmark ===
 
-// Module 17641 (useGuildPowerupsCoachmark)
+// Module 17876 (useGuildPowerupsCoachmark)
 import nativeDefault from "native" /* 587 */;
-import useThemeDefault from "useTheme" /* 5206 */;
-import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13419 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13451 */;
-import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 13458 */;
-import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 13459 */;
-import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13461 */;
-import _modDef13491 from "module_13491" /* 13491 */;
-import _modDef17639 from "module_17639" /* 17639 */;
-import useGuildPowerupsBoostActionDefault from "useGuildPowerupsBoostAction" /* 17642 */;
-import _modDef17643 from "module_17643" /* 17643 */;
-import _modDef17644 from "module_17644" /* 17644 */;
-import _modDef17645 from "module_17645" /* 17645 */;
-import _modDef17646 from "module_17646" /* 17646 */;
+import useThemeDefault from "useTheme" /* 5241 */;
+import openGuildPowerupsModalDefault from "openGuildPowerupsModal" /* 13638 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13670 */;
+import useGetGuildPowerupBannerImage from "useGetGuildPowerupBannerImage" /* 13677 */;
+import GuildPowerupsBoostGemDefault from "GuildPowerupsBoostGem" /* 13678 */;
+import GuildPowerupsImageDefault from "GuildPowerupsImage" /* 13680 */;
+import _modDef13710 from "module_13710" /* 13710 */;
+import _modDef17874 from "module_17874" /* 17874 */;
+import useGuildPowerupsBoostActionDefault from "useGuildPowerupsBoostAction" /* 17877 */;
+import _modDef17878 from "module_17878" /* 17878 */;
+import _modDef17879 from "module_17879" /* 17879 */;
+import _modDef17880 from "module_17880" /* 17880 */;
+import _modDef17881 from "module_17881" /* 17881 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
-import GuildStore from "GuildStore" /* 4846 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
+import GuildStore from "GuildStore" /* 4878 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const GuildPowerupsConstants = fn(5183);
+const GuildPowerupsConstants = fn(5218);
 ({ GUILD_TAG_BADGE_PACKS_WAVE_ONE_SKU_ID_SET: metroRequire, GUILD_TAG_BADGE_PACKS_WAVE_TWO_SKU_ID_SET: closure_7, GuildPowerupType: closure_8 } = GuildPowerupsConstants);
 const Constants = fn(1084);
 ({ AnalyticsPages: closure_9, AnalyticsSections: c10 } = Constants);
-const ContentDismissActionType = fn(4821).ContentDismissActionType;
+const ContentDismissActionType = fn(4853).ContentDismissActionType;
 const ThemeTypes = fn(1095).ThemeTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_14 = createStyles.createStyles((arg0) => {
   const obj = { coachmarkImage: null, coachmarkCover: null, boostGemBackground: null };
   const size = { height: 120, width: 260 - 2 * nativeDefault.space.PX_16, borderRadius: nativeDefault.radii.md };
@@ -108,7 +108,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   }
   let num7 = 0;
   if (null != powerup) {
-    num7 = powerup.cost - tmp9(8370)(guildId).available;
+    num7 = powerup.cost - tmp9(8404)(guildId).available;
   }
   if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
     let obj2 = { page: constants2.GUILD_CHANNEL, section: null };
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
             if (cResult[12] === type) {
               if (cResult[13] === tmp10) {
                 if (cResult[14] === stateFromStores1) {
-                  tmp(9842);
+                  tmp(9874);
                   class S {
                     constructor() {
                       return closure_4.useReducedMotion;
@@ -340,7 +340,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           obj9.visible = true;
           obj9.renderImgComponent = function renderImgComponent() {
             if (powerups.length > 1) {
-              let str = _modDef17643;
+              let str = _modDef17878;
             } else {
               str = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(powerups[0], stateFromStores1, true);
               if (str == null) {
@@ -401,7 +401,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
           obj12.renderImgComponent = function renderImgComponent() {
             guildPowerupBannerImage = useGetGuildPowerupBannerImage.getGuildPowerupBannerImage(found1, stateFromStores1, true);
             if (guildPowerupBannerImage == null) {
-              guildPowerupBannerImage = _modDef17639;
+              guildPowerupBannerImage = _modDef17874;
             }
             const obj2 = { imageUrl: guildPowerupBannerImage, isAnimated: !stateFromStores1, style: null };
             const items = [, ];

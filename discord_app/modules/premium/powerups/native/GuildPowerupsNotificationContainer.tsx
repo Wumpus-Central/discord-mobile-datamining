@@ -1,18 +1,18 @@
-// === Module 13495: GuildPowerupsNotificationContainer ===
+// === Module 13714: GuildPowerupsNotificationContainer ===
 
-// Module 13495 (GuildPowerupsNotificationContainer)
+// Module 13714 (GuildPowerupsNotificationContainer)
 import _mod17 from "module_17" /* 17 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import _modDef2567 from "module_2567" /* 2567 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7077 */;
-import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 13496 */;
-import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 13497 */;
-import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 13500 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import ManaTypeConsolidationExperiment from "ManaTypeConsolidationExperiment" /* 7111 */;
+import useGuildPowerupTier3OverrideConfigDefault from "useGuildPowerupTier3OverrideConfig" /* 13715 */;
+import useGuildPowerupExpiringNotificationsConfigDefault from "useGuildPowerupExpiringNotificationsConfig" /* 13716 */;
+import GuildPowerupsWarningDefault from "GuildPowerupsWarning" /* 13719 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4972 */;
+import createStyles from "createStyles" /* 5004 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

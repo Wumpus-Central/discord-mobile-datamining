@@ -1,6 +1,6 @@
-// === Module 13483: GuildPowerupAnalytics ===
+// === Module 13702: GuildPowerupAnalytics ===
 
-// Module 13483 (GuildPowerupAnalytics)
+// Module 13702 (GuildPowerupAnalytics)
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import noop from "module_19" /* 19 */;
 

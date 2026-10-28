@@ -1,20 +1,20 @@
-// === Module 17311: ContentAndSocialScreen ===
+// === Module 17544: ContentAndSocialScreen ===
 
-// Module 17311 (ContentAndSocialScreen)
+// Module 17544 (ContentAndSocialScreen)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7400 */;
-import SettingBuilders from "SettingBuilders" /* 11212 */;
-import ContactSyncUtils from "ContactSyncUtils" /* 13599 */;
-import SettingLayoutDefault from "SettingLayout" /* 16016 */;
-import SettingsScreenNotices from "SettingsScreenNotices" /* 16143 */;
-import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 16145 */;
-import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 17312 */;
-import useUserSafetySettingsSelectedGuildId from "useUserSafetySettingsSelectedGuildId" /* 17317 */;
-import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 17318 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import SensitiveMediaGoreRedactionSettingsUtils from "SensitiveMediaGoreRedactionSettingsUtils" /* 7435 */;
+import SettingBuilders from "SettingBuilders" /* 11248 */;
+import ContactSyncUtils from "ContactSyncUtils" /* 13817 */;
+import SettingLayoutDefault from "SettingLayout" /* 16244 */;
+import SettingsScreenNotices from "SettingsScreenNotices" /* 16371 */;
+import TinyBroncoSettingsNoticesLazy from "TinyBroncoSettingsNoticesLazy" /* 16373 */;
+import SafetyGuildSettingGuildSelect from "SafetyGuildSettingGuildSelect" /* 17545 */;
+import useUserSafetySettingsSelectedGuildId from "useUserSafetySettingsSelectedGuildId" /* 17550 */;
+import useAuthorizedSlayerApplicationsDefault from "useAuthorizedSlayerApplications" /* 17551 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -145,11 +145,11 @@ function getSocialPermissions(allServersSelected) {
 }
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const MobileUserSettings = fn(8331).MobileUserSettings;
+const MobileUserSettings = fn(8365).MobileUserSettings;
 const HelpdeskArticles = fn(1084).HelpdeskArticles;
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { loadingIndicator: { marginTop: nativeDefault.space.PX_32 }, emptyContainer: null };
 let obj3 = { marginTop: nativeDefault.space.PX_32 };
 obj2.emptyContainer = { flex: 1, gap: nativeDefault.space.PX_4, marginTop: nativeDefault.space.PX_24, paddingHorizontal: nativeDefault.space.PX_16 };
@@ -393,11 +393,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ContentA
   const first1 = _slicedToArray(noop.useState(tmp7), 1)[0];
   if (cResult[3] !== first1) {
     const obj2 = { defaultIndex: first1, settings: first };
-    const segmentedControl = route(11212).createSegmentedControl(obj2);
+    const segmentedControl = route(11248).createSegmentedControl(obj2);
     cResult[3] = first1;
     cResult[4] = segmentedControl;
     let tmp10 = segmentedControl;
-    const tmpResult = route(11212);
+    const tmpResult = route(11248);
   } else {
     tmp10 = cResult[4];
   }

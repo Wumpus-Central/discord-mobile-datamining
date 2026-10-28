@@ -1,8 +1,8 @@
-// === Module 7645: useRecentlyActiveChannelsEnabled ===
+// === Module 7679: useRecentlyActiveChannelsEnabled ===
 
-// Module 7645 (useRecentlyActiveChannelsEnabled)
-import useDesignToggleDefault from "useDesignToggle" /* 6928 */;
-import DesignTogglesStore from "DesignTogglesStore" /* 6929 */;
+// Module 7679 (useRecentlyActiveChannelsEnabled)
+import useDesignToggleDefault from "useDesignToggle" /* 6962 */;
+import DesignTogglesStore from "DesignTogglesStore" /* 6963 */;
 
 let ReactCompilerGating = fn(558);
 ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();

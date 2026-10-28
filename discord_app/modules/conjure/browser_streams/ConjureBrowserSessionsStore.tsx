@@ -1,6 +1,6 @@
-// === Module 10710: ConjureBrowserSessionsStore ===
+// === Module 10742: ConjureBrowserSessionsStore ===
 
-// Module 10710 (ConjureBrowserSessionsStore)
+// Module 10742 (ConjureBrowserSessionsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

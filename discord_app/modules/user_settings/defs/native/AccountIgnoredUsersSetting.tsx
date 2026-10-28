@@ -1,14 +1,14 @@
-// === Module 16135: AccountIgnoredUsersSetting ===
+// === Module 16363: AccountIgnoredUsersSetting ===
 
-// Module 16135 (AccountIgnoredUsersSetting)
+// Module 16363 (AccountIgnoredUsersSetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import RelationshipStore from "RelationshipStore" /* 4914 */;
+import RelationshipStore from "RelationshipStore" /* 4946 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11212);
+const SettingBuilders = fn(11248);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountIgnoredUsersSettingDescription() {
   const cResult = c.c(4);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -42,7 +42,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccount
   return intl.format(util.t.rXUeOl, { numberOfIgnoredUsers: stateFromStoresArray.length });
 });
 const route = SettingBuilders.createRoute({
-  IconComponent: fn(7063).EyeSlashIcon,
+  IconComponent: fn(7097).EyeSlashIcon,
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t["93ZDWE"]);
@@ -79,7 +79,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.format(util.t.rXUeOl, { numberOfIgnoredUsers: stateFromStoresArray.length });
   }),
-  parent: fn(8331).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8365).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   screen: {
     route: fn(1084).UserSettingsSections.IGNORED_USERS,
     getComponent() {

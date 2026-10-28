@@ -1,20 +1,20 @@
-// === Module 13686: HubEmailConnectionModal ===
+// === Module 13904: HubEmailConnectionModal ===
 
-// Module 13686 (HubEmailConnectionModal)
+// Module 13904 (HubEmailConnectionModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import useNavigation from "useNavigation" /* 1502 */;
-import useInitialValueDefault from "useInitialValue" /* 5600 */;
-import NavigatorHeader from "NavigatorHeader" /* 6926 */;
-import Navigator from "Navigator" /* 7097 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7223 */;
-import HubEmailConnectionStudentPromptDefault from "HubEmailConnectionStudentPrompt" /* 13687 */;
-import HubEmailConnectionContentDefault from "HubEmailConnectionContent" /* 13690 */;
-import HubEmailConnectionWaitlistDefault from "HubEmailConnectionWaitlist" /* 13697 */;
-import HubEmailConnectionSubmitSchoolDefault from "HubEmailConnectionSubmitSchool" /* 13699 */;
-import HubEmailConnectionGuildSelectDefault from "HubEmailConnectionGuildSelect" /* 13700 */;
-import HubEmailConnectionPinVerifyDefault from "HubEmailConnectionPinVerify" /* 13701 */;
-import HubEmailConnectionGuildSelectSearchDefault from "HubEmailConnectionGuildSelectSearch" /* 13704 */;
+import useInitialValueDefault from "useInitialValue" /* 5635 */;
+import NavigatorHeader from "NavigatorHeader" /* 6960 */;
+import Navigator from "Navigator" /* 7131 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7257 */;
+import HubEmailConnectionStudentPromptDefault from "HubEmailConnectionStudentPrompt" /* 13905 */;
+import HubEmailConnectionContentDefault from "HubEmailConnectionContent" /* 13908 */;
+import HubEmailConnectionWaitlistDefault from "HubEmailConnectionWaitlist" /* 13915 */;
+import HubEmailConnectionSubmitSchoolDefault from "HubEmailConnectionSubmitSchool" /* 13917 */;
+import HubEmailConnectionGuildSelectDefault from "HubEmailConnectionGuildSelect" /* 13918 */;
+import HubEmailConnectionPinVerifyDefault from "HubEmailConnectionPinVerify" /* 13919 */;
+import HubEmailConnectionGuildSelectSearchDefault from "HubEmailConnectionGuildSelectSearch" /* 13922 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -95,13 +95,13 @@ function getScreens(pop, arg1) {
   };
   return obj2;
 }
-const HubEmailConnectionSteps = fn(13677).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13895).HubEmailConnectionSteps;
 let jsx = fn(21).jsx;
-const createStyles = fn(4972);
-let obj2 = { safeArea: { marginTop: fn(5269).NAV_BAR_HEIGHT, flex: 1 } };
+const createStyles = fn(5004);
+let obj2 = { safeArea: { marginTop: fn(5304).NAV_BAR_HEIGHT, flex: 1 } };
 let closure_5 = createStyles.createStyles(obj2);
 fn(558);
-let obj3 = { marginTop: fn(5269).NAV_BAR_HEIGHT, flex: 1 };
+let obj3 = { marginTop: fn(5304).NAV_BAR_HEIGHT, flex: 1 };
 const ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function HubEmailConnectionScreen(children) {
   const cResult = c.c(3);

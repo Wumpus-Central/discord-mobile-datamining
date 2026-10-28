@@ -1,33 +1,33 @@
-// === Module 16477: QuestDockHooks ===
+// === Module 16706: QuestDockHooks ===
 
-// Module 16477 (QuestDockHooks)
+// Module 16706 (QuestDockHooks)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
-import useToken from "useToken" /* 5253 */;
-import QuestTypes from "QuestTypes" /* 6714 */;
-import AnalyticsTypes from "AnalyticsTypes" /* 7802 */;
-import captureAdUserAction from "captureAdUserAction" /* 9575 */;
-import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9578 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9710 */;
-import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 9978 */;
-import QuestDockUtils from "QuestDockUtils" /* 16479 */;
-import AdCreativeUtils from "AdCreativeUtils" /* 16487 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import useToken from "useToken" /* 5288 */;
+import QuestTypes from "QuestTypes" /* 6748 */;
+import AnalyticsTypes from "AnalyticsTypes" /* 7836 */;
+import captureAdUserAction from "captureAdUserAction" /* 9607 */;
+import captureAdUserActionTypes from "captureAdUserActionTypes" /* 9610 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9742 */;
+import cheapWorkletShallowEqual from "cheapWorkletShallowEqual" /* 10010 */;
+import QuestDockUtils from "QuestDockUtils" /* 16708 */;
+import AdCreativeUtils from "AdCreativeUtils" /* 16716 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import QuestDockStore from "QuestDockStore" /* 16478 */;
+import QuestDockStore from "QuestDockStore" /* 16707 */;
 
 const require = globalThis.__r;
 
-const AssetUtils = getScaledImageUrl(9586);
+const AssetUtils = getScaledImageUrl(9618);
 require = fn;
-const QuestConstants = fn(6711);
+const QuestConstants = fn(6745);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: metroRequire, QuestDockMode: closure_7 } = QuestConstants);
-const QuestDockConstants = fn(16480);
+const QuestDockConstants = fn(16709);
 ({ QUEST_DOCK_CLOSED_HEIGHT: closure_8, QUEST_DOCK_COLLAPSED_HEIGHT: closure_9, QUEST_DOCK_EXTERNAL_OFFSET_CLOSED: c10, QUEST_DOCK_EXTERNAL_OFFSET_COLLAPSED_WITH_YOU_BAR: closure_11, QUEST_DOCK_EXTERNAL_OFFSET_EXPANDED_WITH_YOU_BAR: closure_12, QUEST_DOCK_VERTICAL_EDGE_GUTTER_EXPANDED: map1 } = QuestDockConstants);
 fn(558);
 const __initData = { code: "function QuestDockHooksTsx1(){const{restingQuestDockMode,minExpandedContentHeight,windowDimensions,safeArea}=this.__closure;return{restingQuestDockMode:restingQuestDockMode.get(),minExpandedContentHeight:minExpandedContentHeight.get(),windowWidth:windowDimensions.get().width,windowHeight:windowDimensions.get().height,safeArea:safeArea.get()};}" };
@@ -318,8 +318,8 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDock
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDockDismissalReset() {
   const cResult = setRestingQuestDockMode(576).c(4);
-  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16484).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
-  const activeQuestDockMode = noop.useContext(setRestingQuestDockMode(16481).QuestDockGestureContext).activeQuestDockMode;
+  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16713).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const activeQuestDockMode = noop.useContext(setRestingQuestDockMode(16710).QuestDockGestureContext).activeQuestDockMode;
   if (cResult[0] === activeQuestDockMode) {
     if (cResult[1] === setRestingQuestDockMode) {
       let tmp2 = cResult[2];
@@ -330,8 +330,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDock
   const fn = function t() {
     let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
     if (!isSoftDismissedResult) {
-      isSoftDismissedResult = setRestingQuestDockMode(16479).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-      let obj = setRestingQuestDockMode(16479);
+      isSoftDismissedResult = setRestingQuestDockMode(16708).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+      let obj = setRestingQuestDockMode(16708);
     }
     if (!isSoftDismissedResult) {
       setRestingQuestDockMode(constants.COLLAPSED);
@@ -339,8 +339,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDock
     function maybeResetSoftDismissal() {
       let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
       if (!isSoftDismissedResult) {
-        isSoftDismissedResult = setRestingQuestDockMode(16479).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-        const obj = setRestingQuestDockMode(16479);
+        isSoftDismissedResult = setRestingQuestDockMode(16708).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+        const obj = setRestingQuestDockMode(16708);
       }
       if (!isSoftDismissedResult) {
         closure_0(constants.COLLAPSED);
@@ -360,14 +360,14 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDock
   tmp2 = fn;
   let obj = setRestingQuestDockMode(576);
 }) : (function useQuestDockDismissalReset() {
-  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16484).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
-  const activeQuestDockMode = noop.useContext(setRestingQuestDockMode(16481).QuestDockGestureContext).activeQuestDockMode;
+  setRestingQuestDockMode = noop.useContext(setRestingQuestDockMode(16713).QuestDockExternalCoordinationContext).setRestingQuestDockMode;
+  const activeQuestDockMode = noop.useContext(setRestingQuestDockMode(16710).QuestDockGestureContext).activeQuestDockMode;
   const items = [setRestingQuestDockMode, activeQuestDockMode];
   const effect = noop.useEffect(() => {
     let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
     if (!isSoftDismissedResult) {
-      isSoftDismissedResult = setRestingQuestDockMode(16479).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-      let obj = setRestingQuestDockMode(16479);
+      isSoftDismissedResult = setRestingQuestDockMode(16708).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+      let obj = setRestingQuestDockMode(16708);
     }
     if (!isSoftDismissedResult) {
       setRestingQuestDockMode(constants.COLLAPSED);
@@ -375,8 +375,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useQuestDock
     function maybeResetSoftDismissal() {
       let isSoftDismissedResult = activeQuestDockMode.get() !== constants.SOFT_DISMISSED;
       if (!isSoftDismissedResult) {
-        isSoftDismissedResult = setRestingQuestDockMode(16479).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
-        const obj = setRestingQuestDockMode(16479);
+        isSoftDismissedResult = setRestingQuestDockMode(16708).isSoftDismissed(QuestDockStore.questDockSoftDismissedAt);
+        const obj = setRestingQuestDockMode(16708);
       }
       if (!isSoftDismissedResult) {
         closure_0(constants.COLLAPSED);
@@ -500,7 +500,7 @@ export const useActionSheetPressHandler = function useActionSheetPressHandler(qu
     obj2.sourceQuestContent = QuestTypes.QuestContent.QUEST_BAR_MOBILE;
     obj2.impressionId = questImpressionId;
     obj.captureAdUserAction(obj2);
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16488, dependencyMap.paths), "QuestDockContextMenuActionSheet", { creative, impressionId: questImpressionId });
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(16717, dependencyMap.paths), "QuestDockContextMenuActionSheet", { creative, impressionId: questImpressionId });
   }, items);
 };
 export const useQuestDockExpandHandler = tmp8;

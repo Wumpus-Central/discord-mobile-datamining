@@ -1,9 +1,9 @@
-// === Module 11522: useStageChannelConnectAction ===
+// === Module 11560: useStageChannelConnectAction ===
 
-// Module 11522 (useStageChannelConnectAction)
+// Module 11560 (useStageChannelConnectAction)
 import c from "c" /* 576 */;
-import useStateChannelIsLiveDefault from "useStateChannelIsLive" /* 7872 */;
-import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 11521 */;
+import useStateChannelIsLiveDefault from "useStateChannelIsLive" /* 7906 */;
+import useCurrentUserStageRolesDefault from "useCurrentUserStageRoles" /* 11559 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

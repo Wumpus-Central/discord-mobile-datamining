@@ -1,7 +1,7 @@
-// === Module 7670: StorefrontProductRecord ===
+// === Module 7704: StorefrontProductRecord ===
 
-// Module 7670 (StorefrontProductRecord)
-import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7669 */;
+// Module 7704 (StorefrontProductRecord)
+import CollectiblesStoreListingStylesRecord from "CollectiblesStoreListingStylesRecord" /* 7703 */;
 import SKURecord from "SKURecord" /* 2044 */;
 
 const prototype = function StorefrontProductRecord(arg0) {

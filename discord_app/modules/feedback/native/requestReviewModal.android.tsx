@@ -1,8 +1,8 @@
-// === Module 15048: requestReviewModal ===
+// === Module 15271: requestReviewModal ===
 
-// Module 15048 (requestReviewModal)
+// Module 15271 (requestReviewModal)
 import LoggerDefault from "Logger" /* 3 */;
-import NativeAppRatingRequestModuleDefault from "NativeAppRatingRequestModule" /* 15049 */;
+import NativeAppRatingRequestModuleDefault from "NativeAppRatingRequestModule" /* 15272 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 let closure_4 = async function _requestReviewModal() {

@@ -1,15 +1,15 @@
-// === Module 18063: StandaloneMembersView ===
+// === Module 18301: StandaloneMembersView ===
 
-// Module 18063 (StandaloneMembersView)
+// Module 18301 (StandaloneMembersView)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
-import useActiveTheme from "useActiveTheme" /* 9712 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10628 */;
-import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 12794 */;
-import KickConfirmDefault from "KickConfirm" /* 12808 */;
-import BanConfirmDefault from "BanConfirm" /* 12812 */;
-import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 18064 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9039 */;
+import useActiveTheme from "useActiveTheme" /* 9744 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10660 */;
+import GuildSettingsModalMemberEdit from "GuildSettingsModalMemberEdit" /* 12841 */;
+import KickConfirmDefault from "KickConfirm" /* 12855 */;
+import BanConfirmDefault from "BanConfirm" /* 12859 */;
+import GuildSettingsModalMembersWithTabsDefault from "GuildSettingsModalMembersWithTabs" /* 18302 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -21,7 +21,7 @@ const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
 const constants = { MAIN: "MAIN", MEMBER_EDIT: "MEMBER_EDIT", MEMBER_KICK: "MEMBER_KICK", MEMBER_BAN: "MEMBER_BAN" };
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { navigatorContainer: { overflow: "hidden" }, navigatorBackground: null, sceneBackground: null };
 let obj3 = {};
 let merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -130,11 +130,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Standalo
   }
   dependencyMap = tmp10;
   if (cResult[5] !== navigation) {
-    const headerCloseButton = tmp(6926).getHeaderCloseButton(() => navigation.goBack());
+    const headerCloseButton = tmp(6960).getHeaderCloseButton(() => navigation.goBack());
     cResult[5] = navigation;
     cResult[6] = headerCloseButton;
     let tmp11 = headerCloseButton;
-    const tmpResult = tmp(6926);
+    const tmpResult = tmp(6960);
   } else {
     tmp11 = cResult[6];
   }
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Standalo
       const obj = { title: null };
       const intl = guildId(1125).intl;
       obj.title = intl.string(guildId(1125).t["9Oq93m"]);
-      return closure_1_6(guildId(6926).NavigatorHeader, obj);
+      return closure_1_6(guildId(6960).NavigatorHeader, obj);
     };
     cResult[7] = fn2;
     let tmp13 = fn2;

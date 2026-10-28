@@ -1,10 +1,10 @@
-// === Module 16659: AdvancedVoiceActivitySetting ===
+// === Module 16888: AdvancedVoiceActivitySetting ===
 
-// Module 16659 (AdvancedVoiceActivitySetting)
+// Module 16888 (AdvancedVoiceActivitySetting)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import AudioActionCreatorsDefault from "AudioActionCreators" /* 5852 */;
+import AudioActionCreatorsDefault from "AudioActionCreators" /* 5887 */;
 import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 require = fn;
@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHasAdva
   const items = [MediaEngineStore];
   return initialize.useStateFromStores(items, () => advancedVoiceActivitySupported.isAdvancedVoiceActivitySupported());
 });
-const SettingBuilders = fn(11212);
+const SettingBuilders = fn(11248);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useAdvancedVoiceActivitySettingValue() {
   const cResult = c.c(2);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -54,7 +54,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.BbESsg);
   },
-  parent: fn(8331).MobileUserSettings.VOICE,
+  parent: fn(8365).MobileUserSettings.VOICE,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useAdvancedVoiceActivitySettingValue() {
     const cResult = c.c(2);
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {

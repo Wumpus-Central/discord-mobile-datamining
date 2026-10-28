@@ -1,7 +1,7 @@
-// === Module 9715: TrackingConstants ===
+// === Module 9747: TrackingConstants ===
 
-// Module 9715 (TrackingConstants)
-import SearchConstants from "SearchConstants" /* 9716 */;
+// Module 9747 (TrackingConstants)
+import SearchConstants from "SearchConstants" /* 9748 */;
 import size from "module_2" /* 2 */;
 
 ({ SearchHistoryItemTypes, SearchTabs } = SearchConstants);

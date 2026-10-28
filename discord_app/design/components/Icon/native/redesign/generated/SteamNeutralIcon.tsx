@@ -1,10 +1,10 @@
-// === Module 9278: SteamNeutralIcon ===
+// === Module 9310: SteamNeutralIcon ===
 
-// Module 9278 (SteamNeutralIcon)
+// Module 9310 (SteamNeutralIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5669 */;
-import _mod9279 from "module_9279" /* 9279 */;
+import BaseIconImage from "BaseIconImage" /* 5704 */;
+import _mod9311 from "module_9311" /* 9311 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const SteamNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod9279;
+    const tmpResult = _mod9311;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const SteamNeutralIcon = ReactCompilerGating.isReactCompilerEnabled() ? (
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod9279, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod9311, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

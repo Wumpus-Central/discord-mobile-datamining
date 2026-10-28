@@ -1,9 +1,9 @@
-// === Module 6777: FramesConstants ===
+// === Module 6811: FramesConstants ===
 
-// Module 6777 (FramesConstants)
+// Module 6811 (FramesConstants)
 import _modDef38 from "module_38" /* 38 */;
 import Constants from "Constants" /* 1084 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5627 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5662 */;
 import size from "module_2" /* 2 */;
 
 const ChannelTypes = Constants.ChannelTypes;

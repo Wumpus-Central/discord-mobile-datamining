@@ -1,15 +1,15 @@
-// === Module 11455: AnimatedEffectEmoji ===
+// === Module 11493: AnimatedEffectEmoji ===
 
-// Module 11455 (AnimatedEffectEmoji)
+// Module 11493 (AnimatedEffectEmoji)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import native from "native" /* 1199 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
-import timing from "timing" /* 5207 */;
-import FastImageDefault from "FastImage" /* 5670 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import timing from "timing" /* 5242 */;
+import FastImageDefault from "FastImage" /* 5705 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
 
 require = fn;
 const View = fn(17).View;
@@ -17,7 +17,7 @@ const jsx = fn(21).jsx;
 let c7 = -120;
 let closure_8 = 6 * DurationsDefault.Millis.SECOND;
 let closure_9 = 2 * DurationsDefault.Millis.SECOND;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { voiceChannelEffectEmojiContainer: null, voiceChannelEffectEmojiContainerTileNotch: null, voiceChannelEffectEmoji: null, textEmoji: null, imageEmoji: null };
 const rect = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.round, position: "absolute", right: 16, top: 16 };
 obj2.voiceChannelEffectEmojiContainer = rect;

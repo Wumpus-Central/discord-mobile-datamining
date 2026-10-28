@@ -1,16 +1,16 @@
-// === Module 18118: useSuggestedSearches ===
+// === Module 18358: useSuggestedSearches ===
 
-// Module 18118 (useSuggestedSearches)
-import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13261 */;
-import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13263 */;
+// Module 18358 (useSuggestedSearches)
+import SearchSessionAnalyticsManagerDefault from "SearchSessionAnalyticsManager" /* 13478 */;
+import SmartSearchAnalyticsManagerDefault from "SmartSearchAnalyticsManager" /* 13480 */;
 import noop from "module_19" /* 19 */;
-import SuggestedSearchStore from "SuggestedSearchStore" /* 13240 */;
+import SuggestedSearchStore from "SuggestedSearchStore" /* 13457 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const EMPTY_SUGGESTED_SEARCHES = fn(13240).EMPTY_SUGGESTED_SEARCHES;
-let closure_6 = fn(13241).SUGGESTED_SEARCHES_WINDOW_SIZE;
+const EMPTY_SUGGESTED_SEARCHES = fn(13457).EMPTY_SUGGESTED_SEARCHES;
+let closure_6 = fn(13458).SUGGESTED_SEARCHES_WINDOW_SIZE;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/native/useSuggestedSearches.tsx");

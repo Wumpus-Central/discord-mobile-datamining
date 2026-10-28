@@ -1,10 +1,10 @@
-// === Module 8791: media_playback/Video ===
+// === Module 8828: media_playback/Video ===
 
-// Module 8791 (media_playback/Video)
+// Module 8828 (media_playback/Video)
 import c from "c" /* 576 */;
-import MediaPlaybackExperiment from "MediaPlaybackExperiment" /* 8792 */;
-import NativeVideo from "NativeVideo" /* 8794 */;
-import _mod8796 from "module_8796" /* 8796 */;
+import MediaPlaybackExperiment from "MediaPlaybackExperiment" /* 8829 */;
+import NativeVideo from "NativeVideo" /* 8831 */;
+import _mod8833 from "module_8833" /* 8833 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -51,7 +51,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   } else {
     const _Symbol = Symbol;
     if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmpResult4 = _mod8796;
+      const tmpResult4 = _mod8833;
       cResult[7] = tmpResult4;
     }
     if (cResult[8] === tmp4) {
@@ -81,7 +81,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj3 = {};
     const merged2 = Object.assign(merged);
     obj3.ref = ref;
-    return jsx(_mod8796.default, {});
+    return jsx(_mod8833.default, {});
   }
   obj = MediaPlaybackExperiment;
 }));

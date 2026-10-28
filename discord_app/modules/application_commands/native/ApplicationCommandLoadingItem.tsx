@@ -1,18 +1,18 @@
-// === Module 13315: ApplicationCommandLoadingItem ===
+// === Module 13532: ApplicationCommandLoadingItem ===
 
-// Module 13315 (ApplicationCommandLoadingItem)
+// Module 13532 (ApplicationCommandLoadingItem)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useFontScale from "useFontScale" /* 5254 */;
+import useFontScale from "useFontScale" /* 5289 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const AUTOCOMPLETE_ROW_HEIGHT = fn(10115).AUTOCOMPLETE_ROW_HEIGHT;
+const AUTOCOMPLETE_ROW_HEIGHT = fn(10147).AUTOCOMPLETE_ROW_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 let c7 = 16;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_8 = createStyles.createStyles((arg0) => {
   const obj = { applicationCommandLoadingItem: { flexDirection: "row", paddingVertical: 4, paddingHorizontal: 16, alignItems: "center", height: Math.max(arg0 * AUTOCOMPLETE_ROW_HEIGHT, AUTOCOMPLETE_ROW_HEIGHT) }, applicationCommandLoadingLeftWrapper: { flexDirection: "column", width: "75%", height: "100%", justifyContent: "space-between" }, applicationCommandLoadingName: null, applicationCommandLoadingDescription: null, applicationCommandLoadingSectionName: null };
   const size = { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_STRONG, height: v16, borderRadius: v16, width: "20%" };

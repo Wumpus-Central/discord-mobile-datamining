@@ -1,11 +1,11 @@
-// === Module 17814: TypingSubtitle ===
+// === Module 18051: TypingSubtitle ===
 
-// Module 17814 (TypingSubtitle)
+// Module 18051 (TypingSubtitle)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import utils_ChannelUtils from "utils/ChannelUtils" /* 8502 */;
-import TextIcon from "TextIcon" /* 8551 */;
-import useSubtitleStyles from "useSubtitleStyles" /* 17813 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import utils_ChannelUtils from "utils/ChannelUtils" /* 8539 */;
+import TextIcon from "TextIcon" /* 8588 */;
+import useSubtitleStyles from "useSubtitleStyles" /* 18050 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

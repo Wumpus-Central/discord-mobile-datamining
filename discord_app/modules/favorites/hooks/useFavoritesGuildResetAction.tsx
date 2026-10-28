@@ -1,15 +1,15 @@
-// === Module 17607: useFavoritesGuildResetAction ===
+// === Module 17842: useFavoritesGuildResetAction ===
 
-// Module 17607 (useFavoritesGuildResetAction)
+// Module 17842 (useFavoritesGuildResetAction)
 import c from "c" /* 576 */;
 import router_utils from "router_utils" /* 1111 */;
 import util from "util" /* 1125 */;
-import _modDef3413 from "module_3413" /* 3413 */;
-import UserSettings from "UserSettings" /* 4800 */;
-import FavoritesUtils from "FavoritesUtils" /* 4849 */;
-import FavoritesActionCreators from "FavoritesActionCreators" /* 10848 */;
+import _modDef3445 from "module_3445" /* 3445 */;
+import UserSettings from "UserSettings" /* 4832 */;
+import FavoritesUtils from "FavoritesUtils" /* 4881 */;
+import FavoritesActionCreators from "FavoritesActionCreators" /* 10883 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
 
 require = fn;
 const Routes = fn(1084).Routes;
@@ -38,9 +38,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = util.intl;
-    const stringResult = intl.string(_modDef3413.YkET6R);
+    const stringResult = intl.string(_modDef3445.YkET6R);
     const intl2 = util.intl;
-    const stringResult1 = intl2.string(_modDef3413.ZzcwNk);
+    const stringResult1 = intl2.string(_modDef3445.ZzcwNk);
     cResult[1] = stringResult;
     cResult[2] = stringResult1;
     let tmp7 = stringResult1;
@@ -72,9 +72,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useFavor
     const tmpResult2 = FavoritesActionCreators;
   }, []);
   const intl = util.intl;
-  obj.label = intl.string(_modDef3413.YkET6R);
+  obj.label = intl.string(_modDef3445.YkET6R);
   const intl2 = util.intl;
-  obj.subLabel = intl2.string(_modDef3413.ZzcwNk);
+  obj.subLabel = intl2.string(_modDef3445.ZzcwNk);
   obj.perform = callback;
   return obj;
 });

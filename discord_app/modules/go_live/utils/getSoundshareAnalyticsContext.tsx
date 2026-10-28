@@ -1,6 +1,6 @@
-// === Module 7826: getSoundshareAnalyticsContext ===
+// === Module 7860: getSoundshareAnalyticsContext ===
 
-// Module 7826 (getSoundshareAnalyticsContext)
+// Module 7860 (getSoundshareAnalyticsContext)
 import RunningGameStore from "RunningGameStore" /* 2018 */;
 
 const size = fn(2);

@@ -1,24 +1,22 @@
-// === Module 12472: ConjureClarificationEntityPicker ===
+// === Module 12518: ConjureClarificationEntityPicker ===
 
-// Module 12472 (ConjureClarificationEntityPicker)
+// Module 12518 (ConjureClarificationEntityPicker)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import _modDef3831 from "module_3831" /* 3831 */;
-import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5211 */;
-import TableRow from "TableRow" /* 6905 */;
-import TableRowGroup from "TableRowGroup" /* 6989 */;
-import ConjureUtils from "ConjureUtils" /* 7347 */;
-import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12204 */;
-import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 12206 */;
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12309 */;
-import ConjureClarification from "ConjureClarification" /* 12466 */;
-import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet" /* 12473 */;
-import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12474 */;
+import _modDef3863 from "module_3863" /* 3863 */;
+import ActionSheetActionCreators from "ActionSheetActionCreators" /* 5246 */;
+import TableRow from "TableRow" /* 6939 */;
+import TableRowGroup from "TableRowGroup" /* 7023 */;
+import ConjureUtils from "ConjureUtils" /* 7382 */;
+import ChannelPickerActionSheetDefault from "ChannelPickerActionSheet" /* 12243 */;
+import ConjureGuildPickerSheetDefault from "ConjureGuildPickerSheet" /* 12245 */;
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12354 */;
+import ConjureClarification from "ConjureClarification" /* 12512 */;
+import ConjureClarificationServerSheetDefault from "ConjureClarificationServerSheet" /* 12519 */;
+import ConjureClarificationProjectSheetDefault from "ConjureClarificationProjectSheet" /* 12520 */;
 import noop from "module_19" /* 19 */;
-import GuildChannelStore from "GuildChannelStore" /* 4902 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import RelationshipStore from "RelationshipStore" /* 4914 */;
-import UserStore from "UserStore" /* 1389 */;
+import GuildChannelStore from "GuildChannelStore" /* 4934 */;
+import GuildStore from "GuildStore" /* 4878 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -26,14 +24,14 @@ const ConjureClarificationPickerSheet = "ConjureClarificationPickerSheet";
 const ConjureClarificationEntityPicker = "ConjureClarificationEntityPicker";
 fn(558);
 let ReactCompilerGating = fn(558);
-let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function ServerPicker(question) {
-  const cResult = question(onChange[7]).c(22);
+let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ServerPicker(question) {
+  const cResult = question(onChange[5]).c(22);
   question = question.question;
   value = question.value;
   importDefault = value;
   ({ disabled, onChange } = question);
-  const obj = question(onChange[7]);
-  const conjureEligibleGuilds = question(onChange[8]).useConjureEligibleGuilds(ConjureClarificationEntityPicker);
+  const obj = question(onChange[5]);
+  const conjureEligibleGuilds = question(onChange[6]).useConjureEligibleGuilds(ConjureClarificationEntityPicker);
   if (0 === conjureEligibleGuilds.length) {
     return question.fallback;
   } else {
@@ -64,8 +62,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Server
                 name1 = first2.name;
               }
               if (name1 == null) {
-                name1 = tmp(onChange[11]).clarificationPickerPlaceholder("server", false);
-                const tmpResult = tmp(onChange[11]);
+                name1 = tmp(onChange[9]).clarificationPickerPlaceholder("server", false);
+                const tmpResult = tmp(onChange[9]);
               }
               const first3 = value[0];
               let name2;
@@ -81,8 +79,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Server
             if (cResult[12] !== tmp7) {
               let tmp28;
               if (null != tmp7) {
-                const obj3 = { guild: tmp7, size: tmp(onChange[12]).GuildIconSizes.SMALL_32 };
-                tmp28 = jsx(require("GuildIcon"), { guild: tmp7, size: tmp(onChange[12]).GuildIconSizes.SMALL_32 });
+                const obj3 = { guild: tmp7, size: tmp(onChange[10]).GuildIconSizes.SMALL_32 };
+                tmp28 = jsx(require("GuildIcon"), { guild: tmp7, size: tmp(onChange[10]).GuildIconSizes.SMALL_32 });
                 const tmp31 = require("GuildIcon");
               }
               cResult[12] = tmp7;
@@ -104,7 +102,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Server
                     return tmp35;
                   }
                   const obj4 = { hasIcons: tmp19, children: tmp32 };
-                  const tmp37 = jsx(tmp(onChange[14]).TableRowGroup, { hasIcons: tmp19, children: tmp32 });
+                  const tmp37 = jsx(tmp(onChange[12]).TableRowGroup, { hasIcons: tmp19, children: tmp32 });
                   cResult[19] = tmp19;
                   cResult[20] = tmp32;
                   cResult[21] = tmp37;
@@ -113,7 +111,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Server
               }
             }
             const obj5 = { label: tmp22, icon: tmp27, arrow: true, disabled, onPress: tmp17 };
-            const tmp34 = jsx(tmp(onChange[13]).TableRow, { label: tmp22, icon: tmp27, arrow: true, disabled, onPress: tmp17 });
+            const tmp34 = jsx(tmp(onChange[11]).TableRow, { label: tmp22, icon: tmp27, arrow: true, disabled, onPress: tmp17 });
             cResult[14] = disabled;
             cResult[15] = tmp17;
             cResult[16] = tmp22;
@@ -132,7 +130,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Server
             onPick(id) {
               const name = id;
               const items = [id.id];
-              return closure_1_2(question(onChange[11]).clarificationEntities("server", items, () => name.name, closure_1_1));
+              return closure_1_2(question(onChange[9]).clarificationEntities("server", items, () => name.name, closure_1_1));
             }
           }),
           key: ConjureClarificationPickerSheet,
@@ -158,7 +156,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Server
       if (first5 != null) {
         id2 = first5.id;
       }
-      const fn = function l(id) {
+      const fn = function s(id) {
         const first = value[0];
         id = undefined;
         if (first != null) {
@@ -183,7 +181,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Server
     cResult[2] = found;
     tmp7 = found;
   }
-  let obj2 = question(onChange[8]);
+  let obj2 = question(onChange[6]);
 }) : (function ServerPicker(onChange) {
   ({ question: require, value } = onChange);
   importDefault = value;
@@ -243,8 +241,8 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Server
   const obj = require("useConjureProjects");
 });
 ReactCompilerGating = fn(558);
-let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function ProjectPicker(question) {
-  const cResult = question(onChange[7]).c(11);
+let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function ProjectPicker(question) {
+  const cResult = question(onChange[5]).c(11);
   question = question.question;
   value = question.value;
   importDefault = value;
@@ -272,8 +270,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
               name1 = first1.name;
             }
             if (name1 == null) {
-              name1 = tmp(onChange[11]).clarificationPickerPlaceholder("project", false);
-              const tmpResult = tmp(onChange[11]);
+              name1 = tmp(onChange[9]).clarificationPickerPlaceholder("project", false);
+              const tmpResult = tmp(onChange[9]);
             }
             const first2 = value[0];
             let name2;
@@ -296,8 +294,8 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
           }
           let obj2 = { hasIcons: false, children: null };
           const obj3 = { label: tmp8, arrow: true, disabled, onPress: tmp4 };
-          obj2.children = jsx(tmp(onChange[13]).TableRow, { label: tmp8, arrow: true, disabled, onPress: tmp4 });
-          const tmp15 = jsx(tmp(onChange[14]).TableRowGroup, { hasIcons: false, children: null });
+          obj2.children = jsx(tmp(onChange[11]).TableRow, { label: tmp8, arrow: true, disabled, onPress: tmp4 });
+          const tmp15 = jsx(tmp(onChange[12]).TableRowGroup, { hasIcons: false, children: null });
           cResult[7] = disabled;
           cResult[8] = tmp4;
           cResult[9] = tmp8;
@@ -314,7 +312,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
           projects,
           onPick(projectId) {
             const items = [projectId.projectId];
-            return closure_1_2(question(onChange[11]).clarificationEntities("project", items, () => projectId.name, closure_1_1));
+            return closure_1_2(question(onChange[9]).clarificationEntities("project", items, () => projectId.name, closure_1_1));
           }
         }),
         key: ConjureClarificationPickerSheet,
@@ -329,7 +327,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
     cResult[4] = openSheet;
     tmp4 = openSheet;
   }
-  const obj = question(onChange[7]);
+  const obj = question(onChange[5]);
 }) : (function ProjectPicker(arg0) {
   ({ question: require, value } = arg0);
   importDefault = value;
@@ -394,209 +392,277 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Projec
   return fallback;
 });
 ReactCompilerGating = fn(558);
-let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEntityPicker(question) {
-  const cResult = question(onChange[7]).c(22);
-  question = question.question;
-  value = question.value;
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildEntityPicker(value) {
+  const cResult = question(onChange[5]).c(29);
+  ({ projectId, question } = value);
+  value = value.value;
   importDefault = value;
-  ({ disabled, onChange } = question);
-  ({ projectId, fallback } = question);
-  let obj = question(onChange[7]);
-  const conjureSettingsGuildId = question(onChange[17]).useConjureSettingsGuildId(projectId, true);
-  const input = question.input;
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let items = [conjureSettingsGuildId];
-    cResult[0] = items;
-    let first = items;
-  } else {
-    first = cResult[0];
-  }
-  if (cResult[1] === conjureSettingsGuildId) {
-    if (cResult[2] === input) {
-      let tmp7 = cResult[3];
-      let tmp8 = cResult[4];
-    }
-    const stateFromStores = tmp(onChange[18]).useStateFromStores(first, tmp7, tmp8);
-    if (null != conjureSettingsGuildId) {
-      if (null != input) {
-        if ("project" !== input) {
-          if ("server" !== input) {
-            closure_6 = tmp11;
-            if (cResult[5] === stateFromStores) {
-              if (cResult[6] === conjureSettingsGuildId) {
-                if (cResult[7] === input) {
-                  if (cResult[8] === tmp11) {
-                    if (cResult[9] === onChange) {
-                      if (cResult[10] === question.channel_filter) {
-                        if (cResult[11] === question.question) {
-                          if (cResult[12] === value) {
-                            let tmp12 = cResult[13];
-                          }
-                          if (cResult[14] === input) {
-                            if (cResult[15] === tmp11) {
-                              if (cResult[16] === value) {
-                                if (cResult[18] === disabled) {
-                                  if (cResult[19] === tmp12) {
-                                    if (cResult[20] === tmp13) {
-                                      let tmp16 = cResult[21];
-                                    }
-                                    return tmp16;
-                                  }
-                                }
-                                const obj3 = { hasIcons: false, children: null };
-                                let obj4 = { label: cResult[17], arrow: true, disabled, onPress: tmp12 };
-                                obj3.children = jsx(tmp(onChange[13]).TableRow, { label: cResult[17], arrow: true, disabled, onPress: tmp12 });
-                                const tmp18 = jsx(tmp(onChange[14]).TableRowGroup, { hasIcons: false, children: null });
-                                cResult[18] = disabled;
-                                cResult[19] = tmp12;
-                                cResult[20] = cResult[17];
-                                cResult[21] = tmp18;
-                                tmp16 = tmp18;
-                              }
-                            }
-                          }
-                          if (value.length > 0) {
-                            const mapped = value.map((name) => name.name);
-                            let joined = mapped.join(", ");
-                          } else {
-                            joined = tmp(onChange[11]).clarificationPickerPlaceholder(input, tmp11);
-                            const tmpResult2 = tmp(onChange[11]);
-                          }
-                          cResult[14] = input;
-                          cResult[15] = tmp11;
-                          cResult[16] = value;
-                          cResult[17] = joined;
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+  ({ disabled, onChange } = value);
+  let obj = question(onChange[5]);
+  const conjureSettingsGuildId = question(onChange[15]).useConjureSettingsGuildId(projectId, true);
+  if (cResult[0] === disabled) {
+    if (cResult[1] === conjureSettingsGuildId) {
+      if (cResult[2] === onChange) {
+        if (cResult[3] === projectId) {
+          if (cResult[4] === question) {
+            if (cResult[5] === value) {
+              let tmp5 = cResult[6];
             }
-            function openSheet() {
+            require("useConjureSafetyAlertsChannelPick")(tmp5);
+            const input = question.input;
+            const _Symbol = Symbol;
+            if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+              let items = [conjureSettingsGuildId];
+              cResult[7] = items;
+              let tmp9 = items;
+            } else {
+              tmp9 = cResult[7];
+            }
+            if (cResult[8] === conjureSettingsGuildId) {
+              if (cResult[9] === input) {
+                let tmp11 = cResult[10];
+                let tmp12 = cResult[11];
+              }
+              const stateFromStores = tmp(tmp2[17]).useStateFromStores(tmp9, tmp11, tmp12);
               if (null != conjureSettingsGuildId) {
                 if (null != input) {
                   if ("project" !== input) {
                     if ("server" !== input) {
-                      if ("channel" === input) {
-                        if (!closure_6) {
-                          if (null != stateFromStores) {
-                            const result = ConjureUtils.conjureSettingChannels(tmp2, question.channel_filter);
-                            const obj4 = { header: null, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
-                            const obj7 = { title: question.question };
-                            obj4.header = obj7;
-                            const obj6 = ActionSheetActionCreators;
-                            obj4.guild = GuildStore.getGuild(conjureSettingsGuildId);
-                            obj4.channels = result;
-                            let found = result.find((id) => {
-                              const first = closure_1_1[0];
-                              id = undefined;
-                              if (first != null) {
-                                id = first.id;
+                      closure_6 = tmp15;
+                      if (cResult[12] === stateFromStores) {
+                        if (cResult[13] === conjureSettingsGuildId) {
+                          if (cResult[14] === input) {
+                            if (cResult[15] === tmp15) {
+                              if (cResult[16] === onChange) {
+                                if (cResult[17] === question.channel_filter) {
+                                  if (cResult[18] === question.question) {
+                                    if (cResult[19] === value) {
+                                      let tmp16 = cResult[20];
+                                    }
+                                    if (cResult[21] === input) {
+                                      if (cResult[22] === tmp15) {
+                                        if (cResult[23] === value) {
+                                          if (cResult[25] === disabled) {
+                                            if (cResult[26] === tmp16) {
+                                              if (cResult[27] === tmp17) {
+                                                let tmp20 = cResult[28];
+                                              }
+                                              return tmp20;
+                                            }
+                                          }
+                                          const obj3 = { hasIcons: false, children: null };
+                                          let obj4 = { label: cResult[24], arrow: true, disabled, onPress: tmp16 };
+                                          obj3.children = stateFromStores(tmp(tmp2[11]).TableRow, obj4);
+                                          const tmp22 = stateFromStores(tmp(tmp2[12]).TableRowGroup, obj3);
+                                          class P {
+                                            constructor() {
+                                              channels = null;
+                                              if (null != closure_3) {
+                                                tmp3 = input;
+                                                str = "channel";
+                                                channels = null;
+                                                if ("channel" === input) {
+                                                  tmp4 = closure_3;
+                                                  channels = closure_3.getChannels(tmp);
+                                                }
+                                              }
+                                              return channels;
+                                            }
+                                          }
+                                          cResult[25] = disabled;
+                                          cResult[26] = tmp16;
+                                          cResult[27] = cResult[24];
+                                          cResult[28] = tmp22;
+                                          tmp20 = tmp22;
+                                        }
+                                      }
+                                    }
+                                    if (value.length > 0) {
+                                      const mapped = value.map((name) => name.name);
+                                      let joined = mapped.join(", ");
+                                    } else {
+                                      joined = tmp(tmp2[9]).clarificationPickerPlaceholder(input, tmp15);
+                                      const tmpResult2 = tmp(tmp2[9]);
+                                    }
+                                    cResult[21] = input;
+                                    cResult[22] = tmp15;
+                                    cResult[23] = value;
+                                    class P {
+                                      constructor() {
+                                        channels = null;
+                                        if (null != closure_3) {
+                                          tmp3 = input;
+                                          str = "channel";
+                                          channels = null;
+                                          if ("channel" === input) {
+                                            tmp4 = closure_3;
+                                            channels = closure_3.getChannels(tmp);
+                                          }
+                                        }
+                                        return channels;
+                                      }
+                                    }
+                                  }
+                                }
                               }
-                              return id.id === id;
-                            });
-                            if (found == null) {
-                              found = null;
                             }
-                            let obj = { content: null, key: null, stackingBehavior: "stack" };
-                            obj4.selectedChannel = found;
-                            const intl = util.intl;
-                            obj4.noChannelOptionLabel = intl.string(_modDef3831["jtBVV+"]);
-                            obj4.onSelect = function onSelect(id) {
-                              closure_0 = id;
-                              if (null == id) {
-                                let items = [];
-                              } else {
-                                const obj = question(onChange[11]);
-                                const items1 = [id.id];
-                                items = obj.clarificationEntities(input, items1, () => question(5605).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
-                              }
-                              return dependencyMap(items, conjureSettingsGuildId);
-                            };
-                            obj.content = jsx(ChannelPickerActionSheetDefault, { header: null, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null });
-                            obj.key = ConjureClarificationPickerSheet;
-                            obj6.showActionSheet(obj);
                           }
                         }
                       }
-                      const obj8 = { guildId: conjureSettingsGuildId, type: input, channelFilter: null, title: null, maxPicks: null, selected: null, onSubmit: null };
-                      ({ channel_filter: obj3.channelFilter, question: obj3.title } = question);
-                      let num = 1;
-                      const obj2 = ActionSheetActionCreators;
-                      if (closure_6) {
-                        num = ConjureClarification.MAX_CLARIFICATION_ENTITY_PICKS;
-                      }
-                      const obj12 = { content: null, key: null, stackingBehavior: "stack" };
-                      obj8.maxPicks = num;
-                      obj8.selected = value.map((id) => ({ id: id.id, label: id.name }));
-                      obj8.onSubmit = function onSubmit(arr) {
-                        closure_0 = arr;
-                        return dependencyMap(question(onChange[11]).clarificationEntities(input, arr.map((id) => id.id), (arg0) => {
-                          closure_0 = arg0;
-                          const found = closure_0.find((id) => id.id === closure_0);
-                          let label;
-                          if (found != null) {
-                            label = found.label;
+                      function openSheet() {
+                        if (null != conjureSettingsGuildId) {
+                          if (null != input) {
+                            if ("project" !== input) {
+                              if ("server" !== input) {
+                                if ("channel" === input) {
+                                  if (!closure_6) {
+                                    if (null != stateFromStores) {
+                                      const result = ConjureUtils.conjureSettingChannels(tmp2, question.channel_filter);
+                                      const obj4 = { header: null, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
+                                      const obj7 = { title: question.question };
+                                      obj4.header = obj7;
+                                      const obj6 = ActionSheetActionCreators;
+                                      obj4.guild = GuildStore.getGuild(conjureSettingsGuildId);
+                                      obj4.channels = result;
+                                      let found = result.find((id) => {
+                                        const first = closure_1_1[0];
+                                        id = undefined;
+                                        if (first != null) {
+                                          id = first.id;
+                                        }
+                                        return id.id === id;
+                                      });
+                                      if (found == null) {
+                                        found = null;
+                                      }
+                                      let obj = { content: null, key: null, stackingBehavior: "stack" };
+                                      obj4.selectedChannel = found;
+                                      const intl = util.intl;
+                                      obj4.noChannelOptionLabel = intl.string(_modDef3863["jtBVV+"]);
+                                      obj4.onSelect = function onSelect(id) {
+                                        if (null == id) {
+                                          let items = [];
+                                        } else {
+                                          items = question(onChange[9]).clarificationChannelEntities(id, closure_1_1);
+                                          const obj = question(onChange[9]);
+                                        }
+                                        return closure_1_2(items, conjureSettingsGuildId);
+                                      };
+                                      obj.content = jsx(ChannelPickerActionSheetDefault, { header: null, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null });
+                                      obj.key = ConjureClarificationPickerSheet;
+                                      obj6.showActionSheet(obj);
+                                    }
+                                  }
+                                }
+                                const obj8 = { guildId: conjureSettingsGuildId, type: input, channelFilter: null, title: null, maxPicks: null, selected: null, onSubmit: null };
+                                ({ channel_filter: obj3.channelFilter, question: obj3.title } = question);
+                                let num = 1;
+                                const obj2 = ActionSheetActionCreators;
+                                if (closure_6) {
+                                  num = ConjureClarification.MAX_CLARIFICATION_ENTITY_PICKS;
+                                }
+                                const obj12 = { content: null, key: null, stackingBehavior: "stack" };
+                                obj8.maxPicks = num;
+                                obj8.selected = value.map((id) => ({ id: id.id, label: id.name }));
+                                obj8.onSubmit = function onSubmit(arr) {
+                                  closure_0 = arr;
+                                  return closure_1_2(question(onChange[9]).clarificationEntities(input, arr.map((id) => id.id), (arg0) => {
+                                    closure_0 = arg0;
+                                    const found = closure_0.find((id) => id.id === closure_0);
+                                    let label;
+                                    if (found != null) {
+                                      label = found.label;
+                                    }
+                                    return label;
+                                  }, closure_1_1), conjureSettingsGuildId);
+                                };
+                                obj12.content = jsx(ConjureGuildPickerSheetDefault, { guildId: conjureSettingsGuildId, type: input, channelFilter: null, title: null, maxPicks: null, selected: null, onSubmit: null });
+                                obj12.key = ConjureClarificationPickerSheet;
+                                obj2.showActionSheet(obj12);
+                              }
+                            }
                           }
-                          return label;
-                        }, closure_1_1), conjureSettingsGuildId);
-                      };
-                      obj12.content = jsx(ConjureGuildPickerSheetDefault, { guildId: conjureSettingsGuildId, type: input, channelFilter: null, title: null, maxPicks: null, selected: null, onSubmit: null });
-                      obj12.key = ConjureClarificationPickerSheet;
-                      obj2.showActionSheet(obj12);
+                        }
+                      }
+                      cResult[12] = stateFromStores;
+                      cResult[13] = conjureSettingsGuildId;
+                      class P {
+                        constructor() {
+                          channels = null;
+                          if (null != closure_3) {
+                            tmp3 = input;
+                            str = "channel";
+                            channels = null;
+                            if ("channel" === input) {
+                              tmp4 = closure_3;
+                              channels = closure_3.getChannels(tmp);
+                            }
+                          }
+                          return channels;
+                        }
+                      }
+                      cResult[15] = true === question.multi_select;
+                      cResult[16] = onChange;
+                      cResult[17] = question.channel_filter;
+                      cResult[18] = question.question;
+                      cResult[19] = value;
+                      cResult[20] = openSheet;
+                      tmp16 = openSheet;
                     }
                   }
                 }
               }
+              return value.fallback;
             }
-            cResult[5] = stateFromStores;
-            cResult[6] = conjureSettingsGuildId;
-            cResult[7] = input;
-            cResult[8] = true === question.multi_select;
-            cResult[9] = onChange;
-            cResult[10] = question.channel_filter;
-            cResult[11] = question.question;
-            cResult[12] = value;
-            cResult[13] = openSheet;
-            tmp12 = openSheet;
+            class P {
+              constructor() {
+                channels = null;
+                if (null != closure_3) {
+                  tmp3 = input;
+                  str = "channel";
+                  channels = null;
+                  if ("channel" === input) {
+                    tmp4 = closure_3;
+                    channels = closure_3.getChannels(tmp);
+                  }
+                }
+                return channels;
+              }
+            }
+            const items1 = [conjureSettingsGuildId, input];
+            cResult[8] = conjureSettingsGuildId;
+            cResult[9] = input;
+            cResult[10] = P;
+            cResult[11] = items1;
+            tmp12 = items1;
+            tmp11 = P;
           }
         }
       }
     }
-    return fallback;
   }
-  const fn = function f() {
-    let channels = null;
-    if (null != conjureSettingsGuildId) {
-      channels = null;
-      if ("channel" === input) {
-        channels = GuildChannelStore.getChannels(tmp);
-      }
-    }
-    return channels;
-  };
-  let items1 = [conjureSettingsGuildId, input];
+  let obj5 = { projectId, guildId: conjureSettingsGuildId, question, value, disabled, onChange };
+  cResult[0] = disabled;
   cResult[1] = conjureSettingsGuildId;
-  cResult[2] = input;
-  cResult[3] = fn;
-  cResult[4] = items1;
-  tmp8 = items1;
-  tmp7 = fn;
-  let obj2 = question(onChange[17]);
-}) : (function GuildEntityPicker(question) {
-  question = question.question;
-  value = question.value;
+  cResult[2] = onChange;
+  cResult[3] = projectId;
+  cResult[4] = question;
+  cResult[5] = value;
+  cResult[6] = obj5;
+  tmp5 = obj5;
+}) : (function GuildEntityPicker(value) {
+  ({ projectId, question } = value);
+  value = value.value;
   importDefault = value;
-  const onChange = question.onChange;
+  ({ disabled, onChange } = value);
   closure_6 = undefined;
-  ({ projectId, disabled, fallback } = question);
-  const conjureSettingsGuildId = question(onChange[17]).useConjureSettingsGuildId(projectId, true);
+  const conjureSettingsGuildId = question(onChange[15]).useConjureSettingsGuildId(projectId, true);
+  require("useConjureSafetyAlertsChannelPick")({ projectId, guildId: conjureSettingsGuildId, question, value, disabled, onChange });
   const input = question.input;
-  let obj = question(onChange[17]);
+  let obj = question(onChange[15]);
   let items = [conjureSettingsGuildId];
-  let items1 = [conjureSettingsGuildId, input];
-  const stateFromStores = question(onChange[18]).useStateFromStores(items, () => {
+  const items1 = [conjureSettingsGuildId, input];
+  const stateFromStores = question(onChange[17]).useStateFromStores(items, () => {
     let channels = null;
     if (null != conjureSettingsGuildId) {
       channels = null;
@@ -610,13 +676,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
     if (null != input) {
       if ("project" !== input) {
         if ("server" !== input) {
-          closure_6 = tmp5;
+          closure_6 = tmp6;
           if (value.length > 0) {
             const mapped = value.map((name) => name.name);
             let joined = mapped.join(", ");
           } else {
-            joined = tmp(tmp2[11]).clarificationPickerPlaceholder(input, tmp5);
-            const tmpResult = tmp(tmp2[11]);
+            joined = tmp(tmp2[9]).clarificationPickerPlaceholder(input, tmp6);
+            const tmpResult = tmp(tmp2[9]);
           }
           const obj3 = { hasIcons: false, children: null };
           let obj4 = {
@@ -652,17 +718,15 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                                     let obj = { content: null, key: null, stackingBehavior: "stack" };
                                     obj4.selectedChannel = found;
                                     const intl = util.intl;
-                                    obj4.noChannelOptionLabel = intl.string(_modDef3831["jtBVV+"]);
+                                    obj4.noChannelOptionLabel = intl.string(_modDef3863["jtBVV+"]);
                                     obj4.onSelect = function onSelect(id) {
-                                      closure_0 = id;
                                       if (null == id) {
                                         let items = [];
                                       } else {
-                                        const obj = question(onChange[11]);
-                                        const items1 = [id.id];
-                                        items = obj.clarificationEntities(input, items1, () => question(5605).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
+                                        items = question(onChange[9]).clarificationChannelEntities(id, closure_1_1);
+                                        const obj = question(onChange[9]);
                                       }
-                                      return dependencyMap(items, conjureSettingsGuildId);
+                                      return closure_1_2(items, conjureSettingsGuildId);
                                     };
                                     obj.content = jsx(ChannelPickerActionSheetDefault, { header: null, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null });
                                     obj.key = ConjureClarificationPickerSheet;
@@ -682,7 +746,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                               obj8.selected = value.map((id) => ({ id: id.id, label: id.name }));
                               obj8.onSubmit = function onSubmit(arr) {
                                 closure_0 = arr;
-                                return dependencyMap(question(onChange[11]).clarificationEntities(input, arr.map((id) => id.id), (arg0) => {
+                                return closure_1_2(question(onChange[9]).clarificationEntities(input, arr.map((id) => id.id), (arg0) => {
                                   closure_0 = arg0;
                                   const found = closure_0.find((id) => id.id === closure_0);
                                   let label;
@@ -701,94 +765,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildE
                       }
                     }
           };
-          obj3.children = jsx(tmp(tmp2[13]).TableRow, {
-            label: joined,
-            arrow: true,
-            disabled,
-            onPress: function openSheet() {
-                      if (null != conjureSettingsGuildId) {
-                        if (null != input) {
-                          if ("project" !== input) {
-                            if ("server" !== input) {
-                              if ("channel" === input) {
-                                if (!closure_6) {
-                                  if (null != stateFromStores) {
-                                    const result = ConjureUtils.conjureSettingChannels(tmp2, question.channel_filter);
-                                    const obj4 = { header: null, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null };
-                                    const obj7 = { title: question.question };
-                                    obj4.header = obj7;
-                                    const obj6 = ActionSheetActionCreators;
-                                    obj4.guild = GuildStore.getGuild(conjureSettingsGuildId);
-                                    obj4.channels = result;
-                                    let found = result.find((id) => {
-                                      const first = closure_1_1[0];
-                                      id = undefined;
-                                      if (first != null) {
-                                        id = first.id;
-                                      }
-                                      return id.id === id;
-                                    });
-                                    if (found == null) {
-                                      found = null;
-                                    }
-                                    let obj = { content: null, key: null, stackingBehavior: "stack" };
-                                    obj4.selectedChannel = found;
-                                    const intl = util.intl;
-                                    obj4.noChannelOptionLabel = intl.string(_modDef3831["jtBVV+"]);
-                                    obj4.onSelect = function onSelect(id) {
-                                      closure_0 = id;
-                                      if (null == id) {
-                                        let items = [];
-                                      } else {
-                                        const obj = question(onChange[11]);
-                                        const items1 = [id.id];
-                                        items = obj.clarificationEntities(input, items1, () => question(5605).computeChannelName(closure_0, closure_2_6, stateFromStores), closure_1_1);
-                                      }
-                                      return dependencyMap(items, conjureSettingsGuildId);
-                                    };
-                                    obj.content = jsx(ChannelPickerActionSheetDefault, { header: null, guild: null, channels: null, selectedChannel: null, noChannelOptionLabel: null, onSelect: null });
-                                    obj.key = ConjureClarificationPickerSheet;
-                                    obj6.showActionSheet(obj);
-                                  }
-                                }
-                              }
-                              const obj8 = { guildId: conjureSettingsGuildId, type: input, channelFilter: null, title: null, maxPicks: null, selected: null, onSubmit: null };
-                              ({ channel_filter: obj3.channelFilter, question: obj3.title } = question);
-                              let num = 1;
-                              const obj2 = ActionSheetActionCreators;
-                              if (closure_6) {
-                                num = ConjureClarification.MAX_CLARIFICATION_ENTITY_PICKS;
-                              }
-                              const obj12 = { content: null, key: null, stackingBehavior: "stack" };
-                              obj8.maxPicks = num;
-                              obj8.selected = value.map((id) => ({ id: id.id, label: id.name }));
-                              obj8.onSubmit = function onSubmit(arr) {
-                                closure_0 = arr;
-                                return dependencyMap(question(onChange[11]).clarificationEntities(input, arr.map((id) => id.id), (arg0) => {
-                                  closure_0 = arg0;
-                                  const found = closure_0.find((id) => id.id === closure_0);
-                                  let label;
-                                  if (found != null) {
-                                    label = found.label;
-                                  }
-                                  return label;
-                                }, closure_1_1), conjureSettingsGuildId);
-                              };
-                              obj12.content = jsx(ConjureGuildPickerSheetDefault, { guildId: conjureSettingsGuildId, type: input, channelFilter: null, title: null, maxPicks: null, selected: null, onSubmit: null });
-                              obj12.key = ConjureClarificationPickerSheet;
-                              obj2.showActionSheet(obj12);
-                            }
-                          }
-                        }
-                      }
-                    }
-          });
-          return jsx(tmp(tmp2[14]).TableRowGroup, { hasIcons: false, children: null });
+          obj3.children = stateFromStores(tmp(tmp2[11]).TableRow, obj4);
+          return stateFromStores(tmp(tmp2[12]).TableRowGroup, obj3);
         }
       }
     }
   }
-  return fallback;
+  return value.fallback;
 });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/native/ConjureClarificationEntityPicker.tsx");
@@ -800,7 +783,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     if (cResult[0] !== question) {
       const obj2 = {};
       const merged = Object.assign(question);
-      const tmp22 = <closure_11 />;
+      const tmp22 = <closure_9 />;
       cResult[0] = question;
       cResult[1] = tmp22;
       let tmp16 = tmp22;
@@ -812,7 +795,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     if (cResult[2] !== question) {
       const obj3 = {};
       const merged1 = Object.assign(question);
-      const tmp15 = <closure_10 />;
+      const tmp15 = <closure_8 />;
       cResult[2] = question;
       cResult[3] = tmp15;
       let tmp9 = tmp15;
@@ -824,7 +807,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
     if (cResult[4] !== question) {
       const obj4 = {};
       const merged2 = Object.assign(question);
-      const tmp8 = <closure_12 />;
+      const tmp8 = <closure_10 key={question.question.id} />;
       cResult[4] = question;
       cResult[5] = tmp8;
       let tmp2 = tmp8;
@@ -838,14 +821,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureC
   if ("project" === input) {
     const obj2 = {};
     const merged = Object.assign(question);
-    return <closure_11 />;
+    return <closure_9 />;
   } else if ("server" === input) {
     const obj3 = {};
     const merged1 = Object.assign(question);
-    return <closure_10 />;
+    return <closure_8 />;
   } else {
     const obj = {};
     const merged2 = Object.assign(question);
-    return <closure_12 />;
+    return <closure_10 key={question.question.id} />;
   }
 });

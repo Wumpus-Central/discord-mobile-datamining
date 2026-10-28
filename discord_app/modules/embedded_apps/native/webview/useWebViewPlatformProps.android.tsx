@@ -1,8 +1,8 @@
-// === Module 11503: useWebViewPlatformProps ===
+// === Module 11541: useWebViewPlatformProps ===
 
-// Module 11503 (useWebViewPlatformProps)
+// Module 11541 (useWebViewPlatformProps)
 import Constants from "Constants" /* 2023 */;
-import createEmbeddedAppFrameScript from "createEmbeddedAppFrameScript" /* 11504 */;
+import createEmbeddedAppFrameScript from "createEmbeddedAppFrameScript" /* 11542 */;
 import size from "module_2" /* 2 */;
 
 const messageForDisallowedNavigationError = Constants.DISALLOWED_NAVIGATION_ERROR_CLOSE_ACTIVITY;

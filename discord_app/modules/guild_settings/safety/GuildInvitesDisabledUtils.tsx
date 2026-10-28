@@ -1,8 +1,8 @@
-// === Module 13282: GuildInvitesDisabledUtils ===
+// === Module 13499: GuildInvitesDisabledUtils ===
 
-// Module 13282 (GuildInvitesDisabledUtils)
-import GuildIncidentsStore from "GuildIncidentsStore" /* 11242 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
+// Module 13499 (GuildInvitesDisabledUtils)
+import GuildIncidentsStore from "GuildIncidentsStore" /* 11279 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
 
 const require = fn;
 const Constants = fn(1084);

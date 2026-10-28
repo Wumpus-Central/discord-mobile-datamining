@@ -1,6 +1,6 @@
-// === Module 5200: ServerThemeApexShadowExperiment ===
+// === Module 5235: ServerThemeApexShadowExperiment ===
 
-// Module 5200 (ServerThemeApexShadowExperiment)
+// Module 5235 (ServerThemeApexShadowExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

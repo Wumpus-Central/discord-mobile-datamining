@@ -1,10 +1,10 @@
-// === Module 13580: useChatPlaceholderAnimatedStyles ===
+// === Module 13798: useChatPlaceholderAnimatedStyles ===
 
-// Module 13580 (useChatPlaceholderAnimatedStyles)
-import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
-import timing from "timing" /* 5207 */;
-import timingPresets from "timingPresets" /* 5210 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+// Module 13798 (useChatPlaceholderAnimatedStyles)
+import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import timing from "timing" /* 5242 */;
+import timingPresets from "timingPresets" /* 5245 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
 
 require = fn;
 let TIMING_CONFIG = { duration: 1300, easing: fn(1199).STANDARD_EASING };

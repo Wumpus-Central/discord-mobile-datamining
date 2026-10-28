@@ -1,9 +1,9 @@
-// === Module 14364: useUserProfileVoiceActivity ===
+// === Module 14587: useUserProfileVoiceActivity ===
 
-// Module 14364 (useUserProfileVoiceActivity)
-import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7813 */;
-import PresenceStore from "PresenceStore" /* 5713 */;
-import VoiceStateStore from "VoiceStateStore" /* 5631 */;
+// Module 14587 (useUserProfileVoiceActivity)
+import isEmbeddedActivityDefault from "isEmbeddedActivity" /* 7847 */;
+import PresenceStore from "PresenceStore" /* 5748 */;
+import VoiceStateStore from "VoiceStateStore" /* 5666 */;
 
 const require = fn;
 const ReactCompilerGating = fn(558);
@@ -31,7 +31,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
     if (cResult[1] === userId) {
       let tmp4 = cResult[2];
     }
-    ({ voiceState, voiceChannel } = id(10640)(tmp4));
+    ({ voiceState, voiceChannel } = id(10672)(tmp4));
     id = undefined;
     if (voiceChannel != null) {
       id = voiceChannel.id;
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
     cResult[5] = id;
     cResult[6] = fn;
     tmp13 = fn;
-    const tmp6 = id(10640)(tmp4);
+    const tmp6 = id(10672)(tmp4);
   }
   const obj3 = { userId, guildId };
   cResult[0] = guildId;
@@ -99,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
 }) : (function useUserProfileVoiceActivity(guildId) {
   const userId = guildId.userId;
   let id;
-  const tmp2 = id(10640)({ userId, guildId: guildId.guildId });
+  const tmp2 = id(10672)({ userId, guildId: guildId.guildId });
   const voiceChannel = tmp2.voiceChannel;
   id = undefined;
   if (voiceChannel != null) {

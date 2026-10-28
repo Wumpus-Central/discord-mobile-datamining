@@ -1,12 +1,12 @@
-// === Module 6635: SelectedChannelActionCreators ===
+// === Module 6669: SelectedChannelActionCreators ===
 
-// Module 6635 (SelectedChannelActionCreators)
+// Module 6669 (SelectedChannelActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1111 */;
-import SelectedChannelActionCreatorsAdditional from "SelectedChannelActionCreatorsAdditional" /* 6636 */;
-import GameConsoleActionCreatorsAll from "GameConsoleActionCreators" /* 11655 */;
-import GameConsoleStore from "GameConsoleStore" /* 5716 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
+import SelectedChannelActionCreatorsAdditional from "SelectedChannelActionCreatorsAdditional" /* 6670 */;
+import GameConsoleActionCreatorsAll from "GameConsoleActionCreators" /* 11693 */;
+import GameConsoleStore from "GameConsoleStore" /* 5751 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
 import MediaEngineStore from "MediaEngineStore" /* 2011 */;
 
 require = fn;

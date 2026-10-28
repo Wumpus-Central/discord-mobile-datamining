@@ -1,6 +1,6 @@
-// === Module 18955: ? ===
+// === Module 19218: ? ===
 
-// Module 18955
+// Module 19218
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/LanternSpotIllustration-1x.png.js");

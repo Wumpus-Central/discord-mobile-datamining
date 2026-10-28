@@ -1,15 +1,15 @@
-// === Module 15183: ShareScreen ===
+// === Module 15408: ShareScreen ===
 
-// Module 15183 (ShareScreen)
+// Module 15408 (ShareScreen)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import ShareAttachmentsDefault from "ShareAttachments" /* 15187 */;
-import ShareEmbedDefault from "ShareEmbed" /* 15188 */;
+import ShareAttachmentsDefault from "ShareAttachments" /* 15412 */;
+import ShareEmbedDefault from "ShareEmbed" /* 15413 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
 
 require = fn;
 function getAttachmentsRestriction(type) {
@@ -27,15 +27,15 @@ function getAttachmentsRestriction(type) {
   }
 }
 const View = fn(17).View;
-const ChannelRecord = fn(4828);
+const ChannelRecord = fn(4860);
 ({ ChannelRecordBase: closure_7, isGuildChannelType: closure_8 } = ChannelRecord);
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_11, Permissions: closure_12, MAX_UPLOAD_COUNT: map1 } = Constants);
-const MAX_DESTINATION_COUNT = fn(12915).MAX_DESTINATION_COUNT;
-const UserRowModes = fn(10619).UserRowModes;
+const MAX_DESTINATION_COUNT = fn(12962).MAX_DESTINATION_COUNT;
+const UserRowModes = fn(10651).UserRowModes;
 const jsxProd = fn(21);
 ({ jsx: closure_16, Fragment: closure_17, jsxs: closure_18 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER } };
 let closure_19 = createStyles.createStyles(obj2);
 const size = fn(2);

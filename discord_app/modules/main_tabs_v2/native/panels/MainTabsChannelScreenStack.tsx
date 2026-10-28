@@ -1,27 +1,27 @@
-// === Module 18017: MainTabsChannelScreenStack ===
+// === Module 18254: MainTabsChannelScreenStack ===
 
-// Module 18017 (MainTabsChannelScreenStack)
+// Module 18254 (MainTabsChannelScreenStack)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Link from "Link" /* 1503 */;
-import native from "native" /* 5038 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
-import REAWorkaroundViewDefault from "REAWorkaroundView" /* 5054 */;
-import useChatLayout from "useChatLayout" /* 5154 */;
-import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5156 */;
-import ChatInputUtils from "ChatInputUtils" /* 5160 */;
-import useThemeDefault from "useTheme" /* 5206 */;
-import useMountEffect from "useMountEffect" /* 5264 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5298 */;
-import Suspender from "Suspender" /* 5940 */;
-import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11229 */;
-import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11776 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17467 */;
-import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 17468 */;
-import navigationTTIEnabled from "navigationTTIEnabled" /* 18018 */;
-import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 18020 */;
-import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 18021 */;
-import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 18022 */;
+import native from "native" /* 5070 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import REAWorkaroundViewDefault from "REAWorkaroundView" /* 5086 */;
+import useChatLayout from "useChatLayout" /* 5189 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5191 */;
+import ChatInputUtils from "ChatInputUtils" /* 5195 */;
+import useThemeDefault from "useTheme" /* 5241 */;
+import useMountEffect from "useMountEffect" /* 5299 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5333 */;
+import Suspender from "Suspender" /* 5975 */;
+import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11264 */;
+import MainTabsNavigatorPanelContext from "MainTabsNavigatorPanelContext" /* 11814 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17702 */;
+import useMainTabsPanelsGestureDefault from "useMainTabsPanelsGesture" /* 17703 */;
+import navigationTTIEnabled from "navigationTTIEnabled" /* 18256 */;
+import HideCoveredChannelsExperimentDefault from "HideCoveredChannelsExperiment" /* 18258 */;
+import useMainTabsChannelScreenStyles from "useMainTabsChannelScreenStyles" /* 18259 */;
+import StandaloneChannelScreenDefault from "StandaloneChannelScreen" /* 18260 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -34,21 +34,22 @@ function getKey(index) {
 }
 get_ActivityIndicator = fn(17);
 ({ NativeModules: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const ONYX_BORDER_WIDTH = fn(9702).ONYX_BORDER_WIDTH;
+const setVisibleChannelScreen = fn(18255).setVisibleChannelScreen;
+const ONYX_BORDER_WIDTH = fn(9734).ONYX_BORDER_WIDTH;
 const Constants = fn(1084);
-({ AnalyticsObjectTypes: closure_8, AnalyticsObjects: closure_9, AnalyticsSections: c10 } = Constants);
+({ AnalyticsObjectTypes: closure_9, AnalyticsObjects: c10, AnalyticsSections: closure_11 } = Constants);
 let ThemeTypes = fn(1095).ThemeTypes;
 const jsxProd = fn(21);
-({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4972);
-let closure_14 = createStyles.createStyles({ onyxContainerStyles: { marginTop: -ONYX_BORDER_WIDTH, marginLeft: -ONYX_BORDER_WIDTH } });
+({ jsx: map1, jsxs: closure_14 } = jsxProd);
+const createStyles = fn(5004);
+let closure_15 = createStyles.createStyles({ onyxContainerStyles: { marginTop: -ONYX_BORDER_WIDTH, marginLeft: -ONYX_BORDER_WIDTH } });
 const __initData = { code: "function MainTabsChannelScreenStackTsx1(){const{isStackVisible,highestFullyRenderedScreenIndex,index,alwaysVisible,translateX,maxWidth}=this.__closure;return isStackVisible&&highestFullyRenderedScreenIndex.get()<=index&&(alwaysVisible||translateX.get()<maxWidth);}" };
 const __initData2 = { code: "function MainTabsChannelScreenStackTsx2(visible,wasVisible){const{runOnJS,setIsVisible}=this.__closure;if(visible===wasVisible){return;}runOnJS(setIsVisible)(visible);}" };
 const __initData3 = { code: "function MainTabsChannelScreenStackTsx3(){const{isStackVisible,highestFullyRenderedScreenIndex,index,alwaysVisible,translateX,maxWidth}=this.__closure;return isStackVisible&&highestFullyRenderedScreenIndex.get()<=index&&(alwaysVisible||translateX.get()<maxWidth);}" };
 const __initData4 = { code: "function MainTabsChannelScreenStackTsx4(visible,wasVisible){const{runOnJS,setIsVisible}=this.__closure;if(visible===wasVisible)return;runOnJS(setIsVisible)(visible);}" };
 let ReactCompilerGating = fn(558);
-let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelScreenNavigationTTIVisibility(translateX) {
-  const cResult = translateX(highestFullyRenderedScreenIndex[9]).c(7);
+let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function useChannelScreenNavigationTTIVisibility(translateX) {
+  const cResult = translateX(highestFullyRenderedScreenIndex[10]).c(7);
   translateX = translateX.translateX;
   const maxWidth = translateX.maxWidth;
   highestFullyRenderedScreenIndex = translateX.highestFullyRenderedScreenIndex;
@@ -66,7 +67,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
             }
             const tmp8 = index(isStackVisible.useState(tmp5), 2);
             closure_6 = tmp9;
-            const fn2 = function y() {
+            const fn2 = function f() {
               let tmp = isStackVisible;
               if (isStackVisible) {
                 tmp = highestFullyRenderedScreenIndex.get() <= index;
@@ -89,18 +90,18 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
                 if (translateX !== arg1) {
                   tmp = closure_0;
                   tmp2 = closure_2;
-                  obj = closure_0(closure_2[10]);
+                  obj = closure_0(closure_2[11]);
                   tmp3 = closure_6;
                   tmp4 = obj.runOnJS(closure_6)(translateX);
                 }
                 return;
               }
             }
-            const obj3 = { runOnJS: tmp(tmp2[10]).runOnJS, setIsVisible: tmp8[1] };
+            const obj3 = { runOnJS: tmp(tmp2[11]).runOnJS, setIsVisible: tmp8[1] };
             T.__closure = obj3;
             T.__workletHash = 4812531096876;
             T.__initData = __initData2;
-            const animatedReaction = tmp(tmp2[10]).useAnimatedReaction(fn2, T);
+            const animatedReaction = tmp(tmp2[11]).useAnimatedReaction(fn2, T);
             return tmp8[0];
           }
         }
@@ -129,11 +130,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
   cResult[5] = translateX;
   cResult[6] = fn;
   tmp5 = fn;
-  let obj = translateX(highestFullyRenderedScreenIndex[9]);
+  let obj = translateX(highestFullyRenderedScreenIndex[10]);
 }) : (function useChannelScreenNavigationTTIVisibility(translateX) {
   translateX = translateX.translateX;
   const maxWidth = translateX.maxWidth;
-  highestFullyRenderedScreenIndex = translateX.highestFullyRenderedScreenIndex;
+  const highestFullyRenderedScreenIndex = translateX.highestFullyRenderedScreenIndex;
   const index = translateX.index;
   const isStackVisible = translateX.isStackVisible;
   let flag = translateX.alwaysVisible;
@@ -177,22 +178,22 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCha
       if (translateX !== arg1) {
         tmp = closure_0;
         tmp2 = closure_2;
-        obj = closure_0(closure_2[10]);
+        obj = closure_0(closure_2[11]);
         tmp3 = closure_6;
         tmp4 = obj.runOnJS(closure_6)(translateX);
       }
       return;
     }
   }
-  let obj = translateX(highestFullyRenderedScreenIndex[10]);
-  S.__closure = { runOnJS: translateX(highestFullyRenderedScreenIndex[10]).runOnJS, setIsVisible: tmp[1] };
+  let obj = translateX(highestFullyRenderedScreenIndex[11]);
+  S.__closure = { runOnJS: translateX(highestFullyRenderedScreenIndex[11]).runOnJS, setIsVisible: tmp[1] };
   S.__workletHash = 17276269728204;
   S.__initData = __initData4;
   const animatedReaction = obj.useAnimatedReaction(fn, S);
   return tmp[0];
 });
 ReactCompilerGating = fn(558);
-let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function EnabledChannelScreenNavigationTTIVisibility(arg0) {
+let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function EnabledChannelScreenNavigationTTIVisibility(arg0) {
   const cResult = c.c(10);
   ({ translateX, maxWidth, highestFullyRenderedScreenIndex, index, isStackVisible, alwaysVisible, children } = arg0);
   if (cResult[0] === (undefined !== alwaysVisible && alwaysVisible)) {
@@ -203,7 +204,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Enable
             if (cResult[5] === translateX) {
               let tmp3 = cResult[6];
             }
-            const tmp5 = closure_19(tmp3);
+            const tmp5 = closure_20(tmp3);
             if (cResult[7] === children) {
               if (cResult[8] === tmp5) {
                 let tmp6 = cResult[9];
@@ -235,16 +236,16 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Enable
   if (alwaysVisible === undefined) {
     alwaysVisible = false;
   }
-  return alwaysVisible.children(closure_19({ translateX, maxWidth, highestFullyRenderedScreenIndex, index, isStackVisible, alwaysVisible }));
+  return alwaysVisible.children(closure_20({ translateX, maxWidth, highestFullyRenderedScreenIndex, index, isStackVisible, alwaysVisible }));
 });
 ReactCompilerGating = fn(558);
-let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelScreenNavigationTTIVisibility(children) {
+let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelScreenNavigationTTIVisibility(children) {
   const cResult = c.c(4);
   if (obj2.isNavigationTTIEnabled()) {
     if (cResult[2] !== children) {
       const obj3 = {};
       const merged = Object.assign(children);
-      const tmp10 = parentFreezeValue(closure_20, obj3);
+      const tmp10 = map1(closure_21, obj3);
       cResult[2] = children;
       cResult[3] = tmp10;
     }
@@ -264,7 +265,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function Channe
   if (obj.isNavigationTTIEnabled()) {
     const obj2 = {};
     const merged = Object.assign(children);
-    let childrenResult = parentFreezeValue(closure_20, obj2);
+    let childrenResult = map1(closure_21, obj2);
   } else {
     childrenResult = children.children(false);
   }
@@ -277,7 +278,7 @@ const __initData8 = { code: "function MainTabsChannelScreenStackTsx8(){const{tra
 const __initData9 = { code: "function MainTabsChannelScreenStackTsx9(isVisibleBeneath,wasVisibleBeneath){const{highestFullyRenderedScreenIndex,index}=this.__closure;if(isVisibleBeneath===wasVisibleBeneath)return;if(isVisibleBeneath){if(highestFullyRenderedScreenIndex.get()>=index){highestFullyRenderedScreenIndex.set(index-1);}return;}if(highestFullyRenderedScreenIndex.get()<index){highestFullyRenderedScreenIndex.set(index);}}" };
 const __initData10 = { code: "function MainTabsChannelScreenStackTsx10(){const{enabled,highestFullyRenderedScreenIndex,index}=this.__closure;return enabled&&highestFullyRenderedScreenIndex.get()>index;}" };
 ReactCompilerGating = fn(558);
-let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsCompletelyCovered(index, highestFullyRenderedScreenIndex, translateX) {
+let closure_29 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsCompletelyCovered(index, highestFullyRenderedScreenIndex, translateX) {
   closure_0 = index;
   importDefault = highestFullyRenderedScreenIndex;
   const cResult = c.c(4);
@@ -289,13 +290,13 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsC
     first = cResult[0];
   }
   const enabled = HideCoveredChannelsExperimentDefault.useConfig(first).enabled;
-  const fn = function u() {
+  const fn = function o() {
     return translateX.get() > 0;
   };
   fn.__closure = { translateX };
   fn.__workletHash = 3913618654716;
   fn.__initData = __initData5;
-  const fn2 = function o(arg0, arg1) {
+  const fn2 = function u(arg0, arg1) {
     if (arg0 !== arg1) {
       value = highestFullyRenderedScreenIndex.get();
       if (arg0) {
@@ -374,7 +375,7 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsC
       const result = highestFullyRenderedScreenIndex.set(tmp - 1);
     }
   });
-  const fn3 = function o() {
+  const fn3 = function u() {
     let tmp = enabled;
     if (enabled) {
       tmp = highestFullyRenderedScreenIndex.get() > closure_0;
@@ -387,8 +388,8 @@ let closure_28 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsC
   return ReanimatedRexport.useDerivedValue(fn3);
 });
 ReactCompilerGating = fn(558);
-let closure_29 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FirstChannelScreen(guildId) {
-  const cResult = guildId(showCreateThread[9]).c(39);
+let closure_30 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function FirstChannelScreen(guildId) {
+  const cResult = guildId(showCreateThread[10]).c(39);
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
   showCreateThread = guildId.showCreateThread;
@@ -399,15 +400,15 @@ let closure_29 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   ({ isNavigationTTIStackVisible, maxWidth, focusChatPressableComponent, transitionState } = guildId);
   const cleanup = guildId.cleanup;
   ({ parentFreezeValue, highestFullyRenderedScreenIndex } = guildId);
-  let obj = guildId(showCreateThread[9]);
-  const tmp4 = channelId(showCreateThread[14])();
+  let obj = guildId(showCreateThread[10]);
+  const tmp4 = channelId(showCreateThread[15])();
   let width = containerWidth;
   if (containerWidth == null) {
-    width = channelId(showCreateThread[16])().width;
+    width = channelId(showCreateThread[17])().width;
   }
-  const tmp5 = closure_14();
-  const tmp6 = closure_28(index, highestFullyRenderedScreenIndex, translateX);
-  const mainTabsChannelScreenStyles = guildId(showCreateThread[17]).useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth, tmp6, parentFreezeValue);
+  const tmp5 = closure_15();
+  const tmp6 = closure_29(index, highestFullyRenderedScreenIndex, translateX);
+  const mainTabsChannelScreenStyles = guildId(showCreateThread[18]).useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth, tmp6, parentFreezeValue);
   if (cResult[0] === cleanup) {
     if (cResult[1] === transitionState) {
       let tmp8 = cResult[2];
@@ -428,7 +429,7 @@ let closure_29 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
     }
     let onyxContainerStyles;
     if (tmp4 === ThemeTypes.ONYX) {
-      if (!channelId(showCreateThread[15])().isChatBesideChannelList) {
+      if (!channelId(showCreateThread[16])().isChatBesideChannelList) {
         onyxContainerStyles = tmp5.onyxContainerStyles;
       }
     }
@@ -485,8 +486,8 @@ let closure_29 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                                             constructor(arg0) {
                                               obj = { value: width, children: null };
                                               obj1 = { guildId, channelId, isActive, isNavigationTTIVisible: guildId, showCreateThread, isNavigationScreen: null == containerWidth, frame, screenIndex: index };
-                                              obj.children = jsx(closure_1(closure_2[20]), obj1);
-                                              return jsx(closure_1(closure_2[19]).Provider, obj);
+                                              obj.children = jsx(closure_1(closure_2[21]), obj1);
+                                              return jsx(closure_1(closure_2[20]).Provider, obj);
                                             }
                                           }
                                           cResult[35] = focusChatPressableComponent;
@@ -496,14 +497,14 @@ let closure_29 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                                           tmp32 = tmp34;
                                         }
                                         const obj4 = { freeze, children: tmp24 };
-                                        const tmp31 = parentFreezeValue(tmp(tmp2[21]).Freeze, obj4);
+                                        const tmp31 = closure_13(tmp(tmp2[22]).Freeze, obj4);
                                         cResult[32] = freeze;
                                         class U {
                                           constructor(arg0) {
                                             obj = { value: width, children: null };
                                             obj1 = { guildId, channelId, isActive, isNavigationTTIVisible: guildId, showCreateThread, isNavigationScreen: null == containerWidth, frame, screenIndex: index };
-                                            obj.children = jsx(closure_1(closure_2[20]), obj1);
-                                            return jsx(closure_1(closure_2[19]).Provider, obj);
+                                            obj.children = jsx(closure_1(closure_2[21]), obj1);
+                                            return jsx(closure_1(closure_2[20]).Provider, obj);
                                           }
                                         }
                                         cResult[33] = tmp24;
@@ -517,12 +518,12 @@ let closure_29 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                                     constructor(arg0) {
                                       obj = { value: width, children: null };
                                       obj1 = { guildId, channelId, isActive, isNavigationTTIVisible: guildId, showCreateThread, isNavigationScreen: null == containerWidth, frame, screenIndex: index };
-                                      obj.children = jsx(closure_1(closure_2[20]), obj1);
-                                      return jsx(closure_1(closure_2[19]).Provider, obj);
+                                      obj.children = jsx(closure_1(closure_2[21]), obj1);
+                                      return jsx(closure_1(closure_2[20]).Provider, obj);
                                     }
                                   }
                                   obj5.children = tmp20;
-                                  const tmp28 = parentFreezeValue(transitionState, obj5);
+                                  const tmp28 = closure_13(transitionState, obj5);
                                   cResult[27] = tmp20;
                                   cResult[28] = str;
                                   cResult[29] = tmp17;
@@ -540,13 +541,13 @@ let closure_29 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                         constructor(arg0) {
                           obj = { value: width, children: null };
                           obj1 = { guildId, channelId, isActive, isNavigationTTIVisible: guildId, showCreateThread, isNavigationScreen: null == containerWidth, frame, screenIndex: index };
-                          obj.children = jsx(closure_1(closure_2[20]), obj1);
-                          return jsx(closure_1(closure_2[19]).Provider, obj);
+                          obj.children = jsx(closure_1(closure_2[21]), obj1);
+                          return jsx(closure_1(closure_2[20]).Provider, obj);
                         }
                       }
                       obj6.alwaysVisible = tmp18;
                       obj6.children = tmp19;
-                      const tmp23 = parentFreezeValue(closure_21, obj6);
+                      const tmp23 = closure_13(closure_22, obj6);
                       cResult[19] = highestFullyRenderedScreenIndex;
                       cResult[20] = index;
                       cResult[21] = isNavigationTTIStackVisible;
@@ -567,8 +568,8 @@ let closure_29 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
           constructor(arg0) {
             obj = { value: width, children: null };
             obj1 = { guildId, channelId, isActive, isNavigationTTIVisible: guildId, showCreateThread, isNavigationScreen: null == containerWidth, frame, screenIndex: index };
-            obj.children = jsx(closure_1(closure_2[20]), obj1);
-            return jsx(closure_1(closure_2[19]).Provider, obj);
+            obj.children = jsx(closure_1(closure_2[21]), obj1);
+            return jsx(closure_1(closure_2[20]).Provider, obj);
           }
         }
         cResult[10] = channelId;
@@ -602,19 +603,19 @@ let closure_29 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   cResult[3] = items2;
   tmp9 = items2;
   tmp8 = fn;
-  const tmpResult = guildId(showCreateThread[17]);
+  const tmpResult = guildId(showCreateThread[18]);
 }) : (function FirstChannelScreen(isActive) {
   ({ guildId: require, channelId: importDefault, showCreateThread: dependencyMap, frame: _slicedToArray, index } = isActive);
   ({ isDragging, translateX, containerWidth } = isActive);
   isActive = isActive.isActive;
   ({ maxWidth, transitionState } = isActive);
   const cleanup = isActive.cleanup;
-  highestFullyRenderedScreenIndex = isActive.highestFullyRenderedScreenIndex;
+  const highestFullyRenderedScreenIndex = isActive.highestFullyRenderedScreenIndex;
   ({ freeze, isNavigationTTIStackVisible, focusChatPressableComponent, parentFreezeValue } = isActive);
   const tmp2 = useThemeDefault();
   const width = useBaseAppContainerDimensionsDefault().width;
-  const tmp3 = closure_14();
-  const tmp4 = closure_28(index, highestFullyRenderedScreenIndex, translateX);
+  const tmp3 = closure_15();
+  const tmp4 = closure_29(index, highestFullyRenderedScreenIndex, translateX);
   const items = [cleanup, transitionState];
   const mainTabsChannelScreenStyles = useMainTabsChannelScreenStyles.useMainTabsChannelScreenStyles(isDragging, translateX, maxWidth, tmp4, parentFreezeValue);
   const effect = index.useEffect(() => {
@@ -646,7 +647,7 @@ let closure_29 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   obj5.pointerEvents = str;
   obj5.accessibilityElementsHidden = !isActive;
   obj5.importantForAccessibility = "no-hide-descendants";
-  obj5.children = parentFreezeValue(closure_21, {
+  obj5.children = closure_13(closure_22, {
     translateX,
     maxWidth,
     highestFullyRenderedScreenIndex,
@@ -658,22 +659,22 @@ let closure_29 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       if (containerWidth == null) {
         tmp5 = width;
       }
-      const obj = { value: tmp5, children: parentFreezeValue(StandaloneChannelScreenDefault, { guildId, channelId, isActive, isNavigationTTIVisible, showCreateThread, isNavigationScreen: null == containerWidth, frame, screenIndex: index }) };
-      return parentFreezeValue(ChatViewWidthContextDefault.Provider, obj);
+      const obj = { value: tmp5, children: map1(StandaloneChannelScreenDefault, { guildId, channelId, isActive, isNavigationTTIVisible, showCreateThread, isNavigationScreen: null == containerWidth, frame, screenIndex: index }) };
+      return map1(ChatViewWidthContextDefault.Provider, obj);
     }
   });
-  obj4.children = parentFreezeValue(transitionState, obj5);
-  const items2 = [parentFreezeValue(Suspender.Freeze, obj4), focusChatPressableComponent];
+  obj4.children = closure_13(transitionState, obj5);
+  const items2 = [closure_13(Suspender.Freeze, obj4), focusChatPressableComponent];
   obj3.children = items2;
-  return closure_13(REAWorkaroundViewDefault, obj3);
+  return closure_14(REAWorkaroundViewDefault, obj3);
 }));
 const __initData11 = { code: "function MainTabsChannelScreenStackTsx11(){const{translateX}=this.__closure;return translateX.get()===0;}" };
 const __initData12 = { code: "function MainTabsChannelScreenStackTsx12(isFullyOpen,prev){const{index,mainTabsDisallowGesture}=this.__closure;if(isFullyOpen===prev){return;}if(index!==1){return;}mainTabsDisallowGesture.set(isFullyOpen);}" };
 const __initData13 = { code: "function MainTabsChannelScreenStackTsx13(){const{translateX}=this.__closure;return translateX.get()===0;}" };
 const __initData14 = { code: "function MainTabsChannelScreenStackTsx14(isFullyOpen,prev){const{index,mainTabsDisallowGesture}=this.__closure;if(isFullyOpen===prev)return;if(index!==1)return;mainTabsDisallowGesture.set(isFullyOpen);}" };
 ReactCompilerGating = fn(558);
-let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelScreen(guildId) {
-  const cResult = guildId(showCreateThread[9]).c(44);
+let closure_35 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ChannelScreen(guildId) {
+  const cResult = guildId(showCreateThread[10]).c(44);
   guildId = guildId.guildId;
   const channelId = guildId.channelId;
   showCreateThread = guildId.showCreateThread;
@@ -681,26 +682,26 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const cleanup = guildId.cleanup;
   const isActive = guildId.isActive;
   ({ isNavigationTTIStackVisible, freeze, parentFreezeValue, index } = guildId);
-  highestFullyRenderedScreenIndex = guildId.highestFullyRenderedScreenIndex;
-  const obj = guildId(showCreateThread[9]);
-  const tmp5 = channelId(showCreateThread[14])();
-  const tmp6 = closure_14();
-  const navigation = guildId(showCreateThread[23]).useNavigation();
+  const highestFullyRenderedScreenIndex = guildId.highestFullyRenderedScreenIndex;
+  const obj = guildId(showCreateThread[10]);
+  const tmp5 = channelId(showCreateThread[15])();
+  const tmp6 = closure_15();
+  const navigation = guildId(showCreateThread[24]).useNavigation();
   cleanup.useRef(false);
   if (cResult[0] === cleanup) {
     if (cResult[1] === navigation) {
       let tmp8 = cResult[2];
     }
-    const tmp9 = transitionState !== tmp(tmp2[18]).TransitionStates.YEETED;
+    const tmp9 = transitionState !== tmp(tmp2[19]).TransitionStates.YEETED;
     if (cResult[3] === tmp8) {
       if (cResult[4] === tmp9) {
         let tmp10 = cResult[5];
       }
-      const tmp11 = tmp4(tmp2[25])(tmp10);
+      const tmp11 = tmp4(tmp2[26])(tmp10);
       ({ gesture, panelGestureContext, isDragging, translateX } = tmp11);
       ({ movePanel, maxWidth } = tmp11);
-      const disallowGesture = obj3.useContext(tmp4(tmp2[26])).disallowGesture;
-      const tmp13 = closure_28(index, highestFullyRenderedScreenIndex, translateX);
+      const disallowGesture = obj3.useContext(tmp4(tmp2[27])).disallowGesture;
+      const tmp13 = closure_29(index, highestFullyRenderedScreenIndex, translateX);
       class X {
         constructor() {
           return 0 === translateX.get();
@@ -729,13 +730,13 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       N.__closure = obj5;
       N.__workletHash = 109995460179;
       N.__initData = __initData12;
-      const animatedReaction = tmp(tmp2[10]).useAnimatedReaction(X, N);
+      const animatedReaction = tmp(tmp2[11]).useAnimatedReaction(X, N);
       if (cResult[6] === cleanup) {
         if (cResult[7] === movePanel) {
           let tmp17 = cResult[8];
         }
-        ThemeTypes = tmp17;
-        parentFreezeValue = obj3.useRef(tmp17);
+        let current = tmp17;
+        ThemeTypes = obj3.useRef(tmp17);
         if (cResult[9] !== tmp17) {
           const fn2 = function j() {
             closure_12.current = current;
@@ -781,7 +782,7 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         }
         let onyxContainerStyles;
         if (tmp5 === ThemeTypes.ONYX) {
-          if (!channelId(showCreateThread[15])().isChatBesideChannelList) {
+          if (!channelId(showCreateThread[16])().isChatBesideChannelList) {
             onyxContainerStyles = tmp6.onyxContainerStyles;
           }
         }
@@ -825,14 +826,14 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                                         return tmp50;
                                       }
                                       const obj6 = { gesture, children: tmp47 };
-                                      const tmp52 = parentFreezeValue(tmp(tmp2[27]).GestureDetector, obj6);
+                                      const tmp52 = closure_13(tmp(tmp2[28]).GestureDetector, obj6);
                                       cResult[41] = gesture;
                                       cResult[42] = tmp47;
                                       cResult[43] = tmp52;
                                       tmp50 = tmp52;
                                     }
                                     const obj7 = { value: panelGestureContext, children: tmp44 };
-                                    const tmp49 = parentFreezeValue(tmp(tmp2[26]).MainTabsChannelScreenStackContext.Provider, obj7);
+                                    const tmp49 = closure_13(tmp(tmp2[27]).MainTabsChannelScreenStackContext.Provider, obj7);
                                     cResult[38] = panelGestureContext;
                                     cResult[39] = tmp44;
                                     cResult[40] = tmp49;
@@ -841,7 +842,7 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                                 }
                               }
                               const obj8 = { style: tmp34, accessibilityElementsHidden: tmp35, importantForAccessibility: str, children: tmp41 };
-                              const tmp46 = parentFreezeValue(tmp4(tmp2[22]), obj8);
+                              const tmp46 = closure_13(tmp4(tmp2[23]), obj8);
                               cResult[33] = tmp35;
                               cResult[34] = str;
                               cResult[35] = tmp41;
@@ -855,7 +856,7 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                               tmp44 = tmp46;
                             }
                             const obj9 = { freeze, children: tmp37 };
-                            const tmp43 = parentFreezeValue(tmp(tmp2[21]).Freeze, obj9);
+                            const tmp43 = closure_13(tmp(tmp2[22]).Freeze, obj9);
                             cResult[30] = freeze;
                             cResult[31] = tmp37;
                             cResult[32] = tmp43;
@@ -866,7 +867,7 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
                     }
                   }
                   const obj10 = { translateX, maxWidth, highestFullyRenderedScreenIndex, index, isStackVisible: isNavigationTTIStackVisible, children: tmp36 };
-                  const tmp40 = parentFreezeValue(closure_21, obj10);
+                  const tmp40 = closure_13(closure_22, obj10);
                   cResult[23] = highestFullyRenderedScreenIndex;
                   class X {
                     constructor() {
@@ -898,7 +899,7 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
             }
           }
           function ie(isNavigationTTIVisible) {
-            return parentFreezeValue(StandaloneChannelScreenDefault, { guildId, channelId, isActive, isNavigationTTIVisible, showCreateThread, isNavigationScreen: true, frame: null, screenIndex: index });
+            return map1(StandaloneChannelScreenDefault, { guildId, channelId, isActive, isNavigationTTIVisible, showCreateThread, isNavigationScreen: true, frame: null, screenIndex: index });
           }
           cResult[17] = channelId;
           cResult[18] = guildId;
@@ -933,16 +934,16 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
         cResult[15] = onyxContainerStyles;
         cResult[16] = items1;
         tmp34 = items1;
-        const tmpResult2 = tmp(tmp2[17]);
+        const tmpResult2 = tmp(tmp2[18]);
       }
       const obj11 = { cleanup, movePanel };
       cResult[6] = cleanup;
       cResult[7] = movePanel;
       cResult[8] = obj11;
       tmp17 = obj11;
-      const tmpResult = tmp(tmp2[10]);
+      const tmpResult = tmp(tmp2[11]);
     }
-    const obj12 = { canDrag: tmp9, onVisibilityChange: tmp8, onDragStart: tmp(tmp2[24]).dismissKeyboard, startShown: false };
+    const obj12 = { canDrag: tmp9, onVisibilityChange: tmp8, onDragStart: tmp(tmp2[25]).dismissKeyboard, startShown: false };
     cResult[3] = tmp8;
     cResult[4] = tmp9;
     cResult[5] = obj12;
@@ -962,19 +963,17 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   cResult[1] = navigation;
   cResult[2] = fn;
   tmp8 = fn;
-  const obj2 = guildId(showCreateThread[23]);
+  const obj2 = guildId(showCreateThread[24]);
 }) : (function ChannelScreen(cleanup) {
   ({ guildId: require, channelId: importDefault, showCreateThread: dependencyMap, transitionState } = cleanup);
   cleanup = cleanup.cleanup;
   const isActive = cleanup.isActive;
   const index = cleanup.index;
-  highestFullyRenderedScreenIndex = cleanup.highestFullyRenderedScreenIndex;
+  const highestFullyRenderedScreenIndex = cleanup.highestFullyRenderedScreenIndex;
   translateX = undefined;
-  let obj4;
-  let ref2;
   ({ isNavigationTTIStackVisible, freeze, parentFreezeValue } = cleanup);
   const tmp2 = useThemeDefault();
-  const tmp3 = closure_14();
+  const tmp3 = closure_15();
   const navigation = Link.useNavigation();
   cleanup.useRef(false);
   const items = [cleanup, navigation];
@@ -997,16 +996,14 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const maxWidth = tmp7Result.maxWidth;
   ({ gesture, panelGestureContext, movePanel } = tmp7Result);
   const disallowGesture = cleanup.useContext(MainTabsNavigatorPanelContextDefault).disallowGesture;
-  const tmp9 = closure_28(index, highestFullyRenderedScreenIndex, translateX);
-  class I {
-    constructor() {
-      return 0 === translateX.get();
-    }
-  }
-  I.__closure = { translateX };
-  I.__workletHash = 279822179624;
-  I.__initData = __initData13;
-  const fn = function f(arg0, arg1) {
+  const tmp9 = closure_29(index, highestFullyRenderedScreenIndex, translateX);
+  const fn = function v() {
+    return 0 === translateX.get();
+  };
+  fn.__closure = { translateX };
+  fn.__workletHash = 279822179624;
+  fn.__initData = __initData13;
+  const fn2 = function f(arg0, arg1) {
     let tmp = arg0 !== arg1;
     if (tmp) {
       tmp = 1 === index;
@@ -1015,12 +1012,12 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
       const result = disallowGesture.set(arg0);
     }
   };
-  fn.__closure = { index, mainTabsDisallowGesture: disallowGesture };
-  fn.__workletHash = 2043595505301;
-  fn.__initData = __initData14;
-  const animatedReaction = ReanimatedRexport.useAnimatedReaction(I, fn);
-  obj4 = { cleanup, movePanel };
-  ref2 = cleanup.useRef(obj4);
+  fn2.__closure = { index, mainTabsDisallowGesture: disallowGesture };
+  fn2.__workletHash = 2043595505301;
+  fn2.__initData = __initData14;
+  const animatedReaction = ReanimatedRexport.useAnimatedReaction(fn, fn2);
+  const obj4 = { cleanup, movePanel };
+  ThemeTypes = cleanup.useRef(obj4);
   const effect = cleanup.useEffect(() => {
     closure_12.current = obj4;
   });
@@ -1045,7 +1042,7 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   const obj7 = { value: panelGestureContext, children: null };
   const items2 = [mainTabsChannelScreenStyles, ];
   let onyxContainerStyles;
-  if (tmp2 === obj4.ONYX) {
+  if (tmp2 === ThemeTypes.ONYX) {
     if (!useChatLayoutDefault().isChatBesideChannelList) {
       onyxContainerStyles = tmp3.onyxContainerStyles;
     }
@@ -1054,21 +1051,21 @@ let closure_34 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (funct
   items2[1] = onyxContainerStyles;
   const obj9 = {
     freeze,
-    children: ref2(closure_21, {
+    children: closure_13(closure_22, {
       translateX,
       maxWidth,
       highestFullyRenderedScreenIndex,
       index,
       isStackVisible: isNavigationTTIStackVisible,
       children(isNavigationTTIVisible) {
-        return parentFreezeValue(StandaloneChannelScreenDefault, { guildId, channelId, isActive, isNavigationTTIVisible, showCreateThread, isNavigationScreen: true, frame: null, screenIndex: index });
+        return map1(StandaloneChannelScreenDefault, { guildId, channelId, isActive, isNavigationTTIVisible, showCreateThread, isNavigationScreen: true, frame: null, screenIndex: index });
       }
     })
   };
-  obj8.children = ref2(Suspender.Freeze, obj9);
-  obj7.children = ref2(REAWorkaroundViewDefault, obj8);
-  obj6.children = ref2(MainTabsNavigatorPanelContext.MainTabsChannelScreenStackContext.Provider, obj7);
-  return ref2(LegacyBaseButton.GestureDetector, obj6);
+  obj8.children = closure_13(Suspender.Freeze, obj9);
+  obj7.children = closure_13(REAWorkaroundViewDefault, obj8);
+  obj6.children = closure_13(MainTabsNavigatorPanelContext.MainTabsChannelScreenStackContext.Provider, obj7);
+  return closure_13(LegacyBaseButton.GestureDetector, obj6);
 }));
 const __initData15 = { code: "function MainTabsChannelScreenStackTsx15(){const{translateX,maxWidth}=this.__closure;return translateX.get()===maxWidth;}" };
 const __initData16 = { code: "function MainTabsChannelScreenStackTsx16(value,prev){const{runOnJS,setIsHidden}=this.__closure;if(value===prev){return;}runOnJS(setIsHidden)(value);}" };
@@ -1079,162 +1076,104 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsChannelScreenStack.tsx");
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MainTabsChannelScreenStack(screens) {
-  const cResult = screens(navigationTTIStackVisible[9]).c(42);
+  const cResult = screens(screenStackVisible[10]).c(55);
   screens = screens.screens;
   const screenStackActive = screens.screenStackActive;
-  navigationTTIStackVisible = screens.navigationTTIStackVisible;
+  screenStackVisible = screens.screenStackVisible;
+  const navigationTTIStackVisible = screens.navigationTTIStackVisible;
   const translateX = screens.translateX;
   const isDragging = screens.isDragging;
   const maxWidth = screens.maxWidth;
-  highestFullyRenderedScreenIndex = screens.highestFullyRenderedScreenIndex;
+  const highestFullyRenderedScreenIndex = screens.highestFullyRenderedScreenIndex;
   ({ shouldFreeze, focusChatPressableComponent } = screens);
   const firstScreenWidth = screens.firstScreenWidth;
   const firstScreenFrame = screens.firstScreenFrame;
-  screenStackActive(navigationTTIStackVisible[28])();
+  screenStackActive(screenStackVisible[29])();
   if (cResult[0] !== translateX) {
     value = translateX.get();
     cResult[0] = translateX;
     cResult[1] = value;
-    let tmp5 = value;
+    let tmp6 = value;
   } else {
-    tmp5 = cResult[1];
+    tmp6 = cResult[1];
   }
-  let obj = screens(navigationTTIStackVisible[9]);
-  const tmp8 = translateX(isDragging.useState(tmp5 === maxWidth), 2)[1];
-  closure_10 = tmp8;
-  const tmp7 = translateX(isDragging.useState(tmp5 === maxWidth), 2);
-  class A {
+  let obj = screens(screenStackVisible[10]);
+  const tmp4 = screenStackActive;
+  [tmp9, tmp10] = navigationTTIStackVisible(translateX.useState(tmp6 === maxWidth), 2);
+  closure_11 = tmp10;
+  const tmp8 = navigationTTIStackVisible(translateX.useState(tmp6 === maxWidth), 2);
+  class N {
     constructor() {
       return translateX.get() === maxWidth;
     }
   }
-  A.__closure = { translateX, maxWidth };
-  A.__workletHash = 13892906836978;
-  A.__initData = __initData15;
-  class R {
+  N.__closure = { translateX, maxWidth };
+  N.__workletHash = 13892906836978;
+  N.__initData = __initData15;
+  class D {
     constructor(arg0, arg1) {
       if (screens !== arg1) {
         tmp = closure_0;
         tmp2 = closure_2;
-        obj = closure_0(closure_2[10]);
-        tmp3 = closure_10;
-        tmp4 = obj.runOnJS(closure_10)(screens);
+        obj = closure_0(closure_2[11]);
+        tmp3 = closure_11;
+        tmp4 = obj.runOnJS(closure_11)(screens);
       }
       return;
     }
   }
-  const tmpResult = screens(navigationTTIStackVisible[10]);
-  R.__closure = { runOnJS: screens(navigationTTIStackVisible[10]).runOnJS, setIsHidden: tmp8 };
-  R.__workletHash = 13169088086524;
-  R.__initData = __initData16;
-  const animatedReaction = tmpResult.useAnimatedReaction(A, R);
+  const tmpResult = screens(screenStackVisible[11]);
+  D.__closure = { runOnJS: screens(screenStackVisible[11]).runOnJS, setIsHidden: tmp10 };
+  D.__workletHash = 13169088086524;
+  D.__initData = __initData16;
+  const animatedReaction = tmpResult.useAnimatedReaction(N, D);
   if (cResult[2] !== screens) {
     const atResult = screens.at(-1);
     cResult[2] = screens;
     cResult[3] = atResult;
-    let tmp10 = atResult;
+    let tmp12 = atResult;
   } else {
-    tmp10 = cResult[3];
+    tmp12 = cResult[3];
   }
   let type;
-  if (tmp10 != null) {
-    type = tmp10.type;
+  if (tmp12 != null) {
+    type = tmp12.type;
   }
   let channelId = null;
-  if (type === screens(navigationTTIStackVisible[29]).ChannelScreenType.DEFAULT) {
-    channelId = tmp10.channelId;
+  if (type === screens(screenStackVisible[30]).ChannelScreenType.DEFAULT) {
+    channelId = tmp12.channelId;
   }
-  if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    class W {
-      constructor() {
-        MediaPlayerManager = maxWidth.MediaPlayerManager;
-        if (MediaPlayerManager != null) {
-          pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
-          if (pauseAllMediaPlayers != null) {
-            pauseAllMediaPlayersResult = pauseAllMediaPlayers();
-          }
-        }
-        return;
-      }
+  if (cResult[4] === channelId) {
+    if (cResult[5] === screenStackVisible) {
+      let tmp16 = cResult[6];
+      let tmp17 = cResult[7];
     }
-    cResult[4] = W;
-  } else {
-    class W {
-      constructor() {
-        MediaPlayerManager = maxWidth.MediaPlayerManager;
-        if (MediaPlayerManager != null) {
-          pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
-          if (pauseAllMediaPlayers != null) {
-            pauseAllMediaPlayersResult = pauseAllMediaPlayers();
-          }
-        }
-        return;
-      }
-    }
-  }
-  if (cResult[5] !== channelId) {
-    class W {
-      constructor() {
-        MediaPlayerManager = maxWidth.MediaPlayerManager;
-        if (MediaPlayerManager != null) {
-          pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
-          if (pauseAllMediaPlayers != null) {
-            pauseAllMediaPlayersResult = pauseAllMediaPlayers();
-          }
-        }
-        return;
-      }
-    }
-    tmp16[0] = channelId;
-    cResult[5] = channelId;
-    cResult[6] = tmp16;
-  } else {
-    class W {
-      constructor() {
-        MediaPlayerManager = maxWidth.MediaPlayerManager;
-        if (MediaPlayerManager != null) {
-          pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
-          if (pauseAllMediaPlayers != null) {
-            pauseAllMediaPlayersResult = pauseAllMediaPlayers();
-          }
-        }
-        return;
-      }
-    }
-  }
-  const effect = obj2.useEffect(W, tmp16);
-  closure_11 = screens[0];
-  if (shouldFreeze) {
-    class W {
-      constructor() {
-        MediaPlayerManager = maxWidth.MediaPlayerManager;
-        if (MediaPlayerManager != null) {
-          pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
-          if (pauseAllMediaPlayers != null) {
-            pauseAllMediaPlayersResult = pauseAllMediaPlayers();
-          }
-        }
-        return;
-      }
-    }
-  }
-  if (shouldFreeze) {
-    class W {
-      constructor() {
-        MediaPlayerManager = maxWidth.MediaPlayerManager;
-        if (MediaPlayerManager != null) {
-          pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
-          if (pauseAllMediaPlayers != null) {
-            pauseAllMediaPlayersResult = pauseAllMediaPlayers();
-          }
-        }
-        return;
-      }
-    }
-    if (!tmp18) {
-      class W {
+    const effect = obj2.useEffect(tmp16, tmp17);
+    const _Symbol = Symbol;
+    if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
+      class J {
         constructor() {
-          MediaPlayerManager = maxWidth.MediaPlayerManager;
+          return () => { ... };
+        }
+      }
+      const items = [];
+      cResult[8] = J;
+      cResult[9] = items;
+      let tmp21 = items;
+    } else {
+      class J {
+        constructor() {
+          return () => { ... };
+        }
+      }
+      tmp21 = cResult[9];
+    }
+    const effect1 = obj2.useEffect(J, tmp21);
+    const _Symbol2 = Symbol;
+    if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
+      class Y {
+        constructor() {
+          MediaPlayerManager = isDragging.MediaPlayerManager;
           if (MediaPlayerManager != null) {
             pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
             if (pauseAllMediaPlayers != null) {
@@ -1244,227 +1183,260 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           return;
         }
       }
-      tmp18 = tmp19 !== tmp(tmp2[29]).ChannelScreenType.DEFAULT;
-    }
-    shouldFreeze = tmp18;
-  }
-  let obj3 = { runOnJS: screens(navigationTTIStackVisible[10]).runOnJS, setIsHidden: tmp8 };
-  const sharedValue = screens(navigationTTIStackVisible[10]).useSharedValue(0);
-  if (cResult[7] !== sharedValue) {
-    class J {
-      constructor() {
-        closure_0 = setTimeout(() => { ... }, 10);
-        return () => { ... };
-      }
-    }
-    cResult[7] = sharedValue;
-    cResult[8] = J;
-  } else {
-    class J {
-      constructor() {
-        closure_0 = setTimeout(() => { ... }, 10);
-        return () => { ... };
-      }
-    }
-  }
-  if (cResult[9] === shouldFreeze) {
-    class J {
-      constructor() {
-        closure_0 = setTimeout(() => { ... }, 10);
-        return () => { ... };
-      }
-    }
-    const effect1 = obj2.useEffect(J, items);
-    if (cResult[12] === firstScreenFrame) {
-      class J {
+      cResult[10] = Y;
+    } else {
+      class Y {
         constructor() {
-          closure_0 = setTimeout(() => { ... }, 10);
-          return () => { ... };
+          MediaPlayerManager = isDragging.MediaPlayerManager;
+          if (MediaPlayerManager != null) {
+            pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
+            if (pauseAllMediaPlayers != null) {
+              pauseAllMediaPlayersResult = pauseAllMediaPlayers();
+            }
+          }
+          return;
         }
       }
     }
-    class Y {
-      constructor(arg0, arg1, arg2, arg3) {
-        NumberResult = Number(screens);
-        if (0 === NumberResult) {
-          obj = { guildId: null, channelId: null, showCreateThread: null, focusChatPressableComponent: null, index: null, transitionState: null, cleanup: null, isDragging: null, translateX: null, isActive: null, isNavigationTTIStackVisible: null, freeze: null, containerWidth: null, frame: null, parentFreezeValue: null, maxWidth: null, highestFullyRenderedScreenIndex: null };
-          ({ guildId: obj.guildId, channelId: obj.channelId, showCreateThread: showCreateThread2 } = arg1);
-          tmp9 = null;
-          tmp7 = jsx;
-          tmp8 = closure_29;
-          if (showCreateThread2 == null) {
-            showCreateThread2 = false;
+    if (cResult[11] !== channelId) {
+      class Y {
+        constructor() {
+          MediaPlayerManager = isDragging.MediaPlayerManager;
+          if (MediaPlayerManager != null) {
+            pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
+            if (pauseAllMediaPlayers != null) {
+              pauseAllMediaPlayersResult = pauseAllMediaPlayers();
+            }
           }
-          obj.showCreateThread = showCreateThread2;
-          tmp10 = closure_7;
-          obj.focusChatPressableComponent = closure_7;
-          obj.index = NumberResult;
-          obj.transitionState = arg2;
-          obj.cleanup = arg3;
-          tmp11 = isDragging;
-          obj.isDragging = isDragging;
-          tmp12 = translateX;
-          obj.translateX = translateX;
-          tmp13 = screenStackActive;
-          if (screenStackActive) {
-            tmp14 = screens;
-            num3 = 1;
-            tmp13 = NumberResult === screens.length - 1;
-          }
-          obj.isActive = tmp13;
-          tmp15 = navigationTTIStackVisible;
-          obj.isNavigationTTIStackVisible = navigationTTIStackVisible;
-          tmp16 = screens;
-          num4 = 2;
-          obj.freeze = NumberResult < screens.length - 2;
-          tmp17 = firstScreenWidth;
-          obj.containerWidth = firstScreenWidth;
-          tmp18 = firstScreenFrame;
-          obj.frame = firstScreenFrame;
-          tmp19 = closure_12;
-          obj.parentFreezeValue = closure_12;
-          tmp20 = maxWidth;
-          obj.maxWidth = maxWidth;
-          tmp21 = closure_6;
-          obj.highestFullyRenderedScreenIndex = closure_6;
-          tmp7Result = tmp7(tmp8, obj, screens);
-        } else {
-          obj1 = { guildId: null, channelId: null, showCreateThread: null, index: null, transitionState: null, parentFreezeValue: null, cleanup: null, isActive: null, isNavigationTTIStackVisible: null, freeze: null, highestFullyRenderedScreenIndex: null };
-          ({ guildId: obj2.guildId, channelId: obj2.channelId, showCreateThread } = arg1);
-          tmp24 = null;
-          tmp22 = jsx;
-          tmp23 = closure_34;
-          if (showCreateThread == null) {
-            showCreateThread = false;
-          }
-          obj1.showCreateThread = showCreateThread;
-          obj1.index = NumberResult;
-          obj1.transitionState = arg2;
-          tmp2 = closure_12;
-          obj1.parentFreezeValue = closure_12;
-          obj1.cleanup = arg3;
-          tmp3 = screens;
-          num = 1;
-          obj1.isActive = NumberResult === screens.length - 1;
-          tmp4 = navigationTTIStackVisible;
-          obj1.isNavigationTTIStackVisible = navigationTTIStackVisible;
-          num2 = 2;
-          obj1.freeze = NumberResult < screens.length - 2;
-          tmp5 = closure_6;
-          obj1.highestFullyRenderedScreenIndex = closure_6;
-          tmp7Result = tmp22(tmp23, obj1, screens);
+          return;
         }
-        return tmp7Result;
+      }
+      tmp25[0] = channelId;
+      cResult[11] = channelId;
+      cResult[12] = tmp25;
+    } else {
+      class Y {
+        constructor() {
+          MediaPlayerManager = isDragging.MediaPlayerManager;
+          if (MediaPlayerManager != null) {
+            pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
+            if (pauseAllMediaPlayers != null) {
+              pauseAllMediaPlayersResult = pauseAllMediaPlayers();
+            }
+          }
+          return;
+        }
       }
     }
-    cResult[12] = firstScreenFrame;
-    cResult[13] = firstScreenWidth;
-    cResult[14] = focusChatPressableComponent;
-    cResult[15] = sharedValue;
-    cResult[16] = highestFullyRenderedScreenIndex;
-    cResult[17] = isDragging;
-    cResult[18] = maxWidth;
-    cResult[19] = navigationTTIStackVisible;
-    cResult[20] = screenStackActive;
-    cResult[21] = screens.length;
-    cResult[22] = translateX;
-    cResult[23] = Y;
+    const effect2 = obj2.useEffect(Y, tmp25);
+    const tmp27 = tmp4(tmp2[31])();
+    closure_13 = tmp27;
+    const first = screens[0];
+    if (cResult[13] === tmp27) {
+      class Y {
+        constructor() {
+          MediaPlayerManager = isDragging.MediaPlayerManager;
+          if (MediaPlayerManager != null) {
+            pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
+            if (pauseAllMediaPlayers != null) {
+              pauseAllMediaPlayersResult = pauseAllMediaPlayers();
+            }
+          }
+          return;
+        }
+      }
+    }
+    let tmp30 = shouldFreeze;
+    if (shouldFreeze) {
+      class Y {
+        constructor() {
+          MediaPlayerManager = isDragging.MediaPlayerManager;
+          if (MediaPlayerManager != null) {
+            pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
+            if (pauseAllMediaPlayers != null) {
+              pauseAllMediaPlayersResult = pauseAllMediaPlayers();
+            }
+          }
+          return;
+        }
+      }
+    }
+    if (tmp30) {
+      class Y {
+        constructor() {
+          MediaPlayerManager = isDragging.MediaPlayerManager;
+          if (MediaPlayerManager != null) {
+            pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
+            if (pauseAllMediaPlayers != null) {
+              pauseAllMediaPlayersResult = pauseAllMediaPlayers();
+            }
+          }
+          return;
+        }
+      }
+      if (!tmp31) {
+        class Y {
+          constructor() {
+            MediaPlayerManager = isDragging.MediaPlayerManager;
+            if (MediaPlayerManager != null) {
+              pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
+              if (pauseAllMediaPlayers != null) {
+                pauseAllMediaPlayersResult = pauseAllMediaPlayers();
+              }
+            }
+            return;
+          }
+        }
+        tmp31 = tmp32 !== tmp(tmp2[30]).ChannelScreenType.DEFAULT;
+      }
+      tmp30 = tmp31;
+    }
+    if (tmp30) {
+      class Y {
+        constructor() {
+          MediaPlayerManager = isDragging.MediaPlayerManager;
+          if (MediaPlayerManager != null) {
+            pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
+            if (pauseAllMediaPlayers != null) {
+              pauseAllMediaPlayersResult = pauseAllMediaPlayers();
+            }
+          }
+          return;
+        }
+      }
+    }
+    cResult[13] = tmp27;
+    cResult[14] = first;
+    cResult[15] = tmp9;
+    cResult[16] = screens;
+    cResult[17] = shouldFreeze;
+    cResult[18] = tmp30;
   }
-  items = [shouldFreeze, sharedValue];
-  cResult[9] = shouldFreeze;
-  cResult[10] = sharedValue;
-  cResult[11] = items;
-  const tmpResult2 = screens(navigationTTIStackVisible[10]);
+  class P {
+    constructor() {
+      tmp2 = null;
+      tmp = setVisibleChannelScreen;
+      if (screenStackVisible) {
+        tmp2 = channelId;
+      }
+      tmpResult = tmp(tmp2);
+      return;
+    }
+  }
+  const items1 = [screenStackVisible, channelId];
+  cResult[4] = channelId;
+  cResult[5] = screenStackVisible;
+  cResult[6] = P;
+  cResult[7] = items1;
+  tmp17 = items1;
+  tmp16 = P;
+  let obj3 = { runOnJS: screens(screenStackVisible[11]).runOnJS, setIsHidden: tmp10 };
 }) : (function MainTabsChannelScreenStack(screens) {
   screens = screens.screens;
   const screenStackActive = screens.screenStackActive;
+  const screenStackVisible = screens.screenStackVisible;
   const navigationTTIStackVisible = screens.navigationTTIStackVisible;
   const translateX = screens.translateX;
   const isDragging = screens.isDragging;
   const maxWidth = screens.maxWidth;
-  highestFullyRenderedScreenIndex = screens.highestFullyRenderedScreenIndex;
+  const highestFullyRenderedScreenIndex = screens.highestFullyRenderedScreenIndex;
   ({ shouldFreeze, focusChatPressableComponent } = screens);
   const firstScreenWidth = screens.firstScreenWidth;
   const firstScreenFrame = screens.firstScreenFrame;
+  let memo;
+  closure_13 = undefined;
   let first;
   let sharedValue;
-  let tmp3 = translateX(isDragging.useState(translateX.get() === maxWidth), 2);
-  closure_10 = tmp4;
-  const tmp2 = screenStackActive(navigationTTIStackVisible[28])();
-  const fn = function k() {
+  let tmp3 = navigationTTIStackVisible(translateX.useState(translateX.get() === maxWidth), 2);
+  closure_11 = tmp4;
+  let tmp2 = screenStackActive(screenStackVisible[29])();
+  const fn = function w() {
     return translateX.get() === maxWidth;
   };
   fn.__closure = { translateX, maxWidth };
   fn.__workletHash = 14568525032880;
   fn.__initData = __initData17;
-  class V {
+  class E {
     constructor(arg0, arg1) {
       if (screens !== arg1) {
         tmp = closure_0;
         tmp2 = closure_2;
-        obj = closure_0(closure_2[10]);
-        tmp3 = closure_10;
-        tmp4 = obj.runOnJS(closure_10)(screens);
+        obj = closure_0(closure_2[11]);
+        tmp3 = closure_11;
+        tmp4 = obj.runOnJS(closure_11)(screens);
       }
       return;
     }
   }
-  let obj2 = screens(navigationTTIStackVisible[10]);
-  V.__closure = { runOnJS: screens(navigationTTIStackVisible[10]).runOnJS, setIsHidden: tmp3[1] };
-  V.__workletHash = 7029914705044;
-  V.__initData = __initData18;
-  const animatedReaction = obj2.useAnimatedReaction(fn, V);
+  let obj2 = screens(screenStackVisible[11]);
+  E.__closure = { runOnJS: screens(screenStackVisible[11]).runOnJS, setIsHidden: tmp3[1] };
+  E.__workletHash = 7029914705044;
+  E.__initData = __initData18;
+  const animatedReaction = obj2.useAnimatedReaction(fn, E);
   const items = [screens];
-  const items1 = [
-    isDragging.useMemo(() => {
-      const atResult = screens.at(-1);
-      let type;
-      if (atResult != null) {
-        type = atResult.type;
-      }
-      let channelId = null;
-      if (type === useChannelScreensFromNavigation.ChannelScreenType.DEFAULT) {
-        channelId = atResult.channelId;
-      }
-      return channelId;
-    }, items)
-  ];
-  const effect = isDragging.useEffect(() => {
-    const MediaPlayerManager = maxWidth.MediaPlayerManager;
+  memo = translateX.useMemo(() => {
+    const atResult = screens.at(-1);
+    let type;
+    if (atResult != null) {
+      type = atResult.type;
+    }
+    let channelId = null;
+    if (type === useChannelScreensFromNavigation.ChannelScreenType.DEFAULT) {
+      channelId = atResult.channelId;
+    }
+    return channelId;
+  }, items);
+  const items1 = [screenStackVisible, memo];
+  const effect = translateX.useEffect(() => {
+    let tmp2 = null;
+    if (screenStackVisible) {
+      tmp2 = memo;
+    }
+    setVisibleChannelScreen(tmp2);
+  }, items1);
+  const effect1 = translateX.useEffect(() => () => focusChatPressableComponent(null), []);
+  const items2 = [memo];
+  const effect2 = translateX.useEffect(() => {
+    const MediaPlayerManager = isDragging.MediaPlayerManager;
     if (MediaPlayerManager != null) {
       const pauseAllMediaPlayers = MediaPlayerManager.pauseAllMediaPlayers;
       if (pauseAllMediaPlayers != null) {
         pauseAllMediaPlayers();
       }
     }
-  }, items1);
+  }, items2);
+  const tmp11 = screenStackActive(screenStackVisible[31])();
+  closure_13 = tmp11;
   first = screens[0];
   if (shouldFreeze) {
     shouldFreeze = tmp3[0];
   }
   if (shouldFreeze) {
-    let tmp10 = null == first;
-    if (!tmp10) {
-      tmp10 = first.type !== tmp5(tmp[29]).ChannelScreenType.DEFAULT;
+    let tmp14 = null == first;
+    if (!tmp14) {
+      tmp14 = first.type !== tmp5(tmp[30]).ChannelScreenType.DEFAULT;
     }
-    shouldFreeze = tmp10;
+    shouldFreeze = tmp14;
   }
-  let obj3 = { runOnJS: screens(navigationTTIStackVisible[10]).runOnJS, setIsHidden: tmp3[1] };
-  sharedValue = screens(navigationTTIStackVisible[10]).useSharedValue(0);
-  const items2 = [shouldFreeze, sharedValue];
-  const effect1 = obj.useEffect(() => {
+  if (shouldFreeze) {
+    shouldFreeze = !screens.some((channelId) => closure_13.includes(channelId.channelId));
+  }
+  let obj3 = { runOnJS: screens(screenStackVisible[11]).runOnJS, setIsHidden: tmp3[1] };
+  sharedValue = screens(screenStackVisible[11]).useSharedValue(0);
+  const items3 = [shouldFreeze, sharedValue];
+  const effect3 = obj.useEffect(() => {
     const timeout = setTimeout(() => {
       const result = sharedValue.set(sharedValue.get() + 1);
     }, 10);
     return () => clearTimeout(closure_0);
-  }, items2);
-  const items3 = [screens.length, focusChatPressableComponent, isDragging, translateX, firstScreenWidth, firstScreenFrame, maxWidth, sharedValue, screenStackActive, navigationTTIStackVisible, highestFullyRenderedScreenIndex];
+  }, items3);
+  const items4 = [screens.length, tmp11, focusChatPressableComponent, isDragging, translateX, firstScreenWidth, firstScreenFrame, maxWidth, sharedValue, screenStackActive, navigationTTIStackVisible, highestFullyRenderedScreenIndex];
   let channelId;
-  const callback = obj.useCallback((arg0, arg1, transitionState, cleanup) => {
+  const callback = obj.useCallback((arg0, channelId, transitionState, cleanup) => {
     const NumberResult = Number(arg0);
     if (0 === NumberResult) {
       const obj = { guildId: null, channelId: null, showCreateThread: null, focusChatPressableComponent: null, index: null, transitionState: null, cleanup: null, isDragging: null, translateX: null, isActive: null, isNavigationTTIStackVisible: null, freeze: null, containerWidth: null, frame: null, parentFreezeValue: null, maxWidth: null, highestFullyRenderedScreenIndex: null };
-      ({ guildId: obj.guildId, channelId: obj.channelId, showCreateThread: showCreateThread2 } = arg1);
+      ({ guildId: obj.guildId, channelId: obj.channelId, showCreateThread: showCreateThread2 } = channelId);
       if (showCreateThread2 == null) {
         showCreateThread2 = false;
       }
@@ -1475,22 +1447,26 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj.cleanup = cleanup;
       obj.isDragging = isDragging;
       obj.translateX = translateX;
-      let tmp13 = screenStackActive;
+      let tmp15 = screenStackActive;
       if (screenStackActive) {
-        tmp13 = NumberResult === screens.length - 1;
+        tmp15 = NumberResult === screens.length - 1;
       }
-      obj.isActive = tmp13;
+      obj.isActive = tmp15;
       obj.isNavigationTTIStackVisible = navigationTTIStackVisible;
-      obj.freeze = NumberResult < screens.length - 2;
+      let tmp19 = NumberResult < screens.length - 2;
+      if (tmp19) {
+        tmp19 = !closure_13.includes(channelId.channelId);
+      }
+      obj.freeze = tmp19;
       obj.containerWidth = firstScreenWidth;
       obj.frame = firstScreenFrame;
       obj.parentFreezeValue = sharedValue;
       obj.maxWidth = maxWidth;
       obj.highestFullyRenderedScreenIndex = highestFullyRenderedScreenIndex;
-      let tmp22Result = parentFreezeValue(closure_29, obj, arg0);
+      let tmp26Result = map1(closure_30, obj, arg0);
     } else {
       const obj3 = { guildId: null, channelId: null, showCreateThread: null, index: null, transitionState: null, parentFreezeValue: null, cleanup: null, isActive: null, isNavigationTTIStackVisible: null, freeze: null, highestFullyRenderedScreenIndex: null };
-      ({ guildId: obj2.guildId, channelId: obj2.channelId, showCreateThread } = arg1);
+      ({ guildId: obj2.guildId, channelId: obj2.channelId, showCreateThread } = channelId);
       if (showCreateThread == null) {
         showCreateThread = false;
       }
@@ -1501,31 +1477,35 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj3.cleanup = cleanup;
       obj3.isActive = NumberResult === screens.length - 1;
       obj3.isNavigationTTIStackVisible = navigationTTIStackVisible;
-      obj3.freeze = NumberResult < screens.length - 2;
+      let tmp5 = NumberResult < screens.length - 2;
+      if (tmp5) {
+        tmp5 = !closure_13.includes(channelId.channelId);
+      }
+      obj3.freeze = tmp5;
       obj3.highestFullyRenderedScreenIndex = highestFullyRenderedScreenIndex;
-      tmp22Result = parentFreezeValue(closure_34, obj3, arg0);
+      tmp26Result = map1(closure_35, obj3, arg0);
     }
-    return tmp22Result;
-  }, items3);
+    return tmp26Result;
+  }, items4);
   if (first != null) {
     channelId = first.channelId;
   }
   if (channelId == null) {
     channelId = null;
   }
-  isDragging.useRef(channelId);
-  isDragging.useRef(null);
+  translateX.useRef(channelId);
+  translateX.useRef(null);
   let type;
   if (first != null) {
     type = first.type;
   }
-  const items4 = [type, ];
+  const items5 = [type, ];
   let channelId1;
   if (first != null) {
     channelId1 = first.channelId;
   }
-  items4[1] = channelId1;
-  const effect2 = obj.useEffect(() => {
+  items5[1] = channelId1;
+  const effect4 = obj.useEffect(() => {
     let type;
     if (first != null) {
       type = first.type;
@@ -1553,25 +1533,25 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         tmp6.current = first.channelId;
       }
     }
-  }, items4);
-  const tmp5Result = screens(navigationTTIStackVisible[10]);
-  screens(navigationTTIStackVisible[31]).freezeScreenIndex(shouldFreeze, 0);
+  }, items5);
+  const tmp5Result = screens(screenStackVisible[11]);
+  screens(screenStackVisible[33]).freezeScreenIndex(shouldFreeze, 0);
   if (!shouldFreeze) {
     const obj4 = { freeze: shouldFreeze, children: null };
-    const obj5 = { collapsable: false, style: highestFullyRenderedScreenIndex.absoluteFill, pointerEvents: "box-none", accessibilityElementsHidden: !screenStackActive, importantForAccessibility: "no-hide-descendants", children: null };
+    const obj5 = { collapsable: false, style: maxWidth.absoluteFill, pointerEvents: "box-none", accessibilityElementsHidden: !screenStackActive, importantForAccessibility: "no-hide-descendants", children: null };
     const obj6 = { gradient: tmp2, children: null };
     const obj7 = { items: screens, renderItem: callback, getItemKey: getKey };
-    obj6.children = sharedValue(tmp5(tmp[18]).TransitionGroup, obj7);
-    obj5.children = sharedValue(tmp5(tmp[18]).ThemeContextProvider, obj6);
-    obj4.children = sharedValue(focusChatPressableComponent, obj5);
-    let tmp21Result = tmp21(tmp5(tmp[21]).Freeze, obj4);
-    const tmp24 = !screenStackActive;
+    obj6.children = closure_13(tmp5(tmp[19]).TransitionGroup, obj7);
+    obj5.children = closure_13(tmp5(tmp[19]).ThemeContextProvider, obj6);
+    obj4.children = closure_13(highestFullyRenderedScreenIndex, obj5);
+    let tmp25Result = tmp25(tmp5(tmp[22]).Freeze, obj4);
+    const tmp28 = !screenStackActive;
   } else {
     let showCreateThread;
     if (first != null) {
       showCreateThread = first.showCreateThread;
     }
-    tmp21Result = null;
+    tmp25Result = null;
   }
-  return tmp21Result;
+  return tmp25Result;
 }));

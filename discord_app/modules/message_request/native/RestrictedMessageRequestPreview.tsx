@@ -1,12 +1,12 @@
-// === Module 18393: RestrictedMessageRequestPreview ===
+// === Module 18634: RestrictedMessageRequestPreview ===
 
-// Module 18393 (RestrictedMessageRequestPreview)
+// Module 18634 (RestrictedMessageRequestPreview)
 import nativeDefault from "native" /* 587 */;
-import useIsEmptyMessageRequestChat from "useIsEmptyMessageRequestChat" /* 13545 */;
+import useIsEmptyMessageRequestChat from "useIsEmptyMessageRequestChat" /* 13763 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import MessageStore from "MessageStore" /* 6011 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import MessageStore from "MessageStore" /* 6045 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -14,7 +14,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, scroll: { flex: 1 }, hidden: { opacity: 0 }, scrollContent: null, scrollContentEmpty: null, emptyChat: null, footer: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.scrollContent = { paddingHorizontal: nativeDefault.space.PX_16, paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_8 };
@@ -359,13 +359,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Restrict
         }
       };
       const obj6 = { channel: stateFromStores, user: stateFromStores1 };
-      const items9 = [closure_10(tmp2(18394), obj6), , ];
+      const items9 = [closure_10(tmp2(18635), obj6), , ];
       const obj7 = { channelId };
-      items9[1] = closure_10(tmp2(18396), obj7);
+      items9[1] = closure_10(tmp2(18637), obj7);
       let tmp19Result = null;
       if (isEmpty) {
         const obj8 = { style: tmp.emptyChat };
-        tmp19Result = closure_10(tmp2(13571), obj8);
+        tmp19Result = closure_10(tmp2(13789), obj8);
       }
       items9[2] = tmp19Result;
       obj5.children = items9;
@@ -376,7 +376,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Restrict
       items11[1] = obj10;
       obj9.style = items11;
       const obj11 = { channel: stateFromStores };
-      obj9.children = closure_10(tmp2(13364), obj11);
+      obj9.children = closure_10(tmp2(13583), obj11);
       items10[1] = closure_10(isEmpty, obj9);
       obj4.children = items10;
       tmp14Result = closure_11(tmp15, obj4);

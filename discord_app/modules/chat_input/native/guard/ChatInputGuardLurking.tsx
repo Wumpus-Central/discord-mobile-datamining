@@ -1,20 +1,20 @@
-// === Module 13379: ChatInputGuardLurking ===
+// === Module 13598: ChatInputGuardLurking ===
 
-// Module 13379 (ChatInputGuardLurking)
+// Module 13598 (ChatInputGuardLurking)
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5712 */;
-import GuildActionCreatorsDefault from "GuildActionCreators" /* 6832 */;
-import JoinGuildRefusedError from "JoinGuildRefusedError" /* 7321 */;
-import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7449 */;
-import HubProgressActionCreators from "HubProgressActionCreators" /* 9062 */;
-import ChatInputGuardDefault from "ChatInputGuard" /* 13372 */;
-import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 13380 */;
+import AppAnalyticsUtilsDefault from "AppAnalyticsUtils" /* 5747 */;
+import GuildActionCreatorsDefault from "GuildActionCreators" /* 6866 */;
+import JoinGuildRefusedError from "JoinGuildRefusedError" /* 7355 */;
+import GuildDiscoveryUtilsAll from "GuildDiscoveryUtils" /* 7484 */;
+import HubProgressActionCreators from "HubProgressActionCreators" /* 9095 */;
+import ChatInputGuardDefault from "ChatInputGuard" /* 13591 */;
+import showChannelFollowingActionSheet from "showChannelFollowingActionSheet" /* 13599 */;
 import noop from "module_19" /* 19 */;
-import LurkingStore from "LurkingStore" /* 4905 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
+import LurkingStore from "LurkingStore" /* 4937 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
 
 require = fn;
-const TextAreaCta = fn(12520).TextAreaCta;
+const TextAreaCta = fn(12567).TextAreaCta;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_8, JoinGuildSources: closure_9 } = Constants);
 const jsx = fn(21).jsx;
@@ -691,8 +691,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const intl11 = tmp2(1125).intl;
     obj2.buttonPrimaryText = intl11.string(tmp2(1125).t.RLch70);
     obj2.buttonPrimaryOnPress = callback2;
-    let tmp15Result = jsx(guildId(13372), { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
-    const tmp14 = guildId(13372);
+    let tmp15Result = jsx(guildId(13591), { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonPrimaryText: null, buttonPrimaryOnPress: null });
+    const tmp14 = guildId(13591);
   } else {
     if (null != pendingGameProfileReturn) {
       let obj3 = { type: "button-action", message: null, buttonSecondaryText: null, buttonSecondaryOnPress: null, buttonSecondaryLoading: null, buttonPrimaryText: null, buttonPrimaryOnPress: null };
@@ -732,8 +732,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj9.buttonPrimaryText = intl2.string(tmp2(1125).t.RLch70);
       obj9.buttonPrimaryOnPress = callback2;
     }
-    tmp15Result = jsx(guildId(13372), obj9);
-    const tmp17 = guildId(13372);
+    tmp15Result = jsx(guildId(13591), obj9);
+    const tmp17 = guildId(13591);
   }
   return tmp15Result;
 }));

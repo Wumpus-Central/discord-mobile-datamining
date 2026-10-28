@@ -1,18 +1,19 @@
-// === Module 11201: ConjureRichPresenceStore ===
+// === Module 11236: ConjureRichPresenceStore ===
 
-// Module 11201 (ConjureRichPresenceStore)
+// Module 11236 (ConjureRichPresenceStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6809 */;
-import conjurePresenceActivity from "conjurePresenceActivity" /* 10649 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6843 */;
+import conjurePresenceActivity from "conjurePresenceActivity" /* 10681 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import IdleStore from "IdleStore" /* 6634 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
+import IdleStore from "IdleStore" /* 6668 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
+import ConjurePagesStore from "ConjurePagesStore" /* 11237 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 require = fn;
 function updateActivity(withGracePeriod) {
@@ -27,16 +28,16 @@ function updateActivity(withGracePeriod) {
       clearTimeout(timeout2);
       timeout2 = null;
     }
-    c12 = null;
-    let flag4 = null != c13;
+    c13 = null;
+    let flag4 = null != c14;
     if (flag4) {
-      c13 = null;
+      c14 = null;
       flag4 = true;
     }
     return flag4;
   } else {
-    if (null != c12) {
-      if (null == ConjureProjectStore.getProject(c12)) {
+    if (null != c13) {
+      if (null == ConjureProjectStore.getProject(c13)) {
         if (null != timeout) {
           const _clearTimeout5 = clearTimeout;
           clearTimeout(timeout);
@@ -47,36 +48,45 @@ function updateActivity(withGracePeriod) {
           clearTimeout(timeout2);
           timeout2 = null;
         }
-        c12 = null;
-        let flag3 = null != c13;
+        c13 = null;
+        let flag3 = null != c14;
         if (flag3) {
-          c13 = null;
+          c14 = null;
           flag3 = true;
         }
         return flag3;
       }
     }
-    const guildId = SelectedGuildStore.getGuildId();
-    let globalSelectedProjectId = ConjureProjectStore.getGlobalSelectedProjectId();
-    if (globalSelectedProjectId == null) {
-      let selectedProjectId = null;
-      if (null != guildId) {
-        selectedProjectId = null;
-        if (SelectedChannelStore.getChannelId() === StaticChannelRoute.CONJURE) {
-          selectedProjectId = ConjureProjectStore.getSelectedProjectId(guildId);
+    const shownProjectId = ConjurePagesStore.getShownProjectId();
+    if (null != shownProjectId) {
+      let tmp15 = null;
+      if (null != ConjureProjectStore.getProject(shownProjectId)) {
+        tmp15 = shownProjectId;
+      }
+      let tmp13 = tmp15;
+    } else {
+      const guildId = SelectedGuildStore.getGuildId();
+      let globalSelectedProjectId = ConjureProjectStore.getGlobalSelectedProjectId();
+      if (globalSelectedProjectId == null) {
+        let selectedProjectId = null;
+        if (null != guildId) {
+          selectedProjectId = null;
+          if (SelectedChannelStore.getChannelId() === StaticChannelRoute.CONJURE) {
+            selectedProjectId = ConjureProjectStore.getSelectedProjectId(guildId);
+          }
+        }
+        globalSelectedProjectId = selectedProjectId;
+      }
+      tmp13 = null;
+      if (null != globalSelectedProjectId) {
+        tmp13 = null;
+        if (null != ConjureProjectStore.getProject(globalSelectedProjectId)) {
+          tmp13 = globalSelectedProjectId;
         }
       }
-      globalSelectedProjectId = selectedProjectId;
     }
-    let tmp11 = null;
-    if (null != globalSelectedProjectId) {
-      tmp11 = null;
-      if (null != ConjureProjectStore.getProject(globalSelectedProjectId)) {
-        tmp11 = globalSelectedProjectId;
-      }
-    }
-    if (null == tmp11) {
-      if (null == c13) {
+    if (null == tmp13) {
+      if (null == c14) {
         if (null != timeout) {
           const _clearTimeout3 = clearTimeout;
           clearTimeout(timeout);
@@ -87,10 +97,10 @@ function updateActivity(withGracePeriod) {
           clearTimeout(timeout2);
           timeout2 = null;
         }
-        c12 = null;
-        let flag2 = null != c13;
+        c13 = null;
+        let flag2 = null != c14;
         if (flag2) {
-          c13 = null;
+          c14 = null;
           flag2 = true;
         }
       }
@@ -98,16 +108,16 @@ function updateActivity(withGracePeriod) {
       if (null == timeout) {
         const _setTimeout2 = setTimeout;
         timeout = setTimeout(() => {
-          c14 = null;
-          if (null != c15) {
+          c15 = null;
+          if (null != c16) {
             const _clearTimeout = clearTimeout;
-            clearTimeout(c15);
-            c15 = null;
+            clearTimeout(c16);
+            c16 = null;
           }
-          c12 = null;
-          let flag = null != c13;
+          c13 = null;
+          let flag = null != c14;
           if (flag) {
-            c13 = null;
+            c14 = null;
             flag = true;
           }
           if (flag) {
@@ -122,12 +132,12 @@ function updateActivity(withGracePeriod) {
         clearTimeout(timeout);
         timeout = null;
       }
-      let flag = tmp11 !== c12;
+      let flag = tmp13 !== c13;
       if (!flag) {
-        flag = null == c13;
+        flag = null == c14;
       }
       if (flag) {
-        c12 = tmp11;
+        c13 = tmp13;
         const obj2 = { type: constants.PLAYING, name: conjurePresenceActivity.CONJURE_PRESENCE_ACTIVITY_NAME, details: null, timestamps: null };
         c0 = undefined;
         const prop = conjurePresenceActivity.CONJURE_PRESENCE_ACTIVITY_LINES;
@@ -139,7 +149,7 @@ function updateActivity(withGracePeriod) {
         const _Date = Date;
         obj3.start = Date.now();
         obj2.timestamps = obj3;
-        c13 = obj2;
+        c14 = obj2;
         if (null != timeout2) {
           const _clearTimeout2 = clearTimeout;
           clearTimeout(timeout2);
@@ -148,16 +158,16 @@ function updateActivity(withGracePeriod) {
         const _setTimeout = setTimeout;
         timeout2 = setTimeout(() => {
           let timeout = null;
-          if (null != closure_1_13) {
+          if (null != closure_1_14) {
             let obj = {};
-            let merged = Object.assign(closure_1_13);
-            details = closure_1_13.details;
-            let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
+            let merged = Object.assign(closure_1_14);
+            details = closure_1_14.details;
+            let prop = closure_1_0(closure_1_1[9]).CONJURE_PRESENCE_ACTIVITY_LINES;
             let found = prop.filter((item) => item !== details);
             let _Math = Math;
             let _Math2 = Math;
             obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
-            closure_1_13 = obj;
+            closure_1_14 = obj;
             if (null != timeout) {
               let _clearTimeout = clearTimeout;
               clearTimeout(timeout);
@@ -166,16 +176,16 @@ function updateActivity(withGracePeriod) {
             let _setTimeout = setTimeout;
             timeout = setTimeout(() => {
               let timeout = null;
-              if (null != closure_1_13) {
+              if (null != closure_1_14) {
                 let obj = {};
-                let merged = Object.assign(closure_1_13);
-                details = closure_1_13.details;
-                let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
+                let merged = Object.assign(closure_1_14);
+                details = closure_1_14.details;
+                let prop = closure_1_0(closure_1_1[9]).CONJURE_PRESENCE_ACTIVITY_LINES;
                 let found = prop.filter((item) => item !== details);
                 let _Math = Math;
                 let _Math2 = Math;
                 obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
-                closure_1_13 = obj;
+                closure_1_14 = obj;
                 if (null != timeout) {
                   let _clearTimeout = clearTimeout;
                   clearTimeout(timeout);
@@ -184,16 +194,16 @@ function updateActivity(withGracePeriod) {
                 let _setTimeout = setTimeout;
                 timeout = setTimeout(() => {
                   let timeout = null;
-                  if (null != closure_1_13) {
+                  if (null != closure_1_14) {
                     let obj = {};
-                    let merged = Object.assign(closure_1_13);
-                    details = closure_1_13.details;
-                    let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
+                    let merged = Object.assign(closure_1_14);
+                    details = closure_1_14.details;
+                    let prop = closure_1_0(closure_1_1[9]).CONJURE_PRESENCE_ACTIVITY_LINES;
                     let found = prop.filter((item) => item !== details);
                     let _Math = Math;
                     let _Math2 = Math;
                     obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
-                    closure_1_13 = obj;
+                    closure_1_14 = obj;
                     if (null != timeout) {
                       let _clearTimeout = clearTimeout;
                       clearTimeout(timeout);
@@ -202,42 +212,42 @@ function updateActivity(withGracePeriod) {
                     let _setTimeout = setTimeout;
                     timeout = setTimeout(() => {
                       let timeout = null;
-                      if (null != closure_1_13) {
+                      if (null != closure_1_14) {
                         let obj = {};
-                        let merged = Object.assign(closure_1_13);
-                        details = closure_1_13.details;
-                        let prop = closure_1_0(closure_1_1[8]).CONJURE_PRESENCE_ACTIVITY_LINES;
-                        let found = prop.filter(/* F109747 */ function() { ... });
+                        let merged = Object.assign(closure_1_14);
+                        details = closure_1_14.details;
+                        let prop = closure_1_0(closure_1_1[9]).CONJURE_PRESENCE_ACTIVITY_LINES;
+                        let found = prop.filter(/* F110361 */ function() { ... });
                         let _Math = Math;
                         let _Math2 = Math;
                         obj.details = found[Math.floor(Math, Math.random(Math) * found.length)];
-                        closure_1_13 = obj;
+                        closure_1_14 = obj;
                         if (null != timeout) {
                           let _clearTimeout = clearTimeout;
                           clearTimeout(timeout);
                           timeout = null;
                         }
                         let _setTimeout = setTimeout;
-                        timeout = setTimeout(() => { ... }, closure_1_11);
-                        closure_1_19.emitChange();
+                        timeout = setTimeout(() => { ... }, closure_1_12);
+                        closure_1_20.emitChange();
                       }
-                    }, closure_1_11);
-                    closure_1_19.emitChange();
+                    }, closure_1_12);
+                    closure_1_20.emitChange();
                   }
-                }, closure_1_11);
-                closure_1_19.emitChange();
+                }, closure_1_12);
+                closure_1_20.emitChange();
               }
-            }, closure_1_11);
-            closure_1_19.emitChange();
+            }, closure_1_12);
+            closure_1_20.emitChange();
           }
-        }, c11);
+        }, c12);
         flag = true;
       }
       return flag;
     }
   }
 }
-let closure_18 = async function _resumeRunningProjects() {
+let closure_19 = async function _resumeRunningProjects() {
   if (c4 === 2) {
     c4 = 3;
     throw new TypeError("Generator functions may not be called on executing generators");
@@ -268,13 +278,13 @@ let closure_18 = async function _resumeRunningProjects() {
           closure_128_1 = undefined;
           let body;
           let ensureConnection;
-          if (!c16) {
-            c16 = true;
+          if (!c17) {
+            c17 = true;
             if (obj2.hasConjureGuildWithoutExposure("conjure_resume")) {
               c2 = 1;
               const HTTP = HTTPUtils.HTTP;
               const obj5 = { url: constants.CONJURE_PROJECTS, rejectWithError: true };
-              const items = [HTTP.get(obj5), asyncRequireImpl(dependencyMap[11], dependencyMap.paths)];
+              const items = [HTTP.get(obj5), asyncRequireImpl(dependencyMap[12], dependencyMap.paths)];
               c3 = 2;
               c4 = 1;
               const obj6 = { value: Promise.all(items), done: false };
@@ -286,7 +296,7 @@ let closure_18 = async function _resumeRunningProjects() {
       } else {
         if (1 === tmp7) {
           c2 = 0;
-          closure_129_16 = false;
+          closure_129_17 = false;
         } else if (arg0 === 1) {
           c4 = 3;
           throw value;
@@ -317,24 +327,24 @@ let closure_18 = async function _resumeRunningProjects() {
   }
 };
 const Constants = fn(1084);
-({ ActivityTypes: closure_8, Endpoints: closure_9 } = Constants);
-const StaticChannelRoute = fn(4831).StaticChannelRoute;
-let c11 = 300000;
-let c12 = null;
+({ ActivityTypes: closure_9, Endpoints: c10 } = Constants);
+const StaticChannelRoute = fn(4863).StaticChannelRoute;
+let c12 = 300000;
 let c13 = null;
 let c14 = null;
 let c15 = null;
-let c16 = false;
+let c16 = null;
+let c17 = false;
 const Store = initializeDefault.Store;
 class ConjureRichPresenceStore extends Store {
 }
 const prototype = ConjureRichPresenceStore.prototype;
 prototype["initialize"] = function initialize() {
-  const items = [IdleStore, SelectedChannelStore, SelectedGuildStore, ConjureProjectStore];
+  const items = [IdleStore, SelectedChannelStore, SelectedGuildStore, ConjureProjectStore, ConjurePagesStore];
   this.syncWith(items, () => updateActivity({ withGracePeriod: true }));
 };
 prototype["getActivity"] = function getActivity() {
-  return c13;
+  return c14;
 };
 ConjureRichPresenceStore.displayName = "ConjureRichPresenceStore";
 const conjureRichPresenceStore = new ConjureRichPresenceStore(DispatcherDefault, {
@@ -344,7 +354,7 @@ const conjureRichPresenceStore = new ConjureRichPresenceStore(DispatcherDefault,
   POST_CONNECTION_OPEN() {
     (function resumeRunningProjects() {
       const self = this;
-      const apply = closure_1_18.apply;
+      const apply = closure_1_19.apply;
       if (typeof apply === "unknown") {
         let applyArgumentsResult = HermesBuiltin.applyArguments(self);
       } else {
@@ -355,21 +365,21 @@ const conjureRichPresenceStore = new ConjureRichPresenceStore(DispatcherDefault,
     return false;
   },
   LOGOUT() {
-    c16 = false;
-    if (null != c14) {
-      const _clearTimeout = clearTimeout;
-      clearTimeout(c14);
-      c14 = null;
-    }
+    c17 = false;
     if (null != c15) {
-      const _clearTimeout2 = clearTimeout;
+      const _clearTimeout = clearTimeout;
       clearTimeout(c15);
       c15 = null;
     }
-    c12 = null;
-    let flag = null != c13;
+    if (null != c16) {
+      const _clearTimeout2 = clearTimeout;
+      clearTimeout(c16);
+      c16 = null;
+    }
+    c13 = null;
+    let flag = null != c14;
     if (flag) {
-      c13 = null;
+      c14 = null;
       flag = true;
     }
     return flag;

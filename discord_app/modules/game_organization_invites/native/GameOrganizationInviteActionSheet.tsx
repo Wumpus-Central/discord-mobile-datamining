@@ -1,18 +1,18 @@
-// === Module 15247: GameOrganizationInviteActionSheet ===
+// === Module 15472: GameOrganizationInviteActionSheet ===
 
-// Module 15247 (GameOrganizationInviteActionSheet)
+// Module 15472 (GameOrganizationInviteActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import InstantInviteUtils from "InstantInviteUtils" /* 9052 */;
-import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9060 */;
-import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9082 */;
-import getGameOrganizationInviteSendStateKeyDefault from "getGameOrganizationInviteSendStateKey" /* 11320 */;
-import sendGameOrganizationInviteDefault from "sendGameOrganizationInvite" /* 11327 */;
-import showGameOrganizationInviteErrorToastDefault from "showGameOrganizationInviteErrorToast" /* 11330 */;
+import InstantInviteUtils from "InstantInviteUtils" /* 9085 */;
+import UserPlaceholderRowDefault from "UserPlaceholderRow" /* 9093 */;
+import InviteSuggestionsActionCreators from "InviteSuggestionsActionCreators" /* 9115 */;
+import getGameOrganizationInviteSendStateKeyDefault from "getGameOrganizationInviteSendStateKey" /* 11357 */;
+import sendGameOrganizationInviteDefault from "sendGameOrganizationInvite" /* 11364 */;
+import showGameOrganizationInviteErrorToastDefault from "showGameOrganizationInviteErrorToast" /* 11367 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9065 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import InviteSuggestionsStore from "InviteSuggestionsStore" /* 9098 */;
 
 require = fn;
 function isInvitableUserRow(type) {
@@ -26,11 +26,11 @@ function isInvitableUserRow(type) {
   return tmp3;
 }
 const View = fn(17).View;
-let closure_6 = fn(9131).useInstantInviteSendStates;
+let closure_6 = fn(9164).useInstantInviteSendStates;
 const NOOP_NULL = fn(1095).NOOP_NULL;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { header: { paddingTop: nativeDefault.space.PX_16 }, centeredText: { textAlign: "center" } };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -102,7 +102,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrga
   if (cResult[3] !== stateFromStores) {
     let tmp8 = null;
     if (null != stateFromStores) {
-      tmp8 = stateFromStores(11320)(stateFromStores);
+      tmp8 = stateFromStores(11357)(stateFromStores);
     }
     cResult[3] = stateFromStores;
     cResult[4] = tmp8;
@@ -368,22 +368,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrga
   const obj3 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: str.centeredText, children: null };
   const intl2 = formatToPlainString(1125).intl;
   obj3.children = intl2.formatToPlainString(centeredText(2403).EnTIIr, { noun: stringResult });
-  const items3 = [closure_10(formatToPlainString(5235).Heading, obj3), ];
+  const items3 = [closure_10(formatToPlainString(5270).Heading, obj3), ];
   const obj6 = { variant: "text-sm/medium", color: "text-muted", style: str.centeredText, children: null };
   const intl3 = formatToPlainString(1125).intl;
   obj6.children = intl3.formatToPlainString(centeredText(2403).BBk7Qw, { noun: stringResult });
-  items3[1] = closure_10(formatToPlainString(5235).Text, obj6);
+  items3[1] = closure_10(formatToPlainString(5270).Text, obj6);
   obj2.children = items3;
   const tmp16 = _slicedToArray(noop.useState(true), 2);
   const intl4 = formatToPlainString(1125).intl;
   formatToPlainString = intl4.formatToPlainString;
-  const tmp26 = closure_11(formatToPlainString(5978).Stack, obj2);
+  const tmp26 = closure_11(formatToPlainString(6013).Stack, obj2);
   centeredText = str.centeredText;
   cResult[16] = centeredText;
   cResult[17] = str.header;
-  cResult[18] = formatToPlainString(7147).SearchBar;
-  cResult[19] = formatToPlainString(5978).Stack;
-  cResult[20] = formatToPlainString(7300).ActionSheet;
+  cResult[18] = formatToPlainString(7181).SearchBar;
+  cResult[19] = formatToPlainString(6013).Stack;
+  cResult[20] = formatToPlainString(7334).ActionSheet;
   str = "md";
   cResult[21] = "md";
   cResult[22] = true;
@@ -417,7 +417,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrga
   });
   let tmp5 = null;
   if (null != stateFromStores) {
-    tmp5 = stateFromStores(11320)(stateFromStores);
+    tmp5 = stateFromStores(11357)(stateFromStores);
   }
   dependencyMap = tmp5;
   const tmp7 = closure_6((arg0) => {
@@ -489,25 +489,25 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameOrga
   const obj5 = { variant: "heading-lg/bold", color: "mobile-text-heading-primary", style: tmp.centeredText, children: null };
   const intl3 = tmp2(1125).intl;
   obj5.children = intl3.formatToPlainString(stateFromStores(2403).EnTIIr, { noun: stringResult });
-  const items4 = [closure_10(guildId(5235).Heading, obj5), ];
+  const items4 = [closure_10(guildId(5270).Heading, obj5), ];
   const obj6 = { variant: "text-sm/medium", color: "text-muted", style: tmp.centeredText, children: null };
   const intl4 = tmp2(1125).intl;
   obj6.children = intl4.formatToPlainString(stateFromStores(2403).BBk7Qw, { noun: stringResult });
-  items4[1] = closure_10(guildId(5235).Text, obj6);
+  items4[1] = closure_10(guildId(5270).Text, obj6);
   obj4.children = items4;
-  const items5 = [closure_11(guildId(5978).Stack, obj4), ];
+  const items5 = [closure_11(guildId(6013).Stack, obj4), ];
   const obj7 = { size: "md", round: true, onChange: callback, placeholder: null };
   const intl5 = tmp2(1125).intl;
   obj7.placeholder = intl5.formatToPlainString(stateFromStores(2403).cRK6SQ, { noun: stringResult });
-  items5[1] = closure_10(guildId(7147).SearchBar, obj7);
+  items5[1] = closure_10(guildId(7181).SearchBar, obj7);
   obj3.children = items5;
-  obj2.header = closure_11(guildId(5978).Stack, obj3);
+  obj2.header = closure_11(guildId(6013).Stack, obj3);
   if (tmp9[0]) {
     let tmp16Result = closure_10(closure_14, {});
   } else {
     const obj8 = { users: stateFromStoresArray, getSendState: callback1, onInvite: callback2 };
-    tmp16Result = closure_10(stateFromStores(15248), obj8);
+    tmp16Result = closure_10(stateFromStores(15473), obj8);
   }
   obj2.children = tmp16Result;
-  return closure_10(guildId(7300).ActionSheet, obj2);
+  return closure_10(guildId(7334).ActionSheet, obj2);
 });

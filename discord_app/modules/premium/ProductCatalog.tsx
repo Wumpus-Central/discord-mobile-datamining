@@ -1,11 +1,11 @@
-// === Module 5029: ProductCatalog ===
+// === Module 5061: ProductCatalog ===
 
-// Module 5029 (ProductCatalog)
+// Module 5061 (ProductCatalog)
 import LoggerDefault from "Logger" /* 3 */;
-import SKUListingDefault from "SKUListing" /* 5034 */;
-import DenormalizedPerksReadExperimentDefault from "DenormalizedPerksReadExperiment" /* 5035 */;
+import SKUListingDefault from "SKUListing" /* 5066 */;
+import DenormalizedPerksReadExperimentDefault from "DenormalizedPerksReadExperiment" /* 5067 */;
 import OverridePremiumTypeStore from "OverridePremiumTypeStore" /* 1390 */;
-import PremiumSKUFeature_mod from "PremiumSKUFeature" /* 5030 */;
+import PremiumSKUFeature_mod from "PremiumSKUFeature" /* 5062 */;
 
 let closure_0 = fn;
 const PremiumConstants = fn(1391);
@@ -52,7 +52,7 @@ class ProductCatalogFeature extends tmp36 {
     return tmp21;
   }
 }
-const object = new Object(fn(5031).EntitlementFeatureNames.ANIMATED_EMOJIS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object = new Object(fn(5063).EntitlementFeatureNames.ANIMATED_EMOJIS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -85,7 +85,7 @@ const object = new Object(fn(5031).EntitlementFeatureNames.ANIMATED_EMOJIS, (pre
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, tmp27, tmp26, tmp25, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object16 = new Object(fn(5031).EntitlementFeatureNames.EMOJIS_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object16 = new Object(fn(5063).EntitlementFeatureNames.EMOJIS_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -118,7 +118,7 @@ const object16 = new Object(fn(5031).EntitlementFeatureNames.EMOJIS_EVERYWHERE, 
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, tmp26, tmp25, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object17 = new Object(fn(5031).EntitlementFeatureNames.STICKERS_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object17 = new Object(fn(5063).EntitlementFeatureNames.STICKERS_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -151,7 +151,7 @@ const object17 = new Object(fn(5031).EntitlementFeatureNames.STICKERS_EVERYWHERE
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, tmp25, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object18 = new Object(fn(5031).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object18 = new Object(fn(5063).EntitlementFeatureNames.SOUNDBOARD_EVERYWHERE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -184,7 +184,7 @@ const object18 = new Object(fn(5031).EntitlementFeatureNames.SOUNDBOARD_EVERYWHE
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, tmp24, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object19 = new Object(fn(5031).EntitlementFeatureNames.CUSTOM_CALL_SOUNDS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object19 = new Object(fn(5063).EntitlementFeatureNames.CUSTOM_CALL_SOUNDS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -217,7 +217,7 @@ const object19 = new Object(fn(5031).EntitlementFeatureNames.CUSTOM_CALL_SOUNDS,
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, object18, tmp23, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object20 = new Object(fn(5031).EntitlementFeatureNames.PREMIUM_VOICE_FILTERS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object20 = new Object(fn(5063).EntitlementFeatureNames.PREMIUM_VOICE_FILTERS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -250,7 +250,7 @@ const object20 = new Object(fn(5031).EntitlementFeatureNames.PREMIUM_VOICE_FILTE
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, object18, object19, tmp22, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object21 = new Object(fn(5031).EntitlementFeatureNames.ANIMATED_AVATAR, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object21 = new Object(fn(5063).EntitlementFeatureNames.ANIMATED_AVATAR, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -283,7 +283,7 @@ const object21 = new Object(fn(5031).EntitlementFeatureNames.ANIMATED_AVATAR, (p
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, object18, object19, object20, tmp21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object22 = new Object(fn(5031).EntitlementFeatureNames.CUSTOM_DISCRIMINATOR, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object22 = new Object(fn(5063).EntitlementFeatureNames.CUSTOM_DISCRIMINATOR, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -316,7 +316,7 @@ const object22 = new Object(fn(5031).EntitlementFeatureNames.CUSTOM_DISCRIMINATO
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, object18, object19, object20, object21, tmp20, tmp19, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object23 = new Object(fn(5031).EntitlementFeatureNames.PREMIUM_GUILD_MEMBER_PROFILE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object23 = new Object(fn(5063).EntitlementFeatureNames.PREMIUM_GUILD_MEMBER_PROFILE, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -382,7 +382,7 @@ const tmp33 = new tmp("profileBadges", (premiumType) => (function userHasFeature
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp18, tmp17, tmp16, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const tmp36 = new tmp(fn(5031).EntitlementFeatureNames.PROFILE_PREMIUM_FEATURES, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const tmp36 = new tmp(fn(5063).EntitlementFeatureNames.PROFILE_PREMIUM_FEATURES, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -481,7 +481,7 @@ const tmp38 = new tmp("appIcons", (premiumType) => (function userHasFeatureByMer
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp36, tmp37, tmp15, tmp14, tmp13, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object24 = new Object(fn(5031).EntitlementFeatureNames.CLIENT_THEMES, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object24 = new Object(fn(5063).EntitlementFeatureNames.CLIENT_THEMES, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -580,7 +580,7 @@ const tmp40 = new tmp("freeBoosts", (premiumType) => (function userHasFeatureByM
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp36, tmp37, tmp38, object24, tmp39, tmp12, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object25 = new Object(fn(5031).EntitlementFeatureNames.STREAM_MID_QUALITY, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object25 = new Object(fn(5063).EntitlementFeatureNames.STREAM_MID_QUALITY, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -613,7 +613,7 @@ const object25 = new Object(fn(5031).EntitlementFeatureNames.STREAM_MID_QUALITY,
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp36, tmp37, tmp38, object24, tmp39, tmp40, tmp11, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object26 = new Object(fn(5031).EntitlementFeatureNames.STREAM_HIGH_QUALITY, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object26 = new Object(fn(5063).EntitlementFeatureNames.STREAM_HIGH_QUALITY, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -646,7 +646,7 @@ const object26 = new Object(fn(5031).EntitlementFeatureNames.STREAM_HIGH_QUALITY
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp36, tmp37, tmp38, object24, tmp39, tmp40, object25, tmp10, tmp9, tmp8, tmp7, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object27 = new Object(fn(5031).EntitlementFeatureNames.CUSTOM_NOTIFICATION_SOUNDS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object27 = new Object(fn(5063).EntitlementFeatureNames.CUSTOM_NOTIFICATION_SOUNDS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -778,7 +778,7 @@ const tmp43 = new tmp("redeemPremiumPerks", (premiumType) => (function userHasFe
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp36, tmp37, tmp38, object24, tmp39, tmp40, object25, object26, object27, tmp41, tmp42, tmp6, tmp5, tmp4, tmp3, tmp2, tmp);
-const object28 = new Object(fn(5031).EntitlementFeatureNames.VIDEO_FILTER_ASSETS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object28 = new Object(fn(5063).EntitlementFeatureNames.VIDEO_FILTER_ASSETS, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -812,8 +812,8 @@ const object28 = new Object(fn(5031).EntitlementFeatureNames.VIDEO_FILTER_ASSETS
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp36, tmp37, tmp38, object24, tmp39, tmp40, object25, object26, object27, tmp41, tmp42, tmp43, tmp5, tmp4, tmp3, tmp2, tmp);
 let PremiumSKUFeature = PremiumSKUFeature_mod;
-const importDefaultResult11 = new PremiumSKUFeature(fn(5031).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE, fn(5032).getUserMaxFileSize);
-const object29 = new Object(fn(5031).EntitlementFeatureNames.INCREASED_GUILD_LIMIT, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const importDefaultResult11 = new PremiumSKUFeature(fn(5063).EntitlementFeatureNames.INCREASED_FILE_UPLOAD_SIZE, fn(5064).getUserMaxFileSize);
+const object29 = new Object(fn(5063).EntitlementFeatureNames.INCREASED_GUILD_LIMIT, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -846,7 +846,7 @@ const object29 = new Object(fn(5031).EntitlementFeatureNames.INCREASED_GUILD_LIM
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp36, tmp37, tmp38, object24, tmp39, tmp40, object25, object26, object27, tmp41, tmp42, tmp43, object28, new.target, importDefaultResult11, tmp2, tmp);
-const object30 = new Object(fn(5031).EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const object30 = new Object(fn(5063).EntitlementFeatureNames.INCREASED_MESSAGE_LENGTH, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -945,7 +945,7 @@ const tmp293 = new tmp29("uploadLargeFiles", (premiumType) => (function userHasF
   }
   return false;
 })(closure_0, premiumType), undefined, tmp32, tmp31, ProductCatalogFeature, importDefault, tmp30, tmp29, PremiumSubscriptionSKUs, tmp28, undefined, globalThis, fn, dependencyMap, object, object16, object17, object18, object19, object20, object21, object22, object23, tmp33, tmp36, tmp37, tmp38, object24, tmp39, tmp40, object25, object26, object27, tmp41, tmp42, tmp43, object28, new.target, importDefaultResult11, object29, object30);
-const tmp294 = new tmp29(fn(5031).EntitlementFeatureNames.QUEST_ORB_MULTIPLIER, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
+const tmp294 = new tmp29(fn(5063).EntitlementFeatureNames.QUEST_ORB_MULTIPLIER, (premiumType) => (function userHasFeatureByMeritOfPremiumSKUs(arg0, premiumType) {
   if (null != premiumType) {
     if (null != premiumType.premiumType) {
       try {
@@ -1106,14 +1106,14 @@ export const canUserUse = function canUserUse(COLLECTIBLES, isPremiumWithFractio
       }
       if (null != perks) {
         const config = DenormalizedPerksReadExperimentDefault.getConfig({ location: "product_catalog_can_user_use" });
-        if (config !== closure_0(5035).DenormalizedPerksReadConfig.CONTROL) {
+        if (config !== closure_0(5067).DenormalizedPerksReadConfig.CONTROL) {
           let featureValue = COLLECTIBLES.getFeatureValue(isPremiumWithFractionalPremiumOnly);
           let perks1;
           if (isPremiumWithFractionalPremiumOnly != null) {
             perks1 = isPremiumWithFractionalPremiumOnly.perks;
           }
           const tmp10Result = closure_0(1395);
-          if (config === closure_0(5035).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
+          if (config === closure_0(5067).DenormalizedPerksReadConfig.DUAL_READ_RETURN_NEW) {
             featureValue = hasPerkResult;
           }
           return featureValue;

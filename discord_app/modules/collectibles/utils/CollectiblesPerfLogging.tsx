@@ -1,6 +1,6 @@
-// === Module 7694: CollectiblesPerfLogging ===
+// === Module 7728: CollectiblesPerfLogging ===
 
-// Module 7694 (CollectiblesPerfLogging)
+// Module 7728 (CollectiblesPerfLogging)
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import size from "module_2" /* 2 */;

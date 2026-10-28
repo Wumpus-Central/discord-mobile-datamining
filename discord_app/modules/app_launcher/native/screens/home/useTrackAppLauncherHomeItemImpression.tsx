@@ -1,6 +1,6 @@
-// === Module 11983: useTrackAppLauncherHomeItemImpression ===
+// === Module 12021: useTrackAppLauncherHomeItemImpression ===
 
-// Module 11983 (useTrackAppLauncherHomeItemImpression)
+// Module 12021 (useTrackAppLauncherHomeItemImpression)
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const result = size.fileFinishedImporting("modules/app_launcher/native/screens/h
 export const useTrackAppLauncherHomeItemImpression = ReactCompilerGating.isReactCompilerEnabled() ? (function useTrackAppLauncherHomeItemImpression() {
   const cResult = trackAppLauncherItemImpressionOnFirstView(576).c(4);
   let obj = trackAppLauncherItemImpressionOnFirstView(576);
-  trackAppLauncherItemImpressionOnFirstView = trackAppLauncherItemImpressionOnFirstView(11984).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
+  trackAppLauncherItemImpressionOnFirstView = trackAppLauncherItemImpressionOnFirstView(12022).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
   if (cResult[0] !== trackAppLauncherItemImpressionOnFirstView) {
     const fn = function t(viewableItems) {
       viewableItems = viewableItems.viewableItems;
@@ -81,7 +81,7 @@ export const useTrackAppLauncherHomeItemImpression = ReactCompilerGating.isReact
   }
   return tmp3;
 }) : (function useTrackAppLauncherHomeItemImpression() {
-  trackAppLauncherItemImpressionOnFirstView = trackAppLauncherItemImpressionOnFirstView(11984).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
+  trackAppLauncherItemImpressionOnFirstView = trackAppLauncherItemImpressionOnFirstView(12022).useTrackAppLauncherItemImpressionOnFirstView().trackAppLauncherItemImpressionOnFirstView;
   let obj2 = { trackAppLauncherHomeItemImpression: null };
   const items = [trackAppLauncherItemImpressionOnFirstView];
   obj2.trackAppLauncherHomeItemImpression = noop.useCallback((viewableItems) => {

@@ -1,13 +1,13 @@
-// === Module 8730: useUserProfileGradientColors ===
+// === Module 8767: useUserProfileGradientColors ===
 
-// Module 8730 (useUserProfileGradientColors)
+// Module 8767 (useUserProfileGradientColors)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import native from "native" /* 5038 */;
-import useProfileThemeValues from "useProfileThemeValues" /* 7282 */;
-import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8720 */;
+import native from "native" /* 5070 */;
+import useProfileThemeValues from "useProfileThemeValues" /* 7316 */;
+import UserProfileGradientUtils from "UserProfileGradientUtils" /* 8757 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
 
 const require = globalThis.__r;
 

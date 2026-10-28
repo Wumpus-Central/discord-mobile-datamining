@@ -1,10 +1,10 @@
-// === Module 12279: LinkPlusIcon ===
+// === Module 12325: LinkPlusIcon ===
 
-// Module 12279 (LinkPlusIcon)
+// Module 12325 (LinkPlusIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5669 */;
-import _mod12280 from "module_12280" /* 12280 */;
+import BaseIconImage from "BaseIconImage" /* 5704 */;
+import _mod12326 from "module_12326" /* 12326 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const LinkPlusIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12280;
+    const tmpResult = _mod12326;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const LinkPlusIcon = ReactCompilerGating.isReactCompilerEnabled() ? (func
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12280, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12326, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

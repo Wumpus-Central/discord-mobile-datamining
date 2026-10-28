@@ -1,22 +1,22 @@
-// === Module 17468: useMainTabsPanelsGesture ===
+// === Module 17703: useMainTabsPanelsGesture ===
 
-// Module 17468 (useMainTabsPanelsGesture)
+// Module 17703 (useMainTabsPanelsGesture)
 import PlatformUtils2 from "PlatformUtils" /* 1381 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
-import timing from "timing" /* 5207 */;
-import timingPresets from "timingPresets" /* 5210 */;
-import LegacyBaseButton from "LegacyBaseButton" /* 5298 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import timing from "timing" /* 5242 */;
+import timingPresets from "timingPresets" /* 5245 */;
+import LegacyBaseButton from "LegacyBaseButton" /* 5333 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const LaunchPadTypes = fn(11208).LaunchPadTypes;
+const LaunchPadTypes = fn(11244).LaunchPadTypes;
 let PlatformUtils = fn(1381);
 PlatformUtils = PlatformUtils.isAndroid();
-const PanelsConfig = fn(17469);
+const PanelsConfig = fn(17704);
 let panelsConfig = PlatformUtils ? PanelsConfig.ANDROID_PANELS_ANIMATION_CONFIG : PanelsConfig.DEFAULT_PANELS_ANIMATION_CONFIG;
-let closure_7 = { code: "function useMainTabsPanelsGestureTsx1(width_0){const{isDragging,translateX,IS_ANDROID,withTiming,timingInstant}=this.__closure;if(isDragging.get())return;if(translateX.get()===0)return;translateX.set(IS_ANDROID?withTiming(width_0,timingInstant,'animate-always'):width_0);}" };
+let closure_7 = { code: "function useMainTabsPanelsGestureTsx1(width_0){const{isDragging,translateX,IS_ANDROID,withTiming,timingInstant,isFoldChange,timingStandard}=this.__closure;if(isDragging.get())return;if(translateX.get()===0)return;if(IS_ANDROID){translateX.set(withTiming(width_0,timingInstant,'animate-always'));}else{translateX.set(isFoldChange?withTiming(width_0,timingStandard,'respect-motion-settings'):width_0);}}" };
 let closure_8 = { code: "function useMainTabsPanelsGestureTsx2(show,isFling,velocity,force){const{translateX,width,onVisibilityChange,runOnJS,onPreMovement,panelsConfig,isTimingConfig,withTiming,withSpring}=this.__closure;if(!force&&translateX.get()!==0&&translateX.get()!==width){return false;}const targetTranslationX=show?0:width;if(translateX.get()===targetTranslationX){if(onVisibilityChange!=null){runOnJS(onVisibilityChange)(show);}return false;}if(onPreMovement!=null){runOnJS(onPreMovement)(show);}const animationConfig=show?isFling?panelsConfig.swipeSidePanelOpen:panelsConfig.nonSwipeSidePanelOpen:isFling?panelsConfig.swipeSidePanelClose:panelsConfig.nonSwipeSidePanelClose;function handleAnimationFinish(finished){'worklet';if(!finished)return;if(onVisibilityChange!=null){runOnJS(onVisibilityChange)(show);}}translateX.set(isTimingConfig(animationConfig)?withTiming(targetTranslationX,animationConfig,'respect-motion-settings',handleAnimationFinish):withSpring(targetTranslationX,{...animationConfig,velocity:velocity},'respect-motion-settings',handleAnimationFinish));return true;}" };
-const __initData = { code: "function handleAnimationFinish_useMainTabsPanelsGestureTsx3(finished){const{onVisibilityChange,runOnJS,show}=this.__closure;if(!finished)return;if(onVisibilityChange!=null){runOnJS(onVisibilityChange)(show);}}" };
+let closure_9 = { code: "function handleAnimationFinish_useMainTabsPanelsGestureTsx3(finished){const{onVisibilityChange,runOnJS,show}=this.__closure;if(!finished)return;if(onVisibilityChange!=null){runOnJS(onVisibilityChange)(show);}}" };
 let closure_10 = { code: "function useMainTabsPanelsGestureTsx4(){const{disallowGesture}=this.__closure;return disallowGesture.get();}" };
 let closure_11 = { code: "function useMainTabsPanelsGestureTsx5(currentDisallow,previousDisallow){const{didJustAllowGesture}=this.__closure;if(currentDisallow===previousDisallow)return;if(currentDisallow)return;didJustAllowGesture.set(true);}" };
 let closure_12 = { code: "function useMainTabsPanelsGestureTsx6(e_0){const{isDragging,disallowGesture,didJustAllowGesture,runOnJS,setIsDraggingRef,panelsConfig,movePanel,translateX,width}=this.__closure;try{if(!isDragging.get()||disallowGesture.get()||didJustAllowGesture.get()){return;}}finally{isDragging.set(false);didJustAllowGesture.set(false);runOnJS(setIsDraggingRef)(false);}if(Math.abs(e_0.velocityX)>panelsConfig.minFlingVelocityX){movePanel(e_0.velocityX<0,true,e_0.velocityX,true);}else{movePanel(translateX.get()<width/2,false,e_0.velocityX,true);}}" };
@@ -32,7 +32,11 @@ export default function useMainTabsPanelsGesture(canDrag) {
   const onVisibilityChange = canDrag.onVisibilityChange;
   const onDragStart = canDrag.onDragStart;
   const onPreMovement = canDrag.onPreMovement;
-  ({ openWidth, cancelOnSwipeRightFromStart } = canDrag);
+  ({ openWidth, foldSeam } = canDrag);
+  if (foldSeam === undefined) {
+    foldSeam = null;
+  }
+  const cancelOnSwipeRightFromStart = canDrag.cancelOnSwipeRightFromStart;
   openWidth = undefined;
   let sharedValue;
   let sharedValue1;
@@ -40,15 +44,16 @@ export default function useMainTabsPanelsGesture(canDrag) {
   let callback;
   let sharedValue2;
   let sharedValue3;
+  __initData5 = undefined;
   let callback1;
   let sharedValue4;
   let sharedValue5;
   let context;
   let memo;
   const tmp3 = onVisibilityChange(onDragStart[4])();
-  const launchPadType = tmp3;
+  panelsConfig = tmp3;
   const tmp4 = onVisibilityChange(onDragStart[5])();
-  panelsConfig = tmp4;
+  __initData = tmp4;
   const width = onVisibilityChange(onDragStart[6])().width;
   if (openWidth == null) {
     openWidth = width;
@@ -70,33 +75,39 @@ export default function useMainTabsPanelsGesture(canDrag) {
   sharedValue2 = canDrag(onDragStart[7]).useSharedValue(false);
   const tmp5Result6 = canDrag(onDragStart[7]);
   sharedValue3 = canDrag(onDragStart[7]).useSharedValue(false);
-  const items1 = [sharedValue1, sharedValue, openWidth];
+  __initData5 = onPreMovement.useRef(foldSeam);
+  const items1 = [foldSeam, sharedValue1, sharedValue, openWidth];
   const effect = onPreMovement.useEffect(() => {
-    const fn = function e(arg0) {
+    closure_0 = tmp;
+    __initData5.current = foldSeam;
+    const fn = function e(value) {
       if (!sharedValue1.get()) {
         if (0 !== sharedValue.get()) {
-          let withTimingResult = arg0;
-          if (closure_5) {
-            withTimingResult = canDrag(onDragStart[8]).withTiming(arg0, canDrag(onDragStart[9]).timingInstant, "animate-always");
-            const obj2 = canDrag(onDragStart[8]);
+          if (PlatformUtils) {
+            const result = set(timing.withTiming(value, timingPresets.timingInstant, "animate-always"));
+          } else {
+            let withTimingResult = value;
+            if (closure_0) {
+              withTimingResult = timing.withTiming(value, timingPresets.timingStandard, "respect-motion-settings");
+            }
+            const result1 = set(withTimingResult);
           }
-          const result = sharedValue.set(withTimingResult);
         }
       }
     };
-    const obj = ReanimatedRexport;
-    fn.__closure = { isDragging: sharedValue1, translateX: sharedValue, IS_ANDROID: PlatformUtils, withTiming: timing.withTiming, timingInstant: timingPresets.timingInstant };
-    fn.__workletHash = 16005852081233;
+    let obj = canDrag(onDragStart[7]);
+    fn.__closure = { isDragging: sharedValue1, translateX: sharedValue, IS_ANDROID: cancelOnSwipeRightFromStart, withTiming: canDrag(onDragStart[8]).withTiming, timingInstant: canDrag(onDragStart[9]).timingInstant, isFoldChange: __initData5.current !== foldSeam, timingStandard: canDrag(onDragStart[9]).timingStandard };
+    fn.__workletHash = 9684253698191;
     fn.__initData = __initData;
     obj.runOnUI(fn)(openWidth);
   }, items1);
-  class N {
+  class U {
     constructor(arg0, arg1, arg2, arg3) {
       closure_0 = canDrag;
       if (!arg3) {
-        obj = closure_9;
+        obj = closure_10;
         num = 0;
-        if (0 !== closure_9.get()) {
+        if (0 !== closure_10.get()) {
           tmp = width;
           if (obj.get() !== width) {
             flag = false;
@@ -108,8 +119,8 @@ export default function useMainTabsPanelsGesture(canDrag) {
       if (!canDrag) {
         num2 = width;
       }
-      obj2 = closure_9;
-      if (closure_9.get() === num2) {
+      obj2 = closure_10;
+      if (closure_10.get() === num2) {
         tmp33 = null;
         if (null != onVisibilityChange) {
           tmp34 = canDrag;
@@ -152,8 +163,8 @@ export default function useMainTabsPanelsGesture(canDrag) {
           handleAnimationFinish.__closure = obj1;
           num3 = 1018878139815;
           handleAnimationFinish.__workletHash = 1018878139815;
-          tmp12 = closure_9;
-          handleAnimationFinish.__initData = closure_9;
+          tmp12 = width;
+          handleAnimationFinish.__initData = width;
           tmp13 = canDrag;
           tmp14 = onDragStart;
           obj5 = canDrag(onDragStart[3]);
@@ -192,38 +203,38 @@ export default function useMainTabsPanelsGesture(canDrag) {
     }
   }
   const tmp5Result7 = canDrag(onDragStart[7]);
-  N.__closure = { translateX: sharedValue, width: openWidth, onVisibilityChange, runOnJS: canDrag(onDragStart[7]).runOnJS, onPreMovement, panelsConfig, isTimingConfig: canDrag(onDragStart[3]).isTimingConfig, withTiming: canDrag(onDragStart[8]).withTiming, withSpring: canDrag(onDragStart[10]).withSpring };
-  N.__workletHash = 4205680413964;
-  N.__initData = openWidth;
+  U.__closure = { translateX: sharedValue, width: openWidth, onVisibilityChange, runOnJS: canDrag(onDragStart[7]).runOnJS, onPreMovement, panelsConfig, isTimingConfig: canDrag(onDragStart[3]).isTimingConfig, withTiming: canDrag(onDragStart[8]).withTiming, withSpring: canDrag(onDragStart[10]).withSpring };
+  U.__workletHash = 4205680413964;
+  U.__initData = width;
   const items2 = [onVisibilityChange, onPreMovement, sharedValue, openWidth];
-  callback1 = onPreMovement.useCallback(N, items2);
+  callback1 = onPreMovement.useCallback(U, items2);
   let obj2 = { translateX: sharedValue, width: openWidth, onVisibilityChange, runOnJS: canDrag(onDragStart[7]).runOnJS, onPreMovement, panelsConfig, isTimingConfig: canDrag(onDragStart[3]).isTimingConfig, withTiming: canDrag(onDragStart[8]).withTiming, withSpring: canDrag(onDragStart[10]).withSpring };
   sharedValue4 = canDrag(onDragStart[7]).useSharedValue(false);
   const tmp5Result8 = canDrag(onDragStart[7]);
-  class F {
+  class V {
     constructor() {
-      return closure_13.get();
+      return closure_14.get();
     }
   }
-  F.__closure = { disallowGesture: sharedValue2 };
-  F.__workletHash = 15338765161171;
-  F.__initData = sharedValue1;
-  class U {
+  V.__closure = { disallowGesture: sharedValue2 };
+  V.__workletHash = 15338765161171;
+  V.__initData = sharedValue;
+  class L {
     constructor(arg0, arg1) {
       if (canDrag !== arg1) {
         if (!canDrag) {
-          tmp = closure_16;
+          tmp = closure_18;
           flag = true;
-          result = closure_16.set(true);
+          result = closure_18.set(true);
         }
       }
       return;
     }
   }
-  U.__closure = { didJustAllowGesture: sharedValue4 };
-  U.__workletHash = 17048450187141;
-  U.__initData = ref;
-  const animatedReaction = canDrag(onDragStart[7]).useAnimatedReaction(F, U);
+  L.__closure = { didJustAllowGesture: sharedValue4 };
+  L.__workletHash = 17048450187141;
+  L.__initData = sharedValue1;
+  const animatedReaction = canDrag(onDragStart[7]).useAnimatedReaction(V, L);
   const tmp5Result9 = canDrag(onDragStart[7]);
   sharedValue5 = canDrag(onDragStart[7]).useSharedValue({ x: 0, y: 0 });
   context = onPreMovement.useContext(tmp(tmp2[11]));
@@ -233,14 +244,14 @@ export default function useMainTabsPanelsGesture(canDrag) {
     const PanResult = Gesture.Pan();
     let result = Gesture.Pan().enabled(canDrag).requireExternalGestureToFail(context);
     const enabledResult = Gesture.Pan().enabled(canDrag);
-    const rect = { top: -panelsConfig.top, left: -panelsConfig.left, bottom: -panelsConfig.bottom, right: -panelsConfig.right };
+    const rect = { top: -left.top, left: -left.left, bottom: -left.bottom, right: -left.right };
     const manualActivationResult = result.manualActivation(PlatformUtils2.isAndroid());
     const fn = function u(arg0, fail) {
       const first = arg0.allTouches[0];
       if (null != first) {
         if (__initData4.get()) {
           if (0 === sharedValue.get()) {
-            if (first.x > closure_1_6.left + 24) {
+            if (first.x > left.left + 24) {
               fail.fail();
             }
           }
@@ -250,11 +261,11 @@ export default function useMainTabsPanelsGesture(canDrag) {
         const result = sharedValue5.set(point);
       }
     };
-    fn.__closure = { edgeSwipeOnly: sharedValue3, translateX: sharedValue, insets: panelsConfig, EDGE_SWIPE_WIDTH: 24, startPosition: sharedValue5 };
+    fn.__closure = { edgeSwipeOnly: sharedValue3, translateX: sharedValue, insets: left, EDGE_SWIPE_WIDTH: 24, startPosition: sharedValue5 };
     fn.__workletHash = 5475789226466;
-    fn.__initData = __initData6;
+    fn.__initData = __initData5;
     const hitSlopResult = result.manualActivation(PlatformUtils2.isAndroid()).hitSlop(rect);
-    let obj = { edgeSwipeOnly: sharedValue3, translateX: sharedValue, insets: panelsConfig, EDGE_SWIPE_WIDTH: 24, startPosition: sharedValue5 };
+    let obj = { edgeSwipeOnly: sharedValue3, translateX: sharedValue, insets: left, EDGE_SWIPE_WIDTH: 24, startPosition: sharedValue5 };
     const fn2 = function o(state, fail) {
       if (state.state === canDrag(onDragStart[12]).State.BEGAN) {
         const point = state.allTouches[0];
@@ -272,14 +283,14 @@ export default function useMainTabsPanelsGesture(canDrag) {
                     if (0 === sharedValue.get()) {
                       fail.fail();
                     }
-                  } else if (true === closure_1_4) {
+                  } else if (true === cancelOnSwipeRightFromStart) {
                     if (sharedValue.get() >= openWidth) {
                       fail.fail();
                     }
                   }
-                  if (launchPadType === cancelOnSwipeRightFromStart.GESTURE_EDGE) {
+                  if (minFlingVelocityX === foldSeam.GESTURE_EDGE) {
                     if (diff < 0) {
-                      const diff1 = __initData - 48;
+                      const diff1 = width - 48;
                       fail.fail();
                     }
                   }
@@ -292,10 +303,10 @@ export default function useMainTabsPanelsGesture(canDrag) {
       }
     };
     const onTouchesDownResult = result.manualActivation(PlatformUtils2.isAndroid()).hitSlop(rect).onTouchesDown(fn);
-    fn2.__closure = { State: LegacyBaseButton.State, startPosition: sharedValue5, GESTURE_MIN_DISTANCE: 12, disallowGesture: sharedValue2, translateX: sharedValue, cancelOnSwipeRightFromStart, width: openWidth, launchPadType, LaunchPadTypes, windowWidth: width, LAUNCHPAD_GESTURE_INSET: 48 };
+    fn2.__closure = { State: LegacyBaseButton.State, startPosition: sharedValue5, GESTURE_MIN_DISTANCE: 12, disallowGesture: sharedValue2, translateX: sharedValue, cancelOnSwipeRightFromStart, width: openWidth, launchPadType: minFlingVelocityX, LaunchPadTypes, windowWidth: width, LAUNCHPAD_GESTURE_INSET: 48 };
     fn2.__workletHash = 7246608976890;
-    fn2.__initData = __initData5;
-    const obj2 = { State: LegacyBaseButton.State, startPosition: sharedValue5, GESTURE_MIN_DISTANCE: 12, disallowGesture: sharedValue2, translateX: sharedValue, cancelOnSwipeRightFromStart, width: openWidth, launchPadType, LaunchPadTypes, windowWidth: width, LAUNCHPAD_GESTURE_INSET: 48 };
+    fn2.__initData = __initData4;
+    const obj2 = { State: LegacyBaseButton.State, startPosition: sharedValue5, GESTURE_MIN_DISTANCE: 12, disallowGesture: sharedValue2, translateX: sharedValue, cancelOnSwipeRightFromStart, width: openWidth, launchPadType: minFlingVelocityX, LaunchPadTypes, windowWidth: width, LAUNCHPAD_GESTURE_INSET: 48 };
     const fn3 = function l() {
       const result = sharedValue1.set(true);
       canDrag(onDragStart[7]).runOnJS(__initData2)(true);
@@ -308,7 +319,7 @@ export default function useMainTabsPanelsGesture(canDrag) {
     const onTouchesMoveResult = onTouchesDownResult.onTouchesMove(fn2);
     fn3.__closure = { isDragging: sharedValue1, runOnJS: ReanimatedRexport.runOnJS, setIsDraggingRef: callback, onDragStart };
     fn3.__workletHash = 8659650895938;
-    fn3.__initData = __initData4;
+    fn3.__initData = __initData3;
     let obj3 = { isDragging: sharedValue1, runOnJS: ReanimatedRexport.runOnJS, setIsDraggingRef: callback, onDragStart };
     const fn4 = function n(changeX) {
       if (__initData3.get()) {
@@ -322,47 +333,47 @@ export default function useMainTabsPanelsGesture(canDrag) {
         const _Math = Math;
         const _Math2 = Math;
         const result1 = sharedValue.set(Math.max(0, Math.min(openWidth, sharedValue.get() + changeX.changeX)));
-        const result2 = __initData6.set(false);
+        const result2 = sharedValue4.set(false);
       }
     };
     fn4.__closure = { disallowGesture: sharedValue2, translateX: sharedValue, width: openWidth, didJustAllowGesture: sharedValue4 };
     fn4.__workletHash = 13355779907583;
-    fn4.__initData = __initData3;
+    fn4.__initData = __initData2;
     const obj5 = { disallowGesture: sharedValue2, translateX: sharedValue, width: openWidth, didJustAllowGesture: sharedValue4 };
     const onStartResult = onTouchesMoveResult.onStart(fn3);
     const fn5 = function e(velocityX) {
       try {
         if (sharedValue1.get()) {
           if (!__initData3.get()) {
-            if (!__initData6.get()) {
+            if (!sharedValue4.get()) {
               const result = sharedValue1.set(false);
-              const result1 = __initData6.set(false);
+              const result1 = sharedValue4.set(false);
               canDrag(onDragStart[7]).runOnJS(__initData2)(false);
               const _Math = Math;
-              if (Math.abs(velocityX.velocityX) > closure_6.minFlingVelocityX) {
-                __initData5(velocityX.velocityX < 0, true, velocityX.velocityX, true);
+              if (Math.abs(velocityX.velocityX) > minFlingVelocityX.minFlingVelocityX) {
+                callback1(velocityX.velocityX < 0, true, velocityX.velocityX, true);
               } else {
-                __initData5(sharedValue.get() < openWidth / 2, false, velocityX.velocityX, true);
+                callback1(sharedValue.get() < openWidth / 2, false, velocityX.velocityX, true);
               }
               const obj3 = canDrag(onDragStart[7]);
             }
           }
         }
         const result2 = sharedValue1.set(false);
-        const result3 = __initData6.set(false);
+        const result3 = sharedValue4.set(false);
         canDrag(onDragStart[7]).runOnJS(__initData2)(false);
         const obj4 = canDrag(onDragStart[7]);
       } catch (tmp30) {
         const result4 = sharedValue1.set(false);
-        const result5 = __initData6.set(false);
+        const result5 = sharedValue4.set(false);
         canDrag(onDragStart[7]).runOnJS(__initData2)(false);
         throw tmp30;
       }
     };
     const onChangeResult = onTouchesMoveResult.onStart(fn3).onChange(fn4);
-    fn5.__closure = { isDragging: sharedValue1, disallowGesture: sharedValue2, didJustAllowGesture: sharedValue4, runOnJS: ReanimatedRexport.runOnJS, setIsDraggingRef: callback, panelsConfig, movePanel: callback1, translateX: sharedValue, width: openWidth };
+    fn5.__closure = { isDragging: sharedValue1, disallowGesture: sharedValue2, didJustAllowGesture: sharedValue4, runOnJS: ReanimatedRexport.runOnJS, setIsDraggingRef: callback, panelsConfig: minFlingVelocityX, movePanel: callback1, translateX: sharedValue, width: openWidth };
     fn5.__workletHash = 9466036897321;
-    fn5.__initData = __initData2;
+    fn5.__initData = __initData;
     return onChangeResult.onFinalize(fn5);
   }, items3);
   const items4 = [memo, sharedValue2, sharedValue3, sharedValue];

@@ -1,9 +1,9 @@
-// === Module 10019: NsfwServerInviteWarningAlert ===
+// === Module 10051: NsfwServerInviteWarningAlert ===
 
-// Module 10019 (NsfwServerInviteWarningAlert)
-import useAlertStore from "useAlertStore" /* 5911 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6658 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7884 */;
+// Module 10051 (NsfwServerInviteWarningAlert)
+import useAlertStore from "useAlertStore" /* 5946 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6692 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7918 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

@@ -1,11 +1,11 @@
-// === Module 11955: ChannelListLayout ===
+// === Module 11993: ChannelListLayout ===
 
-// Module 11955 (ChannelListLayout)
-import UserSettings from "UserSettings" /* 4800 */;
-import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 5644 */;
-import CozyDrawer from "CozyDrawer" /* 11956 */;
-import Compact from "Compact" /* 11958 */;
-import Cozy from "Cozy" /* 11959 */;
+// Module 11993 (ChannelListLayout)
+import UserSettings from "UserSettings" /* 4832 */;
+import ChannelListLayoutTypes2 from "ChannelListLayoutTypes" /* 5679 */;
+import CozyDrawer from "CozyDrawer" /* 11994 */;
+import Compact from "Compact" /* 11996 */;
+import Cozy from "Cozy" /* 11997 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

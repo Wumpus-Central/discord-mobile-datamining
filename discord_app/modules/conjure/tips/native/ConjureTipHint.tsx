@@ -1,13 +1,13 @@
-// === Module 12332: ConjureTipHint ===
+// === Module 12377: ConjureTipHint ===
 
-// Module 12332 (ConjureTipHint)
+// Module 12377 (ConjureTipHint)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import XSmallIcon from "XSmallIcon" /* 6933 */;
-import IconButton from "IconButton" /* 7957 */;
-import ConjureTipGutterRowDefault from "ConjureTipGutterRow" /* 12333 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import XSmallIcon from "XSmallIcon" /* 6967 */;
+import IconButton from "IconButton" /* 7991 */;
+import ConjureTipGutterRowDefault from "ConjureTipGutterRow" /* 12378 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,13 +15,13 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 let c6 = "text-sm/normal";
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { line: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 }, text: { flexShrink: 1 }, dismiss: null };
 let obj3 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_4 };
-obj2.dismiss = { height: fn(5235).TextStyleSheet["text-sm/normal"].lineHeight, justifyContent: "center" };
+obj2.dismiss = { height: fn(5270).TextStyleSheet["text-sm/normal"].lineHeight, justifyContent: "center" };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj4 = { height: fn(5235).TextStyleSheet["text-sm/normal"].lineHeight, justifyContent: "center" };
+let obj4 = { height: fn(5270).TextStyleSheet["text-sm/normal"].lineHeight, justifyContent: "center" };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/tips/native/ConjureTipHint.tsx");
 

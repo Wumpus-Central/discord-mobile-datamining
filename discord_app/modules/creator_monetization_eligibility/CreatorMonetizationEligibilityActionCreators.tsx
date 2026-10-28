@@ -1,6 +1,6 @@
-// === Module 19257: CreatorMonetizationEligibilityActionCreators ===
+// === Module 19520: CreatorMonetizationEligibilityActionCreators ===
 
-// Module 19257 (CreatorMonetizationEligibilityActionCreators)
+// Module 19520 (CreatorMonetizationEligibilityActionCreators)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

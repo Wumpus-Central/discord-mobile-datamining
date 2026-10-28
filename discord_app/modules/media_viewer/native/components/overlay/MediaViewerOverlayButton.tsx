@@ -1,8 +1,8 @@
-// === Module 8858: MediaViewerOverlayButton ===
+// === Module 8892: MediaViewerOverlayButton ===
 
-// Module 8858 (MediaViewerOverlayButton)
+// Module 8892 (MediaViewerOverlayButton)
 import c from "c" /* 576 */;
-import IconButton from "IconButton" /* 7957 */;
+import IconButton from "IconButton" /* 7991 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 

@@ -1,10 +1,10 @@
-// === Module 14604: transformStickers ===
+// === Module 14827: transformStickers ===
 
-// Module 14604 (transformStickers)
+// Module 14827 (transformStickers)
 import util from "util" /* 1125 */;
-import StickersUtils from "StickersUtils" /* 6489 */;
-import getAccessibilityLabelOrCheapFallbackUnsafe from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 8280 */;
-import NativeLottieView from "NativeLottieView" /* 8358 */;
+import StickersUtils from "StickersUtils" /* 6523 */;
+import getAccessibilityLabelOrCheapFallbackUnsafe from "getAccessibilityLabelOrCheapFallbackUnsafe" /* 8314 */;
+import NativeLottieView from "NativeLottieView" /* 8392 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/messages/native/renderer/transformStickers.tsx");

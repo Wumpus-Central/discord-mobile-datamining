@@ -1,19 +1,19 @@
-// === Module 18790: AppIconPremiumManager ===
+// === Module 19041: AppIconPremiumManager ===
 
-// Module 18790 (AppIconPremiumManager)
+// Module 19041 (AppIconPremiumManager)
 import LoggerDefault from "Logger" /* 3 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import UserStore from "UserStore" /* 1389 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
 
 let require = fn;
-const AppIconConstants = fn(9867);
+const AppIconConstants = fn(9899);
 ({ getIconById: hasOwnProperty, isHexagonCampaignAppIcon: metroRequire } = AppIconConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const HexagonCampaignPerk = fn(4997).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5029).HexagonCampaignPerk;
 let closure_9 = new LoggerDefault("AppIconPremiumManager");
-const DEFAULT = fn(9868).FreemiumAppIconIds.DEFAULT;
+const DEFAULT = fn(9900).FreemiumAppIconIds.DEFAULT;
 let closure_11 = { ORPHANED: "orphaned", PREMIUM_LOST: "premium_lost", CAMPAIGN_EXPIRED: "campaign_expired" };
 class AppIconPremiumManager extends tmp4 {
   constructor() {

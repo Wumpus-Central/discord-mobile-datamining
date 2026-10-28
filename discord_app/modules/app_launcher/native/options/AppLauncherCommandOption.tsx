@@ -1,18 +1,18 @@
-// === Module 12048: AppLauncherCommandOption ===
+// === Module 12086: AppLauncherCommandOption ===
 
-// Module 12048 (AppLauncherCommandOption)
+// Module 12086 (AppLauncherCommandOption)
 import nativeDefault from "native" /* 587 */;
-import utils_AutocompleteUtilsDefault from "utils/AutocompleteUtils" /* 6828 */;
-import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 12049 */;
-import AppLauncherAutocompleteOptionDefault from "AppLauncherAutocompleteOption" /* 12056 */;
-import AppLauncherTextInputOptionDefault from "AppLauncherTextInputOption" /* 12058 */;
-import AppLauncherAttachmentOptionDefault from "AppLauncherAttachmentOption" /* 12062 */;
-import AppLauncherBooleanOptionDefault from "AppLauncherBooleanOption" /* 12083 */;
-import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 12084 */;
-import AppLauncherMentionableOptionDefault from "AppLauncherMentionableOption" /* 12087 */;
-import AppLauncherRoleOptionDefault from "AppLauncherRoleOption" /* 12089 */;
-import AppLauncherUserOptionDefault from "AppLauncherUserOption" /* 12090 */;
-import AppLauncherChannelOptionDefault from "AppLauncherChannelOption" /* 12096 */;
+import utils_AutocompleteUtilsDefault from "utils/AutocompleteUtils" /* 6862 */;
+import AppLauncherChoicesOptionDefault from "AppLauncherChoicesOption" /* 12087 */;
+import AppLauncherAutocompleteOptionDefault from "AppLauncherAutocompleteOption" /* 12094 */;
+import AppLauncherTextInputOptionDefault from "AppLauncherTextInputOption" /* 12096 */;
+import AppLauncherAttachmentOptionDefault from "AppLauncherAttachmentOption" /* 12100 */;
+import AppLauncherBooleanOptionDefault from "AppLauncherBooleanOption" /* 12121 */;
+import AppLauncherMentionableListActionSheet from "AppLauncherMentionableListActionSheet" /* 12122 */;
+import AppLauncherMentionableOptionDefault from "AppLauncherMentionableOption" /* 12125 */;
+import AppLauncherRoleOptionDefault from "AppLauncherRoleOption" /* 12127 */;
+import AppLauncherUserOptionDefault from "AppLauncherUserOption" /* 12128 */;
+import AppLauncherChannelOptionDefault from "AppLauncherChannelOption" /* 12134 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ const View = fn(17).View;
 let closure_4 = fn(1501).AppLauncherOptionAutoFocusType;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { dismissableOptionWrapper: { flexDirection: "row", alignItems: "center" }, optionViewContainer: { flex: 1 }, dismissButton: { marginLeft: 8, marginRight: -4, padding: 4, borderRadius: nativeDefault.radii.round } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -1210,9 +1210,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunc
             onPress() {
                       return onDismiss(name);
                     },
-            children: tmp13(tmp2(7020).CircleXIcon, { size: "md" })
+            children: tmp13(tmp2(7054).CircleXIcon, { size: "md" })
           };
-          items[1] = tmp13(tmp2(6910).PressableOpacity, obj9);
+          items[1] = tmp13(tmp2(6944).PressableOpacity, obj9);
           obj7.children = items;
           tmp62 = closure_6(View, obj7);
         }

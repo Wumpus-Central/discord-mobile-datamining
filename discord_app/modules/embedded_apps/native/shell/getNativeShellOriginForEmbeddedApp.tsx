@@ -1,8 +1,8 @@
-// === Module 11499: getNativeShellOriginForEmbeddedApp ===
+// === Module 11537: getNativeShellOriginForEmbeddedApp ===
 
-// Module 11499 (getNativeShellOriginForEmbeddedApp)
-import getURLForApplication from "getURLForApplication" /* 5624 */;
-import nativeShellOrigin2 from "nativeShellOrigin" /* 11500 */;
+// Module 11537 (getNativeShellOriginForEmbeddedApp)
+import getURLForApplication from "getURLForApplication" /* 5659 */;
+import nativeShellOrigin2 from "nativeShellOrigin" /* 11538 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/embedded_apps/native/shell/getNativeShellOriginForEmbeddedApp.tsx");

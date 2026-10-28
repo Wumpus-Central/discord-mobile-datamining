@@ -1,8 +1,8 @@
-// === Module 11386: useBottomVoiceControlsSheetWidth ===
+// === Module 11423: useBottomVoiceControlsSheetWidth ===
 
-// Module 11386 (useBottomVoiceControlsSheetWidth)
+// Module 11423 (useBottomVoiceControlsSheetWidth)
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
-import ChannelCallConstants from "ChannelCallConstants" /* 10887 */;
+import ChannelCallConstants from "ChannelCallConstants" /* 10922 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,25 +1,25 @@
-// === Module 10125: ExpressionPickerActionSheet ===
+// === Module 10157: ExpressionPickerActionSheet ===
 
-// Module 10125 (ExpressionPickerActionSheet)
+// Module 10157 (ExpressionPickerActionSheet)
 import initialize from "initialize" /* 504 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import useWindowDimensionsDefault from "useWindowDimensions" /* 1496 */;
 import KeyboardTypes from "KeyboardTypes" /* 1628 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
-import useKeyboardType from "useKeyboardType" /* 5162 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5266 */;
-import NavigatorConstants from "NavigatorConstants" /* 5269 */;
-import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9854 */;
-import KeyboardUtils from "KeyboardUtils" /* 10127 */;
-import ExpressionPickerDefault from "ExpressionPicker" /* 10128 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import useKeyboardType from "useKeyboardType" /* 5197 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5301 */;
+import NavigatorConstants from "NavigatorConstants" /* 5304 */;
+import PortalKeyboardFooterIOSDefault from "PortalKeyboardFooterIOS" /* 9886 */;
+import KeyboardUtils from "KeyboardUtils" /* 10159 */;
+import ExpressionPickerDefault from "ExpressionPicker" /* 10160 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
 
 require = fn;
-let closure_5 = fn(5267).ACTION_SHEET_START_HEIGHT_RATIO;
-const STICKER_FORMATS = fn(10126).STICKER_FORMATS;
+let closure_5 = fn(5302).ACTION_SHEET_START_HEIGHT_RATIO;
+const STICKER_FORMATS = fn(10158).STICKER_FORMATS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, Fragment: closure_8, jsxs: closure_9 } = jsxProd);
 const ReactCompilerGating = fn(558);

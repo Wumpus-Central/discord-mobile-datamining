@@ -1,6 +1,6 @@
-// === Module 11988: CommandRowButton ===
+// === Module 12026: CommandRowButton ===
 
-// Module 11988 (CommandRowButton)
+// Module 12026 (CommandRowButton)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
@@ -8,9 +8,9 @@ import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const util = TableRowArrow(1125);
-const components_Button_Button = TableRowArrow(5245);
-const SendMessageIcon = TableRowArrow(5681);
-const TableRowArrow2 = TableRowArrow(6914);
+const components_Button_Button = TableRowArrow(5280);
+const SendMessageIcon = TableRowArrow(5716);
+const TableRowArrow2 = TableRowArrow(6948);
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

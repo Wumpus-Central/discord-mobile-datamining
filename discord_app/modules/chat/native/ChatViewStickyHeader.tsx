@@ -1,22 +1,22 @@
-// === Module 10929: ChatViewStickyHeader ===
+// === Module 10964: ChatViewStickyHeader ===
 
-// Module 10929 (ChatViewStickyHeader)
+// Module 10964 (ChatViewStickyHeader)
 import c from "c" /* 576 */;
-import useStrangerDangerWarning from "useStrangerDangerWarning" /* 10931 */;
-import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10936 */;
-import useLikelyAtoWarning from "useLikelyAtoWarning" /* 10940 */;
-import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 10941 */;
-import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 10962 */;
-import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 10968 */;
-import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 10992 */;
-import ForumPostActionBarDefault from "ForumPostActionBar" /* 10997 */;
-import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11022 */;
-import ChatBannerDefault from "ChatBanner" /* 11025 */;
+import useStrangerDangerWarning from "useStrangerDangerWarning" /* 10966 */;
+import useInappropriateConversationBannerForChannel from "useInappropriateConversationBannerForChannel" /* 10971 */;
+import useLikelyAtoWarning from "useLikelyAtoWarning" /* 10975 */;
+import LikelyAtoWarningBannerDefault from "LikelyAtoWarningBanner" /* 10976 */;
+import StrangerDangerWarningBannerDefault from "StrangerDangerWarningBanner" /* 10997 */;
+import InappropriateConversationWarningBannerDefault from "InappropriateConversationWarningBanner" /* 11003 */;
+import useUnreadSettingNoticeDefault from "useUnreadSettingNotice" /* 11027 */;
+import ForumPostActionBarDefault from "ForumPostActionBar" /* 11032 */;
+import UnreadSettingNoticeDefault from "UnreadSettingNotice" /* 11057 */;
+import ChatBannerDefault from "ChatBanner" /* 11060 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const LOCATION_CONTEXT_MOBILE = fn(10930).LOCATION_CONTEXT_MOBILE;
+const LOCATION_CONTEXT_MOBILE = fn(10965).LOCATION_CONTEXT_MOBILE;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, Fragment: closure_7, jsxs: closure_8 } = jsxProd);
 let ReactCompilerGating = fn(558);

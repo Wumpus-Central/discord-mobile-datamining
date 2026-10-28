@@ -1,27 +1,27 @@
-// === Module 19189: GuildSettingsModalVanityURL ===
+// === Module 19452: GuildSettingsModalVanityURL ===
 
-// Module 19189 (GuildSettingsModalVanityURL)
+// Module 19452 (GuildSettingsModalVanityURL)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import TextInput from "TextInput" /* 7010 */;
-import HeaderActionButton from "HeaderActionButton" /* 7486 */;
-import getInviteURLDefault from "getInviteURL" /* 9061 */;
-import GuildSettingsVanityURLUtils from "GuildSettingsVanityURLUtils" /* 19032 */;
-import ChangeVanityURLActionCreatorsDefault from "ChangeVanityURLActionCreators" /* 19191 */;
-import _modDef19192 from "module_19192" /* 19192 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import TextInput from "TextInput" /* 7044 */;
+import HeaderActionButton from "HeaderActionButton" /* 7521 */;
+import getInviteURLDefault from "getInviteURL" /* 9094 */;
+import GuildSettingsVanityURLUtils from "GuildSettingsVanityURLUtils" /* 19295 */;
+import ChangeVanityURLActionCreatorsDefault from "ChangeVanityURLActionCreators" /* 19454 */;
+import _modDef19455 from "module_19455" /* 19455 */;
 import noop from "module_19" /* 19 */;
-import ChangeVanityURLModalStore from "ChangeVanityURLModalStore" /* 19190 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9006 */;
+import ChangeVanityURLModalStore from "ChangeVanityURLModalStore" /* 19453 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9040 */;
 
 require = fn;
 const View = fn(17).View;
 const GuildFeatures = fn(1084).GuildFeatures;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { wrapper: { flex: 1, justifyContent: "space-between", paddingTop: nativeDefault.space.PX_32 }, section: null, hints: null, center: null, image: null };
 let obj3 = { flex: 1, justifyContent: "space-between", paddingTop: nativeDefault.space.PX_32 };
 obj2.section = { paddingHorizontal: nativeDefault.space.PX_12 };
@@ -92,8 +92,8 @@ prototype["updateNavigator"] = function updateNavigator(submitting, isEditing) {
     if (submitting) {
       let fn = () => null;
     } else if (isEditing) {
-      fn = self(6926).getHeaderConditionalBackButton(this.handleCancel);
-      let obj = self(6926);
+      fn = self(6960).getHeaderConditionalBackButton(this.handleCancel);
+      let obj = self(6960);
     }
     let obj2 = { headerLeft: fn, headerRight: null };
     if (submitting) {
@@ -183,7 +183,7 @@ prototype["render"] = function render() {
     obj5.children = items1;
     const items3 = [React6(View, obj5), ];
     const obj12 = { style: styles.center, children: null };
-    const obj13 = { source: _modDef19192, style: styles.image, resizeMode: "contain" };
+    const obj13 = { source: _modDef19455, style: styles.image, resizeMode: "contain" };
     obj12.children = closure_1_8(FastImageDefault, obj13);
     items3[1] = closure_1_8(View, obj12);
     obj4.children = items3;
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   if (null != stateFromStores) {
     const obj3 = { children: null };
     const obj4 = { guild: stateFromStores, vanityURLCode: stateFromStores1, submitting, errorDetails, navigation, styles: tmp4, contentContainerStyle };
-    const items3 = [closure_8(GuildSettingsModalVanityURL, obj4), closure_8(tmp(5593).NavScrim, {})];
+    const items3 = [closure_8(GuildSettingsModalVanityURL, obj4), closure_8(tmp(5628).NavScrim, {})];
     obj3.children = items3;
     tmp19 = closure_9(closure_10, obj3);
   }
@@ -314,7 +314,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Connecte
   if (null != stateFromStores) {
     const obj5 = { children: null };
     const obj6 = { guild: stateFromStores, vanityURLCode: stateFromStores1, submitting: tmp8, errorDetails: tmp9, navigation, styles: tmp, contentContainerStyle: guildId.contentContainerStyle };
-    const items3 = [closure_8(GuildSettingsModalVanityURL, obj6), closure_8(tmp2(5593).NavScrim, {})];
+    const items3 = [closure_8(GuildSettingsModalVanityURL, obj6), closure_8(tmp2(5628).NavScrim, {})];
     obj5.children = items3;
     tmp10 = closure_9(closure_10, obj5);
   }

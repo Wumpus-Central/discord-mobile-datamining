@@ -1,31 +1,31 @@
-// === Module 7954: InlineNotice ===
+// === Module 7988: InlineNotice ===
 
-// Module 7954 (InlineNotice)
+// Module 7988 (InlineNotice)
 import nativeDefault from "native" /* 587 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
 import _modDef2078 from "module_2078" /* 2078 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4981 */;
-import Text_Text from "Text/Text" /* 5235 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5013 */;
+import Text_Text from "Text/Text" /* 5270 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-let obj = { critical: { Icon: fn(7014).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2078.uKMqrF }, warning: null, info: null, success: null };
-let obj2 = { Icon: fn(7014).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2078.uKMqrF };
-obj.warning = { Icon: fn(7955).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2078["7vL/d/"] };
-let obj3 = { Icon: fn(7955).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2078["7vL/d/"] };
-obj.info = { Icon: fn(5687).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2078.BReS7U };
-let obj4 = { Icon: fn(5687).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2078.BReS7U };
-obj.success = { Icon: fn(7269).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2078["1MXXPf"] };
-const TextVariantsFlat = fn(5236).TextVariantsFlat;
+let obj = { critical: { Icon: fn(7048).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2078.uKMqrF }, warning: null, info: null, success: null };
+let obj2 = { Icon: fn(7048).CircleErrorIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_CRITICAL, background: nativeDefault.colors.BACKGROUND_FEEDBACK_CRITICAL, border: nativeDefault.colors.INLINENOTICE_BORDER_CRITICAL, typeLabel: _modDef2078.uKMqrF };
+obj.warning = { Icon: fn(7989).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2078["7vL/d/"] };
+let obj3 = { Icon: fn(7989).WarningIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_WARNING, background: nativeDefault.colors.BACKGROUND_FEEDBACK_WARNING, border: nativeDefault.colors.INLINENOTICE_BORDER_WARNING, typeLabel: _modDef2078["7vL/d/"] };
+obj.info = { Icon: fn(5722).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2078.BReS7U };
+let obj4 = { Icon: fn(5722).CircleInformationIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_INFO, background: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, border: nativeDefault.colors.INLINENOTICE_BORDER_INFO, typeLabel: _modDef2078.BReS7U };
+obj.success = { Icon: fn(7303).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2078["1MXXPf"] };
+const TextVariantsFlat = fn(5271).TextVariantsFlat;
 let found = TextVariantsFlat.find((name) => "experimental/body-sm/normal" === name.name);
 let lineHeight;
 if (found != null) {
   lineHeight = found.lineHeight;
 }
-let createStyles = fn(4972);
+let createStyles = fn(5004);
 let closure_9 = createStyles.createStyles((arg0, height) => {
   obj = { container: { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, backgroundColor: obj[arg0].background, borderColor: obj[arg0].border }, iconAndText: null, iconContainer: null, contents: null, copy: null, cta: null };
   const obj2 = { flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_16, padding: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, backgroundColor: obj[arg0].background, borderColor: obj[arg0].border };
@@ -39,9 +39,9 @@ let closure_9 = createStyles.createStyles((arg0, height) => {
   obj.cta = { alignSelf: "flex-start" };
   return obj;
 });
-createStyles = fn(4972);
+createStyles = fn(5004);
 let obj8 = { stack: null, listItem: null, listItemText: null };
-let obj5 = { Icon: fn(7269).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2078["1MXXPf"] };
+let obj5 = { Icon: fn(7303).CircleCheckIcon, iconColor: nativeDefault.colors.ICON_FEEDBACK_POSITIVE, background: nativeDefault.colors.BACKGROUND_FEEDBACK_POSITIVE, border: nativeDefault.colors.INLINENOTICE_BORDER_POSITIVE, typeLabel: _modDef2078["1MXXPf"] };
 obj8.stack = { gap: nativeDefault.space.PX_4 };
 let obj9 = { gap: nativeDefault.space.PX_4 };
 obj8.listItem = { flexDirection: "row", gap: nativeDefault.space.PX_8 };
@@ -168,7 +168,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notice
       tmp10 = T;
     }
   }
-  const tmp7 = closure_5(variant(5235).Text, { variant, color, children: intro });
+  const tmp7 = closure_5(variant(5270).Text, { variant, color, children: intro });
   cResult[0] = color;
   cResult[1] = intro;
   cResult[2] = variant;
@@ -182,7 +182,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function Notice
   dependencyMap = tmp;
   obj = { style: tmp.stack, children: null };
   const items1 = [
-    closure_5(variant(5235).Text, { variant, color, children: children.intro }),
+    closure_5(variant(5270).Text, { variant, color, children: children.intro }),
     closure_5(View, {
       accessibilityRole: "list",
       style: tmp.stack,

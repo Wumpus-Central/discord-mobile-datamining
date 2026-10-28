@@ -1,19 +1,19 @@
-// === Module 10625: UsersFastList ===
+// === Module 10657: UsersFastList ===
 
-// Module 10625 (UsersFastList)
+// Module 10657 (UsersFastList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import native from "native" /* 1199 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import TableRow from "TableRow" /* 6905 */;
-import Pressables from "Pressables" /* 6910 */;
-import ClientThemesOverrides from "ClientThemesOverrides" /* 9710 */;
-import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 10627 */;
-import ThemedGradientDefault from "ThemedGradient" /* 10628 */;
-import UserRowDefault from "UserRow" /* 10630 */;
-import GroupDMRowDefault from "GroupDMRow" /* 10690 */;
-import ChannelRowDefault from "ChannelRow" /* 10693 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import TableRow from "TableRow" /* 6939 */;
+import Pressables from "Pressables" /* 6944 */;
+import ClientThemesOverrides from "ClientThemesOverrides" /* 9742 */;
+import useFastestListTableRowPlaceholderConfig from "useFastestListTableRowPlaceholderConfig" /* 10659 */;
+import ThemedGradientDefault from "ThemedGradient" /* 10660 */;
+import UserRowDefault from "UserRow" /* 10662 */;
+import GroupDMRowDefault from "GroupDMRow" /* 10722 */;
+import ChannelRowDefault from "ChannelRow" /* 10725 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,11 +21,11 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 
 require = fn;
 const View = fn(17).View;
-const UsersFastListConstants = fn(10626);
+const UsersFastListConstants = fn(10658);
 const USERS_LIST_PADDING_BETWEEN_SECTIONS = UsersFastListConstants.USERS_LIST_PADDING_BETWEEN_SECTIONS;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { sectionHeader: { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING }, stickyHeader: { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND }, list: null, emptySection: null, section: null, interactiveSection: null, titlePressable: null, titleRow: null, badgeWrapper: null, badge: null };
 let obj3 = { flex: 1, overflow: "hidden", top: -1 * UsersFastListConstants.USERS_LIST_SECTION_BOTTOM_PADDING };
 let obj4 = { backgroundColor: nativeDefault.colors.MOBILE_ACTIONSHEET_BACKGROUND };

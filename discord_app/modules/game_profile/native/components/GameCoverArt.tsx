@@ -1,18 +1,18 @@
-// === Module 9305: GameCoverArt ===
+// === Module 9337: GameCoverArt ===
 
-// Module 9305 (GameCoverArt)
+// Module 9337 (GameCoverArt)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import useGameArtworkDefault from "useGameArtwork" /* 9306 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import useGameArtworkDefault from "useGameArtwork" /* 9338 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { image: { width: "100%", height: "100%" }, iconContainer: { justifyContent: "center", alignItems: "center" }, icon: { width: "100%", aspectRatio: 1, borderRadius: nativeDefault.radii.sm }, fallback: null, placeholder: null };
 let obj3 = { width: "100%", aspectRatio: 1, borderRadius: nativeDefault.radii.sm };
 obj2.fallback = { justifyContent: "center", alignItems: "center", padding: nativeDefault.space.PX_8, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };

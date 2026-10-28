@@ -1,13 +1,13 @@
-// === Module 14608: SafetyPolicyNoticeEmbed ===
+// === Module 14831: SafetyPolicyNoticeEmbed ===
 
-// Module 14608 (SafetyPolicyNoticeEmbed)
+// Module 14831 (SafetyPolicyNoticeEmbed)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1084 */;
 import util from "util" /* 1125 */;
 import _modDef2046 from "module_2046" /* 2046 */;
-import SafetyHubConstants from "SafetyHubConstants" /* 7899 */;
-import _modDef7956 from "module_7956" /* 7956 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8275 */;
+import SafetyHubConstants from "SafetyHubConstants" /* 7933 */;
+import _modDef7990 from "module_7990" /* 7990 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8309 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -55,7 +55,7 @@ export const createSafetyPolicyNoticeEmbed = function createSafetyPolicyNoticeEm
             const obj = { titleText: null, titleIcon: null, subtitleText: null, descriptionText: null, ctaText: null, classificationId: null };
             const intl = util.intl;
             obj.titleText = intl.string(util.t["4CxGXi"]);
-            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef7956));
+            obj.titleIcon = renderer_EmbedUtils.getAssetUriForEmbed(Image.resolveAssetSource(_modDef7990));
             const intl2 = util.intl;
             const obj3 = { daysAgo: null };
             const obj4 = _modDef2046();

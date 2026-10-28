@@ -1,6 +1,6 @@
-// === Module 14259: EmbedIFrameConfig ===
+// === Module 14483: EmbedIFrameConfig ===
 
-// Module 14259 (EmbedIFrameConfig)
+// Module 14483 (EmbedIFrameConfig)
 import Constants from "Constants" /* 1084 */;
 import URLUtilsDefault from "URLUtils" /* 1383 */;
 import size from "module_2" /* 2 */;

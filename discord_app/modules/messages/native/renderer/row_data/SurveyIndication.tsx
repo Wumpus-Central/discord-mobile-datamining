@@ -1,10 +1,10 @@
-// === Module 14546: SurveyIndication ===
+// === Module 14769: SurveyIndication ===
 
-// Module 14546 (SurveyIndication)
+// Module 14769 (SurveyIndication)
 import util from "util" /* 1125 */;
-import PushNotificationConstants from "PushNotificationConstants" /* 6672 */;
-import _modDef14547 from "module_14547" /* 14547 */;
-import _modDef14548 from "module_14548" /* 14548 */;
+import PushNotificationConstants from "PushNotificationConstants" /* 6706 */;
+import _modDef14770 from "module_14770" /* 14770 */;
+import _modDef14771 from "module_14771" /* 14771 */;
 import size from "module_2" /* 2 */;
 
 const NotificationTypes = PushNotificationConstants.NotificationTypes;
@@ -26,11 +26,11 @@ export const createSurveyIndication = function createSurveyIndication(message, f
   }
   const obj2 = { content: intl.formatToParts(GwWhce, { handleMessage: obj }), feedbackIconUrl: null };
   obj.notificationType = TOP_MESSAGE_PUSH;
-  const tmp2Result = tmp2(8275);
+  const tmp2Result = tmp2(8309);
   if (tmp2Result2.isThemeDark(forcedTheme)) {
-    let tmp7Result = _modDef14547;
+    let tmp7Result = _modDef14770;
   } else {
-    tmp7Result = _modDef14548;
+    tmp7Result = _modDef14771;
   }
   obj2.feedbackIconUrl = tmp2Result.getAssetUriForEmbed(tmp7Result);
   return obj2;

@@ -1,9 +1,9 @@
-// === Module 15900: useScrollToUserProfileEditFormSection ===
+// === Module 16126: useScrollToUserProfileEditFormSection ===
 
-// Module 15900 (useScrollToUserProfileEditFormSection)
+// Module 16126 (useScrollToUserProfileEditFormSection)
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11128 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11163 */;
 
 const require = globalThis.__r;
 

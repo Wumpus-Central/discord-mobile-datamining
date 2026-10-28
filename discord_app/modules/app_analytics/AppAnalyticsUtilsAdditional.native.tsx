@@ -1,6 +1,6 @@
-// === Module 15117: AppAnalyticsUtilsAdditional ===
+// === Module 15342: AppAnalyticsUtilsAdditional ===
 
-// Module 15117 (AppAnalyticsUtilsAdditional)
+// Module 15342 (AppAnalyticsUtilsAdditional)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/app_analytics/AppAnalyticsUtilsAdditional.native.tsx");

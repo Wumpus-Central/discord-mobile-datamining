@@ -1,6 +1,6 @@
-// === Module 5600: useInitialValue ===
+// === Module 5635: useInitialValue ===
 
-// Module 5600 (useInitialValue)
+// Module 5635 (useInitialValue)
 import noop from "module_19" /* 19 */;
 
 let ReactCompilerGating = fn(558);

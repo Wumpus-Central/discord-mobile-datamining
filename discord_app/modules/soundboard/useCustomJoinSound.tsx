@@ -1,12 +1,12 @@
-// === Module 7483: useCustomJoinSound ===
+// === Module 7518: useCustomJoinSound ===
 
-// Module 7483 (useCustomJoinSound)
+// Module 7518 (useCustomJoinSound)
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-let closure_3 = fn(6009).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
+let closure_3 = fn(6044).CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID;
 const CustomSoundType = { GLOBAL: 0, [0]: "GLOBAL", GUILD: 1, [1]: "GUILD" };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

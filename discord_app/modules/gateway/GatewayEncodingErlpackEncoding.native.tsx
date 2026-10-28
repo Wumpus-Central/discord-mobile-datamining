@@ -1,6 +1,6 @@
-// === Module 14988: GatewayEncodingErlpackEncoding ===
+// === Module 15211: GatewayEncodingErlpackEncoding ===
 
-// Module 14988 (GatewayEncodingErlpackEncoding)
+// Module 15211 (GatewayEncodingErlpackEncoding)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/gateway/GatewayEncodingErlpackEncoding.native.tsx");

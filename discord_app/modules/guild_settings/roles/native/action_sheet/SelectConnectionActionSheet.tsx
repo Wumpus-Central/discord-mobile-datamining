@@ -1,21 +1,21 @@
-// === Module 19185: SelectConnectionActionSheet ===
+// === Module 19448: SelectConnectionActionSheet ===
 
-// Module 19185 (SelectConnectionActionSheet)
+// Module 19448 (SelectConnectionActionSheet)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import useThemeDefault from "useTheme" /* 5206 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
-import BottomSheetModal from "BottomSheetModal" /* 5270 */;
-import TableRow from "TableRow" /* 6905 */;
-import TableRowGroup from "TableRowGroup" /* 6989 */;
-import common_SafeAreaView from "common/SafeAreaView" /* 7223 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7250 */;
-import ActionSheet from "ActionSheet" /* 7300 */;
-import ConnectionsHooks from "ConnectionsHooks" /* 7613 */;
-import SegmentedControlState from "SegmentedControlState" /* 8901 */;
-import SegmentedControl from "SegmentedControl" /* 9146 */;
-import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11260 */;
+import useThemeDefault from "useTheme" /* 5241 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import BottomSheetModal from "BottomSheetModal" /* 5305 */;
+import TableRow from "TableRow" /* 6939 */;
+import TableRowGroup from "TableRowGroup" /* 7023 */;
+import common_SafeAreaView from "common/SafeAreaView" /* 7257 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7284 */;
+import ActionSheet from "ActionSheet" /* 7334 */;
+import ConnectionsHooks from "ConnectionsHooks" /* 7647 */;
+import SegmentedControlState from "SegmentedControlState" /* 8935 */;
+import SegmentedControl from "SegmentedControl" /* 9179 */;
+import useGetOrFetchApplicationBatched from "useGetOrFetchApplicationBatched" /* 11297 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -37,7 +37,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Identit
     if (cResult[0] !== bot) {
       let tmp6 = null;
       if (null != bot) {
-        const obj3 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+        const obj3 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
         tmp6 = timestampProducer(native.Avatar, obj3);
       }
       cResult[0] = bot;
@@ -78,7 +78,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Identit
     const bot = getOrFetchApplicationBatched.bot;
     let tmp6Result = null;
     if (null != bot) {
-      const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "Array" };
+      const obj2 = { user: bot, size: native.AvatarSizes.XSMALL, guildId: "r" };
       tmp6Result = timestampProducer(native.Avatar, obj2);
     }
     const obj3 = { icon: tmp6Result, label: getOrFetchApplicationBatched.name, subLabel: null, onPress: null };
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectCo
               let tmp = null;
               if (null != application) {
                 const obj = { icon: null, label: null, subLabel: null, onPress: null };
-                const obj2 = { user: application.bot, size: addConnection(excludedApplications[7]).AvatarSizes.XSMALL, guildId: "Array" };
+                const obj2 = { user: application.bot, size: addConnection(excludedApplications[7]).AvatarSizes.XSMALL, guildId: "r" };
                 obj.icon = closure_1_6(addConnection(excludedApplications[7]).Avatar, obj2);
                 obj.label = application.name;
                 let description;
@@ -449,7 +449,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function SelectCo
       let tmp = null;
       if (null != application) {
         const obj = { icon: null, label: null, subLabel: null, onPress: null };
-        const obj2 = { user: application.bot, size: require("native").AvatarSizes.XSMALL, guildId: "Array" };
+        const obj2 = { user: application.bot, size: require("native").AvatarSizes.XSMALL, guildId: "r" };
         obj.icon = closure_1_6(require("native").Avatar, obj2);
         obj.label = application.name;
         let description;

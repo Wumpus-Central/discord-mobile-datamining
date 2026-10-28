@@ -1,19 +1,19 @@
-// === Module 16812: ReduceSaturationSetting ===
+// === Module 17041: ReduceSaturationSetting ===
 
-// Module 16812 (ReduceSaturationSetting)
+// Module 17041 (ReduceSaturationSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11160 */;
-import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15723 */;
-import CircleMinusIcon from "CircleMinusIcon" /* 16713 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11195 */;
+import AccessibilityActionCreators from "AccessibilityActionCreators" /* 15949 */;
+import CircleMinusIcon from "CircleMinusIcon" /* 16942 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
 
 require = fn;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11212);
+const SettingBuilders = fn(11248);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSaturationSettingProps() {
   const cResult = c.c(1);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -32,7 +32,7 @@ const slider = SettingBuilders.createSlider({
     const intl = util.intl;
     return intl.string(util.t["5PWWCY"]);
   },
-  parent: fn(8331).MobileUserSettings.ACCESSIBILITY,
+  parent: fn(8365).MobileUserSettings.ACCESSIBILITY,
   useTrailing() {
     return jsx(native.BetaTag, { size: native.BetaSizes.SMALL });
   },

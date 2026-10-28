@@ -1,13 +1,13 @@
-// === Module 4973: AccessibilityStore ===
+// === Module 5005: AccessibilityStore ===
 
-// Module 4973 (AccessibilityStore)
+// Module 5005 (AccessibilityStore)
 import initializeDefault from "initialize" /* 504 */;
 import Storage7 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 4978 */;
-import shared from "shared" /* 4979 */;
+import CrossPlatformNativeUtilsDefault from "CrossPlatformNativeUtils" /* 5010 */;
+import shared from "shared" /* 5011 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import GameModeStore from "GameModeStore" /* 4974 */;
+import GameModeStore from "GameModeStore" /* 5006 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1205 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
@@ -94,7 +94,7 @@ let closure_3 = ["fontScale"];
 const Constants = fn(1084);
 const Accessibility = Constants.Accessibility;
 const ThemeTypes = Constants.ThemeTypes;
-const MessageConstants = fn(4977);
+const MessageConstants = fn(5009);
 ({ MESSAGE_GROUP_SPACING: closure_11, DEFAULT_COMPACT_SPACING: closure_12, DEFAULT_COZY_SPACING: map1 } = MessageConstants);
 let obj = { DEFAULT: "default", HIGH: "high" };
 let obj2 = { FLEXIBLE: "flexible", CONDENSED: "condensed", HIDDEN: "hidden" };

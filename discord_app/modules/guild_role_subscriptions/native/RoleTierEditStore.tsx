@@ -1,10 +1,10 @@
-// === Module 19326: RoleTierEditStore ===
+// === Module 19589: RoleTierEditStore ===
 
-// Module 19326 (RoleTierEditStore)
+// Module 19589 (RoleTierEditStore)
 import c from "c" /* 576 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
-import _mod4887 from "module_4887" /* 4887 */;
-import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16611 */;
+import _mod4919 from "module_4919" /* 4919 */;
+import GuildRoleSubscriptionsHooks from "GuildRoleSubscriptionsHooks" /* 16840 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
@@ -44,7 +44,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0) => {
     return (async () => {
       closure_1 = tmp3;
       priceTiers(1271).batchUpdates(() => priceTiers({ priceTierState: constants.LOADING }));
-      await closure_2_2(7358).getPriceTiers(priceTiers);
+      await closure_2_2(7393).getPriceTiers(priceTiers);
       if (1 === tmp7) {
         c2 = 0;
         priceTiers(1271).batchUpdates(() => priceTiers({ priceTierState: constants.ERROR }));
@@ -103,7 +103,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePriceTier
   } else {
     first = cResult[0];
   }
-  const tmp5 = _slicedToArray(withEqualityFn(first, require("module_4887").shallow), 3);
+  const tmp5 = _slicedToArray(withEqualityFn(first, require("module_4919").shallow), 3);
   const first1 = tmp5[0];
   closure_2 = tmp7;
   dependencyMap = tmp8;
@@ -117,7 +117,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePriceTier
         if (cResult[6] === tmp9) {
           let tmp10 = cResult[7];
         }
-        first1(5264)(tmp10);
+        first1(5299)(tmp10);
         if (cResult[8] === guildId) {
           if (cResult[9] === tmp9) {
             if (cResult[10] === tmp7) {
@@ -165,11 +165,11 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function usePriceTier
     const items = [, , ];
     ({ priceTiers: arr[0], priceTierState: arr[1], loadPriceTiers: arr[2] } = arg0);
     return items;
-  }, require("module_4887").shallow), 3);
+  }, require("module_4919").shallow), 3);
   const tiers = tmp[0];
   closure_2 = tmp3;
   dependencyMap = tmp[2];
-  tiers(5264)(() => {
+  tiers(5299)(() => {
     let tmp2 = null == first;
     if (tmp2) {
       tmp2 = closure_2 !== obj.LOADING;
@@ -285,13 +285,13 @@ const tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGroupCo
   } else {
     first = cResult[0];
   }
-  return withEqualityFn(first, _mod4887.shallow);
+  return withEqualityFn(first, _mod4919.shallow);
 }) : (function useGroupCoverState() {
   return withEqualityFn((arg0) => {
     const items = [, ];
     ({ groupCover: arr[0], setGroupCover: arr[1] } = arg0);
     return items;
-  }, _mod4887.shallow);
+  }, _mod4919.shallow);
 });
 ReactCompilerGating = fn(558);
 const tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGroupDescriptionState() {
@@ -307,13 +307,13 @@ const tmp8 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGroupDe
   } else {
     first = cResult[0];
   }
-  return withEqualityFn(first, _mod4887.shallow);
+  return withEqualityFn(first, _mod4919.shallow);
 }) : (function useGroupDescriptionState() {
   return withEqualityFn((arg0) => {
     const items = [, ];
     ({ groupDescription: arr[0], setGroupDescription: arr[1] } = arg0);
     return items;
-  }, _mod4887.shallow);
+  }, _mod4919.shallow);
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_role_subscriptions/native/RoleTierEditStore.tsx");
@@ -342,11 +342,11 @@ export const useGroupIsFullGateState = ReactCompilerGating.isReactCompilerEnable
   } else {
     first = cResult[0];
   }
-  return withEqualityFn(first, _mod4887.shallow);
+  return withEqualityFn(first, _mod4919.shallow);
 }) : (function useGroupIsFullGateState() {
   return withEqualityFn((arg0) => {
     const items = [, ];
     ({ groupIsFullGate: arr[0], setGroupIsFullGate: arr[1] } = arg0);
     return items;
-  }, _mod4887.shallow);
+  }, _mod4919.shallow);
 });

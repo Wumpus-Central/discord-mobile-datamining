@@ -1,10 +1,10 @@
-// === Module 17372: RedesignSettingsCategoryFriendsActivityScreen ===
+// === Module 17605: RedesignSettingsCategoryFriendsActivityScreen ===
 
-// Module 17372 (RedesignSettingsCategoryFriendsActivityScreen)
+// Module 17605 (RedesignSettingsCategoryFriendsActivityScreen)
 import c from "c" /* 576 */;
-import SettingBuilders from "SettingBuilders" /* 11212 */;
-import SettingLayoutDefault from "SettingLayout" /* 16016 */;
-import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17365 */;
+import SettingBuilders from "SettingBuilders" /* 11248 */;
+import SettingLayoutDefault from "SettingLayout" /* 16244 */;
+import MobileNotifSettingsRouteBuilders from "MobileNotifSettingsRouteBuilders" /* 17598 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

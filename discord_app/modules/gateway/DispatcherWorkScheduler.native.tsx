@@ -1,10 +1,10 @@
-// === Module 14993: DispatcherWorkScheduler ===
+// === Module 15216: DispatcherWorkScheduler ===
 
-// Module 14993 (DispatcherWorkScheduler)
+// Module 15216 (DispatcherWorkScheduler)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1084 */;
-import BasicWorkScheduler2 from "BasicWorkScheduler" /* 14994 */;
-import DispatcherWorkConstants from "DispatcherWorkConstants" /* 14992 */;
+import BasicWorkScheduler2 from "BasicWorkScheduler" /* 15217 */;
+import DispatcherWorkConstants from "DispatcherWorkConstants" /* 15215 */;
 import size from "module_2" /* 2 */;
 
 ({ DISPATCHER_CALLBACK_MAX_TIME_REMAINING_MS: c2, NATIVE_WORK_BACKOFF_MS: c3, NATIVE_WORK_DEADLINE_MS: closure_4, WorkIdleDeadline: hasOwnProperty } = DispatcherWorkConstants);

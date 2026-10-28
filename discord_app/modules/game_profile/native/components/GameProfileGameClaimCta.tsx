@@ -1,7 +1,7 @@
-// === Module 9501: GameProfileGameClaimCta ===
+// === Module 9533: GameProfileGameClaimCta ===
 
-// Module 9501 (GameProfileGameClaimCta)
-import MobileWebHandoffLinkingDefault from "MobileWebHandoffLinking" /* 7431 */;
+// Module 9533 (GameProfileGameClaimCta)
+import MobileWebHandoffLinkingDefault from "MobileWebHandoffLinking" /* 7466 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -46,10 +46,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
               const obj3 = { value, done: true };
               return obj3;
             } else {
-              v3(v3(9245).GameProfileTrackActionActions.ClaimGame);
+              v3(v3(9278).GameProfileTrackActionActions.ClaimGame);
               c1 = 1;
               v3 = 1;
-              const obj4 = { value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7435).LoginHandoffSource.GAME_CLAIM), done: false };
+              const obj4 = { value: MobileWebHandoffLinkingDefault.redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7470).LoginHandoffSource.GAME_CLAIM), done: false };
               return obj4;
             }
           } else if (arg0 === 1) {
@@ -104,7 +104,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
     tmp7 = cResult[2];
   }
   if (cResult[3] !== tmp3) {
-    Button = Button(5245).Button;
+    Button = Button(5280).Button;
     let obj2 = { variant: "secondary", size: "md", text: tmp7, onPress: tmp3 };
     tmp = <Button variant="secondary" size="md" text={tmp7} onPress={tmp3} />;
     cResult[3] = tmp3;
@@ -141,10 +141,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
             const obj3 = { value, done: true };
             return obj3;
           } else {
-            trackAction(v3(9245).GameProfileTrackActionActions.ClaimGame);
+            trackAction(v3(9278).GameProfileTrackActionActions.ClaimGame);
             v1 = 1;
             v3 = 1;
-            const obj4 = { value: v1(7431).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7435).LoginHandoffSource.GAME_CLAIM), done: false };
+            const obj4 = { value: v1(7466).redirectDeveloperPortalWithHandoffToken(constants.DEVELOPER_PORTAL_APPLICATIONS_GAME_IDENTITY, v3(7470).LoginHandoffSource.GAME_CLAIM), done: false };
             return obj4;
           }
         } else if (arg0 === 1) {
@@ -172,7 +172,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GameProf
     const intl = trackAction(1125).intl;
     obj.text = intl.string(trackAction(1125).t["mqg+to"]);
     obj.onPress = callback;
-    let tmp3 = jsx(trackAction(5245).Button, { variant: "secondary", size: "md", text: null, onPress: null });
+    let tmp3 = jsx(trackAction(5280).Button, { variant: "secondary", size: "md", text: null, onPress: null });
   } else {
     tmp3 = null;
   }

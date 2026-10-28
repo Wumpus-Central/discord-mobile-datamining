@@ -1,11 +1,11 @@
-// === Module 5856: CertifiedDeviceStore ===
+// === Module 5891: CertifiedDeviceStore ===
 
-// Module 5856 (CertifiedDeviceStore)
+// Module 5891 (CertifiedDeviceStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import Constants from "Constants" /* 5719 */;
+import Constants from "Constants" /* 5754 */;
 import size from "module_2" /* 2 */;
 
 const DeviceTypes = Constants.DeviceTypes;

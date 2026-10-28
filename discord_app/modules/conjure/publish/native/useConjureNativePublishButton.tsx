@@ -1,15 +1,17 @@
-// === Module 12149: useConjureNativePublishButton ===
+// === Module 12187: useConjureNativePublishButton ===
 
-// Module 12149 (useConjureNativePublishButton)
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5664 */;
-import ConjurePublishBlockedSheetDefault from "ConjurePublishBlockedSheet" /* 10806 */;
-import ConjurePublishDestinationSheetDefault from "ConjurePublishDestinationSheet" /* 12150 */;
-import useConjurePublishButtonDefault from "useConjurePublishButton" /* 12151 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
+// Module 12187 (useConjureNativePublishButton)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5013 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
+import ConjurePublishBlockedSheetDefault from "ConjurePublishBlockedSheet" /* 10839 */;
+import ConjurePublishDestinationSheetDefault from "ConjurePublishDestinationSheet" /* 12188 */;
+import useConjurePublishButtonDefault from "useConjurePublishButton" /* 12189 */;
+import noop from "module_19" /* 19 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 const require = globalThis.__r;
 
-const require = fn;
+require = fn;
 let obj = {
   showPublishBlocked: ConjurePublishBlockedSheetDefault,
   promptPublishDestination: ConjurePublishDestinationSheetDefault,
@@ -24,7 +26,7 @@ const result = size.fileFinishedImporting("modules/conjure/publish/native/useCon
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureNativePublishButton(arg0, arg1) {
   _require = arg0;
   obj = require("c");
-  const cResult = obj.c(4);
+  const cResult = obj.c(7);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const items = [ConjureProjectStore];
     cResult[0] = items;
@@ -64,7 +66,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (integrationStatusChecked) {
     isLoading = tmpResult2.useApplication(previewAppId).isLoading;
   }
-  return useConjurePublishButtonDefault(arg0, arg1, isLoading, obj);
+  const tmp9Result = useConjurePublishButtonDefault(arg0, arg1, isLoading, obj);
+  importDefault = tmp9Result;
+  if (cResult[4] !== tmp9Result.confirmation) {
+    const fn2 = function v() {
+      if (null != confirmation.confirmation) {
+        const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+        AccessibilityAnnouncer.announce(tmp.confirmation, "polite");
+      }
+    };
+    const items2 = [tmp9Result.confirmation];
+    cResult[4] = tmp9Result.confirmation;
+    cResult[5] = fn2;
+    cResult[6] = items2;
+    let tmp12 = items2;
+    let tmp11 = fn2;
+  } else {
+    tmp11 = cResult[5];
+    tmp12 = cResult[6];
+  }
+  const effect = noop.useEffect(tmp11, tmp12);
+  return tmp9Result;
 }) : (function useConjureNativePublishButton(arg0, arg1) {
   _require = arg0;
   obj = require("initialize");
@@ -89,5 +111,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   if (integrationStatusChecked) {
     isLoading = obj2.useApplication(previewAppId).isLoading;
   }
-  return useConjurePublishButtonDefault(arg0, arg1, isLoading, obj);
+  const tmp3Result = useConjurePublishButtonDefault(arg0, arg1, isLoading, obj);
+  importDefault = tmp3Result;
+  const items2 = [tmp3Result.confirmation];
+  const effect = noop.useEffect(() => {
+    if (null != confirmation.confirmation) {
+      const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+      AccessibilityAnnouncer.announce(tmp.confirmation, "polite");
+    }
+  }, items2);
+  return tmp3Result;
 });

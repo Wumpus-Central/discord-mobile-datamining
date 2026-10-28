@@ -1,10 +1,10 @@
-// === Module 16278: LaptopPhoneIcon ===
+// === Module 16506: LaptopPhoneIcon ===
 
-// Module 16278 (LaptopPhoneIcon)
+// Module 16506 (LaptopPhoneIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5669 */;
-import _mod16279 from "module_16279" /* 16279 */;
+import BaseIconImage from "BaseIconImage" /* 5704 */;
+import _mod16507 from "module_16507" /* 16507 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const LaptopPhoneIcon = ReactCompilerGating.isReactCompilerEnabled() ? (f
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod16279;
+    const tmpResult = _mod16507;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const LaptopPhoneIcon = ReactCompilerGating.isReactCompilerEnabled() ? (f
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod16279, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod16507, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

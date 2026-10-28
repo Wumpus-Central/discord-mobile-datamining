@@ -1,14 +1,14 @@
-// === Module 16459: launchOrbsArcadeGame ===
+// === Module 16688: launchOrbsArcadeGame ===
 
-// Module 16459 (launchOrbsArcadeGame)
+// Module 16688 (launchOrbsArcadeGame)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1125 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5664 */;
-import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6811 */;
-import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16439 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
+import ApplicationActionCreatorsDefault from "ApplicationActionCreators" /* 6845 */;
+import OrbsArcadeActionCreators from "OrbsArcadeActionCreators" /* 16668 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import ApplicationStore from "ApplicationStore" /* 2042 */;
-import OrbsArcadeStore from "OrbsArcadeStore" /* 16434 */;
+import OrbsArcadeStore from "OrbsArcadeStore" /* 16662 */;
 
 require = fn;
 function showLaunchError() {
@@ -346,7 +346,7 @@ let closure_12 = async function _launchOrbsArcadeGame(arg0, arg1) {
   })();
 };
 const AbortCodes = fn(1084).AbortCodes;
-const FramesConstants = fn(6777);
+const FramesConstants = fn(6811);
 ({ MAIN_SURFACE: closure_7, makeFrameId: closure_8 } = FramesConstants);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/orbs_arcade/native/launchOrbsArcadeGame.tsx");

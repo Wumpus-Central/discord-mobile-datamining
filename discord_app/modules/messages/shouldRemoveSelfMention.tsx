@@ -1,6 +1,6 @@
-// === Module 6819: shouldRemoveSelfMention ===
+// === Module 6853: shouldRemoveSelfMention ===
 
-// Module 6819 (shouldRemoveSelfMention)
+// Module 6853 (shouldRemoveSelfMention)
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 

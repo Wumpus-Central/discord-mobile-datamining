@@ -1,14 +1,14 @@
-// === Module 11211: ChatGestureSettings ===
+// === Module 11247: ChatGestureSettings ===
 
-// Module 11211 (ChatGestureSettings)
+// Module 11247 (ChatGestureSettings)
 import util from "util" /* 1125 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import UserSettings from "UserSettings" /* 4800 */;
-import SettingsConstants from "SettingsConstants" /* 8331 */;
+import UserSettings from "UserSettings" /* 4832 */;
+import SettingsConstants from "SettingsConstants" /* 8365 */;
 import Constants from "Constants" /* 1084 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11212 */;
+import SettingBuilders from "SettingBuilders" /* 11248 */;
 import size from "module_2" /* 2 */;
 
 ({ AnalyticEvents: c3, AnalyticsSections: closure_4 } = Constants);

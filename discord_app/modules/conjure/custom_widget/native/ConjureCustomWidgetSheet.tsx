@@ -1,19 +1,19 @@
-// === Module 14414: ConjureCustomWidgetSheet ===
+// === Module 14637: ConjureCustomWidgetSheet ===
 
-// Module 14414 (ConjureCustomWidgetSheet)
+// Module 14637 (ConjureCustomWidgetSheet)
 import nativeDefault from "native" /* 587 */;
-import _modDef3831 from "module_3831" /* 3831 */;
+import _modDef3863 from "module_3863" /* 3863 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const View = fn(17).View;
-const ConjureConnectionStore = fn(10701);
+const ConjureConnectionStore = fn(10733);
 ({ ensureConnection: closure_7, sendUserMessage: closure_8 } = ConjureConnectionStore);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { body: { gap: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16 } };
 let closure_11 = createStyles.createStyles(obj2);
 const size = fn(2);
@@ -26,7 +26,7 @@ export default function ConjureCustomWidgetSheet() {
   const tmp4 = _slicedToArray(memo.useState(null), 2);
   [tmp7, asyncGeneratorStep] = memo.useState(false);
   _slicedToArray = memo.useRef(false);
-  memo = memo.useMemo(() => first(7347).resolveConjureWorkspaceGuildId("ConjureCustomWidgetSheet"), []);
+  memo = memo.useMemo(() => first(7382).resolveConjureWorkspaceGuildId("ConjureCustomWidgetSheet"), []);
   const callback = memo.useCallback((arg0) => {
     closure_1(arg0);
     dependencyMap(null);
@@ -140,31 +140,31 @@ export default function ConjureCustomWidgetSheet() {
   let obj = { startExpanded: true, keyboardShouldPersistTaps: "handled", header: null, children: null };
   let obj2 = { title: null };
   let intl = value(1125).intl;
-  obj2.title = intl.string(_modDef3831.yI85oV);
-  obj.header = closure_9(value(7250).BottomSheetTitleHeader, obj2);
+  obj2.title = intl.string(_modDef3863.yI85oV);
+  obj.header = closure_9(value(7284).BottomSheetTitleHeader, obj2);
   let obj3 = { style: tmp.body, children: null };
   let obj4 = { label: null, placeholder: null, description: null, errorMessage: null, value: null, onChange: null, maxLength: null, disabled: null };
   const intl2 = value(1125).intl;
-  obj4.label = intl2.string(_modDef3831["09BSx3"]);
+  obj4.label = intl2.string(_modDef3863["09BSx3"]);
   const intl3 = value(1125).intl;
-  obj4.placeholder = intl3.string(_modDef3831.K7zdCZ);
+  obj4.placeholder = intl3.string(_modDef3863.K7zdCZ);
   const intl4 = value(1125).intl;
-  obj4.description = intl4.string(_modDef3831.SKwzvJ);
+  obj4.description = intl4.string(_modDef3863.SKwzvJ);
   obj4.errorMessage = tmp5;
   obj4.value = value;
   obj4.onChange = callback;
-  obj4.maxLength = value(14413).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
+  obj4.maxLength = value(14636).CONJURE_CUSTOM_WIDGET_PROMPT_MAX_LENGTH;
   obj4.disabled = tmp7;
-  const items1 = [closure_9(value(7182).TextArea, obj4), ];
+  const items1 = [closure_9(value(7216).TextArea, obj4), ];
   const obj5 = { variant: "primary", text: null, onPress: null, loading: null, disabled: null };
   const intl5 = tmp12(1125).intl;
-  obj5.text = intl5.string(_modDef3831.MDZXiK);
+  obj5.text = intl5.string(_modDef3863.MDZXiK);
   obj5.onPress = callback1;
   obj5.loading = tmp7;
   obj5.disabled = null == memo;
-  items1[1] = closure_9(value(5245).Button, obj5);
+  items1[1] = closure_9(value(5280).Button, obj5);
   obj3.children = items1;
   obj.children = closure_10(View, obj3);
-  return closure_9(value(7300).ActionSheet, obj);
+  return closure_9(value(7334).ActionSheet, obj);
 };
 export const CONJURE_CUSTOM_WIDGET_SHEET_KEY = "ConjureCustomWidgetSheet";

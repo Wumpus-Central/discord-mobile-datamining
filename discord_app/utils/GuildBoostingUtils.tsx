@@ -1,21 +1,21 @@
-// === Module 8365: GuildBoostingUtils ===
+// === Module 8399: GuildBoostingUtils ===
 
-// Module 8365 (GuildBoostingUtils)
+// Module 8399 (GuildBoostingUtils)
 import util from "util" /* 1125 */;
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
 import _modDef2046 from "module_2046" /* 2046 */;
 import PremiumUtilsAll from "PremiumUtils" /* 2050 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import _modDef3251 from "module_3251" /* 3251 */;
-import FileSizeUtils from "FileSizeUtils" /* 6380 */;
-import PremiumGuildOverrides from "PremiumGuildOverrides" /* 8366 */;
-import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8367 */;
-import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8370 */;
+import _modDef3283 from "module_3283" /* 3283 */;
+import FileSizeUtils from "FileSizeUtils" /* 6414 */;
+import PremiumGuildOverrides from "PremiumGuildOverrides" /* 8400 */;
+import actions_BoostingActionCreators from "actions/BoostingActionCreators" /* 8401 */;
+import useGuildPowerupsBoostCount from "useGuildPowerupsBoostCount" /* 8404 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildStore from "GuildStore" /* 4846 */;
+import GuildStore from "GuildStore" /* 4878 */;
 import UserStore from "UserStore" /* 1389 */;
-import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7512 */;
+import GuildBoostSlotStore from "GuildBoostSlotStore" /* 7547 */;
 import SubscriptionStore from "SubscriptionStore" /* 2055 */;
 import apply from "module_12" /* 12 */;
 
@@ -492,7 +492,7 @@ export const generateBlockGuildSubscriptionPurchasesNode = function generateBloc
   if (isPremiumGroupMemberResult) {
     const intl7 = util.intl;
     const obj = { premiumGroupProductName: closure_27() };
-    return intl7.formatToPlainString(_modDef3251["5xN/C1"], obj);
+    return intl7.formatToPlainString(_modDef3283["5xN/C1"], obj);
   } else {
     const _Object = Object;
     const values2 = Object.values(GuildBoostSlotStore.boostSlots);
@@ -758,7 +758,7 @@ export const getNextPremiumTierForSubscriberCount = function getNextPremiumTierF
 };
 export const TierMarkerPositions = obj3;
 export const getGuildBoostingProgressBarFillFactor = function getGuildBoostingProgressBarFillFactor(guild) {
-  totalAvailableBoostsCount = totalAvailableBoostsCount(8374).getGuildPowerupBoostLevelProgress(guild.id);
+  totalAvailableBoostsCount = totalAvailableBoostsCount(8408).getGuildPowerupBoostLevelProgress(guild.id);
   let NONE = reversed.find((item) => totalAvailableBoostsCount >= AppliedGuildBoostsRequiredForBoostedGuildTier[item]);
   if (NONE == null) {
     NONE = BoostedGuildTiers.NONE;

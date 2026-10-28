@@ -1,30 +1,30 @@
-// === Module 14451: UserProfilePrivacyNotice ===
+// === Module 14674: UserProfilePrivacyNotice ===
 
-// Module 14451 (UserProfilePrivacyNotice)
+// Module 14674 (UserProfilePrivacyNotice)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import UserSettings from "UserSettings" /* 4800 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5687 */;
-import Pressables from "Pressables" /* 6910 */;
-import XSmallIcon from "XSmallIcon" /* 6933 */;
-import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7497 */;
-import useUserIsTeen from "useUserIsTeen" /* 8122 */;
+import UserSettings from "UserSettings" /* 4832 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5722 */;
+import Pressables from "Pressables" /* 6944 */;
+import XSmallIcon from "XSmallIcon" /* 6967 */;
+import useSelectedDismissibleContent from "useSelectedDismissibleContent" /* 7532 */;
+import useUserIsTeen from "useUserIsTeen" /* 8156 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const preloaded_user_settings = PRIVATE_PROFILE_INLINE_NOTICE(1208);
-const dismissible_content = PRIVATE_PROFILE_INLINE_NOTICE(4808);
+const dismissible_content = PRIVATE_PROFILE_INLINE_NOTICE(4840);
 require = fn;
 const View = fn(17).View;
 const UserSettingsSections = fn(1084).UserSettingsSections;
-const ContentDismissActionType = fn(4821).ContentDismissActionType;
+const ContentDismissActionType = fn(4853).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_FEEDBACK_INFO, borderWidth: 1, borderColor: nativeDefault.colors.ICON_FEEDBACK_INFO, borderRadius: nativeDefault.radii.sm, padding: nativeDefault.space.PX_12, flexDirection: "row", alignItems: "flex-start", gap: nativeDefault.space.PX_8 }, icon: { flexShrink: 0, marginTop: 2 }, text: { flex: 1 }, closeButton: { flexShrink: 0 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -143,7 +143,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                     }
                     const _Symbol3 = Symbol;
                     if (cResult[25] === Symbol.for("react.memo_cache_sentinel")) {
-                      const tmp38 = closure_7(tmp(6933).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
+                      const tmp38 = closure_7(tmp(6967).XSmallIcon, { size: "xs", color: "icon-feedback-info" });
                       cResult[25] = tmp38;
                       let tmp36 = tmp38;
                     } else {
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                       tmp42 = tmp44;
                     }
                     const obj4 = { accessibilityRole: "button", accessibilityLabel: tmp33, onPress: tmp35, style: tmp4.closeButton, children: tmp36 };
-                    const tmp41 = closure_7(tmp(6910).PressableOpacity, obj4);
+                    const tmp41 = closure_7(tmp(6944).PressableOpacity, obj4);
                     cResult[26] = tmp4.closeButton;
                     cResult[27] = tmp35;
                     cResult[28] = tmp41;
@@ -211,7 +211,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     const container = tmp4.container;
     const _Symbol = Symbol;
     if (cResult[13] === Symbol.for("react.memo_cache_sentinel")) {
-      const tmp19 = closure_7(tmp(5687).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
+      const tmp19 = closure_7(tmp(5722).CircleInformationIcon, { size: "xs", color: "icon-feedback-info" });
       cResult[13] = tmp19;
       let str2 = tmp19;
     } else {
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     } else {
       tmp20 = cResult[15];
     }
-    const Text = tmp(5235).Text;
+    const Text = tmp(5270).Text;
     const text = tmp4.text;
     const intl = tmp(1125).intl;
     const obj7 = { privacySettingsLink: first };

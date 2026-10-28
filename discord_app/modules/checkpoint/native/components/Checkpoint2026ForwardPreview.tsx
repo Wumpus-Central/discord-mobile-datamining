@@ -1,10 +1,10 @@
-// === Module 12946: Checkpoint2026ForwardPreview ===
+// === Module 12993: Checkpoint2026ForwardPreview ===
 
-// Module 12946 (Checkpoint2026ForwardPreview)
+// Module 12993 (Checkpoint2026ForwardPreview)
 import nativeDefault from "native" /* 587 */;
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1897 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6037 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6071 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -13,7 +13,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ StyleSheet: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { preview: { width: 56, height: 56, alignItems: "center", justifyContent: "center" }, layer: null };
 let obj3 = { transform: null };
 let items = [{ translateY: -2 }];
@@ -29,13 +29,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   layer = closure_7();
   let obj = layer(576);
   const character = checkpointData.checkpointData.character;
-  const isCheckpointCardEnabled = layer(6038).useIsCheckpointCardEnabled("Checkpoint2026ForwardPreview");
+  const isCheckpointCardEnabled = layer(6072).useIsCheckpointCardEnabled("Checkpoint2026ForwardPreview");
   if (cResult[0] !== character) {
-    const cardColors = tmp(8624).getCardColors(character);
+    const cardColors = tmp(8661).getCardColors(character);
     cResult[0] = character;
     cResult[1] = cardColors;
     let tmp5 = cardColors;
-    const tmpResult = tmp(8624);
+    const tmpResult = tmp(8661);
   } else {
     tmp5 = cResult[1];
   }
@@ -43,8 +43,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
   if (cResult[2] !== character) {
     if (null != character) {
       const _Math = Math;
-      let characterLayerUrls = tmp(6037).getCharacterLayerUrls(character, Math.round(56 * getDevicePixelRatioDefault()));
-      const tmpResult2 = tmp(6037);
+      let characterLayerUrls = tmp(6071).getCharacterLayerUrls(character, Math.round(56 * getDevicePixelRatioDefault()));
+      const tmpResult2 = tmp(6071);
     } else {
       characterLayerUrls = [];
     }
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
         });
       } else {
         const obj5 = { color: nativeDefault.colors.BLACK };
-        mapped = jsx(tmp(12947).ExperimentalCheckpointIcon, { color: nativeDefault.colors.BLACK });
+        mapped = jsx(tmp(12994).ExperimentalCheckpointIcon, { color: nativeDefault.colors.BLACK });
       }
       cResult[9] = character;
       cResult[10] = arr;
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
     cResult[8] = items;
     tmp14 = items;
   }
-  const obj2 = layer(6038);
+  const obj2 = layer(6072);
 }) : (function Checkpoint2026ForwardPreview(checkpointData) {
   const tmp = closure_7();
   _require = tmp;
@@ -136,7 +136,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Checkpoi
       });
     } else {
       const obj5 = { color: character(587).colors.BLACK };
-      mapped = jsx(tmp2(12947).ExperimentalCheckpointIcon, { color: character(587).colors.BLACK });
+      mapped = jsx(tmp2(12994).ExperimentalCheckpointIcon, { color: character(587).colors.BLACK });
     }
     obj3.children = mapped;
     <closure_5 style={null}>{null}</closure_5>;

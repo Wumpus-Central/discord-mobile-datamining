@@ -1,6 +1,6 @@
-// === Module 6500: SpotifyStore ===
+// === Module 6534: SpotifyStore ===
 
-// Module 6500 (SpotifyStore)
+// Module 6534 (SpotifyStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -8,19 +8,19 @@ import BackoffDefault from "Backoff" /* 569 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import Timers from "Timers" /* 4819 */;
-import useIsSpeaking from "useIsSpeaking" /* 6782 */;
-import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8620 */;
-import SpotifyActionCreators from "SpotifyActionCreators" /* 11348 */;
-import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 14983 */;
+import Timers from "Timers" /* 4851 */;
+import useIsSpeaking from "useIsSpeaking" /* 6816 */;
+import ApplicationAssetUtils from "ApplicationAssetUtils" /* 8657 */;
+import SpotifyActionCreators from "SpotifyActionCreators" /* 11385 */;
+import stopSyncingUserActivityDefault from "stopSyncingUserActivity" /* 15206 */;
 import RunningGameStore from "RunningGameStore" /* 2018 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6501 */;
-import IdleStore from "IdleStore" /* 6634 */;
-import PresenceStore from "PresenceStore" /* 5713 */;
-import SpeakingStore from "SpeakingStore" /* 6686 */;
-import VoiceStateStore from "VoiceStateStore" /* 5631 */;
-import Platforms from "Platforms" /* 6503 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6535 */;
+import IdleStore from "IdleStore" /* 6668 */;
+import PresenceStore from "PresenceStore" /* 5748 */;
+import SpeakingStore from "SpeakingStore" /* 6720 */;
+import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import Platforms from "Platforms" /* 6537 */;
 
 require = fn;
 function upsertAccount(accountId, accessToken) {
@@ -56,7 +56,7 @@ function upsertAccount(accountId, accessToken) {
     }, closure_29);
     obj.accountId = accountId;
     obj.accessToken = accessToken;
-    const interval = new obj(4819).Interval();
+    const interval = new obj(4851).Interval();
     obj.pingInterval = interval;
     const tmp14 = new BackoffDefault(undefined, MINUTE);
     obj.backoff = tmp14;
@@ -484,7 +484,7 @@ function updatePlayerState(accountId, arg1, device) {
     }
   }
 }
-const SpotifyConstants = fn(8828);
+const SpotifyConstants = fn(8865);
 ({ getSpotifyResourceType: map1, isSpotifyParty: closure_14, SPOTIFY_PARTY_PREFIX: closure_15, SpotifyEndpoints: closure_16, SpotifyResourceTypes: closure_17 } = SpotifyConstants);
 const Constants = fn(1084);
 const PlatformTypes = Constants.PlatformTypes;
@@ -503,11 +503,11 @@ const message = "message";
 const ping = "ping";
 const single = "single";
 const logger = new LoggerDefault("Spotify");
-const timeout = new fn(4819).Timeout();
-const timeout1 = new fn(4819).Timeout();
-const timeout2 = new fn(4819).Timeout();
-const timeout3 = new fn(4819).Timeout();
-const timeout4 = new fn(4819).Timeout();
+const timeout = new fn(4851).Timeout();
+const timeout1 = new fn(4851).Timeout();
+const timeout2 = new fn(4851).Timeout();
+const timeout3 = new fn(4851).Timeout();
+const timeout4 = new fn(4851).Timeout();
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};
@@ -574,7 +574,7 @@ prototype["connect"] = function connect() {
     ({ accountId, accessToken } = self);
     closure_129_0 = accountId;
     closure_129_1 = accessToken;
-    const SpotifyAPI = self(11348).SpotifyAPI;
+    const SpotifyAPI = self(11385).SpotifyAPI;
     const request = { url: constants.PLAYER, query: null, onlyRetryOnAuthorizationErrors: true };
     const obj = { additional_types: null };
     const _HermesInternal = HermesInternal;
@@ -1170,7 +1170,7 @@ const spotifyStore = new SpotifyStore(DispatcherDefault, {
           }
         }
         timeout1.start(100, () => closure_1_35.stop(), false);
-        obj9 = device(6782);
+        obj9 = device(6816);
       }
       if (null != tmp10) {
         if (!tmp22) {

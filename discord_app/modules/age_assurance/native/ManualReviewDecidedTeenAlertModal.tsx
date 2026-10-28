@@ -1,16 +1,16 @@
-// === Module 8097: ManualReviewDecidedTeenAlertModal ===
+// === Module 8131: ManualReviewDecidedTeenAlertModal ===
 
-// Module 8097 (ManualReviewDecidedTeenAlertModal)
+// Module 8131 (ManualReviewDecidedTeenAlertModal)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import _modDef3155 from "module_3155" /* 3155 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import AlertModal from "AlertModal" /* 5915 */;
-import ManualReviewInconclusiveCopyExperiment from "ManualReviewInconclusiveCopyExperiment" /* 8098 */;
+import _modDef3187 from "module_3187" /* 3187 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import AlertModal from "AlertModal" /* 5950 */;
+import ManualReviewInconclusiveCopyExperiment from "ManualReviewInconclusiveCopyExperiment" /* 8132 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const FALLBACK_TEEN_AGE_RANGE = fn(6657).FALLBACK_TEEN_AGE_RANGE;
+const FALLBACK_TEEN_AGE_RANGE = fn(6691).FALLBACK_TEEN_AGE_RANGE;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -26,9 +26,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
         variant: "text-md/normal",
         color: "text-link",
         onPress() {
-          const obj = closure_1_1(7884);
+          const obj = closure_1_1(7918);
           const intl = closure_1_0(1125).intl;
-          return obj.openUrl(closure_1_1(2064).getArticleURL(intl.string(closure_1_1(3155).agiNYw)));
+          return obj.openUrl(closure_1_1(2064).getArticleURL(intl.string(closure_1_1(3187).agiNYw)));
         },
         children
       }, id);
@@ -40,7 +40,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
   }
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     let intl = util.intl;
-    const stringResult = intl.string(_modDef3155.AA3xYb);
+    const stringResult = intl.string(_modDef3187.AA3xYb);
     cResult[1] = stringResult;
     let tmp6 = stringResult;
   } else {
@@ -75,7 +75,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
   }
   const intl2 = util.intl;
   const format = intl2.format;
-  let obj6 = _modDef3155;
+  let obj6 = _modDef3187;
   if (isManualReviewInconclusiveCopyEnabled) {
     obj6 = { contentAndSettingsHook: first };
     let formatResult = format(obj6.UIbYzl, obj6);
@@ -97,9 +97,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
       variant: "text-md/normal",
       color: "text-link",
       onPress() {
-        const obj = closure_1_1(7884);
+        const obj = closure_1_1(7918);
         const intl = closure_1_0(1125).intl;
-        return obj.openUrl(closure_1_1(2064).getArticleURL(intl.string(closure_1_1(3155).agiNYw)));
+        return obj.openUrl(closure_1_1(2064).getArticleURL(intl.string(closure_1_1(3187).agiNYw)));
       },
       children
     }, id);
@@ -107,10 +107,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ManualRe
   const isManualReviewInconclusiveCopyEnabled = ManualReviewInconclusiveCopyExperiment.useIsManualReviewInconclusiveCopyEnabled("manual_review_decided_teen_modal");
   const obj2 = { title: null, content: null, actions: null };
   let intl = util.intl;
-  obj2.title = intl.string(_modDef3155.AA3xYb);
+  obj2.title = intl.string(_modDef3187.AA3xYb);
   const intl2 = util.intl;
   const format = intl2.format;
-  const tmp5 = _modDef3155;
+  const tmp5 = _modDef3187;
   if (isManualReviewInconclusiveCopyEnabled) {
     const obj3 = { contentAndSettingsHook };
     let formatResult = format(tmp5.UIbYzl, obj3);

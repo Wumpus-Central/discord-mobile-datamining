@@ -1,9 +1,9 @@
-// === Module 18876: SoundpackActions ===
+// === Module 19129: SoundpackActions ===
 
-// Module 18876 (SoundpackActions)
+// Module 19129 (SoundpackActions)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import SoundpackStore from "SoundpackStore" /* 11529 */;
+import SoundpackStore from "SoundpackStore" /* 11567 */;
 
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const size = fn(2);

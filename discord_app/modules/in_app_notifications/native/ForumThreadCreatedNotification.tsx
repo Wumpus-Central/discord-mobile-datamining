@@ -1,13 +1,13 @@
-// === Module 13798: ForumThreadCreatedNotification ===
+// === Module 14016: ForumThreadCreatedNotification ===
 
-// Module 13798 (ForumThreadCreatedNotification)
+// Module 14016 (ForumThreadCreatedNotification)
 import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import transitionToChannel from "transitionToChannel" /* 5708 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
+import transitionToChannel from "transitionToChannel" /* 5743 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-let closure_4 = fn(13773).NOTIFICATION_PREVIEW_LINE_CLAMP;
+let closure_4 = fn(13991).NOTIFICATION_PREVIEW_LINE_CLAMP;
 const jsx = fn(21).jsx;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/in_app_notifications/native/ForumThreadCreatedNotification.tsx");
@@ -34,7 +34,7 @@ export default function ForumThreadCreatedNotification(notification) {
   const callback = guild.useCallback(() => {
     transitionToChannel.transitionToThread(thread);
   }, items1);
-  const callback1 = guild.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(13790, dependencyMap.paths), { channelId: notification.parentChannel.id }, "in-app-notification-settings-modal"), items2);
+  const callback1 = guild.useCallback(() => ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(14008, dependencyMap.paths), { channelId: notification.parentChannel.id }, "in-app-notification-settings-modal"), items2);
   const obj2 = { icon: null, children: null, header: null, onPress: null, onSettingsPress: null, notification: null };
   const obj = notification(parentChannel[5]);
   obj2.icon = jsx(notification(parentChannel[11]).Avatar, { size: notification(parentChannel[11]).AvatarSizes.NORMAL, user: threadCreator, guildId: thread.guild_id });

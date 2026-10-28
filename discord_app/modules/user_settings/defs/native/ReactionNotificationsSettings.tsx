@@ -1,12 +1,12 @@
-// === Module 16889: ReactionNotificationsSettings ===
+// === Module 17118: ReactionNotificationsSettings ===
 
-// Module 16889 (ReactionNotificationsSettings)
+// Module 17118 (ReactionNotificationsSettings)
 import util from "util" /* 1125 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import UserSettings from "UserSettings" /* 4800 */;
-import ReactionUtils from "ReactionUtils" /* 4916 */;
-import SettingsConstants from "SettingsConstants" /* 8331 */;
-import SettingBuilders from "SettingBuilders" /* 11212 */;
+import UserSettings from "UserSettings" /* 4832 */;
+import ReactionUtils from "ReactionUtils" /* 4948 */;
+import SettingsConstants from "SettingsConstants" /* 8365 */;
+import SettingBuilders from "SettingBuilders" /* 11248 */;
 import size from "module_2" /* 2 */;
 
 function onChange(arg0) {

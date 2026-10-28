@@ -1,10 +1,10 @@
-// === Module 14140: IosAttributionMetrics ===
+// === Module 14363: IosAttributionMetrics ===
 
-// Module 14140 (IosAttributionMetrics)
+// Module 14363 (IosAttributionMetrics)
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import MonitoringAgentDefault from "MonitoringAgent" /* 6469 */;
-import MetricEvents from "MetricEvents" /* 6474 */;
+import MonitoringAgentDefault from "MonitoringAgent" /* 6503 */;
+import MetricEvents from "MetricEvents" /* 6508 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

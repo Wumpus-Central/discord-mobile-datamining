@@ -1,11 +1,11 @@
-// === Module 17775: GuildsBarDnDStore ===
+// === Module 18012: GuildsBarDnDStore ===
 
-// Module 17775 (GuildsBarDnDStore)
+// Module 18012 (GuildsBarDnDStore)
 import c from "c" /* 576 */;
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
-import _mod4887 from "module_4887" /* 4887 */;
-import SortedGuildStore from "SortedGuildStore" /* 6702 */;
+import _mod4919 from "module_4919" /* 4919 */;
+import SortedGuildStore from "SortedGuildStore" /* 6736 */;
 import identity from "module_1266" /* 1266 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
@@ -19,7 +19,7 @@ let c5 = -1;
 const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
   _require = arg0;
   closure_1 = arg1;
-  let obj = { dragSpecs: "Boolean", overSpecs: "enabled", dropSpecs: "toCharArray$esjava$1", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 12, scrollPosition: 12, windowSize: null, setStateShallow: null, dropStart: 0, dropComplete: "No Output Devices" };
+  let obj = { dragSpecs: "Boolean", overSpecs: "done", dropSpecs: "toCharArray$esjava$1", dragRegion: require("ReanimatedRexport").makeMutable({ min: 0, max: 0 }), gestureState: null, dragDropInProgress: null, listInsets: 12, scrollPosition: 12, windowSize: null, setStateShallow: null, dropStart: 0, dropComplete: "No Output Devices" };
   let obj2 = require("ReanimatedRexport");
   obj.gestureState = require("ReanimatedRexport").makeMutable(obj);
   let obj3 = require("ReanimatedRexport");
@@ -58,7 +58,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
       const error = new Error("GuildsBarDnDStore.dropStart: you cannot start a drop while an existing drop is in progress");
       throw error;
     } else {
-      dropSpecs(1271).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "applicationId" }));
+      dropSpecs(1271).batchUpdates(() => dropSpecs({ dropSpecs, dragSpecs: "Array", overSpecs: "application" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(timeout);
       const _setTimeout = setTimeout;
@@ -83,7 +83,7 @@ const withEqualityFn = identity.createWithEqualityFn((arg0, arg1) => {
     obj2.data = { gestureState: gestureState.get(), dropSpecs, dragSpecs };
     obj.addBreadcrumb(obj2);
     if (null != dropSpecs) {
-      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "rejectWithError" }));
+      ReactBatchUpdates.batchUpdates(() => closure_1_0({ dropSpecs: "paths" }));
       const _clearTimeout = clearTimeout;
       clearTimeout(c5);
       if (null == dragSpecs) {
@@ -109,13 +109,13 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useItemDra
     if (cResult[1] === arg1) {
       let tmp4 = cResult[2];
     }
-    return withEqualityFn(tmp4, _mod4887.shallow);
+    return withEqualityFn(tmp4, _mod4919.shallow);
   }
   const fn = function s(arg0) {
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        const obj2 = { isDragTarget: false, dragState: "enabled", overState: "toCharArray$esjava$1", itemSize: null, dragDropInProgress };
+        const obj2 = { isDragTarget: false, dragState: "done", overState: "toCharArray$esjava$1", itemSize: null, dragDropInProgress };
         return obj2;
       }
     }
@@ -216,7 +216,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useItemDra
     ({ dragSpecs, overSpecs, dropSpecs, dragDropInProgress } = arg0);
     if (null == dragSpecs) {
       if (null == dropSpecs) {
-        const obj2 = { isDragTarget: false, dragState: "enabled", overState: "toCharArray$esjava$1", itemSize: null, dragDropInProgress };
+        const obj2 = { isDragTarget: false, dragState: "done", overState: "toCharArray$esjava$1", itemSize: null, dragDropInProgress };
         return obj2;
       }
     }
@@ -305,7 +305,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useItemDra
     obj.itemSize = num;
     obj.dragDropInProgress = dragDropInProgress;
     return obj;
-  }, _mod4887.shallow);
+  }, _mod4919.shallow);
 });
 let result = size.fileFinishedImporting("modules/guilds_bar/native/GuildsBarDnDStore.tsx");
 

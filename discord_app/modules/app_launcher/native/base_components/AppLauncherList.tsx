@@ -1,14 +1,14 @@
-// === Module 12051: AppLauncherList ===
+// === Module 12089: AppLauncherList ===
 
-// Module 12051 (AppLauncherList)
+// Module 12089 (AppLauncherList)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import mergeProps from "mergeProps" /* 5142 */;
-import Search_SearchBar from "Search/SearchBar" /* 7147 */;
-import AppLauncherFlashList from "AppLauncherFlashList" /* 11985 */;
-import _modDef12052 from "module_12052" /* 12052 */;
+import mergeProps from "mergeProps" /* 5177 */;
+import Search_SearchBar from "Search/SearchBar" /* 7181 */;
+import AppLauncherFlashList from "AppLauncherFlashList" /* 12023 */;
+import _modDef12090 from "module_12090" /* 12090 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -18,7 +18,7 @@ require = fn;
 let closure_3 = ["ref"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_8 = createStyles.createStyles({ searchBarContainer: { marginBottom: 16 }, emptyState: { backgroundColor: "transparent", justifyContent: "flex-start" }, emptyStateImage: { flex: 0 } });
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -110,16 +110,16 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunche
   const merged = Object.assign(ref, Object.assign({ ref: 0 }));
   let appLauncherFlashListProps;
   const bottom = appLauncherFlashListProps(1630)().bottom;
-  appLauncherFlashListProps = ref(11985).useAppLauncherFlashListProps();
+  appLauncherFlashListProps = ref(12023).useAppLauncherFlashListProps();
   const items = [appLauncherFlashListProps.scrollerRef, ref];
   const memo = noop.useMemo(() => mergeProps.mergeRefs(appLauncherFlashListProps.scrollerRef, ref), items);
   const obj3 = { contentContainerStyle: null, scrollIndicatorInsets: { bottom }, ref: memo };
   const items1 = [{ paddingBottom: bottom }, merged.contentContainerStyle];
   obj3.contentContainerStyle = items1;
-  const obj = ref(11985);
+  const obj = ref(12023);
   const merged1 = Object.assign(merged);
   ({ onScroll: obj2.animatedOnScroll, gestureRef: obj2.simultaneousHandlers, animatedProps: obj2.animatedProps } = appLauncherFlashListProps);
-  return jsx(appLauncherFlashListProps(11985), { contentContainerStyle: null, scrollIndicatorInsets: { bottom }, ref: memo });
+  return jsx(appLauncherFlashListProps(12023), { contentContainerStyle: null, scrollIndicatorInsets: { bottom }, ref: memo });
 });
 ReactCompilerGating = fn(558);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppLauncherListEmptyState() {
@@ -144,20 +144,20 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function AppLaunche
     }
     return tmp9;
   }
-  const tmp10 = jsx(native.EmptyState, { style: emptyState, imageStyle: emptyStateImage, lightSource: _modDef12052, darkSource: _modDef12052, title: tmp5, body: tmp6 });
+  const tmp10 = jsx(native.EmptyState, { style: emptyState, imageStyle: emptyStateImage, lightSource: _modDef12090, darkSource: _modDef12090, title: tmp5, body: tmp6 });
   cResult[2] = tmp4.emptyState;
   cResult[3] = tmp4.emptyStateImage;
   cResult[4] = tmp10;
   tmp9 = tmp10;
-  const obj2 = { style: emptyState, imageStyle: emptyStateImage, lightSource: _modDef12052, darkSource: _modDef12052, title: tmp5, body: tmp6 };
+  const obj2 = { style: emptyState, imageStyle: emptyStateImage, lightSource: _modDef12090, darkSource: _modDef12090, title: tmp5, body: tmp6 };
 }) : (function AppLauncherListEmptyState() {
   const tmp = closure_8();
-  const obj = { style: tmp.emptyState, imageStyle: tmp.emptyStateImage, lightSource: _modDef12052, darkSource: _modDef12052, title: null, body: null };
+  const obj = { style: tmp.emptyState, imageStyle: tmp.emptyStateImage, lightSource: _modDef12090, darkSource: _modDef12090, title: null, body: null };
   const intl = util.intl;
   obj.title = intl.string(util.t.vYocDz);
   const intl2 = util.intl;
   obj.body = intl2.string(util.t.V6nAfF);
-  return jsx(native.EmptyState, { style: tmp.emptyState, imageStyle: tmp.emptyStateImage, lightSource: _modDef12052, darkSource: _modDef12052, title: null, body: null });
+  return jsx(native.EmptyState, { style: tmp.emptyState, imageStyle: tmp.emptyStateImage, lightSource: _modDef12090, darkSource: _modDef12090, title: null, body: null });
 });
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_launcher/native/base_components/AppLauncherList.tsx");

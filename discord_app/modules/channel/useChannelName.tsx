@@ -1,12 +1,12 @@
-// === Module 5605: useChannelName ===
+// === Module 5640: useChannelName ===
 
-// Module 5605 (useChannelName)
+// Module 5640 (useChannelName)
 import util from "util" /* 1125 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import UserUtilsDefault from "UserUtils" /* 5026 */;
+import UserUtilsDefault from "UserUtils" /* 5058 */;
 import _slicedToArray from "module_32" /* 32 */;
-import ExperimentStore from "ExperimentStore" /* 5191 */;
-import RelationshipStore from "RelationshipStore" /* 4914 */;
+import ExperimentStore from "ExperimentStore" /* 5226 */;
+import RelationshipStore from "RelationshipStore" /* 4946 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;

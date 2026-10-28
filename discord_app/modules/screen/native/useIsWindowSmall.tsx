@@ -1,7 +1,7 @@
-// === Module 9733: useIsWindowSmall ===
+// === Module 9765: useIsWindowSmall ===
 
-// Module 9733 (useIsWindowSmall)
-import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5155 */;
+// Module 9765 (useIsWindowSmall)
+import useWindowSizeClassifier from "useWindowSizeClassifier" /* 5190 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

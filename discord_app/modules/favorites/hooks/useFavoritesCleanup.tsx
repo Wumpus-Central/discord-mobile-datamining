@@ -1,14 +1,14 @@
-// === Module 17610: useFavoritesCleanup ===
+// === Module 17845: useFavoritesCleanup ===
 
-// Module 17610 (useFavoritesCleanup)
-import FavoritesCleanup from "FavoritesCleanup" /* 10861 */;
+// Module 17845 (useFavoritesCleanup)
+import FavoritesCleanup from "FavoritesCleanup" /* 10896 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
-import ReadStateStore from "ReadStateStore" /* 6772 */;
-import FavoriteStore from "FavoriteStore" /* 4827 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
+import ReadStateStore from "ReadStateStore" /* 6806 */;
+import FavoriteStore from "FavoriteStore" /* 4859 */;
 
 const require = globalThis.__r;
 

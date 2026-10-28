@@ -1,9 +1,9 @@
-// === Module 7821: RobloxSubgameUtils ===
+// === Module 7855: RobloxSubgameUtils ===
 
-// Module 7821 (RobloxSubgameUtils)
+// Module 7855 (RobloxSubgameUtils)
 import _modDef12 from "module_12" /* 12 */;
-import RobloxSubgameTypes from "RobloxSubgameTypes" /* 7822 */;
-import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils" /* 7823 */;
+import RobloxSubgameTypes from "RobloxSubgameTypes" /* 7856 */;
+import RobloxSubgamePlatformUtilsDefault from "RobloxSubgamePlatformUtils" /* 7857 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -140,18 +140,6 @@ export const isRobloxSubgame = function isRobloxSubgame(distributor) {
     tmp = distributor.id !== RobloxSubgameTypes.ROBLOX_APPLICATION_ID;
   }
   return tmp;
-};
-export const isRobloxSubgameApplication = function isRobloxSubgameApplication(getOrFetchApplication) {
-  const thirdPartySkus = getOrFetchApplication.thirdPartySkus;
-  return thirdPartySkus.some((distributor) => distributor.distributor === constants.ROBLOX);
-};
-export const isRobloxSubgameGame = function isRobloxSubgameGame(gameRecord) {
-  let someResult = gameRecord.id !== RobloxSubgameTypes.ROBLOX_GAME_ID;
-  if (someResult) {
-    const thirdPartySkus = gameRecord.thirdPartySkus;
-    someResult = thirdPartySkus.some((distributor) => distributor.distributor === constants.ROBLOX);
-  }
-  return someResult;
 };
 export const openRobloxURLWithRootPlaceId = function openRobloxURLWithRootPlaceId() {
   const self = this;

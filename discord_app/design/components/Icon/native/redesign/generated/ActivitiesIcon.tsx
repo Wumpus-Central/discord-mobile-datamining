@@ -1,10 +1,10 @@
-// === Module 12157: ActivitiesIcon ===
+// === Module 12195: ActivitiesIcon ===
 
-// Module 12157 (ActivitiesIcon)
+// Module 12195 (ActivitiesIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5669 */;
-import _mod12158 from "module_12158" /* 12158 */;
+import BaseIconImage from "BaseIconImage" /* 5704 */;
+import _mod12196 from "module_12196" /* 12196 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const ActivitiesIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12158;
+    const tmpResult = _mod12196;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const ActivitiesIcon = ReactCompilerGating.isReactCompilerEnabled() ? (fu
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12158, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12196, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

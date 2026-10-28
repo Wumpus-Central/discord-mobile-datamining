@@ -1,11 +1,11 @@
-// === Module 15865: DevToolsLazy ===
+// === Module 16091: DevToolsLazy ===
 
-// Module 15865 (DevToolsLazy)
+// Module 16091 (DevToolsLazy)
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
 import noop from "module_19" /* 19 */;
-import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7795 */;
-import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7794 */;
+import DeveloperExperimentStore from "DeveloperExperimentStore" /* 7829 */;
+import DevToolsSettingsStore from "DevToolsSettingsStore" /* 7828 */;
 
 require = fn;
 const NativeModules = fn(17).NativeModules;
@@ -13,11 +13,11 @@ const jsx = fn(21).jsx;
 let items = [
   {
     input: "o",
-    modifierFlags: fn(5974).KeyModifierFlags.keyModifierControl,
+    modifierFlags: fn(6009).KeyModifierFlags.keyModifierControl,
     eventName: "keyCommandShowDevTools",
     discoverabilityTitle: "Open DevTools Panel",
     onKeyCommand() {
-      asyncRequireImpl(15866, dependencyMap.paths).then((navigateToDevTools) => {
+      asyncRequireImpl(16092, dependencyMap.paths).then((navigateToDevTools) => {
         navigateToDevTools.navigateToDevTools();
       });
       return true;
@@ -27,11 +27,11 @@ let items = [
 const ReactCompilerGating = fn(558);
 let obj = {
   input: "o",
-  modifierFlags: fn(5974).KeyModifierFlags.keyModifierControl,
+  modifierFlags: fn(6009).KeyModifierFlags.keyModifierControl,
   eventName: "keyCommandShowDevTools",
   discoverabilityTitle: "Open DevTools Panel",
   onKeyCommand() {
-    asyncRequireImpl(15866, dependencyMap.paths).then((navigateToDevTools) => {
+    asyncRequireImpl(16092, dependencyMap.paths).then((navigateToDevTools) => {
       navigateToDevTools.navigateToDevTools();
     });
     return true;
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
     }
     cResult[7] = tmp14;
   } else {
-    const keyCommands = tmp(5974).useKeyCommands(cResult[7]);
+    const keyCommands = tmp(6009).useKeyCommands(cResult[7]);
     class D {
       constructor() {
         return closure_1_5.showDevWidget;
@@ -135,10 +135,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
     obj = PlatformUtils;
   });
   const obj2 = stateFromStores(504);
-  const keyCommands = stateFromStores(5974).useKeyCommands(stateFromStores ? items : []);
+  const keyCommands = stateFromStores(6009).useKeyCommands(stateFromStores ? items : []);
   if (stateFromStores) {
     if (stateFromStores1) {
-      return jsx(tmp(17378).default, {});
+      return jsx(tmp(17611).default, {});
     }
   }
   return null;

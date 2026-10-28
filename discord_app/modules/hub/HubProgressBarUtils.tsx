@@ -1,6 +1,6 @@
-// === Module 13590: HubProgressBarUtils ===
+// === Module 13808: HubProgressBarUtils ===
 
-// Module 13590 (HubProgressBarUtils)
+// Module 13808 (HubProgressBarUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
@@ -9,7 +9,7 @@ import GlobalUtils from "GlobalUtils" /* 1385 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
 import noop from "module_19" /* 19 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6501 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6535 */;
 
 require = fn;
 function convertHubProgressFlagSetToSet(stateFromStores) {
@@ -23,7 +23,7 @@ function convertHubProgressFlagSetToSet(stateFromStores) {
   }
   return set;
 }
-const HUB_PROGRESS_STEP_ORDER = fn(9063).HUB_PROGRESS_STEP_ORDER;
+const HUB_PROGRESS_STEP_ORDER = fn(9096).HUB_PROGRESS_STEP_ORDER;
 const PlatformTypes = fn(1084).PlatformTypes;
 let ReactCompilerGating = fn(558);
 let closure_7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useContactSyncEverEnabled() {

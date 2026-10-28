@@ -1,13 +1,13 @@
-// === Module 18907: MessageCodedLinkManager ===
+// === Module 19160: MessageCodedLinkManager ===
 
-// Module 18907 (MessageCodedLinkManager)
-import findCodedLinksDefault from "findCodedLinks" /* 5700 */;
-import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 18919 */;
+// Module 19160 (MessageCodedLinkManager)
+import findCodedLinksDefault from "findCodedLinks" /* 5735 */;
+import setupLoadFromMessageManagerHandlersDefault from "setupLoadFromMessageManagerHandlers" /* 19172 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import GuildTemplateStore from "GuildTemplateStore" /* 7568 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import InviteStore from "InviteStore" /* 5701 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
+import GuildTemplateStore from "GuildTemplateStore" /* 7602 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import InviteStore from "InviteStore" /* 5736 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
 
 const require = fn;
 function resolveMessageCodedLinks(content) {
@@ -164,7 +164,7 @@ function resolveMessageCodedLinks(content) {
                                                       const obj3 = { value, done: true };
                                                       return obj3;
                                                     } else {
-                                                      const useGameOrganizationInviteFetch = tmp4(18915).useGameOrganizationInviteFetch;
+                                                      const useGameOrganizationInviteFetch = tmp4(19168).useGameOrganizationInviteFetch;
                                                       const items = [code];
                                                       v1 = 1;
                                                       dependencyMap = 1;
@@ -179,7 +179,7 @@ function resolveMessageCodedLinks(content) {
                                                     const obj = { value, done: true };
                                                     return obj;
                                                   } else {
-                                                    v1(12746)(closure_128_0).catch(closure_1_6);
+                                                    v1(12793)(closure_128_0).catch(closure_1_6);
                                                     dependencyMap = 3;
                                                     return { value: "IconComponent", done: null };
                                                   }
@@ -377,7 +377,7 @@ function resolveMessageCodedLinks(content) {
                                                           const obj3 = { value, done: true };
                                                           return obj3;
                                                         } else {
-                                                          const useGameOrganizationInviteFetch = tmp4(18915).useGameOrganizationInviteFetch;
+                                                          const useGameOrganizationInviteFetch = tmp4(19168).useGameOrganizationInviteFetch;
                                                           const items = [code];
                                                           v1 = 1;
                                                           dependencyMap = 1;
@@ -392,7 +392,7 @@ function resolveMessageCodedLinks(content) {
                                                         const obj = { value, done: true };
                                                         return obj;
                                                       } else {
-                                                        v1(12746)(closure_128_0).catch(closure_1_6);
+                                                        v1(12793)(closure_128_0).catch(closure_1_6);
                                                         dependencyMap = 3;
                                                         return { value: "IconComponent", done: null };
                                                       }

@@ -1,7 +1,7 @@
-// === Module 5039: useBadgeTextVariant ===
+// === Module 5071: useBadgeTextVariant ===
 
-// Module 5039 (useBadgeTextVariant)
-import ThemeContext from "ThemeContext" /* 4989 */;
+// Module 5071 (useBadgeTextVariant)
+import ThemeContext from "ThemeContext" /* 5021 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,12 +1,12 @@
-// === Module 7866: GuildRoomsExperiment ===
+// === Module 7900: GuildRoomsExperiment ===
 
-// Module 7866 (GuildRoomsExperiment)
-import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+// Module 7900 (GuildRoomsExperiment)
+import GuildMemberStore from "GuildMemberStore" /* 4916 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const createExperiment = fn(5189);
+const createExperiment = fn(5224);
 let obj2 = { kind: "guild", id: "2026-06_guild_rooms", label: "Guild Rooms", defaultConfig: { enabled: false, interactionsEnabled: false, multipleRoomsEnabled: false, posturesEnabled: false }, treatments: null };
 let items = [{ id: 1, label: "Enable Guild Rooms in this guild", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: false, posturesEnabled: true } }, { id: 2, label: "Enable Guild Rooms without Interactions", config: { enabled: true, interactionsEnabled: false, multipleRoomsEnabled: false, posturesEnabled: true } }, { id: 3, label: "Enable Guild Rooms with Room Variants", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: true, posturesEnabled: true } }, { id: 4, label: "Enable Guild Rooms without Postures", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: false, posturesEnabled: false } }, { id: 5, label: "Enable Guild Rooms with Room 2 Default and Selector", config: { enabled: true, interactionsEnabled: true, multipleRoomsEnabled: true, posturesEnabled: true } }];
 obj2.treatments = items;

@@ -1,11 +1,11 @@
-// === Module 14341: useCanRequestStreamFromUser ===
+// === Module 14564: useCanRequestStreamFromUser ===
 
-// Module 14341 (useCanRequestStreamFromUser)
+// Module 14564 (useCanRequestStreamFromUser)
 import _modDef12 from "module_12" /* 12 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import GuildMemberStore from "GuildMemberStore" /* 4884 */;
-import GuildRoleStore from "GuildRoleStore" /* 4878 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import GuildRoleStore from "GuildRoleStore" /* 4910 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
 
 const require = globalThis.__r;
 

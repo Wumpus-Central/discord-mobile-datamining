@@ -1,22 +1,22 @@
-// === Module 8595: ComponentStateContext ===
+// === Module 8632: ComponentStateContext ===
 
-// Module 8595 (ComponentStateContext)
+// Module 8632 (ComponentStateContext)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Server from "Server" /* 1997 */;
-import useMountEffectDefault from "useMountEffect" /* 5264 */;
-import InteractionTypes from "InteractionTypes" /* 6020 */;
-import interactions_InteractionTypes from "interactions/InteractionTypes" /* 6021 */;
-import InteractionComponentTypes from "InteractionComponentTypes" /* 6023 */;
-import InteractionUtils from "InteractionUtils" /* 8599 */;
+import useMountEffectDefault from "useMountEffect" /* 5299 */;
+import InteractionTypes from "InteractionTypes" /* 6054 */;
+import interactions_InteractionTypes from "interactions/InteractionTypes" /* 6055 */;
+import InteractionComponentTypes from "InteractionComponentTypes" /* 6057 */;
+import InteractionUtils from "InteractionUtils" /* 8636 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import InteractionStore from "InteractionStore" /* 8268 */;
-import LurkingStore from "LurkingStore" /* 4905 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import GuildMemberStore from "GuildMemberStore" /* 4884 */;
-import GuildVerificationStore from "GuildVerificationStore" /* 6637 */;
+import InteractionStore from "InteractionStore" /* 8302 */;
+import LurkingStore from "LurkingStore" /* 4937 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import GuildVerificationStore from "GuildVerificationStore" /* 6671 */;
 import UserStore from "UserStore" /* 1389 */;
-import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8596 */;
+import LocalInteractionComponentStateStore from "LocalInteractionComponentStateStore" /* 8633 */;
 
 require = fn;
 function isInteractionComponent(type) {
@@ -585,11 +585,11 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useShouldD
   if (channel != null) {
     guild_id = channel.guild_id;
   }
-  const obj5 = channel(8333);
-  const isThreadModerator = channel(7371).useIsThreadModerator(channel);
-  const tmpResult = channel(7371);
+  const obj5 = channel(8367);
+  const isThreadModerator = channel(7406).useIsThreadModerator(channel);
+  const tmpResult = channel(7406);
   let tmp9 = !stateFromStores;
-  const canUnarchiveThread = channel(7371).useCanUnarchiveThread(channel);
+  const canUnarchiveThread = channel(7406).useCanUnarchiveThread(channel);
   if (stateFromStores) {
     tmp9 = stateFromStores1;
   }
@@ -995,7 +995,7 @@ let closure_18 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCom
                 return tmp17;
               }
             }
-            let obj2 = { state: first1, executeStateUpdate: tmp12, isDisabled: false, visualState: tmp(6023).ActionComponentState.NORMAL, error };
+            let obj2 = { state: first1, executeStateUpdate: tmp12, isDisabled: false, visualState: tmp(6057).ActionComponentState.NORMAL, error };
             class S {
               constructor(arg0) {
                 tmp = null == customId;

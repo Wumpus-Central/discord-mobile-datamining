@@ -1,15 +1,15 @@
-// === Module 7347: ConjureUtils ===
+// === Module 7382: ConjureUtils ===
 
-// Module 7347 (ConjureUtils)
+// Module 7382 (ConjureUtils)
 import c from "c" /* 576 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6775 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6809 */;
-import useAppChannelApplication from "useAppChannelApplication" /* 7348 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6809 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6843 */;
+import useAppChannelApplication from "useAppChannelApplication" /* 7383 */;
 import ApplicationStore from "ApplicationStore" /* 2042 */;
-import GuildChannelStore_mod from "GuildChannelStore" /* 4902 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
+import GuildChannelStore_mod from "GuildChannelStore" /* 4934 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
 
 require = fn;
 function conjureChannelAppId(channel) {
@@ -27,7 +27,7 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4902);
+let GuildChannelStore = fn(4934);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1084);
@@ -94,17 +94,17 @@ export const conjureSettingsGuildId = function conjureSettingsGuildId(project, a
   }
   return tmp;
 };
-export const conjureSettingChannels = function conjureSettingChannels(stateFromStores, channel_filter) {
+export const conjureSettingChannels = function conjureSettingChannels(channels, channel_filter) {
   if ("voice" === channel_filter) {
     let items = [];
   } else {
-    items = stateFromStores[React3];
+    items = channels[React3];
   }
   const items1 = [...items];
   if ("text" === channel_filter) {
     let items2 = [];
   } else {
-    items2 = stateFromStores[React4];
+    items2 = channels[React4];
   }
   HermesBuiltin.arraySpread(items2, tmp2);
   const mapped = items1.map((channel) => channel.channel);

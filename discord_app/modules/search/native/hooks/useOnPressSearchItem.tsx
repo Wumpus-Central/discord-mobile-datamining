@@ -1,20 +1,20 @@
-// === Module 18125: useOnPressSearchItem ===
+// === Module 18365: useOnPressSearchItem ===
 
-// Module 18125 (useOnPressSearchItem)
+// Module 18365 (useOnPressSearchItem)
 import util from "util" /* 1125 */;
 import URLUtilsDefault from "URLUtils" /* 1383 */;
-import LinkingDefault from "Linking" /* 5661 */;
-import ToastUtils from "ToastUtils" /* 5663 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7413 */;
-import MaskedLinkUtils from "MaskedLinkUtils" /* 8860 */;
-import SearchPlatformUtils from "SearchPlatformUtils" /* 13239 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13260 */;
-import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13264 */;
+import LinkingDefault from "Linking" /* 5696 */;
+import ToastUtils from "ToastUtils" /* 5698 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7448 */;
+import MaskedLinkUtils from "MaskedLinkUtils" /* 8894 */;
+import SearchPlatformUtils from "SearchPlatformUtils" /* 13456 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13477 */;
+import SearchPlatformActionCreatorsDefault from "SearchPlatformActionCreators" /* 13481 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ConversationPreviewStore from "ConversationPreviewStore" /* 7702 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import SearchQueryStore from "SearchQueryStore" /* 13253 */;
+import ConversationPreviewStore from "ConversationPreviewStore" /* 7736 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import SearchQueryStore from "SearchQueryStore" /* 13470 */;
 
 const SearchPlatformUtilsDefault = SearchPlatformUtils;
 
@@ -89,13 +89,13 @@ let closure_20 = async function _handleVoiceOrStageChannelConnectPress(arg0) {
     }
   }
 };
-const SearchConstants = fn(9716);
+const SearchConstants = fn(9748);
 ({ SearchMediaTypes: closure_8, SearchHistoryItemTypes: closure_9, SearchQueryTagTypes: c10 } = SearchConstants);
-const SearchNavigatorScreens = fn(18126).SearchNavigatorScreens;
-const SearchFilterAddLocations = fn(9715).SearchFilterAddLocations;
+const SearchNavigatorScreens = fn(18366).SearchNavigatorScreens;
+const SearchFilterAddLocations = fn(9747).SearchFilterAddLocations;
 const Constants = fn(1084);
 ({ Routes: map1, ComponentActions: closure_14, ME: closure_15, SearchTypes: closure_16 } = Constants);
-const StaticChannelRoute = fn(4831).StaticChannelRoute;
+const StaticChannelRoute = fn(4863).StaticChannelRoute;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useOnPressSearchLink(arg0) {
@@ -919,8 +919,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
       searchContext = text;
       const type = searchContext.type;
       if (constants4.DMS === type) {
-        const result = searchContext(13239).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-        let obj2 = searchContext(13239);
+        const result = searchContext(13456).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+        let obj2 = searchContext(13456);
       }
       SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
         if (null != obj) {
@@ -952,8 +952,8 @@ export const useOnPressSearchHistoryText = ReactCompilerGating.isReactCompilerEn
     searchContext = text;
     const type = searchContext.type;
     if (constants4.DMS === type) {
-      const result = searchContext(13239).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
-      let obj2 = searchContext(13239);
+      const result = searchContext(13456).delayUntilNavigationComplete(() => allMediaResults(onEndReached[11]).addSearchHistoryItem(closure_0, channel));
+      let obj2 = searchContext(13456);
     }
     SearchPlatformActionCreatorsDefault.updateSearchQuery(searchContext, (setTags) => {
       if (null != obj) {

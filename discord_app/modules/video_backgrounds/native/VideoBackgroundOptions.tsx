@@ -1,18 +1,18 @@
-// === Module 11640: VideoBackgroundOptions ===
+// === Module 11678: VideoBackgroundOptions ===
 
-// Module 11640 (VideoBackgroundOptions)
+// Module 11678 (VideoBackgroundOptions)
 import nativeDefault from "native" /* 587 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5870 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import getDefaultBackgroundDataDefault from "getDefaultBackgroundData" /* 5905 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const BLUR_BACKGROUND_OPTION = fn(5864).BLUR_BACKGROUND_OPTION;
+const BLUR_BACKGROUND_OPTION = fn(5899).BLUR_BACKGROUND_OPTION;
 const jsx = fn(21).jsx;
 const none = "none";
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { imageThumbnail: null };
 let size = { width: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, height: nativeDefault.modules.mobile.TABLE_ROW_ICON_SIZE, borderRadius: nativeDefault.radii.lg };
 obj2.imageThumbnail = size;
@@ -71,8 +71,8 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
     const obj2 = { value: none, label: null, icon: null };
     const intl = tmp(1125).intl;
     obj2.label = intl.string(tmp(1125).t.fUdMeO);
-    const obj3 = { IconComponent: tmp(9772).DenyIcon };
-    obj2.icon = jsx(tmp(6913).TableRowIcon, { IconComponent: tmp(9772).DenyIcon });
+    const obj3 = { IconComponent: tmp(9804).DenyIcon };
+    obj2.icon = jsx(tmp(6947).TableRowIcon, { IconComponent: tmp(9804).DenyIcon });
     cResult[1] = obj2;
     let tmp7 = obj2;
   } else {
@@ -82,8 +82,8 @@ export const useVideoBackgroundRadioOptions = ReactCompilerGating.isReactCompile
     const obj4 = { value: BLUR_BACKGROUND_OPTION, label: null, icon: null };
     const intl2 = tmp(1125).intl;
     obj4.label = intl2.string(tmp(1125).t.LhSyL8);
-    const obj5 = { IconComponent: tmp(11641).BlurBackgroundIcon };
-    obj4.icon = jsx(tmp(6913).TableRowIcon, { IconComponent: tmp(11641).BlurBackgroundIcon });
+    const obj5 = { IconComponent: tmp(11679).BlurBackgroundIcon };
+    obj4.icon = jsx(tmp(6947).TableRowIcon, { IconComponent: tmp(11679).BlurBackgroundIcon });
     cResult[2] = obj4;
     let tmp10 = obj4;
   } else {

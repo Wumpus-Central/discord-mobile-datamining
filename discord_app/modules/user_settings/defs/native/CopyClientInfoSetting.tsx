@@ -1,20 +1,20 @@
-// === Module 16958: CopyClientInfoSetting ===
+// === Module 17188: CopyClientInfoSetting ===
 
-// Module 16958 (CopyClientInfoSetting)
+// Module 17188 (CopyClientInfoSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import DeviceUtils from "DeviceUtils" /* 4929 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
-import ToastUtils from "ToastUtils" /* 5663 */;
-import CopyIcon from "CopyIcon" /* 5683 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7250 */;
-import ClipboardUtils from "ClipboardUtils" /* 7287 */;
-import ActionSheetRow from "ActionSheetRow" /* 7296 */;
-import ActionSheet from "ActionSheet" /* 7300 */;
-import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 7749 */;
-import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12727 */;
-import BuildOverrideStore from "BuildOverrideStore" /* 11031 */;
+import DeviceUtils from "DeviceUtils" /* 4961 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import ToastUtils from "ToastUtils" /* 5698 */;
+import CopyIcon from "CopyIcon" /* 5718 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7284 */;
+import ClipboardUtils from "ClipboardUtils" /* 7321 */;
+import ActionSheetRow from "ActionSheetRow" /* 7330 */;
+import ActionSheet from "ActionSheet" /* 7334 */;
+import IOSAnchoredChatScrollerExperiment from "IOSAnchoredChatScrollerExperiment" /* 7783 */;
+import build_overrides_BuildOverrideUtils from "build_overrides/BuildOverrideUtils" /* 12774 */;
+import BuildOverrideStore from "BuildOverrideStore" /* 11066 */;
 import ClientInfoUtils from "ClientInfoUtils" /* 1380 */;
 
 require = fn;
@@ -75,11 +75,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IOSAnch
   const cResult = subLabel(576).c(3);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     const intl = tmp(1125).intl;
-    let result = tmp(7749).isIOSAnchoredChatScrollerEnabled();
+    let result = tmp(7783).isIOSAnchoredChatScrollerEnabled();
     const t = tmp(1125).t;
     const stringResult = intl.string(result ? t.LfEwvz : t["pe/6Ma"]);
     cResult[0] = stringResult;
-    const tmpResult = tmp(7749);
+    const tmpResult = tmp(7783);
   } else {
     subLabel = cResult[0];
     const _Symbol = Symbol;
@@ -101,7 +101,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function IOSAnch
               const result = ToastUtils.presentCopiedToClipboard();
             }
       };
-      const tmp12 = closure_4(tmp(7296).ActionSheetRow, obj2);
+      const tmp12 = closure_4(tmp(7330).ActionSheetRow, obj2);
       cResult[2] = tmp12;
       let tmp10 = tmp12;
     } else {
@@ -395,18 +395,18 @@ function getClientInfoString(ReleaseChannel) {
   }
   return str;
 }
-const SettingBuilders = fn(11212);
+const SettingBuilders = fn(11248);
 const pressable = SettingBuilders.createPressable({
   useTitle() {
     const intl = util.intl;
     return intl.string(util.t.Na2lF9);
   },
   parent: null,
-  IconComponent: fn(6842).ClipboardListIcon,
+  IconComponent: fn(6876).ClipboardListIcon,
   onPress: function handleClientInfoPress() {
     ActionSheetActionCreatorsDefault.openLazy(Promise.resolve({ default: closure_9 }), "ClientClientInfoActionSheet");
   },
-  usePredicate: fn(4800).DeveloperMode.useSetting,
+  usePredicate: fn(4832).DeveloperMode.useSetting,
   withArrow: true
 });
 const size = fn(2);

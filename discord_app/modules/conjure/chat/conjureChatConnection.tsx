@@ -1,13 +1,13 @@
-// === Module 10720: conjureChatConnection ===
+// === Module 10754: conjureChatConnection ===
 
-// Module 10720 (conjureChatConnection)
+// Module 10754 (conjureChatConnection)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import util from "util" /* 1125 */;
-import _modDef3831 from "module_3831" /* 3831 */;
-import conjureAgentReaction from "conjureAgentReaction" /* 10706 */;
-import ConjureAnalytics from "ConjureAnalytics" /* 10721 */;
-import conjureProjectSockets from "conjureProjectSockets" /* 10722 */;
-import ConjureActionCreators from "ConjureActionCreators" /* 10723 */;
+import _modDef3863 from "module_3863" /* 3863 */;
+import conjureAgentReaction from "conjureAgentReaction" /* 10738 */;
+import ConjureAnalytics from "ConjureAnalytics" /* 10755 */;
+import conjureProjectSockets from "conjureProjectSockets" /* 10756 */;
+import ConjureActionCreators from "ConjureActionCreators" /* 10757 */;
 import size from "module_2" /* 2 */;
 
 function appendFailureStep(turnId, projectId) {
@@ -31,6 +31,9 @@ function handleProjectEvent(event, projectId) {
   let tmp3 = "app_channel_deleted" !== event.type;
   if (tmp3) {
     tmp3 = "remixed" !== event.type;
+  }
+  if (tmp3) {
+    tmp3 = "voice_channel_pin" !== event.type;
   }
   if (tmp3) {
     const result = ConjureActionCreators.refreshConjureInstallState(projectId);
@@ -59,6 +62,7 @@ let obj = {
   preview_bot_removed: handleProjectEvent,
   app_channel_deleted: handleProjectEvent,
   remixed: handleProjectEvent,
+  voice_channel_pin: handleProjectEvent,
   side_reply(id, projectId) {
     DispatcherDefault.dispatch({ type: "CONJURE_CHAT_SIDE_REPLY", projectId: projectId.projectId, id: id.id, inReplyTo: id.in_reply_to, content: id.content, timestamp: id.ts });
   },
@@ -94,7 +98,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3831["913RMa"]);
+      const stringResult = intl.string(_modDef3863["913RMa"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;
@@ -183,7 +187,7 @@ let obj2 = {
       DispatcherDefault.dispatch(obj);
     } else {
       const intl = util.intl;
-      const stringResult = intl.string(_modDef3831["0+RUWx"]);
+      const stringResult = intl.string(_modDef3863["0+RUWx"]);
       let tmp = obj4;
       if (obj4 === undefined) {
         tmp = obj3;

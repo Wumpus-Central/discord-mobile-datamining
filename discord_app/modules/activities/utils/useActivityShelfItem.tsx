@@ -1,22 +1,22 @@
-// === Module 11929: useActivityShelfItem ===
+// === Module 11967: useActivityShelfItem ===
 
-// Module 11929 (useActivityShelfItem)
+// Module 11967 (useActivityShelfItem)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import Server from "Server" /* 1997 */;
-import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4893 */;
-import getPlatformDefault from "getPlatform" /* 5634 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6813 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7255 */;
-import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7259 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10774 */;
-import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11457 */;
-import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11458 */;
-import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11510 */;
-import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11930 */;
-import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11931 */;
+import embeddedActivityLocationUtils from "embeddedActivityLocationUtils" /* 4925 */;
+import getPlatformDefault from "getPlatform" /* 5669 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6847 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7289 */;
+import useGetOrFetchApplications from "useGetOrFetchApplications" /* 7293 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10808 */;
+import useCurrentEmbeddedApplicationDefault from "useCurrentEmbeddedApplication" /* 11495 */;
+import useCurrentEmbeddedActivityDefault from "useCurrentEmbeddedActivity" /* 11496 */;
+import useEmbeddedActivityBackgroundDefault from "useEmbeddedActivityBackground" /* 11548 */;
+import getPreviewVideoAssetUrlDefault from "getPreviewVideoAssetUrl" /* 11968 */;
+import useEmbeddedAppsForChannelDefault from "useEmbeddedAppsForChannel" /* 11969 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
 
 require = fn;
 const STAFF_RELEASE_PHASES = fn(2023).STAFF_RELEASE_PHASES;

@@ -1,30 +1,30 @@
-// === Module 19047: GuildSettingsModalModeration ===
+// === Module 19310: GuildSettingsModalModeration ===
 
-// Module 19047 (GuildSettingsModalModeration)
+// Module 19310 (GuildSettingsModalModeration)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import NavScrim from "NavScrim" /* 5593 */;
-import Stack_Stack from "Stack/Stack" /* 5978 */;
-import TableRadioRow from "TableRadioRow" /* 6986 */;
-import TableRowGroup from "TableRowGroup" /* 6989 */;
-import TableSwitchRow from "TableSwitchRow" /* 7297 */;
-import HeaderActionButton from "HeaderActionButton" /* 7486 */;
-import useUserIsTeen from "useUserIsTeen" /* 8122 */;
-import Form from "Form" /* 8951 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import NavScrim from "NavScrim" /* 5628 */;
+import Stack_Stack from "Stack/Stack" /* 6013 */;
+import TableRadioRow from "TableRadioRow" /* 7020 */;
+import TableRowGroup from "TableRowGroup" /* 7023 */;
+import TableSwitchRow from "TableSwitchRow" /* 7331 */;
+import HeaderActionButton from "HeaderActionButton" /* 7521 */;
+import useUserIsTeen from "useUserIsTeen" /* 8156 */;
+import Form from "Form" /* 8985 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9039 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
-import GuildSettingsStore from "GuildSettingsStore" /* 9006 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
+import GuildSettingsStore from "GuildSettingsStore" /* 9040 */;
 
 require = fn;
 const Constants = fn(1084);
 ({ GuildFeatures: metroRequire, HelpdeskArticles: closure_7, Permissions: closure_8, GuildNSFWContentLevel: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11, Fragment: closure_12 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { stack: { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING } };
 let closure_13 = createStyles.createLegacyClassComponentStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -199,7 +199,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     return self.handleVerificationLevelChange(verificationLevel);
   };
   const features = guild.features;
-  const verificationLevelOptions = self(16167).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
+  const verificationLevelOptions = self(16395).generateVerificationLevelOptions(features.has(constants.COMMUNITY));
   obj.children = verificationLevelOptions.map((item) => {
     ({ name, color, value } = item);
     ({ desc, disabled } = item);
@@ -222,7 +222,7 @@ prototype["renderVerificationLevelSection"] = function renderVerificationLevelSe
     obj.disabled = tmp5;
     return v65535(TableRadioRow.TableRadioRow, obj, "level-" + value);
   });
-  return closure_10(self(6987).TableRadioGroup, obj, "level-section");
+  return closure_10(self(7021).TableRadioGroup, obj, "level-section");
 };
 prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter() {
   const self = this;
@@ -238,7 +238,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     return self.handleExplicitContentFilterChange(explicitContentFilter);
   };
   const features = guild.features;
-  const contentFilterOptions = self(16167).generateContentFilterOptions(features.has(constants.COMMUNITY));
+  const contentFilterOptions = self(16395).generateContentFilterOptions(features.has(constants.COMMUNITY));
   obj.children = contentFilterOptions.map((value) => {
     value = value.value;
     ({ name, desc, disabled } = value);
@@ -251,7 +251,7 @@ prototype["renderExplicitContentFilter"] = function renderExplicitContentFilter(
     obj.disabled = tmp2;
     return v65535(TableRadioRow.TableRadioRow, obj, "filter-" + value);
   });
-  return closure_10(self(6987).TableRadioGroup, obj, "filter-section");
+  return closure_10(self(7021).TableRadioGroup, obj, "filter-section");
 };
 prototype["render"] = function render() {
   const props = this.props;
@@ -285,7 +285,7 @@ prototype["handleVerificationLevelChange"] = function handleVerificationLevelCha
 prototype["handleExplicitContentFilterChange"] = function handleExplicitContentFilterChange(explicitContentFilter) {
   GuildSettingsActionCreatorsDefault.updateGuild({ explicitContentFilter });
 };
-GuildSettingsModalModeration.contextType = fn(5038).ThemeContext;
+GuildSettingsModalModeration.contextType = fn(5070).ThemeContext;
 ReactCompilerGating = fn(558);
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 const size = fn(2);

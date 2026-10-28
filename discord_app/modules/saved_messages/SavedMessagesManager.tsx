@@ -1,9 +1,9 @@
-// === Module 18987: SavedMessagesManager ===
+// === Module 19250: SavedMessagesManager ===
 
-// Module 18987 (SavedMessagesManager)
-import SavedMessagesActions from "SavedMessagesActions" /* 13824 */;
+// Module 19250 (SavedMessagesManager)
+import SavedMessagesActions from "SavedMessagesActions" /* 14042 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
 
 require = fn;
 let closure_3 = async function _refreshSavedMessages() {

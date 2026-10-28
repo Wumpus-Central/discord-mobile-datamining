@@ -1,12 +1,12 @@
-// === Module 16309: FriendRequestsMutualFriendsSetting ===
+// === Module 16537: FriendRequestsMutualFriendsSetting ===
 
-// Module 16309 (FriendRequestsMutualFriendsSetting)
+// Module 16537 (FriendRequestsMutualFriendsSetting)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import FlagUtilsAll from "FlagUtils" /* 1402 */;
-import UserSettings from "UserSettings" /* 4800 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7093 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16147 */;
+import UserSettings from "UserSettings" /* 4832 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7127 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16375 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -17,7 +17,7 @@ ReactCompilerGating = fn(558);
 function useIsDisabled() {
   return useParentalControlSettings.useIsParentallyControlled();
 }
-const SettingBuilders = fn(11212);
+const SettingBuilders = fn(11248);
 const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsMutualFriendsSettingValue() {
   const cResult = c.c(2);
   const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
@@ -33,7 +33,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendR
   }
   return tmp5.mutualFriends;
 }) : (function useFriendRequestsMutualFriendsSettingValue() {
-  const FriendSourceFlagsSetting = setting(4800).FriendSourceFlagsSetting;
+  const FriendSourceFlagsSetting = setting(4832).FriendSourceFlagsSetting;
   setting = FriendSourceFlagsSetting.useSetting();
   const items = [setting];
   return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).mutualFriends;
@@ -43,7 +43,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(util.t.IqlCSq);
   },
-  parent: fn(8331).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8365).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useValue: ReactCompilerGating.isReactCompilerEnabled() ? (function useFriendRequestsMutualFriendsSettingValue() {
     const cResult = c.c(2);
     const FriendSourceFlagsSetting = UserSettings.FriendSourceFlagsSetting;
@@ -59,7 +59,7 @@ const toggle = SettingBuilders.createToggle({
     }
     return tmp5.mutualFriends;
   }) : (function useFriendRequestsMutualFriendsSettingValue() {
-    const FriendSourceFlagsSetting = setting(4800).FriendSourceFlagsSetting;
+    const FriendSourceFlagsSetting = setting(4832).FriendSourceFlagsSetting;
     setting = FriendSourceFlagsSetting.useSetting();
     const items = [setting];
     return noop.useMemo(() => UserSettingsUtils.computeFlags(setting), items).mutualFriends;

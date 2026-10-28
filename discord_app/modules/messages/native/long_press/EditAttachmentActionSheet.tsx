@@ -1,26 +1,26 @@
-// === Module 13999: EditAttachmentActionSheet ===
+// === Module 14218: EditAttachmentActionSheet ===
 
-// Module 13999 (EditAttachmentActionSheet)
+// Module 14218 (EditAttachmentActionSheet)
 import util from "util" /* 1125 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4981 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import components_Button_Button from "components/Button/Button" /* 5245 */;
-import Stack_Stack from "Stack/Stack" /* 5978 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6902 */;
-import TextArea from "TextArea" /* 7182 */;
-import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 7250 */;
-import ActionSheet from "ActionSheet" /* 7300 */;
-import useBottomSheetRef from "useBottomSheetRef" /* 8659 */;
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5013 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import components_Button_Button from "components/Button/Button" /* 5280 */;
+import Stack_Stack from "Stack/Stack" /* 6013 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6936 */;
+import TextArea from "TextArea" /* 7216 */;
+import BottomSheetTitleHeader2 from "BottomSheetTitleHeader" /* 7284 */;
+import ActionSheet from "ActionSheet" /* 7334 */;
+import useBottomSheetRef from "useBottomSheetRef" /* 8696 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import MessageStore from "MessageStore" /* 6011 */;
+import MessageStore from "MessageStore" /* 6045 */;
 
 const require = globalThis.__r;
 
 require = fn;
-let closure_7 = fn(4977).LEGACY_SPOILER_ATTACHMENT_PREFIX;
+let closure_7 = fn(5009).LEGACY_SPOILER_ATTACHMENT_PREFIX;
 let MessageAttachmentFlags = fn(1084).MessageAttachmentFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
@@ -486,7 +486,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function EditAtta
   const tmp7Result3 = first1(first2.useState(false), 2);
   first2 = tmp7Result3[0];
   closure_6 = tmp7Result3[1];
-  const tmp5 = attachment(8758)(attachment);
+  const tmp5 = attachment(8795)(attachment);
   [tmp17, c7] = first1(first2.useState(), 2);
   let intl = util.intl;
   let stringResult = intl.string(util.t.Y8ujqr);

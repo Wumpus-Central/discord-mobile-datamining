@@ -1,6 +1,6 @@
-// === Module 18002: ICYMIBottomLoading ===
+// === Module 18239: ICYMIBottomLoading ===
 
-// Module 18002 (ICYMIBottomLoading)
+// Module 18239 (ICYMIBottomLoading)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import noop from "module_19" /* 19 */;
@@ -9,7 +9,7 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c3, ActivityIndicator: closure_4 } = get_ActivityIndicator);
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_6 = createStyles.createStyles(() => {
   const obj = { container: { paddingTop: nativeDefault.space.PX_8, paddingBottom: nativeDefault.space.PX_24, alignItems: "center", justifyContent: "center" } };
   return obj;

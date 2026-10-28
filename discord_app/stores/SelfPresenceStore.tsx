@@ -1,21 +1,21 @@
-// === Module 6499: SelfPresenceStore ===
+// === Module 6533: SelfPresenceStore ===
 
-// Module 6499 (SelfPresenceStore)
+// Module 6533 (SelfPresenceStore)
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import _modDef1354 from "module_1354" /* 1354 */;
-import UserSettings from "UserSettings" /* 4800 */;
-import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7508 */;
-import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10654 */;
-import SpotifyStore from "SpotifyStore" /* 6500 */;
+import UserSettings from "UserSettings" /* 4832 */;
+import LibraryApplicationUtils from "LibraryApplicationUtils" /* 7543 */;
+import isListeningOnSpotifyDefault from "isListeningOnSpotify" /* 10686 */;
+import SpotifyStore from "SpotifyStore" /* 6534 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 import DetectableGameStore from "DetectableGameStore" /* 2036 */;
-import IdleStore from "IdleStore" /* 6634 */;
+import IdleStore from "IdleStore" /* 6668 */;
 import LibraryApplicationStore from "LibraryApplicationStore" /* 2040 */;
-import LocalActivityStore from "LocalActivityStore" /* 11198 */;
-import PresenceStore from "PresenceStore" /* 5713 */;
-import SessionsStore from "SessionsStore" /* 5717 */;
+import LocalActivityStore from "LocalActivityStore" /* 11233 */;
+import PresenceStore from "PresenceStore" /* 5748 */;
+import SessionsStore from "SessionsStore" /* 5752 */;
 
 require = fn;
 function filterPlayingActivities(arg0) {
@@ -146,7 +146,7 @@ function handleConnectionOpen() {
   handleUpdate();
   const result = PresenceStore.setCurrentUserOnConnectionOpen(IDLE, valueResult);
 }
-const sortActivity = fn(5713).sortActivity;
+const sortActivity = fn(5748).sortActivity;
 const Constants = fn(1084);
 const StatusTypes = Constants.StatusTypes;
 ({ ActivityTypes: map1, AppStates: closure_14 } = Constants);

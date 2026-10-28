@@ -1,8 +1,8 @@
-// === Module 16044: TinyBroncoLazy ===
+// === Module 16272: TinyBroncoLazy ===
 
-// Module 16044 (TinyBroncoLazy)
-import TinyBroncoNoticeVisibility from "TinyBroncoNoticeVisibility" /* 16045 */;
-import useShowTinyBroncoPromoSheet from "useShowTinyBroncoPromoSheet" /* 16046 */;
+// Module 16272 (TinyBroncoLazy)
+import TinyBroncoNoticeVisibility from "TinyBroncoNoticeVisibility" /* 16273 */;
+import useShowTinyBroncoPromoSheet from "useShowTinyBroncoPromoSheet" /* 16274 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/tiny_bronco/native/TinyBroncoLazy.tsx");

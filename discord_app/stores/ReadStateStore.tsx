@@ -1,6 +1,6 @@
-// === Module 6772: ReadStateStore ===
+// === Module 6806: ReadStateStore ===
 
-// Module 6772 (ReadStateStore)
+// Module 6806 (ReadStateStore)
 import LoggerDefault from "Logger" /* 3 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
@@ -9,51 +9,51 @@ import HTTPUtils from "HTTPUtils" /* 1294 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
 import AppStateStore from "AppStateStore" /* 1998 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import TypeUtils from "TypeUtils" /* 4836 */;
-import ThreadActionUtils from "ThreadActionUtils" /* 4912 */;
-import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4913 */;
-import RootNavigationRef from "RootNavigationRef" /* 5152 */;
-import isMessageMentioned from "isMessageMentioned" /* 6372 */;
-import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6495 */;
-import NSFWContentGate from "NSFWContentGate" /* 6682 */;
-import networkAwareRetryDefault from "networkAwareRetry" /* 6799 */;
-import OverlaySupported from "OverlaySupported" /* 6800 */;
-import OverlayVisibility from "OverlayVisibility" /* 6801 */;
-import DiscordAppStateDefault from "DiscordAppState" /* 6802 */;
-import isChannelFocused from "isChannelFocused" /* 6803 */;
-import MessageRequestUtils from "MessageRequestUtils" /* 6814 */;
-import isOptInEnabled from "isOptInEnabled" /* 6815 */;
-import GuildReadStateStore from "GuildReadStateStore" /* 6816 */;
-import visibleInlineChannels from "visibleInlineChannels" /* 6821 */;
-import ThreadNotificationSettings from "ThreadNotificationSettings" /* 6822 */;
-import isChangelogChannelDefault from "isChangelogChannel" /* 6823 */;
+import TypeUtils from "TypeUtils" /* 4868 */;
+import ThreadActionUtils from "ThreadActionUtils" /* 4944 */;
+import BasicPermissionUtilsDefault from "BasicPermissionUtils" /* 4945 */;
+import RootNavigationRef from "RootNavigationRef" /* 5187 */;
+import isMessageMentioned from "isMessageMentioned" /* 6406 */;
+import IOSPushNotificationRawPayloadFixExperiment from "IOSPushNotificationRawPayloadFixExperiment" /* 6529 */;
+import NSFWContentGate from "NSFWContentGate" /* 6716 */;
+import networkAwareRetryDefault from "networkAwareRetry" /* 6833 */;
+import OverlaySupported from "OverlaySupported" /* 6834 */;
+import OverlayVisibility from "OverlayVisibility" /* 6835 */;
+import DiscordAppStateDefault from "DiscordAppState" /* 6836 */;
+import isChannelFocused from "isChannelFocused" /* 6837 */;
+import MessageRequestUtils from "MessageRequestUtils" /* 6848 */;
+import isOptInEnabled from "isOptInEnabled" /* 6849 */;
+import GuildReadStateStore from "GuildReadStateStore" /* 6850 */;
+import visibleInlineChannels from "visibleInlineChannels" /* 6855 */;
+import ThreadNotificationSettings from "ThreadNotificationSettings" /* 6856 */;
+import isChangelogChannelDefault from "isChangelogChannel" /* 6857 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6773 */;
-import GatedChannelStore from "GatedChannelStore" /* 4876 */;
-import ExperimentStore from "ExperimentStore" /* 5191 */;
-import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6785 */;
-import MessageRequestStore from "MessageRequestStore" /* 6786 */;
-import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6787 */;
-import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6788 */;
-import ActiveThreadsStore from "ActiveThreadsStore" /* 6791 */;
-import JoinedThreadsStore from "JoinedThreadsStore" /* 4906 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
+import GatedChannelStore from "GatedChannelStore" /* 4908 */;
+import ExperimentStore from "ExperimentStore" /* 5226 */;
+import GuildScheduledEventStore from "GuildScheduledEventStore" /* 6819 */;
+import MessageRequestStore from "MessageRequestStore" /* 6820 */;
+import SpamMessageRequestStore from "SpamMessageRequestStore" /* 6821 */;
+import NotificationCenterItemsStore from "NotificationCenterItemsStore" /* 6822 */;
+import ActiveThreadsStore from "ActiveThreadsStore" /* 6825 */;
+import JoinedThreadsStore from "JoinedThreadsStore" /* 4938 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelSectionStore from "ChannelSectionStore" /* 6792 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import DimensionStore from "DimensionStore" /* 6491 */;
-import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6704 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import IdleStore from "IdleStore" /* 6634 */;
-import MessageStore from "MessageStore" /* 6011 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
-import RelationshipStore from "RelationshipStore" /* 4914 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
+import ChannelSectionStore from "ChannelSectionStore" /* 6826 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import DimensionStore from "DimensionStore" /* 6525 */;
+import GuildAvailabilityStore from "GuildAvailabilityStore" /* 6738 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import IdleStore from "IdleStore" /* 6668 */;
+import MessageStore from "MessageStore" /* 6045 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
+import RelationshipStore from "RelationshipStore" /* 4946 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6739 */;
 import UserStore from "UserStore" /* 1389 */;
-import WindowStore from "WindowStore" /* 6797 */;
+import WindowStore from "WindowStore" /* 6831 */;
 
 const isMessageMentionedDefault = isMessageMentioned;
 
@@ -821,18 +821,18 @@ function handleGuildFeatureAck(id) {
   }
   return tmp;
 }
-const isEventUpcoming = fn(6785).isEventUpcoming;
-const ChannelRecord = fn(4828);
+const isEventUpcoming = fn(6819).isEventUpcoming;
+const ChannelRecord = fn(4860);
 ({ isChannelChatInSidebar: closure_17, isReadableType: closure_18, isThread: closure_19, isPrivate: closure_20, ALL_CHANNEL_TYPES: closure_21, THREAD_CHANNEL_TYPES: closure_22 } = ChannelRecord);
 const Constants = fn(1084);
 ({ AnalyticsObjectTypes: closure_37, AnalyticsObjects: closure_38, AnalyticsSections: closure_39, Endpoints: closure_40, ChannelLayouts: closure_41, OverlayWidgets, CURRENT_APP_CONTEXT: closure_42, ChannelTypes: closure_43, BasicPermissions } = Constants);
 ({ Permissions: closure_45, MessageTypes: closure_46, RelationshipTypes: closure_47, ChannelTypesSets: closure_48, UserNotificationSettings: closure_49, MessageTypesSets: closure_50, AppStates: closure_51 } = Constants);
-const ActivityPanelConstants = fn(5610);
+const ActivityPanelConstants = fn(5645);
 ({ ActivityPanelModes: closure_52, FocusedActivityLayouts: closure_53 } = ActivityPanelConstants);
-const ChannelConstants = fn(4831);
+const ChannelConstants = fn(4863);
 ({ ChannelFlags: closure_54, isStaticChannelRoute: closure_55 } = ChannelConstants);
-const GuildScheduledEventStatus = fn(4830).GuildScheduledEventStatus;
-const ReadStateTypes = fn(6706).ReadStateTypes;
+const GuildScheduledEventStatus = fn(4862).GuildScheduledEventStatus;
+const ReadStateTypes = fn(6740).ReadStateTypes;
 const ThreadMemberFlags = fn(1124).ThreadMemberFlags;
 const logger = new LoggerDefault("ReadStateStore");
 let closure_60 = BasicPermissions.VIEW_CHANNEL | BasicPermissions.READ_MESSAGE_HISTORY;
@@ -1926,14 +1926,14 @@ prototype2["_ack"] = function _ack(importDefault, ackMessageId) {
         }
         DispatcherDefault.dispatch({ type: "MESSAGE_ACKED" });
         if (closure_2) {
-          asyncRequireImpl(6820, dependencyMap.paths).then((result) => {
+          asyncRequireImpl(6854, dependencyMap.paths).then((result) => {
             let obj = importDefault;
             if (importDefault == null) {
               obj = {};
             }
             result.default(channelId.channelId, obj);
           });
-          const promise = asyncRequireImpl(6820, dependencyMap.paths);
+          const promise = asyncRequireImpl(6854, dependencyMap.paths);
         }
       }
     });
@@ -3248,7 +3248,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
   },
   CHANNEL_LOCAL_ACK: function handleChannelLocalAck(channelId) {
     value = ReadState.get(channelId.channelId);
-    return value.ack({ messageId: "IconComponent", local: "IconComponent", immediate: "Reflect", force: "any", isExplicitUserAction: "clearReactNativeMicrotask", trackAnalytics: "hasVisitedDisplayNameStyles" });
+    return value.ack({ messageId: "IconComponent", local: "IconComponent", immediate: "Reflect", force: "1000000000000000000", isExplicitUserAction: null, trackAnalytics: "1000000000000000001" });
   },
   CHANNEL_PINS_ACK: function handleChannelPinsAck(channelId) {
     value = ReadState.get(channelId.channelId);
@@ -3635,7 +3635,7 @@ const readStateStoreClass = new ReadStateStoreClass(DispatcherDefault, {
     });
     const item = found.forEach((messageId) => {
       value = ReadState.get(messageId.channelId, messageId.readStateType);
-      value.ack({ messageId: messageId.messageId, local: true, immediate: "IconComponent", force: "Reflect", isExplicitUserAction: 0, trackAnalytics: 4 });
+      value.ack({ messageId: messageId.messageId, local: true, immediate: "IconComponent", force: "Reflect", isExplicitUserAction: "M2.97995 0.40039H10.72L13.02 8.26039L14.68 0.40039H20.06L17.08 14.4004H9.49995L7.09995 6.46039L5.39995 14.4004H-4.88423e-05L2.97995 0.40039ZM22.1792 0.40039H28.5192L25.5392 14.4004H19.1992L22.1792 0.40039ZM33.5962\n5.02039H28.8562L29.8362 0.40039H45.6562L44.6762 5.02039H39.9362L37.9362 14.4004H31.6162L33.5962 5.02039ZM47.0034 0.40039H57.5834C58.6634 0.40039 59.5967 0.593723 60.3834 0.980391C61.1834 1.36706 61.7901 1.90039 62.2034 2.58039C62.6167\n3.24706 62.8234 4.00706 62.8234 4.86039C62.8234 6.19372 62.4167 7.28706 61.6034 8.14039C60.8034 8.99372 59.7301 9.48039 58.3834 9.60039L61.1434 14.4004H54.1034L51.5234 8.92039L50.3634 14.4004H44.0234L47.0034 0.40039ZM54.0434\n7.36039C55.6034 7.36039 56.3834 6.81372 56.3834 5.72039C56.3834 5.33372 56.2367 5.02039 55.9434 4.78039C55.6634 4.54039 55.2634 4.42039 54.7434 4.42039H52.4834L51.8634 7.36039H54.0434ZM72.8804 14.8004C71.0138 14.8004 69.3671 14.5071\n67.9404 13.9204C66.5138 13.3204 65.4071 12.4871 64.6204 11.4204C63.8338 10.3537 63.4404 9.13372 63.4404 7.76039C63.4404 6.25372 63.8471 4.91372 64.6604 3.74039C65.4738 2.55372 66.6138 1.63372 68.0804 0.980391C69.5471 0.327057 71.2338\n0.000390053 73.1404 0.000390053C75.0604 0.000390053 76.7471 0.287057 78.2004 0.86039C79.6538 1.42039 80.7738 2.21372 81.5604 3.24039C82.3604 4.26706 82.7604 5.45372 82.7604 6.80039C82.7604 8.33372 82.3404 9.70706 81.5004 10.9204C80.6604\n12.1337 79.4938 13.0871 78.0004 13.7804C76.5071 14.4604 74.8004 14.8004 72.8804 14.8004ZM72.9004 10.1404C73.4738 10.1404 73.9938 10.0071 74.4604 9.74039C74.9271 9.46039 75.2938 9.08706 75.5604 8.62039C75.8271 8.15372 75.9604 7.64039\n75.9604 7.08039C75.9604 6.34706 75.7004 5.76039 75.1804 5.32039C74.6738 4.88039 74.0204 4.66039 73.2204 4.66039C72.6471 4.66039 72.1271 4.79372 71.6604 5.06039C71.2071 5.31372 70.8471 5.66706 70.5804 6.12039C70.3271 6.57372 70.2004 7.08039 70.2004 7.64039C70.2004 8.40039 70.4471 9.00706 70.9404 9.46039C71.4338 9.91372 72.0871 10.1404 72.9004 10.1404ZM95.7692 14.8004C94.2225 14.8004 92.7892 14.6071 91.4692 14.2204C90.1492 13.8337 89.0158 13.3204 88.0692 12.6804L88.8892\n8.80039C89.5825 9.36039 90.5425 9.82706 91.7692 10.2004C92.9958 10.5737 94.1958 10.7604 95.3692 10.7604C96.0092 10.7604 96.4558 10.7071 96.7092 10.6004C96.9758 10.4804 97.1092 10.2804 97.1092 10.0004C97.1092 9.80039 97.0158 9.64706 96.8292 9.54039C96.6558 9.42039 96.3425 9.32039 95.8892 9.24039L94.2892 8.98039C92.7292 8.74039 91.5625 8.29372 90.7892 7.64039C90.0158 6.97372 89.6292 6.14039 89.6292 5.14039C89.6292 3.35372 90.3892 2.05372 91.9092 1.24039C93.4292 0.413723\n95.4225 0.000390053 97.8892 0.000390053C99.3292 0.000390053 100.609 0.14039 101.729 0.420389C102.849 0.70039 103.916 1.08706 104.929 1.58039L104.109 5.36039C103.589 5.04039 102.783 4.74706 101.689 4.48039C100.609 4.21372 99.5358 4.08039\n98.4692 4.08039C97.7758 4.08039 97.2558 4.13372 96.9092 4.24039C96.5758 4.33372 96.4092 4.50706 96.4092 4.76039C96.4092 4.93372 96.4958 5.07372 96.6692 5.18039C96.8558 5.28706 97.2025 5.36706 97.7092 5.42039L99.5092 5.64039C101.016 5.82706 102.149 6.22706 102.909 6.84039C103.669 7.45372 104.049 8.32039 104.049 9.44039C104.049 10.6004 103.676 11.5871 102.929 12.4004C102.183 13.2004 101.183 13.8004 99.9292 14.2004C98.6758 14.6004 97.2892 14.8004 95.7692 14.8004ZM117.574\n14.5404C116.641 14.7137 115.721 14.8004 114.814 14.8004C112.947 14.8004 111.301 14.5071 109.874 13.9204C108.447 13.3204 107.341 12.4871 106.554 11.4204C105.767 10.3537 105.374 9.13372 105.374 7.76039C105.374 6.25372 105.781 4.91372 106.594 3.74039C107.407 2.55372 108.547 1.63372 110.014 0.980391C111.481 0.327057 113.167 0.000390053 115.074 0.000390053C116.994 0.000390053 118.681 0.287057 120.134 0.86039C121.587 1.42039 122.707 2.21372 123.494 3.24039C124.294 4.26706 124.694 5.45372 124.694 6.80039C124.694 8.16039 124.361 9.40039 123.694 10.5204C123.027 11.6404 122.094 12.5604 120.894 13.2804L122.334 15.4404H118.154L117.574 14.5404ZM112.134 7.64039C112.134 8.38706 112.374 8.98706 112.854 9.44039C113.334\n9.88039 113.961 10.1137 114.734 10.1404L113.194 7.74039H117.194L117.614 8.38039C117.801 7.96706 117.894 7.53372 117.894 7.08039C117.894 6.34706 117.634 5.76039 117.114 5.32039C116.607 4.88039 115.954 4.66039 115.154 4.66039C114.581 4.66039 114.061 4.79372 113.594 5.06039C113.141 5.31372 112.781 5.66706 112.514 6.12039C112.261 6.57372 112.134 7.08039 112.134 7.64039ZM133.406 14.8004C131.899 14.8004 130.566 14.5671 129.406 14.1004C128.259 13.6204 127.366 12.9271 126.726\n12.0204C126.086 11.1137 125.766 10.0404 125.766 8.80039C125.766 8.28039 125.826 7.73372 125.946 7.16039L127.406 0.40039H133.746L132.186 7.68039C132.133 7.97372 132.106 8.18039 132.106 8.30039C132.106 8.83372 132.273 9.25372 132.606\n9.56039C132.939 9.85372 133.379 10.0004 133.926 10.0004C135.193 10.0004 135.966 9.31372 136.246 7.94039L137.846 0.40039H144.186L142.526 8.22039C142.073 10.3404 141.066 11.9671 139.506 13.1004C137.959 14.2337 135.926 14.8004 133.406\n14.8004ZM148.999 0.40039H158.219L159.819 14.3804H153.599L153.439 12.2004H148.879L147.779 14.4004H141.439L148.999 0.40039ZM153.219 9.10039L152.859 4.16039L150.399 9.10039H153.219ZM163.859 0.40039H172.079C173.839 0.40039 175.326 0.667056\n176.539 1.20039C177.752 1.73372 178.659 2.45372 179.259 3.36039C179.859 4.26706 180.159 5.28706 180.159 6.42039C180.159 8.15372 179.679 9.62039 178.719 10.8204C177.759 12.0204 176.439 12.9204 174.759 13.5204C173.092 14.1071 171.192 14.4004 169.059 14.4004H160.879L163.859 0.40039ZM169.599 10.3404C170.772 10.3404 171.699 10.0204 172.379 9.38039C173.059 8.74039 173.399 7.88039 173.399 6.80039C173.399 6.12039 173.192 5.56039 172.779 5.12039C172.379 4.68039 171.786 4.46039\n170.999 4.46039H169.339L168.079 10.3404H169.599Z", trackAnalytics: null });
     });
     if (context === closure_1_42) {
       const push = navigation.push;

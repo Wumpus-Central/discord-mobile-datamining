@@ -1,22 +1,22 @@
-// === Module 10091: ForumComposerModal ===
+// === Module 10123: ForumComposerModal ===
 
-// Module 10091 (ForumComposerModal)
+// Module 10123 (ForumComposerModal)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import KeyboardUIStore from "KeyboardUIStore" /* 1500 */;
 import KeyboardTypes from "KeyboardTypes" /* 1628 */;
 import KeyboardManagerUtilsAll from "KeyboardManagerUtils" /* 1893 */;
-import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5910 */;
-import DraftActionCreatorsDefault from "DraftActionCreators" /* 8302 */;
-import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9667 */;
-import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10090 */;
+import actions_AlertActionCreatorsDefault from "actions/AlertActionCreators" /* 5945 */;
+import DraftActionCreatorsDefault from "DraftActionCreators" /* 8336 */;
+import UploadAttachmentActionCreatorsDefault from "UploadAttachmentActionCreators" /* 9699 */;
+import ForumComposerModalActionCreators from "ForumComposerModalActionCreators" /* 10122 */;
 import noop from "module_19" /* 19 */;
-import NativeMenuStore from "NativeMenuStore" /* 10092 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import DraftStore from "DraftStore" /* 7632 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8291 */;
-import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7386 */;
+import NativeMenuStore from "NativeMenuStore" /* 10124 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import DraftStore from "DraftStore" /* 7666 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8325 */;
+import ForumPostMessagesStore from "ForumPostMessagesStore" /* 7421 */;
 
 require = fn;
 function showForumComposerCloseAlert(arg0) {
@@ -36,9 +36,9 @@ function showForumComposerCloseAlert(arg0) {
   actions_AlertActionCreatorsDefault.show(obj3);
 }
 const View = fn(17).View;
-const DraftType = fn(7632).DraftType;
+const DraftType = fn(7666).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

@@ -1,15 +1,15 @@
-// === Module 19379: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
+// === Module 19642: GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet ===
 
-// Module 19379 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
+// Module 19642 (GuildRoleSubscriptionTierTemplatePriceReselectionActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import useA11yRolesNative from "useA11yRolesNative" /* 5040 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import FormRadio from "FormRadio" /* 6990 */;
-import PriceUtils from "PriceUtils" /* 7341 */;
-import TouchableHitBoxDefault from "TouchableHitBox" /* 9041 */;
-import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16630 */;
+import useA11yRolesNative from "useA11yRolesNative" /* 5072 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import FormRadio from "FormRadio" /* 7024 */;
+import PriceUtils from "PriceUtils" /* 7376 */;
+import TouchableHitBoxDefault from "TouchableHitBox" /* 9074 */;
+import GuildRoleSubscriptionTypeUtils from "GuildRoleSubscriptionTypeUtils" /* 16859 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -22,7 +22,7 @@ const SubscriptionIntervalTypes = fn(1391).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1095).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md }, rowContainer: null, containerSelected: null, rowStatusIcon: null, backToTemplates: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, padding: 24, borderTopLeftRadius: nativeDefault.radii.md, borderTopRightRadius: nativeDefault.radii.md };
 obj2.rowContainer = { backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm, flexDirection: "row", alignSelf: "stretch", justifyContent: "flex-start", padding: 12, marginBottom: 12, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_MUTED };

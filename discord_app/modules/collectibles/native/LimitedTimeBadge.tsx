@@ -1,13 +1,13 @@
-// === Module 9427: LimitedTimeBadge ===
+// === Module 9459: LimitedTimeBadge ===
 
-// Module 9427 (LimitedTimeBadge)
+// Module 9459 (LimitedTimeBadge)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import shared from "shared" /* 4979 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import useCountdownDefault from "useCountdown" /* 7555 */;
+import shared from "shared" /* 5011 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import useCountdownDefault from "useCountdown" /* 7589 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2065 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
@@ -48,7 +48,7 @@ function getBadgeString(hasItem, days, hours) {
 }
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { root: { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 }, backgroundDarkMode: null, backgroundLightMode: null };
 let obj3 = { borderRadius: nativeDefault.radii.md, paddingHorizontal: 8, paddingVertical: 2 };
 obj2.backgroundDarkMode = { backgroundColor: nativeDefault.colors.WHITE };

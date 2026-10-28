@@ -1,12 +1,12 @@
-// === Module 13547: useUserProfileMutuals ===
+// === Module 13765: useUserProfileMutuals ===
 
-// Module 13547 (useUserProfileMutuals)
+// Module 13765 (useUserProfileMutuals)
 import _mod12 from "module_12" /* 12 */;
-import usePrevValueDefault from "usePrevValue" /* 9030 */;
+import usePrevValueDefault from "usePrevValue" /* 9063 */;
 import _slicedToArray from "module_32" /* 32 */;
-import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7733 */;
-import SortedGuildStore from "SortedGuildStore" /* 6702 */;
-import UserProfileStore from "UserProfileStore" /* 7704 */;
+import UserAffinitiesV2Store from "UserAffinitiesV2Store" /* 7767 */;
+import SortedGuildStore from "SortedGuildStore" /* 6736 */;
+import UserProfileStore from "UserProfileStore" /* 7738 */;
 
 const require = globalThis.__r;
 

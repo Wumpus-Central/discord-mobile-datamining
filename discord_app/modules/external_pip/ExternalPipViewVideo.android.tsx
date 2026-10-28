@@ -1,17 +1,17 @@
-// === Module 18485: ExternalPipViewVideo ===
+// === Module 18726: ExternalPipViewVideo ===
 
-// Module 18485 (ExternalPipViewVideo)
+// Module 18726 (ExternalPipViewVideo)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import CircleInformationIcon from "CircleInformationIcon" /* 5687 */;
-import ExternalPipDefault from "ExternalPip" /* 5825 */;
-import VideoActionCreators from "VideoActionCreators" /* 18487 */;
-import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 18488 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import CircleInformationIcon from "CircleInformationIcon" /* 5722 */;
+import ExternalPipDefault from "ExternalPip" /* 5860 */;
+import VideoActionCreators from "VideoActionCreators" /* 18728 */;
+import useExternalPipParticipantDefault from "useExternalPipParticipant" /* 18729 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ View: closure_7, PixelRatio: closure_8 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { container: null, video: null, videoUnavailableWrap: null, videoUnavailableSpinner: null, unavailable: null, unavailableText: null, user: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -254,7 +254,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
   const tmpResult = userId(504);
   const stateFromStores1 = userId(504).useStateFromStores(tmp8, tmp10);
   const tmpResult3 = userId(504);
-  const avatarDecoration = userId(6783).useAvatarDecoration(stateFromStores, stateFromStores1);
+  const avatarDecoration = userId(6817).useAvatarDecoration(stateFromStores, stateFromStores1);
   if (cResult[6] === stateFromStores1) {
     if (cResult[7] === stateFromStores) {
       let tmp13 = cResult[8];
@@ -264,7 +264,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
         if (cResult[11] === userId) {
           let tmp15 = cResult[12];
         }
-        ({ gradientStops, backgroundColor } = channelId(18486)(tmp15));
+        ({ gradientStops, backgroundColor } = channelId(18727)(tmp15));
         if (cResult[13] !== backgroundColor) {
           const obj2 = { backgroundColor };
           cResult[13] = backgroundColor;
@@ -281,7 +281,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
             let tmp21 = null;
             if (null != gradientStops) {
               const obj3 = { colors: gradientStops, start, end, style: StyleSheet.absoluteFill, pointerEvents: "none" };
-              tmp21 = closure_11(tmp16(5259), obj3);
+              tmp21 = closure_11(tmp16(5294), obj3);
             }
             cResult[18] = gradientStops;
             cResult[19] = tmp21;
@@ -333,7 +333,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
         cResult[17] = items3;
         tmp19 = items3;
         tmp16 = channelId;
-        const tmp17 = channelId(18486)(tmp15);
+        const tmp17 = channelId(18727)(tmp15);
       }
     }
     const obj6 = { userId, guildId: stateFromStores1, avatarURI: tmp13, location: "ExternalPipViewVideo-native" };
@@ -351,7 +351,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
   cResult[7] = stateFromStores;
   cResult[8] = avatarURL;
   tmp13 = avatarURL;
-  const tmpResult4 = userId(6783);
+  const tmpResult4 = userId(6817);
 }) : (function ExternalPipViewVideoUser(userId) {
   userId = userId.userId;
   const channelId = userId.channelId;
@@ -371,17 +371,17 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
     return guild_id;
   });
   const obj3 = userId(504);
-  const avatarDecoration = userId(6783).useAvatarDecoration(stateFromStores, stateFromStores1);
+  const avatarDecoration = userId(6817).useAvatarDecoration(stateFromStores, stateFromStores1);
   const obj2 = { userId, guildId: stateFromStores1, avatarURI: null, location: "ExternalPipViewVideo-native" };
   let avatarURL;
-  const obj4 = userId(6783);
+  const obj4 = userId(6817);
   const tmp6 = channelId;
   if (stateFromStores != null) {
     avatarURL = stateFromStores.getAvatarURL(stateFromStores1, 80, false);
   }
   obj2.avatarURI = avatarURL;
-  const tmp7 = channelId(18486);
-  ({ gradientStops, backgroundColor } = channelId(18486)(obj2));
+  const tmp7 = channelId(18727);
+  ({ gradientStops, backgroundColor } = channelId(18727)(obj2));
   const items2 = [tmp.user, backgroundColor];
   const obj5 = {
     style: noop.useMemo(() => {
@@ -393,7 +393,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
   let tmp12 = null;
   if (null != gradientStops) {
     const obj6 = { colors: gradientStops, start, end, style: StyleSheet.absoluteFill, pointerEvents: "none" };
-    tmp12 = closure_11(tmp6(5259), obj6);
+    tmp12 = closure_11(tmp6(5294), obj6);
   }
   const items3 = [tmp12, ];
   let tmp17 = null;
@@ -417,7 +417,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
     first = cResult[0];
   }
   let obj = streamId(576);
-  const surfaceDirectRendererExperiment = streamId(5839).useSurfaceDirectRendererExperiment(streamId.userId, first);
+  const surfaceDirectRendererExperiment = streamId(5874).useSurfaceDirectRendererExperiment(streamId.userId, first);
   const tmp6 = closure_17(streamId);
   const streamReady = tmp6.streamReady;
   ({ streamReadLongTime, streamReadyCallback } = tmp6);
@@ -455,7 +455,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
     if (cResult[7] === tmp11) {
       let tmp12 = cResult[8];
     }
-    const token = tmp(5253).useToken(streamReady(587).colors.TEXT_FEEDBACK_INFO);
+    const token = tmp(5288).useToken(streamReady(587).colors.TEXT_FEEDBACK_INFO);
     dependencyMap = closure_8.get();
     if (cResult[9] !== streamId) {
       const fn2 = function w(nativeEvent) {
@@ -525,7 +525,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
       }
     }
     const obj7 = { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: tmp12, streamId, onReady: streamReadyCallback, onLayout: tmp16 };
-    const tmp19 = closure_11(streamReady(11442), obj7);
+    const tmp19 = closure_11(streamReady(11480), obj7);
     cResult[11] = tmp16;
     cResult[12] = streamId;
     cResult[13] = streamReadyCallback;
@@ -533,17 +533,17 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
     cResult[15] = surfaceDirectRendererExperiment;
     cResult[16] = tmp19;
     tmp17 = tmp19;
-    const tmpResult2 = tmp(5253);
+    const tmpResult2 = tmp(5288);
   }
   const items2 = [tmp10.video, tmp11];
   cResult[6] = tmp10.video;
   cResult[7] = tmp11;
   cResult[8] = items2;
   tmp12 = items2;
-  const tmpResult = streamId(5839);
+  const tmpResult = streamId(5874);
 }) : (function ExternalPipViewVideoStream(streamId) {
   streamId = streamId.streamId;
-  const surfaceDirectRendererExperiment = streamId(5839).useSurfaceDirectRendererExperiment(streamId.userId, { location: "ExternalPipViewVideoStream" });
+  const surfaceDirectRendererExperiment = streamId(5874).useSurfaceDirectRendererExperiment(streamId.userId, { location: "ExternalPipViewVideoStream" });
   const tmp2 = closure_17(streamId);
   const streamReady = tmp2.streamReady;
   let items = [streamReady];
@@ -565,8 +565,8 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
     items[1] = { opacity: num };
     return items;
   }, items1);
-  let obj = streamId(5839);
-  const token = streamId(5253).useToken(streamReady(587).colors.TEXT_FEEDBACK_INFO);
+  let obj = streamId(5874);
+  const token = streamId(5288).useToken(streamReady(587).colors.TEXT_FEEDBACK_INFO);
   value = closure_8.get();
   c3 = value;
   const items2 = [streamId, value];
@@ -577,7 +577,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled() ? (function Extern
       VideoActionCreators.updateVideoSize(tmp, size, 1);
     }
   }, items2);
-  const children = [closure_11(streamReady(11442), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: streamReadyCallback, onLayout: callback }), ];
+  const children = [closure_11(streamReady(11480), { useSurfaceDirectRenderer: surfaceDirectRendererExperiment, style: memo, streamId, onReady: streamReadyCallback, onLayout: callback }), ];
   let tmp11Result = null;
   if (null == streamReady) {
     tmp11Result = null;

@@ -1,15 +1,15 @@
-// === Module 12308: ConjureAppBuildRequest ===
+// === Module 12353: ConjureAppBuildRequest ===
 
-// Module 12308 (ConjureAppBuildRequest)
+// Module 12353 (ConjureAppBuildRequest)
 import util from "util" /* 1125 */;
-import _modDef3831 from "module_3831" /* 3831 */;
-import createNonce from "createNonce" /* 10205 */;
-import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12299 */;
-import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12309 */;
-import conjureSendToProject from "conjureSendToProject" /* 12311 */;
+import _modDef3863 from "module_3863" /* 3863 */;
+import createNonce from "createNonce" /* 10237 */;
+import conjureAttachmentDrafts from "conjureAttachmentDrafts" /* 12344 */;
+import useConjureProjectPickerOptionsDefault from "useConjureProjectPickerOptions" /* 12354 */;
+import conjureSendToProject from "conjureSendToProject" /* 12356 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 const require = globalThis.__r;
 
@@ -32,11 +32,11 @@ function sentMessage(arr) {
     [tmp, arr] = arg0;
     const mapped = arr.map((name) => {
       const intl = closure_1_0(1125).intl;
-      return intl.formatToPlainString(closure_1_1(3831).tcDZw9, { name: name.name, projectId: name.projectId });
+      return intl.formatToPlainString(closure_1_1(3863).tcDZw9, { name: name.name, projectId: name.projectId });
     });
     const targets = mapped.join(", ");
     let intl = require("util").intl;
-    return "" + intl.formatToPlainString(_modDef3831.jZlNst, { targets }) + "\n\n" + tmp;
+    return "" + intl.formatToPlainString(_modDef3863.jZlNst, { targets }) + "\n\n" + tmp;
   });
   return arr.join("\n\n");
 }
@@ -51,7 +51,7 @@ export const appBuildRequestSentToast = function appBuildRequestSentToast(arr) {
   const obj = { names: null };
   const mapped = arr.map((name) => name.name);
   obj.names = mapped.join(", ");
-  return intl.formatToPlainString(_modDef3831.RZO35O, obj);
+  return intl.formatToPlainString(_modDef3863.RZO35O, obj);
 };
 export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureAppBuildRequestForm(arg0, prompt, arg2, arg3, arg4) {
   _require = arg0;
@@ -187,7 +187,7 @@ export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompiler
                           const intl = content(1125).intl;
                           let obj = { name, projectId: content };
                           const _HermesInternal = HermesInternal;
-                          content = "" + closure_15 + "\n\n" + intl.formatToPlainString(closure_1(3831).ScoZLp, obj);
+                          content = "" + closure_15 + "\n\n" + intl.formatToPlainString(closure_1(3863).ScoZLp, obj);
                           Promise.allSettled(arr7.map((projectId) => {
                             const current = ref.current;
                             value = current.get(projectId.projectId);
@@ -460,7 +460,7 @@ export const useConjureAppBuildRequestForm = ReactCompilerGating.isReactCompiler
           const intl = content(1125).intl;
           let obj = { name, projectId: content };
           const _HermesInternal = HermesInternal;
-          content = "" + trimmed + "\n\n" + intl.formatToPlainString(_prompt(3831).ScoZLp, obj);
+          content = "" + trimmed + "\n\n" + intl.formatToPlainString(_prompt(3863).ScoZLp, obj);
           Promise.allSettled(memo3.map((projectId) => {
             const current = ref.current;
             value = current.get(projectId.projectId);

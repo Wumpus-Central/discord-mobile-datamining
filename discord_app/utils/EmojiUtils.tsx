@@ -1,19 +1,19 @@
-// === Module 4922: EmojiUtils ===
+// === Module 4954: EmojiUtils ===
 
-// Module 4922 (EmojiUtils)
+// Module 4954 (EmojiUtils)
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import ImageUtils from "ImageUtils" /* 1493 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import EmojiTypes from "EmojiTypes" /* 4921 */;
-import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 4928 */;
+import EmojiTypes from "EmojiTypes" /* 4953 */;
+import EmojiUtilsPlatformedDefault from "EmojiUtilsPlatformed" /* 4960 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmojiPackStore from "EmojiPackStore" /* 4923 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
+import EmojiPackStore from "EmojiPackStore" /* 4955 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const PremiumTypeUtils = isPremiumResult(1988);
-const CreatorMonetizationRestrictionsUtils = isPremiumResult(4896);
-const RoleSubscriptionEmojiUtils = isPremiumResult(4926);
+const CreatorMonetizationRestrictionsUtils = isPremiumResult(4928);
+const RoleSubscriptionEmojiUtils = isPremiumResult(4958);
 require = fn;
 function getEmojiUnavailableReason(forceIncludeExternalGuilds) {
   ({ emoji, channel, guildId } = forceIncludeExternalGuilds);
@@ -178,7 +178,7 @@ let closure_21 = async function _getEmojiColors() {
   await EmojiUtilsPlatformedDefault.getEmojiColors(closure_0);
   return value;
 };
-const ChannelRecord = fn(4828);
+const ChannelRecord = fn(4860);
 ({ isGuildTextChannelType: hasOwnProperty, isGuildVocalChannelType: metroRequire } = ChannelRecord);
 const Permissions = fn(1084).Permissions;
 const EmojiConstants = fn(1392);

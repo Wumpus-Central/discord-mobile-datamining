@@ -1,11 +1,11 @@
-// === Module 7272: ProviderConnectionCard ===
+// === Module 7306: ProviderConnectionCard ===
 
-// Module 7272 (ProviderConnectionCard)
+// Module 7306 (ProviderConnectionCard)
 import native from "native" /* 1199 */;
 import AvatarUtils from "AvatarUtils" /* 1414 */;
-import shared from "shared" /* 4979 */;
-import LinkIcon2 from "LinkIcon" /* 5679 */;
-import PlatformsDefault from "Platforms" /* 6503 */;
+import shared from "shared" /* 5011 */;
+import LinkIcon2 from "LinkIcon" /* 5714 */;
+import PlatformsDefault from "Platforms" /* 6537 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
 
@@ -279,7 +279,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Provider
             } else {
               const obj4 = {};
               const obj5 = v3(1264);
-              const merged = Object.assign(provider_id(5712).collectGuildAnalyticsMetadata(guildId));
+              const merged = Object.assign(provider_id(5747).collectGuildAnalyticsMetadata(guildId));
               obj4.connection_type = "provider";
               provider_id = connection.provider_id;
               if (provider_id == null) {

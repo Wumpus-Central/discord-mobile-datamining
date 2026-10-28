@@ -1,22 +1,22 @@
-// === Module 10664: UsernameWithEffects ===
+// === Module 10696: UsernameWithEffects ===
 
-// Module 10664 (UsernameWithEffects)
+// Module 10696 (UsernameWithEffects)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
 import DisplayNameStylesUtils from "DisplayNameStylesUtils" /* 1406 */;
 import DisplayNameEffect from "DisplayNameEffect" /* 1408 */;
-import shared_getNodeText from "shared/getNodeText" /* 5141 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import useTypographyVariantRemap from "useTypographyVariantRemap" /* 5240 */;
-import useToken2 from "useToken" /* 5253 */;
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6368 */;
-import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 6369 */;
-import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9221 */;
-import types from "types" /* 10665 */;
-import useDisplayNameStylesAccessibleColors from "useDisplayNameStylesAccessibleColors" /* 10666 */;
-import PerLetterEffectDefault from "PerLetterEffect" /* 10669 */;
+import shared_getNodeText from "shared/getNodeText" /* 5176 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import useTypographyVariantRemap from "useTypographyVariantRemap" /* 5275 */;
+import useToken2 from "useToken" /* 5288 */;
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6402 */;
+import useDisplayNameStylesEnabled from "useDisplayNameStylesEnabled" /* 6403 */;
+import useDisplayNameStylesFont from "useDisplayNameStylesFont" /* 9254 */;
+import types from "types" /* 10697 */;
+import useDisplayNameStylesAccessibleColors from "useDisplayNameStylesAccessibleColors" /* 10698 */;
+import PerLetterEffectDefault from "PerLetterEffect" /* 10701 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -28,7 +28,7 @@ const MIN_PRISM_GRADIENT_WIDTH = fn(1407).MIN_PRISM_GRADIENT_WIDTH;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 const dependencyMap = { [fn(1408).DisplayNameEffect.NEON]: 1, [fn(1408).DisplayNameEffect.TOON]: 1.6, [fn(1408).DisplayNameEffect.POP]: 1.2 };
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_14 = createStyles.createStyles((textShadowColor, arg1) => {
   const result = 0.04 * arg1;
   const sum = 4 + 0.12 * arg1;
@@ -144,7 +144,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
           if (cResult[9] !== displayNameStylesFont) {
             let tmp18;
             if (null != displayNameStylesFont) {
-              const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "y" };
+              const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "Array" };
               tmp18 = obj3;
             }
             cResult[9] = displayNameStylesFont;
@@ -706,7 +706,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let STATIC = userName.effectDisplayType;
   ({ userId, guildId } = userName);
   if (STATIC === undefined) {
-    STATIC = userName(10665).EffectDisplayType.STATIC;
+    STATIC = userName(10697).EffectDisplayType.STATIC;
   }
   ({ defaultColor, containerStyle, ignoreDisabledStylesSetting, pendingDisplayNameStyles } = userName);
   if (ignoreDisabledStylesSetting === undefined) {
@@ -714,13 +714,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   }
   const merged = Object.assign(userName, Object.assign({ userId: 0, guildId: 0, userName: 0, effectDisplayType: 0, pendingDisplayNameStyles: 0, defaultColor: 0, containerStyle: 0, ignoreDisabledStylesSetting: 0 }));
   let num2;
-  const tmp6 = num2(6368)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
-  const displayNameStylesEnabled = userName(6369).useDisplayNameStylesEnabled({ location: "UsernameWithEffects" });
-  const obj = userName(6369);
-  const displayNameStylesFont = userName(9221).useDisplayNameStylesFont({ displayNameStyles: tmp6, ignoreDisabledStylesSetting });
+  const tmp6 = num2(6402)({ userId, guildId, pendingDisplayNameStyles, ignoreDisabledStylesSetting });
+  const displayNameStylesEnabled = userName(6403).useDisplayNameStylesEnabled({ location: "UsernameWithEffects" });
+  const obj = userName(6403);
+  const displayNameStylesFont = userName(9254).useDisplayNameStylesFont({ displayNameStyles: tmp6, ignoreDisabledStylesSetting });
   let tmp10;
   if (null != displayNameStylesFont) {
-    const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "y" };
+    const obj3 = { fontFamily: displayNameStylesFont, lineHeight: "Array" };
     tmp10 = obj3;
   }
   let num = merged.lineClamp;
@@ -736,12 +736,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     tmp11 = tmp12;
   }
-  const obj2 = userName(9221);
-  const token = userName(5253).useToken(tmp4(587).colors.BACKGROUND_BASE_LOW);
-  const tmp7Result = userName(5253);
-  const token1 = userName(5253).useToken(tmp4(587).colors.WHITE);
-  const tmp7Result7 = userName(5253);
-  const displayNameStylesAccessibleColors = userName(10666).useDisplayNameStylesAccessibleColors({ displayNameStyles: tmp6, backgroundColor: token });
+  const obj2 = userName(9254);
+  const token = userName(5288).useToken(tmp4(587).colors.BACKGROUND_BASE_LOW);
+  const tmp7Result = userName(5288);
+  const token1 = userName(5288).useToken(tmp4(587).colors.WHITE);
+  const tmp7Result7 = userName(5288);
+  const displayNameStylesAccessibleColors = userName(10698).useDisplayNameStylesAccessibleColors({ displayNameStyles: tmp6, backgroundColor: token });
   let first;
   if (displayNameStylesAccessibleColors.length > 0) {
     first = displayNameStylesAccessibleColors[0];
@@ -758,8 +758,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     colorVariants = tmp7(1406).generateColorVariants(first);
     const tmp7Result9 = tmp7(1406);
   }
-  const tmp7Result10 = userName(5240);
-  const tmp18 = userName(5235).TextStyleSheet[tmp7Result10.useTypographyVariantRemap(tmp7Result10, merged.variant, false)];
+  const tmp7Result10 = userName(5275);
+  const tmp18 = userName(5270).TextStyleSheet[tmp7Result10.useTypographyVariantRemap(tmp7Result10, merged.variant, false)];
   const flattenResult = closure_9.flatten(merged.style);
   num2 = undefined;
   if (flattenResult != null) {
@@ -814,15 +814,15 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const tmp26Result = closure_14(str, num2);
   if (displayNameStylesEnabled) {
     if (null != tmp6) {
-      if (STATIC !== tmp7(10665).EffectDisplayType.PLAIN) {
+      if (STATIC !== tmp7(10697).EffectDisplayType.PLAIN) {
         if (null != colorVariants) {
           const items1 = [merged.style, tmp11];
           if (tmp7Result11.doesEffectImpactLayout(effectId)) {
             const layoutImpact = tmp26Result.layoutImpact;
           }
           if (effectId === tmp7(1408).DisplayNameEffect.GUMMY) {
-            const tmp4Result = tmp4(10669);
-            let str3 = tmp7(5141).getNodeText(userName);
+            const tmp4Result = tmp4(10701);
+            let str3 = tmp7(5176).getNodeText(userName);
             if (str3 == null) {
               str3 = "";
             }
@@ -887,7 +887,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     const items5 = [items1, tmp26Result.popBackLayer];
                     obj8.style = items5;
                     obj8.children = userName;
-                    const items6 = [closure_11(tmp7(5235).Text, obj8), ];
+                    const items6 = [closure_11(tmp7(5270).Text, obj8), ];
                     const obj9 = {};
                     const merged3 = Object.assign(merged);
                     obj9.textStrokeWidth = sum;
@@ -899,7 +899,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     const items7 = [items1, tmp26Result.popFrontLayer];
                     obj9.style = items7;
                     obj9.children = userName;
-                    items6[1] = closure_11(tmp7(5235).Text, obj9);
+                    items6[1] = closure_11(tmp7(5270).Text, obj9);
                     obj7.children = items6;
                     return closure_12(closure_6, obj7);
                   }
@@ -935,7 +935,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
               obj11.textStrokeWidth = tmp30;
               obj11.textStrokeColor = tmp29;
               obj11.children = userName;
-              return closure_11(tmp7(5235).Text, obj11);
+              return closure_11(tmp7(5270).Text, obj11);
             }
             const mapped = displayNameStylesAccessibleColors.map((item) => closure_1_7(item));
             const found = mapped.filter(tmp7(1385).isNotNullish);
@@ -970,13 +970,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj12.style = items12;
       obj12.color = defaultColor;
       obj12.children = userName;
-      return closure_11(tmp7(5235).Text, obj12);
+      return closure_11(tmp7(5270).Text, obj12);
     }
   }
   const obj13 = {};
   const merged6 = Object.assign(merged);
   obj13.color = defaultColor;
   obj13.children = userName;
-  return closure_11(userName(5235).Text, obj13);
+  return closure_11(userName(5270).Text, obj13);
 }));
 export const AVERAGE_FONT_WIDTH_RATIO = 0.6;

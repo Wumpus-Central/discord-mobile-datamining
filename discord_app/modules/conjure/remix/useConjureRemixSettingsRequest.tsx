@@ -1,8 +1,8 @@
-// === Module 12364: useConjureRemixSettingsRequest ===
+// === Module 12409: useConjureRemixSettingsRequest ===
 
-// Module 12364 (useConjureRemixSettingsRequest)
-import conjureSettingsRequest from "conjureSettingsRequest" /* 12365 */;
-import ConjureSettingsStore from "ConjureSettingsStore" /* 10719 */;
+// Module 12409 (useConjureRemixSettingsRequest)
+import conjureSettingsRequest from "conjureSettingsRequest" /* 12410 */;
+import ConjureSettingsStore from "ConjureSettingsStore" /* 10751 */;
 
 const require = globalThis.__r;
 
@@ -43,7 +43,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       if (null != settings_keys) {
         let obj2 = { keys: settings_keys, note: null };
         const intl = tmp(1125).intl;
-        obj2.note = intl.string(settings_keys(3831).F2yVHg);
+        obj2.note = intl.string(settings_keys(3863).F2yVHg);
         tmp12 = obj2;
       }
     }
@@ -96,7 +96,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     if (null != settings_keys) {
       let obj2 = { keys: settings_keys, note: null };
       const intl = require("util").intl;
-      obj2.note = intl.string(settings_keys(3831).F2yVHg);
+      obj2.note = intl.string(settings_keys(3863).F2yVHg);
       tmp4 = obj2;
     }
   }

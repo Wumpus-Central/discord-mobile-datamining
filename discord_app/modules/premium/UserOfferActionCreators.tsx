@@ -1,13 +1,13 @@
-// === Module 8432: UserOfferActionCreators ===
+// === Module 8466: UserOfferActionCreators ===
 
-// Module 8432 (UserOfferActionCreators)
+// Module 8466 (UserOfferActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8433 */;
-import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7565 */;
-import UserOfferStore from "UserOfferStore" /* 7561 */;
+import UserDiscountOfferRecord from "UserDiscountOfferRecord" /* 8467 */;
+import UserTrialOfferRecord from "UserTrialOfferRecord" /* 7599 */;
+import UserOfferStore from "UserOfferStore" /* 7595 */;
 
 const require = globalThis.__r;
 
@@ -63,7 +63,7 @@ let closure_12 = async function _fetchUserOffer(arg0) {
           closure_136_1 = flag;
           let obj8 = closure_2;
           if (closure_2 === undefined) {
-            obj8 = { offerId: "toCharArray$esjava$1", paymentGatewayOverride: "Symbol" };
+            obj8 = { offerId: "useCallback", paymentGatewayOverride: "PX_16" };
           }
           closure_136_2 = obj8;
           closure_136_3 = closure_3;

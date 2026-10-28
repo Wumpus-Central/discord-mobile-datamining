@@ -1,6 +1,6 @@
-// === Module 15399: BrowserHevcExperiment ===
+// === Module 15625: BrowserHevcExperiment ===
 
-// Module 15399 (BrowserHevcExperiment)
+// Module 15625 (BrowserHevcExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

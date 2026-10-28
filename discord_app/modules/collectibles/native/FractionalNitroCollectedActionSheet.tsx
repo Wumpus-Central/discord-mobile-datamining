@@ -1,27 +1,27 @@
-// === Module 14515: FractionalNitroCollectedActionSheet ===
+// === Module 14738: FractionalNitroCollectedActionSheet ===
 
-// Module 14515 (FractionalNitroCollectedActionSheet)
+// Module 14738 (FractionalNitroCollectedActionSheet)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
-import shared from "shared" /* 4979 */;
-import useThemeDefault from "useTheme" /* 5206 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import components_Button_Button from "components/Button/Button" /* 5245 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5266 */;
-import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5583 */;
-import LinkingDefault from "Linking" /* 5661 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import Pressables from "Pressables" /* 6910 */;
-import PremiumPlanActionSheetHeaderDefault from "PremiumPlanActionSheetHeader" /* 7544 */;
-import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7692 */;
-import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9437 */;
-import _modDef10483 from "module_10483" /* 10483 */;
-import _modDef10484 from "module_10484" /* 10484 */;
-import CircleQuestionIcon from "CircleQuestionIcon" /* 13979 */;
-import _modDef14516 from "module_14516" /* 14516 */;
+import shared from "shared" /* 5011 */;
+import useThemeDefault from "useTheme" /* 5241 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import components_Button_Button from "components/Button/Button" /* 5280 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5301 */;
+import ActionSheetHeaderBar from "ActionSheetHeaderBar" /* 5618 */;
+import LinkingDefault from "Linking" /* 5696 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import Pressables from "Pressables" /* 6944 */;
+import PremiumPlanActionSheetHeaderDefault from "PremiumPlanActionSheetHeader" /* 7578 */;
+import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7726 */;
+import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9469 */;
+import _modDef10515 from "module_10515" /* 10515 */;
+import _modDef10516 from "module_10516" /* 10516 */;
+import CircleQuestionIcon from "CircleQuestionIcon" /* 14198 */;
+import _modDef14739 from "module_14739" /* 14739 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -32,7 +32,7 @@ const PremiumConstants = fn(1391);
 ({ FRACTIONAL_PREMIUM_SKU_INTERVAL_COUNTS: closure_7, PremiumTypes: closure_8 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { body: { flex: 1, padding: nativeDefault.space.PX_16 }, content: null, buttonContainer: null, description: null, header: null, fractionNitroIcon: null, questionIconContainer: null, questionIcon: null };
 let obj3 = { flex: 1, padding: nativeDefault.space.PX_16 };
 obj2.content = { flex: 1, gap: nativeDefault.space.PX_16, alignItems: "center" };
@@ -40,11 +40,11 @@ let obj4 = { flex: 1, gap: nativeDefault.space.PX_16, alignItems: "center" };
 obj2.buttonContainer = { flex: 1, gap: nativeDefault.space.PX_16, alignSelf: "stretch" };
 obj2.description = { textAlign: "center" };
 obj2.header = { height: 112, justifyContent: "center", alignItems: "center", overflow: "hidden" };
-let size = { width: fn(9437).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, height: fn(9437).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, position: "absolute", top: "50%", left: "50%", transform: null };
+let size = { width: fn(9469).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, height: fn(9469).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, position: "absolute", top: "50%", left: "50%", transform: null };
 let obj5 = { flex: 1, gap: nativeDefault.space.PX_16, alignSelf: "stretch" };
-let items = [{ translateX: -fn(9437).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 }, ];
-let obj6 = { translateX: -fn(9437).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
-items[1] = { translateY: -fn(9437).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+let items = [{ translateX: -fn(9469).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 }, ];
+let obj6 = { translateX: -fn(9469).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+items[1] = { translateY: -fn(9469).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
 size.transform = items;
 obj2.fractionNitroIcon = size;
 const size1 = { position: "absolute", right: nativeDefault.space.PX_16, top: nativeDefault.space.PX_16, width: 32, height: 32, backgroundColor: nativeDefault.colors.CONTROL_OVERLAY_SECONDARY_BACKGROUND_DEFAULT, justifyContent: "center", borderRadius: nativeDefault.radii.lg, alignItems: "center" };
@@ -57,7 +57,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroA
   skuId = skuId.skuId;
   const tmp4 = closure_12();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj2 = { source: _modDef14516 };
+    const obj2 = { source: _modDef14739 };
     const tmp9 = React6(FastImageDefault, obj2);
     cResult[0] = tmp9;
     let first = tmp9;
@@ -101,7 +101,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroA
 }) : (function NitroAcquiredHeader(skuId) {
   const tmp = closure_12();
   const obj = { style: tmp.header, children: null };
-  const obj2 = { source: _modDef14516 };
+  const obj2 = { source: _modDef14739 };
   const items = [React6(FastImageDefault, obj2), ];
   const obj3 = { style: tmp.fractionNitroIcon, children: null };
   const size = { skuId: skuId.skuId, width: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET, height: FractionalNitroCoinIllustration.FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET };
@@ -111,7 +111,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroA
   return v65535(hasOwnProperty, obj);
 });
 ReactCompilerGating = fn(558);
-let obj7 = { translateY: -fn(9437).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
+let obj7 = { translateY: -fn(9469).FRACTIONAL_NITRO_COIN_SIZE.COLLECTED_SHEET / 2 };
 size = fn(2);
 const result = size.fileFinishedImporting("modules/collectibles/native/FractionalNitroCollectedActionSheet.tsx");
 
@@ -124,9 +124,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Fraction
   ({ isLoading, isFractionalPremiumActive, expiresAt } = fetchFractionalPremiumInfo);
   if (consumed) {
     if (tmpResult.isThemeDark(tmp6)) {
-      let tmp5Result = _modDef10483;
+      let tmp5Result = _modDef10515;
     } else {
-      tmp5Result = _modDef10484;
+      tmp5Result = _modDef10516;
     }
     if (cResult[0] !== tmp5Result) {
       const obj3 = { source: tmp5Result };
@@ -355,9 +355,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Fraction
   ({ onPressExplorePerks, onPressViewCredits } = skuId);
   const tmp = closure_12();
   dependencyMap = tmp;
-  const tmp4 = consumed(5206)();
+  const tmp4 = consumed(5241)();
   noop = tmp4;
-  const fetchFractionalPremiumInfo = skuId(7692).useFetchFractionalPremiumInfo();
+  const fetchFractionalPremiumInfo = skuId(7726).useFetchFractionalPremiumInfo();
   const isFractionalPremiumActive = fetchFractionalPremiumInfo.isFractionalPremiumActive;
   const expiresAt = fetchFractionalPremiumInfo.expiresAt;
   const items = [consumed, tmp4];
@@ -367,9 +367,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Fraction
       const tmp10 = FastImageDefault;
       let obj3 = dependencyMap;
       if (obj2.isThemeDark(closure_3)) {
-        let tmp8Result = _modDef10483;
+        let tmp8Result = _modDef10515;
       } else {
-        tmp8Result = _modDef10484;
+        tmp8Result = _modDef10516;
       }
       obj3 = { source: tmp8Result };
       React6(tmp10, obj3);
@@ -417,7 +417,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Fraction
   }, []);
   if (consumed) {
     let obj2 = { premiumType: closure_8.TIER_2 };
-    let tmp12Result = closure_9(tmp2(7544), obj2);
+    let tmp12Result = closure_9(tmp2(7578), obj2);
     let tmp15 = closure_9;
   } else {
     let obj3 = { skuId };
@@ -427,9 +427,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Fraction
   const obj4 = { children: null };
   const items2 = [tmp12Result, ];
   const obj5 = { style: tmp.questionIconContainer, onPress: callback, children: null };
-  let obj = skuId(7692);
-  obj5.children = tmp15(skuId(13979).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(587).colors.WHITE });
-  items2[1] = tmp15(skuId(6910).PressableOpacity, obj5);
+  let obj = skuId(7726);
+  obj5.children = tmp15(skuId(14198).CircleQuestionIcon, { style: tmp.questionIcon, color: consumed(587).colors.WHITE });
+  items2[1] = tmp15(skuId(6944).PressableOpacity, obj5);
   obj4.children = items2;
   const items3 = [closure_10(closure_11, obj4), , ];
   const obj7 = { style: tmp.body, children: null };
@@ -452,14 +452,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Fraction
       obj10.onPress = onPressViewCredits;
       tmp18 = obj10;
     }
-    const items5 = [tmp15(tmp5(5245).Button, tmp18), ];
+    const items5 = [tmp15(tmp5(5280).Button, tmp18), ];
     const obj11 = { size: "lg", variant: "secondary", text: null, onPress: null };
     let intl2 = tmp5(1125).intl;
     obj11.text = intl2.string(tmp5(1125).t.TkTvBz);
     obj11.onPress = function onPress() {
       return consumed(description[25]).hideActionSheet();
     };
-    items5[1] = tmp15(tmp5(5245).Button, obj11);
+    items5[1] = tmp15(tmp5(5280).Button, obj11);
     obj9.children = items5;
     items4[2] = closure_10(tmp17, obj9);
     obj8.children = items4;
@@ -468,7 +468,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Fraction
   const obj12 = { handleDisabled: true, children: null };
   obj7.children = tmp10Result;
   items3[1] = tmp15(expiresAt, obj7);
-  items3[2] = tmp15(skuId(5583).ActionSheetHeaderBar, { variant: "floating" });
+  items3[2] = tmp15(skuId(5618).ActionSheetHeaderBar, { variant: "floating" });
   obj12.children = items3;
-  return closure_10(skuId(5266).BottomSheet, obj12);
+  return closure_10(skuId(5301).BottomSheet, obj12);
 });

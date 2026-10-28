@@ -1,15 +1,15 @@
-// === Module 16065: useAccountStandingStatusLabel ===
+// === Module 16293: useAccountStandingStatusLabel ===
 
-// Module 16065 (useAccountStandingStatusLabel)
+// Module 16293 (useAccountStandingStatusLabel)
 import c from "c" /* 576 */;
-import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 12847 */;
-import useSafetyHubInitialized from "useSafetyHubInitialized" /* 12881 */;
-import useSafetyHubFetchError from "useSafetyHubFetchError" /* 16066 */;
+import useSafetyHubAccountStanding from "useSafetyHubAccountStanding" /* 12894 */;
+import useSafetyHubInitialized from "useSafetyHubInitialized" /* 12928 */;
+import useSafetyHubFetchError from "useSafetyHubFetchError" /* 16294 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
 const util = tmp(1125);
-const SafetyHubAccountStandingLabels = tmp(16067);
+const SafetyHubAccountStandingLabels = tmp(16295);
 const result = size.fileFinishedImporting("modules/safety_hub/hooks/useAccountStandingStatusLabel.tsx");
 
 export const useAccountStandingStatusLabel = ReactCompilerGating.isReactCompilerEnabled() ? (function useAccountStandingStatusLabel() {

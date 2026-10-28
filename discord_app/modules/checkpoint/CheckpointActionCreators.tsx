@@ -1,12 +1,12 @@
-// === Module 12969: CheckpointActionCreators ===
+// === Module 13016: CheckpointActionCreators ===
 
-// Module 12969 (CheckpointActionCreators)
+// Module 13016 (CheckpointActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7413 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7448 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import CheckpointStore from "CheckpointStore" /* 12968 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import CheckpointStore from "CheckpointStore" /* 13015 */;
 
 require = fn;
 let closure_8 = async function _fetchCheckpointData(arg0) {
@@ -307,10 +307,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
             value: Promise.allSettled(closure_133_2.map((item) => {
                       channel = channel.getChannel(item);
                       if (null != channel) {
-                        const obj = checkpointCardType(7567);
+                        const obj = checkpointCardType(7601);
                         const id = channel.id;
                         const obj3 = { location: "checkpoint", checkpointCardType };
-                        return obj.sendMessage(id, checkpointCardType(7756).parse(channel, closure_1_0), false, obj3);
+                        return obj.sendMessage(id, checkpointCardType(7790).parse(channel, closure_1_0), false, obj3);
                       }
                     })),
             done: false

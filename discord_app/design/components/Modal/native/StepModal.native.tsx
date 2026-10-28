@@ -1,11 +1,11 @@
-// === Module 12743: StepModal ===
+// === Module 12790: StepModal ===
 
-// Module 12743 (StepModal)
+// Module 12790 (StepModal)
 import c from "c" /* 576 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import NavigatorConstants from "NavigatorConstants" /* 5269 */;
-import Modal from "Modal" /* 11153 */;
-import ModalStepIndicator from "ModalStepIndicator" /* 12744 */;
+import NavigatorConstants from "NavigatorConstants" /* 5304 */;
+import Modal from "Modal" /* 11188 */;
+import ModalStepIndicator from "ModalStepIndicator" /* 12791 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -15,9 +15,9 @@ let closure_3 = ["steps", "onWillFocus"];
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { height: "100%" }, stepContainer: null };
-const rect = { flexDirection: "column", alignItems: "center", justifyContent: "center", top: 0, left: 0, right: 0, height: fn(5269).NAV_BAR_HEIGHT, zIndex: 1 };
+const rect = { flexDirection: "column", alignItems: "center", justifyContent: "center", top: 0, left: 0, right: 0, height: fn(5304).NAV_BAR_HEIGHT, zIndex: 1 };
 obj2.stepContainer = rect;
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

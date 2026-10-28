@@ -1,13 +1,13 @@
-// === Module 18481: ExternalPipView ===
+// === Module 18722: ExternalPipView ===
 
-// Module 18481 (ExternalPipView)
+// Module 18722 (ExternalPipView)
 import c from "c" /* 576 */;
-import ExternalPipDefault from "ExternalPip" /* 5825 */;
-import ExternalPipAutoEnterExperiment from "ExternalPipAutoEnterExperiment" /* 18484 */;
-import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 18485 */;
+import ExternalPipDefault from "ExternalPip" /* 5860 */;
+import ExternalPipAutoEnterExperiment from "ExternalPipAutoEnterExperiment" /* 18725 */;
+import ExternalPipViewVideoDefault from "ExternalPipViewVideo" /* 18726 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AppFreezeStore from "AppFreezeStore" /* 8781 */;
+import AppFreezeStore from "AppFreezeStore" /* 8818 */;
 
 require = fn;
 const jsx = fn(21).jsx;
@@ -161,14 +161,14 @@ const result = size.fileFinishedImporting("modules/external_pip/ExternalPipView.
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ExternalPipView() {
   const cResult = externalPipEnabled(576).c(12);
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    let obj2 = { disabled: !setExternalPipActive(5825).isSupported() };
+    let obj2 = { disabled: !setExternalPipActive(5860).isSupported() };
     cResult[0] = obj2;
     let first = obj2;
-    let obj3 = setExternalPipActive(5825);
+    let obj3 = setExternalPipActive(5860);
   } else {
     first = cResult[0];
   }
-  externalPipEnabled = setExternalPipActive(18482)(first).externalPipEnabled;
+  externalPipEnabled = setExternalPipActive(18723)(first).externalPipEnabled;
   let obj = externalPipEnabled(576);
   ({ externalPipActive, setExternalPipActive } = closure_7());
   if (cResult[1] !== externalPipEnabled) {
@@ -327,8 +327,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function External
   return tmp16;
 }) : (function ExternalPipView() {
   let obj = { disabled: null };
-  const tmp = setExternalPipActive(18482);
-  obj.disabled = !setExternalPipActive(5825).isSupported();
+  const tmp = setExternalPipActive(18723);
+  obj.disabled = !setExternalPipActive(5860).isSupported();
   const externalPipEnabled = tmp(obj).externalPipEnabled;
   const tmp2 = closure_7();
   setExternalPipActive = tmp2.setExternalPipActive;
@@ -342,7 +342,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function External
   }, items);
   const items1 = [setExternalPipActive];
   const effect1 = noop.useEffect(() => {
-    closure_0 = setExternalPipActive(5825).addOnPipModeChangedListener((arg0) => {
+    closure_0 = setExternalPipActive(5860).addOnPipModeChangedListener((arg0) => {
       setExternalPipActive(arg0);
     });
     return () => {
@@ -355,7 +355,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function External
   }, items1);
   const items2 = [setExternalPipActive];
   const effect2 = noop.useEffect(() => {
-    closure_0 = setExternalPipActive(5825).addOnPipModeWillChangeListener(() => {
+    closure_0 = setExternalPipActive(5860).addOnPipModeWillChangeListener(() => {
       setExternalPipActive(true);
     });
     return () => {

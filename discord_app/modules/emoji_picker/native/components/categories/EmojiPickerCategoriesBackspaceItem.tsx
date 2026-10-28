@@ -1,9 +1,9 @@
-// === Module 9979: EmojiPickerCategoriesBackspaceItem ===
+// === Module 10011: EmojiPickerCategoriesBackspaceItem ===
 
-// Module 9979 (EmojiPickerCategoriesBackspaceItem)
+// Module 10011 (EmojiPickerCategoriesBackspaceItem)
 import util from "util" /* 1125 */;
-import Timers from "Timers" /* 4819 */;
-import BackspaceIcon from "BackspaceIcon" /* 9980 */;
+import Timers from "Timers" /* 4851 */;
+import BackspaceIcon from "BackspaceIcon" /* 10012 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

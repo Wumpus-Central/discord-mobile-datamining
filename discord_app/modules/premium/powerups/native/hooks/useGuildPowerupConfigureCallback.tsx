@@ -1,12 +1,12 @@
-// === Module 13484: useGuildPowerupConfigureCallback ===
+// === Module 13703: useGuildPowerupConfigureCallback ===
 
-// Module 13484 (useGuildPowerupConfigureCallback)
+// Module 13703 (useGuildPowerupConfigureCallback)
 import _modDef38 from "module_38" /* 38 */;
-import Powerups from "Powerups" /* 5186 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9008 */;
-import openGuildPowerupsBottomSheet from "openGuildPowerupsBottomSheet" /* 13455 */;
+import Powerups from "Powerups" /* 5221 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9039 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9042 */;
+import openGuildPowerupsBottomSheet from "openGuildPowerupsBottomSheet" /* 13674 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;

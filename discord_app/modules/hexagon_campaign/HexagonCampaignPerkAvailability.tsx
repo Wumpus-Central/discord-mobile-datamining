@@ -1,10 +1,10 @@
-// === Module 5000: HexagonCampaignPerkAvailability ===
+// === Module 5032: HexagonCampaignPerkAvailability ===
 
-// Module 5000 (HexagonCampaignPerkAvailability)
+// Module 5032 (HexagonCampaignPerkAvailability)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4999 */;
-import HexagonCampaignExperiment from "HexagonCampaignExperiment" /* 5001 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5031 */;
+import HexagonCampaignExperiment from "HexagonCampaignExperiment" /* 5033 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;

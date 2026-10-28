@@ -1,6 +1,6 @@
-// === Module 6324: ? ===
+// === Module 6358: ? ===
 
-// Module 6324
+// Module 6358
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/layer/wearable/deviant_tail.png.js");

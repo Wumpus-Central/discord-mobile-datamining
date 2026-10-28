@@ -1,24 +1,24 @@
-// === Module 15873: UserProfileEditForm ===
+// === Module 16099: UserProfileEditForm ===
 
-// Module 15873 (UserProfileEditForm)
+// Module 16099 (UserProfileEditForm)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import useAnalyticsLocations from "useAnalyticsLocations" /* 7255 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7280 */;
-import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8655 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8686 */;
-import PendingBadgeSettings from "PendingBadgeSettings" /* 14444 */;
-import _modDef15875 from "module_15875" /* 15875 */;
-import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 15876 */;
-import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 15889 */;
-import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 15891 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import useAnalyticsLocations from "useAnalyticsLocations" /* 7289 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7314 */;
+import ProfileCustomizationUtils from "ProfileCustomizationUtils" /* 8692 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8723 */;
+import PendingBadgeSettings from "PendingBadgeSettings" /* 14667 */;
+import _modDef16101 from "module_16101" /* 16101 */;
+import useOpenChangeBannerActionSheetDefault from "useOpenChangeBannerActionSheet" /* 16102 */;
+import UserProfileEditBannerButtonDefault from "UserProfileEditBannerButton" /* 16115 */;
+import MobileWidgetEditingExperiment from "MobileWidgetEditingExperiment" /* 16117 */;
 import _slicedToArray from "module_32" /* 32 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8681 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11128 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8718 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11163 */;
 
 const useAnalyticsLocationsDefault = useAnalyticsLocations;
 
@@ -26,16 +26,16 @@ require = fn;
 let closure_3 = ["isTryItOut"];
 get_ActivityIndicator = fn(17);
 ({ ScrollView: closure_7, View: closure_8 } = get_ActivityIndicator);
-const FLOATING_UPSELL_HEIGHT = fn(7306).FLOATING_UPSELL_HEIGHT;
+const FLOATING_UPSELL_HEIGHT = fn(7340).FLOATING_UPSELL_HEIGHT;
 const Constants = fn(1084);
 ({ DISPLAY_NAME_MAX_LENGTH: closure_12, PRONOUNS_MAX_LENGTH: map1 } = Constants);
-const HexagonCampaignConstants = fn(4997);
+const HexagonCampaignConstants = fn(5029);
 ({ HexagonCampaignPerk: closure_14, HexagonCampaignPerkAvailability: closure_15 } = HexagonCampaignConstants);
 let closure_16 = fn(1094).ProfileCustomizationScrollPositions;
-const constants3 = fn(15874).UserProfileEditAutoFocusElement;
+const constants3 = fn(16100).UserProfileEditAutoFocusElement;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
-let obj = { assetOrigin: fn(7088).AssetOriginTypes.NEW_ASSET, imageUri: _modDef15875, staticImageUri: _modDef15875, description: "", originalAsset: "code" };
+let obj = { assetOrigin: fn(7122).AssetOriginTypes.NEW_ASSET, imageUri: _modDef16101, staticImageUri: _modDef16101, description: "", originalAsset: "unicodeVersion" };
 let ReactCompilerGating = fn(558);
 let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function EditUserProfileBanner(arg0) {
   obj = c;
@@ -656,124 +656,129 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
   if (tmp60Result10) {
     tmp54 = flag;
   }
-  const obj15 = { style: null, children: null };
-  const items7 = [tmp3.formContainer, { backgroundColor: containerBackground }];
-  obj15.style = items7;
+  const items7 = [tmp3.formContainer, , ];
+  let obj15 = flag;
+  if (flag) {
+    obj15 = { marginTop: 0 };
+  }
+  const obj16 = { style: items7, children: null };
+  items7[1] = obj15;
+  items7[2] = { backgroundColor: containerBackground };
   let tmp58 = null;
   if (null != stringResult) {
     tmp58 = null;
     if ("" !== stringResult) {
-      const obj16 = { style: tmp3.errorContainer, children: null };
-      const obj17 = { variant: "text-sm/bold", color: "text-feedback-critical", children: stringResult };
-      obj16.children = closure_18(tmp4(obj[51]).Text, obj17);
-      tmp58 = closure_18(tmp57, obj16);
+      const obj17 = { style: tmp3.errorContainer, children: null };
+      const obj18 = { variant: "text-sm/bold", color: "text-feedback-critical", children: stringResult };
+      obj17.children = closure_18(tmp4(obj[51]).Text, obj18);
+      tmp58 = closure_18(tmp57, obj17);
     }
   }
   const items8 = [tmp58, , , , , , , , , , , , , ];
-  const obj18 = { inputRef: ref1, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, disabled: null };
+  const obj19 = { inputRef: ref1, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, placeholder: null, maxLength: null, disabled: null };
   const tmp4Result18 = currentUser.currentUser(obj[28]);
   const intl2 = tmp4(obj[21]).intl;
-  obj18.label = intl2.string(currentUser.currentUser(obj[21]).t["9AjdkD"]);
-  obj18.errorMessage = first;
+  obj19.label = intl2.string(currentUser.currentUser(obj[21]).t["9AjdkD"]);
+  obj19.errorMessage = first;
   let tmp62 = pendingGlobalName;
   if (pendingGlobalName == null) {
     tmp62 = str3;
   }
-  obj18.value = tmp62;
-  obj18.onFocus = onFocus;
-  obj18.onChange = function onChange(globalName) {
+  obj19.value = tmp62;
+  obj19.onFocus = onFocus;
+  obj19.onChange = function onChange(globalName) {
     return str(sharedValue1[53]).setPendingChanges({ globalName });
   };
-  obj18.placeholder = currentUser.currentUser.toString();
-  obj18.maxLength = maxLength;
-  obj18.disabled = isSubmitting;
-  items8[1] = closure_18(tmp(obj[52]), obj18);
+  obj19.placeholder = currentUser.currentUser.toString();
+  obj19.maxLength = maxLength;
+  obj19.disabled = isSubmitting;
+  items8[1] = closure_18(tmp(obj[52]), obj19);
   if (!result) {
     if (!isTryItOut) {
       let tmp60Result = null;
       if (hexagonCampaignPerkAvailability !== constants2.HIDDEN) {
-        const obj19 = { user: str, availability: hexagonCampaignPerkAvailability, disabled: isSubmitting };
-        tmp60Result = closure_18(tmp(obj[55]), obj19);
+        const obj20 = { user: str, availability: hexagonCampaignPerkAvailability, disabled: isSubmitting };
+        tmp60Result = closure_18(tmp(obj[55]), obj20);
       }
     }
     items8[2] = tmp60Result;
-    const obj20 = { inputRef: ref2, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, maxLength: null, spellCheck: false, autoCorrect: false, disabled: null };
+    const obj21 = { inputRef: ref2, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, maxLength: null, spellCheck: false, autoCorrect: false, disabled: null };
     const intl3 = tmp4(obj[21]).intl;
-    obj20.label = intl3.string(tmp4(obj[21]).t["+T3RI/"]);
-    obj20.errorMessage = first3;
+    obj21.label = intl3.string(tmp4(obj[21]).t["+T3RI/"]);
+    obj21.errorMessage = first3;
     let tmp66 = pendingPronouns;
     if (pendingPronouns == null) {
       tmp66 = str4;
     }
-    obj20.value = tmp66;
-    obj20.onFocus = onFocus;
-    obj20.onChange = function onChange(pronouns) {
+    obj21.value = tmp66;
+    obj21.onFocus = onFocus;
+    obj21.onChange = function onChange(pronouns) {
       return str(sharedValue1[53]).setPendingChanges({ pronouns });
     };
-    obj20.maxLength = maxLength2;
-    obj20.disabled = isSubmitting;
-    items8[3] = closure_18(tmp(obj[52]), obj20);
+    obj21.maxLength = maxLength2;
+    obj21.disabled = isSubmitting;
+    items8[3] = closure_18(tmp(obj[52]), obj21);
     let tmp60Result7 = !isTryItOut;
     if (!isTryItOut) {
-      const obj21 = { badges: memo, catalogBadges: memo1, ownsAnyBadge: someResult, autoOpen: autoFocusElement === constants3.BADGES };
-      tmp60Result7 = closure_18(tmp(obj[56]), obj21);
+      const obj22 = { badges: memo, catalogBadges: memo1, ownsAnyBadge: someResult, autoOpen: autoFocusElement === constants3.BADGES };
+      tmp60Result7 = closure_18(tmp(obj[56]), obj22);
     }
     items8[4] = tmp60Result7;
-    const obj22 = { inputRef: ref3, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, autoFocus: null, maxLength: null, numberOfLines: 5, disabled: null };
+    const obj23 = { inputRef: ref3, label: null, errorMessage: null, value: null, onFocus: null, onChange: null, autoFocus: null, maxLength: null, numberOfLines: 5, disabled: null };
     const tmpResult11 = tmp(obj[52]);
     const intl4 = tmp4(obj[21]).intl;
-    obj22.label = intl4.string(tmp4(obj[21]).t.ZzAR2Y);
-    obj22.errorMessage = first4;
+    obj23.label = intl4.string(tmp4(obj[21]).t.ZzAR2Y);
+    obj23.errorMessage = first4;
     if (pendingBio == null) {
       pendingBio = str5;
     }
-    obj22.value = pendingBio;
-    obj22.onFocus = onFocus;
-    obj22.onChange = function onChange(bio) {
+    obj23.value = pendingBio;
+    obj23.onFocus = onFocus;
+    obj23.onChange = function onChange(bio) {
       return str(sharedValue1[53]).setPendingChanges({ bio });
     };
-    obj22.autoFocus = autoFocusElement === constants3.BIO;
-    obj22.maxLength = bioMaxLength;
-    obj22.disabled = isSubmitting;
-    items8[5] = closure_18(tmp(obj[52]), obj22);
-    const obj23 = { user: str, onProfileThemeColorsChanged: null, pendingAvatarSrc: null, pendingThemeColors: null, isTryItOut: null };
+    obj23.autoFocus = autoFocusElement === constants3.BIO;
+    obj23.maxLength = bioMaxLength;
+    obj23.disabled = isSubmitting;
+    items8[5] = closure_18(tmp(obj[52]), obj23);
+    const obj24 = { user: str, onProfileThemeColorsChanged: null, pendingAvatarSrc: null, pendingThemeColors: null, isTryItOut: null };
     const tmpResult12 = tmp(obj[52]);
     if (isTryItOut) {
       let fn = tmp4(obj[58]).setTryItOutThemeColors;
     } else {
       fn = (themeColors) => str(sharedValue1[53]).setPendingChanges({ themeColors });
     }
-    obj23.onProfileThemeColorsChanged = fn;
-    obj23.pendingAvatarSrc = pendingAvatarSrc;
+    obj24.onProfileThemeColorsChanged = fn;
+    obj24.pendingAvatarSrc = pendingAvatarSrc;
     let tmp73 = pendingThemeColors;
     if (isTryItOut) {
       tmp73 = tryItOutThemeColors;
     }
-    obj23.pendingThemeColors = tmp73;
-    obj23.isTryItOut = isTryItOut;
-    items8[6] = closure_18(tmp(obj[57]), obj23);
-    const obj24 = { user: str, pendingAvatarDecoration: null, isTryItOut: null };
+    obj24.pendingThemeColors = tmp73;
+    obj24.isTryItOut = isTryItOut;
+    items8[6] = closure_18(tmp(obj[57]), obj24);
+    const obj25 = { user: str, pendingAvatarDecoration: null, isTryItOut: null };
     const tmpResult13 = tmp(obj[57]);
     if (isTryItOut) {
       pendingAvatarDecoration = tryItOutAvatarDecoration;
     }
-    obj24.pendingAvatarDecoration = pendingAvatarDecoration;
-    obj24.isTryItOut = isTryItOut;
-    items8[7] = closure_18(tmp(obj[59]), obj24);
-    const obj25 = { user: str, pendingProfileEffect: null, displayProfile: null, isTryItOut: null };
+    obj25.pendingAvatarDecoration = pendingAvatarDecoration;
+    obj25.isTryItOut = isTryItOut;
+    items8[7] = closure_18(tmp(obj[59]), obj25);
+    const obj26 = { user: str, pendingProfileEffect: null, displayProfile: null, isTryItOut: null };
     const tmpResult14 = tmp(obj[59]);
     if (isTryItOut) {
       pendingProfileEffect = tryItOutProfileEffect;
     }
     let tmp60Result8 = "profile" === tmp4Result10.useCustomTypingIndicatorConfig("UserProfileEditForm").entryPoint;
-    obj25.pendingProfileEffect = pendingProfileEffect;
-    obj25.displayProfile = tmp17Result;
-    obj25.isTryItOut = isTryItOut;
-    items8[8] = closure_18(tmp(obj[60]), obj25);
-    const obj26 = { user: str, pendingProfileFrame, displayProfile: tmp17Result };
-    items8[9] = closure_18(tmp(obj[61]), obj26);
-    const obj27 = { user: str, pendingNameplate };
-    items8[10] = closure_18(tmp(obj[62]), obj27);
+    obj26.pendingProfileEffect = pendingProfileEffect;
+    obj26.displayProfile = tmp17Result;
+    obj26.isTryItOut = isTryItOut;
+    items8[8] = closure_18(tmp(obj[60]), obj26);
+    const obj27 = { user: str, pendingProfileFrame, displayProfile: tmp17Result };
+    items8[9] = closure_18(tmp(obj[61]), obj27);
+    const obj28 = { user: str, pendingNameplate };
+    items8[10] = closure_18(tmp(obj[62]), obj28);
     if (tmp60Result8) {
       if (!result) {
         result = isTryItOut;
@@ -781,125 +786,125 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
       tmp60Result8 = result;
     }
     if (tmp60Result8) {
-      const obj28 = { isTryItOut };
-      tmp60Result8 = closure_18(tmp(obj[63]), obj28);
+      const obj29 = { isTryItOut };
+      tmp60Result8 = closure_18(tmp(obj[63]), obj29);
     }
     items8[11] = tmp60Result8;
-    const obj29 = {
+    const obj30 = {
       ref(arg0) {
           return closure_12(constants.GUILD_TAG, arg0);
         },
       children: null
     };
-    const obj30 = { user: str, disabled: isSubmitting, tagStyle: null, pendingPrimaryGuildId: null };
-    const obj31 = { backgroundColor: containerBackground };
-    obj30.tagStyle = obj31;
-    obj30.pendingPrimaryGuildId = pendingPrimaryGuildId;
-    obj29.children = closure_18(tmp(obj[64]), obj30);
-    items8[12] = closure_18(tmp57, obj29);
+    const obj31 = { user: str, disabled: isSubmitting, tagStyle: null, pendingPrimaryGuildId: null };
+    const obj32 = { backgroundColor: containerBackground };
+    obj31.tagStyle = obj32;
+    obj31.pendingPrimaryGuildId = pendingPrimaryGuildId;
+    obj30.children = closure_18(tmp(obj[64]), obj31);
+    items8[12] = closure_18(tmp57, obj30);
     let tmp60Result9 = null != legacyUsername && !isBadgeManagementEnabled;
     if (tmp60Result9) {
-      const obj32 = { legacyUsername, pendingLegacyUsernameDisabled };
-      tmp60Result9 = closure_18(tmp(obj[65]), obj32);
+      const obj33 = { legacyUsername, pendingLegacyUsernameDisabled };
+      tmp60Result9 = closure_18(tmp(obj[65]), obj33);
     }
     items8[13] = tmp60Result9;
-    obj15.children = items8;
-    const items9 = [closure_19(tmp57, obj15), ];
+    obj16.children = items8;
+    const items9 = [closure_19(tmp57, obj16), ];
     if (tmp60Result10) {
-      const obj33 = {
+      const obj34 = {
         currentUser: str,
         onLayout: tmp43.onTryItOutSectionLayout,
         onPreviewPremium() {
               return str(sharedValue1[67]).openPremiumTryItOutModal();
             }
       };
-      tmp60Result10 = closure_18(tmp(obj[66]), obj33);
+      tmp60Result10 = closure_18(tmp(obj[66]), obj34);
     }
-    const obj34 = { children: null };
+    const obj35 = { children: null };
     items9[1] = tmp60Result10;
-    obj34.children = items9;
-    const tmp55Result = closure_19(closure_20, obj34);
-    const obj35 = { theme, primaryColor, secondaryColor, children: null };
-    const obj36 = { style: tmp3.container, onLayout: callback, children: null };
-    const obj37 = { gradientHeight: tmp39, bannerHeight: tmp37 };
-    const items10 = [closure_18(tmp(obj[69]), obj37), , ];
-    const obj38 = { ref, onScroll: null, onContentSizeChange: null, onLayout: null, scrollEventThrottle: null, children: null };
+    obj35.children = items9;
+    const tmp55Result = closure_19(closure_20, obj35);
+    const obj36 = { theme, primaryColor, secondaryColor, children: null };
+    const obj37 = { style: tmp3.container, onLayout: callback, children: null };
+    const obj38 = { gradientHeight: tmp39, bannerHeight: tmp37 };
+    const items10 = [closure_18(tmp(obj[69]), obj38), , ];
+    const obj39 = { ref, onScroll: null, onContentSizeChange: null, onLayout: null, scrollEventThrottle: null, children: null };
     let tmp80;
     if (tmp46) {
       tmp80 = callback1;
     }
-    obj38.onScroll = tmp80;
+    obj39.onScroll = tmp80;
     let onContentSizeChange;
     if (tmp54) {
       onContentSizeChange = tmp43.onContentSizeChange;
     }
-    obj38.onContentSizeChange = onContentSizeChange;
+    obj39.onContentSizeChange = onContentSizeChange;
     let onScrollViewLayout;
     if (tmp54) {
       onScrollViewLayout = tmp43.onScrollViewLayout;
     }
-    obj38.onLayout = onScrollViewLayout;
+    obj39.onLayout = onScrollViewLayout;
     let num2;
     if (tmp46) {
       num2 = 16;
     }
-    obj38.scrollEventThrottle = num2;
-    const obj39 = { style: tmp3.bounceOffset };
-    const items11 = [closure_18(tmp57, obj39), , ];
-    const obj40 = { user: str, displayProfile: tmp17Result, pendingAvatarSrc, pendingBanner, pendingAccentColor, pendingThemeColors, tryItOutBanner, isTryItOut, disabled: isSubmitting };
-    items11[1] = closure_18(closure_22, obj40);
-    const obj41 = { style: null, children: null };
+    obj39.scrollEventThrottle = num2;
+    const obj40 = { style: tmp3.bounceOffset };
+    const items11 = [closure_18(tmp57, obj40), , ];
+    const obj41 = { user: str, displayProfile: tmp17Result, pendingAvatarSrc, pendingBanner, pendingAccentColor, pendingThemeColors, tryItOutBanner, isTryItOut, disabled: isSubmitting };
+    items11[1] = closure_18(closure_22, obj41);
+    const obj42 = { style: null, children: null };
     const items12 = [, , , ];
     ({ avatarBackground: arr13[0], avatarPosition: arr13[1] } = tmp2);
     items12[2] = tmp3.avatarContainer;
     items12[3] = obj14;
-    obj41.style = items12;
-    const obj42 = { user: str, disabled: isSubmitting, disableStatus: null != isTryItOut, statusStyle: obj14, isTryItOut, autoStartEditFlow: autoFocusElement === constants3.AVATAR };
-    obj41.children = closure_18(tmp(obj[70]), obj42);
-    const items13 = [closure_18(tmp57, obj41), ];
-    const obj43 = { style: null, children: null };
+    obj42.style = items12;
+    const obj43 = { user: str, disabled: isSubmitting, disableStatus: null != isTryItOut, statusStyle: obj14, isTryItOut, autoStartEditFlow: autoFocusElement === constants3.AVATAR };
+    obj42.children = closure_18(tmp(obj[70]), obj43);
+    const items13 = [closure_18(tmp57, obj42), ];
+    const obj44 = { style: null, children: null };
     const items14 = [, , ];
     ({ profileContentWrapper: arr15[0], profileContent: arr15[1] } = tmp2);
-    const obj44 = { paddingTop: 0, paddingBottom: sum1 };
-    items14[2] = obj44;
-    obj43.style = items14;
-    const obj45 = { customStatusActivity, hasCustomProfileTheme: tmp35, style: null, emojiOnlyStyle: null, editEnabled: true };
-    ({ customStatusBubble: obj58.style, emojiOnlyCustomStatusBubble: obj58.emojiOnlyStyle } = tmp2);
-    const items15 = [closure_18(tmp(obj[71]), obj45), , ];
-    const obj46 = { user: str, displayName: pendingGlobalName, badges: memo, catalogBadges: memo1, pronouns: null, badgeContainerBackground: null, displayNameAccessibilityRole: "header", canOpenBadgeDirectory: null, pendingDisplayNameStyles: null };
+    const obj45 = { paddingTop: 0, paddingBottom: sum1 };
+    items14[2] = obj45;
+    obj44.style = items14;
+    const obj46 = { customStatusActivity, hasCustomProfileTheme: tmp35, style: null, emojiOnlyStyle: null, editEnabled: true };
+    ({ customStatusBubble: obj59.style, emojiOnlyCustomStatusBubble: obj59.emojiOnlyStyle } = tmp2);
+    const items15 = [closure_18(tmp(obj[71]), obj46), , ];
+    const obj47 = { user: str, displayName: pendingGlobalName, badges: memo, catalogBadges: memo1, pronouns: null, badgeContainerBackground: null, displayNameAccessibilityRole: "header", canOpenBadgeDirectory: null, pendingDisplayNameStyles: null };
     const tmp79 = stateFromStores;
     const tmpResult15 = tmp(obj[60]);
     if (pendingPronouns == null) {
       pendingPronouns = str4;
     }
-    obj46.pronouns = pendingPronouns;
-    obj46.badgeContainerBackground = containerBackground;
-    obj46.canOpenBadgeDirectory = !isTryItOut;
+    obj47.pronouns = pendingPronouns;
+    obj47.badgeContainerBackground = containerBackground;
+    obj47.canOpenBadgeDirectory = !isTryItOut;
     if (isTryItOut) {
       pendingDisplayNameStyles = tryItOutDisplayNameStyles;
     }
-    obj46.pendingDisplayNameStyles = pendingDisplayNameStyles;
-    items15[1] = closure_18(tmp(obj[72]), obj46);
+    obj47.pendingDisplayNameStyles = pendingDisplayNameStyles;
+    items15[1] = closure_18(tmp(obj[72]), obj47);
     let tmp60Result11 = tmp55Result;
     if (flag) {
-      const obj47 = { value: tmp55Result, children: null };
-      const obj48 = { userId: str.id, containerBackground, hasCustomProfileTheme: tmp35, scrollPosition: sharedValue, scrollViewRef: ref, isBoardTabOnScreen: sharedValue1 };
-      obj47.children = closure_18(tmp(obj[74]), obj48);
-      tmp60Result11 = closure_18(tmp(obj[73]).Provider, obj47);
+      const obj48 = { value: tmp55Result, children: null };
+      const obj49 = { userId: str.id, containerBackground, hasCustomProfileTheme: tmp35, scrollPosition: sharedValue, scrollViewRef: ref, isBoardTabOnScreen: sharedValue1 };
+      obj48.children = closure_18(tmp(obj[74]), obj49);
+      tmp60Result11 = closure_18(tmp(obj[73]).Provider, obj48);
     }
-    const obj49 = { children: null };
+    const obj50 = { children: null };
     items15[2] = tmp60Result11;
-    obj43.children = items15;
-    items13[1] = closure_19(tmp57, obj43);
-    obj49.children = items13;
-    items11[2] = closure_19(tmp57, obj49);
-    obj38.children = items11;
-    items10[1] = closure_19(tmp79, obj38);
+    obj44.children = items15;
+    items13[1] = closure_19(tmp57, obj44);
+    obj50.children = items13;
+    items11[2] = closure_19(tmp57, obj50);
+    obj39.children = items11;
+    items10[1] = closure_19(tmp79, obj39);
     if (!tmp29) {
       items10[2] = tmp29;
-      obj36.children = items10;
-      obj35.children = closure_19(tmp57, obj36);
-      return closure_18(tmp4(obj[68]).ThemeContextProvider, obj35);
+      obj37.children = items10;
+      obj36.children = closure_19(tmp57, obj37);
+      return closure_18(tmp4(obj[68]).ThemeContextProvider, obj36);
     } else if (enabled) {
       tmp = tmp(obj[75]);
       obj = {
@@ -910,8 +915,8 @@ let closure_26 = ReactCompilerGating.isReactCompilerEnabled() ? (function UserPr
       };
       let tmp60Result12 = closure_18(tmp, obj);
     } else {
-      const obj50 = { isTryItOut };
-      tmp60Result12 = closure_18(tmp4(obj[76]).UserProfilePremiumUpsellCard, obj50);
+      const obj51 = { isTryItOut };
+      tmp60Result12 = closure_18(tmp4(obj[76]).UserProfilePremiumUpsellCard, obj51);
     }
     const tmpResult16 = tmp(obj[72]);
   }

@@ -1,6 +1,6 @@
-// === Module 9564: QuestsEligibility ===
+// === Module 9596: QuestsEligibility ===
 
-// Module 9564 (QuestsEligibility)
+// Module 9596 (QuestsEligibility)
 import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
 import size from "module_2" /* 2 */;
 

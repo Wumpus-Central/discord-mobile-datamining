@@ -1,9 +1,9 @@
-// === Module 7023: useInputAttachments ===
+// === Module 7057: useInputAttachments ===
 
-// Module 7023 (useInputAttachments)
+// Module 7057 (useInputAttachments)
 import c from "c" /* 576 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import IconSize from "IconSize" /* 7024 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import IconSize from "IconSize" /* 7058 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -131,9 +131,9 @@ function estimateAttachmentWidth(arg0, arg1) {
   }
   return num;
 }
-function renderInputAttachment(BaseIconImage, leadingText, text) {
-  if (null != BaseIconImage) {
-    let tmp2 = <BaseIconImage size="xs" color="input-icon-default" />;
+function renderInputAttachment(View, leadingText, text) {
+  if (null != View) {
+    let tmp2 = <View size="xs" color="input-icon-default" />;
   } else {
     tmp2 = null;
     if (null != leadingText) {

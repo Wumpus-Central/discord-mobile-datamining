@@ -1,9 +1,9 @@
-// === Module 14435: useUserProfileWidgets ===
+// === Module 14658: useUserProfileWidgets ===
 
-// Module 14435 (useUserProfileWidgets)
+// Module 14658 (useUserProfileWidgets)
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import UserProfileStore from "UserProfileStore" /* 7704 */;
-import WidgetStore from "WidgetStore" /* 14425 */;
+import UserProfileStore from "UserProfileStore" /* 7738 */;
+import WidgetStore from "WidgetStore" /* 14648 */;
 
 const require = globalThis.__r;
 

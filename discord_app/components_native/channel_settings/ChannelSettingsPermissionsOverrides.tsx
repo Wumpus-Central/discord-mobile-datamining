@@ -1,22 +1,22 @@
-// === Module 18326: ChannelSettingsPermissionsOverrides ===
+// === Module 18567: ChannelSettingsPermissionsOverrides ===
 
-// Module 18326 (ChannelSettingsPermissionsOverrides)
+// Module 18567 (ChannelSettingsPermissionsOverrides)
 import nativeDefault from "native" /* 587 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
 import util from "util" /* 1125 */;
-import StageChannelPermissions from "StageChannelPermissions" /* 4832 */;
-import PermissionUtils from "PermissionUtils" /* 4909 */;
-import TableRowGroup from "TableRowGroup" /* 6989 */;
-import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11315 */;
-import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 18327 */;
+import StageChannelPermissions from "StageChannelPermissions" /* 4864 */;
+import PermissionUtils from "PermissionUtils" /* 4941 */;
+import TableRowGroup from "TableRowGroup" /* 7023 */;
+import AppChannelPermissionUtils from "AppChannelPermissionUtils" /* 11352 */;
+import PermissionSpecUtilsDefault from "PermissionSpecUtils" /* 18568 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import GuildRoleStore from "GuildRoleStore" /* 4878 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
-import RelationshipStore from "RelationshipStore" /* 4914 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import GuildRoleStore from "GuildRoleStore" /* 4910 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
+import RelationshipStore from "RelationshipStore" /* 4946 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -24,12 +24,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_7, ScrollView: closure_8 } = get_ActivityIndicator);
-const isGuildOwner = fn(4842).isGuildOwner;
+const isGuildOwner = fn(4874).isGuildOwner;
 const Constants = fn(1084);
 ({ PermissionOverrideType: closure_16, HelpdeskArticles: closure_17, Permissions: closure_18 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_19, Fragment: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, containerContent: null, section: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.containerContent = { paddingTop: nativeDefault.space.PX_16, paddingBottom: nativeDefault.space.PX_16, paddingHorizontal: nativeDefault.space.PX_12 };
@@ -173,7 +173,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
             const intl4 = closure_0(tmp5[27]).intl;
             obj18.confirmText = intl4.string(closure_0(tmp5[27]).t.psXQHP);
             obj18.onConfirm = function onConfirm() {
-              const obj = closure_1_1(5661);
+              const obj = closure_1_1(5696);
               obj.openURL(closure_1_1(2064).getArticleURL(constants.PERMISSIONS_TUTORIAL));
             };
             id(tmp5[26]).show(obj18);
@@ -290,7 +290,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
             };
             const intl = closure_0(1125).intl;
             obj.label = intl.string(closure_0(1125).t.i4jeWR);
-            return closure_2_19(closure_0(9701).HeaderTextButton, obj);
+            return closure_2_19(closure_0(9733).HeaderTextButton, obj);
           }
       };
       navigation.setOptions(obj);
@@ -302,7 +302,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
   const tmp13 = closure_19(require("Text/Text").Text, obj5);
   if (fromCreate.type === constants.MEMBER) {
     let obj6 = { userId: id, guildId: stateFromStores.guild_id, start: true, end: true, trailing: tmp13 };
-    let tmp12Result = closure_19(id(10836), obj6);
+    let tmp12Result = closure_19(id(10871), obj6);
   } else {
     const role = GuildRoleStore.getRole(stateFromStores.guild_id, id);
     let str;
@@ -313,7 +313,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
       str = "";
     }
     const obj7 = { end: true, label: str, start: true, trailing: tmp13 };
-    tmp12Result = closure_19(tmp2(6905).TableRow, obj7);
+    tmp12Result = closure_19(tmp2(6939).TableRow, obj7);
   }
   let obj8 = { style: tmp.container, contentContainerStyle: null, children: null };
   const items5 = [tmp.containerContent, { paddingBottom: tmp.containerContent.paddingBottom + id(1630)().bottom }];
@@ -326,7 +326,7 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
     let intl = tmp2(1125).intl;
     let obj12 = { appName: tmp9.name };
     obj11.message = intl.format(tmp2(1125).t["Xq++FA"], obj12);
-    obj10.children = closure_19(tmp2(7954).InlineNotice, obj11);
+    obj10.children = closure_19(tmp2(7988).InlineNotice, obj11);
     tmp12Result2 = closure_19(closure_7, obj10);
   }
   items6[1] = tmp12Result2;
@@ -343,18 +343,18 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
       children: permissions.map((description, index) => {
         ({ title, flag } = description);
         const tmp = closure_8(flag);
-        const obj = { variant: "text-xs/medium", color: "text-subtle", children: closure_1_0(18331).renderDescription(description.description) };
-        const items = [closure_1_19(closure_1_0(5235).Text, obj), ];
+        const obj = { variant: "text-xs/medium", color: "text-subtle", children: closure_1_0(18572).renderDescription(description.description) };
+        const items = [closure_1_19(closure_1_0(5270).Text, obj), ];
         let tmp5Result = null;
         if (false !== tmp) {
           tmp5Result = null;
           if ("" !== tmp) {
             const obj3 = { variant: "text-xs/medium", color: "text-feedback-critical", children: tmp };
-            tmp5Result = closure_1_19(closure_1_0(5235).Text, obj3);
+            tmp5Result = closure_1_19(closure_1_0(5270).Text, obj3);
           }
         }
         items[1] = tmp5Result;
-        const obj2 = closure_1_0(18331);
+        const obj2 = closure_1_0(18572);
         const tmp3Result = closure_1_21(closure_1_20, { children: items });
         const tmp6Result = closure_1_0(1381);
         const obj4 = { accessible: closure_1_0(1381).isAndroid() || undefined, disabled: false !== tmp, label: title, subLabel: tmp3Result, trailing: null };
@@ -365,8 +365,8 @@ export default function ChannelSettingsPermissionsOverrides(fromCreate) {
         obj5.onValueChange = function onValueChange(arg0) {
           closure_2_7(flag, arg0);
         };
-        obj4.trailing = closure_1_19(id(18332), obj5);
-        return closure_1_19(closure_1_0(6905).TableRow, obj4, "row-" + index);
+        obj4.trailing = closure_1_19(id(18573), obj5);
+        return closure_1_19(closure_1_0(6939).TableRow, obj4, "row-" + index);
       })
     });
     return closure_2_19(React5, obj, "section-" + index);

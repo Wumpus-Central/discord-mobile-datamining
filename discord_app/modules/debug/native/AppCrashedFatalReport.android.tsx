@@ -1,6 +1,6 @@
-// === Module 19534: AppCrashedFatalReport ===
+// === Module 19797: AppCrashedFatalReport ===
 
-// Module 19534 (AppCrashedFatalReport)
+// Module 19797 (AppCrashedFatalReport)
 import _mod17 from "module_17" /* 17 */;
 import size from "module_2" /* 2 */;
 

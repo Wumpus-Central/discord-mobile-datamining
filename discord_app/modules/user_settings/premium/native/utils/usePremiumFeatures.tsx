@@ -1,18 +1,18 @@
-// === Module 9805: usePremiumFeatures ===
+// === Module 9837: usePremiumFeatures ===
 
-// Module 9805 (usePremiumFeatures)
+// Module 9837 (usePremiumFeatures)
 import util from "util" /* 1125 */;
 import user from "user" /* 1397 */;
 import PremiumUtils from "PremiumUtils" /* 2050 */;
-import _modDef3251 from "module_3251" /* 3251 */;
-import FriendsIcon from "FriendsIcon" /* 5667 */;
-import ReactionIcon from "ReactionIcon" /* 9349 */;
-import NitroWheelIcon from "NitroWheelIcon" /* 9424 */;
-import ScreenStreamIcon from "ScreenStreamIcon" /* 9616 */;
-import UploadIcon from "UploadIcon" /* 9806 */;
-import SuperReactionIcon from "SuperReactionIcon" /* 9808 */;
-import BoostGemIcon from "BoostGemIcon" /* 9810 */;
-import UserSquareIcon from "UserSquareIcon" /* 9812 */;
+import _modDef3283 from "module_3283" /* 3283 */;
+import FriendsIcon from "FriendsIcon" /* 5702 */;
+import ReactionIcon from "ReactionIcon" /* 9381 */;
+import NitroWheelIcon from "NitroWheelIcon" /* 9456 */;
+import ScreenStreamIcon from "ScreenStreamIcon" /* 9648 */;
+import UploadIcon from "UploadIcon" /* 9838 */;
+import SuperReactionIcon from "SuperReactionIcon" /* 9840 */;
+import BoostGemIcon from "BoostGemIcon" /* 9842 */;
+import UserSquareIcon from "UserSquareIcon" /* 9844 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -44,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
   }
   const obj2 = { IconComponent: require("FriendsIcon").FriendsIcon, label: null, premiumTypes: null, premiumGroupRoles: null, availableOnFractional: false };
   const intl = tmp(tmp2[7]).intl;
-  obj2.label = intl.formatToPlainString(require("module_3251").gsE005, { totalSeats: TOTAL_PREMIUM_GROUP_USERS });
+  obj2.label = intl.formatToPlainString(require("module_3283").gsE005, { totalSeats: TOTAL_PREMIUM_GROUP_USERS });
   const items = [closure_5.TIER_2];
   let obj = require("c");
   const obj3 = { totalSeats: TOTAL_PREMIUM_GROUP_USERS };
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
   const items2 = [obj2, , , , , , , , , ];
   const obj4 = { IconComponent: require("FriendsIcon").FriendsIcon, label: null, premiumTypes: null, premiumGroupRoles: null, availableOnFractional: false };
   const intl2 = tmp(tmp2[7]).intl;
-  obj4.label = intl2.string(require("module_3251")["G6K/+s"]);
+  obj4.label = intl2.string(require("module_3283")["G6K/+s"]);
   const items3 = [closure_5.TIER_2];
   const set = new Set(items);
   obj4.premiumTypes = new Set(items3);
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
   items2[6] = obj10;
   const obj11 = { IconComponent: require("BoostGemIcon").BoostGemIcon, label: null, premiumTypes: null, premiumGroupRoles: null, availableOnFractional: false };
   const intl8 = tmp(tmp2[7]).intl;
-  obj11.label = intl8.formatToPlainString(require("module_3251").HVCRVf, { numBoosts });
+  obj11.label = intl8.formatToPlainString(require("module_3283").HVCRVf, { numBoosts });
   const items15 = [closure_5.TIER_2];
   const obj12 = { numBoosts };
   const set6 = new Set(items13);
@@ -181,7 +181,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
   return noop.useMemo(() => {
     let obj = { IconComponent: FriendsIcon.FriendsIcon, label: null, premiumTypes: null, premiumGroupRoles: null, availableOnFractional: false };
     const intl = util.intl;
-    obj.label = intl.formatToPlainString(_modDef3251.gsE005, { totalSeats: TOTAL_PREMIUM_GROUP_USERS });
+    obj.label = intl.formatToPlainString(_modDef3283.gsE005, { totalSeats: TOTAL_PREMIUM_GROUP_USERS });
     const items = [hasOwnProperty.TIER_2];
     obj.premiumTypes = new Set(items);
     const items1 = [user.PremiumSubscriptionGroupRole.PRIMARY];
@@ -189,7 +189,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
     const items2 = [obj, , , , , , , , , ];
     const obj3 = { IconComponent: FriendsIcon.FriendsIcon, label: null, premiumTypes: null, premiumGroupRoles: null, availableOnFractional: false };
     const intl2 = util.intl;
-    obj3.label = intl2.string(_modDef3251["G6K/+s"]);
+    obj3.label = intl2.string(_modDef3283["G6K/+s"]);
     const items3 = [hasOwnProperty.TIER_2];
     const obj2 = { totalSeats: TOTAL_PREMIUM_GROUP_USERS };
     const set = new Set(items);
@@ -248,7 +248,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function usePremi
     items2[6] = obj10;
     const obj11 = { IconComponent: BoostGemIcon.BoostGemIcon, label: null, premiumTypes: null, premiumGroupRoles: null, availableOnFractional: false };
     const intl8 = util.intl;
-    obj11.label = intl8.formatToPlainString(_modDef3251.HVCRVf, { numBoosts });
+    obj11.label = intl8.formatToPlainString(_modDef3283.HVCRVf, { numBoosts });
     const items15 = [hasOwnProperty.TIER_2];
     const obj12 = { numBoosts };
     const set6 = new Set(items13);

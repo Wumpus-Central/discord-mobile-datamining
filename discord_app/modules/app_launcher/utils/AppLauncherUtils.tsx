@@ -1,22 +1,22 @@
-// === Module 9651: AppLauncherUtils ===
+// === Module 9683: AppLauncherUtils ===
 
-// Module 9651 (AppLauncherUtils)
+// Module 9683 (AppLauncherUtils)
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import Server from "Server" /* 1997 */;
 import EmbeddedSurfaceUtils from "EmbeddedSurfaceUtils" /* 2028 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5627 */;
-import getPlatformDefault from "getPlatform" /* 5634 */;
-import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6813 */;
-import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7631 */;
-import AppLauncherTypes from "AppLauncherTypes" /* 11173 */;
-import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11409 */;
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5662 */;
+import getPlatformDefault from "getPlatform" /* 5669 */;
+import ApplicationFlagUtils from "ApplicationFlagUtils" /* 6847 */;
+import ApplicationCommandUtils from "ApplicationCommandUtils" /* 7665 */;
+import AppLauncherTypes from "AppLauncherTypes" /* 11208 */;
+import ApplicationInstallUtils from "ApplicationInstallUtils" /* 11446 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9652 */;
+import ApplicationCommandIndexStore from "ApplicationCommandIndexStore" /* 9684 */;
 import ApplicationRecord from "ApplicationRecord" /* 2021 */;
-import AppLauncherStore from "AppLauncherStore" /* 11970 */;
+import AppLauncherStore from "AppLauncherStore" /* 12008 */;
 
 const require = globalThis.__r;
 
@@ -67,8 +67,8 @@ function getShelfBadgeTypeIfActive(application) {
 }
 let closure_3 = ["fakeAppIconURL"];
 const ApplicationFlags = fn(1084).ApplicationFlags;
-const BuiltInSectionId = fn(5984).BuiltInSectionId;
-const MessageSendLocation = fn(4977).MessageSendLocation;
+const BuiltInSectionId = fn(6019).BuiltInSectionId;
+const MessageSendLocation = fn(5009).MessageSendLocation;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/app_launcher/utils/AppLauncherUtils.tsx");
 

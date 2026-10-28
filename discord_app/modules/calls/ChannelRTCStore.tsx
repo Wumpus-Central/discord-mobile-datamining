@@ -1,31 +1,31 @@
-// === Module 6773: ChannelRTCStore ===
+// === Module 6807: ChannelRTCStore ===
 
-// Module 6773 (ChannelRTCStore)
+// Module 6807 (ChannelRTCStore)
 import LoggerDefault from "Logger" /* 3 */;
 import _modDef12 from "module_12" /* 12 */;
 import _modDef38 from "module_38" /* 38 */;
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6781 */;
-import isConjureApplicationDefault from "isConjureApplication" /* 6784 */;
+import ChannelRTCParticipants from "ChannelRTCParticipants" /* 6815 */;
+import isConjureApplicationDefault from "isConjureApplication" /* 6818 */;
 import _slicedToArray from "module_32" /* 32 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
 import ApplicationStore from "ApplicationStore" /* 2042 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
-import FramesStore from "FramesStore" /* 6776 */;
-import GameConsoleStore from "GameConsoleStore" /* 5716 */;
-import SoundboardStore from "SoundboardStore" /* 6007 */;
-import StageChannelRoleStore from "StageChannelRoleStore" /* 6687 */;
-import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6643 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
+import FramesStore from "FramesStore" /* 6810 */;
+import GameConsoleStore from "GameConsoleStore" /* 5751 */;
+import SoundboardStore from "SoundboardStore" /* 6042 */;
+import StageChannelRoleStore from "StageChannelRoleStore" /* 6721 */;
+import ApplicationStreamingStore from "ApplicationStreamingStore" /* 6677 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import CallStore from "CallStore" /* 6498 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import PresenceStore from "PresenceStore" /* 5713 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
-import SpeakingStore from "SpeakingStore" /* 6686 */;
+import CallStore from "CallStore" /* 6532 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import PresenceStore from "PresenceStore" /* 5748 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import SpeakingStore from "SpeakingStore" /* 6720 */;
 import UserStore from "UserStore" /* 1389 */;
-import VideoStreamStore from "VideoStreamStore" /* 6780 */;
-import VoiceStateStore from "VoiceStateStore" /* 5631 */;
+import VideoStreamStore from "VideoStreamStore" /* 6814 */;
+import VoiceStateStore from "VoiceStateStore" /* 5666 */;
 
 const ChannelRTCParticipantsDefault = ChannelRTCParticipants;
 
@@ -40,7 +40,7 @@ function getParticipants(arg0) {
   return tmp2;
 }
 function updateParticipant(arg0) {
-  const f97014 = (dependencyMap) => dependencyMap.updateParticipant(f97014);
+  const f97630 = (dependencyMap) => dependencyMap.updateParticipant(f97630);
   return arr.reduce((acc, item) => {
     let tmp4 = dependencyMap[item];
     if (null == tmp4) {
@@ -49,7 +49,7 @@ function updateParticipant(arg0) {
       tmp4 = tmp10;
     }
     let flag = acc;
-    if (f97014(tmp4)) {
+    if (f97630(tmp4)) {
       obj = dependencyMap[item];
       if (null == obj) {
         const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -283,7 +283,7 @@ function handleRebuildActiveChannels() {
       tmp4 = tmp10;
     }
     let flag = acc;
-    if (f97014(tmp4)) {
+    if (f97630(tmp4)) {
       obj = dependencyMap[item];
       if (null == obj) {
         const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -415,7 +415,7 @@ function handleRebuildActiveChannels() {
   }, false);
 }
 function handleEmbeddedActivityChange() {
-  const f97016 = (updateEmbeddedActivities) => updateEmbeddedActivities.updateEmbeddedActivities();
+  const f97632 = (updateEmbeddedActivities) => updateEmbeddedActivities.updateEmbeddedActivities();
   return closure_30.reduce((acc, item) => {
     let tmp4 = dependencyMap[item];
     if (null == tmp4) {
@@ -424,7 +424,7 @@ function handleEmbeddedActivityChange() {
       tmp4 = tmp10;
     }
     let flag = acc;
-    if (f97014(tmp4)) {
+    if (f97630(tmp4)) {
       obj = dependencyMap[item];
       if (null == obj) {
         const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -564,7 +564,7 @@ function handleFrameChange() {
       tmp[item] = tmp7;
       obj = tmp7;
     }
-    return obj.toArray(f97016(6781).ChannelRTCParticipantsIndexes.ACTIVITY).some((type) => {
+    return obj.toArray(f97632(6815).ChannelRTCParticipantsIndexes.ACTIVITY).some((type) => {
       let tmp = type.type === constants.ACTIVITY;
       if (tmp) {
         tmp = null != type.frameId;
@@ -581,7 +581,7 @@ function handleFrameChange() {
   }
   let reduced = someResult;
   if (reduced) {
-    const f97016 = (updateEmbeddedActivities) => updateEmbeddedActivities.updateEmbeddedActivities();
+    const f97632 = (updateEmbeddedActivities) => updateEmbeddedActivities.updateEmbeddedActivities();
     reduced = closure_30.reduce((acc, item) => {
       let tmp4 = dependencyMap[item];
       if (null == tmp4) {
@@ -590,7 +590,7 @@ function handleFrameChange() {
         tmp4 = tmp10;
       }
       let flag = acc;
-      if (f97014(tmp4)) {
+      if (f97630(tmp4)) {
         obj = dependencyMap[item];
         if (null == obj) {
           const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -724,7 +724,7 @@ function handleFrameChange() {
   return reduced;
 }
 function handleSpeaking(arg0) {
-  const f97018 = (updateParticipantSpeaking) => updateParticipantSpeaking.updateParticipantSpeaking(f97018);
+  const f97634 = (updateParticipantSpeaking) => updateParticipantSpeaking.updateParticipantSpeaking(f97634);
   return closure_30.reduce((acc, item) => {
     let tmp4 = dependencyMap[item];
     if (null == tmp4) {
@@ -733,7 +733,7 @@ function handleSpeaking(arg0) {
       tmp4 = tmp10;
     }
     let flag = acc;
-    if (f97014(tmp4)) {
+    if (f97630(tmp4)) {
       obj = dependencyMap[item];
       if (null == obj) {
         const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -865,7 +865,7 @@ function handleSpeaking(arg0) {
   }, false);
 }
 function handleUserUpdate(user) {
-  const f97014 = (dependencyMap) => dependencyMap.updateParticipant(f97014);
+  const f97630 = (dependencyMap) => dependencyMap.updateParticipant(f97630);
   if (closure_30 !== undefined) {
     return closure_30.reduce((acc, item) => {
       let tmp4 = dependencyMap[item];
@@ -875,7 +875,7 @@ function handleUserUpdate(user) {
         tmp4 = tmp10;
       }
       let flag = acc;
-      if (f97014(tmp4)) {
+      if (f97630(tmp4)) {
         obj = dependencyMap[item];
         if (null == obj) {
           const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -1009,7 +1009,7 @@ function handleUserUpdate(user) {
 }
 function handleCallUpdate(channelId) {
   const items = [channelId.channelId];
-  const f97019 = (rebuild) => rebuild.rebuild();
+  const f97635 = (rebuild) => rebuild.rebuild();
   return items.reduce((acc, item) => {
     let tmp4 = dependencyMap[item];
     if (null == tmp4) {
@@ -1018,7 +1018,7 @@ function handleCallUpdate(channelId) {
       tmp4 = tmp10;
     }
     let flag = acc;
-    if (f97014(tmp4)) {
+    if (f97630(tmp4)) {
       obj = dependencyMap[item];
       if (null == obj) {
         const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -1159,10 +1159,10 @@ function handleChannelDelete(channel) {
   delete tmp[tmp2];
 }
 function handleStreamClose(streamKey) {
-  obj = f97014(6646);
+  obj = f97630(6680);
   const items = [];
-  ({ channelId: arr[0], ownerId: f97014 } = f97014(6646).decodeStreamKey(streamKey.streamKey));
-  f97014 = (dependencyMap) => dependencyMap.updateParticipant(f97014);
+  ({ channelId: arr[0], ownerId: f97630 } = f97630(6680).decodeStreamKey(streamKey.streamKey));
+  f97630 = (dependencyMap) => dependencyMap.updateParticipant(f97630);
   return items.reduce((acc, item) => {
     let tmp4 = dependencyMap[item];
     if (null == tmp4) {
@@ -1171,7 +1171,7 @@ function handleStreamClose(streamKey) {
       tmp4 = tmp10;
     }
     let flag = acc;
-    if (f97014(tmp4)) {
+    if (f97630(tmp4)) {
       obj = dependencyMap[item];
       if (null == obj) {
         const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -1302,7 +1302,7 @@ function handleStreamClose(streamKey) {
     return flag;
   }, false);
 }
-const CallConstants = fn(5633);
+const CallConstants = fn(5668);
 ({ ParticipantTypes: closure_21, ParticipantSelectionTypes: closure_22, isStreamParticipant: closure_23 } = CallConstants);
 const Constants = fn(1084);
 ({ ChannelLayouts: closure_24, ChannelModes: closure_25, ChannelTypes: closure_26, AppContext: closure_27 } = Constants);
@@ -1622,7 +1622,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
     let flag = false;
     if (tmp13) {
       const items = [currentVoiceChannelId];
-      const f97021 = (rebuild) => rebuild.rebuild();
+      const f97637 = (rebuild) => rebuild.rebuild();
       flag = items.reduce((acc, item) => {
         let tmp4 = dependencyMap[item];
         if (null == tmp4) {
@@ -1631,7 +1631,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
           tmp4 = tmp10;
         }
         let flag = acc;
-        if (f97014(tmp4)) {
+        if (f97630(tmp4)) {
           obj = dependencyMap[item];
           if (null == obj) {
             const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -1803,7 +1803,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
         return tmp3;
       }
       let arr = closure_30;
-      const f97014 = (dependencyMap) => dependencyMap.updateParticipant(f97014);
+      const f97630 = (dependencyMap) => dependencyMap.updateParticipant(f97630);
       if (closure_30 === undefined) {
         arr = closure_30;
       }
@@ -1815,7 +1815,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
           tmp4 = tmp10;
         }
         let flag = acc;
-        if (f97014(tmp4)) {
+        if (f97630(tmp4)) {
           obj = dependencyMap[item];
           if (null == obj) {
             const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -1953,7 +1953,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
           tmp4 = tmp10;
         }
         let flag = acc;
-        if (f97014(tmp4)) {
+        if (f97630(tmp4)) {
           obj = dependencyMap[item];
           if (null == obj) {
             const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -2120,12 +2120,12 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
     ({ channelId, id } = arg0);
     obj = getParticipants(channelId);
     if (null == id) {
-      const item = obj.toArray(obj(6781).ChannelRTCParticipantsIndexes.STREAM).forEach((user) => {
+      const item = obj.toArray(obj(6815).ChannelRTCParticipantsIndexes.STREAM).forEach((user) => {
         if (closure_2_23(user)) {
           obj.updateParticipant(user.user.id);
         }
       });
-      const toArrayResult = obj.toArray(obj(6781).ChannelRTCParticipantsIndexes.STREAM);
+      const toArrayResult = obj.toArray(obj(6815).ChannelRTCParticipantsIndexes.STREAM);
     }
     let NONE = id;
     if (id == null) {
@@ -2135,7 +2135,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
     setSelectedParticipantId(channelId, items);
     if (obj2.isStreamKey(id)) {
       try {
-        const ownerId = tmp8(6646).decodeStreamKey(id).ownerId;
+        const ownerId = tmp8(6680).decodeStreamKey(id).ownerId;
         if (ownerId === AuthenticationStore.getId()) {
           const items1 = [channelId];
           updateParticipant(tmp10, items1);
@@ -2144,13 +2144,13 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
           closure_37[channelId] = false;
         }
         tmp10 = ownerId;
-        const tmp8Result = tmp8(6646);
+        const tmp8Result = tmp8(6680);
       } catch (tmp15) {
         const _HermesInternal = HermesInternal;
         obj.warn("INVALID STREAM KEY FORMAT " + tmp, tmp15);
       }
     }
-    obj2 = obj(6646);
+    obj2 = obj(6680);
     tmp8 = obj;
   },
   FRAME_LAUNCH: handleFrameChange,
@@ -2188,7 +2188,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
     if (tmp16) {
       const result = obj2.updateParticipantPoppedOut(participantId, true);
       const items1 = [channelId];
-      const f97014 = (dependencyMap) => dependencyMap.updateParticipant(f97014);
+      const f97630 = (dependencyMap) => dependencyMap.updateParticipant(f97630);
       const reduced = items1.reduce((acc, item) => {
         let tmp4 = dependencyMap[item];
         if (null == tmp4) {
@@ -2197,7 +2197,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
           tmp4 = tmp10;
         }
         let flag = acc;
-        if (f97014(tmp4)) {
+        if (f97630(tmp4)) {
           obj = dependencyMap[item];
           if (null == obj) {
             const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -2345,7 +2345,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
     }
     if (tmp11) {
       const items = [channelId];
-      const f97014 = (dependencyMap) => dependencyMap.updateParticipant(f97014);
+      const f97630 = (dependencyMap) => dependencyMap.updateParticipant(f97630);
       const reduced = items.reduce((acc, item) => {
         let tmp4 = dependencyMap[item];
         if (null == tmp4) {
@@ -2354,7 +2354,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
           tmp4 = tmp10;
         }
         let flag = acc;
-        if (f97014(tmp4)) {
+        if (f97630(tmp4)) {
           obj = dependencyMap[item];
           if (null == obj) {
             const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -2520,14 +2520,14 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
         tmp8 = items;
       }
       const first = _slicedToArray(tmp8, 1)[0];
-      const obj3 = f97014(6646);
+      const obj3 = f97630(6680);
       if (tmp12) {
         setSelectedParticipantId(channelId, null);
       }
-      tmp12 = f97014(6646).isStreamKey(first) && first.includes(id);
+      tmp12 = f97630(6680).isStreamKey(first) && first.includes(id);
     }
     const items1 = [channelId];
-    f97014 = (dependencyMap) => dependencyMap.updateParticipant(f97014);
+    f97630 = (dependencyMap) => dependencyMap.updateParticipant(f97630);
     const reduced = items1.reduce((acc, item) => {
       let tmp4 = dependencyMap[item];
       if (null == tmp4) {
@@ -2536,7 +2536,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
         tmp4 = tmp10;
       }
       let flag = acc;
-      if (f97014(tmp4)) {
+      if (f97630(tmp4)) {
         obj = dependencyMap[item];
         if (null == obj) {
           const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -2685,8 +2685,8 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
   },
   RTC_CONNECTION_VIDEO: function handleRTCConnectionVideo(arg0) {
     const items = [];
-    ({ channelId: arr[0], userId: f97014 } = arg0);
-    f97014 = (dependencyMap) => dependencyMap.updateParticipant(f97014);
+    ({ channelId: arr[0], userId: f97630 } = arg0);
+    f97630 = (dependencyMap) => dependencyMap.updateParticipant(f97630);
     return items.reduce((acc, item) => {
       let tmp4 = dependencyMap[item];
       if (null == tmp4) {
@@ -2695,7 +2695,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
         tmp4 = tmp10;
       }
       let flag = acc;
-      if (f97014(tmp4)) {
+      if (f97630(tmp4)) {
         obj = dependencyMap[item];
         if (null == obj) {
           const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -2828,8 +2828,8 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
   },
   RTC_CONNECTION_PLATFORM: function handleRTCConnectionPlatform(arg0) {
     const items = [];
-    ({ channelId: arr[0], userId: f97014 } = arg0);
-    f97014 = (dependencyMap) => dependencyMap.updateParticipant(f97014);
+    ({ channelId: arr[0], userId: f97630 } = arg0);
+    f97630 = (dependencyMap) => dependencyMap.updateParticipant(f97630);
     return items.reduce((acc, item) => {
       let tmp4 = dependencyMap[item];
       if (null == tmp4) {
@@ -2838,7 +2838,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
         tmp4 = tmp10;
       }
       let flag = acc;
-      if (f97014(tmp4)) {
+      if (f97630(tmp4)) {
         obj = dependencyMap[item];
         if (null == obj) {
           const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -2970,7 +2970,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
     }, false);
   },
   AUDIO_SET_LOCAL_VIDEO_DISABLED: function handleMediaEngineSetLocalVideoDisabled(userId) {
-    const f97014 = (dependencyMap) => dependencyMap.updateParticipant(f97014);
+    const f97630 = (dependencyMap) => dependencyMap.updateParticipant(f97630);
     if (closure_30 !== undefined) {
       return closure_30.reduce((acc, item) => {
         let tmp4 = dependencyMap[item];
@@ -2980,7 +2980,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
           tmp4 = tmp10;
         }
         let flag = acc;
-        if (f97014(tmp4)) {
+        if (f97630(tmp4)) {
           obj = dependencyMap[item];
           if (null == obj) {
             const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -3113,9 +3113,9 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
     }
   },
   MEDIA_ENGINE_VIDEO_SOURCE_QUALITY_CHANGED: function handleVideoSourceQuality(channelId) {
-    ({ senderUserId: f97024, maxResolution: importDefault, maxFrameRate: dependencyMap } = channelId);
+    ({ senderUserId: f97640, maxResolution: importDefault, maxFrameRate: dependencyMap } = channelId);
     const items = [channelId.channelId];
-    f97024 = (updateParticipantQuality) => updateParticipantQuality.updateParticipantQuality(f97024, importDefault, dependencyMap);
+    f97640 = (updateParticipantQuality) => updateParticipantQuality.updateParticipantQuality(f97640, importDefault, dependencyMap);
     return items.reduce((acc, item) => {
       let tmp4 = dependencyMap[item];
       if (null == tmp4) {
@@ -3124,7 +3124,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
         tmp4 = tmp10;
       }
       let flag = acc;
-      if (f97014(tmp4)) {
+      if (f97630(tmp4)) {
         obj = dependencyMap[item];
         if (null == obj) {
           const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -3258,10 +3258,10 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
   STREAM_CLOSE: handleStreamClose,
   STREAM_DELETE: handleStreamClose,
   STREAM_WATCH: function handleStreamWatch(streamKey) {
-    obj = f97014(6646);
+    obj = f97630(6680);
     const items = [];
-    ({ channelId: arr[0], ownerId: f97014 } = f97014(6646).decodeStreamKey(streamKey.streamKey));
-    f97014 = (dependencyMap) => dependencyMap.updateParticipant(f97014);
+    ({ channelId: arr[0], ownerId: f97630 } = f97630(6680).decodeStreamKey(streamKey.streamKey));
+    f97630 = (dependencyMap) => dependencyMap.updateParticipant(f97630);
     return items.reduce((acc, item) => {
       let tmp4 = dependencyMap[item];
       if (null == tmp4) {
@@ -3270,7 +3270,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
         tmp4 = tmp10;
       }
       let flag = acc;
-      if (f97014(tmp4)) {
+      if (f97630(tmp4)) {
         obj = dependencyMap[item];
         if (null == obj) {
           const tmp17 = new ChannelRTCParticipantsDefault(item);
@@ -3405,7 +3405,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
   GUILD_SOUNDBOARD_SOUND_PLAY_START: handleSpeaking,
   GUILD_SOUNDBOARD_SOUND_PLAY_END: handleSpeaking,
   PUSH_TO_TALK_STATE_CHANGE: function handlePushToTalkStateChange() {
-    const f97025 = (updateParticipantSpeaking) => updateParticipantSpeaking.updateParticipantSpeaking(id.getId());
+    const f97641 = (updateParticipantSpeaking) => updateParticipantSpeaking.updateParticipantSpeaking(id.getId());
     return closure_30.reduce((acc, item) => {
       let tmp4 = dependencyMap[item];
       if (null == tmp4) {
@@ -3414,7 +3414,7 @@ const channelRTCStore = new ChannelRTCStore(DispatcherDefault, {
         tmp4 = tmp10;
       }
       let flag = acc;
-      if (f97014(tmp4)) {
+      if (f97630(tmp4)) {
         obj = dependencyMap[item];
         if (null == obj) {
           const tmp17 = new ChannelRTCParticipantsDefault(item);

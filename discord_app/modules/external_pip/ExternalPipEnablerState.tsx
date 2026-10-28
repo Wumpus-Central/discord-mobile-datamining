@@ -1,6 +1,6 @@
-// === Module 18483: ExternalPipEnablerState ===
+// === Module 18724: ExternalPipEnablerState ===
 
-// Module 18483 (ExternalPipEnablerState)
+// Module 18724 (ExternalPipEnablerState)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/external_pip/ExternalPipEnablerState.tsx");

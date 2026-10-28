@@ -1,10 +1,10 @@
-// === Module 12517: FiltersHorizontalIcon ===
+// === Module 12564: FiltersHorizontalIcon ===
 
-// Module 12517 (FiltersHorizontalIcon)
+// Module 12564 (FiltersHorizontalIcon)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import BaseIconImage from "BaseIconImage" /* 5669 */;
-import _mod12518 from "module_12518" /* 12518 */;
+import BaseIconImage from "BaseIconImage" /* 5704 */;
+import _mod12565 from "module_12565" /* 12565 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -36,7 +36,7 @@ export const FiltersHorizontalIcon = ReactCompilerGating.isReactCompilerEnabled(
     INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
   }
   if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-    const tmpResult = _mod12518;
+    const tmpResult = _mod12565;
     cResult[4] = tmpResult;
     let tmp10 = tmpResult;
   } else {
@@ -65,5 +65,5 @@ export const FiltersHorizontalIcon = ReactCompilerGating.isReactCompilerEnabled(
   }
   const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
   const merged1 = Object.assign(merged);
-  return jsx(BaseIconImage.BaseIconImage, { source: _mod12518, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
+  return jsx(BaseIconImage.BaseIconImage, { source: _mod12565, color: INTERACTIVE_ICON_DEFAULT, style: color.style });
 });

@@ -23,6 +23,6 @@ export const ComponentType = { UNKNOWN: -1, [-1]: "UNKNOWN", ACTION_ROW: 1, [1]:
 export const ButtonStyle = { PRIMARY: 1, [1]: "PRIMARY", SECONDARY: 2, [2]: "SECONDARY", SUCCESS: 3, [3]: "SUCCESS", DESTRUCTIVE: 4, [4]: "DESTRUCTIVE", LINK: 5, [5]: "LINK", PREMIUM: 6, [6]: "PREMIUM" };
 export const TextInputComponentStyle = { SMALL: 1, [1]: "SMALL", PARAGRAPH: 2, [2]: "PARAGRAPH" };
 export const SeparatorSpacingSize = { SMALL: 1, [1]: "SMALL", LARGE: 2, [2]: "LARGE" };
-export const InvoiceDiscountTypes = { SUBSCRIPTION_PLAN: 1, [1]: "SUBSCRIPTION_PLAN", ENTITLEMENT: 2, [2]: "ENTITLEMENT", PREMIUM_LEGACY_UPGRADE_PROMOTION: 3, [3]: "PREMIUM_LEGACY_UPGRADE_PROMOTION", PREMIUM_TRIAL: 4, [4]: "PREMIUM_TRIAL", DEFAULT: 5, [5]: "DEFAULT" };
+export const InvoiceDiscountTypes = { SUBSCRIPTION_PLAN: 1, [1]: "SUBSCRIPTION_PLAN", ENTITLEMENT: 2, [2]: "ENTITLEMENT", PREMIUM_LEGACY_UPGRADE_PROMOTION: 3, [3]: "PREMIUM_LEGACY_UPGRADE_PROMOTION", PREMIUM_TRIAL: 4, [4]: "PREMIUM_TRIAL", DEFAULT: 5, [5]: "DEFAULT", QUANTITY_DISCOUNT: 7, [7]: "QUANTITY_DISCOUNT" };
 export const PurchaseNotificationType = { GUILD_PRODUCT: 0, [0]: "GUILD_PRODUCT" };
 export const AuthenticatorType = { WEBAUTHN: 1, [1]: "WEBAUTHN", TOTP: 2, [2]: "TOTP", SMS: 3, [3]: "SMS" };

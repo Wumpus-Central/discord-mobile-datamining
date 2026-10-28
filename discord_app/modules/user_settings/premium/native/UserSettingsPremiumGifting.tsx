@@ -1,35 +1,35 @@
-// === Module 14904: UserSettingsPremiumGifting ===
+// === Module 15127: UserSettingsPremiumGifting ===
 
-// Module 14904 (UserSettingsPremiumGifting)
+// Module 15127 (UserSettingsPremiumGifting)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef2631 from "module_2631" /* 2631 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import GiftCodeUtils from "GiftCodeUtils" /* 6373 */;
-import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6882 */;
-import TableRowGroup from "TableRowGroup" /* 6989 */;
-import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7089 */;
-import UserSettingsUtils from "UserSettingsUtils" /* 7093 */;
-import EntitlementActionCreators from "EntitlementActionCreators" /* 7509 */;
-import useStoreConnectionErrorAlertDefault from "useStoreConnectionErrorAlert" /* 7527 */;
-import BillingActionCreatorsDefault from "BillingActionCreators" /* 7532 */;
-import BadgeId from "BadgeId" /* 8673 */;
-import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8686 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9795 */;
-import _modDef14905 from "module_14905" /* 14905 */;
-import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 14906 */;
-import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 14912 */;
-import PremiumTierCardDefault from "PremiumTierCard" /* 14914 */;
-import GiftPurchaseButtonDefault from "GiftPurchaseButton" /* 14917 */;
-import PremiumUnverifiedWarningDefault from "PremiumUnverifiedWarning" /* 14919 */;
-import UserSettingsGiftingBadgeProgressDefault from "UserSettingsGiftingBadgeProgress" /* 14920 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import GiftCodeUtils from "GiftCodeUtils" /* 6407 */;
+import ActivityIndicator_ActivityIndicator from "ActivityIndicator/ActivityIndicator" /* 6916 */;
+import TableRowGroup from "TableRowGroup" /* 7023 */;
+import UserSettingsModalActionCreatorsDefault from "UserSettingsModalActionCreators" /* 7123 */;
+import UserSettingsUtils from "UserSettingsUtils" /* 7127 */;
+import EntitlementActionCreators from "EntitlementActionCreators" /* 7544 */;
+import useStoreConnectionErrorAlertDefault from "useStoreConnectionErrorAlert" /* 7561 */;
+import BillingActionCreatorsDefault from "BillingActionCreators" /* 7566 */;
+import BadgeId from "BadgeId" /* 8710 */;
+import BadgeDirectoryActionCreators from "BadgeDirectoryActionCreators" /* 8723 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9827 */;
+import _modDef15128 from "module_15128" /* 15128 */;
+import OutboundPromotionCardDefault from "OutboundPromotionCard" /* 15129 */;
+import EntitlementGiftGroupCardDefault from "EntitlementGiftGroupCard" /* 15135 */;
+import PremiumTierCardDefault from "PremiumTierCard" /* 15137 */;
+import GiftPurchaseButtonDefault from "GiftPurchaseButton" /* 15140 */;
+import PremiumUnverifiedWarningDefault from "PremiumUnverifiedWarning" /* 15142 */;
+import UserSettingsGiftingBadgeProgressDefault from "UserSettingsGiftingBadgeProgress" /* 15143 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8681 */;
-import EntitlementStore from "EntitlementStore" /* 7507 */;
+import BadgeDirectoryStore from "BadgeDirectoryStore" /* 8718 */;
+import EntitlementStore from "EntitlementStore" /* 7542 */;
 
 const require = globalThis.__r;
 
@@ -43,7 +43,7 @@ const PremiumConstants = fn(1391);
 ({ PremiumTypes: closure_11, SubscriptionPlans: closure_12 } = PremiumConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { scrollView: { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL }, giftingSettingsContainer: { flex: 1 }, inventorySectionWrapper: { flex: 1 }, giftPurchaseSectionWrapper: { flex: 1, paddingTop: 36, paddingBottom: 16 }, emptyGiftLinks: null, emptyImage: null, emptyGiftHeader: null, emptyGiftDescription: null, emptyGiftInformation: null, titleWrapper: null, cardText: null, tierCard: null, giftPurchaseButton: null, buttonWrapper: null, loading: null, warningMargins: null };
 let obj3 = { paddingHorizontal: nativeDefault.modules.mobile.GIFTING_SETTINGS_PADDING_HORIZONTAL };
 obj2.emptyGiftLinks = { flex: 1, flexDirection: "row", alignItems: "center", paddingVertical: 16, borderWidth: StyleSheet.hairlineWidth, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, borderColor: nativeDefault.colors.BACKGROUND_MOD_NORMAL };
@@ -149,9 +149,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       }
     }
     noop = tmp15;
-    const isPaymentsBlocked = tmp(7530).useIsPaymentsBlocked();
-    const tmpResult7 = tmp(7530);
-    const outboundPromotions = tmp(9518).useOutboundPromotions();
+    const isPaymentsBlocked = tmp(7564).useIsPaymentsBlocked();
+    const tmpResult7 = tmp(7564);
+    const outboundPromotions = tmp(9550).useOutboundPromotions();
     const promotionsLoaded = outboundPromotions.promotionsLoaded;
     const activeOutboundPromotions = outboundPromotions.activeOutboundPromotions;
     BadgeDirectoryStore = outboundPromotions.claimedEndedOutboundPromotions;
@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
         }
       }
     }
-    const GiftingBadgeExperiment = tmp(10499).GiftingBadgeExperiment;
+    const GiftingBadgeExperiment = tmp(10531).GiftingBadgeExperiment;
     const enabled = GiftingBadgeExperiment.useConfig(tmp22).enabled;
     const _Symbol3 = Symbol;
     if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
@@ -202,13 +202,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       }
       tmp24 = cResult[9];
     }
-    const tmpResult8 = tmp(9518);
+    const tmpResult8 = tmp(9550);
     const stateFromStores = tmp(504).useStateFromStores(tmp23, tmp24);
     const tmp27 = navigation(noop.useState(false), 2);
     constants2 = tmp27[0];
     closure_11 = tmp27[1];
     const tmpResult9 = tmp(504);
-    const subscriptionPlansLoaded = tmp(14747).useSubscriptionPlansLoaded();
+    const subscriptionPlansLoaded = tmp(14970).useSubscriptionPlansLoaded();
     const _Symbol4 = Symbol;
     if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
       class L {
@@ -354,7 +354,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
     function renderEmptyState() {
       const obj = { style: closure_2.emptyGiftLinks, children: null };
-      const obj2 = { style: closure_2.emptyImage, source: _modDef14905 };
+      const obj2 = { style: closure_2.emptyImage, source: _modDef15128 };
       const items = [map1(FastImageDefault, obj2), ];
       const obj3 = { style: closure_2.emptyGiftDescription, accessible: true, children: null };
       const obj4 = { style: closure_2.emptyGiftHeader, variant: "text-md/semibold", color: "mobile-text-heading-primary", children: null };
@@ -376,7 +376,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     cResult[22] = tmp7.emptyGiftLinks;
     cResult[23] = tmp7.emptyImage;
     cResult[24] = renderEmptyState;
-    const tmpResult10 = tmp(14747);
+    const tmpResult10 = tmp(14970);
   }
   const tmpResult6 = recipientUserId(504);
 }) : (function UserSettingsPremiumGifting(ref) {

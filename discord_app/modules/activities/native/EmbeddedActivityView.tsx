@@ -1,17 +1,17 @@
-// === Module 11463: EmbeddedActivityView ===
+// === Module 11501: EmbeddedActivityView ===
 
-// Module 11463 (EmbeddedActivityView)
+// Module 11501 (EmbeddedActivityView)
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5711 */;
-import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10774 */;
-import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11464 */;
-import DiscordEnvironment from "DiscordEnvironment" /* 11465 */;
-import activityWebViewController from "activityWebViewController" /* 11467 */;
+import ChannelRTCActionCreatorsDefault from "ChannelRTCActionCreators" /* 5746 */;
+import leaveEmbeddedActivity from "leaveEmbeddedActivity" /* 10808 */;
+import doesOrientationMatchLockStateDefault from "doesOrientationMatchLockState" /* 11502 */;
+import DiscordEnvironment from "DiscordEnvironment" /* 11503 */;
+import activityWebViewController from "activityWebViewController" /* 11505 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
 
 require = fn;
 function useQueryParams(arg0) {
@@ -76,7 +76,7 @@ const Constants = fn(2023);
 fn(1372).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_16 = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
 const EmbeddedActivities = "EmbeddedActivities";
 let ReactCompilerGating = fn(558);
@@ -431,7 +431,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled() ? (function Embedd
   const merged = Object.assign(applicationId, Object.assign({ deepLinkQueryParams: 0, applicationId: 0 }));
   ({ iframeId, shellBridgeSecret } = _slicedToArray(noop.useState(() => activityWebViewController.getOrCreateActivityWebViewController(applicationId)), 1)[0]);
   const merged1 = Object.assign(merged);
-  return closure_14(applicationId(11490).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
+  return closure_14(applicationId(11528).BaseEmbeddedAppWebView, { iframeId, shellBridgeSecret, deepLinkQueryParams: applicationId.deepLinkQueryParams, applicationId });
 });
 ReactCompilerGating = fn(558);
 const memoResult = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function EmbeddedActivityViewInner(channel) {

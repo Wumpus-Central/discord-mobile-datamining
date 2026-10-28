@@ -1,6 +1,6 @@
-// === Module 15343: AGC2MobileExperiment ===
+// === Module 15569: AGC2MobileExperiment ===
 
-// Module 15343 (AGC2MobileExperiment)
+// Module 15569 (AGC2MobileExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

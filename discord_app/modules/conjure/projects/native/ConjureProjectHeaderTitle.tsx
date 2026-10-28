@@ -1,13 +1,14 @@
-// === Module 12284: ConjureProjectHeaderTitle ===
+// === Module 12328: ConjureProjectHeaderTitle ===
 
-// Module 12284 (ConjureProjectHeaderTitle)
+// Module 12328 (ConjureProjectHeaderTitle)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import _modDef3831 from "module_3831" /* 3831 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import Pressables from "Pressables" /* 6910 */;
-import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12172 */;
+import _modDef3863 from "module_3863" /* 3863 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import Pressables from "Pressables" /* 6944 */;
+import ConjureProjectIconDefault from "ConjureProjectIcon" /* 12210 */;
+import useConjurePublishedServerNameDefault from "useConjurePublishedServerName" /* 12329 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -15,83 +16,131 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
 const hitSlop = { top: 12, bottom: 12, left: 12, right: 12 };
-const createStyles = fn(4972);
-let obj2 = { row: { flexDirection: "row", alignItems: "center", flexShrink: 1, gap: nativeDefault.space.PX_8 }, title: { flexShrink: 1 } };
+const createStyles = fn(5004);
+let obj2 = { row: { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 }, titles: { flex: 1, justifyContent: "center" } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
-let obj3 = { flexDirection: "row", alignItems: "center", flexShrink: 1, gap: nativeDefault.space.PX_8 };
+let obj3 = { flex: 1, flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/projects/native/ConjureProjectHeaderTitle.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureProjectHeaderTitle(arg0) {
-  const cResult = c.c(13);
+  const cResult = c.c(15);
   ({ project, title, onPressIcon } = arg0);
   const tmp4 = closure_7();
-  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-    const intl = util.intl;
-    const stringResult = intl.string(_modDef3831.FzfmQ8);
-    cResult[0] = stringResult;
-    let first = stringResult;
-  } else {
-    first = cResult[0];
+  let str;
+  if (project != null) {
+    str = project.id;
   }
-  if (cResult[1] !== project) {
-    const obj2 = { project, size: "header" };
-    const tmp11 = React4(ConjureProjectIconDefault, obj2);
-    cResult[1] = project;
-    cResult[2] = tmp11;
-    let tmp8 = tmp11;
-  } else {
-    tmp8 = cResult[2];
+  if (str == null) {
+    str = "";
   }
-  if (cResult[3] === onPressIcon) {
-    if (cResult[4] === tmp8) {
-      let tmp12 = cResult[5];
+  const tmp6Result = useConjurePublishedServerNameDefault(str);
+  if (cResult[0] === onPressIcon) {
+    if (cResult[1] === project) {
+      let tmp8 = cResult[2];
     }
-    if (cResult[6] === tmp4.title) {
-      if (cResult[7] === title) {
-        let tmp14 = cResult[8];
+    if (cResult[3] !== title) {
+      const obj2 = { accessibilityRole: "header", "aria-level": "1", lineClamp: 1, maxFontSizeMultiplier: 2, variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", children: title };
+      const tmp14 = React4(Text_Text.Text, obj2);
+      cResult[3] = title;
+      cResult[4] = tmp14;
+      let tmp12 = tmp14;
+    } else {
+      tmp12 = cResult[4];
+    }
+    if (cResult[5] !== tmp6Result) {
+      let tmp16 = null;
+      if (null != tmp6Result) {
+        const obj3 = { lineClamp: 1, maxFontSizeMultiplier: 2, variant: "text-xs/normal", color: "text-subtle", children: tmp6Result };
+        tmp16 = React4(Text_Text.Text, obj3);
       }
-      if (cResult[9] === tmp4.row) {
-        if (cResult[10] === tmp12) {
-          if (cResult[11] === tmp14) {
-            let tmp17 = cResult[12];
-          }
-          return tmp17;
+      cResult[5] = tmp6Result;
+      cResult[6] = tmp16;
+      let tmp15 = tmp16;
+    } else {
+      tmp15 = cResult[6];
+    }
+    if (cResult[7] === tmp4.titles) {
+      if (cResult[8] === tmp12) {
+        if (cResult[9] === tmp15) {
+          let tmp18 = cResult[10];
         }
+        if (cResult[11] === tmp4.row) {
+          if (cResult[12] === tmp8) {
+            if (cResult[13] === tmp18) {
+              let tmp22 = cResult[14];
+            }
+            return tmp22;
+          }
+        }
+        const obj4 = { style: tmp4.row, children: null };
+        const items = [tmp8, tmp18];
+        obj4.children = items;
+        const tmp25 = hasOwnProperty(View, obj4);
+        cResult[11] = tmp4.row;
+        cResult[12] = tmp8;
+        cResult[13] = tmp18;
+        cResult[14] = tmp25;
+        tmp22 = tmp25;
       }
-      const obj3 = { style: tmp4.row, children: null };
-      const items = [tmp12, tmp14];
-      obj3.children = items;
-      const tmp20 = hasOwnProperty(View, obj3);
-      cResult[9] = tmp4.row;
-      cResult[10] = tmp12;
-      cResult[11] = tmp14;
-      cResult[12] = tmp20;
-      tmp17 = tmp20;
     }
-    const obj4 = { style: tmp4.title, accessibilityRole: "header", "aria-level": "1", lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: title };
-    const tmp16 = React4(Text_Text.Text, obj4);
-    cResult[6] = tmp4.title;
-    cResult[7] = title;
-    cResult[8] = tmp16;
-    tmp14 = tmp16;
+    const obj5 = { style: tmp4.titles, children: null };
+    const items1 = [tmp12, tmp15];
+    obj5.children = items1;
+    const tmp21 = hasOwnProperty(View, obj5);
+    cResult[7] = tmp4.titles;
+    cResult[8] = tmp12;
+    cResult[9] = tmp15;
+    cResult[10] = tmp21;
+    tmp18 = tmp21;
   }
-  const tmp13 = React4(Pressables.PressableOpacity, { onPress: onPressIcon, hitSlop, accessibilityRole: "button", accessibilityLabel: first, children: tmp8 });
-  cResult[3] = onPressIcon;
-  cResult[4] = tmp8;
-  cResult[5] = tmp13;
-  tmp12 = tmp13;
-  const obj5 = { onPress: onPressIcon, hitSlop, accessibilityRole: "button", accessibilityLabel: first, children: tmp8 };
-}) : (function ConjureProjectHeaderTitle(arg0) {
-  ({ project, title, onPressIcon } = arg0);
+  let tmp9 = null;
+  if (null != project) {
+    const obj6 = { onPress: onPressIcon, hitSlop, accessibilityRole: "button", accessibilityLabel: null, children: null };
+    const intl = util.intl;
+    obj6.accessibilityLabel = intl.string(_modDef3863.FzfmQ8);
+    const obj7 = { project, size: "list" };
+    obj6.children = React4(ConjureProjectIconDefault, obj7);
+    tmp9 = React4(Pressables.PressableOpacity, obj6);
+  }
+  cResult[0] = onPressIcon;
+  cResult[1] = project;
+  cResult[2] = tmp9;
+  tmp8 = tmp9;
+}) : (function ConjureProjectHeaderTitle(project) {
+  project = project.project;
+  ({ title, onPressIcon } = project);
   const tmp = closure_7();
+  let str;
+  if (project != null) {
+    str = project.id;
+  }
+  if (str == null) {
+    str = "";
+  }
+  const tmp4Result = useConjurePublishedServerNameDefault(str);
   const obj = { style: tmp.row, children: null };
-  const obj2 = { onPress: onPressIcon, hitSlop, accessibilityRole: "button", accessibilityLabel: null, children: null };
-  const intl = util.intl;
-  obj2.accessibilityLabel = intl.string(_modDef3831.FzfmQ8);
-  obj2.children = React4(ConjureProjectIconDefault, { project, size: "header" });
-  const items = [React4(Pressables.PressableOpacity, obj2), React4(Text_Text.Text, { style: tmp.title, accessibilityRole: "header", "aria-level": "1", lineClamp: 1, variant: "redesign/heading-18/bold", color: "mobile-text-heading-primary", children: title })];
+  let tmp8 = null;
+  if (null != project) {
+    const obj2 = { onPress: onPressIcon, hitSlop, accessibilityRole: "button", accessibilityLabel: null, children: null };
+    const intl = util.intl;
+    obj2.accessibilityLabel = intl.string(_modDef3863.FzfmQ8);
+    const obj3 = { project, size: "list" };
+    obj2.children = React4(ConjureProjectIconDefault, obj3);
+    tmp8 = React4(Pressables.PressableOpacity, obj2);
+  }
+  const items = [tmp8, ];
+  const obj4 = { style: tmp.titles, children: null };
+  const items1 = [React4(Text_Text.Text, { accessibilityRole: "header", "aria-level": "1", lineClamp: 1, maxFontSizeMultiplier: 2, variant: "redesign/heading-18/semibold", color: "mobile-text-heading-primary", children: title }), ];
+  let tmp12Result = null;
+  if (null != tmp4Result) {
+    const obj5 = { lineClamp: 1, maxFontSizeMultiplier: 2, variant: "text-xs/normal", color: "text-subtle", children: tmp4Result };
+    tmp12Result = React4(Text_Text.Text, obj5);
+  }
+  items1[1] = tmp12Result;
+  obj4.children = items1;
+  items[1] = hasOwnProperty(View, obj4);
   obj.children = items;
   return hasOwnProperty(View, obj);
 });

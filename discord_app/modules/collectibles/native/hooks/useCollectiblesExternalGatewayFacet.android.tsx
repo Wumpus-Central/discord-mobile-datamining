@@ -1,10 +1,10 @@
-// === Module 13892: useCollectiblesExternalGatewayFacet ===
+// === Module 14111: useCollectiblesExternalGatewayFacet ===
 
-// Module 13892 (useCollectiblesExternalGatewayFacet)
+// Module 14111 (useCollectiblesExternalGatewayFacet)
 import _mod19 from "module_19" /* 19 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
-import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9447 */;
+import collectibles_CollectiblesUtils from "collectibles/CollectiblesUtils" /* 9479 */;
 import UserStore from "UserStore" /* 1389 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,6 +1,6 @@
-// === Module 9714: ChannelDetailsStore ===
+// === Module 9746: ChannelDetailsStore ===
 
-// Module 9714 (ChannelDetailsStore)
+// Module 9746 (ChannelDetailsStore)
 import c from "c" /* 576 */;
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
 import module_570 from "module_570" /* 570 */;

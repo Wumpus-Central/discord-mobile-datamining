@@ -1,29 +1,29 @@
-// === Module 16146: TinyBroncoSettingsNotices ===
+// === Module 16374: TinyBroncoSettingsNotices ===
 
-// Module 16146 (TinyBroncoSettingsNotices)
+// Module 16374 (TinyBroncoSettingsNotices)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef3123 from "module_3123" /* 3123 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5645 */;
-import AgeVerificationUtils from "AgeVerificationUtils" /* 6655 */;
-import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6658 */;
-import TinyBroncoExperiment from "TinyBroncoExperiment" /* 6667 */;
-import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7884 */;
-import useUserIsTeen from "useUserIsTeen" /* 8122 */;
-import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10021 */;
-import SafetySettingsUtils from "SafetySettingsUtils" /* 16015 */;
-import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 16055 */;
-import useParentalControlSettings from "useParentalControlSettings" /* 16147 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5680 */;
+import AgeVerificationUtils from "AgeVerificationUtils" /* 6689 */;
+import AgeVerificationAnalyticsUtils from "AgeVerificationAnalyticsUtils" /* 6692 */;
+import TinyBroncoExperiment from "TinyBroncoExperiment" /* 6701 */;
+import AgeVerificationActionCreatorsDefault from "AgeVerificationActionCreators" /* 7918 */;
+import useUserIsTeen from "useUserIsTeen" /* 8156 */;
+import useAgeGroupPresentation from "useAgeGroupPresentation" /* 10053 */;
+import SafetySettingsUtils from "SafetySettingsUtils" /* 16243 */;
+import handleOpenUnconfirmedAgeGroupSupportArticle from "handleOpenUnconfirmedAgeGroupSupportArticle" /* 16283 */;
+import useParentalControlSettings from "useParentalControlSettings" /* 16375 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
 const View = fn(17).View;
-let closure_6 = fn(6666).TINY_BRONCO_SETTINGS_LOCATION;
-const Constants = fn(7418);
+let closure_6 = fn(6700).TINY_BRONCO_SETTINGS_LOCATION;
+const Constants = fn(7453);
 ({ SafetySettingsNoticeAction: closure_7, SafetySettingsNoticeType: closure_8 } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { marginBottom: nativeDefault.space.PX_8 } };
 let closure_10 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
@@ -179,7 +179,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function TeenNo
       tmp21 = tmp24;
     }
     const obj4 = { type: "info", message: tmp11, role: "status", action: tmp17 };
-    const tmp20 = jsx(noticeType(7954).InlineNotice, { type: "info", message: tmp11, role: "status", action: tmp17 });
+    const tmp20 = jsx(noticeType(7988).InlineNotice, { type: "info", message: tmp11, role: "status", action: tmp17 });
     cResult[13] = tmp11;
     cResult[14] = tmp17;
     cResult[15] = tmp20;
@@ -217,7 +217,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function TeenNo
   obj3.text = intl2.string(noticeType(1125).t.hvVgAZ);
   obj3.onPress = callback;
   obj2.action = obj3;
-  obj.children = jsx(noticeType(7954).InlineNotice, { type: "info", message: null, role: "status", action: null });
+  obj.children = jsx(noticeType(7988).InlineNotice, { type: "info", message: null, role: "status", action: null });
   return <View style={closure_10().container}>{null}</View>;
 });
 fn(558);
@@ -369,7 +369,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Unconf
       }
     }
     const obj4 = { type: "info", message: tmp10, role: "status", action: tmp13 };
-    const tmp15 = jsx(tmp(7954).InlineNotice, { type: "info", message: tmp10, role: "status", action: tmp13 });
+    const tmp15 = jsx(tmp(7988).InlineNotice, { type: "info", message: tmp10, role: "status", action: tmp13 });
     cResult[7] = tmp10;
     cResult[8] = tmp15;
   } else {
@@ -429,7 +429,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function Unconf
   obj3.text = intl2.string(AGE_CONFIRMATION_NOTICE(1125).t.FDSSia);
   obj3.onPress = callback1;
   obj2.action = obj3;
-  obj.children = jsx(AGE_CONFIRMATION_NOTICE(7954).InlineNotice, { type: "info", message: null, role: "status", action: null });
+  obj.children = jsx(AGE_CONFIRMATION_NOTICE(7988).InlineNotice, { type: "info", message: null, role: "status", action: null });
   return <View style={closure_10().container}>{null}</View>;
 });
 ReactCompilerGating = fn(558);

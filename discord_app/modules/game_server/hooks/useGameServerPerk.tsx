@@ -1,18 +1,18 @@
-// === Module 13516: useGameServerPerk ===
+// === Module 13735: useGameServerPerk ===
 
-// Module 13516 (useGameServerPerk)
+// Module 13735 (useGameServerPerk)
 import util from "util" /* 1125 */;
 import _modDef2993 from "module_2993" /* 2993 */;
-import useGameServerFeaturedGameNamesDefault from "useGameServerFeaturedGameNames" /* 13517 */;
-import _modDef13518 from "module_13518" /* 13518 */;
+import useGameServerFeaturedGameNamesDefault from "useGameServerFeaturedGameNames" /* 13736 */;
+import _modDef13737 from "module_13737" /* 13737 */;
 import noop from "module_19" /* 19 */;
-import GameServerStore from "GameServerStore" /* 8371 */;
+import GameServerStore from "GameServerStore" /* 8405 */;
 
 const require = globalThis.__r;
 
 require = fn;
-const skuId = fn(5184).GAME_SERVER_POWERUP_SKU_ID;
-const GuildPowerupType = fn(5183).GuildPowerupType;
+const skuId = fn(5219).GAME_SERVER_POWERUP_SKU_ID;
+const GuildPowerupType = fn(5218).GuildPowerupType;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/game_server/hooks/useGameServerPerk.tsx");
@@ -71,8 +71,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameS
         }
         if (cResult[8] === stateFromStores) {
         }
-        const obj3 = { skuId, title: tmp12, description: tmp14, cost: stateFromStores, dependencies: tmp16, type: GuildPowerupType.PERK, animatedImageUrl: _modDef13518, staticImageUrl: null };
-        tmp9Result = _modDef13518;
+        const obj3 = { skuId, title: tmp12, description: tmp14, cost: stateFromStores, dependencies: tmp16, type: GuildPowerupType.PERK, animatedImageUrl: _modDef13737, staticImageUrl: null };
+        tmp9Result = _modDef13737;
         obj3.staticImageUrl = tmp9Result;
         cResult[8] = stateFromStores;
         cResult[9] = tmp14;
@@ -112,8 +112,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGameS
         obj.cost = tmp2;
         obj.dependencies = [];
         obj.type = GuildPowerupType.PERK;
-        obj.animatedImageUrl = _modDef13518;
-        obj.staticImageUrl = _modDef13518;
+        obj.animatedImageUrl = _modDef13737;
+        obj.staticImageUrl = _modDef13737;
         tmp = obj;
       }
     }

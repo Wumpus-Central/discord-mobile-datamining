@@ -1,12 +1,12 @@
-// === Module 17230: CollectiblesShopScreen ===
+// === Module 17460: CollectiblesShopScreen ===
 
-// Module 17230 (CollectiblesShopScreen)
+// Module 17460 (CollectiblesShopScreen)
 import c from "c" /* 576 */;
-import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7092 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7280 */;
-import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7494 */;
-import useShopOrientationLock from "useShopOrientationLock" /* 17231 */;
-import CollectiblesShopV2 from "CollectiblesShopV2" /* 17232 */;
+import useSettingNavigationRoute from "useSettingNavigationRoute" /* 7126 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7314 */;
+import useGiftCardMobileConsumptionHalfsheet from "useGiftCardMobileConsumptionHalfsheet" /* 7529 */;
+import useShopOrientationLock from "useShopOrientationLock" /* 17461 */;
+import CollectiblesShopV2 from "CollectiblesShopV2" /* 17462 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;

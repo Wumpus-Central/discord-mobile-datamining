@@ -1,13 +1,13 @@
-// === Module 14384: UserProfileGameFriendActionSheet ===
+// === Module 14607: UserProfileGameFriendActionSheet ===
 
-// Module 14384 (UserProfileGameFriendActionSheet)
+// Module 14607 (UserProfileGameFriendActionSheet)
 import nativeDefault from "native" /* 587 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
-import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13560 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import UserProfileAlertUtils from "UserProfileAlertUtils" /* 13778 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4914 */;
+import RelationshipStore from "RelationshipStore" /* 4946 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1084).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 }, gameIcon: null };
 let size = { width: 32, height: 32, borderRadius: nativeDefault.radii.sm };
 obj2.gameIcon = size;

@@ -1,11 +1,11 @@
-// === Module 15314: Slider ===
+// === Module 15539: Slider ===
 
-// Module 15314 (Slider)
+// Module 15539 (Slider)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import HapticUtils from "HapticUtils" /* 5213 */;
-import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5214 */;
-import _modDef8769 from "module_8769" /* 8769 */;
+import HapticUtils from "HapticUtils" /* 5248 */;
+import haptics_HapticFeedbackTypesDefault from "haptics/HapticFeedbackTypes" /* 5249 */;
+import _modDef8806 from "module_8806" /* 8806 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { flexGrow: 1, flexDirection: "row", alignItems: "center" }, slider: { flex: 1 }, minimumTrackTintColor: { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED }, maximumTrackTintColor: null, startIcon: null, endIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.REDESIGN_INPUT_CONTROL_SELECTED };
 obj2.maximumTrackTintColor = { backgroundColor: nativeDefault.colors.SLIDER_TRACK_BACKGROUND };
@@ -189,7 +189,7 @@ export const Slider = ReactCompilerGating.isReactCompilerEnabled() ? (function S
             }
           }
           const obj4 = { style: tmp4.slider, value: first, minimumValue: num, maximumValue: num2, step, disabled, onValueChange: tmp10, onSlidingComplete: onChangeEnd, minimumTrackTintColor: tmp4.minimumTrackTintColor.backgroundColor, maximumTrackTintColor: tmp4.maximumTrackTintColor.backgroundColor, tapToSeek: true, accessibilityLabel, accessibilityHint, accessibilityValue: tmp16, testID, onResponderGrant: tmp19 };
-          const tmp23 = closure_6(onChange(8769), obj4);
+          const tmp23 = closure_6(onChange(8806), obj4);
           cResult[11] = accessibilityHint;
           cResult[12] = accessibilityLabel;
           cResult[13] = disabled;
@@ -300,7 +300,7 @@ export const Slider = ReactCompilerGating.isReactCompilerEnabled() ? (function S
   }
   obj3.accessibilityValue = tmp12;
   obj3.testID = testID;
-  const tmp11 = _modDef8769;
+  const tmp11 = _modDef8806;
   let fn;
   if (obj5.isAndroid()) {
     fn = () => true;

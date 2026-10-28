@@ -1,9 +1,9 @@
-// === Module 8856: showSharePreparingModal ===
+// === Module 8890: showSharePreparingModal ===
 
-// Module 8856 (showSharePreparingModal)
+// Module 8890 (showSharePreparingModal)
 import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
-import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8854 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
+import SharePreparingModalConstants from "SharePreparingModalConstants" /* 8888 */;
 import size from "module_2" /* 2 */;
 
 const SHARE_PREPARING_MODAL_KEY = SharePreparingModalConstants.SHARE_PREPARING_MODAL_KEY;
@@ -19,27 +19,27 @@ export const showSharePreparingModal = function showSharePreparingModal(onCancel
           _true = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(dependencyMap);
-          _true(6673).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          _true(6707).popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(6673);
+          const obj = _true(6707);
         }
       }
     };
-    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8857, dependencyMap.paths), {
+    ModalActionCreatorsDefault.pushLazy(asyncRequireImpl(8891, dependencyMap.paths), {
       onCancel() {
         if (!_true) {
           _true = true;
           const _clearTimeout = clearTimeout;
           clearTimeout(dependencyMap);
-          _true(6673).popWithKey(SHARE_PREPARING_MODAL_KEY);
+          _true(6707).popWithKey(SHARE_PREPARING_MODAL_KEY);
           onCancel();
-          const obj = _true(6673);
+          const obj = _true(6707);
         }
       }
     }, SHARE_PREPARING_MODAL_KEY, { animation: "fade", presentation: "transparentModal" }).then(() => {
       if (_true) {
-        _true(6673).popWithKey(SHARE_PREPARING_MODAL_KEY);
-        const obj = _true(6673);
+        _true(6707).popWithKey(SHARE_PREPARING_MODAL_KEY);
+        const obj = _true(6707);
       }
     });
   }, 1000);

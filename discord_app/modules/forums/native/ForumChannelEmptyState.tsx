@@ -1,21 +1,21 @@
-// === Module 13730: ForumChannelEmptyState ===
+// === Module 13948: ForumChannelEmptyState ===
 
-// Module 13730 (ForumChannelEmptyState)
+// Module 13948 (ForumChannelEmptyState)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import shared from "shared" /* 4979 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import _modDef13731 from "module_13731" /* 13731 */;
-import _modDef13732 from "module_13732" /* 13732 */;
+import shared from "shared" /* 5011 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import _modDef13949 from "module_13949" /* 13949 */;
+import _modDef13950 from "module_13950" /* 13950 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_6 = createStyles.createStyles({ container: { flex: 1, alignSelf: "stretch", justifyContent: "center", alignItems: "center" }, image: { width: 120, height: 80 }, title: { textAlign: "center", marginTop: 16, marginHorizontal: 20 }, subtext: { textAlign: "center", marginTop: 4, marginHorizontal: 20 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -44,9 +44,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let tmp9 = cResult[4];
     }
     if (tmpResult2.isThemeLight(tmpResult.useThemeContext().theme)) {
-      let tmp5Result = _modDef13731;
+      let tmp5Result = _modDef13949;
     } else {
-      tmp5Result = _modDef13732;
+      tmp5Result = _modDef13950;
     }
     if (cResult[5] === tmp4.image) {
       if (cResult[6] === tmp5Result) {
@@ -158,9 +158,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const obj = shared;
   const tmp9 = FastImageDefault;
   if (obj3.isThemeLight(obj.useThemeContext().theme)) {
-    let tmp4Result = _modDef13731;
+    let tmp4Result = _modDef13949;
   } else {
-    tmp4Result = _modDef13732;
+    tmp4Result = _modDef13950;
   }
   const items1 = [React4(tmp9, { source: tmp4Result, style: tmp.image }), , ];
   const obj5 = { style: tmp.title, accessibilityRole: "header", variant: "heading-lg/semibold", color: "mobile-text-heading-primary", children: null };

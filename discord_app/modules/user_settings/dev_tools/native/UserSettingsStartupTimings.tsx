@@ -1,20 +1,20 @@
-// === Module 16968: UserSettingsStartupTimings ===
+// === Module 17198: UserSettingsStartupTimings ===
 
-// Module 16968 (UserSettingsStartupTimings)
+// Module 17198 (UserSettingsStartupTimings)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import Stack_Stack from "Stack/Stack" /* 5978 */;
-import TableCheckboxRow from "TableCheckboxRow" /* 6902 */;
-import TableRow from "TableRow" /* 6905 */;
-import TableRowGroup from "TableRowGroup" /* 6989 */;
-import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 13808 */;
-import ShareIcon from "ShareIcon" /* 14234 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import Stack_Stack from "Stack/Stack" /* 6013 */;
+import TableCheckboxRow from "TableCheckboxRow" /* 6936 */;
+import TableRow from "TableRow" /* 6939 */;
+import TableRowGroup from "TableRowGroup" /* 7023 */;
+import serializeAppStartLogsDefault from "serializeAppStartLogs" /* 14026 */;
+import ShareIcon from "ShareIcon" /* 14458 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import DeveloperOptionsStore from "DeveloperOptionsStore" /* 1369 */;
-import NativeTTIManagerModule from "NativeTTIManagerModule" /* 5158 */;
+import NativeTTIManagerModule from "NativeTTIManagerModule" /* 5193 */;
 
 const require = globalThis.__r;
 
@@ -22,7 +22,7 @@ require = fn;
 let View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { wrap: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, code: { fontFamily: fn(1084).Fonts.CODE_BOLD }, border: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.border = { height: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, marginBottom: 8 };
@@ -97,14 +97,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
       closure_10 = Math.ceil(tmp5(9).renderLatestMessages.importTime);
       const _Symbol2 = Symbol;
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
-        const lastTrackedAppUiViewed2Properties = tmp(7585).getLastTrackedAppUiViewed2Properties();
+        const lastTrackedAppUiViewed2Properties = tmp(7619).getLastTrackedAppUiViewed2Properties();
         class G {
           constructor() {
             return closure_7.alertStartupMetrics;
           }
         }
         let tmp20 = lastTrackedAppUiViewed2Properties;
-        const tmpResult2 = tmp(7585);
+        const tmpResult2 = tmp(7619);
       } else {
         tmp20 = cResult[6];
       }
@@ -147,7 +147,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                   closure_128_1 = undefined;
                   dependencyMap = 1;
                   c3 = 1;
-                  const obj5 = { value: tmp5(5158).getAppFirstVisibleTimestamp(), done: false };
+                  const obj5 = { value: tmp5(5193).getAppFirstVisibleTimestamp(), done: false };
                   return obj5;
                 }
               } else if (arg0 === 1) {
@@ -159,9 +159,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 return obj6;
               } else {
                 closure_128_0 = value;
-                closure_128_1 = tmp5(13808)(closure_128_0);
+                closure_128_1 = tmp5(14026)(closure_128_0);
                 const obj7 = { message: closure_128_1 };
-                tmp2(8851).showShareActionSheet(obj7, "Startup Timing");
+                tmp2(8885).showShareActionSheet(obj7, "Startup Timing");
                 c3 = 3;
                 return { value: "IconComponent", done: null };
               }
@@ -283,7 +283,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
                 }
               }
               let obj4 = { contentContainerStyle: tmp28, ListHeaderComponent: tmp29, data: tmp11, renderItem: tmp31 };
-              const tmp34 = closure_8(tmp(7222).FlashList, obj4);
+              const tmp34 = closure_8(tmp(7256).FlashList, obj4);
               cResult[19] = tmp11;
               cResult[20] = tmp28;
               cResult[21] = tmp29;
@@ -430,7 +430,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
     }
   }
   let obj = require("c");
-  const parts = checked(13808)(useResult, !checked, first1).split("\n");
+  const parts = checked(14026)(useResult, !checked, first1).split("\n");
   cResult[0] = useResult;
   cResult[1] = checked;
   cResult[2] = first1;
@@ -494,7 +494,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
             closure_128_1 = undefined;
             dependencyMap = 1;
             c3 = 1;
-            const obj5 = { value: tmp5(5158).getAppFirstVisibleTimestamp(), done: false };
+            const obj5 = { value: tmp5(5193).getAppFirstVisibleTimestamp(), done: false };
             return obj5;
           }
         } else if (arg0 === 1) {
@@ -506,9 +506,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
           return obj6;
         } else {
           closure_128_0 = value;
-          closure_128_1 = tmp5(13808)(closure_128_0);
+          closure_128_1 = tmp5(14026)(closure_128_0);
           const obj7 = { message: closure_128_1 };
-          tmp2(8851).showShareActionSheet(obj7, "Startup Timing");
+          tmp2(8885).showShareActionSheet(obj7, "Startup Timing");
           c3 = 3;
           return { value: "IconComponent", done: null };
         }
@@ -658,6 +658,6 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserSett
   obj5.renderItem = function renderItem(children) {
     return closure_8(lastTrackedAppUiViewed2Properties, { children: children.item });
   };
-  obj4.children = closure_8(tmp10(7222).FlashList, obj5);
+  obj4.children = closure_8(tmp10(7256).FlashList, obj5);
   return closure_8(checked, obj4);
 });

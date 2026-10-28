@@ -1,23 +1,23 @@
-// === Module 14924: GuildPowerupsMarketingHeader ===
+// === Module 15147: GuildPowerupsMarketingHeader ===
 
-// Module 14924 (GuildPowerupsMarketingHeader)
+// Module 15147 (GuildPowerupsMarketingHeader)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import util from "util" /* 1125 */;
 import _modDef2567 from "module_2567" /* 2567 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13428 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13451 */;
-import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 14925 */;
-import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 14926 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import GuildPowerupsActionCreators from "GuildPowerupsActionCreators" /* 13647 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13670 */;
+import useMarketablePowerupPerksDefault from "useMarketablePowerupPerks" /* 15148 */;
+import orderMarketablePerksForDisplayDefault from "orderMarketablePerksForDisplay" /* 15149 */;
 import noop from "module_19" /* 19 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5182 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5217 */;
 
 require = fn;
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: null, text: null };
 let obj3 = { padding: nativeDefault.space.PX_12, backgroundColor: null };
 let obj4 = _modDef683("#000000");
@@ -55,7 +55,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
   const cResult = guild(576).c(13);
   guild = guild.guild;
   const tmp4 = closure_7();
-  arr = arr(14925)(guild.id);
+  arr = arr(15148)(guild.id);
   if (cResult[0] !== guild.id) {
     const fn = function s() {
       if (GuildPowerupsStore.shouldFetchCatalogForGuild(guild.id)) {
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
     tmp7 = cResult[2];
   }
   const effect = noop.useEffect(tmp6, tmp7);
-  if (arr(13451)(guild.id)) {
+  if (arr(13670)(guild.id)) {
     let num4;
     if (arr != null) {
       num4 = arr.length;
@@ -139,7 +139,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
         tmp16 = tmp19;
       }
       let obj4 = { style: text, variant: "text-sm/semibold", children: tmp11 };
-      const tmp15 = jsx(tmp(5235).Text, { style: text, variant: "text-sm/semibold", children: tmp11 });
+      const tmp15 = jsx(tmp(5270).Text, { style: text, variant: "text-sm/semibold", children: tmp11 });
       cResult[7] = tmp4.text;
       cResult[8] = tmp11;
       cResult[9] = tmp15;
@@ -192,7 +192,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function GuildPow
       }
       const obj7 = { perks: str2 };
       obj2.children = intl.format(_modDef2567["7lwpzR"], obj7);
-      obj.children = jsx(guild(5235).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
+      obj.children = jsx(guild(5270).Text, { style: tmp.text, variant: "text-sm/semibold", children: null });
       return <View style={tmp.container}>{null}</View>;
     }
   }

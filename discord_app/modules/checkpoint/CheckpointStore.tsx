@@ -1,6 +1,6 @@
-// === Module 12968: CheckpointStore ===
+// === Module 13015: CheckpointStore ===
 
-// Module 12968 (CheckpointStore)
+// Module 13015 (CheckpointStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

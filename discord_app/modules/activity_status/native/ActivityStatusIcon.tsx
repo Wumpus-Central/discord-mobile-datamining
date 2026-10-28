@@ -1,6 +1,6 @@
-// === Module 10643: ActivityStatusIcon ===
+// === Module 10675: ActivityStatusIcon ===
 
-// Module 10643 (ActivityStatusIcon)
+// Module 10675 (ActivityStatusIcon)
 import c from "c" /* 576 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
@@ -8,7 +8,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 let closure_2 = ["icon", "style"];
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_5 = createStyles.createStyles({ icon: { flexShrink: 0 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

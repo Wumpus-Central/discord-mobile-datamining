@@ -1,12 +1,12 @@
-// === Module 16482: useYouBarMargins ===
+// === Module 16711: useYouBarMargins ===
 
-// Module 16482 (useYouBarMargins)
+// Module 16711 (useYouBarMargins)
 import nativeDefault from "native" /* 587 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useChatLayoutDefault from "useChatLayout" /* 5154 */;
-import useToken from "useToken" /* 5253 */;
-import YouBarConstants from "YouBarConstants" /* 16483 */;
+import useChatLayoutDefault from "useChatLayout" /* 5189 */;
+import useToken from "useToken" /* 5288 */;
+import YouBarConstants from "YouBarConstants" /* 16712 */;
 import "ReactCompilerGating";
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

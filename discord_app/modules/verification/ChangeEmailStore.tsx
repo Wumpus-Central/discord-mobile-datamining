@@ -1,6 +1,6 @@
-// === Module 6925: ChangeEmailStore ===
+// === Module 6959: ChangeEmailStore ===
 
-// Module 6925 (ChangeEmailStore)
+// Module 6959 (ChangeEmailStore)
 import ReactBatchUpdates from "ReactBatchUpdates" /* 1271 */;
 import module_570 from "module_570" /* 570 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

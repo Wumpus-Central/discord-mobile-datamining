@@ -1,18 +1,18 @@
-// === Module 12510: useConjureProjectCreator ===
+// === Module 12557: useConjureProjectCreator ===
 
-// Module 12510 (useConjureProjectCreator)
+// Module 12557 (useConjureProjectCreator)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import _modDef3831 from "module_3831" /* 3831 */;
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12345 */;
-import ListUtils from "ListUtils" /* 12511 */;
+import _modDef3863 from "module_3863" /* 3863 */;
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12390 */;
+import ListUtils from "ListUtils" /* 12558 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
-import ConjureChatStore from "ConjureChatStore" /* 10702 */;
+import ConjureChatStore from "ConjureChatStore" /* 10734 */;
 
 const require = globalThis.__r;
 
-const UserUtils = intl(5026);
+const UserUtils = intl(5058);
 require = fn;
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useConjureProjectPeople(id) {
@@ -335,11 +335,11 @@ function getConjureProjectCreatorLabel(creator, names) {
   if (0 === names.length) {
     const intl2 = util.intl;
     const obj3 = { creator };
-    let formatToPlainStringResult = intl2.formatToPlainString(_modDef3831.t5RWBS, obj3);
+    let formatToPlainStringResult = intl2.formatToPlainString(_modDef3863.t5RWBS, obj3);
   } else {
     const intl = util.intl;
     const obj = { creator, collaborators: ListUtils.getListSummaryLabel(names) };
-    formatToPlainStringResult = intl.formatToPlainString(_modDef3831["b5uCe/"], obj);
+    formatToPlainStringResult = intl.formatToPlainString(_modDef3863["b5uCe/"], obj);
   }
   return formatToPlainStringResult;
 }
@@ -369,11 +369,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
     if (0 === mapped.length) {
       intl = util.intl;
       obj = { creator: name };
-      let formatToPlainStringResult = intl.formatToPlainString(_modDef3831.t5RWBS, obj);
+      let formatToPlainStringResult = intl.formatToPlainString(_modDef3863.t5RWBS, obj);
     } else {
       const intl2 = util.intl;
       const obj4 = { creator: name, collaborators: ListUtils.getListSummaryLabel(mapped) };
-      formatToPlainStringResult = intl2.formatToPlainString(_modDef3831["b5uCe/"], obj4);
+      formatToPlainStringResult = intl2.formatToPlainString(_modDef3863["b5uCe/"], obj4);
       const intlResult1 = ListUtils;
     }
     obj3.label = formatToPlainStringResult;
@@ -397,12 +397,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       if (0 === mapped.length) {
         intl = intl(1125).intl;
         obj2 = { creator: name };
-        let formatToPlainStringResult = intl.formatToPlainString(_modDef3831.t5RWBS, obj2);
+        let formatToPlainStringResult = intl.formatToPlainString(_modDef3863.t5RWBS, obj2);
       } else {
         const intl2 = intl(1125).intl;
-        const obj4 = { creator: name, collaborators: intl(12511).getListSummaryLabel(mapped) };
-        formatToPlainStringResult = intl2.formatToPlainString(_modDef3831["b5uCe/"], obj4);
-        const intlResult = intl(12511);
+        const obj4 = { creator: name, collaborators: intl(12558).getListSummaryLabel(mapped) };
+        formatToPlainStringResult = intl2.formatToPlainString(_modDef3863["b5uCe/"], obj4);
+        const intlResult = intl(12558);
       }
       obj.label = formatToPlainStringResult;
     }

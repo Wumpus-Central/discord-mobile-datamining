@@ -1,7 +1,7 @@
-// === Module 12723: voiceChannelAppSession ===
+// === Module 12770: voiceChannelAppSession ===
 
-// Module 12723 (voiceChannelAppSession)
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5627 */;
+// Module 12770 (voiceChannelAppSession)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5662 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/voice_channel_apps/voiceChannelAppSession.tsx");

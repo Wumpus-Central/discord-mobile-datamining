@@ -1,21 +1,21 @@
-// === Module 8457: GuildSpaceLeaderboardSystemMessage ===
+// === Module 8491: GuildSpaceLeaderboardSystemMessage ===
 
-// Module 8457 (GuildSpaceLeaderboardSystemMessage)
+// Module 8491 (GuildSpaceLeaderboardSystemMessage)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4892 */;
-import NicknameUtilsDefault from "NicknameUtils" /* 5990 */;
-import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8275 */;
-import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8317 */;
-import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8319 */;
-import createCommonMessageDefault from "createCommonMessage" /* 8321 */;
-import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 8355 */;
-import _modDef8458 from "module_8458" /* 8458 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
+import GuildLeaderboardTypes from "GuildLeaderboardTypes" /* 4924 */;
+import NicknameUtilsDefault from "NicknameUtils" /* 6025 */;
+import renderer_EmbedUtils from "renderer/EmbedUtils" /* 8309 */;
+import useAuthorWithProcessedColor from "useAuthorWithProcessedColor" /* 8351 */;
+import formatUsernameOnClickDefault from "formatUsernameOnClick" /* 8353 */;
+import createCommonMessageDefault from "createCommonMessage" /* 8355 */;
+import GuildLeaderboardSystemMessageCopy from "GuildLeaderboardSystemMessageCopy" /* 8389 */;
+import _modDef8492 from "module_8492" /* 8492 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_5 = createStyles.createNativeStyleProperties({ iconTintColor: nativeDefault.colors.ICON_MUTED });
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/messages/native/renderer/system_messages/GuildSpaceLeaderboardSystemMessage.tsx");
@@ -103,7 +103,7 @@ export const createGuildSpaceLeaderboardSystemMessage = function createGuildSpac
           obj4.previousUsernameOnClick = tmp22Result2Result;
           obj7.content = intl.formatToParts(mobileLeaderboardSystemMessage.message, obj4);
           const tmp22Result3 = formatUsernameOnClickDefault;
-          obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8458);
+          obj7.iconUrl = renderer_EmbedUtils.getAssetUriForEmbed(_modDef8492);
           obj7.iconTintColor = tmp13.iconTintColor;
           const merged1 = Object.assign(createCommonMessageDefault(theme));
           return obj7;

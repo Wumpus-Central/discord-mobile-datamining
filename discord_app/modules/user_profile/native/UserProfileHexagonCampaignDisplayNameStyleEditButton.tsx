@@ -1,14 +1,14 @@
-// === Module 15916: UserProfileHexagonCampaignDisplayNameStyleEditButton ===
+// === Module 16142: UserProfileHexagonCampaignDisplayNameStyleEditButton ===
 
-// Module 15916 (UserProfileHexagonCampaignDisplayNameStyleEditButton)
+// Module 16142 (UserProfileHexagonCampaignDisplayNameStyleEditButton)
 import nativeDefault from "native" /* 587 */;
 import _modDef2929 from "module_2929" /* 2929 */;
-import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6368 */;
-import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7255 */;
-import openPremiumModalDefault from "openPremiumModal" /* 9794 */;
-import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9795 */;
-import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10664 */;
-import HexagonCampaignDisplayNameStylePromoDefault from "HexagonCampaignDisplayNameStylePromo" /* 15911 */;
+import useDisplayNameStylesDefault from "useDisplayNameStyles" /* 6402 */;
+import useAnalyticsLocationsDefault from "useAnalyticsLocations" /* 7289 */;
+import openPremiumModalDefault from "openPremiumModal" /* 9826 */;
+import PremiumFeaturesCards from "PremiumFeaturesCards" /* 9827 */;
+import UsernameWithEffectsDefault from "UsernameWithEffects" /* 10696 */;
+import HexagonCampaignDisplayNameStylePromoDefault from "HexagonCampaignDisplayNameStylePromo" /* 16137 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -21,13 +21,13 @@ get_ActivityIndicator = fn(17);
 ({ View: metroRequire, StyleSheet } = get_ActivityIndicator);
 const Constants = fn(1084);
 ({ AnalyticsObjects: closure_8, AnalyticsPages: closure_9, AnalyticsSections: c10, HorizontalGradient: closure_11 } = Constants);
-const HexagonCampaignConstants = fn(4997);
+const HexagonCampaignConstants = fn(5029);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_STYLES: closure_12, HexagonCampaignPerk: map1, HexagonCampaignPerkAvailability: closure_14 } = HexagonCampaignConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_15, jsxs: closure_16 } = jsxProd);
 const colors = ["black", "black"];
 const colors2 = ["black", "transparent"];
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { card: { flexGrow: 1, flexShrink: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md, overflow: "hidden" }, row: null, name: null, nameMask: null, nameMaskOpaque: null, nameMaskFade: null, nameMeasure: null, nameMeasureText: null, labelBadge: null };
 let obj3 = { flexGrow: 1, flexShrink: 1, borderColor: nativeDefault.colors.BORDER_STRONG, borderWidth: 1, borderRadius: nativeDefault.radii.md, overflow: "hidden" };
 obj2.row = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_12, padding: nativeDefault.space.PX_16 };
@@ -69,7 +69,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     first = cResult[0];
   }
   const tmpResult = require("useDisplayNameStylesPendingName");
-  const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(tmp(6714).QuestContent.DISPLAY_NAME_STYLES_SETTINGS, tmp(15895).HexagonCampaignContentSurface.NON_NITRO_CARD, true);
+  const trackHexagonCampaignContentViewed = require("HexagonCampaignAnalytics").useTrackHexagonCampaignContentViewed(tmp(6748).QuestContent.DISPLAY_NAME_STYLES_SETTINGS, tmp(16121).HexagonCampaignContentSurface.NON_NITRO_CARD, true);
   const tmpResult5 = require("HexagonCampaignAnalytics");
   pendingDisplayNameStyles = require("ProfileCustomizationUtils").useGuildMemberOrUserPendingDisplayNameStyles(user).pendingDisplayNameStyles;
   if (cResult[1] === pendingDisplayNameStyles) {
@@ -80,8 +80,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     if (cResult[4] !== tmp14) {
       let result = null != tmp14;
       if (result) {
-        result = tmp(4999).isHexagonCampaignDisplayNameStyle(tmp14);
-        const tmpResult7 = tmp(4999);
+        result = tmp(5031).isHexagonCampaignDisplayNameStyle(tmp14);
+        const tmpResult7 = tmp(5031);
       }
       cResult[4] = tmp14;
       cResult[5] = result;
@@ -154,7 +154,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         }
       }
       const tmp18Result = _slicedToArray(obj7.useState(false), 2);
-      const unmountEffect = tmp(5264).useUnmountEffect(tmp31);
+      const unmountEffect = tmp(5299).useUnmountEffect(tmp31);
       if (!tmp4) {
         class W {
           constructor(arg0) {
@@ -205,7 +205,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                       c3 = 1;
                       v2 = 2;
                       ref = 1;
-                      const obj10 = { value: closure_0(15894).ensureHexagonCampaignEnrollment(constants.DISPLAY_NAME_STYLE), done: false };
+                      const obj10 = { value: closure_0(16120).ensureHexagonCampaignEnrollment(constants.DISPLAY_NAME_STYLE), done: false };
                       return obj10;
                     } else {
                       const currentUser = t9.getCurrentUser();
@@ -216,11 +216,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                       if (null == displayNameStyles) {
                         displayNameStyles = null;
                       } else {
-                        closure_0(4999);
+                        closure_0(5031);
                       }
                       const obj12 = { displayNameStyles };
-                      closure_0(8653).setPendingChanges(obj12);
-                      const obj8 = closure_0(8653);
+                      closure_0(8690).setPendingChanges(obj12);
+                      const obj8 = closure_0(8690);
                     }
                   }
                 }
@@ -247,17 +247,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
                     const obj13 = { text: null };
                     const intl = closure_0(1125).intl;
                     obj13.text = intl.string(closure_0(1125).t.F8FvUy);
-                    tmp52(5664).open("HEXAGON_CAMPAIGN_ENROLLMENT_ERROR", obj13);
-                    const obj2 = tmp52(5664);
+                    tmp52(5699).open("HEXAGON_CAMPAIGN_ENROLLMENT_ERROR", obj13);
+                    const obj2 = tmp52(5699);
                   }
                 }
-                const result = closure_0(15894).saveHexagonCampaignPreviousDisplayNameStyles();
-                const obj4 = closure_0(15894);
+                const result = closure_0(16120).saveHexagonCampaignPreviousDisplayNameStyles();
+                const obj4 = closure_0(16120);
                 const obj14 = { displayNameStyles };
-                closure_0(8653).setPendingChanges(obj14);
-                const obj5 = closure_0(8653);
-                const result1 = closure_0(15894).markHexagonCampaignPerkApplied(constants.DISPLAY_NAME_STYLE);
-                const obj7 = closure_0(15894);
+                closure_0(8690).setPendingChanges(obj14);
+                const obj5 = closure_0(8690);
+                const result1 = closure_0(16120).markHexagonCampaignPerkApplied(constants.DISPLAY_NAME_STYLE);
+                const obj7 = closure_0(16120);
               }
               ref = 3;
             } catch (tmp51) {
@@ -291,8 +291,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         }
       }
       t9 = tmp33;
-      const tmpResult8 = tmp(5264);
-      const analyticsLocations = tmp13(7255)(tmp13(7280).EDIT_DISPLAY_NAME_STYLES_MODAL).analyticsLocations;
+      const tmpResult8 = tmp(5299);
+      const analyticsLocations = tmp13(7289)(tmp13(7314).EDIT_DISPLAY_NAME_STYLES_MODAL).analyticsLocations;
       if (cResult[13] !== analyticsLocations) {
         class W {
           constructor(arg0) {
@@ -329,7 +329,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       cResult[16] = tmp15;
       cResult[17] = tmp6;
       cResult[18] = ye;
-      const tmp13Result = tmp13(7255);
+      const tmp13Result = tmp13(7289);
     }
     let obj2 = { userId: user.id, userName: displayNameStylesPendingName, pendingDisplayNameStyles, ignoreDisabledStylesSetting: true, variant: "heading-xxl/semibold", lineClamp: 1, ellipsizeMode: "clip" };
     const tmp28 = closure_15(UsernameWithEffectsDefault, obj2);
@@ -370,8 +370,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   const tmp9 = useDisplayNameStylesDefault({ userId: user.id, pendingDisplayNameStyles: require("ProfileCustomizationUtils").useGuildMemberOrUserPendingDisplayNameStyles(user).pendingDisplayNameStyles, ignoreDisabledStylesSetting: true });
   let result = null != tmp9;
   if (result) {
-    result = tmp3(4999).isHexagonCampaignDisplayNameStyle(tmp9);
-    const tmp3Result = tmp3(4999);
+    result = tmp3(5031).isHexagonCampaignDisplayNameStyle(tmp9);
+    const tmp3Result = tmp3(5031);
   }
   importDefault = result;
   let obj4 = { userId: user.id, pendingDisplayNameStyles: require("ProfileCustomizationUtils").useGuildMemberOrUserPendingDisplayNameStyles(user).pendingDisplayNameStyles, ignoreDisabledStylesSetting: true };
@@ -509,7 +509,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
     return applyArgumentsResult;
   }, []);
   const tmp3Result2 = require("useMountEffect");
-  analyticsLocations = useAnalyticsLocationsDefault(tmp6(7280).EDIT_DISPLAY_NAME_STYLES_MODAL).analyticsLocations;
+  analyticsLocations = useAnalyticsLocationsDefault(tmp6(7314).EDIT_DISPLAY_NAME_STYLES_MODAL).analyticsLocations;
   const items = [analyticsLocations];
   callback3 = obj6.useCallback(() => {
     const obj = { analyticsLocation: { page: constants2.USER_SETTINGS, section: constants3.SETTINGS_DISPLAY_NAME_STYLES, object: constants.PREMIUM_UPSELL_BUTTON }, analyticsLocations, premiumFeatureCardOrder: PremiumFeaturesCards.PremiumFeatureCardOrder.TIER_2_LEADING };
@@ -528,7 +528,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   if (availability.availability !== constants5.LOCKED) {
     let obj8 = { style: tmp.labelBadge, children: null };
     const obj9 = { perk: constants4.DISPLAY_NAME_STYLE };
-    obj8.children = closure_15(tmp6(15918), obj9);
+    obj8.children = closure_15(tmp6(16144), obj9);
     tmp17Result = closure_15(closure_6, obj8);
   }
   obj7.labelTrailing = tmp17Result;
@@ -554,16 +554,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
       let obj14 = { maskElement: null, children: null };
       const obj15 = { style: tmp.nameMask, children: null };
       const obj16 = { colors, style: tmp.nameMaskOpaque };
-      const items2 = [closure_15(tmp6(5259), obj16), ];
+      const items2 = [closure_15(tmp6(5294), obj16), ];
       const obj17 = { colors: colors2, start: null, end: null, style: null };
       ({ START: obj23.start, END: obj23.end } = closure_11);
       obj17.style = tmp.nameMaskFade;
-      items2[1] = closure_15(tmp6(5259), obj17);
+      items2[1] = closure_15(tmp6(5294), obj17);
       obj15.children = items2;
       obj14.maskElement = closure_16(tmp31, obj15);
       obj14.children = tmp19;
-      tmp17Result3 = closure_15(tmp6(6968), obj14);
-      const tmp6Result2 = tmp6(6968);
+      tmp17Result3 = closure_15(tmp6(7002), obj14);
+      const tmp6Result2 = tmp6(7002);
     }
   }
   const items3 = [tmp17Result3, ];
@@ -574,10 +574,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
   obj13.children = items3;
   const items4 = [closure_16(closure_6, obj13), ];
   if (availability.availability === constants5.LOCKED) {
-    let tmp17Result4 = closure_15(tmp3(6914).TableRowArrow, {});
+    let tmp17Result4 = closure_15(tmp3(6948).TableRowArrow, {});
   } else {
     const obj21 = { "aria-hidden": true, value: result, onValueChange: callback2, disabled };
-    tmp17Result4 = closure_15(tmp3(7298).FormSwitch, obj21);
+    tmp17Result4 = closure_15(tmp3(7332).FormSwitch, obj21);
   }
   items4[1] = tmp17Result4;
   obj11.children = items4;

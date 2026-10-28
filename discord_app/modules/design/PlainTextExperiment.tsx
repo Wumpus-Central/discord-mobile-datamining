@@ -1,6 +1,6 @@
-// === Module 17395: PlainTextExperiment ===
+// === Module 17628: PlainTextExperiment ===
 
-// Module 17395 (PlainTextExperiment)
+// Module 17628 (PlainTextExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

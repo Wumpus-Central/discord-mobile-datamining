@@ -1,6 +1,6 @@
-// === Module 9253: GameProfileStore ===
+// === Module 9285: GameProfileStore ===
 
-// Module 9253 (GameProfileStore)
+// Module 9285 (GameProfileStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 

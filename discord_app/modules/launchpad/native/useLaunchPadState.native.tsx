@@ -1,19 +1,19 @@
-// === Module 18717: useLaunchPadState ===
+// === Module 18968: useLaunchPadState ===
 
-// Module 18717 (useLaunchPadState)
-import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
-import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10908 */;
-import useSafeAreaInsetsSharedValue from "useSafeAreaInsetsSharedValue" /* 10920 */;
-import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 12526 */;
-import LaunchPadPullTabCache2 from "LaunchPadPullTabCache" /* 18718 */;
+// Module 18968 (useLaunchPadState)
+import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import updateSharedValueIfChangedDefault from "updateSharedValueIfChanged" /* 10943 */;
+import useSafeAreaInsetsSharedValue from "useSafeAreaInsetsSharedValue" /* 10955 */;
+import useWindowDimensionsSharedValue from "useWindowDimensionsSharedValue" /* 12573 */;
+import LaunchPadPullTabCache2 from "LaunchPadPullTabCache" /* 18969 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
-const LaunchPadConstants = fn(11208);
+const LaunchPadConstants = fn(11244);
 ({ LAUNCH_PAD_PULL_TAB_MAX_POSITION: closure_4, LAUNCH_PAD_PULL_TAB_SCALE_OFFSET: hasOwnProperty } = LaunchPadConstants);
 let closure_6 = { active: false, initialLaunchPadPosition: 0, initialPullTabPosition: 0, initialTouchX: 0, initialTouchY: 0, positionOffsetX: 0, positionOffsetY: 0, startTime: -1, requiresPop: false, startShown: false };
 let __closure = { position: null, scale: 1, offset: 0, minimized: false };
-const LaunchPadPullTabCache = fn(18718);
+const LaunchPadPullTabCache = fn(18969);
 __closure.position = LaunchPadPullTabCache.getLaunchPadPullTabPositionCached();
 const __initData = { code: "function setLaunchPadShown_useLaunchPadStateNativeTsx1(shown){const{launchPadShown}=this.__closure;launchPadShown.set(shown);}" };
 const __initData2 = { code: "function setLaunchPadPosition_useLaunchPadStateNativeTsx2(value){const{launchPadSharedState}=this.__closure;launchPadSharedState.set(Math.max(Math.min(value,1),0));}" };

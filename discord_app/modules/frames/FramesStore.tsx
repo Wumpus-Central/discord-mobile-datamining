@@ -1,14 +1,14 @@
-// === Module 6776: FramesStore ===
+// === Module 6810: FramesStore ===
 
-// Module 6776 (FramesStore)
+// Module 6810 (FramesStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import Constants from "Constants" /* 1095 */;
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5610 */;
-import getURLForApplicationDefault from "getURLForApplication" /* 5624 */;
-import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6778 */;
-import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6779 */;
-import FramesConstants from "FramesConstants" /* 6777 */;
+import ActivityPanelConstants from "ActivityPanelConstants" /* 5645 */;
+import getURLForApplicationDefault from "getURLForApplication" /* 5659 */;
+import EmbeddedAppTypes from "EmbeddedAppTypes" /* 6812 */;
+import getChannelIdForEmbeddedSurfaceDefault from "getChannelIdForEmbeddedSurface" /* 6813 */;
+import FramesConstants from "FramesConstants" /* 6811 */;
 import size from "module_2" /* 2 */;
 
 function findFrameByIframeId(iframeId) {
@@ -85,8 +85,8 @@ prototype["getFrameByEmbeddedContext"] = function getFrameByEmbeddedContext(cont
 prototype["getFrameBySurface"] = function getFrameBySurface(arg0, arg1) {
   return map.get(closure_1_8(arg0, arg1));
 };
-prototype["getFramesForSurface"] = function getFramesForSurface(frameSurfaceForChannel) {
-  closure_0 = frameSurfaceForChannel;
+prototype["getFramesForSurface"] = function getFramesForSurface(arg0) {
+  closure_0 = arg0;
   return Array.from(map.values()).filter((applicationId) => closure_2_8(applicationId.applicationId, closure_0) === applicationId.id);
 };
 prototype["getFramesForChannel"] = function getFramesForChannel(id) {

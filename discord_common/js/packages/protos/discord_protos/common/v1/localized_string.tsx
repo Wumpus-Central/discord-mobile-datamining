@@ -1,6 +1,6 @@
-// === Module 9524: localized_string ===
+// === Module 9556: localized_string ===
 
-// Module 9524 (localized_string)
+// Module 9556 (localized_string)
 import _mod1209 from "module_1209" /* 1209 */;
 import _slicedToArray from "module_32" /* 32 */;
 

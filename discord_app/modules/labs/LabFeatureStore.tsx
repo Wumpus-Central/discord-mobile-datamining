@@ -1,10 +1,13 @@
-// === Module 8843: LabFeatureStore ===
+// === Module 8498: LabFeatureStore ===
 
-// Module 8843 (LabFeatureStore)
+// Module 8498 (LabFeatureStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import LabFeaturesDefault from "LabFeatures" /* 8844 */;
+import LabFeatures from "LabFeatures" /* 8499 */;
 
+const LabFeaturesDefault = LabFeatures;
+
+require = fn;
 let toggleStates = {};
 const DeviceSettingsStore = initializeDefault.DeviceSettingsStore;
 class LabFeatureStore extends DeviceSettingsStore {
@@ -15,36 +18,37 @@ prototype["getUserAgnosticState"] = function getUserAgnosticState() {
 };
 prototype["initialize"] = function initialize(toggleStates) {
   for (const key10008 in LabFeaturesDefault) {
-    let flag;
+    let labFeatureDefaultValue;
     if (arg0 != null) {
       toggleStates = arg0.toggleStates;
       if (toggleStates != null) {
-        flag = toggleStates[key10008];
+        labFeatureDefaultValue = toggleStates[key10008];
       }
     }
-    if (flag == null) {
-      flag = false;
+    if (labFeatureDefaultValue == null) {
+      let obj = LabFeatures;
+      labFeatureDefaultValue = obj.getLabFeatureDefaultValue(key10008);
     }
-    closure_2[key10008] = flag;
+    closure_3[key10008] = labFeatureDefaultValue;
     continue;
   }
 };
-prototype["get"] = function get(arg0) {
-  let flag = toggleStates[arg0];
-  if (flag == null) {
-    flag = false;
+prototype["get"] = function get(key10008) {
+  let labFeatureDefaultValue = toggleStates[key10008];
+  if (labFeatureDefaultValue == null) {
+    labFeatureDefaultValue = LabFeatures.getLabFeatureDefaultValue(key10008);
   }
-  return flag;
+  return labFeatureDefaultValue;
 };
 prototype["set"] = function set(arg0, arg1) {
-  closure_2[arg0] = arg1;
+  closure_3[arg0] = arg1;
   return arg1;
 };
 LabFeatureStore.displayName = "LabFeatureStore";
 LabFeatureStore.persistKey = "LabFeatureStore";
 const labFeatureStore = new LabFeatureStore(DispatcherDefault, {
   LAB_FEATURE_TOGGLE: function handleLabFeatureToggleSet(labFeature) {
-    closure_2[labFeature.labFeature] = labFeature.enabled;
+    closure_3[labFeature.labFeature] = labFeature.enabled;
   }
 });
 const size = fn(2);

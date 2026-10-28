@@ -1,6 +1,6 @@
-// === Module 4813: ShopMarketingFatigueExperiment ===
+// === Module 4845: ShopMarketingFatigueExperiment ===
 
-// Module 4813 (ShopMarketingFatigueExperiment)
+// Module 4845 (ShopMarketingFatigueExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import size from "module_2" /* 2 */;
 

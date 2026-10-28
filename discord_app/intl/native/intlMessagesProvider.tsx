@@ -1,9 +1,9 @@
-// === Module 19511: intlMessagesProvider ===
+// === Module 19775: intlMessagesProvider ===
 
-// Module 19511 (intlMessagesProvider)
+// Module 19775 (intlMessagesProvider)
 import util from "util" /* 1125 */;
 import _mod1164 from "module_1164" /* 1164 */;
-import NativeI18nModuleDefault from "NativeI18nModule" /* 19512 */;
+import NativeI18nModuleDefault from "NativeI18nModule" /* 19776 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("intl/native/intlMessagesProvider.tsx");

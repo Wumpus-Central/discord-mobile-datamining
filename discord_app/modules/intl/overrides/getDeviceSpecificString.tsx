@@ -1,6 +1,6 @@
-// === Module 5224: getDeviceSpecificString ===
+// === Module 5259: getDeviceSpecificString ===
 
-// Module 5224 (getDeviceSpecificString)
+// Module 5259 (getDeviceSpecificString)
 import util from "util" /* 1125 */;
 import size from "module_2" /* 2 */;
 

@@ -1,22 +1,22 @@
-// === Module 12832: AutomodQuarantineUtils ===
+// === Module 12879: AutomodQuarantineUtils ===
 
-// Module 12832 (AutomodQuarantineUtils)
+// Module 12879 (AutomodQuarantineUtils)
 import util from "util" /* 1125 */;
-import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4910 */;
-import openUserSettings2 from "openUserSettings" /* 7491 */;
-import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11193 */;
+import AutomodPermissionUtils from "AutomodPermissionUtils" /* 4942 */;
+import openUserSettings2 from "openUserSettings" /* 7526 */;
+import GuildIdentityActionCreators from "GuildIdentityActionCreators" /* 11228 */;
 import noop from "module_19" /* 19 */;
-import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11128 */;
+import ProfileCustomizationNavigationStore from "ProfileCustomizationNavigationStore" /* 11163 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import GuildMemberStore from "GuildMemberStore" /* 4884 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
+import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
 
 require = fn;
 const Constants = fn(1084);
 ({ Permissions: closure_9, UserSettingsSections: c10 } = Constants);
-const GuildMemberFlags = fn(4890).GuildMemberFlags;
+const GuildMemberFlags = fn(4922).GuildMemberFlags;
 const constants3 = fn(1094).ProfileCustomizationSubsection;
 fn(558);
 let ReactCompilerGating = fn(558);
@@ -81,7 +81,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
       if (closure_0 == null) {
         guildId = SelectedGuildStore.getGuildId();
       }
-      const obj = { nick: "toCharArray$esjava$1", bio: "Symbol" };
+      const obj = { nick: "useCallback", bio: "PX_16" };
       guild = GuildStore.getGuild(guildId);
       if (null != guild) {
         if (null != guildId) {
@@ -141,7 +141,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGuildAu
     if (closure_0 == null) {
       guildId = SelectedGuildStore.getGuildId();
     }
-    const obj = { nick: "toCharArray$esjava$1", bio: "Symbol" };
+    const obj = { nick: "useCallback", bio: "PX_16" };
     guild = GuildStore.getGuild(guildId);
     if (null != guild) {
       if (null != guildId) {

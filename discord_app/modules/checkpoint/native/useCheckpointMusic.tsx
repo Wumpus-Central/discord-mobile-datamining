@@ -1,9 +1,9 @@
-// === Module 12977: useCheckpointMusic ===
+// === Module 13024: useCheckpointMusic ===
 
-// Module 12977 (useCheckpointMusic)
+// Module 13024 (useCheckpointMusic)
 import _mod17 from "module_17" /* 17 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12968 */;
+import CheckpointStore from "CheckpointStore" /* 13015 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -31,11 +31,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCheck
   if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
     const fn2 = function v() {
       let num = 1;
-      const obj = stateFromStores(11528);
+      const obj = stateFromStores(11566);
       if (CheckpointStore.isMuted) {
         num = 0;
       }
-      const sound = obj.createSound(ref(12978), "vibing_wumpus", num);
+      const sound = obj.createSound(ref(13025), "vibing_wumpus", num);
       ref.current = sound;
       sound.loop();
       ref = AppState.addEventListener("change", (event) => {
@@ -89,11 +89,11 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useCheck
   closure_4(null);
   closure_3(() => {
     let num = 1;
-    const obj = stateFromStores(11528);
+    const obj = stateFromStores(11566);
     if (CheckpointStore.isMuted) {
       num = 0;
     }
-    const sound = obj.createSound(ref(12978), "vibing_wumpus", num);
+    const sound = obj.createSound(ref(13025), "vibing_wumpus", num);
     ref.current = sound;
     sound.loop();
     ref = AppState.addEventListener("change", (event) => {

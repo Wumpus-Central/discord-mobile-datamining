@@ -1,6 +1,6 @@
-// === Module 8710: StorefrontCacheUtils ===
+// === Module 8747: StorefrontCacheUtils ===
 
-// Module 8710 (StorefrontCacheUtils)
+// Module 8747 (StorefrontCacheUtils)
 import DurationsDefault from "Durations" /* 1101 */;
 
 const result = 12 * DurationsDefault.Millis.HOUR;

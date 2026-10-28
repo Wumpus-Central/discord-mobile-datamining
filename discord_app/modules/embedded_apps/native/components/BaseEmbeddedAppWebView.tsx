@@ -1,18 +1,18 @@
-// === Module 11490: BaseEmbeddedAppWebView ===
+// === Module 11528: BaseEmbeddedAppWebView ===
 
-// Module 11490 (BaseEmbeddedAppWebView)
+// Module 11528 (BaseEmbeddedAppWebView)
 import LoggerDefault from "Logger" /* 3 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5909 */;
-import usePreviousDefault from "usePrevious" /* 6661 */;
-import WebView from "WebView" /* 7908 */;
-import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 10778 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5944 */;
+import usePreviousDefault from "usePrevious" /* 6695 */;
+import WebView from "WebView" /* 7942 */;
+import useEmbeddedAppCSPDefault from "useEmbeddedAppCSP" /* 10812 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5626 */;
+import DeveloperActivityShelfStore from "DeveloperActivityShelfStore" /* 5661 */;
 
 require = fn;
 function getSafeArea(arg0, arg1) {
@@ -37,7 +37,7 @@ function getSafeArea(arg0, arg1) {
 }
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_10 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_11 = new LoggerDefault("BaseEmbeddedAppWebView");
 fn(558);

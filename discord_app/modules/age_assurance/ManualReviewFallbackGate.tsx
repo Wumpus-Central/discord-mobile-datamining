@@ -1,9 +1,9 @@
-// === Module 7928: ManualReviewFallbackGate ===
+// === Module 7962: ManualReviewFallbackGate ===
 
-// Module 7928 (ManualReviewFallbackGate)
-import SafetyHubUtils from "SafetyHubUtils" /* 7898 */;
-import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7929 */;
-import AgeVerificationMethodsV2 from "AgeVerificationMethodsV2" /* 7930 */;
+// Module 7962 (ManualReviewFallbackGate)
+import SafetyHubUtils from "SafetyHubUtils" /* 7932 */;
+import ManualAgeAssuranceFallbackExperiment from "ManualAgeAssuranceFallbackExperiment" /* 7963 */;
+import AgeVerificationMethodsV2 from "AgeVerificationMethodsV2" /* 7964 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;

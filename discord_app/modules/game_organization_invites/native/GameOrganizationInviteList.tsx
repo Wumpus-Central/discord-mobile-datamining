@@ -1,8 +1,8 @@
-// === Module 15248: GameOrganizationInviteList ===
+// === Module 15473: GameOrganizationInviteList ===
 
-// Module 15248 (GameOrganizationInviteList)
+// Module 15473 (GameOrganizationInviteList)
 import nativeDefault from "native" /* 587 */;
-import GameOrganizationInviteRowDefault from "GameOrganizationInviteRow" /* 15249 */;
+import GameOrganizationInviteRowDefault from "GameOrganizationInviteRow" /* 15474 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
@@ -10,7 +10,7 @@ function keyExtractor(id) {
   return id.id;
 }
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_5 = createStyles.createStyles((arg0) => {
   const obj = { content: { paddingBottom: arg0 + nativeDefault.space.PX_16 }, emptyState: { backgroundColor: "transparent" } };
   return obj;

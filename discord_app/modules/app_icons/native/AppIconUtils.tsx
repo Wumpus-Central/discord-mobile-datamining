@@ -1,12 +1,12 @@
-// === Module 14803: AppIconUtils ===
+// === Module 15026: AppIconUtils ===
 
-// Module 14803 (AppIconUtils)
+// Module 15026 (AppIconUtils)
 import LoggerDefault from "Logger" /* 3 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import MetaQuestUtils from "MetaQuestUtils" /* 1627 */;
-import useMountEffectDefault from "useMountEffect" /* 5264 */;
-import openUserSettings from "openUserSettings" /* 7491 */;
-import NativeAppIconModuleDefault from "NativeAppIconModule" /* 14804 */;
+import useMountEffectDefault from "useMountEffect" /* 5299 */;
+import openUserSettings from "openUserSettings" /* 7526 */;
+import NativeAppIconModuleDefault from "NativeAppIconModule" /* 15027 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
@@ -195,7 +195,7 @@ let closure_17 = async function _setAppIcon(arg0) {
     }
   }
 };
-const AppIconConstants = fn(9867);
+const AppIconConstants = fn(9899);
 ({ getDefaultIcon: metroRequire, getIconById: closure_7, getLimitedAlternateIcons: closure_8, getOfficialAlternateIcons: closure_9 } = AppIconConstants);
 const Constants = fn(1084);
 ({ AnalyticEvents: c10, UserSettingsSections: closure_11 } = Constants);
@@ -286,7 +286,7 @@ const tmp5 = ReactCompilerGating.isReactCompilerEnabled() ? (function useCurrent
   } else {
     tmp6 = cResult[1];
   }
-  first(5264)(tmp6);
+  first(5299)(tmp6);
   return tmp3[0];
 }) : (function useCurrentAppIcon() {
   const tmp = _slicedToArray(noop.useState(require("AppIconTypes").FreemiumAppIconIds.DEFAULT), 2);

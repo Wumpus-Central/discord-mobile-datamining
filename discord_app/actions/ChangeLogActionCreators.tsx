@@ -1,17 +1,17 @@
-// === Module 8466: ChangeLogActionCreators ===
+// === Module 8503: ChangeLogActionCreators ===
 
-// Module 8466 (ChangeLogActionCreators)
+// Module 8503 (ChangeLogActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import UserSettings from "UserSettings" /* 4800 */;
+import UserSettings from "UserSettings" /* 4832 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ChangelogStore from "ChangelogStore" /* 7414 */;
+import ChangelogStore from "ChangelogStore" /* 7449 */;
 
 require = fn;
 function cacheBustParam() {
   return "x=" + Math.floor(new Date().getMinutes() / 5);
 }
-const ChangelogPlatforms = fn(4874).ChangelogPlatforms;
+const ChangelogPlatforms = fn(4906).ChangelogPlatforms;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ChangeLogActionCreators.tsx");
 

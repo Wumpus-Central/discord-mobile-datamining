@@ -1,16 +1,19 @@
-// === Module 18092: conjureBackgroundFramePlatform ===
+// === Module 18330: conjureBackgroundFramePlatform ===
 
-// Module 18092 (conjureBackgroundFramePlatform)
-import ActivityPanelConstants from "ActivityPanelConstants" /* 5610 */;
-import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5627 */;
-import transitionToChannel from "transitionToChannel" /* 5708 */;
-import FramesActionCreatorsDefault from "FramesActionCreators" /* 10770 */;
-import FramePoolManagerDefault from "FramePoolManager" /* 11782 */;
-import FramesConstants from "FramesConstants" /* 6777 */;
-import size from "module_2" /* 2 */;
+// Module 18330 (conjureBackgroundFramePlatform)
+import EmbeddedSurfaceType from "EmbeddedSurfaceType" /* 5662 */;
+import transitionToChannel from "transitionToChannel" /* 5743 */;
+import FramesActionCreatorsDefault from "FramesActionCreators" /* 10804 */;
+import FramePoolManagerDefault from "FramePoolManager" /* 11820 */;
+import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame" /* 18331 */;
+import conjureAppPictureInPictureFrames from "conjureAppPictureInPictureFrames" /* 18332 */;
+import FramesStore from "FramesStore" /* 6810 */;
 
-const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
-({ asLaunched: closure_4, FrameLayoutModes: hasOwnProperty } = FramesConstants);
+require = fn;
+const ActivityPanelModes = fn(5645).ActivityPanelModes;
+const FramesConstants = fn(6811);
+({ asLaunched: hasOwnProperty, FrameLayoutModes: metroRequire } = FramesConstants);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFramePlatform.native.tsx");
 
 export default {
@@ -20,11 +23,11 @@ export default {
   isActivityPopoutOpen() {
     return false;
   },
-  hasOwnPictureInPicture() {
-    return false;
+  hasOwnPictureInPicture(frame) {
+    return isConjureAppChannelFrameDefault(frame);
   },
   isPictureInPicture(surface) {
-    const tmp = React4(surface);
+    const tmp = hasOwnProperty(surface);
     let activityPanelMode;
     if (tmp != null) {
       activityPanelMode = tmp.data.activityPanelMode;
@@ -36,7 +39,15 @@ export default {
     const result = FramesActionCreatorsDefault.updateFrameLayoutMode({ frameId, layoutMode: constants.PIP });
   },
   isOnScreen(id) {
-    return null != FramePoolManagerDefault.getWinningTarget(id);
+    const frame = FramesStore.getFrame(id);
+    let tmp2 = null == frame;
+    if (!tmp2) {
+      tmp2 = !conjureAppPictureInPictureFrames.isConjureAppPictureInPictureFrame(frame);
+    }
+    if (tmp2) {
+      tmp2 = null != FramePoolManagerDefault.getWinningTarget(id);
+    }
+    return tmp2;
   },
   openSurfaceChannel(surface, channel) {
     let flag = surface.type === EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL;

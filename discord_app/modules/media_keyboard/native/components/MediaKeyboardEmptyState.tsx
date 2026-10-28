@@ -1,24 +1,24 @@
-// === Module 10445: MediaKeyboardEmptyState ===
+// === Module 10477: MediaKeyboardEmptyState ===
 
-// Module 10445 (MediaKeyboardEmptyState)
+// Module 10477 (MediaKeyboardEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import components_Button_Button from "components/Button/Button" /* 5245 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import SettingsIcon from "SettingsIcon" /* 7489 */;
-import CameraIcon from "CameraIcon" /* 10440 */;
-import _modDef10446 from "module_10446" /* 10446 */;
-import _modDef10447 from "module_10447" /* 10447 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import components_Button_Button from "components/Button/Button" /* 5280 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import SettingsIcon from "SettingsIcon" /* 7524 */;
+import CameraIcon from "CameraIcon" /* 10472 */;
+import _modDef10478 from "module_10478" /* 10478 */;
+import _modDef10479 from "module_10479" /* 10479 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const NativePermissionStatus = fn(7869).NativePermissionStatus;
+const NativePermissionStatus = fn(7903).NativePermissionStatus;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { marginHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_32, justifyContent: "center", alignItems: "center" }, label: null };
 let obj3 = { marginHorizontal: nativeDefault.space.PX_8, marginVertical: nativeDefault.space.PX_32, justifyContent: "center", alignItems: "center" };
 obj2.label = { textAlign: "center", marginVertical: nativeDefault.space.PX_16 };
@@ -108,7 +108,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
           const intl3 = util.intl;
           obj2.actionLabel = intl3.string(util.t.JuXTi6);
           obj2.actionPress = tmp2;
-          obj2.imageSource = _modDef10446;
+          obj2.imageSource = _modDef10478;
           const intl4 = util.intl;
           obj2.label = intl4.string(util.t["5g7NcN"]);
           return hasOwnProperty(closure_8, obj2);
@@ -117,7 +117,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
           const intl = util.intl;
           obj.actionLabel = intl.string(util.t.tpoWUd);
           obj.actionPress = tmp;
-          obj.imageSource = _modDef10447;
+          obj.imageSource = _modDef10479;
           const intl2 = util.intl;
           obj.label = intl2.string(util.t.YOvRBZ);
           return hasOwnProperty(closure_8, obj);
@@ -129,7 +129,7 @@ export const getMediaEmptyStateComponentOrNull = function getMediaEmptyStateComp
   const intl5 = util.intl;
   obj3.actionLabel = intl5.string(util.t["457oeG"]);
   obj3.actionPress = photosEmpty.onPressPrivacySettings;
-  obj3.imageSource = _modDef10446;
+  obj3.imageSource = _modDef10478;
   const intl6 = util.intl;
   obj3.label = intl6.string(util.t["8p9jGu"]);
   return hasOwnProperty(closure_8, obj3);

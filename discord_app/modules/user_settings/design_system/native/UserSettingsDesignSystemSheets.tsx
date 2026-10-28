@@ -1,19 +1,19 @@
-// === Module 17217: UserSettingsDesignSystemSheets ===
+// === Module 17447: UserSettingsDesignSystemSheets ===
 
-// Module 17217 (UserSettingsDesignSystemSheets)
+// Module 17447 (UserSettingsDesignSystemSheets)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import components_Button_Button from "components/Button/Button" /* 5245 */;
-import Stack_Stack from "Stack/Stack" /* 5978 */;
-import Card from "Card" /* 6907 */;
-import TextInput from "TextInput" /* 7010 */;
-import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7250 */;
-import ActionSheetRow from "ActionSheetRow" /* 7296 */;
-import ActionSheet from "ActionSheet" /* 7300 */;
-import PromoSheet from "PromoSheet" /* 10859 */;
-import _modDef17218 from "module_17218" /* 17218 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import components_Button_Button from "components/Button/Button" /* 5280 */;
+import Stack_Stack from "Stack/Stack" /* 6013 */;
+import Card from "Card" /* 6941 */;
+import TextInput from "TextInput" /* 7044 */;
+import BottomSheetTitleHeader from "BottomSheetTitleHeader" /* 7284 */;
+import ActionSheetRow from "ActionSheetRow" /* 7330 */;
+import ActionSheet from "ActionSheet" /* 7334 */;
+import PromoSheet from "PromoSheet" /* 10894 */;
+import _modDef17448 from "module_17448" /* 17448 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -25,7 +25,7 @@ const ScrollView = fn(17).ScrollView;
 const NOOP = fn(1084).NOOP;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_9 = createStyles.createStyles({ container: { padding: 16, alignItems: "center" } });
 let ReactCompilerGating = fn(558);
 let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoActionSheet() {
@@ -49,7 +49,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoAc
       let tmp22 = tmp5;
       if (tmp5) {
         const obj2 = { onPress: NOOP };
-        tmp22 = React5(tmp(7295).ActionSheetCloseButton, obj2);
+        tmp22 = React5(tmp(7329).ActionSheetCloseButton, obj2);
       }
       cResult[3] = tmp5;
       cResult[4] = tmp22;
@@ -62,7 +62,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoAc
         if (cResult[7] === tmp21) {
           if (cResult[10] !== first1) {
             const obj3 = { value: first1, onChange: tmp9[1], label: "Title" };
-            const tmp30 = React5(tmp(7010).TextInput, obj3);
+            const tmp30 = React5(tmp(7044).TextInput, obj3);
             cResult[10] = first1;
             cResult[11] = tmp30;
             let tmp28 = tmp30;
@@ -81,7 +81,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoAc
           }
           if (cResult[13] !== tmp12) {
             const obj4 = { value: tmp12, onChange: tmp13, label: "Subtitle", maxLength: 100, clearable: true, onClear: tmp32 };
-            const tmp35 = React5(tmp(7010).TextInput, obj4);
+            const tmp35 = React5(tmp(7044).TextInput, obj4);
             cResult[13] = tmp12;
             cResult[14] = tmp35;
             let tmp33 = tmp35;
@@ -94,7 +94,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoAc
             }
             if (cResult[18] !== first) {
               const obj5 = { value: first, onValueChange: tmp7[1], label: "Show Leading" };
-              const tmp41 = React5(tmp(7296).ActionSheetSwitchRow, obj5);
+              const tmp41 = React5(tmp(7330).ActionSheetSwitchRow, obj5);
               cResult[18] = first;
               cResult[19] = tmp41;
               let tmp39 = tmp41;
@@ -103,7 +103,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoAc
             }
             if (cResult[20] !== tmp5) {
               const obj6 = { value: tmp5, onValueChange: tmp6, label: "Show Trailing" };
-              const tmp44 = React5(tmp(7296).ActionSheetSwitchRow, obj6);
+              const tmp44 = React5(tmp(7330).ActionSheetSwitchRow, obj6);
               cResult[20] = tmp5;
               cResult[21] = tmp44;
               let tmp42 = tmp44;
@@ -145,14 +145,14 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoAc
                 const obj7 = { spacing: 24, children: null };
                 const items = [tmp36, tmp45, tmp50];
                 obj7.children = items;
-                const tmp55 = closure_1_8(tmp(5978).Stack, obj7);
+                const tmp55 = closure_1_8(tmp(6013).Stack, obj7);
                 cResult[29] = tmp45;
                 cResult[30] = tmp50;
                 cResult[31] = tmp36;
                 cResult[32] = tmp55;
               }
               const obj8 = { value: tmp15, onChange: tmp16, label: "Leading", disabled: !first, clearable: true, onClear: M };
-              const tmp52 = React5(tmp(7010).TextInput, obj8);
+              const tmp52 = React5(tmp(7044).TextInput, obj8);
               cResult[26] = tmp15;
               cResult[27] = !first;
               cResult[28] = tmp52;
@@ -160,7 +160,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoAc
             const obj9 = { hasIcons: false, children: null };
             const items1 = [tmp39, tmp42];
             obj9.children = items1;
-            const tmp47 = closure_1_8(tmp(7296).ActionSheetRow.Group, obj9);
+            const tmp47 = closure_1_8(tmp(7330).ActionSheetRow.Group, obj9);
             cResult[22] = tmp39;
             cResult[23] = tmp42;
             cResult[24] = tmp47;
@@ -169,7 +169,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoAc
           const obj10 = { children: null };
           const items2 = [tmp28, tmp33];
           obj10.children = items2;
-          const tmp38 = closure_1_8(tmp(5978).Stack, obj10);
+          const tmp38 = closure_1_8(tmp(6013).Stack, obj10);
           cResult[15] = tmp28;
           cResult[16] = tmp33;
           cResult[17] = tmp38;
@@ -178,7 +178,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoAc
       }
     }
     const obj11 = { title: first1, subtitle: tmp12, leading: tmp18, trailing: tmp21 };
-    const tmp27 = React5(tmp(7250).BottomSheetTitleHeader, obj11);
+    const tmp27 = React5(tmp(7284).BottomSheetTitleHeader, obj11);
     cResult[5] = tmp12;
     cResult[6] = tmp18;
     cResult[7] = tmp21;
@@ -193,7 +193,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoAc
       }
     }
     const obj12 = { onPress: NOOP, label: tmp15 };
-    tmp19 = React5(tmp(8934).ActionSheetHeaderPressableText, obj12);
+    tmp19 = React5(tmp(8968).ActionSheetHeaderPressableText, obj12);
   }
   cResult[0] = tmp15;
   cResult[1] = first;
@@ -221,13 +221,13 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoAc
   let tmp14Result = first;
   if (first) {
     const obj2 = { onPress: NOOP, label: tmp12 };
-    tmp14Result = React5(tmp15(8934).ActionSheetHeaderPressableText, obj2);
+    tmp14Result = React5(tmp15(8968).ActionSheetHeaderPressableText, obj2);
   }
   obj.leading = tmp14Result;
   let tmp14Result2 = tmp2;
   if (tmp2) {
     const obj3 = { onPress: NOOP };
-    tmp14Result2 = React5(tmp15(7295).ActionSheetCloseButton, obj3);
+    tmp14Result2 = React5(tmp15(7329).ActionSheetCloseButton, obj3);
   }
   const obj4 = { header: React5(BottomSheetTitleHeader.BottomSheetTitleHeader, obj), children: null };
   obj.trailing = tmp14Result2;
@@ -288,7 +288,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoPr
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     const obj3 = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
     const obj4 = { type: "image", src: null, aspectRatio: "16/9" };
-    const obj5 = { uri: _modDef17218 };
+    const obj5 = { uri: _modDef17448 };
     obj4.src = obj5;
     obj3.graphic = obj4;
     obj3.actions = first;
@@ -312,7 +312,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function DemoPr
   const obj2 = { graphic: null, gradientColor: "purple", title: "Here's a Promo Sheet", description: "You can use this to promote new features, products, or anything else you'd like!", actions: null };
   const obj3 = { type: "image", src: null, aspectRatio: "16/9" };
   const tmp = React5(components_Button_Button.Button, obj);
-  obj3.src = { uri: _modDef17218 };
+  obj3.src = { uri: _modDef17448 };
   obj2.graphic = obj3;
   obj2.actions = tmp;
   return React5(PromoSheet.PromoSheet, obj2);

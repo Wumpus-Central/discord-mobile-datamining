@@ -1,15 +1,15 @@
-// === Module 6364: CheckpointCustomizationUtils ===
+// === Module 6398: CheckpointCustomizationUtils ===
 
-// Module 6364 (CheckpointCustomizationUtils)
+// Module 6398 (CheckpointCustomizationUtils)
 import util from "util" /* 1125 */;
 import _modDef3089 from "module_3089" /* 3089 */;
-import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6017 */;
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6040 */;
-import CheckpointTrait from "CheckpointTrait" /* 6041 */;
-import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6042 */;
-import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6043 */;
-import CheckpointNavigation from "CheckpointNavigation" /* 6365 */;
-import CheckpointConstants from "CheckpointConstants" /* 6016 */;
+import CheckpointTraitRarity from "CheckpointTraitRarity" /* 6051 */;
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6074 */;
+import CheckpointTrait from "CheckpointTrait" /* 6075 */;
+import CheckpointTraitConfig from "CheckpointTraitConfig" /* 6076 */;
+import CheckpointCharacterAssets from "CheckpointCharacterAssets" /* 6077 */;
+import CheckpointNavigation from "CheckpointNavigation" /* 6399 */;
+import CheckpointConstants from "CheckpointConstants" /* 6050 */;
 import size from "module_2" /* 2 */;
 
 function getAssetDescription(asset) {
@@ -104,9 +104,9 @@ const joined = mapped.join(" ");
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointCustomizationUtils.tsx");
 
 export { CheckpointCustomizationOption };
-export const getCustomizationOptionName = function getCustomizationOptionName(activeCustomizationOption) {
+export const getCustomizationOptionName = function getCustomizationOptionName(customizationOption) {
   const intl = util.intl;
-  return intl.string(obj2[activeCustomizationOption]);
+  return intl.string(obj2[customizationOption]);
 };
 export const CUSTOMIZATION_OPTION_TO_TRAIT = obj3;
 export const getCustomizationOptionForCharacterStage = function getCustomizationOptionForCharacterStage(characterStage) {

@@ -1,6 +1,6 @@
-// === Module 15741: FrecencySettingsMigrations ===
+// === Module 15967: FrecencySettingsMigrations ===
 
-// Module 15741 (FrecencySettingsMigrations)
+// Module 15967 (FrecencySettingsMigrations)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -436,26 +436,26 @@ let items = [
   },
   {
     version: 12,
+    run() {
+      return false;
+    },
+    cleanup() {
+
+    }
+  },
+  {
+    version: 13,
     run(favoriteSoundboardSounds) {
-      if (null == favoriteSoundboardSounds.favoriteSoundboardSounds) {
-        return false;
-      } else {
-        favoriteSoundboardSounds = favoriteSoundboardSounds.favoriteSoundboardSounds;
-        const soundIds = favoriteSoundboardSounds.soundIds;
-        let tmp3 = 0 === _modDef12.size(soundIds);
-        if (!tmp3) {
-          tmp3 = _modDef12.size(favoriteSoundboardSounds.orderedSoundIds) > 0;
-          const tmpResult = _modDef12;
-        }
-        let flag = !tmp3;
-        if (!tmp3) {
-          const items = [];
-          HermesBuiltin.arraySpread(soundIds, 0);
-          favoriteSoundboardSounds.favoriteSoundboardSounds.orderedSoundIds = items;
+      let tmp = null != favoriteSoundboardSounds.favoriteSoundboardSounds;
+      if (tmp) {
+        let flag = 0 !== _modDef12.size(favoriteSoundboardSounds.favoriteSoundboardSounds.orderedSoundIds);
+        if (flag) {
+          favoriteSoundboardSounds.favoriteSoundboardSounds.orderedSoundIds = [];
           flag = true;
         }
-        return flag;
+        tmp = flag;
       }
+      return tmp;
     },
     cleanup() {
 

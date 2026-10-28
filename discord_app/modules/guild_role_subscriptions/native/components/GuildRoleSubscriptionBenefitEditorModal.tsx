@@ -1,27 +1,27 @@
-// === Module 19347: GuildRoleSubscriptionBenefitEditorModal ===
+// === Module 19610: GuildRoleSubscriptionBenefitEditorModal ===
 
-// Module 19347 (GuildRoleSubscriptionBenefitEditorModal)
+// Module 19610 (GuildRoleSubscriptionBenefitEditorModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import components_Button_Button from "components/Button/Button" /* 5245 */;
-import useChannelName from "useChannelName" /* 5605 */;
-import TrashIcon from "TrashIcon" /* 5690 */;
+import components_Button_Button from "components/Button/Button" /* 5280 */;
+import useChannelName from "useChannelName" /* 5640 */;
+import TrashIcon from "TrashIcon" /* 5725 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4914 */;
+import RelationshipStore from "RelationshipStore" /* 4946 */;
 import UserStore from "UserStore" /* 1389 */;
-import GuildRoleSubscriptionBenefitEditorModalStateStore from "GuildRoleSubscriptionBenefitEditorModalStateStore" /* 19346 */;
+import GuildRoleSubscriptionBenefitEditorModalStateStore from "GuildRoleSubscriptionBenefitEditorModalStateStore" /* 19609 */;
 
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const GuildRoleSubscriptionsConstants = fn(16604);
+const GuildRoleSubscriptionsConstants = fn(16833);
 ({ GuildRoleSubscriptionBenefitTypes: c10, MAX_SUBSCRIPTION_BENEFIT_DESCRIPTION_LENGTH: closure_11, MAX_SUBSCRIPTION_BENEFIT_NAME_LENGTH: closure_12 } = GuildRoleSubscriptionsConstants);
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%" }, scrollContainer: { flexGrow: 1 }, deleteButton: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, display: "flex", flexDirection: "column", justifyContent: "space-between", height: "100%" };
 obj2.deleteButton = { marginTop: nativeDefault.space.PX_24, marginHorizontal: nativeDefault.space.PX_16 };
@@ -174,7 +174,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
     return value;
   };
   const tmp2 = closure_15();
-  const tmp5 = value(15181)();
+  const tmp5 = value(15406)();
   [value] = GuildRoleSubscriptionBenefitEditorModalStateStore.useNameState();
   dependencyMap = tmp7;
   [first1, _slicedToArray] = GuildRoleSubscriptionBenefitEditorModalStateStore.useEmojiIdState();
@@ -233,14 +233,14 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
               closure_2(useChannelName.computeChannelName(id, UserStore, RelationshipStore));
             }
       };
-      let tmp27 = closure_13(tmp3(19348), obj2);
+      let tmp27 = closure_13(tmp3(19611), obj2);
       let tmp28 = closure_13;
     } else {
       let obj = { containerStyle: tmp5.inputContainer, accessibilityLabel: stringResult1, maxLength: maxLength2, value, placeholder: null, onChange: null, returnKeyType: "done", autoFocus: true, clearable: true };
       const intl7 = tmp21(1125).intl;
       obj.placeholder = intl7.string(tmp21(1125).t["kV54/Y"]);
       obj.onChange = tmp7;
-      tmp27 = closure_13(tmp21(7010).TextInput, obj);
+      tmp27 = closure_13(tmp21(7044).TextInput, obj);
       tmp28 = closure_13;
     }
     let obj3 = { style: tmp2.container, children: null };
@@ -260,18 +260,18 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
         },
       listingId: merged.listingId
     };
-    const items = [tmp28(tmp3(19350), obj4), ];
+    const items = [tmp28(tmp3(19613), obj4), ];
     let obj5 = { keyboardShouldPersistTaps: "handled", showsVerticalScrollIndicator: false, alwaysBounceVertical: false, contentContainerStyle: null, children: null };
     const items1 = [tmp2.scrollContainer, ];
     const obj6 = { paddingBottom: value(1630)().bottom + 32 + 16 };
     items1[1] = obj6;
     obj5.contentContainerStyle = items1;
     const obj7 = { style: tmp5.header, children: stringResult1 };
-    const items2 = [tmp28(tmp3(9044), obj7), tmp27, , , , , ];
+    const items2 = [tmp28(tmp3(9077), obj7), tmp27, , , , , ];
     const obj8 = { style: tmp5.header, children: null };
     const intl8 = tmp21(1125).intl;
     obj8.children = intl8.string(tmp21(1125).t.sMOuuS);
-    items2[2] = tmp28(tmp3(9044), obj8);
+    items2[2] = tmp28(tmp3(9077), obj8);
     const obj9 = { emoji: null, guildId: null, onChange: null };
     const obj10 = { emojiId: first1, emojiName: first2 };
     obj9.emoji = obj10;
@@ -280,14 +280,14 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
       closure_4(emojiId.emojiId);
       closure_6(emojiId.emojiName);
     };
-    items2[3] = tmp28(tmp3(19351), obj9);
+    items2[3] = tmp28(tmp3(19614), obj9);
     const obj11 = { style: tmp5.header, children: null };
     const tmp31 = first2;
     const tmp32 = closure_6;
-    const tmp3Result = tmp3(9044);
+    const tmp3Result = tmp3(9077);
     const intl9 = tmp21(1125).intl;
     obj11.children = intl9.string(tmp21(1125).t["74JctW"]);
-    items2[4] = tmp28(tmp3(9044), obj11);
+    items2[4] = tmp28(tmp3(9077), obj11);
     const obj12 = { containerStyle: tmp5.inputContainer, accessibilityLabel: null, maxLength: null, value: null, onChange: null, placeholder: null };
     const intl10 = tmp21(1125).intl;
     obj12.accessibilityLabel = intl10.string(tmp21(1125).t["74JctW"]);
@@ -295,7 +295,7 @@ export default function GuildRoleSubscriptionBenefitEditorModal(arg0) {
     obj12.value = first3;
     obj12.onChange = tmp10[1];
     obj12.placeholder = stringResult2;
-    items2[5] = tmp28(tmp21(7182).TextArea, obj12);
+    items2[5] = tmp28(tmp21(7216).TextArea, obj12);
     let tmp28Result = null;
     if (null != merged.onDelete) {
       const obj13 = {

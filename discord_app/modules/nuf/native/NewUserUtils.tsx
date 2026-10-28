@@ -1,19 +1,20 @@
-// === Module 18948: NewUserUtils ===
+// === Module 19201: NewUserUtils ===
 
-// Module 18948 (NewUserUtils)
+// Module 19201 (NewUserUtils)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import router_utils from "router_utils" /* 1111 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import Link from "Link" /* 1503 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
-import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7892 */;
-import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13602 */;
-import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13709 */;
-import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 17461 */;
-import NewUserModalTypes from "NewUserModalTypes" /* 18947 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
+import NativePermissionManagerModuleDefault from "NativePermissionManagerModule" /* 7926 */;
+import NewUserAnalyticsUtils from "NewUserAnalyticsUtils" /* 13820 */;
+import nuf_NUFActionCreators from "nuf/NUFActionCreators" /* 13927 */;
+import MobileOnboardingFrictionExperimentDefault from "MobileOnboardingFrictionExperiment" /* 17696 */;
+import NewUserModalTypes from "NewUserModalTypes" /* 19200 */;
+import InterestPickerExperiment from "InterestPickerExperiment" /* 19202 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import ParentalConsentStore from "ParentalConsentStore" /* 17415 */;
-import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6501 */;
+import ParentalConsentStore from "ParentalConsentStore" /* 17648 */;
+import ConnectedAccountsStore from "ConnectedAccountsStore" /* 6535 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -187,7 +188,7 @@ let closure_21 = async function _getNextOnboardingStep() {
         } else if (value) {
           closure_132_1 = closure_132_2;
           const obj10 = { skip: closure_132_0 };
-          closure_133_0(closure_133_2[18]).trackNUFStep(closure_132_3, key2, obj10);
+          closure_133_0(closure_133_2[19]).trackNUFStep(closure_132_3, key2, obj10);
           if (null != transitionStep2) {
             closure_133_19(key2);
             transitionStep2();
@@ -201,7 +202,7 @@ let closure_21 = async function _getNextOnboardingStep() {
             }
             obj12.continueNavigation = null == transitionStep;
           }
-          const obj3 = closure_133_0(closure_133_2[18]);
+          const obj3 = closure_133_0(closure_133_2[19]);
         } else {
           c6 = 3;
           c7 = 1;
@@ -226,12 +227,12 @@ let closure_21 = async function _getNextOnboardingStep() {
     }
   }
 };
-const NotificationPermissionConstants = fn(13327);
+const NotificationPermissionConstants = fn(13544);
 ({ EventActionLocation: closure_7, EventActionType: closure_8 } = NotificationPermissionConstants);
 const Constants = fn(1084);
 ({ PlatformTypes: closure_9, Routes: c10 } = Constants);
-const ContactPermissions = fn(13597).ContactPermissions;
-let closure_12 = fn(7869).NotificationAuthorizationStatus;
+const ContactPermissions = fn(13815).ContactPermissions;
+let closure_12 = fn(7903).NotificationAuthorizationStatus;
 const NewUserUtils = "NewUserUtils";
 let obj2 = { key: "enable-notification", shouldShowStep: null };
 let closure_16 = asyncGeneratorStep(async () => {
@@ -444,6 +445,17 @@ let items = [
   obj2,
   obj3,
   {
+    key: "interest-picker",
+    shouldShowStep() {
+      const shouldShowGuardianConnect = ParentalConsentStore.getShouldShowGuardianConnect();
+      let result = !shouldShowGuardianConnect;
+      if (!shouldShowGuardianConnect) {
+        result = InterestPickerExperiment.isInterestPickerExperimentEnabled("nuf_interest_picker_step");
+      }
+      return result;
+    }
+  },
+  {
     key: "discoverability",
     shouldShowStep() {
       return !MobileOnboardingFrictionExperimentDefault.getMobileOnboardingFrictionConfig(NewUserUtils).skipContactSync;
@@ -473,7 +485,7 @@ let items = [
   },
   {
     key: "accept-invite",
-    shouldShowStep: fn(9050).hasDeferredInvite,
+    shouldShowStep: fn(9083).hasDeferredInvite,
     transitionStep() {
       DispatcherDefault.dispatch({ type: "DEFERRED_INVITE_SHOW" });
     }

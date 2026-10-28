@@ -1,21 +1,21 @@
-// === Module 5993: MarkupChannelMentionRule ===
+// === Module 6028: MarkupChannelMentionRule ===
 
-// Module 5993 (MarkupChannelMentionRule)
+// Module 6028 (MarkupChannelMentionRule)
 import util from "util" /* 1125 */;
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
 import _modDef1948 from "module_1948" /* 1948 */;
 import StringUtils from "StringUtils" /* 2030 */;
-import useChannelName from "useChannelName" /* 5605 */;
-import LinkUtils from "LinkUtils" /* 5607 */;
-import MarkupTextRuleDefault from "MarkupTextRule" /* 5992 */;
-import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 5994 */;
-import ChannelUtils from "ChannelUtils" /* 5995 */;
-import markup_ChannelUtils from "markup/ChannelUtils" /* 6003 */;
-import GatedChannelStore from "GatedChannelStore" /* 4876 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
-import RelationshipStore from "RelationshipStore" /* 4914 */;
+import useChannelName from "useChannelName" /* 5640 */;
+import LinkUtils from "LinkUtils" /* 5642 */;
+import MarkupTextRuleDefault from "MarkupTextRule" /* 6027 */;
+import useChannelRoleSubscriptionStatus from "useChannelRoleSubscriptionStatus" /* 6029 */;
+import ChannelUtils from "ChannelUtils" /* 6030 */;
+import markup_ChannelUtils from "markup/ChannelUtils" /* 6038 */;
+import GatedChannelStore from "GatedChannelStore" /* 4908 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
+import RelationshipStore from "RelationshipStore" /* 4946 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
@@ -125,7 +125,7 @@ function parseChannel(channel, messageId, guildIdFromChannelId, url) {
           obj4.content = items3;
           let obj11 = obj4;
         } else if (null != url) {
-          const obj9 = { type: "link", content: null, target: null, title: "unicodeVersion" };
+          const obj9 = { type: "link", content: null, target: null, title: "ix" };
           const obj10 = { type: "text", content: url };
           const items4 = [obj10];
           obj9.content = items4;
@@ -351,7 +351,7 @@ obj.channelOrMessageUrl = {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     LinkUtils;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "unicodeVersion" };
+      const obj = { type: "link", content: null, target: null, title: "ix" };
       const obj2 = { type: "text", content: tmp };
       const items = [obj2];
       obj.content = items;
@@ -411,7 +411,7 @@ let obj3 = {
     [tmp, tmp2, tmp3, tmp4] = arg0;
     LinkUtils;
     if (null == tmp3) {
-      const obj = { type: "link", content: null, target: null, title: "unicodeVersion" };
+      const obj = { type: "link", content: null, target: null, title: "ix" };
       const obj2 = { type: "text", content: tmp };
       const items = [obj2];
       obj.content = items;
@@ -485,7 +485,7 @@ obj.mediaPostLink = {
         }
       }
     }
-    const obj = { type: "link", content: null, target: tmp, title: "unicodeVersion" };
+    const obj = { type: "link", content: null, target: tmp, title: "ix" };
     const items = [{ type: "text", content: tmp }];
     obj.content = items;
     return obj;

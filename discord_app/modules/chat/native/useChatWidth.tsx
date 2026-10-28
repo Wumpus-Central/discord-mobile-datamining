@@ -1,14 +1,12 @@
-// === Module 11227: useChatWidth ===
+// === Module 11263: useChatWidth ===
 
-// Module 11227 (useChatWidth)
-import useChatLayout from "useChatLayout" /* 5154 */;
-import useBaseAppContainerDimensions from "useBaseAppContainerDimensions" /* 5156 */;
-import useDrawerWidth from "useDrawerWidth" /* 11228 */;
-import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11229 */;
+// Module 11263 (useChatWidth)
+import c from "c" /* 576 */;
+import useChatLayoutDefault from "useChatLayout" /* 5189 */;
+import useBaseAppContainerDimensionsDefault from "useBaseAppContainerDimensions" /* 5191 */;
+import ChatViewWidthContextDefault from "ChatViewWidthContext" /* 11264 */;
+import useDrawerWidth from "useDrawerWidth" /* 11265 */;
 import noop from "module_19" /* 19 */;
-
-const useChatLayoutDefault = useChatLayout;
-const useBaseAppContainerDimensionsDefault = useBaseAppContainerDimensions;
 
 require = fn;
 const ReactCompilerGating = fn(558);
@@ -16,20 +14,28 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/chat/native/useChatWidth.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChatWidth(arg0) {
+  const cResult = c.c(1);
   let context = noop.useContext(ChatViewWidthContextDefault);
   const width = useBaseAppContainerDimensionsDefault().width;
+  if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
+    const obj2 = { whileSliding: "narrower" };
+    cResult[0] = obj2;
+    let first = obj2;
+  } else {
+    first = cResult[0];
+  }
   useDrawerWidth;
   if (null == context) {
     if (null == arg0) {
       let diff = width;
       if (useChatLayoutDefault().isChatLockedOpen) {
-        diff = width - tmp3;
+        diff = width - tmp7;
       }
-      let tmp5 = diff;
+      let tmp9 = diff;
     } else {
-      tmp5 = width;
+      tmp9 = width;
     }
-    context = tmp5;
+    context = tmp9;
   }
   return context;
 }) : (function useChatWidth(arg0) {
@@ -50,18 +56,3 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChatW
   }
   return context;
 });
-export const getChatWidth = function getChatWidth(arg0) {
-  const obj = useChatLayout;
-  const width = useBaseAppContainerDimensions.getBaseAppContainerDimensions().width;
-  if (null == arg0) {
-    let diff = width;
-    if (obj.getChatLayout().isChatLockedOpen) {
-      diff = width - useDrawerWidth.getDrawerWidth();
-      const tmpResult = useDrawerWidth;
-    }
-    let tmp3 = diff;
-  } else {
-    tmp3 = width;
-  }
-  return tmp3;
-};

@@ -1,31 +1,31 @@
-// === Module 16456: OrbsArcadeRewardsCollectedModal ===
+// === Module 16685: OrbsArcadeRewardsCollectedModal ===
 
-// Module 16456 (OrbsArcadeRewardsCollectedModal)
+// Module 16685 (OrbsArcadeRewardsCollectedModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import components_Button_Button from "components/Button/Button" /* 5245 */;
-import openUserSettings from "openUserSettings" /* 7491 */;
-import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7692 */;
-import useCurrentUser from "useCurrentUser" /* 8667 */;
-import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9402 */;
-import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9437 */;
-import useHandleUseNow from "useHandleUseNow" /* 11186 */;
-import useAvatarDecorationPreviewSizes from "useAvatarDecorationPreviewSizes" /* 13962 */;
-import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16435 */;
-import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview" /* 16443 */;
-import openOrbsArcadeRewardsCollectedModal from "openOrbsArcadeRewardsCollectedModal" /* 16455 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import components_Button_Button from "components/Button/Button" /* 5280 */;
+import openUserSettings from "openUserSettings" /* 7526 */;
+import utils_CollectiblesUtils from "utils/CollectiblesUtils" /* 7726 */;
+import useCurrentUser from "useCurrentUser" /* 8704 */;
+import AvatarDecorationSampleV2Default from "AvatarDecorationSampleV2" /* 9434 */;
+import FractionalNitroCoinIllustration from "FractionalNitroCoinIllustration" /* 9469 */;
+import useHandleUseNow from "useHandleUseNow" /* 11221 */;
+import useAvatarDecorationPreviewSizes from "useAvatarDecorationPreviewSizes" /* 14181 */;
+import OrbsArcadeTypes from "OrbsArcadeTypes" /* 16663 */;
+import OrbsArcadeRewardPreviewDefault from "OrbsArcadeRewardPreview" /* 16672 */;
+import openOrbsArcadeRewardsCollectedModal from "openOrbsArcadeRewardsCollectedModal" /* 16684 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
 
 const require = globalThis.__r;
 
 const initialize = nW6E3m(504);
 const util = nW6E3m(1125);
-const CollectiblesUtils = nW6E3m(7663);
-const useShopProductItems = nW6E3m(8660);
-const useFetchCollectiblesProduct = nW6E3m(11055);
+const CollectiblesUtils = nW6E3m(7697);
+const useShopProductItems = nW6E3m(8697);
+const useFetchCollectiblesProduct = nW6E3m(11090);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
@@ -34,7 +34,7 @@ const dependencyMap2 = fn(1391).FRACTIONAL_PREMIUM_SKU_INTERVAL_COUNTS;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 const locations = [0, 0.72, 1];
-let createStyles = fn(4972);
+let createStyles = fn(5004);
 let obj2 = { root: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW }, backdrop: { position: "absolute", top: 0, bottom: 0, left: 0, right: 0 }, main: { flex: 1 }, header: null, pager: null, pageContent: null, messages: null, message: null, footer: null, pageDots: null, pageDot: null, currentPageDot: null };
 let obj3 = { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW };
 obj2.header = { flexDirection: "row", paddingHorizontal: nativeDefault.space.PX_16 };
@@ -53,9 +53,9 @@ obj2.pageDot = size;
 let obj8 = { flexDirection: "row", justifyContent: "center", gap: nativeDefault.space.PX_4 };
 obj2.currentPageDot = { backgroundColor: nativeDefault.colors.ICON_STRONG };
 let closure_13 = createStyles.createStyles(obj2);
-createStyles = fn(4972);
+createStyles = fn(5004);
 let closure_14 = createStyles.createStyles((width) => ({ preview: { width, height: width, alignItems: "center", justifyContent: "center" } }));
-createStyles = fn(4972);
+createStyles = fn(5004);
 let closure_15 = createStyles.createStyles((width) => {
   const obj = { page: { width } };
   return obj;
@@ -544,7 +544,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroC
       return tmp8;
     }
     let obj2 = { size: "lg", text: cResult[1], onPress: tmp7 };
-    const tmp10 = closure_10(tmp(5245).Button, obj2);
+    const tmp10 = closure_10(tmp(5280).Button, obj2);
     cResult[4] = cResult[1];
     cResult[5] = tmp7;
     cResult[6] = tmp10;
@@ -555,7 +555,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function NitroC
   consumed = consumed.consumed;
   const intl = consumed(1125).intl;
   const t = consumed(1125).t;
-  return closure_10(consumed(5245).Button, {
+  return closure_10(consumed(5280).Button, {
     size: "lg",
     text: intl.string(consumed ? t.ERKK6v : t["Jr6N+s"]),
     onPress() {
@@ -718,12 +718,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
   closure_9 = undefined;
   const tmp = closure_13();
   importDefault = tmp;
-  const token = skuId(5253).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
-  let obj = skuId(5253);
-  const token1 = skuId(5253).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
-  let obj2 = skuId(5253);
-  const token2 = skuId(5253).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
-  let obj3 = skuId(5253);
+  const token = skuId(5288).useToken(nativeDefault.colors.BACKGROUND_BASE_LOW);
+  let obj = skuId(5288);
+  const token1 = skuId(5288).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWER);
+  let obj2 = skuId(5288);
+  const token2 = skuId(5288).useToken(nativeDefault.colors.BACKGROUND_BASE_LOWEST);
+  let obj3 = skuId(5288);
   const items = [c7];
   dependencyMap = skuId(504).useStateFromStores(items, () => _undefined.useReducedMotion);
   const ref = first.useRef(null);
@@ -752,14 +752,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
     const obj6 = { style: tmp.backdrop, start: tmp2(1104).VerticalGradient.START, end: tmp2(1104).VerticalGradient.END, locations, colors: null };
     const items2 = [token, token1, token2];
     obj6.colors = items2;
-    const items3 = [closure_10(tmp4(5259), obj6), ];
+    const items3 = [closure_10(tmp4(5294), obj6), ];
     const rect = { style: tmp.main, top: true, bottom: true, left: true, right: true, children: null };
     const obj7 = { style: tmp.header, children: null };
-    const obj8 = { variant: "tertiary", icon: tmp4(10661), accessibilityLabel: null, onPress: null };
+    const obj8 = { variant: "tertiary", icon: tmp4(10693), accessibilityLabel: null, onPress: null };
     const intl3 = tmp2(1125).intl;
     obj8.accessibilityLabel = intl3.string(tmp2(1125).t.cpT0Cq);
-    obj8.onPress = tmp2(16455).closeOrbsArcadeRewardsCollectedModal;
-    obj7.children = closure_10(tmp2(7957).IconButton, obj8);
+    obj8.onPress = tmp2(16684).closeOrbsArcadeRewardsCollectedModal;
+    obj7.children = closure_10(tmp2(7991).IconButton, obj8);
     const items4 = [closure_10(page, obj7), , ];
     const obj9 = { style: tmp.pager, onLayout: callback, children: null };
     let tmp28Result = null;
@@ -819,7 +819,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
       tmp28Result3 = closure_10(tmp27, obj12);
     }
     const items5 = [tmp28Result3, ];
-    if (tmp16.type === tmp2(16435).OrbsArcadeRewardType.COLLECTIBLE) {
+    if (tmp16.type === tmp2(16663).OrbsArcadeRewardType.COLLECTIBLE) {
       const obj15 = { reward: tmp16 };
       let tmp28Result4 = closure_10(closure_19, obj15, tmp16.id);
     } else {
@@ -861,13 +861,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function OrbsArca
           }
         }
     };
-    items6[1] = closure_10(tmp2(5245).Button, obj18);
+    items6[1] = closure_10(tmp2(5280).Button, obj18);
     obj17.children = items6;
-    items5[1] = closure_11(tmp2(6697).ButtonGroup, obj17);
+    items5[1] = closure_11(tmp2(6731).ButtonGroup, obj17);
     obj11.children = items5;
     items4[2] = closure_11(page, obj11);
     rect.children = items4;
-    items3[1] = closure_11(tmp2(7223).SafeAreaPaddingView, rect);
+    items3[1] = closure_11(tmp2(7257).SafeAreaPaddingView, rect);
     obj5.children = items3;
     return closure_11(page, obj5);
   }

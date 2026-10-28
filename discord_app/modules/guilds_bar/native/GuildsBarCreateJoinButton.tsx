@@ -1,18 +1,18 @@
-// === Module 17838: GuildsBarCreateJoinButton ===
+// === Module 18075: GuildsBarCreateJoinButton ===
 
-// Module 17838 (GuildsBarCreateJoinButton)
+// Module 18075 (GuildsBarCreateJoinButton)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import GuildCapUpsellHooks from "GuildCapUpsellHooks" /* 7309 */;
-import CirclePlusIcon from "CirclePlusIcon" /* 11160 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17784 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17799 */;
-import HomeDrawerAddServerRow from "HomeDrawerAddServerRow" /* 17839 */;
+import GuildCapUpsellHooks from "GuildCapUpsellHooks" /* 7343 */;
+import CirclePlusIcon from "CirclePlusIcon" /* 11195 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 18021 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 18036 */;
+import HomeDrawerAddServerRow from "HomeDrawerAddServerRow" /* 18076 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
@@ -113,7 +113,7 @@ const Constants = fn(1084);
 ({ AnalyticsPages: closure_7, MOBILE_GUILD_UPSELL_LIST: closure_8, TooltipNames: closure_9, UpsellTypes: c10 } = Constants);
 const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -201,7 +201,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
   }
   const obj6 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: tmp10, label: tmp11, expandedChildren: tmp12, children: tmp18 };
-  const tmp22 = jsx(tmp17(17784), { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: tmp10, label: tmp11, expandedChildren: tmp12, children: tmp18 });
+  const tmp22 = jsx(tmp17(18021), { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: tmp10, label: tmp11, expandedChildren: tmp12, children: tmp18 });
   cResult[7] = stateFromStores;
   cResult[8] = tmp18;
   cResult[9] = guildsBarAnimatedWrapperStyles;
@@ -224,12 +224,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj = closure_1_0(dependencyMap[11]);
     }
   }), []);
-  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "f", expandedChildren: "guilds-bar-drag-preview", children: null };
+  const obj4 = { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "(", expandedChildren: "INVITE_RESOLVE_SUCCESS", children: null };
   const intl = util.intl;
   obj4.label = intl.string(util.t.l5WIbf);
   obj4.expandedChildren = jsx(HomeDrawerAddServerRow.HomeDrawerAddServerRowExpandedChildren, {});
   const colors = nativeDefault.colors;
   obj4.children = jsx(CirclePlusIcon.CirclePlusIcon, { size: "md", color: stateFromStores ? colors.WHITE : colors.MOBILE_GUILDBAR_ICON_DEFAULT });
-  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "f", expandedChildren: "guilds-bar-drag-preview", children: null });
+  obj3.children = jsx(GuildsBarAnimatedItemWrapperDefault, { selected: stateFromStores, circle: false, unread: false, styles: guildsBarAnimatedWrapperStyles, overState: "y", config: memo, label: "(", expandedChildren: "INVITE_RESOLVE_SUCCESS", children: null });
   return <View style={tmp.stretch}>{null}</View>;
 }));

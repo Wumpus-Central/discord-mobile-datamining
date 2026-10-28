@@ -1,7 +1,7 @@
-// === Module 12356: conjureQueuedMessage ===
+// === Module 12401: conjureQueuedMessage ===
 
-// Module 12356 (conjureQueuedMessage)
-import conjureChatConnection from "conjureChatConnection" /* 10720 */;
+// Module 12401 (conjureQueuedMessage)
+import conjureChatConnection from "conjureChatConnection" /* 10754 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureQueuedMessage.tsx");

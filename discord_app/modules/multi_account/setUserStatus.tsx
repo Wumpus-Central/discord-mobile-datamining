@@ -1,9 +1,9 @@
-// === Module 13769: setUserStatus ===
+// === Module 13987: setUserStatus ===
 
-// Module 13769 (setUserStatus)
+// Module 13987 (setUserStatus)
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7213 */;
-import SelfPresenceStore from "SelfPresenceStore" /* 6499 */;
+import LastMentionTimestampStore from "LastMentionTimestampStore" /* 7247 */;
+import SelfPresenceStore from "SelfPresenceStore" /* 6533 */;
 
 const require = fn;
 let closure_7 = async function _setUserStatus() {
@@ -34,13 +34,13 @@ let closure_7 = async function _setUserStatus() {
     const obj2 = { value: "" + Date.now() };
   }, closure_130_0(closure_130_2[7]).UserSettingsDelay.INFREQUENT_USER_ACTION);
   closure_129_6 = (function getStatusUpdateAnnouncement(status, arg1) {
-    const humanizeStatusResult = value(5026).humanizeStatus(status);
+    const humanizeStatusResult = value(5058).humanizeStatus(status);
     if ("0" === arg1) {
       const intl3 = value(1125).intl;
       const obj2 = { statusLabel: humanizeStatusResult };
       return intl3.formatToPlainString(value(1125).t.dO2aLi, obj2);
     } else {
-      const statusExpiryParts = value(13770).getStatusExpiryParts(arg1);
+      const statusExpiryParts = value(13988).getStatusExpiryParts(arg1);
       const timeString = statusExpiryParts.timeString;
       if ("today" === statusExpiryParts.kind) {
         const intl2 = value(1125).intl;
@@ -53,7 +53,7 @@ let closure_7 = async function _setUserStatus() {
       }
       return formatToPlainStringResult;
     }
-    const obj = value(5026);
+    const obj = value(5058);
   })(closure_129_0, closure_129_5);
   const AccessibilityAnnouncer = closure_130_0(closure_130_2[9]).AccessibilityAnnouncer;
   AccessibilityAnnouncer.announce(closure_129_6);

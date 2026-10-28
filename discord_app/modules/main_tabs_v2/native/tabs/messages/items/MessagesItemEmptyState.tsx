@@ -1,19 +1,19 @@
-// === Module 17562: MessagesItemEmptyState ===
+// === Module 17797: MessagesItemEmptyState ===
 
-// Module 17562 (MessagesItemEmptyState)
+// Module 17797 (MessagesItemEmptyState)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import RootNavigationRef from "RootNavigationRef" /* 5152 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import components_Button_Button from "components/Button/Button" /* 5245 */;
+import RootNavigationRef from "RootNavigationRef" /* 5187 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import components_Button_Button from "components/Button/Button" /* 5280 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { container: { padding: nativeDefault.space.PX_16, flex: 1, height: 325 }, body: null, title: null };
 let obj3 = { padding: nativeDefault.space.PX_16, flex: 1, height: 325 };
 obj.body = { marginBottom: nativeDefault.space.PX_16, marginTop: nativeDefault.space.PX_8, textAlign: "center" };

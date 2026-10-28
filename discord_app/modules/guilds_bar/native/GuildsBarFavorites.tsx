@@ -1,20 +1,20 @@
-// === Module 17801: GuildsBarFavorites ===
+// === Module 18038: GuildsBarFavorites ===
 
-// Module 17801 (GuildsBarFavorites)
+// Module 18038 (GuildsBarFavorites)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import StarIcon from "StarIcon" /* 9951 */;
-import FavoritesHooks from "FavoritesHooks" /* 10849 */;
-import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 17604 */;
-import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 17784 */;
-import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 17787 */;
-import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 17799 */;
-import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 17802 */;
-import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 17803 */;
+import StarIcon from "StarIcon" /* 9983 */;
+import FavoritesHooks from "FavoritesHooks" /* 10884 */;
+import openFavoritesGuildActionSheetDefault from "openFavoritesGuildActionSheet" /* 17839 */;
+import GuildsBarAnimatedItemWrapper from "GuildsBarAnimatedItemWrapper" /* 18021 */;
+import useGuildsBarBottomRightBadgeDefault from "useGuildsBarBottomRightBadge" /* 18024 */;
+import transitionGuildsBarToGuildOrOpenSelectedChannelDefault from "transitionGuildsBarToGuildOrOpenSelectedChannel" /* 18036 */;
+import useFavoritesGuildUnreadsDefault from "useFavoritesGuildUnreads" /* 18039 */;
+import HomeDrawerFavoritesRow from "HomeDrawerFavoritesRow" /* 18040 */;
 import noop from "module_19" /* 19 */;
-import FavoriteStore from "FavoriteStore" /* 4827 */;
+import FavoriteStore from "FavoriteStore" /* 4859 */;
 
 const GuildsBarAnimatedItemWrapperDefault = GuildsBarAnimatedItemWrapper;
 
@@ -148,10 +148,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   ({ badge: badge2, cutouts } = useGuildsBarBottomRightBadgeDefault({ mentionCount: badge }));
   const memo = noop.useMemo(() => ({
     onPress() {
-      closure_1_1(17799)(closure_1_5);
+      closure_1_1(18036)(closure_1_5);
     },
     onLongPress() {
-      closure_1_1(17604)();
+      closure_1_1(17839)();
     }
   }), []);
   const memo1 = noop.useMemo(() => {

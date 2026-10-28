@@ -1,10 +1,10 @@
-// === Module 14542: formatSharedClientThemeData ===
+// === Module 14765: formatSharedClientThemeData ===
 
-// Module 14542 (formatSharedClientThemeData)
+// Module 14765 (formatSharedClientThemeData)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1125 */;
 import _modDef2769 from "module_2769" /* 2769 */;
-import _modDef8421 from "module_8421" /* 8421 */;
+import _modDef8455 from "module_8455" /* 8455 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -21,7 +21,7 @@ export const formatSharedClientThemeData = function formatSharedClientThemeData(
       str2 = ensureAvatarSourceResult.uri;
     }
     obj.createdByAvatarUrl = str2;
-    obj.nitroWheelIconUrl = Image.resolveAssetSource(_modDef8421).uri;
+    obj.nitroWheelIconUrl = Image.resolveAssetSource(_modDef8455).uri;
     const intl = util.intl;
     obj.previewLabel = intl.string(util.t.SKNnqq);
     const intl2 = util.intl;

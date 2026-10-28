@@ -1,7 +1,7 @@
-// === Module 8737: UserProfileBanner ===
+// === Module 8774: UserProfileBanner ===
 
-// Module 8737 (UserProfileBanner)
-import BannerDefault from "Banner" /* 8745 */;
+// Module 8774 (UserProfileBanner)
+import BannerDefault from "Banner" /* 8782 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ const View = fn(17).View;
 const BANNER_HEIGHT = fn(1084).BANNER_HEIGHT;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_9 = createStyles.createStyles({ bannerContainer: { position: "relative" }, gifTag: { position: "absolute", left: 12, top: 12, right: "auto", bottom: "auto" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

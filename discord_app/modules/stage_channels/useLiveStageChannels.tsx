@@ -1,13 +1,13 @@
-// === Module 17656: useLiveStageChannels ===
+// === Module 17891: useLiveStageChannels ===
 
-// Module 17656 (useLiveStageChannels)
+// Module 17891 (useLiveStageChannels)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import GlobalUtils from "GlobalUtils" /* 1385 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
-import StageInstanceStore from "StageInstanceStore" /* 4829 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
+import StageInstanceStore from "StageInstanceStore" /* 4861 */;
 
 const require = globalThis.__r;
 

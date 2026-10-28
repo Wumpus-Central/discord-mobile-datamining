@@ -1,17 +1,17 @@
-// === Module 17143: DevToolsAccountLinkingScreen ===
+// === Module 17373: DevToolsAccountLinkingScreen ===
 
-// Module 17143 (DevToolsAccountLinkingScreen)
+// Module 17373 (DevToolsAccountLinkingScreen)
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import useStartAuthorizeDefault from "useStartAuthorize" /* 7256 */;
-import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7259 */;
-import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7261 */;
+import useStartAuthorizeDefault from "useStartAuthorize" /* 7290 */;
+import useGetOrFetchApplicationsDefault from "useGetOrFetchApplications" /* 7293 */;
+import AuthorizedAppsActionCreatorsDefault from "AuthorizedAppsActionCreators" /* 7295 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2042 */;
-import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7205 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
+import AuthorizedAppsStore from "AuthorizedAppsStore" /* 7239 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
 
 const require = globalThis.__r;
 
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ ScrollView: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 }, scrollContainer: null, buttonRow: null, rewardImage: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW, flex: 1 };
 obj2.scrollContainer = { padding: nativeDefault.space.PX_16, gap: nativeDefault.space.PX_16 };
@@ -440,8 +440,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
   const obj2 = value(504);
   let found = useGetOrFetchApplicationsDefault(gameApplicationIds).filter((item) => null != item);
   const arr4 = useGetOrFetchApplicationsDefault(gameApplicationIds);
-  getOrFetchApplication = value(7259).useGetOrFetchApplication(value);
-  const tmp8Result = value(7259);
+  getOrFetchApplication = value(7293).useGetOrFetchApplication(value);
+  const tmp8Result = value(7293);
   const items2 = [ApplicationStore];
   const stateFromStoresArray = value(504).useStateFromStoresArray(items2, () => {
     let found;
@@ -514,16 +514,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
         return closure_1_11(first(dependencyMap[18]).TableRow, obj, name.id);
       });
     } else {
-      mapped1 = closure_11(tmp8(6905).TableRow, { label: "No official games" });
+      mapped1 = closure_11(tmp8(6939).TableRow, { label: "No official games" });
     }
   } else {
-    obj5.children = closure_11(tmp8(6905).TableRow, { label: "No guild selected" });
-    const items4 = [closure_11(tmp8(6989).TableRowGroup, obj5), , , ];
+    obj5.children = closure_11(tmp8(6939).TableRow, { label: "No guild selected" });
+    const items4 = [closure_11(tmp8(7023).TableRowGroup, obj5), , , ];
     const obj6 = { style: null, children: null };
     const obj7 = { padding: tmp2(587).space.PX_12 };
     obj6.style = obj7;
     const obj8 = { label: "Application ID", value, onChange: tmp7 };
-    obj6.children = closure_11(tmp8(7010).TextInput, obj8);
+    obj6.children = closure_11(tmp8(7044).TextInput, obj8);
     const items5 = [closure_11(closure_6, obj6), , ];
     if (null != getOrFetchApplication) {
       str = getOrFetchApplication.name;
@@ -532,13 +532,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
     const obj10 = { label: null };
     let _HermesInternal = HermesInternal;
     obj10.label = "Name: " + str;
-    items5[1] = closure_11(tmp8(6905).TableRow, obj10);
+    items5[1] = closure_11(tmp8(6939).TableRow, obj10);
     const obj11 = { label: null };
     const _HermesInternal2 = HermesInternal;
     obj11.label = "Linked Games: " + str2;
-    items5[2] = closure_11(tmp8(6905).TableRow, obj11);
+    items5[2] = closure_11(tmp8(6939).TableRow, obj11);
     obj9.children = items5;
-    items4[1] = closure_12(tmp8(6989).TableRowGroup, obj9);
+    items4[1] = closure_12(tmp8(7023).TableRowGroup, obj9);
     let str6 = "text-feedback-critical";
     if (debug.hasConnectionEntrypointUrl) {
       str6 = "text-feedback-positive";
@@ -550,8 +550,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
     }
     const obj13 = { label: "Connection Entrypoint URL", trailing: null };
     obj12.children = str7;
-    obj13.trailing = closure_11(tmp8(5235).Text, obj12);
-    const items6 = [closure_11(tmp8(6905).TableRow, obj13), , ];
+    obj13.trailing = closure_11(tmp8(5270).Text, obj12);
+    const items6 = [closure_11(tmp8(6939).TableRow, obj13), , ];
     let str8 = "text-muted";
     if (hasAlreadyLinked) {
       str8 = "text-feedback-positive";
@@ -564,8 +564,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
     const obj15 = { title: "Authorization", hasIcons: false, children: null };
     const obj16 = { label: "Already Linked", trailing: null };
     obj14.children = str9;
-    obj16.trailing = closure_11(tmp8(5235).Text, obj14);
-    items6[1] = closure_11(tmp8(6905).TableRow, obj16);
+    obj16.trailing = closure_11(tmp8(5270).Text, obj14);
+    items6[1] = closure_11(tmp8(6939).TableRow, obj16);
     const obj17 = { style: tmp.buttonRow, children: null };
     const obj18 = {
       disabled: !tmp11.canStartAuthorization,
@@ -575,13 +575,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
       variant: "primary",
       text: "Start Authorization"
     };
-    const items7 = [closure_11(tmp8(5245).Button, obj18), ];
+    const items7 = [closure_11(tmp8(5280).Button, obj18), ];
     const obj19 = { disabled: !canDeauthorize, onPress: deauthorize, variant: "critical-primary", text: "Deauthorize" };
-    items7[1] = closure_11(tmp8(5245).Button, obj19);
+    items7[1] = closure_11(tmp8(5280).Button, obj19);
     obj17.children = items7;
     items6[2] = closure_12(closure_6, obj17);
     obj15.children = items6;
-    items4[2] = closure_12(tmp8(6989).TableRowGroup, obj15);
+    items4[2] = closure_12(tmp8(7023).TableRowGroup, obj15);
     let prop;
     if (connectionApp != null) {
       prop = connectionApp.applicationAccountLinkBenefitConfig;
@@ -597,7 +597,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
         const obj23 = { uri: connectionApp.applicationAccountLinkBenefitConfig.reward_image };
         obj22.source = obj23;
         obj22.style = tmp.rewardImage;
-        obj20.children = closure_11(tmp2(5670), obj22);
+        obj20.children = closure_11(tmp2(5705), obj22);
         tmp17Result = closure_11(closure_6, obj20);
       }
       const items8 = [tmp17Result, ];
@@ -609,9 +609,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function DevTools
       const obj25 = { label: null };
       const _HermesInternal3 = HermesInternal;
       obj25.label = "Reward: " + str10;
-      items8[1] = closure_11(tmp8(6905).TableRow, obj25);
+      items8[1] = closure_11(tmp8(6939).TableRow, obj25);
       obj24.children = items8;
-      tmp15Result = closure_12(tmp8(6989).TableRowGroup, obj24);
+      tmp15Result = closure_12(tmp8(7023).TableRowGroup, obj24);
     }
     items4[3] = tmp15Result;
     obj3.children = items4;

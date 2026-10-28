@@ -1,14 +1,14 @@
-// === Module 7795: DeveloperExperimentStore ===
+// === Module 7829: DeveloperExperimentStore ===
 
-// Module 7795 (DeveloperExperimentStore)
+// Module 7829 (DeveloperExperimentStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import UserStoreUtils from "UserStoreUtils" /* 1400 */;
-import GuildStore from "GuildStore" /* 4846 */;
+import GuildStore from "GuildStore" /* 4878 */;
 import UserStore from "UserStore" /* 1389 */;
 
 require = fn;
-const ExperimentBuckets = fn(5192).ExperimentBuckets;
+const ExperimentBuckets = fn(5227).ExperimentBuckets;
 const Environments = fn(1401).Environments;
 let tmp2 = "production" === Environments.DEVELOPMENT;
 if (!tmp2) {

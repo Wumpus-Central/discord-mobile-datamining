@@ -1,12 +1,12 @@
-// === Module 15115: VoiceStateAnalytics ===
+// === Module 15340: VoiceStateAnalytics ===
 
-// Module 15115 (VoiceStateAnalytics)
+// Module 15340 (VoiceStateAnalytics)
 import _mod12 from "module_12" /* 12 */;
-import VoiceStateStore from "VoiceStateStore" /* 5631 */;
-import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5718 */;
+import VoiceStateStore from "VoiceStateStore" /* 5666 */;
+import SortedVoiceStateStore from "SortedVoiceStateStore" /* 5753 */;
 
 require = fn;
-const SpeakingFlags = fn(5719).SpeakingFlags;
+const SpeakingFlags = fn(5754).SpeakingFlags;
 const size = fn(2);
 const result = size.fileFinishedImporting("lib/VoiceStateAnalytics.tsx");
 class VoiceStateAnalytics {

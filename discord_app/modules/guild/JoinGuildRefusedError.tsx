@@ -1,6 +1,6 @@
-// === Module 7321: JoinGuildRefusedError ===
+// === Module 7355: JoinGuildRefusedError ===
 
-// Module 7321 (JoinGuildRefusedError)
+// Module 7355 (JoinGuildRefusedError)
 import size from "module_2" /* 2 */;
 
 const prototype = function JoinGuildRefusedError() {

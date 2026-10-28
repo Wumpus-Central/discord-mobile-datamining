@@ -1,13 +1,13 @@
-// === Module 15852: SessionAdManager ===
+// === Module 16078: SessionAdManager ===
 
-// Module 15852 (SessionAdManager)
+// Module 16078 (SessionAdManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import Timers from "Timers" /* 4819 */;
-import SessionForegroundUtils from "SessionForegroundUtils" /* 7573 */;
-import SessionAdGenerator from "SessionAdGenerator" /* 7796 */;
+import Timers from "Timers" /* 4851 */;
+import SessionForegroundUtils from "SessionForegroundUtils" /* 7607 */;
+import SessionAdGenerator from "SessionAdGenerator" /* 7830 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import LifecycleManager from "LifecycleManager" /* 2001 */;
 

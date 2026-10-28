@@ -1,10 +1,10 @@
-// === Module 12434: conjurePlanExperienceSurfaces ===
+// === Module 12480: conjurePlanExperienceSurfaces ===
 
-// Module 12434 (conjurePlanExperienceSurfaces)
+// Module 12480 (conjurePlanExperienceSurfaces)
 import util from "util" /* 1125 */;
-import _modDef3831 from "module_3831" /* 3831 */;
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6775 */;
-import conjurePlanDesign from "conjurePlanDesign" /* 12435 */;
+import _modDef3863 from "module_3863" /* 3863 */;
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6809 */;
+import conjurePlanDesign from "conjurePlanDesign" /* 12481 */;
 import size from "module_2" /* 2 */;
 
 let result = size.fileFinishedImporting("modules/conjure/plan/conjurePlanExperienceSurfaces.tsx");
@@ -14,7 +14,7 @@ export const conjurePlanExperiencePlacement = function conjurePlanExperiencePlac
     return null;
   } else {
     const intl = util.intl;
-    closure_0 = intl.string(_modDef3831["6/3tGY"]);
+    closure_0 = intl.string(_modDef3863["6/3tGY"]);
     const surfaces3 = kind.surfaces;
     const items = [];
     if (!surfaces3.includes(ConjureProjectTypes.ConjureSupportedSurface.APP_CHANNEL)) {

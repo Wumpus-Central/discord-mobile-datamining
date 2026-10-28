@@ -1,18 +1,18 @@
-// === Module 13910: CollectiblesShopGiftBadgePostPurchaseModal ===
+// === Module 14129: CollectiblesShopGiftBadgePostPurchaseModal ===
 
-// Module 13910 (CollectiblesShopGiftBadgePostPurchaseModal)
+// Module 14129 (CollectiblesShopGiftBadgePostPurchaseModal)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
 import _modDef2631 from "module_2631" /* 2631 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
-import XSmallIcon from "XSmallIcon" /* 6933 */;
-import AnalyticsLocationDefault from "AnalyticsLocation" /* 7280 */;
-import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7650 */;
-import ModalScreen from "ModalScreen" /* 7901 */;
-import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 13911 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
+import XSmallIcon from "XSmallIcon" /* 6967 */;
+import AnalyticsLocationDefault from "AnalyticsLocation" /* 7314 */;
+import CollectiblesActionCreators from "CollectiblesActionCreators" /* 7684 */;
+import ModalScreen from "ModalScreen" /* 7935 */;
+import GiftBadgePostPurchaseDefault from "GiftBadgePostPurchase" /* 14130 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -20,7 +20,7 @@ get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_8 = createStyles.createStyles((paddingTop) => {
   const obj = { header: null, closeButton: null, closeIcon: null };
   const rect = { position: "absolute", top: 0, left: 0, right: 0, height: paddingTop + 56, paddingTop, zIndex: 1, flexDirection: "row", alignItems: "center", justifyContent: "center" };

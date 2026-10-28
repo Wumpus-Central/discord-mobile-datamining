@@ -1,8 +1,8 @@
-// === Module 18146: renderChannelWrapper ===
+// === Module 18386: renderChannelWrapper ===
 
-// Module 18146 (renderChannelWrapper)
-import getLayoutStylesDefault from "getLayoutStyles" /* 18145 */;
-import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 18147 */;
+// Module 18386 (renderChannelWrapper)
+import getLayoutStylesDefault from "getLayoutStyles" /* 18385 */;
+import getScaledChannelRowHeightDefault from "getScaledChannelRowHeight" /* 18387 */;
 import noop from "module_19" /* 19 */;
 
 const View = fn(17).View;

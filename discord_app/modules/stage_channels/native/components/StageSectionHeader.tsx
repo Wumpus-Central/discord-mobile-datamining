@@ -1,10 +1,10 @@
-// === Module 11710: StageSectionHeader ===
+// === Module 11748: StageSectionHeader ===
 
-// Module 11710 (StageSectionHeader)
+// Module 11748 (StageSectionHeader)
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5053 */;
-import timing from "timing" /* 5207 */;
-import _modDef7251 from "module_7251" /* 7251 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5085 */;
+import timing from "timing" /* 5242 */;
+import _modDef7285 from "module_7285" /* 7285 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -12,7 +12,7 @@ get_ActivityIndicator = fn(17);
 ({ TouchableOpacity: c3, View: closure_4 } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsxs: hasOwnProperty, jsx: metroRequire } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { section: { height: 48, paddingHorizontal: 4 }, children: { marginLeft: 12 }, collapseButton: { marginLeft: "auto" }, collapseIcon: { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY }, audience: null };
 let obj3 = { tintColor: nativeDefault.colors.MOBILE_TEXT_HEADING_PRIMARY };
 obj2.audience = { height: 48, flex: 1, flexDirection: "row", alignItems: "center", borderBottomWidth: 1, borderBottomColor: nativeDefault.colors.BORDER_SUBTLE, paddingHorizontal: 4, borderRadius: nativeDefault.radii.xs };
@@ -40,8 +40,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
     obj2.transform = items;
     return obj2;
   };
-  let obj2 = collapsed(5053);
-  fn.__closure = { withTiming: collapsed(5207).withTiming, collapsed };
+  let obj2 = collapsed(5085);
+  fn.__closure = { withTiming: collapsed(5242).withTiming, collapsed };
   fn.__workletHash = 8513320305499;
   fn.__initData = __initData;
   const animatedStyle = obj2.useAnimatedStyle(fn);
@@ -54,7 +54,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
         let tmp8 = cResult[5];
       }
       if (cResult[6] !== tmp4.collapseIcon) {
-        const obj4 = { source: _modDef7251, style: tmp4.collapseIcon };
+        const obj4 = { source: _modDef7285, style: tmp4.collapseIcon };
         const tmp16 = closure_6(collapsed(1199).Icon, obj4);
         cResult[6] = tmp4.collapseIcon;
         cResult[7] = tmp16;
@@ -132,12 +132,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
   const obj10 = { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: null };
   const items1 = [label, " \u2014 ", count];
   obj10.children = items1;
-  const tmp7 = closure_5(collapsed(5235).Text, obj10);
+  const tmp7 = closure_5(collapsed(5270).Text, obj10);
   cResult[0] = count;
   cResult[1] = label;
   cResult[2] = tmp7;
   tmp6 = tmp7;
-  const obj3 = { withTiming: collapsed(5207).withTiming, collapsed };
+  const obj3 = { withTiming: collapsed(5242).withTiming, collapsed };
 }) : (function StageSectionHeader(collapsed) {
   collapsed = collapsed.collapsed;
   const children = collapsed.children;
@@ -158,9 +158,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
       return obj1;
     }
   }
-  let obj = collapsed(5053);
+  let obj = collapsed(5085);
   const tmp2 = collapsed;
-  T.__closure = { withTiming: collapsed(5207).withTiming, collapsed };
+  T.__closure = { withTiming: collapsed(5242).withTiming, collapsed };
   T.__workletHash = 13209446315864;
   T.__initData = __initData2;
   const obj3 = { style: tmp.section, children: null };
@@ -169,7 +169,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
   const obj5 = { variant: "text-md/semibold", color: "text-overlay-light", accessibilityRole: "header", children: null };
   let items = [label, " \u2014 ", count];
   obj5.children = items;
-  const items1 = [closure_5(collapsed(5235).Text, obj5), , ];
+  const items1 = [closure_5(collapsed(5270).Text, obj5), , ];
   let tmp5Result = null != children;
   if (tmp5Result) {
     const obj6 = { style: tmp.children, children };
@@ -178,8 +178,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function StageSec
   items1[1] = tmp5Result;
   const obj7 = { style: tmp.collapseButton, children: null };
   const obj8 = { style: animatedStyle, children: null };
-  let obj2 = { withTiming: collapsed(5207).withTiming, collapsed };
-  obj8.children = closure_6(tmp2(1199).Icon, { source: _modDef7251, style: tmp.collapseIcon });
+  let obj2 = { withTiming: collapsed(5242).withTiming, collapsed };
+  obj8.children = closure_6(tmp2(1199).Icon, { source: _modDef7285, style: tmp.collapseIcon });
   obj7.children = closure_6(ReanimatedRexportDefault.View, obj8);
   items1[2] = closure_6(closure_4, obj7);
   obj4.children = items1;

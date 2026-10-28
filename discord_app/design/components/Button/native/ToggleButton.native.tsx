@@ -1,9 +1,9 @@
-// === Module 15312: ToggleButton ===
+// === Module 15537: ToggleButton ===
 
-// Module 15312 (ToggleButton)
+// Module 15537 (ToggleButton)
 import c from "c" /* 576 */;
-import BaseTextButton from "BaseTextButton" /* 5246 */;
-import useToggleButtonProps from "useToggleButtonProps" /* 12493 */;
+import BaseTextButton from "BaseTextButton" /* 5281 */;
+import useToggleButtonProps from "useToggleButtonProps" /* 12540 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -11,7 +11,7 @@ require = fn;
 let closure_2 = ["pressed", "ref"];
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
-let obj2 = { Icon: fn(5246).BaseTextButton.Icon };
+let obj2 = { Icon: fn(5281).BaseTextButton.Icon };
 let merged = Object.assign(ReactCompilerGating.isReactCompilerEnabled() ? (function ToggleButton(arg0) {
   const cResult = c.c(10);
   if (cResult[0] !== arg0) {

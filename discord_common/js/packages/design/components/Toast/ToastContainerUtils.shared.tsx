@@ -1,7 +1,7 @@
-// === Module 15324: DEFAULT_TOAST_POSITION ===
+// === Module 15549: DEFAULT_TOAST_POSITION ===
 
-// Module 15324 (DEFAULT_TOAST_POSITION)
-import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 4981 */;
+// Module 15549 (DEFAULT_TOAST_POSITION)
+import AccessibilityAnnouncer2 from "AccessibilityAnnouncer" /* 5013 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -10,8 +10,8 @@ const require = globalThis.__r;
 require = fn;
 const top = "top";
 let c5 = 3000;
-const module_4983 = fn(4983);
-let closure_6 = module_4983.create(() => {
+const module_5015 = fn(5015);
+let closure_6 = module_5015.create(() => {
   const obj = { containerIdsBySurface: new Map() };
   return obj;
 });
@@ -252,7 +252,7 @@ export const useToastContainer = ReactCompilerGating.isReactCompilerEnabled() ? 
   cResult[6] = items1;
   tmp15 = items1;
   tmp14 = E;
-  tmpResult = require("module_5666");
+  tmpResult = require("module_5701");
 }) : (function useToastContainer(arg0) {
   _require = arg0;
   const tmp = closure_7(arg0, noop.useId());

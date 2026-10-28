@@ -1,28 +1,28 @@
-// === Module 17484: MainChannels ===
+// === Module 17719: MainChannels ===
 
-// Module 17484 (MainChannels)
+// Module 17719 (MainChannels)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import useSafeAreaInsetsDefault from "useSafeAreaInsets" /* 1630 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5053 */;
-import useChatLayoutDefault from "useChatLayout" /* 5154 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5157 */;
-import useRefValueDefault from "useRefValue" /* 6887 */;
-import StartupProfiler from "StartupProfiler" /* 13073 */;
-import isJankScreenReportingEnabled from "isJankScreenReportingEnabled" /* 17472 */;
-import getJankScreenName from "getJankScreenName" /* 17474 */;
-import JankSlidingSurfaceReporterDefault from "JankSlidingSurfaceReporter" /* 17477 */;
-import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 17487 */;
-import useChannelListWidthDefault from "useChannelListWidth" /* 17488 */;
-import messages_MessagesDefault from "messages/Messages" /* 17489 */;
-import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17490 */;
-import RedesignChannelListDefault from "RedesignChannelList" /* 17571 */;
-import NativeFreezeScreens from "NativeFreezeScreens" /* 17770 */;
-import HomePanelContent from "HomePanelContent" /* 17771 */;
-import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 17848 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5085 */;
+import useChatLayoutDefault from "useChatLayout" /* 5189 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5192 */;
+import useRefValueDefault from "useRefValue" /* 6921 */;
+import StartupProfiler from "StartupProfiler" /* 13290 */;
+import isJankScreenReportingEnabled from "isJankScreenReportingEnabled" /* 17707 */;
+import getJankScreenName from "getJankScreenName" /* 17709 */;
+import JankSlidingSurfaceReporterDefault from "JankSlidingSurfaceReporter" /* 17712 */;
+import useGuildsRouteGuildId from "useGuildsRouteGuildId" /* 17722 */;
+import useChannelListWidthDefault from "useChannelListWidth" /* 17723 */;
+import messages_MessagesDefault from "messages/Messages" /* 17724 */;
+import useHomeDrawerGesture from "useHomeDrawerGesture" /* 17725 */;
+import RedesignChannelListDefault from "RedesignChannelList" /* 17806 */;
+import NativeFreezeScreens from "NativeFreezeScreens" /* 18007 */;
+import HomePanelContent from "HomePanelContent" /* 18008 */;
+import NonCollapsableGestureDetector from "NonCollapsableGestureDetector" /* 18085 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import HomeDrawerStore from "HomeDrawerStore" /* 17485 */;
+import HomeDrawerStore from "HomeDrawerStore" /* 17720 */;
 
 const StartupProfilerDefault = StartupProfiler;
 
@@ -35,7 +35,7 @@ get_ActivityIndicator = fn(17);
 const Constants = fn(1084);
 const DM_WIDTH = Constants.DM_WIDTH;
 const ME = Constants.ME;
-const HOME_DRAWER_SCREEN = fn(17475).HOME_DRAWER_SCREEN;
+const HOME_DRAWER_SCREEN = fn(17710).HOME_DRAWER_SCREEN;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -99,7 +99,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMai
   obj2.selectedGuildId = tmp8;
   return obj2;
 });
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { fill: { flex: 1 }, sideContainer: null, side: null, sideTablet: null };
 const rect = { position: "absolute", top: 0, left: DM_WIDTH, bottom: 0, right: 0, flexDirection: "row", borderLeftWidth: 1, borderTopWidth: 1, borderColor: nativeDefault.colors.APP_FRAME_BORDER, borderTopLeftRadius: nativeDefault.radii.xl };
 obj.sideContainer = rect;

@@ -1,11 +1,11 @@
-// === Module 9134: BotTag ===
+// === Module 9167: BotTag ===
 
-// Module 9134 (BotTag)
+// Module 9167 (BotTag)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9135 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import CheckmarkSmallBoldIcon from "CheckmarkSmallBoldIcon" /* 9168 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -33,7 +33,7 @@ const View = fn(17).View;
 const BotTagTypes = fn(1372).BotTagTypes;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { tag: { paddingLeft: 4, paddingRight: 4, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 }, verifiedTagLeftPadding: { paddingLeft: 1 }, tagNormal: null, tagInverted: null, tagTextNormal: null, tagTextInverted: null };
 let obj3 = { paddingLeft: 4, paddingRight: 4, borderRadius: nativeDefault.radii.xs, display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 1 };
 obj2.tagNormal = { backgroundColor: nativeDefault.colors.BACKGROUND_BRAND };
@@ -241,7 +241,7 @@ const tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function BotTag(arg
   if ("sm" === size) {
     str3 = "text-xxs/semibold";
   }
-  items1[1] = hasOwnProperty(tmp17(5235).Text, { variant: str3, lineClamp: 1, maxFontSizeMultiplier: 2, style: flag ? tmp2.tagTextInverted : tmp2.tagTextNormal, children: getBotLabel(BOT) });
+  items1[1] = hasOwnProperty(tmp17(5270).Text, { variant: str3, lineClamp: 1, maxFontSizeMultiplier: 2, style: flag ? tmp2.tagTextInverted : tmp2.tagTextNormal, children: getBotLabel(BOT) });
   obj2.children = items1;
   return timestampProducer(View, obj2);
 });

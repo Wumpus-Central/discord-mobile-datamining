@@ -1,24 +1,24 @@
-// === Module 12178: ConjureSettingsSheet ===
+// === Module 12216: ConjureSettingsSheet ===
 
-// Module 12178 (ConjureSettingsSheet)
+// Module 12216 (ConjureSettingsSheet)
 import nativeDefault from "native" /* 587 */;
-import _modDef3831 from "module_3831" /* 3831 */;
+import _modDef3863 from "module_3863" /* 3863 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import ConjureConnectionStore from "ConjureConnectionStore" /* 10701 */;
-import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10715 */;
-import ConjureProjectStore_mod from "ConjureProjectStore" /* 6774 */;
+import ConjureConnectionStore from "ConjureConnectionStore" /* 10733 */;
+import ConjureModelSettingsStore from "ConjureModelSettingsStore" /* 10747 */;
+import ConjureProjectStore_mod from "ConjureProjectStore" /* 6808 */;
 
 const require = fn;
 const View = fn(17).View;
-let ConjureProjectStore = fn(6774);
+let ConjureProjectStore = fn(6808);
 ({ canPublishProject: closure_9, isProjectOwner: c10 } = ConjureProjectStore);
 let ConjureProjectStore = ConjureProjectStore_mod;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-let obj = { project: _modDef3831.W0eQfN, app: _modDef3831.lFaJYF, secrets: _modDef3831.vDpCPU, model: _modDef3831.Rs3qc9, linked: _modDef3831.fBEHdq, experimental: _modDef3831["0Pe9uw"] };
-const createStyles = fn(4972);
+let obj = { project: _modDef3863.W0eQfN, app: _modDef3863.lFaJYF, secrets: _modDef3863.vDpCPU, model: _modDef3863.Rs3qc9, linked: _modDef3863.fBEHdq, experimental: _modDef3863["0Pe9uw"] };
+const createStyles = fn(5004);
 let closure_15 = createStyles.createStyles((paddingBottom) => {
   obj = { container: { gap: nativeDefault.space.PX_16, paddingBottom } };
   return obj;
@@ -160,7 +160,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
     return obj;
   }), items);
   const tmp = setActiveIndex(noop.useState(0), 2);
-  obj = tabs(8901);
+  obj = tabs(8935);
   const segmentedControlState = obj.useSegmentedControlState({
     items: memo,
     pageWidth: tmp2,
@@ -182,10 +182,10 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled() ? (function Settin
   const obj3 = { onLayout: callback, children: null };
   if (tabs.length > 3) {
     const obj4 = { state: segmentedControlState };
-    let tmp10Result = closure_12(tmp5(12222).Tabs, obj4);
+    let tmp10Result = closure_12(tmp5(12261).Tabs, obj4);
   } else {
     const obj5 = { state: segmentedControlState };
-    tmp10Result = closure_12(tmp5(9146).SegmentedControl, obj5);
+    tmp10Result = closure_12(tmp5(9179).SegmentedControl, obj5);
   }
   obj3.children = tmp10Result;
   return closure_12(View, obj3);
@@ -204,7 +204,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   } else {
     first = cResult[0];
   }
-  closure_15(ref(5594)(first).insets.bottom);
+  closure_15(ref(5629)(first).insets.bottom);
   ref = noop.useRef(null);
   if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
     let items = [ConjureProjectStore];
@@ -379,8 +379,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
       }
     }
   }
-  const tmp5Result = tmp5(12179);
-  closure_3 = tmp5(12179)(projectId, undefined);
+  const tmp5Result = tmp5(12217);
+  closure_3 = tmp5(12217)(projectId, undefined);
   if (cResult[17] === isPreview) {
     class N {
       constructor() {
@@ -396,7 +396,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureS
   cResult[22] = scopeKeys;
   cResult[23] = { projectId, scopeKeys, note, notifyAgent, onSaved, isPreview };
   let obj3 = { projectId, scopeKeys, note, notifyAgent, onSaved, isPreview };
-  const tmp5ResultResult = tmp5(12179)(projectId, undefined);
+  const tmp5ResultResult = tmp5(12217)(projectId, undefined);
 }) : (function ConjureSettingsSheet(projectId) {
   projectId = projectId.projectId;
   let stateFromStores1;

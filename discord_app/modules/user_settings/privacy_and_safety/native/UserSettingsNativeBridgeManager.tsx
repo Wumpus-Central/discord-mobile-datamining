@@ -1,10 +1,10 @@
-// === Module 19425: UserSettingsNativeBridgeManager ===
+// === Module 19688: UserSettingsNativeBridgeManager ===
 
-// Module 19425 (UserSettingsNativeBridgeManager)
+// Module 19688 (UserSettingsNativeBridgeManager)
 import _mod17 from "module_17" /* 17 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import UserSettingsProtoStore from "UserSettingsProtoStore" /* 1243 */;
-import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7216 */;
+import AutomaticLifecycleManager from "AutomaticLifecycleManager" /* 7250 */;
 import size from "module_2" /* 2 */;
 
 const NativeModules = _mod17.NativeModules;

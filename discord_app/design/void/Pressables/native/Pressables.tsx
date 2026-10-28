@@ -1,10 +1,10 @@
-// === Module 6910: Pressables ===
+// === Module 6944: Pressables ===
 
-// Module 6910 (Pressables)
+// Module 6944 (Pressables)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import StyleSheetUtilsDefault from "StyleSheetUtils" /* 6911 */;
+import StyleSheetUtilsDefault from "StyleSheetUtils" /* 6945 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -13,10 +13,10 @@ let closure_3 = ["children", "androidRippleConfig", "style", "type", "activeOpac
 let closure_4 = ["activeOpacity", "ref"];
 let closure_5 = ["underlayColor", "ref"];
 const Pressable = fn(17).Pressable;
-const IOS_POINTER_STYLE = fn(5256).IOS_POINTER_STYLE;
+const IOS_POINTER_STYLE = fn(5291).IOS_POINTER_STYLE;
 const getThemedRippleConfig = fn(1203).getThemedRippleConfig;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { pressedHighlight: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED } };
 let closure_12 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

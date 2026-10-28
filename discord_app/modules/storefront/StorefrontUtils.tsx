@@ -1,20 +1,20 @@
-// === Module 7337: StorefrontUtils ===
+// === Module 7372: StorefrontUtils ===
 
-// Module 7337 (StorefrontUtils)
+// Module 7372 (StorefrontUtils)
 import _modDef12 from "module_12" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
 import FlagUtils from "FlagUtils" /* 1402 */;
 import PremiumUtilsDefault from "PremiumUtils" /* 2050 */;
-import StorefrontTypes from "StorefrontTypes" /* 7339 */;
-import SlayerStorefrontPriceUtils from "SlayerStorefrontPriceUtils" /* 7340 */;
-import PriceUtils from "PriceUtils" /* 7341 */;
-import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7344 */;
+import StorefrontTypes from "StorefrontTypes" /* 7374 */;
+import SlayerStorefrontPriceUtils from "SlayerStorefrontPriceUtils" /* 7375 */;
+import PriceUtils from "PriceUtils" /* 7376 */;
+import OrbCheckoutUtils from "OrbCheckoutUtils" /* 7379 */;
 import noop from "module_19" /* 19 */;
 import LocaleStore from "LocaleStore" /* 2065 */;
 import UserStore from "UserStore" /* 1389 */;
-import SKUPricesStore from "SKUPricesStore" /* 7338 */;
+import SKUPricesStore from "SKUPricesStore" /* 7373 */;
 
 require = fn;
 function formatSKUPrice(arg0, stateFromStores) {
@@ -85,14 +85,14 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRes
   const stateFromStores = sku(504).useStateFromStores(first, tmp7);
   if (cResult[3] !== priceSetAssignmentPurchaseType) {
     if (null == priceSetAssignmentPurchaseType) {
-      let GIFT = tmp(7339).StorefrontPurchaseType.SELF_PURCHASE;
+      let GIFT = tmp(7374).StorefrontPurchaseType.SELF_PURCHASE;
     } else {
       if (constants2.DEFAULT === priceSetAssignmentPurchaseType) {
-        GIFT = tmp(7339).StorefrontPurchaseType.SELF_PURCHASE;
+        GIFT = tmp(7374).StorefrontPurchaseType.SELF_PURCHASE;
       } else if (tmp11.GIFT !== priceSetAssignmentPurchaseType) {
-        GIFT = tmp(7339).StorefrontPurchaseType.SELF_PURCHASE;
+        GIFT = tmp(7374).StorefrontPurchaseType.SELF_PURCHASE;
       }
-      GIFT = tmp(7339).StorefrontPurchaseType.GIFT;
+      GIFT = tmp(7374).StorefrontPurchaseType.GIFT;
     }
     cResult[3] = priceSetAssignmentPurchaseType;
     cResult[4] = GIFT;
@@ -101,7 +101,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRes
       if (null != stateFromStores) {
         let tmp15 = stateFromStores[tmp10];
         if (tmp15 == null) {
-          tmp15 = stateFromStores[tmp(undefined, 7339).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp15 = stateFromStores[tmp(undefined, 7374).StorefrontPurchaseType.SELF_PURCHASE];
         }
         if (cResult[8] === isOrbPrice) {
           let userPrice;
@@ -189,7 +189,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled() ? (function useRes
       if (null != stateFromStores) {
         let tmp12 = stateFromStores[SELF_PURCHASE];
         if (tmp12 == null) {
-          tmp12 = stateFromStores[tmp4(undefined, 7339).StorefrontPurchaseType.SELF_PURCHASE];
+          tmp12 = stateFromStores[tmp4(undefined, 7374).StorefrontPurchaseType.SELF_PURCHASE];
         }
         let found;
         if (tmp12 != null) {

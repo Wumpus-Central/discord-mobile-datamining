@@ -1,27 +1,27 @@
-// === Module 17671: FavoritesGuildSuggestedChannels ===
+// === Module 17906: FavoritesGuildSuggestedChannels ===
 
-// Module 17671 (FavoritesGuildSuggestedChannels)
+// Module 17906 (FavoritesGuildSuggestedChannels)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import _modDef3413 from "module_3413" /* 3413 */;
-import components_Button_Button from "components/Button/Button" /* 5245 */;
-import XSmallIcon from "XSmallIcon" /* 6933 */;
-import useScaledRowHeightDefault from "useScaledRowHeight" /* 7146 */;
-import SearchableDestinationListRowDefault from "SearchableDestinationListRow" /* 17673 */;
-import handleFavoritesGuildAddSuggestedChannelDefault from "handleFavoritesGuildAddSuggestedChannel" /* 17674 */;
+import _modDef3445 from "module_3445" /* 3445 */;
+import components_Button_Button from "components/Button/Button" /* 5280 */;
+import XSmallIcon from "XSmallIcon" /* 6967 */;
+import useScaledRowHeightDefault from "useScaledRowHeight" /* 7180 */;
+import SearchableDestinationListRowDefault from "SearchableDestinationListRow" /* 17908 */;
+import handleFavoritesGuildAddSuggestedChannelDefault from "handleFavoritesGuildAddSuggestedChannel" /* 17909 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
-const FavoritesGuildSuggestionsStore = fn(17672);
+const FavoritesGuildSuggestionsStore = fn(17907);
 ({ useFavoritesGuildSuggestions: hasOwnProperty, useFavoritesGuildSuggestionsDismissal: metroRequire } = FavoritesGuildSuggestionsStore);
 const NOOP = fn(1084).NOOP;
-let closure_8 = fn(11954).getScaledCategoryRowHeight;
+let closure_8 = fn(11992).getScaledCategoryRowHeight;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const PX_8 = nativeDefault.space.PX_8;
 const PX_4 = nativeDefault.space.PX_4;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_13 = createStyles.createStyles({ container: { marginTop: PX_4 }, rows: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: PX_8 } });
 const ReactCompilerGating = fn(558);
 let obj2 = { container: { marginTop: PX_4 }, rows: { paddingHorizontal: nativeDefault.space.PX_16, paddingBottom: PX_8 } };
@@ -32,19 +32,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   const cResult = arr(576).c(21);
   const tmp4 = closure_13();
   let obj = arr(576);
-  const categoryStyles = arr(17574).useCategoryStyles();
+  const categoryStyles = arr(17809).useCategoryStyles();
   arr = closure_5();
   const tmp6 = closure_6();
   if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
     let intl = tmp(1125).intl;
-    const stringResult = intl.string(_modDef3413.F3dWTe);
+    const stringResult = intl.string(_modDef3445.F3dWTe);
     cResult[0] = stringResult;
     let first = stringResult;
   } else {
     first = cResult[0];
   }
   if (cResult[1] !== tmp6) {
-    let obj3 = { label: first, perform: tmp6, Icon: tmp(6933).XSmallIcon };
+    let obj3 = { label: first, perform: tmp6, Icon: tmp(6967).XSmallIcon };
     cResult[1] = tmp6;
     cResult[2] = obj3;
     let tmp10 = obj3;
@@ -117,8 +117,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
         const intl = util.intl;
         obj3.text = intl.string(util.t.OYkgVk);
         obj3.onPress = function onPress() {
-          const tmp = closure_1(17674);
-          return tmp(arr(12916).getDestinationIdFromResult(closure_0));
+          const tmp = closure_1(17909);
+          return tmp(arr(12963).getDestinationIdFromResult(closure_0));
         };
         obj2.trailing = React6(components_Button_Button.Button, obj3);
         obj.children = React6(SearchableDestinationListRowDefault, obj2);
@@ -131,20 +131,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     }
     const obj7 = { name: null, withMarginTop: false, styles: null, trailingAction: null };
     const intl2 = tmp(1125).intl;
-    obj7.name = intl2.string(_modDef3413.oHWnLy);
+    obj7.name = intl2.string(_modDef3445.oHWnLy);
     obj7.styles = categoryStyles;
     obj7.trailingAction = tmp10;
-    const renderCategoryItemResult = tmp(17574).renderCategoryItem(obj7);
+    const renderCategoryItemResult = tmp(17809).renderCategoryItem(obj7);
     cResult[5] = categoryStyles;
     cResult[6] = tmp10;
     cResult[7] = renderCategoryItemResult;
     tmp14 = renderCategoryItemResult;
-    const tmpResult = tmp(17574);
+    const tmpResult = tmp(17809);
   }
-  let obj2 = arr(17574);
+  let obj2 = arr(17809);
 }) : (function FavoritesGuildSuggestedChannels() {
   let tmp = closure_13();
-  const categoryStyles = arr(17574).useCategoryStyles();
+  const categoryStyles = arr(17809).useCategoryStyles();
   arr = closure_5();
   const tmp5 = closure_6();
   importDefault = tmp5;
@@ -152,7 +152,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
   const memo = noop.useMemo(() => {
     const obj = { label: null, perform: null, Icon: null };
     const intl = util.intl;
-    obj.label = intl.string(_modDef3413.F3dWTe);
+    obj.label = intl.string(_modDef3445.F3dWTe);
     obj.perform = perform;
     obj.Icon = XSmallIcon.XSmallIcon;
     return obj;
@@ -166,10 +166,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     let obj2 = { style: tmp.container, children: null };
     let obj3 = { name: null, withMarginTop: false, styles: null, trailingAction: null };
     let intl = tmp2(1125).intl;
-    obj3.name = intl.string(_modDef3413.oHWnLy);
+    obj3.name = intl.string(_modDef3445.oHWnLy);
     obj3.styles = categoryStyles;
     obj3.trailingAction = memo;
-    const items2 = [tmp2(17574).renderCategoryItem(obj3), ];
+    const items2 = [tmp2(17809).renderCategoryItem(obj3), ];
     const obj4 = {
       style: tmp.rows,
       children: arr.map((item, index) => {
@@ -180,8 +180,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
           const intl = util.intl;
           obj3.text = intl.string(util.t.OYkgVk);
           obj3.onPress = function onPress() {
-            const tmp = closure_1(17674);
-            return tmp(arr(12916).getDestinationIdFromResult(closure_0));
+            const tmp = closure_1(17909);
+            return tmp(arr(12963).getDestinationIdFromResult(closure_0));
           };
           obj2.trailing = React6(components_Button_Button.Button, obj3);
           obj.children = React6(SearchableDestinationListRowDefault, obj2);
@@ -191,7 +191,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function Favorite
     items2[1] = closure_9(View, obj4);
     obj2.children = items2;
     tmp9 = closure_10(View, obj2);
-    const tmp2Result = tmp2(17574);
+    const tmp2Result = tmp2(17809);
   }
   return tmp9;
 });

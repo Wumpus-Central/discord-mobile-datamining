@@ -1,16 +1,16 @@
-// === Module 15918: HexagonCampaignDaysLeftBadge ===
+// === Module 16144: HexagonCampaignDaysLeftBadge ===
 
-// Module 15918 (HexagonCampaignDaysLeftBadge)
+// Module 16144 (HexagonCampaignDaysLeftBadge)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import util from "util" /* 1125 */;
-import _modDef4248 from "module_4248" /* 4248 */;
-import shared from "shared" /* 4979 */;
-import HexagonCampaignUtils from "HexagonCampaignUtils" /* 4999 */;
-import native from "native" /* 5038 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import useCountdownDefault from "useCountdown" /* 7555 */;
+import _modDef4280 from "module_4280" /* 4280 */;
+import shared from "shared" /* 5011 */;
+import HexagonCampaignUtils from "HexagonCampaignUtils" /* 5031 */;
+import native from "native" /* 5070 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import useCountdownDefault from "useCountdown" /* 7589 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
 
@@ -21,8 +21,8 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
 let closure_8 = 60 * DurationsDefault.Millis.SECOND;
-let closure_9 = Object.values(fn(4997).HexagonCampaignPerk);
-const createStyles = fn(4972);
+let closure_9 = Object.values(fn(5029).HexagonCampaignPerk);
+const createStyles = fn(5004);
 let obj2 = { badge: { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_6, paddingVertical: 3, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT }, badgeOverlay: null, badgeExpressiveDark: null, badgeExpressiveLight: null };
 let obj3 = { flexDirection: "row", alignItems: "center", gap: nativeDefault.space.PX_4, paddingHorizontal: nativeDefault.space.PX_6, paddingVertical: 3, borderRadius: nativeDefault.radii.round, backgroundColor: nativeDefault.colors.CONTROL_SECONDARY_BACKGROUND_DEFAULT };
 obj2.badgeOverlay = { backgroundColor: nativeDefault.unsafe_rawColors.OPACITY_BLACK_40 };
@@ -65,7 +65,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHexagonCa
     }
   }
   if (null != item) {
-    obj = obj(4999);
+    obj = obj(5031);
     let hexagonCampaignPerkCutoffMs = obj.getHexagonCampaignPerkCutoffMs(item, stateFromStores);
   } else {
     const _Math = Math;
@@ -102,7 +102,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useHexagonCa
     }
     return hexagonCampaignPerkCutoffMs;
   }, items1);
-  const tmp3 = stateFromStores(7555)(memo, closure_8);
+  const tmp3 = stateFromStores(7589)(memo, closure_8);
   let num = 0;
   if (tmp3.hours > 0) {
     num = 1;
@@ -273,7 +273,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
   if (cResult[1] !== tmp4) {
     const intl = util.intl;
     const obj2 = { days: tmp4 };
-    const formatToPlainStringResult = intl.formatToPlainString(_modDef4248["noGK/D"], obj2);
+    const formatToPlainStringResult = intl.formatToPlainString(_modDef4280["noGK/D"], obj2);
     cResult[1] = tmp4;
     cResult[2] = formatToPlainStringResult;
     let tmp6 = formatToPlainStringResult;
@@ -300,7 +300,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function HexagonC
     text: null
   };
   const intl = util.intl;
-  obj.text = intl.formatToPlainString(_modDef4248["noGK/D"], { days: closure_11(variant.perk) });
+  obj.text = intl.formatToPlainString(_modDef4280["noGK/D"], { days: closure_11(variant.perk) });
   return timestampProducer(closure_12, obj);
 });
 export const useHexagonCampaignDaysLeft = tmp3;

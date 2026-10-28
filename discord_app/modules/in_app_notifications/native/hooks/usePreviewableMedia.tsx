@@ -1,15 +1,15 @@
-// === Module 13784: usePreviewableMedia ===
+// === Module 14002: usePreviewableMedia ===
 
-// Module 13784 (usePreviewableMedia)
+// Module 14002 (usePreviewableMedia)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import useToken from "useToken" /* 5253 */;
-import isForwardMessageDefault from "isForwardMessage" /* 5603 */;
-import MediaFormatTesters from "MediaFormatTesters" /* 6000 */;
-import inlineStyles from "inlineStyles" /* 7960 */;
-import CirclePlayIcon from "CirclePlayIcon" /* 9312 */;
-import FileIcon from "FileIcon" /* 12063 */;
-import WaveformIcon from "WaveformIcon" /* 13785 */;
+import useToken from "useToken" /* 5288 */;
+import isForwardMessageDefault from "isForwardMessage" /* 5638 */;
+import MediaFormatTesters from "MediaFormatTesters" /* 6035 */;
+import inlineStyles from "inlineStyles" /* 7994 */;
+import CirclePlayIcon from "CirclePlayIcon" /* 9344 */;
+import FileIcon from "FileIcon" /* 12101 */;
+import WaveformIcon from "WaveformIcon" /* 14003 */;
 import noop from "module_19" /* 19 */;
 
 const inlineStylesDefault = inlineStyles;
@@ -149,7 +149,7 @@ const Constants = fn(1084);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
 const PreviewableMediaTypes = { IMAGE: "image", VIDEO: "video", AUDIO: "audio", FILE: "file", STICKER: "sticker", GIF: "gif", VOICE_MESSAGE: "voice_message" };
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj3 = { voiceMessageIconOverlay: null };
 let obj4 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);

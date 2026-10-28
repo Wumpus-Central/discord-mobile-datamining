@@ -1,10 +1,10 @@
-// === Module 7412: LazyLoadedThreadManager ===
+// === Module 7447: LazyLoadedThreadManager ===
 
-// Module 7412 (LazyLoadedThreadManager)
+// Module 7447 (LazyLoadedThreadManager)
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6497 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6531 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
 
 const require = fn;
 function initialize() {
@@ -57,9 +57,9 @@ function loadThread(channelId) {
       } else {
         const _location = location;
         let obj2 = { path: null, exact: true };
-        const RouteParam = tmp13(5021).RouteParam;
-        const tmp13Result = tmp13(5008);
-        const RouteParam2 = tmp13(5021).RouteParam;
+        const RouteParam = tmp13(5053).RouteParam;
+        const tmp13Result = tmp13(5040);
+        const RouteParam2 = tmp13(5053).RouteParam;
         obj2.path = closure_9.CHANNEL(RouteParam.guildId(), RouteParam2.channelId(), ":messageId");
         importDefault = tmp13Result.matchPath(location.pathname, obj2);
         const HTTP = tmp13(1294).HTTP;
@@ -85,7 +85,7 @@ function loadThread(channelId) {
           }
         }).catch(() => {
           closure_11[id] = { type: "NOT_FOUND" };
-          const obj2 = { id, guild_id: null, parent_id: "Array" };
+          const obj2 = { id, guild_id: null, parent_id: "r" };
           let guildId;
           if (closure_1 != null) {
             const params = closure_1.params;
@@ -105,11 +105,11 @@ function loadThread(channelId) {
     }
   }
 }
-const ChannelRecord = fn(4828);
+const ChannelRecord = fn(4860);
 ({ createChannelRecordFromServer: closure_4, THREAD_CHANNEL_TYPES: hasOwnProperty } = ChannelRecord);
 const Constants = fn(1084);
 ({ Endpoints: closure_8, Routes: closure_9 } = Constants);
-const isStaticChannelRoute = fn(4831).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4863).isStaticChannelRoute;
 const dependencyMap = {};
 let c12 = false;
 const size = fn(2);
@@ -133,7 +133,7 @@ export default {
       let nextResult = iter.next();
       while (iter !== undefined) {
         let tmp9 = nextResult;
-        if (nextResult !== items1(7325).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
+        if (nextResult !== items1(7360).FAKE_PLACEHOLDER_PRIVATE_CHANNEL_ID) {
           if (!isStaticChannelRoute(tmp9)) {
             if (null == ChannelStore.getChannel(tmp9)) {
               let tmp18 = dependencyMap[tmp9];

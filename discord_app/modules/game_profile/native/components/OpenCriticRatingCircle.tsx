@@ -1,9 +1,9 @@
-// === Module 9330: OpenCriticRatingCircle ===
+// === Module 9362: OpenCriticRatingCircle ===
 
-// Module 9330 (OpenCriticRatingCircle)
+// Module 9362 (OpenCriticRatingCircle)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import inlineStyles from "inlineStyles" /* 7960 */;
+import inlineStyles from "inlineStyles" /* 7994 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

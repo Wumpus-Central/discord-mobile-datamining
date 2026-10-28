@@ -1,16 +1,16 @@
-// === Module 7381: GameInvitesChannelUtils ===
+// === Module 7416: GameInvitesChannelUtils ===
 
-// Module 7381 (GameInvitesChannelUtils)
+// Module 7416 (GameInvitesChannelUtils)
 import _modDef38 from "module_38" /* 38 */;
 import c from "c" /* 576 */;
-import ApplicationActionCreators from "ApplicationActionCreators" /* 6811 */;
-import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 6824 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7383 */;
-import ForumTagHooks from "ForumTagHooks" /* 7384 */;
-import ForumPostDataLoader from "ForumPostDataLoader" /* 7403 */;
-import hasFlagDefault from "hasFlag" /* 7411 */;
+import ApplicationActionCreators from "ApplicationActionCreators" /* 6845 */;
+import getThreadAutoArchiveTimeOnceDefault from "getThreadAutoArchiveTimeOnce" /* 6858 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7418 */;
+import ForumTagHooks from "ForumTagHooks" /* 7419 */;
+import ForumPostDataLoader from "ForumPostDataLoader" /* 7438 */;
+import hasFlagDefault from "hasFlag" /* 7446 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
 
 require = fn;
 let closure_3 = ["data"];
@@ -18,8 +18,8 @@ let closure_4 = ["data"];
 const useMemo = fn(19).useMemo;
 const Constants = fn(1084);
 ({ ActivityFlags: closure_8, ActivityTypes: closure_9, MAX_CHANNEL_NAME_LENGTH: c10 } = Constants);
-const ChannelFlags = fn(4831).ChannelFlags;
-const MAX_FORUM_POST_TAGS = fn(7382).MAX_FORUM_POST_TAGS;
+const ChannelFlags = fn(4863).ChannelFlags;
+const MAX_FORUM_POST_TAGS = fn(7417).MAX_FORUM_POST_TAGS;
 let c13 = "No Mic";
 let ReactCompilerGating = fn(558);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useIsGameInvitesPost(arg0) {
@@ -185,7 +185,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGam
   if (stateFromStores != null) {
     gameId = stateFromStores.gameId;
   }
-  const data = tmp(7408).useGame(gameId).data;
+  const data = tmp(7443).useGame(gameId).data;
   let officialApplicationId;
   if (data != null) {
     officialApplicationId = data.getOfficialApplicationId();
@@ -238,7 +238,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function useGameInvit
   tmp9 = obj3;
 }) : (function useGameInvitesChannelOfficialApplication(arg0) {
   const tmp = closure_15(arg0);
-  application = application(6811).useApplication(tmp);
+  application = application(6845).useApplication(tmp);
   const items = [application];
   return useMemo(() => {
     const merged = Object.assign(_objectWithoutProperties(application, closure_4));
@@ -290,8 +290,8 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSubscribe
       } else {
         tmp11 = cResult[7];
       }
-      const subscribeGuildMembers = tmp(7410).useSubscribeGuildMembers(tmp11, "GameInvitesChannelPostAuthors");
-      const tmpResult2 = tmp(7410);
+      const subscribeGuildMembers = tmp(7445).useSubscribeGuildMembers(tmp11, "GameInvitesChannelPostAuthors");
+      const tmpResult2 = tmp(7445);
     }
     const tmpResult = tmp(504);
   }

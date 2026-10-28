@@ -1,8 +1,8 @@
-// === Module 12939: ForwardPreviewUtils ===
+// === Module 12986: ForwardPreviewUtils ===
 
-// Module 12939 (ForwardPreviewUtils)
-import EmbedUtils from "EmbedUtils" /* 6487 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
+// Module 12986 (ForwardPreviewUtils)
+import EmbedUtils from "EmbedUtils" /* 6521 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

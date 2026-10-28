@@ -1,6 +1,6 @@
-// === Module 11785: FramePoolActionCreators ===
+// === Module 11823: FramePoolActionCreators ===
 
-// Module 11785 (FramePoolActionCreators)
+// Module 11823 (FramePoolActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import size from "module_2" /* 2 */;
 

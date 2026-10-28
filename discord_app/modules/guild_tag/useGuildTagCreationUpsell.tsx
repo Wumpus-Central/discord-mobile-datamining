@@ -1,15 +1,15 @@
-// === Module 14197: useGuildTagCreationUpsell ===
+// === Module 14421: useGuildTagCreationUpsell ===
 
-// Module 14197 (useGuildTagCreationUpsell)
+// Module 14421 (useGuildTagCreationUpsell)
 import _modDef12 from "module_12" /* 12 */;
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import PremiumTypeUtils from "PremiumTypeUtils" /* 1988 */;
-import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6464 */;
-import ServerTagUpsellOnProfileExperimentDefault from "ServerTagUpsellOnProfileExperiment" /* 14198 */;
+import actions_BillingActionCreators from "actions/BillingActionCreators" /* 6498 */;
+import ServerTagUpsellOnProfileExperimentDefault from "ServerTagUpsellOnProfileExperiment" /* 14422 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
 import UserStore from "UserStore" /* 1389 */;
 import BillingInfoStore from "BillingInfoStore" /* 2051 */;
 import SubscriptionStore from "SubscriptionStore" /* 2055 */;

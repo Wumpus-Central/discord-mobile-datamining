@@ -1,11 +1,11 @@
-// === Module 15159: ActivateDevice ===
+// === Module 15384: ActivateDevice ===
 
-// Module 15159 (ActivateDevice)
+// Module 15384 (ActivateDevice)
 import nativeDefault from "native" /* 587 */;
 import NativeImageManagerModuleDefault from "NativeImageManagerModule" /* 1898 */;
-import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 13541 */;
-import _modDef15163 from "module_15163" /* 15163 */;
-import _modDef15164 from "module_15164" /* 15164 */;
+import ConsoleOAuthApplications from "ConsoleOAuthApplications" /* 13759 */;
+import _modDef15388 from "module_15388" /* 15388 */;
+import _modDef15389 from "module_15389" /* 15389 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -16,7 +16,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ActivityIndicator: metroRequire, ScrollView: closure_7, StyleSheet } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { background: { flex: 1 }, imageStyle: null, safeArea: null, content: null, scroller: null, scrollerContent: null };
 let obj3 = {};
 const merged = Object.assign(StyleSheet.absoluteFillObject);
@@ -452,7 +452,7 @@ export const ActivateDevice = ReactCompilerGating.isReactCompilerEnabled() ? ((o
           return;
         }
       }
-      const source = obj9.makeSource(require("module_15171"));
+      const source = obj9.makeSource(require("module_15396"));
       cResult[22] = source;
       const tmp36 = source;
     } else {
@@ -575,11 +575,11 @@ export const ActivateDevice = ReactCompilerGating.isReactCompilerEnabled() ? ((o
       const userCodeData = first.userCodeData;
       const items = [ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_APPLICATION_ID, ConsoleOAuthApplications.ConsoleOAuthApplications.PLAYSTATION_STAGING_APPLICATION_ID];
       if (items.includes(userCodeData.clientId)) {
-        closure_3(_modDef15163);
+        closure_3(_modDef15388);
       } else {
         const scopes = userCodeData.scopes;
         if (scopes.some((item) => first(first1[13]).isSocialLayerUmbrellaScope(item))) {
-          closure_3(_modDef15164);
+          closure_3(_modDef15389);
         }
       }
     }
@@ -615,7 +615,7 @@ export const ActivateDevice = ReactCompilerGating.isReactCompilerEnabled() ? ((o
   const obj7 = { source: null, style: null };
   let obj2 = first(first1[9]);
   const tmp23 = require("FastImage");
-  obj7.source = first(first1[19]).makeSource(require("module_15171"));
+  obj7.source = first(first1[19]).makeSource(require("module_15396"));
   obj7.style = tmp.imageStyle;
   const items6 = [closure_8(tmp23, obj7), ];
   const rect = { bottom: true, top: true, style: tmp.safeArea, children: null };

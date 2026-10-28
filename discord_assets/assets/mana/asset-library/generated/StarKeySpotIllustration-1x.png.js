@@ -1,6 +1,6 @@
-// === Module 19295: ? ===
+// === Module 19558: ? ===
 
-// Module 19295
+// Module 19558
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/StarKeySpotIllustration-1x.png.js");

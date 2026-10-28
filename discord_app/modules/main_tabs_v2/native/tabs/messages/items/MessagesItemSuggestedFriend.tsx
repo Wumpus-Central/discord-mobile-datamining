@@ -1,20 +1,20 @@
-// === Module 17509: MessagesItemSuggestedFriend ===
+// === Module 17744: MessagesItemSuggestedFriend ===
 
-// Module 17509 (MessagesItemSuggestedFriend)
+// Module 17744 (MessagesItemSuggestedFriend)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import UserUtilsDefault from "UserUtils" /* 5026 */;
-import _mod7222 from "module_7222" /* 7222 */;
-import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11063 */;
-import _mod13888 from "module_13888" /* 13888 */;
-import FriendSuggestionUtils from "FriendSuggestionUtils" /* 17510 */;
-import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17511 */;
+import UserUtilsDefault from "UserUtils" /* 5058 */;
+import _mod7256 from "module_7256" /* 7256 */;
+import useScaledTextLineHeight from "useScaledTextLineHeight" /* 11098 */;
+import _mod14107 from "module_14107" /* 14107 */;
+import FriendSuggestionUtils from "FriendSuggestionUtils" /* 17745 */;
+import AddFriendsScreenUtils from "AddFriendsScreenUtils" /* 17746 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import RelationshipStore from "RelationshipStore" /* 4914 */;
+import RelationshipStore from "RelationshipStore" /* 4946 */;
 
 require = fn;
 const View = fn(17).View;
@@ -22,11 +22,11 @@ const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, RelationshipTypes: closure_8 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { container: { paddingHorizontal: nativeDefault.space.PX_8 }, pressable: null, textContainer: null, avatar: null };
 let obj3 = { paddingHorizontal: nativeDefault.space.PX_8 };
 obj.pressable = { borderRadius: nativeDefault.radii.md, flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8 };
-let obj4 = { borderRadius: nativeDefault.radii.md, flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8 };
+const obj4 = { borderRadius: nativeDefault.radii.md, flexDirection: "row", alignItems: "center", padding: nativeDefault.space.PX_8 };
 obj.textContainer = { marginRight: nativeDefault.space.PX_8, flexDirection: "column", alignSelf: "center", overflow: "hidden", flexGrow: 1, flexShrink: 1 };
 let obj5 = { marginRight: nativeDefault.space.PX_8, flexDirection: "column", alignSelf: "center", overflow: "hidden", flexGrow: 1, flexShrink: 1 };
 obj.avatar = { marginRight: nativeDefault.space.PX_8 };
@@ -47,7 +47,7 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
     return items;
   }, items);
   const callback = noop.useCallback(() => {
-    asyncRequireImpl(8668, dependencyMap.paths).then((result) => result.default({ userId: suggestedFriend.user.id, localUser: suggestedFriend.user, location: "Messages Tab User Profile" }));
+    asyncRequireImpl(8705, dependencyMap.paths).then((result) => result.default({ userId: suggestedFriend.user.id, localUser: suggestedFriend.user, location: "Messages Tab User Profile" }));
   }, items1);
   const items2 = [RelationshipStore];
   if (!addedPressed) {
@@ -96,8 +96,8 @@ let closure_12 = noop.memo(function MessagesItemSuggestedFriendView(height) {
     setAddedPressed(true);
   }, items4);
   let obj3 = { accessibilityRole: "button", style: memo, onPress: callback, collapsable: false, children: null };
-  const obj4 = { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32 };
-  const items5 = [closure_9(height(suggestedFriend[18]).Avatar, obj4), , ];
+  obj2 = height(suggestedFriend[11]);
+  const items5 = [closure_9(height(suggestedFriend[18]).Avatar, { style: tmp.avatar, user: suggestedFriend.user, guildId: "Array", size: height(suggestedFriend[18]).AvatarSizes.REFRESH_MEDIUM_32 }), , ];
   let obj5 = { style: tmp.textContainer, children: null };
   const items6 = [closure_9(height(suggestedFriend[19]).Text, { lineClamp: 1, variant: "redesign/channel-title/semibold", maxFontSizeMultiplier: 2, color: "text-default", children: memo1.suggestionName }), ];
   if (addedPressed) {
@@ -161,8 +161,8 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
   } else {
     tmp4 = cResult[1];
   }
-  const tmpResult = _mod7222;
-  [tmp6, tmp7] = _mod7222.useRecyclingState(false, tmp4);
+  const tmpResult = _mod7256;
+  [tmp6, tmp7] = _mod7256.useRecyclingState(false, tmp4);
   if (cResult[2] === tmp6) {
     if (cResult[3] === suggestedFriend) {
       if (cResult[4] === tmp7) {
@@ -181,11 +181,11 @@ const memoResult1 = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (fu
   cResult[4] = tmp7;
   cResult[5] = tmp10;
   tmp8 = tmp10;
-  const tmp5 = _slicedToArray(_mod7222.useRecyclingState(false, tmp4), 2);
+  const tmp5 = _slicedToArray(_mod7256.useRecyclingState(false, tmp4), 2);
 }) : (function MessagesItemSuggestedFriendFlash(suggestedFriend) {
   const items = [suggestedFriend.suggestedFriend.user.id];
   const obj2 = {};
-  [tmp2, tmp3] = _mod7222.useRecyclingState(false, items);
+  [tmp2, tmp3] = _mod7256.useRecyclingState(false, items);
   const merged = Object.assign(suggestedFriend);
   obj2.addedPressed = tmp2;
   obj2.setAddedPressed = tmp3;
@@ -203,7 +203,7 @@ export const MessagesItemSuggestedFriendFast = memoResult;
 export const MessagesItemSuggestedFriendFlash = memoResult1;
 export const MessagesItemSuggestedFriendLegend = noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MessagesItemSuggestedFriendLegend(arg0) {
   const cResult = c.c(4);
-  [tmp3, tmp4] = _mod13888.useRecyclingState(false);
+  [tmp3, tmp4] = _mod14107.useRecyclingState(false);
   if (cResult[0] === tmp3) {
     if (cResult[1] === arg0) {
       if (cResult[2] === tmp4) {
@@ -224,7 +224,7 @@ export const MessagesItemSuggestedFriendLegend = noop.memo(ReactCompilerGating.i
   tmp5 = tmp7;
 }) : (function MessagesItemSuggestedFriendLegend(arg0) {
   const obj2 = {};
-  [tmp2, tmp3] = _mod13888.useRecyclingState(false);
+  [tmp2, tmp3] = _mod14107.useRecyclingState(false);
   const merged = Object.assign(arg0);
   obj2.addedPressed = tmp2;
   obj2.setAddedPressed = tmp3;

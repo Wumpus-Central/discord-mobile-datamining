@@ -1,12 +1,12 @@
-// === Module 13826: ForLaterMessageCard ===
+// === Module 14044: ForLaterMessageCard ===
 
-// Module 13826 (ForLaterMessageCard)
+// Module 14044 (ForLaterMessageCard)
 import nativeDefault from "native" /* 587 */;
-import _modDef5691 from "module_5691" /* 5691 */;
-import SavedMessageHelpers from "SavedMessageHelpers" /* 13827 */;
+import _modDef5726 from "module_5726" /* 5726 */;
+import SavedMessageHelpers from "SavedMessageHelpers" /* 14045 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
 
 const require = globalThis.__r;
 
@@ -16,7 +16,7 @@ const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, ChannelTypes: closure_8, Permissions: closure_9 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { card: { gap: 16, marginBottom: 16 }, cardDivider: { marginHorizontal: -16, height: 1, alignSelf: "stretch", backgroundColor: nativeDefault.colors.BACKGROUND_MOD_MUTED }, deletedCard: { flexDirection: "row", alignItems: "center", gap: 8 }, deletedText: { flex: 1 }, deletedActionButton: { marginLeft: "auto" } };
 let closure_12 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -31,7 +31,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLaterDele
     const _Symbol = Symbol;
     if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
       const obj2 = { size: "xs", color: nativeDefault.colors.ICON_MUTED };
-      const tmp10 = closure_10(tmp(7014).CircleErrorIcon, obj2);
+      const tmp10 = closure_10(tmp(7048).CircleErrorIcon, obj2);
       cResult[3] = tmp10;
       let tmp7 = tmp10;
     } else {
@@ -66,12 +66,12 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLaterDele
             variant: "secondary",
             accessibilityLabel: tmp18,
             size: "sm",
-            icon: _modDef5691,
+            icon: _modDef5726,
             onPress() {
                       return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
                     }
           };
-          const tmp23 = closure_10(tmp(7957).IconButton, obj3);
+          const tmp23 = closure_10(tmp(7991).IconButton, obj3);
           cResult[10] = savedMessage.saveData;
           cResult[11] = tmp23;
           let tmp20 = tmp23;
@@ -93,7 +93,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLaterDele
           const obj4 = { variant: "primary", border: "subtle", shadow: "none", style: tmp5, children: null };
           const items = [tmp7, tmp15, tmp24];
           obj4.children = items;
-          const tmp30 = closure_11(tmp(6907).Card, obj4);
+          const tmp30 = closure_11(tmp(6941).Card, obj4);
           cResult[15] = tmp5;
           cResult[16] = tmp15;
           cResult[17] = tmp24;
@@ -108,7 +108,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLaterDele
         tmp24 = tmp27;
       }
       const obj6 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp4.deletedText, children: cResult[5] };
-      const tmp17 = closure_10(tmp(5235).Text, obj6);
+      const tmp17 = closure_10(tmp(5270).Text, obj6);
       cResult[6] = tmp4.deletedText;
       cResult[7] = cResult[5];
       cResult[8] = tmp17;
@@ -129,7 +129,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLaterDele
   const items = [, ];
   ({ card: arr[0], deletedCard: arr[1] } = tmp);
   obj.style = items;
-  const items1 = [closure_10(savedMessage(7014).CircleErrorIcon, { size: "xs", color: nativeDefault.colors.ICON_MUTED }), , ];
+  const items1 = [closure_10(savedMessage(7048).CircleErrorIcon, { size: "xs", color: nativeDefault.colors.ICON_MUTED }), , ];
   const obj3 = { variant: "text-md/semibold", color: "mobile-text-heading-primary", style: tmp.deletedText, children: null };
   if (null != savedMessage.saveData.dueAt) {
     const intl2 = tmp3(1125).intl;
@@ -139,19 +139,19 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled() ? (function ForLaterDele
     stringResult = intl.string(tmp3(1125).t.o572Fe);
   }
   obj3.children = stringResult;
-  items1[1] = closure_10(savedMessage(5235).Text, obj3);
+  items1[1] = closure_10(savedMessage(5270).Text, obj3);
   const obj4 = { style: tmp.deletedActionButton, children: null };
   const obj5 = { variant: "secondary", accessibilityLabel: null, size: "sm", icon: null, onPress: null };
   const intl3 = tmp3(1125).intl;
   obj5.accessibilityLabel = intl3.string(savedMessage(1125).t.SvXS1Z);
-  obj5.icon = _modDef5691;
+  obj5.icon = _modDef5726;
   obj5.onPress = function onPress() {
     return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
   };
-  obj4.children = closure_10(savedMessage(7957).IconButton, obj5);
+  obj4.children = closure_10(savedMessage(7991).IconButton, obj5);
   items1[2] = closure_10(View, obj4);
   obj.children = items1;
-  return closure_11(savedMessage(6907).Card, obj);
+  return closure_11(savedMessage(6941).Card, obj);
 });
 let closure_13 = tmp4;
 ReactCompilerGating = fn(558);
@@ -160,156 +160,173 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterMessageCard.tsx");
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function ForLaterMessageCard(savedMessage) {
-  const cResult = require("c").c(31);
+  const cResult = require("c").c(40);
   savedMessage = savedMessage.savedMessage;
   _require = savedMessage;
+  const throttledNow = savedMessage.throttledNow;
   closure_12();
   let obj = require("c");
-  const tmp = _require;
   const savedMessageChannel = require("SavedMessageUtils").useSavedMessageChannel(savedMessage);
   if (cResult[0] === savedMessageChannel) {
-    const _Symbol = Symbol;
-    if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-      const items = [PermissionStore];
-      cResult[3] = items;
+    if (cResult[1] === savedMessage) {
+      let tmp6 = cResult[2];
     }
-    if (cResult[4] !== savedMessageChannel) {
-      class T {
-        constructor() {
-          obj = closure_1;
-          type = undefined;
-          if (closure_1 != null) {
-            type = obj.type;
-          }
-          tmp2 = type === ChannelTypes.UNKNOWN;
-          if (!tmp2) {
-            isPrivateResult = undefined;
-            if (obj != null) {
-              isPrivateResult = obj.isPrivate();
-            }
-            canResult = isPrivateResult;
-            if (!canResult) {
-              tmp5 = closure_6;
-              tmp6 = Permissions;
-              canResult = closure_6.can(Permissions.VIEW_CHANNEL, obj);
-            }
-            tmp2 = canResult;
-          }
-          return tmp2;
+    if (cResult[3] === tmp6) {
+      if (cResult[4] === savedMessage) {
+        if (cResult[5] === throttledNow) {
+          let tmp7 = cResult[6];
         }
-      }
-      cResult[4] = savedMessageChannel;
-      cResult[5] = T;
-    } else {
-      class T {
-        constructor() {
-          obj = closure_1;
-          type = undefined;
-          if (closure_1 != null) {
-            type = obj.type;
-          }
-          tmp2 = type === ChannelTypes.UNKNOWN;
-          if (!tmp2) {
-            isPrivateResult = undefined;
-            if (obj != null) {
-              isPrivateResult = obj.isPrivate();
-            }
-            canResult = isPrivateResult;
-            if (!canResult) {
-              tmp5 = closure_6;
-              tmp6 = Permissions;
-              canResult = closure_6.can(Permissions.VIEW_CHANNEL, obj);
-            }
-            tmp2 = canResult;
-          }
-          return tmp2;
+        forLaterCardMenuItems = tmp(tmp2[23]).useForLaterCardMenuItems(tmp7);
+        const _Symbol = Symbol;
+        if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
+          const items = [PermissionStore];
+          cResult[7] = items;
         }
+        if (cResult[8] !== savedMessageChannel) {
+          class T {
+            constructor() {
+              obj = closure_1;
+              type = undefined;
+              if (closure_1 != null) {
+                type = obj.type;
+              }
+              tmp2 = type === ChannelTypes.UNKNOWN;
+              if (!tmp2) {
+                isPrivateResult = undefined;
+                if (obj != null) {
+                  isPrivateResult = obj.isPrivate();
+                }
+                canResult = isPrivateResult;
+                if (!canResult) {
+                  tmp5 = closure_6;
+                  tmp6 = Permissions;
+                  canResult = closure_6.can(Permissions.VIEW_CHANNEL, obj);
+                }
+                tmp2 = canResult;
+              }
+              return tmp2;
+            }
+          }
+          cResult[8] = savedMessageChannel;
+          cResult[9] = T;
+        } else {
+          class T {
+            constructor() {
+              obj = closure_1;
+              type = undefined;
+              if (closure_1 != null) {
+                type = obj.type;
+              }
+              tmp2 = type === ChannelTypes.UNKNOWN;
+              if (!tmp2) {
+                isPrivateResult = undefined;
+                if (obj != null) {
+                  isPrivateResult = obj.isPrivate();
+                }
+                canResult = isPrivateResult;
+                if (!canResult) {
+                  tmp5 = closure_6;
+                  tmp6 = Permissions;
+                  canResult = closure_6.can(Permissions.VIEW_CHANNEL, obj);
+                }
+                tmp2 = canResult;
+              }
+              return tmp2;
+            }
+          }
+        }
+        tmp(tmp2[24]);
+        if (null != savedMessage.message) {
+          class T {
+            constructor() {
+              obj = closure_1;
+              type = undefined;
+              if (closure_1 != null) {
+                type = obj.type;
+              }
+              tmp2 = type === ChannelTypes.UNKNOWN;
+              if (!tmp2) {
+                isPrivateResult = undefined;
+                if (obj != null) {
+                  isPrivateResult = obj.isPrivate();
+                }
+                canResult = isPrivateResult;
+                if (!canResult) {
+                  tmp5 = closure_6;
+                  tmp6 = Permissions;
+                  canResult = closure_6.can(Permissions.VIEW_CHANNEL, obj);
+                }
+                tmp2 = canResult;
+              }
+              return tmp2;
+            }
+          }
+        }
+        if (cResult[10] !== savedMessage) {
+          class T {
+            constructor() {
+              obj = closure_1;
+              type = undefined;
+              if (closure_1 != null) {
+                type = obj.type;
+              }
+              tmp2 = type === ChannelTypes.UNKNOWN;
+              if (!tmp2) {
+                isPrivateResult = undefined;
+                if (obj != null) {
+                  isPrivateResult = obj.isPrivate();
+                }
+                canResult = isPrivateResult;
+                if (!canResult) {
+                  tmp5 = closure_6;
+                  tmp6 = Permissions;
+                  canResult = closure_6.can(Permissions.VIEW_CHANNEL, obj);
+                }
+                tmp2 = canResult;
+              }
+              return tmp2;
+            }
+          }
+          let obj3 = { savedMessage };
+          const tmp17 = closure_10(closure_13, obj3);
+          cResult[10] = savedMessage;
+          cResult[11] = tmp17;
+          const tmp15 = tmp17;
+        } else {
+          class T {
+            constructor() {
+              obj = closure_1;
+              type = undefined;
+              if (closure_1 != null) {
+                type = obj.type;
+              }
+              tmp2 = type === ChannelTypes.UNKNOWN;
+              if (!tmp2) {
+                isPrivateResult = undefined;
+                if (obj != null) {
+                  isPrivateResult = obj.isPrivate();
+                }
+                canResult = isPrivateResult;
+                if (!canResult) {
+                  tmp5 = closure_6;
+                  tmp6 = Permissions;
+                  canResult = closure_6.can(Permissions.VIEW_CHANNEL, obj);
+                }
+                tmp2 = canResult;
+              }
+              return tmp2;
+            }
+          }
+        }
+        return tmp15;
       }
     }
-    tmp(504);
-    if (null != savedMessage.message) {
-      class T {
-        constructor() {
-          obj = closure_1;
-          type = undefined;
-          if (closure_1 != null) {
-            type = obj.type;
-          }
-          tmp2 = type === ChannelTypes.UNKNOWN;
-          if (!tmp2) {
-            isPrivateResult = undefined;
-            if (obj != null) {
-              isPrivateResult = obj.isPrivate();
-            }
-            canResult = isPrivateResult;
-            if (!canResult) {
-              tmp5 = closure_6;
-              tmp6 = Permissions;
-              canResult = closure_6.can(Permissions.VIEW_CHANNEL, obj);
-            }
-            tmp2 = canResult;
-          }
-          return tmp2;
-        }
-      }
-    }
-    if (cResult[6] !== savedMessage) {
-      class T {
-        constructor() {
-          obj = closure_1;
-          type = undefined;
-          if (closure_1 != null) {
-            type = obj.type;
-          }
-          tmp2 = type === ChannelTypes.UNKNOWN;
-          if (!tmp2) {
-            isPrivateResult = undefined;
-            if (obj != null) {
-              isPrivateResult = obj.isPrivate();
-            }
-            canResult = isPrivateResult;
-            if (!canResult) {
-              tmp5 = closure_6;
-              tmp6 = Permissions;
-              canResult = closure_6.can(Permissions.VIEW_CHANNEL, obj);
-            }
-            tmp2 = canResult;
-          }
-          return tmp2;
-        }
-      }
-      let obj3 = { savedMessage };
-      const tmp15 = closure_10(closure_13, obj3);
-      cResult[6] = savedMessage;
-      cResult[7] = tmp15;
-      const tmp13 = tmp15;
-    } else {
-      class T {
-        constructor() {
-          obj = closure_1;
-          type = undefined;
-          if (closure_1 != null) {
-            type = obj.type;
-          }
-          tmp2 = type === ChannelTypes.UNKNOWN;
-          if (!tmp2) {
-            isPrivateResult = undefined;
-            if (obj != null) {
-              isPrivateResult = obj.isPrivate();
-            }
-            canResult = isPrivateResult;
-            if (!canResult) {
-              tmp5 = closure_6;
-              tmp6 = Permissions;
-              canResult = closure_6.can(Permissions.VIEW_CHANNEL, obj);
-            }
-            tmp2 = canResult;
-          }
-          return tmp2;
-        }
-      }
-    }
-    return tmp13;
+    let obj4 = { savedMessage, jumpToMessage: tmp6, throttledNow };
+    cResult[3] = tmp6;
+    cResult[4] = savedMessage;
+    cResult[5] = throttledNow;
+    cResult[6] = obj4;
+    tmp7 = obj4;
   }
   _require = asyncGeneratorStep(async () => {
     if (message === 2) {
@@ -364,7 +381,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       } else {
                         c1 = 1;
                         c2 = 1;
-                        const obj5 = { value: tmp4(13831).savedMessageJumpToMessage(tmp4, c1), done: false };
+                        const obj5 = { value: tmp4(14049).savedMessageJumpToMessage(tmp4, c1), done: false };
                         return obj5;
                       }
                     } else if (arg0 === 1) {
@@ -375,8 +392,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       const obj6 = { value, done: true };
                       return obj6;
                     } else {
-                      closure_2_1(6673).pop();
-                      const arr = closure_2_1(6673);
+                      closure_2_1(6707).pop();
+                      const arr = closure_2_1(6707);
                       const obj8 = { channel_id: tmp4.saveData.channelId, message_id: tmp4.saveData.messageId, message_author_id: null, type: null, due_duration: null };
                       message = tmp4.message;
                       let id;
@@ -385,9 +402,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       }
                       obj8.message_author_id = id;
                       if (null != tmp4.saveData.dueAt) {
-                        let BOOKMARK = tmp4(10080).SavedMessageSortTypes.REMINDER;
+                        let BOOKMARK = tmp4(10112).SavedMessageSortTypes.REMINDER;
                       } else {
-                        BOOKMARK = tmp4(10080).SavedMessageSortTypes.BOOKMARK;
+                        BOOKMARK = tmp4(10112).SavedMessageSortTypes.BOOKMARK;
                       }
                       obj8.type = BOOKMARK;
                       let diffResult;
@@ -417,7 +434,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 return applyArgumentsResult;
               };
             })();
-            if (savedMessageChannel(dependencyMap[22])(message.message, tmp5)) {
+            if (savedMessageChannel(forLaterCardMenuItems[22])(message.message, tmp5)) {
               c1 = 1;
               message = 1;
               let obj4 = { value: tmp5(), done: false };
@@ -453,12 +470,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   cResult[0] = savedMessageChannel;
   cResult[1] = savedMessage;
   cResult[2] = t1;
+  tmp6 = t1;
   let obj2 = require("SavedMessageUtils");
 }) : (function ForLaterMessageCard(savedMessage) {
   savedMessage = savedMessage.savedMessage;
   const throttledNow = savedMessage.throttledNow;
+  let forLaterCardMenuItems;
   const tmp = closure_12();
-  const savedMessageChannel = savedMessage(13831).useSavedMessageChannel(savedMessage);
+  const savedMessageChannel = savedMessage(forLaterCardMenuItems[17]).useSavedMessageChannel(savedMessage);
   const items = [savedMessage, savedMessageChannel];
   const callback = noop.useCallback(asyncGeneratorStep(async () => {
     if (c0 === 2) {
@@ -522,7 +541,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     } else {
                       c1 = 1;
                       c2 = 1;
-                      const obj5 = { value: v3(13831).savedMessageJumpToMessage(tmp4, c1), done: false };
+                      const obj5 = { value: v3(14049).savedMessageJumpToMessage(tmp4, c1), done: false };
                       return obj5;
                     }
                   } else if (arg0 === 1) {
@@ -533,8 +552,8 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     const obj6 = { value, done: true };
                     return obj6;
                   } else {
-                    v1(6673).pop();
-                    const arr = v1(6673);
+                    v1(6707).pop();
+                    const arr = v1(6707);
                     const obj8 = { channel_id: tmp4.saveData.channelId, message_id: tmp4.saveData.messageId, message_author_id: null, type: null, due_duration: null };
                     const message = tmp4.message;
                     let id;
@@ -543,9 +562,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                     }
                     obj8.message_author_id = id;
                     if (null != tmp4.saveData.dueAt) {
-                      let BOOKMARK = v3(10080).SavedMessageSortTypes.REMINDER;
+                      let BOOKMARK = v3(10112).SavedMessageSortTypes.REMINDER;
                     } else {
-                      BOOKMARK = v3(10080).SavedMessageSortTypes.BOOKMARK;
+                      BOOKMARK = v3(10112).SavedMessageSortTypes.BOOKMARK;
                     }
                     obj8.type = BOOKMARK;
                     let diffResult;
@@ -564,7 +583,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 }
               }
             };
-            if (v1(dependencyMap[22])(savedMessage.message, jumpTo)) {
+            if (v1(forLaterCardMenuItems[22])(savedMessage.message, jumpTo)) {
               v1 = 1;
               c0 = 1;
               let obj4 = { value: jumpTo(), done: false };
@@ -587,11 +606,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       }
     }
   }), items);
-  let obj = savedMessage(13831);
+  let obj = savedMessage(forLaterCardMenuItems[17]);
+  forLaterCardMenuItems = savedMessage(forLaterCardMenuItems[23]).useForLaterCardMenuItems({ savedMessage, jumpToMessage: callback, throttledNow });
+  let obj2 = savedMessage(forLaterCardMenuItems[23]);
   const items1 = [PermissionStore];
   if (null != savedMessage.message) {
     if (null != savedMessageChannel) {
-      if (obj2.useStateFromStores(items1, () => {
+      if (obj3.useStateFromStores(items1, () => {
         let type;
         if (savedMessageChannel != null) {
           type = savedMessageChannel.type;
@@ -610,28 +631,44 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
         return tmp2;
       })) {
-        let obj3 = { savedMessage, jumpToMessage: callback, throttledNow };
-        const tmp8 = closure_10(savedMessageChannel(13833), obj3);
-        let obj4 = { variant: "primary", border: "subtle", shadow: "none", style: tmp.card, onPress: callback, children: null };
-        let tmp6Result = null;
+        const mapped = forLaterCardMenuItems.map((label) => ({ name: label.label, label: label.label }));
+        let obj4 = { menuItems: forLaterCardMenuItems, accessibilityElementsHidden: true, importantForAccessibility: "no-hide-descendants" };
+        const tmp9 = closure_10(savedMessageChannel(tmp3[23]), obj4);
+        let obj5 = {
+          variant: "primary",
+          border: "subtle",
+          shadow: "none",
+          style: tmp.card,
+          onPress: callback,
+          accessibilityActions: mapped,
+          onAccessibilityAction(arg0) {
+                  const nativeEvent = arg0;
+                  const found = forLaterCardMenuItems.find((label) => label.label === nativeEvent.nativeEvent.actionName);
+                  if (found != null) {
+                    found.action();
+                  }
+                },
+          children: null
+        };
+        let tmp7Result = null;
         if (null != savedMessage.saveData.dueAt) {
-          let obj5 = { savedMessage, throttledNow, actions: tmp8 };
-          tmp6Result = closure_10(tmp2(13840).ForLaterCardReminderHeader, obj5);
+          let obj6 = { savedMessage, throttledNow, actions: tmp9 };
+          tmp7Result = closure_10(tmp2(tmp3[25]).ForLaterCardReminderHeader, obj6);
         }
-        const items2 = [tmp6Result, , , ];
-        let obj6 = { channel: savedMessageChannel, actions: null };
-        let tmp12 = null;
+        const items2 = [tmp7Result, , , ];
+        const obj7 = { channel: savedMessageChannel, actions: null };
+        let tmp13 = null;
         if (null == savedMessage.saveData.dueAt) {
-          tmp12 = tmp8;
+          tmp13 = tmp9;
         }
-        obj6.actions = tmp12;
-        items2[1] = closure_10(tmp2(13842).ForLaterCardHeader, obj6);
-        const obj7 = { style: tmp.cardDivider };
-        items2[2] = closure_10(View, obj7);
-        let obj8 = { message: savedMessage.message, lineClamp: 2, maxHeight: 250 };
-        items2[3] = closure_10(tmp2(13843).ForLaterMessageRow, obj8);
-        obj4.children = items2;
-        return closure_11(tmp2(6907).Card, obj4);
+        obj7.actions = tmp13;
+        items2[1] = closure_10(tmp2(tmp3[26]).ForLaterCardHeader, obj7);
+        let obj8 = { style: tmp.cardDivider };
+        items2[2] = closure_10(View, obj8);
+        const obj9 = { message: savedMessage.message, lineClamp: 2, maxHeight: 250 };
+        items2[3] = closure_10(tmp2(tmp3[27]).ForLaterMessageRow, obj9);
+        obj5.children = items2;
+        return closure_11(tmp2(tmp3[16]).Card, obj5);
       }
     }
   }

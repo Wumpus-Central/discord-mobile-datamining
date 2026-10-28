@@ -1,9 +1,9 @@
-// === Module 12923: ForwardingIcon ===
+// === Module 12970: ForwardingIcon ===
 
-// Module 12923 (ForwardingIcon)
+// Module 12970 (ForwardingIcon)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
-import ArrowAngleRightUpIcon from "ArrowAngleRightUpIcon" /* 12924 */;
+import ArrowAngleRightUpIcon from "ArrowAngleRightUpIcon" /* 12971 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

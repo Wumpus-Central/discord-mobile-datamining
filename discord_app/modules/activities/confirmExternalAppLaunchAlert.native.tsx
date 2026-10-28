@@ -1,14 +1,14 @@
-// === Module 11417: confirmExternalAppLaunchAlert ===
+// === Module 11454: confirmExternalAppLaunchAlert ===
 
-// Module 11417 (confirmExternalAppLaunchAlert)
+// Module 11454 (confirmExternalAppLaunchAlert)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import components_Button_Button from "components/Button/Button" /* 5245 */;
-import LinkingDefault from "Linking" /* 5661 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5909 */;
-import _modDef11418 from "module_11418" /* 11418 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import components_Button_Button from "components/Button/Button" /* 5280 */;
+import LinkingDefault from "Linking" /* 5696 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5944 */;
+import _modDef11455 from "module_11455" /* 11455 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,7 +16,7 @@ const View = fn(17).View;
 const PRIVATE_APPS_HELP_ARTICLE = fn(2023).PRIVATE_APPS_HELP_ARTICLE;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_7 = createStyles.createStyles({ alertContainer: { display: "flex", alignItems: "center", padding: 8 }, alertEyebrowText: { marginTop: 40, textAlign: "center" }, alertTitleText: { marginTop: 16, textAlign: "center" }, alertSubtitleText: { marginTop: 16, textAlign: "center" }, announcementBirb: { width: 90, height: 100, position: "absolute", top: -66 }, linkWrapper: { marginTop: 8 } });
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function ConfirmActivityGateContent(application) {
@@ -24,7 +24,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Confirm
   application = application.application;
   const tmp4 = closure_7();
   if (cResult[0] !== tmp4.announcementBirb) {
-    const obj2 = { source: _modDef11418, style: tmp4.announcementBirb };
+    const obj2 = { source: _modDef11455, style: tmp4.announcementBirb };
     const tmp9 = hasOwnProperty(FastImageDefault, obj2);
     cResult[0] = tmp4.announcementBirb;
     cResult[1] = tmp9;
@@ -113,7 +113,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled() ? (function Confirm
 }) : (function ConfirmActivityGateContent(activityName) {
   const tmp = closure_7();
   const obj = { style: tmp.alertContainer, children: null };
-  const obj2 = { source: _modDef11418, style: tmp.announcementBirb };
+  const obj2 = { source: _modDef11455, style: tmp.announcementBirb };
   const items = [hasOwnProperty(FastImageDefault, obj2), , , ];
   const obj3 = { style: tmp.alertEyebrowText, variant: "eyebrow", children: null };
   const intl = util.intl;

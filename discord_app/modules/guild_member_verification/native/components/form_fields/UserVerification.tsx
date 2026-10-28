@@ -1,17 +1,17 @@
-// === Module 6919: UserVerification ===
+// === Module 6953: UserVerification ===
 
-// Module 6919 (UserVerification)
+// Module 6953 (UserVerification)
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
-import MemberVerificationTypes from "MemberVerificationTypes" /* 5006 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 6920 */;
+import MemberVerificationTypes from "MemberVerificationTypes" /* 5038 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import IdentityVerificationFieldDefault from "IdentityVerificationField" /* 6954 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, Fragment: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_6 = createStyles.createStyles({ emailPhoneNote: { marginTop: 8, marginBottom: 12 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);

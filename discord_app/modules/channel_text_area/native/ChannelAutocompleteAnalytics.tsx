@@ -1,9 +1,9 @@
-// === Module 13309: ChannelAutocompleteAnalytics ===
+// === Module 13526: ChannelAutocompleteAnalytics ===
 
-// Module 13309 (ChannelAutocompleteAnalytics)
+// Module 13526 (ChannelAutocompleteAnalytics)
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtilsDefault from "AnalyticsUtils" /* 1264 */;
-import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5712 */;
+import AppAnalyticsUtils from "AppAnalyticsUtils" /* 5747 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticEvents = Constants.AnalyticEvents;

@@ -1,14 +1,14 @@
-// === Module 10785: IntlLink ===
+// === Module 10819: IntlLink ===
 
-// Module 10785 (IntlLink)
+// Module 10819 (IntlLink)
 import nativeDefault from "native" /* 587 */;
 import _modDef1948 from "module_1948" /* 1948 */;
-import LinkingDefault from "Linking" /* 5661 */;
+import LinkingDefault from "Linking" /* 5696 */;
 import noop from "module_19" /* 19 */;
 
 const require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_5 = createStyles.createStyles((arg0) => {
   const link = { color: nativeDefault.colors.TEXT_LINK, textDecorationLine: null };
   let str = "none";
@@ -26,7 +26,7 @@ export const IntlLink = ReactCompilerGating.isReactCompilerEnabled() ? (function
   const cResult = target(576).c(7);
   target = target.target;
   const children = target.children;
-  const tmp4 = closure_5(noop.useContext(target(4986).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  const tmp4 = closure_5(noop.useContext(target(5018).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
   if (typeof target === "string") {
     if (cResult[0] !== target) {
       const fn = function s() {
@@ -97,6 +97,6 @@ export const IntlLink = ReactCompilerGating.isReactCompilerEnabled() ? (function
     }
   }
   const tmp = target;
-  const tmp3 = closure_5(noop.useContext(target(4986).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
-  return jsx(tmp(1199).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(4986).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
+  const tmp3 = closure_5(noop.useContext(target(5018).AccessibilityPreferencesContext).alwaysShowLinkDecorations);
+  return jsx(tmp(1199).LegacyText, { accessible: true, accessibilityRole: str, onPress: fn, style: closure_5(noop.useContext(target(5018).AccessibilityPreferencesContext).alwaysShowLinkDecorations).link, children: children.children });
 });

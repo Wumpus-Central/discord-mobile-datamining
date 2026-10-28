@@ -1,6 +1,6 @@
-// === Module 14498: useProductDescription ===
+// === Module 14721: useProductDescription ===
 
-// Module 14498 (useProductDescription)
+// Module 14721 (useProductDescription)
 import _mod19 from "module_19" /* 19 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;

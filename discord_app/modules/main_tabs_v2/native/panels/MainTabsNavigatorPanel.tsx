@@ -1,15 +1,15 @@
-// === Module 17465: MainTabsNavigatorPanel ===
+// === Module 17700: MainTabsNavigatorPanel ===
 
-// Module 17465 (MainTabsNavigatorPanel)
+// Module 17700 (MainTabsNavigatorPanel)
 import LoggerDefault from "Logger" /* 3 */;
 import nativeDefault from "native" /* 587 */;
-import RootNavigationRef from "RootNavigationRef" /* 5152 */;
-import ChatInputUtils from "ChatInputUtils" /* 5160 */;
-import transitionToChannel from "transitionToChannel" /* 5708 */;
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7413 */;
-import PanelsNavigationUtils from "PanelsNavigationUtils" /* 17466 */;
-import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17467 */;
-import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 17471 */;
+import RootNavigationRef from "RootNavigationRef" /* 5187 */;
+import ChatInputUtils from "ChatInputUtils" /* 5195 */;
+import transitionToChannel from "transitionToChannel" /* 5743 */;
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7448 */;
+import PanelsNavigationUtils from "PanelsNavigationUtils" /* 17701 */;
+import useChannelScreensFromNavigation from "useChannelScreensFromNavigation" /* 17702 */;
+import ChannelScreenAnimatedFrameDefault from "ChannelScreenAnimatedFrame" /* 17706 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -21,7 +21,7 @@ const Constants = fn(1084);
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
 let closure_12 = new LoggerDefault("MainTabsNavigatorPanel");
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { container: { flex: 1 }, containerBackground: null, tabsContainer: null };
 const tmp5 = new LoggerDefault("MainTabsNavigatorPanel");
 obj.containerBackground = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
@@ -35,7 +35,7 @@ const size = fn(2);
 let result = size.fileFinishedImporting("modules/main_tabs_v2/native/panels/MainTabsNavigatorPanel.tsx");
 
 export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (function MainTabsNavigatorPanel(showHeaderGradient) {
-  const cResult = navigation(drawerWidth[9]).c(115);
+  const cResult = navigation(drawerWidth[9]).c(116);
   showHeaderGradient = showHeaderGradient.showHeaderGradient;
   isNavigatorPanelsBesideChannelList();
   let obj = navigation(drawerWidth[9]);
@@ -46,6 +46,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let tmp7 = isChatLockedOpen(drawerWidth[11])();
   drawerWidth = navigation(drawerWidth[12]).useDrawerWidth();
   isChatLockedOpen(drawerWidth[13])();
+  const tmp10 = isChatLockedOpen(drawerWidth[14])();
+  let seam;
+  if (tmp10 != null) {
+    seam = tmp10.seam;
+  }
+  if (seam == null) {
+    seam = null;
+  }
   _slicedToArray = noop.useRef(isChatLockedOpen);
   noop = noop.useRef(false);
   if (cResult[0] !== isChatLockedOpen) {
@@ -55,11 +63,11 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         let obj = require;
         let result = dependencyMap;
         if (isChatLockedOpen) {
-          obj = obj(17466);
+          obj = obj(17701);
           result = obj.convertPortraitToLandscapeScreens();
         } else {
-          obj(5160).dismissKeyboard();
-          const objResult = obj(5160);
+          obj(5195).dismissKeyboard();
+          const objResult = obj(5195);
           const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
         }
         closure_4.current = true;
@@ -69,150 +77,102 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[0] = isChatLockedOpen;
     cResult[1] = fn;
     cResult[2] = items;
-    let tmp11 = items;
-    let tmp10 = fn;
+    let tmp13 = items;
+    let tmp12 = fn;
   } else {
-    tmp10 = cResult[1];
-    tmp11 = cResult[2];
+    tmp12 = cResult[1];
+    tmp13 = cResult[2];
   }
-  const layoutEffect = obj4.useLayoutEffect(tmp10, tmp11);
-  const tmp13 = tmp6(drawerWidth[16])(navigation);
-  const first = tmp13[0];
+  const layoutEffect = obj4.useLayoutEffect(tmp12, tmp13);
+  const tmp15 = tmp6(drawerWidth[17])(navigation);
+  const first = tmp15[0];
   let type;
   if (first != null) {
     type = first.type;
   }
-  const tmp16 = type === navigation(drawerWidth[16]).ChannelScreenType.DEFAULT;
+  const tmp18 = type === navigation(drawerWidth[17]).ChannelScreenType.DEFAULT;
   const tmpResult2 = navigation(drawerWidth[12]);
-  [r10063, closure_5] = noop.useState(tmp16);
-  const tmp18 = _slicedToArray(noop.useState(tmp16), 2);
-  closure_6 = _slicedToArray(noop.useState(tmp16), 2)[1];
-  const first1 = tmp13[0];
-  noop.useRef(first1);
+  [r10068, closure_5] = noop.useState(tmp18);
+  const tmp20 = _slicedToArray(noop.useState(tmp18), 2);
+  closure_6 = _slicedToArray(noop.useState(tmp18), 2)[1];
+  const first1 = tmp15[0];
+  constants = obj4.useRef(first1);
   if (cResult[3] !== first1) {
-    const fn2 = function k() {
-      closure_8.current = first1;
-    };
+    class N {
+      constructor() {
+        closure_8.current = closure_7;
+        return;
+      }
+    }
     const items1 = [first1];
     cResult[3] = first1;
-    cResult[4] = fn2;
+    cResult[4] = N;
     cResult[5] = items1;
-    let tmp22 = items1;
-    let tmp21 = fn2;
+    let tmp24 = items1;
   } else {
-    tmp21 = cResult[4];
-    tmp22 = cResult[5];
-  }
-  const effect = obj4.useEffect(tmp21, tmp22);
-  if (cResult[6] !== navigation) {
-    class W {
+    class N {
       constructor() {
-        tmp = closure_5(false);
-        state = closure_0.getState();
-        index = state.index;
-        tmp3 = state.routes[index];
-        name = undefined;
-        if (tmp3 != null) {
-          name = tmp3.name;
-        }
-        num = 0;
-        num2 = 0;
-        if ("channel" === name) {
-          do {
-            diff = index - 1;
-            tmp6 = state.routes[diff];
-            tmp7 = num;
-            name1 = undefined;
-            if (tmp6 != null) {
-              name1 = tmp6.name;
-            }
-            num = num + 1;
-            index = diff;
-            num2 = num;
-          } while ("channel" === name1);
-        }
-        if (0 < num2) {
-          tmp9 = closure_0;
-          arr = closure_0.pop(num2);
-        }
+        closure_8.current = closure_7;
+        return;
+      }
+    }
+    tmp24 = cResult[5];
+  }
+  const effect = obj4.useEffect(N, tmp24);
+  if (cResult[6] !== navigation) {
+    class N {
+      constructor() {
+        closure_8.current = closure_7;
         return;
       }
     }
     cResult[6] = navigation;
-    cResult[7] = W;
+    cResult[7] = tmp27;
   } else {
-    class W {
+    class N {
       constructor() {
-        tmp = closure_5(false);
-        state = closure_0.getState();
-        index = state.index;
-        tmp3 = state.routes[index];
-        name = undefined;
-        if (tmp3 != null) {
-          name = tmp3.name;
-        }
-        num = 0;
-        num2 = 0;
-        if ("channel" === name) {
-          do {
-            diff = index - 1;
-            tmp6 = state.routes[diff];
-            tmp7 = num;
-            name1 = undefined;
-            if (tmp6 != null) {
-              name1 = tmp6.name;
-            }
-            num = num + 1;
-            index = diff;
-            num2 = num;
-          } while ("channel" === name1);
-        }
-        if (0 < num2) {
-          tmp9 = closure_0;
-          arr = closure_0.pop(num2);
-        }
+        closure_8.current = closure_7;
         return;
       }
     }
   }
-  W = tmp24;
   if (cResult[8] !== navigation) {
-    class J {
+    class N {
       constructor() {
-        obj = closure_0(closure_2[16]);
-        return obj.isActiveTabsGuilds(closure_0.getState());
+        closure_8.current = closure_7;
+        return;
       }
     }
     cResult[8] = navigation;
-    cResult[9] = J;
+    cResult[9] = tmp29;
   } else {
-    class J {
+    class N {
       constructor() {
-        obj = closure_0(closure_2[16]);
-        return obj.isActiveTabsGuilds(closure_0.getState());
+        closure_8.current = closure_7;
+        return;
       }
     }
   }
-  [first2, closure_11] = noop.useState(J);
+  [first2, closure_11] = noop.useState(tmp29);
   if (cResult[10] !== first2) {
-    class Q {
+    class Y {
       constructor() {
         return closure_10;
       }
     }
     cResult[10] = first2;
-    cResult[11] = Q;
+    cResult[11] = Y;
   } else {
-    class Q {
+    class Y {
       constructor() {
         return closure_10;
       }
     }
   }
-  const tmp19 = _slicedToArray(noop.useState(tmp16), 2);
-  [tmp30, closure_12] = noop.useState(Q);
+  const tmp21 = _slicedToArray(noop.useState(tmp18), 2);
+  [tmp34, closure_12] = noop.useState(Y);
   if (cResult[12] !== navigation) {
-    class Q {
+    class Y {
       constructor() {
         return closure_10;
       }
@@ -220,63 +180,63 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const items2 = [navigation];
     cResult[12] = navigation;
     cResult[13] = items2;
-    cResult[14] = tmp33;
-    let tmp32 = tmp33;
-    const tmp31 = items2;
+    cResult[14] = tmp37;
+    let tmp36 = tmp37;
+    const tmp35 = items2;
   } else {
-    class Q {
+    class Y {
       constructor() {
         return closure_10;
       }
     }
-    tmp32 = cResult[14];
+    tmp36 = cResult[14];
   }
-  const effect1 = obj4.useEffect(tmp32, tmp31);
+  const effect1 = obj4.useEffect(tmp36, tmp35);
   if (cResult[15] !== first2) {
-    class Q {
+    class Y {
       constructor() {
         return closure_10;
       }
     }
     const items3 = [first2];
     cResult[15] = first2;
-    cResult[16] = tmp37;
+    cResult[16] = tmp41;
     cResult[17] = items3;
-    let tmp36 = items3;
+    let tmp40 = items3;
   } else {
-    class Q {
+    class Y {
       constructor() {
         return closure_10;
       }
     }
-    tmp36 = cResult[17];
+    tmp40 = cResult[17];
   }
-  const effect2 = obj4.useEffect(tmp37, tmp36);
-  if (tmp30) {
-    class Q {
+  const effect2 = obj4.useEffect(tmp41, tmp40);
+  if (tmp34) {
+    class Y {
       constructor() {
         return closure_10;
       }
     }
   }
-  isNavigatorPanelsBesideChannelList = tmp30;
+  isNavigatorPanelsBesideChannelList = tmp34;
   noop.useRef(false);
-  if (cResult[18] === tmp24) {
-    class Q {
+  if (cResult[18] === tmp26) {
+    class Y {
       constructor() {
         return closure_10;
       }
     }
     const _Symbol = Symbol;
     if (cResult[21] === Symbol.for("react.memo_cache_sentinel")) {
-      class Q {
+      class Y {
         constructor() {
           return closure_10;
         }
       }
-      cResult[21] = tmp42;
+      cResult[21] = tmp46;
     } else {
-      class Q {
+      class Y {
         constructor() {
           return closure_10;
         }
@@ -284,73 +244,106 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     }
     const _Symbol2 = Symbol;
     if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
-      class Q {
+      class Se {
         constructor() {
-          return closure_10;
+          ComponentDispatch = closure_0(closure_2[20]).ComponentDispatch;
+          dispatchResult = ComponentDispatch.dispatch(closure_8.BOTTOM_CHANNEL_SCREEN_DRAG_START);
+          obj = closure_0(closure_2[16]);
+          dismissKeyboardResult = obj.dismissKeyboard();
+          return;
         }
       }
-      cResult[22] = tmp44;
+      cResult[22] = Se;
     } else {
-      class Q {
+      class Se {
         constructor() {
-          return closure_10;
+          ComponentDispatch = closure_0(closure_2[20]).ComponentDispatch;
+          dispatchResult = ComponentDispatch.dispatch(closure_8.BOTTOM_CHANNEL_SCREEN_DRAG_START);
+          obj = closure_0(closure_2[16]);
+          dismissKeyboardResult = obj.dismissKeyboard();
+          return;
         }
       }
     }
-    let tmp45 = null != first1;
-    if (tmp45) {
-      class Q {
+    let tmp48 = null != first1;
+    if (tmp48) {
+      class Se {
         constructor() {
-          return closure_10;
+          ComponentDispatch = closure_0(closure_2[20]).ComponentDispatch;
+          dispatchResult = ComponentDispatch.dispatch(closure_8.BOTTOM_CHANNEL_SCREEN_DRAG_START);
+          obj = closure_0(closure_2[16]);
+          dismissKeyboardResult = obj.dismissKeyboard();
+          return;
         }
       }
-      tmp45 = tmp46 !== tmp(tmp2[16]).ChannelScreenType.FALLBACK_RENDERED;
+      tmp48 = tmp49 !== tmp(tmp2[17]).ChannelScreenType.FALLBACK_RENDERED;
     }
-    closure_15 = tmp45;
-    if (tmp30) {
-      class Q {
+    closure_15 = tmp48;
+    if (tmp34) {
+      class Se {
         constructor() {
-          return closure_10;
-        }
-      }
-    }
-    if (!tmp30) {
-      class Q {
-        constructor() {
-          return closure_10;
-        }
-      }
-    }
-    if (tmp13[0] != null) {
-      class Q {
-        constructor() {
-          return closure_10;
+          ComponentDispatch = closure_0(closure_2[20]).ComponentDispatch;
+          dispatchResult = ComponentDispatch.dispatch(closure_8.BOTTOM_CHANNEL_SCREEN_DRAG_START);
+          obj = closure_0(closure_2[16]);
+          dismissKeyboardResult = obj.dismissKeyboard();
+          return;
         }
       }
     }
-    if (tmp30) {
-      class Q {
+    if (!tmp34) {
+      class Se {
         constructor() {
-          return closure_10;
+          ComponentDispatch = closure_0(closure_2[20]).ComponentDispatch;
+          dispatchResult = ComponentDispatch.dispatch(closure_8.BOTTOM_CHANNEL_SCREEN_DRAG_START);
+          obj = closure_0(closure_2[16]);
+          dismissKeyboardResult = obj.dismissKeyboard();
+          return;
         }
       }
     }
-    const tmp51 = undefined === tmp(tmp2[16]).ChannelScreenType.DEFAULT;
-    if (cResult[23] === tmp39) {
-      class Q {
+    if (tmp15[0] != null) {
+      class Se {
         constructor() {
-          return closure_10;
+          ComponentDispatch = closure_0(closure_2[20]).ComponentDispatch;
+          dispatchResult = ComponentDispatch.dispatch(closure_8.BOTTOM_CHANNEL_SCREEN_DRAG_START);
+          obj = closure_0(closure_2[16]);
+          dismissKeyboardResult = obj.dismissKeyboard();
+          return;
         }
       }
     }
-    let obj2 = { canDrag: !tmp30, onVisibilityChange: tmp39, onPreMovement: tmp42, onDragStart: tmp44, startShown: tmp51, openWidth: undefined };
-    cResult[23] = tmp39;
-    cResult[24] = !tmp30;
-    cResult[25] = tmp51;
-    cResult[26] = undefined;
-    cResult[27] = obj2;
+    if (tmp34) {
+      class Se {
+        constructor() {
+          ComponentDispatch = closure_0(closure_2[20]).ComponentDispatch;
+          dispatchResult = ComponentDispatch.dispatch(closure_8.BOTTOM_CHANNEL_SCREEN_DRAG_START);
+          obj = closure_0(closure_2[16]);
+          dismissKeyboardResult = obj.dismissKeyboard();
+          return;
+        }
+      }
+    }
+    const tmp54 = undefined === tmp(tmp2[17]).ChannelScreenType.DEFAULT;
+    if (cResult[23] === seam) {
+      class Se {
+        constructor() {
+          ComponentDispatch = closure_0(closure_2[20]).ComponentDispatch;
+          dispatchResult = ComponentDispatch.dispatch(closure_8.BOTTOM_CHANNEL_SCREEN_DRAG_START);
+          obj = closure_0(closure_2[16]);
+          dismissKeyboardResult = obj.dismissKeyboard();
+          return;
+        }
+      }
+    }
+    let obj2 = { canDrag: !tmp34, onVisibilityChange: tmp43, onPreMovement: tmp46, onDragStart: Se, startShown: tmp54, openWidth: undefined, foldSeam: seam };
+    cResult[23] = seam;
+    cResult[24] = tmp43;
+    cResult[25] = !tmp34;
+    cResult[26] = tmp54;
+    cResult[27] = undefined;
+    cResult[28] = obj2;
   }
-  function oe(arg0) {
+  function de(arg0) {
     closure_1_5(arg0);
     closure_6(arg0);
     closure_14.current = false;
@@ -382,13 +375,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         }
       }
     } else {
-      W();
+      tmp27();
     }
   }
-  cResult[18] = tmp24;
+  cResult[18] = tmp26;
   cResult[19] = navigation;
-  cResult[20] = oe;
-  const tmp17Result2 = _slicedToArray(noop.useState(Q), 2);
+  cResult[20] = de;
+  const tmp19Result2 = _slicedToArray(noop.useState(Y), 2);
 }) : (function MainTabsNavigatorPanel(showHeaderGradient) {
   let flag = showHeaderGradient.showHeaderGradient;
   if (flag === undefined) {
@@ -397,6 +390,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let navigation;
   let isChatLockedOpen;
   let drawerWidth;
+  _slicedToArray = undefined;
   noop = undefined;
   first1 = undefined;
   closure_6 = undefined;
@@ -423,6 +417,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   let obj = navigation(drawerWidth[10]);
   drawerWidth = navigation(drawerWidth[12]).useDrawerWidth();
   let obj2 = navigation(drawerWidth[12]);
+  const tmp9 = isChatLockedOpen(drawerWidth[14])();
+  let seam;
+  if (tmp9 != null) {
+    seam = tmp9.seam;
+  }
+  if (seam == null) {
+    seam = null;
+  }
   _slicedToArray = noop.useRef(isChatLockedOpen);
   noop = noop.useRef(false);
   const items = [isChatLockedOpen];
@@ -432,26 +434,26 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       let obj = require;
       let result = dependencyMap;
       if (isChatLockedOpen) {
-        obj = obj(17466);
+        obj = obj(17701);
         result = obj.convertPortraitToLandscapeScreens();
       } else {
-        obj(5160).dismissKeyboard();
-        const objResult = obj(5160);
+        obj(5195).dismissKeyboard();
+        const objResult = obj(5195);
         const result1 = PanelsNavigationUtils.convertLandscapeToPortraitScreens();
       }
       closure_4.current = true;
     }
   }, items);
-  const arr2 = isChatLockedOpen(drawerWidth[16])(navigation);
+  const arr2 = isChatLockedOpen(drawerWidth[17])(navigation);
   const first = arr2[0];
   let type;
   if (first != null) {
     type = first.type;
   }
-  const tmp12 = type === navigation(drawerWidth[16]).ChannelScreenType.DEFAULT;
-  [first1, closure_6] = noop.useState(tmp12);
-  const tmp15 = _slicedToArray(noop.useState(tmp12), 2);
-  closure_7 = tmp15[1];
+  const tmp14 = type === navigation(drawerWidth[17]).ChannelScreenType.DEFAULT;
+  [first1, closure_6] = noop.useState(tmp14);
+  const tmp17 = _slicedToArray(noop.useState(tmp14), 2);
+  closure_7 = tmp17[1];
   first2 = arr2[0];
   noop.useRef(first2);
   const items1 = [first2];
@@ -493,7 +495,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items3 = [navigation];
   const effect1 = obj3.useEffect(() => {
     function handleStateChange(data) {
-      logger(navigation(drawerWidth[16]).isActiveTabsGuilds(data.data.state));
+      logger(navigation(drawerWidth[17]).isActiveTabsGuilds(data.data.state));
     }
     handleStateChange.addListener("state", handleStateChange);
     return () => {
@@ -549,38 +551,39 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       closure_7(true);
     }
   }, []);
-  let tmp27 = null != first2;
+  let tmp29 = null != first2;
   const callback3 = obj3.useCallback(() => {
-    const ComponentDispatch = navigation(drawerWidth[19]).ComponentDispatch;
+    const ComponentDispatch = navigation(drawerWidth[20]).ComponentDispatch;
     ComponentDispatch.dispatch(first2.BOTTOM_CHANNEL_SCREEN_DRAG_START);
-    navigation(drawerWidth[15]).dismissKeyboard();
+    navigation(drawerWidth[16]).dismissKeyboard();
   }, []);
-  if (tmp27) {
-    tmp27 = first2.type !== tmp2(tmp3[16]).ChannelScreenType.FALLBACK_RENDERED;
+  if (tmp29) {
+    tmp29 = first2.type !== tmp2(tmp3[17]).ChannelScreenType.FALLBACK_RENDERED;
   }
-  closure_16 = tmp27;
-  let tmp29 = isChatBesideChannelList;
-  const tmp21 = _slicedToArray(noop.useState(() => first3), 2);
+  closure_16 = tmp29;
+  let tmp31 = isChatBesideChannelList;
+  const tmp23 = _slicedToArray(noop.useState(() => first3), 2);
   if (isChatBesideChannelList) {
-    tmp29 = isChatLockedOpen;
+    tmp31 = isChatLockedOpen;
   }
-  let tmp30 = !tmp29;
-  if (!tmp29) {
-    tmp30 = tmp27;
+  let tmp32 = !tmp31;
+  if (!tmp31) {
+    tmp32 = tmp29;
   }
-  const obj4 = { canDrag: tmp30, onVisibilityChange: callback1, onPreMovement: callback2, onDragStart: callback3, startShown: null, openWidth: null };
+  const obj4 = { canDrag: tmp32, onVisibilityChange: callback1, onPreMovement: callback2, onDragStart: callback3, startShown: null, openWidth: null, foldSeam: null };
   const first4 = arr2[0];
   let type1;
   if (first4 != null) {
     type1 = first4.type;
   }
-  obj4.startShown = type1 === navigation(drawerWidth[16]).ChannelScreenType.DEFAULT;
-  let tmp33;
+  obj4.startShown = type1 === navigation(drawerWidth[17]).ChannelScreenType.DEFAULT;
+  let tmp35;
   if (isChatBesideChannelList) {
-    tmp33 = drawerWidth;
+    tmp35 = drawerWidth;
   }
-  obj4.openWidth = tmp33;
-  const tmp5ResultResult = isChatLockedOpen(drawerWidth[20])(obj4);
+  obj4.openWidth = tmp35;
+  obj4.foldSeam = seam;
+  const tmp5ResultResult = isChatLockedOpen(drawerWidth[21])(obj4);
   translateX = tmp5ResultResult.translateX;
   movePanel = tmp5ResultResult.movePanel;
   maxWidth = tmp5ResultResult.maxWidth;
@@ -602,7 +605,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items7 = [type2, translateX, isDraggingRef];
   const effect5 = obj3.useEffect(() => {
     if (!isDraggingRef.current) {
-      const current = ref4.current;
+      current = ref4.current;
       ({ maxWidth, movePanel } = current);
       let type;
       ({ handleExit, screens } = current);
@@ -652,7 +655,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       ChannelActionCreatorsDefault.preload(guildId, firstScreen.channelId);
     }
   }, items8);
-  const items9 = [movePanel, tmp27];
+  const items9 = [movePanel, tmp29];
   callback4 = obj3.useCallback(() => {
     if (closure_16) {
       movePanel(true, false, 0, false);
@@ -661,14 +664,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   const items10 = [callback4, first1, isChatLockedOpen, isChatBesideChannelList];
   if (isChatBesideChannelList) {
     if (isChatLockedOpen) {
-      let tmp43 = arr2.length <= 1;
+      let tmp45 = arr2.length <= 1;
     }
     if (!first1) {
-      let tmp44 = isChatBesideChannelList;
+      let tmp46 = isChatBesideChannelList;
       if (isChatBesideChannelList) {
-        tmp44 = isChatLockedOpen;
+        tmp46 = isChatLockedOpen;
       }
-      first1 = tmp44;
+      first1 = tmp46;
     }
     const items11 = [isChatLockedOpen, isChatBesideChannelList, maxWidth, translateX];
     const memo = obj3.useMemo(() => {
@@ -683,9 +686,9 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     if (translateX.get() > 0) {
       num3 = -1;
     }
-    sharedValue = tmp2(tmp3[23]).useSharedValue(num3);
-    const tmp2Result = tmp2(tmp3[23]);
-    function ue() {
+    sharedValue = tmp2(tmp3[24]).useSharedValue(num3);
+    const tmp2Result = tmp2(tmp3[24]);
+    function he() {
       let opacity = 0;
       if (translateX.get() > 0) {
         opacity = 0;
@@ -696,16 +699,16 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       return { opacity };
     }
     const obj6 = { translateX, highestFullyRenderedScreenIndex: sharedValue };
-    ue.__closure = obj6;
-    ue.__workletHash = 10074964118666;
-    ue.__initData = __initData;
-    const animatedStyle = tmp2(tmp3[23]).useAnimatedStyle(ue);
-    const tmp2Result4 = tmp2(tmp3[23]);
-    const tmp49 = tmp5(tmp3[24])("channel_list_scrim");
-    const isCustomThemeActive = tmp2(tmp3[25]).useIsCustomThemeActive();
+    he.__closure = obj6;
+    he.__workletHash = 10074964118666;
+    he.__initData = __initData;
+    const animatedStyle = tmp2(tmp3[24]).useAnimatedStyle(he);
+    const tmp2Result4 = tmp2(tmp3[24]);
+    const tmp51 = tmp5(tmp3[25])("channel_list_scrim");
+    const isCustomThemeActive = tmp2(tmp3[26]).useIsCustomThemeActive();
     const obj7 = { value: panelGestureContext, children: null };
-    const tmp2Result5 = tmp2(tmp3[25]);
-    let tmp53Result = null;
+    const tmp2Result5 = tmp2(tmp3[26]);
+    let tmp55Result = null;
     if (tmp2Result6.isJankScreenReportingEnabled()) {
       const obj8 = { translateX, maxWidth, channelId: null, showCreateThread: null };
       let channelId1;
@@ -721,10 +724,10 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         flag2 = false;
       }
       obj8.showCreateThread = flag2;
-      tmp53Result = handleExit(tmp5(tmp3[27]), obj8);
-      const tmp5Result3 = tmp5(tmp3[27]);
+      tmp55Result = handleExit(tmp5(tmp3[28]), obj8);
+      const tmp5Result3 = tmp5(tmp3[28]);
     }
-    const items12 = [tmp53Result, ];
+    const items12 = [tmp55Result, ];
     const obj9 = { gesture, children: null };
     const items13 = [tmp.container, ];
     let containerBackground = !isCustomThemeActive;
@@ -738,26 +741,31 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     const obj12 = { style: null, accessibilityElementsHidden: null, importantForAccessibility: null, children: null };
     const items14 = [tmp.tabsContainer, animatedStyle];
     obj12.style = items14;
-    obj12.accessibilityElementsHidden = !tmp43;
+    obj12.accessibilityElementsHidden = !tmp45;
     obj12.importantForAccessibility = "no-hide-descendants";
-    const items15 = [handleExit(tmp5(tmp3[28]), {}), ];
-    let tmp56Result;
-    if (tmp49) {
+    const items15 = [handleExit(tmp5(tmp3[29]), {}), ];
+    let tmp58Result;
+    if (tmp51) {
       const obj13 = { translateX, maxWidth };
-      tmp56Result = tmp56(tmp2(tmp3[29]).MainTabsContentScrim, obj13);
+      tmp58Result = tmp58(tmp2(tmp3[30]).MainTabsContentScrim, obj13);
     }
-    items15[1] = tmp56Result;
+    items15[1] = tmp58Result;
     obj12.children = items15;
-    const items16 = [first3(tmp5(tmp3[23]).View, obj12), , ];
-    let tmp56Result3 = null;
+    const items16 = [first3(tmp5(tmp3[24]).View, obj12), , ];
+    let tmp58Result3 = null;
     if (flag) {
-      tmp56Result3 = tmp56(tmp5(tmp3[30]), {});
+      tmp58Result3 = tmp58(tmp5(tmp3[31]), {});
     }
-    items16[1] = tmp56Result3;
+    items16[1] = tmp58Result3;
     if (arr2.length > 0) {
-      const obj14 = { screens: arr2, screenStackActive: first1, navigationTTIStackVisible: null, translateX: null, isDragging: null, maxWidth: null, highestFullyRenderedScreenIndex: null, shouldFreeze: null, focusChatPressableComponent: null, firstScreenWidth: null, firstScreenFrame: null };
+      const obj14 = { screens: arr2, screenStackActive: first1, screenStackVisible: null, navigationTTIStackVisible: null, translateX: null, isDragging: null, maxWidth: null, highestFullyRenderedScreenIndex: null, shouldFreeze: null, focusChatPressableComponent: null, firstScreenWidth: null, firstScreenFrame: null };
+      let tmp65 = first1;
       if (!first1) {
-        first1 = tmp15[0];
+        tmp65 = isChatBesideChannelList;
+      }
+      obj14.screenStackVisible = tmp65;
+      if (!first1) {
+        first1 = tmp17[0];
       }
       obj14.navigationTTIStackVisible = first1;
       obj14.translateX = translateX;
@@ -765,33 +773,33 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
       obj14.maxWidth = maxWidth;
       obj14.highestFullyRenderedScreenIndex = sharedValue;
       obj14.shouldFreeze = !isChatBesideChannelList;
-      obj14.focusChatPressableComponent = tmp42;
-      let tmp63;
+      obj14.focusChatPressableComponent = tmp44;
+      let tmp66;
       if (isChatBesideChannelList) {
         if (isChatLockedOpen) {
-          tmp63 = tmp8;
+          tmp66 = tmp8;
         }
       }
-      obj14.firstScreenWidth = tmp63;
+      obj14.firstScreenWidth = tmp66;
       obj14.firstScreenFrame = memo;
-      let tmp56Result4 = tmp56(tmp5(tmp3[31]), obj14);
-      const tmp5Result4 = tmp5(tmp3[31]);
+      let tmp58Result4 = tmp58(tmp5(tmp3[32]), obj14);
+      const tmp5Result4 = tmp5(tmp3[32]);
     } else {
-      tmp56Result4 = null;
+      tmp58Result4 = null;
       if (isChatBesideChannelList) {
-        tmp56Result4 = null;
+        tmp58Result4 = null;
         if (isChatLockedOpen) {
-          tmp56Result4 = tmp56(tmp5(tmp3[32]), {});
+          tmp58Result4 = tmp58(tmp5(tmp3[33]), {});
         }
       }
     }
-    items16[2] = tmp56Result4;
+    items16[2] = tmp58Result4;
     obj11.children = items16;
-    obj10.children = first3(tmp2(tmp3[33]).SidebarCoachmarkOverlay, obj11);
+    obj10.children = first3(tmp2(tmp3[34]).SidebarCoachmarkOverlay, obj11);
     obj9.children = handleExit(first1, obj10);
-    items12[1] = handleExit(tmp2(tmp3[34]).GestureDetector, obj9);
+    items12[1] = handleExit(tmp2(tmp3[35]).GestureDetector, obj9);
     obj7.children = items12;
-    return first3(tmp5(tmp3[35]).Provider, obj7);
+    return first3(tmp5(tmp3[36]).Provider, obj7);
   }
-  tmp43 = !first1;
+  tmp45 = !first1;
 }));

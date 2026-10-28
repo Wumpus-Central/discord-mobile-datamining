@@ -1,13 +1,13 @@
-// === Module 8300: trackChannelOpenedClickstream ===
+// === Module 8334: trackChannelOpenedClickstream ===
 
-// Module 8300 (trackChannelOpenedClickstream)
-import Clickstream from "Clickstream" /* 7576 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
+// Module 8334 (trackChannelOpenedClickstream)
+import Clickstream from "Clickstream" /* 7610 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
 
 require = fn;
 const Constants = fn(1084);
 ({ ChannelTypes: c3, AnalyticEvents: closure_4 } = Constants);
-const StaticChannelRoute = fn(4831).StaticChannelRoute;
+const StaticChannelRoute = fn(4863).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/app_analytics/track/channel_opened/trackChannelOpenedClickstream.tsx");
 

@@ -1,22 +1,22 @@
-// === Module 11334: PublicGuildAnnouncementProfile ===
+// === Module 11371: PublicGuildAnnouncementProfile ===
 
-// Module 11334 (PublicGuildAnnouncementProfile)
+// Module 11371 (PublicGuildAnnouncementProfile)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5266 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8404 */;
-import _modDef11335 from "module_11335" /* 11335 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import Sheet_BottomSheet from "Sheet/BottomSheet" /* 5301 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8438 */;
+import _modDef11372 from "module_11372" /* 11372 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { content: { padding: 16 }, avatar: null, nameWrapper: null, headerText: null, description: null };
 let size = { borderRadius: nativeDefault.radii.lg, height: 80, width: 80, marginVertical: 16 };
 obj2.avatar = size;
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PublicGu
     tmp7 = cResult[2];
   }
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
-    const obj3 = { source: _modDef11335, disableColor: true };
+    const obj3 = { source: _modDef11372, disableColor: true };
     const tmp14 = React4(native.Icon, obj3);
     cResult[3] = tmp14;
     let tmp11 = tmp14;
@@ -157,7 +157,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function PublicGu
   obj3.source = PublicGuildsUtils.getPublicSystemMessageAvatar();
   const items = [React4(tmp2, obj3), , , ];
   const obj5 = { style: tmp.nameWrapper, children: null };
-  const items1 = [React4(native.Icon, { source: _modDef11335, disableColor: true }), ];
+  const items1 = [React4(native.Icon, { source: _modDef11372, disableColor: true }), ];
   const obj7 = { style: tmp.headerText, variant: "heading-xl/extrabold", color: "mobile-text-heading-primary", children: null };
   const intl = util.intl;
   obj7.children = intl.string(util.t.xfAlNx);

@@ -1,13 +1,13 @@
-// === Module 16911: UpcomingServerEventNotificationSetting ===
+// === Module 17140: UpcomingServerEventNotificationSetting ===
 
-// Module 16911 (UpcomingServerEventNotificationSetting)
+// Module 17140 (UpcomingServerEventNotificationSetting)
 import util from "util" /* 1125 */;
-import UserSettings from "UserSettings" /* 4800 */;
-import SettingsConstants from "SettingsConstants" /* 8331 */;
-import UpcomingServerEventExperiment from "UpcomingServerEventExperiment" /* 16912 */;
-import UpcomingServerEventNotificationUtils from "UpcomingServerEventNotificationUtils" /* 16913 */;
+import UserSettings from "UserSettings" /* 4832 */;
+import SettingsConstants from "SettingsConstants" /* 8365 */;
+import UpcomingServerEventExperiment from "UpcomingServerEventExperiment" /* 17141 */;
+import UpcomingServerEventNotificationUtils from "UpcomingServerEventNotificationUtils" /* 17142 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
-import SettingBuilders from "SettingBuilders" /* 11212 */;
+import SettingBuilders from "SettingBuilders" /* 11248 */;
 import size from "module_2" /* 2 */;
 
 let ReactCompilerGating = ReactCompilerGating_mod;

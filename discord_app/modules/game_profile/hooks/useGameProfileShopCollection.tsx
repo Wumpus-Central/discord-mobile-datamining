@@ -1,11 +1,11 @@
-// === Module 9474: useGameProfileShopCollection ===
+// === Module 9506: useGameProfileShopCollection ===
 
-// Module 9474 (useGameProfileShopCollection)
+// Module 9506 (useGameProfileShopCollection)
 import c from "c" /* 576 */;
-import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9352 */;
-import useCollectiblesShopProducts from "useCollectiblesShopProducts" /* 9475 */;
+import GameProfileHttpUtils from "GameProfileHttpUtils" /* 9384 */;
+import useCollectiblesShopProducts from "useCollectiblesShopProducts" /* 9507 */;
 import noop from "module_19" /* 19 */;
-import GameProfileStore from "GameProfileStore" /* 9253 */;
+import GameProfileStore from "GameProfileStore" /* 9285 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

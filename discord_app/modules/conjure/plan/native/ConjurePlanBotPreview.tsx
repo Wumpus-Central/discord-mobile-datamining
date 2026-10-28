@@ -1,11 +1,11 @@
-// === Module 12451: ConjurePlanBotPreview ===
+// === Module 12497: ConjurePlanBotPreview ===
 
-// Module 12451 (ConjurePlanBotPreview)
+// Module 12497 (ConjurePlanBotPreview)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import RowGeneratorDefault from "RowGenerator" /* 8131 */;
-import ChatItemDefault from "ChatItem" /* 9774 */;
-import ConjurePlanCommandMenuPreviewDefault from "ConjurePlanCommandMenuPreview" /* 12452 */;
+import RowGeneratorDefault from "RowGenerator" /* 8165 */;
+import ChatItemDefault from "ChatItem" /* 9806 */;
+import ConjurePlanCommandMenuPreviewDefault from "ConjurePlanCommandMenuPreview" /* 12498 */;
 import noop from "module_19" /* 19 */;
 
 const require = globalThis.__r;
@@ -15,12 +15,12 @@ const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
 const rowGenerator = new RowGeneratorDefault();
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { chat: null, menu: null };
 let tmp3 = new RowGeneratorDefault();
 obj2.chat = { paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
 let obj3 = { paddingVertical: nativeDefault.space.PX_12, borderRadius: nativeDefault.radii.sm, borderWidth: 1, borderColor: nativeDefault.colors.BORDER_SUBTLE, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER, overflow: "hidden" };
-obj2.menu = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(12334).MESSAGE_CONTENT_INSET, paddingRight: fn(12334).MESSAGE_EDGE_INSET };
+obj2.menu = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(12379).MESSAGE_CONTENT_INSET, paddingRight: fn(12379).MESSAGE_EDGE_INSET };
 let closure_8 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);
 let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SampleMessage(record) {
@@ -79,7 +79,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled() ? (function SampleM
   return hasOwnProperty(ChatItemDefault, { rowGenerator, message: record, modifyRow: callback, pointerEvents: "none" });
 });
 ReactCompilerGating = fn(558);
-const obj4 = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(12334).MESSAGE_CONTENT_INSET, paddingRight: fn(12334).MESSAGE_EDGE_INSET };
+const obj4 = { paddingTop: nativeDefault.space.PX_4, paddingLeft: fn(12379).MESSAGE_CONTENT_INSET, paddingRight: fn(12379).MESSAGE_EDGE_INSET };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/plan/native/ConjurePlanBotPreview.tsx");
 

@@ -1,6 +1,6 @@
-// === Module 8373: gameServerResponseToInstance ===
+// === Module 8407: gameServerResponseToInstance ===
 
-// Module 8373 (gameServerResponseToInstance)
+// Module 8407 (gameServerResponseToInstance)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/game_server/utils/gameServerResponseToInstance.tsx");

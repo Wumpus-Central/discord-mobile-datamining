@@ -1,10 +1,10 @@
-// === Module 11032: GameOrganizationInviteStore ===
+// === Module 11067: GameOrganizationInviteStore ===
 
-// Module 11032 (GameOrganizationInviteStore)
+// Module 11067 (GameOrganizationInviteStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11033 */;
-import fromServerGameOrganization from "fromServerGameOrganization" /* 11034 */;
+import GameOrganizationInviteConstants from "GameOrganizationInviteConstants" /* 11068 */;
+import fromServerGameOrganization from "fromServerGameOrganization" /* 11069 */;
 import size from "module_2" /* 2 */;
 
 const constants = GameOrganizationInviteConstants.GameOrganizationInviteStates;

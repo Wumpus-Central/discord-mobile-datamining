@@ -1,8 +1,8 @@
-// === Module 12559: ConjureDebugSnapshot ===
+// === Module 12606: ConjureDebugSnapshot ===
 
-// Module 12559 (ConjureDebugSnapshot)
-import ConjureDebugLogStore from "ConjureDebugLogStore" /* 10712 */;
-import ConjureDebugStore from "ConjureDebugStore" /* 10707 */;
+// Module 12606 (ConjureDebugSnapshot)
+import ConjureDebugLogStore from "ConjureDebugLogStore" /* 10744 */;
+import ConjureDebugStore from "ConjureDebugStore" /* 10739 */;
 
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureDebugSnapshot.tsx");

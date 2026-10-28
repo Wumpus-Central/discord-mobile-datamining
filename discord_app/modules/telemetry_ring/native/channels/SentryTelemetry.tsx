@@ -1,6 +1,6 @@
-// === Module 15417: SentryTelemetry ===
+// === Module 15643: SentryTelemetry ===
 
-// Module 15417 (SentryTelemetry)
+// Module 15643 (SentryTelemetry)
 import TelemetryRingNative2 from "TelemetryRingNative" /* 2006 */;
 import BaseTelemetryChannel from "BaseTelemetryChannel" /* 2005 */;
 

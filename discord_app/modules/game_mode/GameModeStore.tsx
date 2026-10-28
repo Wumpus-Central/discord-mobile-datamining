@@ -1,6 +1,6 @@
-// === Module 4974: GameModeStore ===
+// === Module 5006: GameModeStore ===
 
-// Module 4974 (GameModeStore)
+// Module 5006 (GameModeStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ApexExperimentStore from "ApexExperimentStore" /* 1258 */;
@@ -32,7 +32,7 @@ function syncExperimentAssignment() {
   }
   return false;
 }
-const DefaultGameModeSettings = fn(4975).DefaultGameModeSettings;
+const DefaultGameModeSettings = fn(5007).DefaultGameModeSettings;
 let obj = {};
 let merged = Object.assign(DefaultGameModeSettings);
 let c6 = false;

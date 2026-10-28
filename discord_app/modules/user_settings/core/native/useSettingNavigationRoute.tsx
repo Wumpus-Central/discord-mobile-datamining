@@ -1,6 +1,6 @@
-// === Module 7092: useSettingNavigationRoute ===
+// === Module 7126: useSettingNavigationRoute ===
 
-// Module 7092 (useSettingNavigationRoute)
+// Module 7126 (useSettingNavigationRoute)
 import Link from "Link" /* 1503 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

@@ -1,19 +1,19 @@
-// === Module 12139: useRenderPollAnswerImage ===
+// === Module 12177: useRenderPollAnswerImage ===
 
-// Module 12139 (useRenderPollAnswerImage)
+// Module 12177 (useRenderPollAnswerImage)
 import AvatarUtilsDefault from "AvatarUtils" /* 1414 */;
-import EmojiTypes from "EmojiTypes" /* 4921 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import EmojiDefault from "Emoji" /* 7229 */;
+import EmojiTypes from "EmojiTypes" /* 4953 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import EmojiDefault from "Emoji" /* 7263 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UploadAttachmentStore from "UploadAttachmentStore" /* 8291 */;
+import UploadAttachmentStore from "UploadAttachmentStore" /* 8325 */;
 
 const require = globalThis.__r;
 
 require = fn;
 const ActivityIndicator = fn(17).ActivityIndicator;
-const DraftType = fn(7632).DraftType;
+const DraftType = fn(7666).DraftType;
 const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useRende
         status = mediaAttachmentState.status;
       }
     }
-    if (status === tmp(12131).PollMediaUploadAttachmentStatus.PREPARING) {
+    if (status === tmp(12169).PollMediaUploadAttachmentStatus.PREPARING) {
       const _Symbol = Symbol;
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
         const tmp38 = <ActivityIndicator />;
@@ -71,7 +71,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useRende
             tmp25 = cResult[13];
             tmp26 = cResult[14];
           }
-          let str = emoji.type === tmp(4921).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
+          let str = emoji.type === tmp(4953).EmojiTypes.UNICODE ? emoji.surrogates : emoji.name;
           if (str == null) {
             str = "";
           }

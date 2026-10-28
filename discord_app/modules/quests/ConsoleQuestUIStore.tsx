@@ -1,6 +1,6 @@
-// === Module 7778: ConsoleQuestUIStore ===
+// === Module 7812: ConsoleQuestUIStore ===
 
-// Module 7778 (ConsoleQuestUIStore)
+// Module 7812 (ConsoleQuestUIStore)
 import module_570 from "module_570" /* 570 */;
 import size from "module_2" /* 2 */;
 

@@ -1,16 +1,16 @@
-// === Module 9517: YouBannerDecorations ===
+// === Module 9549: YouBannerDecorations ===
 
-// Module 9517 (YouBannerDecorations)
+// Module 9549 (YouBannerDecorations)
 import nativeDefault from "native" /* 587 */;
 import _modDef683 from "module_683" /* 683 */;
 import utils_PlatformUtils from "utils/PlatformUtils" /* 1382 */;
-import dismissible_content from "dismissible_content" /* 4808 */;
-import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5002 */;
-import QuestTypes from "QuestTypes" /* 6714 */;
-import useTrialOffer from "useTrialOffer" /* 7560 */;
-import PromotionsHooks from "PromotionsHooks" /* 9518 */;
-import tracking_Tracking from "tracking/Tracking" /* 9568 */;
-import QuestUtils from "QuestUtils" /* 9569 */;
+import dismissible_content from "dismissible_content" /* 4840 */;
+import DismissibleContentUnsafeUtils from "DismissibleContentUnsafeUtils" /* 5034 */;
+import QuestTypes from "QuestTypes" /* 6748 */;
+import useTrialOffer from "useTrialOffer" /* 7594 */;
+import PromotionsHooks from "PromotionsHooks" /* 9550 */;
+import tracking_Tracking from "tracking/Tracking" /* 9600 */;
+import QuestUtils from "QuestUtils" /* 9601 */;
 import noop from "module_19" /* 19 */;
 import UserStore from "UserStore" /* 1389 */;
 
@@ -18,11 +18,11 @@ require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
 const useIntlLoaderStore = fn(2066).useIntlLoaderStore;
-const ContentDismissActionType = fn(4821).ContentDismissActionType;
+const ContentDismissActionType = fn(4853).ContentDismissActionType;
 let closure_9 = fn(1391).PREMIUM_TIER_2_TRIAL_FOR_EVERYONE_TRIAL_ID;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_12 = createStyles.createStyles((arg0, arg1, color, borderColor) => {
   const obj = { containerFloatingWrap: null, containerFloatingGradient: null, containerFloating: null, containerFloatingContent: null, endcap: null, buttonsFloating: null };
   const obj2 = {};
@@ -140,18 +140,18 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
   if (stateFromStores != null) {
     id = stateFromStores.id;
   }
-  const tmp11Result = navigateToPremium(8675)(id);
+  const tmp11Result = navigateToPremium(8712)(id);
   if (cResult[3] === tmp11Result) {
     if (cResult[4] === stateFromStores) {
       let tmp14 = cResult[5];
     }
-    ({ theme, primaryColor, secondaryColor } = tmp10(8718)(tmp14));
+    ({ theme, primaryColor, secondaryColor } = tmp10(8755)(tmp14));
     if (cResult[6] === primaryColor) {
       if (cResult[7] === secondaryColor) {
         if (cResult[8] === theme) {
           let tmp16 = cResult[9];
         }
-        const userProfileColors = tmp(8729).useUserProfileColors(tmp16);
+        const userProfileColors = tmp(8766).useUserProfileColors(tmp16);
         ({ containerBackground, containerBorderColor, gradientSecondaryBackground } = userProfileColors);
         if (cResult[10] === containerBackground) {
           if (cResult[11] === primaryColor) {
@@ -167,24 +167,24 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 const hasPremiumSubscriptionToDisplay = tmp(2050).useHasPremiumSubscriptionToDisplay();
                 const tmp33 = closure_13();
                 dependencyMap = tmp33;
-                const tmp34 = tmp10(9562)();
+                const tmp34 = tmp10(9594)();
                 const showBadge = tmp34.showBadge;
                 const dismissBadge = tmp34.dismissBadge;
                 const _Symbol = Symbol;
                 if (cResult[18] === Symbol.for("react.memo_cache_sentinel")) {
-                  const isEligibleForQuests = tmp(9564).getIsEligibleForQuests();
+                  const isEligibleForQuests = tmp(9596).getIsEligibleForQuests();
                   cResult[18] = isEligibleForQuests;
                   let tmp35 = isEligibleForQuests;
-                  const tmpResult8 = tmp(9564);
+                  const tmpResult8 = tmp(9596);
                 } else {
                   tmp35 = cResult[18];
                 }
-                const tmp37 = tmp10(9565)("YouBannerDecorations");
+                const tmp37 = tmp10(9597)("YouBannerDecorations");
                 if (tmp37 != null) {
                   const placement = tmp37.placement;
                 }
                 const tmpResult7 = tmp(2050);
-                const tmp39 = null != tmp(7560).useTrialOffer(closure_9);
+                const tmp39 = null != tmp(7594).useTrialOffer(closure_9);
                 closure_5 = tmp39;
                 if (cResult[19] === tmp39) {
                   if (cResult[20] === tmp33) {
@@ -209,7 +209,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       if (cResult[28] !== ("you_screen" === placement)) {
                         let tmp45 = null;
                         if (tmp43) {
-                          tmp45 = closure_10(tmp10(14168), {}, "conjure");
+                          tmp45 = closure_10(tmp10(14391), {}, "conjure");
                         }
                         cResult[28] = tmp43;
                         cResult[29] = tmp45;
@@ -368,12 +368,12 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                               const obj7 = { style: tmp30.containerFloatingGradient };
                                               const merged = Object.assign(tmp79);
                                               obj7.pointerEvents = "none";
-                                              const tmp86 = closure_10(tmp10(5259), obj7);
+                                              const tmp86 = closure_10(tmp10(5294), obj7);
                                               cResult[65] = tmp79;
                                               cResult[66] = tmp30.containerFloatingGradient;
                                               cResult[67] = tmp86;
                                               tmp80 = tmp86;
-                                              const tmp10Result = tmp10(5259);
+                                              const tmp10Result = tmp10(5294);
                                             }
                                             const obj10 = { start: tmp73, end: tmp74, colors: null };
                                             const items3 = [tmp75, tmp77];
@@ -391,7 +391,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                           tmp69 = tmp72;
                                         }
                                         const obj12 = { children: tmp64 };
-                                        const tmp68 = closure_10(tmp(14177).YouScreenNavIconMeasurer, obj12, tmp5);
+                                        const tmp68 = closure_10(tmp(14401).YouScreenNavIconMeasurer, obj12, tmp5);
                                         cResult[50] = tmp64;
                                         cResult[51] = tmp5;
                                         cResult[52] = tmp68;
@@ -411,25 +411,25 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                                 tmp64 = found;
                               }
                             }
-                            const obj13 = { ref: settingsButtonRef, IconComponent: tmp(7489).SettingsIcon, accessibilityLabel: tmp58, onPress: tmp40, showRedDot: tmp33, testID: "you_tab_settings_button" };
-                            const tmp63 = closure_10(tmp10(14176), obj13, "settings");
+                            const obj13 = { ref: settingsButtonRef, IconComponent: tmp(7524).SettingsIcon, accessibilityLabel: tmp58, onPress: tmp40, showRedDot: tmp33, testID: "you_tab_settings_button" };
+                            const tmp63 = closure_10(tmp10(14400), obj13, "settings");
                             cResult[40] = tmp33;
                             cResult[41] = tmp40;
                             cResult[42] = settingsButtonRef;
                             cResult[43] = tmp63;
                             tmp60 = tmp63;
-                            const tmp10Result5 = tmp10(14176);
+                            const tmp10Result5 = tmp10(14400);
                           }
                           let tmp55 = null;
                           if (!hasPremiumSubscriptionToDisplay) {
-                            const obj14 = { IconComponent: tmp(9424).NitroWheelIcon, accessibilityLabel: null, label: null, onPress: null };
+                            const obj14 = { IconComponent: tmp(9456).NitroWheelIcon, accessibilityLabel: null, label: null, onPress: null };
                             const intl2 = tmp(1125).intl;
                             obj14.accessibilityLabel = intl2.string(tmp(1125).t.Ipxkog);
                             const intl3 = tmp(1125).intl;
                             obj14.label = intl3.string(tmp(1125).t.Ipxkog);
                             obj14.onPress = tmp41;
-                            tmp55 = closure_10(tmp10(14176), obj14, "nitro");
-                            const tmp10Result6 = tmp10(14176);
+                            tmp55 = closure_10(tmp10(14400), obj14, "nitro");
+                            const tmp10Result6 = tmp10(14400);
                           }
                           cResult[36] = hasPremiumSubscriptionToDisplay;
                           cResult[37] = tmp41;
@@ -437,7 +437,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                           tmp54 = tmp55;
                         }
                         const obj15 = { shopButtonRef, navigateToShop };
-                        const tmp53 = closure_10(tmp10(14186), obj15, "shop");
+                        const tmp53 = closure_10(tmp10(14410), obj15, "shop");
                         cResult[33] = navigateToShop;
                         cResult[34] = shopButtonRef;
                         cResult[35] = tmp53;
@@ -445,13 +445,13 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                       }
                       let tmp48 = null;
                       if (tmp35) {
-                        const obj16 = { IconComponent: tmp(14184).QuestsIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
+                        const obj16 = { IconComponent: tmp(14408).QuestsIcon, accessibilityLabel: null, onPress: null, showRedDot: null };
                         const intl = tmp(1125).intl;
                         obj16.accessibilityLabel = intl.string(tmp(1125).t.JALI2K);
                         obj16.onPress = tmp42;
                         obj16.showRedDot = showBadge;
-                        tmp48 = closure_10(tmp10(14176), obj16, "quests");
-                        const tmp10Result7 = tmp10(14176);
+                        tmp48 = closure_10(tmp10(14400), obj16, "quests");
+                        const tmp10Result7 = tmp10(14400);
                       }
                       cResult[30] = tmp42;
                       cResult[31] = showBadge;
@@ -497,7 +497,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
                 cResult[21] = navigateToSettings;
                 cResult[22] = J;
                 tmp40 = J;
-                const tmpResult9 = tmp(7560);
+                const tmpResult9 = tmp(7594);
               }
               let hexResult3 = null;
               if (null != tmp18) {
@@ -515,7 +515,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
             }
           }
         }
-        const tmpResult6 = tmp(8729);
+        const tmpResult6 = tmp(8766);
         if (!tmpResult10.isThemeLight(theme)) {
           let tmp19 = containerBackground;
         } else {
@@ -530,7 +530,7 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
         cResult[13] = theme;
         cResult[14] = tmp19;
         tmp18 = tmp19;
-        tmpResult10 = tmp(4979);
+        tmpResult10 = tmp(5011);
       }
     }
     const obj17 = { theme, primaryColor, secondaryColor };
@@ -539,14 +539,14 @@ export default noop.memo(ReactCompilerGating.isReactCompilerEnabled() ? (functio
     cResult[8] = theme;
     cResult[9] = obj17;
     tmp16 = obj17;
-    const tmp15 = tmp10(8718)(tmp14);
+    const tmp15 = tmp10(8755)(tmp14);
   }
   const obj18 = { user: stateFromStores, displayProfile: tmp11Result };
   cResult[3] = tmp11Result;
   cResult[4] = stateFromStores;
   cResult[5] = obj18;
   tmp14 = obj18;
-  const tmp11 = navigateToPremium(8675);
+  const tmp11 = navigateToPremium(8712);
 }) : (function YouBannerDecorations(navigateToSettings) {
   navigateToSettings = navigateToSettings.navigateToSettings;
   const navigateToPremium = navigateToSettings.navigateToPremium;

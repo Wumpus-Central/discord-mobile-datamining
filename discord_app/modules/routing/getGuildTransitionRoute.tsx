@@ -1,22 +1,22 @@
-// === Module 7322: getGuildTransitionRoute ===
+// === Module 7356: getGuildTransitionRoute ===
 
-// Module 7322 (getGuildTransitionRoute)
-import FavoritesUtils from "FavoritesUtils" /* 4849 */;
-import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7326 */;
-import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7332 */;
-import ConjureUtils from "ConjureUtils" /* 7347 */;
-import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7323 */;
-import FavoriteStore from "FavoriteStore" /* 4827 */;
-import GuildOnboardingStore from "GuildOnboardingStore" /* 7193 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import GuildChannelStore from "GuildChannelStore" /* 4902 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import SelectedChannelStore from "SelectedChannelStore" /* 4875 */;
-import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7324 */;
+// Module 7356 (getGuildTransitionRoute)
+import FavoritesUtils from "FavoritesUtils" /* 4881 */;
+import OnboardingHomeUtils from "OnboardingHomeUtils" /* 7361 */;
+import SlayerStorefrontUtils from "SlayerStorefrontUtils" /* 7367 */;
+import ConjureUtils from "ConjureUtils" /* 7382 */;
+import ConjureBuilderRouteStore from "ConjureBuilderRouteStore" /* 7357 */;
+import FavoriteStore from "FavoriteStore" /* 4859 */;
+import GuildOnboardingStore from "GuildOnboardingStore" /* 7227 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import GuildChannelStore from "GuildChannelStore" /* 4934 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import SelectedChannelStore from "SelectedChannelStore" /* 4907 */;
+import PrivateChannelSortStore from "PrivateChannelSortStore" /* 7359 */;
 
 require = fn;
 const ME = fn(1084).ME;
-const StaticChannelRoute = fn(4831).StaticChannelRoute;
+const StaticChannelRoute = fn(4863).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/getGuildTransitionRoute.tsx");
 

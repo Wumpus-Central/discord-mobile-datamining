@@ -1,15 +1,15 @@
-// === Module 16221: FamilyCenterModalDataTooltip ===
+// === Module 16449: FamilyCenterModalDataTooltip ===
 
-// Module 16221 (FamilyCenterModalDataTooltip)
+// Module 16449 (FamilyCenterModalDataTooltip)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import _modDef2535 from "module_2535" /* 2535 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import ModalActionCreatorsDefault from "ModalActionCreators" /* 6673 */;
-import NavigatorHeader from "NavigatorHeader" /* 6926 */;
-import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8124 */;
-import Modal from "Modal" /* 11153 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import ModalActionCreatorsDefault from "ModalActionCreators" /* 6707 */;
+import NavigatorHeader from "NavigatorHeader" /* 6960 */;
+import useIsInAdultAgeGroupDefault from "useIsInAdultAgeGroup" /* 8158 */;
+import Modal from "Modal" /* 11188 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -19,9 +19,9 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-let obj = { [USER_INTERACTION]: fn(8542).ChatIcon, [USER_CALLED]: fn(12895).PhoneIcon, [USER_ADD]: fn(5667).FriendsIcon, [GUILD_ADD]: fn(14936).ServerGridIcon, [GUILD_INTERACTION]: fn(8544).ThreadIcon, [PURCHASES]: fn(7944).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5692).ClockIcon, [GIFTS]: fn(12897).GiftIcon };
-({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7647).TeenActionDisplayType);
-let createStyles = fn(4972);
+let obj = { [USER_INTERACTION]: fn(8579).ChatIcon, [USER_CALLED]: fn(12942).PhoneIcon, [USER_ADD]: fn(5702).FriendsIcon, [GUILD_ADD]: fn(15159).ServerGridIcon, [GUILD_INTERACTION]: fn(8581).ThreadIcon, [PURCHASES]: fn(7978).CreditCardIcon, [TOTAL_VOICE_MINUTES]: fn(5727).ClockIcon, [GIFTS]: fn(12944).GiftIcon };
+({ USER_INTERACTION, USER_CALLED, USER_ADD, GUILD_ADD, GUILD_INTERACTION, PURCHASES, TOTAL_VOICE_MINUTES, GIFTS } = fn(7681).TeenActionDisplayType);
+let createStyles = fn(5004);
 let obj3 = { row: { display: "flex", flexDirection: "row", width: "100%", alignItems: "center", marginBottom: nativeDefault.space.PX_8, paddingVertical: nativeDefault.space.PX_12, paddingHorizontal: nativeDefault.space.PX_12, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH, borderRadius: nativeDefault.radii.sm }, content: { flexShrink: 1 }, iconContainer: null, header: null, icon: null };
 let size = { display: "flex", alignItems: "center", justifyContent: "center", width: 40, height: 40, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, borderRadius: nativeDefault.radii.round, flexShrink: 0, marginRight: nativeDefault.space.PX_12 };
 obj3.iconContainer = size;
@@ -123,7 +123,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled() ? (function Row(ar
   obj.children = items;
   return React5(View, obj);
 });
-createStyles = fn(4972);
+createStyles = fn(5004);
 let obj7 = { container: null, groupHeader: null };
 let obj6 = { tintColor: nativeDefault.colors.TEXT_BRAND };
 obj7.container = { display: "flex", alignItems: "center", paddingHorizontal: nativeDefault.space.PX_16, width: "100%" };
@@ -147,7 +147,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
     [tmp4, tmp5] = cResult;
   }
   obj = container(576);
-  const ageSpecificText = container(12894).useAgeSpecificText(tmp4, tmp5);
+  const ageSpecificText = container(12941).useAgeSpecificText(tmp4, tmp5);
   container = useIsInAdultAgeGroupDefault();
   if (cResult[2] === ageSpecificText) {
     if (cResult[3] === container) {
@@ -170,8 +170,8 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
                     const intl3 = tmp(1125).intl;
                     obj3.text = intl3.string(tmp(1125).t["NX+WJN"]);
                     obj3.onPress = ModalActionCreatorsDefault.pop;
-                    obj2.children = closure_6(tmp(5245).Button, obj3);
-                    const tmp36 = closure_6(tmp(12739).ModalFooter, obj2);
+                    obj2.children = closure_6(tmp(5280).Button, obj3);
+                    const tmp36 = closure_6(tmp(12786).ModalFooter, obj2);
                     cResult[25] = tmp36;
                     let tmp34 = tmp36;
                   } else {
@@ -215,10 +215,10 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
       }
     }
   }
-  const tmpResult = container(12894);
-  const sortedActivityTypeConfigs = container(8126).getSortedActivityTypeConfigs();
-  const ModalScreen = tmp(7901).ModalScreen;
-  const ModalContent = tmp(7902).ModalContent;
+  const tmpResult = container(12941);
+  const sortedActivityTypeConfigs = container(8160).getSortedActivityTypeConfigs();
+  const ModalScreen = tmp(7935).ModalScreen;
+  const ModalContent = tmp(7936).ModalContent;
   const container2 = groupHeader.container;
   if (cResult[12] === ageSpecificText) {
     if (cResult[13] === groupHeader.groupHeader) {
@@ -267,13 +267,13 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled() ? (function Family
     cResult[10] = tmp18;
     cResult[11] = mapped;
   }
-  const tmp19 = closure_6(container(5235).Text, { style: groupHeader.groupHeader, variant: "text-lg/bold", color: "mobile-text-heading-primary", children: ageSpecificText });
+  const tmp19 = closure_6(container(5270).Text, { style: groupHeader.groupHeader, variant: "text-lg/bold", color: "mobile-text-heading-primary", children: ageSpecificText });
   cResult[12] = ageSpecificText;
   cResult[13] = groupHeader.groupHeader;
   cResult[14] = tmp19;
   tmp18 = tmp19;
   const obj7 = { style: groupHeader.groupHeader, variant: "text-lg/bold", color: "mobile-text-heading-primary", children: ageSpecificText };
-  const tmpResult2 = container(8126);
+  const tmpResult2 = container(8160);
 }) : (function FamilyCenterModalDataTooltipScreen() {
   const tmp = closure_11();
   const intl = require("util").intl;

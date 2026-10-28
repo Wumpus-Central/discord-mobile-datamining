@@ -1,6 +1,6 @@
-// === Module 11474: stripSensitiveLoggingData ===
+// === Module 11512: stripSensitiveLoggingData ===
 
-// Module 11474 (stripSensitiveLoggingData)
+// Module 11512 (stripSensitiveLoggingData)
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 

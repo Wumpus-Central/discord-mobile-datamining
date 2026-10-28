@@ -1,10 +1,10 @@
-// === Module 17377: useIsNotifSettingDisabled ===
+// === Module 17610: useIsNotifSettingDisabled ===
 
-// Module 17377 (useIsNotifSettingDisabled)
+// Module 17610 (useIsNotifSettingDisabled)
 import _modDef2865 from "module_2865" /* 2865 */;
-import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 17368 */;
-import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 17369 */;
-import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 17367 */;
+import DeclarativeSystemNotifPermissionHelpersDefault from "DeclarativeSystemNotifPermissionHelpers" /* 17601 */;
+import DeclarativeSystemNotifPermissionAnalytics from "DeclarativeSystemNotifPermissionAnalytics" /* 17602 */;
+import DeclarativeSystemNotifPermissionStore from "DeclarativeSystemNotifPermissionStore" /* 17600 */;
 
 const require = globalThis.__r;
 

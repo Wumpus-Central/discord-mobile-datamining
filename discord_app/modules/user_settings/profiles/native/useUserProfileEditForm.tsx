@@ -1,12 +1,12 @@
-// === Module 15893: useUserProfileEditForm ===
+// === Module 16119: useUserProfileEditForm ===
 
-// Module 15893 (useUserProfileEditForm)
+// Module 16119 (useUserProfileEditForm)
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8649 */;
-import UserProfileStore from "UserProfileStore" /* 7704 */;
+import UserProfileSettingsStore from "UserProfileSettingsStore" /* 8686 */;
+import UserProfileStore from "UserProfileStore" /* 7738 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -15,7 +15,7 @@ const require = fn;
 let closure_3 = ["bannerOriginalMd5"];
 let closure_4 = ["bannerOriginalMd5"];
 const FormStates = fn(1084).FormStates;
-const HexagonCampaignPerk = fn(4997).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5029).HexagonCampaignPerk;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/user_settings/profiles/native/useUserProfileEditForm.tsx");
@@ -720,7 +720,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
             let firstFieldErrorMessage3;
             if (!stateFromStores) {
               if (!first) {
-                const pendingHexagonCampaignEnrollment = pendingChanges(15894).getPendingHexagonCampaignEnrollment();
+                const pendingHexagonCampaignEnrollment = pendingChanges(16120).getPendingHexagonCampaignEnrollment();
                 if (null != pendingHexagonCampaignEnrollment) {
                   closure_3(true);
                   c7 = 1;
@@ -728,7 +728,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                   const obj6 = { value: pendingHexagonCampaignEnrollment, done: false };
                   return obj6;
                 }
-                const obj29 = pendingChanges(15894);
+                const obj29 = pendingChanges(16120);
               }
             }
             c8 = 3;
@@ -775,20 +775,20 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                     assetOrigin = pendingAvatar.assetOrigin;
                   }
                   obj11.avatarAssetOrigin = assetOrigin;
-                  const result = pendingChanges(7087).trackUserAvatarUpdated(obj11);
-                  const obj22 = pendingChanges(7087);
+                  const result = pendingChanges(7121).trackUserAvatarUpdated(obj11);
+                  const obj22 = pendingChanges(7121);
                 }
                 if (closure_132_5) {
                   const obj13 = { perks: null, content: null, contentSurface: null };
                   const items = [constants.DISPLAY_NAME_STYLE];
                   obj13.perks = items;
-                  obj13.content = pendingChanges(6714).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
-                  obj13.contentSurface = pendingChanges(15895).HexagonCampaignContentSurface.USER_PROFILE;
-                  const result1 = pendingChanges(15895).trackHexagonCampaignPerkAction(obj13);
-                  const obj24 = pendingChanges(15895);
+                  obj13.content = pendingChanges(6748).QuestContent.DISPLAY_NAME_STYLES_SETTINGS;
+                  obj13.contentSurface = pendingChanges(16121).HexagonCampaignContentSurface.USER_PROFILE;
+                  const result1 = pendingChanges(16121).trackHexagonCampaignPerkAction(obj13);
+                  const obj24 = pendingChanges(16121);
                 }
-                const result2 = pendingChanges(7080).resetPendingAccountChanges();
-                const obj26 = pendingChanges(7080);
+                const result2 = pendingChanges(7114).resetPendingAccountChanges();
+                const obj26 = pendingChanges(7114);
               } else {
                 let username;
                 if (tmp90 != null) {
@@ -798,9 +798,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                   }
                 }
                 if (null != username) {
-                  const result3 = pendingChanges(7090).showInvalidUsernameToast();
+                  const result3 = pendingChanges(7124).showInvalidUsernameToast();
                   closure_132_7 = true;
-                  const obj21 = pendingChanges(7090);
+                  const obj21 = pendingChanges(7124);
                 } else {
                   let avatar;
                   if (closure_132_8 != null) {
@@ -810,16 +810,16 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                     }
                   }
                   if (null != avatar) {
-                    const aPIError = new pendingChanges(6375).APIError(closure_132_8);
+                    const aPIError = new pendingChanges(6409).APIError(closure_132_8);
                     const firstFieldErrorMessage = aPIError.getFirstFieldErrorMessage("avatar");
                     pendingChanges = firstFieldErrorMessage;
                     if (firstFieldErrorMessage == null) {
                       const intl = pendingChanges(1125).intl;
                       pendingChanges = intl.string(pendingChanges(1125).t["84MExs"]);
                     }
-                    const result4 = pendingChanges(15896).showGenericProfileUpdateFailureToast(pendingChanges);
+                    const result4 = pendingChanges(16122).showGenericProfileUpdateFailureToast(pendingChanges);
                     closure_132_7 = true;
-                    const obj51 = pendingChanges(15896);
+                    const obj51 = pendingChanges(16122);
                   }
                 }
               }
@@ -842,14 +842,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                 closure_132_11 = tmp2(profileChangesForUpdateRequest, closure_4);
                 c7 = 3;
                 c8 = 1;
-                const obj15 = { value: pendingChanges(8656).saveProfileChanges(closure_132_11, undefined, bannerOriginalMd5), done: false };
+                const obj15 = { value: pendingChanges(8693).saveProfileChanges(closure_132_11, undefined, bannerOriginalMd5), done: false };
                 return obj15;
               } else {
                 if (undefined === pendingChanges2.pendingBadgeDisplayOrder) {
                   if (undefined === pendingChanges2.pendingBadgeHiddenBadges) {
                     if (undefined !== pendingChanges2.pendingLegacyUsernameDisabled) {
                       c6 = 1;
-                      const LegacyUsernameDisabled = pendingChanges(4800).LegacyUsernameDisabled;
+                      const LegacyUsernameDisabled = pendingChanges(4832).LegacyUsernameDisabled;
                       c7 = 8;
                       c8 = 1;
                       const obj16 = { value: LegacyUsernameDisabled.updateSetting(pendingChanges2.pendingLegacyUsernameDisabled), done: false };
@@ -878,7 +878,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                 const obj17 = { displayOrder: pendingChanges2.pendingBadgeDisplayOrder, hiddenBadges: pendingChanges2.pendingBadgeHiddenBadges };
                 c7 = 4;
                 c8 = 1;
-                const obj20 = { value: pendingChanges(15897).updateBadgeSettings(obj17), done: false };
+                const obj20 = { value: pendingChanges(16123).updateBadgeSettings(obj17), done: false };
                 return obj20;
               }
             }
@@ -897,15 +897,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                 ok2 = closure_132_12.ok;
               }
               if (ok2) {
-                const result5 = pendingChanges(8656).resetPendingProfileChanges();
-                const obj19 = pendingChanges(8656);
+                const result5 = pendingChanges(8693).resetPendingProfileChanges();
+                const obj19 = pendingChanges(8693);
               } else {
-                const aPIError1 = new pendingChanges(6375).APIError(closure_132_12);
+                const aPIError1 = new pendingChanges(6409).APIError(closure_132_12);
                 firstFieldErrorMessage2 = aPIError1.getFirstFieldErrorMessage("banner");
                 if (null != firstFieldErrorMessage2) {
-                  const result6 = pendingChanges(15896).showGenericProfileUpdateFailureToast(firstFieldErrorMessage2);
+                  const result6 = pendingChanges(16122).showGenericProfileUpdateFailureToast(firstFieldErrorMessage2);
                   closure_132_7 = true;
-                  const obj18 = pendingChanges(15896);
+                  const obj18 = pendingChanges(16122);
                 }
               }
               let tmp85 = closure_132_6;
@@ -941,7 +941,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                   }
                   closure_132_16 = id;
                   if (null != closure_132_16) {
-                    const profile = pendingChanges(8670).fetchProfile(closure_132_16);
+                    const profile = pendingChanges(8707).fetchProfile(closure_132_16);
                     c7 = 5;
                     c8 = 1;
                     const obj27 = {
@@ -986,8 +986,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                 const obj38 = { value, done: true };
                 return obj38;
               } else {
-                const result7 = pendingChanges(14444).resetPendingBadgeSettings();
-                const obj7 = pendingChanges(14444);
+                const result7 = pendingChanges(14667).resetPendingBadgeSettings();
+                const obj7 = pendingChanges(14667);
               }
             } else if (7 === tmp7) {
               c6 = 0;
@@ -1003,9 +1003,9 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                   const obj39 = { value, done: true };
                   return obj39;
                 } else {
-                  const result8 = pendingChanges(7080).resetPendingLegacyUsernameDisabled();
+                  const result8 = pendingChanges(7114).resetPendingLegacyUsernameDisabled();
                   c6 = 0;
-                  const obj5 = pendingChanges(7080);
+                  const obj5 = pendingChanges(7114);
                 }
               } else if (arg0 === 1) {
                 c8 = 3;
@@ -1021,15 +1021,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
                   ok4 = closure_132_18.ok;
                 }
                 if (ok4) {
-                  const result9 = pendingChanges(7080).resetPendingPrimaryGuildChanges();
-                  const obj3 = pendingChanges(7080);
+                  const result9 = pendingChanges(7114).resetPendingPrimaryGuildChanges();
+                  const obj3 = pendingChanges(7114);
                 } else {
-                  const aPIError2 = new pendingChanges(6375).APIError(closure_132_18);
+                  const aPIError2 = new pendingChanges(6409).APIError(closure_132_18);
                   firstFieldErrorMessage3 = aPIError2.getFirstFieldErrorMessage("banner");
                   if (null != firstFieldErrorMessage3) {
-                    const result10 = pendingChanges(15896).showGenericProfileUpdateFailureToast(firstFieldErrorMessage3);
+                    const result10 = pendingChanges(16122).showGenericProfileUpdateFailureToast(firstFieldErrorMessage3);
                     closure_132_7 = true;
-                    const obj2 = pendingChanges(15896);
+                    const obj2 = pendingChanges(16122);
                   }
                 }
                 let tmp29 = closure_132_6;
@@ -1052,8 +1052,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
               }
               if (!tmp180) {
                 const intl2 = pendingChanges(1125).intl;
-                const result11 = pendingChanges(15896).showGenericProfileUpdateFailureToast(intl2.string(pendingChanges(1125).t["84MExs"]));
-                const obj35 = pendingChanges(15896);
+                const result11 = pendingChanges(16122).showGenericProfileUpdateFailureToast(intl2.string(pendingChanges(1125).t["84MExs"]));
+                const obj35 = pendingChanges(16122);
               }
               c8 = 3;
               const obj43 = { value: closure_132_6, done: true };
@@ -1061,7 +1061,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
             }
             c7 = 6;
             c8 = 1;
-            const obj45 = { value: pendingChanges(8686).fetchBadgeDirectory(), done: false };
+            const obj45 = { value: pendingChanges(8723).fetchBadgeDirectory(), done: false };
             return obj45;
           }
           const _Object3 = Object;
@@ -1070,27 +1070,27 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
             if (undefined !== primaryGuildId) {
               c7 = 9;
               c8 = 1;
-              const obj47 = { value: pendingChanges(15198).adoptGuildIdentity(primaryGuildId, null !== primaryGuildId), done: false };
+              const obj47 = { value: pendingChanges(15423).adoptGuildIdentity(primaryGuildId, null !== primaryGuildId), done: false };
               return obj47;
             }
           }
         }
         pendingChanges2 = pendingChanges.getPendingChanges();
-        accountUpdateForUpdateRequest = pendingChanges(11189).getAccountUpdateForUpdateRequest(pendingChanges2);
-        const obj30 = pendingChanges(11189);
-        profileChangesForUpdateRequest = pendingChanges(11189).getProfileChangesForUpdateRequest(pendingChanges2);
-        const obj31 = pendingChanges(11189);
-        primaryGuildChangesForUpdateRequest = pendingChanges(11189).getPrimaryGuildChangesForUpdateRequest(pendingChanges2);
-        const obj32 = pendingChanges(11189);
-        let result12 = pendingChanges(4999).hasHexagonCampaignDisplayNameFont(accountUpdateForUpdateRequest.displayNameStyles);
+        accountUpdateForUpdateRequest = pendingChanges(11224).getAccountUpdateForUpdateRequest(pendingChanges2);
+        const obj30 = pendingChanges(11224);
+        profileChangesForUpdateRequest = pendingChanges(11224).getProfileChangesForUpdateRequest(pendingChanges2);
+        const obj31 = pendingChanges(11224);
+        primaryGuildChangesForUpdateRequest = pendingChanges(11224).getPrimaryGuildChangesForUpdateRequest(pendingChanges2);
+        const obj32 = pendingChanges(11224);
+        let result12 = pendingChanges(5031).hasHexagonCampaignDisplayNameFont(accountUpdateForUpdateRequest.displayNameStyles);
         if (result12) {
           const currentUser1 = authStore.getCurrentUser();
           let displayNameStyles;
           if (currentUser1 != null) {
             displayNameStyles = currentUser1.displayNameStyles;
           }
-          result12 = !pendingChanges(4999).hasHexagonCampaignDisplayNameFont(displayNameStyles);
-          const obj34 = pendingChanges(4999);
+          result12 = !pendingChanges(5031).hasHexagonCampaignDisplayNameFont(displayNameStyles);
+          const obj34 = pendingChanges(5031);
         }
         closure_132_5 = result12;
         closure_132_6 = true;
@@ -1099,10 +1099,10 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
         if (Object.keys(accountUpdateForUpdateRequest).length > 0) {
           c7 = 2;
           c8 = 1;
-          const obj48 = { value: pendingChanges(7080).saveProfileAndAccountChanges(accountUpdateForUpdateRequest), done: false };
+          const obj48 = { value: pendingChanges(7114).saveProfileAndAccountChanges(accountUpdateForUpdateRequest), done: false };
           return obj48;
         }
-        const obj33 = pendingChanges(4999);
+        const obj33 = pendingChanges(5031);
       } catch (tmp239) {
         if (tmp3 === c6) {
           c8 = tmp;
@@ -1148,7 +1148,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
               const obj5 = { avatarDecoration: pendingChanges.pendingAvatarDecoration };
               dependencyMap = 1;
               c3 = 1;
-              const obj6 = { value: tmp5(7080).saveProfileAndAccountChanges(obj5), done: false };
+              const obj6 = { value: tmp5(7114).saveProfileAndAccountChanges(obj5), done: false };
               return obj6;
             }
           }
@@ -1162,8 +1162,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useUserP
             ok = closure_128_0.ok;
           }
           if (ok) {
-            const result = tmp5(7080).resetPendingAccountChanges();
-            const obj = tmp5(7080);
+            const result = tmp5(7114).resetPendingAccountChanges();
+            const obj = tmp5(7114);
           }
         }
         c3 = 3;

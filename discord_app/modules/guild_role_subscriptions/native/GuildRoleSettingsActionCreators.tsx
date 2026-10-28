@@ -1,8 +1,8 @@
-// === Module 19333: GuildRoleSettingsActionCreators ===
+// === Module 19596: GuildRoleSettingsActionCreators ===
 
-// Module 19333 (GuildRoleSettingsActionCreators)
-import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9005 */;
-import RoleTierEditStore from "RoleTierEditStore" /* 19326 */;
+// Module 19596 (GuildRoleSettingsActionCreators)
+import GuildSettingsActionCreatorsDefault from "GuildSettingsActionCreators" /* 9039 */;
+import RoleTierEditStore from "RoleTierEditStore" /* 19589 */;
 
 const GuildSettingsSections = fn(1084).GuildSettingsSections;
 const size = fn(2);

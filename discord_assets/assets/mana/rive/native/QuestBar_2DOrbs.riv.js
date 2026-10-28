@@ -1,6 +1,6 @@
-// === Module 5133: ? ===
+// === Module 5168: ? ===
 
-// Module 5133
+// Module 5168
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/rive/native/QuestBar_2DOrbs.riv.js");

@@ -1,6 +1,6 @@
-// === Module 7556: useInterval ===
+// === Module 7590: useInterval ===
 
-// Module 7556 (useInterval)
+// Module 7590 (useInterval)
 import noop from "module_19" /* 19 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;

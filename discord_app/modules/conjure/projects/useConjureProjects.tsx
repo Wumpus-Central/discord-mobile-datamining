@@ -1,19 +1,19 @@
-// === Module 12310: useConjureProjects ===
+// === Module 12355: useConjureProjects ===
 
-// Module 12310 (useConjureProjects)
+// Module 12355 (useConjureProjects)
 import c from "c" /* 576 */;
-import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6809 */;
-import ConjureActivity from "ConjureActivity" /* 11748 */;
+import ConjureGuildExperiment from "ConjureGuildExperiment" /* 6843 */;
+import ConjureActivity from "ConjureActivity" /* 11786 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 import ApplicationStore from "ApplicationStore" /* 2042 */;
-import UserProfileStore from "UserProfileStore" /* 7704 */;
-import GuildChannelStore from "GuildChannelStore" /* 4902 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
-import SelectedGuildStore from "SelectedGuildStore" /* 5003 */;
-import ConjureChatStore from "ConjureChatStore" /* 10702 */;
-import ConjureProjectStore from "ConjureProjectStore" /* 6774 */;
+import UserProfileStore from "UserProfileStore" /* 7738 */;
+import GuildChannelStore from "GuildChannelStore" /* 4934 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
+import SelectedGuildStore from "SelectedGuildStore" /* 5035 */;
+import ConjureChatStore from "ConjureChatStore" /* 10734 */;
+import ConjureProjectStore from "ConjureProjectStore" /* 6808 */;
 
 const require = globalThis.__r;
 

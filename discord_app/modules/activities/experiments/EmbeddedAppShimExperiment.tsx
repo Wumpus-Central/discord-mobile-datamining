@@ -1,6 +1,6 @@
-// === Module 11493: EmbeddedAppShimExperiment ===
+// === Module 11531: EmbeddedAppShimExperiment ===
 
-// Module 11493 (EmbeddedAppShimExperiment)
+// Module 11531 (EmbeddedAppShimExperiment)
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
@@ -22,7 +22,7 @@ export const useEmbeddedAppShimVersion = function useEmbeddedAppShimVersion(Base
   }
   return num;
 };
-export const getEmbeddedAppShimVersion = function getEmbeddedAppShimVersion(location) {
+export const getEmbeddedAppShimVersion = function getEmbeddedAppShimVersion(ChannelLongPressActionSheet) {
   let num = 1;
   if (closure_0.getConfig(obj).enabled) {
     num = 2;

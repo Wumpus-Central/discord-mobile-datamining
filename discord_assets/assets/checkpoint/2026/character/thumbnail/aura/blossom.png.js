@@ -1,6 +1,6 @@
-// === Module 6338: ? ===
+// === Module 6372: ? ===
 
-// Module 6338
+// Module 6372
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/checkpoint/2026/character/thumbnail/aura/blossom.png.js");

@@ -1,10 +1,10 @@
-// === Module 18830: Safe ===
+// === Module 19082: Safe ===
 
-// Module 18830 (Safe)
-import passThrough_mod from "passThrough" /* 18831 */;
+// Module 19082 (Safe)
+import passThrough_mod from "passThrough" /* 19083 */;
 import size from "module_2" /* 2 */;
 
-const obj = { asIterable: passThrough.asIterable, Array: null, Map: null, Set: null, WeakMap: null, WeakSet: null, Function: null, Event: null, NavigateEvent: null, NavigationDestination: null, URL: null, EventTarget: null, MessageEvent: null, PageTransitionEvent: null, MessageChannel: null, MessagePort: null, Document: null, DocumentFragment: null, HTMLTemplateElement: null, DOMParser: null, Node: null, HTMLElement: null, Element: null, Attr: null, NodeList: null, Blob: null, String: null, HTMLMediaElement: null, MediaStream: null, AudioNode: null, BaseAudioContext: null, OfflineAudioContext: null, GainNode: null, AudioParam: null, AnalyserNode: null, Window: null, Object: null, Math: null, Reflect: null, Symbol: null, Crypto: null, Constructor: null };
+const obj = { asIterable: passThrough.asIterable, Array: null, Map: null, Set: null, WeakMap: null, WeakSet: null, Function: null, Event: null, KeyboardEvent: null, NavigateEvent: null, NavigationDestination: null, URL: null, EventTarget: null, MessageEvent: null, PageTransitionEvent: null, MessageChannel: null, MessagePort: null, Document: null, DocumentFragment: null, HTMLTemplateElement: null, DOMParser: null, Node: null, HTMLElement: null, Element: null, Attr: null, NodeList: null, Blob: null, String: null, HTMLMediaElement: null, MediaStream: null, AudioNode: null, BaseAudioContext: null, OfflineAudioContext: null, GainNode: null, AudioParam: null, AnalyserNode: null, Window: null, Object: null, Math: null, Reflect: null, Symbol: null, Crypto: null, Constructor: null };
 let passThrough = passThrough_mod;
 obj.Array = passThrough.protectPrototype("Array", ["every", "filter", "forEach", "includes", "map", "push", "some"], { chainable: ["filter", "map"] });
 let passThrough = passThrough_mod;
@@ -19,6 +19,8 @@ let passThrough = passThrough_mod;
 obj.Function = passThrough.protectPrototype("Function", ["apply", "bind", "call"]);
 let passThrough = passThrough_mod;
 obj.Event = passThrough.protectPrototype("Event", ["preventDefault", "stopImmediatePropagation", "target"]);
+let passThrough = passThrough_mod;
+obj.KeyboardEvent = passThrough.protectPrototype("KeyboardEvent", ["altKey", "ctrlKey", "isComposing", "keyCode", "metaKey", "shiftKey"]);
 let passThrough = passThrough_mod;
 obj.NavigateEvent = passThrough.protectPrototype("NavigateEvent", ["destination"]);
 let passThrough = passThrough_mod;

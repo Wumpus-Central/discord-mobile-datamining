@@ -1,10 +1,10 @@
-// === Module 17435: WumpTrash ===
+// === Module 17668: WumpTrash ===
 
-// Module 17435 (WumpTrash)
+// Module 17668 (WumpTrash)
 import c from "c" /* 576 */;
-import shared from "shared" /* 4979 */;
-import FastImageDefault from "FastImage" /* 5670 */;
-import _mod8724 from "module_8724" /* 8724 */;
+import shared from "shared" /* 5011 */;
+import FastImageDefault from "FastImage" /* 5705 */;
+import _mod8761 from "module_8761" /* 8761 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
@@ -16,41 +16,41 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled() ? (function useWumpTrash
   if (cResult[0] !== theme) {
     const obj3 = {
       dark() {
-          return require("module_17436");
+          return require("module_17669");
         },
       darker() {
-          return require("module_17437");
+          return require("module_17670");
         }
     };
-    const illustrationSource = _mod8724.getIllustrationSource(theme, obj3);
+    const illustrationSource = _mod8761.getIllustrationSource(theme, obj3);
     cResult[0] = theme;
     cResult[1] = illustrationSource;
     let tmp4 = illustrationSource;
-    const tmpResult = _mod8724;
+    const tmpResult = _mod8761;
   } else {
     tmp4 = cResult[1];
   }
   return tmp4;
 }) : (function useWumpTrashSource() {
   const obj = shared;
-  return _mod8724.getIllustrationSource(obj.useThemeContext().theme, {
+  return _mod8761.getIllustrationSource(obj.useThemeContext().theme, {
     dark() {
-      return require("module_17436");
+      return require("module_17669");
     },
     darker() {
-      return require("module_17437");
+      return require("module_17670");
     }
   });
 });
 let closure_4 = tmp3;
 ReactCompilerGating = fn(558);
 function getWumpTrashSource(theme) {
-  return _mod8724.getIllustrationSource(theme, {
+  return _mod8761.getIllustrationSource(theme, {
     dark() {
-      return require("module_17436");
+      return require("module_17669");
     },
     darker() {
-      return require("module_17437");
+      return require("module_17670");
     }
   });
 }

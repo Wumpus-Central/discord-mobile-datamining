@@ -1,6 +1,6 @@
-// === Module 13677: HubConstants ===
+// === Module 13895: HubConstants ===
 
-// Module 13677 (HubConstants)
+// Module 13895 (HubConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/hub/HubConstants.tsx");

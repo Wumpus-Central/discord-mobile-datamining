@@ -1,14 +1,14 @@
-// === Module 19351: FormEmojiPicker ===
+// === Module 19614: FormEmojiPicker ===
 
-// Module 19351 (FormEmojiPicker)
-import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9827 */;
+// Module 19614 (FormEmojiPicker)
+import openEmojiPickerActionSheet from "openEmojiPickerActionSheet" /* 9859 */;
 import noop from "module_19" /* 19 */;
 
 require = fn;
 const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_6 = createStyles.createStyles({ container: { alignItems: "center", flexDirection: "row" }, content: { marginStart: 8, flexGrow: 1 }, emojiPickerIcon: { width: 20, height: 20 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -20,12 +20,12 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
   onChange = onChange.onChange;
   ({ emojiId, emojiName } = emoji);
   const tmp4 = closure_6();
-  const tmp6 = onChange(15181)();
+  const tmp6 = onChange(15406)();
   if (cResult[0] === emojiId) {
     if (cResult[1] === emojiName) {
       let tmp7 = cResult[2];
     }
-    const emojiByIdOrName = guildId(16640).useEmojiByIdOrName(guildId, tmp7);
+    const emojiByIdOrName = guildId(16869).useEmojiByIdOrName(guildId, tmp7);
     let emojiPickerIcon = tmp7;
     if (cResult[3] === tmp7) {
       if (cResult[4] === guildId) {
@@ -44,8 +44,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
               }
               if (cResult[13] !== emojiByIdOrName) {
                 if (null != emojiByIdOrName) {
-                  let allEmojiNamesString = guildId(4922).getAllEmojiNamesString(emojiByIdOrName);
-                  const tmpResult2 = guildId(4922);
+                  let allEmojiNamesString = guildId(4954).getAllEmojiNamesString(emojiByIdOrName);
+                  const tmpResult2 = guildId(4954);
                 } else {
                   const intl = guildId(1125).intl;
                   allEmojiNamesString = intl.string(guildId(1125).t.gXAN3P);
@@ -60,7 +60,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
                     }
                     const _Symbol = Symbol;
                     if (cResult[19] === Symbol.for("react.memo_cache_sentinel")) {
-                      const tmp28 = closure_4(guildId(7307).ChevronSmallRightIcon, { size: "md" });
+                      const tmp28 = closure_4(guildId(7341).ChevronSmallRightIcon, { size: "md" });
                       cResult[19] = tmp28;
                       let tmp26 = tmp28;
                     } else {
@@ -79,7 +79,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
                     let obj2 = { style: tmp17, accessibilityRole: "link", onPress: tmp16, children: null };
                     const items = [tmp10, tmp22, tmp26];
                     obj2.children = items;
-                    const tmp31 = closure_5(tmp5(9041), obj2);
+                    const tmp31 = closure_5(tmp5(9074), obj2);
                     cResult[20] = tmp10;
                     cResult[21] = tmp16;
                     cResult[22] = tmp17;
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
                   }
                 }
                 const obj3 = { style: tmp4.content, variant: "text-md/medium", color: str2, children: cResult[14] };
-                const tmp24 = closure_4(guildId(5235).Text, obj3);
+                const tmp24 = closure_4(guildId(5270).Text, obj3);
                 cResult[15] = tmp4.content;
                 cResult[16] = str2;
                 cResult[17] = cResult[14];
@@ -131,17 +131,17 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
     }
     if (null != emojiPickerIcon) {
       const obj4 = { guildId, id: emojiPickerIcon };
-      let tmp13 = closure_4(tmp5(16639), obj4);
+      let tmp13 = closure_4(tmp5(16868), obj4);
     } else {
       const obj5 = { size: "custom", style: tmp4.emojiPickerIcon };
-      tmp13 = closure_4(guildId(9349).ReactionIcon, obj5);
+      tmp13 = closure_4(guildId(9381).ReactionIcon, obj5);
     }
     cResult[3] = emojiPickerIcon;
     cResult[4] = guildId;
     emojiPickerIcon = tmp4.emojiPickerIcon;
     cResult[5] = emojiPickerIcon;
     cResult[6] = tmp13;
-    const tmpResult = guildId(16640);
+    const tmpResult = guildId(16869);
   }
   let result = emojiId;
   if (emojiId == null) {
@@ -149,8 +149,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
     if (emojiName == null) {
       str = "";
     }
-    result = tmp5(4918).convertSurrogateToName(str, false);
-    const tmp5Result = tmp5(4918);
+    result = tmp5(4950).convertSurrogateToName(str, false);
+    const tmp5Result = tmp5(4950);
   }
   cResult[0] = emojiId;
   cResult[1] = emojiName;
@@ -166,19 +166,19 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
     if (emojiName == null) {
       emojiName = "";
     }
-    emojiId = tmp2(4918).convertSurrogateToName(emojiName, false);
-    const tmp2Result = tmp2(4918);
+    emojiId = tmp2(4950).convertSurrogateToName(emojiName, false);
+    const tmp2Result = tmp2(4950);
   }
-  const tmp4 = onChange(15181)();
-  const emojiByIdOrName = guildId(16640).useEmojiByIdOrName(guildId, emojiId);
+  const tmp4 = onChange(15406)();
+  const emojiByIdOrName = guildId(16869).useEmojiByIdOrName(guildId, emojiId);
   if (null != emojiId) {
     let obj = { guildId, id: emojiId };
-    let tmp8 = closure_4(tmp2(16639), obj);
+    let tmp8 = closure_4(tmp2(16868), obj);
     let tmp7 = closure_4;
   } else {
     tmp7 = closure_4;
     const obj3 = { size: "custom", style: tmp.emojiPickerIcon };
-    tmp8 = closure_4(tmp5(9349).ReactionIcon, obj3);
+    tmp8 = closure_4(tmp5(9381).ReactionIcon, obj3);
   }
   const obj4 = {
     style: null,
@@ -207,7 +207,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
   const items = [tmp.container, tmp4.textInput];
   obj4.style = items;
   const items1 = [tmp8, , ];
-  let obj2 = guildId(16640);
+  let obj2 = guildId(16869);
   const obj5 = { style: tmp.content, variant: "text-md/medium", color: null, children: null };
   let str = "text-muted";
   if (null != emojiByIdOrName) {
@@ -215,15 +215,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function FormEmoj
   }
   obj5.color = str;
   if (null != emojiByIdOrName) {
-    let allEmojiNamesString = tmp5(4922).getAllEmojiNamesString(emojiByIdOrName);
-    const tmp5Result = tmp5(4922);
+    let allEmojiNamesString = tmp5(4954).getAllEmojiNamesString(emojiByIdOrName);
+    const tmp5Result = tmp5(4954);
   } else {
     const intl = tmp5(1125).intl;
     allEmojiNamesString = intl.string(tmp5(1125).t.gXAN3P);
   }
   obj5.children = allEmojiNamesString;
-  items1[1] = tmp7(guildId(5235).Text, obj5);
-  items1[2] = tmp7(guildId(7307).ChevronSmallRightIcon, { size: "md" });
+  items1[1] = tmp7(guildId(5270).Text, obj5);
+  items1[2] = tmp7(guildId(7341).ChevronSmallRightIcon, { size: "md" });
   obj4.children = items1;
-  return closure_5(onChange(9041), obj4);
+  return closure_5(onChange(9074), obj4);
 });

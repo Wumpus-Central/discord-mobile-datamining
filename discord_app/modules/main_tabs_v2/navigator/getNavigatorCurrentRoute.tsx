@@ -1,7 +1,7 @@
-// === Module 11176: getNavigatorCurrentRoute ===
+// === Module 11211: getNavigatorCurrentRoute ===
 
-// Module 11176 (getNavigatorCurrentRoute)
-import RootNavigationRef from "RootNavigationRef" /* 5152 */;
+// Module 11211 (getNavigatorCurrentRoute)
+import RootNavigationRef from "RootNavigationRef" /* 5187 */;
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("modules/main_tabs_v2/navigator/getNavigatorCurrentRoute.tsx");

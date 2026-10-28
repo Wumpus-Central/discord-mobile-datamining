@@ -1,15 +1,15 @@
-// === Module 16971: CacheActionsDiskUsageSection ===
+// === Module 17201: CacheActionsDiskUsageSection ===
 
-// Module 16971 (CacheActionsDiskUsageSection)
+// Module 17201 (CacheActionsDiskUsageSection)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import Stack_Stack from "Stack/Stack" /* 5978 */;
-import FileSizeUtils from "FileSizeUtils" /* 6380 */;
-import Card from "Card" /* 6907 */;
-import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 16974 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import Stack_Stack from "Stack/Stack" /* 6013 */;
+import FileSizeUtils from "FileSizeUtils" /* 6414 */;
+import Card from "Card" /* 6941 */;
+import CacheActionsStorageDiagnosticsDefault from "CacheActionsStorageDiagnostics" /* 17204 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
@@ -17,7 +17,7 @@ import noop from "module_19" /* 19 */;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7, Fragment: closure_8 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { label: { flex: 1 }, nestedLabel: { flex: 1, paddingLeft: nativeDefault.space.PX_16 }, value: { flexShrink: 1 } };
 let closure_9 = createStyles.createStyles(obj2);
 let ReactCompilerGating = fn(558);

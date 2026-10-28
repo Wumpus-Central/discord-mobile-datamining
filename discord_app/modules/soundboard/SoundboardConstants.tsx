@@ -1,6 +1,6 @@
-// === Module 6009: SoundboardConstants ===
+// === Module 6044: SoundboardConstants ===
 
-// Module 6009 (SoundboardConstants)
+// Module 6044 (SoundboardConstants)
 import size from "module_2" /* 2 */;
 
 const obj = { SUCCESS: 0, [0]: "SUCCESS", INTERRUPTED: 1, [1]: "INTERRUPTED" };
@@ -23,4 +23,3 @@ export const EMPTY_SOUND_ID_LIST = [];
 export const CUSTOM_CALL_SOUND_GLOBAL_GUILD_ID = "0";
 export const EFFECT_BUTTON_HOVER_TIME_HIDE_MS = 300;
 export const EFFECT_BUTTON_HOVER_TIME_SHOW_MS = 200;
-export const SOUNDBOARD_FAVORITE_SOUND_DRAG_TYPE = "SOUNDBOARD_FAVORITE_SOUND";

@@ -1,6 +1,6 @@
-// === Module 11460: isActivitySupportedOnClientPlatform ===
+// === Module 11498: isActivitySupportedOnClientPlatform ===
 
-// Module 11460 (isActivitySupportedOnClientPlatform)
+// Module 11498 (isActivitySupportedOnClientPlatform)
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import Server from "Server" /* 1997 */;
 import size from "module_2" /* 2 */;

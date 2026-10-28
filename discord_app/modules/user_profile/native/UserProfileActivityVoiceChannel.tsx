@@ -1,17 +1,17 @@
-// === Module 14346: UserProfileActivityVoiceChannel ===
+// === Module 14569: UserProfileActivityVoiceChannel ===
 
-// Module 14346 (UserProfileActivityVoiceChannel)
+// Module 14569 (UserProfileActivityVoiceChannel)
 import _mod17 from "module_17" /* 17 */;
 import Constants from "Constants" /* 1095 */;
 import native from "native" /* 1199 */;
 import asyncRequireImpl from "asyncRequireImpl" /* 1999 */;
-import GuildRecord from "GuildRecord" /* 4842 */;
-import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5211 */;
-import ToastActionCreatorsDefault from "ToastActionCreators" /* 5664 */;
-import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7868 */;
-import PermissionStore from "PermissionStore" /* 4904 */;
+import GuildRecord from "GuildRecord" /* 4874 */;
+import ActionSheetActionCreatorsDefault from "ActionSheetActionCreators" /* 5246 */;
+import ToastActionCreatorsDefault from "ToastActionCreators" /* 5699 */;
+import PrivateChannelCallUtils from "PrivateChannelCallUtils" /* 7902 */;
+import PermissionStore from "PermissionStore" /* 4936 */;
 import jsxProd from "jsxProd" /* 21 */;
-import createStyles from "createStyles" /* 4972 */;
+import createStyles from "createStyles" /* 5004 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
 import size from "module_2" /* 2 */;
 
@@ -116,7 +116,7 @@ export default function UserProfileActivityVoiceChannel(guild) {
   obj15.accessibilityLabel = intl3.formatToPlainString(guild(onAction[15]).t.e95u3C, { count: users.length });
   obj15.onPress = function handlePressAvatars() {
     onAction({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14348, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(14571, dependencyMap.paths), "UserProfileActivityVoiceChannelUsers", {
       users,
       channel,
       onPressUser(userId) {

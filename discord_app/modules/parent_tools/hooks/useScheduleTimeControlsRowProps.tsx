@@ -1,11 +1,11 @@
-// === Module 16240: useScheduleTimeControlsRowProps ===
+// === Module 16468: useScheduleTimeControlsRowProps ===
 
-// Module 16240 (useScheduleTimeControlsRowProps)
+// Module 16468 (useScheduleTimeControlsRowProps)
 import jsxProd from "jsxProd" /* 21 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import _modDef2535 from "module_2535" /* 2535 */;
-import Text_Text from "Text/Text" /* 5235 */;
+import Text_Text from "Text/Text" /* 5270 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 
@@ -17,7 +17,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSched
   if (0 === arr.length) {
     const _Symbol2 = Symbol;
     if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-      const obj2 = { subLabel: null, trailing: "y" };
+      const obj2 = { subLabel: null, trailing: "Array" };
       const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
       const intl3 = util.intl;
       obj3.children = intl3.string(_modDef2535.fOBIZH);
@@ -90,7 +90,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useSched
   }
 }) : (function useScheduleTimeControlsRowProps(arr) {
   if (0 === arr.length) {
-    const obj2 = { subLabel: null, trailing: "y" };
+    const obj2 = { subLabel: null, trailing: "Array" };
     const obj3 = { variant: "text-xs/medium", color: "text-muted", children: null };
     const intl = util.intl;
     obj3.children = intl.string(_modDef2535.fOBIZH);

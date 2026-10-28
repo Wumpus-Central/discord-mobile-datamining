@@ -1,10 +1,10 @@
-// === Module 10633: GameRelationshipActionCreators ===
+// === Module 10665: GameRelationshipActionCreators ===
 
-// Module 10633 (GameRelationshipActionCreators)
+// Module 10665 (GameRelationshipActionCreators)
 import util from "util" /* 1125 */;
-import shared from "shared" /* 4979 */;
-import AlertActionCreatorsDefault from "AlertActionCreators" /* 5909 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6375 */;
+import shared from "shared" /* 5011 */;
+import AlertActionCreatorsDefault from "AlertActionCreators" /* 5944 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6409 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 
 require = fn;
@@ -116,7 +116,7 @@ let closure_9 = async function _removeGameFriend() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4979).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_1_0(5011).AccessibilityAnnouncer;
       const intl = closure_1_0(1125).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_1_0(1125).t.zRf8cO));
     }
@@ -131,7 +131,7 @@ let closure_10 = async function _cancelGameFriendRequest() {
     userId: closure_129_0,
     applicationId: closure_129_1,
     onSuccess() {
-      const AccessibilityAnnouncer = closure_1_0(4979).AccessibilityAnnouncer;
+      const AccessibilityAnnouncer = closure_1_0(5011).AccessibilityAnnouncer;
       const intl = closure_1_0(1125).intl;
       AccessibilityAnnouncer.announce(intl.string(closure_1_0(1125).t.XMf21q));
     }
@@ -170,7 +170,7 @@ export default {
       const intl = util.intl;
       AccessibilityAnnouncer.announce(intl.string(util.t.taJiuc));
     }).catch((error) => {
-      const aPIError = new onSuccess(6375).APIError(error);
+      const aPIError = new onSuccess(6409).APIError(error);
       let anyErrorMessage = aPIError.getAnyErrorMessage();
       const obj = { title: null, body: null };
       const intl = onSuccess(1125).intl;

@@ -1,18 +1,18 @@
-// === Module 9665: ThreadCreationHooks ===
+// === Module 9697: ThreadCreationHooks ===
 
-// Module 9665 (ThreadCreationHooks)
+// Module 9697 (ThreadCreationHooks)
 import HTTPUtils from "HTTPUtils" /* 1294 */;
-import ThreadHooks from "ThreadHooks" /* 7371 */;
-import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7383 */;
-import MessageActionCreatorsDefault from "MessageActionCreators" /* 7567 */;
-import MessageParserDefault from "MessageParser" /* 7756 */;
+import ThreadHooks from "ThreadHooks" /* 7406 */;
+import sanitizeThreadNameDefault from "sanitizeThreadName" /* 7418 */;
+import MessageActionCreatorsDefault from "MessageActionCreators" /* 7601 */;
+import MessageParserDefault from "MessageParser" /* 7790 */;
 import _slicedToArray from "module_32" /* 32 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import ForumActivePostStore from "ForumActivePostStore" /* 7404 */;
+import ForumActivePostStore from "ForumActivePostStore" /* 7439 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import MessageStore from "MessageStore" /* 6011 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import MessageStore from "MessageStore" /* 6045 */;
 
 const require = globalThis.__r;
 
@@ -463,13 +463,13 @@ let closure_28 = async function _createThread_(arg0, arg1, arg2, arg3) {
     return value;
   })();
 };
-const DraftType = fn(7632).DraftType;
-const SlowmodeType = fn(7761).SlowmodeType;
+const DraftType = fn(7666).DraftType;
+const SlowmodeType = fn(7795).SlowmodeType;
 const ThreadConstants = fn(1124);
 ({ FORUM_POST_CREATION_AUTOMOD_ERRORS: closure_12, FORUM_POST_CREATION_UPLOAD_ERRORS: map1 } = ThreadConstants);
 const Constants = fn(1084);
 ({ AbortCodes: closure_14, AnalyticEvents: closure_15, ChannelTypes: closure_16, Endpoints: closure_17, LoggingInviteTypes: closure_18, MAX_MESSAGES_PER_CHANNEL: closure_19, MessageFlags: closure_20 } = Constants);
-const MessageSendLocation = fn(4977).MessageSendLocation;
+const MessageSendLocation = fn(5009).MessageSendLocation;
 const PrivateThreadMode = { Disabled: 1, [1]: "Disabled", Enabled: 2, [2]: "Enabled", PrivateOnly: 3, [3]: "PrivateOnly" };
 fn(558);
 let ReactCompilerGating = fn(558);

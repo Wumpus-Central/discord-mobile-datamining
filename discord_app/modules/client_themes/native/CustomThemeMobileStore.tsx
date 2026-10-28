@@ -5,7 +5,7 @@ import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
 import ClientThemesUtils from "ClientThemesUtils" /* 1251 */;
-import isPerModeThemingActive from "isPerModeThemingActive" /* 5036 */;
+import isPerModeThemingActive from "isPerModeThemingActive" /* 5068 */;
 import SelectivelySyncedUserSettingsStore from "SelectivelySyncedUserSettingsStore" /* 1205 */;
 import ThemeStore from "ThemeStore" /* 1204 */;
 import UnsyncedUserSettingsStore from "UnsyncedUserSettingsStore" /* 1206 */;
@@ -96,7 +96,7 @@ prototype["getState"] = function getState() {
     const obj2 = { theme, customTheme: prop };
     let obj = obj2;
   } else {
-    obj = { theme: "toCharArray$esjava$1", customTheme: "Symbol" };
+    obj = { theme: "useCallback", customTheme: "PX_16" };
   }
   return obj;
 };

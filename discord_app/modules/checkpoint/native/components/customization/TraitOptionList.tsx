@@ -1,21 +1,21 @@
-// === Module 13045: TraitOptionList ===
+// === Module 13262: TraitOptionList ===
 
-// Module 13045 (TraitOptionList)
+// Module 13262 (TraitOptionList)
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
-import ReanimatedRexport from "ReanimatedRexport" /* 5053 */;
-import HapticUtils from "HapticUtils" /* 5213 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6364 */;
-import inlineStyles from "inlineStyles" /* 7960 */;
+import ReanimatedRexport from "ReanimatedRexport" /* 5085 */;
+import HapticUtils from "HapticUtils" /* 5248 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6398 */;
+import inlineStyles from "inlineStyles" /* 7994 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
 
 const require = globalThis.__r;
 const inlineStylesDefault = inlineStyles;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6016);
+const CheckpointConstants = fn(6050);
 ({ CHECKPOINT_PRIMARY: metroRequire, TRAIT_OPTION_HEIGHT } = CheckpointConstants);
 const TRAIT_OPTION_WIDTH = CheckpointConstants.TRAIT_OPTION_WIDTH;
 const jsxProd = fn(21);
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 const PX_12 = nativeDefault.space.PX_12;
 const PX_16 = nativeDefault.space.PX_16;
 let closure_12 = TRAIT_OPTION_WIDTH + PX_12;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_13 = createStyles.createStyles({ assetList: { paddingHorizontal: PX_16 }, radioGroup: { flexDirection: "row", gap: PX_12 }, selectorOverlay: { position: "absolute", left: PX_16, top: 0, width: TRAIT_OPTION_WIDTH, height: TRAIT_OPTION_HEIGHT } });
 let ReactCompilerGating = fn(558);
 let closure_14 = ReactCompilerGating.isReactCompilerEnabled() ? (function SelectedWindow() {
@@ -391,18 +391,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitOpt
                                   arr1 = Array.from(obj, (arg0, arg1) => {
                                     const diff = closure_4 - arg1 - 1;
                                     closure_0 = diff;
-                                    let obj = options(5053);
+                                    let obj = options(5085);
                                     const obj3 = { duration: 100, easing: null };
-                                    const Easing = options(5053).Easing;
-                                    obj3.easing = Easing.out(options(5053).Easing.cubic);
+                                    const Easing = options(5085).Easing;
+                                    obj3.easing = Easing.out(options(5085).Easing.cubic);
                                     const fn = function o(arg0) {
                                       if (true === arg0) {
                                         options(disabled[13]).runOnJS(onIntroStep)(diff);
                                         const obj = options(disabled[13]);
                                       }
                                     };
-                                    const obj2 = options(5207);
-                                    fn.__closure = { runOnJS: options(5053).runOnJS, onIntroStep, target: diff };
+                                    const obj2 = options(5242);
+                                    fn.__closure = { runOnJS: options(5085).runOnJS, onIntroStep, target: diff };
                                     fn.__workletHash = 1164546249137;
                                     fn.__initData = __initData;
                                     return obj.withDelay(250, obj2.withTiming(diff, obj3, "respect-motion-settings", fn));
@@ -506,18 +506,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitOpt
             arr1 = Array.from(obj, (arg0, arg1) => {
               const diff = closure_4 - arg1 - 1;
               closure_0 = diff;
-              let obj = options(5053);
+              let obj = options(5085);
               const obj3 = { duration: 100, easing: null };
-              const Easing = options(5053).Easing;
-              obj3.easing = Easing.out(options(5053).Easing.cubic);
+              const Easing = options(5085).Easing;
+              obj3.easing = Easing.out(options(5085).Easing.cubic);
               const fn = function o(arg0) {
                 if (true === arg0) {
                   options(disabled[13]).runOnJS(onIntroStep)(diff);
                   const obj = options(disabled[13]);
                 }
               };
-              const obj2 = options(5207);
-              fn.__closure = { runOnJS: options(5053).runOnJS, onIntroStep, target: diff };
+              const obj2 = options(5242);
+              fn.__closure = { runOnJS: options(5085).runOnJS, onIntroStep, target: diff };
               fn.__workletHash = 1164546249137;
               fn.__initData = __initData;
               return obj.withDelay(250, obj2.withTiming(diff, obj3, "respect-motion-settings", fn));
@@ -633,18 +633,18 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitOpt
       HermesBuiltin.arraySpread(Array.from(obj, (arg0, arg1) => {
         const diff = closure_4 - arg1 - 1;
         closure_0 = diff;
-        let obj = options(5053);
+        let obj = options(5085);
         const obj3 = { duration: 100, easing: null };
-        const Easing = options(5053).Easing;
-        obj3.easing = Easing.out(options(5053).Easing.cubic);
+        const Easing = options(5085).Easing;
+        obj3.easing = Easing.out(options(5085).Easing.cubic);
         const fn = function o(arg0) {
           if (true === arg0) {
             options(disabled[13]).runOnJS(onIntroStep)(diff);
             const obj = options(disabled[13]);
           }
         };
-        const obj2 = options(5207);
-        fn.__closure = { runOnJS: options(5053).runOnJS, onIntroStep, target: diff };
+        const obj2 = options(5242);
+        fn.__closure = { runOnJS: options(5085).runOnJS, onIntroStep, target: diff };
         fn.__workletHash = 1402521414610;
         fn.__initData = __initData;
         return obj.withDelay(250, obj2.withTiming(diff, obj3, "respect-motion-settings", fn));
@@ -691,8 +691,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitOpt
           if (null != tmp6) {
             if (tmp6.optionId !== importDefault) {
               onSelectOption(tmp6.trait, tmp6.optionId);
-              const result = x(5213).triggerHapticFeedback(x(5213).HapticFeedbackTypes.IMPACT_LIGHT);
-              const obj = x(5213);
+              const result = x(5248).triggerHapticFeedback(x(5248).HapticFeedbackTypes.IMPACT_LIGHT);
+              const obj = x(5248);
             }
           }
         }
@@ -754,8 +754,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function TraitOpt
       closure_10.current = false;
       if (traitOption.optionId !== importDefault) {
         onSelectOption(traitOption.trait, traitOption.optionId);
-        const result = traitOption(5213).triggerHapticFeedback(traitOption(5213).HapticFeedbackTypes.IMPACT_LIGHT);
-        const obj2 = traitOption(5213);
+        const result = traitOption(5248).triggerHapticFeedback(traitOption(5248).HapticFeedbackTypes.IMPACT_LIGHT);
+        const obj2 = traitOption(5248);
       }
       if (!isScreenReaderEnabled) {
         const current = animatedRef.current;

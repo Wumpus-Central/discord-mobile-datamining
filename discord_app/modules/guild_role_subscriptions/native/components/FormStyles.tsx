@@ -1,10 +1,10 @@
-// === Module 15181: FormStyles ===
+// === Module 15406: FormStyles ===
 
-// Module 15181 (FormStyles)
+// Module 15406 (FormStyles)
 import nativeDefault from "native" /* 587 */;
 import Constants from "Constants" /* 1084 */;
-import createStyles from "createStyles" /* 4972 */;
-import TextStyles_mod from "TextStyles" /* 6652 */;
+import createStyles from "createStyles" /* 5004 */;
+import TextStyles_mod from "TextStyles" /* 6686 */;
 import size from "module_2" /* 2 */;
 
 const Fonts = Constants.Fonts;

@@ -1,6 +1,6 @@
-// === Module 4987: AccessibilityPreferencesContext/AccessibilityConstants ===
+// === Module 5019: AccessibilityPreferencesContext/AccessibilityConstants ===
 
-// Module 4987 (AccessibilityPreferencesContext/AccessibilityConstants)
+// Module 5019 (AccessibilityPreferencesContext/AccessibilityConstants)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/packages/design/components/AccessibilityPreferencesContext/AccessibilityConstants.tsx");

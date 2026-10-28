@@ -1,6 +1,6 @@
-// === Module 11193: GuildIdentityActionCreators ===
+// === Module 11228: GuildIdentityActionCreators ===
 
-// Module 11193 (GuildIdentityActionCreators)
+// Module 11228 (GuildIdentityActionCreators)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 

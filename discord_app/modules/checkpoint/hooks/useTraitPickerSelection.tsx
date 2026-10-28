@@ -1,10 +1,10 @@
-// === Module 13043: useTraitPickerSelection ===
+// === Module 13260: useTraitPickerSelection ===
 
-// Module 13043 (useTraitPickerSelection)
-import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6040 */;
-import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6364 */;
+// Module 13260 (useTraitPickerSelection)
+import CheckpointCharacterTraits from "CheckpointCharacterTraits" /* 6074 */;
+import CheckpointCustomizationUtils from "CheckpointCustomizationUtils" /* 6398 */;
 import noop from "module_19" /* 19 */;
-import CheckpointStore from "CheckpointStore" /* 12968 */;
+import CheckpointStore from "CheckpointStore" /* 13015 */;
 
 require = fn;
 const ReactCompilerGating = fn(558);

@@ -1,9 +1,9 @@
-// === Module 11620: useIsVideoBackgroundEnabled ===
+// === Module 11658: useIsVideoBackgroundEnabled ===
 
-// Module 11620 (useIsVideoBackgroundEnabled)
+// Module 11658 (useIsVideoBackgroundEnabled)
 import c from "c" /* 576 */;
 import PlatformUtils from "PlatformUtils" /* 1381 */;
-import useIsVideoBackgroundSupportedDefault from "useIsVideoBackgroundSupported" /* 11621 */;
+import useIsVideoBackgroundSupportedDefault from "useIsVideoBackgroundSupported" /* 11659 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

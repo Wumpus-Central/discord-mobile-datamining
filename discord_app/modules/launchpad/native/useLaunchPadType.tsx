@@ -1,9 +1,9 @@
-// === Module 11209: useLaunchPadType ===
+// === Module 11245: useLaunchPadType ===
 
-// Module 11209 (useLaunchPadType)
+// Module 11245 (useLaunchPadType)
 import preloaded_user_settings from "preloaded_user_settings" /* 1208 */;
-import UserSettings from "UserSettings" /* 4800 */;
-import LaunchPadConstants from "LaunchPadConstants" /* 11208 */;
+import UserSettings from "UserSettings" /* 4832 */;
+import LaunchPadConstants from "LaunchPadConstants" /* 11244 */;
 import ReactCompilerGating_mod from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

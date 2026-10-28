@@ -1,6 +1,6 @@
-// === Module 13846: ? ===
+// === Module 14064: ? ===
 
-// Module 13846
+// Module 14064
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/ReminderWatchSpotIllustration-1x.png.js");

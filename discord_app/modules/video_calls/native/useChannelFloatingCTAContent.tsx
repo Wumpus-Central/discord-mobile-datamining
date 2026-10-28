@@ -1,11 +1,11 @@
-// === Module 18553: useChannelFloatingCTAContent ===
+// === Module 18801: useChannelFloatingCTAContent ===
 
-// Module 18553 (useChannelFloatingCTAContent)
-import dismissible_content from "dismissible_content" /* 4808 */;
-import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 11652 */;
+// Module 18801 (useChannelFloatingCTAContent)
+import dismissible_content from "dismissible_content" /* 4840 */;
+import useGameConsoleAccountsDefault from "useGameConsoleAccounts" /* 11690 */;
 import noop from "module_19" /* 19 */;
 import MediaEngineStore from "MediaEngineStore" /* 2011 */;
-import RTCConnectionStore from "RTCConnectionStore" /* 5715 */;
+import RTCConnectionStore from "RTCConnectionStore" /* 5750 */;
 
 const require = globalThis.__r;
 
@@ -66,13 +66,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useChann
   }
   const items2 = [];
   if (stateFromStores1) {
-    items2.push(tmp(4808).DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA);
+    items2.push(tmp(4840).DismissibleContent.VOICE_PANEL_BAD_CONNECTION_CTA);
   }
   if (stateFromStores) {
-    items2.push(tmp(4808).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA);
+    items2.push(tmp(4840).DismissibleContent.SOUNDBOARD_MOBILE_FLOATING_CTA);
   }
   if (obj3.some((twoWayLink) => twoWayLink.twoWayLink)) {
-    items2.push(tmp(4808).DismissibleContent.DONUT_MOBILE_NUX);
+    items2.push(tmp(4840).DismissibleContent.DONUT_MOBILE_NUX);
   }
   cResult[5] = obj3;
   cResult[6] = stateFromStores1;

@@ -1,15 +1,15 @@
-// === Module 9758: ConversationNavigatorMoreMenu ===
+// === Module 9790: ConversationNavigatorMoreMenu ===
 
-// Module 9758 (ConversationNavigatorMoreMenu)
+// Module 9790 (ConversationNavigatorMoreMenu)
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
-import ToastUtils from "ToastUtils" /* 5663 */;
-import IconButton from "IconButton" /* 7957 */;
-import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9646 */;
-import ConversationsActionCreators from "ConversationsActionCreators" /* 9738 */;
-import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9741 */;
-import ThumbsUpIcon from "ThumbsUpIcon" /* 9759 */;
-import ThumbsDownIcon from "ThumbsDownIcon" /* 9761 */;
+import ToastUtils from "ToastUtils" /* 5698 */;
+import IconButton from "IconButton" /* 7991 */;
+import MoreHorizontalIcon from "MoreHorizontalIcon" /* 9678 */;
+import ConversationsActionCreators from "ConversationsActionCreators" /* 9770 */;
+import ConversationsAnalytics2 from "ConversationsAnalytics" /* 9773 */;
+import ThumbsUpIcon from "ThumbsUpIcon" /* 9791 */;
+import ThumbsDownIcon from "ThumbsDownIcon" /* 9793 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ require = fn;
 let closure_2 = ["ref"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { paddingHorizontal: nativeDefault.space.PX_12 } };
 let closure_7 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

@@ -1,14 +1,14 @@
-// === Module 11366: _tryJoinAsFrame ===
+// === Module 11403: _tryJoinAsFrame ===
 
-// Module 11366 (_tryJoinAsFrame)
-import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7413 */;
-import getFrameSurfaces from "getFrameSurfaces" /* 11360 */;
-import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11365 */;
+// Module 11403 (_tryJoinAsFrame)
+import ChannelActionCreatorsDefault from "ChannelActionCreators" /* 7448 */;
+import getFrameSurfaces from "getFrameSurfaces" /* 11397 */;
+import getOrFetchApplicationDefault from "getOrFetchApplication" /* 11402 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
-import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4823 */;
-import ChannelRTCStore from "ChannelRTCStore" /* 6773 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import PresenceStore from "PresenceStore" /* 5713 */;
+import EmbeddedActivitiesStore from "EmbeddedActivitiesStore" /* 4855 */;
+import ChannelRTCStore from "ChannelRTCStore" /* 6807 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import PresenceStore from "PresenceStore" /* 5748 */;
 
 require = fn;
 let closure_10 = async function _tryJoinAsFrame(arg0) {
@@ -469,7 +469,7 @@ let closure_13 = async function _startActivity(arg0, arg1) {
   })();
 };
 const ActivityFlags = fn(1084).ActivityFlags;
-const MAIN_SURFACE = fn(6777).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6811).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/GamesActionCreators.shared.tsx");
 

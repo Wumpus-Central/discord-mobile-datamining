@@ -1,20 +1,20 @@
-// === Module 8972: ChannelPermissionsUtils ===
+// === Module 9006: ChannelPermissionsUtils ===
 
-// Module 8972 (ChannelPermissionsUtils)
+// Module 9006 (ChannelPermissionsUtils)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import BigFlagUtilsAll from "BigFlagUtils" /* 1096 */;
 import util from "util" /* 1125 */;
 import Server from "Server" /* 1997 */;
-import ChannelRecord from "ChannelRecord" /* 4828 */;
-import GuildRecord from "GuildRecord" /* 4842 */;
-import GuildRoleUtils from "GuildRoleUtils" /* 4882 */;
-import PermissionUtilsAll from "PermissionUtils" /* 4909 */;
-import UserUtilsDefault from "UserUtils" /* 5026 */;
-import ChannelUtils from "ChannelUtils" /* 5995 */;
-import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 7876 */;
-import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 8973 */;
-import GuildRoleRecord from "GuildRoleRecord" /* 4879 */;
-import GuildMemberStore from "GuildMemberStore" /* 4884 */;
+import ChannelRecord from "ChannelRecord" /* 4860 */;
+import GuildRecord from "GuildRecord" /* 4874 */;
+import GuildRoleUtils from "GuildRoleUtils" /* 4914 */;
+import PermissionUtilsAll from "PermissionUtils" /* 4941 */;
+import UserUtilsDefault from "UserUtils" /* 5058 */;
+import ChannelUtils from "ChannelUtils" /* 6030 */;
+import ChannelPermissionsConstants from "ChannelPermissionsConstants" /* 7910 */;
+import ChannelSettingsPermissionsActionCreators from "ChannelSettingsPermissionsActionCreators" /* 9007 */;
+import GuildRoleRecord from "GuildRoleRecord" /* 4911 */;
+import GuildMemberStore from "GuildMemberStore" /* 4916 */;
 import UserStore from "UserStore" /* 1389 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
@@ -645,17 +645,17 @@ export const isPrivateTextChannel = function isPrivateTextChannel(type) {
   }
   return hasItem;
 };
-export const canCreatePrivateChannel = function canCreatePrivateChannel(first1, canResult, canResult1) {
+export const canCreatePrivateChannel = function canCreatePrivateChannel(GUILD_APP, canResult, canResult1) {
   let tmp2 = canResult;
-  if (first1 !== constants2.GUILD_TEXT) {
+  if (GUILD_APP !== constants2.GUILD_TEXT) {
     tmp2 = canResult;
-    if (first1 !== constants2.GUILD_ANNOUNCEMENT) {
+    if (GUILD_APP !== constants2.GUILD_ANNOUNCEMENT) {
       tmp2 = canResult;
-      if (first1 !== constants2.GUILD_APP) {
-        const tmp4 = isGuildVocalChannelType(first1);
+      if (GUILD_APP !== constants2.GUILD_APP) {
+        const tmp4 = isGuildVocalChannelType(GUILD_APP);
         let tmp5 = !tmp4;
         if (!tmp4) {
-          tmp5 = first1 !== constants2.GUILD_CATEGORY;
+          tmp5 = GUILD_APP !== constants2.GUILD_CATEGORY;
         }
         if (!tmp5) {
           let tmp6 = canResult;

@@ -1,27 +1,27 @@
-// === Module 18200: BaseMessagesScreen ===
+// === Module 18439: BaseMessagesScreen ===
 
-// Module 18200 (BaseMessagesScreen)
-import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13239 */;
-import SearchUtils from "SearchUtils" /* 13246 */;
-import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13260 */;
-import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 18202 */;
+// Module 18439 (BaseMessagesScreen)
+import SearchPlatformUtilsDefault from "SearchPlatformUtils" /* 13456 */;
+import SearchUtils from "SearchUtils" /* 13463 */;
+import search_tracking_TrackingDefault from "search/tracking/Tracking" /* 13477 */;
+import SearchHistoricalIndexingHeaderDefault from "SearchHistoricalIndexingHeader" /* 18441 */;
 import noop from "module_19" /* 19 */;
-import SearchMessageStore from "SearchMessageStore" /* 6793 */;
-import SearchQueryStore from "SearchQueryStore" /* 13253 */;
+import SearchMessageStore from "SearchMessageStore" /* 6827 */;
+import SearchQueryStore from "SearchQueryStore" /* 13470 */;
 
 require = fn;
-const constants = fn(9715).SearchResultContentEntityTypes;
+const constants = fn(9747).SearchResultContentEntityTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/search/native/components/tabs/pages/messages/BaseMessagesScreen.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseMessagesScreen(tab) {
-  const cResult = searchContext(isFocused[7]).c(45);
+  const cResult = searchContext(isFocused[7]).c(46);
   ({ data, searchContext } = tab);
   tab = tab.tab;
   isFocused = tab.isFocused;
-  ({ isFirstPageLoading, contentContainerStyle, ItemSeparatorComponent, numColumns, keywordResultCount, smartSearchStatus } = tab);
+  ({ isFirstPageLoading, contentContainerStyle, ItemSeparatorComponent, numColumns, keywordResultCount, smartSearchStatus, viewabilityConfigCallbackPairs } = tab);
   if (!isFirstPageLoading) {
     isFirstPageLoading = tab.isNextPageLoading;
   }
@@ -81,7 +81,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseMess
                                           }
                                         }
                                         const obj2 = { searchContext: null, documentsIndexed: null, tab: null };
-                                        class U {
+                                        class V {
                                           constructor() {
                                             tmp = isErrorToast;
                                             if (isErrorToast) {
@@ -142,7 +142,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseMess
                                       }
                                     }
                                   }
-                                  class U {
+                                  class V {
                                     constructor() {
                                       tmp = isErrorToast;
                                       if (isErrorToast) {
@@ -162,7 +162,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseMess
                                 }
                               }
                             }
-                            class U {
+                            class V {
                               constructor() {
                                 tmp = isErrorToast;
                                 if (isErrorToast) {
@@ -218,15 +218,15 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseMess
                             }
                             cResult[26] = showErrorToast;
                             cResult[27] = items1;
-                            cResult[28] = U;
-                            tmp20 = U;
+                            cResult[28] = V;
+                            tmp20 = V;
                             tmp19 = items1;
                             obj6 = isFirstPageLoading;
                           }
                         }
                       }
                     }
-                    const fn2 = function q() {
+                    const fn2 = function z() {
                       let tmp = isFocused;
                       if (isFocused) {
                         tmp = !isFirstPageLoading;
@@ -441,7 +441,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function BaseMess
         return tmp13;
       }
     }
-    const obj7 = { contentContainerStyle, data, onEndReached: callback, ListHeaderComponent: tmp9, ItemSeparatorComponent, numColumns, scrollToTopKey: searchResultsQuery };
+    const obj7 = { contentContainerStyle, data, onEndReached: callback, ListHeaderComponent: tmp9, ItemSeparatorComponent, numColumns, viewabilityConfigCallbackPairs: tab.viewabilityConfigCallbackPairs, scrollToTopKey: searchResultsQuery };
     tmp13 = hasError(tab(tmp2[17]), obj7);
     tmp10 = smartSearchStatus === tmp(tmp2[15]).SmartSearchStatus.LOADING || smartSearchStatus === tmp(tmp2[15]).SmartSearchStatus.LOADED;
   }

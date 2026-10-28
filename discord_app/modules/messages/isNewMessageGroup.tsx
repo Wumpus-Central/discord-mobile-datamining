@@ -1,10 +1,10 @@
-// === Module 10009: isNewMessageGroup ===
+// === Module 10041: isNewMessageGroup ===
 
-// Module 10009 (isNewMessageGroup)
+// Module 10041 (isNewMessageGroup)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import DurationsDefault from "Durations" /* 1101 */;
-import DateUtils from "DateUtils" /* 4797 */;
-import isSystemMessageDefault from "isSystemMessage" /* 6818 */;
+import DateUtils from "DateUtils" /* 4829 */;
+import isSystemMessageDefault from "isSystemMessage" /* 6852 */;
 import Constants from "Constants" /* 1084 */;
 import size from "module_2" /* 2 */;
 

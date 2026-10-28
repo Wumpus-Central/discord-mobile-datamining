@@ -1,6 +1,6 @@
-// === Module 5746: DirectVideoStream ===
+// === Module 5781: DirectVideoStream ===
 
-// Module 5746 (DirectVideoStream)
+// Module 5781 (DirectVideoStream)
 import inject from "inject" /* 2013 */;
 import size from "module_2" /* 2 */;
 

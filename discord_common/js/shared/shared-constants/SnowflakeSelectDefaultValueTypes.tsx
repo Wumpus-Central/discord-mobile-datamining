@@ -1,6 +1,6 @@
-// === Module 8604: SnowflakeSelectDefaultValueTypes ===
+// === Module 8641: SnowflakeSelectDefaultValueTypes ===
 
-// Module 8604 (SnowflakeSelectDefaultValueTypes)
+// Module 8641 (SnowflakeSelectDefaultValueTypes)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/SnowflakeSelectDefaultValueTypes.tsx");

@@ -1,13 +1,13 @@
-// === Module 7653: CollectiblesProductRecord ===
+// === Module 7687: CollectiblesProductRecord ===
 
-// Module 7653 (CollectiblesProductRecord)
+// Module 7687 (CollectiblesProductRecord)
 import getPricesFromServerDefault from "getPricesFromServer" /* 2047 */;
 import _slicedToArray from "module_32" /* 32 */;
-import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7654 */;
-import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7660 */;
+import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord" /* 7688 */;
+import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord" /* 7694 */;
 
 const require = fn;
-const CollectiblesItemRecord = fn(7655);
+const CollectiblesItemRecord = fn(7689);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } = CollectiblesItemRecord);
 let closure_7 = fn(1086).REWARD_CATEGORY_AND_REWARD_SKU_IDS;
 const Constants = fn(1084);

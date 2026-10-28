@@ -1,18 +1,18 @@
-// === Module 17733: useGuildActionRows ===
+// === Module 17970: useGuildActionRows ===
 
-// Module 17733 (useGuildActionRows)
-import useIsNewMemberDefault from "useIsNewMember" /* 7328 */;
-import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 13283 */;
-import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13451 */;
-import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 17695 */;
-import useIsEligibleForServerOnboardingSetupProgressDefault from "useIsEligibleForServerOnboardingSetupProgress" /* 17734 */;
+// Module 17970 (useGuildActionRows)
+import useIsNewMemberDefault from "useIsNewMember" /* 7363 */;
+import useCanSeeEventsInChannelListDefault from "useCanSeeEventsInChannelList" /* 13500 */;
+import useHasAllocateBoostPermissionDefault from "useHasAllocateBoostPermission" /* 13670 */;
+import useTotalPossibleBoostCountDefault from "useTotalPossibleBoostCount" /* 17930 */;
+import useIsEligibleForServerOnboardingSetupProgressDefault from "useIsEligibleForServerOnboardingSetupProgress" /* 17971 */;
 import _slicedToArray from "module_32" /* 32 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7327 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7362 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelListGuildActionRow = fn(7644).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7678).ChannelListGuildActionRow;
 const GuildFeatures = fn(1084).GuildFeatures;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -183,14 +183,14 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
         if (premiumProgressBarEnabled) {
           items2.push(ChannelListGuildActionRow.GUILD_PREMIUM_PROGRESS_BAR);
         }
-        tmpResult18 = tmp(7497);
+        tmpResult18 = tmp(7532);
       }
     }
   }
   if (gameServerEnabled) {
     if (isGameServerTabAlwaysOnEnabled) {
       if (!tmp29) {
-        let items3 = [tmp(4808).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+        let items3 = [tmp(4840).DismissibleContent.EMPTY_GAME_SERVER_TAB];
       }
       cResult[6] = gameServerEnabled;
       cResult[7] = tmp29;
@@ -250,7 +250,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   if (gameServerEnabled) {
     if (isGameServerTabAlwaysOnEnabled) {
       if (!hasItem3) {
-        let items2 = [tmp4(4808).DismissibleContent.EMPTY_GAME_SERVER_TAB];
+        let items2 = [tmp4(4840).DismissibleContent.EMPTY_GAME_SERVER_TAB];
       }
       const items3 = [];
       if (hasItem) {

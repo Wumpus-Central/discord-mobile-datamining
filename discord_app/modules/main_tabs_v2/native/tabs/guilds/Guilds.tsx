@@ -1,28 +1,28 @@
-// === Module 17481: guilds/Guilds ===
+// === Module 17716: guilds/Guilds ===
 
-// Module 17481 (guilds/Guilds)
+// Module 17716 (guilds/Guilds)
 import TTITrackerDefault from "TTITracker" /* 9 */;
 import c from "c" /* 576 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import ComponentDispatchUtils from "ComponentDispatchUtils" /* 1120 */;
-import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5147 */;
-import NavigationRouteUtils from "NavigationRouteUtils" /* 5151 */;
-import RootNavigationRef from "RootNavigationRef" /* 5152 */;
-import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5157 */;
-import QuestDockDefault from "QuestDock" /* 16563 */;
-import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17482 */;
-import MainChannelsDefault from "MainChannels" /* 17484 */;
-import YouBarDefault from "YouBar" /* 17849 */;
+import useColorThemeBackgroundDefault from "useColorThemeBackground" /* 5182 */;
+import NavigationRouteUtils from "NavigationRouteUtils" /* 5186 */;
+import RootNavigationRef from "RootNavigationRef" /* 5187 */;
+import HomeDrawerExperiment from "HomeDrawerExperiment" /* 5192 */;
+import QuestDockDefault from "QuestDock" /* 16792 */;
+import TabsPerformanceTracker from "TabsPerformanceTracker" /* 17717 */;
+import MainChannelsDefault from "MainChannels" /* 17719 */;
+import YouBarDefault from "YouBar" /* 18086 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
-import GatewayConnectionStore from "GatewayConnectionStore" /* 6497 */;
+import GatewayConnectionStore from "GatewayConnectionStore" /* 6531 */;
 
-const native = ThemeContextProvider(5038);
-const QuestsEligibility = ThemeContextProvider(9564);
-const QuestDockExternalCoordinationContext = ThemeContextProvider(16484);
-const GuildsRenderExperiment2 = ThemeContextProvider(17483);
+const native = ThemeContextProvider(5070);
+const QuestsEligibility = ThemeContextProvider(9596);
+const QuestDockExternalCoordinationContext = ThemeContextProvider(16713);
+const GuildsRenderExperiment2 = ThemeContextProvider(17718);
 require = fn;
-const YouBarNavigatorScreens = fn(11187).YouBarNavigatorScreens;
+const YouBarNavigatorScreens = fn(11222).YouBarNavigatorScreens;
 const ComponentActions = fn(1084).ComponentActions;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
@@ -97,7 +97,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSho
         let ComponentDispatch = closure_0(1120).ComponentDispatch;
         const subscription1 = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
         let obj = isChatBesideChannelList(584);
-        let rootNavigationRef = closure_0(5152).getRootNavigationRef();
+        let rootNavigationRef = closure_0(5187).getRootNavigationRef();
         if (rootNavigationRef != null) {
           rootNavigationRef.addListener("state", handleNavigationChange);
         }
@@ -126,7 +126,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSho
   }
   const effect = noop.useEffect(tmp4, tmp5);
   if (!isChatBesideChannelList) {
-    isChatBesideChannelList = isChatBesideChannelList(5154)().isChatBesideChannelList;
+    isChatBesideChannelList = isChatBesideChannelList(5189)().isChatBesideChannelList;
   }
   return isChatBesideChannelList;
 }) : (function useShouldRender(arg0) {
@@ -185,7 +185,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSho
       let ComponentDispatch = closure_0(1120).ComponentDispatch;
       const subscription1 = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
       let obj = isChatBesideChannelList(584);
-      let rootNavigationRef = closure_0(5152).getRootNavigationRef();
+      let rootNavigationRef = closure_0(5187).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", handleNavigationChange);
       }
@@ -203,7 +203,7 @@ let closure_11 = ReactCompilerGating.isReactCompilerEnabled() ? (function useSho
     }
   }, items);
   if (!isChatBesideChannelList) {
-    isChatBesideChannelList = isChatBesideChannelList(5154)().isChatBesideChannelList;
+    isChatBesideChannelList = isChatBesideChannelList(5189)().isChatBesideChannelList;
   }
   return isChatBesideChannelList;
 });

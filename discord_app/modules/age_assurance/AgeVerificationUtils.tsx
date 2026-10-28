@@ -1,21 +1,21 @@
-// === Module 6655: AgeVerificationUtils ===
+// === Module 6689: AgeVerificationUtils ===
 
-// Module 6655 (AgeVerificationUtils)
+// Module 6689 (AgeVerificationUtils)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import util from "util" /* 1125 */;
 import Server from "Server" /* 1997 */;
 import _modDef3091 from "module_3091" /* 3091 */;
-import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5645 */;
-import AgeGatedFeature from "AgeGatedFeature" /* 6660 */;
-import usePreviousDefault from "usePrevious" /* 6661 */;
-import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 6662 */;
+import RegionalFeatureConfigUtils from "RegionalFeatureConfigUtils" /* 5680 */;
+import AgeGatedFeature from "AgeGatedFeature" /* 6694 */;
+import usePreviousDefault from "usePrevious" /* 6695 */;
+import ReactiveCheckActionCreators from "ReactiveCheckActionCreators" /* 6696 */;
 import asyncGeneratorStep from "asyncGeneratorStep" /* 5 */;
 import noop from "module_19" /* 19 */;
-import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5646 */;
+import RegionalFeatureConfigStore from "RegionalFeatureConfigStore" /* 5681 */;
 import AuthenticationStore from "AuthenticationStore" /* 502 */;
 import UserStore from "UserStore" /* 1389 */;
-import AgeVerificationStore from "AgeVerificationStore" /* 6656 */;
+import AgeVerificationStore from "AgeVerificationStore" /* 6690 */;
 
 const require = globalThis.__r;
 
@@ -97,10 +97,10 @@ let closure_18 = async function _maybePerformReactiveCheck() {
     }
   }
 };
-fn(6657).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
+fn(6691).FULLSCREEN_AGE_VERIFICATION_ENTRY_POINTS;
 const AgeGateConstants = fn(1109);
 ({ AgeGateSource, REACTIVE_CHECK_AGE_GATE_SOURCES: c10 } = AgeGateConstants);
-let items = [fn(6658).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, fn(6658).AgeVerificationModalEntryPoint.START_STAGE_PROMPT, fn(6658).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND];
+let items = [fn(6692).AgeVerificationModalEntryPoint.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, fn(6692).AgeVerificationModalEntryPoint.START_STAGE_PROMPT, fn(6692).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND];
 const set = new Set(items);
 let items1 = [, , , , , ];
 ({ NSFW_SERVER: arr2[0], NSFW_SERVER_INVITE: arr2[1], NSFW_SERVER_INVITE_EMBED: arr2[2], LARGE_GUILD: arr2[3], JOIN_LARGE_GUILD_UNDERAGE: arr2[4], ACCESS_LARGE_GUILD_UNDERAGE: arr2[5] } = AgeGateSource);

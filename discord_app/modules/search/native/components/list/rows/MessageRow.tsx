@@ -1,32 +1,32 @@
-// === Module 18156: MessageRow ===
+// === Module 18396: MessageRow ===
 
-// Module 18156 (MessageRow)
+// Module 18396 (MessageRow)
 import initialize from "initialize" /* 504 */;
 import c from "c" /* 576 */;
 import nativeDefault from "native" /* 587 */;
 import util from "util" /* 1125 */;
 import native from "native" /* 1199 */;
-import UserUtilsDefault from "UserUtils" /* 5026 */;
-import Text_Text from "Text/Text" /* 5235 */;
-import useChannelNameDefault from "useChannelName" /* 5605 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5644 */;
-import useMessageAuthorDefault from "useMessageAuthor" /* 6367 */;
-import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8318 */;
-import BotTagDefault from "BotTag" /* 9134 */;
-import _modDef10161 from "module_10161" /* 10161 */;
-import _modDef11012 from "module_11012" /* 11012 */;
-import ChannelRowPreview from "ChannelRowPreview" /* 13783 */;
-import BellZIcon from "BellZIcon" /* 13838 */;
-import SearchListRow from "SearchListRow" /* 18120 */;
-import useSearchMessageTimestamp from "useSearchMessageTimestamp" /* 18157 */;
-import PollBadgeDefault from "PollBadge" /* 18158 */;
+import UserUtilsDefault from "UserUtils" /* 5058 */;
+import Text_Text from "Text/Text" /* 5270 */;
+import useChannelNameDefault from "useChannelName" /* 5640 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5679 */;
+import useMessageAuthorDefault from "useMessageAuthor" /* 6401 */;
+import enhanced_role_colors_EnhancedRoleColorUtils from "enhanced_role_colors/EnhancedRoleColorUtils" /* 8352 */;
+import BotTagDefault from "BotTag" /* 9167 */;
+import _modDef10193 from "module_10193" /* 10193 */;
+import _modDef11047 from "module_11047" /* 11047 */;
+import ChannelRowPreview from "ChannelRowPreview" /* 14001 */;
+import BellZIcon from "BellZIcon" /* 14056 */;
+import SearchListRow from "SearchListRow" /* 18360 */;
+import useSearchMessageTimestamp from "useSearchMessageTimestamp" /* 18397 */;
+import PollBadgeDefault from "PollBadge" /* 18398 */;
 import _objectWithoutProperties from "_objectWithoutProperties" /* 109 */;
 import noop from "module_19" /* 19 */;
-import AccessibilityStore from "AccessibilityStore" /* 4973 */;
-import FavoriteStore from "FavoriteStore" /* 4827 */;
-import ChannelStore from "ChannelStore" /* 4824 */;
-import GuildStore from "GuildStore" /* 4846 */;
-import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6705 */;
+import AccessibilityStore from "AccessibilityStore" /* 5005 */;
+import FavoriteStore from "FavoriteStore" /* 4859 */;
+import ChannelStore from "ChannelStore" /* 4856 */;
+import GuildStore from "GuildStore" /* 4878 */;
+import UserGuildSettingsStore from "UserGuildSettingsStore" /* 6739 */;
 
 require = fn;
 let closure_3 = ["message"];
@@ -36,7 +36,7 @@ get_ActivityIndicator = fn(17);
 const MessageFlags = fn(1084).MessageFlags;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { channelIcon: { marginRight: 5, alignSelf: "center" }, channelStatus: { marginLeft: 5, alignSelf: "center", tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT }, labelContainer: { flexDirection: "row", width: "100%", marginBottom: 2, alignItems: "center" }, authorRow: { flexShrink: 1, minWidth: 0, flexDirection: "row" }, timestamp: { marginLeft: 8 }, header: { flexDirection: "row", marginRight: 16, marginBottom: 12 }, body: { alignItems: "flex-start" }, pollBadge: { marginLeft: 8 }, suppressNotificationsIcon: { marginLeft: 4 }, spoilerText: { fontStyle: "italic" } };
 let closure_16 = createStyles.createStyles(obj);
 let ReactCompilerGating = fn(558);
@@ -80,7 +80,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
       }
       if (cResult[9] !== tmp12) {
         const obj2 = { lineClamp: 1, variant: "text-sm/semibold", color: "interactive-text-default", children: tmp12 };
-        const tmp18 = closure_14(tmp(5235).Text, obj2);
+        const tmp18 = closure_14(tmp(5270).Text, obj2);
         cResult[9] = tmp12;
         cResult[10] = tmp18;
         let tmp16 = tmp18;
@@ -137,7 +137,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
         }
         let tmp23 = isFavorite;
         if (isFavorite) {
-          const obj5 = { source: _modDef10161, size: tmp(1199).Icon.Sizes.EXTRA_SMALL, style: tmp4.channelStatus };
+          const obj5 = { source: _modDef10193, size: tmp(1199).Icon.Sizes.EXTRA_SMALL, style: tmp4.channelStatus };
           tmp23 = closure_14(tmp(1199).Icon, obj5);
         }
         cResult[14] = isFavorite;
@@ -147,7 +147,7 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
       }
       let tmp20 = muted;
       if (muted) {
-        const obj6 = { source: _modDef11012, size: tmp(1199).Icon.Sizes.EXTRA_SMALL, style: tmp4.channelStatus };
+        const obj6 = { source: _modDef11047, size: tmp(1199).Icon.Sizes.EXTRA_SMALL, style: tmp4.channelStatus };
         tmp20 = closure_14(tmp(1199).Icon, obj6);
       }
       cResult[11] = muted;
@@ -163,12 +163,12 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
     tmp13 = tmp15;
   }
   const tmpResult = channel(504);
-  const channelIcon = channel(8502).getChannelIcon(channel, { isRulesChannel: tmp8 });
+  const channelIcon = channel(8539).getChannelIcon(channel, { isRulesChannel: tmp8 });
   cResult[3] = channel;
   cResult[4] = tmp8;
   cResult[5] = channelIcon;
   tmp9 = channelIcon;
-  const tmpResult2 = channel(8502);
+  const tmpResult2 = channel(8539);
 }) : (function GuildChannelMessageRowHeader(channel) {
   channel = channel.channel;
   ({ muted, isFavorite } = channel);
@@ -183,19 +183,19 @@ let closure_17 = ReactCompilerGating.isReactCompilerEnabled() ? (function GuildC
     return rulesChannelId;
   });
   const obj = channel(504);
-  const channelIcon = channel(8502).getChannelIcon(channel, { isRulesChannel: stateFromStores === channel.id });
+  const channelIcon = channel(8539).getChannelIcon(channel, { isRulesChannel: stateFromStores === channel.id });
   const obj4 = { style: tmp.header, children: null };
-  const obj2 = channel(8502);
+  const obj2 = channel(8539);
   const obj3 = { isRulesChannel: stateFromStores === channel.id };
   const tmp7 = useChannelNameDefault(channel);
-  const items1 = [closure_14(channel(1199).Icon, { source: channelIcon, size: channel(1199).Icon.Sizes.REFRESH_SMALL_16, style: tmp.channelIcon }), closure_14(channel(5235).Text, { lineClamp: 1, variant: "text-sm/semibold", color: "interactive-text-default", children: tmp7 }), , , ];
+  const items1 = [closure_14(channel(1199).Icon, { source: channelIcon, size: channel(1199).Icon.Sizes.REFRESH_SMALL_16, style: tmp.channelIcon }), closure_14(channel(5270).Text, { lineClamp: 1, variant: "text-sm/semibold", color: "interactive-text-default", children: tmp7 }), , , ];
   if (muted) {
-    const obj6 = { source: _modDef11012, size: tmp2(1199).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    const obj6 = { source: _modDef11047, size: tmp2(1199).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
     muted = closure_14(tmp2(1199).Icon, obj6);
   }
   items1[2] = muted;
   if (isFavorite) {
-    const obj7 = { source: _modDef10161, size: tmp2(1199).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    const obj7 = { source: _modDef10193, size: tmp2(1199).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
     isFavorite = closure_14(tmp2(1199).Icon, obj7);
   }
   items1[3] = isFavorite;
@@ -263,11 +263,11 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
   }
   const effect = noop.useEffect(tmp8, tmp9);
   const obj = channel(576);
-  const searchMessageTimestamp = channel(18157).useSearchMessageTimestamp(message, channel);
+  const searchMessageTimestamp = channel(18397).useSearchMessageTimestamp(message, channel);
   ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
   if (cResult[5] !== tmp5) {
     const obj3 = { lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: tmp5 };
-    const tmp14 = closure_14(channel(5235).Text, obj3);
+    const tmp14 = closure_14(channel(5270).Text, obj3);
     cResult[5] = tmp5;
     cResult[6] = tmp14;
     let tmp12 = tmp14;
@@ -346,7 +346,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
               let tmp33 = null;
               if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
                 const obj7 = { size: "xs", style: tmp4.suppressNotificationsIcon };
-                tmp33 = closure_14(channel(13838).BellZIcon, obj7);
+                tmp33 = closure_14(channel(14056).BellZIcon, obj7);
               }
               cResult[21] = message;
               cResult[22] = tmp4.suppressNotificationsIcon;
@@ -355,7 +355,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
             }
           }
           const obj8 = { variant: "text-xs/medium", color: "interactive-text-active", lineClamp: 1, style: tmp4.timestamp, accessibilityLabel: timestampAccessibilityLabel, children: timestamp };
-          const tmp30 = closure_14(channel(5235).Text, obj8);
+          const tmp30 = closure_14(channel(5270).Text, obj8);
           cResult[17] = tmp4.timestamp;
           cResult[18] = timestamp;
           cResult[19] = timestampAccessibilityLabel;
@@ -377,14 +377,14 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
   }
   let tmp16 = muted;
   if (muted) {
-    const obj10 = { source: _modDef11012, size: channel(1199).Icon.Sizes.EXTRA_SMALL, style: tmp4.channelStatus };
+    const obj10 = { source: _modDef11047, size: channel(1199).Icon.Sizes.EXTRA_SMALL, style: tmp4.channelStatus };
     tmp16 = closure_14(channel(1199).Icon, obj10);
   }
   cResult[7] = muted;
   cResult[8] = tmp4.channelStatus;
   cResult[9] = tmp16;
   tmp15 = tmp16;
-  const tmpResult = channel(18157);
+  const tmpResult = channel(18397);
 }) : (function PrivateChannelMessageRowLabel(message) {
   message = message.message;
   const channel = message.channel;
@@ -400,35 +400,35 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled() ? (function Privat
     }
     tmp = channel.isDM() || channel.isGroupDM();
   }, items1);
-  const searchMessageTimestamp = message(18157).useSearchMessageTimestamp(message, channel);
+  const searchMessageTimestamp = message(18397).useSearchMessageTimestamp(message, channel);
   const obj2 = { style: tmp.labelContainer, children: null };
   const obj3 = { style: tmp.authorRow, children: null };
   ({ timestamp, timestampAccessibilityLabel } = searchMessageTimestamp);
-  const items2 = [closure_14(message(5235).Text, { lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: memo }), , ];
+  const items2 = [closure_14(message(5270).Text, { lineClamp: 1, variant: "text-md/semibold", color: "interactive-text-active", children: memo }), , ];
   if (muted) {
-    const obj4 = { source: channel(11012), size: tmp4(1199).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
+    const obj4 = { source: channel(11047), size: tmp4(1199).Icon.Sizes.EXTRA_SMALL, style: tmp.channelStatus };
     muted = closure_14(tmp4(1199).Icon, obj4);
   }
   items2[1] = muted;
   let isSystemDMResult = channel.isSystemDM();
   if (isSystemDMResult) {
-    const obj5 = { type: channel(9134).Types.SYSTEM_DM, verified: true };
-    isSystemDMResult = closure_14(channel(9134), obj5);
-    const tmp13 = channel(9134);
+    const obj5 = { type: channel(9167).Types.SYSTEM_DM, verified: true };
+    isSystemDMResult = closure_14(channel(9167), obj5);
+    const tmp13 = channel(9167);
   }
   items2[2] = isSystemDMResult;
   obj3.children = items2;
-  const items3 = [closure_15(closure_7, obj3), closure_14(message(5235).Text, { variant: "text-xs/medium", color: "interactive-text-active", lineClamp: 1, style: tmp.timestamp, accessibilityLabel: timestampAccessibilityLabel, children: timestamp }), , ];
+  const items3 = [closure_15(closure_7, obj3), closure_14(message(5270).Text, { variant: "text-xs/medium", color: "interactive-text-active", lineClamp: 1, style: tmp.timestamp, accessibilityLabel: timestampAccessibilityLabel, children: timestamp }), , ];
   let tmp9Result = null;
   if (message.hasFlag(MessageFlags.SUPPRESS_NOTIFICATIONS)) {
     const obj7 = { size: "xs", style: tmp.suppressNotificationsIcon };
-    tmp9Result = closure_14(tmp4(13838).BellZIcon, obj7);
+    tmp9Result = closure_14(tmp4(14056).BellZIcon, obj7);
   }
   items3[2] = tmp9Result;
   let tmp9Result2 = null;
   if (message.isPoll()) {
     const obj8 = { style: tmp.pollBadge };
-    tmp9Result2 = closure_14(channel(18158), obj8);
+    tmp9Result2 = closure_14(channel(18398), obj8);
   }
   items3[3] = tmp9Result2;
   obj2.children = items3;
@@ -701,7 +701,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMes
       }
       const stateFromStores2 = tmp(504).useStateFromStores(tmp13, tmp15);
       const tmpResult5 = tmp(504);
-      const isChannelSpoilerGated = tmp(6683).useIsChannelSpoilerGated(stateFromStores);
+      const isChannelSpoilerGated = tmp(6717).useIsChannelSpoilerGated(stateFromStores);
       if (cResult[11] === stateFromStores) {
         if (cResult[12] === stateFromStores1) {
           if (cResult[13] === isChannelSpoilerGated) {
@@ -727,7 +727,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMes
       cResult[14] = stateFromStores2;
       cResult[15] = obj2;
       tmp18 = obj2;
-      const tmpResult6 = tmp(6683);
+      const tmpResult6 = tmp(6717);
     }
     class C {
       constructor() {

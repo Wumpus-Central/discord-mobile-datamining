@@ -1,8 +1,8 @@
-// === Module 11760: conjurePreviewModes ===
+// === Module 11796: conjurePreviewModes ===
 
-// Module 11760 (conjurePreviewModes)
-import ConjureProjectTypes from "ConjureProjectTypes" /* 6775 */;
-import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 10732 */;
+// Module 11796 (conjurePreviewModes)
+import ConjureProjectTypes from "ConjureProjectTypes" /* 6809 */;
+import conjurePreviewFrameSurfaces from "conjurePreviewFrameSurfaces" /* 10766 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;
@@ -78,9 +78,9 @@ export const profileWidgetState = function profileWidgetState(installScope) {
   }
   return str;
 };
-export const resolvePreviewMode = function resolvePreviewMode(arg0, result2) {
-  let defaultMode = arg0;
-  if (null == arg0) {
+export const resolvePreviewMode = function resolvePreviewMode(mode, result2) {
+  let defaultMode = mode;
+  if (null == mode) {
     defaultMode = result2.defaultMode;
   } else {
     const modes = result2.modes;

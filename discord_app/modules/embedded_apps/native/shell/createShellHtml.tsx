@@ -1,9 +1,9 @@
-// === Module 11501: createShellHtml ===
+// === Module 11539: createShellHtml ===
 
-// Module 11501 (createShellHtml)
-import EmbeddedAppConstants from "EmbeddedAppConstants" /* 10763 */;
-import bridgeProtocol from "bridgeProtocol" /* 11472 */;
-import _modDef11502 from "module_11502" /* 11502 */;
+// Module 11539 (createShellHtml)
+import EmbeddedAppConstants from "EmbeddedAppConstants" /* 10797 */;
+import bridgeProtocol from "bridgeProtocol" /* 11510 */;
+import _modDef11540 from "module_11540" /* 11540 */;
 import size from "module_2" /* 2 */;
 
 let closure_3 = EmbeddedAppConstants.EMBEDDED_APP_FRAME_ELEMENT_ID;
@@ -22,7 +22,7 @@ export const createShellHtml = function createShellHtml(shimVersion) {
     str2 = " csp=\"" + iframeCsp + "\"";
   }
   if (null != shellBridgeSecret) {
-    const tmp5 = _modDef11502;
+    const tmp5 = _modDef11540;
     const _JSON = JSON;
     const _JSON2 = JSON;
     const json = JSON.stringify(shellBridgeSecret);

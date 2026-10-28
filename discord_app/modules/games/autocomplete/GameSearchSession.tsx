@@ -1,9 +1,9 @@
-// === Module 9075: GameSearchSession ===
+// === Module 9108: GameSearchSession ===
 
-// Module 9075 (GameSearchSession)
+// Module 9108 (GameSearchSession)
 import Constants from "Constants" /* 1084 */;
 import AnalyticsUtils from "AnalyticsUtils" /* 1264 */;
-import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8580 */;
+import GameAutocompleteUtils from "GameAutocompleteUtils" /* 8617 */;
 import size from "module_2" /* 2 */;
 
 const AnalyticsUtilsDefault = AnalyticsUtils;

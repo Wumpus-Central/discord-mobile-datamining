@@ -1,11 +1,11 @@
-// === Module 13437: useGuildPowerupRollbackNotificationConfig ===
+// === Module 13656: useGuildPowerupRollbackNotificationConfig ===
 
-// Module 13437 (useGuildPowerupRollbackNotificationConfig)
+// Module 13656 (useGuildPowerupRollbackNotificationConfig)
 import util from "util" /* 1125 */;
 import _modDef2567 from "module_2567" /* 2567 */;
-import dismissible_content from "dismissible_content" /* 4808 */;
-import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13438 */;
-import GuildPowerupsStore from "GuildPowerupsStore" /* 5182 */;
+import dismissible_content from "dismissible_content" /* 4840 */;
+import getGuildPowerupFormattedDateStringDefault from "getGuildPowerupFormattedDateString" /* 13657 */;
+import GuildPowerupsStore from "GuildPowerupsStore" /* 5217 */;
 
 const require = globalThis.__r;
 
@@ -58,7 +58,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   const stateFromStores = require("initialize").useStateFromStores(first, tmp6);
   let tmp8;
   if (stateFromStores != null) {
-    tmp8 = stateFromStores.allPowerups[tmp(undefined, 5186).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+    tmp8 = stateFromStores.allPowerups[tmp(undefined, 5221).GUILD_POWERUP_GUILD_THEME_SKU_ID];
   }
   const tmpResult = require("initialize");
   const shouldShowGuildThemeRollback = require("guildTheme").useShouldShowGuildThemeRollback(arg0, arg1);
@@ -78,7 +78,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       tmp12 = null;
       if (null != storeRemovalDate) {
         const tmp14 = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
-        const obj2 = { dismissibleContent: tmp(4808).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
+        const obj2 = { dismissibleContent: tmp(4840).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
         const intl = tmp(1125).intl;
         const obj3 = { dateString: tmp14 };
         obj2.title = intl.formatToPlainString(_modDef2567["6e2ry1"], obj3);
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
   const items = [GuildPowerupsStore];
   const stateFromStores = require("initialize").useStateFromStores(items, () => GuildPowerupsStore.getStateForGuild(closure_0));
   if (stateFromStores != null) {
-    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 5186).GUILD_POWERUP_GUILD_THEME_SKU_ID];
+    const tmp4 = stateFromStores.allPowerups[tmp(undefined, 5221).GUILD_POWERUP_GUILD_THEME_SKU_ID];
   }
   const obj = require("initialize");
   let tmp5 = null;
@@ -114,7 +114,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useGuild
       tmp6 = null;
       if (null != storeRemovalDate) {
         const tmp8 = getGuildPowerupFormattedDateStringDefault(storeRemovalDate);
-        const obj2 = { dismissibleContent: tmp(4808).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
+        const obj2 = { dismissibleContent: tmp(4840).DismissibleContent.GUILD_THEME_POWERUP_ROLLBACK_NOTIFICATION, title: null, description: null };
         const intl = tmp(1125).intl;
         const obj3 = { dateString: tmp8 };
         obj2.title = intl.formatToPlainString(_modDef2567["6e2ry1"], obj3);

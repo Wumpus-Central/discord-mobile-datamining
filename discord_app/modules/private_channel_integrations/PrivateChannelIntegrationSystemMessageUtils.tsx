@@ -1,6 +1,6 @@
-// === Module 8352: PrivateChannelIntegrationSystemMessageUtils ===
+// === Module 8386: PrivateChannelIntegrationSystemMessageUtils ===
 
-// Module 8352 (PrivateChannelIntegrationSystemMessageUtils)
+// Module 8386 (PrivateChannelIntegrationSystemMessageUtils)
 import util from "util" /* 1125 */;
 import HelpdeskUtilsDefault from "HelpdeskUtils" /* 2064 */;
 import Constants from "Constants" /* 1084 */;

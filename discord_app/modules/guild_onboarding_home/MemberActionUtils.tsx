@@ -1,15 +1,15 @@
-// === Module 13189: MemberActionUtils ===
+// === Module 13406: MemberActionUtils ===
 
-// Module 13189 (MemberActionUtils)
-import useIsNewMemberDefault from "useIsNewMember" /* 7328 */;
-import GuildMemberStore from "GuildMemberStore" /* 4884 */;
-import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7327 */;
-import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8299 */;
+// Module 13406 (MemberActionUtils)
+import useIsNewMemberDefault from "useIsNewMember" /* 7363 */;
+import GuildMemberStore from "GuildMemberStore" /* 4916 */;
+import GuildOnboardingHomeSettingsStore from "GuildOnboardingHomeSettingsStore" /* 7362 */;
+import GuildOnboardingMemberActionStore from "GuildOnboardingMemberActionStore" /* 8333 */;
 
 const require = globalThis.__r;
 
 const require = fn;
-const GuildMemberFlags = fn(4890).GuildMemberFlags;
+const GuildMemberFlags = fn(4922).GuildMemberFlags;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled() ? (function useMemberActionsForChannel(arg0, arg1) {

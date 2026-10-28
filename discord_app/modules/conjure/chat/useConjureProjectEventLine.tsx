@@ -1,9 +1,9 @@
-// === Module 12362: useConjureProjectEventLine ===
+// === Module 12407: useConjureProjectEventLine ===
 
-// Module 12362 (useConjureProjectEventLine)
-import conjureMessageAuthors from "conjureMessageAuthors" /* 12345 */;
+// Module 12407 (useConjureProjectEventLine)
+import conjureMessageAuthors from "conjureMessageAuthors" /* 12390 */;
 import noop from "module_19" /* 19 */;
-import GuildStore from "GuildStore" /* 4846 */;
+import GuildStore from "GuildStore" /* 4878 */;
 import UserStore from "UserStore" /* 1389 */;
 
 const require = globalThis.__r;
@@ -19,7 +19,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   importDefault = arg2;
   let intl = _require;
   let obj = actor_user_id;
-  const cResult = require("c").c(22);
+  const cResult = require("c").c(23);
   actor_user_id = actor_user_id.actor_user_id;
   if (cResult[0] !== actor_user_id) {
     const fn = function c() {
@@ -146,22 +146,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       obj = { app: source_name, server: stringResult };
       let formatResult = intl.format(Lwsrhg, obj);
     } else {
-      const intl10 = intl(obj[9]).intl;
+      const intl11 = intl(obj[9]).intl;
       const obj4 = { app: source_name, server: stringResult };
       const merged = Object.assign(tmp19);
-      formatResult = intl10.format(Lwsrhg(obj[10]).qqePfT, obj4);
+      formatResult = intl11.format(Lwsrhg(obj[10]).qqePfT, obj4);
     }
   } else {
     if ("bot_removed" === type2) {
       if (null == tmp19) {
-        const intl9 = intl(obj[9]).intl;
+        const intl10 = intl(obj[9]).intl;
         const obj5 = { app: source_name, server: stringResult };
-        let formatResult1 = intl9.format(Lwsrhg(obj[10]).mT7EQG, obj5);
+        let formatResult1 = intl10.format(Lwsrhg(obj[10]).mT7EQG, obj5);
       } else {
-        const intl8 = intl(obj[9]).intl;
+        const intl9 = intl(obj[9]).intl;
         const obj6 = { app: source_name, server: stringResult };
         const merged1 = Object.assign(tmp19);
-        formatResult1 = intl8.format(Lwsrhg(obj[10])["lA/crI"], obj6);
+        formatResult1 = intl9.format(Lwsrhg(obj[10])["lA/crI"], obj6);
       }
       forResult = formatResult1;
       cResult[11] = stateFromStores;
@@ -176,46 +176,57 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       cResult[19] = forResult;
     } else if ("preview_bot_removed" === type2) {
       if (null == tmp19) {
-        const intl7 = intl(obj[9]).intl;
+        const intl8 = intl(obj[9]).intl;
         const obj7 = { app: source_name, server: stringResult };
-        let formatResult2 = intl7.format(Lwsrhg(obj[10])["4LVIeo"], obj7);
+        let formatResult2 = intl8.format(Lwsrhg(obj[10])["4LVIeo"], obj7);
       } else {
-        const intl6 = intl(obj[9]).intl;
+        const intl7 = intl(obj[9]).intl;
         const obj8 = { app: source_name, server: stringResult };
         const merged2 = Object.assign(tmp19);
-        formatResult2 = intl6.format(Lwsrhg(obj[10]).YJOV6D, obj8);
+        formatResult2 = intl7.format(Lwsrhg(obj[10]).YJOV6D, obj8);
       }
       forResult = formatResult2;
-    } else if ("app_channel_deleted" !== type2) {
-      if ("remixed" === type2) {
-        if (cResult[20] !== type.source_name) {
+    } else if ("app_channel_deleted" === type2) {
+      let str2 = type.channel_name;
+      if (str2 == null) {
+        str2 = "";
+      }
+      if (null == tmp19) {
+        const intl6 = intl(obj[9]).intl;
+        const obj9 = { channel: str2, server: stringResult };
+        let formatResult3 = intl6.format(Lwsrhg(obj[10])["4VQfid"], obj9);
+      } else {
+        const intl5 = intl(obj[9]).intl;
+        const obj10 = { channel: str2, server: stringResult };
+        const merged3 = Object.assign(tmp19);
+        formatResult3 = intl5.format(Lwsrhg(obj[10]).RlMIJN, obj10);
+      }
+      forResult = formatResult3;
+    } else if ("remixed" !== type2) {
+      if ("voice_channel_pin" === type2) {
+        const _Symbol2 = Symbol;
+        if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
           const intl3 = intl(obj[9]).intl;
-          const obj9 = { source: type.source_name };
-          const formatResult3 = intl3.format(Lwsrhg(obj[10]).mHCXtm, obj9);
-          cResult[20] = type.source_name;
-          cResult[21] = formatResult3;
-          let tmp20 = formatResult3;
+          const stringResult1 = intl3.string(Lwsrhg(obj[10]).UGAfl9);
+          cResult[22] = stringResult1;
+          let tmp20 = stringResult1;
         } else {
-          tmp20 = cResult[21];
+          tmp20 = cResult[22];
         }
         forResult = tmp20;
       }
     }
-    let str = type.channel_name;
-    if (str == null) {
-      str = "";
-    }
-    if (null == tmp19) {
-      const intl5 = intl(obj[9]).intl;
-      const obj10 = { channel: str, server: stringResult };
-      let formatResult4 = intl5.format(Lwsrhg(obj[10])["4VQfid"], obj10);
-    } else {
+    if (cResult[20] !== type.source_name) {
       const intl4 = intl(obj[9]).intl;
-      const obj11 = { channel: str, server: stringResult };
-      const merged3 = Object.assign(tmp19);
-      formatResult4 = intl4.format(Lwsrhg(obj[10]).RlMIJN, obj11);
+      const obj11 = { source: type.source_name };
+      const formatResult4 = intl4.format(Lwsrhg(obj[10]).mHCXtm, obj11);
+      cResult[20] = type.source_name;
+      cResult[21] = formatResult4;
+      let tmp22 = formatResult4;
+    } else {
+      tmp22 = cResult[21];
     }
-    forResult = formatResult4;
+    forResult = tmp22;
   }
   const intlResult2 = intl(obj[6]);
 }) : (function useConjureProjectEventLine(arg0, actor_user_id, arg2) {
@@ -273,38 +284,38 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
   const type = actor_user_id.type;
   if ("app_removed" === type) {
     if (null == tmp9) {
-      const intl10 = tmp2(tmp3[9]).intl;
+      const intl11 = tmp2(tmp3[9]).intl;
       const obj5 = { app: tmp7, server: stateFromStores1 };
-      let formatResult = intl10.format(tmp6(tmp3[10]).Lwsrhg, obj5);
+      let formatResult = intl11.format(tmp6(tmp3[10]).Lwsrhg, obj5);
     } else {
-      const intl9 = tmp2(tmp3[9]).intl;
+      const intl10 = tmp2(tmp3[9]).intl;
       const obj6 = { app: tmp7, server: stateFromStores1 };
       const merged = Object.assign(tmp9);
-      formatResult = intl9.format(tmp6(tmp3[10]).qqePfT, obj6);
+      formatResult = intl10.format(tmp6(tmp3[10]).qqePfT, obj6);
     }
     return formatResult;
   } else if ("bot_removed" === type) {
     if (null == tmp9) {
-      const intl8 = tmp2(tmp3[9]).intl;
+      const intl9 = tmp2(tmp3[9]).intl;
       const obj7 = { app: tmp7, server: stateFromStores1 };
-      let formatResult1 = intl8.format(tmp6(tmp3[10]).mT7EQG, obj7);
+      let formatResult1 = intl9.format(tmp6(tmp3[10]).mT7EQG, obj7);
     } else {
-      const intl7 = tmp2(tmp3[9]).intl;
+      const intl8 = tmp2(tmp3[9]).intl;
       const obj8 = { app: tmp7, server: stateFromStores1 };
       const merged1 = Object.assign(tmp9);
-      formatResult1 = intl7.format(tmp6(tmp3[10])["lA/crI"], obj8);
+      formatResult1 = intl8.format(tmp6(tmp3[10])["lA/crI"], obj8);
     }
     return formatResult1;
   } else if ("preview_bot_removed" === type) {
     if (null == tmp9) {
-      const intl6 = tmp2(tmp3[9]).intl;
+      const intl7 = tmp2(tmp3[9]).intl;
       const obj9 = { app: tmp7, server: stateFromStores1 };
-      let formatResult2 = intl6.format(tmp6(tmp3[10])["4LVIeo"], obj9);
+      let formatResult2 = intl7.format(tmp6(tmp3[10])["4LVIeo"], obj9);
     } else {
-      const intl5 = tmp2(tmp3[9]).intl;
+      const intl6 = tmp2(tmp3[9]).intl;
       const obj10 = { app: tmp7, server: stateFromStores1 };
       const merged2 = Object.assign(tmp9);
-      formatResult2 = intl5.format(tmp6(tmp3[10]).YJOV6D, obj10);
+      formatResult2 = intl6.format(tmp6(tmp3[10]).YJOV6D, obj10);
     }
     return formatResult2;
   } else if ("app_channel_deleted" === type) {
@@ -313,20 +324,23 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function useConju
       str2 = "";
     }
     if (null == tmp9) {
-      const intl4 = tmp2(tmp3[9]).intl;
+      const intl5 = tmp2(tmp3[9]).intl;
       const obj11 = { channel: str2, server: stateFromStores1 };
-      let formatResult3 = intl4.format(tmp6(tmp3[10])["4VQfid"], obj11);
+      let formatResult3 = intl5.format(tmp6(tmp3[10])["4VQfid"], obj11);
     } else {
-      const intl3 = tmp2(tmp3[9]).intl;
+      const intl4 = tmp2(tmp3[9]).intl;
       const obj12 = { channel: str2, server: stateFromStores1 };
       const merged3 = Object.assign(tmp9);
-      formatResult3 = intl3.format(tmp6(tmp3[10]).RlMIJN, obj12);
+      formatResult3 = intl4.format(tmp6(tmp3[10]).RlMIJN, obj12);
     }
     return formatResult3;
   } else if ("remixed" === type) {
-    const intl2 = tmp2(tmp3[9]).intl;
+    const intl3 = tmp2(tmp3[9]).intl;
     const obj13 = { source: actor_user_id.source_name };
-    return intl2.format(tmp6(tmp3[10]).mHCXtm, obj13);
+    return intl3.format(tmp6(tmp3[10]).mHCXtm, obj13);
+  } else if ("voice_channel_pin" === type) {
+    const intl2 = tmp2(tmp3[9]).intl;
+    return intl2.string(tmp6(tmp3[10]).UGAfl9);
   }
   const obj3 = require("initialize");
 });

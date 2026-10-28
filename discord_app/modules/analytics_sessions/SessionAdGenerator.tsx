@@ -1,11 +1,11 @@
-// === Module 7796: SessionAdGenerator ===
+// === Module 7830: SessionAdGenerator ===
 
-// Module 7796 (SessionAdGenerator)
+// Module 7830 (SessionAdGenerator)
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import DurationsDefault from "Durations" /* 1101 */;
 import SentryUtilsDefault from "SentryUtils" /* 1254 */;
 import v1 from "v1" /* 1278 */;
-import SessionUtils from "SessionUtils" /* 7582 */;
+import SessionUtils from "SessionUtils" /* 7616 */;
 
 require = fn;
 let closure_3 = 12 * DurationsDefault.Millis.HOUR;

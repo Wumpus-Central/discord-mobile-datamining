@@ -1,7 +1,7 @@
-// === Module 18829: protocol ===
+// === Module 19081: protocol ===
 
-// Module 18829 (protocol)
-import Safe2 from "Safe" /* 18830 */;
+// Module 19081 (protocol)
+import Safe2 from "Safe" /* 19082 */;
 import size from "module_2" /* 2 */;
 
 const discordEmbeddedAppShim = "discordEmbeddedAppShim";
@@ -49,5 +49,5 @@ export const isSameChildState = function isSameChildState(arg0, arg1) {
   const _Object = Safe2.Safe.Object;
   return Safe.Array(_Object.keys(arg0)).every((item) => closure_0[item] === closure_1[item]);
 };
-export const ParentToChildEvent = { STATE_UPDATED: 0, [0]: "STATE_UPDATED" };
-export const ChildToParentEvent = { STATE_UPDATED: 0, [0]: "STATE_UPDATED", DISCONNECTED: 1, [1]: "DISCONNECTED", CONNECTION_ACCEPTED: 2, [2]: "CONNECTION_ACCEPTED" };
+export const ParentToChildEvent = { STATE_UPDATED: 0, [0]: "STATE_UPDATED", KEYBINDS_UPDATED: 1, [1]: "KEYBINDS_UPDATED" };
+export const ChildToParentEvent = { STATE_UPDATED: 0, [0]: "STATE_UPDATED", DISCONNECTED: 1, [1]: "DISCONNECTED", CONNECTION_ACCEPTED: 2, [2]: "CONNECTION_ACCEPTED", KEYBIND_CAPTURED: 3, [3]: "KEYBIND_CAPTURED" };

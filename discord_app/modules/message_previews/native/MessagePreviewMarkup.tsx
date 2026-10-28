@@ -1,13 +1,13 @@
-// === Module 11952: MessagePreviewMarkup ===
+// === Module 11990: MessagePreviewMarkup ===
 
-// Module 11952 (MessagePreviewMarkup)
+// Module 11990 (MessagePreviewMarkup)
 import privDefault from "priv" /* 1456 */;
 import _modDef1948 from "module_1948" /* 1948 */;
-import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5644 */;
-import MarkupUtilsDefault from "MarkupUtils" /* 5706 */;
-import combineMarkupRulesDefault from "combineMarkupRules" /* 5982 */;
-import MarkupRulesDefault from "MarkupRules" /* 5983 */;
-import MarkupMessagePreviewReactRulesDefault from "MarkupMessagePreviewReactRules" /* 11953 */;
+import ChannelListLayoutTypes from "ChannelListLayoutTypes" /* 5679 */;
+import MarkupUtilsDefault from "MarkupUtils" /* 5741 */;
+import combineMarkupRulesDefault from "combineMarkupRules" /* 6017 */;
+import MarkupRulesDefault from "MarkupRules" /* 6018 */;
+import MarkupMessagePreviewReactRulesDefault from "MarkupMessagePreviewReactRules" /* 11991 */;
 
 require = fn;
 function getOrParseMessagePreviewMarkupAST(arg0) {

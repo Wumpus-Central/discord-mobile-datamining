@@ -1,9 +1,9 @@
-// === Module 17187: DesignSystemSegmentedControlSetting ===
+// === Module 17417: DesignSystemSegmentedControlSetting ===
 
-// Module 17187 (DesignSystemSegmentedControlSetting)
+// Module 17417 (DesignSystemSegmentedControlSetting)
 import Constants from "Constants" /* 1084 */;
-import SettingsConstants from "SettingsConstants" /* 8331 */;
-import SettingBuilders from "SettingBuilders" /* 11212 */;
+import SettingsConstants from "SettingsConstants" /* 8365 */;
+import SettingBuilders from "SettingBuilders" /* 11248 */;
 import size from "module_2" /* 2 */;
 
 const require = globalThis.__r;

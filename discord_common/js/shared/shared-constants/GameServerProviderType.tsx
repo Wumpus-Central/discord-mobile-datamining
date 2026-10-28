@@ -1,6 +1,6 @@
-// === Module 5185: GameServerProviderType ===
+// === Module 5220: GameServerProviderType ===
 
-// Module 5185 (GameServerProviderType)
+// Module 5220 (GameServerProviderType)
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_common/js/shared/shared-constants/GameServerProviderType.tsx");

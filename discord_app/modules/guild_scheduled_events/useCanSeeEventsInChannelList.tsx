@@ -1,8 +1,8 @@
-// === Module 13283: useCanSeeEventsInChannelList ===
+// === Module 13500: useCanSeeEventsInChannelList ===
 
-// Module 13283 (useCanSeeEventsInChannelList)
-import useCanCreateAnEventDefault from "useCanCreateAnEvent" /* 9021 */;
-import useIsHubForGuildDefault from "useIsHubForGuild" /* 13284 */;
+// Module 13500 (useCanSeeEventsInChannelList)
+import useCanCreateAnEventDefault from "useCanCreateAnEvent" /* 9054 */;
+import useIsHubForGuildDefault from "useIsHubForGuild" /* 13501 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;
 import size from "module_2" /* 2 */;
 

@@ -1,6 +1,6 @@
-// === Module 10788: conjurePreviewClaims ===
+// === Module 10822: conjurePreviewClaims ===
 
-// Module 10788 (conjurePreviewClaims)
+// Module 10822 (conjurePreviewClaims)
 import _slicedToArray from "module_32" /* 32 */;
 
 function forget(get, arg1) {

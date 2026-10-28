@@ -1,6 +1,6 @@
-// === Module 4924: DefaultEmojisExperiment ===
+// === Module 4956: DefaultEmojisExperiment ===
 
-// Module 4924 (DefaultEmojisExperiment)
+// Module 4956 (DefaultEmojisExperiment)
 import c from "c" /* 576 */;
 import ApexExperiment from "ApexExperiment" /* 1452 */;
 import ReactCompilerGating from "ReactCompilerGating" /* 558 */;

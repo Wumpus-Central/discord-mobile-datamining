@@ -1,6 +1,6 @@
-// === Module 18768: ? ===
+// === Module 19019: ? ===
 
-// Module 18768
+// Module 19019
 import size from "module_2" /* 2 */;
 
 const result = size.fileFinishedImporting("../discord_assets/assets/mana/asset-library/generated/DisguiseSpotIllustration-2x.png.js");

@@ -1,12 +1,12 @@
-// === Module 8403: getTagProperties ===
+// === Module 8437: getTagProperties ===
 
-// Module 8403 (getTagProperties)
+// Module 8437 (getTagProperties)
 import _mod17 from "module_17" /* 17 */;
 import util from "util" /* 1125 */;
-import MessageConstants from "MessageConstants" /* 4977 */;
-import PublicGuildsUtils from "PublicGuildsUtils" /* 8404 */;
-import isCrosspostDefault from "isCrosspost" /* 8406 */;
-import _modDef8408 from "module_8408" /* 8408 */;
+import MessageConstants from "MessageConstants" /* 5009 */;
+import PublicGuildsUtils from "PublicGuildsUtils" /* 8438 */;
+import isCrosspostDefault from "isCrosspost" /* 8440 */;
+import _modDef8442 from "module_8442" /* 8442 */;
 import size from "module_2" /* 2 */;
 
 const Image = _mod17.Image;
@@ -35,7 +35,7 @@ export default function getTagProperties(arg0) {
           const intl = util.intl;
           let uri;
           if (isVerifiedBotResult) {
-            uri = Image.resolveAssetSource(_modDef8408).uri;
+            uri = Image.resolveAssetSource(_modDef8442).uri;
           }
           flag = isVerifiedBotResult;
           stringResult = intl.string(util.t["9RNkeF"]);
@@ -62,7 +62,7 @@ export default function getTagProperties(arg0) {
         const intl6 = util.intl;
         stringResult2 = intl6.string(util.t.fyE8sH);
       }
-      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "unicodeVersion", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: false, opTagBackgroundColor: false };
+      const obj2 = { tagText: stringResult, tagAccessibilityLabel: null, tagVerified: flag, tagTextColor: "Boolean", tagBackgroundColor: "ix", tagType: SYSTEM_DM_TAG_SYSTEM_TYPE, tagIconUrl: tmp5, opTagText: stringResult2, opTagTextColor: "Array", opTagBackgroundColor: "toCharArray$esjava$1" };
       ({ opTagTextColor: obj3.opTagTextColor, opTagBackgroundColor: obj3.opTagBackgroundColor } = colors);
       return obj2;
     } else {

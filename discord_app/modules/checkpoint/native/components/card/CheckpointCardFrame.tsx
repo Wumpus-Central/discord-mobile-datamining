@@ -1,9 +1,9 @@
-// === Module 13037: CheckpointCardFrame ===
+// === Module 13254: CheckpointCardFrame ===
 
-// Module 13037 (CheckpointCardFrame)
+// Module 13254 (CheckpointCardFrame)
 import getDevicePixelRatioDefault from "getDevicePixelRatio" /* 1897 */;
-import timing from "timing" /* 5207 */;
-import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6037 */;
+import timing from "timing" /* 5242 */;
+import checkpoint_CheckpointMessageComponentUtils from "checkpoint/CheckpointMessageComponentUtils" /* 6071 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -17,7 +17,7 @@ let c10 = 43.5;
 let c11 = 40;
 let c12 = "M0 40H30L40 30V0H10L0 10V40Z";
 let c13 = 150;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_14 = createStyles.createStyles({ canvas: { overflow: "hidden", transformOrigin: "top left" }, layer: { position: "absolute", top: 0, left: 0 }, logo: { position: "absolute", top: 4, left: 4, width: 40, height: 40, alignItems: "center", justifyContent: "center" } });
 const __initData = { code: "function CheckpointCardFrameTsx1(){const{isArtLoaded,withTiming,CARD_ART_FADE_IN_DURATION_MS}=this.__closure;return{opacity:isArtLoaded?withTiming(1,{duration:CARD_ART_FADE_IN_DURATION_MS}):0};}" };
 const __initData2 = { code: "function CheckpointCardFrameTsx2(){const{isArtLoaded,withTiming,CARD_ART_FADE_IN_DURATION_MS}=this.__closure;return{opacity:isArtLoaded?withTiming(1,{duration:CARD_ART_FADE_IN_DURATION_MS}):0};}" };

@@ -1,6 +1,6 @@
-// === Module 9006: GuildSettingsStore ===
+// === Module 9040: GuildSettingsStore ===
 
-// Module 9006 (GuildSettingsStore)
+// Module 9040 (GuildSettingsStore)
 import SnowflakeUtilsDefault from "SnowflakeUtils" /* 11 */;
 import _modDef12 from "module_12" /* 12 */;
 import initializeDefault from "initialize" /* 504 */;
@@ -8,22 +8,22 @@ import Storage2 from "Storage" /* 510 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
 import HTTPUtils from "HTTPUtils" /* 1294 */;
 import _modDef2046 from "module_2046" /* 2046 */;
-import ChannelRecord from "ChannelRecord" /* 4828 */;
-import GuildRecordUtils from "GuildRecordUtils" /* 4838 */;
-import PlainRecord from "PlainRecord" /* 4839 */;
-import GuildRecord from "GuildRecord" /* 4842 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9007 */;
-import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9008 */;
-import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 9010 */;
-import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9011 */;
-import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9012 */;
-import GuildProfileStore from "GuildProfileStore" /* 8985 */;
-import InviteRecord from "InviteRecord" /* 8868 */;
+import ChannelRecord from "ChannelRecord" /* 4860 */;
+import GuildRecordUtils from "GuildRecordUtils" /* 4870 */;
+import PlainRecord from "PlainRecord" /* 4871 */;
+import GuildRecord from "GuildRecord" /* 4874 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9041 */;
+import GuildSettingsServerTagUtils from "GuildSettingsServerTagUtils" /* 9042 */;
+import GuildSettingsVanityURLActionCreators from "GuildSettingsVanityURLActionCreators" /* 9043 */;
+import getDefaultGuildSettingsSection from "getDefaultGuildSettingsSection" /* 9044 */;
+import GuildSettingsFetchActionCreators from "GuildSettingsFetchActionCreators" /* 9045 */;
+import GuildProfileStore from "GuildProfileStore" /* 9019 */;
+import InviteRecord from "InviteRecord" /* 8902 */;
 import UserRecord from "UserRecord" /* 1403 */;
-import GuildStore from "GuildStore" /* 4846 */;
+import GuildStore from "GuildStore" /* 4878 */;
 import UserStore from "UserStore" /* 1389 */;
 import Constants from "Constants" /* 1084 */;
-import PublicGuildsConstants from "PublicGuildsConstants" /* 8405 */;
+import PublicGuildsConstants from "PublicGuildsConstants" /* 8439 */;
 import size from "module_2" /* 2 */;
 
 function handleFormInit(type) {

@@ -1,10 +1,10 @@
-// === Module 12491: ConjureFloatingActivity ===
+// === Module 12538: ConjureFloatingActivity ===
 
-// Module 12491 (ConjureFloatingActivity)
+// Module 12538 (ConjureFloatingActivity)
 import nativeDefault from "native" /* 587 */;
-import _modDef3831 from "module_3831" /* 3831 */;
-import ReanimatedRexportDefault from "ReanimatedRexport" /* 5053 */;
-import timing from "timing" /* 5207 */;
+import _modDef3863 from "module_3863" /* 3863 */;
+import ReanimatedRexportDefault from "ReanimatedRexport" /* 5085 */;
+import timing from "timing" /* 5242 */;
 import _slicedToArray from "module_32" /* 32 */;
 import noop from "module_19" /* 19 */;
 
@@ -12,7 +12,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { root: null, pill: null, pillMain: null, checklistButton: null, panel: null, label: null };
 const rect = { position: "absolute", left: nativeDefault.space.PX_16, right: nativeDefault.space.PX_16, alignItems: "center" };
 obj2.root = rect;
@@ -39,7 +39,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
   ({ line, onJumpToActivity, bottom, todos, todosLive, agents } = arg0);
   const tmp4 = closure_8();
   const obj = sharedValue(576);
-  sharedValue = sharedValue(5053).useSharedValue(0);
+  sharedValue = sharedValue(5085).useSharedValue(0);
   if (cResult[0] !== sharedValue) {
     const fn = function y() {
       const result = sharedValue.set(timing.withTiming(1, { duration: 150 }));
@@ -56,7 +56,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
     tmp7 = cResult[2];
   }
   const effect = noop.useEffect(tmp6, tmp7);
-  const tmpResult = sharedValue(5053);
+  const tmpResult = sharedValue(5085);
   class B {
     constructor() {
       obj = { opacity: closure_0.get() };
@@ -66,8 +66,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
   B.__closure = { opacity: sharedValue };
   B.__workletHash = 451170179306;
   B.__initData = __initData;
-  const animatedStyle = sharedValue(5053).useAnimatedStyle(B);
-  const tmpResult2 = sharedValue(5053);
+  const animatedStyle = sharedValue(5085).useAnimatedStyle(B);
+  const tmpResult2 = sharedValue(5085);
   [r10047, importDefault] = noop.useState(false);
   if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
     class D {
@@ -121,13 +121,13 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
   let sharedValue;
   importDefault = undefined;
   const tmp = closure_8();
-  sharedValue = sharedValue(5053).useSharedValue(0);
+  sharedValue = sharedValue(5085).useSharedValue(0);
   const items = [sharedValue];
   const effect = noop.useEffect(() => {
     const result = sharedValue.set(timing.withTiming(1, { duration: 150 }));
     return () => sharedValue(dependencyMap[8]).cancelAnimation(closure_1_0);
   }, items);
-  const obj = sharedValue(5053);
+  const obj = sharedValue(5085);
   class T {
     constructor() {
       obj = { opacity: closure_0.get() };
@@ -137,8 +137,8 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
   T.__closure = { opacity: sharedValue };
   T.__workletHash = 4327855830857;
   T.__initData = __initData2;
-  const animatedStyle = sharedValue(5053).useAnimatedStyle(T);
-  const obj2 = sharedValue(5053);
+  const animatedStyle = sharedValue(5085).useAnimatedStyle(T);
+  const obj2 = sharedValue(5085);
   [tmp8, c1] = noop.useState(false);
   const callback = noop.useCallback(() => _undefined((arg0) => !arg0), []);
   const obj3 = { style: null, pointerEvents: "box-none", children: null };
@@ -150,7 +150,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
     if (null != todos) {
       const obj4 = { style: tmp.panel, children: null };
       const obj5 = { todos, agents: agents.agents, live: todosLive, announceProgress: false };
-      obj4.children = closure_6(tmp11(12430), obj5);
+      obj4.children = closure_6(tmp11(12476), obj5);
       tmp12 = closure_6(View, obj4);
     }
   }
@@ -158,22 +158,22 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function ConjureF
   const obj6 = { style: tmp.pill, children: null };
   const obj7 = { style: tmp.pillMain, accessibilityRole: "button", accessibilityLabel: null, hitSlop: 8, onPress: null, children: null };
   const intl = tmp2(1125).intl;
-  obj7.accessibilityLabel = intl.formatToPlainString(_modDef3831.xuQfOT, { activity: line });
+  obj7.accessibilityLabel = intl.formatToPlainString(_modDef3863.xuQfOT, { activity: line });
   obj7.onPress = onJumpToActivity;
   const tmp7 = _slicedToArray(noop.useState(false), 2);
-  const items3 = [closure_6(sharedValue(12174).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }), ];
+  const items3 = [closure_6(sharedValue(12212).MagicWandIcon, { size: "xs", color: nativeDefault.colors.TEXT_BRAND }), ];
   const obj8 = { size: "xs", color: nativeDefault.colors.TEXT_BRAND };
-  items3[1] = closure_6(View, { style: tmp.label, children: closure_6(sharedValue(5235).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: line }) });
+  items3[1] = closure_6(View, { style: tmp.label, children: closure_6(sharedValue(5270).Text, { variant: "text-sm/medium", color: "text-default", lineClamp: 1, children: line }) });
   obj7.children = items3;
-  const items4 = [closure_7(sharedValue(6910).PressableOpacity, obj7), ];
+  const items4 = [closure_7(sharedValue(6944).PressableOpacity, obj7), ];
   let tmp16Result = null;
   if (null != todos) {
     const obj10 = { style: tmp.checklistButton, children: null };
-    const obj11 = { variant: "default", size: "sm", icon: tmp11(6843), pressed: tmp8, accessibilityLabel: null, onPress: null };
+    const obj11 = { variant: "default", size: "sm", icon: tmp11(6877), pressed: tmp8, accessibilityLabel: null, onPress: null };
     const intl2 = tmp2(1125).intl;
-    obj11.accessibilityLabel = intl2.string(tmp11(3831).Qp2isI);
+    obj11.accessibilityLabel = intl2.string(tmp11(3863).Qp2isI);
     obj11.onPress = callback;
-    obj10.children = closure_6(tmp2(12492).ToggleIconButton, obj11);
+    obj10.children = closure_6(tmp2(12539).ToggleIconButton, obj11);
     tmp16Result = closure_6(View, obj10);
   }
   items4[1] = tmp16Result;

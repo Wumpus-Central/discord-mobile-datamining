@@ -1,10 +1,10 @@
-// === Module 15056: GlobalDiscoveryServersSearchResultsStore ===
+// === Module 15279: GlobalDiscoveryServersSearchResultsStore ===
 
-// Module 15056 (GlobalDiscoveryServersSearchResultsStore)
+// Module 15279 (GlobalDiscoveryServersSearchResultsStore)
 import initializeDefault from "initialize" /* 504 */;
 import DispatcherDefault from "Dispatcher" /* 584 */;
-import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6375 */;
-import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9007 */;
+import V6OrEarlierAPIError from "V6OrEarlierAPIError" /* 6409 */;
+import GlobalDiscoveryServersConstants from "GlobalDiscoveryServersConstants" /* 9041 */;
 import size from "module_2" /* 2 */;
 
 ({ SEARCH_RESULTS_QUERY_PREFIX: c2, SEARCH_RESULTS_CATEGORY_PREFIX: c3, SEARCH_RESULTS_LANGUAGE_CODE_PREFIX: closure_4 } = GlobalDiscoveryServersConstants);
