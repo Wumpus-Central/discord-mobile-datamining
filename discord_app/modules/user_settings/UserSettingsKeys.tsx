@@ -474,6 +474,7 @@ export const WebUserSettings = {
   DISABLE_APP_COLLECTIONS_CACHE: "disable_app_collections_cache",
   DISCORD_STATS_POPOUT: "discord_stats_popout",
   ENABLE_TABS_EXPERIENCE: "enable_tabs_experience",
+  NATIVE_MARKDOWN: "native_markdown",
   LOGGING: "logging",
   GATEWAY_LOGS: "gateway_logs",
   OVERLAY_RPC_LOGS: "overlay_rpc_logs",

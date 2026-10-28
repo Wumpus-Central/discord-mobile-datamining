@@ -9,12 +9,12 @@ import GuildSettingsStore from "../../GuildSettingsStore.tsx";
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, ScrollView: hasOwnProperty } = get_ActivityIndicator);
-let closure_6 = fn(4842).isGuildOwnerWithRequiredMfaLevel;
+let closure_6 = fn(4874).isGuildOwnerWithRequiredMfaLevel;
 const Constants = fn(1084);
 ({ GuildFeatures: c10, MFALevels: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   wrapper: { flexGrow: 1, justifyContent: "space-between", paddingTop: 99 },
   center: {
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               obj2.children = tmp26;
-              const tmp30 = closure_12(tmp(5235).Text, obj2);
+              const tmp30 = closure_12(tmp(5270).Text, obj2);
               cResult[16] = tmp4.label;
               cResult[17] = tmp30;
               let tmp28 = tmp30;
@@ -363,13 +363,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                   return;
                                 }
                               }
-                              tmp58[0] = stateFromStores(16096);
+                              tmp58[0] = stateFromStores(16324);
                               tmp58[1] = tmp4.image;
-                              const tmp59 = closure_12(stateFromStores(5670), tmp58);
+                              const tmp59 = closure_12(stateFromStores(5705), tmp58);
                               cResult[35] = tmp4.image;
                               cResult[36] = tmp59;
                               let tmp54 = tmp59;
-                              const tmp57 = stateFromStores(5670);
+                              const tmp57 = stateFromStores(5705);
                             } else {
                               tmp54 = cResult[36];
                             }
@@ -477,7 +477,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                       }
                                     }
                                     if (tmp76 === Symbol.for("react.memo_cache_sentinel")) {
-                                      const tmp79 = closure_12(tmp(5593).NavScrim, {});
+                                      const tmp79 = closure_12(tmp(5628).NavScrim, {});
                                       class B {
                                         constructor() {
                                           if (null == closure_1) {
@@ -616,7 +616,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
               }
               const obj9 = { text: cResult[19], disabled: !tmp14, variant: str, onPress: tmp22, shrink: true };
-              const tmp38 = closure_12(tmp(5245).Button, obj9);
+              const tmp38 = closure_12(tmp(5280).Button, obj9);
               cResult[20] = tmp22;
               cResult[21] = cResult[19];
               cResult[22] = !tmp14;
@@ -776,7 +776,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const intl = tmp2(1125).intl;
       obj5.children = intl.string(guildId(1125).t.Wi9LEV);
-      const items4 = [closure_12(guildId(5235).Text, obj5), ,];
+      const items4 = [closure_12(guildId(5270).Text, obj5), ,];
       const obj6 = { style: tmp.button, children: null };
       const intl2 = tmp2(1125).intl;
       const string = intl2.string;
@@ -793,7 +793,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj7.variant = str;
       obj7.onPress = callback;
-      obj6.children = closure_12(guildId(5245).Button, obj7);
+      obj6.children = closure_12(guildId(5280).Button, obj7);
       items4[1] = closure_12(closure_4, obj6);
       let hasItem;
       if (stateFromStores != null) {
@@ -805,7 +805,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = { variant: "text-sm/normal", color: "text-feedback-critical", children: null };
         const intl3 = tmp2(1125).intl;
         obj8.children = intl3.string(tmp2(1125).t["KG1V/E"]);
-        tmp18Result = closure_12(tmp2(5235).Text, obj8);
+        tmp18Result = closure_12(tmp2(5270).Text, obj8);
       }
       const obj9 = { children: null };
       items4[2] = tmp18Result;
@@ -814,19 +814,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj10 = { style: tmp.center, children: null };
       const obj11 = { source: null, style: null, resizeMode: "contain" };
       let obj2 = guildId(504);
-      obj11.source = stateFromStores(16096);
+      obj11.source = stateFromStores(16324);
       obj11.style = tmp.image;
-      const items6 = [closure_12(stateFromStores(5670), obj11)];
+      const items6 = [closure_12(stateFromStores(5705), obj11)];
       const obj12 = { style: tmp.infoWrapper, children: null };
       const obj13 = { variant: "text-sm/medium", color: "text-muted", children: null };
       const intl4 = tmp2(1125).intl;
       obj13.children = intl4.format(guildId(1125).t["FK0+iX"], {});
-      obj12.children = closure_12(guildId(5235).Text, obj13);
+      obj12.children = closure_12(guildId(5270).Text, obj13);
       items6[1] = closure_12(closure_4, obj12);
       obj10.children = items6;
       items5[1] = closure_13(closure_4, obj10);
       obj3.children = items5;
-      const items7 = [closure_13(closure_5, obj3), closure_12(guildId(5593).NavScrim, {})];
+      const items7 = [closure_13(closure_5, obj3), closure_12(guildId(5628).NavScrim, {})];
       obj9.children = items7;
       return closure_13(closure_14, obj9);
     };

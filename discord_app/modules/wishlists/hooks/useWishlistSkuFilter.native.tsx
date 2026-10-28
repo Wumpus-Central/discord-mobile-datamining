@@ -2,7 +2,7 @@
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_3 = fn(7333).WishlistRecommendationReason;
+let closure_3 = fn(7368).WishlistRecommendationReason;
 const SKUProductLines = fn(1084).SKUProductLines;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

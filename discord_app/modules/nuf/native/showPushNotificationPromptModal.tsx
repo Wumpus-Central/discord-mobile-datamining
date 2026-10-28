@@ -11,7 +11,7 @@ let result = size.fileFinishedImporting("modules/nuf/native/showPushNotification
 export const showPushNotificationPromptModal = function showPushNotificationPromptModal(onComplete) {
   onComplete = onComplete.onComplete;
   ModalActionCreatorsDefault.pushLazy(
-    onComplete(1999)(17456, dependencyMap.paths),
+    onComplete(1999)(17691, dependencyMap.paths),
     {
       onComplete: function closeModal() {
         ModalActionCreatorsDefault.popWithKey(closure_4);
@@ -26,5 +26,5 @@ export const showPushNotificationPromptModal = function showPushNotificationProm
       onComplete();
     },
   };
-  const result = onComplete(13329).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
+  const result = onComplete(13546).setPushPermissionState(PermissionStateType.PROMPT_SEEN);
 };

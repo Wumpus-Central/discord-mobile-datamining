@@ -4,7 +4,7 @@ import nativeDefault from "../../../../discord_common/js/packages/tokens/native.
 import CollectiblesAssetUtils from "../../collectibles/utils/CollectiblesAssetUtils.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import AvatarDecorationSampleV2 from "../../collectibles/native/AvatarDecorationSampleV2.tsx";
-import _modDef9403 from "../../../../_runtime/metro/09403__.js";
+import _modDef9435 from "../../../../_runtime/metro/09435__.js";
 import NitroCoinSpotIllustration from "../../../design/components/mana-assets/native/generated/NitroCoinSpotIllustration.native.tsx";
 import OrbsArcadeTypes from "../OrbsArcadeTypes.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_6 = createStyles.createStyles((width) => {
   const obj = {
     container: { width, height: width, alignItems: "center", justifyContent: "center" },
@@ -48,7 +48,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5 = cResult[1];
       }
       if (cResult[2] !== tmp4.avatar) {
-        const obj3 = { style: tmp4.avatar, resizeMode: "contain", source: _modDef9403, accessible: false };
+        const obj3 = { style: tmp4.avatar, resizeMode: "contain", source: _modDef9435, accessible: false };
         const tmp11 = React4(FastImageDefault, obj3);
         cResult[2] = tmp4.avatar;
         cResult[3] = tmp11;
@@ -100,7 +100,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: tmp.container, children: null };
       const obj4 = { style: tmp.avatar, resizeMode: "contain", source: null, accessible: false };
       const obj2 = { skuId: size.reward.skuId, assetFormat: CollectiblesAssetUtils.CollectiblesItemAssetFormat.STATIC };
-      obj4.source = _modDef9403;
+      obj4.source = _modDef9435;
       const items = [React4(FastImageDefault, obj4)];
       let tmp6Result = null;
       if (null != collectiblesItemAssetUrl) {

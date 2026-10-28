@@ -8,8 +8,8 @@ import GuildIcon from "../../../../../guild/native/GuildIcon.tsx";
 import CheckpointTextDefault from "../../CheckpointText.tsx";
 import CheckpointScreenDefault from "../../CheckpointScreen.tsx";
 import CheckpointApngPlayerDefault from "../../CheckpointApngPlayer.tsx";
-import _modDef12998 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
-import _modDef12999 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
+import _modDef13215 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe.png.js";
+import _modDef13216 from "../../../../../../../discord_assets/assets/checkpoint/voice-globe-static.png.js";
 import CheckpointDisplayTextDefault from "../../CheckpointDisplayText.tsx";
 import CheckpointGuildStatsDefault from "../../CheckpointGuildStats.tsx";
 import CheckpointRankTagDefault from "../../CheckpointRankTag.tsx";
@@ -21,12 +21,12 @@ const GuildIconDefault = GuildIcon;
 
 require = fn;
 const View = fn(17).View;
-const CheckpointConstants = fn(6016);
+const CheckpointConstants = fn(6050);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 ({ CHECKPOINT_GUILD_CARD_BACKGROUND, CHECKPOINT_WHITE } = CheckpointConstants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   container: {
     width: "100%",
@@ -309,7 +309,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           ({ container, header, heading, title } = tmp4);
           if (cResult[26] === Symbol.for("react.memo_cache_sentinel")) {
             let obj2 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-            const tmp12 = closure_6(tmp(9648).ServerIcon, obj2);
+            const tmp12 = closure_6(tmp(9680).ServerIcon, obj2);
             cResult[26] = tmp12;
             let tmp9 = tmp12;
           } else {
@@ -604,8 +604,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return tmp2(tmp3, obj, guild.id);
             }
           }
-          obj12.animatedUri = _modDef12998;
-          obj12.staticUri = _modDef12999;
+          obj12.animatedUri = _modDef13215;
+          obj12.staticUri = _modDef13216;
           obj12.style = tmp4.globe;
           const tmp60 = closure_6(tmp59, obj12);
           cResult[5] = tmp4.globe;
@@ -912,7 +912,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { style: tmp.heading, children: null };
           const obj6 = { style: tmp.title, children: null };
           const obj7 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-          const items1 = [closure_6(tmp2(9648).ServerIcon, obj7)];
+          const items1 = [closure_6(tmp2(9680).ServerIcon, obj7)];
           const obj8 = { variant: "heading-md/extrabold", style: tmp.titleText, children: null };
           const tmp16 = CheckpointScreenDefault;
           const intl3 = tmp2(1125).intl;
@@ -978,8 +978,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = require("initialize");
       const obj15 = { animatedUri: null, staticUri: null, style: null };
       const tmp6 = CheckpointScreenDefault;
-      obj15.animatedUri = _modDef12998;
-      obj15.staticUri = _modDef12999;
+      obj15.animatedUri = _modDef13215;
+      obj15.staticUri = _modDef13216;
       obj15.style = tmp.globe;
       const items6 = [closure_6(CheckpointApngPlayerDefault, obj15)];
       const obj16 = { children: null };

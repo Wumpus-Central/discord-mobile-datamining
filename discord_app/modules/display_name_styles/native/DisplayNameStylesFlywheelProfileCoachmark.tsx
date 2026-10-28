@@ -8,9 +8,9 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-const ContentDismissActionType = fn(4821).ContentDismissActionType;
+const ContentDismissActionType = fn(4853).ContentDismissActionType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_8 = createStyles.createStyles({
   coachmarkImageContainer: { alignItems: "center", justifyContent: "center" },
 });
@@ -205,6 +205,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         items2,
       );
       const obj2 = markAsDismissed(2050);
-      const coachmark = visible(9842).useCoachmark(visible.targetRef, memo);
+      const coachmark = visible(9874).useCoachmark(visible.targetRef, memo);
       return null;
     };

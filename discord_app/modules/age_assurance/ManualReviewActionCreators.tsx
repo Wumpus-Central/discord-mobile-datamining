@@ -160,7 +160,7 @@ let closure_14 = async function _handleManualReviewCta() {
   }
 };
 const Endpoints = fn(1084).Endpoints;
-const SafetyToastType = fn(7418).SafetyToastType;
+const SafetyToastType = fn(7453).SafetyToastType;
 const ManualReviewStatus = { IN_PROGRESS: "in_progress", SUBMITTED: "submitted", DECIDED_TEEN: "decided_teen" };
 const MINUTE = DurationsDefault.Millis.MINUTE;
 let c11 = false;

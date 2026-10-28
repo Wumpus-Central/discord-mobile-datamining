@@ -87,7 +87,7 @@ function ReactorNotificationIcon(notification) {
   }
 }
 const View = fn(17).View;
-const InAppNotificationConstants = fn(13773);
+const InAppNotificationConstants = fn(13991);
 ({ IN_APP_NOTIFICATION_MAX_HEIGHT: metroRequire, NOTIFICATION_PREVIEW_LINE_CLAMP: closure_7 } =
   InAppNotificationConstants);
 const Constants = fn(1084);
@@ -95,7 +95,7 @@ const Constants = fn(1084);
 const Fonts = fn(1095).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   newContainerRoleDot: { paddingRight: 4, paddingTop: 0 },
   container: { flexDirection: "column" },
@@ -1039,7 +1039,7 @@ export default function ReactionNotification(notification) {
   const callback1 = obj2.useCallback(
     () =>
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(13790, dependencyMap.paths),
+        asyncRequireImpl(14008, dependencyMap.paths),
         { channelId: id },
         "in-app-notification-settings-modal",
       ),

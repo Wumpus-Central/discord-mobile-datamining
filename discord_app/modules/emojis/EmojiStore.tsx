@@ -93,9 +93,9 @@ let closure_39 = async function _loadSavedEmojis() {
               c2 = 1;
               c3 = 1;
               const obj6 = {
-                value: React(4870).tryLoadOrResetCacheGatewayAsync("EmojiStore.loadSavedEmojis", async () =>
+                value: React(4902).tryLoadOrResetCacheGatewayAsync("EmojiStore.loadSavedEmojis", async () =>
                   closure_1(10).timeAsync("\u{1F4BE}", "loadSavedEmojis", async () =>
-                    closure_2_1(6730).getAsync(closure_1_0),
+                    closure_2_1(6764).getAsync(closure_1_0),
                   ),
                 ),
                 done: false,
@@ -160,7 +160,7 @@ function updateGuildEmoji(guildId) {
   if (null != guildEmojis) {
     const currentUser = UserStore.getCurrentUser();
     if (null != currentUser) {
-      let flag = closure_0(6764).canUseRoleSubscriptionIAP(guildId);
+      let flag = closure_0(6798).canUseRoleSubscriptionIAP(guildId);
       if (typeof GuildEmojis === "function") {
         if (flag === undefined) {
           flag = false;
@@ -180,7 +180,7 @@ function updateGuildEmoji(guildId) {
       } else {
         throw new TypeError("Trying to call a non-function");
       }
-      obj = closure_0(6764);
+      obj = closure_0(6798);
     }
   }
 }
@@ -339,14 +339,14 @@ function handleRoleUpdate(guildId) {
         importDefaultResult31.compute();
       }
     }
-    obj = closure_0(4894);
+    obj = closure_0(4926);
   }
   return false;
 }
 const EmojiConstants = fn(1392);
 ({ EmojiDisabledReasons: closure_18, EmojiIntention: closure_19 } = EmojiConstants);
 const NULL_STRING_GUILD_ID = fn(1084).NULL_STRING_GUILD_ID;
-const EmojiCategories = fn(6729).EmojiCategories;
+const EmojiCategories = fn(6763).EmojiCategories;
 const UserSettingsTypes = fn(1094).UserSettingsTypes;
 let items = [
   EmojiCategories.TOP_GUILD_EMOJI.toString(),
@@ -406,7 +406,7 @@ prototype["isUsable"] = function isUsable(emoji) {
         return roles.includes(item);
       });
       if (!someResult) {
-        let result = emoji(4926).isPurchasableRoleSubscriptionEmoji(emoji);
+        let result = emoji(4958).isPurchasableRoleSubscriptionEmoji(emoji);
         if (result) {
           let _canSeeServerSubIAP = self._canSeeServerSubIAP;
           if (!_canSeeServerSubIAP) {
@@ -415,7 +415,7 @@ prototype["isUsable"] = function isUsable(emoji) {
           result = _canSeeServerSubIAP;
         }
         someResult = result;
-        obj = emoji(4926);
+        obj = emoji(4958);
       }
       tmp6 = someResult;
     }
@@ -1206,7 +1206,7 @@ prototype3["getDisambiguatedEmojiContext"] = function getDisambiguatedEmojiConte
 prototype3["getSearchResultsOrder"] = function getSearchResultsOrder(locked, query, count, intention) {
   closure_0 = intention;
   let formatted = query.toLowerCase();
-  const escapeResult = formatted(5609).escape(formatted);
+  const escapeResult = formatted(5644).escape(formatted);
   let orderByResult = locked;
   if (locked.length > 0) {
     const _RegExp = RegExp;
@@ -1332,7 +1332,7 @@ prototype3["searchWithoutFetchingLatest"] = function searchWithoutFetchingLatest
       if (!tmp5) {
         let tmp6 = _slicedToArray;
         if (_slicedToArray) {
-          tmp6 = emoji.type !== channel(4921).EmojiTypes.UNICODE;
+          tmp6 = emoji.type !== channel(4953).EmojiTypes.UNICODE;
         }
         tmp5 = tmp6;
       }

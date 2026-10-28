@@ -19,7 +19,7 @@ const Constants = fn(1084);
 ({ GuildFeatures: c10, JoinGuildSources: closure_11 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   card: {
     backgroundColor: nativeDefault.colors.BG_SURFACE_RAISED,

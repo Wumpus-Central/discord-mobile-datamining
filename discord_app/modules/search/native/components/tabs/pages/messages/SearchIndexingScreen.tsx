@@ -31,11 +31,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(tmp4, tmp5);
       if (cResult[3] !== searchContext) {
-        const indexingErrorText = searchContext(13246).getIndexingErrorText(searchContext);
+        const indexingErrorText = searchContext(13463).getIndexingErrorText(searchContext);
         cResult[3] = searchContext;
         cResult[4] = indexingErrorText;
         let tmp7 = indexingErrorText;
-        const tmpResult = searchContext(13246);
+        const tmpResult = searchContext(13463);
       } else {
         tmp7 = cResult[4];
       }
@@ -56,6 +56,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const effect = noop.useEffect(() => {
         search_tracking_TrackingDefault.trackSearchIndexing({ searchContext });
       }, items);
-      const text = searchContext(13246).getIndexingErrorText(searchContext);
+      const text = searchContext(13463).getIndexingErrorText(searchContext);
       return jsx(pages_ErrorScreenDefault, { text });
     };

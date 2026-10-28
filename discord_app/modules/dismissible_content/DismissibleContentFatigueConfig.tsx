@@ -31,6 +31,7 @@ const items = [
   dismissible_content.DismissibleContent.RESTRICTED_ACCOUNTS_SETTING_NOTICE,
   dismissible_content.DismissibleContent.SOUNDMOJI_BADGE,
   dismissible_content.DismissibleContent.TRIAL_NUX_EMOJI_BUTTON,
+  dismissible_content.DismissibleContent.DEFAULT_EMOJIS_PACKS_DISCOVERY_DOT,
   dismissible_content.DismissibleContent.TRIAL_NUX_EMOJI_PICKER,
   dismissible_content.DismissibleContent.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL,
   dismissible_content.DismissibleContent.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK,

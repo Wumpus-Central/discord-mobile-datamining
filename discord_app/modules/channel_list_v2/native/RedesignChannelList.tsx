@@ -29,7 +29,7 @@ let closure_4 = ["selectedGuildId", "selectedChannelId"];
 const View = fn(17).View;
 const Constants = fn(1084);
 ({ EMPTY_NUX_SERVER: closure_15, MOBILE_GUILD_UPSELL_LIST: closure_16 } = Constants);
-const ChannelListGuildActionRow = fn(7644).ChannelListGuildActionRow;
+const ChannelListGuildActionRow = fn(7678).ChannelListGuildActionRow;
 const jsxProd = fn(21);
 ({ jsx: closure_18, jsxs: closure_19, Fragment: closure_20 } = jsxProd);
 let ReactCompilerGating = fn(558);
@@ -50,7 +50,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         c0 = -1;
         navigation = navigation.addListener("tabPress", (arg0) => {
           let timeout = arg0;
-          if (null != obj.coerceGuildsRoute(navigation(11176)())) {
+          if (null != obj.coerceGuildsRoute(navigation(11211)())) {
             if (-1 === timeout) {
               const _clearTimeout2 = clearTimeout;
               clearTimeout(timeout);
@@ -101,7 +101,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
         c0 = -1;
         navigation = navigation.addListener("tabPress", (arg0) => {
           let timeout = arg0;
-          if (null != obj.coerceGuildsRoute(navigation(11176)())) {
+          if (null != obj.coerceGuildsRoute(navigation(11211)())) {
             if (-1 === timeout) {
               const _clearTimeout2 = clearTimeout;
               clearTimeout(timeout);
@@ -813,9 +813,9 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(shouldRender, Object.assign({ shouldRender: 0 }));
       let found;
       dependencyMap = undefined;
-      const arr = found(17733)(merged.guild);
+      const arr = found(17970)(merged.guild);
       const hasItem = arr.includes(ChannelListGuildActionRow.GUILD_CONJURE);
-      merged(9567);
+      merged(9599);
       found = arr;
       if (hasItem) {
         found = arr;
@@ -829,8 +829,8 @@ let closure_24 = ReactCompilerGating.isReactCompilerEnabled()
         applicationAccountLinkMarkAsDismissed,
         startApplicationAccountLinkAuthorization,
         accountLinkApplication,
-      } = found(17739)(merged.guild));
-      const tmp9 = found(17739)(merged.guild);
+      } = found(17976)(merged.guild));
+      const tmp9 = found(17976)(merged.guild);
       const items = [ChannelListStore];
       const stateFromStoresObject = merged(504).useStateFromStoresObject(items, () =>
         ChannelListStore.getGuild(merged.guild.id, { guildActionRows: found, channelNoticeRows }),
@@ -927,13 +927,13 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
             if (tmpResult6.isFavoritesGuildId(tmp6)) {
               const _Symbol = Symbol;
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
-                cResult[14] = tmp(17761);
+                cResult[14] = tmp(17998);
                 class I {
                   constructor() {
                     return closure_1_13.getVoiceChannelId();
                   }
                 }
-                const tmpResult7 = tmp(17761);
+                const tmpResult7 = tmp(17998);
               }
               class I {
                 constructor() {
@@ -1005,9 +1005,9 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
                 cResult[27] = tmp25;
                 tmp18 = tmp25;
               }
-              tmpResult8 = tmp(9860);
+              tmpResult8 = tmp(9892);
             }
-            tmpResult6 = tmp(4849);
+            tmpResult6 = tmp(4881);
           }
         }
         if (cResult[11] === tmp4.style) {
@@ -1055,7 +1055,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
               obj4.guild = stateFromStores;
               obj4.selectedChannelId = selectedChannelId;
               obj4.selectedVoiceChannelId = stateFromStores1;
-              return closure_18(tmp2(17761).default, obj4);
+              return closure_18(tmp2(17998).default, obj4);
             } else {
               if (tmp2Result2.shouldNSFWGateGuild(selectedGuildId)) {
                 const obj5 = { style: merged.style, guildId: selectedGuildId };
@@ -1070,7 +1070,7 @@ let closure_25 = ReactCompilerGating.isReactCompilerEnabled()
               }
               return tmp6Result;
             }
-            tmp2Result = tmp2(4849);
+            tmp2Result = tmp2(4881);
           }
         }
         const obj7 = { style: merged.style, selectedGuildId };

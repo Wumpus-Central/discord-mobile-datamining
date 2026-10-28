@@ -139,12 +139,12 @@ function getBlockedUserInGDMTableRows(arg0) {
   tmp3 = ignoredUserIds.length > 0;
 }
 const View = fn(17).View;
-const SharedSpaceWarningConstants = fn(15084);
+const SharedSpaceWarningConstants = fn(15307);
 ({ BlockWarningEngagements: closure_7, GdmWarningMedium: closure_8 } = SharedSpaceWarningConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, Fragment: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   container: { paddingTop: nativeDefault.space.PX_12, gap: nativeDefault.space.PX_8, textAlign: "center" },
   headerImage: { alignSelf: "center", width: 73, height: 86 },
@@ -219,7 +219,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           obj2.size = REFRESH_MEDIUM_32;
           let tmp17 = closure_10(tmp(1199).Avatar, obj2);
         } else {
-          tmp17 = closure_10(tmp(12176).UserIcon, {});
+          tmp17 = closure_10(tmp(12214).UserIcon, {});
         }
         cResult[8] = guildId;
         cResult[9] = tmp12;
@@ -228,7 +228,7 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         if (cResult[12] !== tmp7) {
           const obj3 = { users: tmp7, size: tmp(1199).AvatarSizes.REFRESH_MEDIUM_32 };
-          const tmp11 = closure_10(tmp(10691).FacepileGroupDMAvatar, obj3);
+          const tmp11 = closure_10(tmp(10723).FacepileGroupDMAvatar, obj3);
           cResult[12] = tmp7;
           cResult[13] = tmp11;
           let tmp9 = tmp11;
@@ -260,11 +260,11 @@ let closure_15 = ReactCompilerGating.isReactCompilerEnabled()
           obj3.size = REFRESH_MEDIUM_32;
           let tmp6 = closure_10(tmp(1199).Avatar, obj3);
         } else {
-          tmp6 = closure_10(tmp(12176).UserIcon, {});
+          tmp6 = closure_10(tmp(12214).UserIcon, {});
         }
       } else {
         const obj4 = { users: found, size: tmp(1199).AvatarSizes.REFRESH_MEDIUM_32 };
-        return closure_10(tmp(10691).FacepileGroupDMAvatar, obj4);
+        return closure_10(tmp(10723).FacepileGroupDMAvatar, obj4);
       }
       const obj = userIds(504);
     };

@@ -17,7 +17,7 @@ const View = fn(17).View;
 const MAX_FRIENDS = fn(1084).MAX_FRIENDS;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire, Fragment: closure_7 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   applicationEducation: { flexDirection: "column", gap: 16 },
   entry: { flexDirection: "row", alignItems: "center", gap: 12 },

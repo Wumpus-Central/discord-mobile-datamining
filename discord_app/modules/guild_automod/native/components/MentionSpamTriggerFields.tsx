@@ -5,11 +5,11 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const Constants = fn(12823);
+const Constants = fn(12870);
 ({ MAX_MENTION_SPAM_LIMIT: hasOwnProperty, MIN_MENTION_SPAM_LIMIT: metroRequire } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_9 = createStyles.createStyles({ limitField: { width: 52 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -202,10 +202,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       noop = undefined;
       ({ mentionTotalLimit, mentionRaidProtectionEnabled } = rule.triggerMetadata);
       const tmp = closure_9();
-      let hasMentionRaidLimitAccess = rule(18330).useHasMentionRaidLimitAccess(rule.guildId);
+      let hasMentionRaidLimitAccess = rule(18571).useHasMentionRaidLimitAccess(rule.guildId);
       const intl = rule(1125).intl;
       const stringResult = intl.string(rule(1125).t["s/26oQ"]);
-      let obj = rule(18330);
+      let obj = rule(18571);
       [tmp7, c3] = noop.useState(true);
       let obj2 = { title: null, hasIcons: false, helperText: null, children: null };
       const intl2 = rule(1125).intl;
@@ -216,7 +216,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl3 = tmp2(1125).intl;
         const obj4 = { minimum, maximum };
         obj3.children = intl3.formatToPlainString(tmp2(1125).t["8Y5zsp"], obj4);
-        tmp9 = closure_7(tmp2(5235).Text, obj3);
+        tmp9 = closure_7(tmp2(5270).Text, obj3);
       }
       obj2.helperText = tmp9;
       const obj5 = { label: stringResult, subLabel: null, trailing: null };
@@ -256,9 +256,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         status: "error",
         accessibilityLabel: stringResult,
       };
-      obj6.children = closure_7(rule(7017).TextField, obj7);
+      obj6.children = closure_7(rule(7051).TextField, obj7);
       obj5.trailing = closure_7(View, obj6);
-      const items = [closure_7(rule(6905).TableRow, obj5)];
+      const items = [closure_7(rule(6939).TableRow, obj5)];
       if (hasMentionRaidLimitAccess) {
         const obj8 = { label: null, subLabel: null, checked: null, onPress: null };
         const intl5 = tmp2(1125).intl;
@@ -275,9 +275,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           obj.triggerMetadata = obj2;
           return dependencyMap(obj);
         };
-        hasMentionRaidLimitAccess = closure_7(tmp2(6902).TableCheckboxRow, obj8);
+        hasMentionRaidLimitAccess = closure_7(tmp2(6936).TableCheckboxRow, obj8);
       }
       items[1] = hasMentionRaidLimitAccess;
       obj2.children = items;
-      return closure_8(rule(6989).TableRowGroup, obj2);
+      return closure_8(rule(7023).TableRowGroup, obj2);
     };

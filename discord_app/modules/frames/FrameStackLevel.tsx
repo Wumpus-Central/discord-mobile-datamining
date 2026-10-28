@@ -6,6 +6,7 @@ const obj = {
   WithinAppContent: "within-app-content",
   WithinCallContent: "within-call-content",
   AboveAppContent: "above-app-content",
+  WithinModal: "within-modal",
 };
 const result = size.fileFinishedImporting("modules/frames/FrameStackLevel.tsx");
 
@@ -15,4 +16,5 @@ export const FRAME_STACK_LEVEL_PRIORITY = {
   [obj.WithinAppContent]: 0,
   [obj.WithinCallContent]: 0,
   [obj.AboveAppContent]: 1,
+  [obj.WithinModal]: 1,
 };

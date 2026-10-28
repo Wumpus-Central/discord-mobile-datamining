@@ -139,7 +139,7 @@ let closure_6 = async function _safeTransitionTo(arg0) {
       }
       closure_2 = closure_131_2;
       if (closure_131_2 == null) {
-        closure_2 = { guildId: "rejectWithError" };
+        closure_2 = { guildId: "paths" };
       }
       c5 = 2;
       c6 = 1;

@@ -75,7 +75,7 @@ export const getActivityFromCustomStatus = function getActivityFromCustomStatus(
 export const useCustomStatusActivity = ReactCompilerGating.isReactCompilerEnabled()
   ? function useCustomStatusActivity() {
       const cResult = emojiId(576).c(7);
-      const CustomStatusSetting = emojiId(4800).CustomStatusSetting;
+      const CustomStatusSetting = emojiId(4832).CustomStatusSetting;
       const setting = CustomStatusSetting.useSetting();
       emojiId = undefined;
       if (setting != null) {

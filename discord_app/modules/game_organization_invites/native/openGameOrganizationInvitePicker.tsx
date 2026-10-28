@@ -10,5 +10,5 @@ const result = size.fileFinishedImporting(
 );
 
 export default function openGameOrganizationInvitePicker(userId) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11318, dependencyMap.paths), closure_3, { userId });
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(11355, dependencyMap.paths), closure_3, { userId });
 }

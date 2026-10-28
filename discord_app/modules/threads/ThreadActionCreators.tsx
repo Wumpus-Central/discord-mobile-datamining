@@ -52,11 +52,11 @@ function dispatchThreadMemberLocalUpdate(id, isJoining) {
     isJoining,
   });
 }
-let closure_4 = fn(4828).createChannelRecordFromServer;
-const PAGE_SIZE = fn(8286).PAGE_SIZE;
+let closure_4 = fn(4860).createChannelRecordFromServer;
+const PAGE_SIZE = fn(8320).PAGE_SIZE;
 const Constants = fn(1084);
 ({ Endpoints: closure_12, AbortCodes: map1, AnalyticEvents: closure_14, Permissions: closure_15 } = Constants);
-const ChannelFlags = fn(4831).ChannelFlags;
+const ChannelFlags = fn(4863).ChannelFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/threads/ThreadActionCreators.tsx");
 

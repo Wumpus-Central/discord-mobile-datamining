@@ -38,6 +38,9 @@ function summaryEqual(status, status2) {
   if (tmp3) {
     tmp3 = status.mentionCount === status2.mentionCount;
   }
+  if (tmp3) {
+    tmp3 = status.unreadProjectCount === status2.unreadProjectCount;
+  }
   return tmp3;
 }
 function summarize(arg0) {
@@ -45,6 +48,7 @@ function summarize(arg0) {
   let id1 = null;
   let id2 = null;
   let num = 0;
+  let num2 = 0;
   const iter = arg0[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -56,6 +60,7 @@ function summarize(arg0) {
         id = tmp5.id;
       }
     } else if ("unread" === tmp9) {
+      num2 = num2 + 1;
       let tmp6Result = conjureUnread;
       let conjureProjectMentionCount = tmp6Result.getConjureProjectMentionCount(tmp5.id);
       num = num + conjureProjectMentionCount;
@@ -71,18 +76,18 @@ function summarize(arg0) {
   }
   if (null != id) {
     const obj2 = { kind: "working", projectId: id };
-    let tmp22 = obj2;
+    let tmp23 = obj2;
   } else if (null != id1) {
     const obj3 = { kind: "needs_input", projectId: id1 };
-    tmp22 = obj3;
+    tmp23 = obj3;
   } else {
-    tmp22 = null;
+    tmp23 = null;
     if (null != id2) {
       const obj4 = { kind: "unread", projectId: id2 };
-      tmp22 = obj4;
+      tmp23 = obj4;
     }
   }
-  return { status: tmp22, hasUnread: null != id1 || null != id2, mentionCount: num };
+  return { status: tmp23, hasUnread: null != id1 || null != id2, mentionCount: num, unreadProjectCount: num2 };
 }
 const result = size.fileFinishedImporting("modules/conjure/title_bar/useConjureTitleBarStatus.tsx");
 

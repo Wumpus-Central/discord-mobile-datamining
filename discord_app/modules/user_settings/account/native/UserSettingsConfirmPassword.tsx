@@ -21,7 +21,7 @@ get_ActivityIndicator = fn(17);
 const UserSettingsSections = fn(1084).UserSettingsSections;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   background: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   container: { paddingVertical: 12, paddingHorizontal: 16 },

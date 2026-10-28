@@ -25,7 +25,7 @@ function conjureChannelAppId(channel) {
   }
   return tmp2;
 }
-let GuildChannelStore = fn(4902);
+let GuildChannelStore = fn(4934);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: c3, GUILD_VOCAL_CHANNELS_KEY: closure_4 } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1084);
@@ -96,17 +96,17 @@ export const conjureSettingsGuildId = function conjureSettingsGuildId(project, a
   }
   return tmp;
 };
-export const conjureSettingChannels = function conjureSettingChannels(stateFromStores, channel_filter) {
+export const conjureSettingChannels = function conjureSettingChannels(channels, channel_filter) {
   if ("voice" === channel_filter) {
     let items = [];
   } else {
-    items = stateFromStores[React3];
+    items = channels[React3];
   }
   const items1 = [...items];
   if ("text" === channel_filter) {
     let items2 = [];
   } else {
-    items2 = stateFromStores[React4];
+    items2 = channels[React4];
   }
   HermesBuiltin.arraySpread(items2, tmp2);
   const mapped = items1.map((channel) => channel.channel);

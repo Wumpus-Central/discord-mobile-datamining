@@ -2498,8 +2498,8 @@ export const RPCCommandSchemas = {
   },
   [helpers.RPCCommand.OPEN_INVITE_DIALOG]: {
     embeddedAppSDK: true,
-    request: "unicodeVersion",
-    response: "applicationId",
+    request: "code",
+    response: "isReactCompilerEnabled",
   },
   [helpers.RPCCommand.OPEN_EXTERNAL_LINK]: {
     embeddedAppSDK: true,

@@ -40,6 +40,7 @@ let closure_0 = {
   restore_proposal: true,
   saving: true,
   segment_settled: true,
+  spend_limit: true,
   terminal_error: true,
   thinking: true,
   thinking_lifecycle: true,

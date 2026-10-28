@@ -9,7 +9,7 @@ const ScrollView = fn(17).ScrollView;
 const NOTE_MAX_LENGTH = fn(1084).NOTE_MAX_LENGTH;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 createStyles.createStyles({ contentContainer: { paddingVertical: 24, paddingHorizontal: 16, gap: 8 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -203,7 +203,7 @@ export default ReactCompilerGating.isReactCompilerEnabled() ? (function UserProf
         if (closure_5 == null) {
           str = "";
         }
-        closure_1_1(11075)({
+        closure_1_1(11110)({
           location: "UserProfileEditNote",
           hasUnsavedChanges: str !== closure_6,
           onReset() {

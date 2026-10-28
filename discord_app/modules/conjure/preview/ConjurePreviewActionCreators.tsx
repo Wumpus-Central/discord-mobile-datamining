@@ -20,7 +20,7 @@ let closure_8 = async function _loadConjurePreviewDm() {
   closure_130_1(closure_130_2[7]).dispatch({ type: "CHANNEL_CREATE", channel: closure_129_1 });
   return closure_129_1.id;
 };
-let closure_4 = fn(4828).createChannelRecordFromServer;
+let closure_4 = fn(4860).createChannelRecordFromServer;
 const Endpoints = fn(1084).Endpoints;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/preview/ConjurePreviewActionCreators.tsx");

@@ -19,15 +19,15 @@ function inferImportanceFromBehavior(visibility) {
   HIGH = constants.HIGH;
 }
 function formatCategory(id) {
-  const obj = { id: id.string_id, name: null };
+  const obj = { id: id.stringId, name: null };
   const intl = util.intl;
   obj.name = intl.string(id.title);
   return obj;
 }
-function formatSetting(item10022, importance) {
+function formatSetting(item10023, importance) {
   const obj = {
-    id: item10022.string_id,
-    groupId: item10022.category,
+    id: item10023.string_id,
+    groupId: item10023.category,
     name: null,
     importance: null,
     ringtone: null,
@@ -35,19 +35,19 @@ function formatSetting(item10022, importance) {
     vibrate: null,
   };
   const intl = util.intl;
-  obj.name = intl.string(item10022.title);
+  obj.name = intl.string(item10023.title);
   if (importance != null) {
     obj.importance = importance;
     let ringtone;
-    if ("ringtone" in item10022.behavior) {
-      ringtone = item10022.behavior.ringtone;
+    if ("ringtone" in item10023.behavior) {
+      ringtone = item10023.behavior.ringtone;
     }
     obj.ringtone = ringtone;
-    obj.badge = item10022.behavior.badge;
-    obj.vibrate = item10022.behavior.vibrate;
+    obj.badge = item10023.behavior.badge;
+    obj.vibrate = item10023.behavior.vibrate;
     return obj;
   } else {
-    const behavior = item10022.behavior;
+    const behavior = item10023.behavior;
     if (!("ringtone" in behavior)) {
       if ("popup" !== behavior.visibility) {
         if ("hidden" === behavior.visibility) {
@@ -61,8 +61,8 @@ function formatSetting(item10022, importance) {
   }
 }
 function buildChannelsAndMapping() {
-  const assignedNotifSettingsAndMappings = map(15734).getAssignedNotifSettingsAndMappings();
-  ({ settings, mappings } = assignedNotifSettingsAndMappings);
+  const assignedNotifSettingsAndMappings = map(15960).getAssignedNotifSettingsAndMappings();
+  ({ categories, settings, mappings } = assignedNotifSettingsAndMappings);
   const obj2 = (function computeInheritedImportances(mappings) {
     map = new Map();
     const tmp = NativeNotifSettingsModuleDefault;
@@ -82,7 +82,7 @@ function buildChannelsAndMapping() {
       }
       const _Map = Map;
       const map2 = new Map();
-      for (const item10036 of closure_1_5) {
+      for (const item10036 of closure_1_4) {
         let result1 = map2.set(item10036.id, item10036);
         continue;
       }
@@ -90,7 +90,7 @@ function buildChannelsAndMapping() {
       const nextResult = iter.next();
       while (iter !== undefined) {
         let notifSetting = nextResult.notifSetting;
-        let tmp17 = closure_1_4[nextResult.notifType];
+        let tmp17 = closure_1_3[nextResult.notifType];
         if (null != tmp17) {
           for (const item10055 of tmp17) {
             if (item10055 !== notifSetting) {
@@ -118,31 +118,28 @@ function buildChannelsAndMapping() {
   })(mappings);
   let items = [];
   map = new Map();
-  for (const item10022 of settings) {
-    let arr = items.push(formatSetting(item10022, obj2.get(item10022.id)));
-    let result = map.set(item10022.id, item10022.string_id);
+  for (const item10023 of settings) {
+    let arr = items.push(formatSetting(item10023, obj2.get(item10023.id)));
+    let result = map.set(item10023.id, item10023.string_id);
     continue;
   }
-  const obj = map(15734);
-  return {
-    mapping: mappings.flatMap((notifSetting) => {
-      value = map.get(notifSetting.notifSetting);
-      if (null == value) {
-        let items = [];
-      } else {
-        items = { type: notifSetting.notifType, channel: value };
-      }
-      return items;
-    }),
-    channels: items,
-    inheritedImportances: obj2,
-  };
+  const obj3 = { groups: null, mapping: null, channels: null, inheritedImportances: null };
+  const obj = map(15960);
+  obj3.groups = categories.map(formatCategory);
+  obj3.mapping = mappings.flatMap((notifSetting) => {
+    value = map.get(notifSetting.notifSetting);
+    if (null == value) {
+      let items = [];
+    } else {
+      items = { type: notifSetting.notifType, channel: value };
+    }
+    return items;
+  });
+  obj3.channels = items;
+  obj3.inheritedImportances = obj2;
+  return obj3;
 }
-({
-  NOTIF_CATEGORIES: c3,
-  NOTIF_SETTING_MAPPING: closure_4,
-  NOTIF_SETTINGS: hasOwnProperty,
-} = NotificationSettingsConstants);
+({ NOTIF_SETTING_MAPPING: c3, NOTIF_SETTINGS: closure_4 } = NotificationSettingsConstants);
 const constants = {
   NONE: 0,
   [0]: "NONE",
@@ -166,7 +163,7 @@ export default {
     ({ registerAndroidNotifGroupsAndChannels, registerAndroidNotifTypeMappings } = obj);
     if (null != registerAndroidNotifGroupsAndChannels) {
       if (null != registerAndroidNotifTypeMappings) {
-        ({ channels, inheritedImportances, mapping } = buildChannelsAndMapping());
+        ({ channels, inheritedImportances, groups, mapping } = buildChannelsAndMapping());
         const tmp4 = buildChannelsAndMapping();
         const obj2 = { message: "Registering declarative notification categories", data: null };
         const obj3 = { channels: channels.map((id) => id.id), inheritedImportances: null };
@@ -178,7 +175,7 @@ export default {
         });
         obj2.data = obj3;
         tmpResult.addBreadcrumb(obj2);
-        const result = registerAndroidNotifGroupsAndChannels(React3.map(formatCategory), channels);
+        const result = registerAndroidNotifGroupsAndChannels(groups, channels);
         const result1 = registerAndroidNotifTypeMappings(mapping);
         return true;
       }

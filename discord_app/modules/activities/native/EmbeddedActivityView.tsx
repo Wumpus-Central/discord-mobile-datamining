@@ -74,7 +74,7 @@ const Constants = fn(2023);
 fn(1372).OBEY_SILENT_HARDWARE_SWITCH_APP_IDS;
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_16 = createStyles.createStyles({ loadingContainer: { flex: 1, justifyContent: "center" } });
 const EmbeddedActivities = "EmbeddedActivities";
 let ReactCompilerGating = fn(558);
@@ -472,7 +472,7 @@ let closure_22 = ReactCompilerGating.isReactCompilerEnabled()
         1,
       )[0]);
       const merged1 = Object.assign(merged);
-      return closure_14(applicationId(11490).BaseEmbeddedAppWebView, {
+      return closure_14(applicationId(11528).BaseEmbeddedAppWebView, {
         iframeId,
         shellBridgeSecret,
         deepLinkQueryParams: applicationId.deepLinkQueryParams,

@@ -148,9 +148,9 @@ const joined = mapped.join(" ");
 const result = size.fileFinishedImporting("modules/checkpoint/CheckpointCustomizationUtils.tsx");
 
 export { CheckpointCustomizationOption };
-export const getCustomizationOptionName = function getCustomizationOptionName(activeCustomizationOption) {
+export const getCustomizationOptionName = function getCustomizationOptionName(customizationOption) {
   const intl = util.intl;
-  return intl.string(obj2[activeCustomizationOption]);
+  return intl.string(obj2[customizationOption]);
 };
 export const CUSTOMIZATION_OPTION_TO_TRAIT = obj3;
 export const getCustomizationOptionForCharacterStage = function getCustomizationOptionForCharacterStage(

@@ -20,7 +20,7 @@ function getMemoizedParticipant(item10013, first1) {
   }
   return value;
 }
-const VoicePanelConstants = fn(10904);
+const VoicePanelConstants = fn(10939);
 ({ VoicePanelCardItemType: closure_11, VoicePanelCTACard: closure_12 } = VoicePanelConstants);
 const RTCConnectionStates = fn(1084).RTCConnectionStates;
 let closure_14 = [];

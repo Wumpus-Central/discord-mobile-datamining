@@ -45,8 +45,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[4] !== first) {
         const obj3 = { children: null };
         const obj4 = { label: "Email", value: first, onChange: tmp5[1] };
-        obj3.children = jsx(tmp(7010).TextInput, { label: "Email", value: first, onChange: tmp5[1] });
-        const tmp15 = jsx(tmp(5978).Stack, { children: null });
+        obj3.children = jsx(tmp(7044).TextInput, { label: "Email", value: first, onChange: tmp5[1] });
+        const tmp15 = jsx(tmp(6013).Stack, { children: null });
         cResult[4] = first;
         cResult[5] = tmp15;
         let tmp13 = tmp15;

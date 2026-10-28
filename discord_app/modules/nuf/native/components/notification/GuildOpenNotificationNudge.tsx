@@ -13,8 +13,8 @@ import UserGuildSettingsStore from "../../../../../stores/UserGuildSettingsStore
 import PushNotificationPermissionStore from "../../../../../stores/native/PushNotificationPermissionStore.tsx";
 
 require = fn;
-const PermissionPromptType = fn(13326).PermissionPromptType;
-const NotificationPermissionConstants = fn(13327);
+const PermissionPromptType = fn(13543).PermissionPromptType;
+const NotificationPermissionConstants = fn(13544);
 ({ EventActionLocation: closure_11, NotificationNudgeSurface: closure_12 } = NotificationPermissionConstants);
 const Constants = fn(1084);
 ({ UserNotificationSettings: map1, ZERO_STRING_GUILD_ID: closure_14 } = Constants);
@@ -158,9 +158,9 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     return guildId;
   });
   let obj = stateFromStores(504);
-  let obj2 = stateFromStores3(16882);
-  const canSeePushNotificationNudge = stateFromStores(13328).useCanSeePushNotificationNudge();
-  let obj3 = stateFromStores(13328);
+  let obj2 = stateFromStores3(17111);
+  const canSeePushNotificationNudge = stateFromStores(13545).useCanSeePushNotificationNudge();
+  let obj3 = stateFromStores(13545);
   const items1 = [UserGuildSettingsStore];
   const stateFromStores1 = stateFromStores(504).useStateFromStores(items1, () => {
     let isMutedResult = null == stateFromStores;
@@ -219,8 +219,8 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
     return tmp2;
   });
   if (tmp12) {
-    tmp12 = !tmp(5021).isPseudoGuildId(stateFromStores);
-    const tmpResult = tmp(5021);
+    tmp12 = !tmp(5053).isPseudoGuildId(stateFromStores);
+    const tmpResult = tmp(5053);
   }
   if (tmp12) {
     tmp12 = !obj2.useConfig({ location: "useGuildOpenNudge" }).inHoldout;
@@ -243,14 +243,14 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
   const obj8 = stateFromStores(504);
   let prop = null;
   if (tmp12) {
-    prop = tmp(4808).DismissibleContent.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD;
+    prop = tmp(4840).DismissibleContent.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD;
   }
   let tmp15 = stateFromStores;
   if (stateFromStores == null) {
     tmp15 = closure_14;
   }
   const tmp8Result = tmp8(
-    stateFromStores(7497).useSelectedTimeRecurringGuildDismissibleContent(prop, tmp15, closure_17),
+    stateFromStores(7532).useSelectedTimeRecurringGuildDismissibleContent(prop, tmp15, closure_17),
     2,
   );
   first = tmp8Result[0];
@@ -266,8 +266,8 @@ export const useGuildOpenNudge = function useGuildOpenNudge() {
         PermissionPromptType.GUILD_OPEN_BOTTOM_SHEET,
       );
       const obj3 = { guildId: stateFromStores, markAsDismissed };
-      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18012, dependencyMap.paths), c16, obj3);
+      ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(18249, dependencyMap.paths), c16, obj3);
     }
   }, items6);
-  const tmpResult2 = stateFromStores(7497);
+  const tmpResult2 = stateFromStores(7532);
 };

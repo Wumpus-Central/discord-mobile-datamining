@@ -1,5 +1,6 @@
 // discord_app/modules/user_profile/UserProfileStore.tsx
 import _modDef12 from "../../../_runtime/metro/00012__.js";
+import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import util from "../../intl/index.native.tsx";
 import GlobalUtils from "../../utils/GlobalUtils.tsx";
 import CollectiblesItemType from "../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
@@ -11,6 +12,7 @@ import UserProfilePersonalWidget from "UserProfilePersonalWidget.tsx";
 import UserProfileClipsGalleryWidgetTypes from "UserProfileClipsGalleryWidgetTypes.tsx";
 import TieredTenureBadgeUtils from "TieredTenureBadgeUtils.tsx";
 import parseUserProfileCollectiblesDefault from "utils/parseUserProfileCollectibles.tsx";
+import ProfileReadStateUtils from "ProfileReadStateUtils.tsx";
 import LocaleStore from "../user_settings/LocaleStore.tsx";
 import UserRecord from "../../records/UserRecord.tsx";
 import AuthenticationStore from "../../stores/AuthenticationStore.tsx";
@@ -383,8 +385,8 @@ function handleProfileFetch(arg0) {
       const _Set = Set;
       set = new Set(mapped1.map((id) => id.id));
       let found1;
-      if (tmp64 != null) {
-        const badges1 = tmp64.badges;
+      if (tmp66 != null) {
+        const badges1 = tmp66.badges;
         found1 = badges1.filter((id) => !set.has(id.id));
       }
       if (found1.length > 0) {
@@ -458,23 +460,23 @@ function handleProfileFetch(arg0) {
   obj.fetchStartedAt = fetchStartedAt;
   obj.fetchEndedAt = timestamp;
   obj.legacyUsername = userProfile.legacy_username;
-  let tmp42 = null;
+  let tmp41 = null;
   if (null != application) {
     ({
-      id: obj3.id,
-      primary_sku_id: obj3.primarySkuId,
-      custom_install_url: obj3.customInstallUrl,
-      install_params: obj3.installParams,
-      integration_types_config: obj3.integrationTypesConfig,
-      flags: obj3.flags,
-      embedded_surfaces: obj3.embeddedSurfaces,
-      popular_application_command_ids: obj3.popularApplicationCommandIds,
-      storefront_available: obj3.storefront_available,
-      name: obj3.name,
-      terms_of_service_url: obj3.termsOfServiceUrl,
-      privacy_policy_url: obj3.privacyPolicyUrl,
+      id: obj4.id,
+      primary_sku_id: obj4.primarySkuId,
+      custom_install_url: obj4.customInstallUrl,
+      install_params: obj4.installParams,
+      integration_types_config: obj4.integrationTypesConfig,
+      flags: obj4.flags,
+      embedded_surfaces: obj4.embeddedSurfaces,
+      popular_application_command_ids: obj4.popularApplicationCommandIds,
+      storefront_available: obj4.storefront_available,
+      name: obj4.name,
+      terms_of_service_url: obj4.termsOfServiceUrl,
+      privacy_policy_url: obj4.privacyPolicyUrl,
     } = application);
-    tmp42 = {
+    tmp41 = {
       id: null,
       primarySkuId: null,
       customInstallUrl: null,
@@ -488,7 +490,7 @@ function handleProfileFetch(arg0) {
       termsOfServiceUrl: null,
       privacyPolicyUrl: null,
     };
-    let obj2 = {
+    let obj3 = {
       id: null,
       primarySkuId: null,
       customInstallUrl: null,
@@ -503,23 +505,33 @@ function handleProfileFetch(arg0) {
       privacyPolicyUrl: null,
     };
   }
-  obj.application = tmp42;
+  obj.application = tmp41;
   obj.badges = mapped1;
   const widgets = userProfile.widgets;
   let found3;
   if (widgets != null) {
     const mapped2 = widgets.map(createUserWidgetFromServer);
-    found3 = mapped2.filter(set(tmp36[14]).isNotNullish);
+    found3 = mapped2.filter(set(tmp35[14]).isNotNullish);
   }
   obj.widgets = found3;
   obj.wishlistSettings = userProfile.wishlist_settings;
-  obj.profileReadState = set(date1[22]).parseProfileReadState(userProfile.profile_read_state);
+  value3 = map1.get(userProfile.user.id);
+  let profileReadState;
+  if (value3 != null) {
+    profileReadState = value3.profileReadState;
+  }
+  let obj5 = set(date1[22]);
+  const tmp34 = date;
+  obj.profileReadState = obj5.mergeProfileReadState(
+    profileReadState,
+    set(date1[22]).parseProfileReadState(userProfile.profile_read_state),
+  );
   obj.private = userProfile.private;
   const result5 = map1.set(userProfile.user.id, obj);
   checkUserProfileCollectiblesExpiration(userProfile.user.id);
   if (null != userProfile.guild_member_profile) {
     let obj6 = {};
-    let merged1 = Object.assign(tmp35(tmp36[20])(userProfile.guild_member_profile));
+    let merged1 = Object.assign(tmp34(tmp35[20])(userProfile.guild_member_profile));
     obj6.userId = userProfile.user.id;
     obj6.guildId = userProfile.guild_member_profile.guild_id;
     obj6.banner = userProfile.guild_member_profile.banner;
@@ -541,9 +553,9 @@ function handleProfileFetch(arg0) {
     obj6.badges = userProfile.guild_badges;
     obj6.fetchStartedAt = fetchStartedAt;
     obj6.fetchEndedAt = timestamp;
-    value2 = map2.get(userProfile.user.id);
-    if (null != value2) {
-      const result6 = value2.set(userProfile.guild_member_profile.guild_id, obj6);
+    value4 = map2.get(userProfile.user.id);
+    if (null != value4) {
+      const result6 = value4.set(userProfile.guild_member_profile.guild_id, obj6);
     } else {
       const _Map = Map;
       map = new Map();
@@ -553,8 +565,7 @@ function handleProfileFetch(arg0) {
     userProfile = userProfile.guild_member_profile.guild_id;
     checkUserProfileCollectiblesExpiration(userProfile.user.id, userProfile);
   }
-  let obj4 = set(date1[22]);
-  tmp35 = date;
+  const tmp45Result = set(date1[22]);
 }
 function handleProfileFetchStart(withMutualFriends) {
   ({ userId, guildId } = withMutualFriends);
@@ -602,7 +613,7 @@ function handleProfileFetchFailure(arg0) {
       premiumType: null,
       fetchStartedAt: 0,
       fetchEndedAt: 0,
-      fetchError: "code",
+      fetchError: "unicodeVersion",
     };
     value4 = obj;
   }
@@ -703,6 +714,18 @@ function handleWidgetsUpdateSuccess(arg0) {
     const mapped = widgets.map(createUserWidgetFromServer);
     obj2.widgets = mapped.filter(GlobalUtils.isNotNullish);
     const result = map1.set(userId, obj2);
+  }
+}
+function handleProfileReadStateAck(ownerId) {
+  ownerId = ownerId.ownerId;
+  value = map1.get(ownerId);
+  if (null == value) {
+    return false;
+  } else {
+    const obj2 = {};
+    const merged = Object.assign(value);
+    obj2.profileReadState = ProfileReadStateUtils.mergeProfileReadState(value.profileReadState, ownerId.ackedAt);
+    const result = map1.set(ownerId, obj2);
   }
 }
 function handlePinBadgesToProfile(badges) {
@@ -819,6 +842,7 @@ class UserProfileStore extends tmp2 {
       USER_PROFILE_UPDATE_SUCCESS: handleProfileUpdateSuccess,
       USER_PROFILE_UPDATE_FAILURE: handleProfileUpdateFailure,
       WIDGET_PENDING_SAVE_SUCCESS: handleWidgetsUpdateSuccess,
+      PROFILE_READ_STATE_ACK: handleProfileReadStateAck,
       USER_PROFILE_PIN_BADGES_ON_CLIENT: handlePinBadgesToProfile,
       MUTUAL_FRIENDS_FETCH_START: handleMutualFriendsFetchStart,
       MUTUAL_FRIENDS_FETCH_SUCCESS: handleMutualFriendsFetchSuccess,
@@ -869,6 +893,8 @@ prototype["initialize"] = function initialize() {
   this.waitFor(SortedGuildStore);
   const items = [LocaleStore];
   this.syncWith(items, handleLocaleStoreChange);
+  const Storage = Storage2.Storage;
+  Storage.remove("ProfileReadStateStore");
 };
 prototype["isFetchingProfile"] = function isFetchingProfile(id, guildId) {
   value = map.get(id);

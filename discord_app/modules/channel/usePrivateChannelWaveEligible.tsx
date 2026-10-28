@@ -7,7 +7,7 @@ import RelationshipStore from "../../stores/RelationshipStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const ChannelFlags = fn(4831).ChannelFlags;
+const ChannelFlags = fn(4863).ChannelFlags;
 const MessageTypes = fn(1084).MessageTypes;
 let c7 = 1814400000;
 const ReactCompilerGating = fn(558);
@@ -254,7 +254,7 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
             }
           }
           const extractTimestampResult = SnowflakeUtilsDefault.extractTimestamp(isDM.id);
-          const tmpResult9 = tmp(4797);
+          const tmpResult9 = tmp(4829);
           const isWithinIntervalResult = tmpResult9.isWithinInterval(
             _modDef2046(),
             _modDef2046(extractTimestampResult),
@@ -271,7 +271,7 @@ export const usePrivateChannelWaveEligible = ReactCompilerGating.isReactCompiler
           }
         }
         const tmpResult8 = tmp(504);
-        const strangerDangerWarning = tmp(10931).useStrangerDangerWarning(isDM.id);
+        const strangerDangerWarning = tmp(10966).useStrangerDangerWarning(isDM.id);
         if (tmp4) {
           class T {
             constructor() {

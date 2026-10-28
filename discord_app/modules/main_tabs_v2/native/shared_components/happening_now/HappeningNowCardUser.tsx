@@ -7,11 +7,11 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 
 require = fn;
 const View = fn(17).View;
-let closure_7 = fn(16695).HappeningNowCardTrackingType;
+let closure_7 = fn(16924).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
 const LARGE = fn(1199).AvatarSizes.LARGE;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_11 = createStyles.createStyles({ content: { flex: 1, display: "flex", alignItems: "center" } });
 const size = fn(2);
 const result = size.fileFinishedImporting(
@@ -39,10 +39,10 @@ export default noop.memo(function HappeningNowCardUser(index) {
     obj2.highlighted_user_ids = items;
     AnalyticsUtilsDefault.track(AnalyticEvents.ACTIVITY_CARD_CLICKED, obj2);
     if (null != stateFromStores) {
-      asyncRequireImpl(8668, dependencyMap.paths).then((result) =>
+      asyncRequireImpl(8705, dependencyMap.paths).then((result) =>
         result.default({ userId: localUser.id, localUser, sourceAnalyticsLocations }),
       );
-      const promise = asyncRequireImpl(8668, dependencyMap.paths);
+      const promise = asyncRequireImpl(8705, dependencyMap.paths);
     }
   }, items2);
   let obj = index(guildId[10]);

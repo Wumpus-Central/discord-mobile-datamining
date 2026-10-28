@@ -72,13 +72,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = {
             game: stateFromStores,
             sheetKey: OrbsArcadeInfoSheet,
-            secondaryAction: tmp(16453).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY,
+            secondaryAction: tmp(16682).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY,
             direction: "vertical",
           };
           const tmp22 = jsx(OrbsArcadeSheetActionsDefault, {
             game: stateFromStores,
             sheetKey: OrbsArcadeInfoSheet,
-            secondaryAction: tmp(16453).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY,
+            secondaryAction: tmp(16682).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY,
             direction: "vertical",
           });
           cResult[8] = stateFromStores;
@@ -94,7 +94,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return tmp23;
         }
         const obj4 = { illustration: tmp9, title: tmp13, description: tmp14, actions: tmp17 };
-        const tmp25 = jsx(tmp(10859).PromoSheet, {
+        const tmp25 = jsx(tmp(10894).PromoSheet, {
           illustration: tmp9,
           title: tmp13,
           description: tmp14,
@@ -129,16 +129,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = {
           game: stateFromStores,
           sheetKey: OrbsArcadeInfoSheet,
-          secondaryAction: tmp(16453).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY,
+          secondaryAction: tmp(16682).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY,
           direction: "vertical",
         };
         obj3.actions = jsx(OrbsArcadeSheetActionsDefault, {
           game: stateFromStores,
           sheetKey: OrbsArcadeInfoSheet,
-          secondaryAction: tmp(16453).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY,
+          secondaryAction: tmp(16682).OrbsArcadeSheetSecondaryAction.HOW_TO_PLAY,
           direction: "vertical",
         });
-        return jsx(tmp(10859).PromoSheet, { illustration: tmp9Result, title: null, description: null, actions: null });
+        return jsx(tmp(10894).PromoSheet, { illustration: tmp9Result, title: null, description: null, actions: null });
       }
       const obj = gameId(504);
     };

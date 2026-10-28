@@ -64,14 +64,11 @@ let body = {
               hasItem = features.has(constants3.COMMUNITY);
             }
             if (hasItem) {
-              if (SAFETY === constants2.GUILD_AUTOMOD) {
-                SAFETY = constants2.SAFETY;
-                let subsection = constants.SAFETY_AUTOMOD;
-              }
-              if (SAFETY === constants2.MEMBER_VERIFICATION) {
-                SAFETY = constants2.SAFETY;
-                subsection = constants.SAFETY_DM_AND_SPAM_PROTECTION;
-              }
+              hasItem = SAFETY === constants2.MEMBER_VERIFICATION;
+            }
+            if (hasItem) {
+              SAFETY = constants2.SAFETY;
+              const subsection = constants.SAFETY_DM_AND_SPAM_PROTECTION;
             }
             body.init(guildId, SAFETY, closure_2, subsection);
             if (null != SAFETY) {
@@ -82,9 +79,9 @@ let body = {
             c0 = 3;
             return { value: "IconComponent", done: null };
           }
-        } catch (tmp26) {
+        } catch (tmp25) {
           c0 = tmp;
-          throw tmp26;
+          throw tmp25;
         }
       }
     })();
@@ -278,7 +275,7 @@ let body = {
     obj(584).dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
     const pendingOriginalMd5s = GuildSettingsStore.getPendingOriginalMd5s();
     const obj5 = obj(584);
-    const obj6 = obj(7081);
+    const obj6 = obj(7115);
     const headersForMd5 = obj6.buildHeadersForMd5({
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_ICON]: pendingOriginalMd5s.icon,
       [closure_0(closure_2[14]).SafetyScannedUploadSurface.GUILD_BANNER]: pendingOriginalMd5s.banner,
@@ -449,7 +446,7 @@ let body = {
               c3 = 1;
               const obj6 = {
                 value: HTTP.del(request).then(() => {
-                  const AccessibilityAnnouncer = closure_1_0(4980).AccessibilityAnnouncer;
+                  const AccessibilityAnnouncer = closure_1_0(5012).AccessibilityAnnouncer;
                   const intl = closure_1_0(1125).intl;
                   AccessibilityAnnouncer.announce(intl.string(closure_1_0(1125).t["7iPyVW"]));
                 }),

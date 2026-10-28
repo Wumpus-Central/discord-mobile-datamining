@@ -8,12 +8,10 @@ const SearchListItemTypes = SearchConstants.SearchListItemTypes;
 const items = [
   {
     viewabilityConfig: { viewAreaCoveragePercentThreshold: 33, waitForInteraction: false },
-    onViewableItemsChanged(changed) {
-      changed = changed.changed;
-      const found = changed.find((item) => item.item.type === constants.SMART_SEARCH);
-      if (null != found) {
-        SmartSearchAnalyticsManagerDefault.setIsRowViewable(found.isViewable, SearchSessionAnalyticsManagerDefault);
-      }
+    onViewableItemsChanged(viewableItems) {
+      viewableItems = viewableItems.viewableItems;
+      const someResult = viewableItems.some((item) => item.item.type === constants.SMART_SEARCH);
+      SmartSearchAnalyticsManagerDefault.setIsRowViewable(someResult, SearchSessionAnalyticsManagerDefault);
     },
   },
 ];

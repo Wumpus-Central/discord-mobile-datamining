@@ -16,7 +16,7 @@ ReactCompilerGating = ReactCompilerGating.isReactCompilerEnabled();
 function useIsDisabled() {
   return useParentalControlSettings.useDefaultGuildsRestricted();
 }
-const SettingBuilders = fn(11212);
+const SettingBuilders = fn(11248);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useValue() {
       if (typeof useIsDisabled === "function") {
@@ -57,7 +57,7 @@ const toggle = SettingBuilders.createToggle({
     const intl = util.intl;
     return intl.string(_modDef2535["7aYkh1"]);
   },
-  parent: fn(8331).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
+  parent: fn(8365).MobileUserSettings.FAMILY_CENTER_PARENTAL_CONTROLS_SETTINGS,
   useValue: ReactCompilerGating.isReactCompilerEnabled()
     ? function useValue() {
         if (typeof useIsDisabled === "function") {

@@ -17,14 +17,14 @@ prototype["initialize"] = function initialize(users) {
     users = {};
   }
 };
-prototype["getDecision"] = function getDecision(applicationId, permission) {
+prototype["getDecision"] = function getDecision(applicationId, item10010) {
   const id = AuthenticationStore.getId();
   let tmp2 = null;
   if (null != id) {
     let tmp5;
     if (obj.users[id] != null) {
       if (tmp4[applicationId] != null) {
-        tmp5 = tmp7[permission];
+        tmp5 = tmp7[item10010];
       }
     }
     if (tmp5 == null) {

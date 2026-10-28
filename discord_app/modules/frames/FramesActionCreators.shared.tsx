@@ -269,7 +269,7 @@ function promoteFrame(frameId) {
     } else if (mainFrame1.intent !== constants.MAIN) {
       demoteMainFrame(mainFrame1.id);
     }
-    obj2 = obj2(10769);
+    obj2 = obj2(10803);
     obj2.leaveFrame(mainFrame1.id);
   }
 }
@@ -445,7 +445,7 @@ let closure_18 = async function _refreshProxyTicket(arg0) {
     }
   }
 };
-const FramesConstants = fn(6777);
+const FramesConstants = fn(6811);
 ({
   FrameIntent: metroRequire,
   FrameLayoutModes: closure_7,
@@ -453,7 +453,7 @@ const FramesConstants = fn(6777);
   isLaunched: closure_9,
   makeFrameId: c10,
 } = FramesConstants);
-const ActivityPanelModes = fn(5610).ActivityPanelModes;
+const ActivityPanelModes = fn(5645).ActivityPanelModes;
 let c12 = 0;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/frames/FramesActionCreators.shared.tsx");

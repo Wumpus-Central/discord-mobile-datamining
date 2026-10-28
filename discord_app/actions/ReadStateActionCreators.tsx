@@ -65,7 +65,7 @@ function ackCategory(id, location, arg2, arg3) {
     }
   }
 }
-const isReadableType = fn(4828).isReadableType;
+const isReadableType = fn(4860).isReadableType;
 const CURRENT_APP_CONTEXT = fn(1084).CURRENT_APP_CONTEXT;
 const size = fn(2);
 const result = size.fileFinishedImporting("actions/ReadStateActionCreators.tsx");

@@ -339,7 +339,7 @@ let closure_13 = async function _checkChattableChannelThresholdMetAfterChannelPe
     }
   })();
 };
-let closure_7 = fn(7198).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
+let closure_7 = fn(7232).NUM_DEFAULT_CHATTABLE_CHANNELS_MIN;
 const Constants = fn(1084);
 ({ GuildFeatures: closure_8, GuildSettingsSections, Permissions: closure_9 } = Constants);
 const size = fn(2);

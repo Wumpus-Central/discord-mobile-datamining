@@ -1,22 +1,34 @@
 // discord_common/js/packages/design/components/Rive/native/BaseRive.tsx
 import c from "../../../../../../../_runtime/00576_c.js";
 import AccessibilityPreferencesContext from "../../AccessibilityPreferencesContext/AccessibilityPreferencesContext.tsx";
-import DataBindByName from "../../../../../../../_runtime/05048_DataBindByName.js";
+import DataBindByName from "../../../../../../../_runtime/05080_DataBindByName.js";
 import ManaContext from "../../ManaContext/ManaContext.native.tsx";
 import useRivePlayback from "useRivePlayback.tsx";
 import RiveTypes from "RiveTypes.tsx";
+import asyncGeneratorStep from "../../../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
 
 require = fn;
+function disposeRiveImageLater(current) {
+  closure_0 = current;
+  const timerId = setTimeout(() => current.dispose(), c11);
+}
+function ensureImageUri(source) {
+  let uri = source;
+  if (typeof source === "number") {
+    uri = ref.resolveAssetSource(source).uri;
+  }
+  return uri;
+}
 get_ActivityIndicator = fn(17);
-({ View: c3, StyleSheet, Image: closure_4, PixelRatio: hasOwnProperty, Platform } = get_ActivityIndicator);
+({ View: closure_4, StyleSheet, Image: hasOwnProperty, PixelRatio: metroRequire, Platform } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const container = StyleSheet.create({ container: { flexGrow: 1 }, fill: { flex: 1 }, hidden: { opacity: 0 } });
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const React6 = StyleSheet.create({ container: { flexGrow: 1 }, fill: { flex: 1 }, hidden: { opacity: 0 } });
 let ReactCompilerGating = fn(558);
-let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
+let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useObservedValue(arg0, current) {
       closure_0 = arg0;
       const cResult = c.c(6);
@@ -90,7 +102,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp5 = cResult[4];
           }
           const effect = noop.useEffect(tmp4, tmp5);
-          closure_9(tmp3, arg3);
+          closure_10(tmp3, arg3);
         }
       }
       const fn = function c() {
@@ -150,7 +162,7 @@ let tmp4 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items);
-      closure_9(iter.value, arg3);
+      closure_10(iter.value, arg3);
     };
 ReactCompilerGating = fn(558);
 let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
@@ -167,7 +179,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp5 = cResult[4];
           }
           const effect = noop.useEffect(tmp4, tmp5);
-          closure_9(tmp3, arg3);
+          closure_10(tmp3, arg3);
         }
       }
       const fn = function c() {
@@ -201,7 +213,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items);
-      closure_9(iter.value, arg3);
+      closure_10(iter.value, arg3);
     };
 ReactCompilerGating = fn(558);
 let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
@@ -218,7 +230,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp5 = cResult[4];
           }
           const effect = noop.useEffect(tmp4, tmp5);
-          closure_9(tmp3, arg3);
+          closure_10(tmp3, arg3);
         }
       }
       const fn = function c() {
@@ -254,7 +266,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items);
-      closure_9(iter.value, arg3);
+      closure_10(iter.value, arg3);
     };
 ReactCompilerGating = fn(558);
 let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
@@ -289,25 +301,39 @@ let tmp7 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const effect1 = noop.useEffect(tmp5, tmp6);
           if (cResult[8] !== value) {
-            const fn3 = function y() {
-              if (null != value) {
-                current = ref.current;
-                if (current != null) {
-                  current(value.toInt());
+            class B {
+              constructor() {
+                obj = value;
+                if (null != value) {
+                  current = closure_5.current;
+                  if (current != null) {
+                    currentResult = current(obj.toInt());
+                  }
                 }
+                return;
               }
-            };
+            }
             const items1 = [value];
             cResult[8] = value;
-            cResult[9] = fn3;
+            cResult[9] = B;
             cResult[10] = items1;
             let tmp9 = items1;
-            let tmp8 = fn3;
           } else {
-            tmp8 = cResult[9];
+            class B {
+              constructor() {
+                obj = value;
+                if (null != value) {
+                  current = closure_5.current;
+                  if (current != null) {
+                    currentResult = current(obj.toInt());
+                  }
+                }
+                return;
+              }
+            }
             tmp9 = cResult[10];
           }
-          const effect2 = noop.useEffect(tmp8, tmp9);
+          const effect2 = noop.useEffect(B, tmp9);
         }
       }
       const fn = function c() {
@@ -372,7 +398,7 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
             let tmp5 = cResult[4];
           }
           const effect = noop.useEffect(tmp4, tmp5);
-          closure_9(tmp3, arg3);
+          closure_10(tmp3, arg3);
         }
       }
       const fn = function c() {
@@ -406,10 +432,10 @@ let tmp8 = ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }, items);
-      closure_9(iter.value, arg3);
+      closure_10(iter.value, arg3);
     };
 ReactCompilerGating = fn(558);
-let c10 = 1000;
+let c11 = 1000;
 let tmp9 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useTriggerBinding(arg0, arg1, arg2, onTrigger, arg4) {
       closure_0 = arg2;
@@ -513,7 +539,7 @@ class BaseRiveInner {
     pause = undefined;
     tmp = closure_0;
     tmp2 = closure_1;
-    obj = closure_0(closure_1[3]);
+    obj = closure_0(closure_1[4]);
     tmp3 = undefined;
     if (null != referencedAssets) {
       obj1 = { referencedAssets: null };
@@ -521,8 +547,8 @@ class BaseRiveInner {
       tmp3 = obj1;
     }
     riveFile = obj.useRiveFile(src, tmp3).riveFile;
-    obj3 = closure_2;
-    closure_3 = closure_2.useEffectEvent((arg0) => {
+    obj3 = closure_3;
+    closure_3 = closure_3.useEffectEvent((arg0) => {
       let tmpResult;
       if (dependencyMap != null) {
         tmpResult = tmp(arg0);
@@ -531,7 +557,7 @@ class BaseRiveInner {
     });
     items = [];
     items[0] = riveFile;
-    effect = closure_2.useEffect(() => {
+    effect = closure_3.useEffect(() => {
       let tmp2 = riveFile;
       if (riveFile == null) {
         tmp2 = null;
@@ -539,12 +565,12 @@ class BaseRiveInner {
       closure_3(tmp2);
       return () => closure_1_3(null);
     }, items);
-    tmpResult = tmp(tmp2[3]);
+    tmpResult = tmp(tmp2[4]);
     rive = tmpResult.useRive();
     riveViewRef = rive.riveViewRef;
     tmp7 = null != riveViewRef;
-    enabled = closure_2.useContext(tmp(tmp2[4]).AccessibilityPreferencesContext).reducedMotion.enabled;
-    tmpResult1 = tmp(tmp2[5]);
+    enabled = closure_3.useContext(tmp(tmp2[5]).AccessibilityPreferencesContext).reducedMotion.enabled;
+    tmpResult1 = tmp(tmp2[6]);
     experiments = tmpResult1.useManaContext().experiments;
     flag = undefined;
     if (experiments != null) {
@@ -567,7 +593,7 @@ class BaseRiveInner {
     }
     tmp10 = items1.length > 0;
     memo = obj3.useMemo(() => _require, []);
-    tmpResult2 = tmp(tmp2[3]);
+    tmpResult2 = tmp(tmp2[4]);
     if (null != memo) {
       tmp13 = riveFile;
       if (riveFile == null) {
@@ -580,7 +606,7 @@ class BaseRiveInner {
     instance = tmpResult2.useViewModelInstance(tmp12, { artboardName: artboard, instanceName: memo }).instance;
     None = instance;
     if (instance == null) {
-      None = tmp(tmp2[3]).DataBindMode.None;
+      None = tmp(tmp2[4]).DataBindMode.None;
     }
     tmp15 = artboardProperties[artboard];
     reducedMotion = undefined;
@@ -588,7 +614,7 @@ class BaseRiveInner {
       reducedMotion = tmp15.reducedMotion;
     }
     tmp17 = null != reducedMotion;
-    tmpResult3 = tmp(tmp2[6]);
+    tmpResult3 = tmp(tmp2[7]);
     obj20 = { isReady: tmp7, appStatePlaybackEnabled: flag, shouldShortLoopForReducedMotion: null };
     tmp18 = enabled;
     if (enabled) {
@@ -606,9 +632,9 @@ class BaseRiveInner {
     items2[0] = play;
     items2[1] = pause;
     imperativeHandle = obj3.useImperativeHandle(global.ref, () => ({ play, pause }), items2);
-    tmp23 = closure_8;
+    tmp23 = closure_9;
     items3 = [,];
-    items3[0] = closure_8.container;
+    items3[0] = closure_9.container;
     hidden = undefined;
     tmp21 = jsxs;
     tmp22 = View;
@@ -662,7 +688,7 @@ class BaseRiveInner {
       merged = Object.assign(obj25);
       if (null != fit) {
         obj26 = { fit: null };
-        obj26.fit = tmp(tmp2[7]).FIT_MAP[fit];
+        obj26.fit = tmp(tmp2[8]).FIT_MAP[fit];
         obj27 = obj26;
       } else {
         obj27 = {};
@@ -672,7 +698,7 @@ class BaseRiveInner {
       merged1 = Object.assign(obj27);
       if (null != alignment) {
         obj28 = { alignment: null };
-        obj28.alignment = tmp(tmp2[7]).ALIGNMENT_MAP[alignment];
+        obj28.alignment = tmp(tmp2[8]).ALIGNMENT_MAP[alignment];
         obj29 = obj28;
       } else {
         obj29 = {};
@@ -690,7 +716,7 @@ class BaseRiveInner {
       tmp36 = obj23;
       tmp37 = obj31;
       merged3 = Object.assign(obj31);
-      tmp26Result = tmp26(tmp(tmp2[3]).RiveView, obj23);
+      tmp26Result = tmp26(tmp(tmp2[4]).RiveView, obj23);
     }
     return;
   }
@@ -709,17 +735,18 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
   ? function useImageBinding(arg0, arg1, arg2, current, arg4) {
       _require = arg0;
       dependencyMap = arg1;
-      noop = arg2;
+      closure_2 = arg2;
+      noop = current;
       closure_4 = arg4;
       const cResult = require("c").c(15);
       closure_5 = noop.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function c() {
+        const fn = function f() {
           return () => {
             if (null != ref.current) {
               current = ref.current;
               const _setTimeout = setTimeout;
-              const timerId = setTimeout(() => current.dispose(), closure_2_10);
+              const timerId = setTimeout(() => current.dispose(), closure_2_11);
             }
             ref.current = null;
           };
@@ -743,12 +770,31 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
             const effect1 = obj2.useEffect(tmp5, tmp6);
             closure_6 = obj2.useRef(current);
             if (cResult[8] !== current) {
-              const fn3 = function b() {
+              const fn3 = function y() {
                 closure_6.current = current;
               };
               const items1 = [current];
               cResult[8] = current;
-              cResult[9] = fn3;
+              class I {
+                constructor() {
+                  obj = closure_1;
+                  if (null != closure_1) {
+                    tmp = closure_0;
+                    imagePropertyResult = obj.imageProperty(closure_0);
+                    if (null != imagePropertyResult) {
+                      return imagePropertyResult.addListener(() => {
+                        current = ref.current;
+                        let currentResult;
+                        if (current != null) {
+                          currentResult = current();
+                        }
+                        return currentResult;
+                      });
+                    }
+                  }
+                  return;
+                }
+              }
               cResult[10] = items1;
               let tmp9 = items1;
               let tmp8 = fn3;
@@ -764,62 +810,115 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
               }
               const effect3 = obj2.useEffect(tmp11, tmp12);
             }
-            const fn4 = function y() {
-              if (null != closure_1) {
-                const imagePropertyResult = closure_1.imageProperty(closure_0);
-                if (null != imagePropertyResult) {
-                  return imagePropertyResult.addListener(() => {
-                    current = ref.current;
-                    let currentResult;
-                    if (current != null) {
-                      currentResult = current();
-                    }
-                    return currentResult;
-                  });
+            class I {
+              constructor() {
+                obj = closure_1;
+                if (null != closure_1) {
+                  tmp = closure_0;
+                  imagePropertyResult = obj.imageProperty(closure_0);
+                  if (null != imagePropertyResult) {
+                    return imagePropertyResult.addListener(() => {
+                      current = ref.current;
+                      let currentResult;
+                      if (current != null) {
+                        currentResult = current();
+                      }
+                      return currentResult;
+                    });
+                  }
                 }
+                return;
               }
-            };
+            }
             const items2 = [arg0, arg1];
             cResult[11] = arg1;
             cResult[12] = arg0;
-            cResult[13] = fn4;
+            cResult[13] = I;
             cResult[14] = items2;
             tmp12 = items2;
-            tmp11 = fn4;
+            tmp11 = I;
           }
         }
       }
-      const fn2 = function v() {
+      const fn2 = function p() {
         if (null != closure_1) {
           if (null != closure_2) {
-            c0 = false;
-            const RiveImages = closure_0(closure_1[3]).RiveImages;
-            let uri = closure_2;
-            if (typeof closure_2 === "number") {
-              uri = closure_4.resolveAssetSource(closure_2).uri;
-            }
-            const fromURLAsync = RiveImages.loadFromURLAsync(uri);
-            fromURLAsync
-              .then((dispose) => {
-                if (c0) {
-                  dispose.dispose();
+            c0 = closure_2(function* () {
+              if (c3 === 2) {
+                c3 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp5 === 3) {
+                if (arg0 === 1) {
+                  throw value;
+                } else if (arg0 === 2) {
+                  const obj = { value, done: true };
+                  return obj;
                 } else {
-                  const imagePropertyResult = closure_1.imageProperty(closure_0);
-                  if (imagePropertyResult != null) {
-                    const result = imagePropertyResult.set(dispose);
-                  }
-                  if (null != ref.current) {
-                    current = ref.current;
-                    const _setTimeout = setTimeout;
-                    const timerId = setTimeout(() => current.dispose(), c10);
-                  }
-                  ref.current = dispose;
-                  if (closure_4 != null) {
-                    tmp9();
-                  }
+                  return { value: "IconComponent", done: null };
                 }
-              })
-              .catch(() => {});
+              } else {
+                try {
+                  c3 = 2;
+                  if (0 === c2) {
+                    if (arg0 === 1) {
+                      c3 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c3 = 3;
+                      const obj2 = { value, done: true };
+                      return obj2;
+                    } else {
+                      closure_128_0 = undefined;
+                      const RiveImages = tmp3(tmp2[4]).RiveImages;
+                      c2 = 1;
+                      c3 = 1;
+                      const obj3 = { value: RiveImages.loadFromURLAsync(ensureImageUri(closure_2_2)), done: false };
+                      return obj3;
+                    }
+                  } else if (arg0 === 1) {
+                    c3 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    const obj4 = { value, done: true };
+                    return obj4;
+                  } else {
+                    closure_128_0 = value;
+                    if (tmp3) {
+                      closure_128_0.dispose();
+                    } else {
+                      const imagePropertyResult = closure_2_1.imageProperty(c0);
+                      if (imagePropertyResult != null) {
+                        const result = imagePropertyResult.set(closure_128_0);
+                      }
+                      if (null != ref.current) {
+                        disposeRiveImageLater(ref.current);
+                      }
+                      ref.current = closure_128_0;
+                      if (closure_2_4 != null) {
+                        tmp23();
+                      }
+                    }
+                    c3 = 3;
+                  }
+                } catch (tmp31) {
+                  c3 = tmp;
+                  throw tmp31;
+                }
+              }
+            });
+            closure_0(closure_1[11]).ignoreErrors(
+              (function loadImage() {
+                const self = this;
+                const apply = c0.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(),
+            );
             return () => {
               c0 = true;
             };
@@ -839,7 +938,8 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
   : function useImageBinding(arg0, arg1, arg2, current, arg4) {
       closure_0 = arg0;
       closure_1 = arg1;
-      noop = arg2;
+      closure_2 = arg2;
+      noop = current;
       closure_4 = arg4;
       closure_5 = noop.useRef(null);
       const effect = noop.useEffect(
@@ -847,7 +947,7 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
           if (null != ref.current) {
             current = ref.current;
             const _setTimeout = setTimeout;
-            const timerId = setTimeout(() => current.dispose(), closure_2_10);
+            const timerId = setTimeout(() => current.dispose(), closure_2_11);
           }
           ref.current = null;
         },
@@ -857,34 +957,82 @@ export const useImageBinding = ReactCompilerGating.isReactCompilerEnabled()
       const effect1 = noop.useEffect(() => {
         if (null != closure_1) {
           if (null != closure_2) {
-            c0 = false;
-            const RiveImages = closure_0(closure_1[3]).RiveImages;
-            let uri = closure_2;
-            if (typeof closure_2 === "number") {
-              uri = closure_4.resolveAssetSource(closure_2).uri;
-            }
-            const fromURLAsync = RiveImages.loadFromURLAsync(uri);
-            fromURLAsync
-              .then((dispose) => {
-                if (c0) {
-                  dispose.dispose();
+            c0 = closure_2(function* () {
+              if (c3 === 2) {
+                c3 = 3;
+                throw new TypeError("Generator functions may not be called on executing generators");
+              } else if (tmp5 === 3) {
+                if (arg0 === 1) {
+                  throw value;
+                } else if (arg0 === 2) {
+                  const obj = { value, done: true };
+                  return obj;
                 } else {
-                  const imagePropertyResult = closure_1.imageProperty(closure_0);
-                  if (imagePropertyResult != null) {
-                    const result = imagePropertyResult.set(dispose);
-                  }
-                  if (null != ref.current) {
-                    current = ref.current;
-                    const _setTimeout = setTimeout;
-                    const timerId = setTimeout(() => current.dispose(), c10);
-                  }
-                  ref.current = dispose;
-                  if (closure_4 != null) {
-                    tmp9();
-                  }
+                  return { value: "IconComponent", done: null };
                 }
-              })
-              .catch(() => {});
+              } else {
+                try {
+                  c3 = 2;
+                  if (0 === c2) {
+                    if (arg0 === 1) {
+                      c3 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c3 = 3;
+                      const obj2 = { value, done: true };
+                      return obj2;
+                    } else {
+                      closure_128_0 = undefined;
+                      const RiveImages = tmp3(tmp2[4]).RiveImages;
+                      c2 = 1;
+                      c3 = 1;
+                      const obj3 = { value: RiveImages.loadFromURLAsync(ensureImageUri(closure_2_2)), done: false };
+                      return obj3;
+                    }
+                  } else if (arg0 === 1) {
+                    c3 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    const obj4 = { value, done: true };
+                    return obj4;
+                  } else {
+                    closure_128_0 = value;
+                    if (tmp3) {
+                      closure_128_0.dispose();
+                    } else {
+                      const imagePropertyResult = closure_2_1.imageProperty(c0);
+                      if (imagePropertyResult != null) {
+                        const result = imagePropertyResult.set(closure_128_0);
+                      }
+                      if (null != ref.current) {
+                        disposeRiveImageLater(ref.current);
+                      }
+                      ref.current = closure_128_0;
+                      if (closure_2_4 != null) {
+                        tmp23();
+                      }
+                    }
+                    c3 = 3;
+                  }
+                } catch (tmp31) {
+                  c3 = tmp;
+                  throw tmp31;
+                }
+              }
+            });
+            closure_0(closure_1[11]).ignoreErrors(
+              (function loadImage() {
+                const self = this;
+                const apply = c0.apply;
+                if (typeof apply === "unknown") {
+                  let applyArgumentsResult = HermesBuiltin.applyArguments(self);
+                } else {
+                  applyArgumentsResult = apply(self, arguments);
+                }
+                return applyArgumentsResult;
+              })(),
+            );
             return () => {
               c0 = true;
             };

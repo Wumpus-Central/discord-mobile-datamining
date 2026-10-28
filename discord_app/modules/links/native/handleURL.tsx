@@ -65,7 +65,7 @@ let closure_10 = async function _handleURL(arg0) {
             if (null != obj.sanitizeUrl(closure_1_0)) {
               let SAFARI = constants.SAFARI;
               if (closure_1_0.startsWith("https:")) {
-                const browserManagerSelectedBrowser = closure_0(5694).getBrowserManagerSelectedBrowser();
+                const browserManagerSelectedBrowser = closure_0(5729).getBrowserManagerSelectedBrowser();
                 let tmp10 = closure_1_1;
                 if (closure_1_1 == null) {
                   tmp10 = browserManagerSelectedBrowser;
@@ -83,44 +83,44 @@ let closure_10 = async function _handleURL(arg0) {
                     const tmp8Result = closure_0(1381);
                   }
                 }
-                const obj3 = closure_0(5694);
+                const obj3 = closure_0(5729);
               }
               if (constants.IN_APP === SAFARI) {
-                const result = closure_0(5694).browserManagerOpenUrl(closure_1_0, constants.IN_APP);
+                const result = closure_0(5729).browserManagerOpenUrl(closure_1_0, constants.IN_APP);
                 result.catch(() => {
                   const intl = closure_2_0(1125).intl;
-                  closure_2_0(5663).presentFailedToast(
+                  closure_2_0(5698).presentFailedToast(
                     "" + intl.string(closure_2_0(1125).t.HryVrx) + " " + closure_1_0,
                   );
                 });
-                const obj7 = closure_0(5694);
+                const obj7 = closure_0(5729);
                 let isIOSResult = closure_0(1381).isIOS();
                 if (isIOSResult) {
                   isIOSResult = open.isOpen();
                 }
                 if (isIOSResult) {
-                  closure_1(5211).hideAllActionSheets();
-                  const tmpResult = closure_1(5211);
+                  closure_1(5246).hideAllActionSheets();
+                  const tmpResult = closure_1(5246);
                 }
                 const obj8 = closure_0(1381);
               } else if (constants.CHROME === SAFARI) {
-                const result1 = closure_0(5694).browserManagerOpenUrl(closure_1_0, constants.CHROME);
+                const result1 = closure_0(5729).browserManagerOpenUrl(closure_1_0, constants.CHROME);
                 result1.catch(() => {
                   const intl = closure_2_0(1125).intl;
-                  closure_2_0(5663).presentFailedToast(
+                  closure_2_0(5698).presentFailedToast(
                     "" + intl.string(closure_2_0(1125).t.HryVrx) + " " + closure_1_0,
                   );
                 });
-                const obj6 = closure_0(5694);
+                const obj6 = closure_0(5729);
               } else {
                 const SAFARI2 = constants.SAFARI;
-                const result2 = closure_0(5694).browserManagerOpenUrl(closure_1_0, constants.SAFARI);
-                const obj5 = closure_0(5694);
+                const result2 = closure_0(5729).browserManagerOpenUrl(closure_1_0, constants.SAFARI);
+                const obj5 = closure_0(5729);
               }
             } else {
               let intl = closure_0(1125).intl;
-              closure_0(5663).presentFailedToast(intl.string(closure_0(1125).t.XiqzAp));
-              const obj2 = closure_0(5663);
+              closure_0(5698).presentFailedToast(intl.string(closure_0(1125).t.XiqzAp));
+              const obj2 = closure_0(5698);
             }
             obj = closure_1(1948);
           };
@@ -173,8 +173,8 @@ let closure_10 = async function _handleURL(arg0) {
                     closure_0 = arg0;
                     return new Promise((arg0) => {
                       closure_0 = arg0;
-                      const result = closure_2_1(5659).tryOpenUrlAsUniversalLink(closure_0);
-                      const obj = closure_2_1(5659);
+                      const result = closure_2_1(5694).tryOpenUrlAsUniversalLink(closure_0);
+                      const obj = closure_2_1(5694);
                       result
                         .then(() => {
                           logger.info("Universal link opened successfully.");
@@ -216,7 +216,7 @@ let closure_10 = async function _handleURL(arg0) {
                   value: (function tryHandleCustomScheme(arg0) {
                     let arr = arg0;
                     closure_0 = arg0;
-                    const iter = closure_0(5660).LINKING_SCHEMAS_VALUES[Symbol.iterator]();
+                    const iter = closure_0(5695).LINKING_SCHEMAS_VALUES[Symbol.iterator]();
                     while (iter !== undefined) {
                       ({ regex, protocol } = nextResult);
                       let match = regex.exec(arr);
@@ -240,9 +240,9 @@ let closure_10 = async function _handleURL(arg0) {
                         logger.info("tryHandleCustomScheme", arr);
                         let promise = new Promise((arg0) => {
                           closure_0 = arg0;
-                          const obj = closure_2_1(5659);
-                          const tryOpenSchemeResult = closure_2_1(5659).tryOpenScheme(closure_0);
-                          closure_2_1(5659)
+                          const obj = closure_2_1(5694);
+                          const tryOpenSchemeResult = closure_2_1(5694).tryOpenScheme(closure_0);
+                          closure_2_1(5694)
                             .tryOpenScheme(closure_0)
                             .then(() => {
                               logger.info("Custom scheme opened successfully.");
@@ -312,7 +312,7 @@ let closure_10 = async function _handleURL(arg0) {
                       }
                       return num;
                     }
-                    const iter = closure_0(5662).LINKING_WHITELIST_VALUES[Symbol.iterator]();
+                    const iter = closure_0(5697).LINKING_WHITELIST_VALUES[Symbol.iterator]();
                     const nextResult = iter.next();
                     while (iter !== undefined) {
                       let regex = nextResult.regex;

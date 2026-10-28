@@ -19,7 +19,7 @@ import UserStore from "../../../../../stores/UserStore.tsx";
 require = fn;
 const StatusTypes = fn(1095).StatusTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { iconWrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_MOD_SUBTLE } };
 let closure_10 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -224,7 +224,7 @@ export default function AppLauncherMentionableOption(option) {
     }
     const obj = ActionSheetActionCreatorsDefault;
     obj.openLazy(
-      asyncRequireImpl(12084, dependencyMap.paths),
+      asyncRequireImpl(12122, dependencyMap.paths),
       AppLauncherMentionableListActionSheet.APP_LAUNCHER_MENTIONABLE_LIST_ACTION_SHEET_KEY,
       {
         option,

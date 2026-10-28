@@ -15,7 +15,7 @@ import TypedEventEmitter from "../../../shared/utils/TypedEventEmitter.tsx";
 
 require = fn;
 let closure_3 = ["id", "useGraphicsCapture", "useGraphicsCaptureApiLevel"];
-let Constants = fn(5719);
+let Constants = fn(5754);
 ({
   QUEUE_METRICS_INTERVAL_MS: closure_7,
   SIDECHAIN_COMPRESSION_MAX_RATIO: closure_8,
@@ -24,7 +24,7 @@ let Constants = fn(5719);
   SIDECHAIN_COMPRESSION_MIN_THRESHOLD: closure_11,
   ProcessPriority: closure_12,
 } = Constants);
-Constants = fn(5742);
+Constants = fn(5777);
 ({
   ClipsRecordingEvent: map1,
   DEFAULT_VOLUME: closure_14,
@@ -116,31 +116,19 @@ class MediaEngineNative extends tmp4 {
       );
     };
     obj.handleNewListener = function handleNewListener(arg0) {
-      if (obj(dependencyMap[10]).MediaEngineEvent.VoiceActivity === arg0) {
+      if (MediaEngineEvent.MediaEngineEvent.VoiceActivity === arg0) {
         if (null != tmpResult.getVoiceEngine().setEmitVADLevel2) {
-          const voiceEngine = obj(dependencyMap[9]).getVoiceEngine();
+          const voiceEngine = inject.getVoiceEngine();
           voiceEngine.setEmitVADLevel2(true);
-          const tmpResult3 = obj(dependencyMap[9]);
+          const tmpResult3 = inject;
         } else {
-          const voiceEngine1 = obj(dependencyMap[9]).getVoiceEngine();
+          const voiceEngine1 = inject.getVoiceEngine();
           voiceEngine1.setEmitVADLevel(true, false, {});
-          const tmpResult4 = obj(dependencyMap[9]);
+          const tmpResult4 = inject;
         }
-        tmpResult = obj(dependencyMap[9]);
-      } else if (obj(dependencyMap[10]).MediaEngineEvent.DeviceChange === arg0) {
-        deviceChangeGeneration = deviceChangeGeneration.deviceChangeGeneration;
-        const items = [
-          deviceChangeGeneration.getAudioInputDevices(),
-          deviceChangeGeneration.getAudioOutputDevices(),
-          deviceChangeGeneration.getVideoInputDevices(),
-        ];
-        Promise.all(items).then((result) => {
-          [tmp, tmp2, tmp3] = result;
-          if (deviceChangeGeneration === obj.deviceChangeGeneration) {
-            obj.emit(MediaEngineEvent.MediaEngineEvent.DeviceChange, tmp, tmp2, tmp3);
-          }
-        });
-        const allPromises = Promise.all(items);
+        tmpResult = inject;
+      } else if (MediaEngineEvent.MediaEngineEvent.DeviceChange === arg0) {
+        obj.emitCurrentDevices(obj.deviceChangeGeneration);
       }
     };
     obj.handleRemoveListener = function handleRemoveListener(arg0) {
@@ -343,7 +331,7 @@ class MediaEngineNative extends tmp4 {
           } else if (arg0 !== 2) {
             closure_128_1 = value;
             closure_128_1.periodMs = periodMs;
-            closure_129_0.emit(v0(5749).MediaEngineEvent.VoiceQueueMetrics, closure_128_1);
+            closure_129_0.emit(v0(5784).MediaEngineEvent.VoiceQueueMetrics, closure_128_1);
             const _setTimeout = setTimeout;
             const timerId = setTimeout(closure_129_2, periodMs);
           }
@@ -557,8 +545,8 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
   if (flag) {
     flag = self.supports(constants3.VIDEO);
   }
-  obj3 = self(5752).create(arg0, arg1, videoSupported, flag);
-  obj3.on(obj3(5757).BaseConnectionEvent.Destroy, (arg0) => {
+  obj3 = self(5787).create(arg0, arg1, videoSupported, flag);
+  obj3.on(obj3(5792).BaseConnectionEvent.Destroy, (arg0) => {
     const connections = self.connections;
     connections.delete(arg0);
     if (self.connectionsEmpty()) {
@@ -570,15 +558,15 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
       }
     }
   });
-  obj3.on(obj3(5757).BaseConnectionEvent.Connected, () => {
+  obj3.on(obj3(5792).BaseConnectionEvent.Connected, () => {
     obj3.setVideoBroadcast(self.shouldConnectionBroadcastVideo(obj3));
   });
-  obj3.on(obj3(5757).BaseConnectionEvent.Silence, (arg0) => {
+  obj3.on(obj3(5792).BaseConnectionEvent.Silence, (arg0) => {
     self.emit(MediaEngineEvent.MediaEngineEvent.Silence, arg0);
   });
   let connections = self.connections;
   connections.add(obj3);
-  let obj2 = self(5752);
+  let obj2 = self(5787);
   let HIGH = videoSupported.processPriority;
   if (HIGH == null) {
     HIGH = constants.HIGH;
@@ -592,7 +580,7 @@ prototype["connect"] = function connect(arg0, arg1, videoSupported) {
     }
     const tmpResult2 = tmp(2013);
   }
-  self.emit(obj3(5749).MediaEngineEvent.Connection, obj3);
+  self.emit(obj3(5784).MediaEngineEvent.Connection, obj3);
   return obj3;
 };
 prototype["shouldConnectionBroadcastVideo"] = function shouldConnectionBroadcastVideo(context) {
@@ -693,66 +681,170 @@ prototype["setNoiseCancellationEnableStats"] = function setNoiseCancellationEnab
 };
 prototype["setAudioInputDevice"] = function setAudioInputDevice(audioInputDeviceId) {
   const self = this;
-  _require = audioInputDeviceId;
   this.audioInputDeviceId = audioInputDeviceId;
   if (obj.supportsFeature(constants5.SET_AUDIO_DEVICE_BY_ID)) {
-    let voiceEngine = tmp(2013).getVoiceEngine();
+    const voiceEngine = inject.getVoiceEngine();
     voiceEngine.setInputDevice(audioInputDeviceId);
-    const tmpResult = tmp(2013);
+    const tmpResult = inject;
   } else {
-    const audioInputDevices = tmp(5812).getAudioInputDevices();
-    audioInputDevices.then((arr) => {
-      let found = arr.find((id) => id.id === audioInputDeviceId);
-      if (found == null) {
-        found = arr[0];
-      }
-      if (null != found) {
-        const voiceEngine = inject.getVoiceEngine();
-        voiceEngine.setInputDevice(found.index);
-      }
-    });
-    const tmpResult2 = tmp(5812);
+    const result = self.setAudioInputDeviceByIndex(audioInputDeviceId);
   }
   self.emit(
-    require("MediaEngineEvent").MediaEngineEvent.SelectedDeviceChange,
+    MediaEngineEvent.MediaEngineEvent.SelectedDeviceChange,
     constants2.AUDIO_INPUT,
     this.audioInputDeviceId,
     audioInputDeviceId,
   );
-  obj = require("inject");
+  obj = inject;
+};
+prototype["setAudioInputDeviceByIndex"] = function setAudioInputDeviceByIndex(audioInputDeviceId) {
+  return (async () => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_1 = tmp2;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            c3 = 1;
+            c4 = 1;
+            const obj5 = { value: audioInputDeviceId(tmp5[16]).getAudioInputDevices(), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_129_0 = value;
+          const found = closure_129_0.find((id) => id.id === closure_1_0);
+          audioInputDeviceId = found;
+          if (found == null) {
+            audioInputDeviceId = closure_129_0[0];
+          }
+          closure_129_1 = audioInputDeviceId;
+          if (null != closure_129_1) {
+            const voiceEngine = audioInputDeviceId(tmp5[9]).getVoiceEngine();
+            voiceEngine.setInputDevice(closure_129_1.index);
+            const obj = audioInputDeviceId(tmp5[9]);
+          }
+          c4 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp19) {
+        c4 = tmp;
+        throw tmp19;
+      }
+    }
+  })();
 };
 prototype["getAudioOutputDevices"] = function getAudioOutputDevices() {
   return Devices.getAudioOutputDevices();
 };
 prototype["setAudioOutputDevice"] = function setAudioOutputDevice(audioOutputDeviceId) {
   const self = this;
-  _require = audioOutputDeviceId;
   this.audioOutputDeviceId = audioOutputDeviceId;
   if (obj.supportsFeature(constants5.SET_AUDIO_DEVICE_BY_ID)) {
-    let voiceEngine = tmp(2013).getVoiceEngine();
+    const voiceEngine = inject.getVoiceEngine();
     voiceEngine.setOutputDevice(audioOutputDeviceId);
-    const tmpResult = tmp(2013);
+    const tmpResult = inject;
   } else {
-    const audioOutputDevices = tmp(5812).getAudioOutputDevices();
-    audioOutputDevices.then((arr) => {
-      let found = arr.find((id) => id.id === audioOutputDeviceId);
-      if (found == null) {
-        found = arr[0];
-      }
-      if (null != found) {
-        const voiceEngine = inject.getVoiceEngine();
-        voiceEngine.setOutputDevice(found.index);
-      }
-    });
-    const tmpResult2 = tmp(5812);
+    const result = self.setAudioOutputDeviceByIndex(audioOutputDeviceId);
   }
   self.emit(
-    require("MediaEngineEvent").MediaEngineEvent.SelectedDeviceChange,
+    MediaEngineEvent.MediaEngineEvent.SelectedDeviceChange,
     constants2.AUDIO_OUTPUT,
     this.audioOutputDeviceId,
     audioOutputDeviceId,
   );
-  obj = require("inject");
+  obj = inject;
+};
+prototype["setAudioOutputDeviceByIndex"] = function setAudioOutputDeviceByIndex(audioOutputDeviceId) {
+  return (async () => {
+    if (c4 === 2) {
+      c4 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp4 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c4 = 2;
+        if (0 === c3) {
+          if (arg0 === 1) {
+            c4 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c4 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_1 = tmp2;
+            closure_129_0 = undefined;
+            closure_129_1 = undefined;
+            c3 = 1;
+            c4 = 1;
+            const obj5 = { value: audioOutputDeviceId(tmp5[16]).getAudioOutputDevices(), done: false };
+            return obj5;
+          }
+        } else if (arg0 === 1) {
+          c4 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c4 = 3;
+          const obj6 = { value, done: true };
+          return obj6;
+        } else {
+          closure_129_0 = value;
+          const found = closure_129_0.find((id) => id.id === closure_1_0);
+          audioOutputDeviceId = found;
+          if (found == null) {
+            audioOutputDeviceId = closure_129_0[0];
+          }
+          closure_129_1 = audioOutputDeviceId;
+          if (null != closure_129_1) {
+            const voiceEngine = audioOutputDeviceId(tmp5[9]).getVoiceEngine();
+            voiceEngine.setOutputDevice(closure_129_1.index);
+            const obj = audioOutputDeviceId(tmp5[9]);
+          }
+          c4 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp19) {
+        c4 = tmp;
+        throw tmp19;
+      }
+    }
+  })();
 };
 prototype["getVideoInputDevices"] = function getVideoInputDevices() {
   return Devices.getVideoInputDevices();
@@ -1913,7 +2005,7 @@ prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1
   const replay = ConnectionDefault.createReplay(arg0, arg1);
   let tmp2 = null;
   if (null != replay) {
-    replay.on(self(5757).BaseConnectionEvent.Destroy, (arg0) => {
+    replay.on(self(5792).BaseConnectionEvent.Destroy, (arg0) => {
       const connections = self.connections;
       connections.delete(arg0);
       if (self.connectionsEmpty()) {
@@ -1923,7 +2015,7 @@ prototype["createReplayConnection"] = function createReplayConnection(arg0, arg1
     let connections = self.connections;
     connections.add(replay);
     self(2013).setProcessPriority(constants.HIGH);
-    self.emit(self(5749).MediaEngineEvent.Connection, replay);
+    self.emit(self(5784).MediaEngineEvent.Connection, replay);
     tmp2 = replay;
     const obj3 = self(2013);
   }
@@ -2157,6 +2249,72 @@ prototype["getDeviceAudioEffects"] = function getDeviceAudioEffects(arg0) {
     deviceAudioEffects = Promise.reject(error);
   }
   return deviceAudioEffects;
+};
+prototype["emitCurrentDevices"] = function emitCurrentDevices(deviceChangeGeneration) {
+  closure_0 = deviceChangeGeneration;
+  const self = this;
+  return (async () => {
+    if (c3 === 2) {
+      c3 = 3;
+      throw new TypeError("Generator functions may not be called on executing generators");
+    } else if (tmp5 === 3) {
+      if (arg0 === 1) {
+        throw value;
+      } else if (arg0 === 2) {
+        const obj2 = { value, done: true };
+        return obj2;
+      } else {
+        return { value: "IconComponent", done: null };
+      }
+    } else {
+      try {
+        c3 = 2;
+        if (0 === c2) {
+          if (arg0 === 1) {
+            c3 = 3;
+            throw value;
+          } else if (arg0 === 2) {
+            c3 = 3;
+            const obj3 = { value, done: true };
+            return obj3;
+          } else {
+            closure_1 = tmp3;
+            closure_128_0 = undefined;
+            closure_128_1 = undefined;
+            closure_128_2 = undefined;
+            closure_128_3 = undefined;
+            closure_128_4 = undefined;
+            const items = [self.getAudioInputDevices(), self.getAudioOutputDevices(), self.getVideoInputDevices()];
+            c2 = 1;
+            c3 = 1;
+            const obj4 = { value: Promise.all(items), done: false };
+            return obj4;
+          }
+        } else if (arg0 === 1) {
+          c3 = 3;
+          throw value;
+        } else if (arg0 === 2) {
+          c3 = 3;
+          const obj = { value, done: true };
+          return obj;
+        } else {
+          closure_128_0 = value;
+          closure_128_1 = _slicedToArray(closure_128_0, 3);
+          closure_128_2 = closure_128_1[0];
+          closure_128_3 = closure_128_1[1];
+          closure_128_4 = closure_128_1[2];
+          if (closure_129_0 === closure_129_1.deviceChangeGeneration) {
+            closure_129_1.emit(tmp2(c2[10]).MediaEngineEvent.DeviceChange, closure_128_2, closure_128_3, closure_128_4);
+          }
+          c3 = 3;
+          return { value: "IconComponent", done: null };
+        }
+      } catch (tmp17) {
+        c3 = tmp;
+        throw tmp17;
+      }
+    }
+  })();
 };
 prototype["watchdogTick"] = function watchdogTick() {
   const self = this;

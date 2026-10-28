@@ -24,7 +24,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
     headerTitle() {
       return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, {
         variant: "text-md/normal",
-        children: "applicationId",
+        children: "application",
       });
     },
     render() {
@@ -40,7 +40,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   obj4.headerTitle = function headerTitle() {
     return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, {
       variant: "text-md/normal",
-      children: "applicationId",
+      children: "application",
     });
   };
   obj4.render = function render() {
@@ -55,7 +55,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   obj6.headerTitle = function headerTitle() {
     return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, {
       variant: "text-md/normal",
-      children: "applicationId",
+      children: "application",
     });
   };
   obj6.render = function render() {
@@ -70,7 +70,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   obj8.headerTitle = function headerTitle() {
     return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, {
       variant: "text-md/normal",
-      children: "applicationId",
+      children: "application",
     });
   };
   obj8.render = function render() {
@@ -85,7 +85,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   obj10.headerTitle = function headerTitle() {
     return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, {
       variant: "text-md/normal",
-      children: "applicationId",
+      children: "application",
     });
   };
   obj10.render = function render() {
@@ -100,7 +100,7 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   obj12.headerTitle = function headerTitle() {
     return closure_1_12(isDsaEligible(isDeveloperClassification[12]).Text, {
       variant: "text-md/normal",
-      children: "applicationId",
+      children: "application",
     });
   };
   obj12.render = function render() {
@@ -112,12 +112,12 @@ function getScreens(isDsaEligible, isSpam, isCoppa, isDeveloperClassification) {
   return obj;
 }
 let View = fn(17).View;
-const SafetyHubConstants = fn(7899);
+const SafetyHubConstants = fn(7933);
 ({ APPEAL_INGESTION_IMPRESSION_PROPERTIES: closure_9, AppealIngestionSections: c10 } = SafetyHubConstants);
 const EMPTY_STRING_SNOWFLAKE_ID = fn(1084).EMPTY_STRING_SNOWFLAKE_ID;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1, Fragment: closure_14 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   headerContainer: { alignSelf: "stretch", marginTop: 16, marginBottom: 8, paddingHorizontal: 16 },
@@ -634,7 +634,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                     v2 = 2;
                     c5 = 1;
                     const obj6 = {
-                      value: tmp27(12846).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
+                      value: tmp27(12893).requestReview(tmp35, safetyHubAppealSignal, stateFromStores1),
                       done: false,
                     };
                     return obj6;
@@ -649,8 +649,8 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
                   if (body != null) {
                     code = body.code;
                   }
-                  closure_129_4(safetyHubAppealSignal(7898).getRequestReviewErrorFromCode(code));
-                  const obj2 = safetyHubAppealSignal(7898);
+                  closure_129_4(safetyHubAppealSignal(7932).getRequestReviewErrorFromCode(code));
+                  const obj2 = safetyHubAppealSignal(7932);
                 } else if (arg0 === 1) {
                   c5 = 3;
                   throw value;

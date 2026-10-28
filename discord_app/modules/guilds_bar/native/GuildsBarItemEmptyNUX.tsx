@@ -11,13 +11,13 @@ function handlePress() {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: closure_4, View: hasOwnProperty } = get_ActivityIndicator);
-const GuildsBarConstants = fn(17772);
+const GuildsBarConstants = fn(18009);
 ({ GUILD_ITEM_HIT_SLOP: closure_7, useGuildWrapperSize: closure_8 } = GuildsBarConstants);
 const EMPTY_NUX_SERVER = fn(1084).EMPTY_NUX_SERVER;
-const MODE_CHANGE_PHYSICS = fn(11187).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(11222).MODE_CHANGE_PHYSICS;
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_13 = createStyles.createStyles((width, arg1) => {
   const diff = width - 10;
   const obj = {

@@ -245,8 +245,8 @@ let closure_28 = async function _processSocketThrottlers(arg0) {
     }
   }
 };
-const GUILD_VOCAL_CHANNEL_TYPES = fn(4828).GUILD_VOCAL_CHANNEL_TYPES;
-let Constants = fn(6379);
+const GUILD_VOCAL_CHANNEL_TYPES = fn(4860).GUILD_VOCAL_CHANNEL_TYPES;
+let Constants = fn(6413);
 ({ RPC_LOCAL_SCOPE: map1, TransportTypes: closure_14 } = Constants);
 Constants = fn(1084);
 ({
@@ -479,7 +479,7 @@ export const transformChannel = function transformChannel(channel, result) {
           throw error;
         } else {
           const obj = {
-            nick: closure_1(5990).getName(dependencyMap, id.id, user),
+            nick: closure_1(6025).getName(dependencyMap, id.id, user),
             mute: MediaEngineStore.isLocalMute(user.id),
             volume: MediaEngineStore.getLocalVolume(user.id),
             pan: MediaEngineStore.getLocalPan(user.id),
@@ -488,7 +488,7 @@ export const transformChannel = function transformChannel(channel, result) {
           };
           const obj3 = { mute, deaf, self_mute: selfMute, self_deaf: selfDeaf, suppress };
           obj.voice_state = obj3;
-          obj.user = closure_1(9262)(user);
+          obj.user = closure_1(9294)(user);
           return obj;
         }
       });

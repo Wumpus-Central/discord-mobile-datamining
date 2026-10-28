@@ -5,7 +5,6 @@ import size from "../../../../_runtime/metro/00002__.js";
 const items = [
   CheckpointNavigation.CheckpointRoute.HOME,
   CheckpointNavigation.CheckpointRoute.INTRODUCTION,
-  CheckpointNavigation.CheckpointRoute.NO_DATA_INTRO,
   CheckpointNavigation.CheckpointRoute.VOICE_GENERAL,
   CheckpointNavigation.CheckpointRoute.VOICE_FACE,
   CheckpointNavigation.CheckpointRoute.MESSAGES_GENERAL,

@@ -25,55 +25,51 @@ export const getCheckpointFlow = function getCheckpointFlow(flag) {
 };
 export const getCheckpointRoutes = function getCheckpointRoutes(stats) {
   stats = stats.stats;
-  if (stats.flow === stats(6365).CheckpointFlow.SHARED_DATA) {
-    let prop = tmp(12973).CHECKPOINT_SHARED_DATA_FLOW;
+  if (stats.flow === stats(6399).CheckpointFlow.SHARED_DATA) {
+    let prop = tmp(13020).CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp(12974).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = tmp(13021).CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   return prop.filter((item) => {
     if (item === CheckpointNavigation.CheckpointRoute.SHARE) {
       return false;
-    } else if (item === CheckpointNavigation.CheckpointRoute.NO_DATA_INTRO) {
-      return null === stats;
     } else if (null != obj[item]) {
-      return null != stats && tmp4(stats);
+      return null != stats && tmp2(stats);
     } else {
-      let tmp8 = null == tmp7;
-      if (!tmp8) {
-        tmp8 = undefined === stats || tmp7(stats);
-        const tmp9 = undefined === stats || tmp7(stats);
+      let tmp6 = null == tmp5;
+      if (!tmp6) {
+        tmp6 = undefined === stats || tmp5(stats);
+        const tmp7 = undefined === stats || tmp5(stats);
       }
-      return tmp8;
+      return tmp6;
     }
   });
 };
 export const getAdjacentCheckpointRoute = function getAdjacentCheckpointRoute(stats) {
   stats = stats.stats;
   ({ flow, currentRoute, direction } = stats);
-  if (flow === stats(6365).CheckpointFlow.SHARED_DATA) {
-    let prop = tmp(12973).CHECKPOINT_SHARED_DATA_FLOW;
+  if (flow === stats(6399).CheckpointFlow.SHARED_DATA) {
+    let prop = tmp(13020).CHECKPOINT_SHARED_DATA_FLOW;
   } else {
-    prop = tmp(12974).CHECKPOINT_NO_SHARED_DATA_FLOW;
+    prop = tmp(13021).CHECKPOINT_NO_SHARED_DATA_FLOW;
   }
   const found = prop.filter((item) => {
     if (item === CheckpointNavigation.CheckpointRoute.SHARE) {
       return false;
-    } else if (item === CheckpointNavigation.CheckpointRoute.NO_DATA_INTRO) {
-      return null === stats;
     } else if (null != obj[item]) {
-      return null != stats && tmp4(stats);
+      return null != stats && tmp2(stats);
     } else {
-      let tmp8 = null == tmp7;
-      if (!tmp8) {
-        tmp8 = undefined === stats || tmp7(stats);
-        const tmp9 = undefined === stats || tmp7(stats);
+      let tmp6 = null == tmp5;
+      if (!tmp6) {
+        tmp6 = undefined === stats || tmp5(stats);
+        const tmp7 = undefined === stats || tmp5(stats);
       }
-      return tmp8;
+      return tmp6;
     }
   });
   const index = found.indexOf(currentRoute);
   if (-1 === index) {
-    let INTRODUCTION = tmp(6365).CheckpointRoute.INTRODUCTION;
+    let INTRODUCTION = tmp(6399).CheckpointRoute.INTRODUCTION;
   } else {
     INTRODUCTION = found[index + direction];
     if (INTRODUCTION == null) {

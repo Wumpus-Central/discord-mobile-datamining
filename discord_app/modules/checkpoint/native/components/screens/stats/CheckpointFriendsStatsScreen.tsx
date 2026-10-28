@@ -174,7 +174,7 @@ function SidekickMessageInput(user) {
     const intl2 = tmp15(1125).intl;
     obj5.accessibilityLabel = intl2.string(user(1125).t.Ve9Ge6);
     let obj6 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj5.children = closure_13(user(12897).GiftIcon, obj6);
+    obj5.children = closure_13(user(12944).GiftIcon, obj6);
     const items1 = [closure_13(closure_6, obj5)];
     const obj7 = {
       onPress: function handleSend() {
@@ -204,7 +204,7 @@ function SidekickMessageInput(user) {
     const obj8 = { disabled: !tmp10 };
     obj7.accessibilityState = obj8;
     const obj9 = { size: "refresh_sm", color: CHECKPOINT_PRIMARY };
-    obj7.children = closure_13(user(5681).SendMessageIcon, obj9);
+    obj7.children = closure_13(user(5716).SendMessageIcon, obj9);
     items1[1] = closure_13(closure_6, obj7);
     obj4.children = items1;
     items[1] = closure_14(closure_7, obj4);
@@ -215,7 +215,7 @@ function SidekickMessageInput(user) {
 }
 get_ActivityIndicator = fn(17);
 ({ Pressable: metroRequire, View: closure_7 } = get_ActivityIndicator);
-const CheckpointConstants = fn(6016);
+const CheckpointConstants = fn(6050);
 const CHECKPOINT_PRIMARY = CheckpointConstants.CHECKPOINT_PRIMARY;
 const CHECKPOINT_WHITE = CheckpointConstants.CHECKPOINT_WHITE;
 const jsxProd = fn(21);
@@ -242,7 +242,7 @@ if (PlatformUtils.isIOS()) {
   tmp5 = obj2;
 }
 obj2 = tmp5;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj5 = {
   container: { width: "100%", flexGrow: 1, justifyContent: "flex-end", paddingBottom: nativeDefault.space.PX_64 },
   animation: null,

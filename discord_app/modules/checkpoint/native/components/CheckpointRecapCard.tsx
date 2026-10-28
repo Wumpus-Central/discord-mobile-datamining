@@ -13,9 +13,9 @@ const jsx = fn(21).jsx;
 let c6 = 268;
 const rect = { size: 240, top: nativeDefault.space.PX_16, left: -20 };
 let c8 = 2026;
-const CheckpointStatNumber = fn(12996);
+const CheckpointStatNumber = fn(13213);
 const checkpointStatNumberWidth = CheckpointStatNumber.getCheckpointStatNumberWidth(2026, 64);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { year: null };
 const rect1 = { position: "absolute", left: 178 - checkpointStatNumberWidth / 2, top: 22.5, transform: null };
 let items = [{ rotate: "90deg" }];
@@ -173,7 +173,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         children: null,
       };
       const obj3 = { style: tmp.year, children: null };
-      let obj = character(8624);
+      let obj = character(8661);
       obj3.children = jsx(CheckpointStatNumberDefault, {
         value,
         color: obj.getCardColors(character).primaryBackgroundColor,

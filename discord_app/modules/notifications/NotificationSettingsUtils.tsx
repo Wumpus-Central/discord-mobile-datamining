@@ -45,8 +45,12 @@ function getExperimentAndConfigBySettingId(arg0) {
   }
   return {};
 }
-const NotificationSettingsConstants = fn(15729);
-({ NOTIF_SETTING_MAPPING: closure_4, NOTIF_SETTINGS: hasOwnProperty } = NotificationSettingsConstants);
+const NotificationSettingsConstants = fn(15955);
+({
+  NOTIF_CATEGORIES: closure_4,
+  NOTIF_SETTING_MAPPING: hasOwnProperty,
+  NOTIF_SETTINGS: metroRequire,
+} = NotificationSettingsConstants);
 let ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
 function useIsDeclarativeSettingsUIAvailable(AndroidMessageNotificationsSetting) {
@@ -93,17 +97,17 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
     }
     continue;
   }
-  const entries = Object.entries(React4);
+  const entries = Object.entries(hasOwnProperty);
   while (tmp14 !== undefined) {
     let tmp17 = _slicedToArray(tmp15, 2);
     let tmp18 = tmp17[1];
     let _parseInt = parseInt;
     let parsed = parseInt(tmp17[0]);
-    for (const item10071 of tmp18) {
-      if (set.has(item10071)) {
+    for (const item10072 of tmp18) {
+      if (set.has(item10072)) {
         let obj2 = { notifType: null, notifSetting: null };
         obj2.notifType = parsed;
-        obj2.notifSetting = item10071;
+        obj2.notifSetting = item10072;
         let arr2 = mappings.push(obj2);
         obj4.return();
         break;
@@ -112,7 +116,24 @@ export const getAssignedNotifSettingsAndMappings = function getAssignedNotifSett
     }
     continue;
   }
-  return { settings, mappings };
+  const categories = [];
+  for (const item10090 of closure_1_4) {
+    let tmp28 = null != item10090.redesignState;
+    if (tmp28) {
+      tmp28 = item10090.redesignState !== result;
+    }
+    if (tmp28) {
+      continue;
+    } else {
+      let obj5 = { stringId: item10090.string_id, title: null };
+      if (!result) {
+        obj5.title = item10090.title;
+        obj5 = tmp30(obj5);
+      }
+      let redesignTitle = item10090.redesignTitle;
+    }
+  }
+  return { categories, settings, mappings };
 };
 export { useIsDeclarativeSettingsUIAvailable };
 export { useNotifCategoryVisibility };

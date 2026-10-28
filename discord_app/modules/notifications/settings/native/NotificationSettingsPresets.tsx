@@ -35,7 +35,7 @@ function getSegmentedControlItems() {
   items[2] = obj3;
   return items;
 }
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   customContainer: {
     padding: 16,

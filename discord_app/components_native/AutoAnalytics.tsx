@@ -29,7 +29,7 @@ import UserStore from "../stores/UserStore.tsx";
 require = fn;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_18, ActivityTypes: closure_19, GuildFeatures: closure_20 } = Constants);
-const isStaticChannelRoute = fn(4831).isStaticChannelRoute;
+const isStaticChannelRoute = fn(4863).isStaticChannelRoute;
 const jsx = fn(21).jsx;
 const PureComponent = noop.PureComponent;
 class AutoAnalytics extends PureComponent {}

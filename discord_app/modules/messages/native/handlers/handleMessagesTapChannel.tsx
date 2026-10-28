@@ -291,8 +291,8 @@ let closure_16 = async function _handleMessagesTapChannel(arg0) {
   ({ onBeforeNavigate: closure_129_2, dismissKeyboard: closure_129_3 } = closure_0);
   return "Reflect";
 };
-const isGuildVocalChannelType = fn(4828).isGuildVocalChannelType;
-const isGuildLurker = fn(4842).isGuildLurker;
+const isGuildVocalChannelType = fn(4860).isGuildVocalChannelType;
+const isGuildLurker = fn(4874).isGuildLurker;
 const Constants = fn(1084);
 ({ ChannelTypes: c10, LinkingTypes: closure_11, Permissions: closure_12, Routes: map1 } = Constants);
 const size = fn(2);

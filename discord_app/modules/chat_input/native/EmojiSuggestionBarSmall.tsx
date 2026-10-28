@@ -13,9 +13,9 @@ const ReanimatedRexportDefault = ReanimatedRexport;
 require = fn;
 let closure_3 = ["anchorTop", "onOccupiedHeightChange", "ref"];
 const jsx = fn(21).jsx;
-const sum = fn(9830).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
+const sum = fn(9862).IMAGE_SIZE + 2 * nativeDefault.space.PX_8 + 2;
 const CONTAINER_SMALL_WRAPPER_HEIGHT = sum + nativeDefault.space.PX_8;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { containerSmall: null };
   const rect = {
@@ -163,22 +163,22 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       } = displayEmojis);
       ({ onOccupiedHeightChange, cleanUp } = displayEmojis);
       const tmp = closure_9(displayEmojis.anchorTop);
-      const suggestionBarHeight = displayEmojis(13343).useSuggestionBarHeight(
+      const suggestionBarHeight = displayEmojis(13560).useSuggestionBarHeight(
         transitionState,
         cleanUp,
         CONTAINER_SMALL_WRAPPER_HEIGHT,
         onOccupiedHeightChange,
       );
-      let obj = displayEmojis(13343);
+      let obj = displayEmojis(13560);
       const fn = function j() {
         const obj = { opacity: null };
         const items = [0, closure_8];
         obj.opacity = ReanimatedRexport.interpolate(suggestionBarHeight.get(), items, [0, 1]);
         return obj;
       };
-      let obj2 = displayEmojis(5053);
+      let obj2 = displayEmojis(5085);
       fn.__closure = {
-        interpolate: displayEmojis(5053).interpolate,
+        interpolate: displayEmojis(5085).interpolate,
         heightSv: suggestionBarHeight,
         CONTAINER_SMALL_WRAPPER_HEIGHT,
       };
@@ -287,7 +287,7 @@ export const EmojiSuggestionBarSmall = ReactCompilerGating.isReactCompilerEnable
       let obj = require("c");
       const emojiSuggestionBarState = require("EmojiSuggestionBarUtils").useEmojiSuggestionBarState(
         tmp6,
-        tmp(13343).MAX_SUGGESTIONS_LARGE,
+        tmp(13560).MAX_SUGGESTIONS_LARGE,
         1,
         tmp7,
       );
@@ -311,7 +311,7 @@ export const EmojiSuggestionBarSmall = ReactCompilerGating.isReactCompilerEnable
               }
             }
             const obj2 = { item: undefined, renderItem: tmp15 };
-            const tmp18 = jsx(tmp(5038).TransitionItem, { item: undefined, renderItem: tmp15 });
+            const tmp18 = jsx(tmp(5070).TransitionItem, { item: undefined, renderItem: tmp15 });
             cResult[16] = undefined;
             cResult[17] = tmp15;
             cResult[18] = tmp18;

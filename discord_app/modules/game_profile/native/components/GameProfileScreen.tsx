@@ -22,7 +22,7 @@ get_ActivityIndicator = fn(17);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let c10 = 56;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   loadingContainer: {
     flex: 1,

@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/title_bar/native/confirmConjureYouBarPin.tsx
 import DispatcherDefault from "../../../../Dispatcher.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3831 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
 import ToastActionCreatorsDefault from "../../../toast/native/ToastActionCreators.tsx";
 import useAlertStore from "../../../../design/components/AlertModal/native/useAlertStore.native.tsx";
 import PinIcon from "../../../../design/components/Icon/native/redesign/generated/PinIcon.tsx";
@@ -21,7 +21,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
           DispatcherDefault.dispatch({ type: "CONJURE_YOU_BAR_PIN_SET", pinned: pin });
           const obj2 = { type: "CONJURE_YOU_BAR_PIN_SET", pinned: pin };
           const intl = util.intl;
-          const tmp5 = _modDef3831;
+          const tmp5 = _modDef3863;
           const obj4 = { text: intl.string(pin ? tmp5["VM+k4c"] : tmp5["0EEfRN"]), icon: null };
           if (pin) {
             let PinUprightSlashIcon = PinIcon.PinIcon;
@@ -39,19 +39,19 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[2] !== pin) {
         let intl = tmp(1125).intl;
-        const tmp7 = _modDef3831;
+        const tmp7 = _modDef3863;
         const stringResult = intl.string(pin ? tmp7.M0Nuhc : tmp7.D9HywZ);
         cResult[2] = pin;
         cResult[3] = stringResult;
       } else if (cResult[4] !== pin) {
         const intl2 = tmp(1125).intl;
-        const tmp12 = _modDef3831;
+        const tmp12 = _modDef3863;
         const stringResult1 = intl2.string(pin ? tmp12.nLv5dy : tmp12.f0k4Er);
         cResult[4] = pin;
         cResult[5] = stringResult1;
       } else if (cResult[6] !== pin) {
         const intl3 = tmp(1125).intl;
-        const tmp17 = _modDef3831;
+        const tmp17 = _modDef3863;
         const stringResult2 = intl3.string(pin ? tmp17.I9ZELO : tmp17["7FCFOy"]);
         cResult[6] = pin;
         cResult[7] = stringResult2;
@@ -65,7 +65,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             let obj2 = { variant: "secondary", text: null };
             const intl4 = tmp(1125).intl;
             obj2.text = intl4.string(tmp(1125).t["ETE/oC"]);
-            const tmp26 = closure_3(tmp(5915).AlertActionButton, obj2);
+            const tmp26 = closure_3(tmp(5950).AlertActionButton, obj2);
             cResult[11] = tmp26;
             let tmp24 = tmp26;
           } else {
@@ -91,7 +91,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
           let obj4 = { title: tmp5, content: tmp10, actions: tmp27 };
-          const tmp33 = closure_3(tmp(5915).AlertModal, obj4);
+          const tmp33 = closure_3(tmp(5950).AlertModal, obj4);
           cResult[14] = tmp5;
           cResult[15] = tmp10;
           cResult[16] = tmp27;
@@ -99,7 +99,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
           tmp31 = tmp33;
         }
         const obj5 = { variant: "primary", text: cResult[7], onPress: tmp4 };
-        const tmp22 = closure_3(tmp(5915).AlertActionButton, obj5);
+        const tmp22 = closure_3(tmp(5950).AlertActionButton, obj5);
         cResult[8] = tmp4;
         cResult[9] = cResult[7];
         cResult[10] = tmp22;
@@ -110,7 +110,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
   : function ConjureYouBarPinAlert(pin) {
       pin = pin.pin;
       let intl = pin(1125).intl;
-      let tmp5 = _modDef3831;
+      let tmp5 = _modDef3863;
       if (pin) {
         let D9HywZ = tmp5.M0Nuhc;
         let tmp6 = importDefault;
@@ -120,20 +120,20 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       let obj = { title: intl.string(D9HywZ), content: null, actions: null };
       const intl2 = tmp2(1125).intl;
-      const tmp6Result = tmp6(3831);
+      const tmp6Result = tmp6(3863);
       obj.content = intl2.string(pin ? tmp6Result.nLv5dy : tmp6Result.f0k4Er);
       const intl3 = tmp2(1125).intl;
-      const tmp6Result2 = tmp6(3831);
+      const tmp6Result2 = tmp6(3863);
       let obj2 = { children: null };
       const items = [
-        closure_3(pin(5915).AlertActionButton, {
+        closure_3(pin(5950).AlertActionButton, {
           variant: "primary",
           text: intl3.string(pin ? tmp6Result2.I9ZELO : tmp6Result2["7FCFOy"]),
           onPress: function confirm() {
             DispatcherDefault.dispatch({ type: "CONJURE_YOU_BAR_PIN_SET", pinned: pin });
             const obj2 = { type: "CONJURE_YOU_BAR_PIN_SET", pinned: pin };
             const intl = util.intl;
-            const tmp5 = _modDef3831;
+            const tmp5 = _modDef3863;
             const obj4 = { text: intl.string(pin ? tmp5["VM+k4c"] : tmp5["0EEfRN"]), icon: null };
             if (pin) {
               let PinUprightSlashIcon = PinIcon.PinIcon;
@@ -148,10 +148,10 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
       let obj4 = { variant: "secondary", text: null };
       const intl4 = tmp2(1125).intl;
       obj4.text = intl4.string(pin(1125).t["ETE/oC"]);
-      items[1] = closure_3(pin(5915).AlertActionButton, obj4);
+      items[1] = closure_3(pin(5950).AlertActionButton, obj4);
       obj2.children = items;
       obj.actions = closure_5(closure_4, obj2);
-      return closure_3(pin(5915).AlertModal, obj);
+      return closure_3(pin(5950).AlertModal, obj);
     };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/title_bar/native/confirmConjureYouBarPin.tsx");

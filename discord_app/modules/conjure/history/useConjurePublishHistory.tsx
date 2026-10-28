@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/history/useConjurePublishHistory.tsx
 import util from "../../../intl/index.native.tsx";
 import _modDef2046 from "../../../../_runtime/metro/02046__.js";
-import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
 import conjurePublishHistoryRequests from "conjurePublishHistoryRequests.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -49,7 +49,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] === arg0) {
           let tmp14 = cResult[6];
         }
-        historyLoad = tmp(12242).useHistoryLoad(tmp14);
+        historyLoad = tmp(12281).useHistoryLoad(tmp14);
         nextCursor = null;
         if ("loaded" === historyLoad.state.status) {
           nextCursor = historyLoad.state.data.nextCursor;
@@ -175,7 +175,7 @@ let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         cResult[16] = C;
         cResult[17] = tmp23;
         cResult[18] = obj2;
-        const tmpResult = tmp(12242);
+        const tmpResult = tmp(12281);
       }
       const fn = function p() {
         return conjurePublishHistoryRequests.fetchPublishHistory(closure_0, closure_2);
@@ -242,7 +242,7 @@ let result = size.fileFinishedImporting("modules/conjure/history/useConjurePubli
 export const publishHistoryTitle = function publishHistoryTitle(publishedAt) {
   const intl = util.intl;
   const obj = { date: _modDef2046(publishedAt).format("LLL") };
-  return intl.formatToPlainString(_modDef3831["/spQzC"], obj);
+  return intl.formatToPlainString(_modDef3863["/spQzC"], obj);
 };
 export const useConjurePublishHistory = tmp2;
 export const useConjurePublishHistoryNotes = ReactCompilerGating.isReactCompilerEnabled()

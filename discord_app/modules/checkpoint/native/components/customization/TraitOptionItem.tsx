@@ -2,13 +2,13 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../discord_common/js/packages/tokens/native.tsx";
 import useA11yRolesNative from "../../../../../../discord_common/js/packages/design/hooks/useA11yRolesNative.tsx";
-import LinearGradientDefault from "../../../../../../_runtime/05259_LinearGradient.js";
+import LinearGradientDefault from "../../../../../../_runtime/05294_LinearGradient.js";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import CheckpointTraitRarity from "../../../../../../discord_common/js/shared/shared-constants/CheckpointTraitRarity.tsx";
 import CheckpointCharacterAssets from "../../../CheckpointCharacterAssets.tsx";
 import CheckpointCustomizationUtils from "../../../CheckpointCustomizationUtils.tsx";
-import _modDef6968 from "../../../../../../_runtime/metro/06968__.js";
-import inlineStyles from "../../../../../../_runtime/07960_inlineStyles.js";
+import _modDef7002 from "../../../../../../_runtime/metro/07002__.js";
+import inlineStyles from "../../../../../../_runtime/07994_inlineStyles.js";
 import NitroWheelIcon from "../../../../../design/components/Icon/native/redesign/generated/NitroWheelIcon.tsx";
 import get_ActivityIndicator from "../../../../../../_runtime/metro/00017__.js";
 import CheckpointConstants from "../../../CheckpointConstants.tsx";
@@ -86,7 +86,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             return tmp23;
           }
           const obj3 = { style: tmp11, maskElement: tmp13, pointerEvents: "none", children: tmp16 };
-          const tmp26 = closure_1_11(_modDef6968, obj3);
+          const tmp26 = closure_1_11(_modDef7002, obj3);
           cResult[6] = tmp11;
           cResult[7] = tmp16;
           cResult[8] = tmp26;
@@ -143,7 +143,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
         obj2.maskElement = closure_1_11(NitroWheelIcon.NitroWheelIcon, { size: "xxs" });
         const obj3 = { colors, start, end, style: tmp.cornerNitroIconGradient };
         obj2.children = closure_1_11(LinearGradientDefault, obj3);
-        let tmp4Result = closure_1_11(_modDef6968, obj2);
+        let tmp4Result = closure_1_11(_modDef7002, obj2);
       } else {
         const items1 = [, ,];
         ({ rarityIndicator: arr[0], cornerFlag: arr[1] } = tmp);

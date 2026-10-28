@@ -1,5 +1,4 @@
 // discord_app/modules/soundboard/SoundboardActionCreators.tsx
-import _modDef12 from "../../../_runtime/metro/00012__.js";
 import DispatcherDefault from "../../Dispatcher.tsx";
 import util from "../../intl/index.native.tsx";
 import UserSettingsProtoActionCreators from "../user_settings/UserSettingsProtoActionCreators.tsx";
@@ -71,7 +70,7 @@ function _maybeFetchDefaultSounds() {
   }
 }
 function _maybeFetchGuildSoundboardSounds() {
-  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7448).getGuildIdsToFetchSoundsFor();
+  const guildIdsToFetchSoundsFor = SOUNDBOARD_SOUNDS_RECEIVED(7483).getGuildIdsToFetchSoundsFor();
   if (0 === guildIdsToFetchSoundsFor.length) {
     return Promise.resolve();
   } else {
@@ -89,7 +88,7 @@ function _maybeFetchGuildSoundboardSounds() {
     DispatcherDefault.dispatch(obj4);
     return promise;
   }
-  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7448);
+  const obj = SOUNDBOARD_SOUNDS_RECEIVED(7483);
 }
 let closure_14 = async function _maybeFetchSoundboardSounds(arg0) {
   let disableAnalytics = arg0;
@@ -451,7 +450,7 @@ let closure_18 = async function _fetchSoundGuildData(arg0) {
     }
   }
 };
-const DEFAULT_SOUND_GUILD_ID = fn(6009).DEFAULT_SOUND_GUILD_ID;
+const DEFAULT_SOUND_GUILD_ID = fn(6044).DEFAULT_SOUND_GUILD_ID;
 const Constants = fn(1084);
 ({ Endpoints: metroRequire, AnalyticEvents: closure_7 } = Constants);
 const UserSettingsConstants = fn(1094);
@@ -507,80 +506,29 @@ export const addFavoriteSound = function addFavoriteSound(soundId) {
   FrecencyUserSettingsActionCreators.updateAsync(
     "favoriteSoundboardSounds",
     async (soundIds) => {
-      if (obj.size(soundIds.soundIds) < count) {
-        if (tmpResult.size(soundIds.orderedSoundIds) < count) {
-          const soundIds2 = soundIds.soundIds;
-          const hasItem = soundIds2.includes(closure_0);
-          let flag = !hasItem;
-          if (hasItem) {
-            const orderedSoundIds = soundIds.orderedSoundIds;
-            flag = !orderedSoundIds.includes(closure_0);
-          }
-          if (flag) {
-            soundIds = soundIds.soundIds;
-            if (!soundIds.includes(closure_0)) {
-              const soundIds1 = soundIds.soundIds;
-              soundIds1.push(closure_0);
-            }
-            const orderedSoundIds2 = soundIds.orderedSoundIds;
-            if (!orderedSoundIds2.includes(closure_0)) {
-              const orderedSoundIds1 = soundIds.orderedSoundIds;
-              orderedSoundIds1.push(closure_0);
-            }
-          }
+      if (obj.size(soundIds.soundIds) >= closure_2_8) {
+        const obj2 = { title: null, body: null };
+        const intl = util.intl;
+        obj2.title = intl.string(util.t["+XYXtZ"]);
+        const intl2 = util.intl;
+        const obj3 = { count: tmp3 };
+        obj2.body = intl2.formatToPlainString(util.t.JaIyFi, obj3);
+        AlertActionCreatorsDefault.show(obj2);
+        let flag = false;
+        const tmpResult = AlertActionCreatorsDefault;
+      } else {
+        soundIds = soundIds.soundIds;
+        const hasItem = soundIds.includes(closure_0);
+        flag = !hasItem;
+        if (!hasItem) {
+          const soundIds1 = soundIds.soundIds;
+          soundIds1.push(closure_0);
         }
-        return flag;
       }
-      obj = _modDef12;
-      const obj2 = { title: null, body: null };
-      const intl = util.intl;
-      obj2.title = intl.string(util.t["+XYXtZ"]);
-      const intl2 = util.intl;
-      obj2.body = intl2.formatToPlainString(util.t.JaIyFi, { count });
-      AlertActionCreatorsDefault.show(obj2);
-      flag = false;
-      const tmpResult2 = AlertActionCreatorsDefault;
+      return flag;
     },
     constants.INFREQUENT_USER_ACTION,
   );
-};
-export const reorderFavoriteSound = function reorderFavoriteSound(arg0, arg1) {
-  closure_0 = arg0;
-  closure_1 = arg1;
-  if (arg0 !== arg1) {
-    const FrecencyUserSettingsActionCreators = UserSettingsProtoActionCreators.FrecencyUserSettingsActionCreators;
-    FrecencyUserSettingsActionCreators.updateAsync(
-      "favoriteSoundboardSounds",
-      async (orderedSoundIds) => {
-        orderedSoundIds = orderedSoundIds.orderedSoundIds;
-        const index = orderedSoundIds.indexOf(closure_0);
-        if (-1 === index) {
-          return false;
-        } else {
-          if (null == closure_1) {
-            let length = orderedSoundIds.orderedSoundIds.length;
-          } else {
-            const orderedSoundIds1 = orderedSoundIds.orderedSoundIds;
-            length = orderedSoundIds1.indexOf(tmp3);
-          }
-          if (-1 !== length) {
-            if (length !== index) {
-              const orderedSoundIds2 = orderedSoundIds.orderedSoundIds;
-              orderedSoundIds2.splice(index, 1);
-              let diff = length;
-              if (index < length) {
-                diff = length - 1;
-              }
-              const orderedSoundIds3 = orderedSoundIds.orderedSoundIds;
-              orderedSoundIds3.splice(diff, 0, closure_0);
-            }
-          }
-          return false;
-        }
-      },
-      constants.INFREQUENT_USER_ACTION,
-    );
-  }
 };
 export const removeFavoriteSound = function removeFavoriteSound(soundId) {
   closure_0 = soundId;

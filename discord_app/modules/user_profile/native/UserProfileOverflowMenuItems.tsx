@@ -49,7 +49,7 @@ export const getIgnoreMenuItem = function getIgnoreMenuItem(arg0, isBlocked) {
       obj.label = string(t.ytCpKs);
       obj.action = function action() {
         const obj = ActionSheetActionCreatorsDefault;
-        const tmp = asyncRequireImpl(10965, dependencyMap.paths);
+        const tmp = asyncRequireImpl(11000, dependencyMap.paths);
         obj.openLazy(
           tmp,
           React5,
@@ -99,7 +99,7 @@ export const getBlockMenuItem = function getBlockMenuItem(arg0, isBlocked) {
     obj.label = intl.string(util.t.l4Emac);
     obj.action = function action() {
       const obj = ActionSheetActionCreatorsDefault;
-      const tmp = asyncRequireImpl(10964, dependencyMap.paths);
+      const tmp = asyncRequireImpl(10999, dependencyMap.paths);
       obj.openLazy(
         tmp,
         timestampProducer,
@@ -134,7 +134,7 @@ export const getReportMenuItem = function getReportMenuItem(user, isInIarUserRep
       constants({ action: "REPORT", analyticsLocations });
       if (user.bot) {
         const obj4 = ActionSheetActionCreatorsDefault;
-        const tmp18 = asyncRequireImpl(14296, dependencyMap.paths);
+        const tmp18 = asyncRequireImpl(14519, dependencyMap.paths);
         const obj5 = { user, entrypoint, contextualGuildId, contextualChannelId };
         obj4.openLazy(tmp18, BotReportChooser.BOT_REPORT_CHOOSER_KEY, obj5, "replaceAll");
       } else {
@@ -179,8 +179,8 @@ export const getDeveloperCopyMenuItem = function getDeveloperCopyMenuItem(arg0, 
         dependencyMap({ action: "COPY_USERNAME", analyticsLocations });
         const obj = { action: "COPY_USERNAME", analyticsLocations };
         const obj2 = ClipboardUtils;
-        obj2.copy(analyticsLocations(5026).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
-        const obj3 = analyticsLocations(5026);
+        obj2.copy(analyticsLocations(5058).getUserTag(avatarURL, { decoration: "never", identifiable: "always" }));
+        const obj3 = analyticsLocations(5058);
         const result = ToastUtils.presentUsernameCopied();
       };
       items.push(obj);

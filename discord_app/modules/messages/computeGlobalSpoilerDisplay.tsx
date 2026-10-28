@@ -44,7 +44,7 @@ export const useShouldDisplaySpoilerObscurity = ReactCompilerGating.isReactCompi
       }
       const obj = require("c");
       const stateFromStores = require("useStateFromStores").useStateFromStores(first, tmp6);
-      const RenderSpoilers = tmp(4800).RenderSpoilers;
+      const RenderSpoilers = tmp(4832).RenderSpoilers;
       const setting = RenderSpoilers.useSetting();
       if (cResult[3] === stateFromStores) {
         if (cResult[4] === setting) {

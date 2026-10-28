@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/title_bar/native/useConjureWandStatus.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3831 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
 import useMountEffectDefault from "../../../../hooks/useMountEffect.tsx";
 import ConjureActionCreators from "../../projects/ConjureActionCreators.tsx";
 import useConjureTitleBarStatusDefault from "../useConjureTitleBarStatus.tsx";
@@ -35,7 +35,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       useMountEffectDefault(first);
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef3831.uk6jhJ);
+        const stringResult = intl.string(_modDef3863.uk6jhJ);
         cResult[1] = stringResult;
         let tmp9 = stringResult;
       } else {
@@ -45,7 +45,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let stringResult1 = null;
         if (tmp11) {
           const intl2 = util.intl;
-          stringResult1 = intl2.string(_modDef3831["Y8pS+n"]);
+          stringResult1 = intl2.string(_modDef3863["Y8pS+n"]);
         }
         cResult[2] = tmp11;
         cResult[3] = stringResult1;
@@ -65,7 +65,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let stringResult2 = null;
         if ("needs_input" === kind2) {
           const intl3 = util.intl;
-          stringResult2 = intl3.string(_modDef3831.hfIuc7);
+          stringResult2 = intl3.string(_modDef3863.hfIuc7);
         }
         let kind3;
         if (status != null) {
@@ -89,7 +89,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let stringResult3 = null;
         if ("unread" === kind5) {
           const intl4 = util.intl;
-          stringResult3 = intl4.string(_modDef3831["6XGnHJ"]);
+          stringResult3 = intl4.string(_modDef3863["6XGnHJ"]);
         }
         let kind6;
         if (status != null) {
@@ -154,11 +154,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj.hasBadge = hasUnread;
       const intl = util.intl;
-      const items = [intl.string(_modDef3831.uk6jhJ), , ,];
+      const items = [intl.string(_modDef3863.uk6jhJ), , ,];
       let stringResult = null;
       if ("working" === kind) {
         const intl2 = util.intl;
-        stringResult = intl2.string(_modDef3831["Y8pS+n"]);
+        stringResult = intl2.string(_modDef3863["Y8pS+n"]);
       }
       items[1] = stringResult;
       let kind1;
@@ -168,7 +168,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let stringResult1 = null;
       if ("needs_input" === kind1) {
         const intl3 = util.intl;
-        stringResult1 = intl3.string(_modDef3831.hfIuc7);
+        stringResult1 = intl3.string(_modDef3863.hfIuc7);
       }
       items[2] = stringResult1;
       let kind2;
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let stringResult2 = null;
       if ("unread" === kind2) {
         const intl4 = util.intl;
-        stringResult2 = intl4.string(_modDef3831["6XGnHJ"]);
+        stringResult2 = intl4.string(_modDef3863["6XGnHJ"]);
       }
       items[3] = stringResult2;
       const found = items.filter((item) => null != item);

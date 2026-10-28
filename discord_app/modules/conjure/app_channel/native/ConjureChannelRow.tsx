@@ -2,7 +2,7 @@
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3831 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
 import MagicWandIcon from "../../../../design/components/Icon/native/redesign/generated/MagicWandIcon.tsx";
 import BaseChannelItem from "../../../guild_sidebar/native/BaseChannelItem.tsx";
 import openConjureProjectsSheetDefault from "../../projects/native/openConjureProjectsSheet.tsx";
@@ -14,10 +14,10 @@ const BaseChannelItemDefault = BaseChannelItem;
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   container: {
-    marginVertical: fn(11954).CHANNEL_MARGIN_VERTICAL,
+    marginVertical: fn(11992).CHANNEL_MARGIN_VERTICAL,
     marginHorizontal: nativeDefault.space.PX_8,
     borderRadius: nativeDefault.radii.md,
   },
@@ -25,7 +25,7 @@ let obj2 = {
 let closure_4 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
 let obj3 = {
-  marginVertical: fn(11954).CHANNEL_MARGIN_VERTICAL,
+  marginVertical: fn(11992).CHANNEL_MARGIN_VERTICAL,
   marginHorizontal: nativeDefault.space.PX_8,
   borderRadius: nativeDefault.radii.md,
 };
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = util.intl;
-        const stringResult = intl.string(_modDef3831.uk6jhJ);
+        const stringResult = intl.string(_modDef3863.uk6jhJ);
         cResult[0] = stringResult;
         let first = stringResult;
       } else {
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
         const intl2 = util.intl;
-        const stringResult1 = intl2.string(_modDef3831.uk6jhJ);
+        const stringResult1 = intl2.string(_modDef3863.uk6jhJ);
         cResult[3] = stringResult1;
         let tmp10 = stringResult1;
       } else {
@@ -188,17 +188,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.onPress = openConjureProjectsSheetDefault;
       obj.style = tmp.container;
       const intl = tmp6(1125).intl;
-      obj.accessibilityLabel = intl.string(_modDef3831.uk6jhJ);
+      obj.accessibilityLabel = intl.string(_modDef3863.uk6jhJ);
       obj.accessibilityState = { selected };
       obj.mode = DEFAULT;
       obj.unread = hasUnread;
       const obj2 = { name: null, mode: null };
       const intl2 = tmp6(1125).intl;
-      obj2.name = intl2.string(_modDef3831.uk6jhJ);
+      obj2.name = intl2.string(_modDef3863.uk6jhJ);
       obj2.mode = DEFAULT;
-      obj.name = jsx(tmp6(13290).BaseChannelName, { name: null, mode: null });
+      obj.name = jsx(tmp6(13507).BaseChannelName, { name: null, mode: null });
       const tmp2Result = BaseChannelItemDefault;
-      obj.icon = jsx(tmp6(13290).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp6(12174).MagicWandIcon });
+      obj.icon = jsx(tmp6(13507).BaseChannelIcon, { mode: DEFAULT, IconComponent: tmp6(12212).MagicWandIcon });
       obj.channelInfo = jsx(ChannelBadgeDefault, { mentionCount: tmp4.badgeCount, isNewChannel: false });
       return (
         <tmp2Result

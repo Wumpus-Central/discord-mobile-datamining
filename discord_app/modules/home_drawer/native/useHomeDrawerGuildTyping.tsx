@@ -20,7 +20,7 @@ function areHomeDrawerGuildTypingStatesEqual(typingChannelId, typingChannelId2) 
   }
   return result;
 }
-const isThread = fn(4828).isThread;
+const isThread = fn(4860).isThread;
 let closure_7 = { typingChannelId: "Array", typingChannelName: "Reflect", typingUserIds: [] };
 const ReactCompilerGating = fn(558);
 const size = fn(2);

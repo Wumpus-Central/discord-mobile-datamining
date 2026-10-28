@@ -234,7 +234,7 @@ function handleFavoritesUpdate() {
   const item3 = getFlattedChannelListDefault(obj._categories, obj).forEach(setIndex);
   closure_12[v65535] = obj;
 }
-let GuildChannelStore = fn(4902);
+let GuildChannelStore = fn(4934);
 ({ GUILD_SELECTABLE_CHANNELS_KEY: hasOwnProperty, GUILD_VOCAL_CHANNELS_KEY: metroRequire } = GuildChannelStore);
 let GuildChannelStore = GuildChannelStore_mod;
 const Constants = fn(1084);

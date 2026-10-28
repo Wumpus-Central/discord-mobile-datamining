@@ -1,5 +1,5 @@
 // discord_app/modules/activate_device/native/ActivateDeviceModal.tsx
-import _modDef8113 from "../../../../_runtime/metro/08113__.js";
+import _modDef8147 from "../../../../_runtime/metro/08147__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const require = fn;
@@ -24,11 +24,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           headerLeft() {
-            const obj = { source: _modDef8113, onPress: onClose, accessibilityLabel: null };
+            const obj = { source: _modDef8147, onPress: onClose, accessibilityLabel: null };
             const intl = userCode(1125).intl;
             obj.accessibilityLabel = intl.string(userCode(1125).t.cpT0Cq);
-            return jsx(userCode(7486).HeaderActionButton, {
-              source: _modDef8113,
+            return jsx(userCode(7521).HeaderActionButton, {
+              source: _modDef8147,
               onPress: onClose,
               accessibilityLabel: null,
             });
@@ -37,7 +37,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             return null;
           },
           render() {
-            return jsx(userCode(15159).ActivateDevice, { onClose, prefilledUserCode });
+            return jsx(userCode(15384).ActivateDevice, { onClose, prefilledUserCode });
           },
         };
         obj2[constants.ACTIVATE_DEVICE] = obj3;
@@ -57,7 +57,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[3] !== tmp4) {
         const obj4 = { screens: tmp4, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: tmp6 };
-        const tmp11 = jsx(tmp(7097).Navigator, {
+        const tmp11 = jsx(tmp(7131).Navigator, {
           screens: tmp4,
           initialRouteName: constants.ACTIVATE_DEVICE,
           headerBackTitle: tmp6,
@@ -85,11 +85,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             headerLeft() {
-              const obj = { source: _modDef8113, onPress: onClose, accessibilityLabel: null };
+              const obj = { source: _modDef8147, onPress: onClose, accessibilityLabel: null };
               const intl = userCode(1125).intl;
               obj.accessibilityLabel = intl.string(userCode(1125).t.cpT0Cq);
-              return jsx(userCode(7486).HeaderActionButton, {
-                source: _modDef8113,
+              return jsx(userCode(7521).HeaderActionButton, {
+                source: _modDef8147,
                 onPress: onClose,
                 accessibilityLabel: null,
               });
@@ -98,7 +98,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return null;
             },
             render() {
-              return jsx(userCode(15159).ActivateDevice, { onClose, prefilledUserCode });
+              return jsx(userCode(15384).ActivateDevice, { onClose, prefilledUserCode });
             },
           },
         };
@@ -106,7 +106,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = { screens: memo, initialRouteName: constants.ACTIVATE_DEVICE, headerBackTitle: null };
       let intl = userCode(1125).intl;
       obj.headerBackTitle = intl.string(userCode(1125).t["13/7kX"]);
-      return jsx(userCode(7097).Navigator, {
+      return jsx(userCode(7131).Navigator, {
         screens: memo,
         initialRouteName: constants.ACTIVATE_DEVICE,
         headerBackTitle: null,

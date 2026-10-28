@@ -1,6 +1,7 @@
 // discord_app/modules/nuf/native/components/NewUserModal.tsx
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import NewUserUtils from "../NewUserUtils.tsx";
+import InterestPickerPicksContextDefault from "../../../waterwheels/interest/InterestPickerPicksContext.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const require = globalThis.__r;
@@ -9,9 +10,9 @@ require = fn;
 const NativeModules = fn(17).NativeModules;
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const NativeStackNavigator = fn(9745);
+const NativeStackNavigator = fn(9777);
 let closure_7 = NativeStackNavigator.createNativeStackNavigator();
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj3 = {
   header: {
     borderBottomWidth: 0,
@@ -31,7 +32,7 @@ const result = size.fileFinishedImporting("modules/nuf/native/components/NewUser
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function NewUserModal(arg0) {
-      const cResult = require("c").c(15);
+      const cResult = require("c").c(16);
       ({ initialRouteName, initialOnboardingStepIndex } = arg0);
       const tmp4 = closure_8();
       _require = tmp4;
@@ -43,12 +44,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp5 = cResult[1];
       }
-      accessibilityNativeStackOptions.useRef(tmp5);
+      importDefault = accessibilityNativeStackOptions.useRef(tmp5);
       dependencyMap = accessibilityNativeStackOptions.useRef(null);
       let obj = require("c");
       accessibilityNativeStackOptions = require("Navigator").useAccessibilityNativeStackOptions();
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn = function f(flag) {
+        const fn = function v(flag) {
           ({ lastShownStepIndex, onboardingStepIndex } = ref.current);
           if (flag == null) {
             flag = false;
@@ -98,7 +99,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj3 = {
             name: "enable-notification",
             getComponent() {
-              return closure_0(17456).RedesignNotificationScreen;
+              return closure_0(17691).RedesignNotificationScreen;
             },
             initialParams: null,
           };
@@ -115,7 +116,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = {
             name: "choose-avatar",
             getComponent() {
-              return closure_0(18951).default;
+              return closure_0(19205).default;
             },
             options() {
               return {
@@ -125,7 +126,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   obj.onPress = function onPress() {
                     closure_0 = closure_1_4;
                     const lazyResult = React.lazy(() => closure_0(paths[7])(paths[6], paths.paths));
-                    closure_2_0(5911).openAlert(
+                    closure_2_0(5946).openAlert(
                       "skip-avatar-upload",
                       closure_2_5(lazyResult, {
                         onConfirm() {
@@ -134,7 +135,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       }),
                     );
                   };
-                  return closure_2_5(closure_1(13616), obj);
+                  return closure_2_5(closure_1(13834), obj);
                 },
               };
             },
@@ -154,7 +155,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             name: "contact-sync",
             options: { headerShown: false },
             getComponent() {
-              return closure_0(13604).ContactSyncOnboardingModal;
+              return closure_0(13822).ContactSyncOnboardingModal;
             },
             initialParams: null,
           };
@@ -169,10 +170,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol4 = Symbol;
         if (cResult[10] === Symbol.for("react.memo_cache_sentinel")) {
           const obj9 = {
-            name: "discoverability",
+            name: "interest-picker",
             options: { headerShown: false },
             getComponent() {
-              return closure_0(18952).default;
+              return closure_0(19206).default;
             },
             initialParams: null,
           };
@@ -187,9 +188,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol5 = Symbol;
         if (cResult[11] === Symbol.for("react.memo_cache_sentinel")) {
           const obj11 = {
-            name: "connect-guardian",
+            name: "discoverability",
+            options: { headerShown: false },
             getComponent() {
-              return closure_0(18958).default;
+              return closure_0(19215).default;
             },
             initialParams: null,
           };
@@ -201,20 +203,39 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         } else {
           tmp27 = cResult[11];
         }
-        if (cResult[12] === tmp10) {
-          if (cResult[13] === initialRouteName) {
-            let tmp31 = cResult[14];
-          }
-          return tmp31;
+        const _Symbol6 = Symbol;
+        if (cResult[12] === Symbol.for("react.memo_cache_sentinel")) {
+          const obj13 = {
+            name: "connect-guardian",
+            getComponent() {
+              return closure_0(19221).default;
+            },
+            initialParams: null,
+          };
+          const obj14 = { onComplete: tmp7 };
+          obj13.initialParams = obj14;
+          const tmp34 = closure_5(closure_7.Screen, obj13);
+          cResult[12] = tmp34;
+          let tmp31 = tmp34;
+        } else {
+          tmp31 = cResult[12];
         }
-        const obj13 = { screenOptions: tmp10, initialRouteName, children: null };
-        const items = [tmp11, tmp15, tmp19, tmp23, tmp27];
-        obj13.children = items;
-        const tmp34 = closure_6(closure_7.Navigator, obj13);
-        cResult[12] = tmp10;
-        cResult[13] = initialRouteName;
-        cResult[14] = tmp34;
-        tmp31 = tmp34;
+        if (cResult[13] === tmp10) {
+          if (cResult[14] === initialRouteName) {
+            let tmp35 = cResult[15];
+          }
+          return tmp35;
+        }
+        const obj15 = { children: null };
+        const obj16 = { screenOptions: tmp10, initialRouteName, children: null };
+        const items = [tmp11, tmp15, tmp19, tmp23, tmp27, tmp31];
+        obj16.children = items;
+        obj15.children = closure_6(closure_7.Navigator, obj16);
+        const tmp41 = closure_5(InterestPickerPicksContextDefault, obj15);
+        cResult[13] = tmp10;
+        cResult[14] = initialRouteName;
+        cResult[15] = tmp41;
+        tmp35 = tmp41;
       }
       const fn3 = function y(navigation) {
         closure_2.current = navigation.navigation;
@@ -251,7 +272,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ initialRouteName, initialOnboardingStepIndex } = arg0);
       noop = undefined;
       _require = closure_8();
-      noop.useRef({ onboardingStepIndex: initialOnboardingStepIndex, lastShownStepIndex: initialOnboardingStepIndex });
+      importDefault = noop.useRef({
+        onboardingStepIndex: initialOnboardingStepIndex,
+        lastShownStepIndex: initialOnboardingStepIndex,
+      });
       dependencyMap = noop.useRef(null);
       noop = require("Navigator").useAccessibilityNativeStackOptions();
       const onComplete = noop.useCallback((flag) => {
@@ -308,22 +332,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         initialRouteName: null,
         children: null,
       };
+      let obj2 = require("useNavigatorBackPressHandler");
       if (initialRouteName == null) {
         initialRouteName = "choose-avatar";
       }
+      const obj4 = { children: null };
       obj3.initialRouteName = initialRouteName;
       const items = [
         closure_5(closure_7.Screen, {
           name: "enable-notification",
           getComponent() {
-            return closure_0(17456).RedesignNotificationScreen;
+            return closure_0(17691).RedesignNotificationScreen;
           },
           initialParams: { onComplete },
         }),
         closure_5(closure_7.Screen, {
           name: "choose-avatar",
           getComponent() {
-            return closure_0(18951).default;
+            return closure_0(19205).default;
           },
           options() {
             return {
@@ -333,7 +359,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 obj.onPress = function onPress() {
                   closure_0 = closure_1_4;
                   const lazyResult = React.lazy(() => closure_0(paths[7])(paths[6], paths.paths));
-                  closure_2_0(5911).openAlert(
+                  closure_2_0(5946).openAlert(
                     "skip-avatar-upload",
                     closure_2_5(lazyResult, {
                       onConfirm() {
@@ -342,7 +368,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     }),
                   );
                 };
-                return closure_2_5(closure_1(13616), obj);
+                return closure_2_5(closure_1(13834), obj);
               },
             };
           },
@@ -352,7 +378,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           name: "contact-sync",
           options: { headerShown: false },
           getComponent() {
-            return closure_0(13604).ContactSyncOnboardingModal;
+            return closure_0(13822).ContactSyncOnboardingModal;
+          },
+          initialParams: { onComplete },
+        }),
+        closure_5(closure_7.Screen, {
+          name: "interest-picker",
+          options: { headerShown: false },
+          getComponent() {
+            return closure_0(19206).default;
           },
           initialParams: { onComplete },
         }),
@@ -360,18 +394,19 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           name: "discoverability",
           options: { headerShown: false },
           getComponent() {
-            return closure_0(18952).default;
+            return closure_0(19215).default;
           },
           initialParams: { onComplete },
         }),
         closure_5(closure_7.Screen, {
           name: "connect-guardian",
           getComponent() {
-            return closure_0(18958).default;
+            return closure_0(19221).default;
           },
           initialParams: { onComplete },
         }),
       ];
       obj3.children = items;
-      return closure_6(closure_7.Navigator, obj3);
+      obj4.children = closure_6(closure_7.Navigator, obj3);
+      return closure_5(InterestPickerPicksContextDefault, obj4);
     };

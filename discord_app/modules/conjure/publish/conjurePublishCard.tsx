@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/publish/conjurePublishCard.tsx
-import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const weakMap = new WeakMap();
@@ -54,17 +54,19 @@ export const livePublishCardMessageId = function livePublishCardMessageId(arg0, 
   }
   return null;
 };
-export const publishNoticeMessage = function publishNoticeMessage(notice, arg1) {
+export const publishNoticeMessage = function publishNoticeMessage(notice, arg1, automod) {
   if (true === notice.commands_failed) {
-    let prop = _modDef3831["PrQg+B"];
+    let prop = _modDef3863["PrQg+B"];
   } else if (true === notice.channel_skipped) {
-    prop = _modDef3831.ev23Cw;
+    prop = _modDef3863.ev23Cw;
   } else if (notice.update) {
-    prop = _modDef3831.gQzuLC;
+    prop = _modDef3863.gQzuLC;
+  } else if (automod) {
+    prop = _modDef3863.KORRGl;
   } else if (null == arg1) {
-    prop = _modDef3831.MOrR29;
+    prop = _modDef3863.MOrR29;
   } else {
-    prop = _modDef3831["/npn7F"];
+    prop = _modDef3863["/npn7F"];
   }
   return prop;
 };

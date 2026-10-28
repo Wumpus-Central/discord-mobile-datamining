@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/publish/useConjurePublishButton.tsx
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
-import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
 import useConjurePublishActionDefault from "useConjurePublishAction.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -12,7 +12,7 @@ function publishButtonText(upToDate, arg1) {
     return arg1;
   } else if (null == upToDate) {
     const intl2 = util.intl;
-    let label = intl2.string(_modDef3831["120EFN"]);
+    let label = intl2.string(_modDef3863["120EFN"]);
   } else {
     let tmp = null != upToDate && upToDate.upToDate;
     if (tmp) {
@@ -24,7 +24,7 @@ function publishButtonText(upToDate, arg1) {
     if (tmp) {
       if (!upToDate.publishing) {
         const intl = util.intl;
-        label = intl.string(_modDef3831.kAfbEN);
+        label = intl.string(_modDef3863.kAfbEN);
       }
     }
     label = upToDate.label;
@@ -36,7 +36,7 @@ const result = size.fileFinishedImporting("modules/conjure/publish/useConjurePub
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useConjurePublishButton(arg0, guildId, busy, arg3) {
-      const cResult = c.c(23);
+      const cResult = c.c(29);
       [r10015, require] = noop.useState(null);
       noop.useRef(null);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
@@ -194,6 +194,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         confirmation: tmp11,
         variant: null,
         text: null,
+        label: null,
+        indicator: null,
       };
       let tmp12 = null != tmp7 && tmp7.upToDate;
       if (tmp12) {
@@ -208,5 +210,26 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       obj2.variant = str2;
       obj2.text = publishButtonText(tmp7, tmp11);
+      obj2.label = publishButtonText(tmp7, null);
+      let tmp13 = null;
+      if (null != tmp7) {
+        let str3 = "publishing";
+        if (!tmp7.publishing) {
+          let tmp14 = null != tmp7 && tmp7.upToDate;
+          if (tmp14) {
+            tmp14 = "publish" === tmp7.action;
+          }
+          if (tmp14) {
+            tmp14 = !tmp7.awaitingApproval;
+          }
+          let tmp15 = "unpublished";
+          if (tmp14) {
+            tmp15 = null;
+          }
+          str3 = tmp15;
+        }
+        tmp13 = str3;
+      }
+      obj2.indicator = tmp13;
       return obj2;
     };

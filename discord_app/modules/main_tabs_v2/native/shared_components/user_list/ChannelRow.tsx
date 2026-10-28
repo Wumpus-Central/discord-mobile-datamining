@@ -22,11 +22,11 @@ const useChannelNameDefault = useChannelName;
 require = fn;
 let closure_3 = ["channel", "mode", "selected", "disabled", "onPress", "onLongPress", "trailing", "subLabel", "label"];
 const View = fn(17).View;
-const UserRowModes = fn(10619).UserRowModes;
-const ReadStateTypes = fn(6706).ReadStateTypes;
+const UserRowModes = fn(10651).UserRowModes;
+const ReadStateTypes = fn(6740).ReadStateTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_14, Fragment: closure_15, jsxs: closure_16 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = {
   guildIcon: { flexShrink: 0, flexGrow: 0 },
   subLabel: { display: "flex", flexDirection: "row", alignItems: "center" },
@@ -238,8 +238,8 @@ export default noop.memo(
               }
               obj2.guild = stateFromStores;
               obj2.channel = tmp4;
-              obj2.size = tmp(12955).GuildIconWithChannelTypeSizes.SMALL_32;
-              const tmp34 = closure_14(tmp(12955).GuildIconWithChannelType, obj2);
+              obj2.size = tmp(13002).GuildIconWithChannelTypeSizes.SMALL_32;
+              const tmp34 = closure_14(tmp(13002).GuildIconWithChannelType, obj2);
             }
             cResult[26] = tmp4;
             cResult[27] = stateFromStores;

@@ -2,12 +2,13 @@
 import initializeDefault from "../../../../discord_common/js/packages/flux/index.tsx";
 import DispatcherDefault from "../../../Dispatcher.tsx";
 import ChannelConstants from "../../channel/ChannelConstants.tsx";
+import conjureGuildReturnsToProjectDefault from "conjureGuildReturnsToProject.native.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 const StaticChannelRoute = ChannelConstants.StaticChannelRoute;
 let lastProjectIdByGuildId = { lastProjectIdByGuildId: {} };
-let c2 = null;
-let closure_3 = lastProjectIdByGuildId;
+let c4 = null;
+let closure_5 = lastProjectIdByGuildId;
 const PersistedStore = initializeDefault.PersistedStore;
 class ConjureBuilderRouteStore extends PersistedStore {}
 const prototype = ConjureBuilderRouteStore.prototype;
@@ -16,10 +17,10 @@ prototype["initialize"] = function initialize(arg0) {
   if (arg0 == null) {
     tmp = obj;
   }
-  closure_3 = tmp;
+  closure_5 = tmp;
 };
 prototype["getState"] = function getState() {
-  return closure_3;
+  return closure_5;
 };
 prototype["getRoutedProjectId"] = function getRoutedProjectId(guildId) {
   guildId = undefined;
@@ -33,9 +34,13 @@ prototype["getRoutedProjectId"] = function getRoutedProjectId(guildId) {
   return projectId;
 };
 prototype["getLastProjectId"] = function getLastProjectId(id) {
-  let tmp = closure_3.lastProjectIdByGuildId[id];
-  if (tmp == null) {
-    tmp = null;
+  let tmp = null;
+  if (conjureGuildReturnsToProjectDefault) {
+    let tmp4 = closure_5.lastProjectIdByGuildId[id];
+    if (tmp4 == null) {
+      tmp4 = null;
+    }
+    tmp = tmp4;
   }
   return tmp;
 };
@@ -85,7 +90,7 @@ const conjureBuilderRouteStore = new ConjureBuilderRouteStore(DispatcherDefault,
       if (projectId2 == null) {
         projectId2 = null;
       }
-      let tmp12 = closure_3.lastProjectIdByGuildId[guildId];
+      let tmp12 = closure_5.lastProjectIdByGuildId[guildId];
       if (tmp12 == null) {
         tmp12 = null;
       }
@@ -97,14 +102,14 @@ const conjureBuilderRouteStore = new ConjureBuilderRouteStore(DispatcherDefault,
         tmp9 = flag;
       } else {
         const obj2 = {};
-        const merged = Object.assign(closure_3.lastProjectIdByGuildId);
+        const merged = Object.assign(closure_5.lastProjectIdByGuildId);
         if (null == projectId2) {
           delete tmp2[tmp];
         } else {
           obj2[guildId] = projectId2;
         }
         const obj3 = { lastProjectIdByGuildId: obj2 };
-        closure_3 = obj3;
+        closure_5 = obj3;
       }
     }
     return tmp9;
@@ -112,17 +117,17 @@ const conjureBuilderRouteStore = new ConjureBuilderRouteStore(DispatcherDefault,
   CONJURE_PROJECT_SELECT: function handleProjectSelect(projectId) {
     let tmp4 = null == projectId.projectId;
     if (tmp4) {
-      let tmp6 = closure_3.lastProjectIdByGuildId[tmp3];
+      let tmp6 = closure_5.lastProjectIdByGuildId[tmp3];
       if (tmp6 == null) {
         tmp6 = null;
       }
       let flag = false;
       if (tmp6 !== null) {
         lastProjectIdByGuildId = {};
-        const merged = Object.assign(closure_3.lastProjectIdByGuildId);
+        const merged = Object.assign(closure_5.lastProjectIdByGuildId);
         delete tmp2[tmp];
         const obj2 = { lastProjectIdByGuildId };
-        closure_3 = obj2;
+        closure_5 = obj2;
         flag = true;
       }
       tmp4 = flag;
@@ -130,8 +135,8 @@ const conjureBuilderRouteStore = new ConjureBuilderRouteStore(DispatcherDefault,
     return tmp4;
   },
   LOGOUT: function handleLogout() {
-    c2 = null;
-    closure_3 = obj;
+    c4 = null;
+    closure_5 = obj;
   },
 });
 const result = size.fileFinishedImporting("modules/conjure/builder/ConjureBuilderRouteStore.tsx");

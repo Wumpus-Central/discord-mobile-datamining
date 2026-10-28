@@ -12,7 +12,7 @@ const dependencyMap = {
   sm: { width: 18, height: 18 },
   md: { width: 24, height: 24 },
   lg: { width: 32, height: 32 },
-  custom: { width: "toCharArray$esjava$1", height: "Symbol" },
+  custom: { width: "useCallback", height: "PX_16" },
   refresh_sm: { width: 18, height: 18 },
 };
 const ReactCompilerGating = fn(558);

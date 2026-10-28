@@ -20,7 +20,7 @@ export const useEmbeddedAppShimVersion = function useEmbeddedAppShimVersion(Base
   }
   return num;
 };
-export const getEmbeddedAppShimVersion = function getEmbeddedAppShimVersion(location) {
+export const getEmbeddedAppShimVersion = function getEmbeddedAppShimVersion(ChannelLongPressActionSheet) {
   let num = 1;
   if (closure_0.getConfig(obj).enabled) {
     num = 2;

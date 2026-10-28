@@ -45,16 +45,25 @@ class SmartSearchAnalyticsManager {
       lastShownSuggestionKey: null,
       parentSuggestedSearch: null,
     });
-    merged[0] = { isRowViewable: false, isTabActive: false, isAppActive: true, currentAnswer: null };
+    merged[0] = {
+      isRowViewable: false,
+      isTabActive: false,
+      isNavigationFocused: false,
+      isAppActive: true,
+      currentAnswer: null,
+    };
     return merged;
   }
 }
 const prototype = SmartSearchAnalyticsManager.prototype;
-prototype["setIsRowViewable"] = function setIsRowViewable(isViewable, getSessionId) {
-  this.updateVisibility({ isRowViewable: isViewable }, getSessionId);
+prototype["setIsRowViewable"] = function setIsRowViewable(someResult, getSessionId) {
+  this.updateVisibility({ isRowViewable: someResult }, getSessionId);
 };
 prototype["setIsTabActive"] = function setIsTabActive(isTabActive, getSessionId) {
   this.updateVisibility({ isTabActive }, getSessionId);
+};
+prototype["setIsNavigationFocused"] = function setIsNavigationFocused(isNavigationFocused, getSessionId) {
+  this.updateVisibility({ isNavigationFocused }, getSessionId);
 };
 prototype["setIsAppActive"] = function setIsAppActive(stateFromStores, getSessionId) {
   this.updateVisibility({ isAppActive: stateFromStores }, getSessionId);
@@ -76,7 +85,7 @@ prototype["updateVisibility"] = function updateVisibility(arg0, getSessionId) {
   const merged1 = Object.assign(arg0);
   if (!discord_common_shallowEqualDefault(obj, rowVisibilityState)) {
     self.rowVisibilityState = obj;
-    let tmp3 = obj.isRowViewable && obj.isTabActive && obj.isAppActive;
+    let tmp3 = obj.isRowViewable && obj.isTabActive && obj.isNavigationFocused && obj.isAppActive;
     if (tmp3) {
       tmp3 = null != obj.currentAnswer;
     }
@@ -286,7 +295,13 @@ let merged = Object.assign({
   lastShownSuggestionKey: null,
   parentSuggestedSearch: null,
 });
-merged[0] = { isRowViewable: false, isTabActive: false, isAppActive: true, currentAnswer: null };
+merged[0] = {
+  isRowViewable: false,
+  isTabActive: false,
+  isNavigationFocused: false,
+  isAppActive: true,
+  currentAnswer: null,
+};
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/intelligence_layer/search/SmartSearchAnalyticsManager.tsx");
 

@@ -6,11 +6,11 @@ const require = globalThis.__r;
 const require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: c2, Pressable: c3 } = get_ActivityIndicator);
-const PromoEmailConsentStore = fn(6670);
+const PromoEmailConsentStore = fn(6704);
 ({ usePromoEmailConsentStore: closure_4, setPromoEmailConsentChecked: hasOwnProperty } = PromoEmailConsentStore);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_8 = createStyles.createStyles({
   checkboxRow: { flexDirection: "row", alignItems: "flex-start", gap: 8 },
   checkboxLabel: { flex: 1 },
@@ -20,9 +20,8 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/auth/native/components/PromotionalEmailCheckBox.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function PromotionalEmailCheckBox(style) {
-      const cResult = require("c").c(21);
-      style = style.style;
+  ? function PromotionalEmailCheckBox(arg0) {
+      const cResult = require("c").c(22);
       const tmp4 = closure_8();
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function o(required) {
@@ -35,107 +34,119 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const obj = require("c");
       if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
-        const fn2 = function v(checked) {
-          return checked.checked;
-        };
-        cResult[1] = fn2;
-        let tmp8 = fn2;
+        class E {
+          constructor(arg0) {
+            return arg0.checked;
+          }
+        }
+        cResult[1] = E;
       } else {
-        tmp8 = cResult[1];
+        class E {
+          constructor(arg0) {
+            return arg0.checked;
+          }
+        }
       }
-      const tmp6Result = closure_4(tmp8);
+      const tmp6Result = closure_4(E);
       _require = tmp6Result;
       if (cResult[2] !== tmp6Result) {
-        const obj2 = { checked: tmp6Result };
+        class E {
+          constructor(arg0) {
+            return arg0.checked;
+          }
+        }
+        tmp11[0] = tmp6Result;
         cResult[2] = tmp6Result;
-        cResult[3] = obj2;
-        let tmp10 = obj2;
+        cResult[3] = tmp11;
       } else {
-        tmp10 = cResult[3];
+        class E {
+          constructor(arg0) {
+            return arg0.checked;
+          }
+        }
       }
       const tmp7 = closure_4(first);
-      const checkboxA11yNative = require("useA11yRolesNative").useCheckboxA11yNative(tmp10);
+      const checkboxA11yNative = require("useA11yRolesNative").useCheckboxA11yNative(tmp11);
       ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-      if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const intl = tmp(1125).intl;
-        const stringResult = intl.string(tmp(1125).t.ylFCLt);
-        cResult[4] = stringResult;
-        let tmp12 = stringResult;
-      } else {
-        tmp12 = cResult[4];
-      }
+      const tmpResult = require("useA11yRolesNative");
+      const promoEmailOptInLabel = require("usePromoEmailOptInLabel").usePromoEmailOptInLabel(
+        tmp(1125).t.ylFCLt,
+        "REGISTER_PROMO_EMAIL_CHECKBOX_MOBILE",
+      );
       if (!tmp7) {
-        return null;
+        class E {
+          constructor(arg0) {
+            return arg0.checked;
+          }
+        }
       } else {
-        if (cResult[5] !== tmp6Result) {
-          const fn3 = function w() {
-            return hasOwnProperty(!closure_0);
-          };
-          cResult[5] = tmp6Result;
-          cResult[6] = fn3;
-          let tmp14 = fn3;
-        } else {
-          tmp14 = cResult[6];
+        class E {
+          constructor(arg0) {
+            return arg0.checked;
+          }
         }
-        if (cResult[7] !== tmp6Result) {
-          const obj3 = { checked: tmp6Result };
-          const tmp17 = closure_6(tmp(6903).FormCheckbox, obj3);
-          cResult[7] = tmp6Result;
-          cResult[8] = tmp17;
-          let tmp15 = tmp17;
+        if (cResult[6] !== tmp6Result) {
+          class E {
+            constructor(arg0) {
+              return arg0.checked;
+            }
+          }
+          const obj2 = { checked: tmp6Result };
+          const tmp16 = closure_6(tmp(6937).FormCheckbox, obj2);
+          cResult[6] = tmp6Result;
+          cResult[7] = tmp16;
         } else {
-          tmp15 = cResult[8];
-        }
-        if (cResult[9] !== tmp4.checkboxLabel) {
-          const obj4 = { variant: "text-xs/medium", color: "text-muted", style: tmp4.checkboxLabel, children: tmp12 };
-          const tmp20 = closure_6(tmp(5235).Text, obj4);
-          cResult[9] = tmp4.checkboxLabel;
-          cResult[10] = tmp20;
-          let tmp18 = tmp20;
-        } else {
-          tmp18 = cResult[10];
-        }
-        if (cResult[11] === accessibilityRole) {
-          if (cResult[12] === accessibilityState) {
-            if (cResult[13] === tmp4.checkboxRow) {
-              if (cResult[14] === tmp14) {
-                if (cResult[15] === tmp15) {
-                  if (cResult[16] === tmp18) {
-                    let tmp21 = cResult[17];
-                  }
-                  if (cResult[18] === style) {
-                  }
-                  const obj5 = { style, children: tmp21 };
-                  const tmp28 = closure_6(closure_2, obj5);
-                  cResult[18] = style;
-                  cResult[19] = tmp21;
-                  cResult[20] = tmp28;
-                }
-              }
+          class E {
+            constructor(arg0) {
+              return arg0.checked;
             }
           }
         }
-        const obj6 = {
-          accessibilityRole,
-          accessibilityLabel: tmp12,
-          accessibilityState,
-          onPress: tmp14,
-          style: tmp4.checkboxRow,
-          children: null,
+        if (cResult[8] === promoEmailOptInLabel) {
+          class E {
+            constructor(arg0) {
+              return arg0.checked;
+            }
+          }
+          if (cResult[11] === accessibilityRole) {
+            class E {
+              constructor(arg0) {
+                return arg0.checked;
+              }
+            }
+          }
+          const obj3 = {
+            accessibilityRole,
+            accessibilityLabel: promoEmailOptInLabel,
+            accessibilityState,
+            onPress: tmp14,
+            style: tmp4.checkboxRow,
+            children: null,
+          };
+          const items = [tmp15, tmp17];
+          obj3.children = items;
+          const tmp23 = closure_7(closure_3, obj3);
+          cResult[11] = accessibilityRole;
+          cResult[12] = accessibilityState;
+          cResult[13] = promoEmailOptInLabel;
+          cResult[14] = tmp4.checkboxRow;
+          cResult[15] = tmp14;
+          cResult[16] = tmp15;
+          cResult[17] = tmp17;
+          cResult[18] = tmp23;
+        }
+        const obj4 = {
+          variant: "text-xs/medium",
+          color: "text-muted",
+          style: tmp4.checkboxLabel,
+          children: promoEmailOptInLabel,
         };
-        const items = [tmp15, tmp18];
-        obj6.children = items;
-        const tmp24 = closure_7(closure_3, obj6);
-        cResult[11] = accessibilityRole;
-        cResult[12] = accessibilityState;
-        cResult[13] = tmp4.checkboxRow;
-        cResult[14] = tmp14;
-        cResult[15] = tmp15;
-        cResult[16] = tmp18;
-        cResult[17] = tmp24;
-        tmp21 = tmp24;
+        const tmp19 = closure_6(tmp(5270).Text, obj4);
+        cResult[8] = promoEmailOptInLabel;
+        cResult[9] = tmp4.checkboxLabel;
+        cResult[10] = tmp19;
       }
-      const tmpResult = require("useA11yRolesNative");
+      const tmpResult2 = require("usePromoEmailOptInLabel");
     }
   : function PromotionalEmailCheckBox(style) {
       const tmp = closure_8();
@@ -144,14 +155,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp2 = closure_4((required) => required.required);
       const checkboxA11yNative = require("useA11yRolesNative").useCheckboxA11yNative({ checked: tmp3 });
       ({ accessibilityRole, accessibilityState } = checkboxA11yNative);
-      const intl = require("util").intl;
-      const stringResult = intl.string(require("util").t.ylFCLt);
+      const obj = require("useA11yRolesNative");
+      const promoEmailOptInLabel = require("usePromoEmailOptInLabel").usePromoEmailOptInLabel(
+        require("util").t.ylFCLt,
+        "REGISTER_PROMO_EMAIL_CHECKBOX_MOBILE",
+      );
       let tmp8 = null;
       if (tmp2) {
-        const obj2 = { style: style.style, children: null };
-        const obj3 = {
+        const obj3 = { style: style.style, children: null };
+        const obj4 = {
           accessibilityRole,
-          accessibilityLabel: stringResult,
+          accessibilityLabel: promoEmailOptInLabel,
           accessibilityState,
           onPress() {
             return hasOwnProperty(!closure_0);
@@ -159,18 +173,18 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: tmp.checkboxRow,
           children: null,
         };
-        const obj4 = { checked: tmp3 };
-        const items = [closure_6(tmp4(6903).FormCheckbox, obj4)];
-        const obj5 = {
+        const obj5 = { checked: tmp3 };
+        const items = [closure_6(tmp4(6937).FormCheckbox, obj5)];
+        const obj6 = {
           variant: "text-xs/medium",
           color: "text-muted",
           style: tmp.checkboxLabel,
-          children: stringResult,
+          children: promoEmailOptInLabel,
         };
-        items[1] = closure_6(tmp4(5235).Text, obj5);
-        obj3.children = items;
-        obj2.children = closure_7(closure_3, obj3);
-        tmp8 = closure_6(closure_2, obj2);
+        items[1] = closure_6(tmp4(5270).Text, obj6);
+        obj4.children = items;
+        obj3.children = closure_7(closure_3, obj4);
+        tmp8 = closure_6(closure_2, obj3);
       }
       return tmp8;
     };

@@ -20,7 +20,7 @@ const SubscriptionIntervalTypes = fn(1391).SubscriptionIntervalTypes;
 const CurrencyCodes = fn(1095).CurrencyCodes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   container: {
     backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH,

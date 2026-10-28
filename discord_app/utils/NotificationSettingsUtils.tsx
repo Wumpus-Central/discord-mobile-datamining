@@ -10,8 +10,8 @@ import UserGuildSettingsStore from "../stores/UserGuildSettingsStore.tsx";
 require = fn;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, UserNotificationSettings } = Constants);
-const constants2 = fn(4917).NotificationSettingsUpdateType;
-const UnreadSetting = fn(6706).UnreadSetting;
+const constants2 = fn(4949).NotificationSettingsUpdateType;
+const UnreadSetting = fn(6740).UnreadSetting;
 const UserSettingsConstants = fn(1094);
 ({ ChannelNotificationSettingsFlags: closure_11, GuildNotificationSettingsFlags: closure_12 } = UserSettingsConstants);
 const NotificationLabels = {

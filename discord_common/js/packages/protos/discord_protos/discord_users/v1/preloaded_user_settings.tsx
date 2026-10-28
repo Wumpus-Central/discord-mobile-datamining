@@ -2408,7 +2408,7 @@ prototype10["internalBinaryRead"] = function internalBinaryRead(pos, arg1, readU
   }
   return obj;
 };
-prototype10["binaryReadMap7"] = function binaryReadMap7(recurringDismissibleContentStates, pos, readUnknownField) {
+prototype10["binaryReadMap7"] = function binaryReadMap7(arg0, pos, arg2) {
   const sum = pos.pos + pos.uint32();
   let obj;
   let num;
@@ -2423,7 +2423,7 @@ prototype10["binaryReadMap7"] = function binaryReadMap7(recurringDismissibleCont
       } else if (2 !== tmp7) {
         break;
       } else {
-        internalBinaryReadResult = closure_32.internalBinaryRead(pos, pos.uint32(), readUnknownField);
+        internalBinaryReadResult = closure_32.internalBinaryRead(pos, pos.uint32(), arg2);
       }
       tmp2 = internalBinaryReadResult;
       tmp3 = int32Result;
@@ -2442,7 +2442,7 @@ prototype10["binaryReadMap7"] = function binaryReadMap7(recurringDismissibleCont
   if (obj == null) {
     obj = closure_32.create();
   }
-  recurringDismissibleContentStates[num] = obj;
+  arg0[num] = obj;
 };
 prototype10["internalBinaryWrite"] = function internalBinaryWrite(dismissedContents, tag, writeUnknownFields) {
   if (dismissedContents.dismissedContents.length) {
@@ -2897,7 +2897,7 @@ class VoiceAndVideoSettings$Type extends MessageType13 {
 }
 const prototype13 = VoiceAndVideoSettings$Type.prototype;
 prototype13["create"] = function create(partialSettings) {
-  const obj = { videoBackgroundFilterDesktop: { oneofKind: "rejectWithError" } };
+  const obj = { videoBackgroundFilterDesktop: { oneofKind: "paths" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1209.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -5286,7 +5286,7 @@ class PrivacySettings$Type extends MessageType20 {
         return require("wrappers").BoolValue;
       },
     };
-    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
+    items = [, , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , , ,];
     items[0] = obj;
     items[1] = {
       no: 2,
@@ -5492,20 +5492,27 @@ class PrivacySettings$Type extends MessageType20 {
         return require("wrappers").BoolValue;
       },
     };
-    obj1 = { no: 34, name: "ad_topic_opt_outs", kind: "enum", repeat: 1, T: null };
+    items[31] = {
+      no: 34,
+      name: "ad_topic_opt_outs",
+      kind: "enum",
+      repeat: 1,
+      T() {
+        const items = ["discord_protos.discord_users.v1.AdTopic", obj15, "AD_TOPIC_"];
+        return items;
+      },
+    };
+    obj1 = { no: 35, name: "swp_message_promotion_opted_out", kind: "message", T: null };
     class T {
       constructor() {
-        items = ["discord_protos.discord_users.v1.AdTopic"];
-        items[1] = closure_1_15;
-        items[2] = "AD_TOPIC_";
-        return items;
+        return closure_1_0(closure_1_1[4]).BoolValue;
       }
     }
     obj1.T = T;
-    items[31] = obj1;
-    items[32] = {
-      no: 35,
-      name: "swp_message_promotion_opted_out",
+    items[32] = obj1;
+    items[33] = {
+      no: 36,
+      name: "personal_access_opted_out",
       kind: "message",
       T() {
         return require("wrappers").BoolValue;
@@ -5945,6 +5952,20 @@ prototype20["internalBinaryWrite"] = function internalBinaryWrite(
     const internalBinaryWriteResult20 = BoolValue19.internalBinaryWrite(
       allowActivityPartyPrivacyFriends.swpMessagePromotionOptedOut,
       tag.tag(35, _mod1209.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    );
+  }
+  if (allowActivityPartyPrivacyFriends.personalAccessOptedOut) {
+    const BoolValue20 = wrappers.BoolValue;
+    const tagResult33 = tag.tag(36, _mod1209.WireType.LengthDelimited);
+    const joined26 = BoolValue20.internalBinaryWrite(
+      allowActivityPartyPrivacyFriends.personalAccessOptedOut,
+      tag.tag(36, _mod1209.WireType.LengthDelimited).fork(),
+      writeUnknownFields,
+    ).join();
+    const internalBinaryWriteResult21 = BoolValue20.internalBinaryWrite(
+      allowActivityPartyPrivacyFriends.personalAccessOptedOut,
+      tag.tag(36, _mod1209.WireType.LengthDelimited).fork(),
       writeUnknownFields,
     );
   }

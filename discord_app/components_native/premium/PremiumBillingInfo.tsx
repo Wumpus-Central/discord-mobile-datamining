@@ -11,14 +11,14 @@ import noop from "../../../_runtime/metro/00019__.js";
 
 const util = Text(1125);
 const PremiumUtils = Text(2050);
-const Text_Text = Text(5235);
+const Text_Text = Text(5270);
 require = fn;
 const View = fn(17).View;
 const Constants = fn(1084);
 ({ SubscriptionStatusTypes: hasOwnProperty, USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   title: { paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },
   externalSubtext: { marginTop: 8, paddingHorizontal: USER_SETTINGS_CONTAINER_HORIZONTAL_PADDING },

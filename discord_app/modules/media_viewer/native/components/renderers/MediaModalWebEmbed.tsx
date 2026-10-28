@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import URLUtilsDefault from "../../../../../utils/URLUtils.tsx";
 import MediaModalWebViewBase from "MediaModalWebViewBase.tsx";
-import escapeDefault from "../../../../../../_runtime/14256_escape.js";
+import escapeDefault from "../../../../../../_runtime/14480_escape.js";
 import EmbedIFrameConfig from "../../../../chat/EmbedIFrameConfig.tsx";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
@@ -21,7 +21,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       ({ src, style, onError, onLoad } = arg0);
       ({ onLoadStart, onToggleOverlay } = arg0);
       const obj = onLoad(576);
-      [tmp5, importDefault] = noop.useState(onLoad(8788).PlayerState.UNREADY);
+      [tmp5, importDefault] = noop.useState(onLoad(8825).PlayerState.UNREADY);
       if (cResult[0] !== onLoad) {
         const fn = function t() {
           importDefault(MediaModalWebViewBase.PlayerState.PLAYING);
@@ -61,7 +61,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
           '\n<html>\n  <head>\n    <meta name="viewport" content="initial-scale=1">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src="' +
           tmp9 +
           '" allow="autoplay" sandbox="' +
-          onLoad(14259).EMBED_IFRAME_SANDBOX +
+          onLoad(14483).EMBED_IFRAME_SANDBOX +
           '" scrolling="no"></iframe>\n  </body>\n</html>\n';
         cResult[3] = src;
         cResult[4] = combined;
@@ -107,7 +107,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         onLoad: tmp6,
         onLoadStart,
       };
-      const tmp4 = _slicedToArray(noop.useState(onLoad(8788).PlayerState.UNREADY), 2);
+      const tmp4 = _slicedToArray(noop.useState(onLoad(8825).PlayerState.UNREADY), 2);
       cResult[7] = tmp6;
       cResult[8] = onError;
       cResult[9] = onLoadStart;
@@ -142,7 +142,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
       onLoad = onLoad.onLoad;
       importDefault = undefined;
       ({ src, style, onError, onLoadStart, onToggleOverlay } = onLoad);
-      [obj.playerState, importDefault] = noop.useState(onLoad(8788).PlayerState.UNREADY);
+      [obj.playerState, importDefault] = noop.useState(onLoad(8825).PlayerState.UNREADY);
       const items = [onLoad];
       const callback = noop.useCallback(() => {
         closure_1(MediaModalWebViewBase.PlayerState.PLAYING);
@@ -167,7 +167,7 @@ let closure_9 = ReactCompilerGating.isReactCompilerEnabled()
         '\n<html>\n  <head>\n    <meta name="viewport" content="initial-scale=1">\n    <style>\n      * {\n        margin: 0;\n        padding: 0;\n        background-color: #000;\n      }\n      iframe {\n        width: 100%;\n        height: 100%;\n        border: 0;\n      }\n    </style>\n  </head>\n  <body>\n    <iframe src="' +
         escapeDefault(src) +
         '" allow="autoplay" sandbox="' +
-        onLoad(14259).EMBED_IFRAME_SANDBOX +
+        onLoad(14483).EMBED_IFRAME_SANDBOX +
         '" scrolling="no"></iframe>\n  </body>\n</html>\n';
       obj2.baseUrl = baseURL;
       obj.source = obj2;

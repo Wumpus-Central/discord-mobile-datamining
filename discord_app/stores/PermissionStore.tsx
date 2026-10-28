@@ -259,12 +259,12 @@ function computePermissions(context, overwrites, roles, excludeGuildPermissions)
     excludeGuildPermissions,
   };
 }
-const ChannelRecord = fn(4828);
+const ChannelRecord = fn(4860);
 ({ ChannelRecordBase: closure_8, THREAD_CHANNEL_TYPES: closure_9 } = ChannelRecord);
-const GuildRecord = fn(4842);
+const GuildRecord = fn(4874);
 ({ isGuildOwner: c10, isGuildOwnerWithRequiredMfaLevel: closure_11 } = GuildRecord);
 const Permissions = fn(1084).Permissions;
-let closure_18 = fn(4908).MemberSafetyPagePermissions;
+let closure_18 = fn(4940).MemberSafetyPagePermissions;
 const dependencyMap = {};
 const dependencyMap2 = {};
 const dependencyMap3 = {};

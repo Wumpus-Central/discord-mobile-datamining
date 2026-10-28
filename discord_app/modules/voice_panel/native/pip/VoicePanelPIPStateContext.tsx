@@ -2,7 +2,7 @@
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 let size = {
-  id: "enumerable",
+  id: "emoji",
   mode: "toCharArray$esjava$1",
   width: false,
   height: null,
@@ -10,7 +10,7 @@ let size = {
   showSecondaryPIP: null,
   scale: null,
 };
-const ReanimatedHelperTypes = fn(7171);
+const ReanimatedHelperTypes = fn(7205);
 size.scale = ReanimatedHelperTypes.createFakeSharedValue(1);
 const context = noop.createContext(size);
 let ReactCompilerGating = fn(558);

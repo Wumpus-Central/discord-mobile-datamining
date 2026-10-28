@@ -1,4 +1,5 @@
 // discord_app/modules/explicit_media_redaction/handleExplicitMediaScanTimeoutForMessage.tsx
+import _mod12 from "../../../_runtime/metro/00012__.js";
 import ExplicitMediaRedactionConstants from "ExplicitMediaRedactionConstants.tsx";
 import findComponentMediaDefault from "findComponentMedia.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -31,19 +32,28 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
   let attachments = message.attachments;
   let embeds = message.embeds;
   const attachments1 = attachments.map((item) => {
-    item.content_scan_version = -1;
-    return item;
+    const obj = {};
+    const merged = Object.assign(item);
+    obj.content_scan_version = -1;
+    return obj;
   });
-  let components = message.components;
   const embeds1 = embeds.map((components) => {
-    components.contentScanVersion = -1;
-    components = components.components;
-    if (components == null) {
-      components = [];
+    if (null == components.components) {
+      const obj2 = {};
+      const merged = Object.assign(components);
+      obj2.contentScanVersion = -1;
+      return obj2;
+    } else {
+      const cloneDeepResult = closure_1_0(closure_1_2[1]).cloneDeep(components.components);
+      closure_1_4(cloneDeepResult);
+      const obj3 = {};
+      const merged1 = Object.assign(components);
+      obj3.contentScanVersion = -1;
+      obj3.components = cloneDeepResult;
+      return obj3;
     }
-    closure_1_3(components);
-    return components;
   });
+  const components = _mod12.cloneDeep(message.components);
   failOverComponentMedia(components);
   const messageSnapshots = message.messageSnapshots;
   let messageSnapshots1 = messageSnapshots;
@@ -55,21 +65,32 @@ export const handleExplicitMediaScanTimeoutForMessage = function handleExplicitM
         const attachments = message.attachments;
         const embeds = message.embeds;
         const mapped = attachments.map((item) => {
-          item.content_scan_version = -1;
-          return item;
+          const obj = {};
+          const merged = Object.assign(item);
+          obj.content_scan_version = -1;
+          return obj;
         });
-        let components = message.components;
         const mapped1 = embeds.map((components) => {
-          components.contentScanVersion = -1;
-          components = components.components;
-          if (components == null) {
-            components = [];
+          if (null == components.components) {
+            const obj2 = {};
+            const merged = Object.assign(components);
+            obj2.contentScanVersion = -1;
+            return obj2;
+          } else {
+            const cloneDeepResult = closure_1_0(closure_1_2[1]).cloneDeep(components.components);
+            closure_1_4(cloneDeepResult);
+            const obj3 = {};
+            const merged1 = Object.assign(components);
+            obj3.contentScanVersion = -1;
+            obj3.components = cloneDeepResult;
+            return obj3;
           }
-          closure_1_3(components);
-          return components;
         });
-        failOverComponentMedia(components);
-        return message.merge({ message: message.merge({ attachments: mapped, embeds: mapped1, components }) });
+        let cloneDeepResult = _mod12.cloneDeep(message.components);
+        failOverComponentMedia(cloneDeepResult);
+        return message.merge({
+          message: message.merge({ attachments: mapped, embeds: mapped1, components: cloneDeepResult }),
+        });
       });
     }
   }

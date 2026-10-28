@@ -86,7 +86,7 @@ let closure_11 = async function _loadFavoriteThreadsForCleanup(arg0) {
     }
   }
 };
-const THREAD_CHANNEL_TYPES = fn(4828).THREAD_CHANNEL_TYPES;
+const THREAD_CHANNEL_TYPES = fn(4860).THREAD_CHANNEL_TYPES;
 const Permissions = fn(1095).Permissions;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/favorites/FavoritesCleanup.tsx");

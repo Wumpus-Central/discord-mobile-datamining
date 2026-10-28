@@ -42,15 +42,15 @@ const VideoProgressState = {
 };
 let identity = fn(1266);
 identity = identity.createWithEqualityFn();
-fn(5165);
+fn(5200);
 const obj4 = { name: "videoQuestUIState", storage: null, partialize: null, version: 0 };
-const module_5165 = fn(5165);
-obj4.storage = module_5165.createJSONStorage(() => require("LocalStorageWrapper"));
+const module_5200 = fn(5200);
+obj4.storage = module_5200.createJSONStorage(() => require("LocalStorageWrapper"));
 obj4.partialize = function partialize(volume) {
   return { volume: volume.volume, muted: volume.muted, videoProgress: volume.videoProgress };
 };
 const withEqualityFnResult = identity(
-  module_5165.persist((arg0, arg1) => {
+  module_5200.persist((arg0, arg1) => {
     _require = arg0;
     closure_1 = arg1;
     return {

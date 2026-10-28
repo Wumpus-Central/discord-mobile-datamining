@@ -571,7 +571,7 @@ let closure_0 = asyncGeneratorStep(async (arg0) => {
     }
   }
 });
-const batchInvocationManager = new fn(4819).BatchInvocationManager(function() {
+const batchInvocationManager = new fn(4851).BatchInvocationManager(function() {
   const self = this;
   const apply = closure_0.apply;
   if (typeof apply === "unknown") {
@@ -697,9 +697,9 @@ export { isInCooldown };
 export { isStateInCooldown };
 export const addCandidateContent = function addCandidateContent(content) {
   closure_0 = content;
-  closure_1 = closure_0(4812).bypassesFatigue(content.content);
+  closure_1 = closure_0(4844).bypassesFatigue(content.content);
   dependencyMap = null;
-  let obj = closure_0(4812);
+  let obj = closure_0(4844);
   closure_0(1271).batchUpdates(() => {
     state.setState((candidates) => {
       const obj = {};

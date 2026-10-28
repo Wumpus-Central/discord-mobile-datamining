@@ -9,7 +9,7 @@ const require = globalThis.__r;
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_6 = createStyles.createStyles({
   container: { alignItems: "center", flexDirection: "row" },
   content: { marginStart: 8, flexGrow: 1 },
@@ -47,7 +47,7 @@ export default function FormChannelPicker(channelId) {
       }
       obj2.selectedChannelId = id;
       obj2.onChannelSelected = onChange;
-      obj.openLazy(asyncRequireImpl(19349, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
+      obj.openLazy(asyncRequireImpl(19612, dependencyMap.paths), "ChannelSelectorActionSheet", obj2);
     },
     children: null,
   };

@@ -12,7 +12,7 @@ import GuildScheduledEventStore from "GuildScheduledEventStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GuildScheduledEventsConstants = fn(4830);
+const GuildScheduledEventsConstants = fn(4862);
 ({
   ENTITY_TYPES_REQUIRED_CHANNEL_ID: metroRequire,
   ENTITY_TYPES_REQUIRED_ENTITY_METADATA: closure_7,
@@ -114,7 +114,7 @@ export default {
       return applyArgumentsResult;
     }
     closure_4 = async function _fetch() {
-      await tmp5(6384).httpGetWithCountryCodeQuery({
+      await tmp5(6418).httpGetWithCountryCodeQuery({
         url: closure_1_10.GUILD_EVENT(closure_2_0, closure_2_1),
         rejectWithError: tmp5(1294).rejectWithMigratedError(),
       });
@@ -148,7 +148,7 @@ export default {
   fetchGuildEventsForGuild(guild_id) {
     closure_0 = guild_id;
     return (async () => {
-      await tmp5(6384).httpGetWithCountryCodeQuery({
+      await tmp5(6418).httpGetWithCountryCodeQuery({
         url: closure_1_10.GUILD_EVENTS_FOR_GUILD(tmp5),
         rejectWithError: tmp5(1294).rejectWithMigratedError(),
       });

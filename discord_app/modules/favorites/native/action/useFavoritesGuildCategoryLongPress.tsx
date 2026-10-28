@@ -14,14 +14,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
   ? function useFavoritesGuildCategoryLongPress(getGuildId) {
       const cResult = id(576).c(5);
       if (cResult[0] !== getGuildId) {
-        let isFavoritesGuildIdResult = tmp(4849).isFavoritesGuildId(getGuildId.getGuildId());
+        let isFavoritesGuildIdResult = tmp(4881).isFavoritesGuildId(getGuildId.getGuildId());
         if (isFavoritesGuildIdResult) {
           isFavoritesGuildIdResult = getGuildId.type === ChannelTypes.GUILD_CATEGORY;
         }
         cResult[0] = getGuildId;
         cResult[1] = isFavoritesGuildIdResult;
         let tmp4 = isFavoritesGuildIdResult;
-        const tmpResult = tmp(4849);
+        const tmpResult = tmp(4881);
       } else {
         tmp4 = cResult[1];
       }

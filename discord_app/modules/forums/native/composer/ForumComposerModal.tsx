@@ -43,9 +43,9 @@ function showForumComposerCloseAlert(arg0) {
   actions_AlertActionCreatorsDefault.show(obj3);
 }
 const View = fn(17).View;
-const DraftType = fn(7632).DraftType;
+const DraftType = fn(7666).DraftType;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);

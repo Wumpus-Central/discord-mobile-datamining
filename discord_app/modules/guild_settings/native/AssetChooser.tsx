@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import native from "../../../design/void/native.tsx";
 import FastImageDefault from "../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef19045 from "../../../../_runtime/metro/19045__.js";
-import _modDef19046 from "../../../../_runtime/metro/19046__.js";
+import _modDef19308 from "../../../../_runtime/metro/19308__.js";
+import _modDef19309 from "../../../../_runtime/metro/19309__.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
@@ -15,7 +15,7 @@ get_ActivityIndicator = fn(17);
 const UPLOAD_MEDIUM_SIZE = fn(1084).UPLOAD_MEDIUM_SIZE;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   assetWrapper: { width: "100%", alignItems: "center" },
   asset: null,
@@ -163,13 +163,13 @@ prototype["render"] = function render() {
   const obj2 = { style: tmp.asset, children: null };
   let tmp9Result = source;
   if (null == source) {
-    tmp9Result = _modDef19045;
+    tmp9Result = _modDef19308;
   }
   const items = [React5(FastImageDefault, { source: tmp9Result, style: tmp.assetImage })];
   let tmp5Result = null;
   if (!disabled) {
     const obj4 = { style: tmp.uploadIconWrapper, children: null };
-    const obj5 = { style: tmp.uploadIcon, source: _modDef19046 };
+    const obj5 = { style: tmp.uploadIcon, source: _modDef19309 };
     obj4.children = React5(FastImageDefault, obj5);
     tmp5Result = React5(React4, obj4);
     const tmp9Result2 = FastImageDefault;
@@ -193,7 +193,7 @@ prototype["render"] = function render() {
   children[1] = tmp5Result2;
   return closure_1_8(React6, { children });
 };
-AssetChooser.contextType = fn(5038).ThemeContext;
+AssetChooser.contextType = fn(5070).ThemeContext;
 size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/native/AssetChooser.tsx");
 

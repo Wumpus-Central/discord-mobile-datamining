@@ -11,7 +11,7 @@ const ClipViewDefault = ClipView;
 
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16483);
+const YouBarConstants = fn(16712);
 ({
   YOU_BAR_AVATAR_LARGE_SIZE: closure_4,
   YOU_BAR_AVATAR_PLACEHOLDER_SIZE: hasOwnProperty,
@@ -24,7 +24,7 @@ const YouBarConstants = fn(16483);
 const StatusTypes = fn(1084).StatusTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = {
   placeholderAvatar: {
     borderRadius: nativeDefault.radii.round,

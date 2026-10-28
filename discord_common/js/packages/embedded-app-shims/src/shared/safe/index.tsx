@@ -11,6 +11,7 @@ const obj = {
   WeakSet: null,
   Function: null,
   Event: null,
+  KeyboardEvent: null,
   NavigateEvent: null,
   NavigationDestination: null,
   URL: null,
@@ -62,6 +63,15 @@ let passThrough = passThrough_mod;
 obj.Function = passThrough.protectPrototype("Function", ["apply", "bind", "call"]);
 let passThrough = passThrough_mod;
 obj.Event = passThrough.protectPrototype("Event", ["preventDefault", "stopImmediatePropagation", "target"]);
+let passThrough = passThrough_mod;
+obj.KeyboardEvent = passThrough.protectPrototype("KeyboardEvent", [
+  "altKey",
+  "ctrlKey",
+  "isComposing",
+  "keyCode",
+  "metaKey",
+  "shiftKey",
+]);
 let passThrough = passThrough_mod;
 obj.NavigateEvent = passThrough.protectPrototype("NavigateEvent", ["destination"]);
 let passThrough = passThrough_mod;

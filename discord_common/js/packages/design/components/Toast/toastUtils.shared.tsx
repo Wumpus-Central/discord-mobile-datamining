@@ -1,9 +1,9 @@
 // discord_common/js/packages/design/components/Toast/toastUtils.shared.tsx
-import 04983__ from "../../../../../../_runtime/metro/04983__.js";
+import 05015__ from "../../../../../../_runtime/metro/05015__.js";
 import size from "../../../../../../_runtime/metro/00002__.js";
 
 let c2 = 1;
-const useToastStore = module_4983.create(() => {
+const useToastStore = module_5015.create(() => {
   const obj = { currentToastMap: new Map(), queuedToastsMap: null };
   const map = new Map();
   obj.queuedToastsMap = new Map();

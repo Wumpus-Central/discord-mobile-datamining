@@ -8,7 +8,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildProfileFetchStatus = fn(8985).GuildProfileFetchStatus;
+const GuildProfileFetchStatus = fn(9019).GuildProfileFetchStatus;
 const ChannelTypes = fn(1084).ChannelTypes;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

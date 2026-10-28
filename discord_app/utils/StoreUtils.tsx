@@ -8,7 +8,7 @@ import AuthenticationStore from "../stores/AuthenticationStore.tsx";
 import BillingInfoStore from "../stores/billing/BillingInfoStore.tsx";
 import PaymentSourceStore from "../stores/billing/PaymentSourceStore.tsx";
 import SubscriptionStore from "../stores/billing/SubscriptionStore.tsx";
-import allSettled_mod from "../../_runtime/06385_allSettled.js";
+import allSettled_mod from "../../_runtime/06419_allSettled.js";
 
 require = fn;
 let closure_10 = async function _waitForSubscriptionsToBeFetched() {
@@ -243,14 +243,14 @@ const Constants = fn(1084);
 ({ Endpoints: closure_7, OperatingSystems: closure_8 } = Constants);
 let allSettled = allSettled_mod;
 allSettled = allSettled.shim();
-const isMobile = fn(5903).isMobile;
+const isMobile = fn(5938).isMobile;
 let tmp4 = !isMobile;
 if (!isMobile) {
-  tmp4 = !fn(5903).isTablet;
+  tmp4 = !fn(5938).isTablet;
 }
 if (tmp4) {
-  tmp4 = -1 !== fn(5822).getChromeVersion();
-  let obj2 = fn(5822);
+  tmp4 = -1 !== fn(5857).getChromeVersion();
+  let obj2 = fn(5857);
 }
 let closure_9 = tmp4;
 const size = fn(2);

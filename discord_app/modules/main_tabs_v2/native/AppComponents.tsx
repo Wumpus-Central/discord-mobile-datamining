@@ -9,6 +9,7 @@ import MainShared from "../../../components_native/MainShared.tsx";
 import MainViewTooltipActionSheetsV2Default from "../../upsell_tooltip/native/MainViewTooltipActionSheetsV2.tsx";
 import FramePoolDefault from "../../frames/native/FramePool.tsx";
 import ExternalPipViewDefault from "../../external_pip/ExternalPipView.android.tsx";
+import ConjureAppPictureInPicturesDefault from "../../conjure/background_frames/native/ConjureAppPictureInPictures.tsx";
 import ActivityPanelContainerDefault from "../../activities/panel/native/ActivityPanelContainer.tsx";
 import FramePanelContainerDefault from "../../frames/panel/native/FramePanelContainer.tsx";
 import VoicePanelContainerDefault from "../../voice_panel/native/VoicePanelContainer.tsx";
@@ -71,6 +72,7 @@ const jsxsResult1 = <>{items1}</>;
 const obj2 = { lockKeys: ["external-pip"], children: null };
 let AppFreezer = AppFreezer_mod;
 const items2 = [
+  jsx(ConjureAppPictureInPicturesDefault, {}),
   jsx(ActivityPanelContainerDefault, {}),
   jsx(FramePanelContainerDefault, {}),
   jsx(VoicePanelContainerDefault, {}),

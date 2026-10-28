@@ -18,11 +18,11 @@ import PermissionStore from "../../../../stores/PermissionStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-const InviteTargetTypes = fn(7810).InviteTargetTypes;
+const InviteTargetTypes = fn(7844).InviteTargetTypes;
 const Permissions = fn(1084).Permissions;
 const jsxProd = fn(21);
 ({ jsx: map1, Fragment: closure_14, jsxs: closure_15 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   placeholderHeader: null,
   placeholderLabel: null,

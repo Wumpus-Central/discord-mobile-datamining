@@ -1,15 +1,15 @@
 // discord_app/modules/guild_progress/native/components/GuildProgressCircle.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import GuildProgressUtils from "../GuildProgressUtils.tsx";
 import ProgressCircleDefault from "../../../premium/native/components/ProgressCircle.tsx";
+import GuildProgressUtils from "../GuildProgressUtils.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   wrapper: { position: "relative" },
   circle: { position: "absolute" },

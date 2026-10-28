@@ -221,7 +221,7 @@ let closure_26 = async function _joinGuild(arg0) {
             obj2.title = intl.string(closure_1_0(1125).t.ZZlox4);
             const intl2 = closure_1_0(1125).intl;
             obj2.body = intl2.string(closure_1_0(1125).t.ZUEGFn);
-            closure_1_1(5909).show(obj2);
+            closure_1_1(5944).show(obj2);
           })();
         }
         let tmp94 = closure_131_7;
@@ -778,7 +778,7 @@ export default {
                 obj6 = { primary_color, secondary_color: null, tertiary_color: null };
               }
               obj5.colors = obj6;
-              obj5.permissions = primary_color(4909).NONE;
+              obj5.permissions = primary_color(4941).NONE;
               c6 = 1;
               const HTTP = color(1294).HTTP;
               const request = {
@@ -795,7 +795,7 @@ export default {
           } else if (1 === tmp7) {
             c6 = 0;
             closure_131_2 = closure_5;
-            const tmp30 = new obj6(4796)(closure_131_2);
+            const tmp30 = new obj6(4828)(closure_131_2);
             throw tmp30;
           } else if (arg0 === 1) {
             c8 = 3;
@@ -815,7 +815,7 @@ export default {
               obj6(584).dispatch(obj10);
               const obj = obj6(584);
             }
-            const result = obj6(7426).checkGuildTemplateDirty(closure_132_0);
+            const result = obj6(7461).checkGuildTemplateDirty(closure_132_0);
             c6 = 0;
             c8 = 3;
             const obj11 = { value: body, done: true };
@@ -859,7 +859,7 @@ export default {
       request.rejectWithError = tmp5(1294).rejectWithMigratedError();
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = tmp2(7426).checkGuildTemplateDirty(closure_129_0);
+      const result = tmp2(7461).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -895,7 +895,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7426).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7461).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -913,7 +913,7 @@ export default {
       };
       await HTTP.patch(request);
       closure_128_0 = value;
-      const result = body(7426).checkGuildTemplateDirty(closure_129_0);
+      const result = body(7461).checkGuildTemplateDirty(closure_129_0);
       return closure_128_0;
     })();
   },
@@ -945,20 +945,20 @@ export default {
     ({ query, continuationToken } = obj);
     return DispatcherDefault.dispatch({ type: "GUILD_SEARCH_RECENT_MEMBERS", guildId, query, continuationToken });
   },
-  requestMembersById(id1, id, arg2) {
+  requestMembersById(id1, items, arg2) {
     let flag = arg2;
     if (arg2 === undefined) {
       flag = true;
     }
     let tmp = id1;
     if (!Array.isArray(id1)) {
-      const items = [id1];
+      items = [id1];
       tmp = items;
     }
     const obj2 = { type: "GUILD_MEMBERS_REQUEST", guildIds: tmp, userIds: null, presences: null };
-    let tmp2 = id;
-    if (!Array.isArray(id)) {
-      const items1 = [id];
+    let tmp2 = items;
+    if (!Array.isArray(items)) {
+      const items1 = [items];
       tmp2 = items1;
     }
     obj2.userIds = tmp2;

@@ -7,7 +7,7 @@ import useSafeAreaInsetsDefault from "../../../safe_area/useSafeAreaInsets.nativ
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Sheet_BottomSheet from "../../../../design/components/Sheet/native/BottomSheet.native.tsx";
-import BottomSheetModal from "../../../../../_runtime/05270_BottomSheetModal.js";
+import BottomSheetModal from "../../../../../_runtime/05305_BottomSheetModal.js";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
 import BottomSheetTitleHeader from "../../../../design/components/Sheet/native/BottomSheetTitleHeader.native.tsx";
 import SettingsIcon from "../../../../design/components/Icon/native/redesign/generated/SettingsIcon.tsx";
@@ -33,7 +33,7 @@ const Constants = fn(1084);
 ({ ChannelSettingsSections: closure_9, Permissions: c10 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   container: { paddingHorizontal: 16, flex: 1 },
   sectionRowWrapper: { paddingVertical: nativeDefault.space.PX_12 },
@@ -152,9 +152,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const stateFromStoresArray = channelId(504).useStateFromStoresArray(tmp17, B, tmp20);
       const tmpResult6 = channelId(504);
       navigation = channelId(1502).useNavigation();
-      tmp5(5605)(stateFromStores);
+      tmp5(5640)(stateFromStores);
       const tmpResult7 = channelId(1502);
-      const appChannelBotUserId = channelId(11315).useAppChannelBotUserId(stateFromStores);
+      const appChannelBotUserId = channelId(11352).useAppChannelBotUserId(stateFromStores);
       if (null != stateFromStores) {
         class B {
           constructor() {

@@ -9,9 +9,9 @@ import ReanimatedRexport from "../../../../reanimated/ReanimatedRexport.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const MODE_CHANGE_PHYSICS = fn(10904).MODE_CHANGE_PHYSICS;
+const MODE_CHANGE_PHYSICS = fn(10939).MODE_CHANGE_PHYSICS;
 let jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   pressableWrapper: {
     justifyContent: "center",

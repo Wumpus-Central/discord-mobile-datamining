@@ -187,9 +187,9 @@ export default noop.memo(
     : function GuildsBarPendingGuildFolder(id) {
         id = id.id;
         ({ expanded, childNodes } = id);
-        let obj = id(17784);
+        let obj = id(18021);
         importDefault = usePendingFolderGuildIdsDefault();
-        const guildsBarAnimatedWrapperStyles = id(17784).useGuildsBarAnimatedWrapperStyles({
+        const guildsBarAnimatedWrapperStyles = id(18021).useGuildsBarAnimatedWrapperStyles({
           disableSelectedColor: true,
           disableBGColor: false,
         });
@@ -221,13 +221,13 @@ export default noop.memo(
         ({ accessibilityActions, onAccessibilityAction } = memo);
         const obj2 = id(504);
         const items2 = [id];
-        const sharedValue = id(5053).useSharedValue("" + id);
+        const sharedValue = id(5085).useSharedValue("" + id);
         const memo1 = noop.useMemo(
           () => ({
             onPress() {
-              const result = id(5213).triggerHapticFeedback(id(5213).HapticFeedbackTypes.IMPACT_LIGHT);
-              const obj = id(5213);
-              const result1 = closure_1(6832).toggleGuildFolderExpand(closure_1_0);
+              const result = id(5248).triggerHapticFeedback(id(5248).HapticFeedbackTypes.IMPACT_LIGHT);
+              const obj = id(5248);
+              const result1 = closure_1(6866).toggleGuildFolderExpand(closure_1_0);
             },
           }),
           items2,
@@ -249,7 +249,7 @@ export default noop.memo(
           externalChildren: null,
           children: null,
         };
-        const obj3 = id(5053);
+        const obj3 = id(5085);
         obj4.id = "" + id;
         obj4.accessibilityActions = accessibilityActions;
         obj4.onAccessibilityAction = onAccessibilityAction;
@@ -262,10 +262,10 @@ export default noop.memo(
         let tmp8Result = null;
         if (expanded) {
           const obj5 = { folderId: id, totalItems: childNodes.length };
-          tmp8Result = jsx(tmp(17783).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
+          tmp8Result = jsx(tmp(18020).GuildsBarGuildFolderBG, { folderId: id, totalItems: childNodes.length });
         }
         obj4.externalChildren = tmp8Result;
-        obj4.children = jsx(id(11903).HourglassIcon, {});
+        obj4.children = jsx(id(11941).HourglassIcon, {});
         return jsx(GuildsBarAnimatedItemWrapperDefault, {
           id: null,
           accessibilityActions: null,

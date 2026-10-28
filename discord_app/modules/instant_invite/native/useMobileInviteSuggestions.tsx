@@ -10,7 +10,7 @@ import SortedVoiceStateStore from "../../../stores/views/SortedVoiceStateStore.t
 const require = globalThis.__r;
 
 const require = fn;
-const InviteTargetTypes = fn(7810).InviteTargetTypes;
+const InviteTargetTypes = fn(7844).InviteTargetTypes;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const NOOP_NULL = fn(1095).NOOP_NULL;
 const size = fn(2);
@@ -58,8 +58,8 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
     }
     if (isGuildVoiceResult) {
       const obj2 = { location: "useMobileInviteSuggestions", guildId: set.guild_id };
-      isGuildVoiceResult = closure_0(9081).getGuildMembersInMobileVCInvitesExperiment(obj2);
-      const obj = closure_0(9081);
+      isGuildVoiceResult = closure_0(9114).getGuildMembersInMobileVCInvitesExperiment(obj2);
+      const obj = closure_0(9114);
     }
     if (dependencyMap !== constants.EMBEDDED_APPLICATION) {
       if (!isGuildVoiceResult) {
@@ -81,8 +81,8 @@ export default function useMobileInviteSuggestions(arg0, _location, arg2, applic
         channel: set,
         inviteTargetType: dependencyMap,
       };
-      const inviteSuggestions = closure_0(9082).loadInviteSuggestions(obj4);
-      const obj3 = closure_0(9082);
+      const inviteSuggestions = closure_0(9115).loadInviteSuggestions(obj4);
+      const obj3 = closure_0(9115);
       inviteSuggestions.catch(NOOP_NULL).finally(() => {
         closure_1_7(false);
       });

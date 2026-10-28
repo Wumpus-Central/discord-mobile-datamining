@@ -20,7 +20,7 @@ import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 require = fn;
-let closure_3 = fn(4902).GUILD_SELECTABLE_CHANNELS_KEY;
+let closure_3 = fn(4934).GUILD_SELECTABLE_CHANNELS_KEY;
 const Constants = fn(1084);
 ({
   Endpoints: closure_7,
@@ -30,7 +30,7 @@ const Constants = fn(1084);
 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_11, jsxs: closure_12, Fragment: map1 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { form: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER }, row: null, channelIcon: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER };
 obj2.row = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -133,7 +133,7 @@ class EditWebhook extends PureComponent {
           obj2.title = intl.string(navigation(1125).t.N5riYn);
           const intl2 = navigation(1125).intl;
           obj2.body = intl2.string(navigation(1125).t["/4TwKf"]);
-          closure_1_1(5910).show(obj2);
+          closure_1_1(5945).show(obj2);
         });
     };
     applyArgumentsResult.handleDeleteWebhook = function handleDeleteWebhook() {
@@ -286,25 +286,25 @@ prototype["render"] = function render() {
     }
   }
   obj5.errorMessage = first;
-  items1[1] = closure_11(webhookId(7010).TextInput, obj5);
+  items1[1] = closure_11(webhookId(7044).TextInput, obj5);
   const obj6 = { title: null, hasIcons: true, children: null };
   const intl4 = tmp3(1125).intl;
   obj6.title = intl4.string(webhookId(1125).t.GK18KJ);
   const obj7 = { label: null, arrow: true, onPress: null, icon: null };
-  const tmp2Result = closure_11(webhookId(5235).Text, {
+  const tmp2Result = closure_11(webhookId(5270).Text, {
     variant: "text-sm/medium",
     color: "text-link",
     children: stringResult,
   });
-  obj7.label = webhookId(5605).computeChannelName(channel, UserStore, RelationshipStore);
+  obj7.label = webhookId(5640).computeChannelName(channel, UserStore, RelationshipStore);
   obj7.onPress = self.handleChannelChange;
   const obj8 = { size: webhookId(1199).Icon.Sizes.CUSTOM, source: null, style: null };
-  const tmp3Result = webhookId(5605);
-  obj8.source = webhookId(8502).getChannelIcon(channel);
+  const tmp3Result = webhookId(5640);
+  obj8.source = webhookId(8539).getChannelIcon(channel);
   obj8.style = tmp.channelIcon;
   obj7.icon = closure_11(webhookId(1199).Icon, obj8);
-  obj6.children = closure_11(webhookId(6905).TableRow, obj7);
-  items1[2] = closure_11(webhookId(6989).TableRowGroup, obj6);
+  obj6.children = closure_11(webhookId(6939).TableRow, obj7);
+  items1[2] = closure_11(webhookId(7023).TableRowGroup, obj6);
   let tmp2Result4 = null;
   if (null != token) {
     const obj9 = { title: null, hasIcons: false, children: null };
@@ -316,8 +316,8 @@ prototype["render"] = function render() {
     obj10.label = "" + aPIBaseURL + closure_7.WEBHOOK_INTEGRATION(webhookId, token);
     obj10.onPress = self.handleCopyUrl;
     obj10.trailing = tmp2Result;
-    obj9.children = closure_11(tmp3(6905).TableRow, obj10);
-    tmp2Result4 = closure_11(tmp3(6989).TableRowGroup, obj9);
+    obj9.children = closure_11(tmp3(6939).TableRow, obj10);
+    tmp2Result4 = closure_11(tmp3(7023).TableRowGroup, obj9);
     const tmp3Result4 = tmp3(1294);
   }
   items1[3] = tmp2Result4;
@@ -325,13 +325,13 @@ prototype["render"] = function render() {
   const obj12 = { variant: "danger", onPress: self.handleDeleteWebhook, label: null };
   const intl6 = tmp3(1125).intl;
   obj12.label = intl6.string(webhookId(1125).t.oyYWHE);
-  obj11.children = closure_11(webhookId(6905).TableRow, obj12);
-  items1[4] = closure_11(webhookId(6989).TableRowGroup, obj11);
+  obj11.children = closure_11(webhookId(6939).TableRow, obj12);
+  items1[4] = closure_11(webhookId(7023).TableRowGroup, obj11);
   obj2.children = items1;
-  obj.children = closure_12(webhookId(5978).Stack, obj2);
-  return closure_11(webhookId(8951).Form, obj);
+  obj.children = closure_12(webhookId(6013).Stack, obj2);
+  return closure_11(webhookId(8985).Form, obj);
 };
-EditWebhook.contextType = fn(5038).ThemeContext;
+EditWebhook.contextType = fn(5070).ThemeContext;
 const ReactCompilerGating = fn(558);
 let obj4 = { padding: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
 const size = fn(2);

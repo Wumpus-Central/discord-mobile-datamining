@@ -2,23 +2,21 @@
 import c from "../../../../_runtime/00576_c.js";
 import util from "../../../intl/index.native.tsx";
 import Text_Text from "../../../design/components/Text/native/Text.tsx";
-import FastImageDefault from "../../common/FastImage.tsx";
 import AVError from "../../../modules/errors/av_errors/AVError.tsx";
 import common_AlertDefault from "../../common/Alert.tsx";
-import _modDef19458 from "../../../../_runtime/metro/19458__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4 } = jsxProd);
-let closure_5 = { image: { alignSelf: "center", marginTop: 32 }, body: { marginTop: 16 } };
+let closure_5 = { body: { marginTop: 16 } };
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("components_native/calls/stream/StreamFullAlert.tsx");
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function StreamFullAlert(arg0) {
-      const cResult = c.c(7);
+      const cResult = c.c(6);
       if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
         const errorInfo = AVError.getErrorInfo(AVError.AVError.STREAM_FULL);
         let errorCode;
@@ -46,7 +44,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj3 = { variant: "text-md/normal", style: closure_5.body, children: null };
         const intl3 = util.intl;
         obj3.children = intl3.string(util.t.VVZDBL);
-        const tmp16 = React3(Text_Text.Text, obj3);
+        const tmp15 = React3(Text_Text.Text, obj3);
         const obj4 = {
           variant: "text-md/normal",
           selectable: true,
@@ -54,34 +52,29 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           style: closure_5.body,
           children: first,
         };
-        const tmp17 = React3(Text_Text.Text, obj4);
-        const obj5 = { source: _modDef19458, style: closure_5.image };
-        const tmp20 = React3(FastImageDefault, obj5);
-        cResult[2] = tmp16;
-        cResult[3] = tmp17;
-        cResult[4] = tmp20;
-        let tmp13 = tmp20;
-        let tmp12 = tmp17;
-        let tmp11 = tmp16;
+        const tmp16 = React3(Text_Text.Text, obj4);
+        cResult[2] = tmp15;
+        cResult[3] = tmp16;
+        let tmp12 = tmp16;
+        let tmp11 = tmp15;
       } else {
         tmp11 = cResult[2];
         tmp12 = cResult[3];
-        tmp13 = cResult[4];
       }
-      if (cResult[5] !== arg0) {
-        const obj6 = {};
+      if (cResult[4] !== arg0) {
+        const obj5 = {};
         const merged = Object.assign(arg0);
-        obj6.title = tmp9;
-        const items = [tmp11, tmp12, tmp13];
-        obj6.children = items;
-        const tmp28 = React4(common_AlertDefault, obj6);
-        cResult[5] = arg0;
-        cResult[6] = tmp28;
-        let tmp21 = tmp28;
+        obj5.title = tmp9;
+        const items = [tmp11, tmp12];
+        obj5.children = items;
+        const tmp24 = React4(common_AlertDefault, obj5);
+        cResult[4] = arg0;
+        cResult[5] = tmp24;
+        let tmp17 = tmp24;
       } else {
-        tmp21 = cResult[6];
+        tmp17 = cResult[5];
       }
-      return tmp21;
+      return tmp17;
     }
   : function StreamFullAlert(arg0) {
       const errorInfo = AVError.getErrorInfo(AVError.AVError.STREAM_FULL);
@@ -108,18 +101,6 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           children: formatToPlainStringResult,
         }),
       ];
-      const obj5 = { source: null, style: null };
-      const obj4 = {
-        variant: "text-md/normal",
-        selectable: true,
-        color: "text-muted",
-        style: closure_5.body,
-        children: formatToPlainStringResult,
-      };
-      const tmp6 = common_AlertDefault;
-      obj5.source = _modDef19458;
-      obj5.style = closure_5.image;
-      items[2] = React3(FastImageDefault, obj5);
       obj2.children = items;
-      return React4(tmp6, obj2);
+      return React4(common_AlertDefault, obj2);
     };

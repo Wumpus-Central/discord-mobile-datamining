@@ -142,18 +142,6 @@ export const isRobloxSubgame = function isRobloxSubgame(distributor) {
   }
   return tmp;
 };
-export const isRobloxSubgameApplication = function isRobloxSubgameApplication(getOrFetchApplication) {
-  const thirdPartySkus = getOrFetchApplication.thirdPartySkus;
-  return thirdPartySkus.some((distributor) => distributor.distributor === constants.ROBLOX);
-};
-export const isRobloxSubgameGame = function isRobloxSubgameGame(gameRecord) {
-  let someResult = gameRecord.id !== RobloxSubgameTypes.ROBLOX_GAME_ID;
-  if (someResult) {
-    const thirdPartySkus = gameRecord.thirdPartySkus;
-    someResult = thirdPartySkus.some((distributor) => distributor.distributor === constants.ROBLOX);
-  }
-  return someResult;
-};
 export const openRobloxURLWithRootPlaceId = function openRobloxURLWithRootPlaceId() {
   const self = this;
   const apply = closure_6.apply;

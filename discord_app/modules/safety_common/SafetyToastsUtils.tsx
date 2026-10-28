@@ -8,7 +8,7 @@ import ChannelStore from "../../stores/ChannelStore.tsx";
 import UserStore from "../../stores/UserStore.tsx";
 
 require = fn;
-const SafetyToastType = fn(7418).SafetyToastType;
+const SafetyToastType = fn(7453).SafetyToastType;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/safety_common/SafetyToastsUtils.tsx");
 

@@ -34,6 +34,37 @@ export const pendingPlanRenderId = function pendingPlanRenderId(memo) {
     return null;
   }
 };
+export const takeArrivedPlan = function takeArrivedPlan(current, projectId, stateFromStores1) {
+  if (0 === stateFromStores1.length) {
+    return null;
+  } else {
+    let render_id = null;
+    if ("assistant" === stateFromStores1[stateFromStores1.length - 1].role) {
+      render_id = null;
+      if (null != tmp7.proposal) {
+        render_id = tmp7.render_id;
+      }
+    }
+    current = current.current;
+    const obj = { projectId, planId: render_id };
+    current.current = obj;
+    projectId = undefined;
+    if (current != null) {
+      projectId = current.projectId;
+    }
+    let tmp5 = null;
+    if (projectId === projectId) {
+      tmp5 = null;
+      if (null != render_id) {
+        tmp5 = null;
+        if (render_id !== current.planId) {
+          tmp5 = render_id;
+        }
+      }
+    }
+    return tmp5;
+  }
+};
 export const planVersions = function planVersions(memo) {
   const map = new Map();
   let render_id = null;

@@ -24,7 +24,7 @@ require = fn;
 const Constants = fn(1084);
 ({ AnalyticEvents: metroRequire, MessageFlags: closure_7, Permissions: closure_8 } = Constants);
 const PremiumTypes = fn(1391).PremiumTypes;
-const ScheduledMessagesConstants = fn(9684);
+const ScheduledMessagesConstants = fn(9716);
 ({
   MAX_SCHEDULE_TIME_AFTER_CREATION_SECONDS: c10,
   MAX_SCHEDULE_TIME_INTO_FUTURE_SECONDS: closure_11,

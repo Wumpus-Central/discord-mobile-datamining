@@ -11,6 +11,7 @@ import NotificationSettingsStore from "../../../stores/NotificationSettingsStore
 import SelectedChannelStore from "../../../stores/SelectedChannelStore.tsx";
 import SelectedGuildStore from "../../../stores/SelectedGuildStore.tsx";
 import SelfPresenceStore from "../../../stores/SelfPresenceStore.tsx";
+import ConjurePagesStore from "../pages/ConjurePagesStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
@@ -60,51 +61,51 @@ function notifyTurn(projectId, guildId, title, body, nonce) {
     if (!obj3.isConjureProjectMuted(UserSettingsProtoStore.settings, projectId)) {
       const isSoundDisabledResult = NotificationSettingsStore.isSoundDisabled(message1);
       guildId = SelectedGuildStore.getGuildId();
-      if (ConjureProjectStore.getGlobalSelectedProjectId() === projectId) {
-        if (tmpResult.isWindowFocused()) {
-          if (!isSoundDisabledResult) {
-            SoundUtils.playSound(bit_message1, volume);
-            const tmp8Result = SoundUtils;
-          }
+      if (ConjurePagesStore.getShownProjectId() !== projectId) {
+        let conjureWorkspaceGuildId = guildId;
+        if (guildId == null) {
+          conjureWorkspaceGuildId = ConjureUtils.resolveConjureWorkspaceGuildId(ConjureChatStore);
+          const tmp8Result = ConjureUtils;
         }
-        tmpResult = ConjurePlatformUtilsDefault;
+        const obj5 = {
+          projectId,
+          guildId: conjureWorkspaceGuildId,
+          title,
+          body: null,
+          route: null,
+          sound: null,
+          volume: null,
+        };
+        const tmpResult = ConjurePlatformUtilsDefault;
+        obj5.body = conjureMentions.withConjureMentionNames(body);
+        let CHANNELResult = null;
+        if (null != conjureWorkspaceGuildId) {
+          CHANNELResult = closure_1_11.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
+        }
+        obj5.route = CHANNELResult;
+        let tmp26;
+        if (!isSoundDisabledResult) {
+          tmp26 = bit_message1;
+        }
+        obj5.sound = tmp26;
+        obj5.volume = volume;
+        const result1 = tmpResult.presentTurnNotification(obj5);
+        const tmp8Result3 = conjureMentions;
       }
-      let conjureWorkspaceGuildId = guildId;
-      if (guildId == null) {
-        conjureWorkspaceGuildId = ConjureUtils.resolveConjureWorkspaceGuildId(ConjureChatStore);
-        const tmp8Result3 = ConjureUtils;
+      if (tmpResult2.isWindowFocused()) {
+        if (!isSoundDisabledResult) {
+          SoundUtils.playSound(bit_message1, volume);
+          const tmp8Result4 = SoundUtils;
+        }
       }
-      const obj5 = {
-        projectId,
-        guildId: conjureWorkspaceGuildId,
-        title,
-        body: null,
-        route: null,
-        sound: null,
-        volume: null,
-      };
-      const tmpResult2 = ConjurePlatformUtilsDefault;
-      obj5.body = conjureMentions.withConjureMentionNames(body);
-      let CHANNELResult = null;
-      if (null != conjureWorkspaceGuildId) {
-        CHANNELResult = v65535.CHANNEL(conjureWorkspaceGuildId, StaticChannelRoute.CONJURE, projectId);
-      }
-      obj5.route = CHANNELResult;
-      let tmp25;
-      if (!isSoundDisabledResult) {
-        tmp25 = bit_message1;
-      }
-      obj5.sound = tmp25;
-      obj5.volume = volume;
-      const result1 = tmpResult2.presentTurnNotification(obj5);
-      const tmp8Result4 = conjureMentions;
+      tmpResult2 = ConjurePlatformUtilsDefault;
     }
     obj3 = conjureProjectMute;
   }
 }
 const Constants = fn(1084);
-({ Routes: c10, StatusTypes: closure_11 } = Constants);
-const StaticChannelRoute = fn(4831).StaticChannelRoute;
+({ Routes: closure_11, StatusTypes: closure_12 } = Constants);
+const StaticChannelRoute = fn(4863).StaticChannelRoute;
 const prototype = function ConjureTurnNotificationManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {
@@ -118,7 +119,7 @@ class prototype extends tmp3 {}
 const bit_message1 = "bit_message1";
 const message1 = "message1";
 const ConjureChatStore = "ConjureChatStore";
-let c20 = 0.4;
+let c21 = 0.4;
 const prototype1 = new prototype();
 const map = new Map();
 const size = fn(2);

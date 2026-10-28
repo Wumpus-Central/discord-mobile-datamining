@@ -11,7 +11,7 @@ import common_SafeAreaView from "../../../components_native/common/SafeAreaView.
 import HeaderActionButton from "../../../design/components/Navigator/native/HeaderActionButton.native.tsx";
 import AutomodAlert from "../AutomodAlert.tsx";
 import AutomodFeedback from "../AutomodFeedback.tsx";
-import _modDef8113 from "../../../../_runtime/metro/08113__.js";
+import _modDef8147 from "../../../../_runtime/metro/08147__.js";
 import GuildAutomodActionCreators from "../GuildAutomodActionCreators.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -23,7 +23,7 @@ const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
 const SUBMIT_FEEDBACK = "SUBMIT_FEEDBACK";
 let c10 = 16;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   container: {
     flex: 1,
@@ -100,7 +100,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
         first = cResult[0];
       }
       if (cResult[1] !== onClose) {
-        const obj2 = { accessibilityLabel: first, onPress: onClose, source: _modDef8113 };
+        const obj2 = { accessibilityLabel: first, onPress: onClose, source: _modDef8147 };
         const tmp10 = React5(HeaderActionButton.HeaderActionButton, obj2);
         cResult[1] = onClose;
         cResult[2] = tmp10;
@@ -139,7 +139,7 @@ let closure_12 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj2.accessibilityLabel = intl.string(util.t.cpT0Cq);
       obj2.onPress = onClose.onClose;
-      obj2.source = _modDef8113;
+      obj2.source = _modDef8147;
       obj.children = React5(HeaderActionButton.HeaderActionButton, obj2);
       rect.children = React5(View, obj);
       return React5(common_SafeAreaView.SafeAreaPaddingView, rect);

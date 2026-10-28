@@ -3,6 +3,7 @@ import nativeDefault from "../../../../../discord_common/js/packages/tokens/nati
 import util from "../../../../intl/index.native.tsx";
 import KeyboardManagerUtilsAll from "../../../../utils/native/KeyboardManagerUtils.tsx";
 import asyncRequireImpl from "../../../../../_runtime/01999_asyncRequireImpl.js";
+import AccessibilityAnnouncer2 from "../../../../../discord_common/js/packages/design/components/AccessibilityAnnouncer/AccessibilityAnnouncer.android.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
@@ -14,7 +15,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = {
   modal: { flex: 1, backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
   headerLeftContainer: null,
@@ -56,8 +57,22 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
   const title = onClose.title;
   ({ minimumDate: dependencyMap, maximumDate: _slicedToArray, getError } = onClose);
   first = undefined;
-  onSubmit = undefined;
+  closure_7 = undefined;
   let onPress;
+  function handleSubmitDueDate(arg0) {
+    closure_7(arg0);
+    let tmp2;
+    if (getError != null) {
+      tmp2 = getError(arg0);
+    }
+    if (tmp2 == null) {
+      tmp2 = null;
+    }
+    if (null != tmp2) {
+      const AccessibilityAnnouncer = AccessibilityAnnouncer2.AccessibilityAnnouncer;
+      AccessibilityAnnouncer.announce(tmp2);
+    }
+  }
   function handleOpenDatePicker(date) {
     const result = KeyboardManagerUtilsAll.dismissGlobalKeyboard();
     const obj2 = ActionSheetActionCreatorsDefault;
@@ -89,12 +104,12 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
     }
     obj3.maximumDate = toDateResult;
     obj3.mode = date;
-    obj3.onSubmit = onSubmit;
-    obj2.openLazy(asyncRequireImpl(8933, dependencyMap.paths), "DatePicker", obj3);
-    const tmp3 = asyncRequireImpl(8933, dependencyMap.paths);
+    obj3.onSubmit = handleSubmitDueDate;
+    obj2.openLazy(asyncRequireImpl(8967, dependencyMap.paths), "DatePicker", obj3);
+    const tmp3 = asyncRequireImpl(8967, dependencyMap.paths);
   }
-  const tmp = onPress();
-  [first, onSubmit] = first.useState(onClose.defaultValue);
+  const tmp = handleSubmitDueDate();
+  [first, closure_7] = getError.useState(onClose.defaultValue);
   let error;
   if (getError != null) {
     error = getError(first);
@@ -103,7 +118,7 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
     error = null;
   }
   const items = [createReminder, first, onClose];
-  onPress = first.useCallback(() => {
+  onPress = getError.useCallback(() => {
     createReminder(first.toDate());
     onClose();
   }, items);
@@ -128,7 +143,7 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
   }
   obj3.headerStatusBarHeight = num + createReminder(587).space.PX_8;
   obj5 = onClose(1381);
-  obj3.headerLeft = onClose(6926).getHeaderCloseButton(onClose);
+  obj3.headerLeft = onClose(6960).getHeaderCloseButton(onClose);
   ({ headerLeftContainer: obj4.headerLeftContainerStyle, headerRightContainer: obj4.headerRightContainerStyle } = tmp);
   obj3.headerRight = function headerRight() {
     const obj = { accessibilityRole: "button", disabled: null != error, onPress, children: null };
@@ -142,13 +157,13 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
     obj.children = React5(Text_Text.Text, obj2);
     return React5(Pressables.PressableOpacity, obj);
   };
-  const items1 = [error(onClose(6935).Header, obj3)];
+  const items1 = [closure_7(onClose(6969).Header, obj3)];
   const obj6 = { style: tmp.container, children: null };
   const obj7 = { children: null };
   const obj8 = { style: tmp.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: null };
   let intl = tmp11(1125).intl;
   obj8.children = intl.string(onClose(1125).t.pSZKvM);
-  const items2 = [error(onClose(5235).Text, obj8)];
+  const items2 = [closure_7(onClose(5270).Text, obj8)];
   const obj9 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -164,14 +179,14 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
     handleOpenDatePicker("date");
   };
   obj9.style = tmp.inputContainer;
-  obj9.children = error(onClose(5235).Text, { variant: "text-md/medium", children: formatResult });
-  items2[1] = error(onClose(6910).PressableOpacity, obj9);
+  obj9.children = closure_7(onClose(5270).Text, { variant: "text-md/medium", children: formatResult });
+  items2[1] = closure_7(onClose(6944).PressableOpacity, obj9);
   obj7.children = items2;
-  const items3 = [handleOpenDatePicker(onSubmit, obj7)];
+  const items3 = [error(first, obj7)];
   const obj10 = { style: tmp.formHeader, variant: "text-sm/semibold", color: "text-subtle", children: null };
   const intl3 = tmp11(1125).intl;
   obj10.children = intl3.string(onClose(1125).t.GOmEb8);
-  const items4 = [error(onClose(5235).Text, obj10), ,];
+  const items4 = [closure_7(onClose(5270).Text, obj10), ,];
   const obj11 = {
     accessibilityRole: "button",
     accessibilityLabel: null,
@@ -187,8 +202,8 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
     handleOpenDatePicker("time");
   };
   obj11.style = tmp.inputContainer;
-  obj11.children = error(onClose(5235).Text, { variant: "text-md/medium", children: formatResult1 });
-  items4[1] = error(onClose(6910).PressableOpacity, obj11);
+  obj11.children = closure_7(onClose(5270).Text, { variant: "text-md/medium", children: formatResult1 });
+  items4[1] = closure_7(onClose(6944).PressableOpacity, obj11);
   let tmp10Result = null != error;
   if (tmp10Result) {
     const obj12 = {
@@ -198,12 +213,12 @@ export default noop.memo(function MessageRemindersCustomDurationScreen(onClose) 
       accessibilityRole: "alert",
       children: error,
     };
-    tmp10Result = tmp10(tmp11(5235).Text, obj12);
+    tmp10Result = tmp10(tmp11(5270).Text, obj12);
   }
   items4[2] = tmp10Result;
-  items3[1] = handleOpenDatePicker(onSubmit, { children: items4 });
+  items3[1] = error(first, { children: items4 });
   obj6.children = items3;
-  items1[1] = handleOpenDatePicker(onSubmit, obj6);
+  items1[1] = error(first, obj6);
   obj2.children = items1;
-  return handleOpenDatePicker(onSubmit, obj2);
+  return error(first, obj2);
 });

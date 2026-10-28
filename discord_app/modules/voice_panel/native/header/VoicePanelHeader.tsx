@@ -25,21 +25,21 @@ import UserStore from "../../../../stores/UserStore.tsx";
 require = fn;
 get_ActivityIndicator = fn(17);
 const StyleSheet = get_ActivityIndicator.StyleSheet;
-const VoicePanelConstants = fn(10904);
+const VoicePanelConstants = fn(10939);
 let MODE_CHANGE_PHYSICS = VoicePanelConstants.MODE_CHANGE_PHYSICS;
 ({
   UI_SHOW_HIDE_PHYSICS: closure_16,
   VoicePanelModes: closure_17,
   DRAWER_SPRING_PHYSICS_GESTURE_ACTIVE: closure_18,
 } = VoicePanelConstants);
-const EDGE_GUTTER = fn(10907).EDGE_GUTTER;
-const VoicePanelControlsModes = fn(10902).VoicePanelControlsModes;
-const ParticipantTypes = fn(5633).ParticipantTypes;
+const EDGE_GUTTER = fn(10942).EDGE_GUTTER;
+const VoicePanelControlsModes = fn(10937).VoicePanelControlsModes;
+const ParticipantTypes = fn(5668).ParticipantTypes;
 const ThemeTypes = fn(1095).ThemeTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_23, jsxs: closure_24 } = jsxProd);
 const OPACITY_TIMING = { duration: 300 };
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = {
   headerWrapper: { zIndex: 1, position: "absolute", top: 0, left: 0, width: "100%" },
   headerSurface: null,
@@ -562,7 +562,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
             cResult[2] = stateFromStores;
             cResult[3] = stringResult;
           } else {
-            const tmp4Result = importDefault(stateFromStores ? 11536 : 8460);
+            const tmp4Result = importDefault(stateFromStores ? 11574 : 8494);
             if (cResult[4] !== stateFromStores) {
               const fn2 = function p() {
                 return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
@@ -617,7 +617,7 @@ let closure_41 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const obj3 = {
             accessibilityLabel: stringResult,
-            icon: importDefault(stateFromStores ? 11536 : 8460),
+            icon: importDefault(stateFromStores ? 11574 : 8494),
             onPress() {
               return StageMusicActionCreators.updateStageMusicMuted(!stateFromStores);
             },

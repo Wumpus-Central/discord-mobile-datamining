@@ -34,7 +34,7 @@ export const DisconnectRemoteButton = ReactCompilerGating.isReactCompilerEnabled
       let obj = channel(576);
       const stateFromStoresObject = channel(504).useStateFromStoresObject(tmp4, tmp5);
       const remoteSessionId = stateFromStoresObject.remoteSessionId;
-      const tmp8 = remoteSessionId(stateFromStoresObject.awaitingRemote ? 8113 : 11611);
+      const tmp8 = remoteSessionId(stateFromStoresObject.awaitingRemote ? 8147 : 11649);
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
         const intl = tmp(1125).intl;
         const stringResult = intl.string(tmp(1125).t["6vrfgt"]);
@@ -91,7 +91,7 @@ export const DisconnectRemoteButton = ReactCompilerGating.isReactCompilerEnabled
       }));
       const remoteSessionId = stateFromStoresObject.remoteSessionId;
       let obj2 = {
-        source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8113 : 11611),
+        source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8147 : 11649),
         accessibilityLabel: null,
         isSmallSize: null,
         onPress: null,
@@ -108,7 +108,7 @@ export const DisconnectRemoteButton = ReactCompilerGating.isReactCompilerEnabled
         }
       };
       return jsx(CallBarActionAll.PrimaryActionButton, {
-        source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8113 : 11611),
+        source: remoteSessionId(stateFromStoresObject.awaitingRemote ? 8147 : 11649),
         accessibilityLabel: null,
         isSmallSize: null,
         onPress: null,

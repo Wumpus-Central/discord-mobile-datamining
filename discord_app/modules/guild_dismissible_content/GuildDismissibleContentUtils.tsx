@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const ContentDismissActionType = fn(4821).ContentDismissActionType;
+const ContentDismissActionType = fn(4853).ContentDismissActionType;
 const UserSettingsDelay = fn(1094).UserSettingsDelay;
 const ReactCompilerGating = fn(558);
 function isContentDismissed(GAME_SERVER_HOSTING_GUILD_ELIGIBLE_COACHMARK, guildId) {
@@ -92,7 +92,7 @@ export const markContentAsDismissed = function markContentAsDismissed(dc, guildI
   );
   if (arg2) {
     let UNKNOWN = AUTO_DISMISS;
-    const obj3 = { type: tmp(4808).DismissibleGuildContent[dc], guild_id: guildId, action: null };
+    const obj3 = { type: tmp(4840).DismissibleGuildContent[dc], guild_id: guildId, action: null };
     if (AUTO_DISMISS == null) {
       UNKNOWN = ContentDismissActionType.UNKNOWN;
     }

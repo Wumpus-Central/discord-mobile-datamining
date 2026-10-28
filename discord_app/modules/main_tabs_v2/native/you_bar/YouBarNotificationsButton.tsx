@@ -9,10 +9,10 @@ import useNotificationsTabBadgeDefault from "../tabs/notifications/useNotificati
 import noop from "../../../../../_runtime/metro/00019__.js";
 import SavedMessagesStore from "../../../saved_messages/SavedMessagesStore.tsx";
 
-const ReanimatedRexportDefault = tmp5(5053);
+const ReanimatedRexportDefault = tmp5(5085);
 require = fn;
 const View = fn(17).View;
-const YouBarConstants = fn(16483);
+const YouBarConstants = fn(16712);
 ({
   YOU_BAR_SPRING_CONFIG: metroRequire,
   YOU_BAR_BUTTON_HIT_SLOP: closure_7,
@@ -20,7 +20,7 @@ const YouBarConstants = fn(16483);
 } = YouBarConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = {
   icon: { width: YOU_BAR_BUTTON_ICON_SIZE, height: YOU_BAR_BUTTON_ICON_SIZE },
   iconContainer: { display: "flex", flexDirection: "row", alignItems: "center" },
@@ -94,9 +94,9 @@ export default noop.memo(
         const stateFromStores = initialize.useStateFromStores(tmp7, tmp8);
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const fn3 = function f() {
-            const result = value(5213).triggerHapticFeedback(value(5213).HapticFeedbackTypes.SOFT);
-            const obj = value(5213);
-            value(13818).showForLaterModal(value(10080).SavedMessageSortTypes.BOOKMARK);
+            const result = value(5248).triggerHapticFeedback(value(5248).HapticFeedbackTypes.SOFT);
+            const obj = value(5248);
+            value(14036).showForLaterModal(value(10112).SavedMessageSortTypes.BOOKMARK);
           };
           cResult[2] = fn3;
           let tmp12 = fn3;
@@ -237,8 +237,8 @@ export default noop.memo(
                           onLongPress: tmp12,
                           hitSlop,
                         };
-                        obj7.children = closure_8(tmp(7957).IconButton, obj9);
-                        const tmp38 = closure_8(tmp(17879).YouBarButtonContainer, obj7);
+                        obj7.children = closure_8(tmp(7991).IconButton, obj9);
+                        const tmp38 = closure_8(tmp(18116).YouBarButtonContainer, obj7);
                         cResult[28] = tmp19;
                         cResult[29] = str4;
                         cResult[30] = tmp30;
@@ -264,7 +264,7 @@ export default noop.memo(
                 }
               }
               const obj12 = { icon: tmp15, hasBadge: tmp11, badgeStyle: tmp4.overdueReminderDot };
-              const tmp23 = closure_8(tmp(17879).YouBarButtonIcon, obj12);
+              const tmp23 = closure_8(tmp(18116).YouBarButtonIcon, obj12);
               cResult[14] = tmp15;
               cResult[15] = tmp11;
               cResult[16] = tmp4.overdueReminderDot;
@@ -307,7 +307,7 @@ export default noop.memo(
         hasNameplate = hasNameplate.hasNameplate;
         let onLongPress;
         const tmp = closure_10();
-        value = onLongPress(17883)().value;
+        value = onLongPress(18120)().value;
         _require = value;
         const fn = function u() {
           let num = 0;
@@ -353,9 +353,9 @@ export default noop.memo(
           overdueMessageReminderCount.getOverdueMessageReminderCount(),
         );
         onLongPress = noop.useCallback(() => {
-          const result = _undefined(5213).triggerHapticFeedback(_undefined(5213).HapticFeedbackTypes.SOFT);
-          const obj = _undefined(5213);
-          _undefined(13818).showForLaterModal(_undefined(10080).SavedMessageSortTypes.BOOKMARK);
+          const result = _undefined(5248).triggerHapticFeedback(_undefined(5248).HapticFeedbackTypes.SOFT);
+          const obj = _undefined(5248);
+          _undefined(14036).showForLaterModal(_undefined(10112).SavedMessageSortTypes.BOOKMARK);
         }, []);
         const items1 = [onLongPress];
         const memo = noop.useMemo(() => {
@@ -421,14 +421,14 @@ export default noop.memo(
           hasBadge: stateFromStores > 0 && 0 === value,
           badgeStyle: tmp.overdueReminderDot,
         };
-        items2[1] = closure_8(tmp2(5053).View, {
+        items2[1] = closure_8(tmp2(5085).View, {
           style: animatedStyle,
           children: closure_8(require("native").Badge, { value }),
         });
         obj8.children = items2;
         obj6.icon = closure_9(View, obj8);
         obj6.onPress = function onPress() {
-          const rootNavigationRef = _undefined(5152).getRootNavigationRef();
+          const rootNavigationRef = _undefined(5187).getRootNavigationRef();
           if (null != rootNavigationRef) {
             rootNavigationRef.navigate("notifications", { inNestedNavigator: true });
           }

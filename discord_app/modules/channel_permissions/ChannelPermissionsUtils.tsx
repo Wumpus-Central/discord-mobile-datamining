@@ -691,17 +691,17 @@ export const isPrivateTextChannel = function isPrivateTextChannel(type) {
   }
   return hasItem;
 };
-export const canCreatePrivateChannel = function canCreatePrivateChannel(first1, canResult, canResult1) {
+export const canCreatePrivateChannel = function canCreatePrivateChannel(GUILD_APP, canResult, canResult1) {
   let tmp2 = canResult;
-  if (first1 !== constants2.GUILD_TEXT) {
+  if (GUILD_APP !== constants2.GUILD_TEXT) {
     tmp2 = canResult;
-    if (first1 !== constants2.GUILD_ANNOUNCEMENT) {
+    if (GUILD_APP !== constants2.GUILD_ANNOUNCEMENT) {
       tmp2 = canResult;
-      if (first1 !== constants2.GUILD_APP) {
-        const tmp4 = isGuildVocalChannelType(first1);
+      if (GUILD_APP !== constants2.GUILD_APP) {
+        const tmp4 = isGuildVocalChannelType(GUILD_APP);
         let tmp5 = !tmp4;
         if (!tmp4) {
-          tmp5 = first1 !== constants2.GUILD_CATEGORY;
+          tmp5 = GUILD_APP !== constants2.GUILD_CATEGORY;
         }
         if (!tmp5) {
           let tmp6 = canResult;

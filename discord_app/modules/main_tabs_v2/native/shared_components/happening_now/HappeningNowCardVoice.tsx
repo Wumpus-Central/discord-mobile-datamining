@@ -30,11 +30,11 @@ function formatVoiceActivityTitle(arr, guildId) {
   }
 }
 const View = fn(17).View;
-let closure_8 = fn(16695).HappeningNowCardTrackingType;
+let closure_8 = fn(16924).HappeningNowCardTrackingType;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_12 = createStyles.createStyles({ content: { flexShrink: 1 }, avatars: { marginRight: 12 } });
 const ReactCompilerGating = fn(558);
 const tmp4 = ReactCompilerGating.isReactCompilerEnabled()

@@ -143,7 +143,7 @@ function resetTimer(arg0, arg1) {
   }
   timeout = setTimeout(() => saveProtos(c0), arg0);
 }
-const MAX_NUM_SELECTED_ITEMS = fn(6825).MAX_NUM_SELECTED_ITEMS;
+const MAX_NUM_SELECTED_ITEMS = fn(6859).MAX_NUM_SELECTED_ITEMS;
 const UserSettingsTypes = fn(1094).UserSettingsTypes;
 const FREQUENCY_ITEM_LIMIT = fn(1372).FREQUENCY_ITEM_LIMIT;
 const random = Math.random();

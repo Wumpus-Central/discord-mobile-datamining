@@ -7,8 +7,8 @@ let obj = module_570.create((arg0) => {
   obj = {
     utmSourceCurrent: "r",
     utmMediumCurrent: "__packager_asset",
-    utmCampaignCurrent: "count",
-    utmContentCurrent: "op",
+    utmCampaignCurrent: "np",
+    utmContentCurrent: "key",
     setUtmCurrentContext(utmSourceCurrent) {
       return state({ utmSourceCurrent: utmSourceCurrent.utmSourceCurrent, utmMediumCurrent: utmSourceCurrent.utmMediumCurrent, utmCampaignCurrent: utmSourceCurrent.utmCampaignCurrent, utmContentCurrent: utmSourceCurrent.utmContentCurrent });
     },

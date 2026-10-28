@@ -1,6 +1,6 @@
 // discord_app/modules/favorites/hooks/useFavoritesCleanupActivity.tsx
 import DurationsDefault from "../../../utils/Durations.tsx";
-import _modDef3413 from "../intl/FavoritesGuild.messages.js";
+import _modDef3445 from "../intl/FavoritesGuild.messages.js";
 import getThreadAutoArchiveTimeOnce from "../../threads/getThreadAutoArchiveTimeOnce.tsx";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Math2 = Math;
           const diff = first - stateFromStores;
           obj2.days = Math.max(0, Math.floor(diff / DurationsDefault.Millis.DAY));
-          let formatToPlainStringResult = intl2.formatToPlainString(_modDef3413.IzxPdG, obj2);
+          let formatToPlainStringResult = intl2.formatToPlainString(_modDef3445.IzxPdG, obj2);
         }
         const threadMetadata2 = threadMetadata.threadMetadata;
         let archived1;
@@ -73,7 +73,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (archived1) {
           const intl3 = tmp(1125).intl;
           const obj3 = { activity: formatToPlainStringResult };
-          formatToPlainStringResult1 = intl3.formatToPlainString(_modDef3413.Dr1FWM, obj3);
+          formatToPlainStringResult1 = intl3.formatToPlainString(_modDef3445.Dr1FWM, obj3);
         }
         const threadMetadata3 = threadMetadata.threadMetadata;
         let archived2;
@@ -87,7 +87,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp11 = formatToPlainStringResult1;
       }
       const intl = tmp(1125).intl;
-      formatToPlainStringResult = intl.string(_modDef3413.rYws6y);
+      formatToPlainStringResult = intl.string(_modDef3445.rYws6y);
       const tmpResult = require("initialize");
     }
   : function useFavoritesCleanupActivity(threadMetadata) {
@@ -107,7 +107,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const _Math2 = Math;
           const diff = _slicedToArray(noop.useState(Date.now), 1)[0] - stateFromStores;
           obj2.days = Math.max(0, Math.floor(diff / DurationsDefault.Millis.DAY));
-          let formatToPlainStringResult = intl2.formatToPlainString(_modDef3413.IzxPdG, obj2);
+          let formatToPlainStringResult = intl2.formatToPlainString(_modDef3445.IzxPdG, obj2);
         }
         threadMetadata = threadMetadata.threadMetadata;
         let archived;
@@ -118,11 +118,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (archived) {
           const intl3 = tmp(1125).intl;
           const obj3 = { activity: formatToPlainStringResult };
-          formatToPlainStringResult1 = intl3.formatToPlainString(_modDef3413.Dr1FWM, obj3);
+          formatToPlainStringResult1 = intl3.formatToPlainString(_modDef3445.Dr1FWM, obj3);
         }
         return formatToPlainStringResult1;
       }
       const intl = tmp(1125).intl;
-      formatToPlainStringResult = intl.string(_modDef3413.rYws6y);
+      formatToPlainStringResult = intl.string(_modDef3445.rYws6y);
       const obj = require("initialize");
     };

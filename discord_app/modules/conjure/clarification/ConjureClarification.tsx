@@ -1,14 +1,16 @@
 // discord_app/modules/conjure/clarification/ConjureClarification.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
+import useChannelName from "../../channel/useChannelName.tsx";
 import ChannelStore from "../../../stores/ChannelStore.tsx";
+import RelationshipStore from "../../../stores/RelationshipStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
 
 const require = globalThis.__r;
 
 require = fn;
 const ChannelTypes = fn(1084).ChannelTypes;
-let closure_5 = {
+let closure_6 = {
   [ChannelTypes.GUILD_TEXT]: "text",
   [ChannelTypes.GUILD_VOICE]: "voice",
   [ChannelTypes.GUILD_ANNOUNCEMENT]: "announcement",
@@ -16,17 +18,17 @@ let closure_5 = {
   [ChannelTypes.GUILD_FORUM]: "forum",
   [ChannelTypes.GUILD_MEDIA]: "media",
 };
-let closure_6 = { channel: "#", role: "@", user: "@", project: "", server: "" };
+let closure_7 = { channel: "#", role: "@", user: "@", project: "", server: "" };
 let obj = { channel: null, role: null, user: null, project: null, server: null };
-let items = [_modDef3831["9+dfPT"], _modDef3831.pGSJqE];
+let items = [_modDef3863["9+dfPT"], _modDef3863.pGSJqE];
 obj.channel = items;
-let items1 = [_modDef3831["2VkCoD"], _modDef3831.c8YlX8];
+let items1 = [_modDef3863["2VkCoD"], _modDef3863.c8YlX8];
 obj.role = items1;
-let items2 = [_modDef3831.GZIAxl, _modDef3831["4bptbQ"]];
+let items2 = [_modDef3863.GZIAxl, _modDef3863["4bptbQ"]];
 obj.user = items2;
-const items3 = [_modDef3831.twlOb6, _modDef3831.twlOb6];
+const items3 = [_modDef3863.twlOb6, _modDef3863.twlOb6];
 obj.project = items3;
-const items4 = [_modDef3831.ZWXDeI, _modDef3831.ZWXDeI];
+const items4 = [_modDef3863.ZWXDeI, _modDef3863.ZWXDeI];
 obj.server = items4;
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/clarification/ConjureClarification.tsx");
@@ -44,7 +46,7 @@ export const clarificationDraftPlaceholder = function clarificationDraftPlacehol
   if (tmp2) {
     tmp2 = null == options.input;
   }
-  const tmp4 = _modDef3831;
+  const tmp4 = _modDef3863;
   return intl.string(tmp2 ? tmp4.yLN1x6 : tmp4["tOC+tn"]);
 };
 export const isClarificationComplete = function isClarificationComplete(questions, arg1) {
@@ -169,7 +171,7 @@ export const multiSelectAnswer = function multiSelectAnswer(options, answeredOpt
 export const clarificationChannelType = function clarificationChannelType(arg0) {
   let tmp;
   if (null != arg0) {
-    tmp = closure_5[arg0];
+    tmp = closure_6[arg0];
   }
   return tmp;
 };
@@ -182,9 +184,9 @@ export const clarificationEntities = function clarificationEntities(project, ite
   return substr.map((id) => {
     closure_0 = id;
     obj = { id, name: null };
-    let tmp = closure_1(id);
+    let tmp = importDefault(id);
     if (tmp == null) {
-      const found = closure_2.find((id) => id.id === closure_0);
+      const found = dependencyMap.find((id) => id.id === closure_0);
       let name;
       if (found != null) {
         name = found.name;
@@ -203,7 +205,70 @@ export const clarificationEntities = function clarificationEntities(project, ite
       }
       let tmp15;
       if (null != type) {
-        tmp15 = closure_5[type];
+        tmp15 = closure_6[type];
+      }
+      const obj2 = { kind: tmp5 };
+      if (null == tmp15) {
+        let obj3 = {};
+      } else {
+        obj3 = { channel_type: tmp15 };
+      }
+      const merged = Object.assign(obj3);
+    } else {
+      if ("user" === tmp5) {
+        const user = UserStore.getUser(id);
+        let username;
+        if (user != null) {
+          username = user.username;
+        }
+        const obj4 = { kind: tmp5 };
+        if (null == username) {
+          let obj5 = {};
+        } else {
+          obj5 = { username };
+        }
+        const merged1 = Object.assign(obj5);
+        let obj6 = obj4;
+      } else {
+        obj6 = { kind: tmp5 };
+      }
+      const merged2 = Object.assign(obj6);
+      return obj;
+    }
+  });
+};
+export const clarificationChannelEntities = function clarificationChannelEntities(id, arg1) {
+  closure_0 = id;
+  const items = [id.id];
+  closure_129_0 = "channel";
+  closure_129_1 = () => useChannelName.computeChannelName(closure_0, UserStore, RelationshipStore);
+  closure_129_2 = arg1;
+  const substr = items.slice(0, 10);
+  return substr.map((id) => {
+    closure_0 = id;
+    obj = { id, name: null };
+    let tmp = importDefault(id);
+    if (tmp == null) {
+      const found = dependencyMap.find((id) => id.id === closure_0);
+      let name;
+      if (found != null) {
+        name = found.name;
+      }
+      tmp = name;
+    }
+    if (tmp == null) {
+      tmp = id;
+    }
+    obj.name = tmp;
+    if ("channel" === closure_0) {
+      const channel = ChannelStore.getChannel(id);
+      let type;
+      if (channel != null) {
+        type = channel.type;
+      }
+      let tmp15;
+      if (null != type) {
+        tmp15 = closure_6[type];
       }
       const obj2 = { kind: tmp5 };
       if (null == tmp15) {

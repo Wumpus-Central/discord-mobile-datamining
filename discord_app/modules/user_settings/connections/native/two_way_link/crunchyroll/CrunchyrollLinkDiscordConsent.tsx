@@ -2,9 +2,9 @@
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-let closure_3 = fn(14107).CrunchyrollLinkModalScenes;
+let closure_3 = fn(14330).CrunchyrollLinkModalScenes;
 const PlatformTypes = fn(1084).PlatformTypes;
-const CrunchyrollConnectionConstants = fn(8826);
+const CrunchyrollConnectionConstants = fn(8863);
 ({ CRUNCHYROLL_CLIENT_ID: hasOwnProperty, CRUNCHYROLL_CLIENT_SCOPES: metroRequire } = CrunchyrollConnectionConstants);
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
@@ -50,7 +50,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmp8 = jsx(tmp(9629).TwoWayLinkDiscordConsent, {
+      const tmp8 = jsx(tmp(9661).TwoWayLinkDiscordConsent, {
         platformType: PlatformTypes.CRUNCHYROLL,
         callbackCode,
         callbackState,
@@ -88,7 +88,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const callback1 = noop.useCallback(() => {
         navigation.push(constants.ERROR);
       }, items1);
-      return jsx(navigation(9629).TwoWayLinkDiscordConsent, {
+      return jsx(navigation(9661).TwoWayLinkDiscordConsent, {
         platformType: PlatformTypes.CRUNCHYROLL,
         callbackCode,
         callbackState,

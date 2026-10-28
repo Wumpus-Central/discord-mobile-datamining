@@ -174,13 +174,17 @@ prototype["sendPublishOptions"] = function sendPublishOptions(combined) {
   throw error;
 };
 prototype["sendPublish"] = function sendPublish(destination_id) {
+  if (flag === undefined) {
+    flag = false;
+  }
   const self = this;
   if (null != this.socket) {
     const _WebSocket = WebSocket;
     if (self.socket.readyState === WebSocket.OPEN) {
       const socket = self.socket;
-      const _JSON = JSON;
       const obj = { type: "publish", destination_id };
+      const tmp3 = flag ? { app_channels_private: true } : {};
+      const merged = Object.assign(tmp3);
       socket.send(JSON.stringify(obj));
     }
   }
@@ -208,6 +212,26 @@ prototype["sendDraftPatchNotes"] = function sendDraftPatchNotes(combined) {
       const socket = self.socket;
       const _JSON = JSON;
       const obj = { type: "draft_patch_notes", nonce: combined };
+      socket.send(JSON.stringify(obj));
+    }
+  }
+  const error = new Error("WebSocket not open");
+  throw error;
+};
+prototype["sendVoiceChannelPinOutcome"] = function sendVoiceChannelPinOutcome(status) {
+  const self = this;
+  if (null != this.socket) {
+    const _WebSocket = WebSocket;
+    if (self.socket.readyState === WebSocket.OPEN) {
+      const socket = self.socket;
+      const obj = { type: "voice_channel_pin_outcome", status: status.status };
+      if ("pinned" === status.status) {
+        const obj2 = { channel_id: status.channelId };
+        let obj3 = obj2;
+      } else {
+        obj3 = {};
+      }
+      const merged = Object.assign(obj3);
       socket.send(JSON.stringify(obj));
     }
   }

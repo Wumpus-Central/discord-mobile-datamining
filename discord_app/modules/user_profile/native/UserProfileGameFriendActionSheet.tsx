@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const RelationshipTypes = fn(1084).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   applicationNameWrapper: { flexDirection: "row", justifyContent: "flex-start", alignItems: "center", gap: 12 },
   gameIcon: null,

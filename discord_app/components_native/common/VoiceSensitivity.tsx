@@ -13,10 +13,10 @@ import AppStateStore from "../../stores/native/AppStateStore.tsx";
 require = fn;
 const View = fn(17).View;
 const AppStates = fn(1084).AppStates;
-const NativePermissionTypes = fn(7869).NativePermissionTypes;
+const NativePermissionTypes = fn(7903).NativePermissionTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   sensitivity: { position: "relative", height: 20 },
   sensitivityBar: { position: "absolute", top: 7, left: 0, right: 0, bottom: 7, flexDirection: "row" },
@@ -43,7 +43,7 @@ obj2.sensitivityMin = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_3
 let obj3 = { backgroundColor: nativeDefault.unsafe_rawColors.YELLOW_300 };
 obj2.sensitivityMax = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
 let obj5 = { flex: 1, backgroundColor: null };
-const ColorUtils = fn(4969);
+const ColorUtils = fn(5001);
 obj5.backgroundColor = ColorUtils.hexWithOpacity(nativeDefault.unsafe_rawColors.PRIMARY_400, 0.6);
 obj2.sensitivityDefault = obj5;
 let obj4 = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -677,7 +677,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   c1 = 1;
                   c2 = 1;
                   const obj4 = {
-                    value: onThresholdChange(7886).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
+                    value: onThresholdChange(7920).hasPermission(constants.AUDIO, { showAuthorizationError: false }),
                     done: false,
                   };
                   return obj4;
@@ -696,7 +696,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (tmp5) {
                   mediaEngine = mediaEngine.getMediaEngine();
-                  mediaEngine.on(auto(5740).MediaEngineEvent.VoiceActivity, callback);
+                  mediaEngine.on(auto(5775).MediaEngineEvent.VoiceActivity, callback);
                 }
                 c2 = 3;
                 return { value: "IconComponent", done: null };

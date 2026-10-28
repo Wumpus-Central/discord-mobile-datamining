@@ -14,7 +14,7 @@ import RTCConnectionStore from "../../../../stores/RTCConnectionStore.tsx";
 
 require = fn;
 const InputModes = fn(1084).InputModes;
-const StaticChannelRoute = fn(4831).StaticChannelRoute;
+const StaticChannelRoute = fn(4863).StaticChannelRoute;
 const constants = {
   LURKER: "lurker",
   VOICE: "voice",
@@ -25,7 +25,7 @@ const constants = {
   APPS: "apps",
   NONE: "none",
 };
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_12 = createStyles.createStyles((backgroundColor) => {
   const obj = {
     lurker: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER },
@@ -317,9 +317,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       return prop;
     }
   : function useChannelSafeAreaBottomStyles(arg0) {
-      const token = gradientBottom(5253).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
-      let obj = gradientBottom(5253);
-      gradientBottom = gradientBottom(9710).useGradientBottom();
+      const token = gradientBottom(5288).useToken(nativeDefault.colors.MOBILE_KEYBOARD_GAP_BACKGROUND);
+      let obj = gradientBottom(5288);
+      gradientBottom = gradientBottom(9742).useGradientBottom();
       let backgroundColor1;
       if (gradientBottom != null) {
         backgroundColor1 = gradientBottom.backgroundColor;

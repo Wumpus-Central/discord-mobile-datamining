@@ -6,11 +6,11 @@ import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
 let items = [
-  fn(8830).PlatformType.DESKTOP,
+  fn(8867).PlatformType.DESKTOP,
   "mobile",
-  fn(8830).PlatformType.XBOX,
-  fn(8830).PlatformType.PLAYSTATION,
-  fn(8830).PlatformType.NINTENDO,
+  fn(8867).PlatformType.XBOX,
+  fn(8867).PlatformType.PLAYSTATION,
+  fn(8867).PlatformType.NINTENDO,
 ];
 const ReactCompilerGating = fn(558);
 const size = fn(2);

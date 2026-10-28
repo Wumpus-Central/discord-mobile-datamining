@@ -618,7 +618,7 @@ class Filter$Type extends MessageType3 {
 }
 const prototype3 = Filter$Type.prototype;
 prototype3["create"] = function create(partialSettings) {
-  obj = { filter: { oneofKind: "rejectWithError" }, negate: false };
+  obj = { filter: { oneofKind: "paths" }, negate: false };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1209.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {
@@ -2074,7 +2074,7 @@ class ClientLocation_Location$Type extends MessageType13 {
 }
 const prototype13 = ClientLocation_Location$Type.prototype;
 prototype13["create"] = function create(partialSettings) {
-  obj = { location: { oneofKind: "rejectWithError" } };
+  obj = { location: { oneofKind: "paths" } };
   const _Object = Object;
   _Object.defineProperty(obj, _mod1209.MESSAGE_TYPE, { enumerable: false, value: this });
   if (undefined !== partialSettings) {

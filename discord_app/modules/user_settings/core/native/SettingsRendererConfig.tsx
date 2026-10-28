@@ -172,6 +172,7 @@ import DeveloperModeSettingDefault from "../../defs/native/DeveloperModeSetting.
 import LaunchpadSettingDefault from "../../defs/native/LaunchpadSetting.tsx";
 import ChannelListLayoutSettingDefault from "../../defs/native/ChannelListLayoutSetting.tsx";
 import IcymiTabSettingDefault from "../../defs/native/IcymiTabSetting.tsx";
+import NativeMarkdownSettingDefault from "../../defs/native/NativeMarkdownSetting.tsx";
 import SupportSettingDefault from "../../defs/native/SupportSetting.tsx";
 import UploadDebugLogsSettingDefault from "../../defs/native/UploadDebugLogsSetting.tsx";
 import UploadIntlDataSettingDefault from "../../defs/native/UploadIntlDataSetting.tsx";
@@ -463,6 +464,7 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   LAUNCHPAD,
   CHANNEL_LIST_LAYOUT,
   ICYMI_TAB,
+  NATIVE_MARKDOWN,
   SUPPORT,
   UPLOAD_DEBUG_LOGS,
   UPLOAD_INTL_DATA,
@@ -547,7 +549,6 @@ const MobileUserSettings = SettingsConstants.MobileUserSettings;
   PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE,
   PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS,
   PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_GUILDS,
-  PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS,
 } = MobileUserSettings);
 const merged = Object.assign(MobileNotifSettingsRendererConfig.MOBILE_NOTIF_SETTINGS_RENDERER_CONFIG);
 const frozen = Object.freeze({
@@ -732,6 +733,7 @@ const frozen = Object.freeze({
   [LAUNCHPAD]: LaunchpadSettingDefault,
   [CHANNEL_LIST_LAYOUT]: ChannelListLayoutSettingDefault,
   [ICYMI_TAB]: IcymiTabSettingDefault,
+  [NATIVE_MARKDOWN]: NativeMarkdownSettingDefault,
   [SUPPORT]: SupportSettingDefault,
   [UPLOAD_DEBUG_LOGS]: UploadDebugLogsSettingDefault,
   [UPLOAD_INTL_DATA]: UploadIntlDataSettingDefault,
@@ -816,7 +818,8 @@ const frozen = Object.freeze({
   [PARENTAL_CONTROLS_FRIEND_REQUESTS_EVERYONE]: ParentalControlsFriendRequestsEveryoneSettingDefault,
   [PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_FRIENDS]: ParentalControlsFriendRequestsMutualFriendsSettingDefault,
   [PARENTAL_CONTROLS_FRIEND_REQUESTS_MUTUAL_GUILDS]: ParentalControlsFriendRequestsMutualGuildsSettingDefault,
-  [PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS]: ParentalControlsExplicitMediaFiltersFriendsDMsSettingDefault,
+  [MobileUserSettings.PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_FRIENDS_DMS]:
+    ParentalControlsExplicitMediaFiltersFriendsDMsSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_EXPLICIT_MEDIA_FILTERS_NON_FRIENDS_DMS]:
     ParentalControlsExplicitMediaFiltersNonFriendsDMsSettingDefault,
   [MobileUserSettings.PARENTAL_CONTROLS_GORE_MEDIA_FILTERS_FRIENDS_DMS]:

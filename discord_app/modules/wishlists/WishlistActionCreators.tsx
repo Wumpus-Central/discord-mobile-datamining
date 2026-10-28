@@ -42,7 +42,7 @@ function maybeDispatchAdditionalActions(wishlist_items) {
     const tmpResult = StorefrontUtils;
   }
 }
-const getWishlistSkuIds = fn(9370).getWishlistSkuIds;
+const getWishlistSkuIds = fn(9402).getWishlistSkuIds;
 const Constants = fn(1084);
 ({ AnalyticEvents: c10, Endpoints: closure_11, PaymentGateways: closure_12 } = Constants);
 const size = fn(2);

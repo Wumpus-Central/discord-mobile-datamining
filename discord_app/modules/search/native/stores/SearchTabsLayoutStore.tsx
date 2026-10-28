@@ -204,7 +204,7 @@ function computeLayoutForAll() {
   return flag;
 }
 SmartSearchResultsStoreDefault;
-const SearchConstants = fn(9716);
+const SearchConstants = fn(9748);
 ({
   SearchTabs: c10,
   SEARCH_TYPE_TO_SEARCH_INITIAL_TABS: closure_11,

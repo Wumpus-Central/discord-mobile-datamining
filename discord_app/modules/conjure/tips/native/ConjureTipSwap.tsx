@@ -22,7 +22,7 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       children = children.children;
       const obj = sharedValue(576);
       const tmp = sharedValue;
-      sharedValue = sharedValue(5053).useSharedValue(0);
+      sharedValue = sharedValue(5085).useSharedValue(0);
       if (cResult[0] !== sharedValue) {
         const fn = function s() {
           const obj2 = { duration: 260, easing: null };
@@ -42,14 +42,14 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         tmp6 = cResult[2];
       }
       const effect = noop.useEffect(tmp5, tmp6);
-      let obj2 = sharedValue(5053);
+      let obj2 = sharedValue(5085);
       const fn2 = function f() {
         return { opacity: sharedValue.get() };
       };
       fn2.__closure = { opacity: sharedValue };
       fn2.__workletHash = 14074417751279;
       fn2.__initData = __initData;
-      const animatedStyle = tmp(5053).useAnimatedStyle(fn2);
+      const animatedStyle = tmp(5085).useAnimatedStyle(fn2);
       if (cResult[3] === children) {
         if (cResult[4] === animatedStyle) {
           let tmp9 = cResult[5];
@@ -61,11 +61,11 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[4] = animatedStyle;
       cResult[5] = tmp10;
       tmp9 = tmp10;
-      const tmpResult = tmp(5053);
+      const tmpResult = tmp(5085);
     }
   : function TipFade(children) {
       let sharedValue;
-      sharedValue = sharedValue(5053).useSharedValue(0);
+      sharedValue = sharedValue(5085).useSharedValue(0);
       const items = [sharedValue];
       const effect = noop.useEffect(() => {
         const obj2 = { duration: 260, easing: null };
@@ -74,14 +74,14 @@ let closure_7 = ReactCompilerGating.isReactCompilerEnabled()
         const result = sharedValue.set(timing.withTiming(1, obj2));
         return () => sharedValue(dependencyMap[4]).cancelAnimation(closure_1_0);
       }, items);
-      const obj = sharedValue(5053);
+      const obj = sharedValue(5085);
       const fn = function u() {
         return { opacity: sharedValue.get() };
       };
       fn.__closure = { opacity: sharedValue };
       fn.__workletHash = 13445232887916;
       fn.__initData = __initData2;
-      const style = sharedValue(5053).useAnimatedStyle(fn);
+      const style = sharedValue(5085).useAnimatedStyle(fn);
       return jsx(ReanimatedRexportDefault.View, { style, children: children.children });
     };
 const size = fn(2);

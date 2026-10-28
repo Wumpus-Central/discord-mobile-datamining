@@ -1,11 +1,11 @@
 // discord_app/modules/conjure/settings/conjureSettingsSaved.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
 import conjureSettingsConnection from "conjureSettingsConnection.tsx";
 import ConjureChatStore from "../chat/ConjureChatStore.tsx";
 
 require = fn;
-const sendUserMessage = fn(10701).sendUserMessage;
+const sendUserMessage = fn(10733).sendUserMessage;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/settings/conjureSettingsSaved.tsx");
 
@@ -18,5 +18,5 @@ export const settleProjectSettingsSave = function settleProjectSettingsSave(arg0
     }
   }
   const intl = util.intl;
-  sendUserMessage(arg0, intl.string(_modDef3831["08bsJL"]));
+  sendUserMessage(arg0, intl.string(_modDef3863["08bsJL"]));
 };

@@ -3,10 +3,10 @@ import useGetOrFetchApplicationsDefault from "../../applications/useGetOrFetchAp
 import ApplicationIconAndNameDefault from "ApplicationIconAndName.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
-const UserProfileCardDefault = tmp5(7305);
+const UserProfileCardDefault = tmp5(7339);
 const require = fn;
 let jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_4 = createStyles.createStyles({ card: { flexDirection: "column" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -115,7 +115,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[8] !== tmp7) {
               const obj5 = { variant: "text-md/normal", color: "text-default", children: tmp7 };
-              const tmp21 = jsx(tmp(5235).Text, { variant: "text-md/normal", color: "text-default", children: tmp7 });
+              const tmp21 = jsx(tmp(5270).Text, { variant: "text-md/normal", color: "text-default", children: tmp7 });
               cResult[8] = tmp7;
               cResult[9] = tmp21;
               let tmp19 = tmp21;
@@ -214,7 +214,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const intl3 = tmp6(1125).intl;
         obj4.title = intl3.string(tmp6(1125).t["Uv/eTx"]);
         const obj5 = { variant: "text-md/normal", color: "text-default", children: formatResult };
-        obj4.children = jsx(tmp6(5235).Text, {
+        obj4.children = jsx(tmp6(5270).Text, {
           variant: "text-md/normal",
           color: "text-default",
           children: formatResult,

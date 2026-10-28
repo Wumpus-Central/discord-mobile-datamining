@@ -113,7 +113,7 @@ function handleGuild() {
   return tmp;
 }
 let c3 = 10000000000000;
-const secondaryIndexMap = new fn(4899).SecondaryIndexMap(
+const secondaryIndexMap = new fn(4931).SecondaryIndexMap(
   (saveData) => {
     const items = [SavedMessagesTypes.SavedMessageSortTypes.ALL];
     if (null != saveData.saveData.dueAt) {
@@ -139,7 +139,7 @@ let closure_7 = 0;
 let set = new Set();
 const set1 = new Set();
 let nextBefore = null;
-let FAILED = fn(10080).BookmarksFetchState.LOADED_FINISHED;
+let FAILED = fn(10112).BookmarksFetchState.LOADED_FINISHED;
 let c12 = false;
 let c13 = null;
 const set2 = new Set();
@@ -208,8 +208,8 @@ prototype["getLastChanged"] = function getLastChanged() {
 prototype["isMessageBookmarked"] = function isMessageBookmarked(id, id2) {
   return set1.has(id2);
 };
-prototype["isMessageReminder"] = function isMessageReminder(id, id2) {
-  value = secondaryIndexMap.get("" + id + "-" + id2);
+prototype["isMessageReminder"] = function isMessageReminder(channelId, id) {
+  value = secondaryIndexMap.get("" + channelId + "-" + id);
   return null != value && null != value.saveData.dueAt;
 };
 SavedMessagesStore.displayName = "SavedMessagesStore";

@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/tips/native/ConjureBotPermissionsTip.tsx
-import _modDef3831 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
 import ConjureTipHintDefault from "ConjureTipHint.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
@@ -98,8 +98,8 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function BotPermissionsHint(projectId) {
       projectId = projectId.projectId;
-      dependencyMap = noop.useContext(projectId(11767).ConjurePublishActionContext);
-      let obj = { icon: projectId(10957).ShieldIcon, children: null };
+      dependencyMap = noop.useContext(projectId(11803).ConjurePublishActionContext);
+      let obj = { icon: projectId(10992).ShieldIcon, children: null };
       const intl = projectId(1125).intl;
       const obj2 = { onReview: null };
       importDefault = asyncGeneratorStep(async () => {
@@ -161,11 +161,11 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         return applyArgumentsResult;
       };
-      obj.children = intl.format(_modDef3831["0S9HY8"], obj2);
-      return jsx(ConjureTipHintDefault, { icon: projectId(10957).ShieldIcon, children: null });
+      obj.children = intl.format(_modDef3863["0S9HY8"], obj2);
+      return jsx(ConjureTipHintDefault, { icon: projectId(10992).ShieldIcon, children: null });
     };
 let obj2 = {};
-const merged = Object.assign(fn(12336).CONJURE_BOT_PERMISSIONS_TIP_BASE);
+const merged = Object.assign(fn(12381).CONJURE_BOT_PERMISSIONS_TIP_BASE);
 obj2.render = function render(arg0, context) {
   return <closure_6 projectId={context.context.projectId} />;
 };

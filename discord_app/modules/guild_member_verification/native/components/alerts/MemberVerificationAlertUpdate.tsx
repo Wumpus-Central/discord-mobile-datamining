@@ -5,14 +5,14 @@ import Text_Text from "../../../../../design/components/Text/native/Text.tsx";
 import LinkingDefault from "../../../../../lib/native/Linking.tsx";
 import FastImageDefault from "../../../../../components_native/common/FastImage.tsx";
 import common_AlertDefault from "../../../../../components_native/common/Alert.tsx";
-import _modDef7188 from "../../../../../../_runtime/metro/07188__.js";
+import _modDef7222 from "../../../../../../_runtime/metro/07222__.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const DownloadLinks = fn(1084).DownloadLinks;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_6 = createStyles.createStyles({
   headerImage: { marginLeft: "auto", marginRight: "auto", marginTop: 8 },
   header: { marginTop: 24, textAlign: "center" },
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         [tmp5, tmp6, tmp7] = cResult;
       }
       if (cResult[3] !== tmp4.headerImage) {
-        const obj2 = { source: _modDef7188, style: tmp4.headerImage };
+        const obj2 = { source: _modDef7222, style: tmp4.headerImage };
         const tmp14 = React4(FastImageDefault, obj2);
         cResult[3] = tmp4.headerImage;
         cResult[4] = tmp14;
@@ -133,7 +133,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj.onCancel = onClose.onClose;
       const obj2 = { source: null, style: null };
       const tmp2 = common_AlertDefault;
-      obj2.source = _modDef7188;
+      obj2.source = _modDef7222;
       obj2.style = tmp.headerImage;
       const items = [React4(FastImageDefault, obj2), ,];
       const obj3 = {

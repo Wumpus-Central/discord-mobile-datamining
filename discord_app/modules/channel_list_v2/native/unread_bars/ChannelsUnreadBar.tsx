@@ -10,14 +10,14 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 const ReanimatedRexport = ReanimatedRexport2;
 
 require = fn;
-const RedesignChannelListConstants = fn(11954);
+const RedesignChannelListConstants = fn(11992);
 ({ getScaledSearchBarHeight: hasOwnProperty, VIEWABILITY_CONFIG: metroRequire } = RedesignChannelListConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let closure_10 = ReanimatedRexport.createAnimatedComponent(fn(17).Pressable);
 let c11 = 12;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_12 = createStyles.createStyles((arg0, arg1) => {
   const obj = {
     position: "absolute",

@@ -3,7 +3,7 @@ import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
 import HapticUtils from "../../../../modules/haptics/HapticUtils.native.tsx";
 import haptics_HapticFeedbackTypesDefault from "../../../../modules/haptics/HapticFeedbackTypes.tsx";
-import _modDef8769 from "../../../../../_runtime/metro/08769__.js";
+import _modDef8806 from "../../../../../_runtime/metro/08806__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
@@ -11,7 +11,7 @@ require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   container: { flexGrow: 1, flexDirection: "row", alignItems: "center" },
   slider: { flex: 1 },
@@ -215,7 +215,7 @@ export const Slider = ReactCompilerGating.isReactCompilerEnabled()
                 testID,
                 onResponderGrant: tmp19,
               };
-              const tmp23 = closure_6(onChange(8769), obj4);
+              const tmp23 = closure_6(onChange(8806), obj4);
               cResult[11] = accessibilityHint;
               cResult[12] = accessibilityLabel;
               cResult[13] = disabled;
@@ -344,7 +344,7 @@ export const Slider = ReactCompilerGating.isReactCompilerEnabled()
       }
       obj3.accessibilityValue = tmp12;
       obj3.testID = testID;
-      const tmp11 = _modDef8769;
+      const tmp11 = _modDef8806;
       let fn;
       if (obj5.isAndroid()) {
         fn = () => true;

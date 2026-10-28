@@ -2,9 +2,9 @@
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
 const require = fn;
-const XboxLinkModalScenes = fn(9614).XboxLinkModalScenes;
+const XboxLinkModalScenes = fn(9646).XboxLinkModalScenes;
 const PlatformTypes = fn(1084).PlatformTypes;
-const XBOX_CLIENT_SCOPES = fn(9628).XBOX_CLIENT_SCOPES;
+const XBOX_CLIENT_SCOPES = fn(9660).XBOX_CLIENT_SCOPES;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -49,11 +49,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
       }
       const obj2 = navigation(1502);
-      const tmp8 = jsx(navigation(9629).TwoWayLinkDiscordConsent, {
+      const tmp8 = jsx(navigation(9661).TwoWayLinkDiscordConsent, {
         platformType: PlatformTypes.XBOX,
         callbackCode,
         callbackState,
-        clientId: navigation(13541).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
+        clientId: navigation(13759).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
         scopes: XBOX_CLIENT_SCOPES,
         onNext: tmp5,
         onError: tmp6,
@@ -68,7 +68,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         platformType: PlatformTypes.XBOX,
         callbackCode,
         callbackState,
-        clientId: navigation(13541).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
+        clientId: navigation(13759).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
         scopes: XBOX_CLIENT_SCOPES,
         onNext: tmp5,
         onError: tmp6,
@@ -87,11 +87,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         navigation.push(XboxLinkModalScenes.ERROR);
       }, items1);
       const obj = navigation(1502);
-      return jsx(navigation(9629).TwoWayLinkDiscordConsent, {
+      return jsx(navigation(9661).TwoWayLinkDiscordConsent, {
         platformType: PlatformTypes.XBOX,
         callbackCode,
         callbackState,
-        clientId: navigation(13541).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
+        clientId: navigation(13759).ConsoleOAuthApplications.XBOX_APPLICATION_ID,
         scopes: XBOX_CLIENT_SCOPES,
         onNext: callback,
         onError: callback1,

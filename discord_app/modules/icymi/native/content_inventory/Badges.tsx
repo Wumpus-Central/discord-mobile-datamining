@@ -34,7 +34,7 @@ let obj2 = {
   icon: nativeDefault.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
 };
 obj["user-profile"] = { text: "text-subtle", icon: nativeDefault.colors.TEXT_SUBTLE };
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_10 = createStyles.createStyles((arg0) => {
   obj = { icon: { width: 16, height: 16 }, badgeContainer: null };
   let tmp = null;
@@ -99,10 +99,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function ActiveTimestamp(style) {
       const entry = style.entry;
-      const now = entry(14322).useTimestampTickedNow().now;
+      const now = entry(14545).useTimestampTickedNow().now;
       const items = [entry, now];
       const children = noop.useMemo(() => utils.formatActiveTimestamp(entry, now), items);
-      return closure_6(entry(5235).Text, {
+      return closure_6(entry(5270).Text, {
         style: style.style,
         variant: "text-sm/medium",
         tabularNumbers: true,

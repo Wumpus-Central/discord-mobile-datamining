@@ -14,7 +14,7 @@ function getAdvancedSettings() {
   obj.settings = items;
   const intl2 = util.intl;
   obj.subLabel = intl2.format(util.t["CY6q/Q"], { apiDocsUrl: MarketingURLs.API_DOCS });
-  const items1 = [obj, , ,];
+  const items1 = [obj, , , ,];
   const obj3 = { settings: null, subLabel: null };
   const items2 = [MobileUserSettings.LAUNCHPAD];
   obj3.settings = items2;
@@ -31,9 +31,15 @@ function getAdvancedSettings() {
   const items4 = [MobileUserSettings.ICYMI_TAB];
   obj5.settings = items4;
   items1[3] = obj5;
+  const obj6 = { label: null, settings: null };
+  const intl5 = util.intl;
+  obj6.label = intl5.string(util.t.GwQs0C);
+  const items5 = [MobileUserSettings.NATIVE_MARKDOWN];
+  obj6.settings = items5;
+  items1[4] = obj6;
   return items1;
 }
-const MobileUserSettings = fn(8331).MobileUserSettings;
+const MobileUserSettings = fn(8365).MobileUserSettings;
 const MarketingURLs = fn(1084).MarketingURLs;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);

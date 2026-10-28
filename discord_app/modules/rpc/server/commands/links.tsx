@@ -161,7 +161,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
                   return false;
                 },
                 onConfirm() {
-                  closure_1(5657)(href);
+                  closure_1(5692)(href);
                   const str = new URL(href);
                   let tmp5 = "client.vibeyard.tools" === str.hostname;
                   if (tmp5) {
@@ -237,7 +237,7 @@ let closure_12 = async function _openExternalLink(arg0, arg1) {
     }
   })();
 };
-let Constants = fn(6379);
+let Constants = fn(6413);
 ({ RPC_AUTHENTICATED_SCOPE, RPC_SCOPE_CONFIG, RPC_EMBEDDED_APP_SCOPE } = Constants);
 Constants = fn(1084);
 ({ RPCCommands, RPCErrors: metroRequire, UserSettingsSections: closure_7, AnalyticEvents: closure_8 } = Constants);
@@ -247,7 +247,7 @@ const items = [,];
 const set = new Set(items);
 const weakMap = new WeakMap();
 let obj = {};
-let CONTEXT_MENU_ICON_NAMES = fn(15761);
+let CONTEXT_MENU_ICON_NAMES = fn(15987);
 let obj3 = {
   scope: null,
   handler(socket) {
@@ -379,16 +379,16 @@ let obj4 = {
 const items2 = [RPC_AUTHENTICATED_SCOPE];
 obj4.scope = { [RPC_SCOPE_CONFIG.ANY]: items2 };
 obj[RPCCommands.NAVIGATE_TO_CONNECTIONS] = obj4;
-CONTEXT_MENU_ICON_NAMES = fn(15761);
+CONTEXT_MENU_ICON_NAMES = fn(15987);
 let obj6 = {
   scope: null,
   handler(socket) {
     socket = socket.socket;
     ({ custom_id: importDefault, message: dependencyMap, link_id: asyncGeneratorStep } = socket.args);
-    let result = socket(11482).validatePostMessageTransport(socket.transport);
-    let obj = socket(11482);
+    let result = socket(11520).validatePostMessageTransport(socket.transport);
+    let obj = socket(11520);
     let tmp = socket;
-    const validateApplicationResult = socket(11482).validateApplication(socket.application);
+    const validateApplicationResult = socket(11520).validateApplication(socket.application);
     c4 = validateApplicationResult;
     if (null == validateApplicationResult) {
       const obj3 = { errorCode: constants.INVALID_COMMAND };
@@ -421,7 +421,7 @@ let obj6 = {
       }
       tmpResult = tmp(2028);
     }
-    let obj2 = socket(11482);
+    let obj2 = socket(11520);
   },
 };
 const items3 = [RPC_AUTHENTICATED_SCOPE];

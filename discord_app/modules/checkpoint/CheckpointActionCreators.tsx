@@ -318,10 +318,10 @@ let closure_12 = async function _sendCheckpointCard(arg0) {
               closure_133_2.map((item) => {
                 channel = channel.getChannel(item);
                 if (null != channel) {
-                  const obj = checkpointCardType(7567);
+                  const obj = checkpointCardType(7601);
                   const id = channel.id;
                   const obj3 = { location: "checkpoint", checkpointCardType };
-                  return obj.sendMessage(id, checkpointCardType(7756).parse(channel, closure_1_0), false, obj3);
+                  return obj.sendMessage(id, checkpointCardType(7790).parse(channel, closure_1_0), false, obj3);
                 }
               }),
             ),

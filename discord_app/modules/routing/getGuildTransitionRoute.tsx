@@ -14,7 +14,7 @@ import PrivateChannelSortStore from "../../stores/views/PrivateChannelSortStore.
 
 require = fn;
 const ME = fn(1084).ME;
-const StaticChannelRoute = fn(4831).StaticChannelRoute;
+const StaticChannelRoute = fn(4863).StaticChannelRoute;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/routing/getGuildTransitionRoute.tsx");
 

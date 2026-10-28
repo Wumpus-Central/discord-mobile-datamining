@@ -99,7 +99,7 @@ let closure_9 = async function _fetchGuildEntriesForIds(arg0) {
     return value;
   })();
 };
-const DirectoryEntryCategories = fn(13206).DirectoryEntryCategories;
+const DirectoryEntryCategories = fn(13423).DirectoryEntryCategories;
 let Endpoints = fn(1084).Endpoints;
 asyncGeneratorStep(async (arg0, category_id) => {
   closure_0 = arg0;

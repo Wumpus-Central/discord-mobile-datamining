@@ -8,10 +8,10 @@ const require = globalThis.__r;
 
 require = fn;
 const View = fn(17).View;
-let closure_5 = fn(5608).MOBILE_PREVIEW_MESSAGE_COUNT;
+let closure_5 = fn(5643).MOBILE_PREVIEW_MESSAGE_COUNT;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   row: {
     flexDirection: "row",
@@ -101,7 +101,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       fn2.__closure = { opacity: sharedValue };
       fn2.__workletHash = 11432452203963;
       fn2.__initData = __initData;
-      const animatedStyle = tmp(5053).useAnimatedStyle(fn2);
+      const animatedStyle = tmp(5085).useAnimatedStyle(fn2);
       if (cResult[3] !== tmp4) {
         const _Array = Array;
         let obj3 = { length: closure_5 };
@@ -132,12 +132,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         return tmp14;
       }
-      const tmp15 = closure_6(sharedValue(5053).View, { style: animatedStyle, "aria-hidden": true, children: tmp10 });
+      const tmp15 = closure_6(sharedValue(5085).View, { style: animatedStyle, "aria-hidden": true, children: tmp10 });
       cResult[5] = animatedStyle;
       cResult[6] = tmp10;
       cResult[7] = tmp15;
       tmp14 = tmp15;
-      const tmpResult = tmp(5053);
+      const tmpResult = tmp(5085);
     }
   : function ConversationPreviewSkeleton() {
       _require = closure_8();
@@ -174,5 +174,5 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           return React5(View, obj, arg1);
         }),
       };
-      return closure_6(sharedValue(5053).View, obj3);
+      return closure_6(sharedValue(5085).View, obj3);
     };

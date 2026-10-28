@@ -22,7 +22,7 @@ const MediaModalPortalDefault = MediaModalPortal;
 const MediaModalTiktokDefault = MediaModalTiktok;
 const MediaModalWebVideoFileDefault = MediaModalWebVideoFile;
 
-const useVideoControls = obj(8754);
+const useVideoControls = obj(8791);
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ Modal: hasOwnProperty, StyleSheet: metroRequire, View: closure_7 } = get_ActivityIndicator);
@@ -198,7 +198,7 @@ export default function MediaModal(originLayout) {
         const tmp2Result = HapticUtils;
         const obj2 = { source: selectedMediaSource, disableDownload, shareable: tmp };
         ActionSheetActionCreatorsDefault.openLazy(
-          asyncRequireImpl(8822, dependencyMap.paths),
+          asyncRequireImpl(8859, dependencyMap.paths),
           "MediaShareActionSheet",
           obj2,
         );

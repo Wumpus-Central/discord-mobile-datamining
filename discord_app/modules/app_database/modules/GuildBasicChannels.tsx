@@ -29,8 +29,8 @@ function hasBasicChannelChanged(basicChannel, nextResult) {
   }
   return tmp;
 }
-let closure_7 = fn(4828).createChannelRecordFromServer;
-const ChannelLoader = fn(4824).ChannelLoader;
+let closure_7 = fn(4860).createChannelRecordFromServer;
+const ChannelLoader = fn(4856).ChannelLoader;
 let closure_15 = new LoggerDefault("GuildBasicChannels");
 class GuildBasicChannels {
   constructor() {
@@ -86,9 +86,9 @@ prototype["getAsync"] = function getAsync(arg0) {
     closure_0 = tmp2;
     const _performance2 = performance;
     closure_128_0 = performance.now();
-    let items = [tmp3(4850).basicChannels(closure_0).getKvEntries(), ];
-    tmp3(4850).basicChannels(closure_0);
-    items[1] = tmp3(4850).syncedBasicChannels(closure_0).getKvEntries();
+    let items = [tmp3(4882).basicChannels(closure_0).getKvEntries(), ];
+    tmp3(4882).basicChannels(closure_0);
+    items[1] = tmp3(4882).syncedBasicChannels(closure_0).getKvEntries();
     await Promise.all(items);
     closure_128_1 = value;
     closure_128_2 = _slicedToArray(closure_128_1, 2);
@@ -302,7 +302,7 @@ prototype["handlePostConnectionOpen"] = function handlePostConnectionOpen() {
                             closure_129_1 = closure_3;
                             closure_2_15.warn("couldn't optimstically write basic_channel:", closure_129_1);
                             c6 = 3;
-                            const obj5 = { value: { v: "rejectWithError" }, done: true };
+                            const obj5 = { value: { v: "paths" }, done: true };
                             return obj5;
                           } else if (2 === tmp7) {
                             if (arg0 === 1) {

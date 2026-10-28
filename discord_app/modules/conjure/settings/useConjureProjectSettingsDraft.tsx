@@ -1,6 +1,6 @@
 // discord_app/modules/conjure/settings/useConjureProjectSettingsDraft.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
 import ConjureProjectTypes from "../projects/ConjureProjectTypes.tsx";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
@@ -207,7 +207,7 @@ export default function useConjureProjectSettingsDraft(arg0, arg1) {
     if (arg0.length > ConjureProjectTypes.MAX_PROJECT_COLLABORATOR_ROLES) {
       const intl = util.intl;
       const obj = { max: ConjureProjectTypes.MAX_PROJECT_COLLABORATOR_ROLES };
-      closure_1_19(intl.formatToPlainString(_modDef3831["dH7+/Z"], obj));
+      closure_1_19(intl.formatToPlainString(_modDef3863["dH7+/Z"], obj));
     } else {
       closure_15(arg0);
       closure_1_19(null);

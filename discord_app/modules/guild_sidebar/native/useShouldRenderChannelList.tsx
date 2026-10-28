@@ -133,8 +133,8 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
       }
     }
     function checkNavigationState() {
-      const obj = first(5151);
-      const rootNavigationRef = first(5152).getRootNavigationRef();
+      const obj = first(5186);
+      const rootNavigationRef = first(5187).getRootNavigationRef();
       let currentRoute;
       if (rootNavigationRef != null) {
         currentRoute = rootNavigationRef.getCurrentRoute();
@@ -143,14 +143,14 @@ export const useShouldRenderChannelList = ReactCompilerGating.isReactCompilerEna
         c7 = true;
         checkGatewayConnection(true);
       }
-      const obj2 = first(5152);
+      const obj2 = first(5187);
     }
     if (!allowRender) {
       let result = GatewayConnectionStore.addReactChangeListener(checkGatewayConnection);
       let result1 = CacheStore.addReactChangeListener(checkCacheLoadStatus);
       let ComponentDispatch = first(1120).ComponentDispatch;
       const subscription = ComponentDispatch.subscribe(constants.BOTTOM_CHANNEL_SCREEN_DRAG_START, allowRender);
-      let rootNavigationRef = first(5152).getRootNavigationRef();
+      let rootNavigationRef = first(5187).getRootNavigationRef();
       if (rootNavigationRef != null) {
         rootNavigationRef.addListener("state", checkNavigationState);
       }

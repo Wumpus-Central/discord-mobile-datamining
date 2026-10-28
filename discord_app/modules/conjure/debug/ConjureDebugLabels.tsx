@@ -1,27 +1,27 @@
 // discord_app/modules/conjure/debug/ConjureDebugLabels.tsx
 import util from "../../../intl/index.native.tsx";
-import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
 import ConjureDebugFormat from "ConjureDebugFormat.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
 let closure_3 = {
   db() {
-    return _modDef3831["7l+DFG"];
+    return _modDef3863["7l+DFG"];
   },
   db_preview() {
-    return _modDef3831.FAuffi;
+    return _modDef3863.FAuffi;
   },
   runtime() {
-    return _modDef3831["Gkl+ab"];
+    return _modDef3863["Gkl+ab"];
   },
   runtime_preview() {
-    return _modDef3831.ynpJzv;
+    return _modDef3863.ynpJzv;
   },
   bot() {
-    return _modDef3831["5/i0cj"];
+    return _modDef3863["5/i0cj"];
   },
   bot_preview() {
-    return _modDef3831.m2jsnw;
+    return _modDef3863.m2jsnw;
   },
 };
 const result = size.fileFinishedImporting("modules/conjure/debug/ConjureDebugLabels.tsx");
@@ -29,15 +29,15 @@ const result = size.fileFinishedImporting("modules/conjure/debug/ConjureDebugLab
 export const debugEnvLabel = function debugEnvLabel(env) {
   const intl = util.intl;
   if ("preview" === env) {
-    let eiAi57 = _modDef3831["2yLYlG"];
+    let eiAi57 = _modDef3863["2yLYlG"];
   } else {
-    eiAi57 = _modDef3831.eiAi57;
+    eiAi57 = _modDef3863.eiAi57;
   }
   return intl.string(eiAi57);
 };
 export const debugYesNo = function debugYesNo(connected) {
   const intl = util.intl;
-  const tmp = _modDef3831;
+  const tmp = _modDef3863;
   return intl.string(connected ? tmp.Wv025I : tmp["7/lsFY"]);
 };
 export const DEBUG_LOG_FILTERS = ["all", "preview", "stable", "web"];
@@ -46,18 +46,18 @@ export const debugLogFilterLabel = function debugLogFilterLabel(id) {
     if ("stable" !== id) {
       if ("web" === id) {
         const intl2 = util.intl;
-        return intl2.string(_modDef3831.IVzfVV);
+        return intl2.string(_modDef3863.IVzfVV);
       } else {
         const intl = util.intl;
-        return intl.string(_modDef3831["Um1/8L"]);
+        return intl.string(_modDef3863["Um1/8L"]);
       }
     }
   }
   const intl3 = util.intl;
   if ("preview" === id) {
-    let eiAi57 = _modDef3831["2yLYlG"];
+    let eiAi57 = _modDef3863["2yLYlG"];
   } else {
-    eiAi57 = _modDef3831.eiAi57;
+    eiAi57 = _modDef3863.eiAi57;
   }
   return intl3.string(eiAi57);
 };
@@ -123,23 +123,23 @@ export const filterDebugLogs = function filterDebugLogs(stateFromStores, arg1, f
 export const forceCompactionStatus = function forceCompactionStatus(forceState) {
   if ("idle" === forceState) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3831.wox6Ev);
+    return intl4.string(_modDef3863.wox6Ev);
   } else if ("pending" === forceState) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3831.OcPHQ1);
+    return intl3.string(_modDef3863.OcPHQ1);
   } else {
     const formatObservedAtResult = ConjureDebugFormat.formatObservedAt(forceState.observedAt);
     if ("compacted" === forceState.outcome) {
       const intl2 = util.intl;
       const obj2 = { time: formatObservedAtResult };
-      return intl2.formatToPlainString(_modDef3831.BhRjZZ, obj2);
+      return intl2.formatToPlainString(_modDef3863.BhRjZZ, obj2);
     } else {
       if ("declined" === forceState.outcome) {
-        let ZoUSVK = _modDef3831["o/FKzF"];
+        let ZoUSVK = _modDef3863["o/FKzF"];
       } else if ("busy" === forceState.outcome) {
-        ZoUSVK = _modDef3831.YZb4hK;
+        ZoUSVK = _modDef3863.YZb4hK;
       } else {
-        ZoUSVK = _modDef3831.ZoUSVK;
+        ZoUSVK = _modDef3863.ZoUSVK;
       }
       const intl = util.intl;
       let str2 = forceState.reason;
@@ -155,21 +155,21 @@ export const analyticsUnavailableReason = function analyticsUnavailableReason(an
   const reason = analytics.reason;
   if ("local" === reason) {
     const intl5 = util.intl;
-    return intl5.string(_modDef3831.mUeKML);
+    return intl5.string(_modDef3863.mUeKML);
   } else if ("unconfigured" === reason) {
     const intl4 = util.intl;
-    return intl4.string(_modDef3831.bGefb5);
+    return intl4.string(_modDef3863.bGefb5);
   } else if ("unauthorized" === reason) {
     const intl3 = util.intl;
-    return intl3.string(_modDef3831.KLx6Bb);
+    return intl3.string(_modDef3863.KLx6Bb);
   } else {
     if (null != analytics.detail) {
       const intl2 = util.intl;
       const obj = { detail: analytics.detail };
-      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3831.t09Q6q, obj);
+      let formatToPlainStringResult = intl2.formatToPlainString(_modDef3863.t09Q6q, obj);
     } else {
       const intl = util.intl;
-      formatToPlainStringResult = intl.string(_modDef3831["t+tG59"]);
+      formatToPlainStringResult = intl.string(_modDef3863["t+tG59"]);
     }
     return formatToPlainStringResult;
   }
@@ -190,7 +190,7 @@ export const analyticsMemoryValue = function analyticsMemoryValue(found) {
       num2 = 0;
     }
     obj2.p999 = ConjureDebugFormat.formatBytes(num2);
-    let formatToPlainStringResult = intl.formatToPlainString(_modDef3831["XO/bN4"], obj2);
+    let formatToPlainStringResult = intl.formatToPlainString(_modDef3863["XO/bN4"], obj2);
     const tmp2Result = ConjureDebugFormat;
   } else {
     formatToPlainStringResult = null;
@@ -212,16 +212,16 @@ export const analyticsRoleLabel = function analyticsRoleLabel(role) {
 export const sandboxRestartStatus = function sandboxRestartStatus(restartState) {
   if ("idle" === restartState) {
     const intl2 = util.intl;
-    return intl2.string(_modDef3831.mlok8D);
+    return intl2.string(_modDef3863.mlok8D);
   } else if ("pending" === restartState) {
     const intl = util.intl;
-    return intl.string(_modDef3831["1ugSyK"]);
+    return intl.string(_modDef3863["1ugSyK"]);
   } else {
     const intl3 = util.intl;
     if ("restarted" === restartState.outcome) {
-      let FiVRoT = _modDef3831["76mfqO"];
+      let FiVRoT = _modDef3863["76mfqO"];
     } else {
-      FiVRoT = _modDef3831.FiVRoT;
+      FiVRoT = _modDef3863.FiVRoT;
     }
     let str = restartState.reason;
     if (str == null) {

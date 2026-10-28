@@ -199,7 +199,7 @@ Object.defineProperty(obj3, "guildEventLocationRules", { get: () => closure_17()
 Object.defineProperty(obj3, "notifCenterV2MessagePreviewRules", { get: () => closure_19(), set: undefined });
 obj3.lockscreenWidgetMessageRules = { text: MarkupRulesDefault.RULES.text };
 obj3.astParserFor = MarkupParserAll.astParserFor;
-obj3.reactParserFor = fn(15124).default;
+obj3.reactParserFor = fn(15349).default;
 obj3.parse = function parse() {
   const items = [...arguments];
   return closure_20()(...items);

@@ -6,7 +6,7 @@ import GuildIncidentsStore from "../../../guild_antiraid/GuildIncidentsStore.tsx
 
 require = fn;
 const ReactCompilerGating = fn(558);
-const SettingBuilders = fn(11212);
+const SettingBuilders = fn(11248);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useHasCommunityActivityAlertsSetting() {
       const cResult = c.c(2);
@@ -36,7 +36,7 @@ const route = SettingBuilders.createRoute({
     const intl = util.intl;
     return intl.string(util.t.D9yVAH);
   },
-  parent: fn(8331).MobileUserSettings.NOTIFICATIONS,
+  parent: fn(8365).MobileUserSettings.NOTIFICATIONS,
   useDescription: function useCommunityActivityAlertsSettingDescription() {
     const intl = util.intl;
     return intl.string(util.t["0PhAOH"]);

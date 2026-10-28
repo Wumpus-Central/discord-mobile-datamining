@@ -1,6 +1,5 @@
 // discord_app/modules/collectibles/hooks/useShopProductItems.tsx
 import c from "../../../../_runtime/00576_c.js";
-import util from "../../../intl/index.native.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -159,42 +158,3 @@ export const useShopProductItems = ReactCompilerGating.isReactCompilerEnabled()
         }
       }, items);
     };
-export const getBundleItemNames = function getBundleItemNames(bundledProducts) {
-  const intl = util.intl;
-  let stringResult = intl.string(util.t["7v0T9P"]);
-  const intl2 = util.intl;
-  let stringResult1 = intl2.string(util.t.wR5wOo);
-  const intl3 = util.intl;
-  let stringResult2 = intl3.string(util.t.x5CoXR);
-  let itemThreeName = stringResult2;
-  let itemTwoName = stringResult1;
-  let itemOneName = stringResult;
-  if (null != bundledProducts.bundledProducts) {
-    if (bundledProducts.bundledProducts.length > 0) {
-      const first = bundledProducts.bundledProducts[0];
-      let name;
-      if (first != null) {
-        name = first.name;
-      }
-      stringResult = name;
-    }
-    if (bundledProducts.bundledProducts.length > 1) {
-      let name1;
-      if (bundledProducts.bundledProducts[1] != null) {
-        name1 = tmp9.name;
-      }
-      stringResult1 = name1;
-    }
-    if (bundledProducts.bundledProducts.length > 2) {
-      let name2;
-      if (bundledProducts.bundledProducts[2] != null) {
-        name2 = tmp11.name;
-      }
-      stringResult2 = name2;
-    }
-    itemThreeName = stringResult2;
-    itemTwoName = stringResult1;
-    itemOneName = stringResult;
-  }
-  return { itemOneName, itemTwoName, itemThreeName };
-};

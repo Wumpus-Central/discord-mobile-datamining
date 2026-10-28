@@ -6,12 +6,12 @@ import TextStyles from "../../../rebrand/native/TextStyles.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const HubEmailConnectionSteps = fn(13677).HubEmailConnectionSteps;
+const HubEmailConnectionSteps = fn(13895).HubEmailConnectionSteps;
 const Constants = fn(1084);
 ({ AnalyticEvents: hasOwnProperty, Fonts } = Constants);
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   container: { display: "flex", alignItems: "center", justifyContent: "center", padding: 16 },
   header: null,
@@ -205,10 +205,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       const obj = onClose(1502);
       const obj6 = { source: null };
-      const tmp2 = invite(7239);
-      obj6.source = invite(13688);
-      obj5.leading = closure_6(invite(5670), obj6);
-      obj5.trailing = invite(7239).Arrow;
+      const tmp2 = invite(7273);
+      obj6.source = invite(13906);
+      obj5.leading = closure_6(invite(5705), obj6);
+      obj5.trailing = invite(7273).Arrow;
       const intl2 = onClose(1125).intl;
       obj5.label = intl2.string(onClose(1125).t["a7a/D+"]);
       const intl3 = onClose(1125).intl;
@@ -219,17 +219,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       };
       items[1] = closure_6(tmp2, obj5);
       const obj7 = { DEPRECATED_style: tmp.row, leading: null, trailing: null, label: null, onPress: null };
-      const tmp3 = invite(5670);
+      const tmp3 = invite(5705);
       const obj8 = { source: null };
-      const tmp4 = invite(7239);
-      obj8.source = invite(13689);
-      obj7.leading = closure_6(invite(5670), obj8);
-      obj7.trailing = invite(7239).Arrow;
+      const tmp4 = invite(7273);
+      obj8.source = invite(13907);
+      obj7.leading = closure_6(invite(5705), obj8);
+      obj7.trailing = invite(7273).Arrow;
       const intl4 = onClose(1125).intl;
       obj7.label = intl4.string(onClose(1125).t.GLG9n4);
       obj7.onPress = onClose;
       items[2] = closure_6(tmp4, obj7);
       obj3.children = items;
       obj2.children = closure_7(View, obj3);
-      return closure_6(onClose(13686).HubEmailConnectionScreen, obj2);
+      return closure_6(onClose(13904).HubEmailConnectionScreen, obj2);
     };

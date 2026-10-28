@@ -38,42 +38,42 @@ export default {
   colors: mapValuesDefault(SemanticColors, (arg0, arg1) => ({ [closure_1_6]: arg1 })),
   unsafe_rawColors: RawColors,
   shadows: mapValuesDefault(Shadows, (arg0) => {
-    let f86295 = (shadowOffset, arg1) => {
+    let f86870 = (shadowOffset, arg1) => {
       shadowOffset = undefined;
       if (!arg1) {
         shadowOffset = shadowOffset.shadowOffset;
       }
       return shadowOffset;
     };
-    f86295 = (shadowColorAndroid, arg1) =>
+    f86870 = (shadowColorAndroid, arg1) =>
       arg1 ? shadowColorAndroid.shadowColorAndroid : shadowColorAndroid.shadowColor;
-    f86295 = (shadowOpacity) => shadowOpacity.shadowOpacity;
-    f86295 = (shadowRadius) => shadowRadius.shadowRadius;
-    f86295 = (elevation) => elevation.elevation;
+    f86870 = (shadowOpacity) => shadowOpacity.shadowOpacity;
+    f86870 = (shadowRadius) => shadowRadius.shadowRadius;
+    f86870 = (elevation) => elevation.elevation;
     return {
       shadowOffset: {
         resolve(isAndroid) {
-          return f86295(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f86870(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       shadowColor: {
         resolve(isAndroid) {
-          return f86295(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f86870(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       shadowOpacity: {
         resolve(isAndroid) {
-          return f86295(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f86870(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       shadowRadius: {
         resolve(isAndroid) {
-          return f86295(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f86870(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
       elevation: {
         resolve(isAndroid) {
-          return f86295(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
+          return f86870(require[isAndroid.theme].nativeStyles, isAndroid.isAndroid);
         },
       },
     };
@@ -113,7 +113,7 @@ export default {
     getSemanticColorName(BACKGROUND_BASE_LOW) {
       return BACKGROUND_BASE_LOW[closure_6];
     },
-    resolveSemanticColor(theme, BACKGROUND_SURFACE_HIGH, semanticColorContextFromThemeContext) {
+    resolveSemanticColor(theme, TEXT_FEEDBACK_CRITICAL, semanticColorContextFromThemeContext) {
       sanitizeTheme(theme);
       const category = tmp3.category;
       let result = RawColors[tmp4.raw];
@@ -124,7 +124,7 @@ export default {
       }
       if (null != enabledExperiments1) {
         if (semanticColorContextFromThemeContext.enabledExperiments.length > 0) {
-          if (null != SemanticColorExperiments[BACKGROUND_SURFACE_HIGH[closure_6]]) {
+          if (null != SemanticColorExperiments[TEXT_FEEDBACK_CRITICAL[closure_6]]) {
             const enabledExperiments = semanticColorContextFromThemeContext.enabledExperiments;
             for (const item10035 of enabledExperiments) {
               let tmp12;
@@ -213,7 +213,7 @@ export default {
         }
         if (null != enabledExperiments3) {
           if (semanticColorContextFromThemeContext.enabledExperiments.length > 0) {
-            if (null != SemanticColorExperiments[BACKGROUND_SURFACE_HIGH[closure_6]]) {
+            if (null != SemanticColorExperiments[TEXT_FEEDBACK_CRITICAL[closure_6]]) {
               const enabledExperiments2 = semanticColorContextFromThemeContext.enabledExperiments;
               for (const item10067 of enabledExperiments2) {
                 let gradient3;

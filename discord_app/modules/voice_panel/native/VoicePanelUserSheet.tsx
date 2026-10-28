@@ -18,7 +18,7 @@ const RelationshipTypes = fn(1084).RelationshipTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_12, jsxs: map1 } = jsxProd);
 let c14 = 48;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   wrapper: { gap: 12, padding: 16 },
   card: {
@@ -397,8 +397,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmpResult4 = channelId(504);
       const stateFromStores2 = channelId(504).useStateFromStores(tmp13, tmp14);
       const tmpResult5 = channelId(504);
-      const name = channelId(5990).useName(guildId, channelId, stateFromStores);
-      const live = userId(14362)(userId).live;
+      const name = channelId(6025).useName(guildId, channelId, stateFromStores);
+      const live = userId(14585)(userId).live;
       noop = tmp17;
       if (cResult[8] !== (null == stateFromStores || null == stateFromStores1 || null == stateFromStores2)) {
         class C {
@@ -466,8 +466,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items2 = [UserStore];
       const stateFromStores2 = channelId(504).useStateFromStores(items2, () => currentUser.getCurrentUser());
       const obj4 = channelId(504);
-      const name = channelId(5990).useName(guildId, channelId, stateFromStores);
-      const live = userId(14362)(userId).live;
+      const name = channelId(6025).useName(guildId, channelId, stateFromStores);
+      const live = userId(14585)(userId).live;
       noop = tmp8;
       const items3 = [null == stateFromStores || null == stateFromStores1 || null == stateFromStores2];
       const effect = noop.useEffect(() => {
@@ -480,8 +480,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (null != stateFromStores2) {
             const avatarURL = stateFromStores.getAvatarURL(guildId, 48, false);
             if (null != avatarURL) {
-              const cachedSourceFromURI = channelId(9418).getCachedSourceFromURI(avatarURL);
-              const tmp2Result = channelId(9418);
+              const cachedSourceFromURI = channelId(9450).getCachedSourceFromURI(avatarURL);
+              const tmp2Result = channelId(9450);
             }
             const avatarDecoration = stateFromStores.avatarDecoration;
             const obj2 = { bottom: true, style: tmp.wrapper, children: null };
@@ -502,14 +502,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 height: v48,
                 style: tmp.avatar,
               };
-              tmp11Result = closure_12(tmp7(5670), size);
-              const tmp7Result = tmp7(5670);
+              tmp11Result = closure_12(tmp7(5705), size);
+              const tmp7Result = tmp7(5705);
             }
             const obj9 = { scrollable: true, children: null };
             const obj10 = { children: null };
             const items4 = [tmp11Result];
             const obj11 = { variant: "text-md/semibold", style: tmp.username, lineClamp: 1, children: name };
-            items4[1] = closure_12(channelId(5235).Text, obj11);
+            items4[1] = closure_12(channelId(5270).Text, obj11);
             obj7.children = items4;
             const items5 = [closure_13(closure_6, obj7)];
             const obj12 = { userId: stateFromStores.id, currentUserId: stateFromStores2.id, channelId, guildId };
@@ -535,11 +535,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               currentUser: stateFromStores2,
               style: tmp.card,
             };
-            items6[2] = closure_12(tmp7(14365), obj13);
+            items6[2] = closure_12(tmp7(14588), obj13);
             obj2.children = items6;
-            obj10.children = closure_13(channelId(7223).SafeAreaPaddingView, obj2);
-            obj9.children = closure_12(channelId(5270).BottomSheetScrollView, obj10);
-            return closure_12(channelId(5266).BottomSheet, obj9);
+            obj10.children = closure_13(channelId(7257).SafeAreaPaddingView, obj2);
+            obj9.children = closure_12(channelId(5305).BottomSheetScrollView, obj10);
+            return closure_12(channelId(5301).BottomSheet, obj9);
           }
         }
       }

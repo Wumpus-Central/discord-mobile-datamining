@@ -13,11 +13,11 @@ const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
 const MetaQuestUtils = fn(1627);
 if (MetaQuestUtils.isMetaQuest()) {
-  let MobilePhoneShareIcon = fn(13470).ScreenArrowIcon;
+  let MobilePhoneShareIcon = fn(13689).ScreenArrowIcon;
 } else {
-  MobilePhoneShareIcon = fn(18677).MobilePhoneShareIcon;
+  MobilePhoneShareIcon = fn(18928).MobilePhoneShareIcon;
 }
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_8 = createStyles.createStyles({
   iconContainer: {
     position: "absolute",

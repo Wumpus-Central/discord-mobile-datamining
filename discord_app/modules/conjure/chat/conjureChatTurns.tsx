@@ -3,16 +3,16 @@ import conjureStepTimeline from "conjureStepTimeline.tsx";
 import conjureChatHistory from "conjureChatHistory.tsx";
 import size from "../../../../_runtime/metro/00002__.js";
 
-function findOpenTurn(map) {
+function findOpenTurn(messages) {
   let tmp;
-  if (null == map) {
+  if (null == messages) {
     return null;
   } else {
-    let diff = map.length - 1;
+    let diff = messages.length - 1;
     let flag2 = false;
     if (0 <= diff) {
       while (true) {
-        tmp = map[diff];
+        tmp = messages[diff];
         let tmp4 = flag2;
         if ("assistant" === tmp.role) {
           let tmp5 =

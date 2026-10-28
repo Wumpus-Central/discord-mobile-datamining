@@ -12,16 +12,16 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, Pressable: metroRequire } = get_ActivityIndicator);
-const IGDB_ATTRIBUTION_LINK = fn(8839).IGDB_ATTRIBUTION_LINK;
+const IGDB_ATTRIBUTION_LINK = fn(8876).IGDB_ATTRIBUTION_LINK;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = {};
-obj[fn(8830).PlatformType.DESKTOP] = fn(9482).ScreenIcon;
-obj.mobile = fn(7055).MobilePhoneIcon;
-obj[fn(8830).PlatformType.XBOX] = fn(9292).XboxNeutralIcon;
-obj[fn(8830).PlatformType.PLAYSTATION] = fn(9484).PlaystationNeutralIcon;
-obj[fn(8830).PlatformType.NINTENDO] = fn(9486).NintendoSwitchNeutralIcon;
-const createStyles = fn(4972);
+obj[fn(8867).PlatformType.DESKTOP] = fn(9514).ScreenIcon;
+obj.mobile = fn(7089).MobilePhoneIcon;
+obj[fn(8867).PlatformType.XBOX] = fn(9324).XboxNeutralIcon;
+obj[fn(8867).PlatformType.PLAYSTATION] = fn(9516).PlaystationNeutralIcon;
+obj[fn(8867).PlatformType.NINTENDO] = fn(9518).NintendoSwitchNeutralIcon;
+const createStyles = fn(5004);
 let obj3 = {
   container: { gap: nativeDefault.space.PX_8 },
   headerText: null,
@@ -144,7 +144,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = closure_11();
       importDefault = tmp4;
       obj = trackAction(576);
-      const gameProfileLinks = trackAction(9488).useGameProfileLinks(game);
+      const gameProfileLinks = trackAction(9520).useGameProfileLinks(game);
       const arr2 = useGameProfilePlatformsDefault(game);
       if (null != game) {
         if (cResult[1] === game) {
@@ -165,7 +165,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           let joined;
           if (game != null) {
             const genres1 = game.genres;
-            const mapped = genres1.map(trackAction(9303).getGenreText);
+            const mapped = genres1.map(trackAction(9335).getGenreText);
             joined = mapped.join(", ");
           }
           let genres2;
@@ -349,10 +349,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   const _Date = Date;
                   const date = new Date(tmp30);
-                  const dateFormatResult = tmp5(4797).dateFormat(date, "LL");
+                  const dateFormatResult = tmp5(4829).dateFormat(date, "LL");
                   cResult[34] = tmp30;
                   cResult[35] = dateFormatResult;
-                  const obj8 = tmp5(4797);
+                  const obj8 = tmp5(4829);
                 } else {
                   class O {
                     constructor(arg0) {
@@ -556,7 +556,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               style: headerText,
               children: tmp56,
             };
-            const tmp59 = closure_8(trackAction(5235).Text, obj5);
+            const tmp59 = closure_8(trackAction(5270).Text, obj5);
             cResult[61] = tmp4.headerText;
             cResult[62] = tmp59;
           } else {
@@ -615,7 +615,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           cResult[67] = mapped4;
         }
       }
-      const obj2 = trackAction(9488);
+      const obj2 = trackAction(9520);
     }
   : function GameProfileDetails(game) {
       game = game.game;
@@ -689,7 +689,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (length.length <= 0) {
                   const mapped3 = gameProfileLinks.map((item) =>
-                    trackAction(9490)(item, trackAction(587).colors.ICON_SUBTLE),
+                    trackAction(9522)(item, trackAction(587).colors.ICON_SUBTLE),
                   );
                   const found = mapped3.filter((item) => null != item);
                   if (found.length > 0) {
@@ -735,7 +735,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       obj = {
                         size: "md",
                         color: trackAction(587).colors.ICON_SUBTLE,
-                        accessibilityLabel: game(9489).getGameProfilePlatformText(item),
+                        accessibilityLabel: game(9521).getGameProfilePlatformText(item),
                       };
                       return closure_1_8(closure_1_10[item], obj, item);
                     }),

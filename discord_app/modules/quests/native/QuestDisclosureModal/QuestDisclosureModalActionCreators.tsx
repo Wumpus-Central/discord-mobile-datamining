@@ -65,8 +65,8 @@ export default {
     const obj9 = {};
     const merged1 = Object.assign(tmp6);
     obj9.isTargetedDisclosure = isTargetedDisclosure.isTargetedDisclosure;
-    obj4.pushLazy(asyncRequireImpl(16497, dependencyMap.paths), obj9, QUEST_DISCLOSURE_MODAL);
-    const tmp5 = asyncRequireImpl(16497, dependencyMap.paths);
+    obj4.pushLazy(asyncRequireImpl(16726, dependencyMap.paths), obj9, QUEST_DISCLOSURE_MODAL);
+    const tmp5 = asyncRequireImpl(16726, dependencyMap.paths);
   },
   hideModal() {
     ModalActionCreatorsDefault.popWithKey(QUEST_DISCLOSURE_MODAL);

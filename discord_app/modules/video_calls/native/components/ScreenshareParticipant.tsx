@@ -8,7 +8,7 @@ const View = fn(17).View;
 const ApplicationStreamStates = fn(1084).ApplicationStreamStates;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   container: {
     alignItems: "center",
@@ -16,7 +16,6 @@ let obj2 = {
     flex: 1,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW,
   },
-  image: { marginBottom: 12 },
   title: { textAlign: "center", marginBottom: 8 },
   description: { lineHeight: 18, textAlign: "center", marginBottom: 16 },
 };
@@ -33,7 +32,7 @@ const result = size.fileFinishedImporting("modules/video_calls/native/components
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ScreenshareParticipant(participant) {
-      const cResult = participant(onDoubleTap[8]).c(35);
+      const cResult = participant(onDoubleTap[8]).c(32);
       participant = participant.participant;
       const onSingleTap = participant.onSingleTap;
       onDoubleTap = participant.onDoubleTap;
@@ -78,8 +77,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               if (cResult[12] === tmp10.container) {
                 let tmp16 = cResult[13];
               }
-              if (cResult[14] !== tmp10.image) {
-                const obj2 = { source: null, style: null };
+              if (cResult[14] !== stateFromStores) {
+                const string = tmp(tmp2[11]).intl.string;
+                const t = tmp(tmp2[11]).t;
                 class A {
                   constructor() {
                     currentUserActiveStream = closure_1_5.getCurrentUserActiveStream();
@@ -90,38 +90,16 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return state === closure_1_6.PAUSED;
                   }
                 }
-                obj2.style = tmp10.image;
-                const tmp20 = closure_7(tmp7(tmp2[11]), obj2);
-                cResult[14] = tmp10.image;
-                cResult[15] = tmp20;
-                let tmp17 = tmp20;
-                const tmp7Result = tmp7(tmp2[11]);
+                cResult[14] = stateFromStores;
+                cResult[15] = tmp18;
               } else {
-                tmp17 = cResult[15];
-              }
-              if (cResult[16] !== stateFromStores) {
-                const string = tmp(tmp2[13]).intl.string;
-                const t = tmp(tmp2[13]).t;
-                class A {
-                  constructor() {
-                    currentUserActiveStream = closure_1_5.getCurrentUserActiveStream();
-                    state = undefined;
-                    if (currentUserActiveStream != null) {
-                      state = currentUserActiveStream.state;
-                    }
-                    return state === closure_1_6.PAUSED;
+                if (cResult[16] === tmp10.title) {
+                  if (cResult[17] === tmp17) {
+                    let tmp20 = cResult[18];
                   }
-                }
-                cResult[16] = stateFromStores;
-                cResult[17] = tmp22;
-              } else {
-                if (cResult[18] === tmp10.title) {
-                  if (cResult[19] === tmp21) {
-                    let tmp24 = cResult[20];
-                  }
-                  if (cResult[21] !== stateFromStores) {
-                    const string2 = tmp(tmp2[13]).intl.string;
-                    const t2 = tmp(tmp2[13]).t;
+                  if (cResult[19] !== stateFromStores) {
+                    const string2 = tmp(tmp2[11]).intl.string;
+                    const t2 = tmp(tmp2[11]).t;
                     class A {
                       constructor() {
                         currentUserActiveStream = closure_1_5.getCurrentUserActiveStream();
@@ -132,12 +110,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         return state === closure_1_6.PAUSED;
                       }
                     }
-                    cResult[21] = stateFromStores;
-                    cResult[22] = tmp29;
+                    cResult[19] = stateFromStores;
+                    cResult[20] = tmp25;
                   } else {
-                    if (cResult[23] === tmp10.description) {
-                      if (cResult[24] === tmp28) {
-                        let tmp31 = cResult[25];
+                    if (cResult[21] === tmp10.description) {
+                      if (cResult[22] === tmp24) {
+                        let tmp27 = cResult[23];
                       }
                       const _Symbol2 = Symbol;
                       class A {
@@ -150,48 +128,45 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                           return state === closure_1_6.PAUSED;
                         }
                       }
-                      if (cResult[27] === tmp31) {
-                        if (cResult[28] === tmp16) {
-                          if (cResult[29] === tmp17) {
-                            if (cResult[30] === tmp24) {
+                      if (cResult[25] === tmp27) {
+                        if (cResult[26] === tmp16) {
+                          if (cResult[27] === tmp20) {
+                            let tmp33 = cResult[28];
+                          }
+                          if (cResult[29] === tmp8) {
+                            if (cResult[30] === tmp33) {
                               let tmp37 = cResult[31];
                             }
-                            if (cResult[32] === tmp8) {
-                              if (cResult[33] === tmp37) {
-                                let tmp41 = cResult[34];
-                              }
-                              return tmp41;
-                            }
-                            class A {
-                              constructor() {
-                                currentUserActiveStream = closure_1_5.getCurrentUserActiveStream();
-                                state = undefined;
-                                if (currentUserActiveStream != null) {
-                                  state = currentUserActiveStream.state;
-                                }
-                                return state === closure_1_6.PAUSED;
-                              }
-                            }
-                            tmp43[0] = tmp8;
-                            tmp43[1] = tmp37;
-                            const tmp44 = closure_7(tmp(tmp2[17]).GestureDetector, tmp43);
-                            cResult[32] = tmp8;
-                            cResult[33] = tmp37;
-                            cResult[34] = tmp44;
-                            tmp41 = tmp44;
+                            return tmp37;
                           }
+                          class A {
+                            constructor() {
+                              currentUserActiveStream = closure_1_5.getCurrentUserActiveStream();
+                              state = undefined;
+                              if (currentUserActiveStream != null) {
+                                state = currentUserActiveStream.state;
+                              }
+                              return state === closure_1_6.PAUSED;
+                            }
+                          }
+                          tmp39[0] = tmp8;
+                          tmp39[1] = tmp33;
+                          const tmp40 = closure_7(tmp(tmp2[15]).GestureDetector, tmp39);
+                          cResult[29] = tmp8;
+                          cResult[30] = tmp33;
+                          cResult[31] = tmp40;
+                          tmp37 = tmp40;
                         }
                       }
-                      const obj3 = { style: tmp16, children: null };
-                      const items1 = [tmp17, tmp24, tmp31, tmp36];
-                      obj3.children = items1;
-                      const tmp40 = closure_8(View, obj3);
-                      cResult[27] = tmp31;
-                      cResult[28] = tmp16;
-                      cResult[29] = tmp17;
-                      cResult[30] = tmp24;
-                      cResult[31] = tmp40;
-                      tmp37 = tmp40;
+                      const obj2 = { style: tmp16, children: null };
+                      const items1 = [tmp20, tmp27, tmp32];
+                      obj2.children = items1;
+                      const tmp36 = closure_8(View, obj2);
+                      cResult[25] = tmp27;
+                      cResult[26] = tmp16;
+                      cResult[27] = tmp20;
+                      cResult[28] = tmp36;
+                      tmp33 = tmp36;
                     }
                     class A {
                       constructor() {
@@ -203,13 +178,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                         return state === closure_1_6.PAUSED;
                       }
                     }
-                    tmp33[0] = tmp10.description;
-                    tmp33[3] = cResult[22];
-                    const tmp34 = closure_7(tmp(tmp2[14]).Text, tmp33);
-                    cResult[23] = tmp10.description;
-                    cResult[24] = cResult[22];
-                    cResult[25] = tmp34;
-                    tmp31 = tmp34;
+                    tmp29[0] = tmp10.description;
+                    tmp29[3] = cResult[20];
+                    const tmp30 = closure_7(tmp(tmp2[12]).Text, tmp29);
+                    cResult[21] = tmp10.description;
+                    cResult[22] = cResult[20];
+                    cResult[23] = tmp30;
+                    tmp27 = tmp30;
                   }
                 }
                 class A {
@@ -222,13 +197,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                     return state === closure_1_6.PAUSED;
                   }
                 }
-                tmp26[0] = tmp10.title;
-                tmp26[4] = cResult[17];
-                const tmp27 = closure_7(tmp(tmp2[14]).Text, tmp26);
-                cResult[18] = tmp10.title;
-                cResult[19] = cResult[17];
-                cResult[20] = tmp27;
-                tmp24 = tmp27;
+                tmp22[0] = tmp10.title;
+                tmp22[4] = cResult[15];
+                const tmp23 = closure_7(tmp(tmp2[12]).Text, tmp22);
+                cResult[16] = tmp10.title;
+                cResult[17] = cResult[15];
+                cResult[18] = tmp23;
+                tmp20 = tmp23;
               }
             }
             const items2 = [tmp10.container, containerStyle];
@@ -236,14 +211,13 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             cResult[12] = tmp10.container;
             cResult[13] = items2;
             tmp16 = items2;
-            tmp7 = onSingleTap;
             let tmpResult = tmp(tmp2[10]);
           }
-          const obj4 = { onSingleTapStart: null, onDoubleTapStart: tmp5 };
+          const obj3 = { onSingleTapStart: null, onDoubleTapStart: tmp5 };
           cResult[6] = tmp5;
           cResult[7] = tmp4;
-          cResult[8] = obj4;
-          tmp6 = obj4;
+          cResult[8] = obj3;
+          tmp6 = obj3;
         }
         const fn2 = function b() {
           let tmpResult;
@@ -305,50 +279,45 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj3 = { style: null, children: null };
       const items3 = [tmp5.container, participant.containerStyle];
       obj3.style = items3;
-      const obj4 = { source: null, style: null };
-      const obj = participant(onDoubleTap[10]);
-      obj4.source = onSingleTap(onDoubleTap[12]);
-      obj4.style = tmp5.image;
-      const items4 = [closure_7(onSingleTap(onDoubleTap[11]), obj4), , ,];
-      const obj5 = {
+      const obj4 = {
         style: tmp5.title,
         accessibilityRole: "header",
         variant: "heading-lg/extrabold",
         color: "mobile-text-heading-primary",
         children: null,
       };
-      const intl = participant(onDoubleTap[13]).intl;
+      const intl = participant(onDoubleTap[11]).intl;
       const string = intl.string;
-      const t = participant(onDoubleTap[13]).t;
+      const t = participant(onDoubleTap[11]).t;
       if (stateFromStores) {
         let stringResult = string(t["5q17w5"]);
       } else {
         stringResult = string(t.gMOwov);
       }
-      obj5.children = stringResult;
-      items4[1] = closure_7(participant(onDoubleTap[14]).Text, obj5);
-      const obj6 = {
+      obj4.children = stringResult;
+      const items4 = [closure_7(participant(onDoubleTap[12]).Text, obj4), ,];
+      const obj5 = {
         style: tmp5.description,
         variant: "text-sm/medium",
         color: "interactive-text-default",
         children: null,
       };
-      const intl2 = tmp6(tmp3[13]).intl;
+      const intl2 = tmp6(tmp3[11]).intl;
       const string2 = intl2.string;
-      const t2 = tmp6(tmp3[13]).t;
+      const t2 = tmp6(tmp3[11]).t;
       if (stateFromStores) {
         let string2Result = string2(t2.LV1NSN);
       } else {
         string2Result = string2(t2.dKeLGt);
       }
-      obj6.children = string2Result;
-      items4[2] = closure_7(participant(onDoubleTap[14]).Text, obj6);
-      const obj7 = { variant: "primary-overlay", text: null, onPress: null };
-      const intl3 = tmp6(tmp3[13]).intl;
-      obj7.text = intl3.string(participant(onDoubleTap[13]).t.CpkXwZ);
-      obj7.onPress = participant(onDoubleTap[16]).stopScreenshare;
-      items4[3] = closure_7(participant(onDoubleTap[15]).Button, obj7);
+      obj5.children = string2Result;
+      items4[1] = closure_7(participant(onDoubleTap[12]).Text, obj5);
+      const obj6 = { variant: "primary-overlay", text: null, onPress: null };
+      const intl3 = tmp6(tmp3[11]).intl;
+      obj6.text = intl3.string(participant(onDoubleTap[11]).t.CpkXwZ);
+      obj6.onPress = participant(onDoubleTap[14]).stopScreenshare;
+      items4[2] = closure_7(participant(onDoubleTap[13]).Button, obj6);
       obj3.children = items4;
       obj2.children = closure_8(View, obj3);
-      return closure_7(participant(onDoubleTap[17]).GestureDetector, obj2);
+      return closure_7(participant(onDoubleTap[15]).GestureDetector, obj2);
     };

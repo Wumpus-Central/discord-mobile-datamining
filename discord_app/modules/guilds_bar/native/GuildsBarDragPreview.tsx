@@ -1,6 +1,6 @@
 // discord_app/modules/guilds_bar/native/GuildsBarDragPreview.tsx
 import c from "../../../../_runtime/00576_c.js";
-import _mod4887 from "../../../../_runtime/metro/04887__.js";
+import _mod4919 from "../../../../_runtime/metro/04919__.js";
 import native from "../../../../discord_common/js/packages/design/native.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import spring from "../../../design/animation/reanimated/spring/spring.tsx";
@@ -14,16 +14,16 @@ function getItemPreviewKey(id) {
 function renderAnimatedItemPreview(key, node, transitionState, cleanUp) {
   return <closure_26 key={key} node={node} transitionState={transitionState} cleanUp={cleanUp} />;
 }
-const GuildsNodeType = fn(6702).GuildsNodeType;
-const GUILD_ITEM_INSET_LEFT = fn(17772).GUILD_ITEM_INSET_LEFT;
+const GuildsNodeType = fn(6736).GuildsNodeType;
+const GUILD_ITEM_INSET_LEFT = fn(18009).GUILD_ITEM_INSET_LEFT;
 const jsx = fn(21).jsx;
-let createStyles = fn(4972);
+let createStyles = fn(5004);
 let closure_8 = createStyles.createStyles({
   dragPreview: { position: "absolute", left: 0 },
   animatedPreviewStyle: { position: "absolute" },
   dragPreviewHome: { right: 0 },
 });
-createStyles = fn(4972);
+createStyles = fn(5004);
 let closure_9 = createStyles.createStyles((arg0) => {
   const obj = { animatedPreviewStyleHome: null };
   const rect = { left: 0, right: 0, transformOrigin: null };
@@ -189,7 +189,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "Reflect",
               name: "Array",
-              color: "enumerable",
+              color: "k",
               expanded: null,
               children: null,
             };
@@ -379,7 +379,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               id: -1,
               parentId: "Reflect",
               name: "Array",
-              color: "enumerable",
+              color: "k",
               expanded: null,
               children: null,
             };
@@ -891,11 +891,11 @@ export default noop.memo(
                     overState: null,
                     overNode: null,
                     dropPosition: "o",
-                    gestureState: "loading",
+                    gestureState: "absolute",
                     scrollPosition: null,
-                    dragRegion: null,
-                    windowSize: 12,
-                    dropComplete: null,
+                    dragRegion: -4,
+                    windowSize: 8,
+                    dropComplete: 8,
                     listInsets: null,
                   };
                   ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
@@ -922,7 +922,7 @@ export default noop.memo(
         } else {
           first = cResult[0];
         }
-        const tmp5 = GuildsBarDnDStore(first, _mod4887.shallow);
+        const tmp5 = GuildsBarDnDStore(first, _mod4919.shallow);
         if (cResult[1] !== tmp5) {
           let tmp7 = null;
           if (null != tmp5) {
@@ -991,11 +991,11 @@ export default noop.memo(
                   overState: null,
                   overNode: null,
                   dropPosition: "o",
-                  gestureState: "loading",
+                  gestureState: "absolute",
                   scrollPosition: null,
-                  dragRegion: null,
-                  windowSize: 12,
-                  dropComplete: null,
+                  dragRegion: -4,
+                  windowSize: 8,
+                  dropComplete: 8,
                   listInsets: null,
                 };
                 ({ node: obj.draggedNode, itemSize: obj.draggedHeight } = dragSpecs);
@@ -1016,7 +1016,7 @@ export default noop.memo(
             }
             return null;
           }
-        }, _mod4887.shallow);
+        }, _mod4919.shallow);
         let tmp2 = null;
         if (null != tmp) {
           let obj = {};

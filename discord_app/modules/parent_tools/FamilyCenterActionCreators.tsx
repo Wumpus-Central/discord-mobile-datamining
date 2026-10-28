@@ -396,7 +396,7 @@ let closure_15 = async function _shareIarWithParents() {
     }
   }
 };
-const FamilyCenterAction = fn(7647).FamilyCenterAction;
+const FamilyCenterAction = fn(7681).FamilyCenterAction;
 const Constants = fn(1084);
 ({ AnalyticEvents: metroRequire, Endpoints: closure_7 } = Constants);
 const size = fn(2);
@@ -1057,13 +1057,13 @@ export default {
               return obj3;
             } else {
               let settings2;
-              const protoFieldClass = tmp5(4806).getProtoFieldClass(tmp5(1208).PreloadedUserSettings, tmp2);
+              const protoFieldClass = tmp5(4838).getProtoFieldClass(tmp5(1208).PreloadedUserSettings, tmp2);
               settings = settings.getSettings(tmp5);
               let tmp13;
               if (settings != null) {
                 tmp13 = settings[tmp2];
               }
-              const tmp33Result = tmp5(4806);
+              const tmp33Result = tmp5(4838);
               const modifiedProto = tmp33Result.createModifiedProto(
                 tmp13,
                 closure_2,
@@ -1089,7 +1089,7 @@ export default {
               } else {
                 c3 = 3;
               }
-              const obj12 = tmp5(4806);
+              const obj12 = tmp5(4838);
             }
           } else if (arg0 === 1) {
             c3 = 3;

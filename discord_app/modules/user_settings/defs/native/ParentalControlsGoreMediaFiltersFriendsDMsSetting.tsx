@@ -5,14 +5,14 @@ import useParentalControlSettings from "../../../parent_tools/hooks/useParentalC
 import FamilyCenterControlledSettingsUtils from "../../../parent_tools/FamilyCenterControlledSettingsUtils.tsx";
 import FamilyCenterStore from "../../../parent_tools/FamilyCenterStore.tsx";
 
-const ExplicitMediaRedactionUtils = obj(8586);
+const ExplicitMediaRedactionUtils = obj(8623);
 require = fn;
 const ReactCompilerGating = fn(558);
 function getTitle() {
   const intl = util.intl;
   return intl.string(util.t["+uI23H"]);
 }
-const SettingBuilders = fn(11212);
+const SettingBuilders = fn(11248);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useGoreContentFriendsDmSettingValue() {
       let obj = require;
@@ -49,7 +49,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
     };
 const pressable = SettingBuilders.createPressable({
   useTitle: getTitle,
-  parent: fn(8331).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
+  parent: fn(8365).MobileUserSettings.PARENTAL_CONTROLS_SENSITIVE_CONTENT_FILTERS,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useGoreContentFriendsDmSettingValue() {
         let obj = require;
@@ -87,7 +87,7 @@ const pressable = SettingBuilders.createPressable({
   onPress: function onGoreContentFriendsDmOnPress() {
     const selectedTeenId = FamilyCenterStore.getSelectedTeenId();
     if (null != selectedTeenId) {
-      const obj = selectedTeenId(16151);
+      const obj = selectedTeenId(16379);
       const obj3 = { title: null, subtitle: null, handlePress: null, currentValue: null, excluded: null };
       const intl = selectedTeenId(1125).intl;
       obj3.title = intl.string(selectedTeenId(1125).t["16/3Bi"]);
@@ -99,8 +99,8 @@ const pressable = SettingBuilders.createPressable({
       obj3.currentValue = obj.getGoreContentSettingOrDefault(selectedTeenId).goreContentFriendDm;
       const items = [selectedTeenId(1208).ExplicitContentRedaction.SHOW];
       obj3.excluded = items;
-      const result = selectedTeenId(16156).handleSensitiveMediaFilterPress(obj3);
-      const obj2 = selectedTeenId(16156);
+      const result = selectedTeenId(16384).handleSensitiveMediaFilterPress(obj3);
+      const obj2 = selectedTeenId(16384);
     }
   },
   unsearchable: true,

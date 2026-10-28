@@ -1,7 +1,7 @@
 // discord_app/modules/embedded_apps/native/shell/createShellHtml.tsx
 import EmbeddedAppConstants from "../../EmbeddedAppConstants.tsx";
 import bridgeProtocol from "../../../../../discord_common/js/packages/embedded-app-shims/src/native-shell/bridgeProtocol.tsx";
-import _modDef11502 from "../../../../../_runtime/metro/11502__.js";
+import _modDef11540 from "../../../../../_runtime/metro/11540__.js";
 import size from "../../../../../_runtime/metro/00002__.js";
 
 let closure_3 = EmbeddedAppConstants.EMBEDDED_APP_FRAME_ELEMENT_ID;
@@ -20,7 +20,7 @@ export const createShellHtml = function createShellHtml(shimVersion) {
     str2 = ' csp="' + iframeCsp + '"';
   }
   if (null != shellBridgeSecret) {
-    const tmp5 = _modDef11502;
+    const tmp5 = _modDef11540;
     const _JSON = JSON;
     const _JSON2 = JSON;
     const json = JSON.stringify(shellBridgeSecret);

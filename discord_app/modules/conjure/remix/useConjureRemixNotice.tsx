@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/remix/useConjureRemixNotice.tsx
-import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
 import conjureRemixConnection from "conjureRemixConnection.tsx";
 import noop from "../../../../_runtime/metro/00019__.js";
 import ConjureRemixStore from "ConjureRemixStore.tsx";
@@ -48,7 +48,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] !== stateFromStores) {
           const intl = tmp(1125).intl;
           const obj2 = { reason: stateFromStores };
-          const formatResult = intl.format(_modDef3831.Up6Ssw, obj2);
+          const formatResult = intl.format(_modDef3863.Up6Ssw, obj2);
           cResult[5] = stateFromStores;
           cResult[6] = formatResult;
           let tmp9 = formatResult;
@@ -58,7 +58,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol = Symbol;
         if (cResult[7] === Symbol.for("react.memo_cache_sentinel")) {
           const intl2 = tmp(1125).intl;
-          const stringResult = intl2.string(_modDef3831["ywA+ET"]);
+          const stringResult = intl2.string(_modDef3863["ywA+ET"]);
           cResult[7] = stringResult;
           let tmp12 = stringResult;
         } else {
@@ -93,10 +93,10 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { message: null, retry: null };
         const intl = tmp(1125).intl;
         const obj3 = { reason: stateFromStores };
-        obj2.message = intl.format(_modDef3831.Up6Ssw, obj3);
+        obj2.message = intl.format(_modDef3863.Up6Ssw, obj3);
         const obj4 = { text: null, onClick: null };
         const intl2 = tmp(1125).intl;
-        obj4.text = intl2.string(_modDef3831["ywA+ET"]);
+        obj4.text = intl2.string(_modDef3863["ywA+ET"]);
         obj4.onClick = tmp4;
         obj2.retry = obj4;
         tmp5 = obj2;

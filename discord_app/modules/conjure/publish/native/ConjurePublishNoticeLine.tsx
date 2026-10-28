@@ -3,17 +3,19 @@ import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import ActionSheetActionCreators from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
+import useConjurePublishedServerNameDefault from "../useConjurePublishedServerName.tsx";
 import conjurePublishCard from "../conjurePublishCard.tsx";
 import useConjurePublishedAppNameDefault from "../useConjurePublishedAppName.tsx";
-import useConjurePublishedServerNameDefault from "../useConjurePublishedServerName.tsx";
+import useConjureAutomodSettingsLink from "../useConjureAutomodSettingsLink.tsx";
 import useConjurePatchNotesLink from "../useConjurePatchNotesLink.tsx";
 import ConjurePublishNotesSheet from "ConjurePublishNotesSheet.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
+const useConjureAutomodSettingsLinkDefault = useConjureAutomodSettingsLink;
 const useConjurePatchNotesLinkDefault = useConjurePatchNotesLink;
 const ConjurePublishNotesSheetDefault = ConjurePublishNotesSheet;
 
-const _modDef3831 = v35VEu5(3831);
+const _modDef3863 = v35VEu5(3863);
 require = fn;
 const jsxProd = fn(21);
 ({ jsx: c3, jsxs: closure_4, Fragment: hasOwnProperty } = jsxProd);
@@ -45,7 +47,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if ("sent" === tmp3.state) {
           intl = intl(1125).intl;
-          v35VEu5 = _modDef3831["35VEu5"];
+          v35VEu5 = _modDef3863["35VEu5"];
           obj = {
             sentHook(children, arg1) {
               return React3(
@@ -55,7 +57,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
                   color: "text-muted",
                   accessibilityRole: "link",
                   onPress() {
-                    return projectId(dependencyMap[9]).openConjureSentPatchNotes(sent.sent);
+                    return projectId(dependencyMap[10]).openConjureSentPatchNotes(sent.sent);
                   },
                   children,
                 },
@@ -80,7 +82,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               }
             },
           };
-          formatResult = intl2.format(_modDef3831["6/zJpD"], obj4);
+          formatResult = intl2.format(_modDef3863["6/zJpD"], obj4);
         }
         cResult[0] = tmp3;
         cResult[1] = projectId;
@@ -109,7 +111,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
                   color: "text-muted",
                   accessibilityRole: "link",
                   onPress() {
-                    return projectId(dependencyMap[9]).openConjureSentPatchNotes(sent.sent);
+                    return projectId(dependencyMap[10]).openConjureSentPatchNotes(sent.sent);
                   },
                   children,
                 },
@@ -117,7 +119,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               );
             },
           };
-          let formatResult = intl2.format(_modDef3831["35VEu5"], obj2);
+          let formatResult = intl2.format(_modDef3863["35VEu5"], obj2);
         } else {
           const intl = projectId(1125).intl;
           let obj3 = {
@@ -134,7 +136,7 @@ let closure_6 = ReactCompilerGating.isReactCompilerEnabled()
               }
             },
           };
-          formatResult = intl.format(_modDef3831["6/zJpD"], obj3);
+          formatResult = intl.format(_modDef3863["6/zJpD"], obj3);
         }
         obj = { children: null };
         items = [" ", formatResult];
@@ -147,83 +149,108 @@ let result = size.fileFinishedImporting("modules/conjure/publish/native/ConjureP
 
 export default ReactCompilerGating.isReactCompilerEnabled()
   ? function ConjurePublishNoticeLine(arg0) {
-      const cResult = c.c(10);
+      const cResult = c.c(13);
       ({ projectId, notice } = arg0);
       const tmp4 = useConjurePublishedAppNameDefault(projectId);
       const tmp5 = useConjurePublishedServerNameDefault(projectId);
-      if (cResult[0] === tmp4) {
-        if (cResult[1] === notice) {
-          if (cResult[2] === tmp5) {
-            let tmp6 = cResult[3];
-          }
-          if (cResult[4] === notice) {
-            if (cResult[5] === projectId) {
-              let tmp9 = cResult[6];
+      guildId = useConjureAutomodSettingsLinkDefault(projectId);
+      if (cResult[0] === guildId.automod) {
+        if (cResult[1] === tmp4) {
+          if (cResult[2] === notice) {
+            if (cResult[3] === tmp5) {
+              let tmp6 = cResult[4];
             }
-            if (cResult[7] === tmp6) {
-              if (cResult[8] === tmp9) {
-                let tmp14 = cResult[9];
+            if (cResult[5] === guildId.automod) {
+              if (cResult[6] === guildId.guildId) {
+                if (cResult[7] === notice) {
+                  if (cResult[8] === projectId) {
+                    if (cResult[10] === tmp6) {
+                      if (cResult[11] === tmp9) {
+                        let tmp16 = cResult[12];
+                      }
+                      return tmp16;
+                    }
+                    const obj2 = { variant: "text-md/normal", color: "text-default", children: null };
+                    const items = [tmp6, cResult[9]];
+                    obj2.children = items;
+                    const tmp18 = React4(Text_Text.Text, obj2);
+                    cResult[10] = tmp6;
+                    cResult[11] = cResult[9];
+                    cResult[12] = tmp18;
+                    tmp16 = tmp18;
+                  }
+                }
               }
-              return tmp14;
             }
-            const obj2 = { variant: "text-md/normal", color: "text-default", children: null };
-            const items = [tmp6, tmp9];
-            obj2.children = items;
-            const tmp16 = React4(Text_Text.Text, obj2);
-            cResult[7] = tmp6;
-            cResult[8] = tmp9;
-            cResult[9] = tmp16;
-            tmp14 = tmp16;
-          }
-          let tmp11 = null;
-          if (notice.update) {
-            tmp11 = null;
-            if (null != notice.published_revision) {
-              const obj3 = { projectId, notice };
-              tmp11 = React3(closure_6, obj3);
+            if (null != guildId.guildId) {
+              const obj3 = { guildId: guildId.guildId, update: notice.update };
+              let tmp11 = React3(useConjureAutomodSettingsLink.ConjureAutomodSettingsLink, obj3);
+            } else {
+              tmp11 = null;
+              if (!guildId.automod) {
+                tmp11 = null;
+                if (notice.update) {
+                  tmp11 = null;
+                  if (null != notice.published_revision) {
+                    const obj4 = { projectId, notice };
+                    tmp11 = React3(closure_6, obj4);
+                  }
+                }
+              }
             }
+            ({ automod: tmp3[5], guildId } = guildId);
+            cResult[6] = guildId;
+            cResult[7] = notice;
+            cResult[8] = projectId;
+            cResult[9] = tmp11;
           }
-          cResult[4] = notice;
-          cResult[5] = projectId;
-          cResult[6] = tmp11;
-          tmp9 = tmp11;
         }
       }
       const intl = util.intl;
-      const obj4 = { name: tmp4, server: null };
+      const obj5 = { name: tmp4, server: null };
       let str = tmp5;
       const tmpResult = conjurePublishCard;
       if (tmp5 == null) {
         str = "";
       }
-      obj4.server = str;
-      const formatResult = intl.format(conjurePublishCard.publishNoticeMessage(notice, tmp5), obj4);
-      cResult[0] = tmp4;
-      cResult[1] = notice;
-      cResult[2] = tmp5;
-      cResult[3] = formatResult;
+      obj5.server = str;
+      const formatResult = intl.format(conjurePublishCard.publishNoticeMessage(notice, tmp5, guildId.automod), obj5);
+      cResult[0] = guildId.automod;
+      cResult[1] = tmp4;
+      cResult[2] = notice;
+      cResult[3] = tmp5;
+      cResult[4] = formatResult;
       tmp6 = formatResult;
-      const publishNoticeMessageResult = conjurePublishCard.publishNoticeMessage(notice, tmp5);
+      const publishNoticeMessageResult = conjurePublishCard.publishNoticeMessage(notice, tmp5, guildId.automod);
     }
   : function ConjurePublishNoticeLine(arg0) {
       ({ projectId, notice } = arg0);
       let str = useConjurePublishedServerNameDefault(projectId);
+      const tmp3 = useConjureAutomodSettingsLinkDefault(projectId);
       const intl = util.intl;
-      const tmp = useConjurePublishedAppNameDefault(projectId);
-      const obj2 = { name: tmp, server: null };
+      const tmp2 = useConjurePublishedAppNameDefault(projectId);
+      const obj2 = { name: tmp2, server: null };
       if (str == null) {
         str = "";
       }
       obj2.server = str;
-      const children = [intl.format(conjurePublishCard.publishNoticeMessage(notice, str), obj2)];
-      let tmp4 = null;
-      if (notice.update) {
-        tmp4 = null;
-        if (null != notice.published_revision) {
-          const obj3 = { projectId, notice };
-          tmp4 = React3(closure_6, obj3);
+      const children = [intl.format(conjurePublishCard.publishNoticeMessage(notice, str, tmp3.automod), obj2)];
+      if (null != tmp3.guildId) {
+        const obj3 = { guildId: tmp3.guildId, update: notice.update };
+        let tmp7 = React3(useConjureAutomodSettingsLink.ConjureAutomodSettingsLink, obj3);
+      } else {
+        tmp7 = null;
+        if (!tmp3.automod) {
+          tmp7 = null;
+          if (notice.update) {
+            tmp7 = null;
+            if (null != notice.published_revision) {
+              const obj4 = { projectId, notice };
+              tmp7 = React3(closure_6, obj4);
+            }
+          }
         }
       }
-      children[1] = tmp4;
+      children[1] = tmp7;
       return React4(Text_Text.Text, { variant: "text-md/normal", color: "text-default", children });
     };

@@ -170,6 +170,8 @@ export const InvoiceDiscountTypes = {
   [4]: "PREMIUM_TRIAL",
   DEFAULT: 5,
   [5]: "DEFAULT",
+  QUANTITY_DISCOUNT: 7,
+  [7]: "QUANTITY_DISCOUNT",
 };
 export const PurchaseNotificationType = { GUILD_PRODUCT: 0, [0]: "GUILD_PRODUCT" };
 export const AuthenticatorType = { WEBAUTHN: 1, [1]: "WEBAUTHN", TOTP: 2, [2]: "TOTP", SMS: 3, [3]: "SMS" };

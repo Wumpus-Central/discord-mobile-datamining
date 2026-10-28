@@ -5,7 +5,7 @@ import noop from "../../../../../../../../_runtime/metro/00019__.js";
 import SearchQueryStore from "../../../../stores/SearchQueryStore.tsx";
 
 require = fn;
-const SearchConstants = fn(9716);
+const SearchConstants = fn(9748);
 ({
   SEARCH_FILTERS_BY_TAB: hasOwnProperty,
   SearchFilter: metroRequire,
@@ -123,6 +123,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
     isFocused: isFocused.isFocused,
     contentContainerStyle: contentContainerStyles.messagesContentContainer,
     ItemSeparatorComponent: null,
+    viewabilityConfigCallbackPairs: null,
     isFirstPageLoading: null,
     isNextPageLoading: null,
     keywordResultCount: null,
@@ -130,6 +131,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
   };
   const tmpResult4 = searchContext(stateFromStores[12]);
   obj7.ItemSeparatorComponent = searchContext(stateFromStores[13]).MessageVerticalSeparator;
+  obj7.viewabilityConfigCallbackPairs = searchContext(stateFromStores[14]).smartSearchViewabilityConfig;
   obj7.isFirstPageLoading = isFirstPageLoading;
   obj7.isNextPageLoading = searchMessagesLoadingState.isNextPageLoading;
   obj7.keywordResultCount = length;
@@ -141,6 +143,7 @@ export default noop.memo(function MessagesScreen(isFocused) {
     isFocused: isFocused.isFocused,
     contentContainerStyle: contentContainerStyles.messagesContentContainer,
     ItemSeparatorComponent: null,
+    viewabilityConfigCallbackPairs: null,
     isFirstPageLoading: null,
     isNextPageLoading: null,
     keywordResultCount: null,

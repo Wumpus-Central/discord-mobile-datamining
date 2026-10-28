@@ -13,7 +13,7 @@ get_ActivityIndicator = fn(17);
 const NOOP = fn(1084).NOOP;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { containerWithPadding: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST } };
 let closure_12 = createStyles.createStyles(obj2);
 const ReactCompilerGating = fn(558);
@@ -52,7 +52,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
         const fn = function h() {
-          closure_1(6673).pop();
+          closure_1(6707).pop();
         };
         cResult[6] = fn;
       }
@@ -264,7 +264,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ impressionName, impressionProperties } = props);
       const tmp = closure_12();
       const callback = noop.useCallback(() => {
-        closure_1(6673).pop();
+        closure_1(6707).pop();
       }, []);
       const obj = { type: null, name: null, properties: null };
       const tmp2 = _objectWithoutProperties(props, closure_4);
@@ -297,7 +297,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         },
         [],
       );
-      const layoutEffect = noop.useLayoutEffect(() => modal(7585).trackAppUIViewed("ModalScreen"), []);
+      const layoutEffect = noop.useLayoutEffect(() => modal(7619).trackAppUIViewed("ModalScreen"), []);
       ({ left, right } = useSafeAreaInsetsDefault());
       const tmp13 = useSafeAreaInsetsDefault();
       const items = [absoluteFillObject.absoluteFillObject];
@@ -311,7 +311,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const obj4 = { style: items, onAccessibilityEscape: null, children: null };
       items[1] = tmp16;
       if (modal.closable) {
-        let pop = tmp4(6673).pop;
+        let pop = tmp4(6707).pop;
       } else {
         pop = NOOP;
       }
@@ -322,10 +322,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj5.transitionState = null;
       obj5.onClose = callback;
       const items2 = [<modal.modal />];
-      tmp7Result = modal(18370);
+      tmp7Result = modal(18611);
       let isIOSResult = modal(1381).isIOS();
       if (isIOSResult) {
-        isIOSResult = closure_10(tmp7(11905).PortalKeyboardRenderer, { portal: false });
+        isIOSResult = closure_10(tmp7(11943).PortalKeyboardRenderer, { portal: false });
       }
       items2[1] = isIOSResult;
       obj4.children = items2;

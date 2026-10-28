@@ -1,10 +1,11 @@
 // discord_app/modules/conjure/home/useConjureHomeOwnProjects.tsx
+import conjureHomeProjectOrder from "conjureHomeProjectOrder.tsx";
 import ConjureChatStore from "../chat/ConjureChatStore.tsx";
 import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 
 const require = globalThis.__r;
 
-const require = fn;
+require = fn;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/home/useConjureHomeOwnProjects.tsx");
@@ -35,43 +36,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             found = ConjureProjectStore.getOwnedProjects();
           }
-          const mapped = found.map((project) => {
-            const obj = { project, time: null };
-            if (thinking.isThinking(project.id)) {
-              if (!projectDeleting.isProjectDeleting(project.id)) {
-                const _Number = Number;
+          return conjureHomeProjectOrder.sortConjureProjectsByActivity(
+            found.map((id) => {
+              const findOpenTurnResult = closure_1_0(dependencyMap[5]).findOpenTurn(messages.getMessages(id.id));
+              const obj3 = { project: id, turnStartedAt: null, finishedAt: null };
+              let conjureTurnStartedAtResult = null;
+              if (null != findOpenTurnResult) {
+                conjureTurnStartedAtResult = closure_1_0(dependencyMap[6]).conjureTurnStartedAt(findOpenTurnResult);
+                const tmpResult = closure_1_0(dependencyMap[6]);
               }
-              obj.time = POSITIVE_INFINITY;
-              return obj;
-            }
-            let num = thinking.getFinishedAt(project.id);
-            if (num == null) {
-              num = 0;
-            }
-            let num2 = 0;
-            if (null != project.updated_at) {
-              const _Date = Date;
-              num2 = Date.parse(project.updated_at);
-            }
-            let num3 = 0;
-            if (!Number.isNaN(num2)) {
-              num3 = num2;
-            }
-            POSITIVE_INFINITY = Math.max(num, num3);
-          });
-          const sorted = mapped.sort((time, time2) => {
-            if (time.time === time2.time) {
-              const id = time.project.id;
-              let num = id.localeCompare(time2.project.id);
-            } else {
-              num = -1;
-              if (time.time < time2.time) {
-                num = 1;
-              }
-            }
-            return num;
-          });
-          return sorted.map((project) => project.project);
+              obj3.turnStartedAt = conjureTurnStartedAtResult;
+              obj3.finishedAt = messages.getFinishedAt(id.id);
+              return obj3;
+            }),
+          );
         };
         const items1 = [arg0];
         cResult[1] = arg0;
@@ -83,7 +61,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp7 = cResult[2];
         tmp8 = cResult[3];
       }
-      let obj = require("c");
+      const obj = require("c");
       return require("initialize").useStateFromStoresArray(first, tmp7, tmp8);
     }
   : function useConjureHomeOwnProjects(arg0) {
@@ -106,43 +84,20 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           } else {
             found = ConjureProjectStore.getOwnedProjects();
           }
-          const mapped = found.map((project) => {
-            const obj = { project, time: null };
-            if (thinking.isThinking(project.id)) {
-              if (!projectDeleting.isProjectDeleting(project.id)) {
-                const _Number = Number;
+          return conjureHomeProjectOrder.sortConjureProjectsByActivity(
+            found.map((id) => {
+              const findOpenTurnResult = closure_1_0(dependencyMap[5]).findOpenTurn(messages.getMessages(id.id));
+              const obj3 = { project: id, turnStartedAt: null, finishedAt: null };
+              let conjureTurnStartedAtResult = null;
+              if (null != findOpenTurnResult) {
+                conjureTurnStartedAtResult = closure_1_0(dependencyMap[6]).conjureTurnStartedAt(findOpenTurnResult);
+                const tmpResult = closure_1_0(dependencyMap[6]);
               }
-              obj.time = POSITIVE_INFINITY;
-              return obj;
-            }
-            let num = thinking.getFinishedAt(project.id);
-            if (num == null) {
-              num = 0;
-            }
-            let num2 = 0;
-            if (null != project.updated_at) {
-              const _Date = Date;
-              num2 = Date.parse(project.updated_at);
-            }
-            let num3 = 0;
-            if (!Number.isNaN(num2)) {
-              num3 = num2;
-            }
-            POSITIVE_INFINITY = Math.max(num, num3);
-          });
-          const sorted = mapped.sort((time, time2) => {
-            if (time.time === time2.time) {
-              const id = time.project.id;
-              let num = id.localeCompare(time2.project.id);
-            } else {
-              num = -1;
-              if (time.time < time2.time) {
-                num = 1;
-              }
-            }
-            return num;
-          });
-          return sorted.map((project) => project.project);
+              obj3.turnStartedAt = conjureTurnStartedAtResult;
+              obj3.finishedAt = messages.getFinishedAt(id.id);
+              return obj3;
+            }),
+          );
         },
         items1,
       );

@@ -5,7 +5,7 @@ import util from "../../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../../utils/AnalyticsUtils.tsx";
 import AlertActionCreatorsDefault from "../../../../actions/AlertActionCreators.tsx";
 import usePreviousDefault from "../../../../hooks/usePrevious.tsx";
-import WebView from "../../../../../_runtime/07908_WebView.js";
+import WebView from "../../../../../_runtime/07942_WebView.js";
 import useEmbeddedAppCSPDefault from "../../csp/useEmbeddedAppCSP.tsx";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
@@ -35,7 +35,7 @@ function getSafeArea(arg0, arg1) {
 }
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_10 = createStyles.createStyles({ webView: { backgroundColor: "transparent" } });
 let closure_11 = new LoggerDefault("BaseEmbeddedAppWebView");
 fn(558);

@@ -13,7 +13,7 @@ import FavoriteStore from "FavoriteStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const MAX_FAVORITE_CHANNELS = fn(4837).MAX_FAVORITE_CHANNELS;
+const MAX_FAVORITE_CHANNELS = fn(4869).MAX_FAVORITE_CHANNELS;
 const PremiumTypes = fn(1391).PremiumTypes;
 let ReactCompilerGating = fn(558);
 let closure_8 = ReactCompilerGating.isReactCompilerEnabled()

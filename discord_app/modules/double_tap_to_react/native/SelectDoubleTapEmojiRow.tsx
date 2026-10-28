@@ -10,12 +10,12 @@ import AccessibilityStore from "../../a11y/AccessibilityStore.tsx";
 
 require = fn;
 let View = fn(17).View;
-const ACTION_SHEET_MAX_WIDTH = fn(5267).ACTION_SHEET_MAX_WIDTH;
+const ACTION_SHEET_MAX_WIDTH = fn(5302).ACTION_SHEET_MAX_WIDTH;
 const EmojiConstants = fn(1392);
 ({ EMOJI_URL_BASE_SIZE: closure_7, EmojiIntention: closure_8 } = EmojiConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, Fragment: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = {
   emoji: { width: 24, height: 24 },
   customEmoji: { width: 24, height: 24 },
@@ -151,7 +151,7 @@ let closure_13 = noop.memo(
                                   style: tmp12,
                                   children: tmp23,
                                 };
-                                const tmp29 = closure_9(tmp(6910).PressableOpacity, obj2);
+                                const tmp29 = closure_9(tmp(6944).PressableOpacity, obj2);
                                 cResult[25] = tmp23;
                                 cResult[26] = tmp9;
                                 cResult[27] = tmp10;
@@ -173,7 +173,7 @@ let closure_13 = noop.memo(
                       ({ emoji: obj5.style, customEmoji: obj5.fastImageStyle, textEmoji: obj5.textEmojiStyle } = tmp4);
                       obj6.name = str;
                       obj6.src = cResult[15];
-                      const tmp22 = closure_9(onPress(7229), obj6);
+                      const tmp22 = closure_9(onPress(7263), obj6);
                       cResult[16] = tmp4.customEmoji;
                       cResult[17] = tmp4.emoji;
                       cResult[18] = tmp4.textEmoji;
@@ -283,7 +283,7 @@ let closure_13 = noop.memo(
         obj4.src = url;
         obj3.children = closure_9(EmojiDefault, obj4);
         obj2.children = closure_9(View, obj3);
-        return closure_9(emoji(6910).PressableOpacity, obj2);
+        return closure_9(emoji(6944).PressableOpacity, obj2);
       },
 );
 ReactCompilerGating = fn(558);
@@ -301,7 +301,7 @@ export default noop.memo(
         const tmp4 = closure_12();
         let obj = selectedEmoji(576);
         let tmp = selectedEmoji;
-        const frequentlyUsedReactionEmojis = selectedEmoji(9831).useFrequentlyUsedReactionEmojis(undefined);
+        const frequentlyUsedReactionEmojis = selectedEmoji(9863).useFrequentlyUsedReactionEmojis(undefined);
         const rounded = Math.floor(Math.min(onPressEmoji(1496)().width, ACTION_SHEET_MAX_WIDTH) / 60);
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const items = [AccessibilityStore];
@@ -315,7 +315,7 @@ export default noop.memo(
         } else {
           [tmp6, tmp7] = cResult;
         }
-        let obj2 = selectedEmoji(9831);
+        let obj2 = selectedEmoji(9863);
         const stateFromStores = tmp(504).useStateFromStores(tmp6, tmp7);
         if (cResult[2] === frequentlyUsedReactionEmojis) {
           if (cResult[3] === rounded) {

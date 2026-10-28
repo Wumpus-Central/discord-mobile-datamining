@@ -1,6 +1,6 @@
 // discord_app/modules/user_settings/defs/native/StaffOnlyFindYourFriendsDeletionSetting.tsx
 import c from "../../../../../_runtime/00576_c.js";
-import _mod4887 from "../../../../../_runtime/metro/04887__.js";
+import _mod4919 from "../../../../../_runtime/metro/04919__.js";
 import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 
 require = fn;
@@ -110,10 +110,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      return closure_6(first, _mod4887.shallow);
+      return closure_6(first, _mod4919.shallow);
     }
   : function useFindYourFriendsDeletionIsLoading() {
-      return closure_6((isLoading) => isLoading.isLoading, _mod4887.shallow);
+      return closure_6((isLoading) => isLoading.isLoading, _mod4919.shallow);
     };
 ReactCompilerGating = fn(558);
 ReactCompilerGating.isReactCompilerEnabled();
@@ -121,7 +121,7 @@ ReactCompilerGating = fn(558);
 function useIsFindYourFriendsDeletionDisabled() {
   return closure_8();
 }
-const SettingBuilders = fn(11212);
+const SettingBuilders = fn(11248);
 let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
   ? function useIsFindYourFriendsDeletionTrailing() {
       const cResult = c.c(2);
@@ -150,7 +150,7 @@ const pressable = SettingBuilders.createPressable({
   useTitle() {
     return "STAFF ONLY - Find your friends deletion";
   },
-  parent: fn(8331).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
+  parent: fn(8365).MobileUserSettings.CONTENT_AND_SOCIAL_DISCORD,
   useIsDisabled: useIsFindYourFriendsDeletionDisabled,
   onPress: function onFindYourFriendsDeletionPress() {
     const self = this;
@@ -162,7 +162,7 @@ const pressable = SettingBuilders.createPressable({
     }
     return applyArgumentsResult;
   },
-  usePredicate: fn(16172).useStaffOrDeveloperSettingPredicate,
+  usePredicate: fn(16400).useStaffOrDeveloperSettingPredicate,
   useTrailing: ReactCompilerGating.isReactCompilerEnabled()
     ? function useIsFindYourFriendsDeletionTrailing() {
         const cResult = c.c(2);

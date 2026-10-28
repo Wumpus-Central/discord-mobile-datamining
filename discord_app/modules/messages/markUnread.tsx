@@ -126,7 +126,7 @@ let closure_11 = async function _markUnread(arg0) {
     }
   }
 };
-const shouldBadgeMessage = fn(6772).shouldBadgeMessage;
+const shouldBadgeMessage = fn(6806).shouldBadgeMessage;
 const Endpoints = fn(1084).Endpoints;
 let closure_10 = new LoggerDefault("markUnread");
 const size = fn(2);

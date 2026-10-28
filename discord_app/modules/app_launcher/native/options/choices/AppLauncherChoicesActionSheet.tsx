@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import ActionSheetActionCreatorsDefault from "../../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import AutocompleteUtilsDefault from "../../../../../utils/AutocompleteUtils.tsx";
-import _mod7222 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7256 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import _slicedToArray from "../../../../../../_runtime/metro/00032__.js";
 import _objectWithoutProperties from "../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../_runtime/metro/00019__.js";
@@ -33,7 +33,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
           return cResult[5];
         }
       }
-      let obj2 = _mod7222;
+      let obj2 = _mod7256;
       if (tmp5) {
         obj2 = { preserveScrollMomentum: true };
         const merged = Object.assign(tmp4);
@@ -49,7 +49,7 @@ let closure_10 = ReactCompilerGating.isReactCompilerEnabled()
     }
   : function FlashListWrapper(scrollable) {
       const merged = Object.assign(scrollable, Object.assign({ scrollable: 0 }));
-      const tmp3 = _mod7222;
+      const tmp3 = _mod7256;
       if (scrollable.scrollable) {
         const obj2 = { preserveScrollMomentum: true };
         const merged1 = Object.assign(merged);

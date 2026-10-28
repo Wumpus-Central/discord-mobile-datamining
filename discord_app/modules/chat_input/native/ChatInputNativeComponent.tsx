@@ -13,7 +13,7 @@ import ClientThemesBackgroundStore from "../../client_themes/ClientThemesBackgro
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { style: { flex: 1 }, textColor: { color: nativeDefault.colors.TEXT_DEFAULT }, placeholderColor: null };
 let obj3 = { color: nativeDefault.colors.TEXT_DEFAULT };
 obj2.placeholderColor = { color: nativeDefault.colors.TEXT_MUTED };
@@ -101,7 +101,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         num6 = 1;
       }
       if (maxHeight == null) {
-        maxHeight = tmp10(12524)(onMaxHeightChanged);
+        maxHeight = tmp10(12571)(onMaxHeightChanged);
       }
       tmpResult10 = PlatformUtils;
       const isMobileMarkdownFormatMenuEnabled =
@@ -274,7 +274,7 @@ let tmp3 = ReactCompilerGating.isReactCompilerEnabled()
         num2 = 1;
       }
       tmp4Result4 = PlatformUtils;
-      const tmp13 = tmp9(12524)(onMaxHeightChanged);
+      const tmp13 = tmp9(12571)(onMaxHeightChanged);
       const isMobileMarkdownFormatMenuEnabled =
         MobileMarkdownFormatMenuExperiment.useIsMobileMarkdownFormatMenuEnabled("ChatInputNativeComponent");
       const obj4 = {

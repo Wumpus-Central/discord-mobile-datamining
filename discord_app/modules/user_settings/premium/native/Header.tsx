@@ -5,15 +5,15 @@ import shared from "../../../../design/shared.tsx";
 import useThemeDefault from "../../../../hooks/useTheme.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
-import _modDef14815 from "../../../../../_runtime/metro/14815__.js";
-import _modDef14816 from "../../../../../_runtime/metro/14816__.js";
+import _modDef15038 from "../../../../../_runtime/metro/15038__.js";
+import _modDef15039 from "../../../../../_runtime/metro/15039__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_6 = createStyles.createStyles({
   container: { flexDirection: "column", alignItems: "center" },
   headerText: { marginTop: 16, marginBottom: 24 },
@@ -41,9 +41,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           tmp9 = cResult[3];
         }
         if (tmpResult.isThemeDark(tmp6)) {
-          let tmp5Result = _modDef14815;
+          let tmp5Result = _modDef15038;
         } else {
-          tmp5Result = _modDef14816;
+          tmp5Result = _modDef15039;
         }
         if (cResult[4] !== tmp5Result) {
           const obj2 = { accessible: true, accessibilityLabel: tmp9, accessibilityRole: "header", source: tmp5Result };
@@ -113,9 +113,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       obj2.accessibilityLabel = intl.string(util.t.lpNrPu);
       const tmp8 = FastImageDefault;
       if (obj3.isThemeDark(tmp4)) {
-        let tmp2Result = _modDef14815;
+        let tmp2Result = _modDef15038;
       } else {
-        tmp2Result = _modDef14816;
+        tmp2Result = _modDef15039;
       }
       obj2.source = tmp2Result;
       const items1 = [React4(tmp8, obj2)];

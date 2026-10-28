@@ -502,7 +502,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const obj4 = { title, body, confirmText, confirmColor: tmp2(1199).ButtonColors.RED };
                 v2 = 1;
                 c2 = 1;
-                const obj5 = { value: v2(5910).confirm(obj4), done: false };
+                const obj5 = { value: v2(5945).confirm(obj4), done: false };
                 return obj5;
               }
             } else {

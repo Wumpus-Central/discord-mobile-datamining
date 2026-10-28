@@ -2,7 +2,7 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod12156 from "../../../../../../../_runtime/metro/12156__.js";
+import _mod12194 from "../../../../../../../_runtime/metro/12194__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -35,7 +35,7 @@ export const RobotIcon = ReactCompilerGating.isReactCompilerEnabled()
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod12156;
+        const tmpResult = _mod12194;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -66,7 +66,7 @@ export const RobotIcon = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
       return jsx(BaseIconImage.BaseIconImage, {
-        source: _mod12156,
+        source: _mod12194,
         color: INTERACTIVE_ICON_DEFAULT,
         style: color.style,
       });

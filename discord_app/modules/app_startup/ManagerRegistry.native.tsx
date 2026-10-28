@@ -181,6 +181,7 @@ const obj = {
   LocalMessageCacheStatsManager: null,
   RestrictedHoursManager: null,
   SentryExperimentFeatureFlagManager: null,
+  PlayableProgressManager: null,
   QuestProgressManager: null,
   AccountLinkManagerNative: null,
 };
@@ -1347,6 +1348,13 @@ obj.SentryExperimentFeatureFlagManager = {
   },
   hasStoreChangeListeners: true,
   loadRightBeforeConnectionOpen: true,
+};
+obj.PlayableProgressManager = {
+  actions: [],
+  inlineRequire() {
+    return require("PlayableProgressManager").default;
+  },
+  hasStoreChangeListeners: true,
 };
 obj.QuestProgressManager = {
   actions: [

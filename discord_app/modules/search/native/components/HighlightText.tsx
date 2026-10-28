@@ -6,10 +6,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { text: null };
 const obj3 = { fontFamily: fn(1084).Fonts.PRIMARY_BOLD, backgroundColor: null, color: null };
-const ColorUtils = fn(4969);
+const ColorUtils = fn(5001);
 obj3.backgroundColor = ColorUtils.hexOpacityToRgba(nativeDefault.unsafe_rawColors.YELLOW_300, 0.3);
 obj3.color = nativeDefault.colors.TEXT_STRONG;
 obj2.text = obj3;

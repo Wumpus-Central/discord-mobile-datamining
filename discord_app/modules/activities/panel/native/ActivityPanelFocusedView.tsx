@@ -19,24 +19,24 @@ const require = globalThis.__r;
 
 require = fn;
 const ActivityLayoutMode = fn(2023).ActivityLayoutMode;
-const ActivityPanelConstants = fn(5610);
+const ActivityPanelConstants = fn(5645);
 ({
   ACTIVITY_LAYOUT_PHYSICS_GESTURE: closure_8,
   ACTIVITY_LAYOUT_PHYSICS_DEFAULT: closure_9,
   ActivityPanelModes: c10,
 } = ActivityPanelConstants);
-const ActivityPanelNativeConstants = fn(18409);
+const ActivityPanelNativeConstants = fn(18650);
 ({
   DEFAULT_PORTRAIT_SAFE_AREAS_CONFIG: closure_11,
   DEFAULT_PORTRAIT_LETTERBOX_CONFIG: closure_12,
   DEFAULT_LANDSCAPE_PILLERBOX_CONFIG: map1,
 } = ActivityPanelNativeConstants);
 const ThemeTypes = fn(1084).ThemeTypes;
-const IS_IOS = fn(10904).IS_IOS;
+const IS_IOS = fn(10939).IS_IOS;
 const jsxProd = fn(21);
 ({ jsx: closure_16, jsxs: closure_17 } = jsxProd);
 const REDUCED_MOTION_TIMING = { duration: 300 };
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = {
   wrapper: {
     position: "absolute",

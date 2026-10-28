@@ -14,7 +14,7 @@ import OwnedGameServersStore from "OwnedGameServersStore.tsx";
 const require = globalThis.__r;
 
 require = fn;
-const GAME_SERVER_COLLECTION_ID = fn(5184).GAME_SERVER_COLLECTION_ID;
+const GAME_SERVER_COLLECTION_ID = fn(5219).GAME_SERVER_COLLECTION_ID;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_7, Endpoints: closure_8 } = Constants);
 const size = fn(2);
@@ -277,7 +277,11 @@ export const optimisticallyMarkGameServerResizing = function optimisticallyMarkG
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((subscription_id) => subscription_id.subscription_id === closure_0);
   if (null != found) {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "THREEDS_CARDINAL_SDK_CANCELED" };
+    const obj2 = {
+      type: "GAME_SERVER_UPDATE",
+      guildId: "Array",
+      gameServer: "MASTERPASS_TOKENIZE_MISSING_REQUIRED_OPTION",
+    };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.status = GameServerStatus.GameServerStatus.STARTING;
@@ -292,7 +296,11 @@ export const updateMyGameServerName = function updateMyGameServerName(arg0, name
   if (null == found) {
     let resolved = Promise.resolve();
   } else {
-    const obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "THREEDS_CARDINAL_SDK_CANCELED" };
+    const obj2 = {
+      type: "GAME_SERVER_UPDATE",
+      guildId: "Array",
+      gameServer: "MASTERPASS_TOKENIZE_MISSING_REQUIRED_OPTION",
+    };
     const obj3 = {};
     const merged = Object.assign(found);
     obj3.name = name;
@@ -367,7 +375,11 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
   const gameServers = OwnedGameServersStore.getGameServers();
   const found = gameServers.find((id) => id.id === closure_0);
   if (null != found) {
-    let obj2 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: "THREEDS_CARDINAL_SDK_CANCELED" };
+    let obj2 = {
+      type: "GAME_SERVER_UPDATE",
+      guildId: "Array",
+      gameServer: "MASTERPASS_TOKENIZE_MISSING_REQUIRED_OPTION",
+    };
     let obj3 = {};
     let merged = Object.assign(found);
     obj3.status = require("GameServerStatus").GameServerStatus.STARTING;
@@ -381,10 +393,10 @@ export const wakeMyGameServer = function wakeMyGameServer(arg0) {
     .then((body) => {
       body = body.body;
       let tmp3 = body;
-      if (body.status === closure_0(13425).GameServerStatus.SLEEPING) {
+      if (body.status === closure_0(13644).GameServerStatus.SLEEPING) {
         const obj2 = {};
         const merged = Object.assign(body);
-        obj2.status = closure_0(13425).GameServerStatus.STARTING;
+        obj2.status = closure_0(13644).GameServerStatus.STARTING;
         tmp3 = obj2;
       }
       const obj3 = { type: "GAME_SERVER_UPDATE", guildId: "Array", gameServer: tmp3 };

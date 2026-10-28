@@ -124,7 +124,7 @@ function handleSetLocalMute(arg0) {
       "audioContextSettings",
       async (arg0) => {
         closure_0 = arg0;
-        let result = closure_0(15410).drainPendingAudioSettings((arg0, arg1, arg2) => {
+        let result = closure_0(15636).drainPendingAudioSettings((arg0, arg1, arg2) => {
           let diff;
           const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
           flag = false;
@@ -200,7 +200,7 @@ function handleSetLocalSoundboardMute(userId) {
       "audioContextSettings",
       async (arg0) => {
         closure_0 = arg0;
-        let result = closure_0(15410).drainPendingAudioSettings((arg0, arg1, arg2) => {
+        let result = closure_0(15636).drainPendingAudioSettings((arg0, arg1, arg2) => {
           let diff;
           const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
           flag = false;
@@ -279,7 +279,7 @@ function handleResetMediaEngineSettings(arg0) {
     );
   }
 }
-const MediaEngineContextTypes = fn(5719).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5754).MediaEngineContextTypes;
 function SETTINGS_MIGRATION_KEY(id) {
   return "AudioContextSettingsMigrated:" + id;
 }
@@ -298,7 +298,7 @@ let closure_12 = apply.debounce(() => {
     "audioContextSettings",
     async (arg0) => {
       closure_0 = arg0;
-      let result = closure_0(15410).drainPendingAudioSettings((arg0, arg1, arg2) => {
+      let result = closure_0(15636).drainPendingAudioSettings((arg0, arg1, arg2) => {
         let diff;
         const result = AudioSettingsUtils.coerceAudioContextForProto(arg0);
         flag = false;
@@ -362,7 +362,7 @@ let closure_12 = apply.debounce(() => {
   );
 }, 2000);
 let apply = apply_mod;
-let closure_13 = apply.debounce(fn(11655).remoteAudioSettingsUpdate, 500, { maxWait: 500 });
+let closure_13 = apply.debounce(fn(11693).remoteAudioSettingsUpdate, 500, { maxWait: 500 });
 const prototype = function AudioSettingsManager() {
   const applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);
   applyArgumentsResult.actions = {

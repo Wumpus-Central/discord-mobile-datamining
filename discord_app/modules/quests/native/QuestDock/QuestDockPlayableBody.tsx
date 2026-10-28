@@ -9,7 +9,7 @@ import GamesActionCreatorsDefault from "../../../../actions/GamesActionCreators.
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const QuestDockMode = fn(6711).QuestDockMode;
+const QuestDockMode = fn(6745).QuestDockMode;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);

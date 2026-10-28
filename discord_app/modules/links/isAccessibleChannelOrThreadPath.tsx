@@ -265,7 +265,7 @@ let closure_12 = async function _isAccessibleChannelOrThreadPath(arg0) {
 };
 const Constants = fn(1084);
 ({ GuildFeatures: closure_8, ME: closure_9 } = Constants);
-const ChannelConstants = fn(4831);
+const ChannelConstants = fn(4863);
 ({ isStaticChannelRoute: c10, StaticChannelRoute: closure_11 } = ChannelConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/links/isAccessibleChannelOrThreadPath.tsx");

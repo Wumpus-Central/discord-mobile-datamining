@@ -11,12 +11,12 @@ import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GameOrganizationJoinModalConstants = fn(12734);
+const GameOrganizationJoinModalConstants = fn(12781);
 ({ closeGameOrganizationJoinModal: closure_7, GameOrganizationJoinScenes: closure_8 } =
   GameOrganizationJoinModalConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   text: { textAlign: "center" },
   benefitCard: { flex: 1 },
@@ -217,16 +217,16 @@ export const AcceptStep = function AcceptStep(code) {
     let obj6 = { children: null };
     let obj7 = { displayNoun: str };
     obj4.children = intl6.formatToPlainString(tmp2(2403).WmxMAI, obj7);
-    const items = [closure_9(tmp5(5235).Text, obj4)];
+    const items = [closure_9(tmp5(5270).Text, obj4)];
     let obj8 = { linkedGuild: tmp4.linkedGuild };
-    items[1] = closure_9(tmp2(12741), obj8);
+    items[1] = closure_9(tmp2(12788), obj8);
     obj3.children = items;
-    const items1 = [closure_10(tmp5(5978).Stack, obj3)];
+    const items1 = [closure_10(tmp5(6013).Stack, obj3)];
     const obj9 = { spacing: tmp2(587).space.PX_24, children: null };
     const obj10 = { variant: "heading-lg/semibold", children: null };
     let intl = tmp5(1125).intl;
     obj10.children = intl.string(tmp2(2403).yFqGy8);
-    const items2 = [closure_9(tmp5(5235).Text, obj10)];
+    const items2 = [closure_9(tmp5(5270).Text, obj10)];
     const obj11 = { direction: "horizontal", spacing: tmp2(587).space.PX_16, children: null };
     const obj12 = { text: null };
     const intl2 = tmp5(1125).intl;
@@ -237,12 +237,12 @@ export const AcceptStep = function AcceptStep(code) {
     obj13.text = intl3.string(tmp2(2403).MEQJ1m);
     items3[1] = closure_9(closure_12, obj13);
     obj11.children = items3;
-    items2[1] = closure_10(tmp5(5978).Stack, obj11);
+    items2[1] = closure_10(tmp5(6013).Stack, obj11);
     obj9.children = items2;
-    items1[1] = closure_10(tmp5(5978).Stack, obj9);
+    items1[1] = closure_10(tmp5(6013).Stack, obj9);
     obj2.children = items1;
-    obj6.children = closure_10(tmp5(5978).Stack, obj2);
-    const items4 = [closure_9(tmp5(7902).ModalContent, obj6)];
+    obj6.children = closure_10(tmp5(6013).Stack, obj2);
+    const items4 = [closure_9(tmp5(7936).ModalContent, obj6)];
     const obj14 = { children: null };
     const obj15 = { children: null };
     const obj16 = { text: null, size: "lg", loading: null, disabled: null, onPress: null };
@@ -260,18 +260,18 @@ export const AcceptStep = function AcceptStep(code) {
       }
       return applyArgumentsResult;
     };
-    const items5 = [closure_9(tmp5(5245).Button, obj16)];
+    const items5 = [closure_9(tmp5(5280).Button, obj16)];
     const obj17 = { text: null, size: "lg", variant: "secondary", onPress: null, disabled: null };
     const intl5 = tmp5(1125).intl;
     obj17.text = intl5.string(tmp5(1125).t["ETE/oC"]);
     obj17.onPress = onPress;
     obj17.disabled = tmp7;
-    items5[1] = closure_9(tmp5(5245).Button, obj17);
+    items5[1] = closure_9(tmp5(5280).Button, obj17);
     obj15.children = items5;
-    obj14.children = closure_10(tmp5(6697).ButtonGroup, obj15);
-    items4[1] = closure_9(tmp5(12739).ModalFooter, obj14);
+    obj14.children = closure_10(tmp5(6731).ButtonGroup, obj15);
+    items4[1] = closure_9(tmp5(12786).ModalFooter, obj14);
     obj5.children = items4;
-    return closure_10(tmp5(7901).ModalScreen, obj5);
+    return closure_10(tmp5(7935).ModalScreen, obj5);
   }
   const tmp6 = _slicedToArray(noop.useState(false), 2);
 };

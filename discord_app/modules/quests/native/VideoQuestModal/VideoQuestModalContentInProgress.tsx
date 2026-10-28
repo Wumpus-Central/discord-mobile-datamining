@@ -10,7 +10,7 @@ import timing from "../../../../design/animation/reanimated/timing/timing.tsx";
 import ActionSheetActionCreatorsDefault from "../../../action_sheet/native/ActionSheetActionCreators.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
-import LinearGradientDefault from "../../../../../_runtime/05259_LinearGradient.js";
+import LinearGradientDefault from "../../../../../_runtime/05294_LinearGradient.js";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
 import QuestTypes from "../../QuestTypes.tsx";
 import AdCreativeType from "../../../../../discord_common/js/shared/shared-constants/AdCreativeType.tsx";
@@ -47,7 +47,7 @@ let closure_3 = ["ref"];
 let closure_4 = ["ref"];
 get_ActivityIndicator = fn(17);
 ({ View: closure_8, StyleSheet: closure_9, ScrollView: c10 } = get_ActivityIndicator);
-const QuestConstants = fn(6711);
+const QuestConstants = fn(6745);
 ({ DEFAULT_PORTRAIT_ASPECT_RATIO: closure_11, QuestsExperimentLocations: closure_12 } = QuestConstants);
 const ThemeTypes = fn(1095).ThemeTypes;
 const jsxProd = fn(21);
@@ -73,7 +73,7 @@ const importDefaultResult3Result = n(nativeDefault.unsafe_rawColors.PLUM_23);
 items1[1] = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0.4).hex();
 const contentInsets = { bottom: 158, top: 64, left: 16, right: 16 };
 const contentInsets2 = { bottom: 16, left: 16, right: 16 };
-let createStyles = fn(4972);
+let createStyles = fn(5004);
 let closure_24 = createStyles.createStyles((arg0) => {
   const obj = {
     wrapper: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST, flex: 1 },
@@ -264,10 +264,10 @@ let closure_33 = noop.memo(
         }
         const tmp6 = closure_24(first);
         if (cResult[1] !== quest) {
-          const questAsset = isFullscreen(9586).getQuestAsset(quest, isFullscreen(9586).QuestAssetType.HERO);
+          const questAsset = isFullscreen(9618).getQuestAsset(quest, isFullscreen(9618).QuestAssetType.HERO);
           cResult[1] = quest;
           cResult[2] = questAsset;
-          const tmpResult7 = isFullscreen(9586);
+          const tmpResult7 = isFullscreen(9618);
         }
         const userStatus = quest.userStatus;
         if (userStatus != null) {
@@ -324,9 +324,9 @@ let closure_33 = noop.memo(
               }
             }
           }
-          const sum = isFullscreen(16518).QUEST_PROGRESS_DIAMETER_BY_SIZE.md + tmp14;
+          const sum = isFullscreen(16747).QUEST_PROGRESS_DIAMETER_BY_SIZE.md + tmp14;
           const sum1 = sum + 2 * setIsFullscreen(587).space.PX_16;
-          const sharedValue = isFullscreen(5053).useSharedValue(0);
+          const sharedValue = isFullscreen(5085).useSharedValue(0);
           if (cResult[8] !== sharedValue) {
             class J {
               constructor(arg0) {
@@ -349,23 +349,23 @@ let closure_33 = noop.memo(
             tmp22 = cResult[10];
           }
           const effect = noop.useEffect(tmp23, tmp22);
-          const tmpResult8 = isFullscreen(5053);
+          const tmpResult8 = isFullscreen(5085);
           function he() {
             const obj = ReanimatedRexport;
             return obj.withDelay(c16, timing.withTiming(sharedValue.get(), { duration }));
           }
           const obj2 = {
-            withDelay: isFullscreen(5053).withDelay,
+            withDelay: isFullscreen(5085).withDelay,
             LOGO_REWARD_TRANSITION_DELAY_MS,
-            withTiming: isFullscreen(5207).withTiming,
+            withTiming: isFullscreen(5242).withTiming,
             isComponentMounted: sharedValue,
             LOGO_REWARD_TRANSITION_DURATION_MS,
           };
           he.__closure = obj2;
           he.__workletHash = 12561024953493;
           he.__initData = __initData;
-          const derivedValue = isFullscreen(5053).useDerivedValue(he);
-          const tmpResult9 = isFullscreen(5053);
+          const derivedValue = isFullscreen(5085).useDerivedValue(he);
+          const tmpResult9 = isFullscreen(5085);
           function ge() {
             return { opacity: derivedValue.get() };
           }
@@ -373,8 +373,8 @@ let closure_33 = noop.memo(
           ge.__closure = obj3;
           ge.__workletHash = 17463485679217;
           ge.__initData = __initData2;
-          const animatedStyle = isFullscreen(5053).useAnimatedStyle(ge);
-          const tmpResult10 = isFullscreen(5053);
+          const animatedStyle = isFullscreen(5085).useAnimatedStyle(ge);
+          const tmpResult10 = isFullscreen(5085);
           function ye() {
             return { opacity: 1 - derivedValue.get() };
           }
@@ -382,8 +382,8 @@ let closure_33 = noop.memo(
           ye.__closure = obj5;
           ye.__workletHash = 9103187579788;
           ye.__initData = __initData3;
-          const animatedStyle1 = isFullscreen(5053).useAnimatedStyle(ye);
-          const tmpResult11 = isFullscreen(5053);
+          const animatedStyle1 = isFullscreen(5085).useAnimatedStyle(ye);
+          const tmpResult11 = isFullscreen(5085);
           function _e() {
             let pointerEvents = "none";
             if (derivedValue.get() > 0.3) {
@@ -395,7 +395,7 @@ let closure_33 = noop.memo(
           _e.__closure = obj6;
           _e.__workletHash = 6340268991801;
           _e.__initData = __initData4;
-          const animatedProps = isFullscreen(5053).useAnimatedProps(_e);
+          const animatedProps = isFullscreen(5085).useAnimatedProps(_e);
           setIsFullscreen(1630)();
           if (cResult[11] === isFullscreen) {
             class J {
@@ -446,7 +446,7 @@ let closure_33 = noop.memo(
           cResult[11] = isFullscreen;
           cResult[12] = setIsFullscreen;
           cResult[13] = Ce;
-          const tmpResult12 = isFullscreen(5053);
+          const tmpResult12 = isFullscreen(5085);
         }
         let str = "md";
         if (null != diff) {
@@ -463,7 +463,7 @@ let closure_33 = noop.memo(
                 return;
               }
             }
-            if (diff < isFullscreen(16518).QUEST_PROGRESS_DIAMETER_BY_SIZE.lg + tmp14) {
+            if (diff < isFullscreen(16747).QUEST_PROGRESS_DIAMETER_BY_SIZE.lg + tmp14) {
               class J {
                 constructor(arg0) {
                   tmp = closure_3(closure_1(closure_2[8]).space.PX_24 + arg0.nativeEvent.layout.height);
@@ -1798,7 +1798,7 @@ let closure_34 = noop.memo(
         const tmpResult2 = contentWidth(memo[31]);
       },
 );
-createStyles = fn(4972);
+createStyles = fn(5004);
 let obj = { footerButton: null };
 const alphaResult3 = n(nativeDefault.unsafe_rawColors.PLUM_23).alpha(0.4);
 obj.footerButton = { padding: nativeDefault.space.PX_8 };
@@ -1851,7 +1851,7 @@ let result = size.fileFinishedImporting("modules/quests/native/VideoQuestModal/V
 export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
   ({ onClose, sourceQuestContent } = arg0);
   ({ contentWidth, isFullscreen, onNavigateToPostWatchVideo, onEnd, setIsFullscreen } = arg0);
-  const quest = sourceQuestContent(16513).useVideoQuestModalContext().quest;
+  const quest = sourceQuestContent(16742).useVideoQuestModalContext().quest;
   items = [quest];
   items1 = [quest];
   const memo = noop.useMemo(
@@ -1862,20 +1862,20 @@ export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
     () => AssetUtils.getQuestAsset(quest, AssetUtils.QuestAssetType.VIDEO_PLAYER_TRANSCRIPT, undefined, true),
     items1,
   );
-  let obj = sourceQuestContent(16513);
+  let obj = sourceQuestContent(16742);
   [tmp6, dependencyMap] = videoQuestClickCtaAndMaybeCloseModal(noop.useState(false), 2);
   const items2 = [quest];
   const callback = noop.useCallback(() => dependencyMap((arg0) => !arg0), []);
   const callback1 = noop.useCallback(() => {
     const obj = ActionSheetActionCreatorsDefault;
-    obj.openLazy(asyncRequireImpl(16539, dependencyMap.paths), "transcript-" + quest.id, { quest });
+    obj.openLazy(asyncRequireImpl(16768, dependencyMap.paths), "transcript-" + quest.id, { quest });
   }, items2);
   const tmp5 = videoQuestClickCtaAndMaybeCloseModal(noop.useState(false), 2);
-  const getQuestImpressionId = sourceQuestContent(9608).useGetQuestImpressionId();
-  let obj2 = sourceQuestContent(9608);
+  const getQuestImpressionId = sourceQuestContent(9640).useGetQuestImpressionId();
+  let obj2 = sourceQuestContent(9640);
   [tmp11, closure_4] = videoQuestClickCtaAndMaybeCloseModal(noop.useState(false), 2);
   const tmp10 = videoQuestClickCtaAndMaybeCloseModal(noop.useState(false), 2);
-  const isShareableQuestResult = sourceQuestContent(7797).isShareableQuest(quest.config);
+  const isShareableQuestResult = sourceQuestContent(7831).isShareableQuest(quest.config);
   _objectWithoutProperties = isShareableQuestResult;
   const items3 = [isShareableQuestResult, quest.id, getQuestImpressionId, sourceQuestContent];
   const callback2 = noop.useCallback(() => {
@@ -1901,8 +1901,8 @@ export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
       obj3.showShareActionSheet(obj4, "Video Quest Modal - " + quest.id);
     }
   }, items3);
-  let obj3 = sourceQuestContent(7797);
-  videoQuestClickCtaAndMaybeCloseModal = sourceQuestContent(16540).useVideoQuestClickCtaAndMaybeCloseModal({
+  let obj3 = sourceQuestContent(7831);
+  videoQuestClickCtaAndMaybeCloseModal = sourceQuestContent(16769).useVideoQuestClickCtaAndMaybeCloseModal({
     quest,
     onClose,
     sourceQuestContent,
@@ -1921,14 +1921,14 @@ export default noop.memo(function VideoQuestModalContentInProgress(arg0) {
   const callback5 = noop.useCallback(() => {
     const result = QuestUtils.openRewardDetailsBottomSheet({ questId: quest.id });
   }, items6);
-  let obj4 = sourceQuestContent(16540);
-  const videoExternallyPaused = sourceQuestContent(16541).useVideoExternallyPaused(quest.id, tmp11);
+  let obj4 = sourceQuestContent(16769);
+  const videoExternallyPaused = sourceQuestContent(16770).useVideoExternallyPaused(quest.id, tmp11);
   const tmp19 =
-    quest.config.taskConfigV2.tasks[sourceQuestContent(undefined, 6719).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
+    quest.config.taskConfigV2.tasks[sourceQuestContent(undefined, 6753).FirstPartyQuestTaskTypes.WATCH_VIDEO_ON_MOBILE];
   let tmp20 = null == tmp19;
   if (!tmp20) {
-    tmp20 = "portrait" === sourceQuestContent(14142).getVideoOrientation(tmp19);
-    const tmpResult = sourceQuestContent(14142);
+    tmp20 = "portrait" === sourceQuestContent(14365).getVideoOrientation(tmp19);
+    const tmpResult = sourceQuestContent(14365);
   }
   return closure_14(tmp20 ? closure_34 : closure_33, {
     quest,

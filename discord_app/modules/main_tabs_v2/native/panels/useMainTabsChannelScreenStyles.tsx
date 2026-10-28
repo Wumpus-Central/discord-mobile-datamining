@@ -5,7 +5,7 @@ import ReanimatedRexport from "../../../reanimated/ReanimatedRexport.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 const obj2 = { elevation: null };
 const merged = Object.assign(fn(17).StyleSheet.absoluteFillObject);
 const merged1 = Object.assign(nativeDefault.shadows.SHADOW_LOW);

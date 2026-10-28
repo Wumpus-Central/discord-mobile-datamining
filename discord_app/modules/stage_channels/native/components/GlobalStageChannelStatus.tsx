@@ -13,13 +13,13 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 import ActionSheetStore from "../../../action_sheet/native/ActionSheetStore.tsx";
 import StageInstanceStore from "../../StageInstanceStore.tsx";
 
-const useMountEffectDefault = tmp5(5264);
+const useMountEffectDefault = tmp5(5299);
 require = fn;
 const View = fn(17).View;
 const Fonts = fn(1084).Fonts;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   invitedContainer: { paddingHorizontal: nativeDefault.space.PX_8 },
   icon: null,
@@ -151,8 +151,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const stageBlockedUsersCount = tmp(8104).useStageBlockedUsersCount(tmp17);
-        const tmpResult4 = tmp(8104);
+        const stageBlockedUsersCount = tmp(8138).useStageBlockedUsersCount(tmp17);
+        const tmpResult4 = tmp(8138);
         if (channel != null) {
           class S {
             constructor() {
@@ -160,8 +160,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const stageIgnoredUsersCount = tmp(8104).useStageIgnoredUsersCount(tmp19);
-        const tmpResult5 = tmp(8104);
+        const stageIgnoredUsersCount = tmp(8138).useStageIgnoredUsersCount(tmp19);
+        const tmpResult5 = tmp(8138);
         if (channel != null) {
           class S {
             constructor() {
@@ -169,7 +169,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             }
           }
         }
-        const getStageRTCPanelHeight = tmp(11568).useGetStageRTCPanelHeight(tmp21);
+        const getStageRTCPanelHeight = tmp(11606).useGetStageRTCPanelHeight(tmp21);
         if (cResult[7] !== channel) {
           class S {
             constructor() {
@@ -207,19 +207,19 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                     if (null != id) {
                       if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
                         const obj5 = {
-                          entryPoint: tmp41(6658).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
+                          entryPoint: tmp41(6692).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND,
                         };
-                        const result = stringResult(7884).showAgeVerificationGetStartedModal(obj5);
-                        const obj4 = stringResult(7884);
+                        const result = stringResult(7918).showAgeVerificationGetStartedModal(obj5);
+                        const obj4 = stringResult(7918);
                       } else {
                         v0(true);
                         v0 = 1;
                         c4 = 2;
                         c5 = 1;
-                        const obj6 = { value: tmp41(7874).audienceAckRequestToSpeak(id, false), done: false };
+                        const obj6 = { value: tmp41(7908).audienceAckRequestToSpeak(id, false), done: false };
                         return obj6;
                       }
-                      obj9 = id(6688);
+                      obj9 = id(6722);
                     }
                     c5 = 3;
                   }
@@ -235,8 +235,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                   v0 = 0;
                   v0(false);
                   if (null == key.getKey()) {
-                    stateFromStores(7870).openStageChannel(id);
-                    const obj8 = stateFromStores(7870);
+                    stateFromStores(7904).openStageChannel(id);
+                    const obj8 = stateFromStores(7904);
                   }
                 }
                 v0 = 0;
@@ -404,7 +404,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[14] = tmp26;
           cResult[15] = items2;
         }
-        const tmpResult6 = tmp(11568);
+        const tmpResult6 = tmp(11606);
       }
       cResult[4] = stringResult;
       if (stateFromStores != null) {
@@ -462,18 +462,18 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
                 channel = tmp7;
                 if (null != id) {
                   if (obj9.shouldAgeVerifyToSpeakForCurrentUser(id.id)) {
-                    const obj5 = { entryPoint: tmp41(6658).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
-                    const result = tmp3(7884).showAgeVerificationGetStartedModal(obj5);
-                    const obj4 = tmp3(7884);
+                    const obj5 = { entryPoint: tmp41(6692).AgeVerificationModalEntryPoint.STAGE_CHANNEL_RAISE_HAND };
+                    const result = tmp3(7918).showAgeVerificationGetStartedModal(obj5);
+                    const obj4 = tmp3(7918);
                   } else {
                     dependencyMap(true);
                     dependencyMap = 1;
                     c4 = 2;
                     c5 = 1;
-                    const obj6 = { value: tmp41(7874).audienceAckRequestToSpeak(id, false), done: false };
+                    const obj6 = { value: tmp41(7908).audienceAckRequestToSpeak(id, false), done: false };
                     return obj6;
                   }
-                  obj9 = channel(6688);
+                  obj9 = channel(6722);
                 }
                 c5 = 3;
               }
@@ -489,8 +489,8 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
               dependencyMap = 0;
               closure_129_3(false);
               if (null == key.getKey()) {
-                tmp27(7870).openStageChannel(closure_129_0);
-                const obj8 = tmp27(7870);
+                tmp27(7904).openStageChannel(closure_129_0);
+                const obj8 = tmp27(7904);
               }
             }
             dependencyMap = 0;
@@ -539,14 +539,14 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
       if (channel != null) {
         id1 = channel.id;
       }
-      const stageBlockedUsersCount = channel(8104).useStageBlockedUsersCount(id1);
-      let obj2 = channel(8104);
+      const stageBlockedUsersCount = channel(8138).useStageBlockedUsersCount(id1);
+      let obj2 = channel(8138);
       let id2;
       if (channel != null) {
         id2 = channel.id;
       }
-      let stageIgnoredUsersCount = channel(8104).useStageIgnoredUsersCount(id2);
-      channel(11568);
+      let stageIgnoredUsersCount = channel(8138).useStageIgnoredUsersCount(id2);
+      channel(11606);
       if (channel != null) {
         const id = channel.id;
       }
@@ -582,7 +582,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             };
             const intl6 = tmp6(1125).intl;
             obj9.text = intl6.string(tmp6(1125).t["1YDv7a"]);
-            obj8.children = closure_10(tmp6(5246).BaseTextButton, obj9);
+            obj8.children = closure_10(tmp6(5281).BaseTextButton, obj9);
             const items4 = [closure_10(View, obj8)];
             const obj10 = { style: tmp.buttonWrapper, children: null };
             const obj11 = {
@@ -607,7 +607,7 @@ const tmp3 = ReactCompilerGating.isReactCompilerEnabled()
             obj11.text = intl7.string(tmp6(1125).t.MpO0px);
             obj11.loading = tmp10;
             obj11.disabled = tmp10;
-            obj10.children = closure_10(tmp6(5245).Button, obj11);
+            obj10.children = closure_10(tmp6(5280).Button, obj11);
             items4[1] = closure_10(View, obj10);
             obj7.children = items4;
             items3[2] = closure_11(View, obj7);
@@ -690,7 +690,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (!tmp9) {
         if (!tmp8) {
-          tmp(4994);
+          tmp(5026);
           let str = "dark-content";
         }
         if (null != channel) {
@@ -842,12 +842,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[13] = tmp24;
                 tmp22 = tmp24;
               }
-              const channelIconWithGuild = tmp(8502).getChannelIconWithGuild(channel, guild);
+              const channelIconWithGuild = tmp(8539).getChannelIconWithGuild(channel, guild);
               cResult[8] = channel;
               cResult[9] = guild;
               cResult[10] = channelIconWithGuild;
               tmp20 = channelIconWithGuild;
-              const tmpResult4 = tmp(8502);
+              const tmpResult4 = tmp(8539);
             }
           }
         }
@@ -884,7 +884,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       if (!invitedHeaderText) {
         if (!tmp7) {
-          tmp8(4994);
+          tmp8(5026);
           let str = "dark-content";
         }
         if (null != channel) {
@@ -909,7 +909,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const obj5 = {
                 style: activeSpeakerIcon,
                 size: tmp8(1199).Icon.Sizes.REFRESH_SMALL_16,
-                source: tmp8(8502).getChannelIconWithGuild(channel, guild),
+                source: tmp8(8539).getChannelIconWithGuild(channel, guild),
               };
               items2[1] = closure_10(tmp8(1199).Icon, obj5);
               let tmp13Result = "" !== str2;
@@ -949,7 +949,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               items2[2] = closure_11(tmp8(1199).LegacyText, obj8);
               obj3.children = items2;
               tmp13Result2 = closure_11(View, obj3);
-              const tmp8Result2 = tmp8(8502);
+              const tmp8Result2 = tmp8(8539);
             }
             return tmp13Result2;
           }

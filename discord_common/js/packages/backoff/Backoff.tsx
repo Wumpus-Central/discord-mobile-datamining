@@ -101,6 +101,14 @@ prototype["fail"] = function fail(_callback, arg1) {
   }
   return _current;
 };
+prototype["failAsync"] = function failAsync(arg0) {
+  const self = this;
+  closure_0 = arg0;
+  return new Promise((arg0) => {
+    closure_0 = arg0;
+    self.fail(() => closure_0(), closure_0);
+  });
+};
 prototype["cancel"] = function cancel() {
   const self = this;
   this._callback = null;

@@ -127,7 +127,7 @@ let closure_10 = async function _savedMessageJumpToMessage(arg0, arg1) {
     }
   })();
 };
-const UnknownChannelRecord = fn(4828).UnknownChannelRecord;
+const UnknownChannelRecord = fn(4860).UnknownChannelRecord;
 const Constants = fn(1084);
 ({ ChannelTypes: closure_7, Routes: closure_8 } = Constants);
 const DueInStringTypes = { LONG: 0, [0]: "LONG", SHORT: 1, [1]: "SHORT" };

@@ -287,9 +287,9 @@ let closure_25 = async function _runPrimaryAppCommandOrJoinEmbeddedActivity(arg0
                 }
                 let tmp2 = type === constants.GUILD_VOICE;
                 application = application.getApplication(arg0);
-                const result = closure_1_0(2028).supportsEmbeddedSurface(application, closure_1_0(5627).EmbeddedSurfaceType.MAIN);
+                const result = closure_1_0(2028).supportsEmbeddedSurface(application, closure_1_0(5662).EmbeddedSurfaceType.MAIN);
                 const obj = closure_1_0(2028);
-                const result1 = closure_1_0(8882).isActivityInTextSupportedForChannel(type);
+                const result1 = closure_1_0(8916).isActivityInTextSupportedForChannel(type);
                 if (tmp2) {
                   tmp2 = result;
                 }
@@ -589,26 +589,26 @@ let closure_27 = async function _maybeSendPrimaryAppCommand(arg0) {
                               const obj3 = { status: error_status, body: null };
                               const obj4 = { message: error_message, code: error_code };
                               obj3.body = obj4;
-                              const tmp21 = new nonce(6376)(obj3);
+                              const tmp21 = new nonce(6410)(obj3);
                               closure_1_1(tmp21);
                             }
                           }
                         }
                         if (null != error_reason_code) {
-                          if (error_reason_code in nonce(6019).ReasonCodes) {
-                            const tmp14 = new nonce(6019)(error_reason_code);
+                          if (error_reason_code in nonce(6053).ReasonCodes) {
+                            const tmp14 = new nonce(6053)(error_reason_code);
                             closure_1_1(tmp14);
                           }
                         }
                         const obj = nonce(1264);
-                        const tmp3Result = nonce(6019);
-                        closure_1_1(new nonce(6019)(nonce(6019).ReasonCodes.UNKNOWN));
-                        const tmp3Result1 = new nonce(6019)(nonce(6019).ReasonCodes.UNKNOWN);
+                        const tmp3Result = nonce(6053);
+                        closure_1_1(new nonce(6053)(nonce(6053).ReasonCodes.UNKNOWN));
+                        const tmp3Result1 = new nonce(6053)(nonce(6053).ReasonCodes.UNKNOWN);
                       }
                     };
                   }
                 };
-                nonce(10200)(obj);
+                nonce(10232)(obj);
               });
               c5 = 7;
               c6 = 1;
@@ -1304,13 +1304,13 @@ let closure_35 = async function _refreshProxyTicket() {
     }
   })();
 };
-let closure_5 = fn(9652).getOrFetchApplicationCommandIndexForTarget;
+let closure_5 = fn(9684).getOrFetchApplicationCommandIndexForTarget;
 let closure_16 = fn(2023).SUPPORTED_ACTIVITY_IN_TEXT_CHANNEL_TYPES;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_17, AnalyticsGameOpenTypes: closure_18, ChannelTypes: closure_19, Endpoints: closure_20, PopoutWindowKeys: closure_21 } = Constants);
 const INSTALL_LESS_APP_IDS = fn(1372).INSTALL_LESS_APP_IDS;
-const ContentDismissActionType = fn(4821).ContentDismissActionType;
-const InviteTargetTypes = fn(7810).InviteTargetTypes;
+const ContentDismissActionType = fn(4853).ContentDismissActionType;
+const InviteTargetTypes = fn(7844).InviteTargetTypes;
 let closure_26 = { NO_PRIMARY_APP_COMMAND: 1, [1]: "NO_PRIMARY_APP_COMMAND", UNAUTHORIZED: 2, [2]: "UNAUTHORIZED", NO_CHANNEL: 3, [3]: "NO_CHANNEL", FAILED_ACTIVITY_LAUNCH_CHECKS: 4, [4]: "FAILED_ACTIVITY_LAUNCH_CHECKS" };
 let closure_28 = { OTHER: 0, [0]: "OTHER", NO_APPLICATION_ID: 1, [1]: "NO_APPLICATION_ID", UNKNOWN_USER_OR_APPLICATION: 2, [2]: "UNKNOWN_USER_OR_APPLICATION", INVALID_CHANNEL: 3, [3]: "INVALID_CHANNEL", LAUNCHABILITY_CHECK_FAILED_OTHER: 4, [4]: "LAUNCHABILITY_CHECK_FAILED_OTHER", NO_USE_EMBEDDED_ACTIVITIES_PERMISSION: 5, [5]: "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION", ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS: 6, [6]: "ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS", FAILED_ACTIVITY_LAUNCH_CHECKS: 7, [7]: "FAILED_ACTIVITY_LAUNCH_CHECKS", NOT_CONNECTED_TO_VOICE_CHANNEL: 8, [8]: "NOT_CONNECTED_TO_VOICE_CHANNEL", AIT_NOT_ENABLED_FOR_USER: 9, [9]: "AIT_NOT_ENABLED_FOR_USER", CHANNEL_CONTENT_GATED: 10, [10]: "CHANNEL_CONTENT_GATED" };
 const size = fn(2);

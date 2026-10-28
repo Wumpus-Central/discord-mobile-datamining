@@ -10,8 +10,8 @@ let obj = {
   currentUsernameInvalid: false,
   retryAfterTime: null,
   suggestions: {
-    migration: { suggestion: { username: "rejectWithError" }, fetched: false, usernameSuggestionLoading: false },
-    registration: { suggestion: { username: "rejectWithError" }, source: "Reflect", fetched: null },
+    migration: { suggestion: { username: "paths" }, fetched: false, usernameSuggestionLoading: false },
+    registration: { suggestion: { username: "paths" }, source: "Reflect", fetched: null },
   },
 };
 const Store = initializeDefault.Store;
@@ -85,12 +85,8 @@ const uniqueUsernamesStore = new UniqueUsernamesStore(DispatcherDefault, {
     }
   },
   UNIQUE_USERNAME_SUGGESTIONS_RESET: function handleUniqueUsernameSuggestionsReset() {
-    obj.suggestions.migration = {
-      suggestion: { username: "rejectWithError" },
-      fetched: false,
-      usernameSuggestionLoading: false,
-    };
-    obj.suggestions.registration = { suggestion: { username: "rejectWithError" }, source: "Reflect", fetched: null };
+    obj.suggestions.migration = { suggestion: { username: "paths" }, fetched: false, usernameSuggestionLoading: false };
+    obj.suggestions.registration = { suggestion: { username: "paths" }, source: "Reflect", fetched: null };
   },
   UNIQUE_USERNAME_SUGGESTIONS_SUCCESS: function handleUniqueUsernameSuggestionsSuccess(suggestion) {
     suggestion = suggestion.suggestion;

@@ -121,7 +121,7 @@ const Constants = fn(1084);
 } = Constants);
 const PremiumUpsellTypes = fn(1391).PremiumUpsellTypes;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_13 = createStyles.createStyles({ stretch: { alignSelf: "stretch" } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -221,7 +221,7 @@ export default noop.memo(
           expandedChildren: tmp12,
           children: tmp18,
         };
-        const tmp22 = jsx(tmp17(17784), {
+        const tmp22 = jsx(tmp17(18021), {
           selected: stateFromStores,
           circle: false,
           unread: false,
@@ -265,8 +265,8 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: "f",
-          expandedChildren: "guilds-bar-drag-preview",
+          label: "(",
+          expandedChildren: "INVITE_RESOLVE_SUCCESS",
           children: null,
         };
         const intl = util.intl;
@@ -284,8 +284,8 @@ export default noop.memo(
           styles: guildsBarAnimatedWrapperStyles,
           overState: "y",
           config: memo,
-          label: "f",
-          expandedChildren: "guilds-bar-drag-preview",
+          label: "(",
+          expandedChildren: "INVITE_RESOLVE_SUCCESS",
           children: null,
         });
         return <View style={tmp.stretch}>{null}</View>;

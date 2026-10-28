@@ -296,7 +296,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   } else {
                     const obj4 = {};
                     const obj5 = v3(1264);
-                    const merged = Object.assign(provider_id(5712).collectGuildAnalyticsMetadata(guildId));
+                    const merged = Object.assign(provider_id(5747).collectGuildAnalyticsMetadata(guildId));
                     obj4.connection_type = "provider";
                     provider_id = connection.provider_id;
                     if (provider_id == null) {

@@ -1,7 +1,7 @@
 // discord_app/modules/premium/native/SubscriptionAccountHoldNotice.tsx
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import PremiumUtils from "../../../utils/PremiumUtils.tsx";
-import _modDef14738 from "../../../../_runtime/metro/14738__.js";
+import _modDef14961 from "../../../../_runtime/metro/14961__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -10,7 +10,7 @@ get_ActivityIndicator = fn(17);
 const SubscriptionStatusTypes = fn(1084).SubscriptionStatusTypes;
 const jsxProd = fn(21);
 ({ jsx: metroRequire, jsxs: closure_7 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   container: { padding: 8, margin: 8, backgroundColor: nativeDefault.colors.BACKGROUND_SURFACE_HIGH },
   textContainer: { flexDirection: "row" },
@@ -33,7 +33,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         ({ container, textContainer } = tmp4);
         if (cResult[0] !== tmp4.icon) {
-          const obj2 = { size: tmp(1199).IconSizes.MEDIUM, style: tmp4.icon, source: _modDef14738 };
+          const obj2 = { size: tmp(1199).IconSizes.MEDIUM, style: tmp4.icon, source: _modDef14961 };
           const tmp8 = closure_6(tmp(1199).Icon, obj2);
           cResult[0] = tmp4.icon;
           cResult[1] = tmp8;
@@ -76,7 +76,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       );
                     },
                   };
-                  const tmp24 = closure_6(tmp(5245).Button, obj3);
+                  const tmp24 = closure_6(tmp(5280).Button, obj3);
                   cResult[13] = subscription.paymentGateway;
                   cResult[14] = tmp24;
                   let tmp22 = tmp24;
@@ -113,7 +113,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             tmp15 = tmp18;
           }
           const obj6 = { style: tmp9, variant: "text-sm/medium", children: tmp10 };
-          const tmp14 = closure_6(tmp(5235).Text, obj6);
+          const tmp14 = closure_6(tmp(5270).Text, obj6);
           cResult[5] = tmp4.text;
           cResult[6] = tmp10;
           cResult[7] = tmp14;
@@ -140,7 +140,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (subscription.status === SubscriptionStatusTypes.ACCOUNT_HOLD) {
         const obj = { style: tmp.container, children: null };
         const obj2 = { style: tmp.textContainer, children: null };
-        const obj3 = { size: subscription(1199).IconSizes.MEDIUM, style: tmp.icon, source: _modDef14738 };
+        const obj3 = { size: subscription(1199).IconSizes.MEDIUM, style: tmp.icon, source: _modDef14961 };
         const items = [closure_6(subscription(1199).Icon, obj3)];
         const obj4 = { style: tmp.text, variant: "text-sm/medium", children: null };
         const intl = subscription(1125).intl;
@@ -149,7 +149,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           planDescription: subscription(2050).getDisplayName(subscription.planId),
         };
         obj4.children = intl.format(subscription(1125).t["7I21Iz"], obj5);
-        items[1] = closure_6(subscription(5235).Text, obj4);
+        items[1] = closure_6(subscription(5270).Text, obj4);
         obj2.children = items;
         const items1 = [closure_7(closure_4, obj2)];
         const obj7 = { size: "sm", text: null, onPress: null };
@@ -160,7 +160,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             PremiumUtils.getExternalSubscriptionMethodUrl(subscription.paymentGateway, "PAYMENT_SOURCE_MANAGEMENT"),
           );
         };
-        items1[1] = closure_6(subscription(5245).Button, obj7);
+        items1[1] = closure_6(subscription(5280).Button, obj7);
         obj.children = items1;
         tmp2 = closure_7(closure_4, obj);
         const obj6 = subscription(2050);

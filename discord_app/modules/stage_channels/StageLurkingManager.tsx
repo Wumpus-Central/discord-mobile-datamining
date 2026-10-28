@@ -27,7 +27,7 @@ class StageLurkingManager extends tmp2 {
     applyArgumentsResult.handleDisconnectFromStageChannel = function handleDisconnectFromStageChannel(guildId) {
       guildId = guildId.getGuildId();
       const items = [guildId, guildId];
-      applyArgumentsResult(7437).stopLurkingAll(items.filter(applyArgumentsResult(1385).isNotNullish));
+      applyArgumentsResult(7472).stopLurkingAll(items.filter(applyArgumentsResult(1385).isNotNullish));
     };
     applyArgumentsResult.handleLogout = function handleLogout() {
       applyArgumentsResult.terminate();

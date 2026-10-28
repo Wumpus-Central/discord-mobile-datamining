@@ -16,10 +16,10 @@ import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const StageChannelListStore = fn(11702);
+const StageChannelListStore = fn(11740);
 ({ useActiveSpeakerPillScrollHandler: hasOwnProperty, useActiveSpeakerPillState: metroRequire } =
   StageChannelListStore);
-const MAX_AUDIENCE_ROW_LIMIT = fn(6638).MAX_AUDIENCE_ROW_LIMIT;
+const MAX_AUDIENCE_ROW_LIMIT = fn(6672).MAX_AUDIENCE_ROW_LIMIT;
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 let obj = { direction: fn(1199).CutoutDirection.RIGHT, radius: 13, inset: -6 };
@@ -898,10 +898,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       channel = channel.channel;
       let width;
       let isScreenLandscape;
-      const throttleDurationForChannel = width(11729).useThrottleDurationForChannel(channel.id);
+      const throttleDurationForChannel = width(11767).useThrottleDurationForChannel(channel.id);
       width = isScreenLandscape(1496)().width;
-      let obj = width(11729);
-      isScreenLandscape = width(8691).useIsScreenLandscape();
+      let obj = width(11767);
+      isScreenLandscape = width(8728).useIsScreenLandscape();
       const items = [width, isScreenLandscape];
       const memo = noop.useMemo(() => {
         let num = 3;
@@ -915,9 +915,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj[StageChannelParticipants.StageChannelParticipantNamedIndex.AUDIENCE] = MAX_AUDIENCE_ROW_LIMIT;
         return obj;
       }, items);
-      const obj2 = width(8691);
+      const obj2 = width(8728);
       const tmp4 = _slicedToArray(
-        width(11729).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
+        width(11767).useStageChannelParticipantsListThrottled(channel.id, memo, throttleDurationForChannel, true),
         2,
       );
       return closure_8(closure_12, { channel, listSections: tmp4[0], rowsBySection: tmp4[1] });

@@ -7,7 +7,7 @@ const FavoritesGuildUpsellSheet = "FavoritesGuildUpsellSheet";
 const result = size.fileFinishedImporting("modules/favorites/utils/openFavoritesGuildLimitUpsell.native.tsx");
 
 export default function openFavoritesGuildLimitUpsell(limit) {
-  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10852, dependencyMap.paths), FavoritesGuildUpsellSheet, {
+  ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(10887, dependencyMap.paths), FavoritesGuildUpsellSheet, {
     limit,
   });
 }

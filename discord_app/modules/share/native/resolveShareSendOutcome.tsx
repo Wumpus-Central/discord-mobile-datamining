@@ -32,7 +32,7 @@ export const withoutSentDestinations = function withoutSentDestinations(arr, arr
     return items;
   } else {
     const _Set = Set;
-    set = new Set(arr2.map(set(12916).destinationKey));
+    set = new Set(arr2.map(set(12963).destinationKey));
     return arr.filter((item) => !set.has(formatResults.destinationKey(item)));
   }
 };

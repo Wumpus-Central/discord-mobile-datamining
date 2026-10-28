@@ -173,8 +173,8 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
               let obj3 = { value, done: true };
               return obj3;
             } else {
-              let useStoreState = tmp3;
-              refetch = tmp7;
+              closure_3 = tmp3;
+              closure_2 = tmp7;
               closure_130_0 = undefined;
               closure_130_1 = undefined;
               closure_130_2 = undefined;
@@ -186,7 +186,7 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
                 refetch = false;
               }
               closure_130_2 = refetch;
-              useStoreState = queryId.useStoreState;
+              let useStoreState = queryId.useStoreState;
               if (useStoreState === undefined) {
                 useStoreState = getUseStoreState(queryId);
               }
@@ -284,7 +284,7 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
                       if (null != status) {
                         if ("status" in status) {
                           if (typeof status.status === "number") {
-                            retryAfter = status.retryAfter;
+                            const retryAfter = status.retryAfter;
                             let tmp5;
                             if (typeof retryAfter === "number") {
                               const _Number = Number;
@@ -331,30 +331,30 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
                 closure_130_3.setState(obj6);
                 if (closure_131_8(closure_130_8)) {
                   if (closure_131_6 > backoff.fails) {
-                    const promise = new Promise((arg0, arg1) => {
-                      closure_0 = arg0;
-                      closure_1 = arg1;
-                      retryAfter = retryAfter.retryAfter;
-                      let tmp2;
-                      if (typeof retryAfter === "number") {
-                        const _Number = Number;
-                        if (Number.isFinite(retryAfter)) {
-                          if (retryAfter > 0) {
-                            tmp2 = retryAfter;
-                          }
-                        }
-                      }
-                      let num2 = 0;
-                      if (null != tmp2) {
-                        num2 = 1000 * tmp2;
-                      }
-                      closure_4.fail(() => {
-                        closure_3_13({ queryId, args, useStoreState, refetch }).then(closure_0, closure_1);
-                      }, num2);
-                    });
                     c6 = 4;
                     c7 = 1;
-                    const obj7 = { value: promise, done: false };
+                    const obj7 = {
+                      value: backoff.failAsync(
+                        (function getRetryAfterMs(retryAfter) {
+                          retryAfter = retryAfter.retryAfter;
+                          let tmp;
+                          if (typeof retryAfter === "number") {
+                            const _Number = Number;
+                            if (Number.isFinite(retryAfter)) {
+                              if (retryAfter > 0) {
+                                tmp = retryAfter;
+                              }
+                            }
+                          }
+                          let num2 = 0;
+                          if (null != tmp) {
+                            num2 = 1000 * tmp;
+                          }
+                          return num2;
+                        })(closure_130_8),
+                      ),
+                      done: false,
+                    };
                     return obj7;
                   }
                 }
@@ -376,6 +376,26 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
                   closure_130_3.setState(obj9);
                   c5 = 0;
                 }
+              } else if (4 === tmp7) {
+                if (arg0 === 1) {
+                  c7 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c7 = 3;
+                  const obj10 = { value, done: true };
+                  return obj10;
+                } else {
+                  const obj11 = {
+                    queryId: closure_130_0,
+                    args: closure_130_1,
+                    useStoreState: closure_130_3,
+                    refetch: closure_130_2,
+                  };
+                  c6 = 5;
+                  c7 = 1;
+                  const obj12 = { value: closure_131_13(obj11), done: false };
+                  return obj12;
+                }
               } else if (arg0 === 1) {
                 c7 = 3;
                 throw value;
@@ -386,16 +406,16 @@ export const createFetchStore = function createFetchStore(ApplicationStore, arg1
               }
               c5 = 0;
               c7 = 3;
-              const obj10 = { value, done: true };
-              return obj10;
+              const obj13 = { value, done: true };
+              return obj13;
             }
             c7 = 3;
           }
-        } catch (tmp75) {
-          closure_4 = tmp75;
+        } catch (tmp80) {
+          closure_4 = tmp80;
           if (tmp4 === c5) {
             c7 = tmp2;
-            throw tmp75;
+            throw tmp80;
           } else {
             c6 = tmp;
           }

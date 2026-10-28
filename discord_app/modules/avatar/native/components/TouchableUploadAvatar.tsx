@@ -5,15 +5,15 @@ import util from "../../../../intl/index.native.tsx";
 import native from "../../../../design/void/native.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef13737 from "../../../../../_runtime/metro/13737__.js";
-import _modDef15141 from "../../../../../_runtime/metro/15141__.js";
+import _modDef13955 from "../../../../../_runtime/metro/13955__.js";
+import _modDef15366 from "../../../../../_runtime/metro/15366__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
 const jsxProd = fn(21);
 ({ jsx: closure_4, jsxs: hasOwnProperty } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   avatarContainer: { display: "flex", paddingTop: 24 },
   defaultLogoStyle: { tintColor: nativeDefault.colors.INTERACTIVE_TEXT_DEFAULT, width: 96 },
@@ -62,7 +62,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       ({ avatarSource, showPendingAvatar, onSelectAvatar } = arg0);
       const tmp5 = closure_6();
       if (!(undefined !== showPendingAvatar && showPendingAvatar)) {
-        let tmp7 = _modDef15141;
+        let tmp7 = _modDef15366;
       } else {
         tmp7 = avatarSource;
       }
@@ -84,7 +84,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             let tmp13 = cResult[3];
           }
           if (cResult[4] !== tmp5.uploadAvatarIcon) {
-            const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13737, style: tmp5.uploadAvatarIcon };
+            const obj2 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13955, style: tmp5.uploadAvatarIcon };
             const tmp20 = React4(native.Icon, obj2);
             cResult[4] = tmp5.uploadAvatarIcon;
             cResult[5] = tmp20;
@@ -164,7 +164,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }
       const tmp = closure_6();
       if (!showPendingAvatar) {
-        let tmp3 = _modDef15141;
+        let tmp3 = _modDef15366;
       } else {
         tmp3 = avatarSource;
       }
@@ -185,7 +185,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj4 = { resizeMode: "contain", style: defaultLogoStyle, source: tmp3 };
         const items = [React4(FastImageDefault, obj4)];
         const obj5 = { style: tmp.uploadAvatarWrapper, children: null };
-        const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13737, style: tmp.uploadAvatarIcon };
+        const obj6 = { size: native.Icon.Sizes.MEDIUM, source: _modDef13955, style: tmp.uploadAvatarIcon };
         obj5.children = React4(native.Icon, obj6);
         items[1] = React4(View, obj5);
         obj3.children = items;

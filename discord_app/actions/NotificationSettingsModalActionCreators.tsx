@@ -12,7 +12,7 @@ const require = globalThis.__r;
 
 require = fn;
 const Endpoints = fn(1084).Endpoints;
-fn(4917).NotificationSettingsUpdateType;
+fn(4949).NotificationSettingsUpdateType;
 const constants = fn(1094).ChannelNotificationSettingsFlags;
 const size = fn(2);
 let result = size.fileFinishedImporting("actions/NotificationSettingsModalActionCreators.tsx");

@@ -1,5 +1,5 @@
 // discord_app/modules/conjure/publish_schedule/useConjurePublishScheduleProposal.tsx
-import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
 import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js";
 import _slicedToArray from "../../../../_runtime/metro/00032__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
@@ -8,7 +8,7 @@ import ConjureProjectStore from "../projects/ConjureProjectStore.tsx";
 const require = globalThis.__r;
 
 const require = fn;
-const canPublishProject = fn(6774).canPublishProject;
+const canPublishProject = fn(6808).canPublishProject;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/publish_schedule/useConjurePublishScheduleProposal.tsx");
@@ -132,9 +132,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               return Date.now();
             }
           }
-          let obj5 = { time: tmp(12213).formatPublishScheduleTime(trigger.next_run_at) };
-          formatToPlainStringResult = obj4.formatToPlainString(_modDef3831.orZDqY, obj5);
-          const tmpResult2 = tmp(12213);
+          let obj5 = { time: tmp(12252).formatPublishScheduleTime(trigger.next_run_at) };
+          formatToPlainStringResult = obj4.formatToPlainString(_modDef3863.orZDqY, obj5);
+          const tmpResult2 = tmp(12252);
         }
         cResult[8] = trigger.next_run_at;
         cResult[9] = first1;
@@ -172,17 +172,17 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 v0 = 1;
                 c4 = 2;
                 c5 = 1;
-                const obj5 = { value: closure_0(10809).setPublishSchedule(closure_0, tmp3.trigger), done: false };
+                const obj5 = { value: closure_0(10843).setPublishSchedule(closure_0, tmp3.trigger), done: false };
                 return obj5;
               }
             } else if (1 === tmp7) {
               v0 = 0;
               closure_128_0 = tmp38;
-              if (closure_128_0 instanceof tmp3(10810)) {
+              if (closure_128_0 instanceof tmp3(10844)) {
                 let message = closure_128_0.message;
               } else {
                 const intl = closure_0(1125).intl;
-                message = intl.string(tmp3(3831).EXceox);
+                message = intl.string(tmp3(3863).EXceox);
               }
               v0(message);
               tmp38("error");
@@ -327,9 +327,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         )[0]
       ) {
         let intl = tmp(1125).intl;
-        const obj2 = { time: tmp(12213).formatPublishScheduleTime(trigger.next_run_at) };
-        formatToPlainStringResult = intl.formatToPlainString(_modDef3831.orZDqY, obj2);
-        const tmpResult = tmp(12213);
+        const obj2 = { time: tmp(12252).formatPublishScheduleTime(trigger.next_run_at) };
+        formatToPlainStringResult = intl.formatToPlainString(_modDef3863.orZDqY, obj2);
+        const tmpResult = tmp(12252);
       }
       let obj3 = { summary: null, firstPublish: null, status: null, error: null, onTurnOn: null };
       const tmp4 = _slicedToArray(noop.useState("idle"), 2);

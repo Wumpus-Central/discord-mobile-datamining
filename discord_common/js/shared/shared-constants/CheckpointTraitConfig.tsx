@@ -185,3 +185,20 @@ export const CHECKPOINT_LAYER_BACKGROUND_WEARABLE_ORDERING = [
   "hat",
   "aura",
 ];
+export const CHECKPOINT_BASE_TO_CARD_COLOR_PALETTE = {
+  4: 2,
+  15: 2,
+  3: 2,
+  1: 1,
+  13: 1,
+  7: 1,
+  6: 3,
+  9: 3,
+  11: 3,
+  5: 4,
+  12: 4,
+  2: 5,
+  10: 5,
+  14: 6,
+  8: 6,
+};

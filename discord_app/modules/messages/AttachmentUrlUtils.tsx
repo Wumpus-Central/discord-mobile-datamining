@@ -311,7 +311,7 @@ let closure_14 = async function _maybeRefreshAttachmentUrl() {
     }
   })();
 };
-const ATTACHMENT_PATH_PREFIXES = fn(6005).ATTACHMENT_PATH_PREFIXES;
+const ATTACHMENT_PATH_PREFIXES = fn(6040).ATTACHMENT_PATH_PREFIXES;
 const Endpoints = fn(1084).Endpoints;
 const HOUR = DurationsDefault.Millis.HOUR;
 let items = [window.GLOBAL_ENV.CDN_HOST];

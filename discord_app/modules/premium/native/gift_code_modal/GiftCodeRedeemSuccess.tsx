@@ -5,7 +5,7 @@ import native from "../../../../design/void/native.tsx";
 import CollectiblesItemType from "../../../../../discord_common/js/shared/shared-constants/CollectiblesItemType.tsx";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import GiftCodeUtils from "../../../../utils/GiftCodeUtils.tsx";
-import _mod6485 from "module_6485" /* 6485 */;
+import _mod6519 from "module_6519" /* 6519 */;
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import GameIcon from "../../../game_detection/native/GameIcon.tsx";
 import SlayerStorefrontUtils from "../../../slayer_storefront/SlayerStorefrontUtils.tsx";
@@ -26,7 +26,7 @@ get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   container: { flex: 1, justifyContent: "space-between", backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOW },
   body: {
@@ -87,11 +87,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       let obj = giftCode(576);
       const stateFromStores = giftCode(504).useStateFromStores(first, tmp7);
       let tmpResult = giftCode(504);
-      const getOrFetchSubscriptionPlan = giftCode(11051).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
-      const tmpResult7 = giftCode(11051);
-      const getOrFetchApplication = giftCode(7259).useGetOrFetchApplication(giftCode.applicationId);
-      const tmpResult8 = giftCode(7259);
-      const tmpResult9 = giftCode(11055);
+      const getOrFetchSubscriptionPlan = giftCode(11086).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
+      const tmpResult7 = giftCode(11086);
+      const getOrFetchApplication = giftCode(7293).useGetOrFetchApplication(giftCode.applicationId);
+      const tmpResult8 = giftCode(7293);
+      const tmpResult9 = giftCode(11090);
       let skuId = null;
       if (tmpResult10.isCollectiblesGiftCode(giftCode)) {
         skuId = giftCode.skuId;
@@ -120,8 +120,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp15 = cResult[4];
       }
-      tmpResult10 = giftCode(7663);
-      const shopProductItems = giftCode(8660).useShopProductItems(tmp15);
+      tmpResult10 = giftCode(7697);
+      const shopProductItems = giftCode(8697).useShopProductItems(tmp15);
       const firstAvatarDecoration = shopProductItems.firstAvatarDecoration;
       firstProfileEffect = shopProductItems.firstProfileEffect;
       const firstNameplate = shopProductItems.firstNameplate;
@@ -145,8 +145,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       } else {
         tmp20 = cResult[8];
       }
-      const tmpResult11 = giftCode(8660);
-      const handleUseNow1 = giftCode(11186).useHandleUseNow(tmp20);
+      const tmpResult11 = giftCode(8697);
+      const handleUseNow1 = giftCode(11221).useHandleUseNow(tmp20);
       const handleUseNow = handleUseNow1.handleUseNow;
       const canUseNow = handleUseNow1.canUseNow;
       const isApplying = handleUseNow1.isApplying;
@@ -269,7 +269,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                                                                     const items1 = [tmp35, tmp41];
                                                                     obj5.children = items1;
                                                                     const tmp47 = firstAvatarDecoration(
-                                                                      tmp(7223).SafeAreaPaddingView,
+                                                                      tmp(7257).SafeAreaPaddingView,
                                                                       obj5,
                                                                     );
                                                                     cResult[61] = tmp4.container;
@@ -523,7 +523,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
           return otherwiseResult;
         }
-        const match = _mod6485.match(first1);
+        const match = _mod6519.match(first1);
         const obj7 = { type: CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION };
         const withResult = match.with(
           { type: CollectiblesItemType.CollectiblesItemType.AVATAR_DECORATION },
@@ -605,11 +605,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [SKUStore];
       const stateFromStores = giftCode(504).useStateFromStores(items, () => SKUStore.get(giftCode.skuId));
       let obj = giftCode(504);
-      const getOrFetchSubscriptionPlan = giftCode(11051).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
-      const obj2 = giftCode(11051);
-      const getOrFetchApplication = giftCode(7259).useGetOrFetchApplication(giftCode.applicationId);
-      const obj3 = giftCode(7259);
-      const obj4 = giftCode(11055);
+      const getOrFetchSubscriptionPlan = giftCode(11086).useGetOrFetchSubscriptionPlan(giftCode.subscriptionPlanId);
+      const obj2 = giftCode(11086);
+      const getOrFetchApplication = giftCode(7293).useGetOrFetchApplication(giftCode.applicationId);
+      const obj3 = giftCode(7293);
+      const obj4 = giftCode(11090);
       let skuId = null;
       if (obj5.isCollectiblesGiftCode(giftCode)) {
         skuId = giftCode.skuId;
@@ -623,24 +623,24 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       if (product != null) {
         type = product.type;
       }
-      obj5 = giftCode(7663);
+      obj5 = giftCode(7697);
       let tmp10 = product;
       if (product == null) {
         const obj6 = { items: [] };
         tmp10 = obj6;
       }
-      const shopProductItems = giftCode(8660).useShopProductItems(tmp10);
+      const shopProductItems = giftCode(8697).useShopProductItems(tmp10);
       ({ firstAvatarDecoration, firstProfileEffect, firstNameplate } = shopProductItems);
-      const tmp2Result = giftCode(8660);
+      const tmp2Result = giftCode(8697);
       let tmp12 = product;
       if (product == null) {
         const obj7 = { skuId: "", type: tmp2(1992).CollectiblesItemType.BUNDLE, items: [] };
         tmp12 = obj7;
       }
-      const handleUseNow1 = giftCode(11186).useHandleUseNow({ product: tmp12 });
+      const handleUseNow1 = giftCode(11221).useHandleUseNow({ product: tmp12 });
       const isApplying = handleUseNow1.isApplying;
       ({ handleUseNow, canUseNow } = handleUseNow1);
-      const tmp2Result6 = giftCode(11186);
+      const tmp2Result6 = giftCode(11221);
       [tmp15, c3] = noop.useState();
       const callback = noop.useCallback((nativeEvent) => {
         ({ width: giftCode, height: user } = nativeEvent.nativeEvent.layout);
@@ -660,14 +660,14 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           if (tmp2Result7.isGameItemSKU(stateFromStores)) {
             const obj10 = { style: tmp.gameItemCard, children: null };
             const obj11 = { sku: stateFromStores };
-            obj10.children = closure_8(user(9417), obj11);
+            obj10.children = closure_8(user(9449), obj11);
             let tmp24Result = closure_8(closure_5, obj10);
           } else {
-            const obj12 = { game: getOrFetchApplication, size: tmp2(7263).GameIconSizes.LARGE, skuId: giftCode.skuId };
-            tmp24Result = closure_8(user(7263), obj12);
-            const tmp26 = user(7263);
+            const obj12 = { game: getOrFetchApplication, size: tmp2(7297).GameIconSizes.LARGE, skuId: giftCode.skuId };
+            tmp24Result = closure_8(user(7297), obj12);
+            const tmp26 = user(7297);
           }
-          tmp2Result7 = tmp2(7332);
+          tmp2Result7 = tmp2(7367);
         }
       }
       if (type === giftCode(1992).CollectiblesItemType.BUNDLE) {
@@ -685,7 +685,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               size: "large",
               targetSize: tmp15,
             };
-            tmp20Result = closure_8(user(9389), obj15);
+            tmp20Result = closure_8(user(9421), obj15);
           }
           obj14.children = tmp20Result;
           obj13.children = closure_8(closure_5, obj14);
@@ -696,7 +696,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj16 = { variant: "heading-xl/bold", style: tmp.header, accessibilityRole: "header", children: null };
           const intl4 = tmp2(1125).intl;
           obj16.children = intl4.string(tmp2(1125).t["+BNMcF"]);
-          let tmp31 = closure_8(tmp2(5235).Text, obj16);
+          let tmp31 = closure_8(tmp2(5270).Text, obj16);
         } else {
           if (tmp2Result8.isGameItemSKU(stateFromStores)) {
             const obj17 = {
@@ -707,7 +707,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             };
             const intl3 = tmp2(1125).intl;
             obj17.children = intl3.string(tmp2(1125).t["5glWta"]);
-            tmp31 = closure_8(tmp2(5235).Text, obj17);
+            tmp31 = closure_8(tmp2(5270).Text, obj17);
           } else {
             if (giftCode.isSubscription) {
               if (null != getOrFetchSubscriptionPlan) {
@@ -720,7 +720,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const intl2 = tmp2(1125).intl;
                 const obj19 = { skuName: stateFromStores.name };
                 obj18.children = intl2.format(tmp2(1125).t["1C2BG/"], obj19);
-                tmp31 = closure_8(tmp2(5235).Text, obj18);
+                tmp31 = closure_8(tmp2(5270).Text, obj18);
               }
             }
             if (null != first) {
@@ -733,10 +733,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               };
               const intl = tmp2(1125).intl;
               obj20.children = intl.string(tmp2(1125).t.IMffmm);
-              tmp31 = closure_8(tmp2(5235).Text, obj20);
+              tmp31 = closure_8(tmp2(5270).Text, obj20);
             }
           }
-          tmp2Result8 = tmp2(7332);
+          tmp2Result8 = tmp2(7367);
         }
         items1[1] = tmp31;
         if (tmp2Result9.isGameItemSKU(stateFromStores)) {
@@ -752,7 +752,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             }
             const obj22 = { skuName: str2, applicationName: getOrFetchApplication.name };
             obj21.children = intl7.formatToPlainString(tmp2(1125).t.W2znvX, obj22);
-            let tmp36Result = closure_8(tmp2(5235).Text, obj21);
+            let tmp36Result = closure_8(tmp2(5270).Text, obj21);
             let tmp36 = closure_8;
           }
           items1[2] = tmp36Result;
@@ -772,23 +772,23 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             obj23.children = tmp36(tmp44, obj25);
             items2[1] = tmp36(closure_5, obj23);
             obj8.children = items2;
-            return closure_9(tmp2(7223).SafeAreaPaddingView, obj8);
+            return closure_9(tmp2(7257).SafeAreaPaddingView, obj8);
           }
           obj25 = { text: null, size: "md", onPress: null };
           const intl8 = tmp2(1125).intl;
           obj25.text = intl8.string(tmp2(1125).t["NX+WJN"]);
-          obj25.onPress = user(6673).pop;
+          obj25.onPress = user(6707).pop;
         }
         if (giftCode.isSubscription) {
           if (null != getOrFetchSubscriptionPlan) {
             const obj26 = {
               variant: "text-md/medium",
               style: tmp.message,
-              children: tmp2(6373).getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan),
+              children: tmp2(6407).getSubscriptionGiftSuccessText(getOrFetchSubscriptionPlan),
             };
-            tmp36Result = closure_8(tmp2(5235).Text, obj26);
+            tmp36Result = closure_8(tmp2(5270).Text, obj26);
             tmp36 = closure_8;
-            const tmp2Result10 = tmp2(6373);
+            const tmp2Result10 = tmp2(6407);
           }
         }
         tmp36 = closure_8;
@@ -808,11 +808,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         }
         const intl5 = tmp2(1125).intl;
         formatToPlainStringResult = intl5.string(tmp2(1125).t["5ayf7w"]);
-        tmp2Result9 = tmp2(7332);
+        tmp2Result9 = tmp2(7367);
       }
       const tmp14 = _slicedToArray(noop.useState(), 2);
-      const match = giftCode(6485).match(first);
-      const str = giftCode(6485);
+      const match = giftCode(6519).match(first);
+      const str = giftCode(6519);
       const obj29 = { type: giftCode(1992).CollectiblesItemType.AVATAR_DECORATION };
       const withResult = match.with(
         { type: giftCode(1992).CollectiblesItemType.AVATAR_DECORATION },

@@ -11,7 +11,7 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 
 require = fn;
 const InputModes = fn(1084).InputModes;
-const NativePermissionTypes = fn(7869).NativePermissionTypes;
+const NativePermissionTypes = fn(7903).NativePermissionTypes;
 let c11 = null;
 class VoicePermissionManager extends tmp2 {
   constructor() {

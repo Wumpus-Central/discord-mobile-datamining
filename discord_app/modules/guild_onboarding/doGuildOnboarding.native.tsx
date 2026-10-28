@@ -4,7 +4,7 @@ import getDevicePixelRatioDefault from "../../utils/getDevicePixelRatio.native.t
 import NativeImageManagerModuleDefault from "../../../discord_common/js/packages/rtn-codegen/js/NativeImageManagerModule.tsx";
 import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
 import ModalActionCreatorsDefault from "../../actions/ModalActionCreators.tsx";
-import _mod7195 from "../../../_runtime/metro/07195__.js";
+import _mod7229 from "../../../_runtime/metro/07229__.js";
 import GuildOnboardingActionCreatorsDefault from "GuildOnboardingActionCreators.tsx";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 import asyncGeneratorStep from "../../../_runtime/00005_asyncGeneratorStep.js";
@@ -13,7 +13,7 @@ import GuildOnboardingStore from "GuildOnboardingStore.tsx";
 
 require = fn;
 function getBaseAnimationData() {
-  return JSON.parse(JSON.stringify(_mod7195));
+  return JSON.parse(JSON.stringify(_mod7229));
 }
 let closure_14 = async function _doGuildOnboarding(arg0) {
   let guildId = arg0;
@@ -222,7 +222,7 @@ function openAndWaitForOnboarding(guildId) {
       isFirstOpen: true,
     };
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(7219, dependencyMap.paths),
+      asyncRequireImpl(7253, dependencyMap.paths),
       {
         guildId,
         backShouldLeaveGuild: true,
@@ -238,7 +238,7 @@ function openAndWaitForOnboarding(guildId) {
       }
     });
     const pushLazyResult = ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(7219, dependencyMap.paths),
+      asyncRequireImpl(7253, dependencyMap.paths),
       {
         guildId,
         backShouldLeaveGuild: true,
@@ -251,7 +251,7 @@ function openAndWaitForOnboarding(guildId) {
   });
 }
 const Image = fn(17).Image;
-let closure_8 = fn(7194).GUILD_ONBOARDING_MODAL_KEY;
+let closure_8 = fn(7228).GUILD_ONBOARDING_MODAL_KEY;
 const Constants = fn(1084);
 ({ GuildFeatures: closure_9, Routes: c10 } = Constants);
 let closure_12 = {};

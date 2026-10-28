@@ -20,8 +20,8 @@ import AutomaticLifecycleManager from "../../lib/AutomaticLifecycleManager.tsx";
 const StreamKeyUtilsAll = StreamKeyUtils;
 
 require = fn;
-const getSystemAnalyticsInfo = fn(5734).getSystemAnalyticsInfo;
-const ClipsConstants = fn(8146);
+const getSystemAnalyticsInfo = fn(5769).getSystemAnalyticsInfo;
+const ClipsConstants = fn(8180);
 ({
   WINDOWS_HARDWARE_AUTO_ENABLE_GPU_REGEX: closure_12,
   WINDOWS_HARDWARE_MINIMUM_GPU_REGEX: map1,
@@ -31,8 +31,8 @@ const ClipsConstants = fn(8146);
 } = ClipsConstants);
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_17, RTCConnectionStates: closure_18 } = Constants);
-const StreamTypes = fn(6644).StreamTypes;
-const Features = fn(5719).Features;
+const StreamTypes = fn(6678).StreamTypes;
+const Features = fn(5754).Features;
 class ClipsManager extends tmp4 {
   constructor() {
     applyArgumentsResult = HermesBuiltin.applyArguments(new.target, new.target);

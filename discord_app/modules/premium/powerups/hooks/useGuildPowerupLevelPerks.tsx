@@ -7,7 +7,7 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const PerkIcons = fn(1391).PerkIcons;
-const GUILD_FEATURE_TO_PERK = fn(5183).GUILD_FEATURE_TO_PERK;
+const GUILD_FEATURE_TO_PERK = fn(5218).GUILD_FEATURE_TO_PERK;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/premium/powerups/hooks/useGuildPowerupLevelPerks.tsx");

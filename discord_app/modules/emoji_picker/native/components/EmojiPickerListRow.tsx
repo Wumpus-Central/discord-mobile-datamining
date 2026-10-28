@@ -7,8 +7,8 @@ import PlatformUtils2 from "../../../../utils/PlatformUtils.tsx";
 import shared from "../../../../design/shared.tsx";
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef7230 from "../../../../../_runtime/metro/07230__.js";
-import _modDef7231 from "../../../../../_runtime/metro/07231__.js";
+import _modDef7264 from "../../../../../_runtime/metro/07264__.js";
+import _modDef7265 from "../../../../../_runtime/metro/07265__.js";
 import LockIcon from "../../../../design/components/Icon/native/redesign/generated/LockIcon.tsx";
 import getEmojiItemUrlDefault from "../../../emojis/utils/getEmojiItemUrl.tsx";
 import EmojiPickerListRowViewDefault from "EmojiPickerListRowView.tsx";
@@ -20,12 +20,12 @@ require = fn;
 let closure_3 = ["nativeRow"];
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, StyleSheet } = get_ActivityIndicator);
-const EmojiPickerListConstants = fn(9830);
+const EmojiPickerListConstants = fn(9862);
 const IMAGE_SIZE = EmojiPickerListConstants.IMAGE_SIZE;
 const PADDING_VERTICAL = fn(1240).PADDING_VERTICAL;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = { image: { height: IMAGE_SIZE, width: IMAGE_SIZE }, surrogatesFrame: { height: IMAGE_SIZE, width: IMAGE_SIZE, alignItems: "center", justifyContent: "center" }, disabledOverlay: { borderRadius: nativeDefault.radii.sm, overflow: "hidden" }, surrogates: null, row: null, lockContainer: null, lock: null };
 const PlatformUtils = fn(1381);
 let num = 28;
@@ -168,9 +168,9 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
             const obj4 = { resizeMode: "contain", style: surrogates.image, placeholder: null, source: null, usesSmallCache: true };
             const tmp14 = FastImageDefault;
             if (tmpResult.isThemeDark(ThemeStore.theme)) {
-              let tmp13Result = _modDef7230;
+              let tmp13Result = _modDef7264;
             } else {
-              tmp13Result = _modDef7231;
+              tmp13Result = _modDef7265;
             }
             obj4.placeholder = tmp13Result;
             const obj5 = { uri: image };
@@ -234,10 +234,10 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled() ? (function EmojiItem(em
     const obj2 = { resizeMode: "contain", style: tmp.image, placeholder: null, source: null, usesSmallCache: true };
     const tmp2Result = FastImageDefault;
     if (tmp6Result.isThemeDark(ThemeStore.theme)) {
-      tmp3 = 7230;
+      tmp3 = 7264;
       let tmp2Result2 = importDefault(tmp3);
     } else {
-      tmp2Result2 = _modDef7231;
+      tmp2Result2 = _modDef7265;
     }
     obj2.placeholder = tmp2Result2;
     const obj3 = { uri: tmp4 };

@@ -3,6 +3,7 @@ import util from "../../intl/index.native.tsx";
 import Timers from "../../../discord_common/js/packages/timers/Timers.tsx";
 import SelectedChannelActionCreatorsDefault from "../../actions/SelectedChannelActionCreators.tsx";
 import MessageActionCreatorsDefault from "../../actions/MessageActionCreators.tsx";
+import CampInDmExperiment from "CampInDmExperiment.tsx";
 import EmbeddedActivitiesStore from "../activities/EmbeddedActivitiesStore.tsx";
 import ChannelStore from "../../stores/ChannelStore.tsx";
 import VoiceStateStore from "../../stores/VoiceStateStore.tsx";
@@ -22,7 +23,11 @@ function disconnect() {
       if (tmp5) {
         let tmp7 = SortedVoiceStateStore.countVoiceStatesForChannel(currentClientVoiceChannelId) <= 1;
         if (tmp7) {
-          tmp7 = null == EmbeddedActivitiesStore.getSelfEmbeddedActivityForChannel(currentClientVoiceChannelId);
+          let tmp9 = null == EmbeddedActivitiesStore.getSelfEmbeddedActivityForChannel(currentClientVoiceChannelId);
+          if (tmp9) {
+            tmp9 = !CampInDmExperiment.shouldDisableCallIdleDisconnect();
+          }
+          tmp7 = tmp9;
         }
         tmp5 = tmp7;
       }
@@ -64,7 +69,11 @@ const prototype = function CallIdleManager() {
         if (tmp5) {
           let tmp7 = SortedVoiceStateStore.countVoiceStatesForChannel(currentClientVoiceChannelId) <= 1;
           if (tmp7) {
-            tmp7 = null == EmbeddedActivitiesStore.getSelfEmbeddedActivityForChannel(currentClientVoiceChannelId);
+            let tmp9 = null == EmbeddedActivitiesStore.getSelfEmbeddedActivityForChannel(currentClientVoiceChannelId);
+            if (tmp9) {
+              tmp9 = !CampInDmExperiment.shouldDisableCallIdleDisconnect();
+            }
+            tmp7 = tmp9;
           }
           tmp5 = tmp7;
         }
@@ -89,7 +98,11 @@ const prototype = function CallIdleManager() {
         if (tmp5) {
           let tmp7 = SortedVoiceStateStore.countVoiceStatesForChannel(currentClientVoiceChannelId) <= 1;
           if (tmp7) {
-            tmp7 = null == EmbeddedActivitiesStore.getSelfEmbeddedActivityForChannel(currentClientVoiceChannelId);
+            let tmp9 = null == EmbeddedActivitiesStore.getSelfEmbeddedActivityForChannel(currentClientVoiceChannelId);
+            if (tmp9) {
+              tmp9 = !CampInDmExperiment.shouldDisableCallIdleDisconnect();
+            }
+            tmp7 = tmp9;
           }
           tmp5 = tmp7;
         }

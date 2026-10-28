@@ -2,7 +2,7 @@
 import nativeDefault from "../../discord_common/js/packages/tokens/native.tsx";
 import native from "../design/void/native.tsx";
 import LinkingDefault from "../lib/native/Linking.tsx";
-import _modDef11670 from "../../_runtime/metro/11670__.js";
+import _modDef11708 from "../../_runtime/metro/11708__.js";
 import SurveyActionCreators from "../actions/SurveyActionCreators.tsx";
 import asyncGeneratorStep from "../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../_runtime/metro/00019__.js";
@@ -13,7 +13,7 @@ const require = globalThis.__r;
 require = fn;
 const AnalyticEvents = fn(1084).AnalyticEvents;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_8 = createStyles.createStyles({ confirmIcon: { marginLeft: 4 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -178,7 +178,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             onCancel: C,
             renderConfirmRightIcon: tmp17,
           };
-          const tmp21 = jsx(stateFromStores(5979), {
+          const tmp21 = jsx(stateFromStores(6014), {
             body: _prompt,
             confirmText: cta,
             cancelText: tmp12,
@@ -304,10 +304,10 @@ export default ReactCompilerGating.isReactCompilerEnabled()
             style: confirmIcon.confirmIcon,
             color: nativeDefault.unsafe_rawColors.WHITE,
             size: native.Icon.Sizes.SMALL,
-            source: _modDef11670,
+            source: _modDef11708,
           });
         };
-        tmp5 = jsx(stateFromStores(5979), {
+        tmp5 = jsx(stateFromStores(6014), {
           body: null,
           confirmText: null,
           cancelText: null,
@@ -315,7 +315,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           onCancel: null,
           renderConfirmRightIcon: null,
         });
-        const tmp8 = stateFromStores(5979);
+        const tmp8 = stateFromStores(6014);
       }
       return tmp5;
     };

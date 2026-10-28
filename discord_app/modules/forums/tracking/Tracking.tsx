@@ -14,7 +14,7 @@ import ForumSearchStore from "../ForumSearchStore.tsx";
 const AppAnalyticsUtilsDefault = AppAnalyticsUtils;
 
 require = fn;
-const DraftType = fn(7632).DraftType;
+const DraftType = fn(7666).DraftType;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_8, AnalyticsSections: closure_9 } = Constants);
 let size = fn(2);

@@ -9,9 +9,9 @@ import TypingStore from "../../../../../../../stores/TypingStore.tsx";
 import UserStore from "../../../../../../../stores/UserStore.tsx";
 
 const require = fn;
-const MUTED_OPACITY_CONTENT = fn(11954).MUTED_OPACITY_CONTENT;
+const MUTED_OPACITY_CONTENT = fn(11992).MUTED_OPACITY_CONTENT;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_10 = createStyles.createStyles((arg0) => {
   const avatar = {
     borderRadius: nativeDefault.radii.round,
@@ -412,13 +412,13 @@ export default noop.memo(
                 guildId: "e",
                 isMobileOnline: stateFromStores3,
                 isVROnline: stateFromStores4,
-                status: true,
-                streaming: true,
-                style: false,
-                size: true,
-                animate: true,
-                typing: "enabled",
-                autoStatusCutout: false,
+                status: null,
+                streaming: "6132bad9a78219ca5169bc4a9a39a39d",
+                style: "fi.messages.6132bad9a78219ca5169bc4a9a39a39d.compiled.messages",
+                size: "jsona",
+                animate: "VOICE_CATEGORY_EXPAND",
+                typing: null,
+                autoStatusCutout: true,
               };
               if (!stateFromStores2.isSystemUser()) {
                 class H {
@@ -578,13 +578,13 @@ export default noop.memo(
               guildId: "e",
               isMobileOnline: stateFromStores3,
               isVROnline: stateFromStores4,
-              status: true,
-              streaming: true,
-              style: false,
-              size: true,
-              animate: true,
-              typing: "enabled",
-              autoStatusCutout: false,
+              status: null,
+              streaming: "6132bad9a78219ca5169bc4a9a39a39d",
+              style: "fi.messages.6132bad9a78219ca5169bc4a9a39a39d.compiled.messages",
+              size: "jsona",
+              animate: "VOICE_CATEGORY_EXPAND",
+              typing: null,
+              autoStatusCutout: true,
             };
             let tmp12 = null;
             if (!stateFromStores2.isSystemUser()) {
@@ -602,13 +602,13 @@ export default noop.memo(
               guildId: "e",
               isMobileOnline: stateFromStores3,
               isVROnline: stateFromStores4,
-              status: true,
-              streaming: true,
-              style: false,
-              size: true,
-              animate: true,
-              typing: "enabled",
-              autoStatusCutout: false,
+              status: null,
+              streaming: "6132bad9a78219ca5169bc4a9a39a39d",
+              style: "fi.messages.6132bad9a78219ca5169bc4a9a39a39d.compiled.messages",
+              size: "jsona",
+              animate: "VOICE_CATEGORY_EXPAND",
+              typing: null,
+              autoStatusCutout: true,
             });
           }
         }

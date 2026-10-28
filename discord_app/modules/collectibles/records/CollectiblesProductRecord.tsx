@@ -5,7 +5,7 @@ import CollectiblesBundledProductRecord from "CollectiblesBundledProductRecord.t
 import CollectiblesStoreListingRecord from "CollectiblesStoreListingRecord.tsx";
 
 const require = fn;
-const CollectiblesItemRecord = fn(7655);
+const CollectiblesItemRecord = fn(7689);
 ({ createCollectiblesItemsFromServerResponse: hasOwnProperty, transformSKUToCollectiblesItem: metroRequire } =
   CollectiblesItemRecord);
 let closure_7 = fn(1086).REWARD_CATEGORY_AND_REWARD_SKU_IDS;

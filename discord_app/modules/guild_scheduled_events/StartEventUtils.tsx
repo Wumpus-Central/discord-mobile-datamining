@@ -252,8 +252,8 @@ let closure_14 = async function _setEventAsActive(arg0) {
   closure_130_1 = flag;
   return "Reflect";
 };
-let closure_4 = fn(4828).createChannelRecordFromServer;
-const GuildScheduledEventsConstants = fn(4830);
+let closure_4 = fn(4860).createChannelRecordFromServer;
+const GuildScheduledEventsConstants = fn(4862);
 ({ GuildScheduledEventEntityTypes: closure_7, GuildScheduledEventPrivacyLevel: closure_8 } =
   GuildScheduledEventsConstants);
 const ChannelTypes = fn(1084).ChannelTypes;

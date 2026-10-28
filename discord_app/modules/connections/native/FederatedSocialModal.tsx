@@ -159,7 +159,7 @@ function FederatedSocialModalScreen(onClose) {
 const WebBrowserType = fn(1084).WebBrowserType;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_9 = createStyles.createStyles({
   container: { padding: 16 },
   description: { textAlign: "center" },
@@ -193,11 +193,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] !== platformType.onClose) {
-        const headerBackButton = tmp(6926).getHeaderBackButton(platformType.onClose);
+        const headerBackButton = tmp(6960).getHeaderBackButton(platformType.onClose);
         cResult[2] = platformType.onClose;
         cResult[3] = headerBackButton;
         let tmp10 = headerBackButton;
-        const tmpResult = tmp(6926);
+        const tmpResult = tmp(6960);
       } else {
         tmp10 = cResult[3];
       }

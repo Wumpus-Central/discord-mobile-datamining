@@ -8,8 +8,8 @@ import useVoiceChannelGamesDefault from "../hooks/useVoiceChannelGames.tsx";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 const util = v9sZWVp(1125);
-const TableRow = v9sZWVp(6905);
-const GameProfileAnalyticUtils = v9sZWVp(9245);
+const TableRow = v9sZWVp(6939);
+const GameProfileAnalyticUtils = v9sZWVp(9278);
 require = fn;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);

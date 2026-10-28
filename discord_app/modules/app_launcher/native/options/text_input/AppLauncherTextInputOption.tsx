@@ -12,7 +12,7 @@ const View = fn(17).View;
 const EmojiIntention = fn(1392).EmojiIntention;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_9 = createStyles.createStyles({
   content: { flex: 1, flexDirection: "row", alignItems: "center" },
   stringOptionInput: { maxHeight: 100, flex: 1, padding: 0, paddingTop: 0 },
@@ -643,7 +643,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         returnKeyType: true,
         multiline: null,
         keyboardType: null,
-        onPressIn: 85.286,
+        onPressIn: 154.857,
       };
       const items4 = [inputStyles.text, tmp.stringOptionInput];
       obj6.style = items4;

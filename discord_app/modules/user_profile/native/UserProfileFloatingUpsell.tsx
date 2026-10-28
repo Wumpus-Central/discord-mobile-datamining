@@ -8,10 +8,10 @@ import noop from "../../../../_runtime/metro/00019__.js";
 const UserProfileUpsellCardV2Default = UserProfileUpsellCardV2;
 
 require = fn;
-const Constants = fn(7306);
+const Constants = fn(7340);
 ({ FLOATING_UPSELL_HEIGHT: hasOwnProperty, PROFILE_SIDE_PADDING: metroRequire } = Constants);
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_8 = createStyles.createStyles((bottom) => {
   const obj = {
     container: {

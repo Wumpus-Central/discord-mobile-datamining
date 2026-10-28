@@ -1,37 +1,133 @@
 // discord_app/modules/saved_messages/native/ForLaterCardActionButtons.tsx
+import c from "../../../../_runtime/00576_c.js";
+import util from "../../../intl/index.native.tsx";
 import asyncRequireImpl from "../../../../_runtime/01999_asyncRequireImpl.js";
 import ActionSheetActionCreatorsDefault from "../../action_sheet/native/ActionSheetActionCreators.tsx";
+import IconButton from "../../../design/components/Button/native/IconButton.native.tsx";
+import _modDef9172 from "../../../../_runtime/metro/09172__.js";
+import ContextMenu from "../../../design/components/ContextMenu/native/ContextMenu.native.tsx";
 import SavedMessageHelpers from "../SavedMessageHelpers.native.tsx";
+import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 
 require = fn;
+let closure_3 = ["menuItems"];
+let closure_4 = ["ref"];
 const View = fn(17).View;
 const jsx = fn(21).jsx;
-const createStyles = fn(4972);
-let closure_6 = createStyles.createStyles({ actionGroup: { flexDirection: "row", gap: 8 } });
+const createStyles = fn(5004);
+let closure_9 = createStyles.createStyles({ actionGroup: { flexDirection: "row", gap: 8 } });
+const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/saved_messages/native/ForLaterCardActionButtons.tsx");
 
-export default function ForLaterCardActionButtons(savedMessage) {
+export default ReactCompilerGating.isReactCompilerEnabled()
+  ? function ForLaterCardActionButtons(menuItems) {
+      const cResult = c.c(10);
+      if (cResult[0] !== menuItems) {
+        menuItems = menuItems.menuItems;
+        const tmp8 = _objectWithoutProperties(menuItems, closure_3);
+        cResult[0] = menuItems;
+        cResult[1] = tmp8;
+        cResult[2] = menuItems;
+        let tmp5 = menuItems;
+        let tmp4 = tmp8;
+      } else {
+        tmp4 = cResult[1];
+        tmp5 = cResult[2];
+      }
+      const tmp9 = closure_9();
+      if (cResult[3] === Symbol.for("react.memo_cache_sentinel")) {
+        const fn = function p(ref) {
+          const obj = { ref: ref.ref };
+          const merged = Object.assign(_objectWithoutProperties(ref, closure_1_4));
+          obj.variant = "secondary";
+          const intl = util.intl;
+          obj.accessibilityLabel = intl.string(util.t.e1heBD);
+          obj.size = "sm";
+          obj.icon = _modDef9172;
+          return jsx(IconButton.IconButton, { ref: ref.ref });
+        };
+        cResult[3] = fn;
+        let tmp10 = fn;
+      } else {
+        tmp10 = cResult[3];
+      }
+      if (cResult[4] !== tmp5) {
+        const obj2 = { items: tmp5, keyboardShouldPersistTaps: "handled", triggerOnTap: true, children: tmp10 };
+        const tmp13 = jsx(ContextMenu.ContextMenu, {
+          items: tmp5,
+          keyboardShouldPersistTaps: "handled",
+          triggerOnTap: true,
+          children: tmp10,
+        });
+        cResult[4] = tmp5;
+        cResult[5] = tmp13;
+        let tmp11 = tmp13;
+      } else {
+        tmp11 = cResult[5];
+      }
+      if (cResult[6] === tmp4) {
+        if (cResult[7] === tmp9.actionGroup) {
+          if (cResult[8] === tmp11) {
+            let tmp14 = cResult[9];
+          }
+          return tmp14;
+        }
+      }
+      const obj3 = { style: tmp9.actionGroup };
+      let merged = Object.assign(tmp4);
+      obj3.children = tmp11;
+      const tmp16 = <View style={tmp9.actionGroup} />;
+      cResult[6] = tmp4;
+      cResult[7] = tmp9.actionGroup;
+      cResult[8] = tmp11;
+      cResult[9] = tmp16;
+      tmp14 = tmp16;
+    }
+  : function ForLaterCardActionButtons(items) {
+      let merged = Object.assign(items, Object.assign({ menuItems: 0 }));
+      let obj = { style: closure_9().actionGroup };
+      let merged1 = Object.assign(merged);
+      obj.children = jsx(ContextMenu.ContextMenu, {
+        items: items.menuItems,
+        keyboardShouldPersistTaps: "handled",
+        triggerOnTap: true,
+        children(ref) {
+          const merged = Object.assign(ref, Object.assign({ ref: 0 }));
+          const obj = { ref: ref.ref };
+          const merged1 = Object.assign(merged);
+          obj.variant = "secondary";
+          const intl = util.intl;
+          obj.accessibilityLabel = intl.string(util.t.e1heBD);
+          obj.size = "sm";
+          obj.icon = _modDef9172;
+          return jsx(IconButton.IconButton, { ref: ref.ref });
+        },
+      });
+      return <View style={closure_9().actionGroup} />;
+    };
+export const useForLaterCardMenuItems = function useForLaterCardMenuItems(savedMessage) {
   savedMessage = savedMessage.savedMessage;
   const jumpToMessage = savedMessage.jumpToMessage;
   const items = [savedMessage];
-  let obj = { label: null, IconComponent: null, action: null };
+  const obj = { label: null, IconComponent: null, action: null };
+  let tmp2Result = dependencyMap;
   const callback = noop.useCallback(
     () =>
       ActionSheetActionCreatorsDefault.openLazy(
-        asyncRequireImpl(13834, dependencyMap.paths),
+        asyncRequireImpl(14052, dependencyMap.paths),
         "MessageReminderDurationActionSheet",
         {
           createReminder(dueAt) {
             const obj2 = {};
             const merged = Object.assign(closure_1_0.saveData);
             obj2.dueAt = dueAt;
-            obj2.source = savedMessage(13837).SavedMessageSources.FOR_LATER_LIST;
-            return savedMessage(13827).addOrUpdateSavedMessage(obj2);
+            obj2.source = savedMessage(14055).SavedMessageSources.FOR_LATER_LIST;
+            return savedMessage(14045).addOrUpdateSavedMessage(obj2);
           },
           removeReminder() {
-            return savedMessage(13827).removeSavedMessage({
+            return savedMessage(14045).removeSavedMessage({
               channelId: closure_1_0.saveData.channelId,
               messageId: closure_1_0.saveData.messageId,
               displayToast: true,
@@ -44,86 +140,45 @@ export default function ForLaterCardActionButtons(savedMessage) {
       ),
     items,
   );
-  let intl = savedMessage(1125).intl;
+  const intl = savedMessage(1125).intl;
   obj.label = intl.string(savedMessage(1125).t["+TSRGD"]);
-  obj.IconComponent = savedMessage(12514).ChatArrowRightIcon;
+  obj.IconComponent = savedMessage(12561).ChatArrowRightIcon;
   obj.action = function action() {
     return jumpToMessage();
   };
   const items1 = [obj];
   const intl2 = savedMessage(1125).intl;
   if (null != savedMessage.saveData.dueAt) {
-    let SvXS1Z = tmp3(1125).t["a6gcZ/"];
+    let SvXS1Z = tmp2(1125).t["a6gcZ/"];
   } else {
-    SvXS1Z = tmp3(1125).t.SvXS1Z;
+    SvXS1Z = tmp2(1125).t.SvXS1Z;
   }
-  const tmp = closure_6();
   items1[1] = {
     label: intl2.string(SvXS1Z),
-    IconComponent: savedMessage(6933).XSmallIcon,
+    IconComponent: savedMessage(6967).XSmallIcon,
     action() {
       return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
     },
     variant: "destructive",
   };
   if (null == savedMessage.saveData.dueAt) {
-    const obj3 = { style: tmp.actionGroup, children: null };
-    const obj4 = {
-      items: items1,
-      keyboardShouldPersistTaps: "handled",
-      triggerOnTap: true,
-      children(ref) {
-        const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { ref: ref.ref };
-        const merged1 = Object.assign(merged);
-        obj.variant = "secondary";
-        const intl = savedMessage(1125).intl;
-        obj.accessibilityLabel = intl.string(savedMessage(1125).t.e1heBD);
-        obj.size = "sm";
-        obj.icon = jumpToMessage(9139);
-        return jsx(savedMessage(7957).IconButton, { ref: ref.ref });
-      },
-    };
-    obj3.children = jsx(tmp3(9763).ContextMenu, {
-      items: items1,
-      keyboardShouldPersistTaps: "handled",
-      triggerOnTap: true,
-      children(ref) {
-        const merged = Object.assign(ref, Object.assign({ ref: 0 }));
-        const obj = { ref: ref.ref };
-        const merged1 = Object.assign(merged);
-        obj.variant = "secondary";
-        const intl = savedMessage(1125).intl;
-        obj.accessibilityLabel = intl.string(savedMessage(1125).t.e1heBD);
-        obj.size = "sm";
-        obj.icon = jumpToMessage(9139);
-        return jsx(savedMessage(7957).IconButton, { ref: ref.ref });
-      },
-    });
-    return <View style={tmp.actionGroup}>{null}</View>;
+    return items1;
   } else {
-    const intl3 = tmp3(1125).intl;
-    const t = tmp3(1125).t;
-    let obj5 = {
+    const intl3 = tmp2(1125).intl;
+    const t = tmp2(1125).t;
+    let obj3 = {
       label: intl3.string(savedMessage.throttledNow > savedMessage.saveData.dueAt ? t.GtBCnz : t.vrbqs1),
       IconComponent: null,
       action: null,
     };
     if (savedMessage.throttledNow > savedMessage.saveData.dueAt) {
-      let PencilIcon = tmp3(13838).BellZIcon;
+      tmp2Result = tmp2(14056);
+      let PencilIcon = tmp2Result.BellZIcon;
     } else {
-      PencilIcon = tmp3(10122).PencilIcon;
+      PencilIcon = tmp2(10154).PencilIcon;
     }
-    obj5.IconComponent = PencilIcon;
-    obj5.action = callback;
-    obj5 = items1.unshift(obj5);
+    obj3.IconComponent = PencilIcon;
+    obj3.action = callback;
+    obj3 = items1.unshift(obj3);
   }
-  let obj2 = {
-    label: intl2.string(SvXS1Z),
-    IconComponent: savedMessage(6933).XSmallIcon,
-    action() {
-      return SavedMessageHelpers.removeSavedMessage(savedMessage.saveData);
-    },
-    variant: "destructive",
-  };
-}
+};

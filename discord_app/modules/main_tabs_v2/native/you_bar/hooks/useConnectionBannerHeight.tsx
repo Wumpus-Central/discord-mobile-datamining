@@ -5,8 +5,8 @@ import ConnectionIndicatorExperimentDefault from "../../ConnectionIndicatorExper
 import ConnectivityIndicatorStateStore from "../../../../connectivity/native/ConnectivityIndicatorStateStore.tsx";
 
 require = fn;
-const constants = fn(15036).ConnectivityIndicatorState;
-const CONNECTION_BANNER_HEIGHT = fn(16483).CONNECTION_BANNER_HEIGHT;
+const constants = fn(15259).ConnectivityIndicatorState;
+const CONNECTION_BANNER_HEIGHT = fn(16712).CONNECTION_BANNER_HEIGHT;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/main_tabs_v2/native/you_bar/hooks/useConnectionBannerHeight.tsx");

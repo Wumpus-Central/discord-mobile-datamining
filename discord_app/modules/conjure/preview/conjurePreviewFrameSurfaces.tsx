@@ -57,9 +57,9 @@ export const previewFrameSurfaceOptions = function previewFrameSurfaceOptions(pr
   }
   return mapped;
 };
-export const resolvePreviewFrameSurface = function resolvePreviewFrameSurface(arg0, cResult) {
-  let tmp = arg0;
-  if (null == arg0) {
+export const resolvePreviewFrameSurface = function resolvePreviewFrameSurface(first1, cResult) {
+  let tmp = first1;
+  if (null == first1) {
     let APP_CHANNEL = cResult[0];
     if (APP_CHANNEL == null) {
       APP_CHANNEL = EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL;

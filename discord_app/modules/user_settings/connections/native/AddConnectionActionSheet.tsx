@@ -26,10 +26,10 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
   ? function AddApplicationIdentityTableRow(arg0) {
       const cResult = startAuthorization(576).c(17);
       ({ application, start, end } = arg0);
-      const tmp4 = analyticsLocations(7256)(application);
+      const tmp4 = analyticsLocations(7290)(application);
       startAuthorization = tmp4.startAuthorization;
       const obj = startAuthorization(576);
-      analyticsLocations = analyticsLocations(7255)(analyticsLocations(7280).ACTION_SHEET).analyticsLocations;
+      analyticsLocations = analyticsLocations(7289)(analyticsLocations(7314).ACTION_SHEET).analyticsLocations;
       const tmp6 = closure_7();
       if (cResult[0] !== application) {
         const iconSource = application.getIconSource(tmp(1199).getIconSize(tmp(1199).IconSizes.LARGE));
@@ -50,7 +50,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
           }
           const _Symbol = Symbol;
           if (cResult[8] === Symbol.for("react.memo_cache_sentinel")) {
-            const tmp16 = closure_5(tmp(6905).TableRow.Arrow, {});
+            const tmp16 = closure_5(tmp(6939).TableRow.Arrow, {});
             cResult[8] = tmp16;
             let tmp14 = tmp16;
           } else {
@@ -81,7 +81,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
             trailing: tmp14,
             disabled: !tmp4.canStartAuthorization,
           };
-          const tmp20 = closure_5(tmp(6905).TableRow, obj2, application.id);
+          const tmp20 = closure_5(tmp(6939).TableRow, obj2, application.id);
           cResult[9] = application.id;
           cResult[10] = application.name;
           cResult[11] = end;
@@ -110,17 +110,17 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
       cResult[3] = startAuthorization;
       cResult[4] = fn;
       tmp9 = fn;
-      const tmp5 = analyticsLocations(7255);
+      const tmp5 = analyticsLocations(7289);
     }
   : function AddApplicationIdentityTableRow(application) {
       application = application.application;
       _require = undefined;
       let analyticsLocations;
       ({ start, end } = application);
-      ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7256)(application));
-      const tmp2 = analyticsLocations(7256)(application);
-      analyticsLocations = analyticsLocations(7255)(analyticsLocations(7280).ACTION_SHEET).analyticsLocations;
-      const tmp3 = analyticsLocations(7255);
+      ({ startAuthorization: c0, canStartAuthorization } = analyticsLocations(7290)(application));
+      const tmp2 = analyticsLocations(7290)(application);
+      analyticsLocations = analyticsLocations(7289)(analyticsLocations(7314).ACTION_SHEET).analyticsLocations;
+      const tmp3 = analyticsLocations(7289);
       const tmp4 = closure_7();
       const iconSource = application.getIconSource(require("native").getIconSize(require("native").IconSizes.LARGE));
       const obj2 = {

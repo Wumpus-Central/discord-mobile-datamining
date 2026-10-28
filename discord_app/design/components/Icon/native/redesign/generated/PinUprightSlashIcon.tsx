@@ -2,7 +2,7 @@
 import c from "../../../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../../../discord_common/js/packages/tokens/native.tsx";
 import BaseIconImage from "../../BaseIconImage.tsx";
-import _mod14182 from "../../../../../../../_runtime/metro/14182__.js";
+import _mod14406 from "../../../../../../../_runtime/metro/14406__.js";
 import _objectWithoutProperties from "../../../../../../../_runtime/metro/00109__objectWithoutProperties.js";
 import noop from "../../../../../../../_runtime/metro/00019__.js";
 
@@ -35,7 +35,7 @@ export const PinUprightSlashIcon = ReactCompilerGating.isReactCompilerEnabled()
         INTERACTIVE_ICON_DEFAULT = nativeDefault.colors.INTERACTIVE_ICON_DEFAULT;
       }
       if (cResult[4] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmpResult = _mod14182;
+        const tmpResult = _mod14406;
         cResult[4] = tmpResult;
         let tmp10 = tmpResult;
       } else {
@@ -66,7 +66,7 @@ export const PinUprightSlashIcon = ReactCompilerGating.isReactCompilerEnabled()
       const merged = Object.assign(color, Object.assign({ style: 0, color: 0 }));
       const merged1 = Object.assign(merged);
       return jsx(BaseIconImage.BaseIconImage, {
-        source: _mod14182,
+        source: _mod14406,
         color: INTERACTIVE_ICON_DEFAULT,
         style: color.style,
       });

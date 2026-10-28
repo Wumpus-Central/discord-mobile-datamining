@@ -47,14 +47,14 @@ export const getDeliveredBounty = function getDeliveredBounty(creative) {
   }
   return bounty;
 };
-export const getDeliveredPlayable = function getDeliveredPlayable(creative2) {
+export const getDeliveredPlayable = function getDeliveredPlayable(creative) {
   let type;
-  if (creative2 != null) {
-    type = creative2.type;
+  if (creative != null) {
+    type = creative.type;
   }
   let playable = null;
   if (type === AdCreativeType.AdCreativeType.PLAYABLE) {
-    playable = creative2.playable;
+    playable = creative.playable;
   }
   return playable;
 };

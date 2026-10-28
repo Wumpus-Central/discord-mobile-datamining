@@ -1,19 +1,14 @@
 // discord_app/modules/conjure/chat/native/ConjureFileMention.tsx
-import c from "../../../../../_runtime/00576_c.js";
 import nativeDefault from "../../../../../discord_common/js/packages/tokens/native.tsx";
-import util from "../../../../intl/index.native.tsx";
-import _modDef3831 from "../../intl/ConjureUntranslated.messages.js";
-import Text_Text from "../../../../design/components/Text/native/Text.tsx";
-import conjureFileMentions from "../conjureFileMentions.tsx";
-import conjureStoredAttachments from "../conjureStoredAttachments.tsx";
-import ConjureFileThumbnailDefault from "ConjureFileThumbnail.tsx";
+import asyncGeneratorStep from "../../../../../_runtime/00005_asyncGeneratorStep.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
-require = fn;
-const View = fn(17).View;
+const require = fn;
+get_ActivityIndicator = fn(17);
+({ Pressable: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
 const jsxProd = fn(21);
-({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4972);
+({ jsx: closure_7, jsxs: closure_8 } = jsxProd);
+const createStyles = fn(5004);
 let obj2 = { chip: null, thumbnail: null, name: null };
 let obj3 = {
   flexDirection: "row",
@@ -35,123 +30,122 @@ let size = {
 obj2.thumbnail = size;
 let obj4 = { translateY: nativeDefault.space.PX_4 };
 obj2.name = { color: nativeDefault.colors.MENTION_FOREGROUND };
-let closure_7 = createStyles.createStyles(obj2);
-const ReactCompilerGating = fn(558);
-const obj5 = { color: nativeDefault.colors.MENTION_FOREGROUND };
+let closure_9 = createStyles.createStyles(obj2);
 size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/native/ConjureFileMention.tsx");
 
-export default ReactCompilerGating.isReactCompilerEnabled()
-  ? function ConjureFileMention(variant) {
-      const cResult = c.c(14);
-      variant = variant.variant;
-      let str = "text-md/normal";
-      if (undefined !== variant) {
-        str = variant;
-      }
-      const tmp4 = closure_7();
-      const context = noop.useContext(conjureFileMentions.ConjureFileMentionProjectContext);
-      const conjureStoredAttachment = conjureStoredAttachments.useConjureStoredAttachment(
-        context,
-        variant.attachmentId,
-      );
-      if (cResult[0] === conjureStoredAttachment) {
-        if (cResult[1] === context) {
-          if (cResult[2] === tmp4.thumbnail) {
-            let tmp7 = cResult[3];
-          }
-          let name;
-          if (conjureStoredAttachment != null) {
-            name = conjureStoredAttachment.name;
-          }
-          if (cResult[4] !== name) {
-            let name1;
-            if (conjureStoredAttachment != null) {
-              name1 = conjureStoredAttachment.name;
-            }
-            if (name1 == null) {
-              const intl = util.intl;
-              name1 = intl.string(_modDef3831.ff9Q4C);
-            }
-            let name2;
-            if (conjureStoredAttachment != null) {
-              name2 = conjureStoredAttachment.name;
-            }
-            cResult[4] = name2;
-            cResult[5] = name1;
-            let tmp12 = name1;
-          } else {
-            tmp12 = cResult[5];
-          }
-          if (cResult[6] === tmp4.name) {
-            if (cResult[7] === tmp12) {
-              if (cResult[8] === str) {
-                let tmp16 = cResult[9];
+export default function ConjureFileMention(variant) {
+  let str = variant.variant;
+  if (str === undefined) {
+    str = "text-md/normal";
+  }
+  let context;
+  const tmp = closure_9();
+  context = noop.useContext(context(12232).ConjureFileMentionProjectContext);
+  const conjureStoredAttachment = context(12234).useConjureStoredAttachment(context, variant.attachmentId);
+  const obj2 = { style: tmp.chip, children: null };
+  let obj3 = { projectId: context, file: conjureStoredAttachment, style: tmp.thumbnail, iconColor: null };
+  let obj = context(12234);
+  obj3.iconColor = conjureStoredAttachment(587).colors.MENTION_FOREGROUND;
+  let items = [closure_7(conjureStoredAttachment(12237), obj3)];
+  let obj4 = { variant: str, style: tmp.name, children: null };
+  let name;
+  if (conjureStoredAttachment != null) {
+    name = conjureStoredAttachment.name;
+  }
+  if (name == null) {
+    const intl = tmp2(1125).intl;
+    name = intl.string(tmp9(3863).ff9Q4C);
+  }
+  obj4.children = name;
+  items[1] = closure_7(context(5270).Text, obj4);
+  obj2.children = items;
+  const tmp6Result = closure_8(closure_6, obj2);
+  let tmp8Result = tmp6Result;
+  if (null != context) {
+    tmp8Result = tmp6Result;
+    if (null != conjureStoredAttachment) {
+      const CONJURE_VIEWABLE_IMAGE_TYPES = tmp2(12206).CONJURE_VIEWABLE_IMAGE_TYPES;
+      tmp8Result = tmp6Result;
+      if (CONJURE_VIEWABLE_IMAGE_TYPES.has(conjureStoredAttachment.content_type)) {
+        let obj5 = {
+          onPress: asyncGeneratorStep(async () => {
+            if (c3 === 2) {
+              c3 = 3;
+              throw new TypeError("Generator functions may not be called on executing generators");
+            } else if (tmp4 === 3) {
+              if (arg0 === 1) {
+                throw value;
+              } else if (arg0 === 2) {
+                const obj3 = { value, done: true };
+                return obj3;
+              } else {
+                return { value: "IconComponent", done: null };
               }
-              if (cResult[10] === tmp4.chip) {
-                if (cResult[11] === tmp7) {
-                  if (cResult[12] === tmp16) {
-                    let tmp19 = cResult[13];
+            } else {
+              try {
+                c3 = 2;
+                if (0 === paths) {
+                  if (arg0 === 1) {
+                    c3 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    const obj4 = { value, done: true };
+                    return obj4;
+                  } else {
+                    closure_1 = tmp5;
+                    closure_128_0 = undefined;
+                    paths = 1;
+                    c3 = 1;
+                    const obj5 = { value: tmp2(paths[14])(paths[13], paths.paths), done: false };
+                    return obj5;
                   }
-                  return tmp19;
+                } else if (1 === tmp5) {
+                  if (arg0 === 1) {
+                    c3 = 3;
+                    throw value;
+                  } else if (arg0 === 2) {
+                    c3 = 3;
+                    const obj6 = { value, done: true };
+                    return obj6;
+                  } else {
+                    closure_128_0 = value.openConjureNativeImages;
+                    ({ id: obj2.id, name: obj2.alt } = closure_129_1);
+                    const items = [{ id: null, alt: null }];
+                    paths = 2;
+                    c3 = 1;
+                    const obj13 = { value: closure_128_0(closure_129_0, items, 0), done: false };
+                    return obj13;
+                  }
+                } else if (arg0 === 1) {
+                  c3 = 3;
+                  throw value;
+                } else if (arg0 === 2) {
+                  c3 = 3;
+                  const obj = { value, done: true };
+                  return obj;
+                } else {
+                  c3 = 3;
+                  return { value: "IconComponent", done: null };
                 }
+              } catch (tmp13) {
+                c3 = tmp;
+                throw tmp13;
               }
-              const obj2 = { style: tmp4.chip, children: null };
-              const items = [tmp7, tmp16];
-              obj2.children = items;
-              const tmp22 = timestampProducer(View, obj2);
-              cResult[10] = tmp4.chip;
-              cResult[11] = tmp7;
-              cResult[12] = tmp16;
-              cResult[13] = tmp22;
-              tmp19 = tmp22;
             }
-          }
-          const obj3 = { variant: str, style: tmp4.name, children: tmp12 };
-          const tmp18 = hasOwnProperty(Text_Text.Text, obj3);
-          cResult[6] = tmp4.name;
-          cResult[7] = tmp12;
-          cResult[8] = str;
-          cResult[9] = tmp18;
-          tmp16 = tmp18;
-        }
+          }),
+          accessibilityRole: "button",
+          accessibilityLabel: null,
+          children: null,
+        };
+        const intl2 = tmp2(1125).intl;
+        let obj6 = { name: conjureStoredAttachment.name };
+        obj5.accessibilityLabel = intl2.formatToPlainString(tmp9(3863).GtNukg, obj6);
+        obj5.children = tmp6Result;
+        tmp8Result = closure_7(closure_5, obj5);
       }
-      const obj4 = { projectId: context, file: conjureStoredAttachment, style: tmp4.thumbnail, iconColor: null };
-      const tmpResult = conjureStoredAttachments;
-      obj4.iconColor = nativeDefault.colors.MENTION_FOREGROUND;
-      const tmp9 = hasOwnProperty(ConjureFileThumbnailDefault, obj4);
-      cResult[0] = conjureStoredAttachment;
-      cResult[1] = context;
-      cResult[2] = tmp4.thumbnail;
-      cResult[3] = tmp9;
-      tmp7 = tmp9;
     }
-  : function ConjureFileMention(variant) {
-      let str = variant.variant;
-      if (str === undefined) {
-        str = "text-md/normal";
-      }
-      const tmp = closure_7();
-      const context = noop.useContext(conjureFileMentions.ConjureFileMentionProjectContext);
-      const conjureStoredAttachment = conjureStoredAttachments.useConjureStoredAttachment(
-        context,
-        variant.attachmentId,
-      );
-      const obj2 = { style: tmp.chip, children: null };
-      const obj3 = { projectId: context, file: conjureStoredAttachment, style: tmp.thumbnail, iconColor: null };
-      obj3.iconColor = nativeDefault.colors.MENTION_FOREGROUND;
-      const items = [hasOwnProperty(ConjureFileThumbnailDefault, obj3)];
-      const obj4 = { variant: str, style: tmp.name, children: null };
-      let name;
-      if (conjureStoredAttachment != null) {
-        name = conjureStoredAttachment.name;
-      }
-      if (name == null) {
-        const intl = util.intl;
-        name = intl.string(_modDef3831.ff9Q4C);
-      }
-      obj4.children = name;
-      items[1] = hasOwnProperty(Text_Text.Text, obj4);
-      obj2.children = items;
-      return timestampProducer(View, obj2);
-    };
+  }
+  return tmp8Result;
+}

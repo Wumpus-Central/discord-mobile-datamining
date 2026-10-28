@@ -11,7 +11,7 @@ import collectibles_CollectiblesUtils from "CollectiblesUtils.tsx";
 import ImprovedMobileShopLoadingExperiment from "../experiments/ImprovedMobileShopLoadingExperiment.tsx";
 import CollectiblesShopManager2 from "../CollectiblesShopManager.tsx";
 import NativePaymentHooksDefault from "../../payments/native/hooks/NativePaymentHooks.android.tsx";
-import takeWhileDefault from "../../../../_runtime/17239_takeWhile.js";
+import takeWhileDefault from "../../../../_runtime/17469_takeWhile.js";
 import MobileNitroUpsellInShopFeedExperiment from "MobileNitroUpsellInShopFeedExperiment.tsx";
 import ShopCategory from "ShopCategory.tsx";
 import ShopNitroUpsellBanner from "ShopNitroUpsellBanner.tsx";
@@ -29,7 +29,7 @@ const MobileNitroUpsellInShopFeedExperimentDefault = MobileNitroUpsellInShopFeed
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ActivityIndicator: hasOwnProperty, View: metroRequire } = get_ActivityIndicator);
-const FeedBlockRecord = fn(7683).FeedBlockRecord;
+const FeedBlockRecord = fn(7717).FeedBlockRecord;
 const CollectiblesShopConstants = fn(1086);
 ({
   COLLECTIBLES_SHOP_CACHE_DURATION_MS: map1,
@@ -39,10 +39,10 @@ const CollectiblesShopConstants = fn(1086);
 } = CollectiblesShopConstants);
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_17, PaymentGateways: closure_18 } = Constants);
-const ContentDismissActionType = fn(4821).ContentDismissActionType;
+const ContentDismissActionType = fn(4853).ContentDismissActionType;
 const jsxProd = fn(21);
 ({ jsx: closure_20, jsxs: closure_21 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_22 = createStyles.createStyles({
   rootContainer: { height: "100%", width: "100%" },
   spinner: { position: "absolute", top: "50%", left: "50%", marginTop: -8, marginLeft: -8 },
@@ -1098,7 +1098,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       }
       const effect = noop.useEffect(E, tmp14);
       const tmp11 = _slicedToArray(noop.useState(false), 2);
-      nativePaymentsConnected(1381).isIOS() && !nativePaymentsConnected(6470).isStable && isStaffResult;
+      nativePaymentsConnected(1381).isIOS() && !nativePaymentsConnected(6504).isStable && isStaffResult;
       if (!nativePaymentsConnected) {
         class E {
           constructor() {
@@ -1152,7 +1152,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp(1381);
         const text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj8.isIOS()}`;
         obj7.captureMessage(
-          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj8.isIOS()}`} isStable: ${tmp(6470).isStable}`,
+          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj8.isIOS()}`} isStable: ${tmp(6504).isStable}`,
         );
       }
       if (screen.screen !== constants.ORBS) {
@@ -1271,7 +1271,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
         tmp5(1381);
         const text = `collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`;
         SentryUtilsDefault.captureMessage(
-          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${tmp5(6470).isStable}`,
+          `${`collectibles mobile shop failed to connect to native payments isIOS: ${obj7.isIOS()}`} isStable: ${tmp5(6504).isStable}`,
         );
         const tmpResult = SentryUtilsDefault;
       }
@@ -1292,7 +1292,7 @@ let tmp6 = ReactCompilerGating.isReactCompilerEnabled()
       obj5.screen = screen;
       obj5.improvedLoading = false;
       tmp21 = closure_20(closure_27, obj5);
-      tmp11 = nativePaymentsConnected(1381).isIOS() && !nativePaymentsConnected(6470).isStable && isStaffResult;
+      tmp11 = nativePaymentsConnected(1381).isIOS() && !nativePaymentsConnected(6504).isStable && isStaffResult;
     };
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/collectibles/native/CollectiblesShopV2.tsx");

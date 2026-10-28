@@ -217,9 +217,9 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
                       c0 = 1;
                       const obj4 = {
                         value: closure_1_9(closure_0, () => {
-                          c1(6635).disconnect();
-                          const obj = c1(6635);
-                          const voiceChannel = c1(6635).selectVoiceChannel(dependencyMap);
+                          c1(6669).disconnect();
+                          const obj = c1(6669);
+                          const voiceChannel = c1(6669).selectVoiceChannel(dependencyMap);
                         }),
                         done: false,
                       };
@@ -277,7 +277,7 @@ let closure_11 = async function _updatePersistentCodesEnabled(arg0) {
     }
   }
 };
-let closure_7 = fn(9197).SECURE_FRAMES_PUBLIC_KEY_VERSION;
+let closure_7 = fn(9230).SECURE_FRAMES_PUBLIC_KEY_VERSION;
 const ChannelTypes = fn(1084).ChannelTypes;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/rtc/updatePersistentCodesEnabled.tsx");

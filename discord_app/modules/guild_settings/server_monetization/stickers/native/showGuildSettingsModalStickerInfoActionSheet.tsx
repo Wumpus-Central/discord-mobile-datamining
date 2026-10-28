@@ -13,7 +13,7 @@ export const showGuildSettingsModalStickerInfoActionSheet = function showGuildSe
 ) {
   ({ guildId, stickerId } = arg0);
   ActionSheetActionCreatorsDefault.openLazy(
-    asyncRequireImpl(19130, dependencyMap.paths),
+    asyncRequireImpl(19393, dependencyMap.paths),
     GuildSettingsModalStickerInfoActionSheet,
     {
       guildId,

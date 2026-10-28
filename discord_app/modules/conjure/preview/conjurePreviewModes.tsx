@@ -85,9 +85,9 @@ export const profileWidgetState = function profileWidgetState(installScope) {
   }
   return str;
 };
-export const resolvePreviewMode = function resolvePreviewMode(arg0, result2) {
-  let defaultMode = arg0;
-  if (null == arg0) {
+export const resolvePreviewMode = function resolvePreviewMode(mode, result2) {
+  let defaultMode = mode;
+  if (null == mode) {
     defaultMode = result2.defaultMode;
   } else {
     const modes = result2.modes;

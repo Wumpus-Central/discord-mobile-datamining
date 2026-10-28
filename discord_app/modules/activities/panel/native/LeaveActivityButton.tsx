@@ -3,11 +3,11 @@ import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import leaveEmbeddedActivity from "../../leaveEmbeddedActivity.tsx";
-import _modDef11541 from "../../../../../_runtime/metro/11541__.js";
+import _modDef11579 from "../../../../../_runtime/metro/11579__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
-const ActivityPanelModes = fn(5610).ActivityPanelModes;
+const ActivityPanelModes = fn(5645).ActivityPanelModes;
 const jsx = fn(21).jsx;
 let ReactCompilerGating = fn(558);
 const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -29,7 +29,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       if (cResult[2] !== onPress) {
         const obj2 = {
           onPress,
-          icon: _modDef11541,
+          icon: _modDef11579,
           text: tmp4,
           accessibilityLabel: tmp5,
           variant: "destructive",
@@ -38,7 +38,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
         };
         const tmp11 = jsx(components_Button_Button.Button, {
           onPress,
-          icon: _modDef11541,
+          icon: _modDef11579,
           text: tmp4,
           accessibilityLabel: tmp5,
           variant: "destructive",
@@ -56,7 +56,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
   : function BaseLeaveActivityButton(onPress) {
       const obj = {
         onPress: onPress.onPress,
-        icon: _modDef11541,
+        icon: _modDef11579,
         text: null,
         accessibilityLabel: null,
         variant: "destructive",
@@ -69,7 +69,7 @@ const tmp2 = ReactCompilerGating.isReactCompilerEnabled()
       obj.accessibilityLabel = intl2.string(util.t.k0Aph0);
       return jsx(components_Button_Button.Button, {
         onPress: onPress.onPress,
-        icon: _modDef11541,
+        icon: _modDef11579,
         text: null,
         accessibilityLabel: null,
         variant: "destructive",

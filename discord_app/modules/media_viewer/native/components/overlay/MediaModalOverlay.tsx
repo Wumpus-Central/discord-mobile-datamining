@@ -32,7 +32,7 @@ const StyleSheet = get_ActivityIndicator.StyleSheet;
 const View = get_ActivityIndicator.View;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10, Fragment: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = {
   portraitFooterButtons: null,
   invisibleFooter: null,
@@ -72,7 +72,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmp7Result = importDefault(onToggleMute.isMuted ? 14236 : 11671);
+      const tmp7Result = importDefault(onToggleMute.isMuted ? 14460 : 11709);
       if (cResult[1] === onToggleMute) {
         if (cResult[2] === tmp4.overlayButton) {
           if (cResult[3] === tmp4.overlayButtonIcon) {
@@ -121,7 +121,7 @@ let closure_13 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.w4m945);
       const rect = { left: true, right: true, children: null };
-      obj.source = importDefault(isMuted ? 14236 : 11671);
+      obj.source = importDefault(isMuted ? 14460 : 11709);
       obj.color = nativeDefault.unsafe_rawColors.WHITE;
       obj.onPress = onToggleMute;
       ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -142,7 +142,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       } else {
         first = cResult[0];
       }
-      const tmp7Result = importDefault(onToggleObscure.spoilerActive ? 14237 : 14238);
+      const tmp7Result = importDefault(onToggleObscure.spoilerActive ? 14461 : 14462);
       if (cResult[1] === onToggleObscure) {
         if (cResult[2] === tmp4.overlayButton) {
           if (cResult[3] === tmp4.overlayButtonIcon) {
@@ -191,7 +191,7 @@ let closure_14 = ReactCompilerGating.isReactCompilerEnabled()
       const intl = util.intl;
       obj.accessibilityLabel = intl.string(util.t.UIsxUw);
       const rect = { left: true, right: true, children: null };
-      obj.source = importDefault(spoilerActive ? 14237 : 14238);
+      obj.source = importDefault(spoilerActive ? 14461 : 14462);
       obj.color = nativeDefault.unsafe_rawColors.WHITE;
       obj.onPress = onToggleObscure;
       ({ overlayButton: obj.style, overlayButtonIcon: obj.iconStyle } = tmp);
@@ -458,7 +458,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           }
           importDefault = tmp4;
           const tmp7 = useVideoControlsDefault(index, source, tmp4);
-          const first = _slicedToArray(index(14241).useMediaItemSpoilerState(index), 1)[0];
+          const first = _slicedToArray(index(14465).useMediaItemSpoilerState(index), 1)[0];
           if (cResult[4] !== index) {
             const fn = function b() {
               return useMediaViewerSources.toggleSpoiler(index);
@@ -527,7 +527,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
           cResult[13] = obscure;
           cResult[14] = tmp11;
           cResult[15] = tmp23;
-          const tmpResult = index(14241);
+          const tmpResult = index(14465);
         }
       }
       const videoControls = getVideoControls(index, source);
@@ -541,7 +541,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
   : function MediaModalOverlay(getVideoControls) {
       ({ source, index } = getVideoControls);
       const videoControls = getVideoControls.getVideoControls(index, source);
-      const tmp2 = videoControls(8754)(index, source, videoControls);
+      const tmp2 = videoControls(8791)(index, source, videoControls);
       const items = [index];
       const items1 = [videoControls];
       const callback = noop.useCallback(() => useMediaViewerSources.toggleSpoiler(index), items);
@@ -557,7 +557,7 @@ let closure_16 = ReactCompilerGating.isReactCompilerEnabled()
         flag = false;
       }
       obj2.obscure = flag;
-      obj2.spoilerActive = _slicedToArray(index(14241).useMediaItemSpoilerState(index), 1)[0];
+      obj2.spoilerActive = _slicedToArray(index(14465).useMediaItemSpoilerState(index), 1)[0];
       obj2.toggleObscure = callback;
       return closure_9(closure_15, obj2);
     };

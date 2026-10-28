@@ -9,21 +9,21 @@ import components_Button_Button from "../../../../design/components/Button/nativ
 import FastImageDefault from "../../../../components_native/common/FastImage.tsx";
 import ModalActionCreatorsDefault from "../../../../actions/ModalActionCreators.tsx";
 import Pressables from "../../../../design/void/Pressables/native/Pressables.tsx";
-import _modDef8113 from "../../../../../_runtime/metro/08113__.js";
-import _modDef8949 from "../../../../../_runtime/metro/08949__.js";
+import _modDef8147 from "../../../../../_runtime/metro/08147__.js";
+import _modDef8983 from "../../../../../_runtime/metro/08983__.js";
 import _slicedToArray from "../../../../../_runtime/metro/00032__.js";
 import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const createChannelRecord = fn(4828).createChannelRecord;
-let closure_6 = fn(8948).useStageChannelUpsellCardStore;
-let closure_7 = fn(8884).CREATE_GUILD_EVENT_MODAL_KEY;
+const createChannelRecord = fn(4860).createChannelRecord;
+let closure_6 = fn(8982).useStageChannelUpsellCardStore;
+let closure_7 = fn(8918).CREATE_GUILD_EVENT_MODAL_KEY;
 const ChannelTypes = fn(1084).ChannelTypes;
 const jsxProd = fn(21);
 ({ jsx: closure_9, jsxs: c10 } = jsxProd);
 const CREATE_CHANNEL_MODAL_KEY = "CREATE_CHANNEL_MODAL_KEY";
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   container: {
     flexDirection: "column",
@@ -52,10 +52,10 @@ export default function StageChannelUpsell(arg0) {
   if (!tmp2[0]) {
     let obj = { style: tmp.container, children: null };
     let obj2 = { onPress: tmp3, accessibilityRole: "button", style: tmp.closeContainer, children: null };
-    let obj3 = { source: _modDef8113 };
+    let obj3 = { source: _modDef8147 };
     obj2.children = closure_9(native.Icon, obj3);
     const items = [closure_9(Pressables.PressableOpacity, obj2), , , , ,];
-    const obj4 = { source: _modDef8949, style: tmp.image };
+    const obj4 = { source: _modDef8983, style: tmp.image };
     items[1] = closure_9(FastImageDefault, obj4);
     const obj5 = { style: tmp.header, variant: "text-md/bold", color: "mobile-text-heading-primary", children: null };
     const intl = util.intl;
@@ -70,7 +70,7 @@ export default function StageChannelUpsell(arg0) {
     const obj8 = {
       suggestionsHook(children, arg1) {
         return closure_1_9(
-          guildId(5235).Text,
+          guildId(5270).Text,
           { variant: "text-sm/semibold", color: "mobile-text-heading-primary", children },
           arg1,
         );
@@ -85,7 +85,7 @@ export default function StageChannelUpsell(arg0) {
     obj10.onPress = function handleCreateChannel() {
       ModalActionCreatorsDefault.popWithKey(closure_7);
       ModalActionCreatorsDefault.pushLazy(
-        asyncRequireImpl(8950, dependencyMap.paths),
+        asyncRequireImpl(8984, dependencyMap.paths),
         {
           guildId,
           channelType: ChannelTypes.GUILD_STAGE_VOICE,

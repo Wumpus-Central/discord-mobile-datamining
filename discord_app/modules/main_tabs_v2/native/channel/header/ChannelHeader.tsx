@@ -14,7 +14,7 @@ import ChannelStore from "../../../../../stores/ChannelStore.tsx";
 
 require = fn;
 const ComponentActions = fn(1084).ComponentActions;
-const StaticChannelRoute = fn(4831).StaticChannelRoute;
+const StaticChannelRoute = fn(4863).StaticChannelRoute;
 const jsx = fn(21).jsx;
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -46,7 +46,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp4 = undefined === pressable || pressable;
       const stateFromStores = channelId(573).useStateFromStores(first, tmp9);
       const tmpResult = channelId(573);
-      const isChannelContentGated = channelId(6663).useIsChannelContentGated(stateFromStores);
+      const isChannelContentGated = channelId(6697).useIsChannelContentGated(stateFromStores);
       let tmp11 = !isChannelContentGated;
       if (!isChannelContentGated) {
         tmp11 = tmp4;
@@ -208,7 +208,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           }
         }
       }
-      const tmpResult2 = channelId(6663);
+      const tmpResult2 = channelId(6697);
     }
   : function ChannelHeader(channelId) {
       channelId = channelId.channelId;
@@ -227,7 +227,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const items = [ChannelStore];
       const stateFromStores = channelId(573).useStateFromStores(items, () => ChannelStore.getChannel(channelId));
       const obj = channelId(573);
-      const isChannelContentGated = channelId(6663).useIsChannelContentGated(stateFromStores);
+      const isChannelContentGated = channelId(6697).useIsChannelContentGated(stateFromStores);
       let tmp4 = !isChannelContentGated;
       if (!isChannelContentGated) {
         tmp4 = pressable;

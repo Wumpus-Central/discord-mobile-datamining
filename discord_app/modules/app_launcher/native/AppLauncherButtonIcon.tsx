@@ -5,8 +5,8 @@ import _objectWithoutProperties from "../../../../_runtime/metro/00109__objectWi
 import noop from "../../../../_runtime/metro/00019__.js";
 
 const KeyboardTypes = PlusLargeIcon(1628);
-const AppsIcon = PlusLargeIcon(8577);
-const PlusLargeIcon2 = PlusLargeIcon(10845);
+const AppsIcon = PlusLargeIcon(8614);
+const PlusLargeIcon2 = PlusLargeIcon(10880);
 require = fn;
 let closure_3 = ["style"];
 const View = fn(17).View;

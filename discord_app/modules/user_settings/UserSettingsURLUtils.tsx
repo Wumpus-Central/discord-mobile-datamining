@@ -1,7 +1,7 @@
 // discord_app/modules/user_settings/UserSettingsURLUtils.tsx
 import AnalyticsUtilsDefault from "../../utils/AnalyticsUtils.tsx";
 import UserSettingsKeys from "UserSettingsKeys.tsx";
-import keysSorter from "../../../_runtime/06723_keysSorter.js";
+import keysSorter from "../../../_runtime/06757_keysSorter.js";
 import _slicedToArray from "../../../_runtime/metro/00032__.js";
 
 require = fn;

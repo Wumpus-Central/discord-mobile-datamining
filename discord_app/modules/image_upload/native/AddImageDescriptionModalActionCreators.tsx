@@ -11,7 +11,7 @@ export default {
   open(merged) {
     ActionSheetActionCreatorsDefault.hideActionSheet();
     ModalActionCreatorsDefault.pushLazy(
-      asyncRequireImpl(13986, dependencyMap.paths),
+      asyncRequireImpl(14205, dependencyMap.paths),
       merged,
       ADD_IMAGE_DESCRIPTION_MODAL_KEY,
     );

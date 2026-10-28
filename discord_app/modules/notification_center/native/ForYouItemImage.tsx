@@ -6,14 +6,14 @@ import NotificationCenterItemsTypes from "../NotificationCenterItemsTypes.tsx";
 import Pressables from "../../../design/void/Pressables/native/Pressables.tsx";
 import showUserProfileActionSheetDefault from "../../user_profile/native/showUserProfileActionSheet.tsx";
 import profile_customization_ProfileCustomizationUtils from "../../profile_customization/native/ProfileCustomizationUtils.tsx";
-import _modDef9118 from "../../../../_runtime/metro/09118__.js";
-import _modDef17913 from "../../../../_runtime/metro/17913__.js";
-import _modDef17914 from "../../../../_runtime/metro/17914__.js";
-import _modDef17915 from "../../../../_runtime/metro/17915__.js";
-import _modDef17916 from "../../../../_runtime/metro/17916__.js";
-import _modDef17917 from "../../../../_runtime/metro/17917__.js";
-import _modDef17918 from "../../../../_runtime/metro/17918__.js";
-import _modDef17919 from "../../../../_runtime/metro/17919__.js";
+import _modDef9151 from "../../../../_runtime/metro/09151__.js";
+import _modDef18150 from "../../../../_runtime/metro/18150__.js";
+import _modDef18151 from "../../../../_runtime/metro/18151__.js";
+import _modDef18152 from "../../../../_runtime/metro/18152__.js";
+import _modDef18153 from "../../../../_runtime/metro/18153__.js";
+import _modDef18154 from "../../../../_runtime/metro/18154__.js";
+import _modDef18155 from "../../../../_runtime/metro/18155__.js";
+import _modDef18156 from "../../../../_runtime/metro/18156__.js";
 import noop from "../../../../_runtime/metro/00019__.js";
 import GuildStore from "../../../stores/GuildStore.tsx";
 import UserStore from "../../../stores/UserStore.tsx";
@@ -21,27 +21,27 @@ import UserStore from "../../../stores/UserStore.tsx";
 require = fn;
 function getFallbackIcon(type, fallbackImage) {
   if (NotificationCenterItemsTypes.NotificationCenterItems.MISSED_MESSAGES === type) {
-    const obj2 = { icon: _modDef9118, color: fallbackImage.fallbackImage.color };
+    const obj2 = { icon: _modDef9151, color: fallbackImage.fallbackImage.color };
     return obj2;
   } else if (NotificationCenterItemsTypes.NotificationCenterItems.FRIEND_REQUEST_REMINDER === type) {
-    const obj3 = { icon: _modDef17913, color: fallbackImage.fallbackImage.color };
+    const obj3 = { icon: _modDef18150, color: fallbackImage.fallbackImage.color };
     return obj3;
   } else {
     if (NotificationCenterItemsTypes.NotificationCenterItems.GUILD_SCHEDULED_EVENT_STARTED !== type) {
       if (NotificationCenterItemsTypes.NotificationCenterItems.TOP_MESSAGES !== type) {
         if (NotificationCenterItemsTypes.NotificationCenterItems.MISSED_MESSAGES !== type) {
           if (NotificationCenterItemsTypes.NotificationCenterItems.TOP_MESSAGES === type) {
-            const obj4 = { icon: _modDef17915, color: fallbackImage.fallbackImage.color };
+            const obj4 = { icon: _modDef18152, color: fallbackImage.fallbackImage.color };
             return obj4;
           } else {
-            const obj = { icon: _modDef17916, color: fallbackImage.fallbackImage.color };
+            const obj = { icon: _modDef18153, color: fallbackImage.fallbackImage.color };
             return obj;
           }
         }
       }
     }
     const obj5 = {
-      icon: _modDef17914,
+      icon: _modDef18151,
       color: fallbackImage.fallbackImageV2.color,
       backgroundStyle: fallbackImage.guildGridBackground,
     };
@@ -50,23 +50,23 @@ function getFallbackIcon(type, fallbackImage) {
 }
 function getLifecycleIcon(item_enum) {
   if (item_enum === NotificationCenterItemsTypes.ItemEnum.UPDATE_PROFILE) {
-    const obj2 = { source: _modDef17917 };
-    let tmp5 = jsx(FastImageDefault, { source: _modDef17917 });
+    const obj2 = { source: _modDef18154 };
+    let tmp5 = jsx(FastImageDefault, { source: _modDef18154 });
   } else {
     if (item_enum !== NotificationCenterItemsTypes.ItemEnum.FIND_FRIENDS) {
       if (item_enum !== NotificationCenterItemsTypes.ItemEnum.ADD_FRIEND) {
         if (item_enum === NotificationCenterItemsTypes.ItemEnum.FIRST_MESSAGE) {
-          const obj3 = { source: _modDef17919, style: { width: "105%" } };
-          tmp5 = jsx(FastImageDefault, { source: _modDef17919, style: { width: "105%" } });
+          const obj3 = { source: _modDef18156, style: { width: "105%" } };
+          tmp5 = jsx(FastImageDefault, { source: _modDef18156, style: { width: "105%" } });
         } else {
-          const obj = { source: _modDef17916 };
-          tmp5 = jsx(native.Icon, { source: _modDef17916 });
+          const obj = { source: _modDef18153 };
+          tmp5 = jsx(native.Icon, { source: _modDef18153 });
         }
       }
     }
-    const obj4 = { source: _modDef17918, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE };
+    const obj4 = { source: _modDef18155, size: native.IconSizes.SMALL_20, color: nativeDefault.unsafe_rawColors.WHITE };
     tmp5 = jsx(native.Icon, {
-      source: _modDef17918,
+      source: _modDef18155,
       size: native.IconSizes.SMALL_20,
       color: nativeDefault.unsafe_rawColors.WHITE,
     });
@@ -74,11 +74,11 @@ function getLifecycleIcon(item_enum) {
   return tmp5;
 }
 const View = fn(17).View;
-const getGuildAcronym = fn(4842).getGuildAcronym;
-const Constants = fn(17912);
+const getGuildAcronym = fn(4874).getGuildAcronym;
+const Constants = fn(18149);
 ({ FRIEND_BACKGROUND, MESSAGE_BACKGROUND, PROFILE_BACKGROUND } = Constants);
 const jsx = fn(21).jsx;
-let createStyles = fn(4972);
+let createStyles = fn(5004);
 let closure_9 = createStyles.createStyles((arg0) => {
   let num = 48;
   if (arg0) {
@@ -113,7 +113,7 @@ let closure_9 = createStyles.createStyles((arg0) => {
   obj.guildFallbackImage = size1;
   return obj;
 });
-createStyles = fn(4972);
+createStyles = fn(5004);
 let obj = {
   fallbackImage: { color: nativeDefault.colors.WHITE },
   fallbackImageV2: null,

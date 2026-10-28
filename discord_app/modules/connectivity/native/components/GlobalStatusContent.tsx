@@ -18,11 +18,11 @@ const require = globalThis.__r;
 
 const require = fn;
 const View = fn(17).View;
-const RTC_PANEL_HEIGHT = fn(11572).RTC_PANEL_HEIGHT;
+const RTC_PANEL_HEIGHT = fn(11610).RTC_PANEL_HEIGHT;
 const RTCConnectionStates = fn(1084).RTCConnectionStates;
 const jsxProd = fn(21);
 ({ jsx: c10, jsxs: closure_11 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { bgNeutral: { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST }, bg: null, container: null };
 let obj3 = { backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWEST };
 obj2.bg = { backgroundColor: nativeDefault.unsafe_rawColors.GREEN_360 };
@@ -122,11 +122,11 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5Result = useCanSpeakInChannelDefault;
       const tmp23 = useThemeDefault();
       if (cResult[6] !== tmp23) {
-        const isThemeDarkResult = tmp(4979).isThemeDark(tmp23);
+        const isThemeDarkResult = tmp(5011).isThemeDark(tmp23);
         cResult[6] = tmp23;
         cResult[7] = isThemeDarkResult;
         let tmp24 = isThemeDarkResult;
-        const tmpResult5 = tmp(4979);
+        const tmpResult5 = tmp(5011);
       } else {
         tmp24 = cResult[7];
       }
@@ -144,12 +144,12 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                   tmp22 = tmp5ResultResult;
                 }
-                const isScreenLandscape = tmp(8691).useIsScreenLandscape();
+                const isScreenLandscape = tmp(8728).useIsScreenLandscape();
                 if (cResult[15] !== isScreenLandscape) {
                   let isModalOpenResult = isScreenLandscape;
                   if (isScreenLandscape) {
-                    isModalOpenResult = tmp(5151).isModalOpen(ChannelCallModalDefault);
-                    const tmpResult7 = tmp(5151);
+                    isModalOpenResult = tmp(5186).isModalOpen(ChannelCallModalDefault);
+                    const tmpResult7 = tmp(5186);
                   }
                   if (isModalOpenResult) {
                     isModalOpenResult = tmp(1381).isAndroid();
@@ -234,7 +234,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 cResult[18] = num11;
                 cResult[19] = obj4;
                 tmp33 = obj4;
-                const tmpResult6 = tmp(8691);
+                const tmpResult6 = tmp(8728);
               }
             }
           }
@@ -334,8 +334,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const isThemeDarkResult = require("shared").isThemeDark(useThemeDefault());
       let isScreenLandscape = require("useIsScreenLandscape").useIsScreenLandscape();
       if (isScreenLandscape) {
-        isScreenLandscape = tmp5(5151).isModalOpen(ChannelCallModalDefault);
-        const tmp5Result5 = tmp5(5151);
+        isScreenLandscape = tmp5(5186).isModalOpen(ChannelCallModalDefault);
+        const tmp5Result5 = tmp5(5186);
       }
       if (isScreenLandscape) {
         isScreenLandscape = tmp5(1381).isAndroid();

@@ -4,7 +4,7 @@ import router_utils from "../routing/router_utils.tsx";
 import util from "../../intl/index.native.tsx";
 import _modDef2046 from "../../../_runtime/metro/02046__.js";
 import useChannelName from "../channel/useChannelName.tsx";
-import fuzzysearchDefault from "../../../_runtime/06829_fuzzysearch.js";
+import fuzzysearchDefault from "../../../_runtime/06863_fuzzysearch.js";
 import ReadStateActionCreators from "../../actions/ReadStateActionCreators.tsx";
 import ChannelListState from "../guild_sidebar/ChannelListState.tsx";
 import RecentChannelsActionCreators from "../recent_channels/RecentChannelsActionCreators.tsx";
@@ -23,10 +23,10 @@ function setIndex(arg0, index) {
 }
 const Constants = fn(1084);
 ({ Routes: closure_9, ChannelTypes: c10 } = Constants);
-const ChannelConstants = fn(4831);
+const ChannelConstants = fn(4863);
 ({ ChannelFlags: closure_11, StaticChannelRoute: closure_12 } = ChannelConstants);
-const ChannelListGuildActionRow = fn(7644).ChannelListGuildActionRow;
-const ReadStateTypes = fn(6706).ReadStateTypes;
+const ChannelListGuildActionRow = fn(7678).ChannelListGuildActionRow;
+const ReadStateTypes = fn(6740).ReadStateTypes;
 fn(558);
 const ReactCompilerGating = fn(558);
 let tmp4 = ReactCompilerGating.isReactCompilerEnabled()

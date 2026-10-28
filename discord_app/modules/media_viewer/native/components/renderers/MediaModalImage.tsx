@@ -5,7 +5,6 @@ import FastImageDefault from "../../../../../components_native/common/FastImage.
 import useMediaLoadingDefault from "../../useMediaLoading.tsx";
 import MediaModalLoadingOverlayDefault from "../MediaModalLoadingOverlay.tsx";
 import MediaModalSpoilerOverlayDefault from "../MediaModalSpoilerOverlay.tsx";
-import AndroidMediaViewerFullResolutionExperiment from "../../AndroidMediaViewerFullResolutionExperiment.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -23,57 +22,119 @@ export default noop.memo(
         if (cResult[0] === onError) {
           if (cResult[1] === onLoad) {
             if (cResult[2] === onLoadingVisible) {
-              let tmp4 = cResult[3];
+              let tmp3 = cResult[3];
             }
-            const tmp6 = useMediaLoadingDefault(tmp4);
-            ({ isLoadingVisible, progress, handleLoadStart, handleLoad, handleError, handleProgress } = tmp6);
+            const tmp5 = useMediaLoadingDefault(tmp3);
+            ({ isLoadingVisible, progress, handleLoadStart, handleLoad, handleError, handleProgress } = tmp5);
             if (cResult[4] !== handleProgress) {
-              const fn = function y(nativeEvent) {
-                nativeEvent = nativeEvent.nativeEvent;
-                return handleProgress(nativeEvent.loaded, nativeEvent.total);
-              };
+              class M {
+                constructor(arg0) {
+                  nativeEvent = arg0.nativeEvent;
+                  return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                }
+              }
               cResult[4] = handleProgress;
-              cResult[5] = fn;
-              let tmp7 = fn;
+              cResult[5] = M;
             } else {
-              tmp7 = cResult[5];
+              class M {
+                constructor(arg0) {
+                  nativeEvent = arg0.nativeEvent;
+                  return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                }
+              }
             }
             if (cResult[6] !== source.uri) {
-              const obj2 = { uri: source.uri };
-              cResult[6] = source.uri;
-              cResult[7] = obj2;
-              let tmp8 = obj2;
-            } else {
-              tmp8 = cResult[7];
-            }
-            if (tmp6.hasError) {
-              if (cResult[8] !== style) {
-                const obj3 = { style, status: "error" };
-                const tmp27 = React4(MediaModalLoadingOverlayDefault, obj3);
-                cResult[8] = style;
-                cResult[9] = tmp27;
-                let tmp25 = tmp27;
-              } else {
-                tmp25 = cResult[9];
+              class M {
+                constructor(arg0) {
+                  nativeEvent = arg0.nativeEvent;
+                  return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                }
               }
-              return tmp25;
+              tmp8[0] = source.uri;
+              cResult[6] = source.uri;
+              cResult[7] = tmp8;
             } else {
-              ({ description, height } = source);
+              class M {
+                constructor(arg0) {
+                  nativeEvent = arg0.nativeEvent;
+                  return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                }
+              }
+            }
+            if (tmp5.hasError) {
+              class M {
+                constructor(arg0) {
+                  nativeEvent = arg0.nativeEvent;
+                  return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                }
+              }
+              return tmp16;
+            } else {
+              class M {
+                constructor(arg0) {
+                  nativeEvent = arg0.nativeEvent;
+                  return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                }
+              }
               if (cResult[10] !== source) {
-                let str;
-                if (tmpResult.isAndroid()) {
+                class M {
+                  constructor(arg0) {
+                    nativeEvent = arg0.nativeEvent;
+                    return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                  }
+                }
+                if (obj3.isAndroid()) {
+                  class M {
+                    constructor(arg0) {
+                      nativeEvent = arg0.nativeEvent;
+                      return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                    }
+                  }
                   if (0 !== source.width) {
+                    class M {
+                      constructor(arg0) {
+                        nativeEvent = arg0.nativeEvent;
+                        return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                      }
+                    }
                     if (0 !== source.height) {
+                      class M {
+                        constructor(arg0) {
+                          nativeEvent = arg0.nativeEvent;
+                          return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                        }
+                      }
                       if (source.width > 2048) {
+                        class M {
+                          constructor(arg0) {
+                            nativeEvent = arg0.nativeEvent;
+                            return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                          }
+                        }
                         if (source.width * source.height <= 16777216) {
+                          class M {
+                            constructor(arg0) {
+                              nativeEvent = arg0.nativeEvent;
+                              return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                            }
+                          }
                           const _Math = Math;
                           const _Math2 = Math;
                           const bound = Math.max(source.width, source.height);
                           if (bound / Math.min(source.width, source.height) > 2) {
-                            if (tmpResult2.getAndroidMediaViewerFullResolutionEnabled("MediaModal")) {
-                              str = "none";
+                            class M {
+                              constructor(arg0) {
+                                nativeEvent = arg0.nativeEvent;
+                                return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                              }
                             }
-                            tmpResult2 = AndroidMediaViewerFullResolutionExperiment;
+                          }
+                        }
+                      } else {
+                        class M {
+                          constructor(arg0) {
+                            nativeEvent = arg0.nativeEvent;
+                            return handleProgress(nativeEvent.loaded, nativeEvent.total);
                           }
                         }
                       }
@@ -81,104 +142,42 @@ export default noop.memo(
                   }
                 }
                 cResult[10] = source;
-                cResult[11] = str;
-                let tmp9 = str;
-                tmpResult = PlatformUtils;
+                cResult[11] = undefined;
               } else {
-                tmp9 = cResult[11];
+                class M {
+                  constructor(arg0) {
+                    nativeEvent = arg0.nativeEvent;
+                    return handleProgress(nativeEvent.loaded, nativeEvent.total);
+                  }
+                }
               }
               if (cResult[12] === fadeDuration) {
-                if (cResult[13] === handleError) {
-                  if (cResult[14] === tmp7) {
-                    if (cResult[15] === handleLoad) {
-                      if (cResult[16] === handleLoadStart) {
-                        if (cResult[17] === tmp8) {
-                          if (cResult[18] === pointerEvents) {
-                            if (cResult[19] === source.description) {
-                              if (cResult[20] === source.height) {
-                                if (cResult[21] === source.width) {
-                                  if (cResult[22] === style) {
-                                    if (cResult[23] === tmp9) {
-                                      let tmp12 = cResult[24];
-                                    }
-                                    if (cResult[25] === isLoadingVisible) {
-                                      if (cResult[26] === progress) {
-                                        if (cResult[27] === style) {
-                                          let tmp15 = cResult[28];
-                                        }
-                                        if (cResult[29] === index) {
-                                          if (cResult[30] === source) {
-                                            if (cResult[31] === style) {
-                                              let tmp18 = cResult[32];
-                                            }
-                                            if (cResult[33] === tmp12) {
-                                              if (cResult[34] === tmp15) {
-                                                if (cResult[35] === tmp18) {
-                                                  let tmp21 = cResult[36];
-                                                }
-                                                return tmp21;
-                                              }
-                                            }
-                                            const obj4 = { children: null };
-                                            const items = [tmp12, tmp15, tmp18];
-                                            obj4.children = items;
-                                            const tmp24 = hasOwnProperty(noop.Fragment, obj4);
-                                            cResult[33] = tmp12;
-                                            cResult[34] = tmp15;
-                                            cResult[35] = tmp18;
-                                            cResult[36] = tmp24;
-                                            tmp21 = tmp24;
-                                          }
-                                        }
-                                        const obj5 = { style, index, source };
-                                        const tmp20 = React4(MediaModalSpoilerOverlayDefault, obj5);
-                                        cResult[29] = index;
-                                        cResult[30] = source;
-                                        cResult[31] = style;
-                                        cResult[32] = tmp20;
-                                        tmp18 = tmp20;
-                                      }
-                                    }
-                                    let tmp16 = null;
-                                    if (isLoadingVisible) {
-                                      const obj6 = { style, status: "loading", progress };
-                                      tmp16 = React4(MediaModalLoadingOverlayDefault, obj6);
-                                    }
-                                    cResult[25] = isLoadingVisible;
-                                    cResult[26] = progress;
-                                    cResult[27] = style;
-                                    cResult[28] = tmp16;
-                                    tmp15 = tmp16;
-                                  }
-                                }
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
+                class M {
+                  constructor(arg0) {
+                    nativeEvent = arg0.nativeEvent;
+                    return handleProgress(nativeEvent.loaded, nativeEvent.total);
                   }
                 }
               }
               const size = {
                 accessibilityRole: "image",
-                accessibilityLabel: description,
+                accessibilityLabel: tmp9,
                 fadeDuration,
-                height,
+                height: source.height,
                 onError: handleError,
                 onLoad: handleLoad,
                 onLoadStart: handleLoadStart,
-                onProgress: tmp7,
+                onProgress: M,
                 pointerEvents,
-                resizeMethod: tmp9,
+                resizeMethod: tmp10,
                 source: tmp8,
                 style,
                 width: source.width,
               };
-              const tmp14 = React4(FastImageDefault, size);
+              const tmp15 = React4(FastImageDefault, size);
               cResult[12] = fadeDuration;
               cResult[13] = handleError;
-              cResult[14] = tmp7;
+              cResult[14] = M;
               cResult[15] = handleLoad;
               cResult[16] = handleLoadStart;
               cResult[17] = tmp8;
@@ -187,18 +186,17 @@ export default noop.memo(
               cResult[20] = source.height;
               cResult[21] = source.width;
               cResult[22] = style;
-              cResult[23] = tmp9;
-              cResult[24] = tmp14;
-              tmp12 = tmp14;
+              cResult[23] = tmp10;
+              cResult[24] = tmp15;
             }
           }
         }
-        const obj7 = { onError, onLoad, onLoadingVisible };
+        const obj2 = { onError, onLoad, onLoadingVisible };
         cResult[0] = onError;
         cResult[1] = onLoad;
         cResult[2] = onLoadingVisible;
-        cResult[3] = obj7;
-        tmp4 = obj7;
+        cResult[3] = obj2;
+        tmp3 = obj2;
       }
     : function MediaModalImage(source) {
         source = source.source;
@@ -243,10 +241,7 @@ export default noop.memo(
                     const _Math2 = Math;
                     const bound = Math.max(source.width, source.height);
                     if (bound / Math.min(source.width, source.height) > 2) {
-                      if (tmp10Result.getAndroidMediaViewerFullResolutionEnabled("MediaModal")) {
-                        str = "none";
-                      }
-                      tmp10Result = AndroidMediaViewerFullResolutionExperiment;
+                      str = "none";
                     }
                   }
                 }

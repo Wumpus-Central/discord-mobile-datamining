@@ -27,7 +27,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         tmp4 = cResult[1];
       }
       if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
-        const tmp8 = jsx(tmp(5679).LinkIcon, {});
+        const tmp8 = jsx(tmp(5714).LinkIcon, {});
         const intl = tmp(1125).intl;
         const stringResult = intl.string(tmp(1125).t.B1ubHx);
         cResult[2] = tmp8;
@@ -42,9 +42,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         let obj2 = { children: null };
         const obj3 = { hasIcons: true, children: null };
         const obj4 = { icon: tmp5, label: tmp6, onPress: tmp4 };
-        obj3.children = jsx(tmp(6905).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
-        obj2.children = jsx(tmp(6989).TableRowGroup, { hasIcons: true, children: null });
-        const tmp12 = jsx(tmp(7300).ActionSheet, { children: null });
+        obj3.children = jsx(tmp(6939).TableRow, { icon: tmp5, label: tmp6, onPress: tmp4 });
+        obj2.children = jsx(tmp(7023).TableRowGroup, { hasIcons: true, children: null });
+        const tmp12 = jsx(tmp(7334).ActionSheet, { children: null });
         cResult[4] = tmp4;
         cResult[5] = tmp12;
         let tmp10 = tmp12;
@@ -63,15 +63,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       }, items);
       let obj = { children: null };
       let obj2 = { hasIcons: true, children: null };
-      const obj3 = { icon: jsx(stickerUrl(5679).LinkIcon, {}), label: null, onPress: null };
+      const obj3 = { icon: jsx(stickerUrl(5714).LinkIcon, {}), label: null, onPress: null };
       const intl = stickerUrl(1125).intl;
       obj3.label = intl.string(stickerUrl(1125).t.B1ubHx);
       obj3.onPress = callback;
-      obj2.children = jsx(stickerUrl(6905).TableRow, {
-        icon: jsx(stickerUrl(5679).LinkIcon, {}),
+      obj2.children = jsx(stickerUrl(6939).TableRow, {
+        icon: jsx(stickerUrl(5714).LinkIcon, {}),
         label: null,
         onPress: null,
       });
-      obj.children = jsx(stickerUrl(6989).TableRowGroup, { hasIcons: true, children: null });
-      return jsx(stickerUrl(7300).ActionSheet, { children: null });
+      obj.children = jsx(stickerUrl(7023).TableRowGroup, { hasIcons: true, children: null });
+      return jsx(stickerUrl(7334).ActionSheet, { children: null });
     };

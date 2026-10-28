@@ -24,7 +24,7 @@ const require = globalThis.__r;
 
 require = fn;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-fn(7526).GPlayBillingResult;
+fn(7560).GPlayBillingResult;
 const PremiumConstants = fn(1391);
 ({ PremiumTypes: closure_12, SubscriptionIntervalTypes: map1, SubscriptionPlanInfo: closure_14 } = PremiumConstants);
 let PaymentGateways = fn(1095).PaymentGateways;
@@ -969,12 +969,7 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
         obj3 = externalGatewayFacet;
         let tmp6 = planId(externalGatewayFacet.useState(0), 2);
       }
-      let obj4 = {
-        orderId: "a",
-        planId: 1610613164,
-        planSelection: { premiumType, planInterval },
-        giftInfo: 1090519905,
-      };
+      let obj4 = { orderId: "a", planId: null, planSelection: { premiumType, planInterval }, giftInfo: null };
       cResult[0] = planInterval;
       cResult[1] = premiumType;
       cResult[2] = obj4;
@@ -994,13 +989,12 @@ let closure_20 = ReactCompilerGating.isReactCompilerEnabled()
       const setPremiumType = order.setPremiumType;
       const setPlanInterval = order.setPlanInterval;
       const setError = order.setError;
-      let obj = {
+      closure_13 = externalGatewayFacet.useRef({
         orderId: "a",
-        planId: 1610613164,
+        planId: null,
         planSelection: { premiumType, planInterval },
-        giftInfo: 1090519905,
-      };
-      closure_13 = externalGatewayFacet.useRef(obj);
+        giftInfo: null,
+      });
       externalGatewayFacet.useRef(false);
       externalGatewayFacet.useRef(null);
       const tmp = planId(externalGatewayFacet.useState(0), 2);

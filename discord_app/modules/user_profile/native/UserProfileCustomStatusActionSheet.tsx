@@ -10,11 +10,11 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const View = fn(17).View;
-const Constants = fn(7306);
+const Constants = fn(7340);
 ({ AVATAR_CONTAINER_SIZE, AVATAR_CUSTOM_STATUS_GAP } = Constants);
 const jsxProd = fn(21);
 ({ jsx: hasOwnProperty, jsxs: metroRequire } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   statusPreviewContainer: {
     flexDirection: "row",

@@ -142,9 +142,9 @@ function estimateAttachmentWidth(arg0, arg1) {
   }
   return num;
 }
-function renderInputAttachment(BaseIconImage, leadingText, text) {
-  if (null != BaseIconImage) {
-    let tmp2 = <BaseIconImage size="xs" color="input-icon-default" />;
+function renderInputAttachment(View, leadingText, text) {
+  if (null != View) {
+    let tmp2 = <View size="xs" color="input-icon-default" />;
   } else {
     tmp2 = null;
     if (null != leadingText) {

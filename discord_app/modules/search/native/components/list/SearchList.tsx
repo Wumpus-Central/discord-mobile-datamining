@@ -2,7 +2,7 @@
 import c from "../../../../../../_runtime/00576_c.js";
 import util from "../../../../../intl/index.native.tsx";
 import useSafeAreaInsetsDefault from "../../../../safe_area/useSafeAreaInsets.native.tsx";
-import _mod7222 from "../../../../../../discord_common/js/packages/flash-list/index.js";
+import _mod7256 from "../../../../../../discord_common/js/packages/flash-list/index.js";
 import SuggestedSearchRowDefault from "../../../../intelligence_layer/search/native/components/SuggestedSearchRow.tsx";
 import pages_ErrorScreenDefault from "../tabs/pages/ErrorScreen.tsx";
 import MediaGridPlaceholderDefault from "../tabs/pages/placeholders/MediaGridPlaceholder.tsx";
@@ -24,7 +24,6 @@ import GenericTextRowDefault from "rows/GenericTextRow.tsx";
 import SearchListSectionDefault from "SearchListSection.tsx";
 import SmartSearchRowDefault from "../../../../intelligence_layer/search/native/components/SmartSearchRow.tsx";
 import SuggestedSearchSkeletonDefault from "../../../../intelligence_layer/search/native/components/SuggestedSearchSkeleton.tsx";
-import smartSearchViewabilityConfig from "../../../../intelligence_layer/search/native/smartSearchViewabilityConfig.tsx";
 import noop from "../../../../../../_runtime/metro/00019__.js";
 
 require = fn;
@@ -202,11 +201,11 @@ function renderItem(item) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: closure_4, StyleSheet: hasOwnProperty } = get_ActivityIndicator);
-const SearchConstants = fn(9716);
+const SearchConstants = fn(9748);
 ({ SearchHistoryItemTypes: metroRequire, SearchListItemTypes: closure_7 } = SearchConstants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let closure_10 = createStyles.createStyles({ container: { flex: 1 } });
 const ReactCompilerGating = fn(558);
 const size = fn(2);
@@ -215,7 +214,7 @@ const result = size.fileFinishedImporting("modules/search/native/components/list
 export default noop.memo(
   ReactCompilerGating.isReactCompilerEnabled()
     ? function SearchList(arg0) {
-        const cResult = c.c(25);
+        const cResult = c.c(26);
         ({
           contentContainerStyle,
           data,
@@ -224,6 +223,7 @@ export default noop.memo(
           ListHeaderComponent,
           ListFooterComponent,
           numColumns,
+          viewabilityConfigCallbackPairs,
           scrollToTopKey,
         } = arg0);
         noop.useRef(null);
@@ -311,25 +311,27 @@ export default noop.memo(
                       if (cResult[17] === tmp17) {
                         if (cResult[18] === tmp20) {
                           if (cResult[19] === num4) {
-                            let tmp22 = cResult[20];
-                          }
-                          if (cResult[21] === tmp8.container) {
-                            if (cResult[22] === tmp11) {
-                              if (cResult[23] === tmp22) {
-                                let tmp28 = cResult[24];
-                              }
-                              return tmp28;
+                            if (cResult[20] === viewabilityConfigCallbackPairs) {
+                              let tmp22 = cResult[21];
                             }
+                            if (cResult[22] === tmp8.container) {
+                              if (cResult[23] === tmp11) {
+                                if (cResult[24] === tmp22) {
+                                  let tmp28 = cResult[25];
+                                }
+                                return tmp28;
+                              }
+                            }
+                            const obj7 = { style: tmp8.container, children: null };
+                            const items1 = [tmp11, tmp22];
+                            obj7.children = items1;
+                            const tmp31 = React6(React4, obj7);
+                            cResult[22] = tmp8.container;
+                            cResult[23] = tmp11;
+                            cResult[24] = tmp22;
+                            cResult[25] = tmp31;
+                            tmp28 = tmp31;
                           }
-                          const obj7 = { style: tmp8.container, children: null };
-                          const items1 = [tmp11, tmp22];
-                          obj7.children = items1;
-                          const tmp31 = React6(React4, obj7);
-                          cResult[21] = tmp8.container;
-                          cResult[22] = tmp11;
-                          cResult[23] = tmp22;
-                          cResult[24] = tmp31;
-                          tmp28 = tmp31;
                         }
                       }
                     }
@@ -356,9 +358,9 @@ export default noop.memo(
             ListFooterComponent,
             ItemSeparatorComponent,
             numColumns,
-            viewabilityConfigCallbackPairs: smartSearchViewabilityConfig.smartSearchViewabilityConfig,
+            viewabilityConfigCallbackPairs,
           };
-          const tmp27 = closure_1_8(_mod7222.AnimatedFlashList, obj8);
+          const tmp27 = closure_1_8(_mod7256.AnimatedFlashList, obj8);
           cResult[11] = ItemSeparatorComponent;
           cResult[12] = ListFooterComponent;
           cResult[13] = ListHeaderComponent;
@@ -368,7 +370,8 @@ export default noop.memo(
           cResult[17] = tmp17;
           cResult[18] = tmp20;
           cResult[19] = num4;
-          cResult[20] = tmp27;
+          cResult[20] = viewabilityConfigCallbackPairs;
+          cResult[21] = tmp27;
           tmp22 = tmp27;
         }
         const obj9 = { paddingBottom: sum };
@@ -380,7 +383,7 @@ export default noop.memo(
       }
     : function SearchList(arg0) {
         ({ contentContainerStyle, data, ListHeaderComponent, ListFooterComponent, numColumns, scrollToTopKey } = arg0);
-        ({ onEndReached, ItemSeparatorComponent } = arg0);
+        ({ onEndReached, ItemSeparatorComponent, viewabilityConfigCallbackPairs } = arg0);
         noop.useRef(null);
         const ref = noop.useRef(scrollToTopKey);
         const items = [scrollToTopKey];
@@ -456,8 +459,8 @@ export default noop.memo(
         obj4.ListFooterComponent = ListFooterComponent;
         obj4.ItemSeparatorComponent = ItemSeparatorComponent;
         obj4.numColumns = numColumns;
-        obj4.viewabilityConfigCallbackPairs = smartSearchViewabilityConfig.smartSearchViewabilityConfig;
-        items1[1] = closure_1_8(_mod7222.AnimatedFlashList, obj4);
+        obj4.viewabilityConfigCallbackPairs = viewabilityConfigCallbackPairs;
+        items1[1] = closure_1_8(_mod7256.AnimatedFlashList, obj4);
         obj.children = items1;
         return React6(React4, obj);
       },

@@ -13,7 +13,7 @@ const Constants = fn(1084);
 ({ Permissions: metroRequire, SystemChannelFlags: closure_7 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9, Fragment: c10 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = { container: { flex: 1 }, content: { paddingTop: nativeDefault.space.PX_16 }, stackPadding: null };
 let obj3 = { paddingTop: nativeDefault.space.PX_16 };
 obj2.stackPadding = { paddingHorizontal: nativeDefault.modules.mobile.TABLE_ROW_PADDING };
@@ -201,7 +201,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj7 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GAMING_LEADERBOARD_NOTIFICATIONS,
-          settingType: tmp2(19040).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(19303).ServerHubSettingType.LEADERBOARD_SYSTEM_MESSAGES,
           label: null,
           subLabel: null,
           disabled: null,
@@ -215,7 +215,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj8 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GUILD_SPACE_WHITEBOARD_NOTIFICATIONS,
-          settingType: tmp2(19040).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
+          settingType: tmp2(19303).ServerHubSettingType.WHITEBOARD_SYSTEM_MESSAGES,
           label: null,
           disabled: null,
         };
@@ -226,7 +226,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = {
           guild: stateFromStores,
           flag: constants2.SUPPRESS_GUILD_SPACE_MUSIC_NOTIFICATIONS,
-          settingType: tmp2(19040).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
+          settingType: tmp2(19303).ServerHubSettingType.MUSIC_SYSTEM_MESSAGES,
           label: null,
           subLabel: null,
           disabled: null,
@@ -238,9 +238,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         obj9.disabled = !stateFromStores1;
         items4[2] = closure_8(closure_12, obj9);
         obj6.children = items4;
-        obj5.children = closure_9(tmp2(6989).TableRowGroup, obj6);
-        obj4.children = closure_8(tmp2(5978).Stack, obj5);
-        const items5 = [closure_8(tmp2(8951).Form, obj4), closure_8(tmp2(5593).NavScrim, {})];
+        obj5.children = closure_9(tmp2(7023).TableRowGroup, obj6);
+        obj4.children = closure_8(tmp2(6013).Stack, obj5);
+        const items5 = [closure_8(tmp2(8985).Form, obj4), closure_8(tmp2(5628).NavScrim, {})];
         obj3.children = items5;
         tmp6 = closure_9(closure_10, obj3);
       }

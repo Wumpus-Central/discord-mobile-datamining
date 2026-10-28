@@ -5,12 +5,12 @@ import asyncRequireImpl from "../../../_runtime/01999_asyncRequireImpl.js";
 import PremiumUtils from "../PremiumUtils.tsx";
 import ChatInputUtils from "ChatInputUtils.tsx";
 import ActionSheetActionCreatorsDefault from "../../modules/action_sheet/native/ActionSheetActionCreators.tsx";
-import _modDef9675 from "../../../_runtime/metro/09675__.js";
-import _modDef9676 from "../../../_runtime/metro/09676__.js";
-import _modDef9677 from "../../../_runtime/metro/09677__.js";
-import _modDef9678 from "../../../_runtime/metro/09678__.js";
-import _modDef9679 from "../../../_runtime/metro/09679__.js";
-import _modDef9680 from "../../../_runtime/metro/09680__.js";
+import _modDef9707 from "../../../_runtime/metro/09707__.js";
+import _modDef9708 from "../../../_runtime/metro/09708__.js";
+import _modDef9709 from "../../../_runtime/metro/09709__.js";
+import _modDef9710 from "../../../_runtime/metro/09710__.js";
+import _modDef9711 from "../../../_runtime/metro/09711__.js";
+import _modDef9712 from "../../../_runtime/metro/09712__.js";
 import openPremiumModalDefault from "../../components_native/premium/openPremiumModal.tsx";
 import PremiumFeaturesCards from "../../modules/user_settings/premium/native/PremiumFeaturesCards.tsx";
 import noop from "../../../_runtime/metro/00019__.js";
@@ -374,7 +374,7 @@ export default {
       if (!analyticsLocation(analyticsLocations[13])(initialUpsellKey)) {
         let obj = {
           importer() {
-            return asyncRequireImpl(9866, dependencyMap.paths).then((result) => {
+            return asyncRequireImpl(9898, dependencyMap.paths).then((result) => {
               closure_0 = result.default;
               return (arg0) => {
                 const obj = {};
@@ -404,7 +404,7 @@ export default {
 export const getUpsellItems = function getUpsellItems() {
   const obj = {
     key: constants3.GLOBAL_EMOJI,
-    image: _modDef9675,
+    image: _modDef9707,
     activeTitle: null,
     passiveTitle: null,
     description: null,
@@ -418,7 +418,7 @@ export const getUpsellItems = function getUpsellItems() {
   const items = [obj, , , , ,];
   const obj2 = {
     key: constants3.ANIMATED_EMOJI,
-    image: _modDef9676,
+    image: _modDef9708,
     activeTitle: null,
     passiveTitle: null,
     description: null,
@@ -432,7 +432,7 @@ export const getUpsellItems = function getUpsellItems() {
   items[1] = obj2;
   const obj3 = {
     key: constants3.ANIMATED_AVATAR,
-    image: _modDef9677,
+    image: _modDef9709,
     activeTitle: null,
     passiveTitle: null,
     description: null,
@@ -444,7 +444,7 @@ export const getUpsellItems = function getUpsellItems() {
   const intl9 = util.intl;
   obj3.description = intl9.format(util.t["Tso/Fn"], {});
   items[2] = obj3;
-  const obj4 = { key: constants3.UPLOAD, image: _modDef9678, activeTitle: null, passiveTitle: null, description: null };
+  const obj4 = { key: constants3.UPLOAD, image: _modDef9710, activeTitle: null, passiveTitle: null, description: null };
   const intl10 = util.intl;
   obj4.activeTitle = intl10.string(util.t["1EOZqw"]);
   const intl11 = util.intl;
@@ -456,7 +456,7 @@ export const getUpsellItems = function getUpsellItems() {
   obj5.maxUploadPremium = PremiumUtils.getMaxFileSizeForPremiumType(React6.TIER_2);
   obj4.description = intl12.format(util.t.DUT5IC, obj5);
   items[3] = obj4;
-  const obj7 = { key: constants3.BADGE, image: _modDef9679, activeTitle: null, passiveTitle: null, description: null };
+  const obj7 = { key: constants3.BADGE, image: _modDef9711, activeTitle: null, passiveTitle: null, description: null };
   const intl14 = util.intl;
   obj7.activeTitle = intl14.string(util.t["602BK4"]);
   const intl15 = util.intl;
@@ -466,7 +466,7 @@ export const getUpsellItems = function getUpsellItems() {
   items[4] = obj7;
   const obj8 = {
     key: constants3.APP_ICONS,
-    image: _modDef9680,
+    image: _modDef9712,
     activeTitle: null,
     passiveTitle: null,
     description: null,

@@ -19,19 +19,27 @@ export const transformNativeMention = function transformNativeMention(value, all
   const type = value.type;
   if ("user" === type) {
     const str1 = value.value.toString();
-    const obj5 = { fullMatch: null, id: null, everyoneOrHere: "Array" };
+    const obj5 = { fullMatch: null, id: null, everyoneOrHere: "r" };
     const _HermesInternal2 = HermesInternal;
     obj5.fullMatch = "<@" + str1 + ">";
     obj5.id = str1;
     return MarkupRules.hydrateUserMention(obj5, allowGameMentions);
   } else if ("everyone" === type) {
     return MarkupRules.hydrateUserMention(
-      { fullMatch: "@everyone", id: "applicationId", everyoneOrHere: "leftwards_pushing_hand_tone2" },
+      {
+        fullMatch: "@everyone",
+        id: "application",
+        everyoneOrHere: 0.000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002804286485516824,
+      },
       allowGameMentions,
     );
   } else if ("here" === type) {
     return MarkupRules.hydrateUserMention(
-      { fullMatch: "@here", id: "applicationId", everyoneOrHere: "leftwards_pushing_hand_tone2" },
+      {
+        fullMatch: "@here",
+        id: "application",
+        everyoneOrHere: 2278796593990497400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+      },
       allowGameMentions,
     );
   } else if ("role" === type) {

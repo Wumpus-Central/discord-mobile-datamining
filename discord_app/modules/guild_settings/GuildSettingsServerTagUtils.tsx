@@ -1,41 +1,31 @@
 // discord_app/modules/guild_settings/GuildSettingsServerTagUtils.tsx
 import GuildTagUtils from "../guild_tag/GuildTagUtils.tsx";
-import MobileServerTagExperimentDefault from "MobileServerTagExperiment.tsx";
 import GuildStore from "../../stores/GuildStore.tsx";
 import PermissionStore from "../../stores/PermissionStore.tsx";
 
 require = fn;
 const Permissions = fn(1084).Permissions;
-const GuildSettingsServerTag = "GuildSettingsServerTag";
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/guild_settings/GuildSettingsServerTagUtils.tsx");
 
 export const canUseMobileServerTagSettings = function canUseMobileServerTagSettings(guildId) {
   guild = GuildStore.getGuild(guildId);
-  let enabled = null != guild;
-  if (enabled) {
-    enabled = PermissionStore.can(Permissions.MANAGE_GUILD, guild);
+  let canResult = null != guild;
+  if (canResult) {
+    canResult = PermissionStore.can(Permissions.MANAGE_GUILD, guild);
   }
-  if (enabled) {
-    const obj2 = { location: GuildSettingsServerTag };
-    enabled = MobileServerTagExperimentDefault.getConfig(obj2).enabled;
-  }
-  return enabled;
+  return canResult;
 };
 export const canViewMobileServerTag = function canViewMobileServerTag(id) {
   guild = GuildStore.getGuild(id);
-  let enabled = null != guild;
-  if (enabled) {
-    enabled = GuildTagUtils.guildSupportsTags(guild);
+  let guildSupportsTagsResult = null != guild;
+  if (guildSupportsTagsResult) {
+    guildSupportsTagsResult = GuildTagUtils.guildSupportsTags(guild);
   }
-  if (enabled) {
-    enabled = GuildTagUtils.guildHasTag(guild);
+  if (guildSupportsTagsResult) {
+    guildSupportsTagsResult = GuildTagUtils.guildHasTag(guild);
   }
-  if (enabled) {
-    const obj4 = { location: GuildSettingsServerTag };
-    enabled = MobileServerTagExperimentDefault.getConfig(obj4).enabled;
-  }
-  return enabled;
+  return guildSupportsTagsResult;
 };
 export const isServerTagDraftDirty = function isServerTagDraftDirty(profile, profile2) {
   let tmp = null != profile && null != profile2;

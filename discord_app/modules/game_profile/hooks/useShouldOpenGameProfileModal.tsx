@@ -64,7 +64,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === gameId) {
           let tmp5 = cResult[2];
         }
-        const tmp7 = require("useResolveGameForProfile")(tmp5);
+        const tmp7 = require("useResolveGame")(tmp5);
         ({ gameId: gameId2, gameRecord } = tmp7);
         isLoading = tmp7.isLoading;
         if (cResult[3] !== gameRecord) {

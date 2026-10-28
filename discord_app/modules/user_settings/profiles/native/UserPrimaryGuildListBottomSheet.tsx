@@ -13,10 +13,10 @@ import noop from "../../../../../_runtime/metro/00019__.js";
 
 require = fn;
 const View = fn(17).View;
-const GuildTagBadgeSize = fn(8272).GuildTagBadgeSize;
+const GuildTagBadgeSize = fn(8306).GuildTagBadgeSize;
 const jsxProd = fn(21);
 ({ jsx: closure_7, jsxs: closure_8, Fragment: closure_9 } = jsxProd);
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj = {
   titleContainer: { paddingHorizontal: 16, flexDirection: "row", alignItems: "center", justifyContent: "center" },
   guildIcon: { marginLeft: 4 },
@@ -72,7 +72,7 @@ let closure_11 = noop.memo(
           } else {
             tmp12 = cResult[4];
           }
-          const radioA11yNative = item(5040).useRadioA11yNative(tmp12);
+          const radioA11yNative = item(5072).useRadioA11yNative(tmp12);
           ({ accessibilityRole, accessibilityState } = radioA11yNative);
           let id;
           if (item != null) {
@@ -105,7 +105,7 @@ let closure_11 = noop.memo(
                         }
                         if (cResult[19] !== selected) {
                           const obj3 = { selected };
-                          const tmp30 = closure_7(item(6990).FormRadio, obj3);
+                          const tmp30 = closure_7(item(7024).FormRadio, obj3);
                           cResult[19] = selected;
                           cResult[20] = tmp30;
                           let tmp28 = tmp30;
@@ -145,7 +145,7 @@ let closure_11 = noop.memo(
                               accessibilityState,
                               trailing: tmp31,
                             };
-                            const tmp37 = closure_7(item(6905).TableRow, obj4);
+                            const tmp37 = closure_7(item(6939).TableRow, obj4);
                             cResult[25] = accessibilityRole;
                             cResult[26] = accessibilityState;
                             cResult[27] = end;
@@ -187,7 +187,7 @@ let closure_11 = noop.memo(
                   obj7.guildTag = tag;
                   obj7.guildBadge = tmp7;
                   obj7.badgeSize = GuildTagBadgeSize.SIZE_16;
-                  tmp26Result = closure_7(item(9225).BaseGuildTagChiplet, obj7);
+                  tmp26Result = closure_7(item(9258).BaseGuildTagChiplet, obj7);
                 }
                 cResult[13] = tmp7;
                 cResult[14] = profile;
@@ -199,9 +199,9 @@ let closure_11 = noop.memo(
               }
               let tmp20 = null;
               if (null != item) {
-                const obj8 = { style: tmp4.guildIcon, guild: item, size: item(6885).GuildIconSizes.SMALL_32 };
-                tmp20 = closure_7(onSelectGuild(6885), obj8);
-                const tmp23 = onSelectGuild(6885);
+                const obj8 = { style: tmp4.guildIcon, guild: item, size: item(6919).GuildIconSizes.SMALL_32 };
+                tmp20 = closure_7(onSelectGuild(6919), obj8);
+                const tmp23 = onSelectGuild(6919);
               }
               cResult[10] = item;
               cResult[11] = tmp4.guildIcon;
@@ -228,7 +228,7 @@ let closure_11 = noop.memo(
           cResult[6] = onSelectGuild;
           cResult[7] = fn;
           tmp15 = fn;
-          const tmpResult = item(5040);
+          const tmpResult = item(5072);
         }
         let guildTagBadgeUrl = null != item;
         if (guildTagBadgeUrl) {
@@ -236,8 +236,8 @@ let closure_11 = noop.memo(
           if (profile != null) {
             badge1 = profile.badge;
           }
-          guildTagBadgeUrl = item(8654).getGuildTagBadgeUrl(item.id, badge1, GuildTagBadgeSize.SIZE_24);
-          const tmpResult2 = item(8654);
+          guildTagBadgeUrl = item(8691).getGuildTagBadgeUrl(item.id, badge1, GuildTagBadgeSize.SIZE_24);
+          const tmpResult2 = item(8691);
         }
         let badge2;
         if (profile != null) {
@@ -263,10 +263,10 @@ let closure_11 = noop.memo(
           if (profile != null) {
             badge = profile.badge;
           }
-          guildTagBadgeUrl = item(8654).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
-          let obj = item(8654);
+          guildTagBadgeUrl = item(8691).getGuildTagBadgeUrl(item.id, badge, GuildTagBadgeSize.SIZE_24);
+          let obj = item(8691);
         }
-        const radioA11yNative = item(5040).useRadioA11yNative({ selected });
+        const radioA11yNative = item(5072).useRadioA11yNative({ selected });
         ({ accessibilityRole, accessibilityState } = radioA11yNative);
         const obj3 = {
           start,
@@ -297,7 +297,7 @@ let closure_11 = noop.memo(
         obj3.label = name;
         let tmp10Result = null;
         if (null != item) {
-          const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(6885).GuildIconSizes.SMALL_32 };
+          const obj4 = { style: tmp.guildIcon, guild: item, size: tmp7(6919).GuildIconSizes.SMALL_32 };
           tmp10Result = closure_7(GuildIconDefault, obj4);
         }
         obj3.icon = tmp10Result;
@@ -323,12 +323,12 @@ let closure_11 = noop.memo(
           obj10.guildTag = tag;
           obj10.guildBadge = guildTagBadgeUrl;
           obj10.badgeSize = GuildTagBadgeSize.SIZE_16;
-          tmp10Result2 = closure_7(tmp7(9225).BaseGuildTagChiplet, obj10);
+          tmp10Result2 = closure_7(tmp7(9258).BaseGuildTagChiplet, obj10);
         }
-        const items = [tmp10Result2, closure_7(item(6990).FormRadio, { selected })];
+        const items = [tmp10Result2, closure_7(item(7024).FormRadio, { selected })];
         obj5.children = items;
         obj3.trailing = closure_8(View, obj5);
-        return closure_7(item(6905).TableRow, obj3);
+        return closure_7(item(6939).TableRow, obj3);
       },
 );
 ReactCompilerGating = fn(558);
@@ -347,7 +347,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const tmp5 = str(ref.useState(""), 2);
       ref = ref.useRef(null);
       let obj = selectedGuildId(576);
-      const guildTagCreationUpsell = selectedGuildId(14197).useGuildTagCreationUpsell(
+      const guildTagCreationUpsell = selectedGuildId(14421).useGuildTagCreationUpsell(
         "UserPrimaryGuildListBottomSheet",
       );
       const creatableGuilds = guildTagCreationUpsell.creatableGuilds;
@@ -477,7 +477,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   }
                 }
                 const obj5 = { placeholder: null, accessibilityLabel: null, onChange: null };
-                const SearchBar = selectedGuildId(7147).SearchBar;
+                const SearchBar = selectedGuildId(7181).SearchBar;
                 let intl = selectedGuildId(1125).intl;
                 obj5.placeholder = intl.string(selectedGuildId(1125).t.uohsSv);
                 const intl2 = selectedGuildId(1125).intl;
@@ -627,7 +627,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const intl4 = selectedGuildId(1125).intl;
                 tmp38[1] = intl4.string(selectedGuildId(1125).t.xO5QzM);
                 tmp38[4] = tmp27;
-                items[1] = closure_7(selectedGuildId(5245).Button, tmp38);
+                items[1] = closure_7(selectedGuildId(5280).Button, tmp38);
                 obj7.children = items;
                 tmp35 = closure_8(creatableGuilds, obj7);
               }
@@ -691,7 +691,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[5] = tmp16;
         const str3 = str.trim();
       }
-      const obj3 = selectedGuildId(14197);
+      const obj3 = selectedGuildId(14421);
     }
   : function UserPrimaryGuildListBottomSheet(availableGuilds) {
       availableGuilds = availableGuilds.availableGuilds;

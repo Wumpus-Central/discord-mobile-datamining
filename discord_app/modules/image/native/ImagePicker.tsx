@@ -4,8 +4,8 @@ import util from "../../../intl/index.native.tsx";
 import PlatformUtils from "../../../utils/PlatformUtils.tsx";
 import ImagePickerUtils from "ImagePickerUtils.tsx";
 import AndroidPhotoPickerExperiment from "AndroidPhotoPickerExperiment.tsx";
-import launchCameraAll from "../../../../_runtime/08156_launchCamera.js";
-import openPickerDefault from "../../../../_runtime/08158_openPicker.js";
+import launchCameraAll from "../../../../_runtime/08190_launchCamera.js";
+import openPickerDefault from "../../../../_runtime/08192_openPicker.js";
 import ThemeStore from "../../user_settings/ThemeStore.tsx";
 
 require = fn;

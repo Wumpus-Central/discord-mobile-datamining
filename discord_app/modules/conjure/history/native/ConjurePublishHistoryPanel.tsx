@@ -1,7 +1,7 @@
 // discord_app/modules/conjure/history/native/ConjurePublishHistoryPanel.tsx
 import c from "../../../../../_runtime/00576_c.js";
 import util from "../../../../intl/index.native.tsx";
-import _modDef3831 from "../../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../../intl/ConjureUntranslated.messages.js";
 import Text_Text from "../../../../design/components/Text/native/Text.tsx";
 import components_Button_Button from "../../../../design/components/Button/native/Button.native.tsx";
 import Stack_Stack from "../../../../design/components/Stack/native/Stack.native.tsx";
@@ -30,7 +30,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { variant: "text-sm/normal", color: "text-muted", children: null };
           const intl4 = util.intl;
-          obj3.children = intl4.string(_modDef3831.cBIaeW);
+          obj3.children = intl4.string(_modDef3863.cBIaeW);
           const tmp25 = timestampProducer(Text_Text.Text, obj3);
           cResult[0] = tmp25;
           let first = tmp25;
@@ -40,7 +40,7 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol2 = Symbol;
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           const intl5 = util.intl;
-          const stringResult = intl5.string(_modDef3831.HOuQ9H);
+          const stringResult = intl5.string(_modDef3863.HOuQ9H);
           cResult[1] = stringResult;
           let tmp26 = stringResult;
         } else {
@@ -93,13 +93,13 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if ("loading" === state.status) {
           const intl3 = util.intl;
-          let stringResult1 = intl3.string(_modDef3831["LmWLc+"]);
+          let stringResult1 = intl3.string(_modDef3863["LmWLc+"]);
         } else if (null == data) {
           const intl2 = util.intl;
-          stringResult1 = intl2.string(_modDef3831.hcrQOo);
+          stringResult1 = intl2.string(_modDef3863.hcrQOo);
         } else {
           const intl = util.intl;
-          stringResult1 = intl.string(_modDef3831["0bDcBs"]);
+          stringResult1 = intl.string(_modDef3863["0bDcBs"]);
         }
         cResult[6] = data;
         state = state.status;
@@ -119,11 +119,11 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         const obj2 = { spacing: 8, children: null };
         const obj3 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl4 = util.intl;
-        obj3.children = intl4.string(_modDef3831.cBIaeW);
+        obj3.children = intl4.string(_modDef3863.cBIaeW);
         const items = [timestampProducer(Text_Text.Text, obj3)];
         const obj4 = { variant: "secondary", size: "sm", text: null, onPress: null };
         const intl5 = util.intl;
-        obj4.text = intl5.string(_modDef3831.HOuQ9H);
+        obj4.text = intl5.string(_modDef3863.HOuQ9H);
         obj4.onPress = tmp4;
         items[1] = timestampProducer(components_Button_Button.Button, obj4);
         obj2.children = items;
@@ -142,13 +142,13 @@ let closure_8 = ReactCompilerGating.isReactCompilerEnabled()
         }
         if ("loading" === state.status) {
           const intl3 = util.intl;
-          let stringResult = intl3.string(_modDef3831["LmWLc+"]);
+          let stringResult = intl3.string(_modDef3863["LmWLc+"]);
         } else if (null == data) {
           const intl2 = util.intl;
-          stringResult = intl2.string(_modDef3831.hcrQOo);
+          stringResult = intl2.string(_modDef3863.hcrQOo);
         } else {
           const intl = util.intl;
-          stringResult = intl.string(_modDef3831["0bDcBs"]);
+          stringResult = intl.string(_modDef3863["0bDcBs"]);
         }
         const obj6 = { accessibilityLiveRegion: "polite", children: null };
         const obj7 = { variant: "text-sm/normal", children: stringResult };
@@ -183,7 +183,7 @@ let closure_9 = noop.memo(
         }
         if (cResult[4] !== tmp5) {
           const intl = util.intl;
-          const tmp13 = _modDef3831;
+          const tmp13 = _modDef3863;
           const stringResult = intl.string(tmp5 ? tmp13["Qro2x/"] : tmp13.ufHcsq);
           cResult[4] = tmp5;
           cResult[5] = stringResult;
@@ -191,7 +191,7 @@ let closure_9 = noop.memo(
           if (cResult[6] !== tmp6) {
             const intl2 = util.intl;
             const obj3 = { title: tmp6 };
-            const formatToPlainStringResult = intl2.formatToPlainString(_modDef3831["M9L+3I"], obj3);
+            const formatToPlainStringResult = intl2.formatToPlainString(_modDef3863["M9L+3I"], obj3);
             cResult[6] = tmp6;
             cResult[7] = formatToPlainStringResult;
             let tmp16 = formatToPlainStringResult;
@@ -289,7 +289,7 @@ let closure_9 = noop.memo(
           ,
         ];
         const intl = util.intl;
-        const tmp9 = _modDef3831;
+        const tmp9 = _modDef3863;
         if (tmp2) {
           let ufHcsq = tmp9["Qro2x/"];
           let tmp10 = importDefault;
@@ -306,7 +306,7 @@ let closure_9 = noop.memo(
           onPress: null,
         };
         const intl2 = util.intl;
-        obj2.accessibilityLabel = intl2.formatToPlainString(tmp10(3831)["M9L+3I"], {
+        obj2.accessibilityLabel = intl2.formatToPlainString(tmp10(3863)["M9L+3I"], {
           title: publishHistoryTitleResult,
         });
         obj2.accessibilityState = { expanded: tmp2 };
@@ -332,15 +332,15 @@ export default ReactCompilerGating.isReactCompilerEnabled()
       const cResult = projectId(576).c(33);
       projectId = projectId.projectId;
       const obj = projectId(576);
-      const iter = projectId(12246).useConjurePublishHistory(projectId);
+      const iter = projectId(12285).useConjurePublishHistory(projectId);
       let entries = iter.state;
       if ("loading" === entries.status) {
         const _Symbol6 = Symbol;
         if (cResult[0] === Symbol.for("react.memo_cache_sentinel")) {
           const obj3 = { variant: "text-sm/normal", children: null };
           const intl8 = tmp(1125).intl;
-          obj3.children = intl8.string(iter(3831)["d/Wf8N"]);
-          const tmp59 = closure_6(tmp(5235).Text, obj3);
+          obj3.children = intl8.string(iter(3863)["d/Wf8N"]);
+          const tmp59 = closure_6(tmp(5270).Text, obj3);
           cResult[0] = tmp59;
           let first = tmp59;
         } else {
@@ -352,8 +352,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[1] === Symbol.for("react.memo_cache_sentinel")) {
           const obj4 = { variant: "text-sm/normal", children: null };
           const intl6 = tmp(1125).intl;
-          obj4.children = intl6.string(iter(3831).TzCJWI);
-          const tmp47 = closure_6(tmp(5235).Text, obj4);
+          obj4.children = intl6.string(iter(3863).TzCJWI);
+          const tmp47 = closure_6(tmp(5270).Text, obj4);
           cResult[1] = tmp47;
           let tmp44 = tmp47;
         } else {
@@ -362,7 +362,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const _Symbol5 = Symbol;
         if (cResult[2] === Symbol.for("react.memo_cache_sentinel")) {
           const intl7 = tmp(1125).intl;
-          const stringResult = intl7.string(iter(3831).HOuQ9H);
+          const stringResult = intl7.string(iter(3863).HOuQ9H);
           cResult[2] = stringResult;
           let tmp48 = stringResult;
         } else {
@@ -372,9 +372,9 @@ export default ReactCompilerGating.isReactCompilerEnabled()
           const obj5 = { spacing: 12, children: null };
           const items = [tmp44];
           const obj6 = { variant: "secondary", text: tmp48, onPress: iter.retry };
-          items[1] = closure_6(tmp(5245).Button, obj6);
+          items[1] = closure_6(tmp(5280).Button, obj6);
           obj5.children = items;
-          const tmp54 = closure_7(tmp(5978).Stack, obj5);
+          const tmp54 = closure_7(tmp(6013).Stack, obj5);
           cResult[3] = iter.retry;
           cResult[4] = tmp54;
           let tmp51 = tmp54;
@@ -387,8 +387,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[5] === Symbol.for("react.memo_cache_sentinel")) {
           const obj7 = { variant: "text-sm/normal", color: "text-muted", children: null };
           const intl5 = tmp(1125).intl;
-          obj7.children = intl5.string(iter(3831)["19L92G"]);
-          const tmp42 = closure_6(tmp(5235).Text, obj7);
+          obj7.children = intl5.string(iter(3863)["19L92G"]);
+          const tmp42 = closure_6(tmp(5270).Text, obj7);
           cResult[5] = tmp42;
           let tmp39 = tmp42;
         } else {
@@ -400,8 +400,8 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         if (cResult[6] === Symbol.for("react.memo_cache_sentinel")) {
           const obj8 = { variant: "text-sm/normal", color: "text-muted", children: null };
           const intl = tmp(1125).intl;
-          obj8.children = intl.string(iter(3831).Kzt1rI);
-          const tmp7 = closure_6(tmp(5235).Text, obj8);
+          obj8.children = intl.string(iter(3863).Kzt1rI);
+          const tmp7 = closure_6(tmp(5270).Text, obj8);
           cResult[6] = tmp7;
           let tmp4 = tmp7;
         } else {
@@ -413,7 +413,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
               const _Symbol = Symbol;
               if (cResult[14] === Symbol.for("react.memo_cache_sentinel")) {
                 const intl2 = tmp(1125).intl;
-                const stringResult1 = intl2.string(iter(3831)["4un98A"]);
+                const stringResult1 = intl2.string(iter(3863)["4un98A"]);
                 cResult[14] = stringResult1;
                 let tmp12 = stringResult1;
               } else {
@@ -426,7 +426,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 if (cResult[18] !== iter.page) {
                   const intl3 = tmp(1125).intl;
                   const obj9 = { page: iter.page };
-                  const formatToPlainStringResult = intl3.formatToPlainString(iter(3831)["54samz"], obj9);
+                  const formatToPlainStringResult = intl3.formatToPlainString(iter(3863)["54samz"], obj9);
                   cResult[18] = iter.page;
                   cResult[19] = formatToPlainStringResult;
                   let tmp19 = formatToPlainStringResult;
@@ -435,7 +435,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 }
                 if (cResult[20] !== tmp19) {
                   const obj10 = { variant: "text-sm/normal", children: tmp19 };
-                  const tmp24 = closure_6(tmp(5235).Text, obj10);
+                  const tmp24 = closure_6(tmp(5270).Text, obj10);
                   cResult[20] = tmp19;
                   cResult[21] = tmp24;
                   let tmp22 = tmp24;
@@ -445,7 +445,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 const _Symbol2 = Symbol;
                 if (cResult[22] === Symbol.for("react.memo_cache_sentinel")) {
                   const intl4 = tmp(1125).intl;
-                  const stringResult2 = intl4.string(iter(3831).HqheLL);
+                  const stringResult2 = intl4.string(iter(3863).HqheLL);
                   cResult[22] = stringResult2;
                   let tmp25 = stringResult2;
                 } else {
@@ -469,7 +469,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                       const obj11 = { spacing: 24, children: null };
                       const items1 = [tmp4, tmp8, tmp32];
                       obj11.children = items1;
-                      const tmp37 = closure_7(tmp(5978).Stack, obj11);
+                      const tmp37 = closure_7(tmp(6013).Stack, obj11);
                       cResult[30] = tmp32;
                       cResult[31] = tmp8;
                       cResult[32] = tmp37;
@@ -485,7 +485,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   };
                   const items2 = [tmp16, tmp22, tmp29];
                   obj12.children = items2;
-                  const tmp34 = closure_7(tmp(5978).Stack, obj12);
+                  const tmp34 = closure_7(tmp(6013).Stack, obj12);
                   cResult[26] = tmp29;
                   cResult[27] = tmp16;
                   cResult[28] = tmp22;
@@ -500,7 +500,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                   disabled: !iter.hasNext,
                   onPress: iter.next,
                 };
-                const tmp31 = closure_6(tmp(5245).Button, obj13);
+                const tmp31 = closure_6(tmp(5280).Button, obj13);
                 cResult[23] = iter.next;
                 cResult[24] = !iter.hasNext;
                 cResult[25] = tmp31;
@@ -514,7 +514,7 @@ export default ReactCompilerGating.isReactCompilerEnabled()
                 disabled: !iter.hasPrevious,
                 onPress: iter.previous,
               };
-              const tmp18 = closure_6(tmp(5245).Button, obj14);
+              const tmp18 = closure_6(tmp(5280).Button, obj14);
               cResult[15] = iter.previous;
               cResult[16] = !iter.hasPrevious;
               cResult[17] = tmp18;
@@ -542,41 +542,41 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         cResult[13] = fn;
         tmp9 = fn;
       }
-      const obj2 = projectId(12246);
+      const obj2 = projectId(12285);
     }
   : function ConjurePublishHistoryPanel(projectId) {
       projectId = projectId.projectId;
-      const iter = projectId(12246).useConjurePublishHistory(projectId);
+      const iter = projectId(12285).useConjurePublishHistory(projectId);
       const state = iter.state;
       if ("loading" === state.status) {
         const obj2 = { variant: "text-sm/normal", children: null };
         const intl4 = tmp(1125).intl;
-        obj2.children = intl4.string(iter(3831)["d/Wf8N"]);
-        let tmp5 = closure_6(tmp(5235).Text, obj2);
+        obj2.children = intl4.string(iter(3863)["d/Wf8N"]);
+        let tmp5 = closure_6(tmp(5270).Text, obj2);
       } else if ("failed" === state.status) {
         const obj3 = { spacing: 12, children: null };
         const obj4 = { variant: "text-sm/normal", children: null };
         const intl2 = tmp(1125).intl;
-        obj4.children = intl2.string(iter(3831).TzCJWI);
-        const items = [closure_6(tmp(5235).Text, obj4)];
+        obj4.children = intl2.string(iter(3863).TzCJWI);
+        const items = [closure_6(tmp(5270).Text, obj4)];
         const obj5 = { variant: "secondary", text: null, onPress: null };
         const intl3 = tmp(1125).intl;
-        obj5.text = intl3.string(iter(3831).HOuQ9H);
+        obj5.text = intl3.string(iter(3863).HOuQ9H);
         obj5.onPress = iter.retry;
-        items[1] = closure_6(tmp(5245).Button, obj5);
+        items[1] = closure_6(tmp(5280).Button, obj5);
         obj3.children = items;
-        tmp5 = closure_7(tmp(5978).Stack, obj3);
+        tmp5 = closure_7(tmp(6013).Stack, obj3);
       } else if (0 === state.data.entries.length) {
         const obj6 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl = tmp(1125).intl;
-        obj6.children = intl.string(iter(3831)["19L92G"]);
-        tmp5 = closure_6(tmp(5235).Text, obj6);
+        obj6.children = intl.string(iter(3863)["19L92G"]);
+        tmp5 = closure_6(tmp(5270).Text, obj6);
       } else {
         const obj7 = { spacing: 24, children: null };
         const obj8 = { variant: "text-sm/normal", color: "text-muted", children: null };
         const intl5 = tmp(1125).intl;
-        obj8.children = intl5.string(iter(3831).Kzt1rI);
-        const items1 = [closure_6(tmp(5235).Text, obj8), ,];
+        obj8.children = intl5.string(iter(3863).Kzt1rI);
+        const items1 = [closure_6(tmp(5270).Text, obj8), ,];
         const entries = state.data.entries;
         items1[1] = entries.map((entry) =>
           timestampProducer(closure_9, { projectId, entry, notesCache: iter.notesCache }, entry.id),
@@ -584,25 +584,25 @@ export default ReactCompilerGating.isReactCompilerEnabled()
         const obj9 = { direction: "horizontal", spacing: 8, align: "center", justify: "space-between", children: null };
         const obj10 = { variant: "secondary", size: "sm", shrink: true, text: null, disabled: null, onPress: null };
         const intl6 = tmp(1125).intl;
-        obj10.text = intl6.string(iter(3831)["4un98A"]);
+        obj10.text = intl6.string(iter(3863)["4un98A"]);
         obj10.disabled = !iter.hasPrevious;
         obj10.onPress = iter.previous;
-        const items2 = [closure_6(tmp(5245).Button, obj10), ,];
+        const items2 = [closure_6(tmp(5280).Button, obj10), ,];
         const obj11 = { variant: "text-sm/normal", children: null };
         const intl7 = tmp(1125).intl;
         const obj12 = { page: iter.page };
-        obj11.children = intl7.formatToPlainString(iter(3831)["54samz"], obj12);
-        items2[1] = closure_6(tmp(5235).Text, obj11);
+        obj11.children = intl7.formatToPlainString(iter(3863)["54samz"], obj12);
+        items2[1] = closure_6(tmp(5270).Text, obj11);
         const obj13 = { variant: "secondary", size: "sm", shrink: true, text: null, disabled: null, onPress: null };
         const intl8 = tmp(1125).intl;
-        obj13.text = intl8.string(iter(3831).HqheLL);
+        obj13.text = intl8.string(iter(3863).HqheLL);
         obj13.disabled = !iter.hasNext;
         obj13.onPress = iter.next;
-        items2[2] = closure_6(tmp(5245).Button, obj13);
+        items2[2] = closure_6(tmp(5280).Button, obj13);
         obj9.children = items2;
-        items1[2] = closure_7(tmp(5978).Stack, obj9);
+        items1[2] = closure_7(tmp(6013).Stack, obj9);
         obj7.children = items1;
-        tmp5 = closure_7(tmp(5978).Stack, obj7);
+        tmp5 = closure_7(tmp(6013).Stack, obj7);
       }
       return tmp5;
     };

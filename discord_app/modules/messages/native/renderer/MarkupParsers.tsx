@@ -3,7 +3,7 @@ import Constants from "../../../../Constants.tsx";
 import DurationsDefault from "../../../../utils/Durations.tsx";
 import SentryUtilsDefault from "../../../../utils/SentryUtils.native.tsx";
 import MarkupUtilsDefault from "../../../markup/MarkupUtils.tsx";
-import NativeMarkdownExperiment2 from "../../../markup_v2/NativeMarkdownExperiment.tsx";
+import NativeMarkdownExperiment from "../../../markup_v2/NativeMarkdownExperiment.tsx";
 import ChangeLogStandardTemplate from "../../../../components_native/ChangeLogStandardTemplate.tsx";
 import renderMessageMarkup from "../../renderMessageMarkup.tsx";
 import parseNativeMarkupDefault from "../../../markup_v2/native/parseNativeMarkup.tsx";
@@ -102,20 +102,19 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
   if (result2 === undefined) {
     flag4 = false;
   }
-  const NativeMarkdownExperiment = NativeMarkdownExperiment2.NativeMarkdownExperiment;
-  const enabled = NativeMarkdownExperiment.getConfig({ location: "parseMessageMarkup" }).enabled;
+  result = NativeMarkdownExperiment.isNativeMarkdownEnabled({ location: "parseMessageMarkup" });
   value = closure_7.get(message);
   if (null != value) {
     if (value.isInlineReplyPreview === flag) {
-      if (value.nativeMarkdownEnabled === enabled) {
+      if (value.nativeMarkdownEnabled === result) {
         return value;
       }
     }
   }
   if (message.type === MessageTypes.CHANGELOG) {
     if (null != message.changelogId) {
-      const obj4 = MarkupUtilsDefault;
-      let obj2 = {
+      const obj5 = MarkupUtilsDefault;
+      const obj3 = {
         hideSimpleEmbedContent: forceHideSimpleEmbedContent,
         formatInline: flag,
         allowHeading: null,
@@ -123,36 +122,36 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
         allowLinks: null,
         previewLinkTarget: null,
       };
-      let tmp10 = flag2;
+      let tmp11 = flag2;
       const tmpResult = ChangeLogStandardTemplate;
       if (!flag2) {
-        tmp10 = flag3;
+        tmp11 = flag3;
       }
-      obj2.allowHeading = tmp10;
+      obj3.allowHeading = tmp11;
       if (!flag2) {
         flag2 = flag3;
       }
-      const obj3 = {
+      const obj4 = {
         content: null,
         isInlineReplyPreview: false,
         hasSpoilerEmbeds: false,
         hasBailedAst: false,
         nativeMarkdownEnabled: null,
       };
-      obj2.allowList = flag2;
-      obj2.allowLinks = flag4;
-      obj2.previewLinkTarget = flag4;
-      obj3.content = obj4.astParserFor(ChangeLogStandardTemplate.changelogRules(message.changelogId, true))(
+      obj3.allowList = flag2;
+      obj3.allowLinks = flag4;
+      obj3.previewLinkTarget = flag4;
+      obj4.content = obj5.astParserFor(ChangeLogStandardTemplate.changelogRules(message.changelogId, true))(
         message.content,
         false,
-        obj2,
+        obj3,
       );
-      obj3.nativeMarkdownEnabled = enabled;
-      result = closure_7.set(message, obj3);
-      return obj3;
+      obj4.nativeMarkdownEnabled = result;
+      const result1 = closure_7.set(message, obj4);
+      return obj4;
     }
   }
-  const obj5 = {
+  const obj6 = {
     contentMessage: message2,
     hideSimpleEmbedContent: forceHideSimpleEmbedContent,
     formatInline: flag,
@@ -162,22 +161,22 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
     allowLinks: null,
     previewLinkTarget: null,
   };
-  let tmp4 = flag2;
-  if (!flag2) {
-    tmp4 = flag3;
-  }
-  obj5.allowHeading = tmp4;
   let tmp5 = flag2;
   if (!flag2) {
     tmp5 = flag3;
   }
-  obj5.allowList = tmp5;
-  obj5.allowLinks = flag4;
-  obj5.previewLinkTarget = flag4;
-  const obj6 = {};
+  obj6.allowHeading = tmp5;
+  let tmp6 = flag2;
+  if (!flag2) {
+    tmp6 = flag3;
+  }
+  obj6.allowList = tmp6;
+  obj6.allowLinks = flag4;
+  obj6.previewLinkTarget = flag4;
+  const obj7 = {};
   const merged = Object.assign(
-    (function parseMessageContentToAST(message, arg1, enabled) {
-      if (!enabled) {
+    (function parseMessageContentToAST(message, arg1, result) {
+      if (!result) {
         return renderMessageMarkup.renderMessageMarkupToAST(message, arg1);
       } else {
         try {
@@ -186,10 +185,10 @@ export const parseMessageMarkup = function parseMessageMarkup(message, message2,
           SentryUtilsDefault.captureException(tmp4);
         }
       }
-    })(message, obj5, enabled),
+    })(message, obj6, result),
   );
-  obj6.isInlineReplyPreview = flag;
-  obj6.nativeMarkdownEnabled = enabled;
-  const result1 = closure_7.set(message, obj6);
-  return obj6;
+  obj7.isInlineReplyPreview = flag;
+  obj7.nativeMarkdownEnabled = result;
+  result2 = closure_7.set(message, obj7);
+  return obj7;
 };

@@ -4,20 +4,20 @@ import asyncGeneratorStep from "../../../../_runtime/00005_asyncGeneratorStep.js
 
 require = fn;
 let closure_3 = {
-  [fn(8081).AgeSignalsStatus.SHARED]: "SHARED",
-  [fn(8081).AgeSignalsStatus.NOT_SHARED]: "NOT_SHARED",
-  [fn(8081).AgeSignalsStatus.VERIFICATION_REQUIRED]: "VERIFICATION_REQUIRED",
+  [fn(8115).AgeSignalsStatus.SHARED]: "SHARED",
+  [fn(8115).AgeSignalsStatus.NOT_SHARED]: "NOT_SHARED",
+  [fn(8115).AgeSignalsStatus.VERIFICATION_REQUIRED]: "VERIFICATION_REQUIRED",
 };
 let closure_4 = {
-  [fn(8081).AgeRangeSource.TIER_A]: "TIER_A",
-  [fn(8081).AgeRangeSource.TIER_B]: "TIER_B",
-  [fn(8081).AgeRangeSource.TIER_C]: "TIER_C",
-  [fn(8081).AgeRangeSource.TIER_D]: "TIER_D",
+  [fn(8115).AgeRangeSource.TIER_A]: "TIER_A",
+  [fn(8115).AgeRangeSource.TIER_B]: "TIER_B",
+  [fn(8115).AgeRangeSource.TIER_C]: "TIER_C",
+  [fn(8115).AgeRangeSource.TIER_D]: "TIER_D",
 };
 let closure_5 = {
-  [fn(8081).SignificantChangeStatus.APPROVED]: "APPROVED",
-  [fn(8081).SignificantChangeStatus.PENDING]: "PENDING",
-  [fn(8081).SignificantChangeStatus.DECLINED]: "DECLINED",
+  [fn(8115).SignificantChangeStatus.APPROVED]: "APPROVED",
+  [fn(8115).SignificantChangeStatus.PENDING]: "PENDING",
+  [fn(8115).SignificantChangeStatus.DECLINED]: "DECLINED",
 };
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/age_assurance/native/AppStoreAgeAssurance.android.tsx");

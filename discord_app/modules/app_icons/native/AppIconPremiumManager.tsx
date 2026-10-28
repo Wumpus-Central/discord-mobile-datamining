@@ -6,12 +6,12 @@ import UserStore from "../../../stores/UserStore.tsx";
 import AutomaticLifecycleManager from "../../../lib/AutomaticLifecycleManager.tsx";
 
 let require = fn;
-const AppIconConstants = fn(9867);
+const AppIconConstants = fn(9899);
 ({ getIconById: hasOwnProperty, isHexagonCampaignAppIcon: metroRequire } = AppIconConstants);
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const HexagonCampaignPerk = fn(4997).HexagonCampaignPerk;
+const HexagonCampaignPerk = fn(5029).HexagonCampaignPerk;
 let closure_9 = new LoggerDefault("AppIconPremiumManager");
-const DEFAULT = fn(9868).FreemiumAppIconIds.DEFAULT;
+const DEFAULT = fn(9900).FreemiumAppIconIds.DEFAULT;
 let closure_11 = { ORPHANED: "orphaned", PREMIUM_LOST: "premium_lost", CAMPAIGN_EXPIRED: "campaign_expired" };
 class AppIconPremiumManager extends tmp4 {
   constructor() {

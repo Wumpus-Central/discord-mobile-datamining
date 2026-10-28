@@ -183,7 +183,7 @@ function handleLocalPresenceChange() {
 const Constants = fn(1084);
 ({ RTCConnectionStates: closure_15, AppStates: closure_16 } = Constants);
 const UserSettingsTypes = fn(1094).UserSettingsTypes;
-fn(14984).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
+fn(15207).socket.dispatcher.getDispatchHandler = dispatchSocketMessageDefault;
 let closure_19 = new LoggerDefault("ConnectionStore");
 let closure_20 = 0;
 let c21 = null;
@@ -526,13 +526,13 @@ const gatewayConnectionStore = new GatewayConnectionStore(DispatcherDefault, {
     if (socket.isSessionEstablished()) {
       if (!allowMultiple) {
         const allActiveStreamKeys = StreamRTCConnectionStore.getAllActiveStreamKeys();
-        _require = allActiveStreamKeys.find((item) => closure_0(6646).decodeStreamKey(item).ownerId === id.getId());
+        _require = allActiveStreamKeys.find((item) => closure_0(6680).decodeStreamKey(item).ownerId === id.getId());
         const allActiveStreamKeys1 = StreamRTCConnectionStore.getAllActiveStreamKeys();
         const found = allActiveStreamKeys1.filter((item) => item !== closure_0);
         const item = found.forEach((item) => {
-          const socket = closure_0(14984).socket;
+          const socket = closure_0(15207).socket;
           if (socket.isSessionEstablished()) {
-            const socket2 = closure_0(14984).socket;
+            const socket2 = closure_0(15207).socket;
             socket2.streamDelete(item);
           }
         });

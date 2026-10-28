@@ -6,7 +6,7 @@ import UserStore from "../../../stores/UserStore.tsx";
 
 const require = fn;
 const AnalyticEvents = fn(1084).AnalyticEvents;
-const HexagonCampaignConstants = fn(4997);
+const HexagonCampaignConstants = fn(5029);
 ({ HEXAGON_CAMPAIGN_DISPLAY_NAME_FONT: closure_8, HexagonCampaignPerk: closure_9 } = HexagonCampaignConstants);
 const size = fn(2);
 let result = size.fileFinishedImporting("modules/display_name_styles/hooks/useDisplayNameStylesHandleApply.tsx");
@@ -118,8 +118,8 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
                             closure_0 = tmp8;
                             closure_128_0 = undefined;
                             if (closure_2_1) {
-                              const result = displayNameStyles(15894).saveHexagonCampaignPreviousDisplayNameStyles();
-                              const obj4 = displayNameStyles(15894);
+                              const result = displayNameStyles(16120).saveHexagonCampaignPreviousDisplayNameStyles();
+                              const obj4 = displayNameStyles(16120);
                             }
                             if (closure_1_10) {
                               closure_1_12.current = true;
@@ -128,17 +128,17 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
                               colors = 3;
                               c5 = 1;
                               const obj6 = {
-                                value: displayNameStyles(7080).saveProfileAndAccountChanges(obj5),
+                                value: displayNameStyles(7114).saveProfileAndAccountChanges(obj5),
                                 done: false,
                               };
                               return obj6;
                             } else if (closure_1_7) {
-                              const result1 = displayNameStyles(8656).setTryItOutDisplayNameStyles(displayNameStyles);
-                              const tmp31Result = displayNameStyles(8656);
+                              const result1 = displayNameStyles(8693).setTryItOutDisplayNameStyles(displayNameStyles);
+                              const tmp31Result = displayNameStyles(8693);
                             } else {
                               const obj7 = { guildId, displayNameStyles };
-                              displayNameStyles(8653).setPendingChanges(obj7);
-                              const tmp31Result2 = displayNameStyles(8653);
+                              displayNameStyles(8690).setPendingChanges(obj7);
+                              const tmp31Result2 = displayNameStyles(8690);
                             }
                           }
                         } else if (1 === tmp8) {
@@ -192,10 +192,10 @@ export const useDisplayNameStylesHandleApply = function useDisplayNameStylesHand
                         };
                         closure_2_1(1264).track(constants.DISPLAY_NAME_STYLES_APPLIED, obj13);
                         if (closure_129_1) {
-                          const result2 = displayNameStyles(15894).markHexagonCampaignPerkApplied(
+                          const result2 = displayNameStyles(16120).markHexagonCampaignPerkApplied(
                             constants2.DISPLAY_NAME_STYLE,
                           );
-                          const obj10 = displayNameStyles(15894);
+                          const obj10 = displayNameStyles(16120);
                         }
                         if (closure_1_8 != null) {
                           closure_1_8();

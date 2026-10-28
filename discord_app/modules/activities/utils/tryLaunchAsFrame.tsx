@@ -6,7 +6,7 @@ import openFrameInAppChannelDefault from "../../frames/openFrameInAppChannel.tsx
 import ApplicationStore from "../../applications/ApplicationStore.tsx";
 
 require = fn;
-const MAIN_SURFACE = fn(6777).MAIN_SURFACE;
+const MAIN_SURFACE = fn(6811).MAIN_SURFACE;
 const size = fn(2);
 const result = size.fileFinishedImporting("modules/activities/utils/tryLaunchAsFrame.tsx");
 

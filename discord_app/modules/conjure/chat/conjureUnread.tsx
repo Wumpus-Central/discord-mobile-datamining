@@ -46,7 +46,7 @@ function isProjectInGuild(project, arg1) {
     return tmp2;
   }
 }
-const ReadStateTypes = fn(6706).ReadStateTypes;
+const ReadStateTypes = fn(6740).ReadStateTypes;
 fn(558);
 let ReactCompilerGating = fn(558);
 let tmp2 = ReactCompilerGating.isReactCompilerEnabled()
@@ -285,9 +285,9 @@ const size = fn(2);
 const result = size.fileFinishedImporting("modules/conjure/chat/conjureUnread.tsx");
 
 export { ackConjureProject };
-export const isConjureProjectUnread = function isConjureProjectUnread(item) {
-  const mentionCount = ReadStateStore.getMentionCount(item, ReadStateTypes.CONJURING_PROJECT);
-  const ackMessageIdResult = ReadStateStore.ackMessageId(item, ReadStateTypes.CONJURING_PROJECT);
+export const isConjureProjectUnread = function isConjureProjectUnread(id) {
+  const mentionCount = ReadStateStore.getMentionCount(id, ReadStateTypes.CONJURING_PROJECT);
+  const ackMessageIdResult = ReadStateStore.ackMessageId(id, ReadStateTypes.CONJURING_PROJECT);
   let tmp3 = mentionCount > 0;
   if (!tmp3) {
     let tmp5 = null != ackMessageIdResult;

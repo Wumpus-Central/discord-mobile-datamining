@@ -2,7 +2,7 @@
 import Storage6 from "../../../../discord_common/js/packages/storage/Storage.tsx";
 import util from "../../../intl/index.native.tsx";
 import HTTPUtils from "../../../../discord_common/js/packages/http-utils/HTTPUtils.tsx";
-import _modDef3831 from "../intl/ConjureUntranslated.messages.js";
+import _modDef3863 from "../intl/ConjureUntranslated.messages.js";
 import createNonce from "../../messages/createNonce.tsx";
 import conjureProjectSockets from "../connection/conjureProjectSockets.tsx";
 import ConjureChatActionCreators from "../chat/ConjureChatActionCreators.tsx";
@@ -155,7 +155,7 @@ let closure_20 = async function _putInstallScope(arg0) {
     }
   })();
 };
-let ConjureConnectionStore = fn(10701);
+let ConjureConnectionStore = fn(10733);
 ({
   optimisticMessageId: closure_7,
   sendUserMessage: closure_8,
@@ -296,7 +296,7 @@ export const serverQuestionFields = function serverQuestionFields(conjureEligibl
     const found = conjureEligibleGuilds.find((id) => id.id === closure_0);
     const obj2 = { input: "server", note: null };
     const intl = util.intl;
-    obj2.note = intl.string(_modDef3831.SU9K9U);
+    obj2.note = intl.string(_modDef3863.SU9K9U);
     if (null != found) {
       const obj4 = { default_entities: null };
       ({ id: obj3.id, name: obj3.name } = found);
@@ -324,7 +324,7 @@ export const ownerOnlyClarification = function ownerOnlyClarification(memo) {
       note: null,
     };
     const intl = util.intl;
-    obj.note = intl.string(_modDef3831.ZKPaWY);
+    obj.note = intl.string(_modDef3863.ZKPaWY);
     return obj;
   });
   return obj;
@@ -526,9 +526,9 @@ export const switchConjureInstallScope = function switchConjureInstallScope(proj
           return obj;
         } else {
           if ("guild" === closure_129_1) {
-            let prop = tmp5(3831)["8+EcCu"];
+            let prop = tmp5(3863)["8+EcCu"];
           } else {
-            prop = tmp5(3831)["U7+Yeh"];
+            prop = tmp5(3863)["U7+Yeh"];
           }
           closure_128_0 = prop;
           const intl = tmp2(1125).intl;

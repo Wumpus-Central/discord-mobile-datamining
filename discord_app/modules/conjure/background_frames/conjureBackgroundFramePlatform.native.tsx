@@ -1,14 +1,17 @@
 // discord_app/modules/conjure/background_frames/conjureBackgroundFramePlatform.native.tsx
-import ActivityPanelConstants from "../../activities/panel/ActivityPanelConstants.tsx";
 import EmbeddedSurfaceType from "../../../../discord_common/js/shared/shared-constants/EmbeddedSurfaceType.tsx";
 import transitionToChannel from "../../routing/transitionToChannel.tsx";
 import FramesActionCreatorsDefault from "../../frames/FramesActionCreators.native.tsx";
 import FramePoolManagerDefault from "../../frames/native/FramePoolManager.tsx";
-import FramesConstants from "../../frames/FramesConstants.tsx";
-import size from "../../../../_runtime/metro/00002__.js";
+import isConjureAppChannelFrameDefault from "isConjureAppChannelFrame.tsx";
+import conjureAppPictureInPictureFrames from "native/conjureAppPictureInPictureFrames.tsx";
+import FramesStore from "../../frames/FramesStore.tsx";
 
-const ActivityPanelModes = ActivityPanelConstants.ActivityPanelModes;
-({ asLaunched: closure_4, FrameLayoutModes: hasOwnProperty } = FramesConstants);
+require = fn;
+const ActivityPanelModes = fn(5645).ActivityPanelModes;
+const FramesConstants = fn(6811);
+({ asLaunched: hasOwnProperty, FrameLayoutModes: metroRequire } = FramesConstants);
+const size = fn(2);
 let result = size.fileFinishedImporting("modules/conjure/background_frames/conjureBackgroundFramePlatform.native.tsx");
 
 export default {
@@ -18,11 +21,11 @@ export default {
   isActivityPopoutOpen() {
     return false;
   },
-  hasOwnPictureInPicture() {
-    return false;
+  hasOwnPictureInPicture(frame) {
+    return isConjureAppChannelFrameDefault(frame);
   },
   isPictureInPicture(surface) {
-    const tmp = React4(surface);
+    const tmp = hasOwnProperty(surface);
     let activityPanelMode;
     if (tmp != null) {
       activityPanelMode = tmp.data.activityPanelMode;
@@ -34,7 +37,15 @@ export default {
     const result = FramesActionCreatorsDefault.updateFrameLayoutMode({ frameId, layoutMode: constants.PIP });
   },
   isOnScreen(id) {
-    return null != FramePoolManagerDefault.getWinningTarget(id);
+    const frame = FramesStore.getFrame(id);
+    let tmp2 = null == frame;
+    if (!tmp2) {
+      tmp2 = !conjureAppPictureInPictureFrames.isConjureAppPictureInPictureFrame(frame);
+    }
+    if (tmp2) {
+      tmp2 = null != FramePoolManagerDefault.getWinningTarget(id);
+    }
+    return tmp2;
   },
   openSurfaceChannel(surface, channel) {
     let flag = surface.type === EmbeddedSurfaceType.EmbeddedSurfaceType.APP_CHANNEL;

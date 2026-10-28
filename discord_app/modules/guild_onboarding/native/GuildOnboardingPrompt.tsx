@@ -23,19 +23,19 @@ function formattedNameHighlight(children, arg1) {
 }
 get_ActivityIndicator = fn(17);
 ({ View: hasOwnProperty, ScrollView: metroRequire } = get_ActivityIndicator);
-let closure_11 = fn(7194).GuildOnboardingModalStates;
+let closure_11 = fn(7228).GuildOnboardingModalStates;
 const EMOJI_URL_BASE_SIZE = fn(1392).EMOJI_URL_BASE_SIZE;
 const jsxProd = fn(21);
 ({ jsx: map1, jsxs: closure_14, Fragment: closure_15 } = jsxProd);
 let c16 = 48;
-const createStyles = fn(4972);
+const createStyles = fn(5004);
 let obj2 = {
   flex: { flex: 1 },
   container: {
     display: "flex",
     flex: 1,
     flexGrow: 1,
-    marginTop: fn(5269).NAV_BAR_HEIGHT,
+    marginTop: fn(5304).NAV_BAR_HEIGHT,
     marginBottom: 16,
     backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
   },
@@ -62,7 +62,7 @@ let obj3 = {
   display: "flex",
   flex: 1,
   flexGrow: 1,
-  marginTop: fn(5269).NAV_BAR_HEIGHT,
+  marginTop: fn(5304).NAV_BAR_HEIGHT,
   marginBottom: 16,
   backgroundColor: nativeDefault.colors.BACKGROUND_BASE_LOWER,
 };
@@ -377,8 +377,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
             }
             if (cResult[9] !== tmp20) {
               if (null != tmp20) {
-                let selectedRoleIds = tmp(7203).getSelectedRoleIds(tmp20);
-                const tmpResult4 = tmp(7203);
+                let selectedRoleIds = tmp(7237).getSelectedRoleIds(tmp20);
+                const tmpResult4 = tmp(7237);
               } else {
                 const _Set = Set;
                 selectedRoleIds = new Set();
@@ -387,8 +387,8 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
               cResult[10] = selectedRoleIds;
             } else if (cResult[11] !== tmp20) {
               if (null != tmp20) {
-                let selectedChannelIds = tmp(7203).getSelectedChannelIds(tmp20);
-                const tmpResult5 = tmp(7203);
+                let selectedChannelIds = tmp(7237).getSelectedChannelIds(tmp20);
+                const tmpResult5 = tmp(7237);
               } else {
                 const _Set2 = Set;
                 selectedChannelIds = new Set();
@@ -402,9 +402,9 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                     if (cResult[16] === tmp23) {
                       let tmp33 = cResult[17];
                     }
-                    ({ helpText, helpTextAdditional } = selectedOptionIds(7224)(tmp33));
-                    const tmp36 = selectedOptionIds(7224)(tmp33);
-                    const token = tmp(5253).useToken(selectedOptionIds(587).colors.BACKGROUND_BASE_LOWER);
+                    ({ helpText, helpTextAdditional } = selectedOptionIds(7258)(tmp33));
+                    const tmp36 = selectedOptionIds(7258)(tmp33);
+                    const token = tmp(5288).useToken(selectedOptionIds(587).colors.BACKGROUND_BASE_LOWER);
                     if (cResult[18] !== token) {
                       const obj7 = selectedOptionIds(683)(token);
                       const hexResult = selectedOptionIds(683)(token).alpha(0).hex();
@@ -502,7 +502,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                                 onPress: handleOnPress,
                                 disabled: tmp15,
                               };
-                              const tmp55 = closure_13(tmp(5245).Button, obj4);
+                              const tmp55 = closure_13(tmp(5280).Button, obj4);
                               cResult[35] = tmp12;
                               cResult[36] = tmp15;
                               cResult[37] = handleOnPress;
@@ -520,7 +520,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                             };
                             const items3 = [helpText, " ", helpTextAdditional];
                             obj5.children = items3;
-                            let tmp51 = closure_14(tmp(5235).Text, obj5);
+                            let tmp51 = closure_14(tmp(5270).Text, obj5);
                           } else {
                             tmp51 = null;
                           }
@@ -540,7 +540,7 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                           };
                           const intl = tmp(1125).intl;
                           obj6.children = intl.string(tmp(1125).t.dA1dSf);
-                          tmp48 = closure_13(tmp(5235).Text, obj6);
+                          tmp48 = closure_13(tmp(5270).Text, obj6);
                         }
                         cResult[28] = tmp15;
                         cResult[29] = tmp4.helpText;
@@ -554,19 +554,19 @@ let closure_19 = ReactCompilerGating.isReactCompilerEnabled()
                         colors: tmp42,
                         pointerEvents: "none",
                       };
-                      const tmp46 = closure_13(selectedOptionIds(5259), obj8);
+                      const tmp46 = closure_13(selectedOptionIds(5294), obj8);
                       cResult[25] = tmp42;
                       cResult[26] = tmp4.scrollContainerGradient;
                       cResult[27] = tmp46;
                       tmp43 = tmp46;
-                      const tmp35Result = selectedOptionIds(5259);
+                      const tmp35Result = selectedOptionIds(5294);
                     }
                     const items4 = [tmp38, tmp40];
                     cResult[22] = tmp38;
                     cResult[23] = tmp40;
                     cResult[24] = items4;
                     tmp42 = items4;
-                    const tmpResult6 = tmp(5253);
+                    const tmpResult6 = tmp(5288);
                   }
                 }
               }
@@ -1145,7 +1145,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
               }
               if (cResult[13] !== option.title) {
                 const obj5 = { variant: "text-md/semibold", children: option.title };
-                const tmp23 = closure_13(tmp(5235).Text, obj5);
+                const tmp23 = closure_13(tmp(5270).Text, obj5);
                 cResult[13] = option.title;
                 cResult[14] = tmp23;
                 let tmp21 = tmp23;
@@ -1246,7 +1246,7 @@ let closure_21 = ReactCompilerGating.isReactCompilerEnabled()
       obj3.children = closure_13(EmojiDefault, obj4);
       const items1 = [
         closure_13(closure_5, obj3),
-        closure_13(tmp2(5235).Text, { variant: "text-md/semibold", children: option.title }),
+        closure_13(tmp2(5270).Text, { variant: "text-md/semibold", children: option.title }),
       ];
       obj2.children = items1;
       return closure_14(closure_5, obj2);
@@ -1682,7 +1682,7 @@ export const DropdownPrompt = function DropdownPrompt(guildId) {
   items3[1] = { paddingBottom: 64 + currentPrompt(selectOption[17])().bottom + c16 + c16, position: "relative" };
   obj2.contentContainerStyle = items3;
   const callback = noop.useCallback(() => {
-    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7234, dependencyMap.paths), "DropdownOptions", {
+    ActionSheetActionCreatorsDefault.openLazy(asyncRequireImpl(7268, dependencyMap.paths), "DropdownOptions", {
       guildId,
       promptId: currentPrompt.id,
       onSelect(id, arg1) {

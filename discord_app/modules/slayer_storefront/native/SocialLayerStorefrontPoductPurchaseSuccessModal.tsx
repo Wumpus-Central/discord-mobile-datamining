@@ -2,7 +2,7 @@
 import nativeDefault from "../../../../discord_common/js/packages/tokens/native.tsx";
 import util from "../../../intl/index.native.tsx";
 import AnalyticsUtilsDefault from "../../../utils/AnalyticsUtils.tsx";
-import _modDef3701 from "../intl/SlayerStorefront.messages.js";
+import _modDef3733 from "../intl/SlayerStorefront.messages.js";
 import UserUtilsDefault from "../../../utils/UserUtils.tsx";
 import ReanimatedRexport from "../../reanimated/ReanimatedRexport.tsx";
 import timing from "../../../design/animation/reanimated/timing/timing.tsx";
@@ -23,12 +23,12 @@ const require = globalThis.__r;
 require = fn;
 get_ActivityIndicator = fn(17);
 ({ ScrollView: metroRequire, View: closure_7 } = get_ActivityIndicator);
-let numDays = fn(7335).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
+let numDays = fn(7370).SOCIAL_LAYER_DAYS_TO_CLAIM_ITEM;
 const Constants = fn(1084);
 ({ AnalyticEvents: closure_11, HorizontalGradient: closure_12, VerticalGradient: map1 } = Constants);
 const jsxProd = fn(21);
 ({ jsx: closure_14, jsxs: closure_15 } = jsxProd);
-let createStyles = fn(4972);
+let createStyles = fn(5004);
 let obj2 = {
   root: { flex: 1, backgroundColor: nativeDefault.colors.BLACK },
   backdropImage: { position: "absolute", inset: 0, opacity: 0.45 },
@@ -113,7 +113,7 @@ obj2.finePrint = {
   marginBottom: nativeDefault.space.PX_12,
 };
 let closure_16 = createStyles.createStyles(obj2);
-createStyles = fn(4972);
+createStyles = fn(5004);
 let obj17 = { linkAccountIcon: null };
 let obj15 = {
   textAlign: "center",
@@ -1205,7 +1205,7 @@ let tmp5 = ReactCompilerGating.isReactCompilerEnabled()
               str = "";
             }
             const obj = { applicationName: str };
-            formatToPlainStringResult = formatToPlainString(_modDef3701.eNNnIG, obj);
+            formatToPlainStringResult = formatToPlainString(_modDef3733.eNNnIG, obj);
           }
         }
         return formatToPlainStringResult;

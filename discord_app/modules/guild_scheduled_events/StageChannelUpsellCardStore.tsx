@@ -3,7 +3,7 @@ import Storage2 from "../../../discord_common/js/packages/storage/Storage.tsx";
 import c from "../../../_runtime/00576_c.js";
 import ReactBatchUpdates from "../../../discord_common/js/shared/utils/ReactBatchUpdates.native.tsx";
 import GuildScheduledEventsConstants from "GuildScheduledEventsConstants.tsx";
-import _mod4887 from "../../../_runtime/metro/04887__.js";
+import _mod4919 from "../../../_runtime/metro/04919__.js";
 import identity from "../../../_runtime/metro/01266__.js";
 import ReactCompilerGating from "../react_compiler/ReactCompilerGating.tsx";
 import size from "../../../_runtime/metro/00002__.js";
@@ -39,12 +39,12 @@ export const useStageChannelUpsellCardStore = ReactCompilerGating.isReactCompile
       } else {
         first = cResult[0];
       }
-      return closure_3(first, _mod4887.shallow);
+      return closure_3(first, _mod4919.shallow);
     }
   : function useStageChannelUpsellCardStore() {
       return closure_3((arg0) => {
         const items = [,];
         ({ hasSeenUpsellCard: arr[0], markAsSeen: arr[1] } = arg0);
         return items;
-      }, _mod4887.shallow);
+      }, _mod4919.shallow);
     };

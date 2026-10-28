@@ -18,13 +18,13 @@ function createRTCConnection(guildId, channelId, createdTime) {
   } else {
     const id = AuthenticationStore.getId();
     let obj = { userId: id, sessionId, guildId, channelId, joinVoiceId, createdTime };
-    _default = new _default(5721).default(obj);
-    _default.on(_default(5833).RTCConnectionEvent.State, (state, arg1, arg2) => {
+    _default = new _default(5756).default(obj);
+    _default.on(_default(5868).RTCConnectionEvent.State, (state, arg1, arg2) => {
       const merged = Object.assign(arg1);
       const merged1 = Object.assign(arg2);
       DispatcherDefault.dispatch({ type: "RTC_CONNECTION_STATE", state });
     });
-    _default.on(_default(5833).RTCConnectionEvent.Video, (guildId, channelId, userId, streamId, rtcServerId) => {
+    _default.on(_default(5868).RTCConnectionEvent.Video, (guildId, channelId, userId, streamId, rtcServerId) => {
       const obj = DispatcherDefault;
       obj.dispatch({
         type: "RTC_CONNECTION_VIDEO",
@@ -37,18 +37,18 @@ function createRTCConnection(guildId, channelId, createdTime) {
         mediaEngineConnectionId: _default.getMediaEngineConnectionId(),
       });
     });
-    _default.on(_default(5833).RTCConnectionEvent.Ping, (pings, quality) => {
+    _default.on(_default(5868).RTCConnectionEvent.Ping, (pings, quality) => {
       DispatcherDefault.dispatch({ type: "RTC_CONNECTION_PING", pings, quality });
     });
-    _default.on(_default(5833).RTCConnectionEvent.OutboundLossRate, (lossRate) => {
+    _default.on(_default(5868).RTCConnectionEvent.OutboundLossRate, (lossRate) => {
       DispatcherDefault.dispatch({ type: "RTC_CONNECTION_LOSS_RATE", lossRate });
     });
-    _default.on(_default(5833).RTCConnectionEvent.Speaking, (userId, speaking) => {
+    _default.on(_default(5868).RTCConnectionEvent.Speaking, (userId, speaking) => {
       if (speaking != null) {
         speaking.setSpeaking(userId, speaking);
       }
     });
-    _default.on(_default(5833).RTCConnectionEvent.Flags, (userId, flags) => {
+    _default.on(_default(5868).RTCConnectionEvent.Flags, (userId, flags) => {
       DispatcherDefault.dispatch({
         type: "RTC_CONNECTION_FLAGS",
         flags,
@@ -58,10 +58,10 @@ function createRTCConnection(guildId, channelId, createdTime) {
         context: _default.context,
       });
     });
-    _default.on(_default(5833).RTCConnectionEvent.UsersMerged, (userIds, context) => {
+    _default.on(_default(5868).RTCConnectionEvent.UsersMerged, (userIds, context) => {
       DispatcherDefault.dispatch({ type: "RTC_CONNECTION_USERS_MERGED", userIds, context });
     });
-    _default.on(_default(5833).RTCConnectionEvent.ClientConnect, (userIds) => {
+    _default.on(_default(5868).RTCConnectionEvent.ClientConnect, (userIds) => {
       DispatcherDefault.dispatch({
         type: "RTC_CONNECTION_CLIENT_CONNECT",
         userIds,
@@ -70,7 +70,7 @@ function createRTCConnection(guildId, channelId, createdTime) {
         context: _default.context,
       });
     });
-    _default.on(_default(5833).RTCConnectionEvent.ClientDisconnect, (userId) => {
+    _default.on(_default(5868).RTCConnectionEvent.ClientDisconnect, (userId) => {
       DispatcherDefault.dispatch({
         type: "RTC_CONNECTION_CLIENT_DISCONNECT",
         userId,
@@ -79,13 +79,13 @@ function createRTCConnection(guildId, channelId, createdTime) {
         context: _default.context,
       });
     });
-    _default.on(_default(5833).RTCConnectionEvent.Platform, (userId, platform, channelId) => {
+    _default.on(_default(5868).RTCConnectionEvent.Platform, (userId, platform, channelId) => {
       DispatcherDefault.dispatch({ type: "RTC_CONNECTION_PLATFORM", platform, userId, channelId });
     });
-    _default.on(_default(5833).RTCConnectionEvent.SecureFramesUpdate, () => {
+    _default.on(_default(5868).RTCConnectionEvent.SecureFramesUpdate, () => {
       DispatcherDefault.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
     });
-    _default.on(_default(5833).RTCConnectionEvent.RosterMapUpdate, (userIds) => {
+    _default.on(_default(5868).RTCConnectionEvent.RosterMapUpdate, (userIds) => {
       DispatcherDefault.dispatch({ type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds });
     });
     const tmp322 = new VoiceStateAnalyticsDefault(AuthenticationStore.getId(), channelId);
@@ -153,7 +153,7 @@ function handleRtcAction() {
 }
 const Constants = fn(1084);
 ({ RTCConnectionStates: closure_8, AppStates: closure_9, RTCConnectionQuality: c10 } = Constants);
-const MediaEngineContextTypes = fn(5719).MediaEngineContextTypes;
+const MediaEngineContextTypes = fn(5754).MediaEngineContextTypes;
 let closure_12 = new LoggerDefault("RTCConnectionStore");
 let closure_13 = [];
 let c14 = null;
