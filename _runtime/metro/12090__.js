@@ -4,10 +4,10 @@ import registerAsset from "01131__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/native/empties",
-  width: 141,
+  width: 128,
   height: 128,
   scales: [2, 3],
-  hash: "2d906861c73988d1392c3f207cda799f",
-  name: "empty_quick_switcher",
+  hash: "9ba5a3a00b166d9fbfaee0f42d9a0d05",
+  name: "app_dock_no_permissions_light",
   type: "png",
 });

@@ -20,7 +20,7 @@ function isAttributeObject(value) {
 function attributeValueToTypedAttributeValue(value, flag) {
   let tmp = value;
   if (!isAttributeObject(value)) {
-    let obj = { value, unit: "Array" };
+    let obj = { value, unit: "a" };
     tmp = obj;
   }
   ({ value, unit } = tmp);
@@ -80,7 +80,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export { attributeValueToTypedAttributeValue };
 export { isAttributeObject };
-export const serializeAttributes = function serializeAttributes(attributes) {
+export function serializeAttributes(attributes) {
   if (flag === undefined) {
     flag = false;
   }
@@ -100,4 +100,4 @@ export const serializeAttributes = function serializeAttributes(attributes) {
     continue;
   }
   return obj2;
-};
+}

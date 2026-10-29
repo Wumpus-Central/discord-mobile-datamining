@@ -46,7 +46,7 @@ function setupIntegration(on, name, arg2) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let items = [];
 
-export const addIntegration = function addIntegration(name) {
+export function addIntegration(name) {
   const client = _mod724.getClient();
   if (client) {
     client.addIntegration(name);
@@ -55,8 +55,8 @@ export const addIntegration = function addIntegration(name) {
     const _HermesInternal = HermesInternal;
     debug.warn('Cannot add integration "' + name.name + '" because no SDK Client is available.');
   }
-};
-export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1) {
+}
+export function afterSetupIntegrations(arg0, arg1) {
   const iter = arg1[Symbol.iterator]();
   const nextResult = iter.next();
   while (iter !== undefined) {
@@ -70,11 +70,11 @@ export const afterSetupIntegrations = function afterSetupIntegrations(arg0, arg1
     }
     continue;
   }
-};
+}
 export function defineIntegration(arg0) {
   return arg0;
 }
-export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultIntegrations) {
+export function getIntegrationsToSetup(defaultIntegrations) {
   const arr = defaultIntegrations.defaultIntegrations || [];
   const integrations = defaultIntegrations.integrations;
   const item = arr.forEach((item) => {
@@ -112,10 +112,10 @@ export const getIntegrationsToSetup = function getIntegrationsToSetup(defaultInt
     }
   });
   return Object.values(obj);
-};
+}
 export const installedIntegrations = items;
 export { setupIntegration };
-export const setupIntegrations = function setupIntegrations(arg0, arr) {
+export function setupIntegrations(arg0, arr) {
   closure_0 = arg0;
   const obj = {};
   const item = arr.forEach((item) => {
@@ -124,4 +124,4 @@ export const setupIntegrations = function setupIntegrations(arg0, arr) {
     }
   });
   return obj;
-};
+}

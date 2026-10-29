@@ -4,7 +4,7 @@ import encodeUTF8 from "../00881_encodeUTF8.js";
 require = arg1;
 const dependencyMap = arg6;
 
-export const parseContentLengthHeader = function parseContentLengthHeader(responseHeader) {
+export function parseContentLengthHeader(responseHeader) {
   if (responseHeader) {
     const _parseInt = parseInt;
     const parsed = parseInt(responseHeader, 10);
@@ -15,8 +15,8 @@ export const parseContentLengthHeader = function parseContentLengthHeader(respon
     }
     return tmp3;
   }
-};
-export const getBodySize = function getBodySize(size) {
+}
+export function getBodySize(size) {
   if (size) {
     try {
       if (typeof size === "string") {
@@ -47,4 +47,4 @@ export const getBodySize = function getBodySize(size) {
       }
     } catch (err) {}
   }
-};
+}

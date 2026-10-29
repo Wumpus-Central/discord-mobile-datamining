@@ -13,7 +13,7 @@ export function setRuntimeConfigProvider(arg0) {
     global = arg0;
   }
 }
-export const get = function get(APNGDecorationView, arg1) {
+export function get(APNGDecorationView, arg1) {
   closure_0 = APNGDecorationView;
   closure_1 = arg1;
   customBubblingEventTypesAll.register(APNGDecorationView, () => {
@@ -66,8 +66,8 @@ export const get = function get(APNGDecorationView, arg1) {
     return viewConfig1;
   });
   return APNGDecorationView;
-};
-export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(framebus, arg1) {
+}
+export function getWithFallback_DEPRECATED(framebus, arg1) {
   if (null == global) {
     _modDef38(null == global, "Unexpected invocation!");
     class FallbackNativeComponent {
@@ -194,8 +194,8 @@ export const getWithFallback_DEPRECATED = function getWithFallback_DEPRECATED(fr
   }
   FallbackNativeComponent.displayName = "Fallback(" + framebus + ")";
   return FallbackNativeComponent;
-};
-export const unstable_hasStaticViewConfig = function unstable_hasStaticViewConfig(arg0) {
+}
+export function unstable_hasStaticViewConfig(arg0) {
   let obj;
   if (global != null) {
     obj = tmp(arg0);
@@ -204,4 +204,4 @@ export const unstable_hasStaticViewConfig = function unstable_hasStaticViewConfi
     obj = { native: true };
   }
   return !obj.native;
-};
+}

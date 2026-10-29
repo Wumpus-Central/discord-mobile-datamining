@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/premium/tiered_tenure_badging/native/images",
-  width: 66.66666666666667,
-  height: 59,
-  scales: [3],
-  hash: "ebeff25c9c1d6559128af4dec63d3c8d",
-  name: "asset_diamond_badge_small",
+  httpServerLocation: "/assets/modules/billing/native/images",
+  width: 223,
+  height: 126,
+  scales: [2, 3],
+  hash: "06b6cfc90c8de0a27298c16b4f578563",
+  name: "blocked-purchases-light",
   type: "png",
 });

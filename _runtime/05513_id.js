@@ -1,0 +1,8 @@
+// _runtime/05513_id.js
+let c0 = 0;
+
+export () => {
+  const result = (c0 + 1) % Number.MAX_SAFE_INTEGER;
+  c0 = result;
+  return result;
+}

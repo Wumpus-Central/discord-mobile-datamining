@@ -3,9 +3,9 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/voice_channel_apps",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcw==",
   scales: [1],
-  hash: "ca7c02c6161e21c214b1c1c8fec19b73",
-  name: "VoiceChannelApps.compiled.messages",
+  hash: "0dd1f9ab395abace56499383506bff67",
+  name: "zh-TW.messages.0dd1f9ab395abace56499383506bff67.compiled.messages",
   type: "jsona",
 });

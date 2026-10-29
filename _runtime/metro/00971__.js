@@ -5,7 +5,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const setActiveSpanInBrowser = function setActiveSpanInBrowser(end) {
+export function setActiveSpanInBrowser(end) {
   activeSpan = activeSpan(currentScope[0]).getActiveSpan();
   if (activeSpan !== end) {
     currentScope = tmp(tmp2[0]).getCurrentScope();
@@ -22,4 +22,4 @@ export const setActiveSpanInBrowser = function setActiveSpanInBrowser(end) {
     let result = tmp(tmp2[0])._INTERNAL_setSpanForScope(currentScope, end);
     const tmpResult2 = tmp(tmp2[0]);
   }
-};
+}

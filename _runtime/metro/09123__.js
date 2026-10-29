@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/instant_invite/native/images",
-  width: 160.5,
-  height: 140,
+  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
+  width: 254,
+  height: 154,
   scales: [2, 3],
-  hash: "ad61eda1bea496e5c4dfb770ef28c56b",
-  name: "server-invite-envelope",
+  hash: "82ae7189682c36bee3dc3a129ab02a11",
+  name: "img_app_crash_darker",
   type: "png",
 });

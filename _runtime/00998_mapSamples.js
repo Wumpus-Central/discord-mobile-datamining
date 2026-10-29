@@ -101,7 +101,7 @@ function parseHermesJSStackFrame(category) {
 }
 let closure_2 = 1000000 * MAX_PROFILE_DURATION_MS.MAX_PROFILE_DURATION_MS;
 
-export const convertToSentryProfile = function convertToSentryProfile(hermesProfile) {
+export function convertToSentryProfile(hermesProfile) {
   if (0 === hermesProfile.samples.length) {
     const debug2 = _mod693.debug;
     debug2.warn("[Profiling] No samples found in profile.");
@@ -198,6 +198,6 @@ export const convertToSentryProfile = function convertToSentryProfile(hermesProf
     obj2.active_thread_id = Object.keys(obj)[0] || "0";
     return obj2;
   }
-};
+}
 export { mapSamples };
 export { parseHermesJSStackFrame };

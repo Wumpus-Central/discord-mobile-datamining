@@ -1,10 +1,10 @@
 // _runtime/metro/10321__.js
-import now from "../10273_now.js";
+import assignSimilarDate from "../10288_assignSimilarDate.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 
-const self = this;
-const JPCasualDateParser = require;
+let self = this;
+const ForwardDateRefiner = require;
 let self2 = this;
 if (this) {
   self2 = self.__createBinding;
@@ -67,78 +67,150 @@ if (self2) {
       };
     }
     const _Object3 = Object;
-    let closure_6 = fn(now);
-    const re7 = /今日|きょう|本日|ほんじつ|昨日|きのう|明日|あした|今夜|こんや|今夕|こんゆう|今晩|こんばん|今朝|けさ/i;
-    class JPCasualDateParser {
+    let closure_6 = fn(assignSimilarDate);
+    class ForwardDateRefiner {
       constructor() {
-        tmp = closure_3(this, JPCasualDateParser);
+        tmp = closure_3(this, ForwardDateRefiner);
         return;
       }
     }
     const entry = {
-      key: "pattern",
-      value: function pattern() {
-        return re7;
+      key: "refine",
+      value: function refine(option, arr) {
+        const self = this;
+        if (option.option.forwardDate) {
+          const item = arr.forEach((start) => {
+            option = start;
+            const reference = option.reference;
+            const dateWithAdjustedTimezone = reference.getDateWithAdjustedTimezone();
+            start = start.start;
+            if (start.isOnlyTime()) {
+              const start2 = start.start;
+              if (obj.reference.instant > start2.date()) {
+                const reference2 = obj.reference;
+                const dateWithAdjustedTimezone1 = reference2.getDateWithAdjustedTimezone();
+                const _Date = Date;
+                const date = new Date(dateWithAdjustedTimezone1);
+                date.setDate(date.getDate() + 1);
+                closure_1_6.implySimilarDate(start.start, date);
+                obj.debug(() => {
+                  console.log(
+                    "" +
+                      self.constructor.name +
+                      " adjusted " +
+                      closure_0 +
+                      " time from the ref date (" +
+                      dateWithAdjustedTimezone1 +
+                      ") to the following day (" +
+                      date +
+                      ")",
+                  );
+                });
+                let end2 = start.end;
+                if (end2) {
+                  const end = start.end;
+                  end2 = end.isOnlyTime();
+                }
+                if (end2) {
+                  closure_1_6.implySimilarDate(start.end, date);
+                  ({ start: start3, end: end3 } = start);
+                  if (dateResult > end3.date()) {
+                    date.setDate(date.getDate() + 1);
+                    closure_1_6.implySimilarDate(start.end, date);
+                  }
+                  dateResult = start3.date();
+                }
+              }
+            }
+            const start4 = start.start;
+            let tmp5 = dateWithAdjustedTimezone;
+            if (start4.isOnlyWeekdayComponent()) {
+              const start5 = start.start;
+              tmp5 = dateWithAdjustedTimezone;
+              if (dateWithAdjustedTimezone > start5.date()) {
+                const start11 = start.start;
+                value = start11.get("weekday");
+                const diff = value - dateWithAdjustedTimezone.getDay();
+                let sum = diff;
+                if (diff <= 0) {
+                  sum = diff + 7;
+                }
+                const obj2 = { day: sum };
+                const addDurationResult = option(self[3]).addDuration(dateWithAdjustedTimezone, obj2);
+                option(self[2]).implySimilarDate(start.start, addDurationResult);
+                obj.debug(() => {
+                  console.log("" + self.constructor.name + " adjusted " + start + " weekday (" + start.start + ")");
+                });
+                tmp5 = addDurationResult;
+                if (start.end) {
+                  const end4 = start.end;
+                  tmp5 = addDurationResult;
+                  if (end4.isOnlyWeekdayComponent()) {
+                    const end5 = start.end;
+                    value2 = end5.get("weekday");
+                    const diff1 = value2 - addDurationResult.getDay();
+                    let sum1 = diff1;
+                    if (diff1 <= 0) {
+                      sum1 = diff1 + 7;
+                    }
+                    const obj3 = { day: sum1 };
+                    const addDurationResult1 = tmp7(self[3]).addDuration(addDurationResult, obj3);
+                    tmp7(self[2]).implySimilarDate(start.end, addDurationResult1);
+                    obj.debug(() => {
+                      console.log("" + self.constructor.name + " adjusted " + start + " weekday (" + start.end + ")");
+                    });
+                    tmp5 = addDurationResult1;
+                  }
+                }
+              }
+            }
+            const start6 = start.start;
+            if (start6.isDateWithUnknownYear()) {
+              const start7 = start.start;
+              if (tmp5 > start7.date()) {
+                const start12 = start.start;
+                let num3 = 0;
+                if (tmp5 > start12.date()) {
+                  while (true) {
+                    ({ start: start8, start: start9 } = start);
+                    let implyResult = start8.imply("year", start9.get("year") + 1);
+                    let obj6 = option;
+                    let debugResult3 = option.debug(() => {
+                      console.log("" + self.constructor.name + " adjusted " + start + " year (" + start.start + ")");
+                    });
+                    let end6 = start.end;
+                    if (end6) {
+                      let end7 = start.end;
+                      end6 = !end7.isCertain("year");
+                    }
+                    if (end6) {
+                      ({ end: end8, end: end9 } = start);
+                      let implyResult1 = end8.imply("year", end9.get("year") + 1);
+                      let debugResult4 = obj6.debug(() => {
+                        console.log("" + self.constructor.name + " adjusted " + start + " month (" + start.start + ")");
+                      });
+                    }
+                    let sum2 = num3 + 1;
+                    if (sum2 >= 3) {
+                      break;
+                    } else {
+                      let start10 = start.start;
+                      num3 = sum2;
+                      if (tmp5 <= start10.date()) {
+                        break;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          });
+        }
+        return arr;
       },
     };
     let items = [entry];
-    const entry1 = {
-      key: "extract",
-      value: function extract(createParsingComponents, arg1) {
-        const first = arg1[0];
-        if ("\u304D\u3087\u3046" === first) {
-          let str6 = "\u4ECA\u65E5";
-        } else if ("\u307B\u3093\u3058\u3064" === first) {
-          str6 = "\u672C\u65E5";
-        } else if ("\u304D\u306E\u3046" === first) {
-          str6 = "\u6628\u65E5";
-        } else if ("\u3042\u3057\u305F" === first) {
-          str6 = "\u660E\u65E5";
-        } else if ("\u3053\u3093\u3084" === first) {
-          str6 = "\u4ECA\u591C";
-        } else if ("\u3053\u3093\u3086\u3046" === first) {
-          str6 = "\u4ECA\u5915";
-        } else if ("\u3053\u3093\u3070\u3093" === first) {
-          str6 = "\u4ECA\u6669";
-        } else {
-          str6 = "\u4ECA\u671D";
-          if ("\u3051\u3055" !== first) {
-            str6 = first;
-          }
-        }
-        const parsingComponents = createParsingComponents.createParsingComponents();
-        if ("\u6628\u65E5" === str6) {
-          return closure_6.yesterday(createParsingComponents.reference);
-        } else if ("\u660E\u65E5" === str6) {
-          return closure_6.tomorrow(createParsingComponents.reference);
-        } else {
-          if ("\u672C\u65E5" !== str6) {
-            if ("\u4ECA\u65E5" !== str6) {
-              if ("\u4ECA\u591C" != str6) {
-                if ("\u4ECA\u5915" != str6) {
-                  if ("\u4ECA\u6669" != str6) {
-                    if (str6.match("\u4ECA\u671D")) {
-                      parsingComponents.imply("hour", 6);
-                      parsingComponents.assign("meridiem", JPCasualDateParser(10254).Meridiem.AM);
-                    }
-                  }
-                  const refDate = createParsingComponents.refDate;
-                  parsingComponents.assign("day", refDate.getDate());
-                  parsingComponents.assign("month", refDate.getMonth() + 1);
-                  parsingComponents.assign("year", refDate.getFullYear());
-                  return parsingComponents;
-                }
-              }
-              parsingComponents.imply("hour", 22);
-              parsingComponents.assign("meridiem", JPCasualDateParser(10254).Meridiem.PM);
-            }
-          }
-          return closure_6.today(createParsingComponents.reference);
-        }
-      },
-    };
-    items[1] = entry1;
-    exports.default = _createClass(JPCasualDateParser, items);
+    exports.default = _createClass(ForwardDateRefiner, items);
   } else {
     const _Object2 = Object;
   }

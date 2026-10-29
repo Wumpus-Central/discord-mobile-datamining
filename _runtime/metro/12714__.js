@@ -1,31 +1,42 @@
 // _runtime/metro/12714__.js
-import _mod12715 from "12715__.js";
-import setupIntegration from "12692__.js";
+import _mod12657 from "12657__.js";
 
-export const moduleMetadataIntegration = setupIntegration.defineIntegration(() => ({
-  name: "ModuleMetadata",
-  setup(on) {
-    const options = on;
-    on.on("beforeEnvelope", (arg0) => {
-      options(closure_1_1[1]).forEachEnvelopeItem(arg0, (arg0, arg1) => {
-        if ("event" === arg1) {
-          const _Array = Array;
-          let tmp3;
-          if (Array.isArray(arg0)) {
-            tmp3 = arg0[1];
-          }
-          if (tmp3) {
-            const result = options(dependencyMap[2]).stripMetadataFromStackFrames(tmp3);
-            arg0[1] = tmp3;
-            const obj = options(dependencyMap[2]);
-          }
-        }
-      });
-    });
-    on.on("applyFrameMetadata", (type) => {
-      if (!type.type) {
-        const result = _mod12715.addMetadataToStackFrames(options.getOptions().stackParser, type);
+const RightParenthesis = _mod12657.TYPE.RightParenthesis;
+const obj = {
+  name: "Function",
+  structure: null,
+  parse(call, arg1) {
+    const self = this;
+    const str = this.consumeFunctionName();
+    const formatted = str.toLowerCase();
+    if (arg1.hasOwnProperty(formatted)) {
+      const call2 = tmp4.call;
+      typeof call2 === "unknown" ? arg1[formatted](arg1) : call2(self, arg1);
+    } else {
+      call = call.call;
+      if (!self.scanner.eof) {
+        self.eat(RightParenthesis);
       }
-    });
+      const element = {
+        type: "Function",
+        loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+        name: str,
+        children: typeof call === "unknown" ? call(arg1) : call(self, arg1),
+      };
+      return element;
+    }
   },
-}));
+  generate(name) {
+    this.chunk(name.name);
+    this.chunk("(");
+    this.children(name);
+    this.chunk(")");
+  },
+  walkContext: "function",
+};
+const obj2 = { name: String, children: null };
+const items = [[]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

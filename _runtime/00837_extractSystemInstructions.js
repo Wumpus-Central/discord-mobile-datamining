@@ -6,15 +6,15 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const buildMethodPath = function buildMethodPath(arg0, arg1) {
+export function buildMethodPath(arg0, arg1) {
   let combined = arg1;
   if (arg0) {
     const _HermesInternal = HermesInternal;
     combined = "" + arg0 + "." + arg1;
   }
   return combined;
-};
-export const extractSystemInstructions = function extractSystemInstructions(arr) {
+}
+export function extractSystemInstructions(arr) {
   if (Array.isArray(arr)) {
     const findIndexResult = arr.findIndex((role) => {
       let tmp = role;
@@ -62,8 +62,8 @@ export const extractSystemInstructions = function extractSystemInstructions(arr)
     const obj = { systemInstructions: "Array", filteredMessages: arr };
     return obj;
   }
-};
-export const getFinalOperationName = function getFinalOperationName(arr) {
+}
+export function getFinalOperationName(arr) {
   let str = "chat";
   let str2 = "chat";
   if (!arr.includes("messages")) {
@@ -87,8 +87,8 @@ export const getFinalOperationName = function getFinalOperationName(arr) {
     str2 = str4;
   }
   return str2;
-};
-export const getSpanOperation = function getSpanOperation(arr) {
+}
+export function getSpanOperation(arr) {
   let str = "chat";
   let str2 = "chat";
   if (!arr.includes("messages")) {
@@ -112,8 +112,8 @@ export const getSpanOperation = function getSpanOperation(arr) {
     str2 = str4;
   }
   return "gen_ai." + str2;
-};
-export const getTruncatedJsonString = function getTruncatedJsonString(filteredMessages) {
+}
+export function getTruncatedJsonString(filteredMessages) {
   if (typeof filteredMessages === "string") {
     return truncateTextByBytes.truncateGenAiStringInput(filteredMessages);
   } else {
@@ -126,8 +126,8 @@ export const getTruncatedJsonString = function getTruncatedJsonString(filteredMe
       return JSON.stringify(filteredMessages);
     }
   }
-};
-export const setTokenUsageAttributes = function setTokenUsageAttributes(
+}
+export function setTokenUsageAttributes(
   setAttributes,
   promptTokens,
   completionTokens,
@@ -166,4 +166,4 @@ export const setTokenUsageAttributes = function setTokenUsageAttributes(
   setAttributes.setAttributes({ [closure_1_0(closure_1_1[0]).GEN_AI_USAGE_TOTAL_TOKENS_ATTRIBUTE]: sum2 });
   tmp = undefined !== promptTokens;
   tmp5 = undefined !== completionTokens;
-};
+}

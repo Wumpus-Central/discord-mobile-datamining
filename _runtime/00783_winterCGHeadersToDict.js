@@ -107,7 +107,7 @@ let closure_3 = ["x-forwarded-", "-user"];
 
 export { extractQueryParamsFromUrl };
 export { headersToDict };
-export const httpHeadersToSpanAttributes = function httpHeadersToSpanAttributes(arg0) {
+export function httpHeadersToSpanAttributes(arg0) {
   let flag = arg1;
   if (arg1 === undefined) {
     flag = false;
@@ -147,8 +147,8 @@ export const httpHeadersToSpanAttributes = function httpHeadersToSpanAttributes(
     });
     return obj;
   } catch (err) {}
-};
-export const httpRequestToRequestData = function httpRequestToRequestData(headers) {
+}
+export function httpRequestToRequestData(headers) {
   const tmp = headers.headers || {};
   let prop;
   if (typeof tmp["x-forwarded-host"] === "string") {
@@ -202,9 +202,9 @@ export const httpRequestToRequestData = function httpRequestToRequestData(header
     data: headers.body || undefined,
   };
   return request;
-};
+}
 export { winterCGHeadersToDict };
-export const winterCGRequestToRequestData = function winterCGRequestToRequestData(method) {
+export function winterCGRequestToRequestData(method) {
   const request = {
     method: method.method,
     url: method.url,
@@ -212,4 +212,4 @@ export const winterCGRequestToRequestData = function winterCGRequestToRequestDat
     headers: winterCGHeadersToDict(method.headers),
   };
   return request;
-};
+}

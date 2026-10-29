@@ -5,7 +5,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const count = function count(name, arg1) {
+export function count(name, arg1) {
   let num = arg1;
   if (arg1 === undefined) {
     num = 1;
@@ -26,8 +26,8 @@ export const count = function count(name, arg1) {
     scope = unit.scope;
   }
   const result = _INTERNAL_captureSerializedMetric._INTERNAL_captureMetric(obj2, { scope });
-};
-export const distribution = function distribution(name, value, unit) {
+}
+export function distribution(name, value, unit) {
   const obj2 = { type: "distribution", name, value, unit: null, attributes: null };
   unit = undefined;
   if (unit != null) {
@@ -44,8 +44,8 @@ export const distribution = function distribution(name, value, unit) {
     scope = unit.scope;
   }
   const result = _INTERNAL_captureSerializedMetric._INTERNAL_captureMetric(obj2, { scope });
-};
-export const gauge = function gauge(name, value, unit) {
+}
+export function gauge(name, value, unit) {
   const obj2 = { type: "gauge", name, value, unit: null, attributes: null };
   unit = undefined;
   if (unit != null) {
@@ -62,4 +62,4 @@ export const gauge = function gauge(name, value, unit) {
     scope = unit.scope;
   }
   const result = _INTERNAL_captureSerializedMetric._INTERNAL_captureMetric(obj2, { scope });
-};
+}

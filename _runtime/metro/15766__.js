@@ -1,25 +1,11 @@
 // _runtime/metro/15766__.js
-import e from "../01171_e.js";
+import registerAsset from "01131__.js";
 
-e.__extends(function MissingLocaleDataError() {
-  const self = this;
-  let tmp2 = null !== Error;
-  if (!tmp2) {
-    if (!tmp2) {
-      tmp2 = self;
-    }
-    tmp2.type = "MISSING_LOCALE_DATA";
-    return tmp2;
-  } else {
-    const apply = Error.apply;
-    if (typeof apply === "unknown") {
-      let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-    } else {
-      applyArgumentsResult = apply(self, arguments);
-    }
-  }
-}, Error);
-
-export const isMissingLocaleDataError = function isMissingLocaleDataError(type) {
-  return "MISSING_LOCALE_DATA" === type.type;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/LottieIcon/native/generated/lotties",
+  scales: [1],
+  hash: "f8abc9efddaeaee5956e3c3ac3b829de",
+  name: "NitroGem18",
+  type: "lottie",
+});

@@ -1,7 +1,7 @@
 // _runtime/01215_varint64read.js
 let c0 = 4294967296;
 
-export const varint64read = function varint64read() {
+export function varint64read() {
   const self = this;
   let num = 0;
   let num2 = 0;
@@ -53,8 +53,8 @@ export const varint64read = function varint64read() {
   self.assertBounds();
   const items2 = [tmp3, 0];
   return items2;
-};
-export const varint64write = function varint64write(lo, hi, buf) {
+}
+export function varint64write(lo, hi, buf) {
   let num = 0;
   while (true) {
     let tmp = lo >>> num;
@@ -108,8 +108,8 @@ export const varint64write = function varint64write(lo, hi, buf) {
       }
     }
   }
-};
-export const int64fromString = function int64fromString(trimmed) {
+}
+export function int64fromString(trimmed) {
   let substr = trimmed;
   if ("-" == trimmed[0]) {
     substr = trimmed.slice(1);
@@ -147,8 +147,8 @@ export const int64fromString = function int64fromString(trimmed) {
   }
   const items = ["-" == trimmed[0], result6, sum5];
   return items;
-};
-export const int64toString = function int64toString(lo, hi) {
+}
+export function int64toString(lo, hi) {
   if (hi <= 2097151) {
     return "" + (c0 * hi + (lo >>> 0));
   } else {
@@ -193,8 +193,8 @@ export const int64toString = function int64toString(lo, hi) {
     const slice2 = "0000000".slice;
     return sum5 + ("0000000".slice(str.length) + str);
   }
-};
-export const varint32write = function varint32write(NumberResult, buf) {
+}
+export function varint32write(NumberResult, buf) {
   let num = 0;
   let tmp = NumberResult;
   if (NumberResult >= 0) {
@@ -216,8 +216,8 @@ export const varint32write = function varint32write(NumberResult, buf) {
     } while (num < 9);
     buf.push(1);
   }
-};
-export const varint32read = function varint32read() {
+}
+export function varint32read() {
   const self = this;
   this.pos = +this.pos + 1;
   if (128 & this.buf[+this.pos]) {
@@ -269,4 +269,4 @@ export const varint32read = function varint32read() {
     self.assertBounds();
     return tmp3;
   }
-};
+}

@@ -5,9 +5,9 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const generateSpanId = function generateSpanId() {
+export function generateSpanId() {
   return uuid4.uuid4().substring(16);
-};
-export const generateTraceId = function generateTraceId() {
+}
+export function generateTraceId() {
   return uuid4.uuid4();
-};
+}

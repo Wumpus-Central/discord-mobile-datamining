@@ -1,4 +1,13 @@
 // _runtime/metro/15596__.js
-import _mod15595 from "15595__.js";
+import registerAsset from "01131__.js";
 
-export default (arg0, arg1, arg2) => _mod15595(arg1, arg0, arg2);
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/contact_sync/native/images",
+  width: 40,
+  height: 40,
+  scales: [2, 3],
+  hash: "1d68443a64aaff8d1d20c2355b47322a",
+  name: "cta",
+  type: "png",
+});

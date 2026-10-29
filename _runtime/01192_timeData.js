@@ -4,7 +4,7 @@ import _mod1193 from "metro/01193__.js";
 require = arg1;
 const dependencyMap = arg6;
 
-export const getBestPattern = function getBestPattern(arr3, locale) {
+export function getBestPattern(arr3, locale) {
   let num = 0;
   let str = "";
   let str2 = "";
@@ -131,4 +131,4 @@ export const getBestPattern = function getBestPattern(arr3, locale) {
     throw error;
   }
   return str2;
-};
+}

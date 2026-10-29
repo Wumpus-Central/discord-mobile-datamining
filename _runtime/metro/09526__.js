@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "856ae0fb80fb3c5e7cc40888f4bebb2b",
-  name: "YoutubeNeutralIcon",
+  hash: "ea051c7bb088368772b9e8a5e140622d",
+  name: "TagIcon",
   type: "png",
 });

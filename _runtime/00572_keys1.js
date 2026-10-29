@@ -16,11 +16,7 @@ function createImpl(arg0) {
     const items = [store, tmp];
     const items1 = [store, tmp];
     const callback = noop.useCallback(() => closure_1(closure_0.getState()), items);
-    const syncExternalStore = noop.useSyncExternalStore(
-      store.subscribe,
-      callback,
-      noop.useCallback(() => closure_1(closure_0.getInitialState()), items1),
-    );
+    const syncExternalStore = noop.useSyncExternalStore(store.subscribe, callback, noop.useCallback(() => closure_1(closure_0.getInitialState()), items1));
     const debugValue = noop.useDebugValue(syncExternalStore);
     return syncExternalStore;
   }
@@ -28,7 +24,7 @@ function createImpl(arg0) {
   return useBoundStore;
 }
 
-export const create = (arg0) => {
+export (arg0) => {
   if (arg0) {
     if (typeof createImpl === "function") {
       store = store(571).createStore(arg0);
@@ -42,11 +38,7 @@ export const create = (arg0) => {
         const items = [store, tmp];
         const items1 = [store, tmp];
         const callback = noop.useCallback(() => closure_1(closure_0.getState()), items);
-        const syncExternalStore = noop.useSyncExternalStore(
-          store.subscribe,
-          callback,
-          noop.useCallback(() => closure_1(closure_0.getInitialState()), items1),
-        );
+        const syncExternalStore = noop.useSyncExternalStore(store.subscribe, callback, noop.useCallback(() => closure_1(closure_0.getInitialState()), items1));
         const debugValue = noop.useDebugValue(syncExternalStore);
         return syncExternalStore;
       }
@@ -61,8 +53,8 @@ export const create = (arg0) => {
     tmp2 = createImpl;
   }
   return tmp2;
-};
-export const useStore = function useStore(subscribe) {
+}
+export function useStore(subscribe) {
   closure_0 = subscribe;
   let tmp = arg1;
   if (arg1 === undefined) {
@@ -72,11 +64,7 @@ export const useStore = function useStore(subscribe) {
   const items = [subscribe, tmp];
   const items1 = [subscribe, tmp];
   const callback = noop.useCallback(() => closure_1(closure_0.getState()), items);
-  const syncExternalStore = noop.useSyncExternalStore(
-    subscribe.subscribe,
-    callback,
-    noop.useCallback(() => closure_1(closure_0.getInitialState()), items1),
-  );
+  const syncExternalStore = noop.useSyncExternalStore(subscribe.subscribe, callback, noop.useCallback(() => closure_1(closure_0.getInitialState()), items1));
   const debugValue = noop.useDebugValue(syncExternalStore);
   return syncExternalStore;
-};
+}

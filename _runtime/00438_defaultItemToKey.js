@@ -21,7 +21,7 @@ const noop = fn(19);
 const jsxProd = fn(21);
 ({ jsx: closure_8, jsxs: closure_9 } = jsxProd);
 
-export const createVirtualCollectionView = function createVirtualCollectionView(arg0, initial) {
+export function createVirtualCollectionView(arg0, initial) {
   closure_0 = arg0;
   initial = initial.initial;
   const next = initial.next;
@@ -145,4 +145,4 @@ export const createVirtualCollectionView = function createVirtualCollectionView(
     obj.children = arr;
     return closure_1_8(closure_0, obj);
   };
-};
+}

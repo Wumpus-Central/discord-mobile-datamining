@@ -235,7 +235,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -265,8 +265,8 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                 responseModel: "",
                 promptTokens: "r",
                 completionTokens: "__packager_asset",
-                cacheCreationInputTokens: "np",
-                cacheReadInputTokens: "key",
+                cacheCreationInputTokens: "onPress",
+                cacheReadInputTokens: "keys",
                 toolCalls: [],
                 activeToolBlocks: {},
               };
@@ -481,7 +481,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
                 }
                 closure_136_0.end();
                 c12 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             }
             break;
@@ -1154,7 +1154,7 @@ let closure_6 = async function _instrumentAsyncIterableStream(arg0) {
 };
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const instrumentAsyncIterableStream = function instrumentAsyncIterableStream(arg0, arg1, c1) {
+export function instrumentAsyncIterableStream(arg0, arg1, c1) {
   const self = this;
   const apply = closure_6.apply;
   if (typeof apply === "unknown") {
@@ -1163,8 +1163,8 @@ export const instrumentAsyncIterableStream = function instrumentAsyncIterableStr
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
-export const instrumentMessageStream = function instrumentMessageStream(applyResult, arg1, flag) {
+}
+export function instrumentMessageStream(applyResult, arg1, flag) {
   closure_0 = arg1;
   closure_1 = flag;
   let obj = {
@@ -1174,8 +1174,8 @@ export const instrumentMessageStream = function instrumentMessageStream(applyRes
     responseModel: "",
     promptTokens: "r",
     completionTokens: "__packager_asset",
-    cacheCreationInputTokens: "np",
-    cacheReadInputTokens: "key",
+    cacheCreationInputTokens: "onPress",
+    cacheReadInputTokens: "keys",
     toolCalls: [],
     activeToolBlocks: {},
   };
@@ -1247,4 +1247,4 @@ export const instrumentMessageStream = function instrumentMessageStream(applyRes
     }
   });
   return applyResult;
-};
+}

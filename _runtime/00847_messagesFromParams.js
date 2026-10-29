@@ -9,7 +9,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const handleResponseError = function handleResponseError(setStatus, error) {
+export function handleResponseError(setStatus, error) {
   if (error.error) {
     const obj = { code: SPAN_STATUS_ERROR.SPAN_STATUS_ERROR, message: error.error.type || "internal_error" };
     setStatus.setStatus(obj);
@@ -17,8 +17,8 @@ export const handleResponseError = function handleResponseError(setStatus, error
     captureCheckIn.captureException(error.error, obj2);
     const tmp2Result = captureCheckIn;
   }
-};
-export const messagesFromParams = function messagesFromParams(system) {
+}
+export function messagesFromParams(system) {
   ({ messages, input } = system);
   if (typeof system.system === "string") {
     const obj = { role: "system", content: system.system };
@@ -50,8 +50,8 @@ export const messagesFromParams = function messagesFromParams(system) {
   } else {
     items5 = [];
   }
-};
-export const setMessagesAttribute = function setMessagesAttribute(setAttributes, messagesFromParamsResult) {
+}
+export function setMessagesAttribute(setAttributes, messagesFromParamsResult) {
   if (!Array.isArray(messagesFromParamsResult)) {
     const result = extractSystemInstructions.extractSystemInstructions(messagesFromParamsResult);
     ({ systemInstructions, filteredMessages } = result);
@@ -72,8 +72,8 @@ export const setMessagesAttribute = function setMessagesAttribute(setAttributes,
     setAttributes.setAttributes(obj3);
     const tmp2Result = extractSystemInstructions;
   }
-};
-export const shouldInstrument = function shouldInstrument(arg0) {
+}
+export function shouldInstrument(arg0) {
   const ANTHROPIC_AI_INSTRUMENTED_METHODS = ANTHROPIC_AI_INSTRUMENTED_METHODS2.ANTHROPIC_AI_INSTRUMENTED_METHODS;
   return ANTHROPIC_AI_INSTRUMENTED_METHODS.includes(arg0);
-};
+}

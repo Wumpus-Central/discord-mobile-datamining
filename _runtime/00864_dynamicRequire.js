@@ -6,7 +6,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const isBrowser = function isBrowser() {
+export function isBrowser() {
   let tmp = typeof window !== "undefined";
   if (typeof window !== "undefined") {
     const isNodeEnvResult = _mod865.isNodeEnv();
@@ -22,4 +22,4 @@ export const isBrowser = function isBrowser() {
     tmp = tmp4;
   }
   return tmp;
-};
+}

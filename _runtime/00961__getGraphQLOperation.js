@@ -52,10 +52,10 @@ function _getGraphQLOperation(operationName) {
       } else {
         const match1 = query.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)[{(]/);
         if (match1) {
-          const obj3 = { operationType: match1[1], operationName: "Array" };
+          const obj3 = { operationType: match1[1], operationName: "a" };
           obj = obj3;
         } else {
-          obj = { operationType: "useCallback", operationName: "PX_16" };
+          obj = { operationType: "Array", operationName: "Reflect" };
         }
       }
       let operationName2 = obj.operationName;
@@ -133,7 +133,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
 export { _getGraphQLOperation };
 export { getGraphQLRequestPayload };
-export const getRequestPayloadXhrOrFetch = function getRequestPayloadXhrOrFetch(input) {
+export function getRequestPayloadXhrOrFetch(input) {
   if ("xhr" in input) {
     const tmp7 = input.xhr[triggerHandlers.SENTRY_XHR_DATA_KEY];
     let first = tmp7;
@@ -147,7 +147,7 @@ export const getRequestPayloadXhrOrFetch = function getRequestPayloadXhrOrFetch(
     first1 = triggerHandlers.getBodyString(fetchRequestArgBody)[0];
   }
   return first1;
-};
+}
 export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineIntegration((arg0) => {
   closure_0 = arg0;
   return {
@@ -326,7 +326,7 @@ export const graphqlClientIntegration = registerSpanErrorInstrumentation.defineI
     },
   };
 });
-export const parseGraphQLQuery = function parseGraphQLQuery(str) {
+export function parseGraphQLQuery(str) {
   const match = str.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)(\w+)(?:\s*)[{(]/);
   if (match) {
     const obj2 = { operationType: match[1], operationName: match[2] };
@@ -334,11 +334,11 @@ export const parseGraphQLQuery = function parseGraphQLQuery(str) {
   } else {
     const match1 = str.match(/^(?:\s*)(query|mutation|subscription)(?:\s*)[{(]/);
     if (match1) {
-      const obj3 = { operationType: match1[1], operationName: "Array" };
+      const obj3 = { operationType: match1[1], operationName: "a" };
       let obj = obj3;
     } else {
-      obj = { operationType: "useCallback", operationName: "PX_16" };
+      obj = { operationType: "Array", operationName: "Reflect" };
     }
     return obj;
   }
-};
+}

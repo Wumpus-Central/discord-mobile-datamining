@@ -75,7 +75,7 @@ function startTimeToInitialDisplaySpan(isAutoInstrumented) {
               const obj2 = { value, done: true };
               return obj2;
             } else {
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } else {
             try {
@@ -223,7 +223,7 @@ function startTimeToFullDisplaySpan(arg0) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -330,7 +330,7 @@ function startTimeToFullDisplaySpan(arg0) {
                     obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -457,7 +457,7 @@ function startTimeToFullDisplaySpan(arg0) {
                     obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -598,7 +598,7 @@ function startTimeToFullDisplaySpan(arg0) {
                     obj2 = { value, done: true };
                     return obj2;
                   } else {
-                    return { value: "IconComponent", done: null };
+                    return { value: "IconComponent", done: "IconComponent" };
                   }
                 } else {
                   try {
@@ -734,7 +734,7 @@ function startTimeToFullDisplaySpan(arg0) {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -899,7 +899,7 @@ function updateFullDisplaySpan(arg0, span) {
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -1026,7 +1026,7 @@ function updateFullDisplaySpan(arg0, span) {
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -1180,7 +1180,7 @@ function updateFullDisplaySpan(arg0, span) {
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -1439,7 +1439,7 @@ export { TimeToInitialDisplay };
 export { TimeToFullDisplay };
 export { startTimeToInitialDisplaySpan };
 export { startTimeToFullDisplaySpan };
-export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) {
+export function updateInitialDisplaySpan(arg0) {
   _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
@@ -1476,7 +1476,7 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -1603,7 +1603,7 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -1760,7 +1760,7 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
                 obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -1906,15 +1906,15 @@ export const updateInitialDisplaySpan = function updateInitialDisplaySpan(arg0) 
     let debug = obj3.debug;
     debug.warn("[TimeToDisplay] No span found or created, possibly performance is disabled.");
   }
-};
-export const createTimeToFullDisplay = function createTimeToFullDisplay(useFocusEffect) {
+}
+export function createTimeToFullDisplay(useFocusEffect) {
   useFocusEffect = useFocusEffect.useFocusEffect;
   closure_1 = TimeToFullDisplay;
   class TimeToDisplayWrapper {
     constructor(arg0) {
       tmp = closure_2(useState(false), 2);
       [record, closure_0] = tmp;
-      tmp2 = useFocusEffect(() => { ... });
+      tmp2 = useFocusEffect(/* F144680 */ function() { ... });
       tmp3 = closure_3;
       tmp4 = closure_1;
       if (record) {
@@ -1925,15 +1925,15 @@ export const createTimeToFullDisplay = function createTimeToFullDisplay(useFocus
   }
   TimeToDisplayWrapper.displayName = "TimeToDisplayWrapper";
   return TimeToDisplayWrapper;
-};
-export const createTimeToInitialDisplay = function createTimeToInitialDisplay(useFocusEffect) {
+}
+export function createTimeToInitialDisplay(useFocusEffect) {
   useFocusEffect = useFocusEffect.useFocusEffect;
   closure_1 = TimeToInitialDisplay;
   class TimeToDisplayWrapper {
     constructor(arg0) {
       tmp = closure_2(useState(false), 2);
       [record, closure_0] = tmp;
-      tmp2 = useFocusEffect(() => { ... });
+      tmp2 = useFocusEffect(/* F144680 */ function() { ... });
       tmp3 = closure_3;
       tmp4 = closure_1;
       if (record) {
@@ -1944,4 +1944,4 @@ export const createTimeToInitialDisplay = function createTimeToInitialDisplay(us
   }
   TimeToDisplayWrapper.displayName = "TimeToDisplayWrapper";
   return TimeToDisplayWrapper;
-};
+}

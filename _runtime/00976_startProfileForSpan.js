@@ -7,7 +7,7 @@ const require = globalThis.__r;
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const startProfileForSpan = function startProfileForSpan(rootSpan) {
+export function startProfileForSpan(rootSpan) {
   _require = rootSpan;
   function onProfileHandler() {
     const self = this;
@@ -30,7 +30,7 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
         let obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -100,7 +100,7 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
             }
           }
           v3 = 3;
-          return { value: "IconComponent", done: null };
+          return { value: "IconComponent", done: "IconComponent" };
         }
       } catch (tmp8) {
         v3 = tmp;
@@ -162,4 +162,4 @@ export const startProfileForSpan = function startProfileForSpan(rootSpan) {
     };
     const tmpResult8 = tmp(693);
   }
-};
+}

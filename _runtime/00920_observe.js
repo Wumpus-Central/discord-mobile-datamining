@@ -1,7 +1,7 @@
 // _runtime/00920_observe.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const observe = (type, handleEntries, arg2) => {
+export (type, handleEntries, arg2) => {
   closure_0 = handleEntries;
   let obj = arg2;
   if (arg2 === undefined) {
@@ -22,5 +22,6 @@ export const observe = (type, handleEntries, arg2) => {
       performanceObserver.observe(obj2);
       return performanceObserver;
     }
-  } catch (err) {}
-};
+  } catch (err) {
+  }
+}

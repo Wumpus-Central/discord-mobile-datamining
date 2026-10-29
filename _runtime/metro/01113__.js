@@ -243,7 +243,7 @@ let obj = {
   slash: { encodePath: addLeadingSlash, decodePath: addLeadingSlash },
 };
 
-export const createBrowserHistory = function createBrowserHistory(props) {
+export function createBrowserHistory(props) {
   obj = props;
   function g(state) {
     let tmp = undefined === state.state;
@@ -724,8 +724,8 @@ export const createBrowserHistory = function createBrowserHistory(props) {
     },
   };
   return obj2;
-};
-export const createHashHistory = function createHashHistory(props) {
+}
+export function createHashHistory(props) {
   obj = props;
   const fn = function f() {
     const index = href.indexOf("#");
@@ -1316,8 +1316,8 @@ export const createHashHistory = function createHashHistory(props) {
     },
   };
   return obj2;
-};
-export const createMemoryHistory = function createMemoryHistory(props) {
+}
+export function createMemoryHistory(props) {
   obj = props;
   if (undefined === props) {
     obj = {};
@@ -1522,9 +1522,9 @@ export const createMemoryHistory = function createMemoryHistory(props) {
     },
   };
   return obj2;
-};
+}
 export { createLocation };
-export const locationsAreEqual = function locationsAreEqual(_location, pathname2) {
+export function locationsAreEqual(_location, pathname2) {
   let tmp =
     _location.pathname === pathname2.pathname &&
     _location.search === pathname2.search &&
@@ -1534,6 +1534,6 @@ export const locationsAreEqual = function locationsAreEqual(_location, pathname2
     tmp = valueEqual(_location.state, pathname2.state);
   }
   return tmp;
-};
+}
 export { parsePath };
 export { createPath };

@@ -75,19 +75,13 @@ if (!fn) {
   };
 }
 const MobileReplay = "MobileReplay";
-const options = {
-  maskAllText: true,
-  maskAllImages: true,
-  maskAllVectors: true,
-  enableExperimentalViewRenderer: false,
-  enableViewRendererV2: true,
-  enableFastViewRendering: false,
-  screenshotStrategy: "pixelCopy",
-};
-function mobileReplayIntegrationNoop() {}
+const options = { maskAllText: true, maskAllImages: true, maskAllVectors: true, enableExperimentalViewRenderer: false, enableViewRendererV2: true, enableFastViewRendering: false, screenshotStrategy: "pixelCopy" };
+function mobileReplayIntegrationNoop() {
+
+}
 
 export const MOBILE_REPLAY_INTEGRATION_NAME = "MobileReplay";
-export const mobileReplayIntegration = () => {
+export () => {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = options;
@@ -100,9 +94,7 @@ export const mobileReplayIntegration = () => {
   if (obj.isExpoGo()) {
     let debug = tmp2(tmp3[1]).debug;
     let _HermesInternal = HermesInternal;
-    debug.warn(
-      "[Sentry] " + MobileReplay + " is not supported in Expo Go. Use EAS Build or `expo prebuild` to enable it.",
-    );
+    debug.warn("[Sentry] " + MobileReplay + " is not supported in Expo Go. Use EAS Build or `expo prebuild` to enable it.");
   }
   obj = require("metro/00879__.js");
   if (tmp2Result.notMobileOs()) {
@@ -123,219 +115,189 @@ export const mobileReplayIntegration = () => {
       let obj2 = {
         name: MobileReplay,
         setup(on) {
-          if (obj.hasHooks(on)) {
-            let NATIVE = NativeModules.NATIVE;
-            currentReplayId = NATIVE.getCurrentReplayId();
-            on.on("createDsc", (replay_id) => {
-              if (!replay_id.replay_id) {
-                let tmp = currentReplayId;
-                if (null === currentReplayId) {
-                  const NATIVE = closure_0(currentReplayId[2]).NATIVE;
-                  currentReplayId = NATIVE.getCurrentReplayId();
-                  tmp = currentReplayId;
-                  if (currentReplayId) {
+              if (obj.hasHooks(on)) {
+                let NATIVE = NativeModules.NATIVE;
+                currentReplayId = NATIVE.getCurrentReplayId();
+                on.on("createDsc", (replay_id) => {
+                  if (!replay_id.replay_id) {
+                    let tmp = currentReplayId;
+                    if (null === currentReplayId) {
+                      const NATIVE = closure_0(currentReplayId[2]).NATIVE;
+                      currentReplayId = NATIVE.getCurrentReplayId();
+                      tmp = currentReplayId;
+                      if (currentReplayId) {
+                        tmp = currentReplayId;
+                      }
+                    }
+                    if (tmp) {
+                      replay_id.replay_id = tmp;
+                    }
+                  }
+                });
+                on.on("processMetric", (attributes) => {
+                  let tmp = currentReplayId;
+                  if (null === currentReplayId) {
+                    const NATIVE = closure_0(currentReplayId[2]).NATIVE;
+                    currentReplayId = NATIVE.getCurrentReplayId();
                     tmp = currentReplayId;
+                    if (currentReplayId) {
+                      tmp = currentReplayId;
+                    }
+                  }
+                  if (tmp) {
+                    attributes.attributes = attributes.attributes || {};
+                    attributes.attributes.replay_id = tmp;
+                  }
+                });
+                on.on("beforeAddBreadcrumb", enrichXhrBreadcrumbsForMobileReplay.enrichXhrBreadcrumbsForMobileReplay);
+              }
+              obj = _mod1004;
+            },
+        processEvent(arg0, arg1) {
+              closure_0 = arg0;
+              closure_1 = arg1;
+              return updateCachedReplayId(this, undefined, undefined, function*() {
+                if (c5 === 2) {
+                  c5 = 3;
+                  throw new TypeError("Generator functions may not be called on executing generators");
+                } else if (tmp6 === 3) {
+                  if (arg0 === 1) {
+                    throw value;
+                  } else if (arg0 === 2) {
+                    const obj = { value, done: true };
+                    return obj;
+                  } else {
+                    return { value: "IconComponent", done: "IconComponent" };
+                  }
+                } else {
+                  try {
+                    c5 = 2;
+                    let isHardCrashResult = c4;
+                    if (0 === c4) {
+                      if (arg0 === 1) {
+                        c5 = 3;
+                        throw value;
+                      } else if (arg0 === 2) {
+                        c5 = 3;
+                        const obj2 = { value, done: true };
+                        return obj2;
+                      } else {
+                        closure_128_0 = undefined;
+                        currentReplayId = undefined;
+                        const exception = value.exception;
+                        let values;
+                        if (null !== exception) {
+                          if (undefined !== exception) {
+                            values = exception.values;
+                          }
+                        }
+                        if (values) {
+                          if (value.exception.values.length > 0) {
+                            if (isHardCrashResult.beforeErrorSampling) {
+                              c3 = 1;
+                              if (false === obj7.beforeErrorSampling(value, tmp3)) {
+                                const debug5 = value(tmp3[1]).debug;
+                                const _HermesInternal5 = HermesInternal;
+                                debug5.log("[Sentry] " + MobileReplay + " not sent; beforeErrorSampling conditions not met for event " + value.event_id + ".");
+                                c3 = 0;
+                                c5 = 3;
+                                const obj3 = { value, done: true };
+                                return obj3;
+                              } else {
+                                c3 = 0;
+                              }
+                            }
+                            obj7 = isHardCrashResult;
+                          }
+                        }
+                        c5 = 3;
+                        const obj4 = { value, done: true };
+                        return obj4;
+                      }
+                    } else if (1 === isHardCrashResult) {
+                      c3 = 0;
+                      closure_128_2 = tmp80;
+                      const debug4 = value(tmp3[1]).debug;
+                      const _HermesInternal4 = HermesInternal;
+                      debug4.error("[Sentry] " + MobileReplay + " beforeErrorSampling callback threw an error, proceeding with replay capture", closure_128_2);
+                    } else if (arg0 === 1) {
+                      c5 = 3;
+                      throw value;
+                    } else if (arg0 === 2) {
+                      c5 = 3;
+                      const obj5 = { value, done: true };
+                      return obj5;
+                    } else {
+                      closure_128_0 = value;
+                      if (closure_128_0) {
+                        tmp80(closure_128_0);
+                        const debug3 = value(tmp3[1]).debug;
+                        const _HermesInternal3 = HermesInternal;
+                        debug3.log("[Sentry] " + MobileReplay + " Captured recording replay " + closure_128_0 + " for event " + closure_129_0.event_id + ".");
+                        let contexts = closure_129_0.contexts;
+                        if (!contexts) {
+                          contexts = {};
+                        }
+                        closure_129_0.contexts = contexts;
+                        const _Object3 = Object;
+                        const _Object4 = Object;
+                        const obj6 = { replay_id: closure_128_0 };
+                        closure_129_0.contexts.replay = Object.assign(Object.assign({}, closure_129_0.contexts.replay), obj6);
+                        c5 = 3;
+                      } else {
+                        const NATIVE = value(tmp3[2]).NATIVE;
+                        currentReplayId = NATIVE.getCurrentReplayId();
+                        if (!currentReplayId) {
+                          tmp80(null);
+                          const debug = value(tmp3[1]).debug;
+                          const _HermesInternal = HermesInternal;
+                          debug.log("[Sentry] " + MobileReplay + " not sampled for event " + closure_129_0.event_id + ".");
+                        }
+                      }
+                      tmp80(currentReplayId);
+                      const debug2 = value(tmp3[1]).debug;
+                      const _HermesInternal2 = HermesInternal;
+                      debug2.log("[Sentry] " + MobileReplay + " assign already recording replay " + currentReplayId + " for event " + closure_129_0.event_id + ".");
+                      let contexts1 = closure_129_0.contexts;
+                      if (!contexts1) {
+                        contexts1 = {};
+                      }
+                      closure_129_0.contexts = contexts1;
+                      const _Object = Object;
+                      const _Object2 = Object;
+                      const obj9 = { replay_id: currentReplayId };
+                      closure_129_0.contexts.replay = Object.assign(Object.assign({}, closure_129_0.contexts.replay), obj9);
+                    }
+                    const NATIVE2 = value(tmp3[2]).NATIVE;
+                    isHardCrashResult = value(tmp3[3]).isHardCrash(closure_129_0);
+                    NATIVE2.captureReplay(isHardCrashResult);
+                    c4 = 2;
+                    c5 = 1;
+                    const obj8 = value(tmp3[3]);
+                  } catch (tmp80) {
+                    if (tmp4 === c3) {
+                      c5 = tmp2;
+                      throw tmp80;
+                    } else {
+                      c4 = tmp;
+                    }
                   }
                 }
-                if (tmp) {
-                  replay_id.replay_id = tmp;
-                }
-              }
-            });
-            on.on("processMetric", (attributes) => {
+              });
+            },
+        options: merged,
+        getReplayId() {
               let tmp = currentReplayId;
               if (null === currentReplayId) {
-                const NATIVE = closure_0(currentReplayId[2]).NATIVE;
+                const NATIVE = NativeModules.NATIVE;
                 currentReplayId = NATIVE.getCurrentReplayId();
                 tmp = currentReplayId;
                 if (currentReplayId) {
                   tmp = currentReplayId;
                 }
               }
-              if (tmp) {
-                attributes.attributes = attributes.attributes || {};
-                attributes.attributes.replay_id = tmp;
-              }
-            });
-            on.on("beforeAddBreadcrumb", enrichXhrBreadcrumbsForMobileReplay.enrichXhrBreadcrumbsForMobileReplay);
-          }
-          obj = _mod1004;
-        },
-        processEvent(arg0, arg1) {
-          closure_0 = arg0;
-          closure_1 = arg1;
-          return updateCachedReplayId(this, undefined, undefined, function* () {
-            if (c5 === 2) {
-              c5 = 3;
-              throw new TypeError("Generator functions may not be called on executing generators");
-            } else if (tmp6 === 3) {
-              if (arg0 === 1) {
-                throw value;
-              } else if (arg0 === 2) {
-                const obj = { value, done: true };
-                return obj;
-              } else {
-                return { value: "IconComponent", done: null };
-              }
-            } else {
-              try {
-                c5 = 2;
-                let isHardCrashResult = c4;
-                if (0 === c4) {
-                  if (arg0 === 1) {
-                    c5 = 3;
-                    throw value;
-                  } else if (arg0 === 2) {
-                    c5 = 3;
-                    const obj2 = { value, done: true };
-                    return obj2;
-                  } else {
-                    closure_128_0 = undefined;
-                    currentReplayId = undefined;
-                    const exception = value.exception;
-                    let values;
-                    if (null !== exception) {
-                      if (undefined !== exception) {
-                        values = exception.values;
-                      }
-                    }
-                    if (values) {
-                      if (value.exception.values.length > 0) {
-                        if (isHardCrashResult.beforeErrorSampling) {
-                          c3 = 1;
-                          if (false === obj7.beforeErrorSampling(value, tmp3)) {
-                            const debug5 = value(tmp3[1]).debug;
-                            const _HermesInternal5 = HermesInternal;
-                            debug5.log(
-                              "[Sentry] " +
-                                MobileReplay +
-                                " not sent; beforeErrorSampling conditions not met for event " +
-                                value.event_id +
-                                ".",
-                            );
-                            c3 = 0;
-                            c5 = 3;
-                            const obj3 = { value, done: true };
-                            return obj3;
-                          } else {
-                            c3 = 0;
-                          }
-                        }
-                        obj7 = isHardCrashResult;
-                      }
-                    }
-                    c5 = 3;
-                    const obj4 = { value, done: true };
-                    return obj4;
-                  }
-                } else if (1 === isHardCrashResult) {
-                  c3 = 0;
-                  closure_128_2 = tmp80;
-                  const debug4 = value(tmp3[1]).debug;
-                  const _HermesInternal4 = HermesInternal;
-                  debug4.error(
-                    "[Sentry] " +
-                      MobileReplay +
-                      " beforeErrorSampling callback threw an error, proceeding with replay capture",
-                    closure_128_2,
-                  );
-                } else if (arg0 === 1) {
-                  c5 = 3;
-                  throw value;
-                } else if (arg0 === 2) {
-                  c5 = 3;
-                  const obj5 = { value, done: true };
-                  return obj5;
-                } else {
-                  closure_128_0 = value;
-                  if (closure_128_0) {
-                    tmp80(closure_128_0);
-                    const debug3 = value(tmp3[1]).debug;
-                    const _HermesInternal3 = HermesInternal;
-                    debug3.log(
-                      "[Sentry] " +
-                        MobileReplay +
-                        " Captured recording replay " +
-                        closure_128_0 +
-                        " for event " +
-                        closure_129_0.event_id +
-                        ".",
-                    );
-                    let contexts = closure_129_0.contexts;
-                    if (!contexts) {
-                      contexts = {};
-                    }
-                    closure_129_0.contexts = contexts;
-                    const _Object3 = Object;
-                    const _Object4 = Object;
-                    const obj6 = { replay_id: closure_128_0 };
-                    closure_129_0.contexts.replay = Object.assign(
-                      Object.assign({}, closure_129_0.contexts.replay),
-                      obj6,
-                    );
-                    c5 = 3;
-                  } else {
-                    const NATIVE = value(tmp3[2]).NATIVE;
-                    currentReplayId = NATIVE.getCurrentReplayId();
-                    if (!currentReplayId) {
-                      tmp80(null);
-                      const debug = value(tmp3[1]).debug;
-                      const _HermesInternal = HermesInternal;
-                      debug.log("[Sentry] " + MobileReplay + " not sampled for event " + closure_129_0.event_id + ".");
-                    }
-                  }
-                  tmp80(currentReplayId);
-                  const debug2 = value(tmp3[1]).debug;
-                  const _HermesInternal2 = HermesInternal;
-                  debug2.log(
-                    "[Sentry] " +
-                      MobileReplay +
-                      " assign already recording replay " +
-                      currentReplayId +
-                      " for event " +
-                      closure_129_0.event_id +
-                      ".",
-                  );
-                  let contexts1 = closure_129_0.contexts;
-                  if (!contexts1) {
-                    contexts1 = {};
-                  }
-                  closure_129_0.contexts = contexts1;
-                  const _Object = Object;
-                  const _Object2 = Object;
-                  const obj9 = { replay_id: currentReplayId };
-                  closure_129_0.contexts.replay = Object.assign(Object.assign({}, closure_129_0.contexts.replay), obj9);
-                }
-                const NATIVE2 = value(tmp3[2]).NATIVE;
-                isHardCrashResult = value(tmp3[3]).isHardCrash(closure_129_0);
-                NATIVE2.captureReplay(isHardCrashResult);
-                c4 = 2;
-                c5 = 1;
-                const obj8 = value(tmp3[3]);
-              } catch (tmp80) {
-                if (tmp4 === c3) {
-                  c5 = tmp2;
-                  throw tmp80;
-                } else {
-                  c4 = tmp;
-                }
-              }
+              return tmp;
             }
-          });
-        },
-        options: merged,
-        getReplayId() {
-          let tmp = currentReplayId;
-          if (null === currentReplayId) {
-            const NATIVE = NativeModules.NATIVE;
-            currentReplayId = NATIVE.getCurrentReplayId();
-            tmp = currentReplayId;
-            if (currentReplayId) {
-              tmp = currentReplayId;
-            }
-          }
-          return tmp;
-        },
       };
       return obj2;
     }
@@ -346,12 +308,12 @@ export const mobileReplayIntegration = () => {
       name: MobileReplay,
       options,
       getReplayId() {
-        return null;
-      },
+          return null;
+        }
     };
     return obj3;
   } else {
     throw new TypeError("Trying to call a non-function");
   }
   tmp2Result3 = require("metro/00879__.js");
-};
+}

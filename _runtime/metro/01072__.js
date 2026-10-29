@@ -22,9 +22,12 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {}
+  } catch (err) {
+  }
 }
-function NOOP_SET_VISIBILITY() {}
+function NOOP_SET_VISIBILITY() {
+
+}
 class FeedbackManager {
   constructor() {
     tmp = closure_4(this, ScreenshotButtonManager);
@@ -38,17 +41,19 @@ const items = [
     get() {
       const error = new Error("Subclasses must override feedbackComponentName");
       throw error;
-    },
+    }
   },
   {
     key: "initialize",
     value: function initialize(_setVisibility) {
       this._setVisibility = _setVisibility;
-    },
+    }
   },
   {
     key: "reset",
-    value: function reset() {},
+    value: function reset() {
+
+    }
   },
   {
     key: "show",
@@ -60,15 +65,9 @@ const items = [
       } else {
         const _console = console;
         const _HermesInternal = HermesInternal;
-        console.warn(
-          "[Sentry] " +
-            self._feedbackComponentName +
-            " requires 'Sentry.wrap(RootComponent)' to be called before 'show" +
-            self._feedbackComponentName +
-            "()'.",
-        );
+        console.warn("[Sentry] " + self._feedbackComponentName + " requires 'Sentry.wrap(RootComponent)' to be called before 'show" + self._feedbackComponentName + "()'.");
       }
-    },
+    }
   },
   {
     key: "hide",
@@ -80,20 +79,16 @@ const items = [
       } else {
         const _console = console;
         const _HermesInternal = HermesInternal;
-        console.warn(
-          "[Sentry] " +
-            self._feedbackComponentName +
-            " requires 'Sentry.wrap(RootComponent)' before interacting with the widget.",
-        );
+        console.warn("[Sentry] " + self._feedbackComponentName + " requires 'Sentry.wrap(RootComponent)' before interacting with the widget.");
       }
-    },
+    }
   },
   {
     key: "isFormVisible",
     value: function isFormVisible() {
       return this._isVisible;
-    },
-  },
+    }
+  }
 ];
 const importDefaultResult1Result = _createClass(FeedbackManager, null, items);
 importDefaultResult1Result._isVisible = false;
@@ -124,8 +119,8 @@ const items1 = [
     key: "_feedbackComponentName",
     get() {
       return "FeedbackWidget";
-    },
-  },
+    }
+  }
 ];
 const importDefaultResult1Result1 = _createClass(FeedbackWidgetManager, null, items1);
 class FeedbackButtonManager {
@@ -155,8 +150,8 @@ const items2 = [
     key: "_feedbackComponentName",
     get() {
       return "FeedbackButton";
-    },
-  },
+    }
+  }
 ];
 const importDefaultResult1Result2 = _createClass(FeedbackButtonManager, null, items2);
 class ScreenshotButtonManager {
@@ -185,8 +180,8 @@ const items3 = [
     key: "_feedbackComponentName",
     get() {
       return "ScreenshotButton";
-    },
-  },
+    }
+  }
 ];
 const importDefaultResult1Result3 = _createClass(ScreenshotButtonManager, null, items3);
 
@@ -196,18 +191,18 @@ export const BACKGROUND_ANIMATION_DURATION = 200;
 export const FeedbackWidgetManager = importDefaultResult1Result1;
 export const FeedbackButtonManager = importDefaultResult1Result2;
 export const ScreenshotButtonManager = importDefaultResult1Result3;
-export const showFeedbackButton = () => {
+export () => {
   const result = ScreenshotButtonManager(1073).lazyLoadAutoInjectFeedbackButtonIntegration();
   importDefaultResult1Result2.show();
-};
-export const hideFeedbackButton = () => {
+}
+export () => {
   importDefaultResult1Result2.hide();
-};
-export const showFeedbackWidget = () => {
+}
+export () => {
   const result = ScreenshotButtonManager(1073).lazyLoadAutoInjectFeedbackIntegration();
   importDefaultResult1Result1.show();
-};
-export const showScreenshotButton = () => {
+}
+export () => {
   if (obj.isWeb()) {
     const debug = ScreenshotButtonManager(693).debug;
     debug.warn("ScreenshotButton is not supported on Web.");
@@ -217,16 +212,16 @@ export const showScreenshotButton = () => {
     const tmpResult = ScreenshotButtonManager(1073);
   }
   obj = ScreenshotButtonManager(879);
-};
-export const hideScreenshotButton = () => {
+}
+export () => {
   importDefaultResult1Result3.hide();
-};
-export const resetFeedbackButtonManager = () => {
+}
+export () => {
   importDefaultResult1Result2.reset();
-};
-export const resetFeedbackWidgetManager = () => {
+}
+export () => {
   importDefaultResult1Result1.reset();
-};
-export const resetScreenshotButtonManager = () => {
+}
+export () => {
   importDefaultResult1Result3.reset();
-};
+}

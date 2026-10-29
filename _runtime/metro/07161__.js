@@ -1,13 +1,19 @@
 // _runtime/metro/07161__.js
-import _mod17 from "00017__.js";
+import LegacyBaseButton from "../05334_LegacyBaseButton.js";
+import GestureHandlerRefContext from "../07162_GestureHandlerRefContext.js";
+import noop from "00019__.js";
 
-const Platform = _mod17.Platform;
+require = fn;
+const jsx = fn(21).jsx;
 
-export const getShadowStyle = function getShadowStyle(color) {
-  let shadowColor = color.color;
-  ({ offset, radius, opacity } = color);
-  if (shadowColor === undefined) {
-    shadowColor = "#000";
-  }
-  return { shadowOffset, shadowRadius, shadowColor, shadowOpacity };
-};
+export function PanGestureHandler(arg0) {
+  const ref = noop.useRef(null);
+  const obj = { value: ref, children: null };
+  const obj2 = {};
+  const merged = Object.assign(arg0);
+  obj2.ref = ref;
+  obj.children = jsx(LegacyBaseButton.PanGestureHandler, {});
+  return jsx(GestureHandlerRefContext.GestureHandlerRefContext.Provider, { value: ref, children: null });
+}
+export const GestureHandlerRootView = fn(5334).GestureHandlerRootView;
+export const GestureState = fn(5334).State;

@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const logSpanEnd = function logSpanEnd(spanContext) {
+export function logSpanEnd(spanContext) {
   if (_mod699.DEBUG_BUILD) {
     const spanToJSONResult = spanToJSON.spanToJSON(spanContext);
     const description = spanToJSONResult.description;
@@ -32,8 +32,8 @@ export const logSpanEnd = function logSpanEnd(spanContext) {
     debug.log(combined);
     tmpResult2 = spanToJSON;
   }
-};
-export const logSpanStart = function logSpanStart(spanContext) {
+}
+export function logSpanStart(spanContext) {
   if (_mod699.DEBUG_BUILD) {
     const spanToJSONResult = spanToJSON.spanToJSON(spanContext);
     const description = spanToJSONResult.description;
@@ -91,4 +91,4 @@ export const logSpanStart = function logSpanStart(spanContext) {
     debug.log("" + combined + "\n  " + items.join("\n  "));
     const tmpResult5 = spanToJSON;
   }
-};
+}

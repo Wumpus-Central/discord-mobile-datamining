@@ -567,9 +567,9 @@ let closure_2 = {};
 let closure_4 = 0;
 let closure_5 = { unsafelyIgnoreFunctions: true };
 
-export const create = function create(arg0, arg1) {
+export function create(arg0, arg1) {
   return addNestedProperty(null, arg0, arg1);
-};
-export const diff = function diff(arr, arg1, arg2) {
+}
+export function diff(arr, arg1, arg2) {
   return diffProperties(null, arr, arg1, arg2);
-};
+}

@@ -450,7 +450,7 @@ let items = [
 ];
 
 export default _createClass(AnimatedColor, items);
-export const getRgbaValueAndNativeColor = function getRgbaValueAndNativeColor(arg0) {
+export function getRgbaValueAndNativeColor(arg0) {
   let tmp = processColor(arg0);
   if (tmp == null) {
     tmp = rgbaValue;
@@ -475,4 +475,4 @@ export const getRgbaValueAndNativeColor = function getRgbaValueAndNativeColor(ar
     obj = { nativeColor: tmp, rgbaValue };
   }
   return obj;
-};
+}

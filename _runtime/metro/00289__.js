@@ -19,14 +19,14 @@ function getExtendedError(value, componentStack) {
   }
 }
 
-export const onUncaughtError = function onUncaughtError(value, componentStack) {
+export function onUncaughtError(value, componentStack) {
   const tmp = getExtendedError(value, componentStack);
   _modDef189.handleException(tmp, true);
-};
-export const onCaughtError = function onCaughtError(value, componentStack) {
+}
+export function onCaughtError(value, componentStack) {
   const tmp = getExtendedError(value, componentStack);
   _modDef189.handleException(tmp, false);
-};
-export const onRecoverableError = function onRecoverableError(value, componentStack) {
+}
+export function onRecoverableError(value, componentStack) {
   console.warn(getExtendedError(value, componentStack));
-};
+}

@@ -8,7 +8,7 @@ const re3 = /^(@+)?(\+|#+)?[rs]?$/g;
 const re4 = /(\*)(0+)|(#+)(0+)|(0+)/g;
 const re5 = /^(0+)$/;
 
-export const parseNumberSkeletonFromString = function parseNumberSkeletonFromString(str) {
+export function parseNumberSkeletonFromString(str) {
   if (0 === str.length) {
     const _Error3 = Error;
     const error = new Error("Number skeleton cannot be empty");
@@ -46,10 +46,10 @@ export const parseNumberSkeletonFromString = function parseNumberSkeletonFromStr
     }
     return items;
   }
-};
-export const parseNumberSkeleton = function parseNumberSkeleton(arg0) {
+}
+export function parseNumberSkeleton(arg0) {
   if (0 < arg0.length) {
     const stem = arg0[num].stem;
   }
   return {};
-};
+}

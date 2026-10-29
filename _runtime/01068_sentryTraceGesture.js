@@ -51,7 +51,7 @@ export const DEFAULT_BREADCRUMB_CATEGORY = "gesture";
 export const DEFAULT_BREADCRUMB_TYPE = "user";
 export const GESTURE_POSTFIX_LENGTH = 14;
 export const ACTION_GESTURE_FALLBACK = "gesture";
-export const sentryTraceGesture = function sentryTraceGesture(elementId, handlers) {
+export function sentryTraceGesture(elementId, handlers) {
   _require = elementId;
   if (handlers) {
     if (handlers.handlers) {
@@ -104,4 +104,4 @@ export const sentryTraceGesture = function sentryTraceGesture(elementId, handler
     debug.warn("[GestureTracing] Gesture can not be undefined");
     return handlers;
   }
-};
+}

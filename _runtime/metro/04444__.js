@@ -1,54 +1,44 @@
 // _runtime/metro/04444__.js
-import _typeof_mod from "04287__.js";
-import startOfISOWeek_mod from "../04445_startOfISOWeek.js";
-import requiredArgs_mod from "../04288_requiredArgs.js";
+import module_4292_mod from "04292__.js";
+import module_4445_mod from "04445__.js";
+import module_4448_mod from "04448__.js";
+import requiredArgs_mod from "../04289_requiredArgs.js";
 
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj = { default: _typeof };
+let module_4292 = module_4292_mod;
+if (!module_4292) {
+  const obj = { default: module_4292 };
   let tmp3 = obj;
 } else {
-  tmp3 = _typeof;
+  tmp3 = module_4292;
 }
-_typeof = tmp3;
-let startOfISOWeek = startOfISOWeek_mod;
-if (!startOfISOWeek) {
-  const obj2 = { default: startOfISOWeek };
+module_4292 = tmp3;
+let module_4445 = module_4445_mod;
+if (!module_4445) {
+  const obj2 = { default: module_4445 };
   let tmp5 = obj2;
 } else {
-  tmp5 = startOfISOWeek;
+  tmp5 = module_4445;
 }
-startOfISOWeek = tmp5;
-let requiredArgs = requiredArgs_mod;
-if (!requiredArgs) {
-  const obj3 = { default: requiredArgs };
+module_4445 = tmp5;
+let module_4448 = module_4448_mod;
+if (!module_4448) {
+  const obj3 = { default: module_4448 };
   let tmp7 = obj3;
 } else {
-  tmp7 = requiredArgs;
+  tmp7 = module_4448;
 }
-requiredArgs = tmp7;
+module_4448 = tmp7;
+let requiredArgs = requiredArgs_mod;
+if (!requiredArgs) {
+  const obj4 = { default: requiredArgs };
+  let tmp9 = obj4;
+} else {
+  tmp9 = requiredArgs;
+}
+requiredArgs = tmp9;
 
-export default function getISOWeekYear(arg0) {
-  requiredArgs.default(1, arguments);
-  const defaultResult1 = _typeof.default(arg0);
-  const fullYear = defaultResult1.getFullYear();
-  const date = new Date(0);
-  date.setFullYear(fullYear + 1, 0, 4);
-  date.setHours(0, 0, 0, 0);
-  const date1 = new Date(0);
-  date1.setFullYear(fullYear, 0, 4);
-  date1.setHours(0, 0, 0, 0);
-  const defaultResult2 = startOfISOWeek.default(date);
-  const time = defaultResult1.getTime();
-  if (time >= defaultResult2.getTime()) {
-    let sum = fullYear + 1;
-  } else {
-    const time1 = defaultResult1.getTime();
-    sum = fullYear;
-    if (time1 < defaultResult3.getTime()) {
-      sum = fullYear - 1;
-    }
-  }
-  return sum;
+export default function addISOWeekYears(arg0, arg1) {
+  requiredArgs.default(2, arguments);
+  return module_4448.default(arg0, module_4445.default(arg0) + module_4292.default(arg1));
 };
 export default exports.default;

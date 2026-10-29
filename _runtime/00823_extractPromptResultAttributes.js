@@ -5,7 +5,7 @@ import _slicedToArray from "metro/00032__.js";
 
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const extractPromptResultAttributes = function extractPromptResultAttributes(protocolVersion, recordOutputs) {
+export function extractPromptResultAttributes(protocolVersion, recordOutputs) {
   let obj = {};
   if (obj2.isValidContentItem(protocolVersion)) {
     let tmp4 = recordOutputs;
@@ -74,8 +74,8 @@ export const extractPromptResultAttributes = function extractPromptResultAttribu
     return obj;
   }
   obj2 = obj(messages[2]);
-};
-export const extractToolResultAttributes = function extractToolResultAttributes(protocolVersion, recordOutputs) {
+}
+export function extractToolResultAttributes(protocolVersion, recordOutputs) {
   if (obj.isValidContentItem(protocolVersion)) {
     const _Array = Array;
     if (Array.isArray(protocolVersion.content)) {
@@ -157,4 +157,4 @@ export const extractToolResultAttributes = function extractToolResultAttributes(
     return {};
   }
   obj = validateMcpServerInstance;
-};
+}

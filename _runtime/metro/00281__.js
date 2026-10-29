@@ -9,24 +9,19 @@ importDefault = arg2;
 importAll = arg3;
 const dependencyMap = arg6;
 
-export const createPublicRootInstance = function createPublicRootInstance(containerTag) {
+export function createPublicRootInstance(containerTag) {
   return _mod140.createReactNativeDocument(containerTag);
-};
-export const createPublicInstance = function createPublicInstance(
-  nativeTag,
-  viewConfig,
-  internalInstanceHandle,
-  publicRootInstance,
-) {
+}
+export function createPublicInstance(nativeTag, viewConfig, internalInstanceHandle, publicRootInstance) {
   return new _modDef143(nativeTag, viewConfig, internalInstanceHandle, publicRootInstance);
-};
-export const createPublicTextInstance = function createPublicTextInstance(stateNode, arg1) {
+}
+export function createPublicTextInstance(stateNode, arg1) {
   return new _modDef151(stateNode, arg1);
-};
-export const getNativeTagFromPublicInstance = function getNativeTagFromPublicInstance(hostInstance) {
+}
+export function getNativeTagFromPublicInstance(hostInstance) {
   return hostInstance.__nativeTag;
-};
-export const getNodeFromPublicInstance = function getNodeFromPublicInstance(instance) {
+}
+export function getNodeFromPublicInstance(instance) {
   let nodeFromInternalInstanceHandle = null;
   if (null != instance.__internalInstanceHandle) {
     nodeFromInternalInstanceHandle = renderElementAll.getNodeFromInternalInstanceHandle(
@@ -34,11 +29,9 @@ export const getNodeFromPublicInstance = function getNodeFromPublicInstance(inst
     );
   }
   return nodeFromInternalInstanceHandle;
-};
-export const getInternalInstanceHandleFromPublicInstance = function getInternalInstanceHandleFromPublicInstance(
-  _internalInstanceHandle,
-) {
+}
+export function getInternalInstanceHandleFromPublicInstance(_internalInstanceHandle) {
   return null != _internalInstanceHandle._internalInstanceHandle
     ? _internalInstanceHandle._internalInstanceHandle
     : _internalInstanceHandle.__internalInstanceHandle;
-};
+}

@@ -1,13 +1,14 @@
 // _runtime/metro/08073__.js
-import _modDef8018 from "08018__.js";
+import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
+import _modDef8056 from "08056__.js";
+import _modDef8074 from "08074__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
-import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Marker = importDefault;
+const FeMerge = fn;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,15 +27,16 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
+_possibleConstructorReturnDefault;
 const jsx = fn(21).jsx;
-class Marker {
+class FeMerge {
   constructor() {
     self = this;
-    tmp = c2(this, Marker);
-    tmp2 = closure_4;
-    obj = closure_4(Marker);
-    tmp3 = closure_3;
-    if (metroRequire()) {
+    tmp = closure_3(this, FeMerge);
+    tmp2 = hasOwnProperty;
+    obj = hasOwnProperty(FeMerge);
+    tmp3 = closure_4;
+    if (closure_7()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,47 +49,32 @@ class Marker {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Marker, _modDef8018);
+_inherits(FeMerge, _modDef8056);
 const entry = {
   key: "render",
   value: function render() {
     const self = this;
-    const props = this.props;
-    ({ viewBox, preserveAspectRatio, markerWidth, markerHeight, children } = props);
-    const obj2 = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
     const obj = {
-      name: props.id,
-      refX: props.refX,
-      refY: props.refY,
-      markerUnits: props.markerUnits,
-      orient: String(props.orient),
-      markerWidth,
-      markerHeight,
-    };
-    const merged = Object.assign(obj);
-    const merged1 = Object.assign(Marker(8007)({ viewBox, preserveAspectRatio }));
-    obj2.children = children;
-    return jsx(Marker(8074), {
       ref(arg0) {
         return self.refMethod(arg0);
       },
-    });
+    };
+    const merged = Object.assign(FeMerge(8055).extractFilter(this.props));
+    const obj2 = FeMerge(8055);
+    const merged1 = Object.assign(FeMerge(8055).extractFeMerge(this.props, this));
+    return (
+      <tmp
+        ref={function ref(arg0) {
+          return self.refMethod(arg0);
+        }}
+      />
+    );
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Marker, items);
-importDefaultResultResult.displayName = "Marker";
-importDefaultResultResult.defaultProps = {
-  refX: 0,
-  refY: 0,
-  orient: "0",
-  markerWidth: 3,
-  markerHeight: 3,
-  markerUnits: "strokeWidth",
-};
+const importDefaultResultResult = _createClass(FeMerge, items);
+importDefaultResultResult.displayName = "FeMerge";
+let merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

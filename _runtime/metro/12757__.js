@@ -1,6 +1,4 @@
 // _runtime/metro/12757__.js
+import _mod12758 from "12758__.js";
 
-export const escapeStringForRegex = function escapeStringForRegex(str) {
-  str = str.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&");
-  return str.replace(/-/g, "\\x2d");
-};
+export default _mod12758;

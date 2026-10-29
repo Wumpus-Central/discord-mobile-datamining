@@ -101,7 +101,7 @@ function updateSession(ipAddress) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const closeSession = function closeSession(status, status2) {
+export function closeSession(status, status2) {
   if (status2) {
     const obj2 = { status: status2 };
     let obj = obj2;
@@ -112,8 +112,8 @@ export const closeSession = function closeSession(status, status2) {
     }
   }
   updateSession(status, obj);
-};
-export const makeSession = function makeSession(arg0) {
+}
+export function makeSession(arg0) {
   const timestampInSecondsResult = dateTimestampInSeconds.timestampInSeconds();
   const obj2 = {
     sid: null,
@@ -163,5 +163,5 @@ export const makeSession = function makeSession(arg0) {
     updateSession(obj2, arg0);
   }
   return obj2;
-};
+}
 export { updateSession };

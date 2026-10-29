@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/premium/guild_boosting/tier_icons/flower_star/light",
-  width: 24,
-  height: 23,
+  httpServerLocation: "/assets/images/native/premium/illustrations",
+  width: 180,
+  height: 108,
   scales: [2, 3],
-  hash: "34f1b491773518eba109fd7be7fe4cb9",
-  name: "tier_1_24px",
+  hash: "fdbdffcc03357c67352ab2f9dff83bf6",
+  name: "img_what_you_lose_profile_tier1_light",
   type: "png",
 });

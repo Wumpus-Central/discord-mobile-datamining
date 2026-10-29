@@ -1,6 +1,6 @@
 // _runtime/metro/01225__.js
 
-export const isOneofGroup = function isOneofGroup(oneofKind) {
+export function isOneofGroup(oneofKind) {
   if (typeof oneofKind === "object") {
     if (null !== oneofKind) {
       if (oneofKind.hasOwnProperty("oneofKind")) {
@@ -21,11 +21,11 @@ export const isOneofGroup = function isOneofGroup(oneofKind) {
     }
   }
   return false;
-};
-export const getOneofValue = function getOneofValue(arg0, arg1) {
+}
+export function getOneofValue(arg0, arg1) {
   return arg0[arg1];
-};
-export const setOneofValue = function setOneofValue(oneofKind, oneofKind2, arg2) {
+}
+export function setOneofValue(oneofKind, oneofKind2, arg2) {
   if (undefined !== oneofKind.oneofKind) {
     oneofKind = oneofKind.oneofKind;
     delete tmp2[tmp];
@@ -34,8 +34,8 @@ export const setOneofValue = function setOneofValue(oneofKind, oneofKind2, arg2)
   if (undefined !== arg2) {
     oneofKind[oneofKind2] = arg2;
   }
-};
-export const setUnknownOneofValue = function setUnknownOneofValue(oneofKind, oneofKind2, arg2) {
+}
+export function setUnknownOneofValue(oneofKind, oneofKind2, arg2) {
   if (undefined !== oneofKind.oneofKind) {
     oneofKind = oneofKind.oneofKind;
     delete tmp2[tmp];
@@ -44,14 +44,14 @@ export const setUnknownOneofValue = function setUnknownOneofValue(oneofKind, one
   if (tmp3) {
     oneofKind[oneofKind2] = arg2;
   }
-};
-export const clearOneofValue = function clearOneofValue(oneofKind) {
+}
+export function clearOneofValue(oneofKind) {
   if (undefined !== oneofKind.oneofKind) {
     oneofKind = oneofKind.oneofKind;
     delete tmp[tmp2];
   }
   oneofKind.oneofKind = undefined;
-};
-export const getSelectedOneofValue = function getSelectedOneofValue(oneofKind) {
+}
+export function getSelectedOneofValue(oneofKind) {
   return undefined !== oneofKind.oneofKind ? oneofKind[oneofKind.oneofKind] : undefined;
-};
+}

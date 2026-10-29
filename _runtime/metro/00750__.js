@@ -99,7 +99,7 @@ function getFilenameToDebugIdMap(arg0) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const getDebugImagesForResources = function getDebugImagesForResources(arg0, arg1) {
+export function getDebugImagesForResources(arg0, arg1) {
   const tmp = getFilenameToDebugIdMap(arg0);
   const items = [];
   if (tmp) {
@@ -122,5 +122,5 @@ export const getDebugImagesForResources = function getDebugImagesForResources(ar
   } else {
     return items;
   }
-};
+}
 export { getFilenameToDebugIdMap };

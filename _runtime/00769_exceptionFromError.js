@@ -31,7 +31,7 @@ function exceptionFromError(fn, name) {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const _enhanceErrorWithSentryInfo = function _enhanceErrorWithSentryInfo(__sentry_fetch_url_host__) {
+export function _enhanceErrorWithSentryInfo(__sentry_fetch_url_host__) {
   let isErrorResult = _mod703.isError(__sentry_fetch_url_host__);
   if (isErrorResult) {
     isErrorResult = "__sentry_fetch_url_host__" in __sentry_fetch_url_host__;
@@ -47,8 +47,8 @@ export const _enhanceErrorWithSentryInfo = function _enhanceErrorWithSentryInfo(
     combined = message;
   }
   return combined;
-};
-export const eventFromMessage = function eventFromMessage(fn, value, arg2) {
+}
+export function eventFromMessage(fn, value, arg2) {
   let str = arg2;
   if (arg2 === undefined) {
     str = "info";
@@ -87,8 +87,8 @@ export const eventFromMessage = function eventFromMessage(fn, value, arg2) {
     return obj;
   }
   obj6 = _mod703;
-};
-export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, arg1, name, data) {
+}
+export function eventFromUnknownInput(getOptions, arg1, name, data) {
   data = undefined;
   if (data != null) {
     data = data.data;
@@ -230,8 +230,8 @@ export const eventFromUnknownInput = function eventFromUnknownInput(getOptions, 
   }
   obj5.event_id = event_id;
   return obj5;
-};
+}
 export { exceptionFromError };
-export const parseStackFrames = function parseStackFrames(fn, stack) {
+export function parseStackFrames(fn, stack) {
   return fn(stack.stack || "", 1);
-};
+}

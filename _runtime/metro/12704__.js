@@ -1,29 +1,94 @@
 // _runtime/metro/12704__.js
+import _mod12657 from "12657__.js";
+import _mod12701 from "12701__.js";
 
-export const isSentryRequestUrl = function isSentryRequestUrl(arr, getDsn) {
-  let dsn = getDsn;
-  if (getDsn) {
-    dsn = getDsn.getDsn();
-  }
-  let tunnel = getDsn;
-  if (getDsn) {
-    tunnel = getDsn.getOptions().tunnel;
-  }
-  let tmp2 = dsn && arr.includes(dsn.host);
-  if (!tmp2) {
-    let flag = false;
-    if (tunnel) {
-      let substr = arr;
-      if ("/" === arr[arr.length - 1]) {
-        substr = arr.slice(0, -1);
-      }
-      let substr1 = tunnel;
-      if ("/" === tunnel[tunnel.length - 1]) {
-        substr1 = tunnel.slice(0, -1);
-      }
-      flag = substr === substr1;
+function consumeRaw(arg0) {
+  return this.Raw(arg0, null, true);
+}
+function consumeRule() {
+  return this.parseWithFallback(this.Rule, consumeRaw);
+}
+function consumeRawDeclaration(arg0) {
+  return this.Raw(arg0, _mod12701.mode.semicolonIncluded, true);
+}
+function consumeDeclaration() {
+  const self = this;
+  if (this.scanner.tokenType === Semicolon) {
+    const call = consumeRawDeclaration.call;
+    const tokenIndex = self.scanner.tokenIndex;
+    if (typeof call === "unknown") {
+      let RawResult = self.Raw(tokenIndex, _mod12701.mode.semicolonIncluded, true);
+    } else {
+      RawResult = call(self, tokenIndex);
     }
-    tmp2 = flag;
+    return RawResult;
+  } else {
+    if (self.scanner.tokenType === tmp) {
+      self.scanner.next();
+      const iter = self.scanner;
+    }
+    return self.parseWithFallback(self.Declaration, consumeRawDeclaration);
   }
-  return tmp2;
+}
+const WhiteSpace = _mod12657.TYPE.WhiteSpace;
+const Comment = _mod12657.TYPE.Comment;
+const Semicolon = _mod12657.TYPE.Semicolon;
+const AtKeyword = _mod12657.TYPE.AtKeyword;
+const LeftCurlyBracket = _mod12657.TYPE.LeftCurlyBracket;
+const RightCurlyBracket = _mod12657.TYPE.RightCurlyBracket;
+const obj = {
+  name: "Block",
+  structure: null,
+  parse(arg0) {
+    const tmp = arg0 ? consumeDeclaration : consumeRule;
+    const self = this;
+    const list = this.createList();
+    this.eat(LeftCurlyBracket);
+    if (!this.scanner.eof) {
+      const tokenType = self.scanner.tokenType;
+      while (RightCurlyBracket !== tokenType) {
+        if (WhiteSpace !== tokenType) {
+          if (Comment !== tokenType) {
+            if (AtKeyword === tokenType) {
+              let arr = list.push(self.parseWithFallback(self.Atrule, consumeRaw));
+            } else {
+              let call = tmp.call;
+              let arr3 = list.push(typeof call === "unknown" ? tmp() : call(self));
+            }
+          }
+          if (self.scanner.eof) {
+            break;
+          }
+        }
+        let iter = self.scanner;
+        let nextResult = iter.next();
+      }
+    }
+    if (!self.scanner.eof) {
+      self.eat(RightCurlyBracket);
+    }
+    const element = {
+      type: "Block",
+      loc: self.getLocation(this.scanner.tokenStart, self.scanner.tokenStart),
+      children: list,
+    };
+    return element;
+  },
+  generate(arg0) {
+    this.chunk("{");
+    this.children(arg0, function (type) {
+      if ("Declaration" === type.type) {
+        const self = this;
+        this.chunk(";");
+      }
+    });
+    this.chunk("}");
+  },
+  walkContext: "block",
 };
+const obj2 = { children: null };
+const items = [["Atrule", "Rule", "Declaration"]];
+obj2.children = items;
+obj.structure = obj2;
+
+export default obj;

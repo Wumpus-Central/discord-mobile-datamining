@@ -5,7 +5,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const handleCallbackErrors = function handleCallbackErrors(fn, arg1) {
+export function handleCallbackErrors(fn, arg1) {
   fn = arg2;
   if (arg2 === undefined) {
     fn = function t() {};
@@ -45,4 +45,4 @@ export const handleCallbackErrors = function handleCallbackErrors(fn, arg1) {
     tmp2();
     throw tmp10;
   }
-};
+}

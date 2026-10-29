@@ -1,7 +1,7 @@
 // _runtime/metro/00768__.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const addUserAgentToTransportHeaders = function addUserAgentToTransportHeaders(_metadata) {
+export function addUserAgentToTransportHeaders(_metadata) {
   _metadata = _metadata._metadata;
   let sdk;
   if (_metadata != null) {
@@ -46,4 +46,4 @@ export const addUserAgentToTransportHeaders = function addUserAgentToTransportHe
   const merged2 = Object.assign(headers);
   obj.headers = {};
   _metadata.transportOptions = obj;
-};
+}

@@ -1,50 +1,270 @@
 // _runtime/metro/12678__.js
-import _mod12636 from "12636__.js";
-import spanTimeInputToSeconds from "../12641_spanTimeInputToSeconds.js";
-import SEMANTIC_ATTRIBUTE_CACHE_HIT from "../12651_SEMANTIC_ATTRIBUTE_CACHE_HIT.js";
-import _mod12664 from "12664__.js";
-
-require = arg1;
-const dependencyMap = arg6;
-
-export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
-  if (activeSpan === undefined) {
-    activeSpan = spanTimeInputToSeconds.getActiveSpan();
-  }
-  let rootSpan = activeSpan;
-  if (activeSpan) {
-    rootSpan = spanTimeInputToSeconds.getRootSpan(activeSpan);
-  }
-  if (rootSpan) {
-    if (_mod12664.DEBUG_BUILD) {
-      const logger = _mod12636.logger;
-      const _HermesInternal = HermesInternal;
-      logger.log("[Measurement] Setting measurement on root span: " + arg0 + " = " + arg1 + " " + arg2);
-    }
-    const obj2 = {};
-    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE] = arg1;
-    obj2[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
-    rootSpan.addEvent(arg0, obj2);
-  }
-};
-export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
-  if (arr) {
-    if (0 !== arr.length) {
-      let obj = {};
-      const item = arr.forEach((attributes) => {
-        const tmp = attributes.attributes || {};
-        const tmp2 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT];
-        const tmp3 = tmp[SEMANTIC_ATTRIBUTE_CACHE_HIT.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_VALUE];
-        let tmp4 = typeof tmp2 === "string";
-        if (typeof tmp2 === "string") {
-          tmp4 = typeof tmp3 === "number";
+function getTrace(arg0) {
+  closure_0 = arg0;
+  c1 = null;
+  if (null !== this.matched) {
+    function hasMatch(matched) {
+      if (Array.isArray(matched.match)) {
+        let num = 0;
+        if (0 < matched.match.length) {
+          while (!hasMatch(matched.match[num])) {
+            num = num + 1;
+          }
+          const syntax = matched.syntax;
+          let tmp7 = null !== syntax;
+          if (tmp7) {
+            let tmp8 = "Type" === syntax.type;
+            if (!tmp8) {
+              tmp8 = "Property" === syntax.type;
+            }
+            if (!tmp8) {
+              tmp8 = "Keyword" === syntax.type;
+            }
+            tmp7 = tmp8;
+          }
+          if (tmp7) {
+            items1.unshift(matched.syntax);
+          }
+          return true;
         }
-        if (tmp4) {
-          obj = { value: tmp3, unit: tmp2 };
-          obj[attributes.name] = obj;
+      } else if (matched.node === closure_0) {
+        const syntax2 = matched.syntax;
+        let tmp3 = null !== syntax2;
+        if (tmp3) {
+          let tmp2 = "Type" === syntax2.type;
+          if (!tmp2) {
+            tmp2 = "Property" === syntax2.type;
+          }
+          if (!tmp2) {
+            tmp2 = "Keyword" === syntax2.type;
+          }
+          tmp3 = tmp2;
         }
-      });
-      return obj;
+        if (tmp3) {
+          const items = [matched.syntax];
+          items1 = items;
+        } else {
+          items1 = [];
+        }
+        return true;
+      }
+      return false;
     }
+    hasMatch(tmp.matched);
   }
+  return c1;
+}
+
+export default {
+  getTrace,
+  isType(arg0, arg1) {
+    const self = this;
+    closure_0 = arg1;
+    const call = getTrace.call;
+    if (typeof call === "unknown") {
+      closure_0 = arg0;
+      c1 = null;
+      if (null !== self.matched) {
+        function hasMatch(matched) {
+          if (Array.isArray(matched.match)) {
+            let num = 0;
+            if (0 < matched.match.length) {
+              while (!hasMatch(matched.match[num])) {
+                num = num + 1;
+              }
+              const syntax = matched.syntax;
+              let tmp7 = null !== syntax;
+              if (tmp7) {
+                let tmp8 = "Type" === syntax.type;
+                if (!tmp8) {
+                  tmp8 = "Property" === syntax.type;
+                }
+                if (!tmp8) {
+                  tmp8 = "Keyword" === syntax.type;
+                }
+                tmp7 = tmp8;
+              }
+              if (tmp7) {
+                items1.unshift(matched.syntax);
+              }
+              return true;
+            }
+          } else if (matched.node === closure_0) {
+            const syntax2 = matched.syntax;
+            let tmp3 = null !== syntax2;
+            if (tmp3) {
+              let tmp2 = "Type" === syntax2.type;
+              if (!tmp2) {
+                tmp2 = "Property" === syntax2.type;
+              }
+              if (!tmp2) {
+                tmp2 = "Keyword" === syntax2.type;
+              }
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              const items = [matched.syntax];
+              items1 = items;
+            } else {
+              items1 = [];
+            }
+            return true;
+          }
+          return false;
+        }
+        hasMatch(self.matched);
+      }
+      let callResult = c1;
+    } else {
+      callResult = call(self, arg0);
+    }
+    return (
+      null !== callResult &&
+      callResult.some((type) => {
+        let tmp = "Type" === type.type;
+        if (tmp) {
+          tmp = type.name === closure_0;
+        }
+        return tmp;
+      })
+    );
+  },
+  isProperty(arg0, arg1) {
+    const self = this;
+    closure_0 = arg1;
+    const call = getTrace.call;
+    if (typeof call === "unknown") {
+      closure_0 = arg0;
+      c1 = null;
+      if (null !== self.matched) {
+        function hasMatch(matched) {
+          if (Array.isArray(matched.match)) {
+            let num = 0;
+            if (0 < matched.match.length) {
+              while (!hasMatch(matched.match[num])) {
+                num = num + 1;
+              }
+              const syntax = matched.syntax;
+              let tmp7 = null !== syntax;
+              if (tmp7) {
+                let tmp8 = "Type" === syntax.type;
+                if (!tmp8) {
+                  tmp8 = "Property" === syntax.type;
+                }
+                if (!tmp8) {
+                  tmp8 = "Keyword" === syntax.type;
+                }
+                tmp7 = tmp8;
+              }
+              if (tmp7) {
+                items1.unshift(matched.syntax);
+              }
+              return true;
+            }
+          } else if (matched.node === closure_0) {
+            const syntax2 = matched.syntax;
+            let tmp3 = null !== syntax2;
+            if (tmp3) {
+              let tmp2 = "Type" === syntax2.type;
+              if (!tmp2) {
+                tmp2 = "Property" === syntax2.type;
+              }
+              if (!tmp2) {
+                tmp2 = "Keyword" === syntax2.type;
+              }
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              const items = [matched.syntax];
+              items1 = items;
+            } else {
+              items1 = [];
+            }
+            return true;
+          }
+          return false;
+        }
+        hasMatch(self.matched);
+      }
+      let callResult = c1;
+    } else {
+      callResult = call(self, arg0);
+    }
+    return (
+      null !== callResult &&
+      callResult.some((type) => {
+        let tmp = "Property" === type.type;
+        if (tmp) {
+          tmp = type.name === closure_0;
+        }
+        return tmp;
+      })
+    );
+  },
+  isKeyword(arg0) {
+    const self = this;
+    const call = getTrace.call;
+    if (typeof call === "unknown") {
+      closure_0 = arg0;
+      let items1 = null;
+      if (null !== self.matched) {
+        function hasMatch(matched) {
+          if (Array.isArray(matched.match)) {
+            let num = 0;
+            if (0 < matched.match.length) {
+              while (!hasMatch(matched.match[num])) {
+                num = num + 1;
+              }
+              const syntax = matched.syntax;
+              let tmp7 = null !== syntax;
+              if (tmp7) {
+                let tmp8 = "Type" === syntax.type;
+                if (!tmp8) {
+                  tmp8 = "Property" === syntax.type;
+                }
+                if (!tmp8) {
+                  tmp8 = "Keyword" === syntax.type;
+                }
+                tmp7 = tmp8;
+              }
+              if (tmp7) {
+                items1.unshift(matched.syntax);
+              }
+              return true;
+            }
+          } else if (matched.node === closure_0) {
+            const syntax2 = matched.syntax;
+            let tmp3 = null !== syntax2;
+            if (tmp3) {
+              let tmp2 = "Type" === syntax2.type;
+              if (!tmp2) {
+                tmp2 = "Property" === syntax2.type;
+              }
+              if (!tmp2) {
+                tmp2 = "Keyword" === syntax2.type;
+              }
+              tmp3 = tmp2;
+            }
+            if (tmp3) {
+              const items = [matched.syntax];
+              items1 = items;
+            } else {
+              items1 = [];
+            }
+            return true;
+          }
+          return false;
+        }
+        hasMatch(self.matched);
+      }
+      let callResult = items1;
+    } else {
+      callResult = call(self, arg0);
+    }
+    let someResult = null !== callResult;
+    if (someResult) {
+      someResult = callResult.some((type) => "Keyword" === type.type);
+    }
+    return someResult;
+  },
 };

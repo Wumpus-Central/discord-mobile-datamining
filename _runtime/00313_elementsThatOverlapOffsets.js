@@ -40,12 +40,12 @@ function elementsThatOverlapOffsets(items, getItemCount, getCellMetricsApprox) {
 }
 
 export { elementsThatOverlapOffsets };
-export const newRangeCount = function newRangeCount(arg0, arg1) {
+export function newRangeCount(arg0, arg1) {
   const sum = arg1.last - arg1.first + 1;
   const sum1 = 1 + Math.min(arg1.last, arg0.last);
   return sum - Math.max(0, sum1 - Math.max(arg1.first, arg0.first));
-};
-export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
+}
+export function computeWindowedRenderLimits(
   getItemCount,
   result2,
   tmpResult6,
@@ -243,8 +243,8 @@ export const computeWindowedRenderLimits = function computeWindowedRenderLimits(
       throw error;
     }
   }
-};
-export const keyExtractor = function keyExtractor(key, arg1) {
+}
+export function keyExtractor(key, arg1) {
   if (typeof key === "object") {
     key = undefined;
     if (key != null) {
@@ -265,4 +265,4 @@ export const keyExtractor = function keyExtractor(key, arg1) {
     }
   }
   id = String(arg1);
-};
+}

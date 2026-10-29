@@ -1,7 +1,7 @@
 // _runtime/metro/00331__.js
 import _slicedToArray from "00032__.js";
 
-export const getImageSourcesFromImageProps = function getImageSourcesFromImageProps(source) {
+export function getImageSourcesFromImageProps(source) {
   let tmp = width(height[1])(source.source);
   ({ referrerPolicy, src, srcSet, width } = source);
   height = source.height;
@@ -72,4 +72,4 @@ export const getImageSourcesFromImageProps = function getImageSourcesFromImagePr
     }
   }
   return tmp2;
-};
+}

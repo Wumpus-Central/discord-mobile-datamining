@@ -1,6 +1,6 @@
 // _runtime/01276_read.js
 
-export const read = (self, arg1, arg2, arg3, arg4) => {
+export (self, arg1, arg2, arg3, arg4) => {
   let num = 0;
   const diff = 8 * arg4 - arg3;
   if (arg2) {
@@ -28,7 +28,7 @@ export const read = (self, arg1, arg2, arg3, arg4) => {
       tmp11 = sum1;
     } while (0 < sum1);
   }
-  let sum4 = tmp10 & ((num3 << tmp12) - num3);
+  let sum4 = tmp10 & (num3 << tmp12) - num3;
   let sum3 = tmp11 + arg3;
   let tmp15 = sum4;
   if (sum3 > 0) {
@@ -62,8 +62,8 @@ export const read = (self, arg1, arg2, arg3, arg4) => {
     num3 = -1;
   }
   return num3 * sum6 * Math.pow(2, diff3 - arg3);
-};
-export const write = (self, arg1, arg2, arg3, arg4, arg5) => {
+}
+export (self, arg1, arg2, arg3, arg4, arg5) => {
   let num = 0;
   const diff = 8 * arg5 - arg4;
   if (23 === arg4) {
@@ -152,7 +152,7 @@ export const write = (self, arg1, arg2, arg3, arg4, arg5) => {
         tmp23 = diff5;
       } while (8 <= diff5);
     }
-    let result5 = (num12 << tmp23) | tmp22;
+    let result5 = num12 << tmp23 | tmp22;
     let sum3 = diff1 + tmp23;
     let sum4 = tmp21;
     let tmp27 = tmp21;
@@ -166,7 +166,7 @@ export const write = (self, arg1, arg2, arg3, arg4, arg5) => {
       } while (0 < sum3);
     }
     const diff6 = arg2 + tmp27 - num7;
-    self[diff6] = self[diff6] | (128 * num8);
+    self[diff6] = self[diff6] | 128 * num8;
   }
   let num13 = 0;
   if (isNaN(absolute)) {
@@ -174,4 +174,4 @@ export const write = (self, arg1, arg2, arg3, arg4, arg5) => {
   }
   num11 = num13;
   num12 = diff2;
-};
+}

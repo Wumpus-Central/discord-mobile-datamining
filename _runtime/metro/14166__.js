@@ -1,19 +1,13 @@
 // _runtime/metro/14166__.js
-const require = globalThis.__r;
+import registerAsset from "01131__.js";
 
-for (const key10013 in require("RNIapAmazonModule")) {
-  arg5[key10013] = require("RNIapAmazonModule")[key10013];
-  continue;
-}
-for (const key10017 in require("14159__.js")) {
-  arg5[key10017] = require("14159__.js")[key10017];
-  continue;
-}
-for (const key10021 in require("14160__.js")) {
-  arg5[key10021] = require("14160__.js")[key10021];
-  continue;
-}
-for (const key10025 in require("14167__.js")) {
-  arg5[key10025] = require("14167__.js")[key10025];
-  continue;
-}
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons/empty_channel",
+  width: 32,
+  height: 32,
+  scales: [2, 3],
+  hash: "9a47d778a0b93e08af7ca2a5a0e14da1",
+  name: "add_friend_32px",
+  type: "png",
+});

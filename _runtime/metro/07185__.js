@@ -1,13 +1,13 @@
 // _runtime/metro/07185__.js
-import registerAsset from "01131__.js";
+import _mod17 from "00017__.js";
 
-export default registerAsset.registerAsset({
-  __packager_asset: true,
-  httpServerLocation: "/assets/images/native",
-  width: 160,
-  height: 160,
-  scales: [2, 3],
-  hash: "b7eca7761481c5ff3cc170b16fbdff57",
-  name: "img_no_results",
-  type: "png",
-});
+const Platform = _mod17.Platform;
+
+export function getShadowStyle(color) {
+  let shadowColor = color.color;
+  ({ offset, radius, opacity } = color);
+  if (shadowColor === undefined) {
+    shadowColor = "#000";
+  }
+  return { shadowOffset, shadowRadius, shadowColor, shadowOpacity };
+}

@@ -389,17 +389,17 @@ export const Children = {
       const items = [];
       c2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f85245.call;
+        const call = f86252.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f85245(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f86252(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
       return items;
     }
   },
   forEach(element, arg1, arg2) {
-    const f85243 = function() {
+    const f86250 = function() {
       const self = this;
-      const apply = f85243.apply;
+      const apply = f86250.apply;
       if (typeof apply === "unknown") {
         HermesBuiltin.applyArguments(self);
       } else {
@@ -410,9 +410,9 @@ export const Children = {
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f85245.call;
+        const call = f86252.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f85245(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f86252(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
     }
   },
@@ -423,23 +423,23 @@ export const Children = {
     if (null != element) {
       c2 = 0;
       mapIntoArray(element, [], "", "", (arg0) => {
-        const call = f85245.call;
+        const call = f86252.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f85245(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f86252(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
     }
     return closure_0;
   },
   toArray(element) {
-    const f85245 = (arg0) => arg0;
+    const f86252 = (arg0) => arg0;
     let items1 = element;
     if (null != element) {
       const items = [];
       closure_2 = 0;
       mapIntoArray(element, items, "", "", (arg0) => {
-        const call = f85245.call;
+        const call = f86252.call;
         closure_2 = tmp3 + 1;
-        return typeof call === "unknown" ? f85245(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
+        return typeof call === "unknown" ? f86252(arg0, +closure_2) : call(closure_1_1, arg0, +closure_2);
       });
       items1 = items;
     }
@@ -485,7 +485,7 @@ export (arg0) => {
   };
 }
 export () => null
-export const cloneElement = (onlyResult, cResult, children) => {
+export (onlyResult, cResult, children) => {
   if (null == onlyResult) {
     const _Error = Error;
     throw Error("The argument must be a React element, but you passed " + onlyResult + ".");
@@ -552,12 +552,12 @@ export const cloneElement = (onlyResult, cResult, children) => {
     element.props = tmp18;
     return element;
   }
-};
-export const createContext = (fakeSharedValue) => {
+}
+export (fakeSharedValue) => {
   _context = { $$typeof: _typeof3, _currentValue: fakeSharedValue, _currentValue2: fakeSharedValue, _threadCount: 0, Provider: _context, Consumer: { $$typeof: _typeof2, _context } };
   return _context;
-};
-export const createElement = (div, merged, element) => {
+}
+export (div, merged, element) => {
   const props = {};
   let tmp2 = null;
   if (null != merged) {
@@ -622,7 +622,7 @@ export const createElement = (div, merged, element) => {
   element.ref = tmp15;
   element.props = props;
   return element;
-};
+}
 export () => ({ current: null })
 export (render) => ({ $$typeof: _typeof4, render })
 export { isValidElement };
@@ -639,7 +639,7 @@ export (stateFromStores, size3) => {
   obj.compare = tmp;
   return obj;
 }
-export const startTransition = (fn) => {
+export (fn) => {
   const T = {};
   T.T = T;
   try {
@@ -677,84 +677,84 @@ export const startTransition = (fn) => {
     tmp2.T = tmp;
     throw tmp20;
   }
-};
-export const unstable_useCacheRefresh = () => {
+}
+export () => {
   const H = obj.H;
   return H.useCacheRefresh();
-};
-export const use = (arg0) => {
+}
+export (arg0) => {
   const H = obj.H;
   return H.use(arg0);
-};
-export const useActionState = (arg0, arg1, arg2) => {
+}
+export (arg0, arg1, arg2) => {
   const H = obj.H;
   return H.useActionState(arg0, arg1, arg2);
-};
-export const useCallback = (arg0, arg1) => {
+}
+export (arg0, arg1) => {
   const H = obj.H;
   return H.useCallback(arg0, arg1);
-};
-export const useContext = (arg0) => {
+}
+export (arg0) => {
   const H = obj.H;
   return H.useContext(arg0);
-};
+}
 export () => {
 
 }
-export const useDeferredValue = (arg0, arg1) => {
+export (arg0, arg1) => {
   const H = obj.H;
   return H.useDeferredValue(arg0, arg1);
-};
-export const useEffect = (cResult, items) => {
+}
+export (cResult, items) => {
   const H = obj.H;
   return H.useEffect(cResult, items);
-};
-export const useEffectEvent = (arg0) => {
+}
+export (arg0) => {
   const H = obj.H;
   return H.useEffectEvent(arg0);
-};
-export const useId = () => {
+}
+export () => {
   const H = obj.H;
   return H.useId();
-};
-export const useImperativeHandle = (arg0, arg1, arg2) => {
+}
+export (arg0, arg1, arg2) => {
   const H = obj.H;
   return H.useImperativeHandle(arg0, arg1, arg2);
-};
-export const useInsertionEffect = (arg0, arg1) => {
+}
+export (arg0, arg1) => {
   const H = obj.H;
   return H.useInsertionEffect(arg0, arg1);
-};
-export const useLayoutEffect = (arg0, arg1) => {
+}
+export (arg0, arg1) => {
   const H = obj.H;
   return H.useLayoutEffect(arg0, arg1);
-};
-export const useMemo = (arg0, arg1) => {
+}
+export (arg0, arg1) => {
   const H = obj.H;
   return H.useMemo(arg0, arg1);
-};
-export const useOptimistic = (arg0, arg1) => {
+}
+export (arg0, arg1) => {
   const H = obj.H;
   return H.useOptimistic(arg0, arg1);
-};
-export const useReducer = (arg0, arg1, arg2) => {
+}
+export (arg0, arg1, arg2) => {
   const H = obj.H;
   return H.useReducer(arg0, arg1, arg2);
-};
-export const useRef = (arg0) => {
+}
+export (arg0) => {
   const H = obj.H;
   return H.useRef(arg0);
-};
-export const useState = (arg0) => {
+}
+export (arg0) => {
   const H = obj.H;
   return H.useState(arg0);
-};
-export const useSyncExternalStore = (arg0, arg1, arg2) => {
+}
+export (arg0, arg1, arg2) => {
   const H = obj.H;
   return H.useSyncExternalStore(arg0, arg1, arg2);
-};
-export const useTransition = () => {
+}
+export () => {
   const H = obj.H;
   return H.useTransition();
-};
+}
 export const version = "19.2.3";

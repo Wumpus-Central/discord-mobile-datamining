@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "e0c0be280ef4e57b36ea99cdd95bd9e8",
-  name: "AppsSpoilerIcon",
+  hash: "45e56b0ad20f9774b74dbe6cbb00fca0",
+  name: "GroupIcon",
   type: "png",
 });

@@ -49,7 +49,7 @@ obj["prompts/get"] = {
   argumentsField: "arguments",
 };
 
-export const extractTargetInfo = function extractTargetInfo(method, arg1) {
+export function extractTargetInfo(method, arg1) {
   if (obj[method]) {
     let tmp2;
     if (tmp.targetField) {
@@ -76,8 +76,8 @@ export const extractTargetInfo = function extractTargetInfo(method, arg1) {
     obj = { attributes: {} };
     return obj;
   }
-};
-export const getRequestArguments = function getRequestArguments(method, uri) {
+}
+export function getRequestArguments(method, uri) {
   obj = {};
   if (obj[method]) {
     if (tmp.captureArguments) {
@@ -138,4 +138,4 @@ export const getRequestArguments = function getRequestArguments(method, uri) {
   } else {
     return obj;
   }
-};
+}

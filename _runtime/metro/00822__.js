@@ -8,7 +8,7 @@ import _slicedToArray from "00032__.js";
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const weakMap = new WeakMap();
 
-export const cleanupPendingSpansForTransport = function cleanupPendingSpansForTransport(arg0) {
+export function cleanupPendingSpansForTransport(arg0) {
   value = weakMap.get(arg0);
   if (value) {
     const tmp2 = value[Symbol.iterator]();
@@ -23,8 +23,8 @@ export const cleanupPendingSpansForTransport = function cleanupPendingSpansForTr
     }
     value.clear();
   }
-};
-export const completeSpanWithResults = function completeSpanWithResults(arg0, id, result, self) {
+}
+export function completeSpanWithResults(arg0, id, result, self) {
   value = weakMap.get(arg0);
   if (!value) {
     const _Map = Map;
@@ -61,8 +61,8 @@ export const completeSpanWithResults = function completeSpanWithResults(arg0, id
       extractPromptResultAttributes.extractToolResultAttributes(protocolVersion, obj2.recordOutputs),
     );
   }
-};
-export const storeSpanForRequest = function storeSpanForRequest(self, id, startInactiveSpanResult, method) {
+}
+export function storeSpanForRequest(self, id, startInactiveSpanResult, method) {
   value = weakMap.get(self);
   if (!value) {
     const _Map = Map;
@@ -72,4 +72,4 @@ export const storeSpanForRequest = function storeSpanForRequest(self, id, startI
   }
   const result1 = value.set(id, { span: startInactiveSpanResult, method, startTime: Date.now() });
   const obj2 = { span: startInactiveSpanResult, method, startTime: Date.now() };
-};
+}

@@ -1,6 +1,6 @@
 // _runtime/metro/00887__.js
 
-export const utf8ToBytes = function utf8ToBytes(str, arg1) {
+export function utf8ToBytes(str, arg1) {
   let num = arg1;
   if (!arg1) {
     num = Infinity;
@@ -111,4 +111,4 @@ export const utf8ToBytes = function utf8ToBytes(str, arg1) {
     throw error;
   }
   return items;
-};
+}

@@ -1,66 +1,57 @@
 // _runtime/metro/08285__.js
-import _mod8246 from "08246__.js";
-import _modDef8263 from "08263__.js";
-import _modDef8286 from "08286__.js";
-import _slicedToArray from "00032__.js";
+import _modDef8273 from "08273__.js";
 
-require = arg1;
-function getTagName(dataView, sum1) {
-  const tmp = _slicedToArray(_mod8246.getPascalStringFromDataView(dataView, sum1), 2);
-  const first = tmp[0];
-  const obj2 = { tagName: tmp[1], tagNameSize: null };
-  let num = 0;
-  const sum = 1 + first;
-  if (first % 2 === 0) {
-    num = 1;
-  }
-  obj2.tagNameSize = sum + num;
-  return obj2;
-}
-let c4 = "8BIM";
-let c5 = 2;
-let c6 = 4;
-({ length, length: closure_7 } = "8BIM");
+importDefault = arg2;
+const dependencyMap = arg6;
+const typeSizes = { 1: 1, 2: 1, 3: 2, 4: 4, 5: 8, 7: 1, 9: 4, 10: 8, 13: 4 };
+const obj2 = { BYTE: 1, ASCII: 2, SHORT: 3, LONG: 4, RATIONAL: 5, UNDEFINED: 7, SLONG: 9, SRATIONAL: 10, IFD: 13 };
 
 export default {
-  read(arg0, arg1) {
-    const uint8Array = new Uint8Array(arg0);
-    const dataView = _mod8246.getDataView(uint8Array.buffer);
-    const obj2 = {};
-    let num = 0;
-    if (0 < arg0.length) {
-      const sum = num + React5;
-      const stringFromDataView = _mod8246.getStringFromDataView(dataView, num, React5);
-      const shortAt = _modDef8263.getShortAt(dataView, sum);
-      const sum1 = sum + c5;
-      const tmp15 = getTagName(dataView, sum1);
-      let name = tmp15.tagName;
-      const sum2 = sum1 + tmp15.tagNameSize;
-      const longAt = _modDef8263.getLongAt(dataView, sum2);
-      const sum3 = sum2 + c6;
-      if (stringFromDataView === c4) {
-        const dataView1 = _mod8246.getDataView(dataView.buffer, sum3, longAt);
-        const obj7 = { id: shortAt, value: null };
-        const tmp5Result = _mod8246;
-        obj7.value = _mod8246.getStringFromDataView(dataView1, 0, longAt);
-        if (_modDef8286[shortAt]) {
-          try {
-            obj7.description = _modDef8286[shortAt].description(dataView1);
-            if (!name) {
-              name = _modDef8286[shortAt].name;
-            }
-            obj2[name] = obj7;
-          } catch (err) {
-            tmp.description = tmp2;
-          }
-        } else if (arg1) {
-          const _HermesInternal = HermesInternal;
-          obj2["undefined-" + shortAt] = obj7;
-        }
-        const tmp5Result2 = _mod8246;
-      }
-      num = sum3 + (longAt + (longAt % 2));
+  getAsciiValue(items) {
+    return items.map((item) => String.fromCharCode(item));
+  },
+  getByteAt(getUint8, sum) {
+    return getUint8.getUint8(sum);
+  },
+  getAsciiAt(getUint8, sum) {
+    return getUint8.getUint8(sum);
+  },
+  getShortAt(dataView, sum, byteOrder) {
+    return dataView.getUint16(sum, byteOrder === _modDef8273.LITTLE_ENDIAN);
+  },
+  getLongAt(dataView, sum, byteOrder) {
+    return dataView.getUint32(sum, byteOrder === _modDef8273.LITTLE_ENDIAN);
+  },
+  getRationalAt(getUint32, sum, arg2) {
+    const items = [getUint32.getUint32(sum, arg2 === _modDef8273.LITTLE_ENDIAN)];
+    sum = sum + 4;
+    items[1] = getUint32.getUint32(sum, arg2 === _modDef8273.LITTLE_ENDIAN);
+    return items;
+  },
+  getUndefinedAt(getUint8, sum) {
+    return getUint8.getUint8(sum);
+  },
+  getSlongAt(getInt32, sum, arg2) {
+    return getInt32.getInt32(sum, arg2 === _modDef8273.LITTLE_ENDIAN);
+  },
+  getSrationalAt(getInt32, sum, arg2) {
+    const items = [getInt32.getInt32(sum, arg2 === _modDef8273.LITTLE_ENDIAN)];
+    sum = sum + 4;
+    items[1] = getInt32.getInt32(sum, arg2 === _modDef8273.LITTLE_ENDIAN);
+    return items;
+  },
+  getIfdPointerAt(getUint32, sum, arg2) {
+    return getUint32.getUint32(sum, arg2 === _modDef8273.LITTLE_ENDIAN);
+  },
+  typeSizes,
+  tagTypes: obj2,
+  getTypeSize(LONG) {
+    if (undefined === obj2[LONG]) {
+      const _Error = Error;
+      const error = new Error("No such type found.");
+      throw error;
+    } else {
+      return obj[tmp[LONG]];
     }
-    return obj2;
   },
 };

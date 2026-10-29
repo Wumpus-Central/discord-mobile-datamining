@@ -26,7 +26,7 @@ function instrumentError() {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let onerror = null;
 
-export const addGlobalErrorInstrumentationHandler = function addGlobalErrorInstrumentationHandler(errorCallback) {
+export function addGlobalErrorInstrumentationHandler(errorCallback) {
   _mod726.addHandler("error", errorCallback);
   _mod726.maybeInstrument("error", instrumentError);
-};
+}

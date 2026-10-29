@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
+export function addBreadcrumb(arg0, arg1) {
   closure_0 = arg1;
   const client = _mod724.getClient();
   const isolationScope = _mod724.getIsolationScope();
@@ -40,4 +40,4 @@ export const addBreadcrumb = function addBreadcrumb(arg0, arg1) {
       const tmpResult = dateTimestampInSeconds;
     }
   }
-};
+}

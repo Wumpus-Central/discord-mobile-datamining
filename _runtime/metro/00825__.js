@@ -62,7 +62,7 @@ function captureHandlerError(name, arg1, tool_name) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
+export function wrapAllMCPHandlers(arg0) {
   const tool = "tool";
   tool(698).fill(arg0, "tool", (arg0) => {
     closure_0 = arg0;
@@ -185,8 +185,8 @@ export const wrapAllMCPHandlers = function wrapAllMCPHandlers(arg0) {
       }
     };
   });
-};
-export const wrapPromptHandlers = function wrapPromptHandlers(arg0) {
+}
+export function wrapPromptHandlers(arg0) {
   const prompt = "prompt";
   prompt(698).fill(arg0, "prompt", (arg0) => {
     closure_0 = arg0;
@@ -227,8 +227,8 @@ export const wrapPromptHandlers = function wrapPromptHandlers(arg0) {
       }
     };
   });
-};
-export const wrapResourceHandlers = function wrapResourceHandlers(arg0) {
+}
+export function wrapResourceHandlers(arg0) {
   const resource = "resource";
   resource(698).fill(arg0, "resource", (arg0) => {
     closure_0 = arg0;
@@ -269,8 +269,8 @@ export const wrapResourceHandlers = function wrapResourceHandlers(arg0) {
       }
     };
   });
-};
-export const wrapToolHandlers = function wrapToolHandlers(arg0) {
+}
+export function wrapToolHandlers(arg0) {
   const tool = "tool";
   tool(698).fill(arg0, "tool", (arg0) => {
     closure_0 = arg0;
@@ -311,4 +311,4 @@ export const wrapToolHandlers = function wrapToolHandlers(arg0) {
       }
     };
   });
-};
+}

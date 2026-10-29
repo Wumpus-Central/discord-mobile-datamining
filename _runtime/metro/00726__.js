@@ -8,12 +8,12 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const dependencyMap = {};
 let closure_3 = {};
 
-export const addHandler = function addHandler(console, errorCallback) {
+export function addHandler(console, errorCallback) {
   dependencyMap[console] = dependencyMap[console] || [];
   dependencyMap[console].push(errorCallback);
   const tmp2 = dependencyMap[console] || [];
-};
-export const maybeInstrument = function maybeInstrument(console, fn) {
+}
+export function maybeInstrument(console, fn) {
   if (!closure_3[console]) {
     tmp2[console] = true;
     try {
@@ -26,14 +26,14 @@ export const maybeInstrument = function maybeInstrument(console, fn) {
       }
     }
   }
-};
-export const resetInstrumentationHandlers = function resetInstrumentationHandlers() {
+}
+export function resetInstrumentationHandlers() {
   const keys = Object.keys(closure_2);
   const item = keys.forEach((item) => {
     dependencyMap[item] = undefined;
   });
-};
-export const triggerHandlers = function triggerHandlers(arg0, arg1) {
+}
+export function triggerHandlers(arg0, arg1) {
   let tmp8 = arg0;
   if (arg0) {
     tmp8 = dependencyMap[arg0];
@@ -53,4 +53,4 @@ export const triggerHandlers = function triggerHandlers(arg0, arg1) {
     }
     const nextResult = iter.next();
   }
-};
+}

@@ -1,7 +1,7 @@
 // _runtime/metro/00764__.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const getPossibleEventMessages = function getPossibleEventMessages(message) {
+export function getPossibleEventMessages(message) {
   const items = [];
   if (message.message) {
     items.push(message.message);
@@ -21,4 +21,4 @@ export const getPossibleEventMessages = function getPossibleEventMessages(messag
     }
     return items;
   } catch (err) {}
-};
+}

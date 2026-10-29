@@ -80,12 +80,12 @@ let map = new Map();
 const weakMap = new WeakMap();
 const weakMap1 = new WeakMap();
 
-export const registerObserver = function registerObserver(observer, callback) {
+export function registerObserver(observer, callback) {
   closure_5 = closure_5 + 1;
   const result = map.set(closure_5, { observer, callback });
   return closure_5;
-};
-export const unregisterObserver = function unregisterObserver(_intersectionObserverId) {
+}
+export function unregisterObserver(_intersectionObserverId) {
   let deleteResult = map.delete(_intersectionObserverId);
   if (deleteResult) {
     deleteResult = 0 === map.size;
@@ -97,8 +97,8 @@ export const unregisterObserver = function unregisterObserver(_intersectionObser
     }
     c6 = false;
   }
-};
-export const observe = function observe(arg0) {
+}
+export function observe(arg0) {
   ({ intersectionObserverId, root, target } = arg0);
   if (null == NativeIntersectionObserverCxxDefault) {
     const _Error = Error;
@@ -159,8 +159,8 @@ export const observe = function observe(arg0) {
       }
     }
   }
-};
-export const unobserve = function unobserve(_intersectionObserverId, arg1) {
+}
+export function unobserve(_intersectionObserverId, arg1) {
   if (null != NativeIntersectionObserverCxxDefault) {
     if (null != map.get(_intersectionObserverId)) {
       value = weakMap1.get(arg1);
@@ -185,4 +185,4 @@ export const unobserve = function unobserve(_intersectionObserverId, arg1) {
     const error = new Error("Missing native implementation of IntersectionObserver");
     throw error;
   }
-};
+}

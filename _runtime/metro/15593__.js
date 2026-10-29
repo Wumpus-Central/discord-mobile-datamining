@@ -1,4 +1,13 @@
 // _runtime/metro/15593__.js
-import _mod15581 from "15581__.js";
+import registerAsset from "01131__.js";
 
-export default (arg0, arg1) => new _mod15581(arg0, arg1).patch;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/icons",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "928ec3b0cfa6ddcb7b852c71960488c7",
+  name: "Share",
+  type: "png",
+});

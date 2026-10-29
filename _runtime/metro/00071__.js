@@ -30,7 +30,7 @@ let closure_4 = [
   "unstable_getCurrentEventPriority",
 ];
 
-export const getFabricUIManager = function getFabricUIManager() {
+export function getFabricUIManager() {
   let tmp = null == closure_3;
   if (tmp) {
     tmp = null != global.nativeFabricUIManager;
@@ -56,4 +56,4 @@ export const getFabricUIManager = function getFabricUIManager() {
     })(global.nativeFabricUIManager, closure_4);
   }
   return closure_3;
-};
+}

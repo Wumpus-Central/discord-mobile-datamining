@@ -5,7 +5,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const convertSpanJsonToTransactionEvent = function convertSpanJsonToTransactionEvent(beforeSendSpanResult) {
+export function convertSpanJsonToTransactionEvent(beforeSendSpanResult) {
   const obj = {
     type: "transaction",
     timestamp: beforeSendSpanResult.timestamp,
@@ -44,8 +44,8 @@ export const convertSpanJsonToTransactionEvent = function convertSpanJsonToTrans
   obj.contexts = obj6;
   obj.measurements = beforeSendSpanResult.measurements;
   return obj;
-};
-export const convertTransactionEventToSpanJson = function convertTransactionEventToSpanJson(contexts) {
+}
+export function convertTransactionEventToSpanJson(contexts) {
   contexts = contexts.contexts;
   let trace;
   if (contexts != null) {
@@ -104,4 +104,4 @@ export const convertTransactionEventToSpanJson = function convertTransactionEven
   obj2.exclusive_time = tmp4;
   obj2.measurements = contexts.measurements;
   return obj2;
-};
+}

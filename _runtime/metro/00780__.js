@@ -12,7 +12,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const getTraceData = function getTraceData(arg0) {
+export function getTraceData(arg0) {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -87,4 +87,4 @@ export const getTraceData = function getTraceData(arg0) {
     }
   }
   return {};
-};
+}

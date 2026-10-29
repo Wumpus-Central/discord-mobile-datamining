@@ -12,7 +12,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const items = [1800, 3000];
 
 export const FCPThresholds = items;
-export const onFCP = (arg0) => {
+export (arg0) => {
   _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
@@ -47,4 +47,4 @@ export const onFCP = (arg0) => {
       closure_0 = tmpResult.bindReporter(closure_0, metric, items, obj.reportAllChanges);
     }
   });
-};
+}

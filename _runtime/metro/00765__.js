@@ -6,7 +6,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const createClientReportEnvelope = function createClientReportEnvelope(discarded_events, dsn, arg2) {
+export function createClientReportEnvelope(discarded_events, dsn, arg2) {
   let result = arg2;
   const items = [{ type: "client_report" }];
   if (!arg2) {
@@ -21,4 +21,4 @@ export const createClientReportEnvelope = function createClientReportEnvelope(di
   }
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(obj4, items1);
-};
+}

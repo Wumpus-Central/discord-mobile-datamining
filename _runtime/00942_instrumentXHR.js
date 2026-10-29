@@ -117,8 +117,8 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const __sentry_xhr_v3__ = "__sentry_xhr_v3__";
 
 export const SENTRY_XHR_DATA_KEY = "__sentry_xhr_v3__";
-export const addXhrInstrumentationHandler = function addXhrInstrumentationHandler(arg0) {
+export function addXhrInstrumentationHandler(arg0) {
   _mod693.addHandler("xhr", arg0);
   _mod693.maybeInstrument("xhr", instrumentXHR);
-};
+}
 export { instrumentXHR };

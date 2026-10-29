@@ -1,14 +1,27 @@
 // _runtime/metro/12708__.js
-import _mod12707 from "12707__.js";
+import _mod12657 from "12657__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const getTraceMetaTags = function getTraceMetaTags() {
-  const entries = Object.entries(_mod12707.getTraceData());
-  const mapped = entries.map((item) => {
-    [tmp, tmp2] = item;
-    return '<meta name="' + tmp + '" content="' + tmp2 + '"/>';
-  });
-  return mapped.join("\n");
+const Ident = _mod12657.TYPE.Ident;
+const obj = {
+  name: "ClassSelector",
+  structure: { name: String },
+  parse() {
+    const self = this;
+    const scanner = this.scanner;
+    if (!scanner.isDelim(46)) {
+      self.error("Full stop is expected");
+    }
+    self.scanner.next();
+    return {
+      type: "ClassSelector",
+      loc: self.getLocation(self.scanner.tokenStart - 1, self.scanner.tokenEnd),
+      name: self.consume(Ident),
+    };
+  },
+  generate(name) {
+    this.chunk(".");
+    this.chunk(name.name);
+  },
 };
+
+export default obj;

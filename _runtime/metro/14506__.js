@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/images/native/empties",
-  width: 120,
-  height: 96,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
   scales: [2, 3],
-  hash: "21dd2828907413d4c11bf84cb61743df",
-  name: "search_empty_state_light",
+  hash: "6fb23e8fddb36af1d7c8748104537e96",
+  name: "VideoDenyIcon",
   type: "png",
 });

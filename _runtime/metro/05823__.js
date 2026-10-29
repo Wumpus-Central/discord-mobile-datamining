@@ -1,9 +1,9 @@
 // _runtime/metro/05823__.js
-import shortOut from "../05824_shortOut.js";
-import overRest from "../05828_overRest.js";
-import flatten from "../05830_flatten.js";
+import baseGetAllKeys from "../00668_baseGetAllKeys.js";
+import _mod5806 from "05806__.js";
+import keysIn from "../05808_keysIn.js";
 
-export default function flatRest(arg0) {
-  const tmp = shortOut;
-  return tmp(overRest(arg0, undefined, flatten), "" + arg0);
+export default function getAllKeysIn(arg0) {
+  const tmp = baseGetAllKeys;
+  return tmp(arg0, keysIn, _mod5806);
 }

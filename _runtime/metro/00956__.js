@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfIsEmbeddedBrowserExtension() {
+export function checkAndWarnIfIsEmbeddedBrowserExtension() {
   let flag = false;
   if (undefined !== ignoreNextOnError.WINDOW.window) {
     const WINDOW = ignoreNextOnError.WINDOW;
@@ -47,4 +47,4 @@ export const checkAndWarnIfIsEmbeddedBrowserExtension = function checkAndWarnIfI
     }
   }
   return flag2;
-};
+}

@@ -8,7 +8,7 @@ const require = globalThis.__r;
 
 e.__exportStar(TYPE, exports);
 
-export const parse = function parse(acknowledgedBadgeLabel, arg1) {
+export function parse(acknowledgedBadgeLabel, arg1) {
   let obj = arg1;
   if (undefined === arg1) {
     obj = {};
@@ -56,7 +56,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                                           if (!closure_1_0(closure_1_1[0]).isNumberElement(style)) {
                                             if (closure_1_0(closure_1_1[0]).isTagElement(style)) {
                                               let children = style.children;
-                                              let item = children.forEach(() => { ... });
+                                              let item = children.forEach(/* F89644 */ function() { ... });
                                             }
                                           }
                                           style = style.style;
@@ -66,7 +66,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                                       for (const key10046 in arg0.options) {
                                         delete tmp4[tmp2];
                                         let value = arg0.options[key10046].value;
-                                        let item1 = value.forEach(() => { ... });
+                                        let item1 = value.forEach(/* F89644 */ function() { ... });
                                         continue;
                                       }
                                     });
@@ -86,7 +86,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                                     if (!closure_1_0(closure_1_1[0]).isNumberElement(style)) {
                                       if (closure_1_0(closure_1_1[0]).isTagElement(style)) {
                                         let children = style.children;
-                                        let item = children.forEach(() => { ... });
+                                        let item = children.forEach(/* F89644 */ function() { ... });
                                       }
                                     }
                                     style = style.style;
@@ -96,7 +96,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                                 for (const key10046 in arg0.options) {
                                   delete tmp4[tmp2];
                                   let value = arg0.options[key10046].value;
-                                  let item1 = value.forEach(() => { ... });
+                                  let item1 = value.forEach(/* F89644 */ function() { ... });
                                   continue;
                                 }
                               });
@@ -126,7 +126,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                                     if (!closure_1_0(closure_1_1[0]).isNumberElement(style)) {
                                       if (closure_1_0(closure_1_1[0]).isTagElement(style)) {
                                         let children = style.children;
-                                        let item = children.forEach(() => { ... });
+                                        let item = children.forEach(/* F89644 */ function() { ... });
                                       }
                                     }
                                     style = style.style;
@@ -136,7 +136,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                                 for (const key10046 in arg0.options) {
                                   delete tmp4[tmp2];
                                   let value = arg0.options[key10046].value;
-                                  let item1 = value.forEach(() => { ... });
+                                  let item1 = value.forEach(/* F89644 */ function() { ... });
                                   continue;
                                 }
                               });
@@ -156,7 +156,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                               if (!closure_1_0(closure_1_1[0]).isNumberElement(style)) {
                                 if (closure_1_0(closure_1_1[0]).isTagElement(style)) {
                                   let children = style.children;
-                                  let item = children.forEach(() => { ... });
+                                  let item = children.forEach(/* F89644 */ function() { ... });
                                 }
                               }
                               style = style.style;
@@ -166,7 +166,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                           for (const key10046 in arg0.options) {
                             delete tmp4[tmp2];
                             let value = arg0.options[key10046].value;
-                            let item1 = value.forEach(() => { ... });
+                            let item1 = value.forEach(/* F89644 */ function() { ... });
                             continue;
                           }
                         });
@@ -206,7 +206,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                                     if (!closure_1_0(closure_1_1[0]).isNumberElement(style)) {
                                       if (closure_1_0(closure_1_1[0]).isTagElement(style)) {
                                         let children = style.children;
-                                        let item = children.forEach(() => { ... });
+                                        let item = children.forEach(/* F89644 */ function() { ... });
                                       }
                                     }
                                     style = style.style;
@@ -216,7 +216,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                                 for (const key10046 in arg0.options) {
                                   delete tmp4[tmp2];
                                   let value = arg0.options[key10046].value;
-                                  let item1 = value.forEach(() => { ... });
+                                  let item1 = value.forEach(/* F89644 */ function() { ... });
                                   continue;
                                 }
                               });
@@ -236,7 +236,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                               if (!closure_1_0(closure_1_1[0]).isNumberElement(style)) {
                                 if (closure_1_0(closure_1_1[0]).isTagElement(style)) {
                                   let children = style.children;
-                                  let item = children.forEach(() => { ... });
+                                  let item = children.forEach(/* F89644 */ function() { ... });
                                 }
                               }
                               style = style.style;
@@ -246,7 +246,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                           for (const key10046 in arg0.options) {
                             delete tmp4[tmp2];
                             let value = arg0.options[key10046].value;
-                            let item1 = value.forEach(() => { ... });
+                            let item1 = value.forEach(/* F89644 */ function() { ... });
                             continue;
                           }
                         });
@@ -276,7 +276,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                               if (!closure_1_0(closure_1_1[0]).isNumberElement(style)) {
                                 if (closure_1_0(closure_1_1[0]).isTagElement(style)) {
                                   let children = style.children;
-                                  let item = children.forEach(() => { ... });
+                                  let item = children.forEach(/* F89644 */ function() { ... });
                                 }
                               }
                               style = style.style;
@@ -286,7 +286,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                           for (const key10046 in arg0.options) {
                             delete tmp4[tmp2];
                             let value = arg0.options[key10046].value;
-                            let item1 = value.forEach(() => { ... });
+                            let item1 = value.forEach(/* F89644 */ function() { ... });
                             continue;
                           }
                         });
@@ -306,7 +306,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                         if (!closure_1_0(closure_1_1[0]).isNumberElement(style)) {
                           if (closure_1_0(closure_1_1[0]).isTagElement(style)) {
                             let children = style.children;
-                            let item = children.forEach(() => { ... });
+                            let item = children.forEach(/* F89644 */ function() { ... });
                           }
                         }
                         style = style.style;
@@ -316,7 +316,7 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
                     for (const key10046 in arg0.options) {
                       delete tmp4[tmp2];
                       let value = arg0.options[key10046].value;
-                      let item1 = value.forEach(() => { ... });
+                      let item1 = value.forEach(/* F89644 */ function() { ... });
                       continue;
                     }
                   });
@@ -332,6 +332,6 @@ export const parse = function parse(acknowledgedBadgeLabel, arg1) {
     }
     return parsed.val;
   }
-};
+}
 export const _Parser = Parser.Parser;
 export const isStructurallySame = require("cloneDeep").isStructurallySame;

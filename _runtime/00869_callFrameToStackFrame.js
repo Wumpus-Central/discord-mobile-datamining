@@ -6,7 +6,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const callFrameToStackFrame = function callFrameToStackFrame(location, str, fn) {
+export function callFrameToStackFrame(location, str, fn) {
   let replaced;
   if (str) {
     replaced = str.replace(/^file:\/\//, "");
@@ -33,8 +33,8 @@ export const callFrameToStackFrame = function callFrameToStackFrame(location, st
   }
   obj.in_app = filenameIsInAppResult;
   return obj;
-};
-export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
+}
+export function watchdogTimer(fn, arg1, arg2, arg3) {
   closure_0 = arg1;
   closure_1 = arg2;
   closure_2 = arg3;
@@ -65,4 +65,4 @@ export const watchdogTimer = function watchdogTimer(fn, arg1, arg2, arg3) {
       closure_5 = arg0;
     },
   };
-};
+}

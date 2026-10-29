@@ -1,24 +1,24 @@
 // _runtime/metro/04442__.js
-import module_4291_mod from "04291__.js";
-import _typeof_mod from "04287__.js";
-import requiredArgs_mod from "../04288_requiredArgs.js";
+import module_4292_mod from "04292__.js";
+import module_4443_mod from "04443__.js";
+import requiredArgs_mod from "../04289_requiredArgs.js";
 
-let module_4291 = module_4291_mod;
-if (!module_4291) {
-  const obj = { default: module_4291 };
+let module_4292 = module_4292_mod;
+if (!module_4292) {
+  const obj = { default: module_4292 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4291;
+  tmp3 = module_4292;
 }
-module_4291 = tmp3;
-let _typeof = _typeof_mod;
-if (!_typeof) {
-  const obj2 = { default: _typeof };
+module_4292 = tmp3;
+let module_4443 = module_4443_mod;
+if (!module_4443) {
+  const obj2 = { default: module_4443 };
   let tmp5 = obj2;
 } else {
-  tmp5 = _typeof;
+  tmp5 = module_4443;
 }
-_typeof = tmp5;
+module_4443 = tmp5;
 let requiredArgs = requiredArgs_mod;
 if (!requiredArgs) {
   const obj3 = { default: requiredArgs };
@@ -27,11 +27,10 @@ if (!requiredArgs) {
   tmp7 = requiredArgs;
 }
 requiredArgs = tmp7;
+let c3 = 3600000;
 
-export default function addMilliseconds(arg0, arg1) {
+export default function addHours(interval, arg1) {
   requiredArgs.default(2, arguments);
-  const time = _typeof.default(arg0).getTime();
-  const defaultResult1 = _typeof.default(arg0);
-  return new Date(time + module_4291.default(arg1));
+  return module_4443.default(interval, module_4292.default(arg1) * c3);
 };
 export default exports.default;

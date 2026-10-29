@@ -1,21 +1,12 @@
 // _runtime/metro/04298__.js
-let closure_0 = ["ned\u011Bli", "pond\u011Bl\u00ED", "\u00FAter\u00FD", "st\u0159edu", "\u010Dtvrtek", "p\u00E1tek", "sobotu"];
-let closure_1 = {
-  lastWeek: "'posledn\u00ED' eeee 've' p",
-  yesterday: "'v\u010Dera v' p",
-  today: "'dnes v' p",
-  tomorrow: "'z\u00EDtra v' p",
-  nextWeek(arg0) {
-    return "'v " + closure_0[arg0.getUTCDay(arg0)] + " o' p";
-  },
-  other: "P"
-};
+import 02071__ from "02071__.js";
 
-export default function formatRelative(arg0, arg1) {
-  let tmpResult = tmp;
-  if (typeof closure_1[arg0] === "function") {
-    tmpResult = tmp(arg1);
-  }
-  return tmpResult;
-};
+if (!module_2071) {
+  const obj2 = { default: module_2071 };
+  let obj = obj2;
+} else {
+  obj = module_2071;
+}
+
+export default { date: obj.default({ formats: { full: "EEEE, d. MMMM yyyy", long: "d. MMMM yyyy", medium: "d. M. yyyy", short: "dd.MM.yyyy" }, defaultWidth: "full" }), time: obj.default({ formats: { full: "H:mm:ss zzzz", long: "H:mm:ss z", medium: "H:mm:ss", short: "H:mm" }, defaultWidth: "full" }), dateTime: obj.default({ formats: { full: "{{date}} 'v' {{time}}", long: "{{date}} 'v' {{time}}", medium: "{{date}}, {{time}}", short: "{{date}}, {{time}}" }, defaultWidth: "full" }) };
 export default exports.default;

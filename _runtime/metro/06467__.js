@@ -1,30 +1,28 @@
 // _runtime/metro/06467__.js
-import _mod1305 from "01305__.js";
-import _mod6468 from "06468__.js";
-import _mod6469 from "06469__.js";
-import _mod6470 from "06470__.js";
+import callBoundIntrinsic from "../01338_callBoundIntrinsic.js";
+import _mod1464 from "01464__.js";
 
-if (_mod6468) {
-  function setProto(arg0, arg1) {
-    if (_mod6468(arg0, arg1)) {
-      return arg0;
-    } else {
-      const tmp5 = new _mod1305("Reflect.setPrototypeOf: failed to set [[Prototype]]");
-      throw tmp5;
-    }
+let closure_0 = callBoundIntrinsic("Date.prototype.getDay");
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = _mod1464();
+
+export default function isDateObject(obj) {
+  let tmp = typeof obj === "object";
+  if (typeof obj === "object") {
+    tmp = null !== obj;
   }
-} else {
-  setProto = _mod6469;
-  if (!setProto) {
-    let setProto2 = null;
-    if (_mod6470) {
-      setProto2 = function setProto(arg0, arg1) {
-        _mod6470(arg0, arg1);
-        return arg0;
-      };
-    }
-    setProto = setProto2;
+  if (!tmp) {
+    return tmp;
+  } else if (closure_2) {
+    let tmp4 = (function tryDateGetDayCall(arg0) {
+      try {
+        closure_1_0(arg0);
+        return true;
+      } catch (err) {
+        return false;
+      }
+    })(obj);
+  } else {
+    tmp4 = "[object Date]" === closure_1(obj);
   }
 }
-
-export default setProto;

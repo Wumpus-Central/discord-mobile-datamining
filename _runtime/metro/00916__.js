@@ -5,7 +5,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const getActivationStart = () => {
+export () => {
   const navigationEntry = _mod917.getNavigationEntry();
   let num;
   if (navigationEntry != null) {
@@ -15,4 +15,4 @@ export const getActivationStart = () => {
     num = 0;
   }
   return num;
-};
+}

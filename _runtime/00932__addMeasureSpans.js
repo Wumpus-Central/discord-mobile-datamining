@@ -253,7 +253,7 @@ let closure_6 = {};
 export { _addMeasureSpans };
 export { _addNavigationSpans };
 export { _addResourceSpans };
-export const _setResourceRequestAttributes = function _setResourceRequestAttributes(arg0, arg1, arr) {
+export function _setResourceRequestAttributes(arg0, arg1, arr) {
   closure_0 = arg0;
   closure_1 = arg1;
   const item = arr.forEach((item) => {
@@ -273,8 +273,8 @@ export const _setResourceRequestAttributes = function _setResourceRequestAttribu
       closure_1[tmp2] = tmp3;
     }
   });
-};
-export const addPerformanceEntries = function addPerformanceEntries(setAttribute, recordClsOnPageloadSpan) {
+}
+export function addPerformanceEntries(setAttribute, recordClsOnPageloadSpan) {
   _require = setAttribute;
   dependencyMap = recordClsOnPageloadSpan;
   const browserPerformanceAPI = require("extractNetworkProtocol").getBrowserPerformanceAPI();
@@ -442,8 +442,8 @@ export const addPerformanceEntries = function addPerformanceEntries(setAttribute
       const tmp3Result8 = tmp3(693);
     }
   }
-};
-export const startTrackingInteractions = function startTrackingInteractions() {
+}
+export function startTrackingInteractions() {
   const result = _mod908.addPerformanceInstrumentationHandler("event", (arg0) => {
     const entries = arg0.entries;
     const activeSpan = require("metro/00693__.js").getActiveSpan();
@@ -487,8 +487,8 @@ export const startTrackingInteractions = function startTrackingInteractions() {
     }
     const obj = require("metro/00693__.js");
   });
-};
-export const startTrackingLongAnimationFrames = function startTrackingLongAnimationFrames() {
+}
+export function startTrackingLongAnimationFrames() {
   const performanceObserver = new globalThis.PerformanceObserver((getEntries) => {
     const activeSpan = require("metro/00693__.js").getActiveSpan();
     if (activeSpan) {
@@ -543,8 +543,8 @@ export const startTrackingLongAnimationFrames = function startTrackingLongAnimat
     const obj = require("metro/00693__.js");
   });
   performanceObserver.observe({ type: "long-animation-frame", buffered: true });
-};
-export const startTrackingLongTasks = function startTrackingLongTasks() {
+}
+export function startTrackingLongTasks() {
   const result = _mod908.addPerformanceInstrumentationHandler("longtask", (arg0) => {
     const entries = arg0.entries;
     const activeSpan = require("metro/00693__.js").getActiveSpan();
@@ -581,8 +581,8 @@ export const startTrackingLongTasks = function startTrackingLongTasks() {
     }
     const obj = require("metro/00693__.js");
   });
-};
-export const startTrackingWebVitals = function startTrackingWebVitals(client) {
+}
+export function startTrackingWebVitals(client) {
   client = client.client;
   _require = undefined;
   dependencyMap = undefined;
@@ -643,4 +643,4 @@ export const startTrackingWebVitals = function startTrackingWebVitals(client) {
     tmpResult = tmp(693);
   }
   return () => {};
-};
+}

@@ -1,10 +1,13 @@
 // _runtime/metro/06989__.js
+import registerAsset from "01131__.js";
 
-export const getDefaultSidebarWidth = (width) => {
-  width = width.width;
-  let num = 360;
-  if (width - 56 <= 360) {
-    num = width - 56;
-  }
-  return num;
-};
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  width: 24,
+  height: 24,
+  scales: [2, 3],
+  hash: "24def842b7fc85d108b018aef0f23eb6",
+  name: "ArrowLargeLeftIcon",
+  type: "png",
+});

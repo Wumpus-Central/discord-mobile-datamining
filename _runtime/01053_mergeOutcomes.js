@@ -1,6 +1,6 @@
 // _runtime/01053_mergeOutcomes.js
 
-export const mergeOutcomes = function mergeOutcomes() {
+export function mergeOutcomes() {
   const items = [...arguments];
   const map = new Map();
   function process(reason) {
@@ -15,4 +15,4 @@ export const mergeOutcomes = function mergeOutcomes() {
   const item = items.forEach((arr) => arr.forEach(process));
   const items1 = [...map.values()];
   return items1;
-};
+}

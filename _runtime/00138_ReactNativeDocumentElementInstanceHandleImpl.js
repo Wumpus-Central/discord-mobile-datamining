@@ -10,32 +10,27 @@ class ReactNativeDocumentElementInstanceHandleImpl {
 }
 let closure_1 = _createClass(ReactNativeDocumentElementInstanceHandleImpl);
 
-export const createReactNativeDocumentElementInstanceHandle =
-  function createReactNativeDocumentElementInstanceHandle() {
-    return new closure_1();
-  };
-export const getNativeElementReferenceFromReactNativeDocumentElementInstanceHandle =
-  function getNativeElementReferenceFromReactNativeDocumentElementInstanceHandle(nativeElementReference) {
-    return nativeElementReference.nativeElementReference;
-  };
-export const setNativeElementReferenceForReactNativeDocumentElementInstanceHandle =
-  function setNativeElementReferenceForReactNativeDocumentElementInstanceHandle(
-    reactNativeDocumentElementInstanceHandle,
-    linkRootNodeResult,
-  ) {
-    reactNativeDocumentElementInstanceHandle.nativeElementReference = linkRootNodeResult;
-  };
-export const getPublicInstanceFromReactNativeDocumentElementInstanceHandle =
-  function getPublicInstanceFromReactNativeDocumentElementInstanceHandle(publicInstance) {
-    return publicInstance.publicInstance;
-  };
-export const setPublicInstanceForReactNativeDocumentElementInstanceHandle =
-  function setPublicInstanceForReactNativeDocumentElementInstanceHandle(
-    reactNativeDocumentElementInstanceHandle,
-    publicInstance,
-  ) {
-    reactNativeDocumentElementInstanceHandle.publicInstance = publicInstance;
-  };
-export const isReactNativeDocumentElementInstanceHandle = function isReactNativeDocumentElementInstanceHandle(c5) {
+export function createReactNativeDocumentElementInstanceHandle() {
+  return new closure_1();
+}
+export function getNativeElementReferenceFromReactNativeDocumentElementInstanceHandle(nativeElementReference) {
+  return nativeElementReference.nativeElementReference;
+}
+export function setNativeElementReferenceForReactNativeDocumentElementInstanceHandle(
+  reactNativeDocumentElementInstanceHandle,
+  linkRootNodeResult,
+) {
+  reactNativeDocumentElementInstanceHandle.nativeElementReference = linkRootNodeResult;
+}
+export function getPublicInstanceFromReactNativeDocumentElementInstanceHandle(publicInstance) {
+  return publicInstance.publicInstance;
+}
+export function setPublicInstanceForReactNativeDocumentElementInstanceHandle(
+  reactNativeDocumentElementInstanceHandle,
+  publicInstance,
+) {
+  reactNativeDocumentElementInstanceHandle.publicInstance = publicInstance;
+}
+export function isReactNativeDocumentElementInstanceHandle(c5) {
   return c5 instanceof closure_1;
-};
+}

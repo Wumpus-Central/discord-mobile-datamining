@@ -7,7 +7,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const initAndBind = function initAndBind(arg0, debug) {
+export function initAndBind(arg0, debug) {
   if (true === debug.debug) {
     const obj = consoleSandbox;
     if (_mod699.DEBUG_BUILD) {
@@ -26,8 +26,8 @@ export const initAndBind = function initAndBind(arg0, debug) {
   currentScope1.setClient(obj4);
   obj4.init();
   return obj4;
-};
-export const setCurrentClient = function setCurrentClient(arg0) {
+}
+export function setCurrentClient(arg0) {
   const currentScope = _mod724.getCurrentScope();
   currentScope.setClient(arg0);
-};
+}

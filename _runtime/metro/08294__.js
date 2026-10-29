@@ -1,121 +1,313 @@
 // _runtime/metro/08294__.js
-import _mod8246 from "08246__.js";
-import PNG_CHUNK_TYPE_SIZE from "../08253_PNG_CHUNK_TYPE_SIZE.js";
-import _modDef8263 from "08263__.js";
-
-require = arg1;
-importDefault = arg2;
-const dependencyMap = arg6;
-
-export default {
-  read(byteLength, arg1) {
-    const obj = {};
-    for (let num = 0; num < arg1.length; num = num + 1) {
-      let obj2 = _modDef8263;
-      let longAt = obj2.getLongAt(byteLength, arg1[num] + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_LENGTH_OFFSET);
-      let obj3 = _mod8246;
-      let sum = arg1[num] + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_TYPE_OFFSET;
-      let stringFromDataView = obj3.getStringFromDataView(byteLength, sum, PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_TYPE_SIZE);
-      if (stringFromDataView === PNG_CHUNK_TYPE_SIZE.TYPE_PHYS) {
-        let tmp22 = arg1[num];
-        let tmp23 = 4 <= longAt && tmp22 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4 <= byteLength.byteLength;
-        let tmp24;
-        if (tmp23) {
-          let tmpResult = _modDef8263;
-          let longAt1 = tmpResult.getLongAt(byteLength, tmp22 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET);
-          let obj4 = { value: longAt1, description: "" + longAt1 };
-          tmp24 = obj4;
-        }
-        obj["Pixels Per Unit X"] = tmp24;
-        let tmp26 = arg1[num];
-        let tmp27 = 8 <= longAt && tmp26 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4 + 4 <= byteLength.byteLength;
-        let tmp28;
-        if (tmp27) {
-          let tmpResult9 = _modDef8263;
-          let longAt2 = tmpResult9.getLongAt(byteLength, tmp26 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4);
-          let obj5 = { value: longAt2, description: "" + longAt2 };
-          tmp28 = obj5;
-        }
-        obj["Pixels Per Unit Y"] = tmp28;
-        let tmp30 = arg1[num];
-        let tmp31 = 9 <= longAt && tmp30 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 8 + 1 <= byteLength.byteLength;
-        let tmp32;
-        if (tmp31) {
-          let tmpResult10 = _modDef8263;
-          let byteAt = tmpResult10.getByteAt(byteLength, tmp30 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 8);
-          let obj6 = { value: byteAt, description: null };
-          let str7 = "Unknown";
-          if (1 === byteAt) {
-            str7 = "meters";
+const obj = {
+  0: {
+    name: "GPSVersionID",
+    description(arg0) {
+      let str = "Unknown";
+      if (2 === arg0[0]) {
+        str = "Unknown";
+        if (2 === arg0[1]) {
+          str = "Unknown";
+          if (0 === arg0[2]) {
+            str = "Unknown";
+            if (0 === arg0[3]) {
+              str = "Version 2.2";
+            }
           }
-          obj6.description = str7;
-          tmp32 = obj6;
         }
-        obj["Pixel Units"] = tmp32;
-      } else if (stringFromDataView === PNG_CHUNK_TYPE_SIZE.TYPE_TIME) {
-        let tmp34 = arg1[num];
-        let tmp8 = 7 <= longAt && tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 7 <= byteLength.byteLength;
-        let tmp9;
-        if (tmp8) {
-          let tmpResult11 = _modDef8263;
-          let shortAt = tmpResult11.getShortAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET);
-          let tmpResult12 = _modDef8263;
-          let byteAt1 = tmpResult12.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 2);
-          let tmpResult13 = _modDef8263;
-          let byteAt2 = tmpResult13.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 3);
-          let tmpResult14 = _modDef8263;
-          let byteAt3 = tmpResult14.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 4);
-          let tmpResult15 = _modDef8263;
-          let byteAt4 = tmpResult15.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 5);
-          let tmpResult16 = _modDef8263;
-          let byteAt5 = tmpResult16.getByteAt(byteLength, tmp34 + PNG_CHUNK_TYPE_SIZE.PNG_CHUNK_DATA_OFFSET + 6);
-          let obj7 = { value: null, description: null };
-          let items = [shortAt, byteAt1, byteAt2, byteAt3, byteAt4, byteAt5];
-          obj7.value = items;
-          let repeat = "0".repeat;
-          let _HermesInternal = HermesInternal;
-          let combined = "" + "0".repeat(4 - "" + shortAt.length) + shortAt;
-          let repeat2 = "0".repeat;
-          let _HermesInternal2 = HermesInternal;
-          let repeat3 = "0".repeat;
-          let combined1 = "" + "0".repeat(2 - "" + byteAt1.length) + byteAt1;
-          let _HermesInternal3 = HermesInternal;
-          let repeat4 = "0".repeat;
-          let combined2 = "" + "0".repeat(2 - "" + byteAt2.length) + byteAt2;
-          let _HermesInternal4 = HermesInternal;
-          let repeat5 = "0".repeat;
-          let combined3 = "" + "0".repeat(2 - "" + byteAt3.length) + byteAt3;
-          let _HermesInternal5 = HermesInternal;
-          let repeat6 = "0".repeat;
-          let combined4 = "" + "0".repeat(2 - "" + byteAt4.length) + byteAt4;
-          let _HermesInternal6 = HermesInternal;
-          let _HermesInternal7 = HermesInternal;
-          let str = "";
-          let str2 = "-";
-          let str3 = "-";
-          let str4 = " ";
-          let str5 = ":";
-          let str6 = ":";
-          obj7.description =
-            "" +
-            combined +
-            "-" +
-            combined1 +
-            "-" +
-            combined2 +
-            " " +
-            combined3 +
-            ":" +
-            combined4 +
-            ":" +
-            "" +
-            "0".repeat(2 - "" + byteAt5.length) +
-            byteAt5;
-          tmp9 = obj7;
+      }
+      return str;
+    },
+  },
+  1: {
+    name: "GPSLatitudeRef",
+    description(join) {
+      const joined = join.join("");
+      let str = "North latitude";
+      if ("N" !== joined) {
+        let str2 = "Unknown";
+        if ("S" === joined) {
+          str2 = "South latitude";
         }
-        obj["Modify Date"] = tmp9;
+        str = str2;
+      }
+      return str;
+    },
+  },
+  2: { name: "GPSLatitude", description: fn(8293).getCalculatedGpsValue },
+  3: {
+    name: "GPSLongitudeRef",
+    description(join) {
+      const joined = join.join("");
+      let str = "East longitude";
+      if ("E" !== joined) {
+        let str2 = "Unknown";
+        if ("W" === joined) {
+          str2 = "West longitude";
+        }
+        str = str2;
+      }
+      return str;
+    },
+  },
+  4: null,
+  5: null,
+  6: null,
+  7: null,
+  8: "GPSSatellites",
+  9: null,
+  10: null,
+  11: "GPSDOP",
+  12: null,
+  13: "GPSSpeed",
+  14: null,
+  15: "GPSTrack",
+  16: null,
+  17: "GPSImgDirection",
+  18: "GPSMapDatum",
+  19: null,
+  20: null,
+  21: null,
+  22: null,
+  23: null,
+  24: "GPSDestBearing",
+  25: null,
+  26: "GPSDestDistance",
+  27: null,
+  28: null,
+  29: "GPSDateStamp",
+  30: null,
+  31: "GPSHPositioningError",
+};
+const obj2 = {
+  name: "GPSVersionID",
+  description(arg0) {
+    let str = "Unknown";
+    if (2 === arg0[0]) {
+      str = "Unknown";
+      if (2 === arg0[1]) {
+        str = "Unknown";
+        if (0 === arg0[2]) {
+          str = "Unknown";
+          if (0 === arg0[3]) {
+            str = "Version 2.2";
+          }
+        }
       }
     }
-    return obj;
+    return str;
   },
 };
+const obj3 = { name: "GPSLatitude", description: fn(8293).getCalculatedGpsValue };
+obj[4] = { name: "GPSLongitude", description: fn(8293).getCalculatedGpsValue };
+obj[5] = {
+  name: "GPSAltitudeRef",
+  description(arg0) {
+    let str = "Sea level";
+    if (0 !== arg0) {
+      let str2 = "Unknown";
+      if (1 === arg0) {
+        str2 = "Sea level reference (negative value)";
+      }
+      str = str2;
+    }
+    return str;
+  },
+};
+obj[6] = {
+  name: "GPSAltitude",
+  description(arg0) {
+    return arg0[0] / arg0[1] + " m";
+  },
+};
+obj[7] = {
+  name: "GPSTimeStamp",
+  description(arr) {
+    const mapped = arr.map((item) => {
+      [tmp, tmp2] = item;
+      const result = tmp / tmp2;
+      let combined = result;
+      if (obj.test("" + result)) {
+        const _HermesInternal = HermesInternal;
+        combined = "0" + result;
+      }
+      return combined;
+    });
+    return mapped.join(":");
+  },
+};
+obj[9] = {
+  name: "GPSStatus",
+  description(join) {
+    const joined = join.join("");
+    let str = "Measurement in progress";
+    if ("A" !== joined) {
+      let str2 = "Unknown";
+      if ("V" === joined) {
+        str2 = "Measurement Interoperability";
+      }
+      str = str2;
+    }
+    return str;
+  },
+};
+obj[10] = {
+  name: "GPSMeasureMode",
+  description(join) {
+    const joined = join.join("");
+    let str = "2-dimensional measurement";
+    if ("2" !== joined) {
+      let str2 = "Unknown";
+      if ("3" === joined) {
+        str2 = "3-dimensional measurement";
+      }
+      str = str2;
+    }
+    return str;
+  },
+};
+obj[12] = {
+  name: "GPSSpeedRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "Kilometers per hour";
+    if ("K" !== joined) {
+      let str2 = "Miles per hour";
+      if ("M" !== joined) {
+        let str4 = "Unknown";
+        if ("N" === joined) {
+          str4 = "Knots";
+        }
+        str2 = str4;
+      }
+      str = str2;
+    }
+    return str;
+  },
+};
+obj[14] = {
+  name: "GPSTrackRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "True direction";
+    if ("T" !== joined) {
+      let str2 = "Unknown";
+      if ("M" === joined) {
+        str2 = "Magnetic direction";
+      }
+      str = str2;
+    }
+    return str;
+  },
+};
+obj[16] = {
+  name: "GPSImgDirectionRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "True direction";
+    if ("T" !== joined) {
+      let str2 = "Unknown";
+      if ("M" === joined) {
+        str2 = "Magnetic direction";
+      }
+      str = str2;
+    }
+    return str;
+  },
+};
+obj[19] = {
+  name: "GPSDestLatitudeRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "North latitude";
+    if ("N" !== joined) {
+      let str2 = "Unknown";
+      if ("S" === joined) {
+        str2 = "South latitude";
+      }
+      str = str2;
+    }
+    return str;
+  },
+};
+obj[20] = {
+  name: "GPSDestLatitude",
+  description(arg0) {
+    return arg0[0][0] / arg0[0][1] + arg0[1][0] / arg0[1][1] / 60 + arg0[2][0] / arg0[2][1] / 3600;
+  },
+};
+obj[21] = {
+  name: "GPSDestLongitudeRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "East longitude";
+    if ("E" !== joined) {
+      let str2 = "Unknown";
+      if ("W" === joined) {
+        str2 = "West longitude";
+      }
+      str = str2;
+    }
+    return str;
+  },
+};
+obj[22] = {
+  name: "GPSDestLongitude",
+  description(arg0) {
+    return arg0[0][0] / arg0[0][1] + arg0[1][0] / arg0[1][1] / 60 + arg0[2][0] / arg0[2][1] / 3600;
+  },
+};
+obj[23] = {
+  name: "GPSDestBearingRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "True direction";
+    if ("T" !== joined) {
+      let str2 = "Unknown";
+      if ("M" === joined) {
+        str2 = "Magnetic direction";
+      }
+      str = str2;
+    }
+    return str;
+  },
+};
+obj[25] = {
+  name: "GPSDestDistanceRef",
+  description(join) {
+    const joined = join.join("");
+    let str = "Kilometers";
+    if ("K" !== joined) {
+      let str2 = "Miles";
+      if ("M" !== joined) {
+        let str4 = "Unknown";
+        if ("N" === joined) {
+          str4 = "Knots";
+        }
+        str2 = str4;
+      }
+      str = str2;
+    }
+    return str;
+  },
+};
+const obj4 = { name: "GPSLongitude", description: fn(8293).getCalculatedGpsValue };
+obj[27] = { name: "GPSProcessingMethod", description: fn(8293).getEncodedString };
+const obj5 = { name: "GPSProcessingMethod", description: fn(8293).getEncodedString };
+obj[28] = { name: "GPSAreaInformation", description: fn(8293).getEncodedString };
+obj[30] = {
+  name: "GPSDifferential",
+  description(arg0) {
+    let str = "Measurement without differential correction";
+    if (0 !== arg0) {
+      let str2 = "Unknown";
+      if (1 === arg0) {
+        str2 = "Differential correction applied";
+      }
+      str = str2;
+    }
+    return str;
+  },
+};
+
+export default obj;

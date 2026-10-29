@@ -36,7 +36,7 @@ function createStoreImpl(fn) {
       closure_0 = arg0;
       set.add(arg0);
       return () => set.delete(closure_0);
-    },
+    }
   };
   const tmp2 = fn(setState, getState, store);
   closure_0 = tmp2;
@@ -44,7 +44,7 @@ function createStoreImpl(fn) {
   return store;
 }
 
-export const createStore = (fn) => {
+export (fn) => {
   if (fn) {
     const _Set = Set;
     const set = new Set();
@@ -77,13 +77,13 @@ export const createStore = (fn) => {
       setState,
       getState,
       getInitialState() {
-        return closure_2;
-      },
+          return closure_2;
+        },
       subscribe(arg0) {
-        closure_0 = arg0;
-        set.add(arg0);
-        return () => set.delete(closure_0);
-      },
+          closure_0 = arg0;
+          set.add(arg0);
+          return () => set.delete(closure_0);
+        }
     };
     const tmp7 = fn(setState, getState, store);
     closure_0 = tmp7;
@@ -93,4 +93,4 @@ export const createStore = (fn) => {
     tmp = createStoreImpl;
   }
   return tmp;
-};
+}

@@ -5,7 +5,7 @@ require = arg1;
 const dependencyMap = arg6;
 let closure_2 = {};
 
-export const topLevelTypeToEventType = function topLevelTypeToEventType(str) {
+export function topLevelTypeToEventType(str) {
   const charCodeAtResult = str.charCodeAt(3);
   let formatted = str;
   if (str.startsWith("top")) {
@@ -19,8 +19,8 @@ export const topLevelTypeToEventType = function topLevelTypeToEventType(str) {
     }
   }
   return formatted;
-};
-export const getEventTypePropName = function getEventTypePropName(arg0, arg1) {
+}
+export function getEventTypePropName(arg0, arg1) {
   if (undefined !== closure_2[arg0]) {
     return arg1 ? tmp3.captured : tmp3.bubbled;
   } else {
@@ -103,4 +103,4 @@ export const getEventTypePropName = function getEventTypePropName(arg0, arg1) {
       }
     }
   }
-};
+}

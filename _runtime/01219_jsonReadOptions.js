@@ -2,7 +2,7 @@
 let closure_0 = { emitDefaultValues: false, enumAsInteger: false, useProtoFieldName: false, prettySpaces: 0 };
 let closure_1 = { ignoreUnknownFields: false };
 
-export const jsonReadOptions = function jsonReadOptions(arg0) {
+export function jsonReadOptions(arg0) {
   if (arg0) {
     const _Object = Object;
     const _Object2 = Object;
@@ -11,8 +11,8 @@ export const jsonReadOptions = function jsonReadOptions(arg0) {
     merged = closure_1;
   }
   return merged;
-};
-export const jsonWriteOptions = function jsonWriteOptions(prettySpaces) {
+}
+export function jsonWriteOptions(prettySpaces) {
   if (prettySpaces) {
     const _Object = Object;
     const _Object2 = Object;
@@ -21,8 +21,8 @@ export const jsonWriteOptions = function jsonWriteOptions(prettySpaces) {
     merged = closure_0;
   }
   return merged;
-};
-export const mergeJsonOptions = function mergeJsonOptions(typeRegistry, typeRegistry2) {
+}
+export function mergeJsonOptions(typeRegistry, typeRegistry2) {
   const merged = Object.assign(Object.assign({}, typeRegistry), typeRegistry2);
   typeRegistry = undefined;
   if (null != typeRegistry) {
@@ -42,4 +42,4 @@ export const mergeJsonOptions = function mergeJsonOptions(typeRegistry, typeRegi
   HermesBuiltin.arraySpread(typeRegistry1, tmp2);
   merged.typeRegistry = items;
   return merged;
-};
+}

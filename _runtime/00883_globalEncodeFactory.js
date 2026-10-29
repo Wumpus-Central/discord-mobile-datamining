@@ -17,7 +17,7 @@ function encodePolyfill(arr) {
   return uint8Array;
 }
 
-export const useEncodePolyfill = () => {
+export () => {
   const sentryCarrier = _mod882.getSentryCarrier();
   if (RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.TextEncoder) {
     if (typeof globalEncodeFactory === "function") {
@@ -32,6 +32,6 @@ export const useEncodePolyfill = () => {
   } else {
     sentryCarrier.encodePolyfill = encodePolyfill;
   }
-};
+}
 export { globalEncodeFactory };
 export { encodePolyfill };

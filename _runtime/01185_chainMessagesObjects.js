@@ -1,6 +1,6 @@
 // _runtime/01185_chainMessagesObjects.js
 
-export const chainMessagesObjects = function chainMessagesObjects(messagesProxy, module_1164) {
+export function chainMessagesObjects(messagesProxy, module_1164) {
   let tmp2 = "IntlMessagesProxy" === module_1164[Symbol.toStringTag];
   if ("IntlMessagesProxy" === messagesProxy[Symbol.toStringTag]) {
     if (tmp2) {
@@ -31,8 +31,8 @@ export const chainMessagesObjects = function chainMessagesObjects(messagesProxy,
     const _Object4 = Object;
     merged = Object.assign(module_1164.$$baseObject, messagesProxy);
   }
-};
-export const makeMessagesProxy = function makeMessagesProxy(loader) {
+}
+export function makeMessagesProxy(loader) {
   closure_0 = loader;
   const obj = {};
   const proxy = new Proxy(obj, {
@@ -66,4 +66,4 @@ export const makeMessagesProxy = function makeMessagesProxy(loader) {
   Object.defineProperty(proxy, "$$baseObject", { value: obj, enumerable: false, configurable: false, writable: false });
   Object.defineProperty(proxy, "$$loader", { value: loader, enumerable: false, configurable: false, writable: false });
   return proxy;
-};
+}

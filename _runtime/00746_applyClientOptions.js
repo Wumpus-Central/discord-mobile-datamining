@@ -60,7 +60,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 let closure_3 = ["user", "level", "extra", "contexts", "tags", "fingerprint", "propagationContext"];
 
 export { applyClientOptions };
-export const applyDebugIds = function applyDebugIds(exception, arg1) {
+export function applyDebugIds(exception, arg1) {
   const filenameToDebugIdMap = _mod750.getFilenameToDebugIdMap(arg1);
   exception = exception.exception;
   if (exception != null) {
@@ -81,8 +81,8 @@ export const applyDebugIds = function applyDebugIds(exception, arg1) {
       });
     }
   }
-};
-export const applyDebugMeta = function applyDebugMeta(exception) {
+}
+export function applyDebugMeta(exception) {
   const obj = {};
   exception = exception.exception;
   if (exception != null) {
@@ -123,8 +123,8 @@ export const applyDebugMeta = function applyDebugMeta(exception) {
       closure_1.push({ type: "sourcemap", code_file: tmp, debug_id: tmp2 });
     });
   }
-};
-export const parseEventHintOrCaptureContext = function parseEventHintOrCaptureContext(captureContext) {
+}
+export function parseEventHintOrCaptureContext(captureContext) {
   if (captureContext) {
     if (tmp3) {
       const obj = { captureContext };
@@ -136,8 +136,8 @@ export const parseEventHintOrCaptureContext = function parseEventHintOrCaptureCo
     }
     return tmp5;
   }
-};
-export const prepareEvent = function prepareEvent(normalizeDepth, event_id, event_id2, clone, emit, isolationScope) {
+}
+export function prepareEvent(normalizeDepth, event_id, event_id2, clone, emit, isolationScope) {
   normalizeDepth = normalizeDepth.normalizeDepth;
   let num = 3;
   if (undefined !== normalizeDepth) {
@@ -386,4 +386,4 @@ export const prepareEvent = function prepareEvent(normalizeDepth, event_id, even
     }
     cloneResult.update(captureContext);
   }
-};
+}

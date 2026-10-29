@@ -65,12 +65,12 @@ let closure_6 = 1;
 let c7 = false;
 let map = new Map();
 
-export const registerObserver = function registerObserver(observer, callback) {
+export function registerObserver(observer, callback) {
   closure_6 = closure_6 + 1;
   const result = map.set(closure_6, { observer, callback });
   return closure_6;
-};
-export const unregisterObserver = function unregisterObserver(_mutationObserverId) {
+}
+export function unregisterObserver(_mutationObserverId) {
   let deleteResult = map.delete(_mutationObserverId);
   if (deleteResult) {
     deleteResult = 0 === map.size;
@@ -82,8 +82,8 @@ export const unregisterObserver = function unregisterObserver(_mutationObserverI
     }
     c7 = false;
   }
-};
-export const observe = function observe(mutationObserverId) {
+}
+export function observe(mutationObserverId) {
   mutationObserverId = mutationObserverId.mutationObserverId;
   ({ target, subtree } = mutationObserverId);
   if (null != NativeMutationObserverCxxDefault) {
@@ -114,8 +114,8 @@ export const observe = function observe(mutationObserverId) {
   } else {
     warnOnceDefault("missing-native-mutation-observer", "Missing native implementation of MutationObserver");
   }
-};
-export const unobserveAll = function unobserveAll(_mutationObserverId) {
+}
+export function unobserveAll(_mutationObserverId) {
   if (null != NativeMutationObserverCxxDefault) {
     if (null != map.get(_mutationObserverId)) {
       NativeMutationObserverCxxDefault.unobserveAll(_mutationObserverId);
@@ -132,4 +132,4 @@ export const unobserveAll = function unobserveAll(_mutationObserverId) {
   } else {
     warnOnceDefault("missing-native-mutation-observer", "Missing native implementation of MutationObserver");
   }
-};
+}

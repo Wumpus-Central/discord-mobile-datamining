@@ -65,7 +65,7 @@ function _enhanceEventWithSdkInfo(sdk, name) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
 export { _enhanceEventWithSdkInfo };
-export const createEventEnvelope = function createEventEnvelope(type, url, sdk, arg3) {
+export function createEventEnvelope(type, url, sdk, arg3) {
   const sdkMetadataForEnvelopeHeader = forEachEnvelopeItem.getSdkMetadataForEnvelopeHeader(sdk);
   let str = "event";
   if (type.type) {
@@ -90,8 +90,8 @@ export const createEventEnvelope = function createEventEnvelope(type, url, sdk, 
   const tmp3Result = forEachEnvelopeItem;
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(eventEnvelopeHeaders, items1);
-};
-export const createSessionEnvelope = function createSessionEnvelope(toJSON, url, sdk, arg3) {
+}
+export function createSessionEnvelope(toJSON, url, sdk, arg3) {
   const sdkMetadataForEnvelopeHeader = forEachEnvelopeItem.getSdkMetadataForEnvelopeHeader(sdk);
   const obj2 = { sent_at: null };
   obj2.sent_at = new Date().toISOString();
@@ -117,8 +117,8 @@ export const createSessionEnvelope = function createSessionEnvelope(toJSON, url,
   const date = new Date();
   const items2 = [items1];
   return forEachEnvelopeItem.createEnvelope(obj2, items2);
-};
-export const createSpanEnvelope = function createSpanEnvelope(arr, getDsn) {
+}
+export function createSpanEnvelope(arr, getDsn) {
   const dynamicSamplingContextFromSpan = beforeSendSpan(ignoreSpans[2]).getDynamicSamplingContextFromSpan(arr[0]);
   let dsn;
   if (getDsn != null) {
@@ -186,4 +186,4 @@ export const createSpanEnvelope = function createSpanEnvelope(arr, getDsn) {
     const spanToJSON = tmp2(tmp4[4]).spanToJSON;
   }
   found[Symbol.iterator]();
-};
+}

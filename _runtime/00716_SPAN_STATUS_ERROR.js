@@ -4,7 +4,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 export const SPAN_STATUS_ERROR = 2;
 export const SPAN_STATUS_OK = 1;
 export const SPAN_STATUS_UNSET = 0;
-export const getSpanStatusFromHttpCode = function getSpanStatusFromHttpCode(arg0) {
+export function getSpanStatusFromHttpCode(arg0) {
   if (arg0 < 400) {
     if (arg0 >= 100) {
       return { code: 1 };
@@ -41,8 +41,8 @@ export const getSpanStatusFromHttpCode = function getSpanStatusFromHttpCode(arg0
     }
   }
   return { code: 2, message: "internal_error" };
-};
-export const setHttpStatus = function setHttpStatus(setAttribute, status) {
+}
+export function setHttpStatus(setAttribute, status) {
   const attr = setAttribute.setAttribute("http.response.status_code", status);
   if (status < 400) {
     if (status >= 100) {
@@ -83,4 +83,4 @@ export const setHttpStatus = function setHttpStatus(setAttribute, status) {
     }
   }
   obj = { code: 2, message: "internal_error" };
-};
+}

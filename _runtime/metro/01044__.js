@@ -5,7 +5,7 @@ import feedbackAsyncIntegration from "../00898_feedbackAsyncIntegration.js";
 require = arg1;
 const dependencyMap = arg6;
 
-export const breadcrumbsIntegration = () => {
+export () => {
   let obj = merged1;
   if (merged1 === undefined) {
     obj = {};
@@ -33,4 +33,4 @@ export const breadcrumbsIntegration = () => {
   merged1 = Object.assign(merged, obj3);
   const tmp4Result = _mod879;
   return feedbackAsyncIntegration.breadcrumbsIntegration(merged1);
-};
+}

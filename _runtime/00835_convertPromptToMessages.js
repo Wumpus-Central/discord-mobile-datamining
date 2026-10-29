@@ -30,15 +30,15 @@ function convertPromptToMessages(data) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const _INTERNAL_cleanupToolCallSpan = function _INTERNAL_cleanupToolCallSpan(arg0) {
+export function _INTERNAL_cleanupToolCallSpan(arg0) {
   const toolCallSpanMap = EMBEDDINGS_OPS.toolCallSpanMap;
   toolCallSpanMap.delete(arg0);
-};
-export const _INTERNAL_getSpanForToolCallId = function _INTERNAL_getSpanForToolCallId(arg0) {
+}
+export function _INTERNAL_getSpanForToolCallId(arg0) {
   const toolCallSpanMap = EMBEDDINGS_OPS.toolCallSpanMap;
   return toolCallSpanMap.get(arg0);
-};
-export const accumulateTokensForParent = function accumulateTokensForParent(item10015, map) {
+}
+export function accumulateTokensForParent(item10015, map) {
   const parent_span_id = item10015.parent_span_id;
   if (parent_span_id) {
     const tmp3 = item10015.data[ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE.GEN_AI_USAGE_INPUT_TOKENS_ATTRIBUTE];
@@ -54,8 +54,8 @@ export const accumulateTokensForParent = function accumulateTokensForParent(item
       const result = map.set(parent_span_id, tmp6);
     }
   }
-};
-export const applyAccumulatedTokens = function applyAccumulatedTokens(trace, map) {
+}
+export function applyAccumulatedTokens(trace, map) {
   value = map.get(trace.span_id);
   let data = value;
   if (value) {
@@ -73,8 +73,8 @@ export const applyAccumulatedTokens = function applyAccumulatedTokens(trace, map
     }
     tmp6 = value.inputTokens > 0 || value.outputTokens > 0;
   }
-};
-export const convertAvailableToolsToJsonString = function convertAvailableToolsToJsonString(data) {
+}
+export function convertAvailableToolsToJsonString(data) {
   return JSON.stringify(
     data.map((item) => {
       if (typeof item === "string") {
@@ -89,9 +89,9 @@ export const convertAvailableToolsToJsonString = function convertAvailableToolsT
       }
     }),
   );
-};
+}
 export { convertPromptToMessages };
-export const getSpanOpFromName = function getSpanOpFromName(description) {
+export function getSpanOpFromName(description) {
   switch (description) {
     case "ai.generateText":
       let tmp17 = ANTHROPIC_AI_RESPONSE_TIMESTAMP_ATTRIBUTE;
@@ -132,8 +132,8 @@ export const getSpanOpFromName = function getSpanOpFromName(description) {
       }
       return str2;
   }
-};
-export const requestMessagesFromPrompt = function requestMessagesFromPrompt(setAttribute, data) {
+}
+export function requestMessagesFromPrompt(setAttribute, data) {
   if (data[AI_MODEL_ID_ATTRIBUTE.AI_PROMPT_ATTRIBUTE]) {
     const attr = setAttribute.setAttribute(
       "gen_ai.prompt",
@@ -202,4 +202,4 @@ export const requestMessagesFromPrompt = function requestMessagesFromPrompt(setA
       }
     } catch (err) {}
   }
-};
+}

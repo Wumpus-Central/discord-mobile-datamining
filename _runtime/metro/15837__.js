@@ -1,11 +1,4 @@
 // _runtime/metro/15837__.js
-import _mod15818 from "15818__.js";
-import _mod15838 from "15838__.js";
+import _mod15830 from "15830__.js";
 
-export default (arg0, arg1) => {
-  let tmp4;
-  if (!_mod15818(arg0[arg1])) {
-    tmp4 = _mod15838(tmp);
-  }
-  return tmp4;
-};
+export default (arg0, arg1, arg2) => _mod15830(arg0, arg1, arg2) < 0;

@@ -10,7 +10,7 @@ const dependencyMap = arg6;
 const ReactNativeNavigation = "ReactNativeNavigation";
 
 export const INTEGRATION_NAME = "ReactNativeNavigation";
-export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
+export (enableTabsInstrumentation) => {
   ({ navigation, routeChangeTimeoutMs } = enableTabsInstrumentation);
   if (routeChangeTimeoutMs === undefined) {
     routeChangeTimeoutMs = 1000;
@@ -63,9 +63,7 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
     }
     if (beforeStartSpan) {
       const options = reactNativeTracingIntegration.options;
-      let beforeStartSpanResult = options.beforeStartSpan(
-        flag2(reactNativeTracingIntegration[0]).getDefaultIdleNavigationSpanOptions(),
-      );
+      let beforeStartSpanResult = options.beforeStartSpan(flag2(reactNativeTracingIntegration[0]).getDefaultIdleNavigationSpanOptions());
       const obj4 = flag2(reactNativeTracingIntegration[0]);
     } else {
       beforeStartSpanResult = flag2(reactNativeTracingIntegration[0]).getDefaultIdleNavigationSpanOptions();
@@ -74,10 +72,7 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
     const result = obj2.startIdleNavigationSpan(beforeStartSpanResult, obj2);
     _undefined = result;
     if (null != result) {
-      const attr = _undefined.setAttribute(
-        flag2(reactNativeTracingIntegration[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
-        flag2(reactNativeTracingIntegration[3]).SPAN_ORIGIN_AUTO_NAVIGATION_REACT_NATIVE_NAVIGATION,
-      );
+      const attr = _undefined.setAttribute(flag2(reactNativeTracingIntegration[2]).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, flag2(reactNativeTracingIntegration[3]).SPAN_ORIGIN_AUTO_NAVIGATION_REACT_NATIVE_NAVIGATION);
     }
     if (flag2) {
       const obj5 = flag2(reactNativeTracingIntegration[4]);
@@ -87,12 +82,7 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
     closure_0 = _undefined;
     const obj7 = flag2(reactNativeTracingIntegration[4]);
     const client = flag2(reactNativeTracingIntegration[2]).getClient();
-    const result2 = obj7.ignoreEmptyRouteChangeTransactions(
-      client,
-      _undefined,
-      flag2(reactNativeTracingIntegration[0]).DEFAULT_NAVIGATION_SPAN_NAME,
-      () => c4 === closure_0,
-    );
+    const result2 = obj7.ignoreEmptyRouteChangeTransactions(client, _undefined, flag2(reactNativeTracingIntegration[0]).DEFAULT_NAVIGATION_SPAN_NAME, () => c4 === closure_0);
     timeout = setTimeout(discardLatestNavigationSpan.bind(c3), closure_0);
     const obj8 = flag2(reactNativeTracingIntegration[2]);
   }
@@ -139,20 +129,8 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
         if (obj.spanToJSON(_undefined).description === startIdleSpan.DEFAULT_NAVIGATION_SPAN_NAME) {
           _undefined.updateName(componentId.componentName);
         }
-        const obj4 = {
-          "route.name": null,
-          "route.component_id": null,
-          "route.component_type": null,
-          "route.has_been_seen": null,
-          "previous_route.name": null,
-          "previous_route.component_id": null,
-          "previous_route.component_type": null,
-        };
-        ({
-          componentName: obj2["route.name"],
-          componentId: obj2["route.component_id"],
-          componentType: obj2["route.component_type"],
-        } = componentId);
+        const obj4 = { "route.name": null, "route.component_id": null, "route.component_type": null, "route.has_been_seen": null, "previous_route.name": null, "previous_route.component_id": null, "previous_route.component_type": null };
+        ({ componentName: obj2["route.name"], componentId: obj2["route.component_id"], componentType: obj2["route.component_type"] } = componentId);
         obj4["route.has_been_seen"] = hasItem;
         let componentName;
         if (null != enableTabsInstrumentation) {
@@ -201,7 +179,9 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
       }
     }
   });
-  pushRecentComponentId = function pushRecentComponentId(arg0) {};
+  pushRecentComponentId = function pushRecentComponentId(arg0) {
+
+  };
   discardLatestNavigationSpan = function discardLatestNavigationSpan() {
     if (_undefined) {
       if (obj.isSentrySpan(_undefined)) {
@@ -221,17 +201,16 @@ export const reactNativeNavigationIntegration = (enableTabsInstrumentation) => {
       throw new TypeError("Trying to call a non-function");
     }
   };
-  clearStateChangeTimeout = function clearStateChangeTimeout() {};
+  clearStateChangeTimeout = function clearStateChangeTimeout() {
+
+  };
   return {
     name: routeChangeTimeoutMs,
     afterAllSetup(getIntegrationByName) {
       reactNativeTracingIntegration = _mod1040.getReactNativeTracingIntegration(getIntegrationByName);
       if (reactNativeTracingIntegration) {
-        obj2 = {
-          finalTimeout: reactNativeTracingIntegration.options.finalTimeoutMs,
-          idleTimeout: reactNativeTracingIntegration.options.idleTimeoutMs,
-        };
+        obj2 = { finalTimeout: reactNativeTracingIntegration.options.finalTimeoutMs, idleTimeout: reactNativeTracingIntegration.options.idleTimeoutMs };
       }
-    },
+    }
   };
-};
+}

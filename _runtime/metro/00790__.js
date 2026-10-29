@@ -7,7 +7,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const map = new Map();
 const set = new Set();
 
-export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, exception) {
+export function addMetadataToStackFrames(arg0, exception) {
   closure_0 = arg0;
   exception = exception.exception;
   if (exception != null) {
@@ -56,8 +56,8 @@ export const addMetadataToStackFrames = function addMetadataToStackFrames(arg0, 
       });
     }
   }
-};
-export const getFilenameToMetadataMap = function getFilenameToMetadataMap(fn) {
+}
+export function getFilenameToMetadataMap(fn) {
   const obj = {};
   if (_mod697.GLOBAL_OBJ._sentryModuleMetadata) {
     const _Object = Object;
@@ -80,8 +80,8 @@ export const getFilenameToMetadataMap = function getFilenameToMetadataMap(fn) {
   } else {
     return obj;
   }
-};
-export const getMetadataForUrl = function getMetadataForUrl(fn, arg1) {
+}
+export function getMetadataForUrl(fn, arg1) {
   (function ensureMetadataStacksAreParsed(fn) {
     if (closure_1_0(697).GLOBAL_OBJ._sentryModuleMetadata) {
       const _Object = Object;
@@ -106,8 +106,8 @@ export const getMetadataForUrl = function getMetadataForUrl(fn, arg1) {
     }
   })(fn);
   return map.get(arg1);
-};
-export const stripMetadataFromStackFrames = function stripMetadataFromStackFrames(exception) {
+}
+export function stripMetadataFromStackFrames(exception) {
   exception = exception.exception;
   if (exception != null) {
     const values = exception.values;
@@ -125,4 +125,4 @@ export const stripMetadataFromStackFrames = function stripMetadataFromStackFrame
       });
     }
   }
-};
+}

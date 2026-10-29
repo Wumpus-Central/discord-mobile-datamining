@@ -222,7 +222,7 @@ function normalizeToSize(arg0) {
 
 export { normalize };
 export { normalizeToSize };
-export const normalizeUrlToBase = function normalizeUrlToBase(arg0, str) {
+export function normalizeUrlToBase(arg0, str) {
   const replaced = str.replace(/\\/g, "/");
   try {
     const _decodeURI = decodeURI;
@@ -236,4 +236,4 @@ export const normalizeUrlToBase = function normalizeUrlToBase(arg0, str) {
       .replace(/webpack:\/?/g, "")
       .replace(regExp, "app:///");
   } catch (err) {}
-};
+}

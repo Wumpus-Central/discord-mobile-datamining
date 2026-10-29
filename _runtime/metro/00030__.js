@@ -7,7 +7,7 @@ importDefault = arg2;
 const dependencyMap = arg6;
 __turboModuleProxy = __turboModuleProxy.__turboModuleProxy;
 
-export const get = function get(AccessibilityInfo) {
+export function get(AccessibilityInfo) {
   if (null == __turboModuleProxy) {
     const tmp5 = genModule.default[AccessibilityInfo];
     let tmp6 = null;
@@ -19,8 +19,8 @@ export const get = function get(AccessibilityInfo) {
     tmpResult = tmp(AccessibilityInfo);
   }
   return tmpResult;
-};
-export const getEnforcing = function getEnforcing(RNGestureHandlerModule) {
+}
+export function getEnforcing(RNGestureHandlerModule) {
   if (null == __turboModuleProxy) {
     const tmp5 = genModule.default[RNGestureHandlerModule];
     let tmp6 = null;
@@ -38,4 +38,4 @@ export const getEnforcing = function getEnforcing(RNGestureHandlerModule) {
       "' could not be found. Verify that a module by this name is registered in the native binary.",
   );
   return tmpResult;
-};
+}

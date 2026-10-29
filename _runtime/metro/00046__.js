@@ -3,7 +3,7 @@ const global = arg0;
 let c1 = 8192;
 let closure_2 = 0;
 
-export const isEnabled = function isEnabled() {
+export function isEnabled() {
   if (global.nativeTraceIsTracing) {
     let nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
   } else {
@@ -11,9 +11,9 @@ export const isEnabled = function isEnabled() {
     nativeTraceIsTracingResult = Boolean(global.__RCTProfileIsProfiling);
   }
   return nativeTraceIsTracingResult;
-};
+}
 export function setEnabled(arg0) {}
-export const beginEvent = function beginEvent(fn, arg1) {
+export function beginEvent(fn, arg1) {
   if (global.nativeTraceIsTracing) {
     let nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
   } else {
@@ -27,8 +27,8 @@ export const beginEvent = function beginEvent(fn, arg1) {
     }
     const result = global.nativeTraceBeginSection(c1, tmp5, arg1);
   }
-};
-export const endEvent = function endEvent(arg0) {
+}
+export function endEvent(arg0) {
   if (global.nativeTraceIsTracing) {
     let nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
   } else {
@@ -38,8 +38,8 @@ export const endEvent = function endEvent(arg0) {
   if (nativeTraceIsTracingResult) {
     const result = global.nativeTraceEndSection(c1, arg0);
   }
-};
-export const beginAsyncEvent = function beginAsyncEvent(fn, arg1) {
+}
+export function beginAsyncEvent(fn, arg1) {
   if (global.nativeTraceIsTracing) {
     let nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
   } else {
@@ -55,8 +55,8 @@ export const beginAsyncEvent = function beginAsyncEvent(fn, arg1) {
     const result = global.nativeTraceBeginAsyncSection(c1, tmp7, tmp, arg1);
   }
   return closure_2;
-};
-export const endAsyncEvent = function endAsyncEvent(fn, arg1, arg2) {
+}
+export function endAsyncEvent(fn, arg1, arg2) {
   if (global.nativeTraceIsTracing) {
     let nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
   } else {
@@ -70,8 +70,8 @@ export const endAsyncEvent = function endAsyncEvent(fn, arg1, arg2) {
     }
     const result = global.nativeTraceEndAsyncSection(c1, tmp5, arg1, arg2);
   }
-};
-export const counterEvent = function counterEvent(pending_js_to_native_queue, length) {
+}
+export function counterEvent(pending_js_to_native_queue, length) {
   if (global.nativeTraceIsTracing) {
     let nativeTraceIsTracingResult = global.nativeTraceIsTracing(c1);
   } else {
@@ -87,4 +87,4 @@ export const counterEvent = function counterEvent(pending_js_to_native_queue, le
       global.nativeTraceCounter(c1, tmp5, length);
     }
   }
-};
+}

@@ -64,13 +64,13 @@ const items = [
   },
   {
     key: "_getCached",
-    value: function _getCached(dateTime, value, fn) {
-      const _getKeyResult = this._getKey(value);
+    value: function _getCached(dateTime, arg1, fn) {
+      const _getKeyResult = this._getKey(arg1);
       value = dateTime.get(_getKeyResult);
       if (value) {
         return value;
       } else {
-        const tmp4 = fn(value);
+        const tmp4 = fn(arg1);
         const result = dateTime.set(_getKeyResult, tmp4);
         return tmp4;
       }

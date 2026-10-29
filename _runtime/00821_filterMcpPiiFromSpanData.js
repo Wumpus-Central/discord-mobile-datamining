@@ -9,7 +9,7 @@ const items = [
 ];
 const set = new Set(items);
 
-export const filterMcpPiiFromSpanData = function filterMcpPiiFromSpanData(arg0, BooleanResult) {
+export function filterMcpPiiFromSpanData(arg0, BooleanResult) {
   let reduced = arg0;
   if (!BooleanResult) {
     const _Object = Object;
@@ -23,4 +23,4 @@ export const filterMcpPiiFromSpanData = function filterMcpPiiFromSpanData(arg0, 
     }, {});
   }
   return reduced;
-};
+}

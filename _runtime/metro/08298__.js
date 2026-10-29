@@ -1,42 +1,13 @@
 // _runtime/metro/08298__.js
-const require = globalThis.__r;
-
-const require = arg1;
-const dependencyMap = arg6;
-let closure_2 = [6, 7, 99];
-
-export default {
-  get(buffer, Compression, arg2) {
-    let prop = Compression;
-    if (Compression) {
-      let hasItem = undefined === Compression.Compression;
-      if (!hasItem) {
-        hasItem = closure_2.includes(Compression.Compression.value);
-      }
-      prop = hasItem;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormat;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormat.value;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormatLength;
-    }
-    if (prop) {
-      prop = Compression.JPEGInterchangeFormatLength.value;
-    }
-    if (prop) {
-      Compression.type = "image/jpeg";
-      const sum = arg2 + Compression.JPEGInterchangeFormat.value;
-      buffer = buffer.buffer;
-      Compression.image = buffer.slice(sum, sum + Compression.JPEGInterchangeFormatLength.value);
-      require("08246__.js").deferInit(Compression, "base64", function () {
-        return require("08246__.js").getBase64Image(this.image);
-      });
-      const obj = require("08246__.js");
-    }
-    return Compression;
+const obj = {
+  0: {
+    name: "PentaxVersion",
+    description(join) {
+      return join.join(".");
+    },
   },
+  5: "PentaxModelID",
+  555: "LevelInfo",
 };
+
+export default obj;

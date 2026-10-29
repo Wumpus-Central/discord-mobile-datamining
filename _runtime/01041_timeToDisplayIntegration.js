@@ -147,7 +147,7 @@ export () => {
                 let obj3 = { value, done: true };
                 return obj3;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -190,7 +190,7 @@ export () => {
                   let found;
                   if (null !== spans) {
                     if (debug1 !== closure_129_4) {
-                      found = closure_129_4.find(() => { ... });
+                      found = closure_129_4.find(/* F166785 */ function() { ... });
                     }
                   }
                   closure_128_1 = found;
@@ -259,7 +259,7 @@ export () => {
                 const obj2 = { value, done: true };
                 return obj2;
               } else {
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             } else {
               try {
@@ -306,7 +306,7 @@ export () => {
                       let found;
                       if (null !== spans) {
                         if (debug1 !== closure_129_4) {
-                          found = closure_129_4.find(() => { ... });
+                          found = closure_129_4.find(/* F166787 */ function() { ... });
                         }
                       }
                       closure_128_1 = found;
@@ -356,7 +356,7 @@ export () => {
                     }
                   }
                   c3 = 3;
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } catch (tmp83) {
                 c3 = tmp;

@@ -47,7 +47,7 @@ const javascript = "javascript";
 
 export const DEFAULT_NAVIGATION_SPAN_NAME = "Route Change";
 export { defaultIdleOptions };
-export const startIdleNavigationSpan = (arg0) => {
+export (arg0) => {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -74,10 +74,7 @@ export const startIdleNavigationSpan = (arg0) => {
       const tmp5Result = _mod996;
     }
     if (isRootSpanResult) {
-      const items = [
-        SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_INTERACTION,
-        SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_MANUAL_INTERACTION,
-      ];
+      const items = [SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_INTERACTION, SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_MANUAL_INTERACTION];
       const tmp5Result7 = _mod693;
       isRootSpanResult = items.includes(_mod693.spanToJSON(activeSpan).origin || "");
       const tmp10 = _mod693.spanToJSON(activeSpan).origin || "";
@@ -88,11 +85,7 @@ export const startIdleNavigationSpan = (arg0) => {
       if (flag) {
         const debug3 = _mod693.debug;
         const _HermesInternal2 = HermesInternal;
-        debug3.log(
-          "[startIdleNavigationSpan] Not canceling " +
-            _mod693.spanToJSON(activeSpan).op +
-            " transaction because navigation is from app restart - preserving error context.",
-        );
+        debug3.log("[startIdleNavigationSpan] Not canceling " + _mod693.spanToJSON(activeSpan).op + " transaction because navigation is from app restart - preserving error context.");
         const tmp5Result9 = _mod693;
       }
       const _Object = Object;
@@ -107,23 +100,16 @@ export const startIdleNavigationSpan = (arg0) => {
         str6 = "unknown op";
       }
       const _HermesInternal3 = HermesInternal;
-      debug4.log("[startIdleNavigationSpan] Starting " + str6 + ' transaction "' + merged.name + '" on scope');
+      debug4.log("[startIdleNavigationSpan] Starting " + str6 + " transaction \"" + merged.name + "\" on scope");
       const tmp5Result10 = _mod693;
       const result = _mod1035.adjustTransactionDuration(client, obj14, finalTimeout);
-      const attr = obj14.setAttribute(
-        _mod693.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
-        SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_NAVIGATION_CUSTOM,
-      );
+      const attr = obj14.setAttribute(_mod693.SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_NAVIGATION_CUSTOM);
       return obj14;
     }
     if (isRootSpanResult) {
       const debug2 = _mod693.debug;
       const _HermesInternal = HermesInternal;
-      debug2.log(
-        "[startIdleNavigationSpan] Canceling " +
-          _mod693.spanToJSON(activeSpan).op +
-          " transaction because of a new navigation root span.",
-      );
+      debug2.log("[startIdleNavigationSpan] Canceling " + _mod693.spanToJSON(activeSpan).op + " transaction because of a new navigation root span.");
       const obj6 = { code: _mod693.SPAN_STATUS_ERROR, message: "cancelled" };
       activeSpan.setStatus(obj6);
       activeSpan.end();
@@ -134,35 +120,32 @@ export const startIdleNavigationSpan = (arg0) => {
     const debug = obj3.debug;
     debug.warn("[startIdleNavigationSpan] Can't create route change span, missing client.");
   }
-};
+}
 export { startIdleSpan };
-export const getDefaultIdleNavigationSpanOptions = function getDefaultIdleNavigationSpanOptions() {
+export function getDefaultIdleNavigationSpanOptions() {
   const obj = { name, op: "navigation", forceTransaction: true, scope: _mod693.getCurrentScope() };
   return obj;
-};
-export const isSentryInteractionSpan = function isSentryInteractionSpan(activeSpan) {
-  const items = [
-    SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_INTERACTION,
-    SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_MANUAL_INTERACTION,
-  ];
+}
+export function isSentryInteractionSpan(activeSpan) {
+  const items = [SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_AUTO_INTERACTION, SPAN_ORIGIN_AUTO_INTERACTION.SPAN_ORIGIN_MANUAL_INTERACTION];
   return items.includes(_mod693.spanToJSON(activeSpan).origin || "");
-};
+}
 export const SCOPE_SPAN_FIELD = "_sentrySpan";
-export const clearActiveSpanFromScope = function clearActiveSpanFromScope(currentScope) {
+export function clearActiveSpanFromScope(currentScope) {
   delete tmp[tmp2];
-};
-export const addDefaultOpForSpanFrom = function addDefaultOpForSpanFrom(on) {
+}
+export function addDefaultOpForSpanFrom(on) {
   on.on("spanStart", (setAttribute) => {
     if (!obj.spanToJSON(setAttribute).op) {
       const attr = setAttribute.setAttribute(_mod693.SEMANTIC_ATTRIBUTE_SENTRY_OP, "default");
     }
     obj = _mod693;
   });
-};
+}
 export const SPAN_THREAD_NAME = "thread.name";
 export const SPAN_THREAD_NAME_MAIN = "main";
 export const SPAN_THREAD_NAME_JAVASCRIPT = "javascript";
-export const addThreadInfoToSpan = function addThreadInfoToSpan(on) {
+export function addThreadInfoToSpan(on) {
   on.on("spanStart", (setAttribute) => {
     const data = _mod693.spanToJSON(setAttribute).data;
     let tmp;
@@ -175,9 +158,9 @@ export const addThreadInfoToSpan = function addThreadInfoToSpan(on) {
       const attr = setAttribute.setAttribute(closure_1_7, javascript);
     }
   });
-};
-export const setMainThreadInfo = function setMainThreadInfo(childSpanJSON) {
+}
+export function setMainThreadInfo(childSpanJSON) {
   childSpanJSON.data = childSpanJSON.data || {};
   childSpanJSON.data[c7] = main;
   return childSpanJSON;
-};
+}

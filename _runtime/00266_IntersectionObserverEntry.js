@@ -99,6 +99,6 @@ const module_126 = fn(126);
 module_126.setPlatformObject(tmp2);
 
 export default tmp2;
-export const createIntersectionObserverEntry = function createIntersectionObserverEntry(arg0, arg1) {
+export function createIntersectionObserverEntry(arg0, arg1) {
   return new closure_3(arg0, arg1);
-};
+}

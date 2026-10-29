@@ -1,11 +1,4 @@
 // _runtime/metro/15855__.js
-import _mod15856 from "15856__.js";
+import _mod15853 from "15853__.js";
 
-export default (arg0) => {
-  const tmp = _mod15856(arg0);
-  let num = 0;
-  if (tmp > 0) {
-    num = min(tmp, 9007199254740991);
-  }
-  return num;
-};
+export default (arg0, arg1, arg2) => _mod15853(arg0, arg1, "<", arg2);

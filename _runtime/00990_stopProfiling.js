@@ -23,12 +23,7 @@ function stopProfiling(arg0) {
         if (stopProfilingResult.androidProfile) {
           const _Object3 = Object;
           const _Object4 = Object;
-          const obj = {
-            platform: "android",
-            js_profile: hermesProfilingEvent.profile,
-            duration_ns: null,
-            active_thread_id: null,
-          };
+          const obj = { platform: "android", js_profile: hermesProfilingEvent.profile, duration_ns: null, active_thread_id: null };
           const merged = Object.assign({}, stopProfilingResult.androidProfile);
           obj.duration_ns = result - arg0.toString(10);
           obj.active_thread_id = hermesProfilingEvent.transaction.active_thread_id;
@@ -42,11 +37,7 @@ function stopProfiling(arg0) {
           const obj2 = { profile: null };
           const profile = hermesProfilingEvent.profile;
           const merged1 = Object.assign({}, hermesProfilingEvent);
-          addNativeThreadCpuProfileToHermes(
-            profile,
-            measurements.profile,
-            hermesProfilingEvent.transaction.active_thread_id,
-          );
+          addNativeThreadCpuProfileToHermes(profile, measurements.profile, hermesProfilingEvent.transaction.active_thread_id);
           obj2.profile = profile;
           let merged2 = Object.assign(merged1, obj2);
           const debug_meta = measurements.debug_meta;
@@ -90,20 +81,17 @@ function addNativeThreadCpuProfileToHermes(profile, profile2, active_thread_id) 
     const frames = profile2.frames;
     for (const item10032 of frames) {
       let frames1 = arg0.frames;
-      let obj = { function: null, instruction_addr: null, platform: "r" };
+      let obj = { function: null, instruction_addr: null, platform: "Array" };
       ({ function: obj.function, instruction_addr: obj.instruction_addr } = item10032);
       let arr = frames1.push(obj);
       continue;
     }
   }
-  const items = [...(profile.stacks || []), ...arr3.map((arr) => arr.map((item) => item + length))];
+  const items = [...profile.stacks || [], ...arr3.map((arr) => arr.map((item) => item + length))];
   profile.stacks = items;
-  const items1 = [...(profile.samples || [])];
+  const items1 = [...profile.samples || []];
   const found = profile2.samples || [].filter((thread_id) => thread_id.thread_id !== closure_0);
-  HermesBuiltin.arraySpread(
-    found.map((stack_id) => Object.assign(Object.assign({}, stack_id), { stack_id: length + stack_id.stack_id })),
-    tmp6,
-  );
+  HermesBuiltin.arraySpread(found.map((stack_id) => Object.assign(Object.assign({}, stack_id), { stack_id: length + stack_id.stack_id })), tmp6);
   profile.samples = items1;
   return profile;
 }
@@ -111,7 +99,7 @@ const Platform = _mod17.Platform;
 let c2 = 1000000;
 let closure_3 = { platformProfilers: true };
 
-export const hermesProfilingIntegration = () => {
+export () => {
   let tmp = arg0;
   if (arg0 === undefined) {
     tmp = c3;
@@ -121,7 +109,9 @@ export const hermesProfilingIntegration = () => {
   const platformProfilers = tmp.platformProfilers;
   closure_2 = null === platformProfilers || undefined === platformProfilers || platformProfilers;
   c3 = false;
-  function _startCurrentProfileForActiveTransaction() {}
+  function _startCurrentProfileForActiveTransaction() {
+
+  }
   function _startCurrentProfile(activeSpan) {
     if (obj.isRootSpan(activeSpan)) {
       _finishCurrentProfile();
@@ -148,9 +138,7 @@ export const hermesProfilingIntegration = () => {
           }
           if (undefined === profilesSampleRate) {
             const debug3 = _mod693.debug;
-            debug3.log(
-              "[Profiling] Profiling disabled, enable it by setting `profilesSampleRate` option to SDK init call.",
-            );
+            debug3.log("[Profiling] Profiling disabled, enable it by setting `profilesSampleRate` option to SDK init call.");
             let flag2 = false;
           } else {
             const _Math = Math;
@@ -173,8 +161,12 @@ export const hermesProfilingIntegration = () => {
     }
     obj = _mod996;
   }
-  function _shouldStartProfiling(arg0) {}
-  function _startNewProfile(arg0) {}
+  function _shouldStartProfiling(arg0) {
+
+  }
+  function _startNewProfile(arg0) {
+
+  }
   function _finishCurrentProfileForSpan(spanContext) {
     if (obj.isRootSpan(spanContext)) {
       let span_id;
@@ -191,13 +183,7 @@ export const hermesProfilingIntegration = () => {
           span_id1 = _undefined.span_id;
         }
         const _HermesInternal = HermesInternal;
-        debug.log(
-          "[Profiling] Span (" +
-            spanId +
-            ") ended is not the currently profiled span (" +
-            span_id1 +
-            "). Not stopping profiling.",
-        );
+        debug.log("[Profiling] Span (" + spanId + ") ended is not the currently profiled span (" + span_id1 + "). Not stopping profiling.");
       }
     }
     obj = _mod996;
@@ -299,7 +285,9 @@ export const hermesProfilingIntegration = () => {
       }
     }
   }
-  function _clearCurrentProfileTimeout() {}
+  function _clearCurrentProfileTimeout() {
+
+  }
   return {
     name: "HermesProfiling",
     setupOnce() {
@@ -356,10 +344,10 @@ export const hermesProfilingIntegration = () => {
         }
         isHermesEnabledResult = _mod879.isHermesEnabled();
       }
-    },
+    }
   };
-};
-export const startProfiling = function startProfiling(arg0) {
+}
+export function startProfiling(arg0) {
   const NATIVE = NativeModules.NATIVE;
   let result = null;
   if (NATIVE.startProfiling(arg0)) {
@@ -367,16 +355,16 @@ export const startProfiling = function startProfiling(arg0) {
     result = Date.now() * c2;
   }
   return result;
-};
+}
 export { stopProfiling };
-export const createAndroidWithHermesProfile = function createAndroidWithHermesProfile(js_profile, arg1, arg2) {
+export function createAndroidWithHermesProfile(js_profile, arg1, arg2) {
   const obj = { platform: "android", js_profile: js_profile.profile, duration_ns: null, active_thread_id: null };
   const merged = Object.assign({}, arg1);
   obj.duration_ns = require("AppStartPerformance");
   obj.active_thread_id = js_profile.transaction.active_thread_id;
   return Object.assign(merged, obj);
-};
-export const addNativeProfileToHermesProfile = function addNativeProfileToHermesProfile(profile, measurements) {
+}
+export function addNativeProfileToHermesProfile(profile, measurements) {
   const obj = { profile: null };
   profile = profile.profile;
   const merged = Object.assign({}, profile);
@@ -399,5 +387,5 @@ export const addNativeProfileToHermesProfile = function addNativeProfileToHermes
     obj4 = {};
   }
   return Object.assign(Object.assign(merged1, obj4), { measurements: measurements.measurements });
-};
+}
 export { addNativeThreadCpuProfileToHermes };

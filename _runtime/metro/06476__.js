@@ -1,46 +1,30 @@
 // _runtime/metro/06476__.js
-import _mod1305 from "01305__.js";
-import _mod1337 from "01337__.js";
 
-let closure_2 = Object.assign({
-  "[[Configurable]]": true,
-  "[[Enumerable]]": true,
-  "[[Get]]": true,
-  "[[Set]]": true,
-  "[[Value]]": true,
-  "[[Writable]]": true,
-});
-
-export default function isPropertyDescriptor(obj) {
-  if (obj) {
-    if (typeof obj === "object") {
-      for (const key10001 in arg0) {
-        if (!_mod1337(arg0, key10001)) {
-          continue;
-        } else if (closure_2[key10001]) {
-          continue;
-        } else {
-          let flag = false;
-          return false;
-        }
-        continue;
-      }
-      let tmp4 = _mod1337(obj, "[[Value]]");
-      if (!tmp4) {
-        tmp4 = _mod1337(obj, "[[Writable]]");
-      }
-      let tmp5 = _mod1337(obj, "[[Get]]");
-      if (!tmp5) {
-        tmp5 = _mod1337(obj, "[[Set]]");
-      }
-      if (tmp4) {
-        if (tmp5) {
-          const tmp8 = new _mod1305("Property Descriptors may not be both accessor and data descriptors");
-          throw tmp8;
-        }
-      }
-      return true;
+export default function isArguments(callee) {
+  const call = toString.call;
+  const tmp2 = typeof call === "unknown" ? toString() : call(callee);
+  let tmp3 = "[object Arguments]" === tmp2;
+  if (!tmp3) {
+    let tmp4 = "[object Array]" !== tmp2;
+    if (tmp4) {
+      tmp4 = null !== callee;
+    }
+    if (tmp4) {
+      tmp4 = typeof callee === "object";
+    }
+    if (tmp4) {
+      tmp4 = typeof callee.length === "number";
+    }
+    if (tmp4) {
+      tmp4 = callee.length >= 0;
+    }
+    if (!tmp4) {
+      tmp3 = tmp4;
+    } else {
+      const call2 = toString.call;
+      const str2 = "[object Function]";
+      const tmp6 = typeof call2 === "unknown" ? toString() : call2(str2);
     }
   }
-  return false;
+  return tmp3;
 }

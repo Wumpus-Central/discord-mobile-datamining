@@ -200,7 +200,7 @@ let obj3 = {
             obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           while (true) {
@@ -324,7 +324,7 @@ let obj3 = {
               return obj;
             }
             c3 = 3;
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         }
       })();
@@ -461,7 +461,7 @@ let obj3 = {
             obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -507,7 +507,7 @@ let obj3 = {
             obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -553,7 +553,7 @@ let obj3 = {
             obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -599,7 +599,7 @@ let obj3 = {
             obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -645,7 +645,7 @@ let obj3 = {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -694,7 +694,7 @@ let obj3 = {
             obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -898,7 +898,7 @@ let obj3 = {
             obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -925,7 +925,7 @@ let obj3 = {
                 }
               }
               c1 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -1130,7 +1130,7 @@ let obj3 = {
             obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -1151,7 +1151,7 @@ let obj3 = {
                 }
               }
               c1 = 3;
-              return { value: "IconComponent", done: null };
+              return { value: "IconComponent", done: "IconComponent" };
             }
           } catch (tmp4) {
             c1 = tmp;
@@ -1178,7 +1178,7 @@ let obj3 = {
             obj3 = { value, done: true };
             return obj3;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -1302,7 +1302,7 @@ let obj3 = {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -1415,7 +1415,7 @@ let obj3 = {
             const obj2 = { value, done: true };
             return obj2;
           } else {
-            return { value: "IconComponent", done: null };
+            return { value: "IconComponent", done: "IconComponent" };
           }
         } else {
           try {
@@ -1572,7 +1572,7 @@ obj3._NativeClientError = sentryError1;
 
 export { getRNSentryModule };
 export const NATIVE = obj3;
-export const getDataFromUri = function getDataFromUri(arg0) {
+export function getDataFromUri(arg0) {
   closure_0 = arg0;
   return fn(this, undefined, undefined, function* () {
     if (c0 === 2) {
@@ -1585,7 +1585,7 @@ export const getDataFromUri = function getDataFromUri(arg0) {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -1608,4 +1608,4 @@ export const getDataFromUri = function getDataFromUri(arg0) {
       }
     }
   });
-};
+}

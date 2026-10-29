@@ -8,7 +8,7 @@ const AutoInjectMobileFeedback = "AutoInjectMobileFeedback";
 const AutoInjectMobileFeedbackButton = "AutoInjectMobileFeedbackButton";
 const AutoInjectMobileScreenshotButton = "AutoInjectMobileScreenshotButton";
 
-export const lazyLoadFeedbackIntegration = function lazyLoadFeedbackIntegration() {
+export function lazyLoadFeedbackIntegration() {
   const client = _mod693.getClient();
   let integrationByName;
   if (null !== client) {
@@ -28,9 +28,9 @@ export const lazyLoadFeedbackIntegration = function lazyLoadFeedbackIntegration(
     obj3.addIntegration(_getClientIntegration.feedbackIntegration());
     const tmpResult2 = _getClientIntegration;
   }
-};
+}
 export const AUTO_INJECT_FEEDBACK_INTEGRATION_NAME = "AutoInjectMobileFeedback";
-export const lazyLoadAutoInjectFeedbackIntegration = function lazyLoadAutoInjectFeedbackIntegration() {
+export function lazyLoadAutoInjectFeedbackIntegration() {
   const client = _mod693.getClient();
   let integrationByName;
   if (null !== client) {
@@ -50,9 +50,9 @@ export const lazyLoadAutoInjectFeedbackIntegration = function lazyLoadAutoInject
     const obj2 = { name: AutoInjectMobileFeedback };
     obj3.addIntegration(obj2);
   }
-};
+}
 export const AUTO_INJECT_FEEDBACK_BUTTON_INTEGRATION_NAME = "AutoInjectMobileFeedbackButton";
-export const lazyLoadAutoInjectFeedbackButtonIntegration = function lazyLoadAutoInjectFeedbackButtonIntegration() {
+export function lazyLoadAutoInjectFeedbackButtonIntegration() {
   const client = _mod693.getClient();
   let integrationByName;
   if (null !== client) {
@@ -72,9 +72,9 @@ export const lazyLoadAutoInjectFeedbackButtonIntegration = function lazyLoadAuto
     const obj2 = { name: AutoInjectMobileFeedbackButton };
     obj3.addIntegration(obj2);
   }
-};
+}
 export const AUTO_INJECT_SCREENSHOT_BUTTON_INTEGRATION_NAME = "AutoInjectMobileScreenshotButton";
-export const lazyLoadAutoInjectScreenshotButtonIntegration = function lazyLoadAutoInjectScreenshotButtonIntegration() {
+export function lazyLoadAutoInjectScreenshotButtonIntegration() {
   const client = _mod693.getClient();
   let integrationByName;
   if (null !== client) {
@@ -94,4 +94,4 @@ export const lazyLoadAutoInjectScreenshotButtonIntegration = function lazyLoadAu
     const obj2 = { name: AutoInjectMobileScreenshotButton };
     obj3.addIntegration(obj2);
   }
-};
+}

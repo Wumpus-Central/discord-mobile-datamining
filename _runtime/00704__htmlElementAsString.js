@@ -84,7 +84,7 @@ function _htmlElementAsString(tagName, arr) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const getComponentName = function getComponentName(arg0) {
+export function getComponentName(arg0) {
   let parentNode = arg0;
   let num = 0;
   if (_mod697.GLOBAL_OBJ.HTMLElement) {
@@ -109,15 +109,15 @@ export const getComponentName = function getComponentName(arg0) {
   } else {
     return null;
   }
-};
-export const getLocationHref = function getLocationHref() {
+}
+export function getLocationHref() {
   try {
     return _mod697.GLOBAL_OBJ.document.location.href;
   } catch (err) {
     return "";
   }
-};
-export const htmlTreeAsString = function htmlTreeAsString(arg0) {
+}
+export function htmlTreeAsString(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -184,4 +184,4 @@ export const htmlTreeAsString = function htmlTreeAsString(arg0) {
   } else {
     return "<unknown>";
   }
-};
+}

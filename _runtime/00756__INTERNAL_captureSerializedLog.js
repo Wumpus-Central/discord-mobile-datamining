@@ -64,7 +64,7 @@ function _INTERNAL_flushLogsBuffer(getOptions, value) {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes) {
+export function _INTERNAL_captureLog(attributes) {
   let currentScope = scope;
   if (scope === undefined) {
     currentScope = _mod724.getCurrentScope();
@@ -279,13 +279,13 @@ export const _INTERNAL_captureLog = function _INTERNAL_captureLog(attributes) {
     const debug = consoleSandbox.debug;
     debug.warn("No client available to capture log.");
   }
-};
+}
 export { _INTERNAL_captureSerializedLog };
 export { _INTERNAL_flushLogsBuffer };
-export const _INTERNAL_getLogBuffer = function _INTERNAL_getLogBuffer(arg0) {
+export function _INTERNAL_getLogBuffer(arg0) {
   const globalSingleton = _mod701.getGlobalSingleton("clientToLogBufferMap", () => {
     const weakMap = new WeakMap();
     return weakMap;
   });
   return globalSingleton.get(arg0);
-};
+}

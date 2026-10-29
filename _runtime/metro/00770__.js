@@ -6,7 +6,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const createCheckInEnvelope = function createCheckInEnvelope(arg0, trace, sdk, arg3, url) {
+export function createCheckInEnvelope(arg0, trace, sdk, arg3, url) {
   const obj = { sent_at: new Date().toISOString() };
   sdk = undefined;
   if (sdk != null) {
@@ -30,4 +30,4 @@ export const createCheckInEnvelope = function createCheckInEnvelope(arg0, trace,
   const date = new Date();
   const items1 = [items];
   return forEachEnvelopeItem.createEnvelope(obj, items1);
-};
+}

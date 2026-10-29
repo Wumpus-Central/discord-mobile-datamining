@@ -3,9 +3,9 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/modules/clips",
+  httpServerLocation: "/assets/.cache/intl/bW9kdWxlcy9jbGlwcw==",
   scales: [1],
-  hash: "de414d0b72a20a9b0d6f3998f6dfefa7",
-  name: "Clips.compiled.messages",
+  hash: "0521984eda20bc90f851e5db256da4ac",
+  name: "zh-TW.messages.0521984eda20bc90f851e5db256da4ac.compiled.messages",
   type: "jsona",
 });

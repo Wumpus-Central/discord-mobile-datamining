@@ -1,7 +1,7 @@
 // _runtime/metro/00860__.js
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const getBreadcrumbLogLevelFromHttpStatusCode = function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
+export function getBreadcrumbLogLevelFromHttpStatusCode(arg0) {
   let tmp;
   if (undefined !== arg0) {
     if (arg0 < 400) {
@@ -16,4 +16,4 @@ export const getBreadcrumbLogLevelFromHttpStatusCode = function getBreadcrumbLog
     tmp = str;
   }
   return tmp;
-};
+}

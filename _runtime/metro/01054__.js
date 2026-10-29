@@ -88,7 +88,7 @@ if (!fn) {
 }
 let obj = { enableNativeCrashHandling: true, enableNativeNagger: true, autoInitializeNativeSdk: true, enableAutoPerformanceTracing: true, enableWatchdogTerminationTracking: true, patchGlobalPromise: true, sendClientReports: true, maxQueueSize: fn(1055).DEFAULT_BUFFER_SIZE, attachStacktrace: true, enableCaptureFailedRequests: false, enableNdk: true, enableAppStartTracking: true, enableNativeFramesTracking: true, enableStallTracking: true, enableUserInteractionTracing: false, propagateTraceparent: false };
 
-export const init = function init(maxQueueSize) {
+export function init(maxQueueSize) {
   obj = _mod879;
   if (!obj.isRunningInMetroDevServer()) {
     maxQueueSize = maxQueueSize.maxQueueSize;
@@ -247,8 +247,8 @@ export const init = function init(maxQueueSize) {
     }
     tmpResult38 = _mod879;
   }
-};
-export const wrap = function wrap(displayName, profilerProps) {
+}
+export function wrap(displayName, profilerProps) {
   _require = displayName;
   dependencyMap = profilerProps;
   profilerProps = undefined;
@@ -282,12 +282,12 @@ export const wrap = function wrap(displayName, profilerProps) {
     const merged1 = Object.assign({}, closure_2);
     return noop.createElement(_mod1069.TouchEventBoundary, merged, <ReactNativeProfiler {......merged1}>{noop.createElement(_mod1070.FeedbackWidgetProvider, null, <closure_0 {......Object.assign({}, arg0)} />)}</ReactNativeProfiler>);
   };
-};
-export const nativeCrash = function nativeCrash() {
+}
+export function nativeCrash() {
   const NATIVE = NativeModules.NATIVE;
   NATIVE.nativeCrash();
-};
-export const flush = function flush() {
+}
+export function flush() {
   return fn(this, undefined, undefined, function*() {
     if (c4 === 2) {
       c4 = 3;
@@ -299,7 +299,7 @@ export const flush = function flush() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -356,8 +356,8 @@ export const flush = function flush() {
       }
     }
   });
-};
-export const close = function close() {
+}
+export function close() {
   return fn(this, undefined, undefined, function*() {
     if (c4 === 2) {
       c4 = 3;
@@ -369,7 +369,7 @@ export const close = function close() {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -421,8 +421,8 @@ export const close = function close() {
       }
     }
   });
-};
-export const withScope = function withScope(arg0) {
+}
+export function withScope(arg0) {
   _require = arg0;
   return require("00693__.js").withScope((arg0) => {
     try {
@@ -432,8 +432,8 @@ export const withScope = function withScope(arg0) {
       debug.error("Error while running withScope callback", tmp3);
     }
   });
-};
-export const crashedLastRun = function crashedLastRun() {
+}
+export function crashedLastRun() {
   return fn(this, undefined, undefined, function*() {
     if (c0 === 2) {
       c0 = 3;
@@ -445,7 +445,7 @@ export const crashedLastRun = function crashedLastRun() {
         const obj2 = { value, done: true };
         return obj2;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -469,4 +469,4 @@ export const crashedLastRun = function crashedLastRun() {
       }
     }
   });
-};
+}

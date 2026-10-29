@@ -1,4 +1,13 @@
 // _runtime/metro/15602__.js
-import _mod15595 from "15595__.js";
+import registerAsset from "01131__.js";
 
-export default (arg0, arg1, arg2) => _mod15595(arg0, arg1, arg2) < 0;
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/images/native/oauth2",
+  width: 375,
+  height: 812,
+  scales: [2, 3],
+  hash: "9f0466452ea774e0a27ad50f4f806303",
+  name: "background",
+  type: "png",
+});

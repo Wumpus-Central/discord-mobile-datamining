@@ -1,6 +1,6 @@
 // _runtime/01210_typeofJsonValue.js
 
-export const typeofJsonValue = function typeofJsonValue(obj) {
+export function typeofJsonValue(obj) {
   if (typeof obj === "object") {
     const _Array = Array;
     if (Array.isArray(obj)) {
@@ -10,12 +10,12 @@ export const typeofJsonValue = function typeofJsonValue(obj) {
     }
   }
   return typeof obj;
-};
-export const isJsonObject = function isJsonObject(obj) {
+}
+export function isJsonObject(obj) {
   let tmp = null !== obj && typeof obj === "object";
   if (tmp) {
     const _Array = Array;
     tmp = !Array.isArray(obj);
   }
   return tmp;
-};
+}

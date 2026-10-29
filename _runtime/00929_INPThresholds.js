@@ -14,7 +14,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const items = [200, 500];
 
 export const INPThresholds = items;
-export const onINP = (arg0) => {
+export (arg0) => {
   _require = arg0;
   let obj = arg1;
   if (arg1 === undefined) {
@@ -87,4 +87,4 @@ export const onINP = (arg0) => {
       let obj3 = require("whenActivated");
     }
   }
-};
+}

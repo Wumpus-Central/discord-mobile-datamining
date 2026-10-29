@@ -1,30 +1,41 @@
 // _runtime/metro/12710__.js
-import setupIntegration from "12692__.js";
+import _mod12657 from "12657__.js";
 
-const weakMap = new WeakMap();
+const Comment = _mod12657.TYPE.Comment;
+let obj = {
+  name: "Comment",
+  structure: { value: String },
+  parse() {
+    const self = this;
+    const tokenStart = this.scanner.tokenStart;
+    const tokenEnd = this.scanner.tokenEnd;
+    this.eat(Comment);
+    const sum = tokenEnd - tokenStart + 2;
+    let tmp3 = sum >= 2;
+    if (2 <= sum) {
+      const source = self.scanner.source;
+      tmp3 = 42 === source.charCodeAt(tokenEnd - 2);
+    }
+    if (tmp3) {
+      const source2 = self.scanner.source;
+      tmp3 = 47 === source2.charCodeAt(tokenEnd - 1);
+    }
+    let diff = tokenEnd;
+    if (tmp3) {
+      diff = tokenEnd - 2;
+    }
+    const obj = {
+      type: "Comment",
+      loc: self.getLocation(tokenStart, self.scanner.tokenStart),
+      value: self.scanner.source.substring(tokenStart + 2, diff),
+    };
+    return obj;
+  },
+  generate(value) {
+    this.chunk("/*");
+    this.chunk(value.value);
+    this.chunk("*/");
+  },
+};
 
-export const functionToStringIntegration = setupIntegration.defineIntegration(() => ({
-  name: "FunctionToString",
-  setupOnce() {
-    toString = Function.prototype.toString;
-    try {
-      const _Function = Function;
-      Function.prototype.toString = function () {
-        const items = [...arguments];
-        const originalFunction = closure_1_0(12642).getOriginalFunction(this);
-        const obj = closure_1_0(12642);
-        let self = this;
-        if (set.has(obj2.getClient())) {
-          self = this;
-          if (undefined !== originalFunction) {
-            self = originalFunction;
-          }
-        }
-        return toString.apply(self, items);
-      };
-    } catch (err) {}
-  },
-  setup(arg0) {
-    const result = weakMap.set(arg0, true);
-  },
-}));
+export default obj;

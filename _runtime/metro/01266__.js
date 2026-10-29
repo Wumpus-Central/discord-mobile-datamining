@@ -19,13 +19,7 @@ function createWithEqualityFnImpl(arg0, arg1) {
     if (arg0 === undefined) {
       tmp2 = identity;
     }
-    const syncExternalStoreWithSelector = is.useSyncExternalStoreWithSelector(
-      store.subscribe,
-      store.getState,
-      store.getInitialState,
-      tmp2,
-      tmp,
-    );
+    const syncExternalStoreWithSelector = is.useSyncExternalStoreWithSelector(store.subscribe, store.getState, store.getInitialState, tmp2, tmp);
     const debugValue = noop.useDebugValue(syncExternalStoreWithSelector);
     return syncExternalStoreWithSelector;
   }
@@ -33,7 +27,7 @@ function createWithEqualityFnImpl(arg0, arg1) {
   return useBoundStoreWithEqualityFn;
 }
 
-export const createWithEqualityFn = (arg0, shallow) => {
+export (arg0, shallow) => {
   if (arg0) {
     if (typeof createWithEqualityFnImpl === "function") {
       _require = shallow;
@@ -47,13 +41,7 @@ export const createWithEqualityFn = (arg0, shallow) => {
         if (arg0 === undefined) {
           tmp2 = identity;
         }
-        const syncExternalStoreWithSelector = is.useSyncExternalStoreWithSelector(
-          store.subscribe,
-          store.getState,
-          store.getInitialState,
-          tmp2,
-          tmp,
-        );
+        const syncExternalStoreWithSelector = is.useSyncExternalStoreWithSelector(store.subscribe, store.getState, store.getInitialState, tmp2, tmp);
         const debugValue = noop.useDebugValue(syncExternalStoreWithSelector);
         return syncExternalStoreWithSelector;
       }
@@ -68,19 +56,13 @@ export const createWithEqualityFn = (arg0, shallow) => {
     tmp2 = createWithEqualityFnImpl;
   }
   return tmp2;
-};
-export const useStoreWithEqualityFn = function useStoreWithEqualityFn(context) {
+}
+export function useStoreWithEqualityFn(context) {
   let tmp = cResult;
   if (cResult === undefined) {
     tmp = identity;
   }
-  const syncExternalStoreWithSelector = is.useSyncExternalStoreWithSelector(
-    context.subscribe,
-    context.getState,
-    context.getInitialState,
-    tmp,
-    shallow,
-  );
+  const syncExternalStoreWithSelector = is.useSyncExternalStoreWithSelector(context.subscribe, context.getState, context.getInitialState, tmp, shallow);
   const debugValue = noop.useDebugValue(syncExternalStoreWithSelector);
   return syncExternalStoreWithSelector;
-};
+}

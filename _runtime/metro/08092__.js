@@ -1,17 +1,13 @@
 // _runtime/metro/08092__.js
-import _possibleConstructorReturnDefault from "00093__possibleConstructorReturn.js";
-import appendTransformPropsDefault from "../08002_appendTransformProps.js";
-import extractPropsDefault from "../08009_extractProps.js";
-import extractFontDefault from "../08016_extractFont.js";
-import _modDef8018 from "08018__.js";
-import _modDef8095 from "08095__.js";
+import _modDef8041 from "08041__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
+import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
 import noop from "00019__.js";
 
-const Text = fn;
+const LinearGradient = importDefault;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -30,74 +26,45 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-_possibleConstructorReturnDefault;
-_isNativeReflectConstruct = fn(8093);
 const jsx = fn(21).jsx;
-class Text {
+class LinearGradient {
   constructor() {
     self = this;
-    items = [...arguments];
-    closure_0 = undefined;
-    tmp = closure_3(this, Text);
-    items1 = [...items];
-    tmp2 = hasOwnProperty;
-    obj = hasOwnProperty(Text);
-    tmp3 = closure_4;
-    if (closure_7()) {
-      tmp5 = globalThis;
+    tmp = c2(this, LinearGradient);
+    tmp2 = closure_4;
+    obj = closure_4(LinearGradient);
+    tmp3 = closure_3;
+    if (metroRequire()) {
+      tmp7 = globalThis;
       _Reflect = Reflect;
-      constructResult = Reflect.construct(obj, items1, tmp2(self).constructor);
+      tmp8 = arguments;
+      constructResult = Reflect.construct(obj, arguments, tmp2(self).constructor);
     } else {
-      constructResult = obj.apply(self, items1);
+      tmp4 = arguments;
+      tmp5 = arguments;
+      constructResult = obj(...arguments);
     }
-    tmp3Result = tmp3(self, constructResult);
-    closure_0 = tmp3Result;
-    tmp3Result.setNativeProps = (matrix) => {
-      let tmp = matrix;
-      if (matrix) {
-        tmp = !matrix.matrix;
-      }
-      if (tmp) {
-        tmp = appendTransformPropsDefault(matrix);
-      }
-      if (tmp) {
-        matrix.matrix = tmp;
-      }
-      const propsAndStylesResult = Text(8009).propsAndStyles(matrix);
-      const obj = Text(8009);
-      const merged = Object.assign(
-        propsAndStylesResult,
-        Text(8010).pickNotNil(extractFontDefault(propsAndStylesResult, true)),
-      );
-      if (closure_0.root) {
-        const root = closure_0.root;
-        root.setNativeProps(propsAndStylesResult);
-      }
-      const obj2 = Text(8010);
-    };
-    return tmp3Result;
+    return tmp3(self, constructResult);
   }
 }
-_inherits(Text, _modDef8018);
+_inherits(LinearGradient, _modDef8041);
 const entry = {
   key: "render",
   value: function render() {
-    const propsAndStylesResult = Text(8009).propsAndStyles(this.props);
-    const obj2 = {};
-    const obj = Text(8009);
-    const merged = Object.assign(propsAndStylesResult);
-    obj2.x = null;
-    obj2.y = null;
-    const tmp2Result = extractPropsDefault(obj2, this);
-    const merged1 = Object.assign(tmp2Result, extractFontDefault(propsAndStylesResult, true));
-    tmp2Result.ref = this.refMethod;
-    const obj3 = {};
-    const merged2 = Object.assign(tmp2Result);
-    return jsx(_modDef8095, {});
+    const self = this;
+    const props = this.props;
+    const merged = Object.assign({ x1: props.x1, y1: props.y1, x2: props.x2, y2: props.y2 });
+    const merged1 = Object.assign(LinearGradient(8094)(props, this));
+    return jsx(LinearGradient(8093), {
+      ref(arg0) {
+        return self.refMethod(arg0);
+      },
+    });
   },
 };
-let items = [entry];
-const importDefaultResultResult = _createClass(Text, items);
-importDefaultResultResult.displayName = "Text";
+const items = [entry];
+const importDefaultResultResult = _createClass(LinearGradient, items);
+importDefaultResultResult.displayName = "LinearGradient";
+importDefaultResultResult.defaultProps = { x1: "0%", y1: "0%", x2: "100%", y2: "0%" };
 
 export default importDefaultResultResult;

@@ -8,7 +8,7 @@ const forResult = Symbol.for("SentryBufferFullError");
 let c2 = forResult;
 
 export const SENTRY_BUFFER_FULL_ERROR = forResult;
-export const makePromiseBuffer = function makePromiseBuffer() {
+export function makePromiseBuffer() {
   const set = new Set();
   const obj = {};
   Object.defineProperty(obj, "$", { get: () => Array.from(set), set: undefined });
@@ -51,4 +51,4 @@ export const makePromiseBuffer = function makePromiseBuffer() {
     }
   };
   return obj;
-};
+}

@@ -21,7 +21,7 @@ function updateEstimate(arr) {
   });
 }
 
-export const getInteractionCount = () => {
+export () => {
   if (closure_2) {
     let tmp2 = c3;
   } else {
@@ -29,10 +29,10 @@ export const getInteractionCount = () => {
     tmp2 = performance.interactionCount || 0;
   }
   return tmp2;
-};
-export const initInteractionCountPolyfill = () => {
+}
+export () => {
   if (!tmp) {
     closure_2 = observe.observe("event", updateEstimate, { type: "event", buffered: true, durationThreshold: 0 });
   }
   tmp = "interactionCount" in performance || closure_2;
-};
+}

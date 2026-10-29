@@ -1,31 +1,5 @@
 // _runtime/metro/12745__.js
 
-export const flatten = function flatten(arr) {
-  const items = [];
-  const item = arr.forEach((arr) => {
-    if (Array.isArray(arr)) {
-      let item = arr.forEach((arr) => {
-        if (Array.isArray(arr)) {
-          let item = arr.forEach((arr) => {
-            if (Array.isArray(arr)) {
-              let item = arr.forEach((arr) => {
-                if (Array.isArray(arr)) {
-                  let item = arr.forEach(() => { ... });
-                } else {
-                  arr = closure_1_0.push(arr);
-                }
-              });
-            } else {
-              arr = closure_1_0.push(arr);
-            }
-          });
-        } else {
-          arr = closure_1_0.push(arr);
-        }
-      });
-    } else {
-      arr = closure_1_0.push(arr);
-    }
-  });
-  return items;
-};
+export default function () {
+  return this.createSingleNodeList(this.Raw(this.scanner.tokenIndex, null, false));
+}

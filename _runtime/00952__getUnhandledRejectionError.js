@@ -22,7 +22,7 @@ function _getUnhandledRejectionError(reason) {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const _eventFromRejectionWithPrimitive = function _eventFromRejectionWithPrimitive(reason) {
+export function _eventFromRejectionWithPrimitive(reason) {
   const obj = { exception: null };
   const obj2 = { values: null };
   const items = [
@@ -31,7 +31,7 @@ export const _eventFromRejectionWithPrimitive = function _eventFromRejectionWith
   obj2.values = items;
   obj.exception = obj2;
   return obj;
-};
+}
 export { _getUnhandledRejectionError };
 export const globalHandlersIntegration = registerSpanErrorInstrumentation.defineIntegration(() => {
   let obj = arg0;

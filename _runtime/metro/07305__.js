@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Icon/native/redesign/generated/images",
+  httpServerLocation: "/assets/images/native",
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "dd2bf1474590dee83bbb5fea2b4f182c",
-  name: "CircleCheckIcon-primary",
+  hash: "6b87bd10c997f01ea0ccd2cea57f04c5",
+  name: "ic_selection_none_24px",
   type: "png",
 });

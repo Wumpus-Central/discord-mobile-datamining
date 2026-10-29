@@ -6,15 +6,15 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const getDefaultCurrentScope = function getDefaultCurrentScope() {
+export function getDefaultCurrentScope() {
   return _mod701.getGlobalSingleton("defaultCurrentScope", () => {
     const scope = new Scope.Scope();
     return scope;
   });
-};
-export const getDefaultIsolationScope = function getDefaultIsolationScope() {
+}
+export function getDefaultIsolationScope() {
   return _mod701.getGlobalSingleton("defaultIsolationScope", () => {
     const scope = new Scope.Scope();
     return scope;
   });
-};
+}

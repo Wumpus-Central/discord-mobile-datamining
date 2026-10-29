@@ -1,36 +1,20 @@
 // _runtime/metro/12722__.js
-import _mod12634 from "12634__.js";
-import _mod12636 from "12636__.js";
-import _mod12637 from "12637__.js";
+import _mod12657 from "12657__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function instrumentConsole() {
-  if ("console" in _mod12637.GLOBAL_OBJ) {
-    const CONSOLE_LEVELS = _mod12636.CONSOLE_LEVELS;
-    const item = CONSOLE_LEVELS.forEach((item) => {
-      closure_0 = item;
-      if (item in closure_0(12637).GLOBAL_OBJ.console) {
-        tmp(12642).fill(tmp(12637).GLOBAL_OBJ.console, item, (arg0) => {
-          _mod12636.originalConsoleMethods[level] = arg0;
-          return () => {
-            const items = [...arguments];
-            level(12634).triggerHandlers("console", { args: items, level });
-            const obj3 = level(12636).originalConsoleMethods[level];
-            if (obj3) {
-              obj3.apply(level(12637).GLOBAL_OBJ.console, items);
-            }
-            const obj = { args: items, level };
-            const obj2 = level(12634);
-          };
-        });
-        const tmpResult = tmp(12642);
-      }
-    });
-  }
-}
-
-export const addConsoleInstrumentationHandler = function addConsoleInstrumentationHandler(errorCallback) {
-  _mod12634.addHandler("console", errorCallback);
-  _mod12634.maybeInstrument("console", instrumentConsole);
+const Number = _mod12657.TYPE.Number;
+const obj = {
+  name: "Number",
+  structure: { value: String },
+  parse() {
+    return {
+      type: "Number",
+      loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenEnd),
+      value: this.consume(Number),
+    };
+  },
+  generate(value) {
+    this.chunk(value.value);
+  },
 };
+
+export default obj;

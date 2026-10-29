@@ -186,7 +186,7 @@ let c8 = "[Filtered]";
 let closure_9 = ["image_url", "data", "content", "b64_json", "result", "uri"];
 
 export const DEFAULT_GEN_AI_MESSAGES_BYTE_LIMIT = 20000;
-export const truncateGenAiMessages = function truncateGenAiMessages(filteredMessages) {
+export function truncateGenAiMessages(filteredMessages) {
   let tmp2 = filteredMessages;
   if (Array.isArray(filteredMessages)) {
     tmp2 = filteredMessages;
@@ -288,7 +288,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj2.content = content.map(() => { ... });
+                              obj2.content = content.map(/* F88368 */ function() { ... });
                               let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
@@ -324,7 +324,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj3.parts = parts.map(() => { ... });
+                              obj3.parts = parts.map(/* F88368 */ function() { ... });
                               tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
@@ -393,7 +393,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj2.content = content.map(() => { ... });
+                              obj2.content = content.map(/* F88368 */ function() { ... });
                               let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
@@ -429,7 +429,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj3.parts = parts.map(() => { ... });
+                              obj3.parts = parts.map(/* F88368 */ function() { ... });
                               tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
@@ -531,7 +531,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj2.content = content.map(() => { ... });
+                              obj2.content = content.map(/* F88368 */ function() { ... });
                               let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
@@ -567,7 +567,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj3.parts = parts.map(() => { ... });
+                              obj3.parts = parts.map(/* F88368 */ function() { ... });
                               tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
@@ -636,7 +636,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj2.content = content.map(() => { ... });
+                              obj2.content = content.map(/* F88368 */ function() { ... });
                               let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
@@ -672,7 +672,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj3.parts = parts.map(() => { ... });
+                              obj3.parts = parts.map(/* F88368 */ function() { ... });
                               tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
@@ -807,7 +807,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj2.content = content.map(() => { ... });
+                              obj2.content = content.map(/* F88368 */ function() { ... });
                               let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
@@ -843,7 +843,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj3.parts = parts.map(() => { ... });
+                              obj3.parts = parts.map(/* F88368 */ function() { ... });
                               tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
@@ -912,7 +912,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj2.content = content.map(() => { ... });
+                              obj2.content = content.map(/* F88368 */ function() { ... });
                               let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
@@ -948,7 +948,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj3.parts = parts.map(() => { ... });
+                              obj3.parts = parts.map(/* F88368 */ function() { ... });
                               tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
@@ -1050,7 +1050,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj2.content = content.map(() => { ... });
+                              obj2.content = content.map(/* F88368 */ function() { ... });
                               let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
@@ -1086,7 +1086,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj3.parts = parts.map(() => { ... });
+                              obj3.parts = parts.map(/* F88368 */ function() { ... });
                               tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
@@ -1155,7 +1155,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj2 = {};
                               let merged = Object.assign(content);
                               content = content.content;
-                              obj2.content = content.map(() => { ... });
+                              obj2.content = content.map(/* F88368 */ function() { ... });
                               let tmp9 = obj2;
                             } else {
                               let tmp7 = "content" in content;
@@ -1191,7 +1191,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
                               let obj3 = {};
                               let merged2 = Object.assign(tmp19);
                               let parts = content.parts;
-                              obj3.parts = parts.map(() => { ... });
+                              obj3.parts = parts.map(/* F88368 */ function() { ... });
                               tmp18 = obj3;
                             }
                             if (closure_1_6(tmp18)) {
@@ -1374,7 +1374,7 @@ export const truncateGenAiMessages = function truncateGenAiMessages(filteredMess
     }
   }
   return tmp2;
-};
-export const truncateGenAiStringInput = function truncateGenAiStringInput(filteredMessages) {
+}
+export function truncateGenAiStringInput(filteredMessages) {
   return truncateTextByBytes(filteredMessages, c0);
-};
+}

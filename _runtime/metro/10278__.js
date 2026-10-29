@@ -1,98 +1,199 @@
 // _runtime/metro/10278__.js
+import ENDefaultConfiguration2 from "../10279_ENDefaultConfiguration.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 
-const SlashDateFormatParser = require;
-const regExp = new RegExp(
-  "([^\\d]|^)([0-3]{0,1}[0-9]{1})[\\/\\.\\-]([0-3]{0,1}[0-9]{1})(?:[\\/\\.\\-]([0-9]{4}|[0-9]{2}))?(\\W|$)",
-  "i",
-);
-class SlashDateFormatParser {
+let ParsingContext = require;
+let fn = this;
+if (this) {
+  fn = this.__importDefault;
+}
+if (!fn) {
+  fn = (__esModule) => {
+    if (!__esModule) {
+      const obj = { default: __esModule };
+      let tmp = obj;
+    } else {
+      tmp = __esModule;
+    }
+    return tmp;
+  };
+}
+const ENDefaultConfiguration = fn(ENDefaultConfiguration2);
+class Chrono {
   constructor(arg0) {
     self = this;
-    tmp = c2(this, SlashDateFormatParser);
-    num = 2;
-    if (global) {
-      num = 3;
+    casualConfiguration = global;
+    tmp2 = c2(this, ParsingContext);
+    _default = new closure_3.default();
+    this.defaultConfig = _default;
+    if (!global) {
+      defaultConfig = self.defaultConfig;
+      casualConfiguration = defaultConfig.createCasualConfiguration();
     }
-    self.groupNumberMonth = num;
-    num2 = 3;
-    if (global) {
-      num2 = 2;
-    }
-    self.groupNumberDay = num2;
+    items = [...casualConfiguration.parsers];
+    self.parsers = items;
+    self.refiners = [...casualConfiguration.refiners];
     return;
   }
 }
+ParsingContext = Chrono;
 const entry = {
-  key: "pattern",
-  value: function pattern() {
-    return regExp;
+  key: "clone",
+  value: function clone() {
+    const obj = { parsers: null, refiners: [...this.refiners] };
+    const items = [...this.parsers];
+    obj.parsers = items;
+    const obj2 = Object.create(ParsingContext.prototype);
+    _classCallCheck(obj2, ParsingContext);
+    obj2.defaultConfig = new ENDefaultConfiguration.default();
+    obj2.parsers = [...obj.parsers];
+    obj2.refiners = [...obj.refiners];
+    return obj2;
   },
 };
 let items = [
   entry,
   {
-    key: "extract",
-    value: function extract(text, index) {
-      const sum = index.index + index[1].length;
-      const diff = index.index + index[0].length - index[5].length;
-      if (sum > 0) {
-        text.text.substring(0, sum);
+    key: "parseDate",
+    value: function parseDate(arg0, arg1, arg2) {
+      const parsed = this.parse(arg0, arg1, arg2);
+      let dateResult = null;
+      if (parsed.length > 0) {
+        const start = parsed[0].start;
+        dateResult = start.date();
       }
-      if (diff < text.text.length) {
-        text.text.substring(diff);
+      return dateResult;
+    },
+  },
+  {
+    key: "parse",
+    value: function parse(arg0, arg1, arg2) {
+      closure_0 = new _moduleResult(arg0, arg1, arg2);
+      dependencyMap = [];
+      const parsers = this.parsers;
+      const item = parsers.forEach((item) => {
+        closure_1 = closure_1.concat(ParsingContext.executeParser(closure_0, item));
+      });
+      const sorted = dependencyMap.sort((index, index2) => index.index - index2.index);
+      const refiners = this.refiners;
+      const item1 = refiners.forEach((refine) => {
+        closure_1 = refine.refine(closure_0, closure_1);
+      });
+      return dependencyMap;
+    },
+  },
+];
+const entry1 = {
+  key: "executeParser",
+  value: function executeParser(debug, pattern) {
+    let index = pattern;
+    const items = [];
+    const patternResult = pattern.pattern(debug);
+    ({ text, text: text2 } = debug);
+    let match = patternResult.exec(text2);
+    if (match) {
+      match.index = match.index + text.length - text2.length;
+      const extractResult = pattern.extract(debug, match);
+      while (!extractResult) {
+        let substr = text.substring(match.index + 1);
+        let match1 = patternResult.exec(substr);
+        match = match1;
+        text2 = substr;
       }
-      const str8 = text.text.substring(sum, diff);
-      if (!str8.match(/^\d\.\d$/)) {
-        if (!str8.match(/^\d\.\d{1,2}\.\d{1,2}\s*$/)) {
-          const self = this;
-          const parsingResult = text.createParsingResult(sum, str8);
-          const _parseInt = parseInt;
-          const parsed = parseInt(index[this.groupNumberMonth]);
-          const _parseInt2 = parseInt;
-          const parsed1 = parseInt(index[this.groupNumberDay]);
-          if (parsed < 1) {
-            tmp6 = parsed1;
-            tmp7 = parsed;
-            if (parsed > 12) {
-              if (parsed1 >= 1) {
-                if (parsed1 <= 12) {
-                  if (parsed <= 31) {
-                    const items = [parsed, parsed1];
-                    [tmp6, tmp7] = items;
-                  }
-                }
-              }
-              return null;
-            }
-          } else {
-            tmp6 = parsed1;
-            tmp7 = parsed;
-          }
-          if (tmp6 >= 1) {
-            if (tmp6 <= 31) {
-              const start3 = parsingResult.start;
-              start3.assign("day", tmp6);
-              const start4 = parsingResult.start;
-              start4.assign("month", tmp7);
-              if (index[4]) {
-                const _parseInt3 = parseInt;
-                const parsed2 = parseInt(index[4]);
-                const start2 = parsingResult.start;
-                start2.assign("year", SlashDateFormatParser(10250).findMostLikelyADYear(parsed2));
-              } else {
-                const start = parsingResult.start;
-                start.imply("year", SlashDateFormatParser(10250).findYearClosestToRef(text.refDate, tmp6, tmp7));
-              }
-              return parsingResult.addTag("parser/SlashDateFormatParser");
-            }
-          }
-          return null;
+      let parsingResult = extractResult;
+      if (extractResult instanceof ParsingContext(10285).ParsingResult) {
+        index = parsingResult.index;
+        const text1 = parsingResult.text;
+        debug.debug(() =>
+          console.log("" + ParsingContext.constructor.name + " extracted (at index=" + index + ") '" + text1 + "'"),
+        );
+        items.push(parsingResult);
+        const substr1 = text.substring(index + text1.length);
+        const match2 = patternResult.exec(substr1);
+      } else if (!(extractResult instanceof ParsingContext(10285).ParsingComponents)) {
+        parsingResult = debug.createParsingResult(match.index, match[0], extractResult);
+      }
+      const tmp9Result = tmp9(index, substr1);
+      tmp9Result.start = extractResult;
+      parsingResult = tmp9Result;
+    }
+    return items;
+  },
+};
+const items1 = [entry1];
+class ParsingContext {
+  constructor(arg0, arg1, arg2) {
+    self = this;
+    obj = importDefault;
+    tmp = c2(this, ParsingContext);
+    this.text = global;
+    if (null == importDefault) {
+      obj = {};
+    }
+    self.option = obj;
+    ReferenceWithTimezone = closure_0(closure_1[3]).ReferenceWithTimezone;
+    self.reference = ReferenceWithTimezone.fromInput(require, self.option.timezones);
+    self.refDate = self.reference.instant;
+    return;
+  }
+}
+const entry2 = {
+  key: "createParsingComponents",
+  value: function createParsingComponents(date) {
+    let parsingComponents = date;
+    if (!(date instanceof ParsingContext(10285).ParsingComponents)) {
+      const self = this;
+      parsingComponents = new ParsingContext(10285).ParsingComponents(this.reference, date);
+    }
+    return parsingComponents;
+  },
+};
+const items2 = [
+  entry2,
+  {
+    key: "createParsingResult",
+    value: function createParsingResult(sum, match, extractResult, date) {
+      const self = this;
+      let substr = match;
+      if (typeof match !== "string") {
+        substr = self.text.substring(sum, match);
+      }
+      let parsingComponents = null;
+      if (extractResult) {
+        parsingComponents = self.createParsingComponents(extractResult);
+      }
+      let parsingComponents1 = null;
+      if (date) {
+        parsingComponents1 = self.createParsingComponents(date);
+      }
+      return new ParsingContext(10285).ParsingResult(
+        self.reference,
+        sum,
+        substr,
+        parsingComponents,
+        parsingComponents1,
+      );
+    },
+  },
+  {
+    key: "debug",
+    value: function debug(arg0) {
+      const self = this;
+      if (this.option.debug) {
+        const _Function = Function;
+        const option = self.option;
+        const debug = option.debug;
+        if (self.option.debug instanceof Function) {
+          debug(arg0);
+        } else {
+          debug.debug(arg0);
         }
       }
     },
   },
 ];
+const _moduleResult = _createClass(ParsingContext, items2);
 
-export default _createClass(SlashDateFormatParser, items);
+export const Chrono = _createClass(Chrono, items, items1);
+export const ParsingContext = _moduleResult;

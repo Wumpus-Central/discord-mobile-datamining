@@ -8,7 +8,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
+export function setMeasurement(arg0, arg1, arg2) {
   let activeSpan = _getSpanForScopeResult;
   if (_getSpanForScopeResult === undefined) {
     activeSpan = spanToJSON.getActiveSpan();
@@ -28,8 +28,8 @@ export const setMeasurement = function setMeasurement(arg0, arg1, arg2) {
     obj2[GEN_AI_CONVERSATION_ID_ATTRIBUTE.SEMANTIC_ATTRIBUTE_SENTRY_MEASUREMENT_UNIT] = arg2;
     rootSpan.addEvent(arg0, obj2);
   }
-};
-export const timedEventsToMeasurements = function timedEventsToMeasurements(arr) {
+}
+export function timedEventsToMeasurements(arr) {
   if (arr) {
     if (0 !== arr.length) {
       let obj = {};
@@ -49,4 +49,4 @@ export const timedEventsToMeasurements = function timedEventsToMeasurements(arr)
       return obj;
     }
   }
-};
+}

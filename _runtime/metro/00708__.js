@@ -6,7 +6,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const isMatchingPattern = function isMatchingPattern(arr, test) {
+export function isMatchingPattern(arr, test) {
   let flag = arg2;
   if (arg2 === undefined) {
     flag = false;
@@ -30,8 +30,8 @@ export const isMatchingPattern = function isMatchingPattern(arr, test) {
     }
     tmpResult = _mod703;
   }
-};
-export const safeJoin = function safeJoin(__v_isVNode, arg1) {
+}
+export function safeJoin(__v_isVNode, arg1) {
   if (Array.isArray(__v_isVNode)) {
     const items = [];
     let num = 0;
@@ -55,8 +55,8 @@ export const safeJoin = function safeJoin(__v_isVNode, arg1) {
   } else {
     return "";
   }
-};
-export const snipLine = function snipLine(arr, lineno) {
+}
+export function snipLine(arr, lineno) {
   if (arr.length <= 150) {
     return arr;
   } else {
@@ -90,8 +90,8 @@ export const snipLine = function snipLine(arr, lineno) {
     }
     return text;
   }
-};
-export const stringMatchesSomePattern = function stringMatchesSomePattern(transaction) {
+}
+export function stringMatchesSomePattern(transaction) {
   let items = allowUrls;
   if (allowUrls === undefined) {
     items = [];
@@ -121,8 +121,8 @@ export const stringMatchesSomePattern = function stringMatchesSomePattern(transa
       tmpResult = _mod703;
     }
   });
-};
-export const truncate = function truncate(str) {
+}
+export function truncate(str) {
   let num = maxValueLength;
   if (maxValueLength === undefined) {
     num = 0;
@@ -139,4 +139,4 @@ export const truncate = function truncate(str) {
     }
   }
   return combined;
-};
+}

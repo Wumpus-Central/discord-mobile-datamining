@@ -144,7 +144,7 @@ function normalizePath(str) {
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const re0 = /^(\S+:\\|\/?)([\s\S]*?)((?:\.{1,2}|[^/\\]+?|)(\.[^./\\]*|))(?:[/\\]*)$/;
 
-export const basename = function basename(arr, arg1) {
+export function basename(arr, arg1) {
   let combined = arr;
   if (arr.length > 1024) {
     const _HermesInternal = HermesInternal;
@@ -165,8 +165,8 @@ export const basename = function basename(arr, arg1) {
     substr1 = arr3.slice(0, arr3.length - arg1.length);
   }
   return substr1;
-};
-export const dirname = function dirname(arr) {
+}
+export function dirname(arr) {
   let combined = arr;
   if (arr.length > 1024) {
     const _HermesInternal = HermesInternal;
@@ -188,16 +188,16 @@ export const dirname = function dirname(arr) {
     str2 = ".";
   }
   return str2;
-};
-export const isAbsolute = function isAbsolute(str) {
+}
+export function isAbsolute(str) {
   return "/" === str.charAt(0);
-};
-export const join = function join() {
+}
+export function join() {
   const items = [...arguments];
   return normalizePath(items.join("/"));
-};
+}
 export { normalizePath };
-export const relative = function relative(root, replaced) {
+export function relative(root, replaced) {
   let length;
   const arr = resolve(root);
   const str = resolve(root).slice(1);
@@ -304,5 +304,5 @@ export const relative = function relative(root, replaced) {
   }
   const combined = items2.concat(items1.slice(tmp12));
   return combined.join("/");
-};
+}
 export { resolve };

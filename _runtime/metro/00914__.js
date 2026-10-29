@@ -8,20 +8,18 @@ const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 const set = new Set();
 function onVisibilityUpdate(type) {
-  if (
-    (function isPageHidden(type) {
-      let tmp = "pagehide" === type.type;
-      if (!tmp) {
-        const _document = require("00913__.js").WINDOW.document;
-        let visibilityState;
-        if (_document != null) {
-          visibilityState = _document.visibilityState;
-        }
-        tmp = "hidden" === visibilityState;
+  if ((function isPageHidden(type) {
+    let tmp = "pagehide" === type.type;
+    if (!tmp) {
+      const _document = require("00913__.js").WINDOW.document;
+      let visibilityState;
+      if (_document != null) {
+        visibilityState = _document.visibilityState;
       }
-      return tmp;
-    })(type)
-  ) {
+      tmp = "hidden" === visibilityState;
+    }
+    return tmp;
+  })(type)) {
     if (num2 > -1) {
       if ("visibilitychange" === type.type) {
         for (const item10012 of set) {
@@ -41,7 +39,7 @@ function onVisibilityUpdate(type) {
   }
 }
 
-export const getVisibilityWatcher = () => {
+export () => {
   if (require("00913__.js").WINDOW.document) {
     if (num2 < 0) {
       _require = tmp(916).getActivationStart();
@@ -97,4 +95,4 @@ export const getVisibilityWatcher = () => {
     set.add(arg0);
   };
   return obj;
-};
+}

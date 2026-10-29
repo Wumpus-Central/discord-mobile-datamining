@@ -1,76 +1,20 @@
 // _runtime/metro/12648__.js
-import generatePropagationContext from "../12646_generatePropagationContext.js";
-import BAGGAGE_HEADER_NAME from "../12649_BAGGAGE_HEADER_NAME.js";
+import _mod12767 from "12767__.js";
+import _mod12768 from "12768__.js";
+import module_12649 from "../12649_create.js";
+import patchDictionary from "../12692_patchDictionary.js";
+import 12739__ from "12739__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-const regExp = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$");
+module.exports.version = _mod12768.version;
 
-export const TRACEPARENT_REGEXP = regExp;
-export const extractTraceparentData = function extractTraceparentData(str) {
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
-        }
-      }
-      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
-      return obj;
+export default module_12649.create((function merge() {
+  const obj = {};
+  for (let num = 0; num < arguments.length; num = num + 1) {
+    let tmp = arguments[num];
+    for (const key10011 in tmp) {
+      obj[key10011] = tmp[key10011];
+      continue;
     }
   }
-};
-export const generateSentryTraceHeader = function generateSentryTraceHeader() {
-  if (traceId === undefined) {
-    traceId = generatePropagationContext.generateTraceId();
-  }
-  if (spanId === undefined) {
-    spanId = generatePropagationContext.generateSpanId();
-  }
-  let str = "";
-  if (undefined !== sampled) {
-    let str2 = "-0";
-    if (sampled) {
-      str2 = "-1";
-    }
-    str = str2;
-  }
-  return "" + traceId + "-" + spanId + str;
-};
-export const propagationContextFromHeaders = function propagationContextFromHeaders(str, _slicedToArray) {
-  let tmp;
-  if (str) {
-    const match = str.match(regExp);
-    if (match) {
-      let flag = true;
-      if ("1" !== match[3]) {
-        if ("0" === match[3]) {
-          flag = false;
-        }
-      }
-      const obj = { traceId: match[1], parentSampled: flag, parentSpanId: match[2] };
-      tmp = obj;
-    }
-  }
-  let result = BAGGAGE_HEADER_NAME.baggageHeaderToDynamicSamplingContext(_slicedToArray);
-  if (tmp) {
-    if (tmp.traceId) {
-      const obj3 = { traceId: null, parentSpanId: null, spanId: null, sampled: null, dsc: null };
-      ({ traceId: obj7.traceId, parentSpanId: obj7.parentSpanId, parentSampled } = tmp);
-      obj3.spanId = generatePropagationContext.generateSpanId();
-      obj3.sampled = parentSampled;
-      if (!result) {
-        result = {};
-      }
-      obj3.dsc = result;
-      return obj3;
-    }
-  }
-  const obj4 = { traceId: null, spanId: null };
-  obj4.traceId = generatePropagationContext.generateTraceId();
-  const tmp4Result3 = generatePropagationContext;
-  obj4.spanId = generatePropagationContext.generateSpanId();
-  return obj4;
-};
+  return obj;
+})(patchDictionary, module_12739, _mod12767));

@@ -12,7 +12,7 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const TRACING_DEFAULTS = { idleTimeout: 1000, finalTimeout: 30000, childSpanTimeout: 15000 };
 
 export { TRACING_DEFAULTS };
-export const startIdleSpan = function startIdleSpan(arg0) {
+export function startIdleSpan(arg0) {
   let obj = arg1;
   if (arg1 === undefined) {
     obj = {};
@@ -367,4 +367,4 @@ export const startIdleSpan = function startIdleSpan(arg0) {
   const tmp5Result13 = require("metro/00733__.js");
   require("metro/00733__.js").freezeDscOnSpan(sentryNonRecordingSpan, obj4);
   return sentryNonRecordingSpan;
-};
+}

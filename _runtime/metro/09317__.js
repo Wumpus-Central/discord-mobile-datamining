@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "0a2944e427275918c323a5aa7d658085",
-  name: "BattlenetNeutralIcon",
+  hash: "8c94b907df8972f3dc35ed38a2375c9f",
+  name: "EpicGamesNeutralIcon",
   type: "png",
 });

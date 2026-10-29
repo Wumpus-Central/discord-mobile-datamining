@@ -8,23 +8,23 @@ const dependencyMap = arg6;
 let closure_4 = Symbol("internalInstanceHandle");
 let closure_5 = Symbol("ownerDocument");
 
-export const getInstanceHandle = function getInstanceHandle(target) {
+export function getInstanceHandle(target) {
   return target[closure_4];
-};
-export const setInstanceHandle = function setInstanceHandle(tmp3Result, __internalInstanceHandle) {
+}
+export function setInstanceHandle(tmp3Result, __internalInstanceHandle) {
   tmp3Result[closure_4] = __internalInstanceHandle;
-};
-export const getOwnerDocument = function getOwnerDocument(arg0) {
+}
+export function getOwnerDocument(arg0) {
   let tmp = arg0[closure_5];
   if (tmp == null) {
     tmp = null;
   }
   return tmp;
-};
-export const setOwnerDocument = function setOwnerDocument(tmp3Result, arg1) {
+}
+export function setOwnerDocument(tmp3Result, arg1) {
   tmp3Result[closure_5] = arg1;
-};
-export const getPublicInstanceFromInstanceHandle = function getPublicInstanceFromInstanceHandle(element) {
+}
+export function getPublicInstanceFromInstanceHandle(element) {
   if (null == closure_3) {
     closure_3 = renderElement.getPublicInstanceFromInternalInstanceHandle;
   }
@@ -50,8 +50,8 @@ export const getPublicInstanceFromInstanceHandle = function getPublicInstanceFro
     }
     obj = _mod137;
   }
-};
-export const getNativeNodeReference = function getNativeNodeReference(target) {
+}
+export function getNativeNodeReference(target) {
   if (null == closure_2) {
     closure_2 = renderElement.getNodeFromInternalInstanceHandle;
   }
@@ -77,8 +77,8 @@ export const getNativeNodeReference = function getNativeNodeReference(target) {
     }
     obj = _mod137;
   }
-};
-export const getNativeElementReference = function getNativeElementReference(c5) {
+}
+export function getNativeElementReference(c5) {
   if (obj.isReactNativeDocumentElementInstanceHandle(c5[closure_4])) {
     let nativeElementReferenceFromReactNativeDocumentElementInstanceHandle =
       ReactNativeDocumentElementInstanceHandleImpl.getNativeElementReferenceFromReactNativeDocumentElementInstanceHandle(
@@ -92,8 +92,8 @@ export const getNativeElementReference = function getNativeElementReference(c5) 
     nativeElementReferenceFromReactNativeDocumentElementInstanceHandle = closure_2(tmp);
   }
   return nativeElementReferenceFromReactNativeDocumentElementInstanceHandle;
-};
-export const getCurrentProps = function getCurrentProps(arg0) {
+}
+export function getCurrentProps(arg0) {
   let currentProps;
   if (arg0[closure_4] != null) {
     const stateNode = tmp.stateNode;
@@ -108,10 +108,10 @@ export const getCurrentProps = function getCurrentProps(arg0) {
     currentProps = {};
   }
   return currentProps;
-};
-export const getNativeTextReference = function getNativeTextReference(arg0) {
+}
+export function getNativeTextReference(arg0) {
   if (null == closure_2) {
     closure_2 = renderElement.getNodeFromInternalInstanceHandle;
   }
   return closure_2(arg0[closure_4]);
-};
+}

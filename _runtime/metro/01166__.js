@@ -1,6 +1,6 @@
 // _runtime/metro/01166__.js
 
-export const resolveFormatConfigOptions = function resolveFormatConfigOptions(list, format) {
+export function resolveFormatConfigOptions(list, format) {
   format = undefined;
   if (null != format) {
     format = format.format;
@@ -12,7 +12,7 @@ export const resolveFormatConfigOptions = function resolveFormatConfigOptions(li
   } else {
     return format;
   }
-};
+}
 export const DEFAULT_FORMAT_CONFIG = {
   duration: {},
   list: {},

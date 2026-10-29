@@ -23,7 +23,8 @@ function _isNativeReflectConstruct() {
       return closure_0;
     };
     return _isNativeReflectConstruct();
-  } catch (err) {}
+  } catch (err) {
+  }
 }
 get_ActivityIndicator = fn(17);
 ({ StyleSheet, View: metroRequire } = get_ActivityIndicator);
@@ -76,7 +77,7 @@ const entry = {
     }
     const obj = TouchEventBoundary(693);
     tmp5 = null === addIntegration || undefined === addIntegration;
-  },
+  }
 };
 let items = [
   entry,
@@ -86,12 +87,8 @@ let items = [
       const obj = { style: wrapperView.wrapperView, onTouchStart: null };
       const _onTouchStart = this._onTouchStart;
       obj.onTouchStart = _onTouchStart.bind(this);
-      return (
-        <timestampProducer style={wrapperView.wrapperView} onTouchStart={null}>
-          {this.props.children}
-        </timestampProducer>
-      );
-    },
+      return <timestampProducer style={wrapperView.wrapperView} onTouchStart={null}>{this.props.children}</timestampProducer>;
+    }
   },
   {
     key: "_logTouchEvent",
@@ -124,7 +121,7 @@ let items = [
         const debug = TouchEventBoundary(693).debug;
         debug.warn("[TouchEvents] No root component found in touch path.");
       }
-    },
+    }
   },
   {
     key: "_isNameIgnored",
@@ -152,7 +149,7 @@ let items = [
         }
         return tmp;
       });
-    },
+    }
   },
   {
     key: "_onTouchStart",
@@ -275,10 +272,7 @@ let items = [
         const obj5 = { elementId: label, op: TouchEventBoundary(1029).UI_ACTION_TOUCH };
         const result = TouchEventBoundary(1039).startUserInteractionSpan(obj5);
         if (result) {
-          const attr = result.setAttribute(
-            TouchEventBoundary(693).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN,
-            TouchEventBoundary(1032).SPAN_ORIGIN_AUTO_INTERACTION,
-          );
+          const attr = result.setAttribute(TouchEventBoundary(693).SEMANTIC_ATTRIBUTE_SENTRY_ORIGIN, TouchEventBoundary(1032).SPAN_ORIGIN_AUTO_INTERACTION);
           const _targetInst2 = _targetInst._targetInst;
           let tmp36;
           if (_targetInst2) {
@@ -370,7 +364,7 @@ let items = [
         }
         const obj4 = TouchEventBoundary(1039);
       }
-    },
+    }
   },
   {
     key: "_pushIfNotIgnored",
@@ -418,20 +412,15 @@ let items = [
         tmp = tmp3;
       }
       return tmp;
-    },
-  },
+    }
+  }
 ];
 const importDefaultResultResult = _createClass(TouchEventBoundary, items);
 importDefaultResultResult.displayName = "__Sentry.TouchEventBoundary";
-importDefaultResultResult.defaultProps = {
-  breadcrumbCategory: "touch",
-  breadcrumbType: "user",
-  ignoreNames: [],
-  maxComponentTreeSize: 20,
-};
+importDefaultResultResult.defaultProps = { breadcrumbCategory: "touch", breadcrumbType: "user", ignoreNames: [], maxComponentTreeSize: 20 };
 
 export const TouchEventBoundary = importDefaultResultResult;
-export const withTouchEventBoundary = (arg0, arg1) => {
+export (arg0, arg1) => {
   closure_0 = arg0;
   closure_1 = arg1;
   class WrappedComponent {
@@ -448,4 +437,4 @@ export const withTouchEventBoundary = (arg0, arg1) => {
   }
   WrappedComponent.displayName = "WithTouchEventBoundary";
   return WrappedComponent;
-};
+}

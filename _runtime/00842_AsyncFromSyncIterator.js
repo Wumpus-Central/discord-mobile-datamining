@@ -269,7 +269,7 @@ let closure_8 = async function _instrumentStream(arg0) {
         const obj3 = { value, done: true };
         return obj3;
       } else {
-        return { value: "IconComponent", done: null };
+        return { value: "IconComponent", done: "IconComponent" };
       }
     } else {
       try {
@@ -302,7 +302,7 @@ let closure_8 = async function _instrumentStream(arg0) {
                 responseTimestamp: 0,
                 promptTokens: "r",
                 completionTokens: "k",
-                totalTokens: "mode",
+                totalTokens: "getGuild",
                 chatCompletionToolCalls: {},
                 responsesApiToolCalls: [],
               };
@@ -514,7 +514,7 @@ let closure_8 = async function _instrumentStream(arg0) {
                 }
                 closure_146_0.end();
                 c22 = 3;
-                return { value: "IconComponent", done: null };
+                return { value: "IconComponent", done: "IconComponent" };
               }
             }
             break;
@@ -1182,7 +1182,7 @@ let closure_8 = async function _instrumentStream(arg0) {
 };
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const instrumentStream = function instrumentStream(arg0, arg1, arg2) {
+export function instrumentStream(arg0, arg1, arg2) {
   const self = this;
   const apply = closure_8.apply;
   if (typeof apply === "unknown") {
@@ -1191,4 +1191,4 @@ export const instrumentStream = function instrumentStream(arg0, arg1, arg2) {
     applyArgumentsResult = apply(self, arguments);
   }
   return applyArgumentsResult;
-};
+}

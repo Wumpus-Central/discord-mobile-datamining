@@ -5,7 +5,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const getNavigationEntry = (arg0) => {
+export (arg0) => {
   let flag = arg0;
   if (arg0 === undefined) {
     flag = true;
@@ -26,4 +26,4 @@ export const getNavigationEntry = (arg0) => {
     }
   }
   return first;
-};
+}

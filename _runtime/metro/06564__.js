@@ -4,10 +4,10 @@ import registerAsset from "01131__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "6dfdeab813b7b4024164980d2fd4bf7a",
-  name: "img_account_sync_league_of_legends_light_and_dark",
-  type: "png",
+  hash: "a5aa4e98136aaaae712a29ded608e4e5",
+  name: "img_account_sync_twitch_light_and_dark",
+  type: "svg",
 });

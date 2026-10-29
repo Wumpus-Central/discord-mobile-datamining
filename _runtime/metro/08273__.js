@@ -1,20 +1,19 @@
 // _runtime/metro/08273__.js
-import _mod8271 from "08271__.js";
+let c0 = 18761;
+let c1 = 19789;
 
-require = arg1;
-const dependencyMap = arg6;
-const obj = {
-  1: "InteroperabilityIndex",
-  2: null,
-  4096: "RelatedImageFileFormat",
-  4097: "RelatedImageWidth",
-  4098: "RelatedImageHeight",
-};
-obj[2] = {
-  name: "InteroperabilityVersion",
-  description(value) {
-    return _mod8271.getStringValue(value);
+export default {
+  BIG_ENDIAN: 19789,
+  LITTLE_ENDIAN: 18761,
+  getByteOrder(getUint16, c5) {
+    if (getUint16.getUint16(c5) === c0) {
+      return c0;
+    } else if (getUint16.getUint16(c5) === c1) {
+      return c1;
+    } else {
+      const _Error = Error;
+      const error = new Error("Illegal byte order value. Faulty image.");
+      throw error;
+    }
   },
 };
-
-export default obj;

@@ -7,7 +7,7 @@ export default registerAsset.registerAsset({
   width: 24,
   height: 24,
   scales: [2, 3],
-  hash: "a9bda86a153eecbc9eb21d6f5b6433f7",
-  name: "QrCodeIcon",
+  hash: "13168e0700737564714d8e4fc44106f6",
+  name: "ShareIcon",
   type: "png",
 });

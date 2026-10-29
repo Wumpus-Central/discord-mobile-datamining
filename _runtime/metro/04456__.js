@@ -1,16 +1,16 @@
 // _runtime/metro/04456__.js
-import module_4291_mod from "04291__.js";
+import module_4292_mod from "04292__.js";
 import module_4436_mod from "04436__.js";
-import requiredArgs_mod from "../04288_requiredArgs.js";
+import requiredArgs_mod from "../04289_requiredArgs.js";
 
-let module_4291 = module_4291_mod;
-if (!module_4291) {
-  const obj = { default: module_4291 };
+let module_4292 = module_4292_mod;
+if (!module_4292) {
+  const obj = { default: module_4292 };
   let tmp3 = obj;
 } else {
-  tmp3 = module_4291;
+  tmp3 = module_4292;
 }
-module_4291 = tmp3;
+module_4292 = tmp3;
 let module_4436 = module_4436_mod;
 if (!module_4436) {
   const obj2 = { default: module_4436 };
@@ -28,8 +28,8 @@ if (!requiredArgs) {
 }
 requiredArgs = tmp7;
 
-export default function addYears(interval, arg1) {
+export default function addWeeks(arg0, arg1) {
   requiredArgs.default(2, arguments);
-  return module_4436.default(interval, 12 * module_4291.default(arg1));
+  return module_4436.default(arg0, 7 * module_4292.default(arg1));
 };
 export default exports.default;

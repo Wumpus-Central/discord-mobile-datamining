@@ -4,10 +4,10 @@ import registerAsset from "01131__.js";
 export default registerAsset.registerAsset({
   __packager_asset: true,
   httpServerLocation: "/assets/images/platforms",
-  width: 255,
-  height: 255,
+  width: 24,
+  height: 24,
   scales: [1],
-  hash: "2eb4a3a7eee9d2c37d6ab83a1bbe761d",
-  name: "img_account_sync_steam_light",
-  type: "png",
+  hash: "8b42912ce44ddbe707d5a6f54419c49d",
+  name: "img_account_sync_youtube_light_and_dark",
+  type: "svg",
 });

@@ -1,11 +1,32 @@
 // _runtime/metro/06459__.js
-import _mod1330 from "01330__.js";
+import callBoundIntrinsic from "../01338_callBoundIntrinsic.js";
+import _mod1464 from "01464__.js";
 
-export default function mod(arg0, arg1) {
-  const result = arg0 % arg1;
-  let sum = result;
-  if (result < 0) {
-    sum = result + arg1;
+let closure_0 = callBoundIntrinsic("String.prototype.valueOf");
+let closure_1 = callBoundIntrinsic("Object.prototype.toString");
+let closure_2 = _mod1464();
+
+export default function isString(str) {
+  let tmp = typeof str === "string";
+  if (typeof str !== "string") {
+    let tmp2 = !str;
+    if (str) {
+      tmp2 = typeof str !== "object";
+    }
+    if (tmp2) {
+      tmp = !tmp2;
+    } else if (closure_2) {
+      let tmp5 = (function tryStringObject(arg0) {
+        try {
+          closure_1_0(arg0);
+          return true;
+        } catch (err) {
+          return false;
+        }
+      })(str);
+    } else {
+      tmp5 = "[object String]" === closure_1(str);
+    }
   }
-  return _mod1330(sum);
+  return tmp;
 }

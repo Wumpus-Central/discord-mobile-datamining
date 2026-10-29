@@ -3,11 +3,11 @@ import registerAsset from "01131__.js";
 
 export default registerAsset.registerAsset({
   __packager_asset: true,
-  httpServerLocation: "/assets/design/components/Illustration/native/redesign/generated/images",
-  width: 256,
-  height: 130,
-  scales: [2, 3],
-  hash: "5bbcc6438e9b5eafb60d2e7f478ed717",
-  name: "img_invite_empty_darker",
+  httpServerLocation: "/assets/modules/nuf/native/components/notification",
+  width: 302,
+  height: 202,
+  scales: [1, 2],
+  hash: "21f19c3533062eebc26337b4e7ba590a",
+  name: "notification_upsell",
   type: "png",
 });

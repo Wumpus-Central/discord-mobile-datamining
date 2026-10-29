@@ -1,39 +1,37 @@
 // _runtime/metro/12671__.js
-import _mod12643 from "12643__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-
-export const handleCallbackErrors = function handleCallbackErrors(fn, arg1) {
-  fn = arg2;
-  if (arg2 === undefined) {
-    fn = function t() {};
-  }
-  try {
-    return (function maybeHandlePromiseRejection(promise, arg1, fn) {
-      closure_0 = arg1;
-      closure_1 = fn;
-      if (obj.isThenable(promise)) {
-        return promise.then(
-          (result) => {
-            closure_1();
-            return result;
-          },
-          (arg0) => {
-            closure_0(arg0);
-            closure_1();
-            throw arg0;
-          },
-        );
-      } else {
-        fn();
-        return promise;
-      }
-      obj = _mod12643;
-    })(fn(), arg1, fn);
-  } catch (tmp5) {
-    tmp3(tmp5);
-    tmp2();
-    throw tmp5;
-  }
-};
+export default function createConvertors(arg0) {
+  closure_0 = arg0;
+  return {
+    fromPlainObject(arg0) {
+      closure_0(arg0, {
+        enter(children) {
+          children = children.children;
+          if (children) {
+            children = children.children instanceof closure_1_0(12659) === false;
+          }
+          if (children) {
+            const obj = new closure_1_0(12659)();
+            children.children = obj.fromArray(children.children);
+          }
+        },
+      });
+      return arg0;
+    },
+    toPlainObject(arg0) {
+      closure_0(arg0, {
+        leave(children) {
+          children = children.children;
+          if (children) {
+            children = children.children instanceof closure_1_0(closure_1_1[0]);
+          }
+          if (children) {
+            const children2 = children.children;
+            children.children = children2.toArray();
+          }
+        },
+      });
+      return arg0;
+    },
+  };
+}

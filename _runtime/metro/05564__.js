@@ -1,11 +1,17 @@
 // _runtime/metro/05564__.js
+import _mod5549 from "05549__.js";
+import _mod5565 from "05565__.js";
 
-export default function _assertThisInitialized(arg0) {
-  if (undefined === arg0) {
-    const _ReferenceError = ReferenceError;
-    const referenceError = new ReferenceError("this hasn't been initialised - super() hasn't been called");
-    throw referenceError;
+export default function _possibleConstructorReturn(arg0, fn) {
+  if (fn) {
+    _mod5549;
+    return fn;
+  }
+  if (undefined !== fn) {
+    const _TypeError = TypeError;
+    const typeError = new TypeError("Derived constructors may only return object or undefined");
+    throw typeError;
   } else {
-    return arg0;
+    return _mod5565(arg0);
   }
 }

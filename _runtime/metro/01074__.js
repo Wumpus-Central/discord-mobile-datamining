@@ -22,7 +22,7 @@ const obj2 = {
   sentryLogo: "#ffffff",
 };
 
-export const getTheme = function getTheme() {
+export function getTheme() {
   const obj = _getClientIntegration;
   let colorScheme = obj.getColorScheme();
   if ("system" === colorScheme) {
@@ -36,6 +36,6 @@ export const getTheme = function getTheme() {
     merged1 = Object.assign(merged2, tmpResult2.getFeedbackDarkTheme());
   }
   return merged1;
-};
+}
 export { LightTheme };
 export const DarkTheme = obj2;

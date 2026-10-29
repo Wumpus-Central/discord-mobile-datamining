@@ -188,7 +188,7 @@ let merged = Object.assign(_moduleResult, {
 
 export const Profiler = _moduleResult;
 export const UNKNOWN_COMPONENT = "unknown";
-export const useProfiler = function useProfiler(arg0) {
+export function useProfiler(arg0) {
   closure_0 = arg0;
   if (arg1 === undefined) {
     let obj = { disabled: false, hasRenderSpan: true };
@@ -243,8 +243,8 @@ export const useProfiler = function useProfiler(arg0) {
       }
     };
   }, []);
-};
-export const withProfiler = function withProfiler(displayName, name) {
+}
+export function withProfiler(displayName, name) {
   Profiler = displayName;
   dependencyMap = name;
   name = undefined;
@@ -274,4 +274,4 @@ export const withProfiler = function withProfiler(displayName, name) {
   Wrapped.displayName = "profiler(" + name + ")";
   Profiler(1014).hoistNonReactStatics(Wrapped, displayName);
   return Wrapped;
-};
+}

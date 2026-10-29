@@ -1,95 +1,23 @@
 // _runtime/metro/05416__.js
-import handlerIDToTag from "../05337_handlerIDToTag.js";
-import transformIntoHandlerTags from "../05364_transformIntoHandlerTags.js";
-import _mod5377 from "05377__.js";
-import DEFAULT_PROPS_TRANSFORMER from "../05401_DEFAULT_PROPS_TRANSFORMER.js";
-import noop from "00019__.js";
+import ComposedGestureName from "../05393_ComposedGestureName.js";
+import DEFAULT_PROPS_TRANSFORMER from "../05402_DEFAULT_PROPS_TRANSFORMER.js";
+import _mod5417 from "05417__.js";
 
-const require = globalThis.__r;
+require = arg1;
+const dependencyMap = arg6;
+const items = [
+  ["maxDistance", "maxDist"],
+  ["maxDuration", "maxDurationMs"],
+  ["maxDelay", "maxDelayMs"],
+];
+const map = new Map(items);
+let closure_3 = {};
 
-({ useEffect: c2, useMemo: c3 } = noop);
-
-export const useGesture = function useGesture(Fling, clonedAndRemappedConfig) {
-  _require = Fling;
-  dependencyMap = clonedAndRemappedConfig;
-  const tmp2 = jsEventHandler(() => type(config[1]).getNextHandlerTag(), []);
-  const handlerTag = tmp2;
-  if (clonedAndRemappedConfig.disableReanimated !== jsEventHandler(() => config.disableReanimated, [])) {
-    const _Error2 = Error;
-    const error = new Error(
-      require("tagMessage").tagMessage(
-        'The "disableReanimated" property must not be changed after the handler is created.',
-      ),
-    );
-    throw error;
-  } else {
-    const gestureCallbacks = require("05417__.js").useGestureCallbacks(tmp2, clonedAndRemappedConfig);
-    jsEventHandler = gestureCallbacks.jsEventHandler;
-    const reanimatedEventHandler = gestureCallbacks.reanimatedEventHandler;
-    const animatedEventHandler = gestureCallbacks.animatedEventHandler;
-    if (clonedAndRemappedConfig.shouldUseReanimatedDetector) {
-      if (!reanimatedEventHandler) {
-        const _Error = Error;
-        const error1 = new Error(require("tagMessage").tagMessage("Failed to create reanimated event handlers."));
-        throw error1;
-      }
-    }
-    const items = [tmp2, , ,];
-    ({ simultaneousWith: arr[1], requireToFail: arr[2], block: arr[3] } = clonedAndRemappedConfig);
-    const tmpResult = tmp(
-      () =>
-        DEFAULT_PROPS_TRANSFORMER.prepareRelations(
-          { simultaneousWith: config.simultaneousWith, requireToFail: config.requireToFail, block: config.block },
-          closure_2,
-        ),
-      items,
-    );
-    const gestureRelations = tmpResult;
-    const items1 = [
-      tmp2,
-      Fling,
-      clonedAndRemappedConfig,
-      jsEventHandler,
-      reanimatedEventHandler,
-      animatedEventHandler,
-      tmpResult,
-    ];
-    const tmpResult2 = tmp(() => {
-      const obj = {
-        handlerTag,
-        type,
-        config,
-        detectorCallbacks: { jsEventHandler, animatedEventHandler, reanimatedEventHandler },
-        gestureRelations,
-      };
-      return obj;
-    }, items1);
-    closure_7 = tmpResult2;
-    const items2 = [Fling, tmp2];
-    handlerTag(() => {
-      let NativeProxy = _mod5377.NativeProxy;
-      NativeProxy.createGestureHandler(closure_0, closure_2, {});
-      let result = transformIntoHandlerTags.scheduleFlushOperations();
-      return () => {
-        const NativeProxy = closure_0(5377).NativeProxy;
-        NativeProxy.dropGestureHandler(handlerTag);
-        const result = closure_0(5364).scheduleFlushOperations();
-      };
-    }, items2);
-    const items3 = [tmp2, clonedAndRemappedConfig, Fling, tmpResult2];
-    handlerTag(() => {
-      const result = DEFAULT_PROPS_TRANSFORMER.prepareConfigForNativeSide(closure_0, dependencyMap);
-      const NativeProxy = _mod5377.NativeProxy;
-      const result1 = NativeProxy.setGestureHandlerConfig(closure_2, result);
-      const result2 = transformIntoHandlerTags.scheduleFlushOperations();
-      DEFAULT_PROPS_TRANSFORMER.bindSharedValues(dependencyMap, closure_2);
-      handlerIDToTag.registerGesture(closure_2, closure_7);
-      return () => {
-        closure_0(5401).unbindSharedValues(dependencyMap, handlerTag);
-        const obj = closure_0(5401);
-        closure_0(5337).unregisterGesture(handlerTag);
-      };
-    }, items3);
-    return tmpResult2;
+export function useTapGesture() {
+  let tmp = cResult;
+  if (cResult === undefined) {
+    tmp = closure_3;
   }
-};
+  const clonedAndRemappedConfig = DEFAULT_PROPS_TRANSFORMER.useClonedAndRemappedConfig(tmp, map);
+  return _mod5417.useGesture(ComposedGestureName.SingleGestureName.Tap, clonedAndRemappedConfig);
+}

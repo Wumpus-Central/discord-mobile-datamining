@@ -31,7 +31,7 @@ function handleStreamingError(error, isRecording, function) {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(arg0, arg1) {
+export function instrumentAnthropicAiClient(arg0, arg1) {
   const client = require("metro/00724__.js").getClient();
   let sendDefaultPii;
   if (client != null) {
@@ -215,7 +215,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                 const obj2 = { value, done: true };
                                 return obj2;
                               } else {
-                                return { value: "IconComponent", done: null };
+                                return { value: "IconComponent", done: "IconComponent" };
                               }
                             } else {
                               try {
@@ -430,7 +430,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                               }
                                               let obj2 = str(_function[4]);
                                             }
-                                            return str(_function[9]).handleCallbackErrors(() => { ... }, () => { ... }, /* F159005 */ function() { ... }, () => { ... });
+                                            return str(_function[9]).handleCallbackErrors(/* F160654 */ function() { ... }, /* F160655 */ function() { ... }, /* F160656 */ function() { ... }, /* F160657 */ function() { ... });
                                           });
                                         }
                                       }
@@ -460,7 +460,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                                 const obj2 = { value, done: true };
                                                 return obj2;
                                               } else {
-                                                return { value: "IconComponent", done: null };
+                                                return { value: "IconComponent", done: "IconComponent" };
                                               }
                                             } else {
                                               try {
@@ -661,7 +661,7 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                                           const tmp2Result5 = tmp2(startSpanManual[7]);
                                                           obj3.op = tmp2(startSpanManual[2]).getSpanOperation(tmp);
                                                           obj3.attributes = obj;
-                                                          return tmp2Result5.startSpan(obj3, () => { ... });
+                                                          return tmp2Result5.startSpan(obj3, /* F144203 */ function() { ... });
                                                         }
                                                       }
                                                       dependencyMap = arr;
@@ -679,14 +679,14 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
                                                       obj4.attributes = obj;
                                                       if (BooleanResult) {
                                                         if (!tmp12) {
-                                                          closure_0 = _self(/* F163403 */ function() { ... });
-                                                          let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj4, () => { ... });
+                                                          closure_0 = _self(/* F165080 */ function() { ... });
+                                                          let startSpanManualResult = tmp2(startSpanManual[7]).startSpanManual(obj4, /* F165081 */ function() { ... });
                                                           const tmp2Result8 = tmp2(startSpanManual[7]);
                                                         }
                                                       }
                                                       tmp2 = tmp2(startSpanManual[7]);
                                                       startSpanManual = tmp2.startSpanManual;
-                                                      startSpanManualResult = startSpanManual(obj4, () => { ... });
+                                                      startSpanManualResult = startSpanManual(obj4, /* F160653 */ function() { ... });
                                                       const tmp2Result7 = tmp2(startSpanManual[2]);
                                                     }
                                                   }
@@ -764,4 +764,4 @@ export const instrumentAnthropicAiClient = function instrumentAnthropicAiClient(
     }
   });
   return proxy;
-};
+}

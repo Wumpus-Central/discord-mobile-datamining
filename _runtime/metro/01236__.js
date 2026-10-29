@@ -75,10 +75,10 @@ function listEnumValues(arg0) {
 
 export { isEnumObject };
 export { listEnumValues };
-export const listEnumNames = function listEnumNames(arg0) {
+export function listEnumNames(arg0) {
   return listEnumValues(arg0).map((name) => name.name);
-};
-export const listEnumNumbers = function listEnumNumbers(arg0) {
+}
+export function listEnumNumbers(arg0) {
   const mapped = listEnumValues(arg0).map((number) => number.number);
   return mapped.filter((item, index, arr) => arr.indexOf(item) == index);
-};
+}

@@ -1,13 +1,27 @@
 // _runtime/metro/08276__.js
-const obj = {
-  0: {
-    name: "PentaxVersion",
-    description(join) {
-      return join.join(".");
-    },
-  },
-  5: "PentaxModelID",
-  555: "LevelInfo",
-};
+import findOffsets from "../08277_findOffsets.js";
 
-export default obj;
+require = arg1;
+const dependencyMap = arg6;
+
+export default {
+  isHeicFile(getUint32) {
+    if (getUint32) {
+      try {
+        let parseBoxResult = findOffsets.parseBox(getUint32, 0);
+        if (parseBoxResult) {
+          const items = ["heic", "heix", "hevc", "hevx", "heim", "heis", "hevm", "hevs", "mif1"];
+          parseBoxResult = -1 !== items.indexOf(parseBoxResult.majorBrand);
+        }
+        return parseBoxResult;
+      } catch (err) {
+        return false;
+      }
+    } else {
+      return false;
+    }
+  },
+  findHeicOffsets(byteLength) {
+    return findOffsets.findOffsets(byteLength);
+  },
+};

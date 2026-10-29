@@ -5,7 +5,7 @@ require = arg1;
 const dependencyMap = arg6;
 
 export const DEFAULT_BREADCRUMB_LEVEL = "info";
-export const breadcrumbFromObject = function breadcrumbFromObject(type) {
+export function breadcrumbFromObject(type) {
   const obj = {};
   if (typeof type.type === "string") {
     obj.type = type.type;
@@ -39,4 +39,4 @@ export const breadcrumbFromObject = function breadcrumbFromObject(type) {
     }
   }
   return obj;
-};
+}

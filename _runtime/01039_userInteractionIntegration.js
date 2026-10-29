@@ -10,7 +10,7 @@ const dependencyMap = arg6;
 const UserInteraction = "UserInteraction";
 
 export () => ({ name: UserInteraction })
-export const startUserInteractionSpan = (arg0) => {
+export (arg0) => {
   const client = _mod693.getClient();
   if (client) {
     const currentReactNativeTracingIntegration = _mod1040.getCurrentReactNativeTracingIntegration();
@@ -84,4 +84,4 @@ export const startUserInteractionSpan = (arg0) => {
     }
     const tmpResult = _mod1040;
   }
-};
+}

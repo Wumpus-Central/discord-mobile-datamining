@@ -4,16 +4,16 @@ import _mod693 from "00693__.js";
 require = arg1;
 const dependencyMap = arg6;
 
-export const isSentrySpan = function isSentrySpan(c4) {
+export function isSentrySpan(c4) {
   return c4 instanceof _mod693.SentrySpan;
-};
-export const isRootSpan = function isRootSpan(activeSpan) {
+}
+export function isRootSpan(activeSpan) {
   return activeSpan === _mod693.getRootSpan(activeSpan);
-};
-export const setEndTimeValue = function setEndTimeValue(arg0, _endTime) {
+}
+export function setEndTimeValue(arg0, _endTime) {
   arg0._endTime = _endTime;
-};
-export const convertSpanToTransaction = function convertSpanToTransaction(_convertSpanToTransaction) {
+}
+export function convertSpanToTransaction(_convertSpanToTransaction) {
   _convertSpanToTransaction = _convertSpanToTransaction._convertSpanToTransaction;
   if (null !== _convertSpanToTransaction) {
     if (undefined !== _convertSpanToTransaction) {
@@ -21,4 +21,4 @@ export const convertSpanToTransaction = function convertSpanToTransaction(_conve
       typeof call === "unknown" ? _convertSpanToTransaction() : call(_convertSpanToTransaction);
     }
   }
-};
+}

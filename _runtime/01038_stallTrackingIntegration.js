@@ -8,7 +8,7 @@ import _slicedToArray from "metro/00032__.js";
 require = fn;
 const AppState = fn(17).AppState;
 
-export const stallTrackingIntegration = () => {
+export () => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -75,15 +75,13 @@ export const stallTrackingIntegration = () => {
         tmp19.timeout = setTimeout(tmp19.iteration, 50);
       }
       tmp20 = obj2.isTracking && !obj2.isBackground;
-    },
+    }
   };
   function _onSpanStart(activeSpan) {
     if (obj.isRootSpan(activeSpan)) {
       if (map.has(activeSpan)) {
         const debug = _mod693.debug;
-        debug.error(
-          "[StallTracking] Tried to start stall tracking on a transaction already being tracked. Measurements might be lost.",
-        );
+        debug.error("[StallTracking] Tried to start stall tracking on a transaction already being tracked. Measurements might be lost.");
       } else if (typeof _startTracking === "function") {
         if (!map.isTracking) {
           map.isTracking = true;
@@ -164,15 +162,11 @@ export const stallTrackingIntegration = () => {
           const latestChildSpanEndTimestamp = _mod1030.getLatestChildSpanEndTimestamp(activeSpan);
           if (latestChildSpanEndTimestamp !== timestamp2) {
             const debug3 = _mod693.debug;
-            debug3.log(
-              "[StallTracking] Stall measurements not added due to a custom `endTimestamp` (root end is not equal to the latest child span end).",
-            );
+            debug3.log("[StallTracking] Stall measurements not added due to a custom `endTimestamp` (root end is not equal to the latest child span end).");
           }
           if (!value.atTimestamp) {
             const debug4 = _mod693.debug;
-            debug4.log(
-              "[StallTracking] Stall measurements not added due to `endTimestamp` not being close to now. And no previous stats from child end were found.",
-            );
+            debug4.log("[StallTracking] Stall measurements not added due to `endTimestamp` not being close to now. And no previous stats from child end were found.");
           }
           if (tmp29) {
             stats = value.atTimestamp.stats;
@@ -200,35 +194,14 @@ export const stallTrackingIntegration = () => {
           }
           if (stats) {
             const tmpResult12 = _mod1030;
-            tmpResult12.setSpanMeasurement(
-              activeSpan,
-              APP_START_WARM.STALL_COUNT,
-              stats.stall_count.value - value.atStart.stall_count.value,
-              value.atStart.stall_count.unit,
-            );
+            tmpResult12.setSpanMeasurement(activeSpan, APP_START_WARM.STALL_COUNT, stats.stall_count.value - value.atStart.stall_count.value, value.atStart.stall_count.unit);
             const tmpResult13 = _mod1030;
-            tmpResult13.setSpanMeasurement(
-              activeSpan,
-              APP_START_WARM.STALL_TOTAL_TIME,
-              stats.stall_total_time.value - value.atStart.stall_total_time.value,
-              value.atStart.stall_total_time.unit,
-            );
+            tmpResult13.setSpanMeasurement(activeSpan, APP_START_WARM.STALL_TOTAL_TIME, stats.stall_total_time.value - value.atStart.stall_total_time.value, value.atStart.stall_total_time.unit);
             const tmpResult14 = _mod1030;
-            tmpResult14.setSpanMeasurement(
-              activeSpan,
-              APP_START_WARM.STALL_LONGEST_TIME,
-              stats.stall_longest_time.value,
-              stats.stall_longest_time.unit,
-            );
+            tmpResult14.setSpanMeasurement(activeSpan, APP_START_WARM.STALL_LONGEST_TIME, stats.stall_longest_time.value, stats.stall_longest_time.unit);
           } else if (undefined !== timestamp2) {
             const debug5 = _mod693.debug;
-            debug5.log(
-              "[StallTracking] Stall measurements not added due to `endTimestamp` not being close to now.",
-              "endTimestamp",
-              timestamp2,
-              "now",
-              _mod693.timestampInSeconds(),
-            );
+            debug5.log("[StallTracking] Stall measurements not added due to `endTimestamp` not being close to now.", "endTimestamp", timestamp2, "now", _mod693.timestampInSeconds());
             const tmpResult15 = _mod693;
           }
         } else {
@@ -271,9 +244,7 @@ export const stallTrackingIntegration = () => {
             const _Math = Math;
             if (Math.abs(tmpResult18.timestampInSeconds() - timestamp) > 0.02) {
               const debug = _mod693.debug;
-              debug.log(
-                "[StallTracking] Span end not logged due to end timestamp being outside the margin of error from now.",
-              );
+              debug.log("[StallTracking] Span end not logged due to end timestamp being outside the margin of error from now.");
               if (tmp14) {
                 const _Object = Object;
                 const _Object2 = Object;
@@ -325,12 +296,24 @@ export const stallTrackingIntegration = () => {
     }
     obj = _mod996;
   }
-  function _onChildSpanEnd(arg0) {}
-  function _markSpanFinish(arg0, arg1) {}
-  function _getCurrentStats(arg0) {}
-  function _startTracking() {}
-  function _shouldStopTracking() {}
-  function _reset() {}
+  function _onChildSpanEnd(arg0) {
+
+  }
+  function _markSpanFinish(arg0, arg1) {
+
+  }
+  function _getCurrentStats(arg0) {
+
+  }
+  function _startTracking() {
+
+  }
+  function _shouldStopTracking() {
+
+  }
+  function _reset() {
+
+  }
   function _flushLeakedTransactions() {
     if (map.size > 10) {
       num = 0;
@@ -364,6 +347,6 @@ export const stallTrackingIntegration = () => {
       on.on("spanStart", _onSpanStart);
       on.on("spanEnd", _onSpanEnd);
     },
-    _internalState: obj2,
+    _internalState: obj2
   };
-};
+}

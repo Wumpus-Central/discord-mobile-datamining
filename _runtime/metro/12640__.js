@@ -1,31 +1,13 @@
 // _runtime/metro/12640__.js
-import _mod12634 from "12634__.js";
-import _mod12637 from "12637__.js";
+import registerAsset from "01131__.js";
 
-require = arg1;
-const dependencyMap = arg6;
-function instrumentUnhandledRejection() {
-  onunhandledrejection = _mod12637.GLOBAL_OBJ.onunhandledrejection;
-  _mod12637.GLOBAL_OBJ.onunhandledrejection = function (arg0) {
-    _mod12634.triggerHandlers("unhandledrejection", arg0);
-    if (!onunhandledrejection) {
-      return !onunhandledrejection;
-    } else {
-      const self = this;
-      const apply = onunhandledrejection.apply;
-      if (typeof apply === "unknown") {
-        let applyArgumentsResult = HermesBuiltin.applyArguments(self);
-      } else {
-        applyArgumentsResult = apply(self, arguments);
-      }
-    }
-  };
-  _mod12637.GLOBAL_OBJ.onunhandledrejection.__SENTRY_INSTRUMENTED__ = true;
-}
-let onunhandledrejection = null;
-
-export const addGlobalUnhandledRejectionInstrumentationHandler =
-  function addGlobalUnhandledRejectionInstrumentationHandler(errorCallback) {
-    _mod12634.addHandler("unhandledrejection", errorCallback);
-    _mod12634.maybeInstrument("unhandledrejection", instrumentUnhandledRejection);
-  };
+export default registerAsset.registerAsset({
+  __packager_asset: true,
+  httpServerLocation: "/assets/modules/conjure/home/images",
+  width: 640,
+  height: 360,
+  scales: [1],
+  hash: "1959740f5a804a73d247c5716c4838a6",
+  name: "conjure-home-aram-widget",
+  type: "svg",
+});

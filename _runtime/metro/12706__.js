@@ -1,27 +1,16 @@
 // _runtime/metro/12706__.js
-import _mod12638 from "12638__.js";
+import _mod12657 from "12657__.js";
 
-require = arg1;
-const dependencyMap = arg6;
+const CDC = _mod12657.TYPE.CDC;
 
-export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
-  let arr = arg2;
-  if (arg2 === undefined) {
-    const items = [arg1];
-    arr = items;
-  }
-  let str = arg3;
-  if (arg3 === undefined) {
-    str = "npm";
-  }
-  const tmp = _metadata._metadata || {};
-  if (!tmp.sdk) {
-    const obj = { name: null, packages: null, version: null };
-    const _HermesInternal = HermesInternal;
-    obj.name = "sentry.javascript." + arg1;
-    obj.packages = arr.map((item) => ({ name: "" + str + ":@sentry/" + item, version: _mod12638.SDK_VERSION }));
-    obj.version = str(12638).SDK_VERSION;
-    tmp.sdk = obj;
-  }
-  _metadata._metadata = tmp;
+export default {
+  name: "CDC",
+  structure: [],
+  parse() {
+    this.eat(CDC);
+    return { type: "CDC", loc: this.getLocation(this.scanner.tokenStart, this.scanner.tokenStart) };
+  },
+  generate() {
+    this.chunk("-->");
+  },
 };

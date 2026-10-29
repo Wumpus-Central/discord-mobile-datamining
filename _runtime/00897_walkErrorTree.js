@@ -32,14 +32,7 @@ function walkErrorTree(stackParser, arg1, originalException, arg3) {
         const obj3 = { frames: null };
         const stackElements = tmp.stackElements;
         const mapped = stackElements.map((className) => {
-          const obj = {
-            platform: "java",
-            module: className.className,
-            filename: className.fileName,
-            lineno: null,
-            function: null,
-            in_app: null,
-          };
+          const obj = { platform: "java", module: className.className, filename: className.fileName, lineno: null, function: null, in_app: null };
           let lineNumber;
           if (className.lineNumber >= 0) {
             lineNumber = className.lineNumber;
@@ -121,7 +114,7 @@ function walkErrorTree(stackParser, arg1, originalException, arg3) {
 }
 let nativePackageName = null;
 
-export const nativeLinkedErrorsIntegration = () => {
+export () => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -130,7 +123,9 @@ export const nativeLinkedErrorsIntegration = () => {
   closure_1 = obj.limit || 5;
   return {
     name: "NativeLinkedErrors",
-    setupOnce() {},
+    setupOnce() {
+
+    },
     preprocessEvent(exception, originalException, getOptions) {
       exception = exception.exception;
       let values;
@@ -143,12 +138,7 @@ export const nativeLinkedErrorsIntegration = () => {
         if (originalException) {
           const _Error = Error;
           if (obj.isInstanceOf(originalException.originalException, Error)) {
-            ({ exceptions, debugImages } = walkErrorTree(
-              getOptions.getOptions().stackParser,
-              closure_1,
-              originalException.originalException,
-              closure_0,
-            ));
+            ({ exceptions, debugImages } = walkErrorTree(getOptions.getOptions().stackParser, closure_1, originalException.originalException, closure_0));
             const items = [];
             HermesBuiltin.arraySpread(exceptions, HermesBuiltin.arraySpread(exception.exception.values, 0));
             exception.exception.values = items;
@@ -166,16 +156,11 @@ export const nativeLinkedErrorsIntegration = () => {
             const items1 = [];
             HermesBuiltin.arraySpread(debugImages, 0);
             HermesBuiltin.apply(items1, images1);
-            const tmp12 = walkErrorTree(
-              getOptions.getOptions().stackParser,
-              closure_1,
-              originalException.originalException,
-              closure_0,
-            );
+            const tmp12 = walkErrorTree(getOptions.getOptions().stackParser, closure_1, originalException.originalException, closure_0);
           }
           obj = _mod693;
         }
       }
-    },
+    }
   };
-};
+}

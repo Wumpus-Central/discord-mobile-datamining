@@ -8,7 +8,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const sampleSpan = function sampleSpan(tracesSampler, parentSampled, sampleRand) {
+export function sampleSpan(tracesSampler, parentSampled, sampleRand) {
   if (obj.hasSpansEnabled(tracesSampler)) {
     if (typeof tracesSampler.tracesSampler === "function") {
       const obj2 = {};
@@ -84,4 +84,4 @@ export const sampleSpan = function sampleSpan(tracesSampler, parentSampled, samp
     return items3;
   }
   obj = _mod731;
-};
+}

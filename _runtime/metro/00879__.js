@@ -7,20 +7,20 @@ import _slicedToArray from "00032__.js";
 require = fn;
 const Platform = fn(17).Platform;
 
-export const isHermesEnabled = function isHermesEnabled() {
+export function isHermesEnabled() {
   return RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.HermesInternal;
-};
-export const isTurboModuleEnabled = function isTurboModuleEnabled() {
+}
+export function isTurboModuleEnabled() {
   let tmp3 = true === RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.RN$Bridgeless;
   if (!tmp3) {
     tmp3 = null != RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.__turboModuleProxy;
   }
   return tmp3;
-};
-export const isFabricEnabled = function isFabricEnabled() {
+}
+export function isFabricEnabled() {
   return null != RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.nativeFabricUIManager;
-};
-export const getReactNativeVersion = function getReactNativeVersion() {
+}
+export function getReactNativeVersion() {
   if (TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion) {
     const version = TurboModuleRegistry.ReactNativeLibraries.ReactNativeVersion.version;
     ({ major, minor, patch } = version);
@@ -32,14 +32,14 @@ export const getReactNativeVersion = function getReactNativeVersion() {
     const _HermesInternal2 = HermesInternal;
     return "" + major + "." + minor + "." + patch + str2;
   }
-};
-export const isExpo = function isExpo() {
+}
+export function isExpo() {
   return null != RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.expo;
-};
-export const isExpoGo = function isExpoGo() {
+}
+export function isExpoGo() {
   return _mod880.getExpoGo();
-};
-export const getExpoGoVersion = function getExpoGoVersion() {
+}
+export function getExpoGoVersion() {
   const expoConstants = _mod880.getExpoConstants();
   let expoVersion;
   if (null != expoConstants) {
@@ -50,8 +50,8 @@ export const getExpoGoVersion = function getExpoGoVersion() {
     expoVersion1 = expoConstants.expoVersion;
   }
   return expoVersion1;
-};
-export const getExpoSdkVersion = function getExpoSdkVersion() {
+}
+export function getExpoSdkVersion() {
   const expoConstants = _mod880.getExpoConstants();
   let manifest;
   if (null != expoConstants) {
@@ -69,7 +69,7 @@ export const getExpoSdkVersion = function getExpoSdkVersion() {
     parts = [];
   }
   return _slicedToArray(parts, 2)[1];
-};
+}
 export function isWeb() {
   return false;
 }
@@ -82,7 +82,7 @@ export function isMobileOs() {
 export function notMobileOs() {
   return false;
 }
-export const getHermesVersion = function getHermesVersion() {
+export function getHermesVersion() {
   const _HermesInternal = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.HermesInternal;
   let getRuntimeProperties;
   if (null !== _HermesInternal) {
@@ -96,11 +96,11 @@ export const getHermesVersion = function getHermesVersion() {
       const prop = typeof call === "unknown" ? getRuntimeProperties() : call(_HermesInternal)["OSS Release Version"];
     }
   }
-};
+}
 export function getDefaultEnvironment() {
   return "production";
 }
-export const isRunningInMetroDevServer = function isRunningInMetroDevServer() {
+export function isRunningInMetroDevServer() {
   let tmp3 = undefined !== RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.process;
   if (tmp3) {
     const env = RN_GLOBAL_OBJ.RN_GLOBAL_OBJ.process.env;
@@ -113,4 +113,4 @@ export const isRunningInMetroDevServer = function isRunningInMetroDevServer() {
     tmp3 = "true" === prop;
   }
   return tmp3;
-};
+}

@@ -92,7 +92,7 @@ function addRequestAttributes(setAttribute, input, arg2) {
 }
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 
-export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1) {
+export function instrumentOpenAiClient(arg0, arg1) {
   const client = require("metro/00724__.js").getClient();
   let sendDefaultPii;
   if (client != null) {
@@ -125,7 +125,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                   let obj3 = { value, done: true };
                   return obj3;
                 } else {
-                  return { value: "IconComponent", done: null };
+                  return { value: "IconComponent", done: "IconComponent" };
                 }
               } else {
                 try {
@@ -147,7 +147,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       closure_129_4 = undefined;
                       c3 = 1;
                       c4 = 1;
-                      return { value: "Reflect", done: true };
+                      return { value: "Reflect", done: null };
                     }
                   } else if (arg0 === 1) {
                     c4 = 3;
@@ -176,8 +176,8 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                       obj9.op = str(tmp2[2]).getSpanOperation(tmp2);
                       obj9.attributes = closure_129_1;
                       obj5.startSpanManual(obj9, (() => {
-                        closure_0 = closure_2(/* F164610 */ function() { ... });
-                        return () => { ... };
+                        closure_0 = closure_2(/* F166294 */ function() { ... });
+                        return /* F166295 */ function() { ... };
                       })());
                       let obj7 = str(tmp2[2]);
                     }
@@ -189,8 +189,8 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                     obj10.op = str(tmp2[2]).getSpanOperation(tmp2);
                     obj10.attributes = closure_129_1;
                     obj2.startSpan(obj10, (() => {
-                      closure_0 = closure_2(/* F164612 */ function() { ... });
-                      return () => { ... };
+                      closure_0 = closure_2(/* F166296 */ function() { ... });
+                      return /* F166297 */ function() { ... };
                     })());
                     let obj4 = str(tmp2[2]);
                   }
@@ -248,7 +248,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                   let obj3 = { value, done: true };
                                   return obj3;
                                 } else {
-                                  return { value: "IconComponent", done: null };
+                                  return { value: "IconComponent", done: "IconComponent" };
                                 }
                               } else {
                                 try {
@@ -270,7 +270,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                       closure_129_4 = undefined;
                                       c3 = 1;
                                       c4 = 1;
-                                      return { value: "Reflect", done: true };
+                                      return { value: "Reflect", done: null };
                                     }
                                   } else if (arg0 === 1) {
                                     c4 = 3;
@@ -298,7 +298,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                       let obj5 = str(tmp2[5]);
                                       obj9.op = str(tmp2[2]).getSpanOperation(tmp2);
                                       obj9.attributes = closure_129_1;
-                                      obj5.startSpanManual(obj9, (() => { ... })());
+                                      obj5.startSpanManual(obj9, (/* F165078 */ function() { ... })());
                                       let obj7 = str(tmp2[2]);
                                     }
                                     let obj = str(tmp2[2]);
@@ -308,7 +308,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                     let obj2 = str(tmp2[5]);
                                     obj10.op = str(tmp2[2]).getSpanOperation(tmp2);
                                     obj10.attributes = closure_129_1;
-                                    obj2.startSpan(obj10, (() => { ... })());
+                                    obj2.startSpan(obj10, (/* F165079 */ function() { ... })());
                                     let obj4 = str(tmp2[2]);
                                   }
                                 } catch (tmp40) {
@@ -354,7 +354,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                             closure_0 = [...arguments];
                                             c3 = 0;
                                             c4 = 0;
-                                            const iter = (/* F159000 */ function*() { ... })();
+                                            const iter = (/* F160651 */ function*() { ... })();
                                             iter.next();
                                             return iter;
                                           });
@@ -388,7 +388,7 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
                                                           closure_1 = methodPath;
                                                           closure_2 = self;
                                                           closure_3 = closure_1_1;
-                                                          closure_2_2(() => { ... });
+                                                          closure_2_2(/* F144194 */ function() { ... });
                                                           function instrumentedMethod() { ... }
                                                         }
                                                         return instrumentedMethod;
@@ -432,4 +432,4 @@ export const instrumentOpenAiClient = function instrumentOpenAiClient(arg0, arg1
     }
   });
   return proxy;
-};
+}

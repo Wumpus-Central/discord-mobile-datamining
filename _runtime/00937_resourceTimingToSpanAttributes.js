@@ -6,7 +6,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const resourceTimingToSpanAttributes = function resourceTimingToSpanAttributes(nextHopProtocol) {
+export function resourceTimingToSpanAttributes(nextHopProtocol) {
   const obj = {};
   if (null != nextHopProtocol.nextHopProtocol) {
     const result = extractNetworkProtocol.extractNetworkProtocol(nextHopProtocol.nextHopProtocol);
@@ -183,4 +183,4 @@ export const resourceTimingToSpanAttributes = function resourceTimingToSpanAttri
     const tmp4Result24 = extractNetworkProtocol;
   }
   return fromEntriesResult;
-};
+}

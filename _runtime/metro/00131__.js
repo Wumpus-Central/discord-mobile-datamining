@@ -266,13 +266,13 @@ let items = [
   },
   {
     key: "compareDocumentPosition",
-    value: function compareDocumentPosition(nativeNodeReference) {
-      if (nativeNodeReference === this) {
+    value: function compareDocumentPosition(target) {
+      if (target === this) {
         return 0;
       } else {
-        nativeNodeReference = ReadOnlyNode(136).getNativeNodeReference(tmp);
+        const nativeNodeReference = ReadOnlyNode(136).getNativeNodeReference(tmp);
         const obj = ReadOnlyNode(136);
-        const nativeNodeReference1 = ReadOnlyNode(136).getNativeNodeReference(nativeNodeReference);
+        const nativeNodeReference1 = ReadOnlyNode(136).getNativeNodeReference(target);
         if (null != nativeNodeReference) {
           if (null != nativeNodeReference1) {
             let DOCUMENT_POSITION_DISCONNECTED = require("NativeDOMCxx").compareDocumentPosition(
@@ -290,11 +290,11 @@ let items = [
   },
   {
     key: "contains",
-    value: function contains(nativeNodeReference) {
+    value: function contains(arg0) {
       const self = this;
-      let tmp = nativeNodeReference === this;
+      let tmp = arg0 === this;
       if (!tmp) {
-        tmp = self.compareDocumentPosition(nativeNodeReference) & ReadOnlyNode.DOCUMENT_POSITION_CONTAINED_BY;
+        tmp = self.compareDocumentPosition(arg0) & ReadOnlyNode.DOCUMENT_POSITION_CONTAINED_BY;
       }
       return tmp;
     },

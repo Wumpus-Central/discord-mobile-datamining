@@ -1,4 +1,0 @@
-// _runtime/metro/06469__.js
-import _mod1313 from "01313__.js";
-
-export default _mod1313.setPrototypeOf || null;

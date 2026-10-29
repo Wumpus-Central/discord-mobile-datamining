@@ -126,7 +126,7 @@ Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 export { extractModelMetadata };
 export { extractTokenUsageFromMessage };
 export { extractToolCalls };
-export const extractToolsFromCompiledGraph = function extractToolsFromCompiledGraph(builder) {
+export function extractToolsFromCompiledGraph(builder) {
   builder = builder.builder;
   let tools1;
   if (builder != null) {
@@ -191,8 +191,8 @@ export const extractToolsFromCompiledGraph = function extractToolsFromCompiledGr
   } else {
     return null;
   }
-};
-export const setResponseAttributes = function setResponseAttributes(setAttribute, c2, messages) {
+}
+export function setResponseAttributes(setAttribute, c2, messages) {
   messages = undefined;
   if (messages != null) {
     messages = messages.messages;
@@ -259,4 +259,4 @@ export const setResponseAttributes = function setResponseAttributes(setAttribute
       }
     }
   }
-};
+}

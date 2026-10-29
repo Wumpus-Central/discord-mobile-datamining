@@ -15,7 +15,7 @@ const items = [
   "X-Vercel-Forwarded-For",
 ];
 
-export const getClientIPAddress = function getClientIPAddress(headers) {
+export function getClientIPAddress(headers) {
   let obj = {};
   const keys = Object.keys(headers);
   for (const item10010 of keys) {
@@ -74,5 +74,5 @@ export const getClientIPAddress = function getClientIPAddress(headers) {
       return isMatch;
     }) || null
   );
-};
+}
 export const ipHeaderNames = items;

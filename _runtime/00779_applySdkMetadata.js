@@ -5,7 +5,7 @@ require = arg1;
 const dependencyMap = arg6;
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
+export function applySdkMetadata(_metadata, arg1) {
   let arr = arg2;
   if (arg2 === undefined) {
     const items = [arg1];
@@ -25,4 +25,4 @@ export const applySdkMetadata = function applySdkMetadata(_metadata, arg1) {
     tmp.sdk = obj;
   }
   _metadata._metadata = tmp;
-};
+}

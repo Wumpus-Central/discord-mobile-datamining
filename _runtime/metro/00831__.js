@@ -27,7 +27,7 @@ let closure_5 = {
 };
 let closure_6 = { 0: "fatal", 1: "warn", 2: "info", 3: "info", 4: "debug", 5: "trace" };
 
-export const createConsolaReporter = function createConsolaReporter() {
+export function createConsolaReporter() {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -104,4 +104,4 @@ export const createConsolaReporter = function createConsolaReporter() {
       }
     },
   };
-};
+}

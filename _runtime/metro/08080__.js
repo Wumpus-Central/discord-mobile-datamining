@@ -1,13 +1,12 @@
 // _runtime/metro/08080__.js
-import _modDef8018 from "08018__.js";
+import _modDef8056 from "08056__.js";
 import _classCallCheck from "00041__classCallCheck.js";
 import _createClass from "00042__createClass.js";
 import c3 from "00093__possibleConstructorReturn.js";
 import _getPrototypeOf from "../00095__getPrototypeOf.js";
 import _inherits from "../00098__inherits.js";
-import noop from "00019__.js";
 
-const Pattern = importDefault;
+const FeSpecularLighting = arg1;
 function _isNativeReflectConstruct() {
   try {
     const _Boolean = Boolean;
@@ -26,15 +25,14 @@ function _isNativeReflectConstruct() {
     return _isNativeReflectConstruct();
   } catch (err) {}
 }
-const jsx = fn(21).jsx;
-class Pattern {
+class FeSpecularLighting {
   constructor() {
     self = this;
-    tmp = c2(this, Pattern);
+    tmp = c2(this, FeSpecularLighting);
     tmp2 = closure_4;
-    obj = closure_4(Pattern);
+    obj = closure_4(FeSpecularLighting);
     tmp3 = closure_3;
-    if (metroRequire()) {
+    if (hasOwnProperty()) {
       tmp7 = globalThis;
       _Reflect = Reflect;
       tmp8 = arguments;
@@ -47,64 +45,18 @@ class Pattern {
     return tmp3(self, constructResult);
   }
 }
-_inherits(Pattern, _modDef8018);
+_inherits(FeSpecularLighting, _modDef8056);
 const entry = {
   key: "render",
   value: function render() {
-    const self = this;
-    const props = this.props;
-    ({ patternTransform, patternUnits, patternContentUnits } = props);
-    ({ transform, id, x, y, width, height, children, viewBox, preserveAspectRatio } = props);
-    if (!patternTransform) {
-      patternTransform = transform;
-    }
-    if (!patternTransform) {
-      patternTransform = props;
-    }
-    const tmp3Result = Pattern(8002)(patternTransform);
-    const size = {
-      x,
-      y,
-      width,
-      height,
-      name: id,
-      matrix: tmp3Result,
-      patternTransform: tmp3Result,
-      patternUnits: null,
-      patternContentUnits: null,
-    };
-    let num = patternUnits;
-    if (patternUnits) {
-      num = Pattern(8072)[patternUnits];
-    }
-    if (!num) {
-      num = 0;
-    }
-    size.patternUnits = num;
-    let num2 = 1;
-    if (patternContentUnits) {
-      num2 = Pattern(8072)[patternContentUnits];
-    }
-    size.patternContentUnits = num2;
-    const obj = {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    };
-    const tmp3 = Pattern(8002);
-    const merged = Object.assign(size);
-    const merged1 = Object.assign(Pattern(8007)({ viewBox, preserveAspectRatio }));
-    obj.children = children;
-    return jsx(Pattern(8081), {
-      ref(arg0) {
-        return self.refMethod(arg0);
-      },
-    });
+    const result = FeSpecularLighting(8033).warnUnimplementedFilter();
+    return null;
   },
 };
 const items = [entry];
-const importDefaultResultResult = _createClass(Pattern, items);
-importDefaultResultResult.displayName = "Pattern";
-importDefaultResultResult.defaultProps = { x: "0%", y: "0%", width: "100%", height: "100%" };
+const importDefaultResultResult = _createClass(FeSpecularLighting, items);
+importDefaultResultResult.displayName = "FeSpecularLighting";
+const merged = Object.assign(importDefaultResultResult.defaultPrimitiveProps);
+importDefaultResultResult.defaultProps = {};
 
 export default importDefaultResultResult;

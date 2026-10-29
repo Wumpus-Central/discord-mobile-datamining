@@ -1,11 +1,16 @@
 // _runtime/metro/15817__.js
-import _mod15818 from "15818__.js";
+let closure_0 = Object.freeze({ loose: true });
+let closure_1 = Object.freeze({});
 
 export default (arg0) => {
-  if (_mod15818(arg0)) {
-    const tmp4 = new TypeError("Can't call method on " + arg0);
-    throw tmp4;
+  let tmp = arg0;
+  if (arg0) {
+    if (typeof tmp !== "object") {
+      tmp = closure_0;
+    }
+    let tmp2 = tmp;
   } else {
-    return arg0;
+    tmp2 = closure_1;
   }
+  return tmp2;
 };

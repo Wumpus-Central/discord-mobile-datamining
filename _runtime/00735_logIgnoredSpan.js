@@ -11,7 +11,7 @@ function logIgnoredSpan(op) {
 }
 Object.defineProperty(arg5, Symbol.toStringTag, { value: "Module" });
 
-export const reparentChildSpans = function reparentChildSpans(spans, parent_span_id) {
+export function reparentChildSpans(spans, parent_span_id) {
   parent_span_id = parent_span_id.parent_span_id;
   if (parent_span_id) {
     const iter = spans[Symbol.iterator]();
@@ -23,8 +23,8 @@ export const reparentChildSpans = function reparentChildSpans(spans, parent_span
       continue;
     }
   }
-};
-export const shouldIgnoreSpan = function shouldIgnoreSpan(timestamp, ignoreSpans) {
+}
+export function shouldIgnoreSpan(timestamp, ignoreSpans) {
   let length;
   if (ignoreSpans != null) {
     length = ignoreSpans.length;
@@ -83,4 +83,4 @@ export const shouldIgnoreSpan = function shouldIgnoreSpan(timestamp, ignoreSpans
     }
   }
   return false;
-};
+}

@@ -3,9 +3,11 @@ import init from "01009_init.js";
 
 require = arg1;
 const dependencyMap = arg6;
-function browserReplayIntegrationNoop() {}
+function browserReplayIntegrationNoop() {
 
-export const browserReplayIntegration = () => {
+}
+
+export () => {
   let obj = arg0;
   if (arg0 === undefined) {
     obj = {};
@@ -14,16 +16,24 @@ export const browserReplayIntegration = () => {
     if (typeof browserReplayIntegrationNoop === "function") {
       const obj3 = {
         name: "Replay",
-        start() {},
-        startBuffering() {},
+        start() {
+
+            },
+        startBuffering() {
+
+            },
         stop() {
-          return Promise.resolve();
-        },
+              return Promise.resolve();
+            },
         flush() {
-          return Promise.resolve();
-        },
-        getReplayId() {},
-        getRecordingMode() {},
+              return Promise.resolve();
+            },
+        getReplayId() {
+
+            },
+        getRecordingMode() {
+
+            }
       };
       let replayIntegrationResult = obj3;
     } else {
@@ -48,4 +58,4 @@ export const browserReplayIntegration = () => {
     const tmpResult = init;
   }
   return replayIntegrationResult;
-};
+}
